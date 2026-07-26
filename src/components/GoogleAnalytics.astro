@@ -1,5 +1,5 @@
 ---
-const rawId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const rawId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-ZLCCQTLZF7';
 const isValidId = rawId && rawId !== 'G-XXXXXXXXXX' && /^G-[A-Z0-9]+$/.test(rawId);
 const GA_MEASUREMENT_ID = isValidId ? rawId : null;
 ---
