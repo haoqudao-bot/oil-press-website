@@ -1,0 +1,330 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allProducts = await getCollection('products');
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const pageTitle = currentLocale === 'fr' ? 'Presse à Huile par Échelle de Production — Petite, Commerciale, Industrielle' :
+                  currentLocale === 'ar' ? 'مكينة ضغط الزيت حسب حجم الإنتاج — صغيرة، تجارية، صناعية' :
+                  'Mesin Press Minyak berdasarkan Skala Produksi — Kecil, Komersial, Industri';
+
+const pageDesc = currentLocale === 'fr' ? 'Choisissez la bonne presse à huile hydraulique pour votre échelle de production. De l\'usage domestique (50-500 kg/jour) à l\'industriel (5+ tonnes/jour), trouvez la solution parfaite pour votre entreprise.' :
+                 currentLocale === 'ar' ? 'اختر مكينة الضغط الهيدروليكي المناسبة لحجم إنتاجك. من الاستخدام المنزلي (50-500 كجم/يوم) إلى الصناعي (5+ طن/يوم)، ابحث عن الحل المثالي لمشروعك.' :
+                 'Pilih mesin press minyak hidrolik yang tepat untuk skala produksi Anda. Dari penggunaan rumahan (50-500 kg/hari) hingga industri (5+ ton/hari), temukan solusi sempurna untuk bisnis Anda.';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.solutions, item: `https://www.hydoilpress.com/${currentLocale}/solutions` },
+    { '@type': 'ListItem', position: 3, name: currentLocale === 'fr' ? 'Par Échelle de Production' : currentLocale === 'ar' ? 'حسب حجم الإنتاج' : 'Berdasarkan Skala Produksi', item: `https://www.hydoilpress.com/${currentLocale}/solutions/by-scale` },
+  ],
+};
+
+const scaleSolutions = [
+  {
+    id: 'small-business',
+    icon: '🏪',
+    title: currentLocale === 'fr' ? 'Maison & Petite Entreprise' : currentLocale === 'ar' ? 'منزلي وشركات صغيرة' : 'Rumahan & Usaha Kecil',
+    subtitle: '50-500 kg/jour',
+    description: currentLocale === 'fr' ? 'Bien adapté pour la production d\'huile à domicile, les petites boutiques et les marchés de quartier. Démarrez votre entreprise d\'huile avec un investissement minimal et développez à mesure que la demande augmente.' : currentLocale === 'ar' ? 'مناسب جيداً لإنتاج الزيت المنزلي والمحلات الصغيرة وأسواق الأحياء. ابدأ مشروع الزيت باستثمار بسيط ونم مع زيادة الطلب.' : 'Cocok untuk produksi minyak rumahan, toko kecil, dan pasar lingkungan. Mulai bisnis minyak Anda dengan investasi minimal dan kembangkan seiring meningkatnya permintaan.',
+    features: [
+      currentLocale === 'fr' ? 'Conception compacte et économique en espace' : currentLocale === 'ar' ? 'تصميم مضغوط وموفر للمساحة' : 'Desain kompak dan hemat ruang',
+      currentLocale === 'fr' ? 'Faible consommation d\'énergie' : currentLocale === 'ar' ? 'استهلاك طاقة منخفض' : 'Konsumsi energi rendah',
+      currentLocale === 'fr' ? 'Facile à utiliser et à entretenir' : currentLocale === 'ar' ? 'سهل الاستخدام والصيانة' : 'Mudah digunakan dan dirawat',
+      currentLocale === 'fr' ? 'Idéal pour 5-10 kg par lot' : currentLocale === 'ar' ? 'مثالي لـ 5-10 كجم لكل دفعة' : 'Ideal untuk 5-10 kg per batch',
+      currentLocale === 'fr' ? 'Point d\'entrée abordable' : currentLocale === 'ar' ? 'نقطة دخول ميسورة' : 'Titik masuk terjangkau',
+      currentLocale === 'fr' ? 'Retour sur investissement rapide' : currentLocale === 'ar' ? 'عائد استثمار سريع' : 'Pengembalian investasi cepat',
+    ],
+    recommendedModels: ['HN300', 'HN325'],
+    typicalCapacity: '50-500 kg/jour',
+    investmentRange: currentLocale === 'fr' ? 'Contactez pour les prix' : currentLocale === 'ar' ? 'اتصل للأسعار' : 'Hubungi untuk harga',
+    roiPeriod: currentLocale === 'fr' ? 'Variable significativement (voir FAQ ci-dessous)' : currentLocale === 'ar' ? 'يختلف بشكل كبير (انظر الأسئلة الشائعة أدناه)' : 'Bervariasi signifikan (lihat FAQ di bawah)',
+    link: localePath('/solutions/small-business-oil-press'),
+  },
+  {
+    id: 'commercial',
+    icon: '🏭',
+    title: currentLocale === 'fr' ? 'Échelle Commerciale' : currentLocale === 'ar' ? 'النطاق التجاري' : 'Skala Komersial',
+    subtitle: currentLocale === 'fr' ? '500 kg - 5 tonnes/jour' : currentLocale === 'ar' ? '500 كجم - 5 طن/يوم' : '500 kg - 5 ton/hari',
+    description: currentLocale === 'fr' ? 'Pour les moulins à huile établis, les coopératives et les distributeurs régionaux. Machines haute capacité qui assurent une production continue avec une qualité constante.' : currentLocale === 'ar' ? 'لمعاصر الزيت الراسخة والتعاونيات والموزعين الإقليميين. مكائن عالية السعة تضمن إنتاجاً مستمراً بجودة ثابتة.' : 'Untuk penggilingan minyak yang mapan, koperasi, dan distributor regional. Mesin kapasitas tinggi yang menangani produksi berkelanjutan dengan kualitas konsisten.',
+    features: [
+      currentLocale === 'fr' ? 'Capacité de production à volume élevé' : currentLocale === 'ar' ? 'قدرة إنتاج عالية الحجم' : 'Kapasitas produksi volume tinggi',
+      currentLocale === 'fr' ? 'Fonctionnement semi-automatique' : currentLocale === 'ar' ? 'تشغيل شبه آلي' : 'Operasi semi-otomatis',
+      currentLocale === 'fr' ? 'Unités de pressage multiples' : currentLocale === 'ar' ? 'وحدات ضغط متعددة' : 'Unitus press ganda',
+      currentLocale === 'fr' ? 'Système de filtration intégré' : currentLocale === 'ar' ? 'نظام ترشيح متكامل' : 'Sistem filtrasi terintegrasi',
+      currentLocale === 'fr' ? 'Meilleure efficacité et rendement' : currentLocale === 'ar' ? 'كفاءة وعائد أفضل' : 'Efisiensi dan hasil lebih baik',
+      currentLocale === 'fr' ? 'Support pour commandes en gros' : currentLocale === 'ar' ? 'دعم للطلبات بالجملة' : 'Dukungan untuk pesanan grosir',
+    ],
+    recommendedModels: ['HN355', 'HN400', 'HN426'],
+    typicalCapacity: currentLocale === 'fr' ? '500 kg - 5 tonnes/jour' : currentLocale === 'ar' ? '500 كجم - 5 طن/يوم' : '500 kg - 5 ton/hari',
+    investmentRange: currentLocale === 'fr' ? 'Contactez pour les prix' : currentLocale === 'ar' ? 'اتصل للأسعار' : 'Hubungi untuk harga',
+    roiPeriod: currentLocale === 'fr' ? 'Env. 6-12+ mois*' : currentLocale === 'ar' ? 'تقريباً 6-12+ شهر*' : 'Est. 6-12+ bulan*',
+    link: localePath('/solutions/commercial-oil-press'),
+  },
+  {
+    id: 'industrial',
+    icon: '🏢',
+    title: currentLocale === 'fr' ? 'Échelle Industrielle' : currentLocale === 'ar' ? 'النطاق الصناعي' : 'Skala Industri',
+    subtitle: currentLocale === 'fr' ? '5+ tonnes/jour' : currentLocale === 'ar' ? '5+ طن/يوم' : '5+ ton/hari',
+    description: currentLocale === 'fr' ? 'Pour les grandes raffineries d\'huile, les producteurs axés sur l\'exportation et les fabricants industriels. Lignes de production hautement automatisées avec efficacité maximale.' : currentLocale === 'ar' ? 'لمصافي الزيت الكبيرة والمنتجين الموجهين للتصدير والمصنعين الصناعيين. خطوط إنتاج عالية الأتمتة بكفاءة قصوى.' : 'Untuk kilang minyak skala besar, produsen berorientasi ekspor, dan pabrikan industri. Lini produksi sangat otomatis dengan efisiensi maksimum.',
+    features: [
+      currentLocale === 'fr' ? 'Ligne de production hautement automatisée' : currentLocale === 'ar' ? 'خط إنتاج عالي الأتمتة' : 'Lini produksi sangat otomatis',
+      currentLocale === 'fr' ? 'Capacité de débit élevée' : currentLocale === 'ar' ? 'قدرة إنتاجية عالية' : 'Kapasitas throughput tinggi',
+      currentLocale === 'fr' ? 'Système de contrôle PLC' : currentLocale === 'ar' ? 'نظام تحكم PLC' : 'Sistem kontrol PLC',
+      currentLocale === 'fr' ? 'Torréfaction et raffinage intégrés' : currentLocale === 'ar' ? 'تحميص وتكرير متكاملان' : 'Sangrai dan pemurnian terintegrasi',
+      currentLocale === 'fr' ? 'Fonctionnement continu 24/7' : currentLocale === 'ar' ? 'تشغيل مستمر 24/7' : 'Operasi berkelanjutan 24/7',
+      currentLocale === 'fr' ? 'Solutions d\'ingénierie sur mesure' : currentLocale === 'ar' ? 'حلول هندسية مخصصة' : 'Solusi rekayasa kustom',
+    ],
+    recommendedModels: ['HN480B', 'HN500', 'Custom Line'],
+    typicalCapacity: currentLocale === 'fr' ? '5+ tonnes/jour' : currentLocale === 'ar' ? '5+ طن/يوم' : '5+ ton/hari',
+    investmentRange: currentLocale === 'fr' ? 'Contactez pour les prix' : currentLocale === 'ar' ? 'اتصل للأسعار' : 'Hubungi untuk harga',
+    roiPeriod: currentLocale === 'fr' ? 'Env. 12-24+ mois*' : currentLocale === 'ar' ? 'تقريباً 12-24+ شهر*' : 'Est. 12-24+ bulan*',
+    link: localePath('/solutions/industrial-oil-press'),
+  },
+];
+
+const faqItems = [
+  {
+    question: currentLocale === 'fr' ? 'Puis-je passer d\'une petite machine à une plus grande par la suite ?' : currentLocale === 'ar' ? 'هل يمكنني الترقية من مكينة صغيرة إلى أكبر لاحقاً؟' : 'Bisakah saya upgrade dari mesin kecil ke yang lebih besar nanti?',
+    answer: currentLocale === 'fr' ? 'Oui ! Beaucoup de nos clients commencent avec des machines plus petites et évoluent à mesure que leur entreprise se développe. Nous proposons des programmes de reprise et pouvons vous aider à choisir le bon chemin de mise à niveau en fonction de votre production actuelle et de vos objectifs futurs.' : currentLocale === 'ar' ? 'نعم! العديد من عملائنا يبدأون بمكائن أصغر ويطورون مع نمو مشروعهم. نقدم برامج مقايضة ويمكننا مساعدتك في اختيار مسار الترقية المناسب بناءً على إنتاجك الحالي وأهدافك المستقبلية.' : 'Ya! Banyak pelanggan kami mulai dengan mesin yang lebih kecil dan meningkatkan seiring pertumbuhan bisnis mereka. Kami menawarkan program tukar tambah dan dapat membantu Anda memilih jalur upgrade yang tepat berdasarkan produksi saat ini dan tujuan masa depan Anda.',
+  },
+  {
+    question: currentLocale === 'fr' ? 'Quel est le retour sur investissement typique pour chaque échelle ?' : currentLocale === 'ar' ? 'ما هو العائد على الاستثمار النموذجي لكل حجم؟' : 'Berapa pengembalian investasi khas untuk setiap skala?',
+    answer: currentLocale === 'fr' ? 'Le ROI varie considérablement selon les conditions du marché local, les coûts des matières premières et le volume de production. Les machines de petite entreprise peuvent voir des retours en environ 3-6+ mois en raison de l\'investissement initial plus faible. Les machines commerciales prennent généralement 6-12+ mois. Les lignes industrielles ont des périodes de ROI plus longues (12-24+ mois) mais peuvent générer des revenus substantiels à l\'échelle. <em class="text-steel-400">*Ce sont des estimations uniquement — les résultats réels varient.</em>' : currentLocale === 'ar' ? 'العائد على الاستثمار يختلف بشكل كبير حسب ظروف السوق المحلي وتكاليف المواد الخام وحجم الإنتاج. مكائن الشركات الصغيرة قد تحقق عوائد في حوالي 3-6+ شهر بسبب الاستثمار الأولي الأقل. المكائن التجارية عادة تستغرق 6-12+ شهر. الخطوط الصناعية لها فترات عائد أطول (12-24+ شهر) لكن يمكنها توليد إيرادات كبيرة على نطاق واسع. <em class="text-steel-400">*هذه تقديرات فقط — النتائج الفعلية تختلف.</em>' : 'ROI bervariasi signifikan tergantung kondisi pasar lokal, biaya bahan baku, dan volume produksi. Mesin usaha kecil mungkin melihat pengembalian dalam sekitar 3-6+ bulan karena investasi awal yang lebih rendah. Mesin komersial biasanya membutuhkan 6-12+ bulan. Lini industri memiliki periode ROI lebih lama (12-24+ bulan) tetapi dapat menghasilkan pendapatan substansial dalam skala besar. <em class="text-steel-400">*Ini hanya estimasi — hasil aktual bervariasi.</em>',
+  },
+  {
+    question: currentLocale === 'fr' ? 'Ai-je besoin d\'une formation spéciale pour utiliser les machines plus grandes ?' : currentLocale === 'ar' ? 'هل أحتاج إلى تدريب خاص لتشغيل المكائن الأكبر؟' : 'Apakah saya perlu pelatihan khusus untuk mengoperasikan mesin yang lebih besar?',
+    answer: currentLocale === 'fr' ? 'Nous fournissons une formation complète pour toutes nos machines. Pour les petites machines, l\'utilisation de base peut être apprise en une journée. Les machines commerciales et industrielles nécessitent une formation plus détaillée, que nous fournissons à travers des tutoriels vidéo, des manuels et une formation optionnelle sur site dans notre usine.' : currentLocale === 'ar' ? 'نقدم تدريباً شاملاً لجميع مكائننا. للمكائن الصغيرة، يمكن تعلم التشغيل الأساسي في يوم واحد. المكائن التجارية والصناعية تحتاج إلى تدريب أكثر تفصيلاً، الذي نقدمه من خلال دروس فيديو وكتيبات وتدريب اختياري في موقعنا.' : 'Kami menyediakan pelatihan komprehensif untuk semua mesin kami. Untuk mesin kecil, operasi dasar dapat dipelajari dalam sehari. Mesin komersial dan industri membutuhkan pelatihan lebih detail, yang kami sediakan melalui tutorial video, manual, dan pelatihan opsional di lokasi pabrik kami.',
+  },
+  {
+    question: currentLocale === 'fr' ? 'Quelles graines fonctionnent le mieux pour chaque échelle ?' : currentLocale === 'ar' ? 'أي بذور تعمل بشكل أفضل لكل حجم؟' : 'Biji apa yang paling cocok untuk setiap skala?',
+    answer: currentLocale === 'fr' ? 'Les petites machines fonctionnent bien avec le sésame, la coco, l\'arachide et le beurre de karité. Les machines commerciales gèrent les graines à volume plus élevé comme le tournesol, le soja et le palmiste. Les lignes industrielles sont conçues pour le traitement continu de grandes cultures oléagineuses dont le coton, le colza et les huiles tropicales à volume élevé.' : currentLocale === 'ar' ? 'المكائن الصغيرة تعمل جيداً مع السمسم وجوز الهند والفول السوداني وزبدة الشيه. المكائن التجارية تتعامل مع البذور عالية الحجم مثل عباد الشمس والصويا ونواة النخيل. الخطوط الصناعية مصممة للمعالجة المستمرة للمحاصيل الزيتية الكبيرة بما في ذلك القطن والكركديه والزيوت الاستوائية عالية الحجم.' : 'Mesin kecil bekerja baik dengan wijen, kelapa, kacang tanah, dan mentega shea. Mesin komersial menangani biji volume lebih tinggi seperti bunga matahari, kedelai, dan inti sawit. Lini industri dirancang untuk pemrosesan berkelanjutan tanaman minyak besar termasuk kapas, rapeseed, dan minyak tropis volume tinggi.',
+  },
+];
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={pageTitle}
+  description={pageDesc}
+  keywords={currentLocale === 'fr' ? ['presse à huile par échelle', 'petite presse à huile', 'presse à huile commerciale', 'équipement presse industrielle', 'capacité presse hydraulique'] : currentLocale === 'ar' ? ['مكينة ضغط زيت حسب الحجم', 'مكينة ضغط صغيرة', 'مكينة ضغط تجارية', 'معدات ضغط صناعية', 'سعة مكينة الضغط الهيدروليكي'] : ['mesin press minyak berdasarkan skala', 'mesin press minyak kecil', 'mesin press komersial', 'peralatan press industri', 'kapasitas mesin press hidrolik']}
+  jsonLd={breadcrumbLd}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/solutions')} class="hover:text-amber-500 transition-colors">{t.nav.solutions}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{currentLocale === 'fr' ? 'Par Échelle de Production' : currentLocale === 'ar' ? 'حسب حجم الإنتاج' : 'Berdasarkan Skala Produksi'}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Page Header -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'fr' ? 'Par Échelle de Production' : currentLocale === 'ar' ? 'حسب حجم الإنتاج' : 'Berdasarkan Skala Produksi'}</h1>
+      <p class="text-steel-300 text-lg max-w-2xl">
+        {currentLocale === 'fr' ? 'Que vous démarriez une petite opération à domicile ou que vous passiez à la production industrielle, nous avons la bonne presse à huile hydraulique pour chaque taille d\'entreprise.' : currentLocale === 'ar' ? 'سواء كنت تبدأ عملية صغيرة منزلية أو تنتقل إلى الإنتاج الصناعي، لدينا مكينة الضغط الهيدروليكي المناسبة لكل حجم مشروع.' : 'Baik Anda memulai operasi kecil di rumah atau meningkatkan ke produksi industri, kami memiliki mesin press minyak hidrolik yang tepat untuk setiap ukuran bisnis.'}
+      </p>
+    </div>
+  </section>
+
+  <!-- Scale Cards -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {scaleSolutions.map((scale, index) => (
+          <a
+            href={scale.link}
+            class="group bg-gradient-to-br from-steel-50 to-white rounded-2xl p-8 border border-steel-100 hover:border-amber-300 hover:shadow-xl transition-all"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
+            <div class="text-6xl mb-6">{scale.icon}</div>
+            <h3 class="font-display text-2xl text-charcoal-900 mb-2">{scale.title}</h3>
+            <div class="inline-flex items-center gap-1 text-amber-500 font-medium text-sm mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {scale.subtitle}
+            </div>
+            <p class="text-steel-600 mb-6">{scale.description}</p>
+
+            <div class="space-y-3 mb-6">
+              {scale.features.map((feature) => (
+                <div class="flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-steel-600">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div class="bg-amber-50 rounded-xl p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">{currentLocale === 'fr' ? 'Capacité' : currentLocale === 'ar' ? 'السعة' : 'Kapasitas'}</div>
+                  <div class="font-display text-lg text-amber-600">{scale.typicalCapacity}</div>
+                </div>
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">{currentLocale === 'fr' ? 'Investissement' : currentLocale === 'ar' ? 'الاستثمار' : 'Investasi'}</div>
+                  <div class="font-display text-lg text-amber-600">{scale.investmentRange}</div>
+                </div>
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">{currentLocale === 'fr' ? 'Période ROI' : currentLocale === 'ar' ? 'فترة العائد' : 'Periode ROI'}</div>
+                  <div class="font-display text-lg text-amber-600">{scale.roiPeriod}</div>
+                </div>
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">{currentLocale === 'fr' ? 'Modèles' : currentLocale === 'ar' ? 'النماذج' : 'Model'}</div>
+                  <div class="font-display text-sm text-amber-600">{scale.recommendedModels.join(', ')}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center text-amber-600 font-semibold group-hover:gap-2 transition-all">
+              <span>{currentLocale === 'fr' ? 'Voir les Solutions' : currentLocale === 'ar' ? 'عرض الحلول' : 'Lihat Solusi'}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6">{currentLocale === 'fr' ? 'Comment Choisir la Bonne Échelle' : currentLocale === 'ar' ? 'كيف تختار الحجم المناسب' : 'Cara Memilih Skala yang Tepat'}</h2>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">1</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Estimez Votre Capacité Quotidienne' : currentLocale === 'ar' ? 'قدر سعتك اليومية' : 'Estimasi Kapasitas Harian Anda'}</h4>
+                <p class="text-steel-600">{currentLocale === 'fr' ? 'Calculez combien d\'huile vous prévoyez de produire par jour. Commencez par la taille de votre marché cible et remontez.' : currentLocale === 'ar' ? 'احسب كم زيت تتوقع إنتاجه يومياً. ابدأ بحجم سوقك المستهدف واعمل للخلف.' : 'Hitung berapa banyak minyak yang Anda harapkan untuk diproduksi per hari. Mulai dari ukuran pasar target Anda dan bekerja mundur.'}</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">2</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Considérez Votre Budget' : currentLocale === 'ar' ? 'اعتبر ميزانيتك' : 'Pertimbangkan Anggaran Anda'}</h4>
+                <p class="text-steel-600">{currentLocale === 'fr' ? 'Les machines plus grandes nécessitent un investissement initial plus élevé mais offrent une meilleure efficacité et un ROI plus rapide à l\'échelle.' : currentLocale === 'ar' ? 'المكائن الأكبر تحتاج استثماراً أولياً أعلى لكن توفر كفاءة أفضل وعائد أسرع على النطاق.' : 'Mesin yang lebih besar membutuhkan investasi awal lebih tinggi tetapi menawarkan efisiensi lebih baik dan ROI lebih cepat dalam skala besar.'}</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">3</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Planifiez la Croissance' : currentLocale === 'ar' ? 'خطط للنمو' : 'Rencanakan Pertumbuhan'}</h4>
+                <p class="text-steel-600">{currentLocale === 'fr' ? 'Choisissez une machine qui peut évoluer avec votre entreprise. Nos conceptions modulaires permettent des mises à niveau faciles ultérieurement.' : currentLocale === 'ar' ? 'اختر مكينة يمكنها النمو مع مشروعك. تصاميمنا المعيارية تسمح بالترقية السهلة لاحقاً.' : 'Pilih mesin yang dapat tumbuh dengan bisnis Anda. Desain modular kami memungkinkan upgrade mudah nanti.'}</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">4</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Vérifiez l\'Alimentation et l\'Espace' : currentLocale === 'ar' ? 'تحقق من الطاقة والمساحة' : 'Periksa Daya dan Ruang'}</h4>
+                <p class="text-steel-600">{currentLocale === 'fr' ? 'Assurez-vous d\'avoir une capacité électrique et un espace au sol suffisants pour la machine choisie.' : currentLocale === 'ar' ? 'تأكد من أن لديك سعة كهربائية ومساحة أرضية كافيتين للمكينة المختارة.' : 'Pastikan Anda memiliki kapasitas listrik dan ruang lantai yang cukup untuk mesin yang dipilih.'}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-6">{currentLocale === 'fr' ? 'Tableau de Comparaison Rapide' : currentLocale === 'ar' ? 'جدول مقارنة سريعة' : 'Tabel Perbandingan Cepat'}</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-steel-200">
+                  <th class="text-left py-3 px-4 font-medium text-steel-500">{currentLocale === 'fr' ? 'Paramètre' : currentLocale === 'ar' ? 'المعامل' : 'Parameter'}</th>
+                  <th class="text-center py-3 px-4 font-medium text-steel-500">{currentLocale === 'fr' ? 'Petite Entreprise' : currentLocale === 'ar' ? 'شركة صغيرة' : 'Usaha Kecil'}</th>
+                  <th class="text-center py-3 px-4 font-medium text-steel-500">{currentLocale === 'fr' ? 'Commerciale' : currentLocale === 'ar' ? 'تجاري' : 'Komersial'}</th>
+                  <th class="text-center py-3 px-4 font-medium text-steel-500">{currentLocale === 'fr' ? 'Industrielle' : currentLocale === 'ar' ? 'صناعي' : 'Industri'}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-steel-100">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Production Quotidienne' : currentLocale === 'ar' ? 'الإنتاج اليومي' : 'Output Harian'}</td>
+                  <td class="text-center text-steel-600">50-500 kg</td>
+                  <td class="text-center text-steel-600">500kg-5 tonnes</td>
+                  <td class="text-center text-steel-600">5+ tonnes</td>
+                </tr>
+                <tr class="border-b border-steel-100 bg-steel-50">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Puissance' : currentLocale === 'ar' ? 'القدرة' : 'Daya'}</td>
+                  <td class="text-center text-steel-600">2.2-5.5 kW</td>
+                  <td class="text-center text-steel-600">7.5-15 kW</td>
+                  <td class="text-center text-steel-600">15-45 kW</td>
+                </tr>
+                <tr class="border-b border-steel-100">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Surface au Sol' : currentLocale === 'ar' ? 'مساحة الأرض' : 'Luas Lantai'}</td>
+                  <td class="text-center text-steel-600">2-5 m²</td>
+                  <td class="text-center text-steel-600">10-20 m²</td>
+                  <td class="text-center text-steel-600">50+ m²</td>
+                </tr>
+                <tr class="border-b border-steel-100 bg-steel-50">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Main-d\'Œuvre' : currentLocale === 'ar' ? 'العمالة' : 'Tenaga Kerja'}</td>
+                  <td class="text-center text-steel-600">{currentLocale === 'fr' ? '1 personne' : currentLocale === 'ar' ? '1 شخص' : '1 orang'}</td>
+                  <td class="text-center text-steel-600">{currentLocale === 'fr' ? '2-3 personnes' : currentLocale === 'ar' ? '2-3 أشخاص' : '2-3 orang'}</td>
+                  <td class="text-center text-steel-600">{currentLocale === 'fr' ? '5+ personnes' : currentLocale === 'ar' ? '5+ أشخاص' : '5+ orang'}</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Meilleur Pour' : currentLocale === 'ar' ? 'الأفضل لـ' : 'Terbaik Untuk'}</td>
+                  <td class="text-center text-amber-600">{currentLocale === 'fr' ? 'Maison / Petite Boutique' : currentLocale === 'ar' ? 'منزل / متجر صغير' : 'Rumahan / Toko Kecil'}</td>
+                  <td class="text-center text-amber-600">{currentLocale === 'fr' ? 'Moulin à Huile / Coopérative' : currentLocale === 'ar' ? 'معصرة زيت / تعاونية' : 'Penggilingan / Koperasi'}</td>
+                  <td class="text-center text-amber-600">{currentLocale === 'fr' ? 'Usine / Exportation' : currentLocale === 'ar' ? 'مصنع / تصدير' : 'Pabrik / Ekspor'}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-8 text-center">{currentLocale === 'fr' ? 'Foire aux questions' : currentLocale === 'ar' ? 'أسئلة شائعة' : 'Pertanyaan yang Sering Diajukan'}</h2>
+      <div class="space-y-4">
+        {faqItems.map((item) => (
+          <details class="group bg-steel-50 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600" set:html={item.answer} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{currentLocale === 'fr' ? 'Toujours Incertain de l\'Échelle ?' : currentLocale === 'ar' ? 'لا تزال غير متأكد من الحجم؟' : 'Masih Belum Yakin dengan Skala?'}</h2>
+      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">{currentLocale === 'fr' ? 'Dites-nous votre matière première, capacité quotidienne et budget — nos ingénieurs vous recommanderont la meilleure installation de presse à huile pour votre entreprise.' : currentLocale === 'ar' ? 'أخبرنا بمادتك الخام وسعتك اليومية وميزانيتك — مهندسونا سيوصون بأفضل إعداد مكينة ضغط لمشروعك.' : 'Beritahu kami bahan baku, kapasitas harian, dan anggaran Anda — insinyur kami akan merekomendasikan pengaturan mesin press minyak terbaik untuk bisnis Anda.'}</p>
+      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        {currentLocale === 'fr' ? 'Consultation Gratuite' : currentLocale === 'ar' ? 'استشارة مجانية' : 'Konsultasi Gratis'}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

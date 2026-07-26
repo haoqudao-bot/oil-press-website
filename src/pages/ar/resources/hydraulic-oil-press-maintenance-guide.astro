@@ -1,0 +1,300 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'hydraulic-oil-press-maintenance-guide');
+const t = getTranslations('ar');
+
+const title = resource?.data.title.ar || resource?.data.title.en || 'دليل صيانة المكبس الزيتي الهيدروليكي';
+const description = resource?.data.description.ar || resource?.data.description.en || 'دليل شامل لصيانة و صيانة المكبس الزيتي الهيدروليكي';
+const seoKeywords = resource?.data.seoKeywords || ['مصيانة ضاغط زيت هيدروليكي', 'صيانة آلة ضغط زيت'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/maintenance-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Senior Oil Press Engineer',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/ar' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/hydraulic-oil-press-maintenance-guide' },
+  ],
+};
+
+const maintenanceSchedule = [
+  { frequency: 'يومي', tasks: ['تنظيف الجهاز والمنطقة المحيطة', 'التحقق من مستوى الزيت في نظام الهيدروليكي', 'فحص غرفة الضغط بحثاً عن البقايا', 'التحقق من أن أجهزة الأمان تعمل بشكل صحيح'] },
+  { frequency: 'أسبوعي', tasks: ['تنظيف مرشح خزان الزيت الهيدروليكي', 'التحقق من توصيلات الهيدروليكي بحثاً عن تسربات', 'فحص الاتصالات الكهربائية', 'تزييت الأجزاء المتحركة'] },
+  { frequency: 'شهري', tasks: ['التحقق من جودة الزيت الهيدروليكي', 'فحص الختمات والملحقات', 'اختبار مقاييس الضغط', 'معايرة مستشعرات الحرارة'] },
+  { frequency: 'ربع سنوي', tasks: ['استبدال الزيت الهيدروليكي (كل 2000 ساعة)', 'فحص الاسطوانة الهيدروليكية', 'التحقق من الإطار والمكونات الهيكلية', 'اختبار وظيفة الإيقاف الطارئ'] },
+];
+
+const hydraulicSystem = [
+  { title: 'إدارة الزيت الهيدروليكي', items: ['استخدام زيت هيدروليكي ISO VG 46', 'الحفاظ على درجة حرارة مناسبة (30-50 درجة مئوية)', 'استبدال الزيت كل 2000 ساعة عمل', 'السعة : <a href="/ar/products/standard-hydraulic-oil-press">HN325</a>/<a href="/ar/products/heavy-duty-hydraulic-oil-press">HN355</a> : 30-40 لتر، <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press">HN500</a> : 50-60 لتر'] },
+  { title: 'صيانة الاسطوانة الهيدروليكية', items: ['الاحتفاظ بقضيب الاسطوانة نظيفاً', 'الحماية من الغبار والخردل', 'فحص الختمات بحثاً عن التآكل', 'الاستبدال في حال التسرب'] },
+  { title: 'صيانة مرشح الهيدروليكي', items: ['التنظيف كل 50-100 ساعة عمل', 'الاستبدال في حال الإصابة أو التسرب الزائد', 'استخدام مرشحات استبدال Haonuo الأصلية'] },
+];
+
+const electricalSystem = [
+  { title: 'فحص التيار', items: ['التحقق من الجهد الداخلي', 'التحقق من تقلبات الجهد', 'استخدام حاجزات الصدمة'] },
+  { title: 'صيانة المحرك', items: ['التحقق من غلاف المحرك بحثاً عن الأضرار', 'فحص المروحة ونظام التبريد', 'التنظيف المنتظم لأجنحة التبريد'] },
+  { title: 'صيانة لوحة التحكم', items: ['إزالة الغبار من اللوحة', 'التحقق من وظيفة الأزرار', 'شد الاتصالات الطرفية'] },
+];
+
+const troubleshooting = [
+  { problem: 'ضغط منخفض', causes: ['مستوى زيت هيدروليكي منخفض', 'زيت ملوث', 'مضخة متهالكة', 'ختمات تسرب'], solutions: ['إضافة زيت', 'مرشح أو استبدال الزيت', 'فحص المضخة', 'استبدال الختمات'] },
+  { problem: 'دورة ضغط بطيئة', causes: ['درجة حرارة زيت هيدروليكي منخفضة', 'مرشح ملوث', 'مضخة متهالكة', 'جهد منخفض'], solutions: ['سخن النظام', 'تنظيف المرشح', 'فحص المضخة', 'التحقق من التيار'] },
+  { problem: 'تسربات الزيت', causes: ['ختمات متهالكة', 'توصيلات فضفاضة', 'أسطوانات مكسورة'], solutions: ['استبدال الختمات', 'شد التوصيلات', 'استبدال الأسطوانات'] },
+  { problem: 'الجهاز لا يبدأ', causes: ['لا يوجد تيار', 'إيقاف طارئ مفعل', 'حارس أمان مفتوح'], solutions: ['التحقق من التيار', 'إعادة ضبط الإيقاف الطارئ', 'إغلاق حارس الأمان'] },
+];
+
+const spareParts = [
+  { name: 'عناصر مرشح الزيت الهيدروليكي', stock: 'Critical' },
+  { name: 'ختمات وملحقات', stock: 'Critical' },
+  { name: 'أسطوانات هيدروليكية', stock: 'Wear' },
+  { name: 'لوحات الضغط', stock: 'Wear' },
+  { name: 'حلقات O', stock: 'Consumables' },
+];
+
+function localePath(path: string): string {
+  return `/ar${path}`;
+}
+---
+
+<BaseLayout locale="ar" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-green-50 to-emerald-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-green-500/10 text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          دليل الصيانة
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-right">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">المقدمة</h2>
+        <p class="text-steel-700 leading-relaxed">
+          الصيانة المناسبة لضاغط الزيت هو العامل الأكثر أهمية لتحديد عمر أجهزتك الضاغطة الهيدروليكية وثبات جودة الزيت الذي تنتجه.
+        </p>
+      </section>
+
+      <section id="maintenance-schedule" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">جدول الصيانة</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {maintenanceSchedule.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <div class="flex items-center gap-3 mb-4">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${index === 0 ? 'bg-red-100 text-red-600' : index === 1 ? 'bg-orange-100 text-orange-600' : index === 2 ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+                </div>
+                <h3 class="font-semibold text-lg text-charcoal-900">{item.frequency}</h3>
+              </div>
+              <ul class="space-y-2">
+                {item.tasks.map((task, idx) => (
+                  <li key={idx} class="flex items-center gap-2 text-steel-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {task}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="hydraulic-system" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">صيانة النظام الهيدروليكي</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {hydraulicSystem.map((item, index) => (
+            <div key={index} class="bg-blue-50 p-5 rounded-xl border border-blue-200">
+              <h3 class="font-semibold text-blue-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm" set:html={task}></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="electrical-system" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">صيانة النظام الكهربائي</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {electricalSystem.map((item, index) => (
+            <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
+              <h3 class="font-semibold text-purple-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="safety-maintenance" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">صيانة الأمان</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-red-50 p-5 rounded-xl border border-red-200">
+            <h3 class="font-semibold text-red-800 mb-4">أنظمة الطوارئ</h3>
+            <ul class="space-y-2">
+              <li class="text-steel-700">• اختبار الإيقاف الطارئ شهرياً</li>
+              <li class="text-steel-700">• ضمان الاستجابة السريعة</li>
+              <li class="text-steel-700">• الاستبدال في حال العيوب</li>
+            </ul>
+          </div>
+          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
+            <h3 class="font-semibold text-orange-800 mb-4">إجراءات القفل</h3>
+            <ol class="space-y-1 list-decimal list-inside text-steel-700 text-sm">
+              <li>إيقاف التيار</li>
+              <li>قفل المفتاح</li>
+              <li>وضع علامة "لا تشغيل"</li>
+              <li>التحقق من انقطاع التيار</li>
+              <li>تنفيذ الصيانة</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="troubleshooting" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">دليل التصليح</h2>
+        <div class="space-y-6">
+          {troubleshooting.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-red-600 mb-3">{item.problem}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">الأسباب:</h4>
+                  <ul class="space-y-1">
+                    {item.causes.map((cause, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">الحلول:</h4>
+                  <ul class="space-y-1">
+                    {item.solutions.map((solution, idx) => (
+                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="spare-parts" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مخزون قطع الغيار</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">القطع الأساسية</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {spareParts.map((item, index) => (
+            <div key={index} class="bg-white p-4 rounded-xl border border-steel-100 shadow-sm flex justify-between items-center">
+              <span class="text-charcoal-900 font-medium">{item.name}</span>
+              <span class={`px-2 py-1 rounded text-xs font-bold ${item.stock === 'Critical' ? 'bg-red-100 text-red-700' : item.stock === 'Wear' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'}`}>{item.stock}</span>
+            </div>
+          ))}
+        </div>
+        <div class="mt-6 bg-steel-50 p-4 rounded-xl">
+          <h4 class="font-semibold text-charcoal-900 mb-2">مستويات المخزون الموصى بها</h4>
+          <ul class="text-steel-700 text-sm space-y-1">
+            <li>• القطع الحرجة: 1-2 في المخزن</li>
+            <li>• قطع التآكل: 2-3 في المخزن</li>
+            <li>• المستهلكات: 3-6 أشهر من الإمداد</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخاتمة</h2>
+        <p class="text-steel-700 leading-relaxed">
+          الصيانة المنتظمة لضاغط الزيت الهيدروليكي الخاص بك هي المفتاح لزيادة عمره وآدائه. للحصول على نصائح مخصصة أو لطلب قطع الغيار، اتصل بفريق الدعم الفني في Haonuo.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت؟</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لفريقنا الهندسي مساعدتك في اختيار الأفضل إعداد لاحتياجاتك الخاصة ومقياس الإنتاج وميزانيتك.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.nav.products}
+        </a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.resources.backToResources}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

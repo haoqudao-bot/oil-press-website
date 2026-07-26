@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('id');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Syarat dan Ketentuan', item: 'https://www.hydoilpress.com/id/terms-of-service' },
+  ],
+};
+---
+
+<BaseLayout title="Syarat dan Ketentuan" description="Syarat dan Ketentuan Haonuo Machinery - Syarat-syarat ini mengatur penggunaan Anda terhadap situs web dan layanan kami." locale="id">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Syarat dan Ketentuan</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">Syarat dan Ketentuan</h1>
+      <p class="text-steel-600 text-lg mb-8">Diperbarui terakhir: 20 Juli 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. Penerimaan Syarat</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Dengan mengakses atau menggunakan situs web kami, Anda setuju untuk terikat oleh Syarat dan Ketentuan ini ("Syarat"). Jika Anda tidak setuju dengan bagian mana pun dari Syarat ini, Anda tidak dapat menggunakan situs web atau layanan kami.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. Penggunaan Situs Web</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Anda dapat menggunakan situs web kami hanya untuk tujuan bisnis yang sah. Anda setuju untuk tidak:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Menggunakan situs web kami untuk tujuan ilegal atau tidak sah</li>
+            <li>Mengganggu atau menghentikan operasi situs web kami</li>
+            <li>Menyalin, memodifikasi, atau mendistribusikan konten situs web kami tanpa izin</li>
+            <li>Menggunakan alat otomatis untuk mengikis atau menjelajahi situs web kami</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. Hak Cipta</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Semua konten di situs web kami, termasuk teks, gambar, logo, dan merek dagang, adalah milik Shandong Haonuo Machinery Equipment Group Co., Ltd. atau pemberi lisensinya dan dilindungi oleh hukum hak cipta dan merek dagang. Anda tidak dapat mereproduksi, mendistribusikan, atau menggunakan konten apa pun tanpa izin tertulis kami sebelumnya.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. Informasi Produk</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Kami berusaha keras untuk memastikan bahwa informasi produk di situs web kami akurat dan terkini. Namun, kami tidak menjamin keakuratan, kelengkapan, atau keandalan informasi produk apa pun. Spesifikasi dan harga produk dapat berubah tanpa pemberitahuan.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. Penawaran dan Pesanan</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Semua penawaran yang kami berikan tunduk pada syarat dan ketentuan kami dan berlaku untuk jangka waktu tertentu. Pesanan tunduk pada penerimaan kami, dan kami berhak untuk menolak pesanan apa pun dengan alasan apa pun.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. Pembatasan Tanggung Jawab</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Dalam batas maksimum yang diizinkan oleh hukum, Shandong Haonuo Machinery Equipment Group Co., Ltd. tidak akan bertanggung jawab atas kerusakan tidak langsung, insidental, khusus, atau akibat yang timbul dari penggunaan Anda terhadap situs web atau layanan kami.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">7. Hukum yang Berlaku</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Syarat ini akan diatur dan ditafsirkan sesuai dengan hukum Republik Rakyat Tionghoa, tanpa mempertimbangkan prinsip konflik hukumnya.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">8. Penyelesaian Sengketa</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Sengketa apa pun yang timbul dari Syarat ini akan diselesaikan melalui negosiasi damai. Jika negosiasi gagal, sengketa akan diajukan ke pengadilan yang memiliki yurisdiksi di Qingzhou, Shandong, China.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">9. Perubahan Syarat Ini</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Kami dapat memperbarui Syarat ini dari waktu ke waktu. Kami akan memberitahu Anda tentang perubahan signifikan dengan mempublikasikan syarat yang diperbarui di situs web kami. Penggunaan Anda yang terus menerus terhadap situs web kami setelah perubahan apa pun merupakan penerimaan Anda terhadap syarat yang diperbarui.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">10. Hubungi Kami</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Jika Anda memiliki pertanyaan tentang Syarat ini, silakan hubungi kami:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>Email: contact@hydoilpress.com</li>
+            <li>Telepon: +86-18957149128</li>
+            <li>Alamat: Qingzhou, Weifang, Shandong, China</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

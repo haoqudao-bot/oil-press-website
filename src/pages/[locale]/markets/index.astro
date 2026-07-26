@@ -1,0 +1,410 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  if (currentLocale === 'en') return path;
+  return `/${currentLocale}${path}`;
+}
+
+const marketNames: Record<string, Record<string, string>> = {
+  Nigeria: { en: 'Nigeria', fr: 'Nigéria', ar: 'نيجيريا', id: 'Nigeria' },
+  India: { en: 'India', fr: 'Inde', ar: 'الهند', id: 'India' },
+  Indonesia: { en: 'Indonesia', fr: 'Indonésie', ar: 'إندونيسيا', id: 'Indonesia' },
+  Pakistan: { en: 'Pakistan', fr: 'Pakistan', ar: 'پاكستان', id: 'Pakistan' },
+  Philippines: { en: 'Philippines', fr: 'Philippines', ar: 'الفلبين', id: 'Filipina' },
+  Egypt: { en: 'Egypt', fr: 'Égypte', ar: 'مصر', id: 'Mesir' },
+  'South Africa': { en: 'South Africa', fr: 'Afrique du Sud', ar: 'جنوب أفريقيا', id: 'Afrika Selatan' },
+  Kenya: { en: 'Kenya', fr: 'Kenya', ar: 'كينيا', id: 'Kenya' },
+  UK: { en: 'UK', fr: 'Royaume-Uni', ar: 'المملكة المتحدة', id: 'Inggris' },
+  USA: { en: 'USA', fr: 'États-Unis', ar: 'الولايات المتحدة', id: 'Amerika Serikat' },
+  'Middle East': { en: 'Middle East', fr: 'Moyen-Orient', ar: 'الشرق الأوسط', id: 'Timur Tengah' },
+};
+
+const seedNames: Record<string, Record<string, string>> = {
+  Groundnut: { en: 'Groundnut', fr: 'Arachide', ar: 'فول سوداني', id: 'Kacang Tanah' },
+  'Palm Kernel': { en: 'Palm Kernel', fr: 'Noix de Palme', ar: 'نواة النخيل', id: 'Inti Sawit' },
+  Sesame: { en: 'Sesame', fr: 'Sésame', ar: 'سمسم', id: 'Wijen' },
+  Cottonseed: { en: 'Cottonseed', fr: 'Graines de Coton', ar: 'بذور القطن', id: 'Biji Kapas' },
+  Mustard: { en: 'Mustard', fr: 'Moutarde', ar: 'خردل', id: 'Sawi' },
+  Coconut: { en: 'Coconut', fr: 'Coco', ar: 'جوز هند', id: 'Kelapa' },
+  'Coconut (VCO)': { en: 'Coconut (VCO)', fr: 'Coco (VCO)', ar: 'جوز هند (VCO)', id: 'Kelapa (VCO)' },
+  Peanut: { en: 'Peanut', fr: 'Arachide', ar: 'فول سوداني', id: 'Kacang Tanah' },
+  Rapeseed: { en: 'Rapeseed', fr: 'Colza', ar: 'قلعة', id: 'Biji Sawi' },
+  Sunflower: { en: 'Sunflower', fr: 'Tournesol', ar: 'عباد الشمس', id: 'Bunga Matahari' },
+  Moringa: { en: 'Moringa', fr: 'Moringa', ar: 'مورينغا', id: 'Moringa' },
+  Olive: { en: 'Olive', fr: 'Olive', ar: 'زيتون', id: 'Zaitun' },
+  Soybean: { en: 'Soybean', fr: 'Soja', ar: 'فول صويا', id: 'Kedelai' },
+  Canola: { en: 'Canola', fr: 'Colza', ar: 'كانولا', id: 'Canola' },
+  Hemp: { en: 'Hemp', fr: 'Chanvre', ar: 'قنب', id: 'Ganja' },
+  Flaxseed: { en: 'Flaxseed', fr: 'Graines de Lin', ar: 'بذور الكتان', id: 'Biji Rami' },
+  Almond: { en: 'Almond', fr: 'Amande', ar: 'لوز', id: 'Almond' },
+  Walnut: { en: 'Walnut', fr: 'Noix', ar: 'جوز', id: 'Kacang Walnut' },
+};
+
+const featuredMarkets = [
+  {
+    name: 'Nigeria',
+    flag: '🇳🇬',
+    description: { en: 'Hydraulic oil press machines for groundnut, palm kernel, sesame, and cottonseed oil production.', fr: 'Presses hydrauliques pour la production d\'huile d\'arachide, de palmiste, de sésame et de coton.', ar: 'آلات الضغط الهيدروليكي لزيت الفول السوداني ونواة النخيل والسمسم وبذور القطن.', id: 'Mesin press minyak hidrolik untuk produksi minyak kacang tanah, inti sawit, wijen, dan biji kapas.' },
+    link: '/markets/nigeria',
+    popularSeeds: ['Groundnut', 'Palm Kernel', 'Sesame', 'Cottonseed'],
+    stats: { machines: '500+', clients: '200+', countries: '4' },
+    marketHighlight: { en: 'Africa\'s largest edible oil market', fr: 'Le plus grand marché d\'huile alimentaire d\'Afrique', ar: 'أكبر سوق لزيت الطعام في أفريقيا', id: 'Pasar minyak goreng terbesar di Afrika' },
+    caseStudy: { en: 'Lagos-based oil mill increased production 300%', fr: 'Huilerie basée à Lagos a augmenté sa production de 300%', ar: 'مصنع الزيت في لاغوس زاد الإنتاج بنسبة 300%', id: 'Pabrik minyak di Lagos meningkatkan produksi 300%' },
+  },
+  {
+    name: 'India',
+    flag: '🇮🇳',
+    description: { en: 'Mustard (kachi ghani), sesame, peanut, and coconut oil pressing solutions for the Indian market.', fr: 'Solutions de pressage pour l\'huile de moutarde (kachi ghani), sésame, arachide et coco sur le marché indien.', ar: 'حلول ضغط لزيت الخردل (كاجي غاني) والسمسم والفول السوداني وجوز الهند للسوق الهندي.', id: 'Solusi press minyak sawi (kachi ghani), wijen, kacang tanah, dan kelapa untuk pasar India.' },
+    link: '/markets/india',
+    popularSeeds: ['Mustard', 'Sesame', 'Peanut', 'Coconut'],
+    stats: { machines: '400+', clients: '180+', countries: '3' },
+    marketHighlight: { en: 'World\'s largest edible oil consumer', fr: 'Le plus grand consommateur d\'huile alimentaire au monde', ar: 'أكبر مستهلك لزيت الطعام في العالم', id: 'Konsumen minyak goreng terbesar di dunia' },
+    caseStudy: { en: 'Punjab farmer upgraded from manual to hydraulic press', fr: 'Fermier du Pendjab est passé de la presse manuelle à la presse hydraulique', ar: 'مزارع في بنجاب ارتقى من الضغط اليدوي إلى الضغط الهيدروليكي', id: 'Petani Punjab meningkatkan dari press manual ke press hidrolik' },
+  },
+  {
+    name: 'Indonesia',
+    flag: '🇮🇩',
+    description: { en: 'Coconut and palm oil pressing solutions for Southeast Asian markets.', fr: 'Solutions de pressage d\'huile de coco et de palme pour les marchés d\'Asie du Sud-Est.', ar: 'حلول ضغط لزيت جوز الهند وزيت النخيل لأسواق آسيا جنوبية شرقية.', id: 'Solusi press minyak kelapa dan sawit untuk pasar Asia Tenggara.' },
+    link: '/markets/indonesia',
+    popularSeeds: ['Coconut', 'Palm Kernel', 'Peanut', 'Rapeseed'],
+    stats: { machines: '300+', clients: '150+', countries: '3' },
+    marketHighlight: { en: 'Leading palm oil producer globally', fr: 'Premier producteur mondial d\'huile de palme', ar: 'المنتج الرائد لزيت النخيل في العالم', id: 'Produsen minyak sawit terkemuka di dunia' },
+    caseStudy: { en: 'Bali VCO producer achieved organic certification', fr: 'Producteur VCO de Bali a obtenu la certification bio', ar: 'منتج VCO في بالي حصل على شهادة عضوية', id: 'Produsen VCO Bali mencapai sertifikasi organik' },
+  },
+  {
+    name: 'Pakistan',
+    flag: '🇵🇰',
+    description: { en: 'Sunflower, mustard, and sesame oil pressing solutions for Pakistani producers.', fr: 'Solutions de pressage d\'huile de tournesol, de moutarde et de sésame pour les producteurs pakistanais.', ar: 'حلول ضغط لزيت عباد الشمس والخردل والسمسم للمُنتجين الباكستانيين.', id: 'Solusi press minyak bunga matahari, sawi, dan wijen untuk produsen Pakistan.' },
+    link: '/markets/pakistan',
+    popularSeeds: ['Sunflower', 'Mustard', 'Sesame', 'Cottonseed'],
+    stats: { machines: '250+', clients: '120+', countries: '2' },
+    marketHighlight: { en: 'Growing oilseed processing sector', fr: 'Secteur de transformation des graines oléagineuses en croissance', ar: 'قطاع معالجة البذور الزيتية النامي', id: 'Sektor pengolahan biji minyak yang berkembang' },
+    caseStudy: { en: 'Karachi oil mill expanded to export markets', fr: 'Huilerie de Karachi s\'est étendue aux marchés d\'exportation', ar: 'مصنع الزيت في كراتشي توسع إلى أسواق التصدير', id: 'Pabrik minyak Karachi memperluas ke pasar ekspor' },
+  },
+  {
+    name: 'Philippines',
+    flag: '🇵🇭',
+    description: { en: 'Virgin coconut oil (VCO) and peanut oil pressing solutions for Filipino producers.', fr: 'Solutions de pressage d\'huile de coco vierge (VCO) et d\'huile d\'arachide pour les producteurs philippins.', ar: 'حلول ضغط لزيت جوز الهند البكر (VCO) وزيت الفول السوداني للمُنتجين الفلبينيين.', id: 'Solusi press minyak kelapa virgin (VCO) dan minyak kacang tanah untuk produsen Filipina.' },
+    link: '/markets/philippines',
+    popularSeeds: ['Coconut (VCO)', 'Peanut', 'Sunflower', 'Moringa'],
+    stats: { machines: '200+', clients: '90+', countries: '2' },
+    marketHighlight: { en: 'Top coconut oil exporter', fr: 'Premier exportateur d\'huile de coco', ar: 'أكبر مصدر لزيت جوز الهند', id: 'Eksportir minyak kelapa teratas' },
+    caseStudy: { en: 'Cebu cooperative doubled member income', fr: 'Coopérative de Cebu a doublé le revenu des membres', ar: 'التعاونية في سيبو مضاعفت دخل الأعضاء', id: 'Koperasi Cebu menggandakan pendapatan anggota' },
+  },
+  {
+    name: 'Egypt',
+    flag: '🇪🇬',
+    description: { en: 'Sesame, olive, and peanut oil pressing solutions for the Egyptian market.', fr: 'Solutions de pressage d\'huile de sésame, d\'olive et d\'arachide pour le marché égyptien.', ar: 'حلول ضغط لزيت السمسم وزيت الزيتون وزيت الفول السوداني للسوق المصري.', id: 'Solusi press minyak wijen, zaitun, dan kacang tanah untuk pasar Mesir.' },
+    link: '/markets/egypt',
+    popularSeeds: ['Sesame', 'Olive', 'Peanut', 'Sunflower'],
+    stats: { machines: '150+', clients: '70+', countries: '2' },
+    marketHighlight: { en: 'Gateway to North Africa', fr: 'Porte d\'entrée vers l\'Afrique du Nord', ar: 'بوابة شمال أفريقيا', id: 'Gerbang ke Afrika Utara' },
+    caseStudy: { en: 'Alexandria sesame exporter improved quality', fr: 'Exportateur de sésame d\'Alexandrie a amélioré la qualité', ar: 'مصدر السمسم من الإسكندرية تحسّن الجودة', id: 'Eksportir wijen Alexandria meningkatkan kualitas' },
+  },
+  {
+    name: 'South Africa',
+    flag: '🇿🇦',
+    description: { en: 'Sunflower, peanut, and canola oil pressing for South African producers.', fr: 'Pressage d\'huile de tournesol, d\'arachide et de colza pour les producteurs sud-africains.', ar: 'ضغط لزيت عباد الشمس والفول السوداني والكانولا للمُنتجين جنوب أفريقيا.', id: 'Press minyak bunga matahari, kacang tanah, dan canola untuk produsen Afrika Selatan.' },
+    link: '/markets/south-africa',
+    popularSeeds: ['Sunflower', 'Peanut', 'Soybean', 'Canola'],
+    stats: { machines: '120+', clients: '55+', countries: '2' },
+    marketHighlight: { en: 'Southern Africa\'s economic hub', fr: 'Pôle économique de l\'Afrique australe', ar: 'المركز الاقتصادي لأفريقيا الجنوبية', id: 'Pusat ekonomi Afrika Selatan' },
+    caseStudy: { en: 'Gauteng processor adopted cold press technology', fr: 'Le processeur de Gauteng a adopté la technologie de pressage à froid', ar: 'معالج غوتنغ اعتمد تقنية الضغط البارد', id: 'Pengolah Gauteng mengadopsi teknologi cold press' },
+  },
+  {
+    name: 'Kenya',
+    flag: '🇰🇪',
+    description: { en: 'Sunflower, peanut, and sesame oil pressing for Kenyan producers.', fr: 'Pressage d\'huile de tournesol, d\'arachide et de sésame pour les producteurs kenyans.', ar: 'ضغط لزيت عباد الشمس والفول السوداني والسمسم للمُنتجين الكينيين.', id: 'Press minyak bunga matahari, kacang tanah, dan wijen untuk produsen Kenya.' },
+    link: '/markets/kenya',
+    popularSeeds: ['Sunflower', 'Peanut', 'Sesame', 'Cottonseed'],
+    stats: { machines: '80+', clients: '35+', countries: '1' },
+    marketHighlight: { en: 'Fastest growing oilseed market', fr: 'Marché des graines oléagineuses à la croissance la plus rapide', ar: 'سوق البذور الزيتية الأكثر نمواً', id: 'Pasar biji minyak yang tumbuh tercepat' },
+    caseStudy: { en: 'Nairobi startup scaled to national distribution', fr: 'La startup de Nairobi s\'est développée jusqu\'à la distribution nationale', ar: 'شركة نairobi ناشئة توسعت إلى التوزيع الوطني', id: 'Startup Nairobi berkembang ke distribusi nasional' },
+  },
+  {
+    name: 'UK',
+    flag: '🇬🇧',
+    description: { en: 'Rapeseed, hemp, and flaxseed cold press solutions for UK producers.', fr: 'Solutions de pressage à froid du colza, du chanvre et des graines de lin pour les producteurs britanniques.', ar: 'حلول ضغط بارد لقلعة القنب وبذور الكتان للمُنتجين البريطانيين.', id: 'Solusi cold press biji sawi, ganja, dan biji rami untuk produsen Inggris.' },
+    link: '/markets/uk',
+    popularSeeds: ['Rapeseed', 'Sunflower', 'Hemp', 'Flaxseed'],
+    stats: { machines: '40+', clients: '20+', countries: '1' },
+    marketHighlight: { en: 'Premium cold-pressed oil demand', fr: 'Demande d\'huile pressée à froid premium', ar: 'طلب زيت الضغط البارد الممتاز', id: 'Permintaan minyak cold-press premium' },
+    caseStudy: { en: 'Scottish rapeseed producer won awards', fr: 'Producteur écossais de colza a remporté des prix', ar: 'منتج القلعة السكوتلندي فاز بالجوائز', id: 'Produsen biji sawi Skotlandia memenangkan penghargaan' },
+  },
+  {
+    name: 'USA',
+    flag: '🇺🇸',
+    description: { en: 'Sunflower, peanut, hemp, and almond oil pressing for US market.', fr: 'Pressage d\'huile de tournesol, d\'arachide, de chanvre et d\'amande pour le marché américain.', ar: 'ضغط لزيت عباد الشمس والفول السوداني والقنب واللوز للسوق الأمريكي.', id: 'Press minyak bunga matahari, kacang tanah, ganja, dan almond untuk pasar AS.' },
+    link: '/markets/usa',
+    popularSeeds: ['Sunflower', 'Peanut', 'Hemp', 'Almond'],
+    stats: { machines: '50+', clients: '25+', countries: '1' },
+    marketHighlight: { en: 'Organic and specialty oils boom', fr: 'Essor des huiles organiques et spécialisées', ar: 'ازدهار الزيوت العضوية والمتخصصة', id: 'Boom minyak organik dan khusus' },
+    caseStudy: { en: 'California olive oil producer expanded', fr: 'Producteur californien d\'huile d\'olive s\'est étendu', ar: 'منتج زيت الزيتون في كاليفورنيا توسع', id: 'Produsen minyak zaitun California berkembang' },
+  },
+  {
+    name: 'Middle East',
+    flag: '🇸🇦',
+    description: { en: 'Premium cold press machines for sesame, walnut, and olive oil production.', fr: 'Presses à froid premium pour la production d\'huile de sésame, de noix et d\'olive.', ar: 'آلات الضغط البارد الممتازة لإنتاج زيت السمسم والجوز وزيت الزيتون.', id: 'Mesin cold press premium untuk produksi minyak wijen, walnut, dan zaitun.' },
+    link: '/markets/middle-east',
+    popularSeeds: ['Sesame', 'Walnut', 'Olive', 'Almond'],
+    stats: { machines: '200+', clients: '100+', countries: '6' },
+    marketHighlight: { en: 'Traditional oil markets expanding', fr: 'Marchés traditionnels des huiles en expansion', ar: 'أسواق الزيت التقليدية المتوسعة', id: 'Pasar minyak tradisional yang berkembang' },
+    caseStudy: { en: 'Dubai distributor built regional network', fr: 'Distributeur de Dubaï a construit un réseau régional', ar: 'موزع دبي بنى شبكة إقليمية', id: 'Distributor Dubai membangun jaringan regional' },
+  }
+];
+
+const regionalStats = [
+  { region: { en: 'Africa', fr: 'Afrique', ar: 'أفريقيا', id: 'Afrika' }, countries: 19, machines: 1200, clients: 550, description: { en: 'Our largest market with Nigeria, Egypt, and South Africa leading the way.', fr: 'Notre plus grand marché avec le Nigéria, l\'Égypte et l\'Afrique du Sud en tête.', ar: 'أسواقنا الأكبر مع نيجيريا ومصر وجنوب أفريقيا في الصدارة.', id: 'Pasar terbesar kami dengan Nigeria, Mesir, dan Afrika Selatan memimpin.' } },
+  { region: { en: 'Asia', fr: 'Asie', ar: 'آسيا', id: 'Asia' }, countries: 16, machines: 1150, clients: 500, description: { en: 'Strong presence in India, Indonesia, and Pakistan with growing demand.', fr: 'Présence forte en Inde, en Indonésie et au Pakistan avec une demande croissante.', ar: 'حضور قوي في الهند وإندونيسيا وباكستان مع طلب متزايد.', id: 'Kehadiran kuat di India, Indonesia, dan Pakistan dengan permintaan yang tumbuh.' } },
+  { region: { en: 'Middle East', fr: 'Moyen-Orient', ar: 'الشرق الأوسط', id: 'Timur Tengah' }, countries: 6, machines: 200, clients: 100, description: { en: 'Premium oil markets with focus on sesame and olive oil production.', fr: 'Marchés d\'huile premium avec un focus sur la production de sésame et d\'huile d\'olive.', ar: 'أسواق الزيت الممتازة مع تركيز على إنتاج السمسم وزيت الزيتون.', id: 'Pasar minyak premium dengan fokus pada produksi wijen dan minyak zaitun.' } },
+  { region: { en: 'Europe', fr: 'Europe', ar: 'أوروبا', id: 'Eropa' }, countries: 12, machines: 150, clients: 70, description: { en: 'Cold-press specialty oils for UK, Germany, and France.', fr: 'Huiles spécialisées pressées à froid pour le Royaume-Uni, l\'Allemagne et la France.', ar: 'زيوت متخصصة مضغوطة باردة للمملكة المتحدة وألمانيا وفرنسا.', id: 'Minyak khusus cold-press untuk Inggris, Jerman, dan Prancis.' } },
+  { region: { en: 'Americas', fr: 'Amériques', ar: 'القارة الأمريكية', id: 'Amerika' }, countries: 12, machines: 200, clients: 80, description: { en: 'US and Brazil showing strong growth in organic oil markets.', fr: 'Les États-Unis et le Brésil montrent une forte croissance dans les marchés d\'huiles organiques.', ar: 'الولايات المتحدة والبرازيل تظهر نمواً قوياً في أسواق الزيوت العضوية.', id: 'AS dan Brasil menunjukkan pertumbuhan kuat di pasar minyak organik.' } },
+  { region: { en: 'Oceania', fr: 'Océanie', ar: 'أوقيانوسيا', id: 'Oseania' }, countries: 8, machines: 50, clients: 30, description: { en: 'Australian and New Zealand premium oil producers.', fr: 'Producteurs d\'huile premium australiens et néo-zélandais.', ar: 'مُنتجون زيت ممتاز من أستراليا ونيوزيلندا.', id: 'Produsen minyak premium Australia dan Selandia Baru.' } },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.allMarkets || 'Markets', item: `https://www.hydoilpress.com/${currentLocale}/markets` },
+  ],
+};
+---
+
+<BaseLayout locale={currentLocale} title={currentLocale === 'fr' ? 'Marchés Mondiaux & Solutions Régionales de Presse à Huile | Haonuo' : currentLocale === 'ar' ? 'أسواق عالمية وحلول إقليمية لآلات الضغط الهيدروليكي | Haonuo' : 'Global Markets & Regional Oil Press Solutions | Haonuo'} description={currentLocale === 'fr' ? 'Les presses à huile hydrauliques Haonuo servent plus de 50 pays dans le monde. Découvrez les solutions régionales, les analyses de marché et les histoires de succès.' : currentLocale === 'ar' ? 'تخدم آلات الضغط الهيدروليكي لزيت Haonuo أكثر من 50 دولة في جميع أنحاء العالم. اكتشف الحلول الإقليمية والمناقشات السوقية وقصص النجاح.' : 'Haonuo hydraulic oil press machines serve 50+ countries worldwide. Explore regional solutions, market insights, and success stories.'} keywords={currentLocale === 'fr' ? ['press à huile mondial', '50 pays presse hydraulique', 'fabricant presse à huile international'] : currentLocale === 'ar' ? ['آلة ضغط زيت عالمي', '50 دولة ضغط هيدروليكي', 'مصنع ضغط زيت دولي'] : ['oil press machine global', 'hydraulic oil press 50 countries', 'oil press manufacturer worldwide']} jsonLd={breadcrumbLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/markets')} class="hover:text-amber-500 transition-colors">{t.common.allMarkets || 'Markets'}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{t.common.allMarkets || 'Markets'}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          {currentLocale === 'fr' ? '50+ Pays & 6 Continents' : currentLocale === 'ar' ? '50+ دولة و 6 قارات' : '50+ Countries & 6 Continents'}
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-4">
+          {currentLocale === 'fr' ? 'Presses à Huile Hydrauliques — Marchés Mondiaux & Solutions Régionales' : currentLocale === 'ar' ? 'آلات الضغط الهيدروليكي لزيت — أسواق عالمية وحلول إقليمية' : 'Hydraulic Oil Press Machine — Global Markets & Regional Solutions'}
+        </h1>
+        <p class="text-steel-500 text-lg max-w-3xl mx-auto">
+          {currentLocale === 'fr' ? 'Portée mondiale, expertise locale. Fidélisé par des producteurs d\'huile dans plus de 50 pays à travers l\'Afrique, l\'Asie, le Moyen-Orient, l\'Amérique du Sud, l\'Europe et l\'Océanie. Voici nos marchés régionaux phares avec un support dédié et une expérience terrain étendue.' : currentLocale === 'ar' ? 'نطاق عالمي، خبرة محلية. موثوق به من قبل مُنتجي الزيت في أكثر من 50 دولة في جميع أنحاء أفريقيا وآسيا والشرق الأوسط وأمريكا الجنوبية وأوروبا وأوقيانوسيا. إليك أسواقنا الإقليمية المميزة مع دعم مختص وخبرة واسعة على الأرض.' : 'Global Reach, Local Expertise. Trusted by oil producers in 50+ countries across Africa, Asia, Middle East, South America, Europe, and Oceania. Below are our featured regional markets with dedicated support and extensive on-the-ground experience.'}
+        </p>
+      </div>
+
+      <!-- Quick Stats Bar -->
+      <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="text-center text-white">
+            <div class="font-display text-3xl md:text-4xl font-bold mb-1">50+</div>
+            <div class="text-amber-100 text-sm">{t.common.countriesServed || 'Countries Served'}</div>
+          </div>
+          <div class="text-center text-white">
+            <div class="font-display text-3xl md:text-4xl font-bold mb-1">6</div>
+            <div class="text-amber-100 text-sm">{t.common.continents || 'Continents'}</div>
+          </div>
+          <div class="text-center text-white">
+            <div class="font-display text-3xl md:text-4xl font-bold mb-1">2,000+</div>
+            <div class="text-amber-100 text-sm">{t.common.happyClients || 'Happy Clients'}</div>
+          </div>
+          <div class="text-center text-white">
+            <div class="font-display text-3xl md:text-4xl font-bold mb-1">15+</div>
+            <div class="text-amber-100 text-sm">{t.common.yearsExportExperience || 'Years Export Experience'}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regional Stats -->
+      <div class="mb-16">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-3xl text-charcoal-900 mb-3">
+            {currentLocale === 'fr' ? 'Empreinte Régionale' : currentLocale === 'ar' ? 'البصمة الإقليمية' : 'Regional Footprint'}
+          </h2>
+          <p class="text-steel-500 max-w-2xl mx-auto">
+            {currentLocale === 'fr' ? 'Nos presses à huile hydrauliques fonctionnent avec succès sur 6 continents. Voici une ventilation de notre présence mondiale.' : currentLocale === 'ar' ? 'تعمل آلات الضغط الهيدروليكي لزيت لدينا بنجاح على 6 قارات. إليك تفصيل حضورنا العالمي.' : 'Our hydraulic oil press machines are operating successfully across 6 continents. Here\'s a breakdown of our global presence.'}
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {regionalStats.map((stat) => (
+            <div class="bg-white rounded-xl border border-steel-100 p-6 hover:border-amber-300 transition-colors">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-display text-xl text-charcoal-900">{stat.region[currentLocale] || stat.region.en}</h3>
+                <div class="text-2xl">{stat.countries} {t.common.countries || 'Countries'}</div>
+              </div>
+              <div class="flex gap-4 mb-4">
+                <div>
+                  <div class="font-display text-xl text-amber-600">{stat.machines}+</div>
+                  <div class="text-xs text-steel-500">{t.common.machines || 'Machines'}</div>
+                </div>
+                <div>
+                  <div class="font-display text-xl text-amber-600">{stat.clients}+</div>
+                  <div class="text-xs text-steel-500">{t.common.clients || 'Clients'}</div>
+                </div>
+              </div>
+              <p class="text-sm text-steel-600">{stat.description[currentLocale] || stat.description.en}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Featured Markets Section -->
+      <div class="mb-16">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-3xl text-charcoal-900 mb-3">
+            {currentLocale === 'fr' ? 'Marchés Régionaux Phares' : currentLocale === 'ar' ? 'أسواق إقليمية مميزة' : 'Featured Regional Markets'}
+          </h2>
+          <p class="text-steel-500 max-w-2xl mx-auto">
+            {currentLocale === 'fr' ? 'Ce sont nos plus grands marchés avec un support local dédié et une expérience terrain étendue. Vous ne voyez pas votre pays ? ' : currentLocale === 'ar' ? 'هذه هي أسواقنا الأكبر مع دعم محلي مختص وخبرة واسعة على الأرض. لم ترى دولتك؟ ' : 'These are our largest markets with dedicated local support and extensive on-the-ground experience. Don\'t see your country? '}
+            <a href={localePath('/contact')} class="text-amber-600 hover:text-amber-700 font-medium underline">{t.nav.contact}</a>
+            {currentLocale === 'fr' ? ' — nous expédions dans le monde entier.' : currentLocale === 'ar' ? ' — نوفر الشحن إلى جميع أنحاء العالم.' : ' — we ship worldwide.'}
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featuredMarkets.map(market => (
+            <a href={localePath(market.link)} class="bg-white rounded-2xl border border-steel-100 overflow-hidden hover:shadow-lg transition-shadow group">
+              <div class="h-48 bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center relative">
+                <span class="text-8xl opacity-80">{market.flag}</span>
+                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="absolute bottom-3 left-3 right-3">
+                  <span class="inline-block bg-black/70 text-white text-xs px-2 py-1 rounded-full">{market.marketHighlight[currentLocale] || market.marketHighlight.en}</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl text-charcoal-900 mb-2">{marketNames[market.name][currentLocale] || marketNames[market.name].en}</h3>
+                <p class="text-steel-600 mb-4">{market.description[currentLocale] || market.description.en}</p>
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {market.popularSeeds.map(seed => (
+                    <span class="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded-full">{seedNames[seed]?.[currentLocale] || seedNames[seed]?.en || seed}</span>
+                  ))}
+                </div>
+
+                <div class="bg-steel-50 rounded-lg p-3 mb-4">
+                  <div class="flex items-start gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <p class="text-xs text-steel-600">{market.caseStudy[currentLocale] || market.caseStudy.en}</p>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3 pt-4 border-t border-steel-100">
+                  <div class="text-center">
+                    <div class="font-display text-lg text-charcoal-900">{market.stats.machines}</div>
+                    <div class="text-xs text-steel-500">{t.common.machines || 'Machines'}</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="font-display text-lg text-charcoal-900">{market.stats.clients}</div>
+                    <div class="text-xs text-steel-500">{t.common.clients || 'Clients'}</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="font-display text-lg text-charcoal-900">{market.stats.countries}</div>
+                    <div class="text-xs text-steel-500">{t.common.countries || 'Countries'}</div>
+                  </div>
+                </div>
+
+                <div class="mt-4 flex items-center text-amber-600 group-hover:text-amber-700 transition-colors">
+                  <span class="text-sm font-medium">{t.common.exploreMarket || 'Explore Market'}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ms-1 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Why Choose Haonuo Globally -->
+      <div class="mb-16 bg-steel-50 rounded-2xl p-8">
+        <h2 class="font-display text-2xl text-charcoal-900 mb-6 text-center">
+          {currentLocale === 'fr' ? 'Pourquoi Haonuo est Fidélisé dans le Monde Entier' : currentLocale === 'ar' ? 'لماذا يُعتمد العالم على Haonuo' : 'Why Haonuo is Trusted Worldwide'}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-amber-100 rounded-xl flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-1">
+              {currentLocale === 'fr' ? '15+ Ans d\'Expérience' : currentLocale === 'ar' ? '15+ سنة خبرة' : '15+ Years Experience'}
+            </h3>
+            <p class="text-sm text-steel-600">
+              {currentLocale === 'fr' ? 'Depuis 2010, nous perfectionnons la technologie des presses hydrauliques.' : currentLocale === 'ar' ? 'منذ عام 2010، نقوم بتحسين تقنية آلات الضغط الهيدروليكي.' : 'Since 2010, we\'ve been perfecting hydraulic oil press technology.'}
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-amber-100 rounded-xl flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-1">50+ {currentLocale === 'fr' ? 'Pays' : currentLocale === 'ar' ? 'دول' : 'Countries'}</h3>
+            <p class="text-sm text-steel-600">
+              {currentLocale === 'fr' ? 'Nos machines fonctionnent avec succès sur 6 continents.' : currentLocale === 'ar' ? 'تعمل آلاتنا بنجاح على 6 قارات.' : 'Our machines are operating successfully across 6 continents.'}
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-amber-100 rounded-xl flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-1">
+              {currentLocale === 'fr' ? 'Garantie 1 An' : currentLocale === 'ar' ? 'ضمان 1 سنة' : '1-Year Warranty'}
+            </h3>
+            <p class="text-sm text-steel-600">
+              {currentLocale === 'fr' ? 'La paix totale de l\'esprit avec notre garantie complète.' : currentLocale === 'ar' ? 'أطمئنان تام مع ضماننا الشامل.' : 'Complete peace of mind with our comprehensive warranty.'}
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 mx-auto mb-4 bg-amber-100 rounded-xl flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-1">
+              {currentLocale === 'fr' ? 'Support 24/7' : currentLocale === 'ar' ? 'دعم 24/7' : '24/7 Support'}
+            </h3>
+            <p class="text-sm text-steel-600">
+              {currentLocale === 'fr' ? 'Support WhatsApp disponible à toute heure, partout.' : currentLocale === 'ar' ? 'دعم WhatsApp متوفر على مدار الساعة، في أي مكان.' : 'WhatsApp support available anytime, anywhere.'}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-charcoal-900 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="font-display text-3xl text-white mb-4">
+          {currentLocale === 'fr' ? 'Votre Pays n\'est Pas Listé ?' : currentLocale === 'ar' ? 'لم ترى دولتك في القائمة؟' : 'Don\'t See Your Country Listed?'}
+        </h2>
+        <p class="text-steel-300 text-lg max-w-2xl mx-auto mb-8">
+          {currentLocale === 'fr' ? 'Nous servons activement plus de 50 pays et nous nous étendons rapidement. Il est probable que nous puissions expédier à votre emplacement avec un support complet. Contactez notre équipe pour discuter de vos besoins spécifiques.' : currentLocale === 'ar' ? 'نحن نخدم بنشاط أكثر من 50 دولة ونحن نتوسع بسرعة. من المحتمل أن نتمكن من الشحن إلى موقعك مع دعم كامل. اتصل بفريقنا لمناقشة احتياجاتك المحددة.' : 'We actively serve 50+ countries and are expanding rapidly. Chances are, we can ship to your location with full support. Contact our team to discuss your specific requirements.'}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={localePath('/contact')} class="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-charcoal-900 font-semibold rounded-xl hover:bg-amber-400 transition-colors">
+            {t.common.getInTouch || 'Get in Touch'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://wa.me/8618957149128" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 bg-steel-700 text-white font-semibold rounded-xl hover:bg-steel-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 me-2" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            {t.common.chatOnWhatsApp || 'Chat on WhatsApp'}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

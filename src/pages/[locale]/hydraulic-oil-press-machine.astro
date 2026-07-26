@@ -1,0 +1,417 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allProducts = await getCollection('products');
+const hydraulicProducts = allProducts.filter(p => p.data.category === 'hydraulic-oil-press');
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const pageTitle = currentLocale === 'fr' ? 'Presse à Huile Hydraulique — Directe d\'Usine chez Haonuo' :
+                  currentLocale === 'ar' ? 'آلة ضغط الزيت الهيدروليكي — مباشرة من المصنع' :
+                  'Mesin Press Minyak Hidrolik — Langsung dari Pabrik';
+
+const pageDesc = currentLocale === 'fr' ? 'Presse à huile hydraulique professionnelle pour le pressage à froid du sésame, arachide, coco et 20+ graines oléagineuses. 15+ ans de fabrication. Prix d\'usine. Garantie 1 an.' :
+                 currentLocale === 'ar' ? 'آلة ضغط الزيت الهيدروليكي المحترفة لضغط السمسم والفول السوداني والجوز الهنديadi والكركديهadi و20+ نباتات زيتية. 15+ سنة من التصنيع. أسعار مصنع. ضمان سنة واحدة.' :
+                 'Mesin press minyak hidrolik profesional untuk press dingin wijen, kacang tanah, kelapa, dan 20+ biji minyak. 15+ tahun manufaktur. Harga pabrik. Garansi 1 tahun.';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.products, item: `https://www.hydoilpress.com/${currentLocale}/products` },
+    { '@type': 'ListItem', position: 3, name: t.common.hydraulicOilPressMachine, item: `https://www.hydoilpress.com/${currentLocale}/hydraulic-oil-press-machine` },
+  ],
+};
+
+const faqs = [
+  { question: currentLocale === 'fr' ? 'Qu\'est-ce qu\'une presse à huile hydraulique ?' :
+              currentLocale === 'ar' ? 'ما هو ماكينة الضغط الهيدروليكي؟' :
+              'Apa itu mesin press minyak hidrolik?',
+    answer: currentLocale === 'fr' ? 'Une presse à huile hydraulique utilise la pression hydraulique pour extraire l\'huile des graines et noix. Contrairement aux presses à vis qui génèrent de la chaleur par friction, les presses hydrauliques appliquent une pression statique uniforme à des températures contrôlées, ce qui les rend idéales pour le pressage à froid d\'huiles premium comme le sésame, la noix et l\'huile de coco. Le processus préserve les nutriments naturels, la saveur et l\'arôme.' :
+            currentLocale === 'ar' ? 'تستخدم آلة الضغط الهيدروليكي الضغط الهيدروليكي لاستخراج الزيت من البذور والجوز. على عكس الماكينات الضاغطة بالبرغي التي تولد الحرارة عن طريق الاحتكاك، تطبق الماكينات الهيدروليكية ضغطاً ساكناً موحداً عند درجات حرارة مضبوطة، مما يجعلها مثالية لضغط الأزياء الفاخرة مثل السمسم والجوز والجوز الهنديadi. الحفاظ على العناصر الغذائية الطبيعية والنكهة والرائحة.' :
+            'Mesin press minyak hidrolik menggunakan tekanan hidrolik untuk mengekstraksi minyak dari biji dan kacang. Tidak seperti press sekrup yang menghasilkan panas melalui gesekan, press hidrolik menerapkan tekanan statis seragam pada suhu terkontrol, membuatnya ideal untuk press dingin minyak premium seperti wijen, kacang walnut, dan minyak kelapa. Proses ini melestarikan nutrisi alami, rasa, dan aroma.' },
+  { question: currentLocale === 'fr' ? 'Comment fonctionne une presse à huile hydraulique ?' :
+              currentLocale === 'ar' ? 'كيف تعمل ماكينة الضغط الهيدروليكي؟' :
+              'Bagaimana cara kerja mesin press minyak hidrolik?',
+    answer: currentLocale === 'fr' ? 'La machine utilise une pompe hydraulique pour générer une haute pression (jusqu\'à 75 Mpa) qui entraîne un piston dans un fût rempli de graines oléagineuses préparées. La pression expulse l\'huile à travers un fût rainuré tandis que la tourteau comprimé reste à l\'intérieur. Un cycle de pressage typique dure 8-15 minutes. Le système de commande micro-ordinateur automatise l\'ensemble du processus du pressage à la vidange du tourteau.' :
+            currentLocale === 'ar' ? 'تستخدم الماكينة مضخة هيدروليكية لتوليد ضغط عالٍ (حتى 75 ميجاباسكال) الذي يقود المكبس إلى داخل برميل مملوء بالبذور الزيتية المعدة. الضغط يخرج الزيت عبر البرميل المقطر بينما يبقى الكيكة المضغوطة بداخله. دورة الضغط النموذجية تستغرق 8-15 دقيقة. نظام التحكم بالكمبيوتر الصغير يقوم بأتمتة جميع مراحل العملية من الضغط إلى إخراج الكيكة.' :
+            'Mesin menggunakan pompa hidrolik untuk menghasilkan tekanan tinggi (sampai 75 Mpa) yang menggerakkan piston ke dalam barrel yang diisi biji minyak yang sudah dipersiapkan. Tekanan ini memeras minyak keluar melalui barrel berlubang sementara ampas biji terkompresi tetap berada di dalam. Siklus press khas membutuhkan 8-15 menit. Sistem kontrol mikrokomputer mengotomatiskan seluruh proses dari press hingga pengeluaran ampas.' },
+  { question: currentLocale === 'fr' ? 'Quelles graines peut traiter une presse à huile hydraulique ?' :
+              currentLocale === 'ar' ? 'ما هي البذور التي يمكن معالجتها بواسطة ماكينة الضغط الهيدروليكي؟' :
+              'Biji apa saja yang dapat diproses oleh mesin press minyak hidrolik?',
+    answer: currentLocale === 'fr' ? 'Les presses à huile hydrauliques peuvent traiter plus de 20 types de graines oléagineuses dont le sésame, l\'arachide, le coco, la noix, l\'amande, le tournesol, le lin, la moutarde, le colza, la graine de thé, le soja, le cotonnier, la noisette et bien plus. Différents modèles sont optimisés pour différents types de graines — modèles plus petits pour le sésame et les graines molles, modèles haute pression pour les noix à coque dure comme la noix et l\'amande.' :
+            currentLocale === 'ar' ? 'يمكن لمكائن الضغط الهيدروليكي معالجة أكثر من 20 نوع من البذور الزيتية بما في ذلك السمسم والفول السوداني والجوز الهنديadi والجوز واللوز والذرة الصفراء والخس والخردل والكركديهadi وجوز الهند ومصنوعات الصنوبر وذرة الشاي والصنوبر واللوز الصنوبريadi. تم تحسين النماذج المختلفة لنوع مختلف من البذور — نماذج أصغر للسمسم والبذور الناعمة، نماذج عالية الضغط للجوز الصلب مثل الجوز واللوز.' :
+            'Mesin press minyak hidrolik dapat memproses lebih dari 20 jenis biji minyak termasuk wijen, kacang tanah, kelapa, kacang walnut, almond, bunga matahari, biji rami, sawi, rapeseed, biji teh, kedelai, kapas, apricot kernel, dan banyak lagi. Model berbeda dioptimalkan untuk jenis biji yang berbeda — model kecil untuk wijen dan biji lunak, model bertekanan tinggi untuk kacang keras seperti walnut dan almond.' },
+  { question: currentLocale === 'fr' ? 'Quel est le rendement en huile d\'une presse à huile hydraulique ?' :
+              currentLocale === 'ar' ? 'ما هو العائد من الزيت لماكينة الضغط الهيدروليكي؟' :
+              'Berapa hasil minyak dari mesin press minyak hidrolik?',
+    answer: currentLocale === 'fr' ? 'Le rendement varie selon le type de graine : sésame 42-50%, arachide 38-45%, coco 55-65%, noix 50-60%, colza 35-45%, tournesol 40-48%. Les presses hydrauliques Haonuo utilisent une conception de fût rainuré de type barre qui atteint environ 2-3% de rendement supérieur aux presses traditionnelles à fût percé (selon nos tests internes, les résultats varient), avec une huile résiduelle dans le tourteau aussi basse que 6-8%.' :
+            currentLocale === 'ar' ? 'يختلف العائد حسب نوع البذرة: السمسم 42-50%، الفول السوداني 38-45%، الجوز الهنديadi 55-65%، الجوز 50-60%، الكركديهadi 35-45%، الذرة الصفراء 40-48%. تستخدم مكائن الضغط الهيدروليكي Haonuo تصميم برميل مقطر من نوع القضبان الذي يحقق حوالي 2-3% عائد أعلى من المكائن الضاغطة التقليدية بالبرميل المثقوب (حسب اختباراتنا الداخلية، والنتائج تختلف)، مع زيت باقي في الكيكة يصل إلى 6-8%.' :
+            'Hasil minyak bervariasi tergantung jenis biji: wijen 42-50%, kacang tanah 38-45%, kelapa 55-65%, walnut 50-60%, rapeseed 35-45%, bunga matahari 40-48%. Mesin press hidrolik Haonuo menggunakan desain barrel beralur tipe batang yang mencapai hasil sekitar 2-3% lebih tinggi daripada press konvensional dengan barrel bolong (berdasarkan pengujian internal, hasil dapat bervariasi), dengan sisa minyak di ampas sedikitnya 6-8%.' },
+  { question: currentLocale === 'fr' ? 'Combien coûte une presse à huile hydraulique ?' :
+              currentLocale === 'ar' ? 'كم تكلفة ماكينة الضغط الهيدروليكي؟' :
+              'Berapa harga mesin press minyak hidrolik?',
+    answer: currentLocale === 'fr' ? 'Contactez Haonuo pour un prix d\'usine direct. Nous proposons des tarifs compétitifs sans majoration d\'intermédiaire — économisez par rapport aux prix des distributeurs locaux (les économies réelles varient). Le prix dépend du modèle, de la configuration du fût (simple/double) et des options de personnalisation. Demandez un devis et recevez une cotation détaillée incluant le prix de la machine, l\'expédition et les droits estimés dans les 24 heures.' :
+            currentLocale === 'ar' ? 'اتصل بـ Haonuo للحصول على أسعار مصنع مباشرة. نقدم أسعاراً تنافسية بدون ربح وسيط — وفورات مقارنة بأسعار الموزعين المحليين (الوفورات الفعلية تختلف). السعر يعتمد على النموذج وتكوين البرميل (مفرد/مزدوج) وخيارات التخصيص. اطلب عرض أسعار وتلقي عرضاً مفصلاً يشتمل على سعر الماكينة والشحن والرسوم المستحقة المقدرة في غضون 24 ساعة.' :
+            'Hubungi Haonuo untuk harga pabrik langsung. Kami menawarkan harga kompetitif tanpa markup perantara — hemat dibanding harga distributor lokal (penghematan aktual dapat bervariasi). Harga tergantung model, konfigurasi barrel (tunggal/ganda), dan opsi kustomisasi. Minta penawaran dan terima penawaran detail termasuk harga mesin, pengiriman, dan biaya taksiran dalam 24 jam.' },
+  { question: currentLocale === 'fr' ? 'Quelle est la différence entre pressage à froid et pressage à chaud ?' :
+              currentLocale === 'ar' ? 'ما هو الفرق بين الضغط البارد والضغط الساخن؟' :
+              'Apa perbedaan antara press dingin dan press panas?',
+    answer: currentLocale === 'fr' ? 'Le pressage à froid fonctionne en dessous de 60°C en préservant les nutriments, la saveur naturelle et l\'arôme — idéal pour les huiles premium comme le sésame, la noix et l\'huile de coco vierge. Le pressage à chaud consiste à torréfier les graines avant pressage, ce qui augmente légèrement le rendement mais peut altérer la saveur et réduire la valeur nutritionnelle. Les presses à huile hydrauliques sont naturellement adaptées au pressage à froid car elles appliquent une pression statique sans chaleur générée par friction.' :
+            currentLocale === 'ar' ? 'الضغط البارد يعمل تحت 60 درجة مئوية مع الحفاظ على العناصر الغذائية والنكهة الطبيعية والرائحة — مثالي للأزياء الفاخرة مثل السمسم والجوز والجوز الهنديadi البري. الضغط الساخن يتضمن تحميص البذور قبل الضغط، مما يزيد قليلاً العائد ولكن قد يغير النكهة ويقلل من القيمة الغذائية. المكائن الضاغطة الهيدروليكية مناسبة بشكل طبيعي للضغط البارد لأنها تطبق ضغطاً ساكناً بدون حرارة ناتجة عن الاحتكاك.' :
+            'Press dingin beroperasi di bawah 60°C melestarikan nutrisi, rasa alami, dan aroma — ideal untuk minyak premium seperti wijen, walnut, dan minyak kelapa virgin. Press panas melibatkan pemanggangan biji sebelum press, yang meningkatkan hasil sedikit tetapi dapat mengubah rasa dan mengurangi nilai nutrisi. Mesin press minyak hidrolik secara alami cocok untuk press dingin karena menerapkan tekanan statis tanpa panas dari gesekan.' },
+  { question: currentLocale === 'fr' ? 'La machine peut-elle fonctionner sur générateur ?' :
+              currentLocale === 'ar' ? 'يمكن للماكينة العمل على المولد؟' :
+              'Bisakah mesin beroperasi dengan generator?',
+    answer: currentLocale === 'fr' ? 'Oui, les presses hydrauliques Haonuo n\'ont besoin que de 2.2 KW de puissance moteur, ce qui les rend totalement compatibles avec un générateur de 5-7 KVA. Cela les rend idéales pour les zones avec une électricité instable ou inexistante, comme les zones rurales du Nigéria, du Kenya et d\'autres régions d\'Afrique et d\'Asie du Sud-Est.' :
+            currentLocale === 'ar' ? 'نعم، مكائن الضغط الهيدروليكي Haonuo تحتاج فقط 2.2 كيلو وات من قوة المحرك، مما يجعلها متوافقة تماماً مع مولد 5-7 كيلو فولت آمبير. هذا يجعلها مثالية للمناطق التي بها كهرباء غير مستقرة أو معدومة، مثل المناطق الريفية في النيجيريا والكينيا وغيرها من المناطق في أفريقيا وجنوب آسيا.' :
+            'Ya, mesin press hidrolik Haonuo hanya membutuhkan daya motor 2.2 KW, membuatnya sepenuhnya kompatibel dengan generator 5-7 KVA. Ini membuatnya ideal untuk area dengan listrik tidak stabil atau tidak ada, seperti daerah pedesaan Nigeria, Kenya, dan wilayah lain di Afrika dan Asia Tenggara.' },
+  { question: currentLocale === 'fr' ? 'Quelle garantie fournissez-vous ?' :
+              currentLocale === 'ar' ? 'ما هو الضمان الذي توفره؟' :
+              'Berapa garansi yang Anda berikan?',
+    answer: currentLocale === 'fr' ? 'Toutes les machines Haonuo sont livrées avec une garantie de 1 an couvrant les défauts de fabrication, plus un support technique à vie. Les pièces de rechange sont disponibles en stock. Chaque machine subit un test continu de 48 heures à pleine charge avant l\'expédition pour garantir un fonctionnement fiable.' :
+            currentLocale === 'ar' ? 'تأتي جميع مكائن Haonuo مع ضمان 1 سنة يغطي العيوب التصنيعية، بالإضافة إلى دعم فني مدى الحياة. قطع الغيار متوفرة في المخزن. تخضع كل ماكينة لاختبار مستمر لمدة 48 ساعة بحد أقصى من الحمل قبل الشحن لضمان التشغيل الموثوق.' :
+            'Semua mesin Haonuo dilengkapi garansi 1 tahun yang mencakup cacat manufaktur, plus dukungan teknis seumur hidup. Spare part tersedia di stok. Setiap mesin menjalani pengujian berkelanjutan 48 jam dengan beban penuh sebelum pengiriman untuk memastikan operasi andal.' },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={pageTitle}
+  description={pageDesc}
+  keywords={currentLocale === 'fr' ? ['presse à huile hydraulique', 'presse hydraulique', 'machine pressage à froid', 'presse pour extraction huile', 'fabricant machine pressage huile'] : currentLocale === 'ar' ? ['مكينة ضغط زيت هيدروليكية', 'مكينة ضغط هيدروليكي', 'مكينة ضغط بارد', 'مكينة استخراج الزيت', 'مصنع مكائن ضغط الزيت'] : ['mesin press minyak hidrolik', 'press hidrolik', 'mesin press dingin', 'mesin ekstraksi minyak', 'pabrik mesin press minyak']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/products')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{t.common.hydraulicOilPressMachine}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">{pageTitle}</h1>
+      <p class="text-steel-300 text-lg max-w-3xl mb-8">{pageDesc}</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {currentLocale === 'fr' ? 'Demander un devis' : currentLocale === 'ar' ? 'طلب عرض أسعار' : 'Minta Penawaran'}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href={localePath('/products/model-comparison')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
+          {currentLocale === 'fr' ? 'Comparer les modèles' : currentLocale === 'ar' ? 'مقارنة النماذج' : 'Bandingkan Model'}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Hydraulic Oil Press -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Pourquoi choisir une Presse à Huile Hydraulique' : currentLocale === 'ar' ? 'لماذا تختار ماكينة الضغط الهيدروليكي' : 'Mengapa Memilih Mesin Press Minyak Hidrolik'}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Rendement en Huile Élevé' : currentLocale === 'ar' ? 'عائد زيت عالي' : 'Hasil Minyak Tinggi'}</h3>
+          <p class="text-sm text-steel-600 mb-3">{currentLocale === 'fr' ? 'Généralement 42-50% pour le sésame, 55-65% pour le coco selon la qualité des graines et les conditions de traitement. Les résultats varient.' : currentLocale === 'ar' ? 'عادة 42-50% للسمسم، 55-65% للجوز الهنديadi حسب جودة البذور وشروط المعالجة. النتائج تختلف.' : 'Biasanya 42-50% untuk wijen, 55-65% untuk kelapa tergantung kualitas biji dan kondisi pemrosesan. Hasil dapat bervariasi.'}</p>
+          <div class="text-amber-500 font-semibold text-sm">{currentLocale === 'fr' ? 'Sésame: 42-50% de rendement' : currentLocale === 'ar' ? 'السمسم: عائد 42-50%' : 'Wijen: Hasil 42-50%'}</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Consommation Énergétique Basse' : currentLocale === 'ar' ? 'استهلاك طاقة منخفض' : 'Konsumsi Energi Rendah'}</h3>
+          <p class="text-sm text-steel-600 mb-3">{currentLocale === 'fr' ? 'Seulement 2.2 KW de puissance moteur nécessaire. Compatible avec les générateurs, idéal pour les zones avec une électricité instable ou inexistante.' : currentLocale === 'ar' ? 'فقط 2.2 كيلو وات من قوة المحرك المطلوبة. متوافقة مع المولدات، مثالية للمناطق التي بها كهرباء غير مستقرة أو معدومة.' : 'Hanya 2.2 KW daya motor yang dibutuhkan. Kompatibel dengan generator, ideal untuk area dengan listrik tidak stabil atau tidak ada.'}</p>
+          <div class="text-amber-500 font-semibold text-sm">{currentLocale === 'fr' ? 'Juste 2.2 KW — fonctionne sur 5KVA générateur' : currentLocale === 'ar' ? 'فقط 2.2 كيلو وات — تعمل على مولد 5 كيلو فولت آمبير' : 'Hanya 2.2 KW — berjalan pada generator 5KVA'}</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Polyvalent — 20+ Graines' : currentLocale === 'ar' ? 'متعدد الاستخدامات — 20+ بذرة' : 'Serbaguna — 20+ Biji'}</h3>
+          <p class="text-sm text-steel-600 mb-3">{currentLocale === 'fr' ? 'Une seule machine traite le sésame, l\'arachide, le coco, la noix, l\'amande, le tournesol, le lin, la moutarde, le colza et bien plus.' : currentLocale === 'ar' ? 'مجرد ماكينة واحدة تعالج السمسم والفول السوداني والجوز الهنديadi والجوز واللوز والذرة الصفراء والخس والخردل والكركديهadi وغيرها.' : 'Satu mesin menangani wijen, kacang tanah, kelapa, walnut, almond, bunga matahari, biji rami, sawi, rapeseed, dan banyak lagi.'}</p>
+          <div class="text-amber-500 font-semibold text-sm">{currentLocale === 'fr' ? 'Plus de 20 types de graines oléagineuses pris en charge' : currentLocale === 'ar' ? 'أكثر من 20 نوع من البذور الزيتية مدعومة' : 'Lebih dari 20 jenis biji minyak didukung'}</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Construction Durable' : currentLocale === 'ar' ? 'بناء متين' : 'Konstruksi Tahan Lama'}</h3>
+          <p class="text-sm text-steel-600 mb-3">{currentLocale === 'fr' ? 'Châssis en acier haute résistance, trempé à haute fréquence et traité thermiquement. Conçu pour une longue durée de vie — estimée à plus de 20 000 heures dans des conditions de fonctionnement normales (la durée de vie réelle dépend de l\'entretien et des modes d\'utilisation).' : currentLocale === 'ar' ? 'هيكل فولاذي عالي المقاومة، مقطر على تردد عالي ومعالج حرارياً. مصمم لفترة طويلة من العمر — تقدر بـ 20000+ ساعة في ظل ظروف التشغيل العادية (العمر الفعلي يعتمد على الصيانة وأنماط الاستخدام).' : 'Rangka baja berkekuatan tinggi, dikuatkan frekuensi tinggi dan diperlakukan secara termal. Dirancang untuk masa pakai panjang — diperkirakan 20.000+ jam dalam kondisi operasi normal (masa pakai aktual tergantung perawatan dan pola penggunaan).'}</p>
+          <div class="text-amber-500 font-semibold text-sm">{currentLocale === 'fr' ? '20 000+ heures de durée de vie' : currentLocale === 'ar' ? '20000+ ساعة من العمر' : '20.000+ jam masa pakai'}</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Facile à Utiliser' : currentLocale === 'ar' ? 'سهل الاستخدام' : 'Mudah Digunakan'}</h3>
+          <p class="text-sm text-steel-600 mb-3">{currentLocale === 'fr' ? 'Démarrage en un clic avec contrôle micro-ordinateur. Cycle de pressage automatisé avec démarrage en un clic — peu de formation nécessaire. Nous fournissons des tutoriels vidéo et une guidance à distance. Généralement 1-2 travailleurs peuvent opérer la machine.' : currentLocale === 'ar' ? 'بدء التشغيل بنقرة واحدة مع تحكم بالكمبيوتر الصغير. دورة ضغط آتوماتيكي مع بدء التشغيل بنقرة واحدة — لا حاجة لتدريب كبير. نقدم دروساً فيديو وتوجيهات عن بُعد. عادةً 1-2 عاملين يمكنهم تشغيل الماكينة.' : 'Start satu tombol dengan kontrol mikrokomputer. Siklus press otomatis dengan start satu tombol — pelatihan minimal dibutuhkan. Kami menyediakan tutorial video dan panduan jarak jauh. Biasanya 1-2 pekerja dapat mengoperasikan mesin.'}</p>
+          <div class="text-amber-500 font-semibold text-sm">{currentLocale === 'fr' ? 'Démarrage en 1 clic, 1-2 travailleurs' : currentLocale === 'ar' ? 'بدء التشغيل بنقرة واحدة، 1-2 عاملين' : 'Start 1 tombol, 1-2 pekerja'}</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Directe d\'Usine' : currentLocale === 'ar' ? 'مباشرة من المصنع' : 'Langung dari Pabrik'}</h3>
+          <p class="text-sm text-steel-600 mb-3">{currentLocale === 'fr' ? 'Pas d\'intermédiaire — achetez directement auprès du fabricant. Potentiellement économiser par rapport aux prix des distributeurs locaux (les économies réelles varient selon le marché). L\'assurance qualité est fournie directement par le fabricant.' : currentLocale === 'ar' ? 'لا وسيط — اشترِ مباشرة من المصنع. يمكن الوفورات مقارنة بأسعار الموزعين المحليين (الوفورات الفعلية تختلف حسب السوق). ضمان الجودة يوفره المصنع مباشرة.' : 'Tidak ada perantara — beli langsung dari pabrik. Potensi penghematan dibanding harga distributor lokal (penghematan aktual bervariasi per pasar). Jaminan kualitas diberikan langsung oleh pabrik.'}</p>
+          <div class="text-amber-500 font-semibold text-sm">{currentLocale === 'fr' ? 'Potentiellement économiser vs prix distributeur' : currentLocale === 'ar' ? 'يمكن الوفورات مقارنة بأسعار الموزعين' : 'Potensi hemat vs harga distributor'}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Series Showcase -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Notre Série de Presses à Huile Hydrauliques' : currentLocale === 'ar' ? 'سلسلة مكائن الضغط الهيدروليكي' : 'Seri Mesin Press Minyak Hidrolik Kami'}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {hydraulicProducts.map(product => (
+          <a
+            href={localePath(`/products/${product.slug}`)}
+            class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+          >
+            <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+              <img
+                src={product.data.images[0]}
+                alt={product.data.title[currentLocale] || product.data.title.en}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20hydraulic%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+              />
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
+              <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+              <div class="flex flex-wrap gap-2">
+                {(currentLocale === 'id' && product.data.specificationsId?.length > 0 ? product.data.specificationsId : currentLocale === 'ar' && product.data.specificationsAr?.length > 0 ? product.data.specificationsAr : currentLocale === 'fr' && product.data.specificationsFr?.length > 0 ? product.data.specificationsFr : product.data.specifications).slice(0, 2).map(spec => (
+                  <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                    {spec.name}: {spec.value}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Comment Fonctionne une Presse à Huile Hydraulique' : currentLocale === 'ar' ? 'كيف تعمل ماكينة الضغط الهيدروليكي' : 'Bagaimana Cara Kerja Mesin Press Minyak Hidrolik'}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white font-display text-2xl mx-auto mb-4">1</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Charger les Graines' : currentLocale === 'ar' ? 'تحميل البذور' : 'Isi Biji'}</h3>
+          <p class="text-steel-600">{currentLocale === 'fr' ? 'Remplir le fût de pressage avec les graines oléagineuses préparées. Aucun prétraitement nécessaire pour la plupart des types de graines — il suffit de charger et de presser.' : currentLocale === 'ar' ? 'املأ برميل الضغط بالبذور الزيتية المعدة. لا حاجة لمعالجة مسبقة لمعظم أنواع البذور — ما عليك سوى التحميل والضغط.' : 'Isi barrel press dengan biji minyak yang sudah dipersiapkan. Tidak perlu pra-pemrosesan untuk sebagian besar jenis biji — cukup isi dan press.'}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white font-display text-2xl mx-auto mb-4">2</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Appliquer la Pression' : currentLocale === 'ar' ? 'تطبيق الضغط' : 'Terapkan Tekanan'}</h3>
+          <p class="text-steel-600">{currentLocale === 'fr' ? 'Le système hydraulique génère jusqu\'à 620 tonnes de force de pressage à des températures contrôlées en dessous de 60°C pour un véritable pressage à froid.' : currentLocale === 'ar' ? 'يُولِّد النظام الهيدروليكي حتى 620 طن من قوة الضغط عند درجات حرارة مضبوطة تحت 60 درجة مئوية لضغط بارد حقيقي.' : 'Sistem hidrolik menghasilkan hingga 620 ton gaya press pada suhu terkontrol di bawah 60°C untuk press dingin sejati.'}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white font-display text-2xl mx-auto mb-4">3</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Collecter l\'Huile' : currentLocale === 'ar' ? 'جمع الزيت' : 'Kumpulkan Minyak'}</h3>
+          <p class="text-steel-600">{currentLocale === 'fr' ? 'L\'huile pure et filtrée s\'écoule à travers le fût rainuré tandis que le tourteau comprimé est éjecté automatiquement par le mécanisme à 4 crochets.' : currentLocale === 'ar' ? 'يتدفق الزيت النقي والمرصّح عبر البرميل المقطر بينما يتم إخراج الكيكة المضغوطة تلقائياً بواسطة آلية الأربعة خطافات.' : 'Minyak murni dan terfilter mengalir keluar melalui barrel berlubang sementara ampas biji terkompresi dikeluarkan secara otomatis oleh mekanisme 4-hook.'}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Scenarios -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Scénarios d\'Application' : currentLocale === 'ar' ? 'سيناريوهات التطبيق' : 'Skenario Aplikasi'}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">&#127807;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Sésame Pressée à Froid' : currentLocale === 'ar' ? 'زيت السمسم المضغوط بارداً' : 'Minyak Wijen Press Dingin'}</h3>
+          <p class="text-steel-600 text-sm">{currentLocale === 'fr' ? 'Huile de cuisine premium pour les marchés asiatiques et du Moyen-Orient. Le pressage à froid préserve l\'arôme riche et la saveur de noisette qui commande des prix premium.' : currentLocale === 'ar' ? 'زيت طبخ فاخر لأسواق آسيا والشرق الأوسط. الضغط البارد يحافظ على الرائحة الغنية والنكهة الجوزية التي تحقق أسعاراً فاخرة.' : 'Minyak masak premium untuk pasar Asia dan Timur Tengah. Press dingin mempertahankan aroma kaya dan rasa kacang yang memerintah harga premium.'}</p>
+          <div class="text-amber-500 font-semibold text-sm mt-3">{currentLocale === 'fr' ? 'Rendement : 42-50%' : currentLocale === 'ar' ? 'العائد: 42-50%' : 'Hasil: 42-50%'}</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">&#129381;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Coco Vierge (VCO)' : currentLocale === 'ar' ? 'زيت جوز الهند البكر (VCO)' : 'Minyak Kelapa Virgin (VCO)'}</h3>
+          <p class="text-steel-600 text-sm">{currentLocale === 'fr' ? 'Production de VCO haute valeur pour les Philippines, l\'Indonésie et les marchés mondiaux d\'alimentation santé. Modèles en acier inoxydable de qualité alimentaire disponibles pour la conformité à la sécurité alimentaire.' : currentLocale === 'ar' ? 'إنتاج VCO عالي القيمة للفلبين وإندونيسيا وأسواق الأغذية الصحية العالمية. نماذج من الفولاذ المقاوم للصدأ بدرجة غذائية متوفرة للامتثال لسلامة الغذاء.' : 'Produksi VCO bernilai tinggi untuk Filipina, Indonesia, dan pasar makanan kesehatan global. Model baja tahan karat food-grade tersedia untuk kepatuhan keamanan pangan.'}</p>
+          <div class="text-amber-500 font-semibold text-sm mt-3">{currentLocale === 'fr' ? 'Rendement : 55-65%' : currentLocale === 'ar' ? 'العائد: 55-65%' : 'Hasil: 55-65%'}</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">&#129372;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile d\'Arachide' : currentLocale === 'ar' ? 'زيت الفول السوداني' : 'Minyak Kacang Tanah'}</h3>
+          <p class="text-steel-600 text-sm">{currentLocale === 'fr' ? 'L\'huile de cuisine la plus populaire d\'Afrique. Idéale pour les entreprises d\'huile d\'arachide au Nigéria, au Ghana et en Afrique de l\'Ouest. Compatible avec les générateurs pour les opérations rurales.' : currentLocale === 'ar' ? 'أكثر زيت طبخ شعبية في أفريقيا. مثالي لمشاريع زيت الفول السوداني في نيجيريا وغانا وغرب أفريقيا. متوافق مع المولدات للعمليات الريفية.' : 'Minyak masak paling populer di Afrika. Ideal untuk bisnis minyak kacang tanah di Nigeria, Ghana, dan Afrika Barat. Kompatibel dengan generator untuk operasi pedesaan.'}</p>
+          <div class="text-amber-500 font-semibold text-sm mt-3">{currentLocale === 'fr' ? 'Rendement : 38-45%' : currentLocale === 'ar' ? 'العائد: 38-45%' : 'Hasil: 38-45%'}</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">&#129756;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile d\'Olive' : currentLocale === 'ar' ? 'زيت الزيتون' : 'Minyak Zaitun'}</h3>
+          <p class="text-steel-600 text-sm">{currentLocale === 'fr' ? 'Marché premium méditerranéen et du Moyen-Orient. Le pressage à froid hydraulique préserve les polyphénols et le profil aromatique distinctif exigé par les connaisseurs d\'huile d\'olive.' : currentLocale === 'ar' ? 'سوق فاخر في البحر الأبيض المتوسط والشرق الأوسط. الضغط البارد الهيدروليكي يحافظ على البوليفينول والنكهة المميزة التي يطلبها خبراء زيت الزيتون.' : 'Pasar premium Mediterania dan Timur Tengah. Press dingin hidrolik mempertahankan polifenol dan profil rasa khas yang diminati konoseur minyak zaitun.'}</p>
+          <div class="text-amber-500 font-semibold text-sm mt-3">{currentLocale === 'fr' ? 'Rendement : 35-45%' : currentLocale === 'ar' ? 'العائد: 35-45%' : 'Hasil: 35-45%'}</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">&#129361;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile d\'Avocat' : currentLocale === 'ar' ? 'زيت الأفوكادو' : 'Minyak Alpukat'}</h3>
+          <p class="text-steel-600 text-sm">{currentLocale === 'fr' ? 'Demande croissante dans les cosmétiques et les marchés de cuisine premium. Le pressage à froid retient les vitamines, les graisses mono-insaturées et la couleur verte vibrante de l\'huile d\'avocat premium.' : currentLocale === 'ar' ? 'طلب متزايد في مستحضرات التجميل وأسواق الطبخ الفاخرة. الضغط البارد يحتفظ بالفيتامينات والدهون الأحادية غير المشبعة واللون الأخضر الزاهي لزيت الأفوكادو الفاخر.' : 'Permintaan yang meningkat di kosmetik dan pasar masak premium. Press dingin mempertahankan vitamin, lemak tak jenuh tunggal, dan warna hijau cerah minyak alpukat premium.'}</p>
+          <div class="text-amber-500 font-semibold text-sm mt-3">{currentLocale === 'fr' ? 'Rendement : 30-40%' : currentLocale === 'ar' ? 'العائد: 30-40%' : 'Hasil: 30-40%'}</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">&#127803;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Tournesol' : currentLocale === 'ar' ? 'زيت دوار الشمس' : 'Minyak Bunga Matahari'}</h3>
+          <p class="text-steel-600 text-sm">{currentLocale === 'fr' ? 'Huile de cuisine de base en Europe de l\'Est et en Afrique. Point de fumée élevé et saveur douce en font un choix polyvalent pour la production alimentaire domestique et commerciale.' : currentLocale === 'ar' ? 'زيت طبخ أساسي في أوروبا الشرقية وأفريقيا. نقطة الدخان العالية والنكهة الخفيفة تجعله خياراً متعدد الاستخدامات لكل من الإنتاج المنزلي والتجاري.' : 'Minyak masak pokok di Eropa Timur dan Afrika. Titik asap tinggi dan rasa ringan menjadikannya pilihan serbaguna untuk produksi makanan rumahan dan komersial.'}</p>
+          <div class="text-amber-500 font-semibold text-sm mt-3">{currentLocale === 'fr' ? 'Rendement : 40-48%' : currentLocale === 'ar' ? 'العائد: 40-48%' : 'Hasil: 40-48%'}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Comparison -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Comparaison Technique' : currentLocale === 'ar' ? 'المقارنة التقنية' : 'Perbandingan Teknis'}</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-steel-900 text-white">
+              <th class="px-4 py-3 text-left font-display text-sm rounded-tl-lg">{currentLocale === 'fr' ? 'Modèle' : currentLocale === 'ar' ? 'النموذج' : 'Model'}</th>
+              <th class="px-4 py-3 text-left font-display text-sm">{currentLocale === 'fr' ? 'Force de Pressage' : currentLocale === 'ar' ? 'قوة الضغط' : 'Gaya Press'}</th>
+              <th class="px-4 py-3 text-left font-display text-sm">{currentLocale === 'fr' ? 'Capacité' : currentLocale === 'ar' ? 'السعة' : 'Kapasitas'}</th>
+              <th class="px-4 py-3 text-left font-display text-sm">{currentLocale === 'fr' ? 'Moteur' : currentLocale === 'ar' ? 'المحرك' : 'Motor'}</th>
+              <th class="px-4 py-3 text-left font-display text-sm rounded-tr-lg">{currentLocale === 'fr' ? 'Recommandé Pour' : currentLocale === 'ar' ? 'مناسب لـ' : 'Cocok Untuk'}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-steel-100">
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN300</td>
+              <td class="px-4 py-3 text-steel-600">300 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Sésame, petites graines, entrée de gamme' : currentLocale === 'ar' ? 'سمسم، بذور صغيرة، مستوى دخول' : 'Wijen, biji kecil, entry-level'}</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN325</td>
+              <td class="px-4 py-3 text-steel-600">325 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Populaire, polyvalent, arachide et colza' : currentLocale === 'ar' ? 'شائع، متعدد الاستخدامات، فول سوداني وكلزا' : 'Populer, serbaguna, kacang tanah dan rapeseed'}</td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN325S</td>
+              <td class="px-4 py-3 text-steel-600">330 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Acier inoxydable, qualité alimentaire, marchés d\'exportation' : currentLocale === 'ar' ? 'فولاذ مقاوم للصدأ، درجة غذائية، أسواق التصدير' : 'Baja tahan karat, food-grade, pasar ekspor'}</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN355</td>
+              <td class="px-4 py-3 text-steel-600">360 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Lourd, graine de thé et graines moyennes' : currentLocale === 'ar' ? 'ثقيل، بذور الشاي والبذور المتوسطة' : 'Berat, biji teh dan biji sedang'}</td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN400</td>
+              <td class="px-4 py-3 text-steel-600">400 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Échelle commerciale, production à volume élevé' : currentLocale === 'ar' ? 'تجاري، إنتاج عالي الحجم' : 'Skala komersial, produksi volume tinggi'}</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN426</td>
+              <td class="px-4 py-3 text-steel-600">500 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Pressage à froid, noix, coco et huiles premium' : currentLocale === 'ar' ? 'ضغط بارد، جوز، جوز هندادى وزيوت فاخرة' : 'Press dingin, walnut, kelapa dan minyak premium'}</td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN480B</td>
+              <td class="px-4 py-3 text-steel-600">560 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Pressage à froid lourd, coco VCO, industriel' : currentLocale === 'ar' ? 'ضغط بارد ثقيل، جوز هندادى VCO، صناعي' : 'Press dingin berat, kelapa VCO, industri'}</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-charcoal-900">HN500</td>
+              <td class="px-4 py-3 text-steel-600">620 Tons</td>
+              <td class="px-4 py-3 text-steel-600">100 kg/batch</td>
+              <td class="px-4 py-3 text-steel-600">2.2 KW</td>
+              <td class="px-4 py-3 text-steel-600">{currentLocale === 'fr' ? 'Ultra-haute pression, échelle industrielle, toutes graines' : currentLocale === 'ar' ? 'ضغط فائق العلو، صناعي، جميع البذور' : 'Tekanan ultra-tinggi, skala industri, semua biji'}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-sm text-steel-500 mt-4">{currentLocale === 'fr' ? 'Tous les modèles disponibles en configurations à fût simple et double. Taille de fût personnalisable.' : currentLocale === 'ar' ? 'جميع النماذج متوفرة بتهيئات البرميل المفرد والمزدوج. حجم البرميل قابل للتخصيص.' : 'Semua model tersedia dalam konfigurasi barrel tunggal dan ganda. Ukuran barrel dapat disesuaikan.'} <a href={localePath('/products/model-comparison')} class="text-amber-500 hover:underline">{currentLocale === 'fr' ? 'Comparer tous les modèles →' : currentLocale === 'ar' ? 'مقارنة جميع النماذج ←' : 'Bandingkan semua model →'}</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">{currentLocale === 'fr' ? 'Foire aux questions' : currentLocale === 'ar' ? 'أسئلة شائعة' : 'Pertanyaan yang Sering Diajukan'}</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'fr' ? 'Prêt à Trouver la Bonne Presse à Huile Hydraulique ?' : currentLocale === 'ar' ? 'هل أنت مستعد لمعرفة ماكينة الضغط الهيدروليكي المناسبة؟' : 'Siap Temukan Mesin Press Minyak Hidrolik yang Tepat?'}</h2>
+      <p class="text-steel-300 text-lg mb-8">{currentLocale === 'fr' ? 'Obtenez un devis gratuit, une estimation d\'expédition et une recommandation d\'équipement professionnelle généralement dans les 24 heures ouvrables.' : currentLocale === 'ar' ? 'احصل على عرض أسعار مجاني، تقدير الشحن، والتوصية المهنية للمعدات عادةً في غضون 24 ساعة عمل.' : 'Dapatkan penawaran gratis, estimasi pengiriman, dan rekomendasi peralatan profesional biasanya dalam 24 jam kerja.'}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {currentLocale === 'fr' ? 'Demander un devis' : currentLocale === 'ar' ? 'طلب عرض أسعار' : 'Minta Penawaran'}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128?text=Hello%20Haonuo%2C%20I%20am%20interested%20in%20hydraulic%20oil%20press%20machine" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-500 transition-colors text-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          {currentLocale === 'fr' ? 'Discuter sur WhatsApp' : currentLocale === 'ar' ? 'واتساب' : 'WhatsApp Kami'}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

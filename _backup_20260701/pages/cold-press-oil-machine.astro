@@ -1,0 +1,368 @@
+﻿﻿﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allProducts = await getCollection('products');
+const coldPressProducts = allProducts.filter(p =>
+  p.data.category === 'hydraulic-oil-press' && (
+    p.data.title?.en?.toLowerCase().includes('cold press') ||
+    p.data.title?.en?.toLowerCase().includes('ultra-high-pressure') ||
+    p.data.applicableSeeds?.some(s =>
+      s.toLowerCase().includes('coconut') ||
+      s.toLowerCase().includes('walnut') ||
+      s.toLowerCase().includes('almond') ||
+      s.toLowerCase().includes('avocado') ||
+      s.toLowerCase().includes('flaxseed') ||
+      s.toLowerCase().includes('olive')
+    )
+  )
+).slice(0, 6);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://www.hydoilpress.com/products' },
+    { '@type': 'ListItem', position: 3, name: 'Cold Press Oil Machine', item: 'https://www.hydoilpress.com/cold-press-oil-machine' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a cold press oil machine?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A cold press oil machine extracts oil from seeds at temperatures below 60°C, preserving the natural nutrients, flavor, and aroma of the oil. Unlike hot press methods that heat seeds to 120-180°C, cold pressing uses hydraulic pressure alone to extract oil, making it ideal for producing premium, unrefined oils such as virgin coconut oil, cold-pressed sesame oil, and walnut oil. Haonuo\'s cold press oil machines deliver professional-grade extraction. Cold press yields are typically somewhat lower than hot pressing but produce higher-quality, premium-priced oils.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between cold press and hot press?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Cold press operates below 60°C helping retain nutrients, natural flavor, and aroma, while hot press heats seeds to 120-180°C which increases yield but may reduce oil quality. Cold-pressed oils are premium, unrefined products that typically command higher market prices than refined oils, though actual premiums vary significantly by market, region, and oil type. Hot-pressed oils require chemical refining and are suitable for bulk cooking oil production. For premium and organic oil markets, cold pressing is often preferred.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What seeds can be cold pressed?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most oil seeds can be cold pressed including sesame, peanut, coconut, walnut, almond, sunflower, flaxseed, mustard seed, rapeseed, tea seed, apricot kernel, and more. Hard-shell materials like walnut and apricot kernel benefit especially from cold pressing with high-pressure hydraulic presses. Coconut for VCO (Virgin Coconut Oil) and sesame for premium cooking oil are the most popular cold-pressed oils globally.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is cold-pressed oil better?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Cold-pressed oil generally retains more of certain nutrients, natural flavor, and aroma compared to hot-pressed or refined oils. Some vitamins and antioxidants may be reduced during high-temperature processing, though the degree varies by oil type and processing method. Cold-pressed oils are not processed with chemical refining agents. However, the chemical profile of any oil depends on the quality and handling of the raw material. While the yield may be slightly lower, the significantly higher market value of cold-pressed oils (30-80% premium) makes cold pressing more profitable for producers targeting premium and organic markets.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the yield of cold press oil machine?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo\'s hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on internal testing, results vary), minimizing the yield gap between cold and hot pressing methods.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a cold press oil machine cost?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with capacities from 50 to 125 kg/hr. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 2-year warranty, lifetime technical support, and free voltage customization for your local power supply.' },
+    },
+  ],
+};
+
+const faqs = [
+  { question: 'What is a cold press oil machine?', answer: 'A cold press oil machine extracts oil from seeds at temperatures below 60°C, helping retain the natural nutrients, flavor, and aroma of the oil. Unlike hot press methods that heat seeds to 120-180°C, cold pressing uses hydraulic pressure alone to extract oil, making it well-suited for producing premium, unrefined oils such as virgin coconut oil, cold-pressed sesame oil, and walnut oil. Haonuo\'s cold press oil machines deliver professional-grade extraction. Cold press yields are typically somewhat lower than hot pressing but produce higher-quality, premium-priced oils.' },
+  { question: 'What is the difference between cold press and hot press?', answer: 'Cold press operates below 60°C helping retain nutrients, natural flavor, and aroma, while hot press heats seeds to 120-180°C which increases yield but may reduce oil quality. Cold-pressed oils are premium, unrefined products that typically command higher market prices than refined oils, though actual premiums vary significantly by market, region, and oil type. Hot-pressed oils require chemical refining and are suitable for bulk cooking oil production. For premium and organic oil markets, cold pressing is often preferred.' },
+  { question: 'What seeds can be cold pressed?', answer: 'Most oil seeds can be cold pressed including sesame, peanut, coconut, walnut, almond, sunflower, flaxseed, mustard seed, rapeseed, tea seed, apricot kernel, and more. Hard-shell materials like walnut and apricot kernel benefit especially from cold pressing with high-pressure hydraulic presses. Coconut for VCO (Virgin Coconut Oil) and sesame for premium cooking oil are the most popular cold-pressed oils globally.' },
+  { question: 'Is cold-pressed oil better?', answer: 'Cold-pressed oil generally retains more of certain nutrients, natural flavor, and aroma compared to hot-pressed or refined oils. Some vitamins and antioxidants may be reduced during high-temperature processing, though the degree varies by oil type and processing method. Cold-pressed oils are not processed with chemical refining agents. However, the chemical profile of any oil depends on the quality and handling of the raw material. While the yield may be slightly lower, the typically higher market value of cold-pressed oils makes cold pressing potentially more profitable for producers targeting premium and organic markets, though actual price premiums vary significantly.' },
+  { question: 'What is the yield of cold press oil machine?', answer: 'Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo\'s hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on internal testing, results vary), minimizing the yield gap between cold and hot pressing methods.' },
+  { question: 'How much does a cold press oil machine cost?', answer: 'Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with capacities from 50 to 125 kg/hr. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 2-year warranty, lifetime technical support, and free voltage customization for your local power supply.' },
+];
+---
+
+<BaseLayout
+  title="Cold Press Oil Machine — Help Preserve Natural Quality | Haonuo"
+  description="Professional cold press oil machine for premium oil extraction below 60°C. Can help retain more nutrients and flavor compared to hot pressing. Factory-direct from Haonuo. 2-year warranty."
+  keywords={['cold press oil machine', 'cold press oil expeller', 'cold press oil machine price', 'cold pressed oil machine', 'cold press oil extraction machine', 'cold press machine for home']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/products" class="hover:text-amber-500 transition-colors">Products</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">Cold Press Oil Machine</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Cold Press Oil Machine — Help Preserve Natural Quality</h1>
+	      <p class="text-steel-300 text-lg max-w-3xl mb-8">Professional cold press oil machines that extract premium oil below 60°C. Can help retain more nutrients, flavor, and aroma compared to hot pressing. Well-suited for coconut, sesame, walnut, and premium oils. Factory-direct from Haonuo.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          Request a Quote
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/resources/does-cold-pressing-make-difference" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+          Learn How Cold Press Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Cold Press Matters -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">Why Cold Press Matters</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#127793;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">Nutrient Preservation</h3>
+          <p class="text-steel-600 leading-relaxed">Cold pressing below 60°C helps retain vitamins, antioxidants, and essential fatty acids that may be lost in hot pressing. Your customers get premium quality cold-pressed oil.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#128067;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">Natural Flavor & Aroma</h3>
+          <p class="text-steel-600 leading-relaxed">No heating means the oil keeps its original taste — critical for premium and organic markets. Sesame stays nutty, coconut stays fragrant, walnut stays rich.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#128142;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">Higher Market Value</h3>
+          <p class="text-steel-600 leading-relaxed">Cold-pressed oils command 30-80% premium over refined/hot-pressed oils. Higher quality translates directly to higher profit margins for your business.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#127981;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">Versatile Applications</h3>
+          <p class="text-steel-600 leading-relaxed">From VCO (Virgin Coconut Oil) to cold-pressed sesame oil for pharmaceutical and cosmetic industries. One machine opens doors to multiple premium markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cold Press Products -->
+  {coldPressProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-steel-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">Our Cold Press Oil Machine Series</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {coldPressProducts.map(product => (
+            <a
+              href={`/products/${product.slug}`}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20cold%20press%20oil%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {product.data.specifications.slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Cold Press vs Hot Press Comparison -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">Cold Press vs Hot Press Comparison</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-steel-900 text-white">
+              <th class="text-left px-6 py-4 font-display text-lg rounded-tl-xl">Feature</th>
+              <th class="text-center px-6 py-4 font-display text-lg">Cold Press</th>
+              <th class="text-center px-6 py-4 font-display text-lg rounded-tr-xl">Hot Press</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-4 font-medium text-charcoal-900">Temperature</td>
+              <td class="px-6 py-4 text-center text-steel-600">Below 60°C</td>
+              <td class="px-6 py-4 text-center text-steel-600">120-180°C</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-6 py-4 font-medium text-charcoal-900">Nutrient Retention</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">Generally high (varies by seed type)</span></td>
+              <td class="px-6 py-4 text-center"><span class="text-steel-600">Low (40-60%)</span></td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-4 font-medium text-charcoal-900">Oil Yield</td>
+              <td class="px-6 py-4 text-center text-steel-600">Standard</td>
+              <td class="px-6 py-4 text-center text-steel-600">Higher</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-6 py-4 font-medium text-charcoal-900">Oil Quality</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">Premium, unrefined</span></td>
+              <td class="px-6 py-4 text-center text-steel-600">Requires refining</td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-4 font-medium text-charcoal-900">Flavor/Aroma</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">Natural, rich</span></td>
+              <td class="px-6 py-4 text-center text-steel-600">Neutral</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-6 py-4 font-medium text-charcoal-900">Market Price</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">Typically premium (varies significantly by market and oil type)</span></td>
+              <td class="px-6 py-4 text-center text-steel-600">Standard</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-charcoal-900 rounded-bl-xl">Best For</td>
+              <td class="px-6 py-4 text-center text-amber-500 font-semibold">Premium/organic oils</td>
+              <td class="px-6 py-4 text-center text-steel-600 rounded-br-xl">Bulk cooking oil</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-8">
+        <a href="/resources/does-cold-pressing-make-difference" class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+          Read the full Cold Press vs Hot Press comparison
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Cold-Pressed Oils -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">Popular Cold-Pressed Oils</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129381;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Virgin Coconut Oil (VCO)</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">Philippines / Indonesia</p>
+          <p class="text-steel-600 text-sm mb-3">Premium cooking & cosmetic applications</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 55-65%</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">High Demand</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127807;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Cold-Pressed Sesame Oil</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">Middle East / Asia</p>
+          <p class="text-steel-600 text-sm mb-3">Traditional cooking & health supplements</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 42-50%</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">Premium Price</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129361;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Avocado Oil</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">Global demand</p>
+          <p class="text-steel-600 text-sm mb-3">Cosmetic & premium cooking</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 15-25%</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">Fast Growing</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129722;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Cold-Pressed Olive Oil</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">Mediterranean</p>
+          <p class="text-steel-600 text-sm mb-3">Premium food market</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 15-25%</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">Established Market</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129728;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Walnut Oil</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">Europe / Asia</p>
+          <p class="text-steel-600 text-sm mb-3">Gourmet cooking & supplements</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 50-60%</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">Ultra Premium</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127803;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Cold-Pressed Sunflower Oil</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">Eastern Europe / Africa</p>
+          <p class="text-steel-600 text-sm mb-3">Health-conscious market</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 35-45%</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">High Volume</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Cold Press Extraction Works -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">How Cold Press Extraction Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">1</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">Prepare Seeds</h3>
+          <p class="text-steel-600 leading-relaxed">Clean, dry, and optionally dehull the oil seeds. Proper preparation ensures maximum oil yield and clean, sediment-free oil output.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">2</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">Cold Press at Low Temperature</h3>
+          <p class="text-steel-600 leading-relaxed">Hydraulic pressure extracts oil below 60°C. The intense mechanical pressure does the work — no heating or chemicals needed. Nutrients and flavor stay intact.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">3</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">Filter & Package</h3>
+          <p class="text-steel-600 leading-relaxed">Natural sediment filtration, no chemical processing needed. The result is pure, premium cold-pressed oil ready for bottling and market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Start Producing Premium Cold-Pressed Oil</h2>
+      <p class="text-steel-300 text-lg mb-8">Contact Haonuo for factory-direct pricing, model recommendations, and free production line design.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          Request a Quote
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

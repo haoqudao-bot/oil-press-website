@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('fr');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+    { '@type': 'ListItem', position: 2, name: 'Politique de confidentialité', item: 'https://www.hydoilpress.com/fr/privacy-policy' },
+  ],
+};
+---
+
+<BaseLayout title="Politique de confidentialité" description="Politique de confidentialité de Haonuo Machinery - Votre vie privée est importante pour nous. Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles." locale="fr">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/fr" class="hover:text-amber-500 transition-colors">Accueil</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Politique de confidentialité</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">Politique de confidentialité</h1>
+      <p class="text-steel-600 text-lg mb-8">Dernière mise à jour: 20 juillet 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. Introduction</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Shandong Haonuo Machinery Equipment Group Co., Ltd. ("nous", "notre") s'engage à protéger votre vie privée. Cette Politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations personnelles lorsque vous visitez notre site web, utilisez nos services ou nous contactez.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. Informations que nous collectons</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Nous pouvons collecter les types d'informations personnelles suivants:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li><strong>Informations de contact:</strong> Nom, adresse email, numéro de téléphone, nom de l'entreprise, adresse et autres détails de contact que vous fournissez lorsque vous remplissez des formulaires ou nous contactez.</li>
+            <li><strong>Informations sur les demandes:</strong> Détails sur vos intérêts en matière de produits, vos besoins en matière de projets et autres informations que vous fournissez dans vos demandes.</li>
+            <li><strong>Données d'utilisation:</strong> Informations sur la manière dont vous interagissez avec notre site web, y compris les pages visitées, le temps passé et les informations sur l'appareil.</li>
+            <li><strong>Cookies:</strong> Nous utilisons des cookies pour améliorer votre expérience de navigation. Pour plus d'informations, consultez notre Politique sur les cookies.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. Comment nous utilisons vos informations</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Nous utilisons vos informations aux fins suivantes:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Répondre à vos demandes et vous fournir des informations sur les produits</li>
+            <li>Traiter vos demandes de devis et de propositions</li>
+            <li>Améliorer notre site web et nos services</li>
+            <li>Envoyer des communications marketing (avec votre consentement)</li>
+            <li>Respecter nos obligations légales</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. Partage de vos informations</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Nous pouvons partager vos informations avec:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Nos partenaires et prestataires de services autorisés qui nous assistent dans la fourniture de services</li>
+            <li>Les autorités de police ou de régulation lorsque cela est requis par la loi</li>
+            <li>Des tiers avec votre consentement explicite</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            Nous ne vendons pas vos informations personnelles à des tiers.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. Sécurité</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Nous prenons des mesures raisonnables pour protéger vos informations personnelles contre tout accès, utilisation ou divulgation non autorisés. Cependant, aucune transmission de données sur Internet n'est totalement sécurisée, et nous ne pouvons garantir la sécurité absolue de vos informations.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. Vos droits</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Vous avez le droit de:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Accéder à vos informations personnelles et en recevoir une copie</li>
+            <li>Corriger ou mettre à jour vos informations personnelles</li>
+            <li>Demander la suppression de vos informations personnelles</li>
+            <li>Retirer votre consentement aux communications marketing</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            Pour exercer ces droits, veuillez nous contacter à contact@hydoilpress.com.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">7. Modifications de cette politique</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Nous pouvons mettre à jour cette Politique de confidentialité de temps en temps. Nous vous informerons de tout changement significatif en publiant la politique mise à jour sur notre site web. Votre utilisation continue de notre site web après tout changement constitue votre acceptation de la politique mise à jour.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">8. Nous contacter</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Si vous avez des questions sur cette Politique de confidentialité, veuillez nous contacter:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>Email: contact@hydoilpress.com</li>
+            <li>Téléphone: +86-18957149128</li>
+            <li>Adresse: Qingzhou, Weifang, Shandong, Chine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

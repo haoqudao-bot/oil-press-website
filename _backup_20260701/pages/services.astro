@@ -1,0 +1,312 @@
+﻿﻿﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslations } from '../i18n';
+
+const t = getTranslations('en');
+
+const services = [
+  {
+    icon: 'machine',
+    title: 'Standard Machine Purchase',
+    subtitle: 'Ready-to-Ship Models',
+    description: 'Choose from our complete range of hydraulic oil press machines — from HN300 mini to HN500 ultra-high pressure. Every machine is factory-tested and ready to ship within 20-30 working days.',
+    features: [
+      '8 standard models + 4 specialty models in stock',
+      'Single or double barrel configurations available',
+      'Carbon steel or food-grade stainless steel options',
+      'Full accessory package included (oil cloth, tools, manual)',
+      '48-hour continuous running test before shipment',
+    ],
+    bestFor: 'Distributors, new oil pressing businesses, buyers who need machines fast',
+  },
+  {
+    icon: 'oem',
+    title: 'OEM / White Label Manufacturing',
+    subtitle: 'Your Brand, Our Manufacturing',
+    description: 'We manufacture hydraulic oil press machines under your brand name. From custom logo and color to modified specifications — we handle everything from design to delivery.',
+    features: [
+      'Custom brand name, logo, and color scheme',
+      'Modified specifications to match your market requirements',
+      'Custom packaging with your branding and documentation',
+      'Private label user manuals and certificates',
+      'Low MOQ — start with as few as 5 units',
+    ],
+    bestFor: 'Brand owners, distributors who want their own product line',
+  },
+  {
+    icon: 'odm',
+    title: 'ODM / Custom Engineering',
+    subtitle: 'Custom Solutions from Scratch',
+    description: 'Our engineering team designs and builds custom hydraulic press machines tailored to your unique requirements — from barrel dimensions to pressure systems to automation integration.',
+    features: [
+      'Custom barrel diameter and height for specific oil seeds',
+      'Modified hydraulic systems for special pressure requirements',
+      'Integration with existing production lines and automation',
+      'Special material options (316L stainless steel, nickel plating)',
+      'Full engineering documentation and technical support',
+    ],
+    bestFor: 'Large-scale producers, companies with unique processing needs',
+  },
+  {
+    icon: 'parts',
+    title: 'Spare Parts & Accessories',
+    subtitle: 'Keep Your Machines Running',
+    description: 'Genuine Haonuo spare parts and accessories to keep your hydraulic oil press machines operating at peak performance. Fast worldwide shipping with quality guarantee.',
+    features: [
+      'Hydraulic cylinders, seals, and pump assemblies',
+      'Oil barrels (standard and custom sizes)',
+      'Filter press cloths and filter elements',
+      'Electrical components and control panels',
+      'Complete maintenance kits for each model',
+    ],
+    bestFor: 'Existing Haonuo machine owners, maintenance teams',
+  },
+  {
+    icon: 'support',
+    title: 'Technical Support & Training',
+    subtitle: 'Expert Help When You Need It',
+    description: 'Comprehensive technical support from installation to daily operation. Our engineers are available via video call, WhatsApp, or on-site visit to ensure your success.',
+    features: [
+      'Video installation guidance with step-by-step instructions',
+      'Remote troubleshooting via WhatsApp or video call',
+      'On-site installation and training (available in select regions)',
+      'Operator training programs for your team',
+      'Lifetime technical support for all Haonuo machines',
+    ],
+    bestFor: 'First-time buyers, teams that need hands-on training',
+  },
+  {
+    icon: 'upgrade',
+    title: 'Equipment Upgrade & Retrofit',
+    subtitle: 'Modernize Your Existing Machines',
+    description: 'Upgrade your older Haonuo or third-party hydraulic oil press machines with modern components. Improve efficiency, safety, and oil yield without buying a whole new machine.',
+    features: [
+      'Hydraulic system upgrades for higher pressure',
+      'Stainless steel barrel retrofits for food-grade compliance',
+      'Electrical system modernization and safety upgrades',
+      'Automation add-ons (auto-feeding, auto cake removal)',
+      'Performance optimization for specific oil seeds',
+    ],
+    bestFor: 'Existing machine owners looking to improve performance',
+  },
+];
+
+const iconPaths: Record<string, string> = {
+  machine: 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z',
+  oem: 'M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82zM7 7h.01',
+  odm: 'M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z',
+  parts: 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z',
+  support: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',
+  upgrade: 'M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15',
+};
+
+const process = [
+  {
+    step: 1,
+    title: 'Tell Us Your Needs',
+    desc: 'Share your oil seed type, production capacity, budget, and any customization requirements. We respond within 24 hours.',
+  },
+  {
+    step: 2,
+    title: 'Custom Proposal',
+    desc: 'Our engineers design the optimal solution — whether it\'s a standard model, OEM branding, or fully custom ODM machine.',
+  },
+  {
+    step: 3,
+    title: 'Sample & Approval',
+    desc: 'For OEM/ODM orders, we provide detailed specifications and 3D renders for your approval before production begins.',
+  },
+  {
+    step: 4,
+    title: 'Production & QC',
+    desc: 'Your machines are manufactured in our factory with 48-hour continuous testing before shipment.',
+  },
+  {
+    step: 5,
+    title: 'Global Delivery',
+    desc: 'Safe packaging, reliable shipping to your port, full export documentation, and ongoing technical support.',
+  },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.hydoilpress.com/about' },
+    { '@type': 'ListItem', position: 3, name: 'Services', item: 'https://www.hydoilpress.com/services' },
+  ],
+};
+---
+
+<BaseLayout title="OEM/ODM Manufacturing & Services | Haonuo Machinery" description="Haonuo Machinery offers standard machine purchase, OEM white label manufacturing, ODM custom engineering, spare parts, technical support, and equipment upgrades for hydraulic oil press machines." keywords={['oil press OEM manufacturer', 'hydraulic oil press ODM', 'custom oil press machine', 'oil press machine manufacturer China']} jsonLd={breadcrumbLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/about" class="hover:text-amber-500 transition-colors">About</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">Services</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Factory Direct • 15+ Years • 50+ Countries
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-4">Our Services</h1>
+        <p class="text-steel-500 text-lg max-w-3xl mx-auto">From standard machine purchase to fully custom OEM/ODM manufacturing, Haonuo provides comprehensive solutions for every oil pressing need. Choose the service model that fits your business.</p>
+      </div>
+
+      <!-- Service Cards -->
+      <div class="space-y-8 mb-20">
+        {services.map((service, index) => (
+          <div class={`bg-white rounded-2xl border border-steel-100 overflow-hidden ${index === 1 || index === 2 ? 'border-amber-200 shadow-md' : ''}`}>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+              <!-- Left: Info -->
+              <div class={`p-8 ${index === 1 || index === 2 ? 'bg-amber-50/50' : 'bg-steel-50/50'}`}>
+                <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d={iconPaths[service.icon]}/></svg>
+                </div>
+                <h2 class="font-display text-2xl text-charcoal-900 mb-1">{service.title}</h2>
+                <p class="text-amber-600 font-medium text-sm mb-4">{service.subtitle}</p>
+                <p class="text-steel-600 leading-relaxed">{service.description}</p>
+                <div class="mt-4">
+                  <span class="text-xs font-semibold text-steel-400 uppercase tracking-wider">Best For</span>
+                  <p class="text-sm text-steel-700 mt-1">{service.bestFor}</p>
+                </div>
+              </div>
+              <!-- Right: Features -->
+              <div class="lg:col-span-2 p-8">
+                <h3 class="font-display text-lg text-charcoal-900 mb-4">What's Included</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {service.features.map(feature => (
+                    <div class="flex items-start gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span class="text-sm text-steel-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <div class="mt-6">
+                  <a href="/contact" class="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium transition-colors text-sm">
+                    Get a Quote for {service.title.split(' / ')[0].split(' & ')[0]}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Highlight -->
+      <div class="bg-gradient-to-br from-steel-900 to-steel-800 rounded-2xl p-8 md:p-12 mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-display text-3xl text-white mb-4">Why Partner with Haonuo for OEM/ODM?</h2>
+            <p class="text-steel-300 text-lg mb-8">As a direct manufacturer with 15+ years of hydraulic oil press expertise, we offer capabilities that trading companies simply cannot match.</p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">Direct Factory Access</h3>
+                  <p class="text-steel-400 text-sm">No middleman — you work directly with our engineers and production team. Faster communication, better quality control, lower costs.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">Proven Export Experience</h3>
+                  <p class="text-steel-400 text-sm">Successfully shipped to 50+ countries with full documentation (CO, Form A/E, embassy legalization). We handle customs and compliance.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">Flexible MOQ</h3>
+                  <p class="text-steel-400 text-sm">Start with as few as 5 units for OEM orders. We support growing businesses and understand that you may want to test the market first.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">Full Customization Capability</h3>
+                  <p class="text-steel-400 text-sm">From barrel dimensions to hydraulic pressure to surface treatment — we can customize every aspect of the machine to your specifications.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-steel-800 rounded-xl p-8 border border-steel-700">
+            <h3 class="font-display text-xl text-white mb-4">Ready for Custom Solutions?</h3>
+            <p class="text-steel-400 text-sm mb-6">Whether you need OEM branding, ODM custom engineering, or full production line design, our team is ready to help. Contact us today for a free consultation.</p>
+            <ul class="space-y-2 mb-6 text-sm text-steel-300">
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Free engineering consultation
+              </li>
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                24-hour response time
+              </li>
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Custom 3D renders for approval
+              </li>
+            </ul>
+            <a href="/contact" class="block w-full text-center bg-amber-500 text-charcoal-900 font-semibold py-3 rounded-xl hover:bg-amber-400 transition-colors">
+              Request OEM/ODM Quote
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <h2 class="font-display text-3xl text-charcoal-900 mb-3">How It Works</h2>
+          <p class="text-steel-500 max-w-2xl mx-auto">From initial inquiry to delivery and beyond — our streamlined process ensures a smooth experience for every service type.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {process.map(p => (
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-4 bg-amber-500 text-white rounded-full flex items-center justify-center font-display text-xl font-bold">{p.step}</div>
+              <h3 class="font-display text-lg text-charcoal-900 mb-2">{p.title}</h3>
+              <p class="text-sm text-steel-600">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-amber-500 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="font-display text-3xl text-charcoal-900 mb-4">Ready to Start Your Project?</h2>
+        <p class="text-charcoal-700 text-lg max-w-2xl mx-auto mb-8">Whether you need a single machine or a custom OEM production line, our team is ready to help. Get a free consultation and quote today.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-charcoal-900 text-white font-semibold rounded-xl hover:bg-charcoal-800 transition-colors">
+            Request a Quote
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://wa.me/8618957149128" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 bg-white text-charcoal-900 font-semibold rounded-xl hover:bg-steel-50 transition-colors">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

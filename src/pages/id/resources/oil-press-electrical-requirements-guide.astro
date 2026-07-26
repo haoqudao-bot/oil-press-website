@@ -1,0 +1,383 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'oil-press-electrical-requirements-guide');
+const t = getTranslations('id');
+
+const title = resource?.data.title.id || 'Panduan Persyaratan Listrik Mesin Press Minyak';
+const description = resource?.data.description.id || 'Konfigurasi pasokan daya dan generator';
+const seoKeywords = resource?.data.seoKeywords || ['persyaratan listrik mesin press minyak', 'generator untuk mesin press minyak', 'konfigurasi pasokan daya'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/electrical-guide-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Insinyur Teknis Mesin Press Minyak', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/oil-press-electrical-requirements-guide' },
+  ],
+};
+
+const voltageSpecs = ['220V Single Phase (umum di banyak negara)', '380V Three Phase (standar industri)', '415V Three Phase (beberapa wilayah)', 'Frekuensi: 50Hz atau 60Hz', 'Voltase dapat disesuaikan tanpa biaya tambahan'];
+const powerConsumption = ['Daya Motor: Semua model Haonuo: 2.2 KW', 'Standby: 0.5-1.0 KW', 'Pressing: 1.5-2.2 KW', 'Puncak: Sampai 3.0 KW (selama pembangunan tekanan)'];
+const currentRequirements = ['Single Phase (220V): Running 10-15 A, Starting 20-30 A', 'Three Phase (380V): Running 5-8 A, Starting 10-15 A', 'Pemutus Sirkuit Direkomendasikan: Single phase 30 A, Three phase 16 A per phase'];
+
+const generatorCapacity = [
+  { model: 'HN325', singlePhase: '5 kVA', threePhase: '5 kVA' },
+  { model: 'HN355', singlePhase: '5.5 kVA', threePhase: '5.5 kVA' },
+  { model: 'HN426', singlePhase: '5.5 kVA', threePhase: '5.5 kVA' },
+  { model: 'HN480', singlePhase: '5.5 kVA', threePhase: '5.5 kVA' },
+  { model: 'HN500', singlePhase: '7 kVA', threePhase: '7 kVA' },
+];
+
+const safetyMargin = ['Tambahkan 20-30% untuk arus start', 'Perhitungkan peralatan lain di sirkuit yang sama', 'Akun untuk penurunan voltase'];
+const recommendedGenerator = [
+  { models: 'HN325/HN355', size: '6-7 kVA' },
+  { models: 'HN426/HN480', size: '7-8 kVA' },
+  { models: 'HN500', size: '8-10 kVA' },
+];
+
+const generatorSelection = [
+  { title: 'Tipe', desc: 'Diesel (paling umum), Bensin, Surya' },
+  { title: 'Kualitas', desc: 'Merek ternama, jenis inverter direkomendasikan' },
+  { title: 'Fitur', desc: 'Regulasi voltase, proteksi overloading, start/stop otomatis' },
+];
+
+const wiringRequirements = [
+  { distance: '10m', singlePhase: '2.5 mm²', threePhase: '2.5 mm²' },
+  { distance: '20m', singlePhase: '4 mm²', threePhase: '2.5 mm²' },
+  { distance: '30m', singlePhase: '6 mm²', threePhase: '4 mm²' },
+  { distance: '50m', singlePhase: '10 mm²', threePhase: '6 mm²' },
+];
+
+const controlPanelComponents = ['Tombol utama', 'Pemutus sirkuit', 'Starter motor', 'Tombol kontrol', 'Stop darurat', 'Lampu indikator'];
+const electricalSafety = ['Gunakan sarung tangan insulasi', 'Gunakan alat insulasi', 'Ikuti prosedur penguncian'];
+const voltageFluctuations = [
+  { type: 'Voltase rendah', effects: 'Motor overheating, performa menurun', solution: 'Stabilizer voltase' },
+  { type: 'Voltase tinggi', effects: 'Kerusakan motor, kegagalan komponen', solution: 'Pelindung lonjakan' },
+];
+
+const lightningProtection = ['Instalasi penangkal petir', 'Perangkat pelindung lonjakan', 'Sistem grounding'];
+const upsInfo = ['Aplikasi: Cadangan panel kontrol, shutdown darurat', 'Ukuran: 500-1000 VA biasanya cukup'];
+const solarInfo = ['Aplikasi: Lokasi off-grid, operasi berkelanjutan', 'Pertimbangan: Ukuran panel surya, penyimpanan baterai, generator cadangan direkomendasikan'];
+
+const powerManagement = ['Jalankan selama jam sibuk rendah jika memungkinkan', 'Pengolahan batch untuk mengurangi siklus startup'];
+const costCalculation = ['Biaya Energi per Hari = (Konsumsi Energi x Jam x Tarif) / 1000', 'Contoh: 2.0 KW x 8 jam x Rp1.500/KWh = Rp24.000/hari'];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">PANDUAN TEKNIS</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Insinyur Teknis Mesin Press Minyak · 15+ Tahun Pengalaman</div>
+          </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
+        <p class="text-steel-700 leading-relaxed">Memahami persyaratan listrik mesin press minyak hidrolik Anda sangat penting untuk operasi yang aman dan efisien.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Konfigurasi listrik yang tepat memastikan operasi aman dan memperpanjang umur peralatan.</p>
+        </div>
+      </section>
+
+      <section id="basic-requirements" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Persyaratan Listrik Dasar</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Spesifikasi Voltase</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+          {voltageSpecs.map((spec, index) => (
+            <div key={index} class="bg-blue-50 p-4 rounded-lg border border-blue-100 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span class="text-steel-700 text-sm">{spec}</span>
+            </div>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Konsumsi Energi</h3>
+        <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-100 mb-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {powerConsumption.map((item, index) => (
+              <div key={index} class="bg-white p-3 rounded-lg text-center">
+                <p class="text-sm text-steel-600">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Persyaratan Arus</h3>
+        <div class="space-y-2">
+          {currentRequirements.map((req, index) => (
+            <div key={index} class="bg-white p-4 rounded-lg border border-steel-100 shadow-sm flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-steel-700">{req}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="generator" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Persyaratan Generator</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Kapasitas Generator</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Model</th><th class="px-4 py-3 text-left font-semibold">Single Phase</th><th class="px-4 py-3 text-left font-semibold">Three Phase</th></tr>
+            </thead>
+            <tbody>
+              {generatorCapacity.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-green-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.model}</td>
+                  <td class="px-4 py-3 text-green-600">{item.singlePhase}</td>
+                  <td class="px-4 py-3 text-green-600">{item.threePhase}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-orange-50 p-5 rounded-xl border border-orange-100">
+            <h4 class="font-semibold text-orange-800 mb-3">Margin Keamanan</h4>
+            <ul class="space-y-2">
+              {safetyMargin.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-amber-50 p-5 rounded-xl border border-amber-100">
+            <h4 class="font-semibold text-amber-800 mb-3">Ukuran Generator Direkomendasikan</h4>
+            <ul class="space-y-2">
+              {recommendedGenerator.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-center justify-between">
+                  <span>{item.models}</span>
+                  <span class="font-bold text-amber-600">{item.size}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Kriteria Seleksi Generator</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {generatorSelection.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
+              <h4 class="font-semibold text-charcoal-900 mb-2">{item.title}</h4>
+              <p class="text-steel-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="power-supply" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Konfigurasi Pasokan Daya</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Koneksi Jaringan</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <h4 class="font-semibold text-blue-800 mb-3">Koneksi Single Phase</h4>
+            <ul class="space-y-1 text-steel-700 text-sm">
+              <li>L1 -> Pemutus Sirkuit -> Motor</li>
+              <li>N -> Motor</li>
+              <li>PE -> Rangka Peralatan</li>
+            </ul>
+          </div>
+          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h4 class="font-semibold text-green-800 mb-3">Koneksi Three Phase</h4>
+            <ul class="space-y-1 text-steel-700 text-sm">
+              <li>L1, L2, L3 -> Pemutus Sirkuit -> Motor</li>
+              <li>N -> Panel Kontrol</li>
+              <li>PE -> Rangka Peralatan</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Persyaratan Kabel</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Jarak</th><th class="px-4 py-3 text-left font-semibold">Single Phase (220V)</th><th class="px-4 py-3 text-left font-semibold">Three Phase (380V)</th></tr>
+            </thead>
+            <tbody>
+              {wiringRequirements.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.distance}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.singlePhase}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.threePhase}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Komponen Panel Kontrol</h3>
+        <div class="flex flex-wrap gap-2">
+          {controlPanelComponents.map((item, index) => (
+            <span key={index} class="bg-steel-100 text-steel-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section id="safety" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pertimbangan Keamanan</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+            <h3 class="font-semibold text-red-800 mb-3">Keamanan Listrik</h3>
+            <ul class="space-y-2">
+              {electricalSafety.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-orange-50 p-5 rounded-xl border border-orange-100">
+            <h3 class="font-semibold text-orange-800 mb-3">Fluktuasi Voltase</h3>
+            <ul class="space-y-3">
+              {voltageFluctuations.map((item, index) => (
+                <li key={index} class="text-sm">
+                  <p class="font-medium text-steel-700">{item.type}</p>
+                  <p class="text-steel-500">{item.effects}</p>
+                  <p class="text-green-600 font-medium">Solusi: {item.solution}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
+            <h3 class="font-semibold text-purple-800 mb-3">Pelindungan Petir</h3>
+            <ul class="space-y-2">
+              {lightningProtection.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="backup-power" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Solusi Pasokan Daya Cadangan</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <h3 class="font-semibold text-blue-800 mb-3">UPS (Pasokan Daya Tanpa Gangguan)</h3>
+            <ul class="space-y-2">
+              {upsInfo.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h3 class="font-semibold text-green-800 mb-3">Sistem Energi Surya</h3>
+            <ul class="space-y-2">
+              {solarInfo.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="energy-efficiency" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Tips Efisiensi Energi</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Manajemen Energi</h3>
+        <div class="flex flex-wrap gap-2 mb-8">
+          {powerManagement.map((item, index) => (
+            <span key={index} class="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Perhitungan Biaya</h3>
+        <div class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 p-6 rounded-xl text-white">
+          <div class="space-y-2">
+            {costCalculation.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
+        <p class="text-steel-700 leading-relaxed">Konfigurasi listrik yang tepat sangat penting untuk operasi yang aman dan efisien mesin press minyak hidrolik. Untuk saran konfigurasi listrik yang dipersonalisasi, hubungi tim dukungan teknis Haonuo.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MULAI PRODUKSI MINYAK ANDA?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim insinyur kami dapat membantu Anda mengkonfigurasi pasokan daya optimal untuk peralatan mesin press minyak Anda.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Hubungi Ahli Kami<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">Telusuri Peralatan</a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">Kembali ke Sumber Daya</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

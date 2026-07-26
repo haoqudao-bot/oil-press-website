@@ -1,0 +1,176 @@
+---
+import { type Locale, getTranslations, isRtl } from '../i18n/index.ts';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ChatWidget from '../components/ChatWidget.tsx';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  jsonLd?: object;
+  locale?: string;
+  ogImage?: string;
+}
+
+const { title, description, keywords, jsonLd, locale = 'en', ogImage } = Astro.props;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+const rtl = isRtl(currentLocale);
+
+// Title: max 60 chars, truncate if needed
+const brandSuffix = ' | Haonuo Machinery';
+const maxTitleLen = 60;
+let pageTitle: string;
+if (title) {
+  const availableLen = maxTitleLen - brandSuffix.length;
+  const truncatedTitle = title.length > availableLen ? title.substring(0, availableLen - 1) + '…' : title;
+  pageTitle = `${truncatedTitle}${brandSuffix}`;
+} else {
+  pageTitle = 'Haonuo Machinery - Hydraulic Oil Press Manufacturer';
+}
+
+// Description: max 150 chars + CTA
+const defaultDesc = 'Shandong Haonuo Machinery - Professional hydraulic oil press manufacturer since 2010. Cold press technology for coconut, sesame, peanut & more. Get a free quote!';
+const maxDescLen = 150;
+const ctaSuffix = ' Get a free quote!';
+let pageDesc: string;
+if (description) {
+  const descWithCta = description.endsWith('!') || description.endsWith('.') ? description + ctaSuffix : description + '.' + ctaSuffix;
+  pageDesc = descWithCta.length > maxDescLen ? descWithCta.substring(0, maxDescLen - 1) + '…' : descWithCta;
+} else {
+  pageDesc = defaultDesc;
+}
+
+const pageKeywords = keywords || ['hydraulic oil press', 'oil press machine', 'cold press', 'coconut oil press', 'sesame oil press', 'Haonuo Machinery'];
+
+// Canonical URL
+const canonicalUrl = `https://www.hydoilpress.com${Astro.url.pathname}`;
+
+// OG Image
+const defaultOgImage = 'https://www.hydoilpress.com/images/og-default.webp';
+const pageOgImage = ogImage || defaultOgImage;
+
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.',
+  url: 'https://www.hydoilpress.com',
+  logo: 'https://www.hydoilpress.com/images/logo.png',
+  description: 'Professional hydraulic oil press manufacturer since 2010',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Qingzhou, Weifang',
+    addressRegion: 'Shandong',
+    addressCountry: 'CN',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+86-18957149128',
+    contactType: 'sales',
+    availableLanguage: ['English', 'French', 'Arabic', 'Indonesian'],
+  },
+  foundingDate: '2010',
+  numberOfEmployees: 200,
+};
+
+const rawLd = jsonLd ? [organizationLd, jsonLd] : [organizationLd];
+const mergedLd = rawLd.flat();
+---
+
+<!DOCTYPE html>
+<html lang={currentLocale} dir={rtl ? 'rtl' : 'ltr'}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={pageDesc} />
+  <meta name="keywords" content={pageKeywords.join(', ')} />
+  <meta name="author" content="Shandong Haonuo Machinery Equipment Group Co., Ltd." />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDesc} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Haonuo Machinery" />
+  <meta property="og:image" content={pageOgImage} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={pageDesc} />
+  <meta name="twitter:image" content={pageOgImage} />
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="alternate" hreflang="en" href={`https://www.hydoilpress.com${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
+  <link rel="alternate" hreflang="fr" href={`https://www.hydoilpress.com/fr${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
+  <link rel="alternate" hreflang="ar" href={`https://www.hydoilpress.com/ar${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
+  <link rel="alternate" hreflang="id" href={`https://www.hydoilpress.com/id${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
+  <link rel="alternate" hreflang="x-default" href={`https://www.hydoilpress.com${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
+  <title>{pageTitle}</title>
+  {mergedLd.map((ld, i) => (
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  ))}
+</head>
+<body class="min-h-screen flex flex-col font-body">
+  <div id="lang-notice" class="hidden fixed top-16 md:top-20 left-0 right-0 z-40 bg-amber-500 text-charcoal-900 text-center text-sm py-2 px-4">
+    <span id="lang-notice-text"></span>
+    <button id="lang-notice-close" class="ml-4 font-bold hover:underline">✕</button>
+  </div>
+  <Navbar locale={currentLocale} />
+  <main class="flex-1">
+    <slot />
+  </main>
+  <Footer locale={currentLocale} />
+  <ChatWidget client:load locale={currentLocale} />
+  <script>
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Language switcher - navigate to locale URL
+    document.querySelectorAll('.lang-switch-btn').forEach(langBtn => {
+      langBtn.addEventListener('click', () => {
+        const lang = langBtn.getAttribute('data-lang');
+        if (!lang) return;
+
+        const currentPath = window.location.pathname;
+        // Remove existing locale prefix
+        const pathWithoutLocale = currentPath.replace(/^\/(fr|ar|id)(\/|$)/, '/');
+
+        if (lang === 'en') {
+          window.location.href = pathWithoutLocale;
+        } else {
+          const cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
+          window.location.href = `/${lang}${cleanPath}`;
+        }
+      });
+    });
+
+    // Language notice banner for non-English locales
+    const notice = document.getElementById('lang-notice');
+    const noticeText = document.getElementById('lang-notice-text');
+    const htmlLang = document.documentElement.lang;
+    const langNames: Record<string, string> = { fr: 'Français', ar: 'العربية', id: 'Bahasa Indonesia' };
+
+    if (htmlLang !== 'en' && notice && noticeText && langNames[htmlLang]) {
+      noticeText.textContent = `You are viewing this page in ${langNames[htmlLang]}.`;
+      notice.classList.remove('hidden');
+    }
+
+    // Close notice
+    document.getElementById('lang-notice-close')?.addEventListener('click', () => {
+      document.getElementById('lang-notice')?.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const t = getTranslations('en');
+
+const allProducts = await getCollection('products');
+
+const scaleSolutions = [
+  {
+    id: 'small-business',
+    icon: '🏪',
+    title: 'Home & Small Business',
+    subtitle: '400-1,400 kg/day',
+    description: 'Well-suited for home-based oil production, small shops, and neighborhood markets. Start your oil business with minimal investment and grow as demand increases.',
+    features: [
+      'Compact & space-saving design',
+      'Low power consumption',
+      'Easy to operate & maintain',
+      '100 kg per batch capacity',
+      'Affordable entry point',
+      'Quick return on investment',
+    ],
+    recommendedModels: ['HN300', 'HN325'],
+    typicalCapacity: '400-1,400 kg/day',
+    investmentRange: 'Contact for pricing',
+    roiPeriod: 'Varies significantly (see FAQ below)',
+    link: '/solutions/small-business-oil-press',
+  },
+  {
+    id: 'commercial',
+    icon: '🏭',
+    title: 'Commercial Scale',
+    subtitle: '600 kg - 2.8 tons/day',
+    description: 'For established oil mills, cooperatives, and regional distributors. High-capacity machines that handle continuous production with consistent quality.',
+    features: [
+      'High-volume production capacity',
+      'Semi-automatic operation',
+      'Multiple pressing units',
+      'Integrated filtration system',
+      'Better efficiency & yield',
+      'Support for bulk orders',
+      '100 kg per batch capacity',
+    ],
+    recommendedModels: ['HN355', 'HN400', 'HN426'],
+    typicalCapacity: '600 kg - 2.8 tons/day',
+    investmentRange: 'Contact for pricing',
+    roiPeriod: 'Est. 6-12+ months*',
+    link: '/solutions/commercial-oil-press',
+  },
+  {
+    id: 'industrial',
+    icon: '🏢',
+    title: 'Industrial Scale',
+    subtitle: '2+ tons/day',
+    description: 'For large-scale oil refineries, export-focused producers, and industrial manufacturers. Highly automated production lines with maximum efficiency.',
+    features: [
+      'Highly automated production line',
+      'High throughput capacity',
+      'PLC control system',
+      'Integrated roasting & refining',
+      '24/7 continuous operation',
+      'Custom engineering solutions',
+      '100 kg per batch capacity',
+    ],
+    recommendedModels: ['HN480B', 'HN500', 'Custom Line'],
+    typicalCapacity: '2+ tons/day',
+    investmentRange: 'Contact for pricing',
+    roiPeriod: 'Est. 12-24+ months*',
+    link: '/solutions/industrial-oil-press',
+  },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.hydoilpress.com/solutions' },
+    { '@type': 'ListItem', position: 3, name: 'By Production Scale', item: 'https://www.hydoilpress.com/solutions/by-scale' },
+  ],
+};
+---
+
+<BaseLayout title="Oil Press Machine by Production Scale — Small, Commercial, Industrial" description="Choose the right hydraulic oil press machine for your production scale. From home-based (400-600kg/day) to industrial (2+ tons/day), find the perfect solution for your business." keywords={['oil press machine by scale', 'small oil press machine', 'commercial oil press', 'industrial oil press equipment', 'hydraulic oil press capacity']} jsonLd={breadcrumbLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/solutions" class="hover:text-amber-500 transition-colors">Solutions</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">By Production Scale</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Page Header -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-white mb-4">By Production Scale</h1>
+      <p class="text-steel-300 text-lg max-w-2xl">
+        Whether you're starting a small home-based operation or scaling to industrial production, we have the right hydraulic oil press machine for every business size.
+      </p>
+    </div>
+  </section>
+
+  <!-- Scale Cards -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {scaleSolutions.map((scale, index) => (
+          <a
+            href={scale.link}
+            class="group bg-gradient-to-br from-steel-50 to-white rounded-2xl p-8 border border-steel-100 hover:border-amber-300 hover:shadow-xl transition-all"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
+            <div class="text-6xl mb-6">{scale.icon}</div>
+            <h3 class="font-display text-2xl text-charcoal-900 mb-2">{scale.title}</h3>
+            <div class="inline-flex items-center gap-1 text-amber-500 font-medium text-sm mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {scale.subtitle}
+            </div>
+            <p class="text-steel-600 mb-6">{scale.description}</p>
+            
+            <div class="space-y-3 mb-6">
+              {scale.features.map((feature) => (
+                <div class="flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span class="text-sm text-steel-600">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div class="bg-amber-50 rounded-xl p-4 mb-6">
+              <div class="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">Capacity</div>
+                  <div class="font-display text-lg text-amber-600">{scale.typicalCapacity}</div>
+                </div>
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">Investment</div>
+                  <div class="font-display text-lg text-amber-600">{scale.investmentRange}</div>
+                </div>
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">ROI Period</div>
+                  <div class="font-display text-lg text-amber-600">{scale.roiPeriod}</div>
+                </div>
+                <div>
+                  <div class="text-xs text-steel-500 mb-1">Models</div>
+                  <div class="font-display text-sm text-amber-600">{scale.recommendedModels.join(', ')}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center text-amber-600 font-semibold group-hover:gap-2 transition-all">
+              <span>View Solutions</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection Guide -->
+  <section class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6">How to Choose the Right Scale</h2>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">1</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">Estimate Your Daily Capacity</h4>
+                <p class="text-steel-600">Calculate how much oil you expect to produce per day. Start with your target market size and work backwards.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">2</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">Consider Your Budget</h4>
+                <p class="text-steel-600">Larger machines require higher upfront investment but offer better efficiency and faster ROI at scale.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">3</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">Plan for Growth</h4>
+                <p class="text-steel-600">Choose a machine that can grow with your business. Our modular designs allow easy upgrades later.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">4</div>
+              <div>
+                <h4 class="font-display text-lg text-charcoal-900 mb-1">Check Power & Space</h4>
+                <p class="text-steel-600">Ensure you have sufficient electrical capacity and floor space for your chosen machine.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-6">Quick Comparison Table</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-steel-200">
+                  <th class="text-left py-3 px-4 font-medium text-steel-500">Parameter</th>
+                  <th class="text-center py-3 px-4 font-medium text-steel-500">Small Business</th>
+                  <th class="text-center py-3 px-4 font-medium text-steel-500">Commercial</th>
+                  <th class="text-center py-3 px-4 font-medium text-steel-500">Industrial</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-steel-100">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">Daily Output</td>
+                  <td class="text-center text-steel-600">50-500 kg</td>
+                  <td class="text-center text-steel-600">500kg-5 tons</td>
+                  <td class="text-center text-steel-600">5+ tons</td>
+                </tr>
+                <tr class="border-b border-steel-100 bg-steel-50">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">Power</td>
+                  <td class="text-center text-steel-600">2.2-5.5 kW</td>
+                  <td class="text-center text-steel-600">7.5-15 kW</td>
+                  <td class="text-center text-steel-600">15-45 kW</td>
+                </tr>
+                <tr class="border-b border-steel-100">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">Floor Space</td>
+                  <td class="text-center text-steel-600">2-5 m²</td>
+                  <td class="text-center text-steel-600">10-20 m²</td>
+                  <td class="text-center text-steel-600">50+ m²</td>
+                </tr>
+                <tr class="border-b border-steel-100 bg-steel-50">
+                  <td class="py-3 px-4 font-medium text-charcoal-900">Labor</td>
+                  <td class="text-center text-steel-600">1 person</td>
+                  <td class="text-center text-steel-600">2-3 people</td>
+                  <td class="text-center text-steel-600">5+ people</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-medium text-charcoal-900">Best For</td>
+                  <td class="text-center text-amber-600">Home / Small Shop</td>
+                  <td class="text-center text-amber-600">Oil Mill / Co-op</td>
+                  <td class="text-center text-amber-600">Factory / Export</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-steel-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+            <span class="font-display text-lg text-charcoal-900">Can I upgrade from a small machine to a larger one later?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-6 pb-4 text-steel-600">Yes! Many of our customers start with smaller machines and upgrade as their business grows. We offer trade-in programs and can help you select the right upgrade path based on your current production and future goals.</div>
+        </details>
+        <details class="group bg-steel-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+            <span class="font-display text-lg text-charcoal-900">What is the typical return on investment for each scale?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-6 pb-4 text-steel-600">ROI varies significantly based on local market conditions, raw material costs, and production volume. Small business machines may see returns in approximately 3-6+ months due to lower initial investment. Commercial machines typically take 6-12+ months. Industrial lines have longer ROI periods (12-24+ months) but can generate substantial revenue at scale. <em class="text-steel-400">*These are estimates only — actual results vary.</em></div>
+        </details>
+        <details class="group bg-steel-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+            <span class="font-display text-lg text-charcoal-900">Do I need special training to operate larger machines?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-6 pb-4 text-steel-600">We provide comprehensive training for all our machines. For small machines, basic operation can be learned in a day. Commercial and industrial machines require more detailed training, which we provide through video tutorials, manuals, and optional on-site training at our factory.</div>
+        </details>
+        <details class="group bg-steel-50 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+            <span class="font-display text-lg text-charcoal-900">What oil seeds work best for each scale?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-6 pb-4 text-steel-600">Small machines work well with sesame, coconut, peanut, and shea butter. Commercial machines handle higher-volume seeds like sunflower, soybean, and palm kernel. Industrial lines are designed for continuous processing of large oilseed crops including cottonseed, rapeseed, and high-volume tropical oils.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Still Unsure Which Scale?</h2>
+      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">Tell us your raw material, daily capacity, and budget — our engineers will recommend the best oil press setup for your business.</p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        Get Free Consultation
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

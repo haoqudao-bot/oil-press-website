@@ -1,0 +1,578 @@
+﻿﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allProducts = await getCollection('products');
+const allSolutions = await getCollection('solutions');
+const modelOrder: Record<string, number> = {
+  HN325: 1,
+  HN355: 2,
+  HN426: 3,
+  HN480: 4,
+};
+
+const featuredProducts = allProducts
+  .filter(p => p.data.featured)
+  .sort((a, b) => (modelOrder[a.data.model] || 99) - (modelOrder[b.data.model] || 99))
+  .slice(0, 4);
+
+// Localized specs helper for featured product cards
+function getLocalizedSpecs(product: any): { name: string; value: string }[] {
+  if (currentLocale === 'id' && product.data.specificationsId?.length > 0) {
+    return product.data.specificationsId;
+  }
+  if (currentLocale === 'ar' && product.data.specificationsAr?.length > 0) {
+    return product.data.specificationsAr;
+  }
+  if (currentLocale === 'fr' && product.data.specificationsFr?.length > 0) {
+    return product.data.specificationsFr;
+  }
+  return product.data.specifications;
+}
+const featuredSolutions = allSolutions.sort((a, b) => a.data.order - b.data.order).slice(0, 6);
+
+const scaleSolutions = allSolutions
+  .filter(s => ['small-business', 'commercial', 'industrial'].includes(s.data.seedName))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const seedIcons: Record<string, string> = {
+  coconut: '🥥',
+  sesame: '🫘',
+  peanut: '🥜',
+  mustard: '🌾',
+  sunflower: '🌻',
+  shea: '🧈',
+  palm: '🌴',
+  avocado: '🥑',
+  almond: '🌰',
+  castor: '🌱',
+  olive: '🫒',
+  cottonseed: '🎯',
+  soybean: '🫘',
+  walnut: '🌰',
+  flaxseed: '🌾',
+  'small-business': '🏪',
+  commercial: '🏭',
+  industrial: '⚙️',
+};
+
+const scaleIcons: Record<string, string> = {
+  'small-business': '🏪',
+  commercial: '🏭',
+  industrial: '⚙️',
+};
+
+function localePath(path: string): string {
+  if (currentLocale === 'en') return path;
+  return `/${currentLocale}${path}`;
+}
+
+// BreadcrumbList JSON-LD for homepage
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+  ],
+};
+
+const stats = [
+  { value: '15+', label: t.home.statsYears, highlight: t.home.statsHighlight1 },
+  { value: '50+', label: t.home.statsCountries, highlight: t.home.statsHighlight2 },
+  { value: '200+', label: t.home.statsEmployees, highlight: t.home.statsHighlight3 },
+  { value: '3,000', label: t.home.statsArea, highlight: t.home.statsHighlight4 },
+  { value: '2,000+', label: t.home.statsMachines, highlight: t.home.statsHighlight5 },
+];
+
+const advantages = [
+  { title: t.home.feature1Title, desc: t.home.feature1Desc, icon: 'factory' },
+  { title: t.home.feature2Title, desc: t.home.feature2Desc, icon: 'settings' },
+  { title: t.home.feature3Title, desc: t.home.feature3Desc, icon: 'globe' },
+  { title: t.home.feature4Title, desc: t.home.feature4Desc, icon: 'leaf' },
+];
+---
+
+<BaseLayout locale={currentLocale} title={t.home.heroTitle} description={t.site.description} jsonLd={breadcrumbLd}>
+  <!-- Hero Carousel Section -->
+  <section class="relative h-[85vh] min-h-[600px] overflow-hidden" id="hero-carousel">
+    <!-- Slides -->
+    <div class="hero-slides" id="hero-slides">
+      <!-- Slide 1: Image -->
+      <div class="hero-slide active" data-index="0">
+        <div class="absolute inset-0 bg-steel-900">
+          <img
+            src="/images/hero/hydraulic-oil-press-machine.webp"
+            alt={t.home.heroTitle}
+            class="w-full h-full object-cover opacity-40"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div class="max-w-2xl">
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+              {t.home.heroTitle}
+            </h1>
+            <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+              {t.home.heroSlide1Tag}
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href={localePath('/contact')} class="btn-primary text-base">
+                {t.home.heroCta}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+                {t.home.heroSecondary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Image -->
+      <div class="hero-slide" data-index="1">
+        <div class="absolute inset-0 bg-steel-900">
+          <img
+            src="/images/hero/cold-press-production-line.webp"
+            alt={t.home.heroSlide2Title}
+            class="w-full h-full object-cover opacity-40"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div class="max-w-2xl">
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+              {t.home.heroSlide2Title}
+            </h1>
+            <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+              {t.home.heroSlide2Desc}
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href={localePath('/products/cold-press-hydraulic-oil-press')} class="btn-primary text-base">
+                {t.home.heroSlide2Cta}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href={localePath('/solutions')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+                {t.home.heroSlide2Secondary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Video -->
+      <div class="hero-slide" data-index="2">
+        <div class="absolute inset-0 bg-steel-900">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover opacity-40"
+            poster="/images/hero/factory-workshop.webp"
+          >
+            <source src="/videos/factory-tour.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div class="max-w-2xl">
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+              {t.home.heroSlide3Title}
+            </h1>
+            <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+              {t.home.heroSlide3Desc}
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href={localePath('/about')} class="btn-primary text-base">
+                {t.home.heroSlide3Cta}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href={localePath('/contact')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+                {t.home.heroSlide3Secondary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10">
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors active" data-slide="0" aria-label={`${(t as any).common?.slide || 'Slide'} 1`}></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" data-slide="1" aria-label={`${(t as any).common?.slide || 'Slide'} 2`}></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" data-slide="2" aria-label={`${(t as any).common?.slide || 'Slide'} 3`}></button>
+    </div>
+
+    <!-- Arrow Controls -->
+    <button id="hero-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors backdrop-blur-sm" aria-label={(t as any).common?.previous || 'Previous'}>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button id="hero-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors backdrop-blur-sm" aria-label={(t as any).common?.next || 'Next'}>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </section>
+
+  <style>
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      pointer-events: none;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .hero-dot.active {
+      background-color: #f59e0b;
+      width: 2rem;
+      border-radius: 9999px;
+    }
+  </style>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let current = 0;
+    let interval: ReturnType<typeof setInterval>;
+
+    function goToSlide(index: number) {
+      slides[current]?.classList.remove('active');
+      dots[current]?.classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current]?.classList.add('active');
+      dots[current]?.classList.add('active');
+    }
+
+    function startAutoplay() {
+      interval = setInterval(() => goToSlide(current + 1), 6000);
+    }
+
+    function stopAutoplay() {
+      clearInterval(interval);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        stopAutoplay();
+        goToSlide(parseInt(dot.getAttribute('data-slide') || '0'));
+        startAutoplay();
+      });
+    });
+
+    document.getElementById('hero-prev')?.addEventListener('click', () => {
+      stopAutoplay();
+      goToSlide(current - 1);
+      startAutoplay();
+    });
+
+    document.getElementById('hero-next')?.addEventListener('click', () => {
+      stopAutoplay();
+      goToSlide(current + 1);
+      startAutoplay();
+    });
+
+    startAutoplay();
+  </script>
+
+  <!-- Stats Section -->
+  <section class="py-10 md:py-12 bg-amber-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
+        {stats.map(stat => (
+          <div class="text-center">
+            <div class="font-display text-4xl md:text-5xl text-charcoal-900 font-bold">{stat.value}</div>
+            <div class="text-sm text-charcoal-800 font-semibold mt-1">{stat.label}</div>
+            <div class="text-xs text-charcoal-700 mt-0.5">{stat.highlight}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 md:py-24 bg-white" id="why-choose-us">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12 reveal">
+        <div>
+          <h2 class="section-title">{t.home.whyChooseUs}</h2>
+          <p class="text-steel-600 max-w-2xl mt-4">{t.home.whyChooseSubtitle}</p>
+        </div>
+        <a href={localePath('/about#why-choose-us')} class="inline-flex items-center gap-2 bg-charcoal-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-charcoal-800 transition-colors whitespace-nowrap">
+          {t.home.browseDetails}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="reveal bg-amber-50 rounded-2xl p-8 group hover:bg-amber-100 transition-colors">
+          <div class="w-14 h-14 bg-amber-500 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.home.premiumMaterialsTitle}</h3>
+          <p class="text-sm text-steel-600 leading-relaxed mb-6">{t.home.premiumMaterialsDesc}</p>
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.premiumMaterialsDetail1}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.premiumMaterialsDetail2}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.premiumMaterialsDetail3}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.premiumMaterialsDetail4}
+            </div>
+          </div>
+          <a href={localePath('/about#why-choose-us')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium hover:text-amber-600 transition-colors">
+            {t.home.learnMore}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="reveal bg-steel-50 rounded-2xl p-8 group hover:bg-steel-100 transition-colors">
+          <div class="w-14 h-14 bg-amber-500 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.home.highReturnsTitle}</h3>
+          <p class="text-sm text-steel-600 leading-relaxed mb-6">{t.home.highReturnsDesc}</p>
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.highReturnsDetail1}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.highReturnsDetail2}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.highReturnsDetail3}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.highReturnsDetail4}
+            </div>
+          </div>
+          <a href={localePath('/about#why-choose-us')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium hover:text-amber-600 transition-colors">
+            {t.home.learnMore}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="reveal bg-steel-50 rounded-2xl p-8 group hover:bg-steel-100 transition-colors">
+          <div class="w-14 h-14 bg-amber-500 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.home.easyOperationTitle}</h3>
+          <p class="text-sm text-steel-600 leading-relaxed mb-6">{t.home.easyOperationDesc}</p>
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.easyOperationDetail1}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.easyOperationDetail2}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.easyOperationDetail3}
+            </div>
+            <div class="flex items-center gap-2 text-sm text-steel-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {t.home.easyOperationDetail4}
+            </div>
+          </div>
+          <a href={localePath('/about#why-choose-us')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium hover:text-amber-600 transition-colors">
+            {t.home.learnMore}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="py-16 md:py-24 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-4 reveal">
+        <div>
+          <h2 class="section-title">{t.home.featuredProducts}</h2>
+        </div>
+        <a href={localePath('/products')} class="hidden sm:inline-flex btn-outline text-sm">
+          {t.home.viewAllProducts}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <p class="text-steel-600 max-w-3xl mb-10 reveal">{t.home.featuredProductsIntro}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {featuredProducts.map((product, i) => (
+          <a
+            href={localePath(`/products/${product.slug}`)}
+            class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            style={`animation-delay: ${i * 100}ms`}
+          >
+            <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+              <img
+                src={product.data.images[0]}
+                alt={product.data.title[currentLocale] || product.data.title.en}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.onerror=null;this.src='/images/hero/hydraulic-oil-press-machine.webp'"
+              />
+              <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+                <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {t.products.viewDetails}
+                </span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
+              <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+              <div class="flex flex-wrap gap-2">
+                {getLocalizedSpecs(product).slice(0, 2).map(spec => (
+                  <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                    {spec.name}: {spec.value}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href={localePath('/products')} class="btn-outline text-sm">
+          {t.home.viewAllProducts}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-4 reveal">
+        <div>
+          <h2 class="section-title">{t.home.featuredSolutions}</h2>
+        </div>
+        <a href={localePath('/solutions')} class="hidden sm:inline-flex btn-outline text-sm">
+          {t.home.viewAllSolutions}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <p class="text-steel-600 max-w-3xl mb-10 reveal">{t.home.featuredSolutionsIntro}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {featuredSolutions.map((solution, i) => (
+          <a
+            href={localePath(`/solutions/${solution.slug}`)}
+            class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors"
+            style={`animation-delay: ${i * 80}ms`}
+          >
+            <div class="text-3xl mb-4">
+              {seedIcons[solution.data.seedName] || '🛢️'}
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">
+              {solution.data.title[currentLocale] || solution.data.title.en}
+            </h3>
+            <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">
+              {solution.data.description[currentLocale] || solution.data.description.en}
+            </p>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+              {t.solutions.viewSolution}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href={localePath('/solutions')} class="btn-outline text-sm">
+          {t.home.viewAllSolutions}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- By Production Scale Section -->
+  <section class="py-16 md:py-24 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">{t.home.byScale}</h2>
+        <p class="section-subtitle mx-auto">{t.home.byScaleSubtitle}</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+        {scaleSolutions.map((solution, i) => (
+          <a
+            href={localePath(`/solutions/${solution.slug}`)}
+            class="reveal card-hover bg-white rounded-2xl p-8 group hover:bg-amber-50 transition-colors border border-steel-100 hover:border-amber-300"
+            style={`animation-delay: ${i * 100}ms`}
+          >
+            <div class="text-4xl mb-4">{scaleIcons[solution.data.seedName] || '🏭'}</div>
+            <h3 class="font-display text-2xl text-charcoal-900 mb-3 group-hover:text-amber-600 transition-colors">
+              {solution.data.title[currentLocale] || solution.data.title.en}
+            </h3>
+            <p class="text-sm text-steel-600 leading-relaxed line-clamp-3">
+              {solution.data.description[currentLocale] || solution.data.description.en}
+            </p>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+              {t.solutions.viewSolution}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+        {t.home.ctaTitle}
+      </h2>
+      <p class="text-steel-300 text-lg mb-6 max-w-2xl mx-auto">
+        {t.home.ctaDesc}
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm text-amber-400">
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit1}
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit2}
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit3}
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit4}
+        </span>
+      </div>
+      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        {t.home.ctaButton}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

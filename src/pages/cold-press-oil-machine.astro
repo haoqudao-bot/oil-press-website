@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getTranslations } from '../i18n';
+
+const t = getTranslations('en');
+const allProducts = await getCollection('products');
+const coldPressProducts = allProducts.filter(p =>
+  p.data.category === 'hydraulic-oil-press' && (
+    p.data.title?.en?.toLowerCase().includes('cold press') ||
+    p.data.title?.en?.toLowerCase().includes('ultra-high-pressure') ||
+    p.data.applicableSeeds?.some(s =>
+      s.toLowerCase().includes('coconut') ||
+      s.toLowerCase().includes('walnut') ||
+      s.toLowerCase().includes('almond') ||
+      s.toLowerCase().includes('avocado') ||
+      s.toLowerCase().includes('flaxseed') ||
+      s.toLowerCase().includes('olive')
+    )
+  )
+).slice(0, 6);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.coldPress.breadcrumbHome, item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: t.coldPress.breadcrumbProducts, item: 'https://www.hydoilpress.com/products' },
+    { '@type': 'ListItem', position: 3, name: t.coldPress.breadcrumbCurrent, item: 'https://www.hydoilpress.com/cold-press-oil-machine' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: t.coldPress.faqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title={t.coldPress.title}
+  description={t.coldPress.description}
+  keywords={['cold press oil machine', 'cold press oil expeller', 'cold press oil machine price', 'cold pressed oil machine', 'cold press oil extraction machine', 'cold press machine for home']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">{t.coldPress.breadcrumbHome}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/products" class="hover:text-amber-500 transition-colors">{t.coldPress.breadcrumbProducts}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">{t.coldPress.breadcrumbCurrent}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.coldPress.heroTitle}</h1>
+	      <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.coldPress.heroDesc}</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {t.coldPress.requestQuote}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/resources/does-cold-pressing-make-difference" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+          {t.coldPress.learnHow}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{t.coldPress.whyColdPress}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#127793;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.nutrientPreservation.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.nutrientPreservation.desc}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#128067;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.naturalFlavor.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.naturalFlavor.desc}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#128142;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.higherMarketValue.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.higherMarketValue.desc}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
+          <div class="text-3xl mb-4">&#127981;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.versatileApplications.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.versatileApplications.desc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {coldPressProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-steel-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">{t.coldPress.productsTitle}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {coldPressProducts.map(product => (
+            <a
+              href={`/products/${product.slug}`}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20cold%20press%20oil%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {product.data.specifications.slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{t.coldPress.comparisonTitle}</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-steel-900 text-white">
+              <th class="text-left px-6 py-4 font-display text-lg rounded-tl-xl">{t.coldPress.comparisonFeature}</th>
+              <th class="text-center px-6 py-4 font-display text-lg">{t.coldPress.comparisonColdPress}</th>
+              <th class="text-center px-6 py-4 font-display text-lg rounded-tr-xl">{t.coldPress.comparisonHotPress}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonTemp}</td>
+              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonTempCold}</td>
+              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonTempHot}</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonNutrient}</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">{t.coldPress.comparisonNutrientCold}</span></td>
+              <td class="px-6 py-4 text-center"><span class="text-steel-600">{t.coldPress.comparisonNutrientHot}</span></td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonYield}</td>
+              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonYieldCold}</td>
+              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonYieldHot}</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonQuality}</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">{t.coldPress.comparisonQualityCold}</span></td>
+              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonQualityHot}</td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonFlavor}</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">{t.coldPress.comparisonFlavorCold}</span></td>
+              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonFlavorHot}</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonPrice}</td>
+              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">{t.coldPress.comparisonPriceCold}</span></td>
+              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonPriceHot}</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-charcoal-900 rounded-bl-xl">{t.coldPress.comparisonBestFor}</td>
+              <td class="px-6 py-4 text-center text-amber-500 font-semibold">{t.coldPress.comparisonBestForCold}</td>
+              <td class="px-6 py-4 text-center text-steel-600 rounded-br-xl">{t.coldPress.comparisonBestForHot}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-8">
+        <a href="/resources/does-cold-pressing-make-difference" class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+          {t.coldPress.readFullComparison}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{t.coldPress.popularOilsTitle}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129381;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.vco.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.vco.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.vco.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.vco.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.vco.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127807;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.sesameOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.sesameOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.sesameOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.sesameOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.sesameOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129361;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.avocadoOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.avocadoOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.avocadoOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.avocadoOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.avocadoOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129722;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.oliveOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.oliveOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.oliveOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.oliveOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.oliveOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129728;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.walnutOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.walnutOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.walnutOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.walnutOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.walnutOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127803;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.sunflowerOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.sunflowerOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.sunflowerOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.sunflowerOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.sunflowerOil.tag}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{t.coldPress.howWorksTitle}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">1</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep1.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep1.desc}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">2</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep2.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep2.desc}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">3</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep3.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep3.desc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">{t.coldPress.faqTitle}</h2>
+      <div class="space-y-4">
+        {t.coldPress.faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{t.coldPress.ctaTitle}</h2>
+      <p class="text-steel-300 text-lg mb-8">{t.coldPress.ctaDesc}</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {t.coldPress.requestQuote}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+          {t.coldPress.whatsappUs}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

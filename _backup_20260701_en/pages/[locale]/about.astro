@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.hydoilpress.com/about' },
+  ],
+};
+
+const stats = [
+  { value: '15+', label: t.home.statsYears },
+  { value: '50+', label: t.home.statsCountries },
+  { value: '200+', label: t.home.statsEmployees },
+  { value: '3,000', label: t.home.statsArea },
+];
+
+const milestones = [
+  { year: '2010', event: 'Company founded in Qingzhou, Shandong — began designing and manufacturing hydraulic oil press machines for the domestic market' },
+  { year: '2013', event: 'Completed first export order to Southeast Asia, marking the start of international business' },
+  { year: '2016', event: 'Expanded to 20+ export countries across Middle East and Africa; developed ultra-high pressure hydraulic press series' },
+  { year: '2020', event: 'Exported to 40+ countries worldwide; established dedicated after-sales service network in Africa and South Asia' },
+  { year: '2025', event: 'Reached 50+ export countries with 200+ employees; new 3,000m² modern factory with tripled production capacity' },
+];
+
+const certificates = [];
+
+const capabilities = [
+  { icon: 'cnc', title: t.about.capCncTitle, desc: t.about.capCncDesc },
+  { icon: 'assembly', title: t.about.capAssemblyTitle, desc: t.about.capAssemblyDesc },
+  { icon: 'qc', title: t.about.capQcTitle, desc: t.about.capQcDesc },
+  { icon: 'rd', title: t.about.capRdTitle, desc: t.about.capRdDesc },
+  { icon: 'paint', title: t.about.capPaintTitle, desc: t.about.capPaintDesc },
+  { icon: 'warehouse', title: t.about.capWarehouseTitle, desc: t.about.capWarehouseDesc },
+];
+
+const whyChooseUs = [
+  { title: t.about.why1Title, desc: t.about.why1Desc },
+  { title: t.about.why2Title, desc: t.about.why2Desc },
+  { title: t.about.why3Title, desc: t.about.why3Desc },
+  { title: t.about.why4Title, desc: t.about.why4Desc },
+  { title: t.about.why5Title, desc: t.about.why5Desc },
+  { title: t.about.why6Title, desc: t.about.why6Desc },
+];
+
+const keyMarkets = [
+  { region: t.about.regionSouthAsia, countries: ['India', 'Pakistan', 'Sri Lanka'] },
+  { region: t.about.regionAfrica, countries: ['Nigeria', 'Kenya', 'Ghana', 'Tanzania', 'Uganda'] },
+  { region: t.about.regionSeAsia, countries: ['Philippines', 'Indonesia', 'Vietnam', 'Thailand', 'Myanmar'] },
+  { region: t.about.regionMiddleEast, countries: ['Saudi Arabia', 'UAE', 'Egypt', 'Turkey', 'Iraq'] },
+];
+---
+
+<BaseLayout locale={currentLocale} title={t.about.title} description={t.about.subtitle} jsonLd={breadcrumbLd}>

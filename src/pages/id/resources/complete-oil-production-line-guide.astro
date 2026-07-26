@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'complete-oil-production-line-guide');
+const t = getTranslations('id');
+
+const title = resource?.data.title.id || 'Panduan Lengkap Garis Produksi Minyak';
+const description = resource?.data.description.id || 'Merancang sistem produksi yang efisien';
+const seoKeywords = resource?.data.seoKeywords || ['desain garis produksi minyak', 'garis press minyak hidrolik', 'peralatan pabrik minyak'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/production-line-guide-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Insinyur Teknis Mesin Press Minyak', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/complete-oil-production-line-guide' },
+  ],
+};
+
+const components = [
+  { name: 'Sistem Pembersihan Benih', items: ['Pembersih layar getar', 'Pemisah magnetik', 'Pemisah gravitasi', 'Kapasitas harus sesuai atau melebihi laju input bahan baku'] },
+  { name: 'Sistem Pengupasan', items: ['Pengupas cakram', 'Pengupas gilingan palu', 'Aplikasi: Kacang tanah, bunga matahari, kelapa, wijen'] },
+  { name: 'Sistem Pengaturan Kadar Air', items: ['Pengatur uap', 'Pengering udara panas', 'Target kadar air: Press panas 5-8%, Press dingin 7-9%'] },
+  { name: 'Sistem Pemanggangan (Hanya Press Panas)', items: ['Pemanggangan drum', 'Pemanggangan datar', 'Suhu: 160-180°C, Waktu: 25-35 menit'] },
+  { name: 'Sistem Penggilingan Benih', items: ['Gilingan roller', 'Gilingan palu', 'Ukuran partikel: 2-4 mm untuk ekstraksi optimal'] },
+  { name: 'Press Minyak Hidrolik', items: ['Press minyak hidrolik Haonuo (HN325, HN355, HN426, HN480, HN500)', 'Kapasitas: 100 kg per batch', 'Waktu siklus: Press panas 30-40 menit, Press dingin ~2 jam'] },
+  { name: 'Sistem Filtrasi Minyak', items: ['Press filter pelat', 'Filter kantong', 'Filter sentrifugal', 'Tingkat filtrasi: Primer 100-200 mesh, Halus 200-300 mesh'] },
+  { name: 'Sistem Penyimpanan Minyak', items: ['Tangki stainless steel', 'Tangki baja lembut (dengan lapisan)', 'Minyak press dingin: Simpan pada < 25°C, terlindung dari sinar'] },
+  { name: 'Sistem Pengolahan Cake', items: ['Konveyor cake', 'Gilingan cake', 'Penggunaan cake: Pakan ternak, pupuk, pengolahan sekunder'] },
+];
+
+const capacityPlanning = [
+  { scale: 'Kecil', capacity: '500-1,000 kg', model: 'HN325' },
+  { scale: 'Sedang', capacity: '1,000-2,500 kg', model: 'HN355/HN426' },
+  { scale: 'Besar', capacity: '2,500-4,000 kg', model: 'HN480/HN500' },
+];
+
+const spaceRequirements = [
+  { scale: 'Kecil', area: '50-80 m2', height: '3 m' },
+  { scale: 'Sedang', area: '100-150 m2', height: '3-4 m' },
+  { scale: 'Besar', area: '200-300 m2', height: '4-5 m' },
+];
+
+const costAnalysis = [
+  { scale: 'Garis Produksi Skala Kecil', items: [{ name: 'Press hidrolik', cost: 'Hubungi untuk harga' }, { name: 'Peralatan pendukung', cost: 'Hubungi untuk harga' }, { name: 'Instalasi', cost: 'Hubungi untuk harga' }] },
+  { scale: 'Garis Produksi Skala Sedang', items: [{ name: 'Press hidrolik', cost: 'Hubungi untuk harga' }, { name: 'Peralatan pendukung', cost: 'Hubungi untuk harga' }, { name: 'Instalasi', cost: 'Hubungi untuk harga' }] },
+  { scale: 'Garis Produksi Skala Besar', items: [{ name: 'Press hidrolik', cost: 'Hubungi untuk harga' }, { name: 'Peralatan pendukung', cost: 'Hubungi untuk harga' }, { name: 'Instalasi', cost: 'Hubungi untuk harga' }] },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-purple-50 to-pink-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-purple-500/10 text-purple-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">DESAIN GARIS PRODUKSI</span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Insinyur Teknis Mesin Press Minyak · 15+ Tahun Pengalaman</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
+        <p class="text-steel-700 leading-relaxed">Merancang garis produksi minyak lengkap memerlukan perencanaan cermat dan integrasi beberapa komponen. Garis produksi yang dirancang dengan baik akan memaksimalkan efisiensi, meminimalkan limbah, dan memastikan kualitas produk yang konsisten.</p>
+      </section>
+
+      <section id="components" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Komponen Garis Produksi</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {components.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-purple-600 mb-3">{item.name}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="capacity-planning" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perencanaan Kapasitas</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Kebutuhan Kapasitas Berdasarkan Skala</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Skala</th>
+                <th class="px-4 py-3 text-left font-semibold">Kapasitas Harian</th>
+                <th class="px-4 py-3 text-left font-semibold">Model Direkomendasikan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {capacityPlanning.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.capacity}</td>
+                  <td class="px-4 py-3 text-amber-600 font-medium">{item.model}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 bg-gradient-to-r from-steel-50 to-steel-100 p-5 rounded-xl">
+          <h4 class="font-semibold text-charcoal-900 mb-3">Pertimbangan Keseimbangan Garis</h4>
+          <ol class="space-y-2 list-decimal list-inside text-steel-700">
+            <li>Kapasitas Pemanggangan: Harus >= 2 x laju pressing</li>
+            <li>Kapasitas Penggilingan: Harus sesuai laju pressing</li>
+            <li>Kapasitas Filtrasi: Harus sesuai output pressing</li>
+            <li>Kapasitas Penyimpanan: Harus menampung 3-5 hari produksi</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="layout-design" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Desain Tata Letak</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Prinsip Desain</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-green-50 p-4 rounded-xl border border-green-200">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-semibold text-green-800">Efisiensi Alur Kerja</span>
+            </div>
+            <p class="text-steel-700 text-sm mt-1">Meminimalkan penanganan material</p>
+          </div>
+          <div class="bg-red-50 p-4 rounded-xl border border-red-200">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><shield/></svg>
+              <span class="font-semibold text-red-800">Keamanan</span>
+            </div>
+            <p class="text-steel-700 text-sm mt-1">Memastikan akses aman untuk operasi dan perawatan</p>
+          </div>
+          <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><refresh-cw/></svg>
+              <span class="font-semibold text-blue-800">Fleksibilitas</span>
+            </div>
+            <p class="text-steel-700 text-sm mt-1">Memungkinkan perluasan di masa depan</p>
+          </div>
+          <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><user/></svg>
+              <span class="font-semibold text-amber-800">Ergonomi</span>
+            </div>
+            <p class="text-steel-700 text-sm mt-1">Desain untuk kenyamanan operator</p>
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900 mt-8">Kebutuhan Ruang</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Skala</th>
+                <th class="px-4 py-3 text-left font-semibold">Luas Area</th>
+                <th class="px-4 py-3 text-left font-semibold">Tinggi</th>
+              </tr>
+            </thead>
+            <tbody>
+              {spaceRequirements.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.area}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.height}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="cost-analysis" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Analisis Biaya</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Investasi Modal</h3>
+        <div class="space-y-6">
+          {costAnalysis.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h4 class="font-semibold text-lg text-charcoal-900 mb-3">{item.scale}</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {item.items.map((cost, idx) => (
+                  <div key={idx} class="bg-gradient-to-br from-steel-50 to-steel-100 p-4 rounded-lg">
+                    <span class="text-steel-500 text-sm">{cost.name}</span>
+                    <p class="font-bold text-amber-600">{cost.cost}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-6 bg-gradient-to-r from-green-500 to-emerald-500 p-6 rounded-xl text-white">
+          <h4 class="font-semibold text-lg mb-3">Return on Investment</h4>
+          <div class="flex flex-wrap gap-6">
+            <div>
+              <span class="text-white/80">Skala Kecil:</span>
+              <span class="font-bold text-xl ml-2">12-18 bulan</span>
+            </div>
+            <div>
+              <span class="text-white/80">Skala Sedang:</span>
+              <span class="font-bold text-xl ml-2">10-15 bulan</span>
+            </div>
+            <div>
+              <span class="text-white/80">Skala Besar:</span>
+              <span class="font-bold text-xl ml-2">8-12 bulan</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
+        <p class="text-steel-700 leading-relaxed">Merancang garis produksi minyak lengkap adalah investasi besar yang memerlukan perencanaan cermat. Haonuo menyediakan dukungan komprehensif untuk desain garis produksi minyak, termasuk pemilihan peralatan, perencanaan tata letak, dan bantuan instalasi.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MULAI PRODUKSI MINYAK ANDA?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim insinyur kami dapat membantu Anda memilih peralatan terbaik dan mengoptimalkan investasi Anda untuk hasil maksimal.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Hubungi Ahli Kami<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">Telusuri Peralatan</a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">Kembali ke Sumber Daya</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

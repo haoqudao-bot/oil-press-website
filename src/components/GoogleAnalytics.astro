@@ -1,0 +1,21 @@
+---
+const rawId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const isValidId = rawId && rawId !== 'G-XXXXXXXXXX' && /^G-[A-Z0-9]+$/.test(rawId);
+const GA_MEASUREMENT_ID = isValidId ? rawId : null;
+---
+
+{GA_MEASUREMENT_ID && (
+  <script is:inline define:vars={{ id: GA_MEASUREMENT_ID }}>
+    (function() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', id);
+    })();
+  </script>
+)}

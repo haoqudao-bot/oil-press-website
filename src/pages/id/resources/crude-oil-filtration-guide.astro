@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+
+const t = getTranslations('id');
+const title = 'Panduan Filtrasi dan Pemisahan Minyak Mentah';
+const description = 'Panduan lengkap untuk menyaring dan memisahkan minyak mentah setelah pemerasan';
+const seoKeywords = ['filtrasi minyak mentah', 'pemisahan minyak', 'filtrasi mesin press hidrolik'];
+const publishedAt = new Date();
+const updatedAt = publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/filtration-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Tim Teknik Haonuo',
+    jobTitle: 'Insinyur Mesin Press Minyak Senior',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/crude-oil-filtration-guide' },
+  ],
+};
+
+const impurities = [
+  { type: 'Partikel Padat', description: 'Potongan biji, partikel ampas', source: 'Proses pemerasan', impact: 'Keruh, sedimentasi' },
+  { type: 'Senyawa Fosfor', description: 'Fosfolipid (gum)', source: 'Bahan baku', impact: 'Pembentukan emulsi' },
+  { type: 'Asam Lemak Bebas', description: 'Trigliserida terhidrolisis', source: 'Degradasi', impact: 'Keasaman, cita rasa' },
+  { type: 'Senyawa Warna', description: 'Karotenoid, klorofil', source: 'Bahan baku', impact: 'Warna gelap' },
+  { type: 'Kelembaban', description: 'Kandungan air', source: 'Pengolahan', impact: 'Masa simpan, pertumbuhan mikroba' },
+  { type: 'Aflatoksin', description: 'Mikotoksin', source: 'Kontaminasi jamur', impact: 'Risiko keamanan pangan' },
+];
+
+const filtrationMethods = [
+  { name: 'Mesin Press Filter Multilayer Pneumatik', advantages: ['Efisiensi filtrasi tinggi', 'Kemampuan operasi berkelanjutan', 'Filtrasi multi-tahap dalam satu unit', 'Perawatan mudah'], stages: [{ mesh: '100-200', purpose: 'Menghilangkan partikel besar' }, { mesh: '200-300', purpose: 'Menghilangkan partikel halus' }, { mesh: '300-500', purpose: 'Kecerahan minyak premium' }] },
+  { name: 'Mesin Press Filter Plat', advantages: ['Kemampuan tekanan tinggi', 'Efektif untuk minyak mentah berpadat tinggi', 'Pemindahan ampas mudah'], disadvantages: ['Operasi batch', 'Memerlukan pembersihan manual'] },
+  { name: 'Filter Kantong', advantages: ['Biaya rendah', 'Penggantian filter mudah', 'Baik untuk pra-filtrasi'], disadvantages: ['Kapasitas filtrasi terbatas', 'Penggantian kantong sering'] },
+  { name: 'Filter Sentrifugal', advantages: ['Debit tinggi', 'Perawatan rendah', 'Operasi berkelanjutan'], disadvantages: ['Konsumsi energi lebih tinggi', 'Kurang efektif untuk partikel sangat halus'] },
+];
+
+const clarifyingAgents = [
+  { agent: 'Bentonit', function: 'Menyerap gum dan kotoran', dosage: '0,5-2%' },
+  { agent: 'Karbon Aktif', function: 'Menyerap senyawa warna dan aflatoksin', dosage: '0,2-1%' },
+  { agent: 'Diatomaceous Earth', function: 'Menyaring partikel halus', dosage: '1-3%' },
+];
+
+const equipmentSelection = [
+  { scale: 'Kecil', output: '500-1,500 kg', system: 'Mesin press filter tunggal', budget: 'Hubungi untuk harga' },
+  { scale: 'Sedang', output: '1,500-3,000 kg', system: 'Filtrasi multi-tahap', budget: 'Hubungi untuk harga' },
+  { scale: 'Besar', output: '3,000+ kg', system: 'Garis produksi filtrasi otomatis', budget: 'Hubungi untuk harga' },
+];
+
+const troubleshooting = [
+  { problem: 'Minyak Keruh Setelah Filtrasi', causes: ['Media filter tersumbat atau rusak', 'Ukuran mesh filter salah', 'Suhu minyak terlalu rendah', 'Kandungan kelembaban berlebih'], solutions: ['Ganti media filter', 'Gunakan filter mesh lebih halus', 'Panaskan minyak sebelum filtrasi', 'Keringkan minyak sebelum filtrasi'] },
+  { problem: 'Tingkat Filtrasi Rendah', causes: ['Media filter tersumbat', 'Tekanan pompa tidak cukup', 'Viskositas terlalu tinggi', 'Masuk tersumbat'], solutions: ['Bersihkan atau ganti filter', 'Naikkan tekanan pompa', 'Panaskan minyak untuk mengurangi viskositas', 'Bersihkan sumbatan masuk'] },
+  { problem: 'Minyak Bocor', causes: ['Segel atau gasket aus', 'Koneksi longgar', 'Tekanan berlebih', 'Peralatan rusak'], solutions: ['Ganti segel', 'Kencangkan koneksi', 'Kurangi tekanan', 'Perbaiki atau ganti peralatan'] },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/id/" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-blue-50 to-cyan-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-blue-500/10 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          PANDUAN FILTRASI
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Tim Teknik Haonuo</div>
+              <div class="text-sm text-steel-500">Insinyur Mesin Press Minyak Senior · Pengalaman 15+ Tahun</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Proses filtrasi dan pemisahan sangat penting untuk menghasilkan minyak goreng berkualitas tinggi. Setelah pemerasan, minyak mentah mengandung berbagai kotoran yang harus dihilangkan untuk memenuhi standar pasar dalam hal kejernihan, cita rasa, dan masa simpan.
+        </p>
+      </section>
+
+      <section id="impurities" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Memahami Kotoran Minyak Mentah</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Jenis Kotoran</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-red-500 to-rose-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Jenis Kotoran</th>
+                <th class="px-4 py-3 text-left font-semibold">Deskripsi</th>
+                <th class="px-4 py-3 text-left font-semibold">Sumber</th>
+                <th class="px-4 py-3 text-left font-semibold">Dampak</th>
+              </tr>
+            </thead>
+            <tbody>
+              {impurities.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-red-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.type}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.description}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.source}</td>
+                  <td class="px-4 py-3 text-red-600">{item.impact}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="filtration-methods" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Metode Filtrasi</h2>
+        <div class="space-y-6">
+          {filtrationMethods.map((item, index) => (
+            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-xl text-charcoal-900 mb-4">{item.name}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-green-600 mb-3">Keuntungan:</h4>
+                  <ul class="space-y-2">
+                    {item.advantages.map((adv, idx) => (
+                      <li key={idx} class="flex items-center gap-2 text-steel-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        {adv}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {item.disadvantages && (
+                  <div>
+                    <h4 class="font-medium text-red-600 mb-3">Kerugian:</h4>
+                    <ul class="space-y-2">
+                      {item.disadvantages.map((dis, idx) => (
+                        <li key={idx} class="flex items-center gap-2 text-steel-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                          {dis}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+              {item.stages && (
+                <div class="mt-6 pt-6 border-t border-steel-100">
+                  <h4 class="font-medium text-blue-600 mb-3">Media Filter Direkomendasikan:</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {item.stages.map((stage, idx) => (
+                      <div key={idx} class="bg-blue-50 p-3 rounded-lg">
+                        <span class="font-semibold text-blue-800">{stage.mesh} mesh</span>
+                        <p class="text-sm text-steel-600">{stage.purpose}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="oil-settling" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Proses Pengendapan Minyak</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+            <h3 class="font-semibold text-lg text-charcoal-900 mb-4">Pengendapan Alami</h3>
+            <ol class="space-y-2 list-decimal list-inside text-steel-700">
+              <li>Transfer minyak mentah ke tangki pengendapan</li>
+              <li>Biarkan mengendap selama 24-72 jam</li>
+              <li>Partikel mengendap ke bawah karena gravitasi</li>
+              <li>Decant minyak jernih dari atas</li>
+            </ol>
+            <div class="mt-4 p-3 bg-steel-50 rounded-lg">
+              <h4 class="font-medium text-steel-500 mb-2">Kondisi:</h4>
+              <ul class="text-sm text-steel-700">
+                <li>• Suhu: 25-30°C</li>
+                <li>• Material tangki: Stainless steel</li>
+                <li>• Ventilasi yang baik</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+            <h3 class="font-semibold text-lg text-charcoal-900 mb-4">Pengendapan Dipercepat</h3>
+            <ul class="space-y-2 text-steel-700">
+              <li>• Pemanasan untuk mempercepat gerakan partikel</li>
+              <li>• Penambahan agen pemisah</li>
+              <li>• Penggunaan pemisah pelat miring</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipment-selection" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Panduan Pemilihan Peralatan</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Berdasarkan Skala Produksi</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Skala</th>
+                <th class="px-4 py-3 text-left font-semibold">Output Harian</th>
+                <th class="px-4 py-3 text-left font-semibold">Sistem</th>
+                <th class="px-4 py-3 text-left font-semibold">Anggaran</th>
+              </tr>
+            </thead>
+            <tbody>
+              {equipmentSelection.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.output}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.system}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.budget}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="troubleshooting" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Panduan Troubleshooting</h2>
+        <div class="space-y-4">
+          {troubleshooting.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-red-600 mb-3">{item.problem}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Penyebab:</h4>
+                  <ul class="space-y-1">
+                    {item.causes.map((cause, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Solusi:</h4>
+                  <ul class="space-y-1">
+                    {item.solutions.map((solution, idx) => (
+                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Filtrasi dan pemisahan minyak mentah yang efektif sangat penting untuk menghasilkan minyak goreng berkualitas tinggi. Dengan memilih metode filtrasi yang tepat, produsen minyak dapat memastikan kualitas produk yang konsisten dan memaksimalkan kepuasan pelanggan.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MEMULAI PRODUKSI MINYAK ANDA?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim teknisi kami dapat membantu Anda memilih peralatan terbaik dan mengoptimalkan investasi Anda.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          Hubungi Ahli
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">
+          Jelajahi Peralatan
+        </a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">
+          Kembali ke Sumber Daya
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

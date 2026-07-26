@@ -1,0 +1,606 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+
+const t = getTranslations('id');
+
+const title = 'Panduan Pemanfaatan Hasil Samping Kue Minyak';
+const description = 'Panduan lengkap untuk memaksimalkan nilai dari hasil samping kue minyak';
+const seoKeywords = ['pemanfaatan kue minyak', 'kue kacang tanah', 'manajemen hasil samping'];
+const publishedAt = new Date();
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/cake-byproduct-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Insinyur Teknik Minyak Utama', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/oil-cake-byproduct-guide' },
+  ],
+};
+
+const nutritionalAnalysis = [
+  { component: 'Protein', peanut: '45-50%', sesame: '35-40%', rapeseed: '38-42%', soybean: '40-45%' },
+  { component: 'Lemak', peanut: '6-10%', sesame: '8-12%', rapeseed: '3-6%', soybean: '1-3%' },
+  { component: 'Serat', peanut: '8-12%', sesame: '6-8%', rapeseed: '10-15%', soybean: '5-8%' },
+  { component: 'Karbohidrat', peanut: '20-25%', sesame: '25-30%', rapeseed: '25-30%', soybean: '25-30%' },
+  { component: 'Abu', peanut: '5-7%', sesame: '5-7%', rapeseed: '6-8%', soybean: '5-7%' },
+];
+
+const keyNutrients = [
+  { icon: 'droplet', title: 'Protein', desc: 'Protein nabati berkualitas tinggi untuk pakan ternak' },
+  { icon: 'dna', title: 'Asam Amino', desc: 'Mengandung asam amino esensial seperti lisin, metionin' },
+  { icon: 'gem', title: 'Mineral', desc: 'Kaya fosfor, kalsium, magnesium, kalium' },
+  { icon: 'sun', title: 'Vitamin', desc: 'Vitamin B, vitamin E' },
+];
+
+const poultryFeed = { benefits: ['Protein tinggi mendorong pertumbuhan dan produksi telur', 'Sumber energi yang baik', 'Alternatif hemat biaya dari tepung kedelai'], inclusion: ['Ayam broiler: 10-20% dari diet', 'Ayam petelur: 8-15% dari diet', 'Ayam kalkun: 10-18% dari diet'] };
+const livestockFeed = { benefits: ['Meningkatkan produksi susu pada sapi perah', 'Memperkuat pertambahan berat pada sapi potong', 'Cocok untuk domba dan kambing'], inclusion: ['Sapi perah: 15-25% dari campuran konsentrat', 'Sapi potong: 10-20% dari diet', 'Domba/kambing: 10-15% dari diet'] };
+const aquacultureFeed = { benefits: ['Protein tinggi untuk pertumbuhan ikan', 'Alternatif berkelanjutan dari tepung ikan', 'Daya cerna yang baik'], inclusion: ['Nila: 15-25%', 'Ikan kating: 10-20%', 'Udang: 10-15%'] };
+const swineFeed = { benefits: ['Mendorong pertambahan berat', 'Meningkatkan rasio konversi pakan', 'Hemat biaya'], inclusion: ['Babi tumbuh: 10-20%', 'Babi akhir: 8-15%', 'Babi betina: 10-15%'] };
+
+const traditionalUses = [
+  { name: 'Kue Kacang Tanah (Kuli-Kuli)', desc: 'Camilan populer di Afrika Barat (Nigeria, Ghana). Bola kue digoreng. Tinggi protein, padat energi.' },
+  { name: 'Produksi Tempe', desc: 'Kue kedelai difermentasi. Makanan tradisional Indonesia. Nilai gizi tinggi.' },
+];
+
+const modernUses = [
+  { name: 'Protein Terisolasi', desc: 'Protein diekstraksi untuk produk makanan. Digunakan dalam pengganti daging vegetarian. Suplemen protein.' },
+  { name: 'Produk Tanpa Gluten', desc: 'Tepung kue untuk baking tanpa gluten. Kandungan serat tinggi. Kaya nutrisi.' },
+];
+
+const organicFertilizer = { benefits: ['Sumber nitrogen pelepasan lambat', 'Meningkatkan struktur tanah', 'Memperkuat aktivitas mikroba tanah'], methods: ['Aplikasi langsung: 500-1000 kg/ha', 'Kompos: Campur dengan limbah organik', 'Pupuk cair: Ekstraksi nutrisi'] };
+const soilAmendment = { benefits: ['Meningkatkan retensi air', 'Memperkuat aerasi tanah', 'Meningkatkan kapasitas pertukaran kation'] };
+const animalBedding = { benefits: ['Bahan penyerap', 'Hemat biaya', 'Dapat dikomposkan setelah penggunaan'] };
+
+const biogasProduction = { process: ['Campur kue minyak dengan air', 'Pencernaan anaerob', 'Hasilkan biogas (metana)', 'Gunakan untuk produksi energi'], yield: ['200-300 m3 biogas per ton kue minyak', 'Kadar metana 50-60%'] };
+const biofuelProduction = { process: ['Ekstraksi minyak sisa', 'Konversi ke biodiesel', 'Gunakan sebagai bahan bakar transportasi'] };
+const activatedCarbon = { process: ['Karbonisasi kue minyak', 'Aktivasi dengan uap atau bahan kimia', 'Gunakan untuk filtrasi dan pemurnian'] };
+
+const crushingEquipment = ['Mesin pemecah palu', 'Mesin pemecah rol', 'Mesin pemecah cakram'];
+const particleSizes = [
+  { use: 'Pakan Ternak', size: '1-3 mm' },
+  { use: 'Pupuk', size: '2-5 mm' },
+  { use: 'Industri', size: 'Bubuk halus' },
+];
+
+const pelletizingInfo = { benefits: ['Pengolahan yang ditingkatkan', 'Debu berkurang', 'Kepadatan volumetrik lebih tinggi'], equipment: ['Mesin pelet die datar', 'Mesin pelet die cincin'], size: '4-8 mm diameter' };
+
+const valueAddedProducts = [
+  { title: 'Ekstraksi Minyak Sisa', desc: 'Ekstraksi pelarut, Ekstraksi CO2 superkritis, Pemulihan minyak tambahan 2-3%' },
+  { title: 'Ekstraksi Protein', desc: 'Ekstraksi alkalin, Presipitasi asam, Produksi isolat protein' },
+  { title: 'Ekstraksi Senyawa Fitokimia', desc: 'Antioksidan, Fitosterol, Saponin' },
+];
+
+const qualityControl = [
+  { parameter: 'Kadar Protein', standard: '> 40%', method: 'Metode Kjeldahl' },
+  { parameter: 'Kelembapan', standard: '< 12%', method: 'Pengeringan oven' },
+  { parameter: 'Abu', standard: '< 8%', method: 'Pembakaran' },
+  { parameter: 'Aflatoksin', standard: '< 20 µg/kg', method: 'HPLC' },
+  { parameter: 'Asam Lemak Bebas', standard: '< 2%', method: 'Titrasi' },
+];
+
+const storageRequirements = ['Penyimpanan kering dan berventilasi baik', 'Suhu < 25°C', 'Kelembapan relatif < 65%', 'Gunakan kantong tahan air'];
+
+const marketValue = [
+  { application: 'Pakan Ternak', price: 'Hubungi untuk harga' },
+  { application: 'Pupuk Organik', price: 'Hubungi untuk harga' },
+  { application: 'Makanan Manusia', price: 'Hubungi untuk harga' },
+  { application: 'Industri', price: 'Hubungi untuk harga' },
+];
+
+const profitExample = [
+  'Produksi 100 ton/bulan',
+  'Hasil kue: 55 ton/bulan',
+  'Potensi pendapatan tambahan signifikan',
+  'Margin keuntungan meningkat dengan pengolahan',
+  'Tergantung pada harga pasar dan tingkat pengolahan',
+];
+
+const investmentRequirements = [
+  { level: 'Pemecahan dasar', investment: 'Hubungi untuk harga', capacity: '50-100 ton' },
+  { level: 'Pelletisasi', investment: 'Hubungi untuk harga', capacity: '100-300 ton' },
+  { level: 'Pengolahan nilai tambah', investment: 'Hubungi untuk harga', capacity: '200-500 ton' },
+];
+
+const wasteReduction = ['Kue minyak adalah sumber daya berharga, bukan limbah', 'Pemanfaatan yang tepat mengurangi limbah di landfill', 'Pendekatan ekonomi sirkuler'];
+const sustainability = ['Sumber daya terbarukan', 'Dapat terurai secara hayati', 'Produksi netral karbon'];
+const pollutionControl = ['Penyimpanan yang tepat mencegah pertumbuhan jamur', 'Kontrol debu selama pengolahan', 'Pengolahan limbah cair untuk proses ekstraksi'];
+
+const caseStudy = [
+  'Kapasitas harian: 1000 kg kacang tanah',
+  'Hasil minyak: 45% = 450 kg minyak',
+  'Hasil kue: 55% = 550 kg kue',
+  '400 kg kue dijual sebagai pakan ternak',
+  '150 kg kue diproses menjadi pelet',
+  'Pendapatan kue bulanan: ~$4,500',
+  'Biaya pembuangan limbah berkurang',
+  'Keuntungan keseluruhan meningkat',
+  'Model bisnis berkelanjutan',
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">PANDUAN PEMANFAATAN</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Insinyur Teknik Minyak Utama · Pengalaman 15+ Tahun</div>
+          </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
+        <p class="text-steel-700 leading-relaxed">Kue minyak adalah residu padat yang tersisa setelah ekstraksi minyak dari biji-bijian minyak. Hasil samping berharga ini mewakili sekitar 50-60% dari berat biji asli dan mengandung tingkat tinggi protein, serat, dan nutrisi lainnya. Pemanfaatan kue minyak yang tepat dapat meningkatkan profitabilitas keseluruhan operasi produksi minyak.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Kue minyak bukan limbah - ini adalah sumber daya berharga yang dapat meningkatkan hasil Anda.</p>
+        </div>
+      </section>
+
+      <section id="composition" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Memahami Komposisi Kue Minyak</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Analisis Nutrisi</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Komponen</th><th class="px-4 py-3 text-left font-semibold">Kue Kacang Tanah</th><th class="px-4 py-3 text-left font-semibold">Kue wijen</th><th class="px-4 py-3 text-left font-semibold">Kue Biji Kolza</th><th class="px-4 py-3 text-left font-semibold">Kue Kedelai</th></tr>
+            </thead>
+            <tbody>
+              {nutritionalAnalysis.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.component}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.peanut}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.sesame}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.rapeseed}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.soybean}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Nutrisi Utama</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {keyNutrients.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-3">
+                {item.icon === 'droplet' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S6 13 6 15a7 7 0 0 0 7 7z"/></svg>}
+                {item.icon === 'dna' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 10c0 3.866-3.582 7-8 7a8.841 8.841 0 0 1-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM12 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>}
+                {item.icon === 'gem' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>}
+                {item.icon === 'sun' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>}
+              </div>
+              <h4 class="font-semibold text-charcoal-900 mb-1">{item.title}</h4>
+              <p class="text-steel-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="animal-feed" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Aplikasi Pakan Ternak</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h3 class="font-semibold text-green-800 mb-3">Pakan Unggas</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Manfaat:</h4>
+            <ul class="space-y-1 text-sm text-steel-600 mb-4">
+              {poultryFeed.benefits.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            <h4 class="font-medium text-steel-700 mb-2">Inklusi Direkomendasikan:</h4>
+            <ul class="space-y-1 text-sm text-steel-600">
+              {poultryFeed.inclusion.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <h3 class="font-semibold text-blue-800 mb-3">Pakan Ternak Besar</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Manfaat:</h4>
+            <ul class="space-y-1 text-sm text-steel-600 mb-4">
+              {livestockFeed.benefits.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            <h4 class="font-medium text-steel-700 mb-2">Inklusi Direkomendasikan:</h4>
+            <ul class="space-y-1 text-sm text-steel-600">
+              {livestockFeed.inclusion.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-cyan-50 p-5 rounded-xl border border-cyan-100">
+            <h3 class="font-semibold text-cyan-800 mb-3">Pakan Budidaya Air</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Manfaat:</h4>
+            <ul class="space-y-1 text-sm text-steel-600 mb-4">
+              {aquacultureFeed.benefits.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            <h4 class="font-medium text-steel-700 mb-2">Inklusi Direkomendasikan:</h4>
+            <ul class="space-y-1 text-sm text-steel-600">
+              {aquacultureFeed.inclusion.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
+            <h3 class="font-semibold text-purple-800 mb-3">Pakan Babi</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Manfaat:</h4>
+            <ul class="space-y-1 text-sm text-steel-600 mb-4">
+              {swineFeed.benefits.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            <h4 class="font-medium text-steel-700 mb-2">Inklusi Direkomendasikan:</h4>
+            <ul class="space-y-1 text-sm text-steel-600">
+              {swineFeed.inclusion.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="human-food" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Aplikasi Makanan Manusia</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Penggunaan Tradisional</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          {traditionalUses.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
+              <h4 class="font-semibold text-amber-600 mb-2">{item.name}</h4>
+              <p class="text-steel-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Aplikasi Modern</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {modernUses.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
+              <h4 class="font-semibold text-teal-600 mb-2">{item.name}</h4>
+              <p class="text-steel-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="agricultural" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Aplikasi Pertanian</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h3 class="font-semibold text-green-800 mb-3">Pupuk Organik</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Manfaat:</h4>
+            <ul class="space-y-1 text-sm text-steel-600 mb-4">
+              {organicFertilizer.benefits.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            <h4 class="font-medium text-steel-700 mb-2">Metode Aplikasi:</h4>
+            <ul class="space-y-1 text-sm text-steel-600">
+              {organicFertilizer.methods.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-amber-50 p-5 rounded-xl border border-amber-100">
+            <h3 class="font-semibold text-amber-800 mb-3">Pengubah Tanah</h3>
+            <ul class="space-y-2 text-sm text-steel-600">
+              {soilAmendment.benefits.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <h3 class="font-semibold text-blue-800 mb-3">Kasur Hewan</h3>
+            <ul class="space-y-2 text-sm text-steel-600">
+              {animalBedding.benefits.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="industrial" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Aplikasi Industri</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-orange-50 p-5 rounded-xl border border-orange-100">
+            <h3 class="font-semibold text-orange-800 mb-3">Produksi Biogas</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Proses:</h4>
+            <ol class="space-y-1 text-sm text-steel-600 mb-4">
+              {biogasProduction.process.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ol>
+            <h4 class="font-medium text-steel-700 mb-2">Hasil:</h4>
+            <ul class="space-y-1 text-sm text-steel-600">
+              {biogasProduction.yield.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-cyan-50 p-5 rounded-xl border border-cyan-100">
+            <h3 class="font-semibold text-cyan-800 mb-3">Produksi Bahan Bakar Bio</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Proses:</h4>
+            <ol class="space-y-1 text-sm text-steel-600">
+              {biofuelProduction.process.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ol>
+          </div>
+          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
+            <h3 class="font-semibold text-purple-800 mb-3">Karbon Aktif</h3>
+            <h4 class="font-medium text-steel-700 mb-2">Proses:</h4>
+            <ol class="space-y-1 text-sm text-steel-600">
+              {activatedCarbon.process.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="processing" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Metode Pengolahan</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Pemecahan dan Penggilingan</h3>
+        <div class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm mb-6">
+          <h4 class="font-medium text-steel-700 mb-2">Peralatan:</h4>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {crushingEquipment.map((item, index) => (
+              <span key={index} class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm">{item}</span>
+            ))}
+          </div>
+          <h4 class="font-medium text-steel-700 mb-2">Ukuran Partikel:</h4>
+          <div class="space-y-1 text-sm text-steel-600">
+            {particleSizes.map((item, index) => (
+              <p key={index}><span class="font-medium">{item.use}:</span> {item.size}</p>
+            ))}
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Pelletisasi</h3>
+        <div class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm mb-6">
+          <h4 class="font-medium text-steel-700 mb-2">Manfaat:</h4>
+          <ul class="space-y-1 text-sm text-steel-600 mb-4">
+            {pelletizingInfo.benefits.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          <h4 class="font-medium text-steel-700 mb-2">Peralatan:</h4>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {pelletizingInfo.equipment.map((item, index) => (
+              <span key={index} class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">{item}</span>
+            ))}
+          </div>
+          <h4 class="font-medium text-steel-700 mb-2">Ukuran Pelet:</h4>
+          <p class="text-sm text-steel-600">{pelletizingInfo.size}</p>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Ekstraksi Produk Nilai Tambah</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {valueAddedProducts.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
+              <h4 class="font-semibold text-charcoal-900 mb-2">{item.title}</h4>
+              <p class="text-steel-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="quality-control" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kontrol Kualitas</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Parameter Pengujian</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Parameter</th><th class="px-4 py-3 text-left font-semibold">Standar Penerimaan</th><th class="px-4 py-3 text-left font-semibold">Metode Pengujian</th></tr>
+            </thead>
+            <tbody>
+              {qualityControl.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-teal-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.parameter}</td>
+                  <td class="px-4 py-3 text-teal-600">{item.standard}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.method}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Persyaratan Penyimpanan</h3>
+        <div class="flex flex-wrap gap-2">
+          {storageRequirements.map((item, index) => (
+            <span key={index} class="bg-orange-100 text-orange-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section id="economic" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pertimbangan Ekonomi</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Nilai Pasar</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+          {marketValue.map((item, index) => (
+            <div key={index} class="bg-gradient-to-br from-amber-50 to-orange-50 p-4 rounded-xl border border-amber-100 text-center">
+              <p class="text-sm text-steel-500 mb-1">{item.application}</p>
+              <p class="text-xl font-bold text-amber-600">{item.price}</p>
+              <p class="text-xs text-steel-400">USD/ton</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Peningkatan Keuntungan</h3>
+        <div class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 p-6 rounded-xl text-white mb-8">
+          <p class="font-semibold mb-4">Contoh: Produksi 100 ton/bulan</p>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {profitExample.map((item, index) => (
+              <div key={index} class="text-center">
+                <p class="text-sm">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Persyaratan Investasi</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Tingkat Pengolahan</th><th class="px-4 py-3 text-left font-semibold">Investasi (USD)</th><th class="px-4 py-3 text-left font-semibold">Kapasitas Bulanan</th></tr>
+            </thead>
+            <tbody>
+              {investmentRequirements.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-purple-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.level}</td>
+                  <td class="px-4 py-3 text-purple-600">{item.investment}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.capacity}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="environmental" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pertimbangan Lingkungan</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h3 class="font-semibold text-green-800 mb-3">Pengurangan Limbah</h3>
+            <ul class="space-y-2">
+              {wasteReduction.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <h3 class="font-semibold text-blue-800 mb-3">Keberlanjutan</h3>
+            <ul class="space-y-2">
+              {sustainability.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
+            <h3 class="font-semibold text-purple-800 mb-3">Kontrol Polusi</h3>
+            <ul class="space-y-2">
+              {pollutionControl.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="case-study" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Studi Kasus</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Pabrik Produksi Minyak Kacang Tanah</h3>
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-amber-600 mb-3">Produksi</h4>
+              <ul class="space-y-1 text-sm text-steel-600">
+                {caseStudy.slice(0, 3).map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-green-600 mb-3">Pemanfaatan Hasil Samping</h4>
+              <ul class="space-y-1 text-sm text-steel-600">
+                {caseStudy.slice(3, 6).map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-blue-600 mb-3">Manfaat Tambahan</h4>
+              <ul class="space-y-1 text-sm text-steel-600">
+                {caseStudy.slice(6).map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
+        <p class="text-steel-700 leading-relaxed">Hasil samping kue minyak mewakili nilai signifikan yang belum dimanfaatkan dalam operasi produksi minyak. Dengan memahami komposisi nutrisi dan mengeksplorasi berbagai metode pemanfaatan, produsen dapat mengubah apa yang pernah dianggap limbah menjadi aliran pendapatan yang menguntungkan. Apakah digunakan sebagai pakan ternak, pupuk organik, atau diproses menjadi produk nilai tambah, kue minyak dapat secara substansial meningkatkan kelayakan ekonomi bisnis produksi minyak.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MULAI PRODUKSI MINYAK ANDA?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim insinyur kami dapat membantu Anda memaksimalkan nilai dari hasil samping kue minyak Anda.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Hubungi Ahli Kami<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">Jelajahi Peralatan</a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">Kembali ke Sumber Daya</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

@@ -1,0 +1,247 @@
+﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allProducts = await getCollection('products');
+const egyptSeeds = ['sesame', 'olive', 'peanut', 'sunflower'];
+const seedProducts = allProducts.filter(p =>
+  p.data.applicableSeeds.some(s => egyptSeeds.some(ns => s.toLowerCase().includes(ns)))
+).slice(0, 4);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Markets', item: 'https://www.hydoilpress.com/markets' },
+    { '@type': 'ListItem', position: 3, name: 'Egypt', item: 'https://www.hydoilpress.com/markets/egypt' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the price of an oil press machine in Egypt?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Contact us for a customized quote for a complete Haonuo oil press setup including shipping to Alexandria or Port Said. We provide competitive factory-direct pricing and can quote in EGP (Egyptian Pound) at current exchange rates.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can the machine press sesame for tahini and oil?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Haonuo hydraulic cold press machines are excellent for sesame oil production. Egypt is one of the world\'s top sesame producers, and our machines achieve 42-50% oil yield, producing premium cold-pressed sesame oil ideal for both tahini production and cooking oil markets.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What voltage does the oil press machine use in Egypt?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Haonuo oil press machines are customized for Egypt\'s 220V/50Hz power standard. Our motors are configured to match local electrical requirements, ensuring safe and efficient operation.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does shipping take to Alexandria, Egypt?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sea freight from Qingdao, China to Alexandria or Port Said takes 20-24 days. We handle all export documentation and can arrange CIF shipping for your convenience. Contact us for current shipping rates.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the import regulations for oil press machines in Egypt?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Oil press machines are classified under HS code 8479.82. Egypt requires registration with GOEIC (General Organization for Export and Import Control) for machinery imports. We provide all necessary documentation including certificates of origin, commercial invoices, and quality certificates to facilitate smooth customs clearance.' },
+    },
+  ],
+};
+
+const faqs = [
+  { question: 'What is the price of an oil press machine in Egypt?', answer: 'Contact us for a customized quote for a complete Haonuo oil press setup including shipping to Alexandria or Port Said. We provide competitive factory-direct pricing and can quote in EGP (Egyptian Pound) at current exchange rates.' },
+  { question: 'Can the machine press sesame for tahini and oil?', answer: 'Yes. Haonuo hydraulic cold press machines are excellent for sesame oil production. Egypt is one of the world\'s top sesame producers, and our machines achieve 42-50% oil yield, producing premium cold-pressed sesame oil ideal for both tahini production and cooking oil markets.' },
+  { question: 'What voltage does the oil press machine use in Egypt?', answer: 'Haonuo oil press machines are customized for Egypt\'s 220V/50Hz power standard. Our motors are configured to match local electrical requirements, ensuring safe and efficient operation.' },
+  { question: 'How long does shipping take to Alexandria, Egypt?', answer: 'Sea freight from Qingdao, China to Alexandria or Port Said takes 20-24 days. We handle all export documentation and can arrange CIF shipping for your convenience. Contact us for current shipping rates.' },
+  { question: 'What are the import regulations for oil press machines in Egypt?', answer: 'Oil press machines are classified under HS code 8479.82. Egypt requires registration with GOEIC (General Organization for Export and Import Control) for machinery imports. We provide all necessary documentation including certificates of origin, commercial invoices, and quality certificates to facilitate smooth customs clearance.' },
+];
+---
+
+<BaseLayout
+  title="Oil Press Machine in Egypt | Haonuo"
+  description="Professional oil press machine for Egypt. Hydraulic cold press for sesame, olive, peanut, sunflower oil. Factory-direct pricing in EGP. Shipping to Alexandria 20-24 days. 1-year warranty."
+  keywords={['oil press machine Egypt', 'sesame oil press machine Egypt', 'olive oil press Egypt', 'hydraulic oil press Egypt price']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/markets" class="hover:text-amber-500 transition-colors">Markets</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Egypt</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Oil Press Machine in Egypt — Factory Direct</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">Hydraulic oil press machines for sesame, olive, peanut, and sunflower oil production. Factory-direct pricing, shipping to Alexandria in 20-24 days, 1-year warranty.</p>
+    </div>
+  </section>
+
+  <!-- Popular Oilseeds in Egypt -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Popular Oilseeds in Egypt</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🫘</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Sesame</h3>
+          <p class="text-sm text-steel-600 mb-3">Egypt is a top sesame producer. Used for tahini and premium cold-pressed oil with distinctive flavor.</p>
+          <div class="text-amber-500 font-semibold text-sm">Yield: 42-50%</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🫒</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Olive</h3>
+          <p class="text-sm text-steel-600 mb-3">Premium cold-pressed olive oil from Egypt's growing olive cultivation. High-value product for health-conscious consumers.</p>
+          <div class="text-amber-500 font-semibold text-sm">Yield: 15-25%</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🥜</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Peanut</h3>
+          <p class="text-sm text-steel-600 mb-3">Popular cooking oil in Egyptian households. Versatile oil with high smoke point ideal for local cuisine.</p>
+          <div class="text-amber-500 font-semibold text-sm">Yield: 38-45%</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🌻</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Sunflower</h3>
+          <p class="text-sm text-steel-600 mb-3">Growing market for sunflower oil as a healthier alternative. Light flavor suitable for everyday cooking.</p>
+          <div class="text-amber-500 font-semibold text-sm">Yield: 35-45%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Products -->
+  {seedProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-steel-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">Recommended Machines for Egypt</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {seedProducts.map(product => (
+            <a
+              href={`/products/${product.slug}`}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {product.data.specifications.slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Get a Customized Quote -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="section-title mb-6">Get a Customized Quote for Egypt</h2>
+      <p class="text-steel-600 text-lg mb-6 max-w-2xl mx-auto">We provide competitive factory-direct pricing for all our oil press machines. Request a formal quotation in EGP or USD, including shipping to Alexandria/Port Said and estimated clearing costs.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🏭</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Factory-Direct Pricing</h3>
+          <p class="text-steel-600 text-sm">No middleman markup &save compared to local distributors (actual savings vary)</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">📋</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Complete Quotation</h3>
+          <p class="text-steel-600 text-sm">Machine price + shipping + estimated duties all included</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">💬</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Quote in EGP</h3>
+          <p class="text-steel-600 text-sm">We can quote in Egyptian Pound at current exchange rates</p>
+        </div>
+      </div>
+      <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        Request a Quote
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Shipping Info -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Shipping to Egypt</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100 text-center">
+          <div class="text-3xl mb-3">🚢</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Port</h3>
+          <p class="text-steel-600">Alexandria / Port Said</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100 text-center">
+          <div class="text-3xl mb-3">⏱️</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Transit Time</h3>
+          <p class="text-steel-600">20-24 days from China</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100 text-center">
+          <div class="text-3xl mb-3">💰</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Shipping Cost</h3>
+          <p class="text-steel-600">Ask us for current rates</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Ready to Start Your Oil Business in Egypt?</h2>
+      <p class="text-steel-300 text-lg mb-8">Get a free quotation in EGP, shipping estimate to Alexandria, and professional equipment recommendation.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          Get a Free Quote
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128?text=Hello%20Haonuo%2C%20I%20am%20interested%20in%20oil%20press%20machine%20for%20Egypt" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-500 transition-colors text-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

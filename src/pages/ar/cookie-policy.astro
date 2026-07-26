@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('ar');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+    { '@type': 'ListItem', position: 2, name: 'سياسة ملفات تعريف الارتباط', item: 'https://www.hydoilpress.com/ar/cookie-policy' },
+  ],
+};
+---
+
+<BaseLayout title="سياسة ملفات تعريف الارتباط" description="سياسة ملفات تعريف الارتباط لشركة هاونوو الميكانيكية - تعرف على كيفية استخدامنا لملفات تعريف الارتباط على موقعنا وكيفية إدارة تفضيلاتك." locale="ar">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/ar" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">سياسة ملفات تعريف الارتباط</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">سياسة ملفات تعريف الارتباط</h1>
+      <p class="text-steel-600 text-lg mb-8">آخر تحديث: 20 يوليو 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. ما هي ملفات تعريف الارتباط؟</h2>
+          <p class="text-steel-600 leading-relaxed">
+            ملفات تعريف الارتباط هي ملفات نصية صغيرة يتم تخزينها على جهازك عند زيارة موقع على الويب. تساعد المواقع على الويب في تذكر المعلومات حول زيارتك، مثل تفضيل اللغة والإعدادات الأخرى.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. كيف نستخدم ملفات تعريف الارتباط</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            نستخدم ملفات تعريف الارتباط لأغراض التالية:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li><strong>ملفات تعريف الارتباط الضرورية:</strong> هذه الملفات ضرورية لكيفية تشغيل الموقع. لا يمكن تعطيلها.</li>
+            <li><strong>ملفات تعريف الارتباط الأدائية:</strong> تساعدنا في تحليل كيفية استخدام الزوار لموقعنا وتحسين أدائه.</li>
+            <li><strong>ملفات تعريف الارتباط الوظيفية:</strong> تتيح للموقع تذكر تفضيلاتك وتقديم ميزات محسنة.</li>
+            <li><strong>ملفات تعريف الارتباط التسويقية:</strong> تُستخدم لتقديم إعلانات وسلاسل تسويقية شخصية.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. ملفات تعريف الارتباط من طرفي ثالث</h2>
+          <p class="text-steel-600 leading-relaxed">
+            قد نستخدم خدمات من طرفي ثالث التي تضع ملفات تعريف الارتباط على موقعنا، مثل Google Analytics لتحليلات الموقع. لهؤلاء الطرفين ثالثي سياسات خاصة لخصوصيتهم وملفات تعريف الارتباط.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. إدارة ملفات تعريف الارتباط</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            يمكنك إدارة تفضيلاتك regarding cookies من خلال إعدادات متصفحك. معظم المتصفحات تسمح لك:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>قبول جميع ملفات تعريف الارتباط</li>
+            <li>رفض جميع ملفات تعريف الارتباط</li>
+            <li>قبول ملفات تعريف الارتباط الضرورية فقط</li>
+            <li>حذف ملفات تعريف الارتباط الموجودة</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            يرجى ملاحظة أن تعطيل بعض ملفات تعريف الارتباط قد يؤثر على وظيفة موقعنا.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. التغييرات في هذه السياسة</h2>
+          <p class="text-steel-600 leading-relaxed">
+            قد نقوم بتحديث سياسة ملفات تعريف الارتباط هذه من وقت لآخر. سنقوم بإعلامك بأي تغيير كبير من خلال نشر السياسة المحدثة على موقعنا على الويب. استمرارك في استخدام موقعنا على الويب بعد أي تغيير يشكل قبولك للسياسة المحدثة.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. الاتصال بنا</h2>
+          <p class="text-steel-600 leading-relaxed">
+            إذا كان لديك أي أسئلة حول سياسة ملفات تعريف الارتباط هذه، يرجى الاتصال بنا:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>البريد الإلكتروني: contact@hydoilpress.com</li>
+            <li>الهاتف: +86-18957149128</li>
+            <li>العنوان: قنجو، ويفانغ، شاندونغ، الصين</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

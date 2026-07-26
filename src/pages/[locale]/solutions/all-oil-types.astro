@@ -1,0 +1,317 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allSolutions = await getCollection('solutions');
+
+const marketOrder: Record<string, number> = {
+  soybean: 1, palm: 2, sunflower: 3, peanut: 4, cottonseed: 5,
+  mustard: 6, sesame: 7, olive: 8, coconut: 9, shea: 10,
+  castor: 11, almond: 12, avocado: 13, flaxseed: 14, walnut: 15,
+};
+
+const seedSolutions = allSolutions
+  .filter(s => !['small-business', 'commercial', 'industrial'].includes(s.data.seedName))
+  .sort((a, b) => (marketOrder[a.data.seedName] || 99) - (marketOrder[b.data.seedName] || 99));
+
+const seedIcons: Record<string, string> = {
+  coconut: '🥥', sesame: '🫘', peanut: '🥜', mustard: '🌾',
+  sunflower: '🌻', shea: '🧈', palm: '🌴', avocado: '🥑',
+  almond: '🌰', castor: '🌱', olive: '🫒', cottonseed: '🎯',
+  soybean: '🫘', walnut: '🌰', flaxseed: '🌾',
+};
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const pageTitle = currentLocale === 'fr' ? 'Tous les Types d\'Huile — Solutions de Presse à Huile par Type de Graine' :
+                  currentLocale === 'ar' ? 'جميع أنواع الزيت — حلول مكينة الضغط حسب نوع البذور' :
+                  'Semua Jenis Minyak — Solusi Mesin Press Minyak berdasarkan Jenis Biji';
+
+const pageDesc = currentLocale === 'fr' ? 'Solutions complètes de presse à huile hydraulique pour plus de 15 graines oléagineuses dont soja, coco, sésame, tournesol, arachide, olive et plus. Trouvez la meilleure presse à huile pour votre matière première avec des spécifications détaillées.' :
+                 currentLocale === 'ar' ? 'حلول مكائن ضغط الزيت الهيدروليكي الكاملة لأكثر من 15 بذرة زيتية بما في ذلك الصويا وجوز الهند والسمسم وعباد الشمس والفول السوداني والزيتون والمزيد. ابحث عن أفضل مكينة ضغط زيت لمادتك الخام مع مواصفات مفصلة.' :
+                 'Solusi lengkap mesin press minyak hidrolik untuk 15+ biji minyak termasuk kedelai, kelapa, wijen, bunga matahari, kacang tanah, zaitun, dan banyak lagi. Temukan mesin press minyak terbaik untuk bahan baku Anda dengan spesifikasi detail.';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.solutions, item: `https://www.hydoilpress.com/${currentLocale}/solutions` },
+    { '@type': 'ListItem', position: 3, name: currentLocale === 'fr' ? 'Tous les Types d\'Huile' : currentLocale === 'ar' ? 'جميع أنواع الزيت' : 'Semua Jenis Minyak', item: `https://www.hydoilpress.com/${currentLocale}/solutions/all-oil-types` },
+  ],
+};
+
+const seedDetails: Record<string, {
+  description: string;
+  oilContent: string;
+  bestFor: string;
+  typicalYield: string;
+}> = {
+  soybean: {
+    description: currentLocale === 'fr' ? 'L\'huile végétale la plus produite au monde. Nos presses hydrauliques traitent le soja avec 18-22% de teneur en huile avec un rendement maximal et un minimum d\'huile résiduelle dans le tourteau.' : currentLocale === 'ar' ? 'أكثر زيت نباتي إنتاجاً في العالم. مكائننا الهيدروليكية تتعامل مع فول الصويا بنسبة زيت 18-22% مع أقصى عائد وحد أدنى من الزيت المتبقي في الكيكة.' : 'Minyak nabati yang paling banyak diproduksi di dunia. Press hidrolik kami menangani kedelai dengan kandungan minyak 18-22% dengan hasil maksimal dan sisa minyak minimal di ampas.',
+    oilContent: '18-22%',
+    bestFor: currentLocale === 'fr' ? 'Échelle Industrielle & Commerciale' : currentLocale === 'ar' ? 'الصناعي والتجاري' : 'Skala Industri & Komersial',
+    typicalYield: '16-19%',
+  },
+  palm: {
+    description: currentLocale === 'fr' ? 'Extraction d\'huile de palmiste tropical. Solutions de pressage haute efficacité pour le palmiste et le fruit avec équipement spécialisé pour les petites graines dures.' : currentLocale === 'ar' ? 'استخراج زيت نواة النخيل الاستوائي. حلول ضغط عالية الكفاءة لنواة النخيل والفاكهة مع معدات متخصصة للبذور الصلبة الصغيرة.' : 'Ekstraksi minyak inti sawit tropis. Solusi press efisiensi tinggi untuk inti sawit dan buah dengan peralatan khusus untuk biji kecil yang keras.',
+    oilContent: '45-55%',
+    bestFor: currentLocale === 'fr' ? 'Commercial & Industriel' : currentLocale === 'ar' ? 'تجاري وصناعي' : 'Komersial & Industri',
+    typicalYield: '40-48%',
+  },
+  sunflower: {
+    description: currentLocale === 'fr' ? 'Production d\'huile de tournesol pressée à froid premium. Préserve la vitamine E naturelle et les nutriments avec notre technologie de presse hydraulique à basse température.' : currentLocale === 'ar' ? 'إنتاج زيت عباد الشمس المضغوط بارد الفاخر. يحافظ على فيتامين E الطبيعي والمغذيات بتقنية مكينتنا الهيدروليكية منخفضة الحرارة.' : 'Produksi minyak bunga matahari press dingin premium. Mempertahankan vitamin E alami dan nutrisi dengan teknologi press hidrolik suhu rendah kami.',
+    oilContent: '40-45%',
+    bestFor: currentLocale === 'fr' ? 'Toutes Échelles' : currentLocale === 'ar' ? 'جميع المقاييس' : 'Semua Skala',
+    typicalYield: '36-40%',
+  },
+  peanut: {
+    description: currentLocale === 'fr' ? 'Pressage d\'huile d\'arachide à haut rendement. Machines robustes conçues pour un fonctionnement continu sur les marchés africains et asiatiques avec capacité de torréfaction à haute température.' : currentLocale === 'ar' ? 'ضغط زيت الفول السوداني عالي العائد. مكائن متينة مصممة للتشغيل المستمر في الأسواق الأفريقية والآسيوية مع قدرة على التحميص في درجة حرارة عالية.' : 'Press minyak kacang tanah hasil tinggi. Mesin kokoh dirancang untuk operasi berkelanjutan di pasar Afrika dan Asia dengan kemampuan sangrai suhu tinggi.',
+    oilContent: '45-50%',
+    bestFor: currentLocale === 'fr' ? 'Commercial & Industriel' : currentLocale === 'ar' ? 'تجاري وصناعي' : 'Komersial & Industri',
+    typicalYield: '40-45%',
+  },
+  cottonseed: {
+    description: currentLocale === 'fr' ? 'Extraction industrielle d\'huile de coton. Solutions haute capacité avec équipement de filtration et de raffinage intégré pour les opérations à grande échelle.' : currentLocale === 'ar' ? 'استخراج صناعي لزيت بذرة القطن. حلول عالية السعة مع معدات ترشيح وتكرير متكاملة للعمليات واسعة النطاق.' : 'Ekstraksi industri minyak biji kapas. Solusi kapasitas tinggi dengan peralatan filtrasi dan pemurnian terintegrasi untuk operasi skala besar.',
+    oilContent: '18-22%',
+    bestFor: currentLocale === 'fr' ? 'Échelle Industrielle' : currentLocale === 'ar' ? 'الصناعي' : 'Skala Industri',
+    typicalYield: '15-19%',
+  },
+  mustard: {
+    description: currentLocale === 'fr' ? 'Production traditionnelle d\'huile de moutarde. Presses robustes conçues pour les petites graines dures avec préservation de la forte saveur piquante pour le marché indien.' : currentLocale === 'ar' ? 'إنتاج زيت الخردل التقليدي. مكائن ثقيلة مصممة للبذور الصغيرة الصلبة مع الحفاظ على النكهة الحارة القوية للسوق الهندي.' : 'Produksi minyak sawi tradisional. Press berat dirancang untuk biji kecil keras dengan pelestarian rasa pedas yang kuat untuk pasar India.',
+    oilContent: '35-40%',
+    bestFor: currentLocale === 'fr' ? 'Toutes Échelles' : currentLocale === 'ar' ? 'جميع المقاييس' : 'Semua Skala',
+    typicalYield: '30-35%',
+  },
+  sesame: {
+    description: currentLocale === 'fr' ? 'Extraction d\'huile de sésame premium. Pressage à froid à température contrôlée préservant la saveur délicate et l\'arôme naturel du sésame blanc et noir.' : currentLocale === 'ar' ? 'استخراج زيت السمسم الفاخر. ضغط بارد بدرجة حرارة مضبوطة يحافظ على النكهة الرقيقة والرائحة الطبيعية للسمسم الأبيض والأسود.' : 'Ekstraksi minyak wijen premium. Press dingin suhu terkontrol mempertahankan rasa halus dan aroma alami wijen putih dan hitam.',
+    oilContent: '50-55%',
+    bestFor: currentLocale === 'fr' ? 'Toutes Échelles' : currentLocale === 'ar' ? 'جميع المقاييس' : 'Semua Skala',
+    typicalYield: '45-50%',
+  },
+  olive: {
+    description: currentLocale === 'fr' ? 'Production d\'huile d\'olive extra vierge. Technologie de pressage à froid doux qui préserve les polyphénols et la saveur authentique pour les marchés méditerranéens.' : currentLocale === 'ar' ? 'إنتاج زيت الزيتون البكر الممتاز. تقنية ضغط بارد لطيف تحافظ على البوليفينول والنكهة الأصيلة للأسواق المتوسطية.' : 'Produksi minyak zaitun extra virgin. Teknologi press dingin lembut yang mempertahankan polifenol dan rasa otentik untuk pasar Mediterania.',
+    oilContent: '15-25%',
+    bestFor: currentLocale === 'fr' ? 'Petite Entreprise & Commercial' : currentLocale === 'ar' ? 'الشركات الصغيرة والتجاري' : 'Usaha Kecil & Komersial',
+    typicalYield: '12-20%',
+  },
+  coconut: {
+    description: currentLocale === 'fr' ? 'Production d\'huile de coco vierge (VCO). Nos presses hydrauliques offrent une huile de coco pressée à froid pure avec une qualité et un arôme exceptionnels.' : currentLocale === 'ar' ? 'إنتاج زيت جوز الهند البكر (VCO). مكائننا الهيدروليكية توفر زيت جوز الهند المضغوط بارد النقي بجودة ورائحة استثنائية.' : 'Produksi VCO (Virgin Coconut Oil). Press hidrolik kami memberikan minyak kelapa press dingin murni dengan kualitas dan aroma luar biasa.',
+    oilContent: '60-65%',
+    bestFor: currentLocale === 'fr' ? 'Petite Entreprise & Commercial' : currentLocale === 'ar' ? 'الشركات الصغيرة والتجاري' : 'Usaha Kecil & Komersial',
+    typicalYield: '55-60%',
+  },
+  shea: {
+    description: currentLocale === 'fr' ? 'Production de beurre de karité et d\'huile de karité. Presses hydrauliques spécialisées pour les produits karité ouest-africains de haute valeur avec pressage à température contrôlée.' : currentLocale === 'ar' ? 'إنتاج زبدة الشيه وزيت الشيه. مكائن هيدروليكية متخصصة لمنتجات الشيه الغربية الأفريقية عالية القيمة مع ضغط بدرجة حرارة مضبوطة.' : 'Produksi mentega shea dan minyak shea. Press hidrolik khusus untuk produk shea Afrika Barat bernilai tinggi dengan press suhu terkontrol.',
+    oilContent: '30-40%',
+    bestFor: currentLocale === 'fr' ? 'Petite Entreprise & Commercial' : currentLocale === 'ar' ? 'الشركات الصغيرة والتجاري' : 'Usaha Kecil & Komersial',
+    typicalYield: '25-35%',
+  },
+  castor: {
+    description: currentLocale === 'fr' ? 'Pressage industriel d\'huile de ricin. Machines robustes pour l\'extraction d\'huile à haute viscosité utilisée dans les lubrifiants, polymères et applications pharmaceutiques.' : currentLocale === 'ar' ? 'ضغط صناعي لزيت الخروع. مكائن ثقيلة لاستخراج زيت عالي اللزوجة يستخدم في زيوت التشحيم والبوليمرات والتطبيقات الصيدلانية.' : 'Press industri minyak jarak. Mesin berat untuk ekstraksi minyak viskositas tinggi yang digunakan dalam pelumas, polimer, dan aplikasi farmasi.',
+    oilContent: '45-50%',
+    bestFor: currentLocale === 'fr' ? 'Commercial & Industriel' : currentLocale === 'ar' ? 'تجاري وصناعي' : 'Komersial & Industri',
+    typicalYield: '40-45%',
+  },
+  almond: {
+    description: currentLocale === 'fr' ? 'Production d\'huile d\'amande premium. Pressée à froid pour préserver la vitamine E naturelle et la délicate saveur de noisette pour les applications cosmétiques et culinaires.' : currentLocale === 'ar' ? 'إنتاج زيت اللوز الفاخر. مضغوط بارد للحفاظ على فيتامين E الطبيعي والنكهة الجوزية الرقيقة للتطبيقات التجميلية والطبخية.' : 'Produksi minyak almond premium. Press dingin untuk mempertahankan vitamin E alami dan rasa kacang halus untuk aplikasi kosmetik dan kuliner.',
+    oilContent: '45-55%',
+    bestFor: currentLocale === 'fr' ? 'Petite Entreprise & Commercial' : currentLocale === 'ar' ? 'الشركات الصغيرة والتجاري' : 'Usaha Kecil & Komersial',
+    typicalYield: '40-50%',
+  },
+  avocado: {
+    description: currentLocale === 'fr' ? 'Extraction d\'huile d\'avocat riche. Pressée à froid pour maintenir la teneur élevée en graisses mono-insaturées et la chlorophylle naturelle pour les marchés culinaires et cosmétiques premium.' : currentLocale === 'ar' ? 'استخراج زيت الأفوكادو الغني. مضغوط بارد للحفاظ على محتوى الدهون الأحادية غير المشبعة العالي والكلوروفيل الطبيعي لأسواق الطبخ والتجميل الفاخرة.' : 'Ekstraksi minyak alpukat kaya. Press dingin untuk mempertahankan kandungan lemak tak jenuh tunggal tinggi dan klorofil alami untuk pasar kuliner dan kosmetik premium.',
+    oilContent: '15-25%',
+    bestFor: currentLocale === 'fr' ? 'Petite Entreprise' : currentLocale === 'ar' ? 'الشركات الصغيرة' : 'Usaha Kecil',
+    typicalYield: '12-20%',
+  },
+  flaxseed: {
+    description: currentLocale === 'fr' ? 'Production d\'huile de lin riche en oméga-3. Pressage à froid doux préservant les acides gras essentiels délicats pour les applications de compléments nutritionnels.' : currentLocale === 'ar' ? 'إنتاج زيت الكتان الغني بأوميغا-3. ضغط بارد لطيف يحافظ على الأحماض الدهنية الأساسية الرقيقة لتطبيقات المكملات الغذائية.' : 'Produksi minyak biji rami kaya omega-3. Press dingin lembut mempertahankan asam lemak esensial yang halus untuk aplikasi suplemen nutrisi.',
+    oilContent: '35-45%',
+    bestFor: currentLocale === 'fr' ? 'Petite Entreprise' : currentLocale === 'ar' ? 'الشركات الصغيرة' : 'Usaha Kecil',
+    typicalYield: '30-40%',
+  },
+  walnut: {
+    description: currentLocale === 'fr' ? 'Extraction d\'huile de noix de luxe. Pressage à basse température préservant les acides gras oméga-3 et la saveur naturelle pour les marchés culinaires gastronomiques.' : currentLocale === 'ar' ? 'استخراج زيت الجوز الفاخر. ضغط في درجة حرارة منخفضة يحافظ على أحماض أوميغا-3 الدهنية والنكهة الطبيعية لأسواق الطبخ الفاخرة.' : 'Ekstraksi minyak walnut mewah. Press suhu rendah mempertahankan asam lemak omega-3 dan rasa alami untuk pasar kuliner gourmet.',
+    oilContent: '50-60%',
+    bestFor: currentLocale === 'fr' ? 'Petite Entreprise' : currentLocale === 'ar' ? 'الشركات الصغيرة' : 'Usaha Kecil',
+    typicalYield: '45-55%',
+  },
+};
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={pageTitle}
+  description={pageDesc}
+  keywords={currentLocale === 'fr' ? ['presse à huile par type d\'huile', 'solutions presse hydraulique', 'presse à huile coco sésame tournesol', 'machine pressage à froid', 'équipement extraction huile'] : currentLocale === 'ar' ? ['مكينة ضغط زيت حسب نوع الزيت', 'حلول مكينة ضغط هيدروليكي', 'مكينة ضغط جوز هند سمسم عباد الشمس', 'مكينة ضغط بارد', 'معدات استخراج الزيت'] : ['mesin press minyak berdasarkan jenis', 'solusi mesin press hidrolik', 'press minyak kelapa wijen bunga matahari', 'mesin press dingin', 'peralatan ekstraksi minyak']}
+  jsonLd={breadcrumbLd}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/solutions')} class="hover:text-amber-500 transition-colors">{t.nav.solutions}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{currentLocale === 'fr' ? 'Tous les Types d\'Huile' : currentLocale === 'ar' ? 'جميع أنواع الزيت' : 'Semua Jenis Minyak'}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Page Header -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'fr' ? 'Tous les Types d\'Huile' : currentLocale === 'ar' ? 'جميع أنواع الزيت' : 'Semua Jenis Minyak'}</h1>
+      <p class="text-steel-300 text-lg max-w-2xl">
+        {currentLocale === 'fr' ? 'Nos presses à huile hydrauliques traitent une large gamme de graines oléagineuses. Choisissez votre matière première pour trouver la meilleure solution de pressage, l\'équipement recommandé et le rendement attendu pour une productivité maximale.' : currentLocale === 'ar' ? 'مكائننا الهيدروليكية تتعامل مع مجموعة واسعة من البذور الزيتية. اختر مادتك الخام للعثور على أفضل حل ضغط والمعدات الموصى بها والعائد المتوقع لأقصى إنتاجية.' : 'Press hidrolik kami menangani berbagai jenis biji minyak. Pilih bahan baku Anda untuk menemukan solusi press terbaik, peralatan yang direkomendasikan, dan hasil yang diharapkan untuk produktivitas maksimal.'}
+      </p>
+    </div>
+  </section>
+
+  <!-- Oil Type Grid -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {seedSolutions.map((solution) => {
+          const details = seedDetails[solution.data.seedName];
+          return (
+            <a
+              href={localePath(`/solutions/${solution.slug}`)}
+              class="group bg-white rounded-2xl p-6 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
+            >
+              <div class="flex items-start gap-4 mb-4">
+                <span class="text-4xl flex-shrink-0">{seedIcons[solution.data.seedName] || '🛢️'}</span>
+                <div class="min-w-0">
+                  <h3 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">
+                    {solution.data.title[currentLocale] || solution.data.title.en}
+                  </h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-steel-100 text-steel-600 px-2 py-0.5 rounded-full">{currentLocale === 'fr' ? 'Huile' : currentLocale === 'ar' ? 'زيت' : 'Minyak'}: {details?.oilContent}</span>
+                    <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">{currentLocale === 'fr' ? 'Rendement' : currentLocale === 'ar' ? 'العائد' : 'Hasil'}: {details?.typicalYield}</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm text-steel-600 leading-relaxed line-clamp-2 mb-4">
+                {details?.description}
+              </p>
+              <div class="flex items-center justify-between pt-4 border-t border-steel-100">
+                <span class="text-xs text-steel-500">{currentLocale === 'fr' ? 'Meilleur pour' : currentLocale === 'ar' ? 'الأفضل لـ' : 'Cocok untuk'}: {details?.bestFor}</span>
+                <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium">
+                  {currentLocale === 'fr' ? 'Voir la Solution' : currentLocale === 'ar' ? 'عرض الحل' : 'Lihat Solusi'}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Oil Pressing Guide Section -->
+  <section class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-4">{currentLocale === 'fr' ? 'Comment Choisir la Bonne Presse à Huile' : currentLocale === 'ar' ? 'كيف تختار مكينة الضغط المناسبة' : 'Cara Memilih Mesin Press yang Tepat'}</h2>
+          <p class="text-steel-600 mb-6">
+            {currentLocale === 'fr' ? 'Choisir la bonne presse à huile hydraulique dépend de plusieurs facteurs notamment votre matière première, votre capacité de production et la qualité d\'huile souhaitée. Notre guide vous aide à prendre la meilleure décision.' : currentLocale === 'ar' ? 'اختيار مكينة الضغط الهيدروليكي المناسبة يعتمد على عدة عوامل بما في ذلك مادتك الخام وسعتك الإنتاجية وجودة الزيت المطلوبة. دليلنا يساعدك على اتخاذ القرار الأفضل.' : 'Memilih mesin press minyak hidrolik yang tepat tergantung pada beberapa faktor termasuk bahan baku, kapasitas produksi, dan kualitas minyak yang diinginkan. Panduan kami membantu Anda membuat keputusan terbaik.'}
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-amber-500 font-bold">1.</span>
+              <div>
+                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Déterminez Votre Matière Première' : currentLocale === 'ar' ? 'حدد مادتك الخام' : 'Tentukan Bahan Baku Anda'}</h4>
+                <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'Différentes graines oléagineuses nécessitent différentes pressions et températures de pressage.' : currentLocale === 'ar' ? 'البذور الزيتية المختلفة تحتاج إلى ضغوط ودرجات حرارة ضغط مختلفة.' : 'Biji minyak yang berbeda membutuhkan tekanan dan suhu press yang berbeda.'}</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-amber-500 font-bold">2.</span>
+              <div>
+                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Calculez la Capacité Quotidienne' : currentLocale === 'ar' ? 'احسب السعة اليومية' : 'Hitung Kapasitas Harian'}</h4>
+                <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'De 50 kg/heure à 5 tonnes/heure, nous avons des machines pour toutes les échelles.' : currentLocale === 'ar' ? 'من 50 كجم/ساعة إلى 5 طن/ساعة، لدينا مكائن لجميع المقاييس.' : 'Dari 50 kg/jam hingga 5 ton/jam, kami memiliki mesin untuk semua skala.'}</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-amber-500 font-bold">3.</span>
+              <div>
+                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Choisissez Pressage à Froid ou à Chaud' : currentLocale === 'ar' ? 'اختر الضغط البارد أو الساخن' : 'Pilih Press Dingin atau Panas'}</h4>
+                <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'Le pressage à froid préserve les nutriments ; le pressage à chaud donne un rendement plus élevé.' : currentLocale === 'ar' ? 'الضغط البارد يحافظ على المغذيات؛ الضغط الساخن يعطي عائداً أعلى.' : 'Press dingin mempertahankan nutrisi; press panas memberikan hasil lebih tinggi.'}</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-amber-500 font-bold">4.</span>
+              <div>
+                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Considérez Votre Budget' : currentLocale === 'ar' ? 'اعتبر ميزانيتك' : 'Pertimbangkan Anggaran Anda'}</h4>
+                <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'Nous proposons des machines de base aux lignes de production entièrement automatisées.' : currentLocale === 'ar' ? 'نقدم مكائن من الأساسية إلى خطوط الإنتاج المؤتمتة بالكامل.' : 'Kami menawarkan mesin dari dasar hingga lini produksi sepenuhnya otomatis.'}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-4">{currentLocale === 'fr' ? 'Tableau de Référence Rapide' : currentLocale === 'ar' ? 'جدول مرجعي سريع' : 'Tabel Referensi Cepat'}</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-steel-100">
+                  <th class="text-left py-2 px-3 text-steel-500 font-medium">{currentLocale === 'fr' ? 'Graine Oléagineuse' : currentLocale === 'ar' ? 'البذور الزيتية' : 'Biji Minyak'}</th>
+                  <th class="text-right py-2 px-3 text-steel-500 font-medium">{currentLocale === 'fr' ? 'Teneur en Huile' : currentLocale === 'ar' ? 'محتوى الزيت' : 'Kandungan Minyak'}</th>
+                  <th class="text-right py-2 px-3 text-steel-500 font-medium">{currentLocale === 'fr' ? 'Rendement Typique' : currentLocale === 'ar' ? 'العائد النموذجي' : 'Hasil Khas'}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {seedSolutions.slice(0, 8).map((solution) => {
+                  const details = seedDetails[solution.data.seedName];
+                  return (
+                    <tr key={solution.slug} class="border-b border-steel-50 hover:bg-amber-50/30">
+                      <td class="py-2 px-3 font-medium text-charcoal-900">{solution.data.title[currentLocale] || solution.data.title.en}</td>
+                      <td class="py-2 px-3 text-right text-steel-600">{details?.oilContent}</td>
+                      <td class="py-2 px-3 text-right text-amber-600 font-medium">{details?.typicalYield}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <a href={localePath('/resources/which-seeds-can-be-pressed')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
+            {currentLocale === 'fr' ? 'Voir le Guide de Compatibilité Complet' : currentLocale === 'ar' ? 'عرض دليل التوافق الكامل' : 'Lihat Panduan Kompatibilitas Lengkap'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">
+        {currentLocale === 'fr' ? 'Pas Sûr de Quel Type d\'Huile ?' : currentLocale === 'ar' ? 'غير متأكد من نوع الزيت؟' : 'Tidak Yakin Jenis Minyak Mana?'}
+      </h2>
+      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">
+        {currentLocale === 'fr' ? 'Dites-nous votre matière première, capacité quotidienne et budget — nos ingénieurs vous recommanderont la meilleure installation de presse à huile pour votre entreprise.' : currentLocale === 'ar' ? 'أخبرنا بمادتك الخام وسعتك اليومية وميزانيتك — مهندسونا سيوصون بأفضل إعداد مكينة ضغط لمشروعك.' : 'Beritahu kami bahan baku, kapasitas harian, dan anggaran Anda — insinyur kami akan merekomendasikan pengaturan mesin press minyak terbaik untuk bisnis Anda.'}
+      </p>
+      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        {currentLocale === 'fr' ? 'Consultation Gratuite' : currentLocale === 'ar' ? 'استشارة مجانية' : 'Konsultasi Gratis'}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

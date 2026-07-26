@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../../i18n';
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import { frResourceBodies } from '../../../data/fr-resource-bodies';
+import { arResourceBodies } from '../../../data/ar-resource-bodies';
+import { idResourceBodies } from '../../../data/id-resource-bodies';
+
+export async function getStaticPaths() {
+  const resources = await getCollection('resources');
+  const locales: Locale[] = ['fr', 'ar', 'id'];
+  return locales.flatMap(locale =>
+    resources.map(resource => ({
+      params: { locale, slug: resource.slug },
+      props: { resource },
+    }))
+  );
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const { resource } = Astro.props;
+const t = getTranslations(currentLocale);
+const { Content } = await resource.render();
+
+// Arabic body content
+const arBodyHtml = currentLocale === 'ar' && arResourceBodies[resource.slug]
+  ? marked(arResourceBodies[resource.slug])
+  : null;
+// French body content
+const frBodyHtml = currentLocale === 'fr' && frResourceBodies[resource.slug]
+  ? marked(frResourceBodies[resource.slug])
+  : null;
+// Indonesian body content
+const idBodyHtml = currentLocale === 'id' && idResourceBodies[resource.slug]
+  ? marked(idResourceBodies[resource.slug])
+  : null;
+
+const typeLabels: Record<string, string> = {
+  comparison: t.resources.comparison,
+  guide: t.resources.guide,
+  blog: t.resources.blog,
+};
+
+const typeColors: Record<string, string> = {
+  comparison: 'bg-blue-100 text-blue-700',
+  guide: 'bg-green-100 text-green-700',
+  blog: 'bg-purple-100 text-purple-700',
+};
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: `https://www.hydoilpress.com/${currentLocale}/resources` },
+    { '@type': 'ListItem', position: 3, name: resource.data.title[currentLocale] || resource.data.title.en, item: `https://www.hydoilpress.com/${currentLocale}/resources/${resource.slug}` },
+  ],
+};
+
+// Use localized keywords for all locales (fall back to English if no specific keywords)
+const seoKeywords = resource.data.seoKeywords;
+---
+
+<BaseLayout locale={currentLocale} title={resource.data.title[currentLocale] || resource.data.title.en} description={resource.data.description[currentLocale] || resource.data.description.en} keywords={seoKeywords} jsonLd={breadcrumbLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{resource.data.title[currentLocale] || resource.data.title.en}</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="py-12 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Article Header -->
+      <div class="mb-12 text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class={`text-xs font-semibold px-4 py-2 rounded-full ${typeColors[resource.data.type] || 'bg-steel-100 text-steel-700'} uppercase tracking-wider`}>
+            {typeLabels[resource.data.type] || resource.data.type}
+          </span>
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {resource.data.title[currentLocale] || resource.data.title.en}
+        </h1>
+        <p class="text-xl md:text-2xl text-steel-600 leading-relaxed max-w-3xl mx-auto mb-8">
+          {resource.data.description[currentLocale] || resource.data.description.en}
+        </p>
+
+        <!-- Author Info -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 py-6 border-t border-b border-steel-100">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <p class="text-base font-semibold text-charcoal-900">Haonuo Engineering Team</p>
+              <p class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</p>
+            </div>
+          </div>
+          <div class="hidden md:block w-px h-10 bg-steel-200"></div>
+          <div class="flex items-center gap-2 text-steel-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <time class="text-sm">
+              {resource.data.publishedAt.toLocaleDateString(currentLocale === 'fr' ? 'fr-FR' : currentLocale === 'ar' ? 'ar-SA' : currentLocale === 'id' ? 'id-ID' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Content -->
+      {idBodyHtml ? (
+        <div class="prose prose-xl max-w-none text-steel-700 leading-relaxed
+          prose-headings:font-display prose-headings:text-charcoal-900
+          prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-steel-100
+          prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-4
+          prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-3
+          prose-p:mb-6 prose-p:leading-7
+          prose-a:text-amber-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+          prose-strong:text-charcoal-900 prose-strong:font-semibold
+          prose-table:border-collapse prose-table:w-full prose-table:my-8
+          prose-th:bg-steel-50 prose-th:p-4 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-charcoal-900 prose-th:border prose-th:border-steel-200 prose-th:rounded-tl-lg prose-th:rounded-tr-lg
+          prose-td:p-4 prose-td:text-base prose-td:border prose-td:border-steel-200 prose-td:last:rounded-br-lg prose-td:first:rounded-bl-lg
+          prose-tr:nth-child(even):bg-steel-50/50
+          prose-li:mb-3 prose-li:leading-relaxed
+          prose-ul:mb-6 prose-ol:mb-6
+          prose-blockquote:border-l-4 prose-blockquote:border-amber-400 prose-blockquote:bg-amber-50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8 prose-blockquote:italic" set:html={idBodyHtml} />
+      ) : arBodyHtml ? (
+        <div class="prose prose-xl max-w-none text-steel-700 leading-relaxed
+          prose-headings:font-display prose-headings:text-charcoal-900
+          prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-steel-100
+          prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-4
+          prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-3
+          prose-p:mb-6 prose-p:leading-7
+          prose-a:text-amber-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+          prose-strong:text-charcoal-900 prose-strong:font-semibold
+          prose-table:border-collapse prose-table:w-full prose-table:my-8
+          prose-th:bg-steel-50 prose-th:p-4 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-charcoal-900 prose-th:border prose-th:border-steel-200 prose-th:rounded-tl-lg prose-th:rounded-tr-lg
+          prose-td:p-4 prose-td:text-base prose-td:border prose-td:border-steel-200 prose-td:last:rounded-br-lg prose-td:first:rounded-bl-lg
+          prose-tr:nth-child(even):bg-steel-50/50
+          prose-li:mb-3 prose-li:leading-relaxed
+          prose-ul:mb-6 prose-ol:mb-6
+          prose-blockquote:border-l-4 prose-blockquote:border-amber-400 prose-blockquote:bg-amber-50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8 prose-blockquote:italic" set:html={arBodyHtml} />
+      ) : frBodyHtml ? (
+        <div class="prose prose-xl max-w-none text-steel-700 leading-relaxed
+          prose-headings:font-display prose-headings:text-charcoal-900
+          prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-steel-100
+          prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-4
+          prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-3
+          prose-p:mb-6 prose-p:leading-7
+          prose-a:text-amber-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+          prose-strong:text-charcoal-900 prose-strong:font-semibold
+          prose-table:border-collapse prose-table:w-full prose-table:my-8
+          prose-th:bg-steel-50 prose-th:p-4 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-charcoal-900 prose-th:border prose-th:border-steel-200 prose-th:rounded-tl-lg prose-th:rounded-tr-lg
+          prose-td:p-4 prose-td:text-base prose-td:border prose-td:border-steel-200 prose-td:last:rounded-br-lg prose-td:first:rounded-bl-lg
+          prose-tr:nth-child(even):bg-steel-50/50
+          prose-li:mb-3 prose-li:leading-relaxed
+          prose-ul:mb-6 prose-ol:mb-6
+          prose-blockquote:border-l-4 prose-blockquote:border-amber-400 prose-blockquote:bg-amber-50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8 prose-blockquote:italic" set:html={frBodyHtml} />
+      ) : (
+        <div class="prose prose-xl max-w-none text-steel-700 leading-relaxed
+          prose-headings:font-display prose-headings:text-charcoal-900
+          prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-steel-100
+          prose-h3:text-xl prose-h3:mt-12 prose-h3:mb-4
+          prose-h4:text-lg prose-h4:mt-8 prose-h4:mb-3
+          prose-p:mb-6 prose-p:leading-7
+          prose-a:text-amber-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+          prose-strong:text-charcoal-900 prose-strong:font-semibold
+          prose-table:border-collapse prose-table:w-full prose-table:my-8
+          prose-th:bg-steel-50 prose-th:p-4 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-charcoal-900 prose-th:border prose-th:border-steel-200 prose-th:rounded-tl-lg prose-th:rounded-tr-lg
+          prose-td:p-4 prose-td:text-base prose-td:border prose-td:border-steel-200 prose-td:last:rounded-br-lg prose-td:first:rounded-bl-lg
+          prose-tr:nth-child(even):bg-steel-50/50
+          prose-li:mb-3 prose-li:leading-relaxed
+          prose-ul:mb-6 prose-ol:mb-6
+          prose-blockquote:border-l-4 prose-blockquote:border-amber-400 prose-blockquote:bg-amber-50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8 prose-blockquote:italic">
+          <Content />
+        </div>
+      )}
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 md:p-10 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 shadow-sm">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h3 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-3">{t.resources.ctaTitle}</h3>
+            <p class="text-lg text-steel-600">{t.resources.ctaDesc}</p>
+          </div>
+          <a href={localePath('/contact')} class="btn-primary text-base px-6 py-3 whitespace-nowrap">
+            {t.resources.ctaButton}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="mt-10 flex justify-center">
+        <a href={localePath('/resources')} class="inline-flex items-center gap-2 px-6 py-3 text-steel-600 hover:text-amber-600 hover:bg-amber-50 rounded-xl transition-all duration-200 font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          {t.resources.backToResources}
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

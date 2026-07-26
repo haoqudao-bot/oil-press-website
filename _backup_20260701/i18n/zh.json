@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品中心",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "news": "新闻资讯"
+  },
+  "hero": {
+    "title": "专业液压榨油机制造商",
+    "subtitle": "20年专注粮油加工设备研发制造，产品出口全球50+国家",
+    "cta": "获取报价",
+    "ctaSecondary": "浏览产品"
+  },
+  "advantages": {
+    "title": "为什么选择我们",
+    "items": [
+      { "title": "OEM/ODM定制", "desc": "根据客户需求定制设备规格与功能" },
+      { "title": "严格质量管控", "desc": "严格质量管控，符合国际标准" },
+      { "title": "全球50+国家出口", "desc": "服务覆盖东南亚、中东、中亚、非洲等市场" },
+      { "title": "专业技术支持", "desc": "提供安装指导、操作培训及售后维护" }
+    ]
+  },
+  "categories": {
+    "title": "产品分类",
+    "viewAll": "查看全部产品"
+  },
+  "featured": {
+    "title": "热销产品",
+    "viewDetail": "查看详情",
+    "inquiry": "立即询价"
+  },
+  "testimonials": {
+    "title": "客户评价",
+    "from": "来自"
+  },
+  "products": {
+    "title": "产品中心",
+    "all": "全部",
+    "filter": "筛选",
+    "specifications": "技术参数",
+    "description": "产品描述",
+    "related": "相关产品",
+    "inquiry": "询盘",
+    "backToList": "返回产品列表"
+  },
+  "about": {
+    "title": "关于我们",
+    "intro": "公司介绍",
+    "history": "发展历程",
+    "certificates": "资质证书",
+    "factory": "工厂展示",
+    "stats": {
+      "years": "年行业经验",
+      "countries": "出口国家",
+      "products": "产品型号",
+      "clients": "服务客户"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "form": {
+      "name": "姓名",
+      "email": "邮箱",
+      "country": "国家",
+      "company": "公司名称",
+      "product": "感兴趣的产品",
+      "message": "留言内容",
+      "submit": "提交询盘",
+      "success": "询盘已提交，我们将尽快回复您！",
+      "placeholder": {
+        "name": "请输入您的姓名",
+        "email": "请输入您的邮箱",
+        "country": "请选择国家",
+        "company": "请输入公司名称",
+        "product": "请输入感兴趣的产品",
+        "message": "请描述您的需求..."
+      }
+    },
+    "info": "联系方式",
+    "phone": "电话",
+    "email": "邮箱",
+    "address": "地址",
+    "whatsapp": "WhatsApp",
+    "wechat": "微信"
+  },
+  "news": {
+    "title": "新闻资讯",
+    "backToList": "返回新闻列表",
+    "readMore": "阅读更多"
+  },
+  "chat": {
+    "title": "在线咨询",
+    "whatsapp": "WhatsApp咨询",
+    "wechat": "微信咨询",
+    "email": "发送邮件"
+  },
+  "footer": {
+    "desc": "专业液压榨油机及粮油加工设备制造商",
+    "quickLinks": "快速链接",
+    "contactUs": "联系我们",
+    "followUs": "关注我们",
+    "copyright": "版权所有"
+  }
+}

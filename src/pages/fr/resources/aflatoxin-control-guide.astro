@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'aflatoxin-control-guide');
+const t = getTranslations('fr');
+
+const title = resource?.data.title.fr || resource?.data.title.en || 'Guide de contrôle de l\'aflatoxine';
+const description = resource?.data.description.fr || resource?.data.description.en || 'Stratégies complètes pour prévenir et contrôler la contamination par l\'aflatoxine';
+const seoKeywords = resource?.data.seoKeywords || ['contrôle aflatoxine', 'prévention aflatoxine', 'sécurité alimentaire huile'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/aflatoxin-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Senior Oil Press Engineer',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/fr' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/aflatoxin-control-guide' },
+  ],
+};
+
+const typesOfAflatoxins = [
+  { type: 'Aflatoxine B1', danger: 'Très toxique', sources: 'Maïs, arachides, riz', effects: 'Carcinogène, hépatotoxique' },
+  { type: 'Aflatoxine B2', danger: 'Toxique', sources: 'Arachides, maïs', effects: 'Moins toxique que B1' },
+  { type: 'Aflatoxine G1', danger: 'Toxique', sources: 'Grains, noix', effects: 'Carcinogène' },
+  { type: 'Aflatoxine G2', danger: 'Moins toxique', sources: 'Grains', effects: 'Effets mineurs' },
+];
+
+const contaminationSources = [
+  { title: 'Conditions de stockage humides', desc: 'Stockage dans des zones humides ou inondées favorise la croissance fongique', icon: 'droplet' },
+  { title: 'Temps de stockage prolongé', desc: 'Plus les graines sont stockées, plus le risque augmente', icon: 'clock' },
+  { title: 'Conditions climatiques', desc: 'Températures chaudes et humidité élevée favorisent la croissance', icon: 'sun' },
+  { title: 'Pré-récolte', desc: 'Météo humide avant la récolte peut contaminer les cultures', icon: 'cloud-rain' },
+];
+
+const preventionStrategies = [
+  { title: 'Contrôle des graines', items: ['Vérifier la qualité avant achat', 'Éviter les graines endommagées ou moisies', 'Tester les lots pour l\'aflatoxine'] },
+  { title: 'Stockage approprié', items: ['Conserver dans des conditions secs', 'Utiliser des sacs imperméables', 'Contrôler l\'humidité relative'] },
+  { title: 'Séchage immédiat', items: ['Sécher les graines dans les 24 heures', 'Maintenir l\'humidité en dessous de 12%', 'Utiliser des séchoirs industriels'] },
+];
+
+const detectionMethods = [
+  { method: 'Test de champ rapide', time: '5-10 minutes', accuracy: 'Bas', useCase: 'Vérification initiale' },
+  { method: 'Test ELISA', time: '2-4 heures', accuracy: 'Moyen', useCase: 'Contrôle qualité' },
+  { method: 'HPLC', time: '4-6 heures', accuracy: 'Haute', useCase: 'Certification' },
+];
+
+const regulations = [
+  { region: 'UE', limit: '2 ppb', products: 'Huiles comestibles' },
+  { region: 'USA', limit: '20 ppb', products: 'Graines et huiles' },
+  { region: 'Codex Alimentarius', limit: '10 ppb', products: 'Produits alimentaires' },
+];
+
+function localePath(path: string): string {
+  return `/fr${path}`;
+}
+---
+
+<BaseLayout locale="fr" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-red-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-red-500/10 text-red-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          SÉCURITÉ ALIMENTAIRE
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Les aflatoxines sont des toxines produites par certains champignons (Aspergillus flavus et Aspergillus parasiticus) qui peuvent contaminer les graines utilisées pour la production d'huile. Le contrôle de l'aflatoxine est crucial pour garantir la sécurité alimentaire et respecter les normes internationales.
+        </p>
+      </section>
+
+      <section id="types" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Types d'aflatoxines</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {typesOfAflatoxins.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <div class="font-bold text-lg text-red-600 mb-3">{item.type}</div>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Danger:</span>
+                  <span class="text-sm text-charcoal-900">{item.danger}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Sources:</span>
+                  <span class="text-sm text-charcoal-900">{item.sources}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Effets:</span>
+                  <span class="text-sm text-charcoal-900">{item.effects}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="sources" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Sources de contamination</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {contaminationSources.map((item, index) => (
+            <div key={index} class="bg-orange-50 p-5 rounded-xl border border-orange-200">
+              <h3 class="font-semibold text-lg text-orange-800 mb-2">{item.title}</h3>
+              <p class="text-steel-700 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="prevention" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Stratégies de prévention</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {preventionStrategies.map((item, index) => (
+            <div key={index} class="bg-green-50 p-5 rounded-xl border border-green-200">
+              <h3 class="font-semibold text-lg text-green-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {task}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="detection" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Méthodes de détection</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Méthode</th>
+                <th class="px-4 py-3 text-left font-semibold">Temps</th>
+                <th class="px-4 py-3 text-left font-semibold">Précision</th>
+                <th class="px-4 py-3 text-left font-semibold">Utilisation</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detectionMethods.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.method}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.time}</td>
+                  <td class="px-4 py-3 text-emerald-600">{item.accuracy}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.useCase}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="regulations" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Normes et réglementations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {regulations.map((item, index) => (
+            <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
+              <h3 class="font-semibold text-lg text-purple-800 mb-3">{item.region}</h3>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Limite:</span>
+                  <span class="text-sm text-red-600 font-bold">{item.limit}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Produits:</span>
+                  <span class="text-sm text-charcoal-900">{item.products}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Le contrôle de l'aflatoxine exige une approche proactive à chaque étape de la chaîne d'approvisionnement. En combinant une sélection rigoureuse des matières premières, un stockage approprié et des méthodes de détection fiables, vous pouvez garantir la sécurité de vos produits et respecter les normes internationales.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À GARANTIR LA SÉCURITÉ DE VOTRE PRODUCTION?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à mettre en place des procédures de contrôle de qualité complètes.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.resources.backToResources}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

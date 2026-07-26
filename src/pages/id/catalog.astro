@@ -1,0 +1,411 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const t = getTranslations('id');
+const products = await getCollection('products');
+
+const categories = {
+  'hydraulic-oil-press': 'Press Minyak Hidrolik',
+  'oil-refining': 'Peralatan Pemisahan Minyak',
+  'seed-processing': 'Peralatan Pengolahan Benih',
+  'oil-filtration': 'Peralatan Filter Minyak',
+};
+
+const hydraulicSortOrder = [
+  'HN325',
+  'HN355',
+  'HN426',
+  'HN480',
+  'HN500',
+  'HN325 Large Barrel',
+  'HN325/355 Sesame',
+  '300 Type Coconut',
+  'HN325S',
+];
+
+function getHydraulicSortIndex(product) {
+  const model = product.data.model;
+  const index = hydraulicSortOrder.indexOf(model);
+  return index >= 0 ? index : hydraulicSortOrder.length + products.indexOf(product);
+}
+
+const categorizedProducts = products.reduce((acc, product) => {
+  const category = product.data.category || 'other';
+  if (!acc[category]) acc[category] = [];
+  acc[category].push(product);
+  return acc;
+}, {});
+
+if (categorizedProducts['hydraulic-oil-press']) {
+  categorizedProducts['hydraulic-oil-press'].sort((a, b) => {
+    return getHydraulicSortIndex(a) - getHydraulicSortIndex(b);
+  });
+}
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/id' },
+    { '@type': 'ListItem', position: 2, name: 'Katalog Produk', item: 'https://www.hydoilpress.com/id/catalog' },
+  ],
+};
+---
+
+<BaseLayout title="Katalog Produk - Haonuo Machinery" description="Katalog lengkap press minyak hidrolik dan peralatan pengolahan minyak dari Haonuo Machinery." locale="id">
+  <section class="bg-amber-500 py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-amber-100 text-sm mb-4">
+        <a href="/id" class="hover:text-white transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-white font-semibold">Katalog Produk</span>
+      </nav>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">Katalog Produk</h1>
+      <p class="text-amber-100 text-lg md:text-xl max-w-2xl">Rangkaian lengkap press minyak hidrolik dan peralatan pengolahan minyak untuk bisnis Anda</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center mb-8">
+        <p class="text-steel-600">{(t as any).footer?.companyName || 'Shandong Haonuo Machinery Equipment Group Co., Ltd.'}</p>
+        <button onclick="window.print()" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-medium transition-colors hidden md:block no-print">
+          Cetak Katalog
+        </button>
+      </div>
+
+      {Object.entries(categorizedProducts).map(([category, items]) => (
+        <div key={category} class="mb-4">
+          <h2 class="font-display text-3xl text-charcoal-900 mb-6 pb-2 border-b-2 border-amber-500">
+            {categories[category] || category.replace('-', ' ')}
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map(product => {
+              const specs = product.data.specificationsId || product.data.specifications || [];
+              return (
+                <div key={product.slug} class="border border-steel-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow break-inside-avoid">
+                  <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                    <img 
+                      src={product.data.images?.[0] || '/images/products/default-product.webp'} 
+                      alt={product.data.title.id || product.data.title.en}
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                      <h3 class="font-display text-xl text-charcoal-900">{product.data.title.id || product.data.title.en}</h3>
+                      <span class="bg-amber-100 text-amber-700 text-sm px-2 py-1 rounded font-medium">
+                        {product.data.model}
+                      </span>
+                    </div>
+                    <p class="text-steel-600 text-sm mb-4 line-clamp-2">
+                      {product.data.description.id || product.data.description.en}
+                    </p>
+                    <div class="border-t border-steel-100 pt-4">
+                      <h4 class="font-semibold text-charcoal-900 mb-2 text-sm">Spesifikasi:</h4>
+                      <ul class="text-steel-600 text-xs space-y-1">
+                        {specs.slice(0, 4).map(spec => (
+                          <li key={spec.name} class="flex justify-between">
+                            <span>{spec.name}:</span>
+                            <span class="font-medium">{spec.value}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div class="mt-4">
+                      <a href={`/id/products/${product.slug}`} class="inline-block text-amber-600 hover:text-amber-700 font-medium text-sm hover:underline">
+                        Lihat Detail →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-charcoal-900 py-12 no-print">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-2xl text-white mb-4">Hubungi Kami untuk Informasi Lebih Lanjut</h2>
+      <p class="text-steel-400 mb-6">Dapatkan penawaran personalisasi untuk kebutuhan Anda</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/id/contact" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+          Minta Penawaran
+        </a>
+        <a href="mailto:info@hydoilpress.com" class="border border-steel-600 hover:border-amber-500 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+          Kirim Email
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+
+  @media print {
+    header#main-navbar,
+    header#main-navbar *,
+    footer.bg-charcoal-900,
+    footer.bg-charcoal-900 *,
+    .chat-widget,
+    .chat-widget *,
+    .cookie-consent-banner,
+    .cookie-consent-banner *,
+    .no-print,
+    [class*="cookie-consent"],
+    [class*="chat-widget"] {
+      display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      z-index: auto !important;
+    }
+    
+    body {
+      font-size: 10px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: white !important;
+    }
+    
+    html {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: white !important;
+    }
+    
+    main {
+      display: block !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    .max-w-7xl {
+      max-width: none !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    
+    .grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 8px !important;
+    }
+    
+    h1 {
+      font-size: 20px !important;
+      text-align: center !important;
+      margin-bottom: 6px !important;
+      line-height: 1.2 !important;
+    }
+    
+    h2 {
+      font-size: 14px !important;
+      margin-top: 8px !important;
+      margin-bottom: 6px !important;
+      padding-bottom: 3px !important;
+      border-bottom: 2px solid #f59e0b !important;
+    }
+    
+    h3 {
+      font-size: 12px !important;
+      margin-bottom: 3px !important;
+      line-height: 1.2 !important;
+    }
+    
+    h4 {
+      font-size: 10px !important;
+      margin-bottom: 3px !important;
+    }
+    
+    section {
+      margin-bottom: 6px !important;
+      padding: 0 !important;
+    }
+    
+    .bg-amber-500 {
+      background-color: #f59e0b !important;
+      color: white !important;
+      padding: 6px !important;
+      text-align: center !important;
+      margin-bottom: 4px !important;
+    }
+    
+    .bg-amber-500 h1 {
+      color: white !important;
+      margin-top: 0 !important;
+    }
+    
+    .bg-amber-500 p {
+      color: rgba(255,255,255,0.9) !important;
+      font-size: 11px !important;
+      margin: 0 !important;
+    }
+    
+    .aspect-\[4\/3\] {
+      aspect-ratio: 4/3;
+      max-height: 120px;
+      overflow: hidden;
+    }
+    
+    img {
+      max-height: 120px;
+      object-fit: contain !important;
+      width: 100%;
+    }
+    
+    .rounded-xl {
+      border-radius: 2px;
+    }
+    
+    .p-6 {
+      padding: 8px !important;
+    }
+    
+    .py-12, .py-16, .py-8, .md\:py-12, .md\:py-16 {
+      padding-top: 4px !important;
+      padding-bottom: 4px !important;
+    }
+    
+    .text-xl {
+      font-size: 11px !important;
+    }
+    
+    .text-sm {
+      font-size: 9px !important;
+    }
+    
+    .text-xs {
+      font-size: 8px !important;
+    }
+    
+    .border {
+      border-width: 1px !important;
+    }
+    
+    .border-b-2 {
+      border-bottom-width: 2px !important;
+    }
+    
+    .mb-6 {
+      margin-bottom: 6px !important;
+    }
+    
+    .mb-4 {
+      margin-bottom: 3px !important;
+    }
+    
+    .mb-2 {
+      margin-bottom: 2px !important;
+    }
+    
+    .mt-4 {
+      margin-top: 3px !important;
+    }
+    
+    .pt-4 {
+      padding-top: 3px !important;
+    }
+    
+    .space-y-1 {
+      gap: 1px !important;
+    }
+    
+    nav {
+      display: none !important;
+    }
+    
+    a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    
+    .bg-amber-100 {
+      background-color: #fef3c7 !important;
+    }
+    
+    .text-amber-700 {
+      color: #b45309 !important;
+    }
+    
+    .text-amber-600 {
+      color: #d97706 !important;
+    }
+    
+    .text-charcoal-900 {
+      color: #1f2937 !important;
+    }
+    
+    .text-steel-600 {
+      color: #4b5563 !important;
+    }
+    
+    .text-steel-700 {
+      color: #374151 !important;
+    }
+    
+    .page-break-inside-avoid {
+      page-break-inside: auto !important;
+      break-inside: auto !important;
+    }
+    
+    .break-inside-avoid {
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+    }
+    
+    @page {
+      size: A4;
+      margin: 12mm;
+      
+      @top-center {
+        content: "Haonuo Machinery - Katalog Produk";
+        font-size: 9px;
+        color: #6b7280;
+      }
+      
+      @bottom-center {
+        content: "Halaman " counter(page) " dari " counter(pages);
+        font-size: 9px;
+        color: #6b7280;
+      }
+      
+      @bottom-left {
+        content: "Shandong Haonuo Machinery Equipment Group Co., Ltd.";
+        font-size: 8px;
+        color: #9ca3af;
+      }
+      
+      @bottom-right {
+        content: "www.hydoilpress.com";
+        font-size: 8px;
+        color: #9ca3af;
+      }
+    }
+  }
+</style>

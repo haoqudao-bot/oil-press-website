@@ -1,0 +1,454 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const pageTitle = currentLocale === 'fr' ? 'Calculateur ROI Presse à Huile Hydraulique' :
+                  currentLocale === 'ar' ? 'حاسبة العائد على الاستثمار لمكينة الضغط الهيدروليكي' :
+                  'Kalkulator ROI Mesin Press Minyak Hidrolik';
+
+const pageDesc = currentLocale === 'fr' ? 'Estimez votre retour sur investissement pour les presses à huile hydrauliques Haonuo. Calculez la production d\'huile quotidienne, les revenus, les bénéfices et la période de récupération.' :
+                 currentLocale === 'ar' ? 'قدر عائدك على الاستثمار لمكائن الضغط الهيدروليكي Haonuo. احسب إنتاج الزيت اليومي والإيرادات والأرباح وفترة الاسترداد.' :
+                 'Estimasi pengembalian investasi Anda untuk mesin press minyak hidrolik Haonuo. Hitung produksi minyak harian, pendapatan, keuntungan, dan periode pengembalian.';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: currentLocale === 'fr' ? 'Calculateur ROI' : currentLocale === 'ar' ? 'حاسبة العائد' : 'Kalkulator ROI', item: `https://www.hydoilpress.com/${currentLocale}/roi-calculator` },
+  ],
+};
+
+const contactUrl = localePath('/contact');
+
+const disclaimerTitle = currentLocale === 'fr' ? 'Avertissement Important' :
+                        currentLocale === 'ar' ? 'تنبيه مهم' :
+                        'Penyanggalan Penting';
+
+const disclaimerText = currentLocale === 'fr' ? `Ce calculateur fournit des <strong>estimations approximatives uniquement</strong> pour votre planification préliminaire. Ce n'est <strong>PAS une garantie</strong> de rendements réels. Les résultats réels dépendent de nombreux facteurs notamment la qualité des matières premières, l'habileté de l'opérateur, les conditions du marché local, les coûts d'électricité, les coûts de main-d'œuvre et les dépenses d'entretien. <strong>Ne prenez pas de décisions d'achat uniquement sur la base de ces estimations.</strong> Veuillez <a href="${contactUrl}" class="text-amber-800 underline font-medium">contacter notre équipe</a> pour une analyse détaillée et spécifique à votre cas.` :
+                       currentLocale === 'ar' ? `هذه الحاسبة توفر <strong>تقديرات تقريبية فقط</strong> لتخطيطك التمهيدي. هي <strong>ليست ضماناً</strong> للعوائد الفعلية. النتائج الفعلية تعتمد على عوامل كثيرة منها جودة المواد الخام ومهارة المشغل وظروف السوق المحلي وتكاليف الكهرباء وتكاليف العمالة ومصاريف الصيانة. <strong>لا تتخذ قرارات الشراء بناءً على هذه التقديرات فقط.</strong> يرجى <a href="${contactUrl}" class="text-amber-800 underline font-medium">الاتصال بفريقنا</a> لتحليل مفصل ومخصص لحالتك.` :
+                       `Kalkulator ini menyediakan <strong>estimasi kasar saja</strong> untuk perencanaan awal Anda. Ini <strong>BUKAN jaminan</strong> pengembalian aktual. Hasil aktual tergantung pada banyak faktor termasuk kualitas bahan baku, keterampilan operator, kondisi pasar lokal, biaya listrik, biaya tenaga kerja, dan biaya pemeliharaan. <strong>Jangan membuat keputusan pembelian hanya berdasarkan estimasi ini.</strong> Silakan <a href="${contactUrl}" class="text-amber-800 underline font-medium">hubungi tim kami</a> untuk analisis detail yang disesuaikan dengan kasus Anda.`;
+
+const labelMachineModel = currentLocale === 'fr' ? 'Modèle de Machine' :
+                          currentLocale === 'ar' ? 'نموذج المكينة' :
+                          'Model Mesin';
+
+const labelMachinePrice = currentLocale === 'fr' ? 'Prix de la Machine (USD)' :
+                          currentLocale === 'ar' ? 'سعر المكينة (دولار أمريكي)' :
+                          'Harga Mesin (USD)';
+
+const labelDailyHours = currentLocale === 'fr' ? 'Heures de Fonctionnement Quotidiennes' :
+                        currentLocale === 'ar' ? 'ساعات التشغيل اليومية' :
+                        'Jam Operasi Harian';
+
+const labelRawMaterial = currentLocale === 'fr' ? 'Type de Matière Première' :
+                         currentLocale === 'ar' ? 'نوع المادة الخام' :
+                         'Jenis Bahan Baku';
+
+const labelMaterialCost = currentLocale === 'fr' ? 'Coût de la Matière Première par kg (USD)' :
+                          currentLocale === 'ar' ? 'تكلفة المادة الخام لكل كجم (دولار أمريكي)' :
+                          'Biaya Bahan Baku per kg (USD)';
+
+const labelOilPrice = currentLocale === 'fr' ? 'Prix de Vente de l\'Huile par kg (USD)' :
+                      currentLocale === 'ar' ? 'سعر بيع الزيت لكل كجم (دولار أمريكي)' :
+                      'Harga Jual Minyak per kg (USD)';
+
+const labelDailyOpCost = currentLocale === 'fr' ? 'Coûts d\'Exploitation Quotidiens Estimés (USD)' :
+                         currentLocale === 'ar' ? 'تكاليف التشغيل اليومية المقدرة (دولار أمريكي)' :
+                         'Estimasi Biaya Operasional Harian (USD)';
+
+const calculateBtn = currentLocale === 'fr' ? 'Calculer le ROI' :
+                     currentLocale === 'ar' ? 'حساب العائد على الاستثمار' :
+                     'Hitung ROI';
+
+const resultsTitle = currentLocale === 'fr' ? 'Vos Rendements Estimés' :
+                     currentLocale === 'ar' ? 'عوائدك المقدرة' :
+                     'Estimasi Pengembalian Anda';
+
+const resultDisclaimerText = currentLocale === 'fr' ? '<strong>Ce sont des estimations approximatives, pas des garanties.</strong> Les rendements réels peuvent être significativement inférieurs ou supérieurs selon vos conditions spécifiques. Ces chiffres ne tiennent pas compte de toutes les variables du monde réel.' :
+                             currentLocale === 'ar' ? '<strong>هذه تقديرات تقريبية وليست ضمانات.</strong> العوائد الفعلية قد تكون أقل أو أعلى بكثير حسب ظروفك الخاصة. هذه الأرقام لا تأخذ في الاعتبار جميع المتغيرات الواقعية.' :
+                             '<strong>Ini adalah estimasi kasar, bukan jaminan.</strong> Pengembalian aktual mungkin jauh lebih rendah atau lebih tinggi tergantung kondisi spesifik Anda. Angka-angka ini tidak memperhitungkan semua variabel dunia nyata.';
+
+const notesTitle = currentLocale === 'fr' ? 'Notes Importantes' :
+                   currentLocale === 'ar' ? 'ملاحظات مهمة' :
+                   'Catatan Penting';
+
+const ctaTitle = currentLocale === 'fr' ? 'Besoin d\'une Estimation Fiable ?' :
+                 currentLocale === 'ar' ? 'هل تحتاج تقديراً موثوقاً؟' :
+                 'Butuh Estimasi yang Andal?';
+
+const ctaDesc = currentLocale === 'fr' ? 'Notre équipe peut fournir une analyse ROI détaillée et spécifique à votre cas basée sur vos conditions de marché réelles, sources de matières premières et objectifs de production.' :
+                currentLocale === 'ar' ? 'فريقنا يمكنه تقديم تحليل عائد مفصل ومخصص لحالتك بناءً على ظروف سوقك الفعلية ومصادر موادك الخام وأهداف إنتاجك.' :
+                'Tim kami dapat menyediakan analisis ROI detail yang disesuaikan berdasarkan kondisi pasar aktual Anda, sumber bahan baku, dan tujuan produksi.';
+
+const ctaBtn = currentLocale === 'fr' ? 'Obtenir une Analyse Personnalisée' :
+               currentLocale === 'ar' ? 'الحصول على تحليل مخصص' :
+               'Dapatkan Analisis yang Dipersonalisasi';
+
+const checkboxLabel = currentLocale === 'fr' ? 'Je comprends que ce calculateur fournit des <strong>estimations approximatives uniquement</strong> et n\'est <strong>pas une garantie</strong> de rendements d\'investissement réels. Les résultats réels dépendent de nombreux facteurs notamment la qualité des matières premières, les conditions d\'exploitation, les prix du marché local et l\'efficacité de production. Je ne prendrai pas de décisions d\'achat uniquement sur la base de ces estimations.' :
+                      currentLocale === 'ar' ? 'أفهم أن هذه الحاسبة توفر <strong>تقديرات تقريبية فقط</strong> و<strong>ليست ضماناً</strong> لعوائد الاستثمار الفعلية. النتائج الفعلية تعتمد على عوامل كثيرة منها جودة المواد الخام وظروف التشغيل وأسعار السوق المحلي وكفاءة الإنتاج. لن أتخذ قرارات شراء بناءً على هذه التقديرات فقط.' :
+                      'Saya memahami bahwa kalkulator ini menyediakan <strong>estimasi kasar saja</strong> dan <strong>bukan jaminan</strong> pengembalian investasi aktual. Hasil aktual tergantung pada banyak faktor termasuk kualitas bahan baku, kondisi operasi, harga pasar lokal, dan efisiensi produksi. Saya tidak akan membuat keputusan pembelian hanya berdasarkan estimasi ini.';
+
+const placeholderPrice = currentLocale === 'fr' ? 'Entrez le prix de votre devis' :
+                         currentLocale === 'ar' ? 'أدخل سعر عرض الأسعار الخاص بك' :
+                         'Masukkan harga dari penawaran Anda';
+
+const priceHint = currentLocale === 'fr' ? `Entrez le prix de votre devis. <a href="${contactUrl}" class="text-amber-500 underline">Demandez un devis</a> si vous n'en avez pas encore.` :
+                  currentLocale === 'ar' ? `أدخل سعر عرض الأسعار. <a href="${contactUrl}" class="text-amber-500 underline">اطلب عرض أسعار</a> إذا لم يكن لديك واحد بعد.` :
+                  `Masukkan harga dari penawaran Anda. <a href="${contactUrl}" class="text-amber-500 underline">Minta penawaran</a> jika Anda belum memilikinya.`;
+
+const placeholderMaterialCost = currentLocale === 'fr' ? 'Entrez le coût de la matière première par kg dans votre marché local' :
+                                currentLocale === 'ar' ? 'أدخل تكلفة المادة الخام لكل كجم في سوقك المحلي' :
+                                'Masukkan biaya bahan baku per kg di pasar lokal Anda';
+
+const materialCostHint = currentLocale === 'fr' ? 'Veuillez entrer le coût réel dans votre marché local. Les prix des matières premières fluctuent considérablement.' :
+                         currentLocale === 'ar' ? 'يرجى إدخال التكلفة الفعلية في سوقك المحلي. أسعار المواد الخام تتقلب بشكل كبير.' :
+                         'Silakan masukkan biaya aktual di pasar lokal Anda. Harga bahan baku berfluktuasi secara signifikan.';
+
+const placeholderOilPrice = currentLocale === 'fr' ? 'Entrez votre prix de vente attendu par kg' :
+                            currentLocale === 'ar' ? 'أدخل سعر البيع المتوقع لكل كجم' :
+                            'Masukkan harga jual yang diharapkan per kg';
+
+const oilPriceHint = currentLocale === 'fr' ? 'Veuillez entrer le prix de vente réel dans votre marché cible. Les prix varient selon la région et le grade de qualité.' :
+                     currentLocale === 'ar' ? 'يرجى إدخال سعر البيع الفعلي في سوقك المستهدف. الأسعار تختلف حسب المنطقة ودرجة الجودة.' :
+                     'Silakan masukkan harga jual aktual di pasar target Anda. Harga bervariasi menurut wilayah dan kelas kualitas.';
+
+const placeholderOpCost = currentLocale === 'fr' ? 'ex. électricité, main-d\'œuvre, entretien, emballage' :
+                          currentLocale === 'ar' ? 'مثال: كهرباء، عمالة، صيانة، تغليف' :
+                          'mis. listrik, tenaga kerja, pemeliharaan, pengemasan';
+
+const opCostHint = currentLocale === 'fr' ? 'Incluez l\'électricité, la main-d\'œuvre, l\'entretien, l\'emballage, le transport et autres coûts quotidiens. Cela affecte significativement la rentabilité réelle.' :
+                   currentLocale === 'ar' ? 'شمل الكهرباء والعمالة والصيانة والتغليف والنقل والتكاليف اليومية الأخرى. هذا يؤثر بشكل كبير على الربحية الفعلية.' :
+                   'Termasuk listrik, tenaga kerja, pemeliharaan, pengemasan, transportasi, dan biaya harian lainnya. Ini secara signifikan mempengaruhi profitabilitas aktual.';
+
+const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon la variété, la région et l\'humidité. Les valeurs indiquées sont des fourchettes typiques, pas des garanties.' :
+                       currentLocale === 'ar' ? 'محتوى الزيت يختلف حسب الصنف والمنطقة والرطوبة. القيم المعروضة هي نطاقات نموذجية وليست ضمانات.' :
+                       'Kandungan minyak bervariasi menurut varietas, wilayah, dan kelembapan. Nilai yang ditampilkan adalah rentang khas, bukan jaminan.';
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={pageTitle}
+  description={pageDesc}
+  keywords={currentLocale === 'fr' ? ['calculateur ROI presse hydraulique', 'investissement presse à huile', 'période récupération presse à huile', 'calculateur profit presse à huile'] : currentLocale === 'ar' ? ['حاسبة العائد على الاستثمار لمكينة الضغط الهيدروليكي', 'استثمار مكينة ضغط الزيت', 'فترة استرداد مكينة ضغط الزيت', 'حاسبة ربح مكينة ضغط الزيت'] : ['kalkulator ROI mesin press hidrolik', 'investasi mesin press minyak', 'periode pengembalian mesin press minyak', 'kalkulator keuntungan mesin press minyak']}
+  jsonLd={[breadcrumbLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">{currentLocale === 'fr' ? 'Calculateur ROI' : currentLocale === 'ar' ? 'حاسبة العائد' : 'Kalkulator ROI'}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{pageTitle}</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">{currentLocale === 'fr' ? 'Estimez votre retour sur investissement' : currentLocale === 'ar' ? 'قدر عائدك على الاستثمار' : 'Estimasi pengembalian investasi Anda'}</p>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Disclaimer Banner -->
+      <div class="mb-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <h3 class="font-display text-lg text-amber-800 mb-1">{disclaimerTitle}</h3>
+            <p class="text-sm text-amber-700 leading-relaxed" set:html={disclaimerText} />
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-steel-100 p-8 md:p-10">
+        <!-- Input Fields -->
+        <div class="space-y-6">
+          <!-- Machine Model -->
+          <div>
+            <label for="machine-model" class="block font-display text-xl text-charcoal-900 mb-2">{labelMachineModel}</label>
+            <select id="machine-model" class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              <option value="HN325">HN325 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Standard' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي قياسية' : 'Mesin Press Hidrolik Standar'}</option>
+              <option value="HN355">HN355 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Lourde' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي ثقيلة' : 'Mesin Press Hidrolik Berat'}</option>
+              <option value="HN426">HN426 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique à Froid' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي بارد' : 'Mesin Press Hidrolik Dingin'}</option>
+              <option value="HN480">HN480 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Haute Pression' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي عالية الضغط' : 'Mesin Press Hidrolik Tekanan Tinggi'}</option>
+            </select>
+          </div>
+
+          <!-- Machine Price -->
+          <div>
+            <label for="machine-price" class="block font-display text-xl text-charcoal-900 mb-2">{labelMachinePrice}</label>
+            <input
+              type="number"
+              id="machine-price"
+              min="0"
+              step="100"
+              placeholder={placeholderPrice}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1" set:html={priceHint} />
+          </div>
+
+          <!-- Daily Operating Hours -->
+          <div>
+            <label for="daily-hours" class="block font-display text-xl text-charcoal-900 mb-2">
+              {labelDailyHours}: <span id="hours-display" class="text-amber-500">8</span>
+            </label>
+            <input
+              type="range"
+              id="daily-hours"
+              min="1"
+              max="24"
+              value="8"
+              class="w-full h-2 bg-steel-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
+            />
+            <div class="flex justify-between text-xs text-steel-400 mt-1">
+              <span>{currentLocale === 'fr' ? '1 h' : currentLocale === 'ar' ? '1 ساعة' : '1 jam'}</span>
+              <span>{currentLocale === 'fr' ? '24 h' : currentLocale === 'ar' ? '24 ساعة' : '24 jam'}</span>
+            </div>
+          </div>
+
+          <!-- Raw Material Type -->
+          <div>
+            <label for="raw-material" class="block font-display text-xl text-charcoal-900 mb-2">{labelRawMaterial}</label>
+            <select id="raw-material" class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              <option value="sesame">{currentLocale === 'fr' ? 'Sésame (env. 45% teneur en huile)' : currentLocale === 'ar' ? 'سمسم (حوالي 45% محتوى زيت)' : 'Wijen (kurang lebih 45% kandungan minyak)'}</option>
+              <option value="peanut">{currentLocale === 'fr' ? 'Arachide (env. 42% teneur en huile)' : currentLocale === 'ar' ? 'فول سوداني (حوالي 42% محتوى زيت)' : 'Kacang tanah (kurang lebih 42% kandungan minyak)'}</option>
+              <option value="coconut">{currentLocale === 'fr' ? 'Coco (env. 55% teneur en huile)' : currentLocale === 'ar' ? 'جوز هند (حوالي 55% محتوى زيت)' : 'Kelapa (kurang lebih 55% kandungan minyak)'}</option>
+              <option value="sunflower">{currentLocale === 'fr' ? 'Tournesol (env. 40% teneur en huile)' : currentLocale === 'ar' ? 'عباد الشمس (حوالي 40% محتوى زيت)' : 'Bunga matahari (kurang lebih 40% kandungan minyak)'}</option>
+              <option value="rapeseed">{currentLocale === 'fr' ? 'Colza (env. 38% teneur en huile)' : currentLocale === 'ar' ? 'كركديه (حوالي 38% محتوى زيت)' : 'Rapeseed (kurang lebih 38% kandungan minyak)'}</option>
+            </select>
+            <p class="text-xs text-steel-400 mt-1">{oilContentHint}</p>
+          </div>
+
+          <!-- Raw Material Cost -->
+          <div>
+            <label for="material-cost" class="block font-display text-xl text-charcoal-900 mb-2">{labelMaterialCost}</label>
+            <input
+              type="number"
+              id="material-cost"
+              min="0"
+              step="0.01"
+              placeholder={placeholderMaterialCost}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1">{materialCostHint}</p>
+          </div>
+
+          <!-- Oil Selling Price -->
+          <div>
+            <label for="oil-price" class="block font-display text-xl text-charcoal-900 mb-2">{labelOilPrice}</label>
+            <input
+              type="number"
+              id="oil-price"
+              min="0"
+              step="0.01"
+              placeholder={placeholderOilPrice}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1">{oilPriceHint}</p>
+          </div>
+
+          <!-- Additional Operating Costs -->
+          <div>
+            <label for="daily-opcost" class="block font-display text-xl text-charcoal-900 mb-2">
+              {labelDailyOpCost}
+            </label>
+            <input
+              type="number"
+              id="daily-opcost"
+              min="0"
+              step="1"
+              placeholder={placeholderOpCost}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1">{opCostHint}</p>
+          </div>
+
+          <!-- Acknowledgment Checkbox -->
+          <div class="bg-steel-50 rounded-xl p-4 border border-steel-200">
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input type="checkbox" id="acknowledge" class="mt-1 w-4 h-4 text-amber-500 border-steel-300 rounded focus:ring-amber-500" />
+              <span class="text-sm text-steel-600 leading-relaxed" set:html={checkboxLabel} />
+            </label>
+          </div>
+
+          <!-- Calculate Button -->
+          <button
+            id="calculate-btn"
+            disabled
+            class="btn-primary w-full justify-center text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {calculateBtn}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hidden mt-10 pt-10 border-t border-steel-200">
+          <!-- Result Disclaimer -->
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+            <p class="text-sm text-amber-800 leading-relaxed" set:html={resultDisclaimerText} />
+          </div>
+
+          <h2 class="font-display text-3xl text-charcoal-900 mb-6">{resultsTitle}</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Production d\'Huile Quotidienne (estimée)' : currentLocale === 'ar' ? 'إنتاج الزيت اليومي (مقدر)' : 'Produksi Minyak Harian (estimasi)'}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-oil">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Revenu Quotidien (estimé)' : currentLocale === 'ar' ? 'الإيراد اليومي (مقدر)' : 'Pendapatan Harian (estimasi)'}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-revenue">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Coût Quotidien des Matières Premières' : currentLocale === 'ar' ? 'التكلفة اليومية للمواد الخام' : 'Biaya Bahan Baku Harian'}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-cost">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Coûts d\'Exploitation Quotidiens' : currentLocale === 'ar' ? 'تكاليف التشغيل اليومية' : 'Biaya Operasional Harian'}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-opcost">—</div>
+            </div>
+            <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200">
+              <div class="text-sm text-amber-700 mb-1">{currentLocale === 'fr' ? 'Bénéfice Net Quotidien (estimé)' : currentLocale === 'ar' ? 'صافي الربح اليومي (مقدر)' : 'Laba Bersih Harian (estimasi)'}</div>
+              <div class="font-display text-3xl text-amber-600" id="result-daily-profit">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Bénéfice Net Mensuel (25 jours, estimé)' : currentLocale === 'ar' ? 'صافي الربح الشهري (25 يوماً، مقدر)' : 'Laba Bersih Bulanan (25 hari, estimasi)'}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-monthly-profit">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Période de Récupération Estimée' : currentLocale === 'ar' ? 'فترة الاسترداد المقدرة' : 'Periode Pengembalian Estimasi'}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-payback">—</div>
+            </div>
+            <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200">
+              <div class="text-sm text-amber-700 mb-1">{currentLocale === 'fr' ? 'ROI Annuel Estimé' : currentLocale === 'ar' ? 'العائد السنوي المقدر على الاستثمار' : 'ROI Tahunan Estimasi'}</div>
+              <div class="font-display text-4xl text-amber-600" id="result-roi">—</div>
+            </div>
+          </div>
+
+          <!-- Bottom Disclaimer -->
+          <div class="mt-6 bg-steel-50 rounded-xl p-5 border border-steel-200">
+            <h4 class="font-display text-sm text-charcoal-900 mb-2">{notesTitle}</h4>
+            <ul class="text-xs text-steel-500 space-y-1.5">
+              <li>• {currentLocale === 'fr' ? 'Tous les chiffres sont des <strong>estimations approximatives</strong> basées sur les valeurs que vous avez entrées et les paramètres typiques de l\'industrie — ils ne sont <strong>PAS des garanties</strong> de performance réelle.' : currentLocale === 'ar' ? 'جميع الأرقام هي <strong>تقديرات تقريبية</strong> مبنية على القيم التي أدخلتها ومعلمات الصناعة النموذجية — هي <strong>ليست ضمانات</strong> للأداء الفعلي.' : 'Semua angka adalah <strong>estimasi kasar</strong> berdasarkan nilai yang Anda masukkan dan parameter industri khas — mereka <strong>BUKAN jaminan</strong> performa aktual.'}</li>
+              <li>• {currentLocale === 'fr' ? 'Le rendement réel en huile dépend de la variété de matière première, de la teneur en humidité, de la température de pressage, de l\'habileté de l\'opérateur et de l\'état de la machine.' : currentLocale === 'ar' ? 'عائد الزيت الفعلي يعتمد على نوع المادة الخام ومحتوى الرطوبة ودرجة حرارة الضغط ومهارة المشغل وحالة المكينة.' : 'Hasil minyak aktual tergantung pada varietas bahan baku, kadar kelembapan, suhu press, keterampilan operator, dan kondisi mesin.'}</li>
+              <li>• {currentLocale === 'fr' ? 'Ce calcul utilise un <strong>taux d\'utilisation conservateur de 60%</strong> (temps de chargement/déchargement, configuration, nettoyage). Le débit réel peut varier.' : currentLocale === 'ar' ? 'هذا الحساب يستخدم <strong>معدل استخدام متحفظ بنسبة 60%</strong> (وقت التحميل/التفريغ، الإعداد، التنظيف). الإنتاجية الفعلية قد تختلف.' : 'Perhitungan ini menggunakan <strong>tingkat utilisasi konservatif 60%</strong> (waktu pemuatan/pengosongan, pengaturan, pembersihan). Throughput aktual dapat bervariasi.'}</li>
+              <li>• {currentLocale === 'fr' ? 'Les coûts d\'exploitation (électricité, main-d\'œuvre, entretien, emballage, transport) sont souvent sous-estimés. Veuillez entrer des chiffres réalistes.' : currentLocale === 'ar' ? 'تكاليف التشغيل (الكهرباء، العمالة، الصيانة، التغليف، النقل) غالباً ما يتم التقليل من شأنها. يرجى إدخال أرقام واقعية.' : 'Biaya operasional (listrik, tenaga kerja, pemeliharaan, pengemasan, transportasi) sering diremehkan. Silakan masukkan angka realistis.'}</li>
+              <li>• {currentLocale === 'fr' ? 'Les prix du marché pour les matières premières et l\'huile finie fluctuent. Ne supposez pas des prix constants sur la période de récupération.' : currentLocale === 'ar' ? 'أسعار السوق للمواد الخام والزيت النهائي تتقلب. لا تفترض أسعاراً ثابتة خلال فترة الاسترداد.' : 'Harga pasar untuk bahan baku dan minyak jadi berfluktuasi. Jangan berasumsi harga konstan selama periode pengembalian.'}</li>
+              <li>• {currentLocale === 'fr' ? 'Ce calculateur ne tient pas compte des impôts, droits de douane, frais d\'expédition ou risques de change.' : currentLocale === 'ar' ? 'هذه الحاسبة لا تأخذ في الاعتبار الضرائب والرسوم الجمركية ومصاريف الشحن أو مخاطر سعر الصرف.' : 'Kalkulator ini tidak memperhitungkan pajak, bea masuk, biaya pengiriman, atau risiko nilai tukar mata uang.'}</li>
+              <li>• <strong>{currentLocale === 'fr' ? 'Haonuo ne donne aucune garantie, expresse ou implicite, concernant l\'exactitude ou la fiabilité de ces estimations.' : currentLocale === 'ar' ? 'Haonuo لا يقدم أي ضمان، صريح أو ضمني، فيما يتعلق بدقة أو موثوقية هذه التقديرات.' : 'Haonuo tidak memberikan jaminan, tersurat maupun tersirat, mengenai keakuratan atau keandalan estimasi ini.'}</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 p-8 bg-steel-900 rounded-2xl text-center">
+        <h3 class="font-display text-3xl text-white mb-3">{ctaTitle}</h3>
+        <p class="text-steel-300 mb-6">{ctaDesc}</p>
+        <a href={localePath('/contact')} class="btn-primary text-lg">
+          {ctaBtn}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Machine data - conservative estimates with utilization rate
+  const machineData: Record<string, { capacity: number; cycleMinutes: number }> = {
+    HN325: { capacity: 10, cycleMinutes: 15 },
+    HN355: { capacity: 15, cycleMinutes: 15 },
+    HN426: { capacity: 20, cycleMinutes: 15 },
+    HN480: { capacity: 25, cycleMinutes: 15 },
+  };
+
+  // Oil content - conservative mid-range values
+  const oilContent: Record<string, number> = {
+    sesame: 0.45,
+    peanut: 0.42,
+    coconut: 0.55,
+    sunflower: 0.40,
+    rapeseed: 0.38,
+  };
+
+  const utilizationRate = 0.60;
+
+  const hoursSlider = document.getElementById('daily-hours') as HTMLInputElement;
+  const hoursDisplay = document.getElementById('hours-display')!;
+  const ackCheckbox = document.getElementById('acknowledge') as HTMLInputElement;
+  const calcBtn = document.getElementById('calculate-btn') as HTMLButtonElement;
+
+  hoursSlider.addEventListener('input', () => {
+    hoursDisplay.textContent = hoursSlider.value;
+  });
+
+  ackCheckbox.addEventListener('change', () => {
+    calcBtn.disabled = !ackCheckbox.checked;
+  });
+
+  calcBtn.addEventListener('click', () => {
+    if (!ackCheckbox.checked) return;
+
+    const model = (document.getElementById('machine-model') as HTMLSelectElement).value;
+    const machinePrice = parseFloat((document.getElementById('machine-price') as HTMLInputElement).value) || 0;
+    const hours = parseFloat(hoursSlider.value);
+    const material = (document.getElementById('raw-material') as HTMLSelectElement).value;
+    const materialCost = parseFloat((document.getElementById('material-cost') as HTMLInputElement).value) || 0;
+    const oilPrice = parseFloat((document.getElementById('oil-price') as HTMLInputElement).value) || 0;
+    const dailyOpcost = parseFloat((document.getElementById('daily-opcost') as HTMLInputElement).value) || 0;
+
+    const machine = machineData[model];
+    const yieldPct = oilContent[material];
+
+    const batchesPerHour = 60 / machine.cycleMinutes;
+    const effectiveBatchesPerHour = batchesPerHour * utilizationRate;
+    const dailyBatches = effectiveBatchesPerHour * hours;
+    const dailyRawMaterial = machine.capacity * dailyBatches;
+    const dailyOil = dailyRawMaterial * yieldPct;
+    const dailyRevenue = dailyOil * oilPrice;
+    const dailyMaterialCost = dailyRawMaterial * materialCost;
+    const dailyProfit = dailyRevenue - dailyMaterialCost - dailyOpcost;
+    const monthlyProfit = dailyProfit * 25;
+    const paybackMonths = dailyProfit > 0 ? machinePrice / monthlyProfit : Infinity;
+    const annualProfit = monthlyProfit * 12;
+    const annualROI = machinePrice > 0 ? (annualProfit / machinePrice) * 100 : 0;
+
+    const fmt = (n: number) => n >= 1000 ? `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : `$${n.toFixed(2)}`;
+
+    document.getElementById('result-daily-oil')!.textContent = `${dailyOil.toFixed(1)} kg`;
+    document.getElementById('result-daily-revenue')!.textContent = fmt(dailyRevenue);
+    document.getElementById('result-daily-cost')!.textContent = fmt(dailyMaterialCost);
+    document.getElementById('result-daily-opcost')!.textContent = fmt(dailyOpcost);
+    document.getElementById('result-daily-profit')!.textContent = fmt(dailyProfit);
+    document.getElementById('result-monthly-profit')!.textContent = fmt(monthlyProfit);
+    document.getElementById('result-payback')!.textContent = paybackMonths === Infinity ? 'N/A' : `${paybackMonths.toFixed(1)} months`;
+    document.getElementById('result-roi')!.textContent = `${annualROI.toFixed(1)}%`;
+
+    document.getElementById('results')!.classList.remove('hidden');
+  });
+</script>

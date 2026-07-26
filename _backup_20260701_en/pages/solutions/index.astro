@@ -1,0 +1,266 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('en');
+
+const solutionCategories = [
+  {
+    icon: '🛢️',
+    title: 'By Oil Type',
+    description: 'Complete hydraulic oil pressing solutions for 15+ oil seeds including soybean, coconut, sesame, sunflower, peanut, olive, and more.',
+    link: '/solutions/all-oil-types',
+    keywords: ['soybean oil press', 'coconut oil press', 'sesame oil press', 'sunflower oil press'],
+    image: '/images/hero/hydraulic-oil-press-production.webp',
+  },
+  {
+    icon: '🌍',
+    title: 'By Region',
+    description: 'Tailored solutions for local markets. We understand the specific oil seeds, regulations, and business needs in each region.',
+    link: '/markets',
+    keywords: ['oil press Nigeria', 'oil press India', 'oil press Indonesia', 'oil press Africa'],
+    image: '/images/hero/cold-press-production-line.webp',
+  },
+  {
+    icon: '⚙️',
+    title: 'By Production Scale',
+    description: 'From small home businesses to large industrial plants, find the perfect equipment for your production capacity.',
+    link: '/solutions/by-scale',
+    keywords: ['small oil press', 'commercial oil press', 'industrial oil press'],
+    image: '/images/hero/factory-workshop.webp',
+  },
+];
+
+const popularSolutions = [
+  { href: '/solutions/coconut-oil-pressing', label: 'Coconut Oil' },
+  { href: '/solutions/sesame-oil-pressing', label: 'Sesame Oil' },
+  { href: '/solutions/peanut-oil-pressing', label: 'Peanut Oil' },
+  { href: '/solutions/sunflower-oil-pressing', label: 'Sunflower Oil' },
+  { href: '/solutions/mustard-oil-pressing', label: 'Mustard Oil' },
+  { href: '/solutions/palm-oil-pressing', label: 'Palm Oil' },
+];
+
+const popularMarkets = [
+  { href: '/markets/nigeria', label: 'Nigeria' },
+  { href: '/markets/india', label: 'India' },
+  { href: '/markets/indonesia', label: 'Indonesia' },
+  { href: '/markets/pakistan', label: 'Pakistan' },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.hydoilpress.com/solutions' },
+  ],
+};
+---
+
+<BaseLayout title="Oil Pressing Solutions — Complete Hydraulic Oil Press Machine Solutions" description="Find complete hydraulic oil pressing solutions by oil type, region, and production scale. Get tailored recommendations for your oil pressing business." keywords={['hydraulic oil press solutions', 'oil press machine', 'cold press oil machine', 'oil pressing equipment']} jsonLd={breadcrumbLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Solutions</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Page Header -->
+  <section class="relative bg-steel-900 py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/images/hero/hydraulic-oil-press-production.webp" alt="" width="1200" height="800" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-6">
+          Oil Pressing Solutions
+        </h1>
+        <p class="text-steel-300 text-lg md:text-xl leading-relaxed mb-8">
+          From seed to oil — complete hydraulic oil pressing solutions for <strong class="text-amber-400">15+ oil seeds</strong>, serving <strong class="text-amber-400">50+ countries</strong>, across <strong class="text-amber-400">all production scales</strong>. Find the perfect oil press machine for your business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Categories -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Explore Solutions</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          Choose how you want to browse our hydraulic oil press solutions — by oil type, by region, or by production scale.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {solutionCategories.map((category) => (
+          <a
+            href={category.link}
+            class="group relative bg-steel-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+          >
+            <div class="aspect-video overflow-hidden">
+              <img src={category.image} alt={category.title} width="600" height="338" class="w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500" />
+            </div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+              <span class="text-5xl mb-4">{category.icon}</span>
+              <h3 class="font-display text-2xl text-white mb-2">{category.title}</h3>
+              <p class="text-steel-300 text-sm">{category.description}</p>
+              <span class="inline-flex items-center gap-1 text-amber-400 text-sm font-medium mt-4 group-hover:translate-x-1 transition-transform">
+                Explore
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Access -->
+  <section class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Popular Oil Types -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">🛢️</span>
+            <h3 class="font-display text-2xl text-charcoal-900">Popular Oil Types</h3>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {popularSolutions.map((item) => (
+              <a
+                href={item.href}
+                class="bg-white px-4 py-3 rounded-xl border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all text-center"
+              >
+                <span class="text-sm font-medium text-steel-700 hover:text-amber-600">{item.label}</span>
+              </a>
+            ))}
+          </div>
+          <a href="/solutions/all-oil-types" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
+            View All 15+ Oil Types
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <!-- Popular Markets -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">🌍</span>
+            <h3 class="font-display text-2xl text-charcoal-900">Popular Markets</h3>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {popularMarkets.map((item) => (
+              <a
+                href={item.href}
+                class="bg-white px-4 py-3 rounded-xl border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all text-center"
+              >
+                <span class="text-sm font-medium text-steel-700 hover:text-amber-600">{item.label}</span>
+              </a>
+            ))}
+          </div>
+          <a href="/markets" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
+            View All 50+ Markets
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Hydraulic Oil Press -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Why Choose Hydraulic Oil Pressing</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          Hydraulic oil pressing technology offers unique advantages for quality-conscious oil producers worldwide.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">High Oil Yield</h3>
+          <p class="text-sm text-steel-600">Approximately 2-5% higher yield compared to screw presses based on our internal testing (results vary). Efficient extraction helps retain more oil in every batch.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Cold Press Capability</h3>
+          <p class="text-sm text-steel-600">Preserve natural nutrients, flavor, and color through low-temperature pressing. Premium oil commands higher market prices.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Wide Seed Compatibility</h3>
+          <p class="text-sm text-steel-600">One machine handles sesame, peanut, coconut, walnut, almond, sunflower, and 20+ oil seeds with minimal adjustments.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Low Maintenance</h3>
+          <p class="text-sm text-steel-600">Simple mechanical design with fewer moving parts. Reduced downtime and lower operating costs over the machine's lifetime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Haonuo -->
+  <section class="py-16 md:py-20 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Trusted by Oil Producers in 50+ Countries</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          From small home businesses to large industrial plants, our solutions power oil production worldwide.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">2-Year Warranty</h3>
+          <p class="text-steel-600 text-sm">Full coverage on manufacturing defects plus lifetime technical support by phone, email, and video call.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Production &amp; Shipping</h3>
+	          <p class="text-steel-600 text-sm">Production: 20-30 working days. Shipping transit varies by destination (typically 6-10 weeks total from order to arrival). Full export documentation provided.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          </div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Factory-Direct Pricing</h3>
+          <p class="text-steel-600 text-sm">As a direct manufacturer, we offer competitive factory-direct prices with no trading company markups.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">
+        Not Sure Which Solution Fits You?
+      </h2>
+      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">
+        Tell us your raw material, daily capacity, and budget — our engineers will recommend the best oil press setup for your business.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        Get Free Consultation
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

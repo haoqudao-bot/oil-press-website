@@ -1,0 +1,259 @@
+﻿﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allCategories = await getCollection('categories');
+  return allCategories.map(cat => ({
+    params: { category: cat.slug },
+    props: { category: cat },
+  }));
+}
+
+const { category } = Astro.props;
+const t = getTranslations('en');
+
+const allProducts = await getCollection('products');
+const allCategories = await getCollection('categories');
+const sortedCategories = allCategories.sort((a, b) => a.data.order - b.data.order);
+
+const sortPriority: Record<string, number> = {
+  'mini-hydraulic-oil-press': 1,
+  'standard-hydraulic-oil-press': 2,
+  'stainless-steel-hydraulic-oil-press': 3,
+  'heavy-duty-hydraulic-oil-press': 4,
+  'medium-hydraulic-oil-press': 5,
+  'cold-press-hydraulic-oil-press': 6,
+  'high-pressure-hydraulic-oil-press': 7,
+  'ultra-high-pressure-cold-press': 8,
+  'ultra-high-pressure-hydraulic-oil-press': 9,
+  'sesame-oil-hydraulic-press': 10,
+  'coconut-oil-hydraulic-press': 11,
+  'large-barrel-hydraulic-oil-press': 12,
+  'animal-fat-hydraulic-press': 13,
+};
+
+const filteredProducts = allProducts.filter(p => p.data.category === category.slug)
+  .sort((a, b) => {
+    if (category.slug === 'hydraulic-oil-press') {
+      const orderA = sortPriority[a.slug] ?? 99;
+      const orderB = sortPriority[b.slug] ?? 99;
+      if (orderA !== orderB) return orderA - orderB;
+    }
+    const numA = parseInt(a.data.model.replace(/\D/g, '')) || 0;
+    const numB = parseInt(b.data.model.replace(/\D/g, '')) || 0;
+    return numA - numB;
+  });
+
+const categoryLabels: Record<string, string> = {
+  'hydraulic-oil-press': t.products.hydraulicOilPress,
+  'seed-processing-equipment': t.products.seedProcessing,
+  'roasting-steaming-equipment': t.products.roastingSteaming,
+  'filtration-refining-equipment': t.products.filtrationRefining,
+};
+
+const categoryLabel = categoryLabels[category.slug] || category.data.name.en;
+
+// Keywords mapping per category
+const categoryKeywords: Record<string, string[]> = {
+  'hydraulic-oil-press': ['hydraulic oil press', 'hydraulic oil press machine', 'cold press hydraulic oil press', 'hydraulic oil extractor', 'industrial hydraulic press', 'hydraulic press for oil extraction', 'cold press oil machine', 'hydraulic oil press price', 'double barrel hydraulic press', 'hydraulic seed press'],
+  'seed-processing-equipment': ['seed processing equipment', 'seed crusher machine', 'seed grinding machine', 'oil seed processing', 'seed crushing machine', 'industrial seed crusher', 'seed mill equipment', 'seed preparation machine', 'oil seed crusher', 'seed processing plant'],
+  'roasting-steaming-equipment': ['seed roasting machine', 'seed steamer', 'seed roasting pan', 'oil seed roaster', 'seed cooking machine', 'seed conditioning equipment', 'steam seed cooker', 'thermal seed roaster', 'electric seed steamer', 'seed pre-treatment machine'],
+  'filtration-refining-equipment': ['oil filtration equipment', 'oil refining machine', 'oil filter press', 'edible oil refinery', 'oil purification system', 'oil decolorization machine', 'oil deodorization equipment', 'crude oil filter', 'oil processing equipment', 'edible oil refining plant'],
+};
+const pageKeywords = categoryKeywords[category.slug] || ['oil press equipment', 'oil processing machine'];
+
+// ItemList JSON-LD
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${categoryLabel} - Haonuo Machinery`,
+  description: category.data.description.en,
+  numberOfItems: filteredProducts.length,
+  itemListElement: filteredProducts.map((product, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Product',
+      name: product.data.title.en,
+      url: `https://www.hydoilpress.com/products/${product.slug}`,
+      image: product.data.images[0] || '',
+      brand: { '@type': 'Brand', name: 'Haonuo' },
+    },
+  })),
+};
+
+// BreadcrumbList JSON-LD
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://www.hydoilpress.com/products' },
+    { '@type': 'ListItem', position: 3, name: categoryLabel, item: `https://www.hydoilpress.com/products/${category.slug}` },
+  ],
+};
+
+const allLd = [itemListLd, breadcrumbLd];
+---
+
+<BaseLayout title={`${categoryLabel} - ${t.products.title}`} description={category.data.description.en} keywords={pageKeywords} jsonLd={allLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/products" class="hover:text-amber-500 transition-colors">{t.products.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{categoryLabel}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Page Header -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{categoryLabel}</h1>
+      <p class="text-steel-300 text-lg max-w-2xl">{category.data.description.en}</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Sidebar Filter -->
+        <aside class="lg:w-56 shrink-0">
+          <div class="sticky top-24 space-y-8">
+            <div>
+              <h3 class="font-display text-lg text-charcoal-900 mb-4">Category</h3>
+              <nav class="space-y-1">
+                <a
+                  href="/products"
+                  class="block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                >
+                  {t.products.allCategories}
+                </a>
+                {sortedCategories.map(cat => (
+                  <a
+                    href={`/products/${cat.slug}`}
+                    class:list={[
+                      'block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
+                      category.slug === cat.slug ? 'bg-amber-500 text-charcoal-900' : 'text-steel-600 hover:bg-steel-50'
+                    ]}
+                  >
+                    {cat.data.name.en}
+                  </a>
+                ))}
+              </nav>
+            </div>
+
+            <div class="pt-6 border-t border-steel-100">
+              <nav class="space-y-1">
+                <a
+                  href="/hydraulic-oil-press-machine"
+                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  <span>{t.common.hydraulicOilPressMachine}</span>
+                </a>
+                <a
+                  href="/cold-press-oil-machine"
+                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>{t.common.coldPressOilMachine}</span>
+                </a>
+                <a
+                  href="/manual-oil-press-machine"
+                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
+                  <span>{t.common.manualOilPressMachine}</span>
+                </a>
+              </nav>
+            </div>
+
+            <div class="pt-6 border-t border-steel-100">
+              <h3 class="font-display text-lg text-charcoal-900 mb-4">{t.common.tools}</h3>
+              <a
+                href="/products/model-comparison"
+                class="flex items-center gap-3 px-4 py-3 rounded-lg text-steel-700 hover:text-amber-500 hover:bg-steel-50 transition-colors group"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                <div>
+                  <div class="text-sm font-semibold">{t.nav.modelComparison}</div>
+                  <div class="text-xs opacity-70">{t.common.compareAllModels}</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="flex-1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+            {filteredProducts.map((product) => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+                  <img
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20hydraulic%20oil%20press%20machine%20product%20photo%20on%20white%20background%2C%20professional%20product%20photography&image_size=landscape_4_3'"
+                  />
+                  <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+                    <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {t.products.viewDetails}
+                    </span>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <p class="text-sm text-steel-500 mb-3 line-clamp-2">{product.data.description?.en}</p>
+                  <div class="flex flex-wrap gap-2 items-center">
+                    {product.data.applicableSeeds.slice(0, 3).map(seed => (
+                      <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">
+                        {seed}
+                      </span>
+                    ))}
+                    <span class="text-xs text-steel-400">+ more</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {filteredProducts.length === 0 && (
+            <div class="text-center py-20">
+              <p class="text-steel-400 text-lg">No products in this category</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Need Help Choosing the Right {categoryLabel}?</h2>
+      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">Our engineers can recommend the best machine for your oil seeds, capacity, and budget. Get a free quotation within 24 hours.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          Request a Quote
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-500 transition-colors text-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getTranslations } from '../i18n';
+
+const t = getTranslations('en');
+const allProducts = await getCollection('products');
+const manualProducts = allProducts.filter(p =>
+  p.data.category === 'hydraulic-oil-press' &&
+  (p.data.model?.toLowerCase().includes('hn300') ||
+   p.data.model?.toLowerCase().includes('hn325') ||
+   p.data.model?.toLowerCase().includes('mini') ||
+   p.data.title?.en?.toLowerCase().includes('mini'))
+).slice(0, 4);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.manual.breadcrumbHome, item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: t.manual.breadcrumbProducts, item: 'https://www.hydoilpress.com/products' },
+    { '@type': 'ListItem', position: 3, name: t.manual.breadcrumbCurrent, item: 'https://www.hydoilpress.com/commercial-hydraulic-oil-press' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: t.manual.faqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title={t.manual.title}
+  description={t.manual.description}
+  keywords={['commercial hydraulic oil press', 'industrial oil press machine', 'hydraulic oil press for business', 'large capacity oil press', 'professional oil press machine']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">{t.manual.breadcrumbHome}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/products" class="hover:text-amber-500 transition-colors">{t.manual.breadcrumbProducts}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{t.manual.breadcrumbCurrent}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">{t.manual.heroTitle}</h1>
+      <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.manual.heroDesc}</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {t.manual.getPricing}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/hydraulic-oil-press-machine" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
+          {t.manual.viewModels}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{t.manual.whyChoose}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#128161;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.industrialCapacity.title}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{t.manual.industrialCapacity.desc}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#128200;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.professionalYield.title}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{t.manual.professionalYield.desc}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#128736;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.lowPower.title}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{t.manual.lowPower.desc}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#128181;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.costEffective.title}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{t.manual.costEffective.desc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl p-8 border-2 border-amber-200">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl shrink-0">&#128161;</div>
+          <div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.manual.hydraulicAdvantageTitle}</h3>
+            <p class="text-steel-600 leading-relaxed mb-3">{t.manual.hydraulicAdvantageDesc}</p>
+            <ul class="text-steel-600 space-y-2 mb-4">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{t.manual.hydraulicAdvantage1}</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{t.manual.hydraulicAdvantage2}</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{t.manual.hydraulicAdvantage3}</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{t.manual.hydraulicAdvantage4}</strong></span>
+              </li>
+            </ul>
+            <a href="/hydraulic-oil-press-machine" class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              {t.manual.exploreHydraulic}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {manualProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title text-center mb-12">{t.manual.productModelsTitle}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {manualProducts.map(product => (
+            <a
+              href={`/products/${product.slug}`}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Compact%20hydraulic%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {product.data.specifications.slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{t.manual.applicationsTitle}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127807;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.sesameOilApp.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.manual.sesameOilApp.tag}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.manual.sesameOilApp.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.manual.sesameOilApp.yield}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129372;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.peanutOilApp.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.manual.peanutOilApp.tag}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.manual.peanutOilApp.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.manual.peanutOilApp.yield}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127795;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.palmKernelOilApp.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.manual.palmKernelOilApp.tag}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.manual.palmKernelOilApp.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.manual.palmKernelOilApp.yield}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127811;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.manual.coconutOilApp.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.manual.coconutOilApp.tag}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.manual.coconutOilApp.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.manual.coconutOilApp.yield}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">{t.manual.faqTitle}</h2>
+      <div class="space-y-4">
+        {t.manual.faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{t.manual.ctaTitle}</h2>
+      <p class="text-steel-300 text-lg mb-8">{t.manual.ctaDesc}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {t.manual.getPricing}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128?text=Hello%20Haonuo%2C%20I%20am%20interested%20in%20a%20commercial%20hydraulic%20oil%20press%20machine" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-500 transition-colors text-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          {t.manual.whatsappUs}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

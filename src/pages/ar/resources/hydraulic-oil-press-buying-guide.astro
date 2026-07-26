@@ -1,0 +1,235 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+
+const t = getTranslations('ar');
+const title = 'دليل شراء مكبس الزيت الهيدروليكي';
+const description = 'كيفية اختيار الجهاز المناسب لعملك';
+const seoKeywords = ['شراء مكبس هيدروليكي', 'دليل اختيار مكبس', 'مكينة هيدروليكي'];
+const publishedAt = new Date();
+const updatedAt = publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/buying-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'مهندس مكبس زيت وكيل',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+    { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/hydraulic-oil-press-buying-guide' },
+  ],
+};
+
+const keyFactors = [
+  { title: 'نوع المادة الأولية', items: ['البذور التقليدية: السمسم، الفول السوداني، اللفت، الصويا، بذور الشاي', 'المواد ذات القشرة الصلبة: الجوز، اللوز، قصب البرقوق، جوز النمر', 'الضغط البارد فقط: المواد التي تتطلب استخراجًا عند درجة حرارة منخفضة'] },
+  { title: 'مقياس الإنتاج', items: ['المقياس الصغير: 500-1500 كجم/يوم', 'المقياس المتوسط: 1500-3000 كجم/يوم', 'المقياس الكبير: 3000+ كجم/يوم'] },
+  { title: 'طريقة الضغط', items: ['الضغط الساخن: ناتج أعلى، وقت دورة أسرع (30-40 دقيقة/دفعة)', 'الضغط البارد: زيت ذو جودة فائقة، وقت دورة أطول (2 ساعات/دفعة)'] },
+];
+
+const models = [
+  { name: 'HN325 Standard', bestFor: ['المُنتجون بالمقياس الصغير', 'البذور الزيتية التقليدية (السمسم، الفول السوداني، اللفت، الصويا)', 'عمليات الضغط الساخن'], specs: ['قوة الضغط 325 طن', 'ضغط النظام 60 ميجاباسكال', 'ضغط سطح الكيك 27.78 ميجاباسكال/سم2', 'سعة الدفعة 100 كجم', 'قوة المحرك 2.2 كيلوواط'] },
+  { name: 'HN355 Heavy Duty', bestFor: ['العمليات التجارية المتوسطة', 'معالجة المواد الأكثر صلابة قليلاً', 'التشغيل المكثف المستمر'], specs: ['قوة الضغط 360 طن', 'ضغط النظام 63 ميجاباسكال', 'ضغط سطح الكيك 30.15 ميجاباسكال/سم2', 'سعة الدفعة 100 كجم'] },
+  { name: 'HN426 Cold Press', bestFor: ['عمليات الضغط البارد', 'المواد ذات القشرة الصلبة (الجوز، اللوز، قصب البرقوق)', 'إنتاج الزيت الفاخر'], specs: ['قوة الضغط 500 طن', 'ضغط النظام 70 ميجاباسكال', 'ضغط سطح الكيك 42 ميجاباسكال/سم2', 'سعة الدفعة 100 كجم'] },
+  { name: 'HN480 High Pressure', bestFor: ['متطلبات الإنتاج المختلط', 'العمليات من المتوسط إلى الكبير', 'المواد التقليدية ومواد الضغط البارد'], specs: ['قوة الضغط 560 طن', 'ضغط النظام 72 ميجاباسكال', 'ضغط سطح الكيك 48 ميجاباسكال/سم2', 'سعة الدفعة 100 كجم'] },
+  { name: 'HN500 Ultra High Pressure', bestFor: ['العمليات الصناعية الكبيرة', 'أشق المواد لضغط بارد', 'متطلبات العائد القصوى'], specs: ['قوة الضغط 620 طن', 'ضغط النظام 75 ميجاباسكال', 'ضغط سطح الكيك 52 ميجاباسكال/سم2', 'سعة الدفعة 100 كجم'] },
+];
+
+const decisionTree = [
+  { category: 'البذور التقليدية فقط', options: ['مقياس صغير -> HN325', 'مقياس متوسط -> HN355', 'مقياس كبير -> HN500'] },
+  { category: 'مواد الضغط البارد', options: ['ضغط بارد قياسي -> HN426', 'ضغط بارد عالي السعة -> HN480', 'ضغط بارد قصوى العائد -> HN500'] },
+  { category: 'مواد مختلطة', options: ['أداء متوازن -> HN480', 'مرونة قصوى -> HN500'] },
+];
+
+const barrelConfig = [
+  { type: 'برميل واحد', features: ['التكلفة الأولية الأقل', 'التشغيل الأبسط', 'المثالي للعمليات الصغيرة أو الشركات الناشئة'] },
+  { type: 'برميل مزدوج', features: ['يضاعف تقريبًا الإنتاج', 'قدرة التشغيل المستمر', 'موصى به للاستخدام التجاري والصناعي'] },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="ar">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/ar/" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/ar/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          دليل الشراء
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-right">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">مهندس مكبس زيت وكيل · 15+ سنة من الخبرة</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">مقدمة</h2>
+        <p class="text-steel-700 leading-relaxed">
+          اختيار مكبس الزيت الهيدروليكي المناسب هو قرار استثماري حاسم يؤثر مباشرة على سعة إنتاجك، عائد الزيت، وربحك الإجمالي. مع توفر نماذج متعددة، فهم الفروقات الرئيسية بينها أمر أساسي لاتخاذ قرار مستنير.
+        </p>
+      </section>
+
+      <section id="key-factors" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">العوامل الرئيسية التي يجب مراعاتها</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {keyFactors.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-amber-600 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="model-comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مقارنة النماذج</h2>
+        <div class="space-y-6">
+          {models.map((item, index) => (
+            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-xl text-charcoal-900 mb-4">{item.name} مكبس الزيت الهيدروليكي</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-amber-600 mb-3">المثالي لـ:</h4>
+                  <ul class="space-y-2">
+                    {item.bestFor.map((feature, idx) => (
+                      <li key={idx} class="flex items-center gap-2 text-steel-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-blue-600 mb-3">المواصفات الرئيسية:</h4>
+                  <ul class="space-y-2">
+                    {item.specs.map((spec, idx) => (
+                      <li key={idx} class="text-steel-700">{spec}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="decision-tree" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">شجرة القرار</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">الخطوة 1: تحديد مادةك الأولية الرئيسية</h3>
+        <div class="space-y-4">
+          {decisionTree.map((item, index) => (
+            <div key={index} class="bg-gradient-to-br from-steel-50 to-steel-100 p-5 rounded-xl border border-steel-200">
+              <h4 class="font-semibold text-charcoal-900 mb-2">{item.category}</h4>
+              <ul class="space-y-1">
+                {item.options.map((option, idx) => (
+                  <li key={idx} class="text-steel-700">{option}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="barrel-configuration" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تكوين البرميل الأحادي مقابل المزدوج</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {barrelConfig.map((item, index) => (
+            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-charcoal-900 mb-4">{item.type}</h3>
+              <ul class="space-y-2">
+                {item.features.map((feature, idx) => (
+                  <li key={idx} class="flex items-center gap-2 text-steel-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
+        <p class="text-steel-700 leading-relaxed">
+          اختيار مكبس الزيت الهيدروليكي المناسب يتطلب تقييمًا دقيقًا لمتطلبات إنتاجك المحددة، موادك، والقيود التشغيلية. للحصول على توصيات مخصصة بناءً على احتياجاتك المحددة، اتصل بفريقنا الهندسي للحصول على استشارة مجانية.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت؟</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">فريقنا الهندسي يمكنه مساعدتك في اختيار أفضل المعدات وتحسين استثمارك لتحقيق أقصى عوائد.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/ar/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          اتصل بخبراؤنا
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/ar/products" class="btn-outline border-white text-white hover:bg-white/10">
+          تصفح المعدات
+        </a>
+        <a href="/ar/resources" class="btn-outline border-white text-white hover:bg-white/10">
+          العودة للموارد
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

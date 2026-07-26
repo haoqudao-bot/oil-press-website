@@ -1,0 +1,579 @@
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+import { getTranslations } from '../i18n';
+
+const { locale = 'en' } = Astro.props;
+const currentPath = Astro.url.pathname || '/';
+
+const t = getTranslations(locale as any);
+
+const localeLabels: Record<string, string> = { en: 'EN', fr: 'FR', ar: 'العربية', id: 'ID' };
+const locales = ['en', 'fr', 'ar', 'id'] as const;
+
+// Pages that only exist in English (no [locale] version)
+// Value: '' = stay on English page; '/path' = redirect to locale version of that path
+const englishOnlyPages: Record<string, string> = {
+  '/roi-calculator': '',
+  '/solutions/all-oil-types': '/solutions',
+  '/solutions/by-scale': '/solutions',
+};
+
+function localePath(path: string): string {
+  if (locale === 'en') return path;
+  // Check if path is an English-only page with a locale fallback
+  if (englishOnlyPages[path] !== undefined) {
+    const fallback = englishOnlyPages[path];
+    return fallback ? `/${locale}${fallback}` : path;
+  }
+  return `/${locale}${path}`;
+}
+
+const productsSubItems = [
+  { href: '/products/hydraulic-oil-press', label: t.nav.hydraulicOilPress },
+  { href: '/products/seed-processing-equipment', label: t.nav.seedProcessing },
+  { href: '/products/roasting-steaming-equipment', label: t.nav.roastingSteaming },
+  { href: '/products/filtration-refining-equipment', label: t.nav.filtrationRefining },
+];
+
+const seedSolutions = [
+  { href: '/solutions/soybean-oil-pressing', label: t.nav.soybeanOil },
+  { href: '/solutions/palm-oil-pressing', label: t.nav.palmKernelOil },
+  { href: '/solutions/sunflower-oil-pressing', label: t.nav.sunflowerOil },
+  { href: '/solutions/coconut-oil-pressing', label: t.nav.coconutOil },
+  { href: '/solutions/peanut-oil-pressing', label: t.nav.peanutOil },
+  { href: '/solutions/sesame-oil-pressing', label: t.nav.sesameOil },
+  { href: '/solutions/mustard-oil-pressing', label: t.nav.mustardOil },
+  { href: '/solutions/olive-oil-pressing', label: t.nav.oliveOil },
+  { href: '/solutions/cottonseed-oil-pressing', label: t.nav.cottonseedOil },
+  { href: '/solutions/shea-butter-pressing', label: (t as any).common?.sheaButter || t.nav.sheaButter },
+  { href: '/solutions/castor-oil-pressing', label: t.nav.castorOil },
+  { href: '/solutions/avocado-oil-pressing', label: t.nav.avocadoOil },
+  { href: '/solutions/almond-oil-pressing', label: t.nav.almondOil },
+  { href: '/solutions/walnut-oil-pressing', label: t.nav.walnutOil },
+  { href: '/solutions/flaxseed-oil-pressing', label: t.nav.flaxseedOil },
+];
+
+const marketsSubItems = [
+  { href: '/markets/nigeria', label: t.nav.nigeria },
+  { href: '/markets/india', label: t.nav.india },
+  { href: '/markets/indonesia', label: t.nav.indonesia },
+  { href: '/markets/pakistan', label: t.nav.pakistan },
+  { href: '/markets/philippines', label: t.nav.philippines },
+  { href: '/markets/egypt', label: t.nav.egypt },
+  { href: '/markets/south-africa', label: t.nav.southAfrica },
+  { href: '/markets/kenya', label: t.nav.kenya },
+  { href: '/markets/uk', label: t.nav.uk },
+  { href: '/markets/usa', label: t.nav.usa },
+  { href: '/markets/middle-east', label: t.nav.middleEast },
+];
+
+const scaleSolutions = [
+  { href: '/solutions/small-business-oil-press', label: '🏠 ' + t.nav.smallBusiness },
+  { href: '/solutions/commercial-oil-press', label: '🏪 ' + t.nav.commercial },
+  { href: '/solutions/industrial-oil-press', label: '🏭 ' + t.nav.industrial },
+  { href: '/products/mini-hydraulic-oil-press', label: '🤲 ' + ((t as any).common?.manual || 'Manual') },
+];
+
+const guideItems = [
+  { href: '/resources/hydraulic-oil-press-buying-guide', label: ((t as any).nav?.guideBuying || 'Buying Guide') },
+  { href: '/resources/peanut-oil-pressing-guide', label: ((t as any).nav?.guidePeanutOil || 'Peanut Oil Guide') },
+  { href: '/resources/oil-press-raw-materials-guide', label: ((t as any).nav?.guideRawMaterials || 'Raw Materials Guide') },
+  { href: '/resources/how-to-maximize-oil-yield', label: ((t as any).nav?.guideYieldImprovement || 'Maximize Oil Yield') },
+  { href: '/resources/hydraulic-oil-press-maintenance-guide', label: ((t as any).nav?.guideMaintenance || 'Maintenance Guide') },
+  { href: '/resources/oil-press-electrical-requirements-guide', label: ((t as any).nav?.guideElectrical || 'Electrical Guide') },
+  { href: '/resources/crude-oil-filtration-guide', label: ((t as any).nav?.guideFiltration || 'Oil Filtration') },
+  { href: '/resources/aflatoxin-control-guide', label: ((t as any).nav?.guideAflatoxin || 'Aflatoxin Control') },
+  { href: '/resources/oil-cake-byproduct-guide', label: ((t as any).nav?.guideByproduct || 'By-Product Guide') },
+  { href: '/resources/complete-oil-production-line-guide', label: ((t as any).nav?.guideProductionLine || 'Production Line') },
+];
+
+const comparisonItems = [
+  { href: '/resources/cold-press-vs-hot-press-oil', label: ((t as any).nav?.compColdVsHot || 'Cold vs Hot Press') },
+  { href: '/resources/hydraulic-oil-press-vs-other-types', label: ((t as any).nav?.compHydraulicVsOthers || 'Hydraulic vs Others') },
+];
+---
+
+<header
+  id="main-navbar"
+  class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-steel-100 transition-shadow duration-300 no-print"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href={localePath('/')} class="flex items-center gap-2 shrink-0">
+        <div class="w-10 h-10 bg-steel-900 rounded-lg flex items-center justify-center">
+          <span class="text-amber-500 font-display text-xl font-bold">HN</span>
+        </div>
+        <span class="font-display text-lg md:text-xl text-steel-900 tracking-wide leading-tight">
+          HAONUO<br class="hidden sm:block" />
+          <span class="text-sm font-normal tracking-widest">MACHINERY</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <!-- Home -->
+        <a
+          href={localePath('/')}
+          class:list={[
+            'px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-amber-500 rounded-md',
+            currentPath === '/' || currentPath === `/${locale}` ? 'text-amber-500' : 'text-steel-700'
+          ]}
+        >
+          {t.nav.home}
+        </a>
+
+        <!-- Products Dropdown -->
+        <div class="relative group flex items-center">
+          <a href={localePath('/products')} class="px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-amber-500 rounded-md text-steel-700">
+            {t.nav.products}
+          </a>
+          <button class="px-1 py-2 text-sm text-steel-700 hover:text-amber-500 transition-colors" aria-label={(t as any).contact?.toggleDropdown || 'Toggle dropdown'}>
+            <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+          </button>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white rounded-xl shadow-xl border border-steel-100 p-4 min-w-[220px]">
+              <ul class="space-y-1">
+                {productsSubItems.map(item => (
+                  <li>
+                    <a
+                      href={localePath(item.href)}
+                      class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+                <li class="pt-2 mt-2 border-t border-steel-100">
+	                  <a
+                    href={localePath('/hydraulic-oil-press-machine')}
+                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                  >
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    {(t as any).common?.hydraulicOilPressMachine || 'Hydraulic Oil Press Machine'}
+                  </a>
+	                </li>
+	                <li>
+	                  <a
+                    href={localePath('/cold-press-oil-machine')}
+                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                  >
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    {(t as any).common?.coldPressOilMachine || 'Cold Press Oil Machine'}
+                  </a>
+	                </li>
+	                <li>
+	                  <a
+                    href={localePath('/manual-oil-press-machine')}
+                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                  >
+                    <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
+                    {(t as any).common?.manualOilPressMachine || 'Manual Oil Press Machine'}
+                  </a>
+	                </li>
+                <li class="pt-2 mt-1 border-t border-steel-100">
+                  <a
+                    href={localePath('/products/model-comparison')}
+                    class="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                  >
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13h2v8H3zM9 5h2v16H9zM15 9h2v12h-2zM21 2h2v19h-2z"/></svg>
+                    {t.nav.modelComparison}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={localePath('/catalog')}
+                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                  >
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    {(t as any).nav?.catalog || 'Product Catalog'}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solutions Dropdown (includes Markets as By Region) -->
+        <div class="relative group flex items-center">
+          <a href={localePath('/solutions')} class="px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-amber-500 rounded-md text-steel-700">
+            {t.nav.solutions}
+          </a>
+          <button class="px-1 py-2 text-sm text-steel-700 hover:text-amber-500 transition-colors" aria-label={(t as any).contact?.toggleDropdown || 'Toggle dropdown'}>
+            <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+          </button>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white rounded-xl shadow-xl border border-steel-100 p-4 min-w-[600px]">
+              <div class="grid grid-cols-3 gap-x-6">
+                <!-- Col 1: By Oil Type -->
+                <ul class="space-y-1">
+	                  <li class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">{(t as any).common?.byOilType || 'By Oil Type'}</li>
+	                  <li class="mb-1">
+	                    <a href={localePath('/solutions/all-oil-types')} class="block px-3 py-1.5 text-xs font-semibold text-amber-600 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors">
+	                      🛢️ {(t as any).common?.allOilTypes || 'All Oil Types'}
+	                    </a>
+	                  </li>
+                  {seedSolutions.map(item => (
+                    <li>
+                      <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors whitespace-nowrap">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <!-- Col 2: By Region -->
+	                <ul class="space-y-1">
+	                  <li class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">{(t as any).common?.byRegion || 'By Region'}</li>
+	                  <li class="mb-1">
+	                    <a href={localePath('/markets')} class="block px-3 py-1.5 text-xs font-semibold text-amber-600 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors">
+	                      🌍 {(t as any).common?.allMarkets || 'All Markets'} <span class="ml-1 text-[10px] bg-amber-200 text-amber-800 px-1.5 py-0.5 rounded-full">{(t as any).common?.fiftyPlusCountries || '50+ Countries'}</span>
+	                    </a>
+	                  </li>
+                  {marketsSubItems.map(item => (
+                    <li>
+                      <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors whitespace-nowrap">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <!-- Col 3: By Scale -->
+	                <ul class="space-y-1">
+	                  <li class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">{(t as any).common?.byScale || 'By Scale'}</li>
+                  {scaleSolutions.map(item => (
+                    <li>
+                      <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors whitespace-nowrap">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Dropdown (with News, Guides, Comparisons, Tools) -->
+        <div class="relative group flex items-center">
+          <a href={localePath('/resources')} class="px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-amber-500 rounded-md text-steel-700">
+            {t.nav.resources}
+          </a>
+          <button class="px-1 py-2 text-sm text-steel-700 hover:text-amber-500 transition-colors" aria-label={(t as any).contact?.toggleDropdown || 'Toggle dropdown'}>
+            <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+          </button>
+          <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white rounded-xl shadow-xl border border-steel-100 p-4 min-w-[400px]">
+              <div class="grid grid-cols-2 gap-x-6 gap-y-1">
+                <!-- Guides & Tutorials -->
+                <div>
+                  <p class="px-3 py-1 text-xs font-semibold text-amber-600 uppercase tracking-wider">📖 {(t as any).common?.guidesTutorials || 'Guides & Tutorials'}</p>
+                  {guideItems.map(item => (
+                    <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors">
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+                <!-- Comparisons & Tools -->
+                <div>
+                  <p class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">⚖️ {(t as any).common?.comparisons || 'Comparisons'}</p>
+                  {comparisonItems.map(item => (
+                    <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors">
+                      {item.label}
+                    </a>
+                  ))}
+                  <div class="mt-2 pt-2 border-t border-steel-100">
+                    <p class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">🛠️ {(t as any).common?.tools || 'Tools'}</p>
+                    <a href={localePath('/roi-calculator')} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors">
+                      📊 {(t as any).common?.roiCalculator || 'ROI Calculator'}
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 pt-2 border-t border-steel-100">
+                <a href={localePath('/resources')} class="block px-3 py-1.5 text-xs text-amber-500 hover:text-amber-600 font-medium text-center">{(t as any).common?.viewAll || 'View All Resources'} →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Dropdown -->
+        <div class="relative group flex items-center">
+          <a href={localePath('/about')} class="px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-amber-500 rounded-md text-steel-700">
+            {t.nav.about}
+          </a>
+          <button class="px-1 py-2 text-sm text-steel-700 hover:text-amber-500 transition-colors" aria-label={(t as any).contact?.toggleDropdown || 'Toggle dropdown'}>
+            <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+          </button>
+          <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white rounded-xl shadow-xl border border-steel-100 p-3 min-w-[200px]">
+	              <ul class="space-y-1">
+	                <li>
+	                  <a href={localePath('/about')} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors">
+	                    🏢 {(t as any).common?.aboutUs || 'About Us'}
+	                  </a>
+	                </li>
+	                <li>
+	                  <a href={localePath('/services')} class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors">
+	                    🔧 {(t as any).common?.services || t.nav.services || 'Services'}
+	                  </a>
+	                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <a
+          href={localePath('/contact')}
+          class:list={[
+            'px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-amber-500 rounded-md',
+            currentPath.startsWith('/contact') || currentPath.startsWith(`/${locale}/contact`) ? 'text-amber-500' : 'text-steel-700'
+          ]}
+        >
+          {t.nav.contact}
+        </a>
+      </nav>
+
+      <!-- Right side: Language + CTA + Mobile menu -->
+      <div class="flex items-center gap-3">
+        <!-- Language Switcher -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-sm text-steel-600 hover:text-steel-900 px-2 py-1 rounded transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>{localeLabels[locale] || 'EN'}</span>
+          </button>
+          <div class="absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-steel-100 py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[120px]">
+            {locales.map(l => (
+              <button
+                data-lang={l}
+                class:list={[
+                  'block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-steel-50 lang-switch-btn',
+                  l === locale ? 'text-amber-500 font-medium' : 'text-steel-700'
+                ]}
+              >
+                {localeLabels[l]}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href={localePath('/contact')} class="hidden sm:inline-flex btn-primary text-sm px-4 py-2">
+          {t.common.getQuote}
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-steel-700 hover:text-steel-900" aria-label={(t as any).contact?.menuButton || 'Menu'}>
+          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-steel-100 max-h-[calc(100vh-4rem)] overflow-y-auto">
+    <div class="px-4 py-3 space-y-1">
+      <a href={localePath('/')} class="block px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+        {t.nav.home}
+      </a>
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+          {t.nav.products}
+          <svg class="w-3 h-3 transition-transform duration-200" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+        </button>
+        <div class="mobile-accordion-content hidden pl-4">
+          <a href={localePath('/products')} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors font-medium">
+	            {(t as any).common?.allProducts || 'All Products'}
+	          </a>
+          {productsSubItems.map(item => (
+            <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+              {item.label}
+            </a>
+          ))}
+          <a href={localePath('/hydraulic-oil-press-machine')} class="flex items-center gap-2 mt-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+	            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+	            {(t as any).common?.hydraulicOilPressMachine || 'Hydraulic Oil Press Machine'}
+	          </a>
+	          <a href={localePath('/cold-press-oil-machine')} class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            {(t as any).common?.coldPressOilMachine || 'Cold Press Oil Machine'}
+          </a>
+          <a href={localePath('/manual-oil-press-machine')} class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
+            {(t as any).common?.manualOilPressMachine || 'Manual Oil Press Machine'}
+          </a>
+          <a href={localePath('/products/model-comparison')} class="flex items-center gap-2 mt-2 px-3 py-2 text-sm font-semibold text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13h2v8H3zM9 5h2v16H9zM15 9h2v12h-2zM21 2h2v19h-2z"/></svg>
+            {t.nav.modelComparison}
+          </a>
+          <a href={localePath('/catalog')} class="flex items-center gap-2 mt-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            {(t as any).nav?.catalog || 'Product Catalog'}
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+          {t.nav.solutions}
+          <svg class="w-3 h-3 transition-transform duration-200" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+        </button>
+        <div class="mobile-accordion-content hidden pl-4">
+          <a href={localePath('/solutions')} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors font-medium">
+	            {(t as any).common?.allSolutions || 'All Solutions'}
+	          </a>
+	          <div class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">{(t as any).common?.byOilType || 'By Oil Type'}</div>
+	          <a href={localePath('/solutions/all-oil-types')} class="block px-3 py-2 text-sm font-medium text-amber-600 bg-amber-50 rounded-lg transition-colors">
+	            🛢️ {(t as any).common?.allOilTypes || 'All Oil Types'}
+	          </a>
+          {seedSolutions.map(item => (
+            <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+              {item.label}
+            </a>
+          ))}
+          <div class="my-2 border-t border-steel-100"></div>
+	          <div class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">{(t as any).common?.byScale || 'By Scale'}</div>
+          {scaleSolutions.map(item => (
+            <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+              {item.label}
+            </a>
+          ))}
+          <div class="my-2 border-t border-steel-100"></div>
+	          <div class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">{(t as any).common?.byRegion || 'By Region'}</div>
+	          <a href={localePath('/markets')} class="block px-3 py-2 text-sm font-medium text-amber-600 bg-amber-50 rounded-lg transition-colors">
+	            🌍 {(t as any).common?.allMarkets || 'All Markets'}
+	          </a>
+          {marketsSubItems.map(item => (
+            <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+          {t.nav.resources}
+          <svg class="w-3 h-3 transition-transform duration-200" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+        </button>
+        <div class="mobile-accordion-content hidden pl-4">
+          <a href={localePath('/resources')} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors font-medium">
+	            {(t as any).common?.allResources || 'All Resources'}
+	          </a>
+	          <div class="px-3 py-1 text-xs font-semibold text-amber-600 uppercase tracking-wider">📖 {(t as any).common?.guidesTutorials || 'Guides & Tutorials'}</div>
+          {guideItems.map(item => (
+            <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+              {item.label}
+            </a>
+          ))}
+          <div class="my-2 border-t border-steel-100"></div>
+	          <div class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">⚖️ {(t as any).common?.comparisons || 'Comparisons'}</div>
+          {comparisonItems.map(item => (
+            <a href={localePath(item.href)} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+              {item.label}
+            </a>
+          ))}
+          <div class="my-2 border-t border-steel-100"></div>
+	          <div class="px-3 py-1 text-xs font-semibold text-steel-400 uppercase tracking-wider">🛠️ {(t as any).common?.tools || 'Tools'}</div>
+	          <a href={localePath('/roi-calculator')} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+	            📊 {(t as any).common?.roiCalculator || 'ROI Calculator'}
+	          </a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+          {t.nav.about}
+          <svg class="w-3 h-3 transition-transform duration-200" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
+        </button>
+        <div class="mobile-accordion-content hidden pl-4">
+          <a href={localePath('/about')} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+	            🏢 {(t as any).common?.aboutUs || 'About Us'}
+	          </a>
+	          <a href={localePath('/services')} class="block px-3 py-2 text-sm text-steel-500 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+	            🔧 {(t as any).common?.services || t.nav.services || 'Services'}
+	          </a>
+        </div>
+      </div>
+
+      <a href={localePath('/contact')} class="block px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors">
+        {t.nav.contact}
+      </a>
+
+      <!-- Language Switcher -->
+      <div class="flex gap-2 pt-3 mt-2 border-t border-steel-100">
+        {locales.map(l => (
+          <button
+            data-lang={l}
+            class:list={[
+              'px-3 py-1 text-sm rounded-full border transition-colors lang-switch-btn',
+              l === locale ? 'bg-amber-500 text-charcoal-900 border-amber-500 font-medium' : 'border-steel-200 text-steel-600 hover:border-amber-500'
+            ]}
+          >
+            {localeLabels[l]}
+          </button>
+        ))}
+      </div>
+
+      <a href={localePath('/contact')} class="block text-center btn-primary text-sm px-4 py-2 mt-2">
+        {t.common.getQuote}
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 md:h-20"></div>
+
+<script>
+  // Scroll shadow
+  const navbar = document.getElementById('main-navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar?.classList.add('shadow-md');
+    } else {
+      navbar?.classList.remove('shadow-md');
+    }
+  });
+
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+  });
+
+  // Mobile accordion
+  document.querySelectorAll('.mobile-accordion-btn').forEach(accordionBtn => {
+    accordionBtn.addEventListener('click', () => {
+      const content = (accordionBtn.parentElement as HTMLElement)?.querySelector('.mobile-accordion-content');
+      const arrow = accordionBtn.querySelector('svg');
+      content?.classList.toggle('hidden');
+      arrow?.classList.toggle('rotate-180');
+    });
+  });
+
+  // Language switcher - navigate to locale URL
+  document.querySelectorAll('.lang-switch-btn').forEach(langBtn => {
+    langBtn.addEventListener('click', () => {
+      const lang = langBtn.getAttribute('data-lang');
+      if (!lang) return;
+
+      const currentPath = window.location.pathname;
+      const pathWithoutLocale = currentPath.replace(/^\/(fr|ar|id)(\/|$)/, '/');
+
+      if (lang === 'en') {
+        window.location.href = pathWithoutLocale + window.location.search;
+      } else {
+        const cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
+        window.location.href = `/${lang}${cleanPath}${window.location.search}`;
+      }
+    });
+  });
+</script>

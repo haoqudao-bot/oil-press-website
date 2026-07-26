@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allSolutions = await getCollection('solutions');
+
+const seedSolutions = allSolutions
+  .filter(s => !['small-business', 'commercial', 'industrial'].includes(s.data.seedName))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const scaleSolutions = allSolutions
+  .filter(s => ['small-business', 'commercial', 'industrial'].includes(s.data.seedName))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const seedIcons: Record<string, string> = {
+  coconut: '🥥', sesame: '🫘', peanut: '🥜', mustard: '🌾',
+  sunflower: '🌻', shea: '🧈', palm: '🌴', avocado: '🥑',
+  almond: '🌰', castor: '🌱', olive: '🫒', cottonseed: '🎯',
+  soybean: '🫘', walnut: '🌰', flaxseed: '🌾',
+};
+
+const scaleIcons: Record<string, string> = {
+  'small-business': '🏪', commercial: '🏭', industrial: '⚙️',
+};
+
+const seedDescriptions: Record<string, Record<string, string>> = {
+  soybean: { en: 'The world\'s most produced vegetable oil. Our screw expellers and hydraulic presses handle 18-22% oil content soybeans with maximum yield.', fr: 'L\'huile végétale la plus produite au monde. Nos expelleurs à vis et presses hydrauliques traitent le soja avec un rendement maximal.', ar: 'أكثر زيوت نباتية إنتاجاً في العالم. تعمل مغازلنا و пресاتنا الهيدروليكية على فول الصويا بأقصى عائد.', id: 'Minyak nabati yang paling banyak diproduksi di dunia. Mesin press kami menangani kedelai dengan hasil maksimal.' },
+  palm: { en: 'Tropical palm kernel oil extraction. High-efficiency pressing solutions for palm kernel and fruit with specialized equipment.', fr: 'Extraction d\'huile de palmiste tropical. Solutions de pressage haute efficacité avec équipements spécialisés.', ar: 'استخراج زيت نواة النخيل الاستوائي. حلول عصر عالية الكفاءة بمعدات متخصصة.', id: 'Ekstraksi minyak inti sawit tropis. Solusi penekanan efisiensi tinggi dengan peralatan khusus.' },
+  sunflower: { en: 'Premium cold-pressed sunflower oil production. Preserve natural Vitamin E and nutrients with our low-temperature hydraulic press.', fr: 'Production d\'huile de tournesol pressée à froid premium. Préservez la vitamine E naturelle et les nutriments.', ar: 'إنتاج زيت عباد الشمس الممتاز المعصور على البارد. الحفاظ على فيتامين E الطبيعي والمغذيات.', id: 'Produksi minyak bunga matahari premium yang dicold-press. Mempertahankan Vitamin E alami dan nutrisi.' },
+  coconut: { en: 'Virgin coconut oil (VCO) production. Our hydraulic presses deliver pure, cold-pressed coconut oil with exceptional quality.', fr: 'Production d\'huile de coco vierge (VCO). Nos presses hydrauliques produisent une huile de coco pure de qualité exceptionnelle.', ar: 'إنتاج زيت جوز الهند البكر. تنتج Presseاتنا الهيدروليكية زيت جوز هند نقي بجودة استثنائية.', id: 'Produksi minyak kelapa virgin (VCO). Mesin press hidrolik kami menghasilkan minyak kelapa murni berkualitas tinggi.' },
+  peanut: { en: 'High-yield groundnut oil pressing. Robust machines built for continuous operation in African and Asian markets.', fr: 'Pressage d\'huile d\'arachide à haut rendement. Machines robustes pour fonctionnement continu en Afrique et en Asie.', ar: 'عصر زيت الفول السوداني عالي العائد. آلات متينة مصممة للتشغيل المستمر في الأسواق الأفريقية والآسيوية.', id: 'Penekanan minyak kacang tanah berhasil tinggi. Mesin kokoh untuk operasi berkelanjutan di pasar Afrika dan Asia.' },
+  sesame: { en: 'Premium sesame oil extraction. Temperature-controlled cold pressing preserves the delicate flavor and aroma.', fr: 'Extraction d\'huile de sésame premium. Le pressage à froid contrôlé en température préserve la saveur délicate.', ar: 'استخراج زيت السمسم الممتاز. العصر على البارد مع التحكم في درجة الحرارة يحافظ على النكهة والرائحة.', id: 'Ekstraksi minyak wijen premium. Cold press dengan kontrol suhu mempertahankan rasa dan aroma alami.' },
+  mustard: { en: 'Traditional mustard oil production. Heavy-duty presses designed for small hard seeds with high pungency preservation.', fr: 'Production traditionnelle d\'huile de moutarde. Presses robustes conçues pour les petites graines dures.', ar: 'إنتاج زيت الخردل التقليدي. Preses متينة مصممة للبذور الصغيرة والصلبة.', id: 'Produksi minyak sawi tradisional. Mesin press berat dirancang untuk biji kecil yang keras.' },
+  olive: { en: 'Extra virgin olive oil production. Gentle cold pressing technology that preserves polyphenols and authentic flavor.', fr: 'Production d\'huile d\'olive extra vierge. Technologie de pressage à froid doux qui préserve les polyphénols.', ar: 'إنتاج زيت الزيتون البكر الممتاز. تقنية العصر على البارد اللطيفة التي تحافظ على البوليفينول والنكهة الأصيلة.', id: 'Produksi minyak zaitun extra virgin. Teknologi cold press lembut yang mempertahankan polifenol dan rasa autentik.' },
+  cottonseed: { en: 'Industrial cottonseed oil extraction. High-capacity solutions with integrated filtration and refining equipment.', fr: 'Extraction industrielle d\'huile de coton. Solutions haute capacité avec équipements de filtration et raffinage intégrés.', ar: 'استخراج زيت بذور القطن الصناعي. حلول عالية السعة مع معدات ترشيح وتكرير متكاملة.', id: 'Ekstraksi minyak biji kapas industri. Solusi kapasitas tinggi dengan peralatan filtrasi dan pemurnian terintegrasi.' },
+  shea: { en: 'Shea butter and shea oil production. Specialized hydraulic presses for high-value West African shea products.', fr: 'Production de beurre de karité et d\'huile de karité. Presses hydrauliques spécialisées pour les produits ouest-africains.', ar: 'إنتاج زبدة الشيا وزيت الشيا. Preses هيدروليكية متخصصة لمنتجات الشيا في غرب أفريقيا.', id: 'Produksi mentega shea dan minyak shea. Mesin press hidrolik khusus untuk produk shea Afrika Barat.' },
+  castor: { en: 'Industrial castor oil pressing. Heavy-duty machines for high-viscosity oil extraction used in lubricants and polymers.', fr: 'Pressage industriel d\'huile de ricin. Machines lourdes pour l\'extraction d\'huile à haute viscosité.', ar: 'عصر زيت الخروع الصناعي. آلات ثقيلة لاستخراج الزيت عالي اللزوجة المستخدم في زيوت التشحيم والبوليمرات.', id: 'Penekanan minyak jarak industri. Mesin berat untuk ekstraksi minyak viskositas tinggi.' },
+  avocado: { en: 'Premium avocado oil production. Cold press technology that preserves omega-3 fatty acids and natural green color.', fr: 'Production d\'huile d\'avocat premium. Technologie de pressage à froid préservant les acides gras oméga-3.', ar: 'إنتاج زيت الأفوكادو الممتاز. تقنية العصر على البارد التي تحافظ على أحماض أوميغا-3 الدهنية واللون الأخضر الطبيعي.', id: 'Produksi minyak alpukat premium. Teknologi cold press yang mempertahankan asam lemak omega-3 dan warna hijau alami.' },
+  almond: { en: 'Delicate almond oil extraction. Low-temperature pressing for cosmetic and culinary grade sweet almond oil.', fr: 'Extraction délicate d\'huile d\'amande. Pressage à basse température pour une huile d\'amande douce de qualité cosmétique et culinaire.', ar: 'استخراج زيت اللوز الحساس. العصر على درجة حرارة منخفضة لزيت اللوز الحلو بجودة مستحضرات التجميل والطهي.', id: 'Ekstraksi minyak almond halus. Penekanan suhu rendah untuk minyak almond manis kualitas kosmetik dan kuliner.' },
+  walnut: { en: 'Premium walnut oil production. Cold pressing preserves omega-3, omega-6, and antioxidants.', fr: 'Production d\'huile de noix premium. Le pressage à froid préserve les oméga-3, oméga-6 et antioxydants.', ar: 'إنتاج زيت الجوز الممتاز. العصر على البارد يحافظ على أوميغا-3 وأوميغا-6 ومضادات الأكسدة.', id: 'Produksi minyak kenari premium. Cold press mempertahankan omega-3, omega-6, dan antioksidan.' },
+  flaxseed: { en: 'Health-focused flaxseed oil pressing. Cold press extraction preserving omega-3 ALA and lignans.', fr: 'Pressage d\'huile de lin axé sur la santé. Extraction à froid préservant l\'ALA oméga-3 et les lignanes.', ar: 'عصر زيت بذور الكتان الصحي. الاستخراج على البارد يحافظ على حمض ألفا لينوليك أوميغا-3 والليجنات.', id: 'Penekanan minyak biji flax fokus kesehatan. Ekstraksi cold press mempertahankan omega-3 ALA dan lignan.' },
+};
+
+const scaleDescriptions: Record<string, Record<string, string>> = {
+  'small-business': { en: 'Compact and affordable hydraulic presses for startups, home use, and small-scale production. Low investment, easy operation, fast return on investment.', fr: 'Presses hydrauliques compactes et abordables pour les startups et la production à petite échelle. Faible investissement, fonctionnement facile.', ar: 'Preses هيدروليكية مدمجة وبأسعار معقولة للشركات الناشئة والاستخدام المنزلي. استثمار منخفض، تشغيل سهل.', id: 'Mesin press hidrolik kompak dan terjangkau untuk startup dan produksi skala kecil. Investasi rendah, operasi mudah.' },
+  commercial: { en: 'Mid-range production lines for established oil mills. Higher capacity with automated controls, suitable for 1-10 tons per day output.', fr: 'Lignes de production de milieu de gamme pour les huileries établies. Capacité supérieure avec commandes automatisées.', ar: 'خطوط إنتاج متوسطة المدى لمعاصر الزيت الراسخة. سعة أعلى مع تحكم آلي، مناسبة لإنتاج 1-10 طن يومياً.', id: 'Lini produksi menengah untuk pabrik minyak mapan. Kapasitas lebih tinggi dengan kontrol otomatis.' },
+  industrial: { en: 'Full-scale industrial oil pressing plants with integrated processing lines. High-volume continuous production with complete automation.', fr: 'Usines industrielles de pressage d\'huile à pleine échelle avec lignes de traitement intégrées. Production continue à volume élevé.', ar: 'مصانع عصر زيت صناعية كاملة النطاق مع خطوط معالجة متكاملة. إنتاج مستمر عالي الحجم مع أتمتة كاملة.', id: 'Pabrik penekanan minyak industri skala penuh dengan lini pemrosesan terintegrasi. Produksi berkelanjutan volume tinggi.' },
+};
+
+const markets = [
+  { name: 'Nigeria', flag: '🇳🇬', desc: { en: 'Africa\'s largest groundnut & palm oil market', fr: 'Le plus grand marché d\'huile d\'arachide et de palme d\'Afrique', ar: 'أكبر سوق لزيت الفول السوداني وزيت النخيل في أفريقيا', id: 'Pasar minyak kacang tanah dan sawit terbesar di Afrika' }, link: '/markets/nigeria' },
+  { name: 'India', flag: '🇮🇳', desc: { en: 'World\'s largest edible oil consumer', fr: 'Le plus grand consommateur d\'huile alimentaire au monde', ar: 'أكبر مستهلك للزيت الصالح للأكل في العالم', id: 'Konsumen minyak nabati terbesar di dunia' }, link: '/markets/india' },
+  { name: 'Indonesia', flag: '🇮🇩', desc: { en: 'Leading palm oil producer', fr: 'Premier producteur d\'huile de palme', ar: 'المنتج الرائد لزيت النخيل', id: 'Produsen minyak sawit terkemuka' }, link: '/markets/indonesia' },
+  { name: 'Pakistan', flag: '🇵🇰', desc: { en: 'Major cottonseed & mustard oil market', fr: 'Marché majeur de l\'huile de coton et de moutarde', ar: 'سوق رئيسي لزيت بذور القطن والخردل', id: 'Pasar minyak biji kapas dan sawi utama' }, link: '/markets/pakistan' },
+  { name: 'Philippines', flag: '🇵🇭', desc: { en: 'Top coconut oil exporter', fr: 'Premier exportateur d\'huile de coco', ar: 'أكبر مصدر لزيت جوز الهند', id: 'Eksportir minyak kelapa teratas' }, link: '/markets/philippines' },
+  { name: 'Egypt', flag: '🇪🇬', desc: { en: 'Sesame & sunflower oil hub', fr: 'Centre de l\'huile de sésame et tournesol', ar: 'مركز زيت السمسم وعباد الشمس', id: 'Pusat minyak wijen dan bunga matahari' }, link: '/markets/egypt' },
+  { name: 'South Africa', flag: '🇿🇦', desc: { en: 'Sunflower & soybean processing', fr: 'Transformation de tournesol et soja', ar: 'معالجة عباد الشمس وفول الصويا', id: 'Pengolahan bunga matahari dan kedelai' }, link: '/markets/south-africa' },
+  { name: 'Kenya', flag: '🇰🇪', desc: { en: 'Growing sunflower & sesame market', fr: 'Marché croissant du tournesol et sésame', ar: 'سوق متنامي لعباد الشمس والسمسم', id: 'Pasar bunga matahari dan wijen yang berkembang' }, link: '/markets/kenya' },
+  { name: 'UK', flag: '🇬🇧', desc: { en: 'Premium cold-pressed oil market', fr: 'Marché premium d\'huile pressée à froid', ar: 'سوق زيت العصر على البارد الممتاز', id: 'Pasar minyak cold-press premium' }, link: '/markets/uk' },
+  { name: 'USA', flag: '🇺🇸', desc: { en: 'Specialty & organic oil demand', fr: 'Demande d\'huiles spéciales et bio', ar: 'طلب على الزيوت المتخصصة والعضوية', id: 'Permintaan minyak spesial dan organik' }, link: '/markets/usa' },
+  { name: 'Middle East', flag: '🇸🇦', desc: { en: 'Sesame & olive oil traditions', fr: 'Traditions d\'huile de sésame et d\'olive', ar: 'تقاليد زيت السمسم وزيت الزيتون', id: 'Tradisi minyak wijen dan zaitun' }, link: '/markets/middle-east' },
+];
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+function getText(record: Record<string, Record<string, string>>, key: string): string {
+  return record[key]?.[currentLocale] || record[key]?.['en'] || '';
+}
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.hydoilpress.com/solutions' },
+  ],
+};
+---
+
+<BaseLayout locale={currentLocale} title={t.solutions.title} description={t.solutions.subtitle} jsonLd={breadcrumbLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{t.solutions.title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Page Header -->
+  <section class="relative bg-steel-900 py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/images/hero/cold-press-production-line.webp" alt="" width="1200" height="800" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-6">
+          {t.solutions.title}
+        </h1>
+        <p class="text-steel-300 text-lg md:text-xl leading-relaxed mb-8">
+          {t.solutions.subtitle}
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#by-oil-type" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition-colors">
+            🛢️ {t.solutions.byOilType || 'By Oil Type'}
+          </a>
+          <a href="#by-region" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">
+            🌍 {t.solutions.byRegion || 'By Region'}
+          </a>
+          <a href="#by-scale" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">
+            ⚙️ {t.solutions.byScale || 'By Scale'}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- By Oil Type Section -->
+  <section id="by-oil-type" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.solutions.byOilType || 'By Oil Type'}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          {t.solutions.byOilTypeDesc || 'Choose your raw material to find the best pressing solution and recommended equipment.'}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {seedSolutions.map((solution) => (
+          <a
+            href={localePath(`/solutions/${solution.slug}`)}
+            class="group bg-white rounded-2xl p-6 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
+          >
+            <div class="flex items-start gap-4">
+              <span class="text-4xl flex-shrink-0">{seedIcons[solution.data.seedName] || '🛢️'}</span>
+              <div class="min-w-0">
+                <h3 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">
+                  {solution.data.title[currentLocale] || solution.data.title.en}
+                </h3>
+                <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">
+                  {getText(seedDescriptions, solution.data.seedName) || solution.data.description[currentLocale] || solution.data.description.en}
+                </p>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+              {t.solutions.viewSolution}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- By Region Section -->
+  <section id="by-region" class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.solutions.byRegion || 'By Region'}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          {t.solutions.byRegionDesc || 'Tailored solutions for local markets.'}
+        </p>
+      </div>
+      <div class="mb-6">
+        <a
+          href={localePath('/markets')}
+          class="inline-flex items-center gap-3 bg-amber-500 text-charcoal-900 font-semibold px-6 py-3 rounded-xl hover:bg-amber-400 transition-colors"
+        >
+          🌍 {t.solutions.allMarkets || 'All Markets'}
+          <span class="text-xs bg-charcoal-900 text-amber-400 px-2 py-0.5 rounded-full">50+ Countries</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {markets.map((market) => (
+          <a
+            href={localePath(market.link)}
+            class="group bg-white rounded-2xl p-6 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
+          >
+            <div class="flex items-start gap-4">
+              <span class="text-4xl flex-shrink-0">{market.flag}</span>
+              <div class="min-w-0">
+                <h3 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">
+                  {market.name}
+                </h3>
+                <p class="text-sm text-steel-600 leading-relaxed">
+                  {market.desc[currentLocale] || market.desc.en}
+                </p>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+              {t.solutions.viewMarket || 'View Market'}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- By Scale Section -->
+  <section id="by-scale" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.solutions.byScale || 'By Production Scale'}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          {t.solutions.byScaleDesc || 'Find the right equipment for your production needs.'}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {scaleSolutions.map((solution) => (
+          <a
+            href={localePath(`/solutions/${solution.slug}`)}
+            class="group bg-white rounded-2xl p-8 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
+          >
+            <span class="text-5xl block mb-4">{scaleIcons[solution.data.seedName] || '⚙️'}</span>
+            <h3 class="font-display text-2xl text-charcoal-900 mb-3 group-hover:text-amber-600 transition-colors">
+              {solution.data.title[currentLocale] || solution.data.title.en}
+            </h3>
+            <p class="text-sm text-steel-600 leading-relaxed mb-4">
+              {getText(scaleDescriptions, solution.data.seedName) || solution.data.description[currentLocale] || solution.data.description.en}
+            </p>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium">
+              {t.solutions.viewSolution}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">
+        {t.home.ctaTitle}
+      </h2>
+      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">
+        {t.home.ctaDesc}
+      </p>
+      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        {t.home.ctaButton}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

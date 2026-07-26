@@ -1,0 +1,7 @@
+# Cloudflare Pages Redirect Rules
+# Format: source destination status_code
+
+# No redirects needed - English pages are at root level (prefixDefaultLocale: false)
+# Example redirects (uncomment if needed):
+# /old-page /new-page 301
+# /blog/* /resources/:splat 301

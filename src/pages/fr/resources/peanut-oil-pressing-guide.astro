@@ -1,0 +1,492 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'peanut-oil-pressing-guide');
+const t = getTranslations('fr');
+
+const title = resource?.data.title.fr || 'Guide complet de la fabrication de l\'huile d\'arachide';
+const description = resource?.data.description.fr || 'Guide complet de la production d\'huile d\'arachide';
+const seoKeywords = resource?.data.seoKeywords || ['huile d\'arachide', 'production d\'huile'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/peanut-oil-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Ingénieur principal en presse à huile',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+    { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/peanut-oil-pressing-guide' },
+  ],
+};
+
+const peanutTypes = [
+  { type: 'Runner', characteristics: 'Graines de taille moyenne, uniformes', bestFor: 'Production générale d\'huile' },
+  { type: 'Virginia', characteristics: 'Graines grandes, haute qualité', bestFor: 'Huile premium, exportation' },
+  { type: 'Spanish', characteristics: 'Graines petites, teneur en huile élevée', bestFor: 'Production à haut rendement' },
+  { type: 'Valencia', characteristics: 'Plusieurs graines par gousse', bestFor: 'Marchés spéciaux' },
+];
+
+const rawMaterialRequirements = [
+  { icon: 'droplet', color: 'blue', title: 'Teneur en humidité', desc: '7-9% pour la pression à froid, 5-7% pour la pression à chaud' },
+  { icon: 'flask', color: 'green', title: 'Teneur en huile', desc: '45-55% (arachides de bonne qualité)' },
+  { icon: 'filter', color: 'purple', title: 'Niveau d\'impureté', desc: 'Moins de 0,5%' },
+  { icon: 'shield', color: 'red', title: 'Niveau d\'aflatoxine', desc: 'AFB1 ≤ 20 μg/kg (conformité commerciale)' },
+];
+
+const processingSteps = [
+  { step: '1', title: 'Décortication', desc: 'Requise pour toute production d\'huile d\'arachide', details: ['Cible: Taux de décortication > 95%', 'Équipement: Décoqueuse à disque ou broyeur à marteaux'] },
+  { step: '2', title: 'Nettoyage', desc: 'Éliminer les pierres, métaux et autres impuretés dures', details: ['Séparation magnétique pour contaminants métalliques', 'Séparation par gravité pour impuretés légères'] },
+  { step: '3', title: 'Tri', desc: 'Inspection visuelle des graines moisies ou endommagées', details: ['Optionnel: Tri optique par couleur et qualité'] },
+];
+
+const hotPressParams = [
+  { param: 'Taux de pré-pression', value: '~500 kg/h' },
+  { param: 'Température de torréfaction', value: '160-180°C' },
+  { param: 'Durée de torréfaction', value: '25-35 minutes' },
+  { param: 'Cycle de pression', value: '30-40 minutes/lot' },
+  { param: 'Cycle total (2 cuves)', value: '~1,5 heures' },
+  { param: 'Pression système', value: '60 MPa' },
+  { param: 'Puissance moteur', value: '2,2 kW' },
+];
+
+const coldPressModels = [
+  { model: 'HN355', force: '370 tonnes', cycle: '~2 heures/lot', bestFor: 'Pression à froid de niveau entry' },
+  { model: 'HN426', force: '500 tonnes', cycle: '~2 heures/lot', bestFor: 'Pression à froid standard' },
+  { model: 'HN480', force: '560 tonnes', cycle: '~2 heures/lot', bestFor: 'Pression à froid de grande capacité' },
+  { model: 'HN500', force: '620 tonnes', cycle: '~2 heures/lot', bestFor: 'Production commerciale premium' },
+];
+
+const hotVsCold = [
+  { feature: 'Rendement en huile', hot: '45-55%', cold: '35-40%' },
+  { feature: 'Vitesse de production', hot: 'Rapide (30-40 min/lot)', cold: 'Lente (2+ heures/lot)' },
+  { feature: 'Qualité de l\'huile', hot: 'Bonne, saveur neutre', cold: 'Premium, arôme naturel' },
+  { feature: 'Valeur marchande', hot: 'Standard', cold: '2-3x plus élevée' },
+  { feature: 'Coût de l\'équipement', hot: 'Plus bas', cold: 'Plus élevé' },
+];
+
+const aflatoxinControl = [
+  { stage: 'Matériau brut', measure: 'Inspection par lot', standard: 'AFB1 ≤ 20 μg/kg' },
+  { stage: 'Tri', measure: 'Tri optique par couleur', standard: 'Supprimer les graines moisies' },
+  { stage: 'Torréfaction', measure: 'Surveillance de la température', standard: '160-180°C' },
+  { stage: 'Filtrage', measure: 'Adsorption au charbon actif', standard: 'AFB1 ≤ 20 μg/kg' },
+  { stage: 'Huile finie', measure: 'Test par lot', standard: 'AFB1 ≤ 20 μg/kg' },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="fr">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/fr" class="hover:text-amber-500 transition-colors">Accueil</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/fr/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          GUIDE DE PRODUCTION
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Ingénieur principal en presse à huile · 15+ Ans d'expérience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed">
+          L'huile d'arachide est une des huiles de cuisson les plus populaires dans le monde, réputée pour son point de fumée élevé, sa saveur neutre et ses avantages nutritionnels. Ce guide complet couvre tous les aspects de la production d'huile d'arachide, de la sélection des matières premières à la pression jusqu'à l'huile finie.
+        </p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            Que vous installiez une installation de production à petite échelle ou une usine commerciale de grande taille, ce guide fournit les paramètres techniques et les bonnes pratiques pour obtenir une huile d'arachide de haute qualité avec un rendement maximal.
+          </p>
+        </div>
+      </section>
+
+      <section id="raw-material" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Préparation des matières premières</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Comprendre les types d'arachides</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Type d'arachide</th><th class="px-4 py-3 text-left font-semibold">Caractéristiques</th><th class="px-4 py-3 text-left font-semibold">Meilleur pour</th></tr>
+            </thead>
+            <tbody>
+              {peanutTypes.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.type}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.characteristics}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.bestFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Exigences en matière de matières premières</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {rawMaterialRequirements.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <div class="flex items-start gap-3">
+                <div class={`w-10 h-10 ${item.color === 'blue' ? 'bg-blue-100' : item.color === 'green' ? 'bg-green-100' : item.color === 'purple' ? 'bg-purple-100' : 'bg-red-100'} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                  {item.icon === 'droplet' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S6 13 6 15a7 7 0 0 0 7 7z"/></svg>}
+                  {item.icon === 'flask' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>}
+                  {item.icon === 'filter' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 19 14 12.46 22 3"/></svg>}
+                  {item.icon === 'shield' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+                </div>
+                <div>
+                  <h4 class="font-semibold text-charcoal-900 mb-1">{item.title}</h4>
+                  <p class="text-steel-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="processing-steps" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Étapes de traitement</h2>
+        <div class="space-y-6">
+          {processingSteps.map((step, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  {step.step}
+                </div>
+                {index < processingSteps.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
+              </div>
+              <div class={index < processingSteps.length - 1 ? 'pb-8' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{step.title}</h3>
+                <p class="text-steel-600 mb-3">{step.desc}</p>
+                <div class="bg-steel-50 p-4 rounded-lg">
+                  {step.details.map((detail, idx) => (
+                    <p key={idx} class="mb-1 text-steel-700">
+                      {detail.includes(':') ? (
+                        <>
+                          <span class="font-medium text-charcoal-900">{detail.split(':')[0]}:</span>
+                          {detail.split(':').slice(1).join(':')}
+                        </>
+                      ) : (
+                        <>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                          {detail}
+                        </>
+                      )}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="hot-pressing" class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><path d="M18.07 16.94a8 8 0 1 1-11.31 0"/></svg>
+          </div>
+          <h2 class="font-display font-bold text-2xl text-charcoal-900">Processus de pression à chaud</h2>
+        </div>
+        
+        <p class="text-steel-700 leading-relaxed mb-6">
+          La pression à chaud est la méthode la plus courante pour la production d'huile d'arachide, offrant des rendements plus élevés et des temps de traitement plus rapides.
+        </p>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Configuration de l'équipement</h3>
+        <div class="bg-steel-50 rounded-xl p-6 mb-6">
+          <h4 class="font-semibold text-charcoal-900 mb-3">Ligne de pression à chaud complète:</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">5 x Poêles plates électriques (100 kg/lot chacune)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">5 x <a href="/fr/products/standard-hydraulic-oil-press" class="text-amber-600 hover:underline">HN325 Presse à huile hydraulique</a> (100 kg/lot chacune)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Presse filtrante pneumatique à plusieurs couches</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Cuves de décantation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Cuves de stockage en acier inoxydable</span>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Paramètres de production</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-charcoal-900 to-gray-800 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Paramètre</th><th class="px-4 py-3 text-left font-semibold">Spécification</th></tr>
+            </thead>
+            <tbody>
+              {hotPressParams.map((item, index) => (
+                <tr key={index} class={`${index % 2 === 0 ? 'bg-white' : 'bg-steel-50'} hover:bg-steel-100 transition-colors`}>
+                  <td class="px-4 py-3 font-medium text-charcoal-900">{item.param}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Rendements attendus</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-xl border border-green-200">
+            <h4 class="font-semibold text-green-800 mb-2">Graines de bonne qualité</h4>
+            <div class="flex justify-between items-center">
+              <span class="text-steel-700">Rendement en huile:</span>
+              <span class="font-bold text-green-700 text-lg">45-55%</span>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-steel-700">Huile résiduelle:</span>
+              <span class="font-semibold text-green-700">6-8%</span>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-5 rounded-xl border border-yellow-200">
+            <h4 class="font-semibold text-yellow-800 mb-2">Graines de qualité moyenne</h4>
+            <div class="flex justify-between items-center">
+              <span class="text-steel-700">Rendement en huile:</span>
+              <span class="font-bold text-yellow-700 text-lg">40-45%</span>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-steel-700">Huile résiduelle:</span>
+              <span class="font-semibold text-yellow-700">8-10%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cold-pressing" class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 16a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+          </div>
+          <h2 class="font-display font-bold text-2xl text-charcoal-900">Processus de pression à froid</h2>
+        </div>
+        
+        <p class="text-steel-700 leading-relaxed mb-6">
+          La pression à froid préserve la saveur naturelle et les propriétés nutritionnelles de l'huile d'arachide, produisant un produit premium avec une valeur marchande plus élevée.
+        </p>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Configuration de l'équipement</h3>
+        <div class="bg-steel-50 rounded-xl p-6 mb-6">
+          <h4 class="font-semibold text-charcoal-900 mb-3">Ligne de pression à froid:</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700"><a href="/fr/products/heavy-duty-hydraulic-oil-press" class="text-amber-600 hover:underline">HN355</a>, <a href="/fr/products/cold-press-hydraulic-oil-press" class="text-amber-600 hover:underline">HN426</a>, <a href="/fr/products/high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN480</a>, ou <a href="/fr/products/ultra-high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN500</a> Presse à huile hydraulique</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Système de contrôle de température précis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Presse filtrante pneumatique à plusieurs couches</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Cuves de stockage à température contrôlée</span>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Comparaison des modèles</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Modèle</th><th class="px-4 py-3 text-left font-semibold">Force de pression</th><th class="px-4 py-3 text-left font-semibold">Temps de cycle</th><th class="px-4 py-3 text-left font-semibold">Meilleur pour</th></tr>
+            </thead>
+            <tbody>
+              {coldPressModels.map((item, index) => (
+                <tr key={index} class={`${index % 2 === 0 ? 'bg-white' : 'bg-steel-50'} hover:bg-steel-100 transition-colors`}>
+                  <td class="px-4 py-3 font-medium text-charcoal-900"><a href="/fr/products/cold-press-hydraulic-oil-press" class="text-amber-600 hover:underline">{item.model}</a></td>
+                  <td class="px-4 py-3 text-steel-700">{item.force}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.cycle}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.bestFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="hot-vs-cold" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pression à chaud vs Pression à froid</h2>
+        <div class="bg-steel-50 rounded-2xl overflow-hidden border border-steel-200">
+          <div class="grid grid-cols-3 bg-charcoal-900 text-white">
+            <div class="p-6 text-left">
+              <p class="font-semibold text-steel-300">Caractéristique</p>
+            </div>
+            <div class="p-6 text-center border-x border-charcoal-700">
+              <div class="flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><path d="M18.07 16.94a8 8 0 1 1-11.31 0"/></svg>
+                <p class="font-display text-xl">Pression à chaud</p>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <div class="flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 16a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+                <p class="font-display text-xl">Pression à froid</p>
+              </div>
+            </div>
+          </div>
+          {hotVsCold.map((item, index) => (
+            <div key={index} class={`grid grid-cols-3 p-4 ${index % 2 === 0 ? 'bg-white' : 'bg-steel-50/50'} hover:bg-amber-50/30 transition-colors`}>
+              <div class="text-charcoal-900 font-semibold">{item.feature}</div>
+              <div class="text-center text-amber-600 font-medium border-x border-steel-100">{item.hot}</div>
+              <div class="text-center text-blue-600 font-medium">{item.cold}</div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="p-6 bg-amber-50 rounded-xl border border-amber-100">
+            <h4 class="font-display text-xl text-charcoal-900 mb-3">Meilleur pour la pression à chaud</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Production de grande capacité</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Marchés sensibles au coût</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Applications industrielles</li>
+            </ul>
+          </div>
+          <div class="p-6 bg-blue-50 rounded-xl border border-blue-100">
+            <h4 class="font-display text-xl text-charcoal-900 mb-3">Meilleur pour la pression à froid</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Marchés organiques premium</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Consommateurs soucieux de santé</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Produits alimentaires spéciaux</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="quality-control" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Contrôle de qualité</h2>
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-200">
+          <h3 class="font-semibold text-xl mb-6 text-charcoal-900">Gestion de l'aflatoxine</h3>
+          <div class="grid md:grid-cols-5 gap-4 mb-6">
+            {['Matériau brut', 'Tri', 'Torréfaction', 'Filtrage', 'Huile finie'].map((stage, index) => (
+              <div key={index} class="text-center p-4 bg-white/80 rounded-xl border border-amber-100">
+                <div class="w-12 h-12 mx-auto mb-2 bg-amber-500/10 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <p class="text-sm font-medium text-charcoal-900">{stage}</p>
+              </div>
+            ))}
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full bg-white rounded-xl border border-steel-200">
+              <thead>
+                <tr class="bg-steel-50">
+                  <th class="py-4 px-6 text-left font-semibold text-charcoal-900 rounded-tl-xl">Étape</th>
+                  <th class="py-4 px-6 text-left font-semibold text-charcoal-900">Mesure de contrôle</th>
+                  <th class="py-4 px-6 text-right font-semibold text-charcoal-900 rounded-tr-xl">Norme d'acceptation</th>
+                </tr>
+              </thead>
+              <tbody>
+                {aflatoxinControl.map((item, index) => (
+                  <tr key={index} class={`${index % 2 === 0 ? 'bg-white' : 'bg-steel-50'} border-b border-steel-100 last:border-b-0`}>
+                    <td class="py-4 px-6 font-medium text-amber-600">{item.stage}</td>
+                    <td class="py-4 px-6 text-steel-600">{item.measure}</td>
+                    <td class="py-4 px-6 text-right font-medium text-charcoal-900">{item.standard}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Que vous choisissiez la pression à chaud ou la pression à froid, obtenir une huile d'arachide de haute qualité nécessite une attention soigneuse à chaque étape de la production. Notre équipe d'ingénieurs peut vous aider à concevoir et à optimiser votre ligne de production pour une efficacité maximale et une qualité de produit exceptionnelle.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À LANCER VOTRE ACTIVITÉ D'HUILE D'ARACHIDE ?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à concevoir la ligne de production parfaite selon vos exigences de capacité et vos objectifs de marché.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          Contacter nos experts
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">
+          Parcourir l'équipement
+        </a>
+        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">
+          Retour aux ressources
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

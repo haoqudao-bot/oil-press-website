@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('ar');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+    { '@type': 'ListItem', position: 2, name: 'شروط الخدمة', item: 'https://www.hydoilpress.com/ar/terms-of-service' },
+  ],
+};
+---
+
+<BaseLayout title="شروط الخدمة" description="شروط الخدمة لشركة هاونوو الميكانيكية - هذه الشروط تحكم استخدامك لموقعنا على الويب وخدماتنا." locale="ar">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/ar" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">شروط الخدمة</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">شروط الخدمة</h1>
+      <p class="text-steel-600 text-lg mb-8">آخر تحديث: 20 يوليو 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. قبول الشروط</h2>
+          <p class="text-steel-600 leading-relaxed">
+            من خلال الوصول أو استخدام موقعنا على الويب، توافق على الالتزام بهذه الشروط ("الشروط"). إذا كنت لا توافق على أي جزء من هذه الشروط، فلا يمكنك استخدام موقعنا على الويب أو خدماتنا.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. استخدام الموقع</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            يمكنك استخدام موقعنا على الويب لأغراض تجارية مشروعة فقط. توافق على عدم:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>استخدام موقعنا على الويب لأغراض غير قانونية أو غير مصرح بها</li>
+            <li>التداخل مع أو تعطيل تشغيل موقعنا على الويب</li>
+            <li>نسخ أو تعديل أو توزيع أي محتوى من موقعنا على الويب بدون إذن</li>
+            <li>استخدام أدوات آلية لاستخراج أو تصفح موقعنا على الويب</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. الملكية الفكرية</h2>
+          <p class="text-steel-600 leading-relaxed">
+            جميع المحتويات على موقعنا على الويب، بما في ذلك النصوص، الصور، الشعارات، والعلامات التجارية، هي ملك لشركة شاندونغ هاونوو لمجموعة المعدات الميكانيكية المحدودة أو مرخصيها ومحمية بحقوق النشر والعلامات التجارية. لا يمكنك إعادة إنتاج أو توزيع أو استخدام أي محتوى دون موافقتنا المسبقة письменًا.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. معلومات المنتجات</h2>
+          <p class="text-steel-600 leading-relaxed">
+            نبذل قصارى جهدنا لضمان أن معلومات المنتجات على موقعنا على الويب دقيقة ومحدثة. Cependant، لا نضمن دقة أو اكتمال أو موثوقية أي معلومة عن المنتجات. مواصفات المنتجات والأسعار قابلة للتغيير دون إشعار.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. العروض والطلبات</h2>
+          <p class="text-steel-600 leading-relaxed">
+            جميع العروض التي نقدمها تخضع لشروطنا العامة وقابلة لاستخدامها لمدة محددة. الطلبات تخضع لقبولنا، ونحتفظ بالحق في رفض أي طلب لأي سبب.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. الحد من المسؤولية</h2>
+          <p class="text-steel-600 leading-relaxed">
+            في أقصى حد يسمح به القانون، شركة شاندونغ هاونوو لمجموعة المعدات الميكانيكية المحدودة لن تكون مسؤولة عن أي ضرر غير مباشر أو عرضي أو خاص أو نتيجي ناتج عن استخدامك لموقعنا على الويب أو خدماتنا.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">7. القانون المطبق</h2>
+          <p class="text-steel-600 leading-relaxed">
+            هذه الشروط ستخضع لقانون جمهورية الصين الشعبية وتفسيره وفقًا لها، دون مراعاة مبادئ تنازع القوانين.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">8. تسوية النزاعات</h2>
+          <p class="text-steel-600 leading-relaxed">
+            أي نزاع ينشأ من هذه الشروط سيتعامل معه من خلال التفاوض السلمي. إذا فشل التفاوض، سيقدم النزاع إلى المحكمة المختصة في قنجو، شاندونغ، الصين.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">9. التغييرات في هذه الشروط</h2>
+          <p class="text-steel-600 leading-relaxed">
+            قد نقوم بتحديث هذه الشروط من وقت لآخر. سنقوم بإعلامك بأي تغيير كبير من خلال نشر الشروط المحدثة على موقعنا على الويب. استمرارك في استخدام موقعنا على الويب بعد أي تغيير يشكل قبولك للشروط المحدثة.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">10. الاتصال بنا</h2>
+          <p class="text-steel-600 leading-relaxed">
+            إذا كان لديك أي أسئلة حول هذه الشروط، يرجى الاتصال بنا:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>البريد الإلكتروني: contact@hydoilpress.com</li>
+            <li>الهاتف: +86-18957149128</li>
+            <li>العنوان: قنجو، ويفانغ، شاندونغ، الصين</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

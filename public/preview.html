@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage Preview — Haonuo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            steel: {50:'#f0f4f8',100:'#d9e2ec',200:'#bcccdc',300:'#9fb3c8',400:'#829ab1',500:'#627d98',600:'#486581',700:'#334e68',800:'#243b53',900:'#1B3A5C',950:'#102a43'},
+            amber: {400:'#F0B429',500:'#E8A838',600:'#D69E2E'},
+            charcoal: {900:'#1A1A2E',800:'#2D2D44',700:'#3D3D56'},
+            oil: {gold:'#C8960C',dark:'#8B6914',light:'#F5D990'},
+          },
+          fontFamily: {display:['Bebas Neue','sans-serif'],body:['Inter','sans-serif']},
+        },
+      },
+    }
+  </script>
+  <style>
+    html {font-family:'Inter',sans-serif;scroll-behavior:smooth}
+    body {background-color:#f0f4f8;color:#1A1A2E}
+    h1,h2,h3,h4,h5,h6 {font-family:'Bebas Neue',sans-serif;letter-spacing:.02em}
+    
+    .btn-primary {background-color:#E8A838;color:#1A1A2E;font-semibold;padding:12px 24px;border-radius:8px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+    .btn-primary:hover {background-color:#D69E2E}
+    .btn-outline {border:2px solid #1B3A5C;color:#1B3A5C;font-semibold;padding:12px 24px;border-radius:8px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+    .btn-outline:hover {background-color:#1B3A5C;color:white}
+    
+    .section-title {font-size:2.5rem;@media(min-width:768px){font-size:3.125rem};font-family:'Bebas Neue',sans-serif;color:#1A1A2E;margin-bottom:1rem}
+    .section-subtitle {font-size:1.125rem;color:#627d98;max-width:48rem}
+    
+    .card-hover {transition:all .3s;transform:translateY(0);box-shadow:none}
+    .card-hover:hover {transform:translateY(-4px);box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04)}
+    
+    .hero-slide {position:absolute;inset:0;opacity:0;transition:opacity 1s ease-in-out;pointer-events:none}
+    .hero-slide.active {opacity:1;pointer-events:auto}
+    .hero-dot.active {background-color:#f59e0b;width:2rem;border-radius:9999px}
+    
+    .reveal {opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible {opacity:1;transform:translateY(0)}
+    
+    .badge-preview {position:fixed;top:16px;right:16px;z-index:9999;background:linear-gradient(135deg,#E8A838,#C8960C);color:#1A1A2E;font-weight:700;padding:10px 18px;border-radius:10px;font-size:12px;font-family:Inter,sans-serif;box-shadow:0 4px 16px rgba(232,168,56,.4)}
+    
+    .material-card {position:relative;overflow:hidden;border-radius:16px}
+    .material-card::before {content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8A838,#F5D990)}
+    
+    .compare-badge-more {background:#EF4444;color:white;font-weight:bold;font-size:11px;padding:4px 8px;border-radius:4px}
+    .compare-badge-less {background:#22C55E;color:white;font-weight:bold;font-size:11px;padding:4px 8px;border-radius:4px}
+  </style>
+</head>
+<body>
+<div class="badge-preview">📐 PREVIEW — Enhanced with Video Content</div>
+
+<!-- Hero Carousel Section -->
+<section class="relative h-[85vh] min-h-[600px] overflow-hidden" id="hero-carousel">
+  <div class="hero-slides" id="hero-slides">
+    <div class="hero-slide active" data-index="0">
+      <div class="absolute inset-0 bg-steel-900">
+        <img src="/images/hero/hydraulic-oil-press-machine.webp" alt="Hydraulic Oil Press" width="1200" height="800" class="w-full h-full object-cover opacity-40" />
+        <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div class="max-w-2xl">
+          <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+            Premium Hydraulic Oil<br>Press Machines
+          </h1>
+          <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+            Built with Q355B high-strength steel frames, 27硅锰 cylinders, and riveted barrels for maximum durability and oil yield.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/contact" class="btn-primary text-base">
+              Get a Quote
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#materials" class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+              See Our Materials
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" data-index="1">
+      <div class="absolute inset-0 bg-steel-900">
+        <img src="/images/hero/cold-press-production-line.webp" alt="Cold Press Technology" width="1200" height="800" class="w-full h-full object-cover opacity-40" />
+        <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div class="max-w-2xl">
+          <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+            Cold Press Technology
+          </h1>
+          <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+            Preserve natural nutrients with our advanced cold press systems. 14 diaphragm plates for even pressure distribution.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/products/cold-press-hydraulic-oil-press" class="btn-primary text-base">
+              Explore Products
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="/solutions" class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+              View Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10">
+    <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" data-slide="1" aria-label="Slide 2"></button>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  let current = 0;
+  let interval;
+
+  function goToSlide(index) {
+    slides[current]?.classList.remove('active');
+    dots[current]?.classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current]?.classList.add('active');
+    dots[current]?.classList.add('active');
+  }
+
+  function startAutoplay() {
+    interval = setInterval(() => goToSlide(current + 1), 6000);
+  }
+
+  function stopAutoplay() {
+    clearInterval(interval);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      stopAutoplay();
+      goToSlide(parseInt(dot.getAttribute('data-slide') || '0'));
+      startAutoplay();
+    });
+  });
+
+  startAutoplay();
+</script>
+
+<!-- Stats Section -->
+<section class="py-10 md:py-12 bg-amber-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
+      <div class="text-center">
+        <div class="font-display text-4xl md:text-5xl text-charcoal-900 font-bold">15+</div>
+        <div class="text-sm text-charcoal-800 font-semibold mt-1">Years Experience</div>
+        <div class="text-xs text-charcoal-700 mt-0.5">Since 2010</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-4xl md:text-5xl text-charcoal-900 font-bold">50+</div>
+        <div class="text-sm text-charcoal-800 font-semibold mt-1">Countries</div>
+        <div class="text-xs text-charcoal-700 mt-0.5">6 Continents</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-4xl md:text-5xl text-charcoal-900 font-bold">200+</div>
+        <div class="text-sm text-charcoal-800 font-semibold mt-1">Employees</div>
+        <div class="text-xs text-charcoal-700 mt-0.5">Expert Team</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-4xl md:text-5xl text-charcoal-900 font-bold">355MPa</div>
+        <div class="text-sm text-charcoal-800 font-semibold mt-1">Frame Strength</div>
+        <div class="text-xs text-charcoal-700 mt-0.5">Q355B Steel</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-4xl md:text-5xl text-charcoal-900 font-bold">8,000+</div>
+        <div class="text-sm text-charcoal-800 font-semibold mt-1">Customers</div>
+        <div class="text-xs text-charcoal-700 mt-0.5">Worldwide</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-title">Why Choose Haonuo?</h2>
+      <p class="section-subtitle mx-auto">We use only the finest materials and proven manufacturing processes to deliver machines that last.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-steel-50 hover:bg-amber-50 transition-colors duration-300 group border border-transparent hover:border-amber-200">
+        <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 group-hover:bg-amber-600 rounded-xl flex items-center justify-center transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8l4-4 4 4v8"/><path d="M10 20v-6l4-4 4 4v6"/><path d="M18 20v-4l2-2 2 2v4"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-3">Factory Direct</h3>
+        <p class="text-sm text-steel-600 leading-relaxed">Cut out the middleman and get factory-direct pricing. No hidden fees, no markups.</p>
+      </div>
+      <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-steel-50 hover:bg-amber-50 transition-colors duration-300 group border border-transparent hover:border-amber-200">
+        <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 group-hover:bg-amber-600 rounded-xl flex items-center justify-center transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-3">Premium Materials</h3>
+        <p class="text-sm text-steel-600 leading-relaxed">Q355B steel frames, 27硅锰 cylinders, riveted barrels — built to last 15+ years.</p>
+      </div>
+      <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-steel-50 hover:bg-amber-50 transition-colors duration-300 group border border-transparent hover:border-amber-200">
+        <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 group-hover:bg-amber-600 rounded-xl flex items-center justify-center transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-3">Global Support</h3>
+        <p class="text-sm text-steel-600 leading-relaxed">24/7 technical support via WhatsApp, video guides, and on-site assistance.</p>
+      </div>
+      <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-steel-50 hover:bg-amber-50 transition-colors duration-300 group border border-transparent hover:border-amber-200">
+        <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 group-hover:bg-amber-600 rounded-xl flex items-center justify-center transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-3">High Yield</h3>
+        <p class="text-sm text-steel-600 leading-relaxed">Up to 95% oil yield with 50MPa pressure. 14 diaphragm plates for even pressing.</p>
+      </div>
+    </div>
+
+    <!-- Factory Strength Sub-section -->
+    <div class="mt-12 reveal">
+      <div class="relative bg-steel-900 rounded-3xl overflow-hidden">
+        <img src="/images/factory/assembly-line.webp" alt="Haonuo Factory" width="1200" height="600" class="w-full h-80 md:h-96 object-cover opacity-40" />
+        <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/80 to-steel-900/60"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="font-display text-2xl md:text-3xl text-white mb-4">Factory Strength You Can Trust</h3>
+              <p class="text-steel-200 leading-relaxed mb-6">Our 3,000m² production facility uses CNC machining, riveting technology, and 48-hour testing to ensure every machine meets our strict quality standards.</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-steel-200">
+                  <span class="text-xl">🏭</span>
+                  <span class="text-sm leading-relaxed">3,000 m² modern production facility</span>
+                </li>
+                <li class="flex items-start gap-3 text-steel-200">
+                  <span class="text-xl">🔧</span>
+                  <span class="text-sm leading-relaxed">CNC machining with ±0.01mm tolerance</span>
+                </li>
+                <li class="flex items-start gap-3 text-steel-200">
+                  <span class="text-xl">✅</span>
+                  <span class="text-sm leading-relaxed">48-hour non-stop testing before shipping</span>
+                </li>
+                <li class="flex items-start gap-3 text-steel-200">
+                  <span class="text-xl">📦</span>
+                  <span class="text-sm leading-relaxed">Fumigated wooden crates for safe shipping</span>
+                </li>
+              </ul>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+                <div class="font-display text-3xl md:text-4xl text-amber-500 font-bold mb-2">3,000 m²</div>
+                <div class="text-sm text-steel-300">Production Facility</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+                <div class="font-display text-3xl md:text-4xl text-amber-500 font-bold mb-2">200+</div>
+                <div class="text-sm text-steel-300">Expert Team</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+                <div class="font-display text-3xl md:text-4xl text-amber-500 font-bold mb-2">20-30</div>
+                <div class="text-sm text-steel-300">Working Days Production</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+                <div class="font-display text-3xl md:text-4xl text-amber-500 font-bold mb-2">48h</div>
+                <div class="text-sm text-steel-300">Non-Stop Testing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIUM MATERIALS SECTION - NEW CONTENT FROM VIDEO -->
+<section class="py-16 md:py-24 bg-steel-950" id="materials">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <div class="text-amber-500 text-xs font-semibold uppercase tracking-[0.3em] mb-4">MACHINE ANATOMY</div>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Built With Premium Materials</h2>
+      <p class="text-steel-400 text-lg max-w-2xl mx-auto">Every component matters. See exactly what goes into a Haonuo press — from the frame to the smallest seal. Full transparency, zero compromise.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
+      <div class="relative">
+        <div class="aspect-square bg-steel-900 rounded-3xl flex items-center justify-center relative overflow-hidden">
+          <img src="/images/hero/hydraulic-oil-press-machine.webp" alt="Machine Anatomy" class="w-full h-full object-contain opacity-60" />
+          
+          <div class="absolute top-[20%] left-[30%] w-4 h-4 bg-amber-500 rounded-full ring-4 ring-steel-950">
+            <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-amber-500"></div>
+            <div class="absolute -top-20 left-1/2 -translate-x-1/2 text-white text-xs font-semibold whitespace-nowrap">A. Hydraulic Cylinder</div>
+          </div>
+          
+          <div class="absolute top-[50%] right-[15%] w-4 h-4 bg-amber-500 rounded-full ring-4 ring-steel-950">
+            <div class="absolute top-0 right-6 w-8 h-0.5 bg-amber-500"></div>
+            <div class="absolute top-2 right-14 text-white text-xs font-semibold">B. Piston Rod</div>
+          </div>
+          
+          <div class="absolute top-[50%] left-[15%] w-4 h-4 bg-amber-500 rounded-full ring-4 ring-steel-950">
+            <div class="absolute top-0 left-6 w-8 h-0.5 bg-amber-500"></div>
+            <div class="absolute top-2 left-14 text-white text-xs font-semibold">C. Press Barrel</div>
+          </div>
+          
+          <div class="absolute bottom-[25%] left-[50%] w-4 h-4 bg-amber-500 rounded-full ring-4 ring-steel-950">
+            <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-amber-500"></div>
+            <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 text-white text-xs font-semibold whitespace-nowrap">D. Frame Base</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="material-card bg-steel-900/50 border border-steel-800 p-6 hover:border-amber-500/50 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-amber-500/20 rounded-lg flex items-center justify-center text-amber-500 text-sm font-bold">A</span>
+            <h3 class="font-display text-xl text-white">Hydraulic Cylinder</h3>
+          </div>
+          <p class="text-sm text-steel-400 leading-relaxed mb-3">Our cylinders use 27硅锰 steel from Hubei Daye Special Steel Factory — each cylinder costs over 10,000 yuan. It withstands 835MPa pressure with surface heat treatment for wear resistance.</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">27硅锰 Steel</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">835MPa Pressure</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">~10,000¥ per cylinder</span>
+          </div>
+        </div>
+
+        <div class="material-card bg-steel-900/50 border border-steel-800 p-6 hover:border-amber-500/50 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-amber-500/20 rounded-lg flex items-center justify-center text-amber-500 text-sm font-bold">B</span>
+            <h3 class="font-display text-xl text-white">Piston Rod</h3>
+          </div>
+          <p class="text-sm text-steel-400 leading-relaxed mb-3">Every piston rod gets surface heat treatment — we spend 500 yuan extra per rod to increase surface hardness. This prevents wear and ensures smooth operation for 10+ years.</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">Heat Treatment</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">+500¥ extra</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">10+ Year Lifespan</span>
+          </div>
+        </div>
+
+        <div class="material-card bg-steel-900/50 border border-amber-500/30 p-6 ring-1 ring-amber-500/20">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-amber-500/30 rounded-lg flex items-center justify-center text-amber-500 text-sm font-bold">C</span>
+            <h3 class="font-display text-xl text-white">Press Barrel</h3>
+          </div>
+          <p class="text-sm text-steel-400 leading-relaxed mb-3">We rivet our barrels with 2+ centimeter thick plates and reinforced rivets. The structure maintains full thickness and pressure — no leakage, better oil output, lasts 10+ years.</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">Riveted Construction</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">2+ cm Thick</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">No Leakage</span>
+          </div>
+        </div>
+
+        <div class="material-card bg-steel-900/50 border border-steel-800 p-6 hover:border-amber-500/50 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-amber-500/20 rounded-lg flex items-center justify-center text-amber-500 text-sm font-bold">D</span>
+            <h3 class="font-display text-xl text-white">Frame Base</h3>
+          </div>
+          <p class="text-sm text-steel-400 leading-relaxed mb-3">We use Q355B high-strength structural steel — the same material used in bridges, ships, and pressure vessels. Each square centimeter withstands 355MPa pressure.</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">Q355B Steel</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">355MPa Strength</span>
+            <span class="text-xs bg-amber-500/10 text-amber-500 px-3 py-1 rounded">Bridge-Grade</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY IT COSTS MORE - PRICE COMPARISON -->
+    <div class="bg-steel-900/50 border border-steel-800 rounded-3xl p-8 mb-12">
+      <h3 class="font-display text-2xl md:text-3xl text-white text-center mb-8">Why Our Machine Costs More</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white/5 rounded-2xl p-6 text-center">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <span class="compare-badge-more">HIGHER COST</span>
+          </div>
+          <div class="font-display text-3xl text-amber-500 mb-2">+500¥/kg</div>
+          <div class="text-sm text-steel-400">Q355B Steel vs Ordinary Steel</div>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-6 text-center">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <span class="compare-badge-more">HIGHER COST</span>
+          </div>
+          <div class="font-display text-3xl text-amber-500 mb-2">+10,000¥</div>
+          <div class="text-sm text-steel-400">27硅锰 Hydraulic Cylinder</div>
+        </div>
+        <div class="bg-amber-500/10 rounded-2xl p-6 text-center border border-amber-500/30">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <span class="compare-badge-less">BIGGER SAVINGS</span>
+          </div>
+          <div class="font-display text-3xl text-success-500 mb-2">-50,000¥</div>
+          <div class="text-sm text-steel-400">Repair Savings Over 5 Years</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPERATIONS DEMO SECTION -->
+    <div class="text-center mb-12 reveal">
+      <div class="text-amber-500 text-xs font-semibold uppercase tracking-[0.3em] mb-4">OPERATION DEMO</div>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">So Simple, Anyone Can Run It</h2>
+      <p class="text-steel-400 text-lg max-w-2xl mx-auto">From startup to shutdown, the entire process takes minutes. No specialized training, no complicated setup.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-steel-900/50 border border-steel-800 rounded-2xl p-6 hover:border-amber-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          </span>
+          <span class="text-amber-500 text-xs font-semibold">STEP 01</span>
+        </div>
+        <h3 class="font-display text-xl text-white mb-3">One-Touch Start</h3>
+        <p class="text-sm text-steel-400 leading-relaxed mb-4">Load seeds, close the barrel, press the green button. The machine auto-adjusts pressure and temperature based on seed type presets.</p>
+        <div class="flex items-center gap-2 text-amber-500">
+          <span class="font-display text-xl">2 min</span>
+          <span class="text-xs">Setup Time</span>
+        </div>
+      </div>
+
+      <div class="bg-steel-900/50 border border-steel-800 rounded-2xl p-6 hover:border-amber-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </span>
+          <span class="text-amber-500 text-xs font-semibold">STEP 02</span>
+        </div>
+        <h3 class="font-display text-xl text-white mb-3">Easy Cake Removal</h3>
+        <p class="text-sm text-steel-400 leading-relaxed mb-4">Our top cake removal system lifts the barrel automatically. No more squatting down to collect cake — it slides out easily.</p>
+        <div class="flex items-center gap-2 text-amber-500">
+          <span class="font-display text-xl">10x</span>
+          <span class="text-xs">Faster vs Traditional</span>
+        </div>
+      </div>
+
+      <div class="bg-steel-900/50 border border-steel-800 rounded-2xl p-6 hover:border-amber-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </span>
+          <span class="text-amber-500 text-xs font-semibold">STEP 03</span>
+        </div>
+        <h3 class="font-display text-xl text-white mb-3">Diaphragm System</h3>
+        <p class="text-sm text-steel-400 leading-relaxed mb-4">14 diaphragm plates distribute pressure evenly across the seed bed. This increases oil yield by 8-12% compared to flat-plate designs.</p>
+        <div class="flex items-center gap-2 text-amber-500">
+          <span class="font-display text-xl">+8-12%</span>
+          <span class="text-xs">Yield Improvement</span>
+        </div>
+      </div>
+
+      <div class="bg-steel-900/50 border border-steel-800 rounded-2xl p-6 hover:border-amber-500/50 transition-colors">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <span class="text-amber-500 text-xs font-semibold">STEP 04</span>
+        </div>
+        <h3 class="font-display text-xl text-white mb-3">Low Maintenance</h3>
+        <p class="text-sm text-steel-400 leading-relaxed mb-4">Daily: wipe the barrel, check oil level. Monthly: lubricate guide pins. That's it. The hydraulic system is sealed for life.</p>
+        <div class="flex items-center gap-2 text-amber-500">
+          <span class="font-display text-xl">5 min</span>
+          <span class="text-xs">Daily Maintenance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="py-16 md:py-24 bg-steel-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between mb-4 reveal">
+      <div>
+        <h2 class="section-title">Featured Products</h2>
+      </div>
+      <a href="/products" class="hidden sm:inline-flex btn-outline text-sm">
+        View All Products
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <p class="text-steel-600 max-w-3xl mb-10 reveal">Every model uses our premium materials and riveted barrel design. Choose based on your daily capacity and production goals.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <a href="/products/hn325" class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+          <img src="/images/hero/hydraulic-oil-press-machine.webp" alt="HN325" width="400" height="300" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+            <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              View Details
+            </span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN325</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Single Barrel Press</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">50-60 kg/h</span>
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">2.2 kW</span>
+          </div>
+        </div>
+      </a>
+      <a href="/products/hn355" class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-amber-300 ring-2 ring-amber-500/20 group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+          <img src="/images/hero/hydraulic-oil-press-production.webp" alt="HN355" width="400" height="300" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute top-3 right-3"><span class="bg-amber-500 text-charcoal-900 text-[10px] font-bold px-2.5 py-1 rounded-lg">★ Most Popular</span></div>
+          <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+            <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              View Details
+            </span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN355</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Double Barrel Press</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">70-80 kg/h</span>
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">3 kW</span>
+          </div>
+        </div>
+      </a>
+      <a href="/products/hn426" class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+          <img src="/images/hero/cold-press-production-line.webp" alt="HN426" width="400" height="300" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+            <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              View Details
+            </span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Large Barrel Press</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">90-110 kg/h</span>
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">4 kW</span>
+          </div>
+        </div>
+      </a>
+      <a href="/products/hn480" class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+          <img src="/images/hero/factory-workshop.webp" alt="HN480" width="400" height="300" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+            <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              View Details
+            </span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN480</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Full Production Line</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">120-150 kg/h</span>
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">5.5 kW</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Solutions Section -->
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between mb-4 reveal">
+      <div>
+        <h2 class="section-title">Featured Solutions</h2>
+      </div>
+      <a href="/solutions" class="hidden sm:inline-flex btn-outline text-sm">
+        View All Solutions
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <p class="text-steel-600 max-w-3xl mb-10 reveal">Different seeds need different pressing strategies. We've optimized each solution for maximum yield and efficiency.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <a href="/solutions/coconut" class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors">
+        <div class="text-3xl mb-4">🥥</div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Coconut Oil</h3>
+        <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">Cold press coconut oil extraction with high yield and minimal moisture content.</p>
+        <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+          View Solution
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/solutions/sesame" class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors">
+        <div class="text-3xl mb-4">🫘</div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Sesame Oil</h3>
+        <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">Premium sesame oil production with optimal temperature control.</p>
+        <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+          View Solution
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/solutions/peanut" class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors">
+        <div class="text-3xl mb-4">🥜</div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Peanut Oil</h3>
+        <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">High-efficiency peanut oil pressing with complete oil extraction.</p>
+        <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+          View Solution
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/solutions/mustard" class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors">
+        <div class="text-3xl mb-4">🌾</div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Mustard Oil</h3>
+        <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">Traditional mustard oil production with modern technology.</p>
+        <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+          View Solution
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/solutions/sunflower" class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors">
+        <div class="text-3xl mb-4">🌻</div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Sunflower Oil</h3>
+        <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">Large-scale sunflower oil production for commercial operations.</p>
+        <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+          View Solution
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/solutions/shea" class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors">
+        <div class="text-3xl mb-4">🧈</div>
+        <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Shea Butter</h3>
+        <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">Specialized shea butter extraction for cosmetic and food industries.</p>
+        <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+          View Solution
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 md:py-24 bg-steel-900">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+    <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+      Ready to Start Your Oil Business?
+    </h2>
+    <p class="text-steel-300 text-lg mb-6 max-w-2xl mx-auto">
+      8,000+ oil producers trust Haonuo for Q355B steel frames, 27硅锰 cylinders, and riveted barrels. Get your custom quote today.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm text-amber-400">
+      <span class="flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Free Consultation
+      </span>
+      <span class="flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Factory-Direct Quote in 24h
+      </span>
+      <span class="flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        2-Year Warranty
+      </span>
+      <span class="flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Global Shipping
+      </span>
+    </div>
+    <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+      Get Your Quote Now
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer class="bg-charcoal-900 text-steel-500 py-8 text-center text-sm">
+  <p>© 2026 Shandong Haonuo Machinery Equipment Group Co., Ltd. All rights reserved.</p>
+  <p class="text-steel-600 mt-1 text-xs">📐 Preview — Enhanced with Video Content</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  });
+</script>
+</body>
+</html>

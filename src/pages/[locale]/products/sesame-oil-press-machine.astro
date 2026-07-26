@@ -1,0 +1,263 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getTranslations, type Locale } from '../../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allProducts = await getCollection('products');
+const seedProducts = allProducts.filter(p =>
+  p.data.applicableSeeds.some(s => s.toLowerCase().includes('sesame'))
+).slice(0, 3);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const pageTitle = currentLocale === 'fr' ? 'Presse à Huile de Sésame — Presse Hydraulique à Froid pour Huile Premium' :
+                  currentLocale === 'ar' ? 'مكينة ضغط زيت السمسم — ضغط هيدروليكي بارد لزيت فاخر' :
+                  'Mesin Press Minyak Wijen — Press Hidrolik Dingin untuk Minyak Premium';
+
+const pageDesc = currentLocale === 'fr' ? 'Presse à huile de sésame professionnelle par Haonuo Machinery. Technologie de presse hydraulique à froid préservant l\'arôme naturel et les nutriments. Rendement en huile de 42-47%, capacité 50 kg/lot. Prix direct d\'usine.' :
+                 currentLocale === 'ar' ? 'مكينة ضغط زيت السمسم محترفة من Haonuo Machinery. تقنية الضغط الهيدروليكي البارد تحافظ على الرائحة الطبيعية والمغذيات. عائد زيت 42-47%، سعة 50 كجم/دفعة. أسعار مباشرة من المصنع.' :
+                 'Mesin press minyak wijen profesional oleh Haonuo Machinery. Teknologi press hidrolik dingin mempertahankan aroma alami dan nutrisi. Hasil minyak 42-47%, kapasitas 50 kg/batch. Harga langsung pabrik.';
+
+const heroTitle = currentLocale === 'fr' ? 'Presse à Huile de Sésame' :
+                  currentLocale === 'ar' ? 'مكينة ضغط زيت السمسم' :
+                  'Mesin Press Minyak Wijen';
+
+const heroDesc = currentLocale === 'fr' ? 'Presse hydraulique à froid pour huile de sésame premium — préserve l\'arôme naturel et les nutriments, rendement en huile de 42-47%, capacité jusqu\'à 50 kg/lot.' :
+                 currentLocale === 'ar' ? 'ضغط هيدروليكي بارد لزيت سمسم فاخر — يحافظ على الرائحة الطبيعية والمغذيات، عائد زيت 42-47%، سعة تصل إلى 50 كجم/دفعة.' :
+                 'Press hidrolik dingin untuk minyak wijen premium — mempertahankan aroma alami dan nutrisi, hasil minyak 42-47%, kapasitas hingga 50 kg/batch.';
+
+const seoIntro1 = currentLocale === 'fr' ? 'L\'huile de sésame est l\'une des huiles comestibles les plus précieuses au monde, prisée pour sa saveur de noisette distinctive, son arôme riche et son profil nutritionnel impressionnant. Produire une huile de sésame premium exige un équipement spécialisé capable d\'extraire un maximum d\'huile tout en préservant les composés aromatiques délicats et les antioxydants comme la sésamine et le sésamol. Une presse à huile de sésame utilisant la technologie de presse hydraulique à froid est la solution idéale, appliquant une pression intense à basse température pour atteindre des rendements en huile de 42-47% sans dégrader la qualité de l\'huile.' :
+                  currentLocale === 'ar' ? 'زيت السمسم هو أحد أكثر الأزياء الصالحة للأكل قيمة في العالم، يُقدر لنكهته الجوزية المميزة ورائحته الغنية وملفه الغذائي المثير للإعجاب. إنتاج زيت سمسم فاخر يتطلب معدات متخصصة يمكنها استخراج أقصى قدر من الزيت مع الحفاظ على المركبات العطرية الرقيقة ومضادات الأكسدة مثل السيزامين والسيزامول. مكينة ضغط زيت السمسم باستخدام تقنية الضغط الهيدروليكي البارد هي الحل المثالي، تطبيق ضغط شديد في درجة حرارة منخفضة لتحقيق عوائد زيت 42-47% بدون تدهور جودة الزيت.' :
+                  'Minyak wijen adalah salah satu minyak yang dapat dimakan paling berharga di dunia, dihargai karena rasa kacangnya yang khas, aromanya yang kaya, dan profil nutrisinya yang mengesankan. Memproduksi minyak wijen premium membutuhkan peralatan khusus yang dapat mengekstraksi minyak secara maksimal sambil mempertahankan senyawa rasa halus dan antioksidan seperti sesamin dan sesamol. Mesin press minyak wijen menggunakan teknologi press hidrolik dingin adalah solusi ideal, menerapkan tekanan intensif pada suhu rendah untuk mencapai hasil minyak 42-47% tanpa menurunkan kualitas minyak.';
+
+const seoIntro2 = currentLocale === 'fr' ? 'Les presses à huile de sésame de Haonuo Machinery sont spécialement conçues pour le traitement du sésame, avec un fût plus étroit de 300 mm qui concentre la force de pressage à 47-51 Mpa/cm² pour une extraction complète en un seul cycle rapide. La conception sensible à la température minimise la perte de chaleur pendant le pressage — un facteur critique pour le sésame, où une exposition prolongée à la chaleur réduit à la fois le rendement et la qualité. Avec des capacités de lot allant jusqu\'à 50 kg et des temps de cycle de seulement 8-12 minutes, ces machines offrent un débit nettement supérieur aux presses à huile de sésame de style coréen traditionnelles, offrant une valeur et une efficacité de production supérieures.' :
+                  currentLocale === 'ar' ? 'مكائن ضغط زيت السمسم من Haonuo Machinery مصممة خصيصاً لمعالجة السمسم، مع برميل أضيق بقطر 300 مم يركز قوة الضغط على 47-51 ميجاباسكال/سم² لاستخراج كامل في دورة واحدة سريعة. التصميم الحساس لدرجة الحرارة يقلل من فقدان الحرارة أثناء الضغط — عامل حاسم للسمسم، حيث التعرض المطول للحرارة يقلل كلاً من العائد والجودة. مع سعات دفعة تصل إلى 50 كجم وأوقات دورة فقط 8-12 دقيقة، هذه المكائن توفر إنتاجية أعلى بكثير من مكائن ضغط زيت السمسم الكورية التقليدية، مما يوفر قيمة وكفاءة إنتاج فائقة.' :
+                  'Mesin press minyak wijen Haonuo Machinery dirancang khusus untuk pengolahan wijen, dengan barrel yang lebih sempit 300 mm yang memusatkan gaya press hingga 47-51 Mpa/cm² untuk ekstraksi lengkap dalam satu siklus cepat. Desain sensitif suhu meminimalkan kehilangan panas selama press — faktor kritis untuk wijen, di mana paparan panas yang berkepanjangan mengurangi baik hasil maupun kualitas. Dengan kapasitas batch hingga 50 kg dan waktu siklus hanya 8-12 menit, mesin ini menawarkan throughput yang jauh lebih tinggi daripada press minyak wijen gaya Korea tradisional, memberikan nilai dan efisiensi produksi yang unggul.';
+
+const productSectionTitle = currentLocale === 'fr' ? 'Nos Presses à Huile de Sésame' :
+                           currentLocale === 'ar' ? 'مكائن ضغط زيت السمسم لدينا' :
+                           'Mesin Press Minyak Wijen Kami';
+
+const faqSectionTitle = currentLocale === 'fr' ? 'Foire aux questions' :
+                        currentLocale === 'ar' ? 'أسئلة شائعة' :
+                        'Pertanyaan yang Sering Diajukan';
+
+const relatedTitle = currentLocale === 'fr' ? 'Solutions Associées' :
+                     currentLocale === 'ar' ? 'حلول ذات صلة' :
+                     'Solusi Terkait';
+
+const faqs = [
+  { question: currentLocale === 'fr' ? 'Quel est le rendement en huile de sésame avec une presse hydraulique ?' :
+              currentLocale === 'ar' ? 'ما هو عائد زيت السمسم باستخدام مكينة الضغط الهيدروليكي؟' :
+              'Berapa hasil minyak wijen menggunakan mesin press hidrolik?',
+    answer: currentLocale === 'fr' ? 'Une presse à huile hydraulique peut extraire environ 42-47% d\'huile des graines de sésame. Le rendement exact dépend de la variété de sésame, de la teneur en humidité et des paramètres de pressage. Les modèles spécifiques au sésame de Haonuo atteignent des rendements plus élevés grâce à une force de pressage concentrée de 47-51 Mpa/cm².' :
+            currentLocale === 'ar' ? 'مكينة الضغط الهيدروليكي يمكنها استخراج حوالي 42-47% من الزيت من بذور السمسم. العائد الدقيق يعتمد على نوع السمسم ومحتوى الرطوبة ومعلمات الضغط. نماذج السمسم المخصصة من Haonuo تحقق عوائد أعلى بفضل قوة الضغط المركزة 47-51 ميجاباسكال/سم².' :
+            'Mesin press hidrolik dapat mengekstraksi sekitar 42-47% minyak dari biji wijen. Hasil tepat tergantung pada varietas wijen, kadar kelembapan, dan parameter press. Model khusus wijen Haonuo mencapai hasil lebih tinggi berkat gaya press terkonsentrasi 47-51 Mpa/cm².' },
+  { question: currentLocale === 'fr' ? 'Pourquoi le pressage à froid est-il important pour l\'huile de sésame ?' :
+              currentLocale === 'ar' ? 'لماذا الضغط البارد مهم لزيت السمسم؟' :
+              'Mengapa press dingin penting untuk minyak wijen?',
+    answer: currentLocale === 'fr' ? 'L\'huile de sésame est prisée pour son arôme et sa saveur de noisette, qui sont facilement détruits par les hautes températures. Le pressage à froid à basse température préserve la saveur naturelle du sésame, les antioxydants (sésamine et sésamol) et la valeur nutritionnelle, produisant une huile de sésame de qualité premium qui se vend à des prix de marché plus élevés.' :
+            currentLocale === 'ar' ? 'زيت السمسم يُقدر لرائحته ونكهته الجوزية، التي يسهل تدميرها بدرجات الحرارة العالية. الضغط البارد في درجة حرارة منخفضة يحافظ على النكهة الطبيعية للسمسم ومضادات الأكسدة (السيزامين والسيزامول) والقيمة الغذائية، منتجاً زيت سمسم عالي الجودة يُباع بأسعار سوق أعلى.' :
+            'Minyak wijen dihargai karena aroma dan rasanya yang beraroma kacang, yang mudah rusak oleh suhu tinggi. Press dingin pada suhu rendah mempertahankan rasa alami wijen, antioksidan (sesamin dan sesamol), dan nilai nutrisi, menghasilkan minyak wijen berkualitas premium yang dijual dengan harga pasar lebih tinggi.' },
+  { question: currentLocale === 'fr' ? 'Combien de temps faut-il pour presser un lot de sésame ?' :
+              currentLocale === 'ar' ? 'كم يستغرق ضغط دفعة سمسم واحدة؟' :
+              'Berapa lama waktu yang dibutuhkan untuk mempress satu batch wijen?',
+    answer: currentLocale === 'fr' ? 'Le pressage du sésame doit être effectué rapidement pour éviter la perte de chaleur et la réduction du rendement. La presse hydraulique spécifique au sésame de Haonuo complète un cycle de pressage complet en environ 8-12 minutes par lot, grâce à la force de pressage concentrée et au design de fût optimisé.' :
+            currentLocale === 'ar' ? 'ضغط السمسم يجب أن يتم بسرعة لمنع فقدان الحرارة وانخفاض العائد. مكينة الضغط الهيدروليكي المخصصة للسمسم من Haonuo تكمل دورة ضغط كاملة في حوالي 8-12 دقيقة لكل دفعة، بفضل قوة الضغط المركزة وتصميم البرميل المحسن.' :
+            'Press wijen harus diselesaikan dengan cepat untuk mencegah kehilangan panas dan penurunan hasil. Press hidrolik khusus wijen Haonuo menyelesaikan siklus press penuh dalam sekitar 8-12 menit per batch, berkat gaya press terkonsentrasi dan desain barrel yang dioptimalkan.' },
+  { question: currentLocale === 'fr' ? 'Combien de sésame la machine peut-elle traiter par lot ?' :
+              currentLocale === 'ar' ? 'كم سمسم يمكن للمكينة معالجته في الدفعة؟' :
+              'Berapa banyak wijen yang dapat diproses mesin per batch?',
+    answer: currentLocale === 'fr' ? 'Les modèles spécifiques au sésame de Haonuo disposent d\'un fût de 300 mm de diamètre intérieur et 800 mm de haut, pouvant contenir 32,5 kg de sésame par lot. Avec une pré-compression pour créer de l\'espace supplémentaire, un seul lot peut traiter jusqu\'à 50 kg de sésame — nettement plus que les presses hydrauliques de sésame de style coréen.' :
+            currentLocale === 'ar' ? 'نماذج السمسم المخصصة من Haonuo تتمتع ببرميل بقطر داخلي 300 مم وارتفاع 800 مم، يحمل 32.5 كجم من السمسم لكل دفعة. مع ضغط مسبق لخلق مساحة إضافية، دفعة واحدة يمكنها معالجة حتى 50 كجم من السمسم — أكثر بكثير من مكائن ضغط السمسم الكورية.' :
+            'Model khusus wijen Haonuo memiliki barrel berdiameter dalam 300 mm dan tinggi 800 mm yang menampung 32,5 kg wijen per batch. Dengan pra-kompresi untuk membuat ruang tambahan, satu batch dapat memproses hingga 50 kg wijen — jauh lebih banyak daripada press hidrolik wijen gaya Korea.' },
+  { question: currentLocale === 'fr' ? 'La même machine peut-elle presser d\'autres graines oléagineuses que le sésame ?' :
+              currentLocale === 'ar' ? 'هل يمكن لنفس المكينة ضغط بذور زيتية أخرى غير السمسم؟' :
+              'Apakah mesin yang sama dapat mempress biji minyak lain selain wijen?',
+    answer: currentLocale === 'fr' ? 'Oui, la presse hydraulique à huile de sésame de Haonuo est polyvalente et peut également presser les noix en coque, les graines de thé, le colza, les arachides, le soja, les graines de laque et le lin. En fait, elle atteint des taux d\'huile résiduelle encore plus bas sur ces matériaux conventionnels par rapport aux modèles standard.' :
+            currentLocale === 'ar' ? 'نعم، مكينة الضغط الهيدروليكي لزيت السمسم من Haonuo متعددة الاستخدامات ويمكنها أيضاً ضغط الجوز بقشره وبذور الشاي والكركديه والفول السوداني والصويا وبذور الطلاء والكتان. في الواقع، تحقق معدلات زيت متبقية أقل على هذه المواد التقليدية مقارنة بالنماذج القياسية.' :
+            'Ya, mesin press hidrolik wijen Haonuo serbaguna dan juga dapat mempress walnut dengan cangkang, biji teh, rapeseed, kacang tanah, kedelai, biji lak, dan biji rami. Faktanya, mesin ini mencapai tingkat sisa minyak yang lebih rendah pada bahan konvensional ini dibandingkan model standar.' },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.products, item: `https://www.hydoilpress.com/${currentLocale}/products` },
+    { '@type': 'ListItem', position: 3, name: heroTitle, item: `https://www.hydoilpress.com/${currentLocale}/products/sesame-oil-press-machine` },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
+const ctaTitle = currentLocale === 'fr' ? 'Prêt à Démarrer Votre Entreprise d\'Huile de Sésame ?' :
+                currentLocale === 'ar' ? 'هل أنت مستعد لبدء مشروع زيت السمسم؟' :
+                'Siap Memulai Bisnis Minyak Wijen Anda?';
+
+const ctaDesc = currentLocale === 'fr' ? 'Contactez-nous pour un devis gratuit et une recommandation d\'équipement professionnelle.' :
+                currentLocale === 'ar' ? 'اتصل بنا للحصول على عرض أسعار مجاني وتوصية معدات احترافية.' :
+                'Hubungi kami untuk penawaran gratis dan rekomendasi peralatan profesional.';
+
+const ctaBtn = currentLocale === 'fr' ? 'Demander un devis gratuit' :
+               currentLocale === 'ar' ? 'طلب عرض أسعار مجاني' :
+               'Minta Penawaran Gratis';
+
+const relatedSol1Title = currentLocale === 'fr' ? 'Solution de Pressage d\'Huile de Sésame' :
+                         currentLocale === 'ar' ? 'حل ضغط زيت السمسم' :
+                         'Solusi Press Minyak Wijen';
+const relatedSol1Desc = currentLocale === 'fr' ? 'Ligne de production complète d\'huile de sésame de la sélection des graines à l\'huile premium.' :
+                        currentLocale === 'ar' ? 'خط إنتاج زيت السمسم الكامل من اختيار البذور إلى الزيت الفاخر.' :
+                        'Lini produksi minyak wijen lengkap dari pemilihan biji hingga minyak premium.';
+const relatedSol2Title = currentLocale === 'fr' ? 'Solution de Presse à Huile pour Petite Entreprise' :
+                         currentLocale === 'ar' ? 'حل مكينة ضغط الزيت للشركات الصغيرة' :
+                         'Solusi Press Minyak untuk Usaha Kecil';
+const relatedSol2Desc = currentLocale === 'fr' ? 'Solutions de pressage d\'huile abordables pour les entrepreneurs à petite échelle.' :
+                        currentLocale === 'ar' ? 'حلول ضغط زيت ميسورة التكلفة لرواد الأعمال على نطاق صغير.' :
+                        'Solusi press minyak terjangkau untuk wirausahawan skala kecil.';
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={pageTitle}
+  description={pageDesc}
+  keywords={currentLocale === 'fr' ? ['presse à huile de sésame', 'presse hydraulique sésame', 'presse hydraulique pour sésame', 'machine extraction huile sésame', 'huile sésame pressée à froid', 'machine huile sésame'] : currentLocale === 'ar' ? ['مكينة ضغط زيت السمسم', 'مكينة ضغط هيدروليكي سمسم', 'مكينة ضغط هيدروليكي للسمسم', 'مكينة استخراج زيت السمسم', 'زيت سمسم مضغوط بارد', 'مكينة زيت السمسم'] : ['mesin press minyak wijen', 'mesin press hidrolik wijen', 'mesin press hidrolik untuk wijen', 'mesin ekstraksi minyak wijen', 'minyak wijen press dingin', 'mesin minyak wijen']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/products')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">{heroTitle}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{heroTitle}</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">{heroDesc}</p>
+    </div>
+  </section>
+
+  <!-- SEO Introduction -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose-solution">
+        <p>{seoIntro1}</p>
+        <p>{seoIntro2}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  {seedProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-steel-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">{productSectionTitle}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {seedProducts.map(product => (
+            <a
+              href={localePath(`/products/${product.slug}`)}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title[currentLocale] || product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20sesame%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
+                <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {(currentLocale === 'id' && product.data.specificationsId?.length > 0 ? product.data.specificationsId : currentLocale === 'ar' && product.data.specificationsAr?.length > 0 ? product.data.specificationsAr : currentLocale === 'fr' && product.data.specificationsFr?.length > 0 ? product.data.specificationsFr : product.data.specifications).slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">{faqSectionTitle}</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Solutions -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">{relatedTitle}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href={localePath('/solutions/sesame-oil-pressing')} class="card-hover bg-white rounded-2xl p-6 border border-steel-100 group hover:border-amber-300">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">{relatedSol1Title}</h3>
+          <p class="text-sm text-steel-600 line-clamp-2">{relatedSol1Desc}</p>
+        </a>
+        <a href={localePath('/solutions/small-business-oil-press')} class="card-hover bg-white rounded-2xl p-6 border border-steel-100 group hover:border-amber-300">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">{relatedSol2Title}</h3>
+          <p class="text-sm text-steel-600 line-clamp-2">{relatedSol2Desc}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{ctaTitle}</h2>
+      <p class="text-steel-300 text-lg mb-8">{ctaDesc}</p>
+      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        {ctaBtn}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

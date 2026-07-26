@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allProducts = await getCollection('products');
+const indonesiaSeeds = ['palm', 'coconut', 'peanut'];
+const seedProducts = allProducts.filter(p =>
+  p.data.applicableSeeds.some(s => indonesiaSeeds.some(ns => s.toLowerCase().includes(ns)))
+).slice(0, 4);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.hydoilpress.com/solutions' },
+    { '@type': 'ListItem', position: 3, name: 'Indonesia', item: 'https://www.hydoilpress.com/markets/indonesia' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Berapa harga mesin press minyak di Indonesia?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Hubungi kami untuk penawaran harga mesin press minyak hidrolik Haonuo. Harga sudah termasuk kustomisasi tegangan 220V/50Hz untuk standar listrik Indonesia.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Berapa lama pengiriman ke Jakarta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Pengiriman laut dari Qingdao, China ke Pelabuhan Tanjung Priok, Jakarta membutuhkan waktu 15-20 hari. Kami menangani semua dokumen ekspor. Hubungi kami untuk biaya pengiriman terkini.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Apakah mesin bisa digunakan untuk kelapa dan sawit?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ya, mesin press hidrolik Haonuo sangat serbaguna dan bisa memproses kelapa (VCO), inti sawit, kacang tanah, biji wijen, dan banyak lagi. Cukup sesuaikan pengaturan tekanan dan suhu untuk setiap jenis bahan.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Apakah mesin cocok untuk produksi VCO (Virgin Coconut Oil)?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ya, model HN426 Cold Press dirancang khusus untuk cold pressing pada suhu di bawah 60°C, menjaga aroma dan nutrisi alami kelapa. Konstruksi stainless steel 304 tersedia untuk ketahanan terhadap korosi air kelapa.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Apakah ada layanan purna jual di Indonesia?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Kami menyediakan dukungan teknis melalui WhatsApp, manual instalasi lengkap dalam bahasa Inggris, dan video tutorial. Suku cadang dikirim dalam 48 jam melalui DHL ke Jakarta. Untuk pesanan besar, kami bisa mengirim teknisi untuk instalasi di lokasi Anda.' },
+    },
+  ],
+};
+
+const faqs = [
+  { question: 'Berapa harga mesin press minyak di Indonesia?', answer: 'Hubungi kami untuk penawaran harga mesin press minyak hidrolik Haonuo. Harga sudah termasuk kustomisasi tegangan 220V/50Hz untuk standar listrik Indonesia.' },
+  { question: 'Berapa lama pengiriman ke Jakarta?', answer: 'Pengiriman laut dari Qingdao, China ke Pelabuhan Tanjung Priok, Jakarta membutuhkan waktu 15-20 hari. Kami menangani semua dokumen ekspor. Hubungi kami untuk biaya pengiriman terkini.' },
+  { question: 'Apakah mesin bisa digunakan untuk kelapa dan sawit?', answer: 'Ya, mesin press hidrolik Haonuo sangat serbaguna dan bisa memproses kelapa (VCO), inti sawit, kacang tanah, biji wijen, dan banyak lagi. Cukup sesuaikan pengaturan tekanan dan suhu untuk setiap jenis bahan.' },
+  { question: 'Apakah mesin cocok untuk produksi VCO (Virgin Coconut Oil)?', answer: 'Ya, model HN426 Cold Press dirancang khusus untuk cold pressing pada suhu di bawah 60°C, menjaga aroma dan nutrisi alami kelapa. Konstruksi stainless steel 304 tersedia untuk ketahanan terhadap korosi air kelapa.' },
+  { question: 'Apakah ada layanan purna jual di Indonesia?', answer: 'Kami menyediakan dukungan teknis melalui WhatsApp, manual instalasi lengkap dalam bahasa Inggris, dan video tutorial. Suku cadang dikirim dalam 48 jam melalui DHL ke Jakarta. Untuk pesanan besar, kami bisa mengirim teknisi untuk instalasi di lokasi Anda.' },
+];
+---
+
+<BaseLayout
+  title="Mesin Press Minyak & Hydraulic Oil Press &Harga Pabrik dari Haonuo"
+  description="Mesin press minyak hidrolik profesional untuk kelapa, sawit, dan kacang tanah. Harga pabrik langsung dari Haonuo. Pengiriman ke Jakarta 15-20 hari. Garansi 2 tahun."
+  keywords={['mesin press minyak', 'mesin press minyak kelapa', 'mesin press minyak sawit', 'harga mesin press minyak', 'mesin press minyak hidrolik', 'mesin VCO']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/solutions" class="hover:text-amber-500 transition-colors">Solutions</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Indonesia</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Mesin Press Minyak & Hydraulic Oil Press &Harga Pabrik dari Haonuo</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">Mesin press minyak hidrolik untuk kelapa (VCO), inti sawit, dan kacang tanah. Harga pabrik langsung, pengiriman ke Jakarta 15-20 hari, garansi 2 tahun.</p>
+    </div>
+  </section>
+
+  <!-- Popular Oilseeds in Indonesia -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Bahan Minyak Populer di Indonesia</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🌴</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Kelapa (Coconut)</h3>
+          <p class="text-sm text-steel-600 mb-3">Indonesia adalah produsen kelapa terbesar di dunia. Virgin Coconut Oil (VCO) sangat diminati untuk kuliner dan kosmetik.</p>
+          <div class="text-amber-500 font-semibold text-sm">Yield: 60-65% (kopra)</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🫒</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Sawit (Palm Kernel)</h3>
+          <p class="text-sm text-steel-600 mb-3">Produsen sawit #1 dunia. Inti sawit menghasilkan minyak berkualitas tinggi untuk kosmetik dan makanan.</p>
+          <div class="text-amber-500 font-semibold text-sm">Yield: 44-48%</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🥜</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Kacang Tanah (Peanut)</h3>
+          <p class="text-sm text-steel-600 mb-3">Minyak kacang tanah populer untuk masakan Indonesia. Rasa khas yang disukai untuk menggoreng dan bumbu.</p>
+          <div class="text-amber-500 font-semibold text-sm">Yield: 38-45%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Products -->
+  {seedProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-steel-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">Rekomendasi Mesin untuk Indonesia</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {seedProducts.map(product => (
+            <a
+              href={`/products/${product.slug}`}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {product.data.specifications.slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Get a Customized Quote -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="section-title mb-6">Dapatkan Penawaran Harga untuk Indonesia</h2>
+      <p class="text-steel-600 text-lg mb-6 max-w-2xl mx-auto">Kami menyediakan harga pabrik langsung yang kompetitif untuk semua mesin press minyak kami. Minta penawaran resmi dalam Rupiah atau USD, termasuk pengiriman ke Jakarta.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">🏭</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Harga Pabrik Langsung</h3>
+          <p class="text-steel-600 text-sm">Tanpa perantara — hemat dibanding distributor lokal (penghematan aktual bervariasi)</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">📋</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Penawaran Lengkap</h3>
+          <p class="text-steel-600 text-sm">Harga mesin + pengiriman + estimasi bea masuk termasuk</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-3">💬</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Penawaran dalam Rupiah</h3>
+          <p class="text-steel-600 text-sm">Kami dapat memberikan penawaran dalam Rupiah dengan kurs terkini</p>
+        </div>
+      </div>
+      <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        Minta Penawaran Harga
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Shipping Info -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Pengiriman ke Indonesia</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100 text-center">
+          <div class="text-3xl mb-3">🚢</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Pelabuhan</h3>
+          <p class="text-steel-600">Tanjung Priok, Jakarta</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100 text-center">
+          <div class="text-3xl mb-3">⏱️</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Waktu Pengiriman</h3>
+          <p class="text-steel-600">15-20 hari dari China</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100 text-center">
+          <div class="text-3xl mb-3">💰</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Biaya Pengiriman</h3>
+          <p class="text-steel-600">Tanya kami untuk tarif terkini</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">Pertanyaan yang Sering Diajukan</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <div class="reveal bg-white rounded-xl p-6" style={`animation-delay: ${i * 80}ms`}>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">{item.question}</h3>
+            <p class="text-steel-600 leading-relaxed">{item.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Siap Memulai Bisnis Minyak Anda?</h2>
+      <p class="text-steel-300 text-lg mb-8">Dapatkan penawaran harga dalam Rupiah, estimasi pengiriman ke Jakarta, dan rekomendasi mesin yang tepat.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          Minta Penawaran Harga
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128?text=Halo%20Haonuo%2C%20saya%20tertarik%20dengan%20mesin%20press%20minyak%20untuk%20Indonesia" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-500 transition-colors text-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hubungi via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

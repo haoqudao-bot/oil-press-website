@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('fr');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+    { '@type': 'ListItem', position: 2, name: 'Politique sur les cookies', item: 'https://www.hydoilpress.com/fr/cookie-policy' },
+  ],
+};
+---
+
+<BaseLayout title="Politique sur les cookies" description="Politique sur les cookies de Haonuo Machinery - Découvrez comment nous utilisons les cookies sur notre site web et comment vous pouvez gérer vos préférences en matière de cookies." locale="fr">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/fr" class="hover:text-amber-500 transition-colors">Accueil</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Politique sur les cookies</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">Politique sur les cookies</h1>
+      <p class="text-steel-600 text-lg mb-8">Dernière mise à jour: 20 juillet 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. Qu'est-ce qu'un cookie?</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Les cookies sont de petits fichiers texte qui sont stockés sur votre appareil lorsque vous visitez un site web. Ils aident les sites web à se souvenir d'informations sur votre visite, telles que votre préférence de langue et d'autres paramètres.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. Comment nous utilisons les cookies</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Nous utilisons les cookies aux fins suivantes:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li><strong>Cookies essentiels:</strong> Ces cookies sont nécessaires au bon fonctionnement du site web. Ils ne peuvent pas être désactivés.</li>
+            <li><strong>Cookies de performance:</strong> Ces cookies nous aident à analyser la manière dont les visiteurs utilisent notre site web et à améliorer ses performances.</li>
+            <li><strong>Cookies de fonctionnalité:</strong> Ces cookies permettent au site web de se souvenir de vos préférences et de fournir des fonctionnalités améliorées.</li>
+            <li><strong>Cookies marketing:</strong> Ces cookies sont utilisés pour fournir de la publicité et des messages marketing personnalisés.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. Cookies tiers</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Nous pouvons utiliser des services tiers qui définissent des cookies sur notre site web, tels que Google Analytics pour les analyses du site web. Ces tiers ont leurs propres politiques de confidentialité et de cookies.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. Gérer les cookies</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Vous pouvez gérer vos préférences en matière de cookies via les paramètres de votre navigateur. La plupart des navigateurs vous permettent de:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Accepter tous les cookies</li>
+            <li>Refuser tous les cookies</li>
+            <li>Accepter uniquement les cookies essentiels</li>
+            <li>Supprimer les cookies existants</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            Veuillez noter que la désactivation de certains cookies peut affecter le fonctionnement de notre site web.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. Modifications de cette politique</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Nous pouvons mettre à jour cette Politique sur les cookies de temps en temps. Nous vous informerons de tout changement significatif en publiant la politique mise à jour sur notre site web. Votre utilisation continue de notre site web après tout changement constitue votre acceptation de la politique mise à jour.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. Nous contacter</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Si vous avez des questions sur cette Politique sur les cookies, veuillez nous contacter:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>Email: contact@hydoilpress.com</li>
+            <li>Téléphone: +86-18957149128</li>
+            <li>Adresse: Qingzhou, Weifang, Shandong, Chine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

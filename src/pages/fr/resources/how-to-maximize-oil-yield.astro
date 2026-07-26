@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'how-to-maximize-oil-yield');
+const t = getTranslations('fr');
+
+const title = resource?.data.title.fr || resource?.data.title.en || 'Comment maximiser le rendement en huile';
+const description = resource?.data.description.fr || resource?.data.description.en || 'Conseils et techniques pour une extraction d\'huile améliorée';
+const seoKeywords = resource?.data.seoKeywords || ['maximiser rendement huile', 'extraction huile efficiency', 'optimisation pressage'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/yield-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Senior Oil Press Engineer',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/fr' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/how-to-maximize-oil-yield' },
+  ],
+};
+
+const rawMaterialPrep = [
+  { title: 'Sélection des graines', items: ['Utiliser des graines de haute qualité avec une teneur en huile élevée', 'Éviter les graines endommagées, moisies ou infestées', 'Choisir des graines pleinement mûres'] },
+  { title: 'Nettoyage des graines', items: ['Supprimer les pierres, le métal et autres impuretés dures', 'Séparer les graines endommagées et cassées', 'Objectif : moins de 0,5% d\'impuretés'] },
+  { title: 'Décortication', items: ['Augmente la teneur en huile effective par volume', 'Réduit l\'usure de l\'équipement de pressage', 'Taux de retrait recommandé : Arachides 95%+, Sésame 98%+'] },
+];
+
+const moistureConditioning = [
+  { material: 'Sésame', hotPress: '5-6%', coldPress: '7-8%' },
+  { material: 'Arachide', hotPress: '5-7%', coldPress: '7-9%' },
+  { material: 'Noisette', hotPress: '-', coldPress: '7-9%' },
+];
+
+const hotPressing = [
+  { title: 'Processus de torréfaction', items: ['Température : 160-180°C', 'Durée : 25-35 minutes', 'Humidité de sortie : 3-5%'] },
+  { title: 'Paramètres de pressage', items: ['Commencer avec une pression inférieure, augmenter progressivement', 'Maintenir la pression maximale pendant 15-20 minutes', 'Temps de cycle standard : 30-40 minutes par lot'] },
+];
+
+const coldPressing = [
+  { title: 'Contrôle de température', items: ['Maintenir la température de pressage en dessous de 60°C', 'Utiliser un équipement de pressage à froid spécialisé', 'Modèles recommandés : <a href="/fr/products/cold-press-hydraulic-oil-press">HN426</a>, <a href="/fr/products/high-pressure-hydraulic-oil-press">HN480</a>, <a href="/fr/products/ultra-high-pressure-hydraulic-oil-press">HN500</a>'] },
+  { title: 'Optimisation de la pression', items: ['Le pressage à froid nécessite une pression plus élevée pour briser les parois cellulaires', 'Utiliser une pression de surface de cake de 42+ Mpa/cm2', 'Cycle prolongé : ~2 heures par lot'] },
+];
+
+const postPressing = [
+  { title: 'Filtration de l\'huile', items: ['Filtration primaire : 100-200 mailles', 'Filtration fine : 200-300 mailles', 'Polissage : 300-500 mailles (optionnel)'] },
+  { title: 'Décantation de l\'huile', items: ['Laisser reposer l\'huile pendant 24-48 heures', 'Les particules se déposent au fond', 'Amélioration de la clarté et de la qualité de l\'huile'] },
+];
+
+const qualityControl = [
+  { title: 'Suivi du rendement', items: ['Peser l\'entrée et la sortie pour chaque lot', 'Calculer le pourcentage de rendement', 'Suivre les tendances au fil du temps'] },
+  { title: 'Maintenance de l\'équipement', items: ['Nettoyer la chambre de pressage après chaque lot', 'Inspecter le système hydraulique mensuellement', 'Remplacer les pièces usées rapidement'] },
+];
+
+const commonProblems = [
+  { problem: 'Rendement faible', causes: ['Qualité des graines médiocre', 'Humidité incorrecte', 'Torréfaction insuffisante'], solutions: ['Sourcer des graines de haute qualité', 'Ajuster l\'humidité', 'Augmenter la température de torréfaction'] },
+  { problem: 'Huile trouble', causes: ['Filtration incomplète', 'Contamination par l\'eau'], solutions: ['Augmenter la taille de mailles de filtration', 'Assurer un séchage approprié'] },
+  { problem: 'Temps de pressage trop long', causes: ['Graines trop sèches', 'Taille de particules trop fine'], solutions: ['Augmenter le contenu en humidité', 'Ajuster les paramètres de concassage'] },
+];
+
+function localePath(path: string): string {
+  return `/fr${path}`;
+}
+---
+
+<BaseLayout locale="fr" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-green-50 to-emerald-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-green-500/10 text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          OPTIMISATION DE LA PRODUCTION
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Maximiser le rendement en huile est crucial pour la rentabilité de la production d'huile. Même de petites améliorations de l'efficacité d'extraction peuvent avoir un impact significatif sur vos résultats.
+        </p>
+      </section>
+
+      <section id="understanding-yield" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Comprendre le rendement en huile</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">
+          Le rendement en huile est le pourcentage d'huile extraite de la matière première :
+        </p>
+        <div class="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-xl text-white font-mono text-lg">
+          Rendement (%) = (Poids de l'huile extraite / Poids de la matière première) x 100
+        </div>
+      </section>
+
+      <section id="raw-material-prep" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Préparation de la matière première</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {rawMaterialPrep.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-green-600 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900 mt-8">Conditionnement d'humidité</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Matériau</th>
+                <th class="px-4 py-3 text-left font-semibold">Humidité pour pressage chaud</th>
+                <th class="px-4 py-3 text-left font-semibold">Humidité pour pressage à froid</th>
+              </tr>
+            </thead>
+            <tbody>
+              {moistureConditioning.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hotPress}</td>
+                  <td class="px-4 py-3 text-emerald-600">{item.coldPress}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="hot-pressing" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Optimisation du pressage chaud</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {hotPressing.map((item, index) => (
+            <div key={index} class="bg-orange-50 p-5 rounded-xl border border-orange-200">
+              <h3 class="font-semibold text-orange-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="cold-pressing" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Optimisation du pressage à froid</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {coldPressing.map((item, index) => (
+            <div key={index} class="bg-blue-50 p-5 rounded-xl border border-blue-200">
+              <h3 class="font-semibold text-blue-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm" set:html={task}></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="post-pressing" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Techniques après pressage</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {postPressing.map((item, index) => (
+            <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
+              <h3 class="font-semibold text-purple-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="quality-control" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Contrôle de qualité</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {qualityControl.map((item, index) => (
+            <div key={index} class="bg-steel-50 p-5 rounded-xl border border-steel-200">
+              <h3 class="font-semibold text-charcoal-900 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="common-problems" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Problèmes courants et solutions</h2>
+        <div class="space-y-4">
+          {commonProblems.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-red-600 mb-3">{item.problem}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Causes:</h4>
+                  <ul class="space-y-1">
+                    {item.causes.map((cause, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Solutions:</h4>
+                  <ul class="space-y-1">
+                    {item.solutions.map((solution, idx) => (
+                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Maximiser le rendement en huile nécessite une attention à chaque étape du processus de production. En suivant ces stratégies, vous pouvez obtenir un rendement optimal et maximiser la rentabilité de votre activité de production d'huile.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À COMMENCER VOTRE PRODUCTION D'HUILE?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à sélectionner le meilleur équipement et à optimiser votre investissement pour des rendements maximaux.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.nav.products}
+        </a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.resources.backToResources}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

@@ -1,0 +1,87 @@
+---
+interface Props {
+  locale?: string;
+}
+
+const { locale = 'en' } = Astro.props;
+
+function getCookieText() {
+  const texts = {
+    en: {
+      title: 'Cookie Consent',
+      message: 'We use cookies to improve your browsing experience and analyze website traffic. By continuing to use our website, you consent to our use of cookies.',
+      accept: 'Accept All',
+      reject: 'Reject Non-Essential',
+      learnMore: 'Learn More',
+    },
+    fr: {
+      title: 'Consentement aux cookies',
+      message: 'Nous utilisons des cookies pour améliorer votre expérience de navigation et analyser le trafic du site web. En continuant à utiliser notre site web, vous acceptez notre utilisation des cookies.',
+      accept: 'Accepter tout',
+      reject: 'Rejeter les non essentiels',
+      learnMore: 'En savoir plus',
+    },
+    ar: {
+      title: 'موافقة على ملفات تعريف الارتباط',
+      message: 'نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك وتحليل حركة مرور الموقع. من خلال الاستمرار في استخدام موقعنا، توافق على استخدامنا لملفات تعريف الارتباط.',
+      accept: 'قبول الكل',
+      reject: 'رفض غير الضروري',
+      learnMore: 'تعرف على المزيد',
+    },
+    id: {
+      title: 'Ijinkan Cookie',
+      message: 'Kami menggunakan cookie untuk meningkatkan pengalaman browsing Anda dan menganalisis lalu lintas situs web. Dengan melanjutkan menggunakan situs web kami, Anda menyetujui penggunaan cookie kami.',
+      accept: 'Terima Semua',
+      reject: 'Tolak Non-Essensial',
+      learnMore: 'Pelajari Lebih Lanjut',
+    },
+  };
+  return texts[locale as keyof typeof texts] || texts.en;
+}
+
+const text = getCookieText();
+---
+
+<script>
+  (function() {
+    const cookieName = 'haonuo_cookie_consent';
+    const banner = document.getElementById('cookie-consent-banner');
+    
+    function setConsent(accepted) {
+      document.cookie = `${cookieName}=${accepted ? 'accepted' : 'rejected'}; expires=${new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
+      banner.style.display = 'none';
+    }
+    
+    function checkConsent() {
+      const consent = document.cookie.split(';').find(row => row.trim().startsWith(`${cookieName}=`));
+      if (consent) {
+        banner.style.display = 'none';
+      }
+    }
+    
+    document.getElementById('cookie-accept').addEventListener('click', () => setConsent(true));
+    document.getElementById('cookie-reject').addEventListener('click', () => setConsent(false));
+    
+    checkConsent();
+  })();
+</script>
+
+<div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-charcoal-900 text-white p-4 md:p-6 z-50 border-t border-charcoal-700 no-print">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex-1">
+        <h3 class="font-semibold text-lg mb-1">{text.title}</h3>
+        <p class="text-steel-400 text-sm">{text.message}</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="/cookie-policy" class="text-amber-500 hover:text-amber-400 text-sm">{text.learnMore}</a>
+        <button id="cookie-reject" class="px-4 py-2 border border-steel-600 hover:border-amber-500 text-steel-300 hover:text-amber-500 rounded-lg text-sm transition-colors">
+          {text.reject}
+        </button>
+        <button id="cookie-accept" class="px-6 py-2 bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold rounded-lg text-sm transition-colors">
+          {text.accept}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

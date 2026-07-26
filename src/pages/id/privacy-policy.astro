@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('id');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Kebijakan Privasi', item: 'https://www.hydoilpress.com/id/privacy-policy' },
+  ],
+};
+---
+
+<BaseLayout title="Kebijakan Privasi" description="Kebijakan Privasi Haonuo Machinery - Privasi Anda penting bagi kami. Pelajari bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda." locale="id">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Kebijakan Privasi</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">Kebijakan Privasi</h1>
+      <p class="text-steel-600 text-lg mb-8">Diperbarui terakhir: 20 Juli 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. Pengantar</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Shandong Haonuo Machinery Equipment Group Co., Ltd. ("kami", "kita") berkomitmen untuk melindungi privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasi pribadi Anda ketika Anda mengunjungi situs web kami, menggunakan layanan kami, atau menghubungi kami.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. Informasi yang Kami Kumpulkan</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Kami dapat mengumpulkan jenis informasi pribadi berikut:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li><strong>Informasi Kontak:</strong> Nama, alamat email, nomor telepon, nama perusahaan, alamat, dan detail kontak lainnya yang Anda berikan saat mengisi formulir atau menghubungi kami.</li>
+            <li><strong>Informasi Pertanyaan:</strong> Detail tentang minat produk Anda, persyaratan proyek, dan informasi lain yang Anda berikan dalam pertanyaan Anda.</li>
+            <li><strong>Data Penggunaan:</strong> Informasi tentang bagaimana Anda berinteraksi dengan situs web kami, termasuk halaman yang dikunjungi, waktu yang dihabiskan, dan informasi perangkat.</li>
+            <li><strong>Cookies:</strong> Kami menggunakan cookies untuk meningkatkan pengalaman browsing Anda. Untuk informasi lebih lanjut, lihat Kebijakan Cookie kami.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. Bagaimana Kami Menggunakan Informasi Anda</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Kami menggunakan informasi Anda untuk tujuan berikut:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Menjawab pertanyaan Anda dan memberikan informasi produk</li>
+            <li>Memproses permintaan Anda untuk penawaran dan proposal</li>
+            <li>Meningkatkan situs web dan layanan kami</li>
+            <li>Mengirimkan komunikasi pemasaran (dengan izin Anda)</li>
+            <li>Mematuhi kewajiban hukum</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. Berbagi Informasi Anda</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Kami dapat membagikan informasi Anda dengan:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Mitra dan penyedia layanan kami yang berwenang yang membantu kami menyediakan layanan</li>
+            <li>Otoritas penegak hukum atau regulator ketika diperlukan oleh hukum</li>
+            <li>Pihak ketiga dengan izin eksplisit Anda</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            Kami tidak menjual informasi pribadi Anda ke pihak ketiga.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. Keamanan</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Kami mengambil tindakan yang wajar untuk melindungi informasi pribadi Anda dari akses, penggunaan, atau pengungkapan yang tidak sah. Namun, tidak ada transmisi data melalui internet yang sepenuhnya aman, dan kami tidak dapat menjamin keamanan mutlak informasi Anda.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. Hak Anda</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Anda memiliki hak untuk:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Mengakses dan menerima salinan informasi pribadi Anda</li>
+            <li>Memperbaiki atau memperbarui informasi pribadi Anda</li>
+            <li>Meminta penghapusan informasi pribadi Anda</li>
+            <li>Menarik izin untuk komunikasi pemasaran</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            Untuk melaksanakan hak-hak ini, silakan hubungi kami di contact@hydoilpress.com.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">7. Perubahan Kebijakan Ini</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Kami akan memberitahu Anda tentang perubahan signifikan dengan mempublikasikan kebijakan yang diperbarui di situs web kami. Penggunaan Anda yang terus menerus terhadap situs web kami setelah perubahan apa pun merupakan penerimaan Anda terhadap kebijakan yang diperbarui.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">8. Hubungi Kami</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi kami:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>Email: contact@hydoilpress.com</li>
+            <li>Telepon: +86-18957149128</li>
+            <li>Alamat: Qingzhou, Weifang, Shandong, China</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,346 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+
+const t = getTranslations('fr');
+const title = 'Guide de filtrage et de clarification de l\'huile brute';
+const description = 'Guide complet pour filtrer et clarifier l\'huile brute après extraction';
+const seoKeywords = ['filtrage huile brute', 'clarification huile', 'filtrage presse hydraulique'];
+const publishedAt = new Date();
+const updatedAt = publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/filtration-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Ingénieur Senior en Presse à Huile',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+    { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/crude-oil-filtration-guide' },
+  ],
+};
+
+const impurities = [
+  { type: 'Particules Solides', description: 'Fragments de graines, particules de tourteau', source: 'Processus d\'extraction', impact: 'Opacité, sédimentation' },
+  { type: 'Composés Phosphorés', description: 'Phospholipides (gommes)', source: 'Matériaux bruts', impact: 'Formation d\'émulsion' },
+  { type: 'Acides Gras Libres', description: 'Triglycérides hydrolysés', source: 'Dégradation', impact: 'Acidité, saveur' },
+  { type: 'Composés Colorés', description: 'Caténoïdes, chlorophylle', source: 'Matériaux bruts', impact: 'Couleur foncée' },
+  { type: 'Humidité', description: 'Teneur en eau', source: 'Traitement', impact: 'Durée de conservation, croissance microbienne' },
+  { type: 'Aflatoxines', description: 'Mycotoxines', source: 'Contamination par moisissure', impact: 'Risque sanitaire' },
+];
+
+const filtrationMethods = [
+  { name: 'Presse à filtre multicouche pneumatique', advantages: ['Efficacité de filtrage élevée', 'Capacité d\'opération continue', 'Filtrage multistage dans une seule unité', 'Entretien facile'], stages: [{ mesh: '100-200', purpose: 'Supprimer les grosses particules' }, { mesh: '200-300', purpose: 'Supprimer les particules fines' }, { mesh: '300-500', purpose: 'Clarté premium de l\'huile' }] },
+  { name: 'Presse à filtre à plaques', advantages: ['Capacité de pression élevée', 'Efficace pour les huiles brutes à haute teneur en solides', 'Élimination facile du gâteau'], disadvantages: ['Opération par lots', 'Nettoyage manuel nécessaire'] },
+  { name: 'Filtre à sac', advantages: ['Coût faible', 'Filtres faciles à remplacer', 'Bon pour le pré-filtrage'], disadvantages: ['Capacité de filtrage limitée', 'Remplacement fréquent des sacs'] },
+  { name: 'Filtre centrifuge', advantages: ['Débit élevé', 'Entretien faible', 'Opération continue'], disadvantages: ['Consommation d\'énergie plus élevée', 'Moins efficace pour les particules très fines'] },
+];
+
+const clarifyingAgents = [
+  { agent: 'Bentonite', function: 'Adsorbe les gommes et les impuretés', dosage: '0,5-2%' },
+  { agent: 'Charbon Actif', function: 'Adsorbe les composés colorés et les aflatoxines', dosage: '0,2-1%' },
+  { agent: 'Terre de Diatomées', function: 'Filtre les particules fines', dosage: '1-3%' },
+];
+
+const equipmentSelection = [
+  { scale: 'Petit', output: '500-1,500 kg', system: 'Presse à filtre unique', budget: 'Contacter pour devis' },
+  { scale: 'Moyen', output: '1,500-3,000 kg', system: 'Filtrage multistage', budget: 'Contacter pour devis' },
+  { scale: 'Grand', output: '3,000+ kg', system: 'Ligne de filtrage automatisée', budget: 'Contacter pour devis' },
+];
+
+const troubleshooting = [
+  { problem: 'Huile trouble après filtrage', causes: ['Filtre obstrué ou endommagé', 'Taille de maille incorrecte', 'Température de l\'huile trop basse', 'Teneur en humidité excessive'], solutions: ['Remplacer le filtre', 'Utiliser un filtre à maille plus fine', 'Chauffer l\'huile avant filtrage', 'Sécher l\'huile avant filtrage'] },
+  { problem: 'Taux de filtrage faible', causes: ['Filtre obstrué', 'Pression de pompe insuffisante', 'Viscosité trop élevée', 'Entrée bloquée'], solutions: ['Nettoyer ou remplacer les filtres', 'Augmenter la pression de pompe', 'Chauffer l\'huile pour réduire la viscosité', 'Débloquer l\'entrée'] },
+  { problem: 'Fuites d\'huile', causes: ['Jointures ou garnitures usées', 'Connections lâches', 'Pression excessive', 'Équipement endommagé'], solutions: ['Remplacer les joints', 'Serre les connections', 'Réduire la pression', 'Réparer ou remplacer l\'équipement'] },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="fr">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/fr/" class="hover:text-amber-500 transition-colors">Accueil</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/fr/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-blue-50 to-cyan-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-blue-500/10 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          GUIDE DE FILTRATION
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Ingénieur Senior en Presse à Huile · Plus de 15 ans d'expérience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Le processus de filtrage et de clarification est essentiel pour produire des huiles comestibles de haute qualité. Après extraction, l'huile brute contient diverses impuretés qui doivent être éliminées pour répondre aux normes du marché en termes de clarté, de saveur et de durée de conservation.
+        </p>
+      </section>
+
+      <section id="impurities" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Comprendre les impuretés de l'huile brute</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Types d'impuretés</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-red-500 to-rose-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Type d'impureté</th>
+                <th class="px-4 py-3 text-left font-semibold">Description</th>
+                <th class="px-4 py-3 text-left font-semibold">Source</th>
+                <th class="px-4 py-3 text-left font-semibold">Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {impurities.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-red-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.type}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.description}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.source}</td>
+                  <td class="px-4 py-3 text-red-600">{item.impact}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="filtration-methods" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Méthodes de filtrage</h2>
+        <div class="space-y-6">
+          {filtrationMethods.map((item, index) => (
+            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-xl text-charcoal-900 mb-4">{item.name}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-green-600 mb-3">Avantages:</h4>
+                  <ul class="space-y-2">
+                    {item.advantages.map((adv, idx) => (
+                      <li key={idx} class="flex items-center gap-2 text-steel-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        {adv}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {item.disadvantages && (
+                  <div>
+                    <h4 class="font-medium text-red-600 mb-3">Inconvénients:</h4>
+                    <ul class="space-y-2">
+                      {item.disadvantages.map((dis, idx) => (
+                        <li key={idx} class="flex items-center gap-2 text-steel-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                          {dis}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+              {item.stages && (
+                <div class="mt-6 pt-6 border-t border-steel-100">
+                  <h4 class="font-medium text-blue-600 mb-3">Milieux filtrants recommandés:</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {item.stages.map((stage, idx) => (
+                      <div key={idx} class="bg-blue-50 p-3 rounded-lg">
+                        <span class="font-semibold text-blue-800">{stage.mesh} maille</span>
+                        <p class="text-sm text-steel-600">{stage.purpose}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="oil-settling" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Processus de sédimentation de l'huile</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+            <h3 class="font-semibold text-lg text-charcoal-900 mb-4">Sédimentation naturelle</h3>
+            <ol class="space-y-2 list-decimal list-inside text-steel-700">
+              <li>Transférer l'huile brute dans des cuves de sédimentation</li>
+              <li>Laissez reposer 24-72 heures</li>
+              <li>Les particules s'édimentent au fond par gravité</li>
+              <li>Décantez l'huile claire du haut</li>
+            </ol>
+            <div class="mt-4 p-3 bg-steel-50 rounded-lg">
+              <h4 class="font-medium text-steel-500 mb-2">Conditions:</h4>
+              <ul class="text-sm text-steel-700">
+                <li>• Température: 25-30°C</li>
+                <li>• Matériau de la cuve: Acier inoxydable</li>
+                <li>• Ventilation appropriée</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+            <h3 class="font-semibold text-lg text-charcoal-900 mb-4">Sédimentation accélérée</h3>
+            <ul class="space-y-2 text-steel-700">
+              <li>• Chauffage pour accélérer le mouvement des particules</li>
+              <li>• Ajout d'agents clarifiants (bentonite, charbon actif)</li>
+              <li>• Utilisation de décanteurs à plaques inclinées</li>
+            </ul>
+            <h4 class="font-medium text-steel-500 mt-4 mb-3">Agents clarifiants:</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead class="text-sm text-steel-500">
+                  <tr>
+                    <th class="text-left pb-2">Agent</th>
+                    <th class="text-left pb-2">Fonction</th>
+                    <th class="text-left pb-2">Dosage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {clarifyingAgents.map((item, idx) => (
+                    <tr key={idx} class="text-sm">
+                      <td class="font-medium text-charcoal-900">{item.agent}</td>
+                      <td class="text-steel-600">{item.function}</td>
+                      <td class="text-amber-600">{item.dosage}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipment-selection" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Guide de sélection de l'équipement</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">En fonction de l'échelle de production</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Échelle</th>
+                <th class="px-4 py-3 text-left font-semibold">Production quotidienne</th>
+                <th class="px-4 py-3 text-left font-semibold">Système recommandé</th>
+                <th class="px-4 py-3 text-left font-semibold">Budget</th>
+              </tr>
+            </thead>
+            <tbody>
+              {equipmentSelection.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.output}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.system}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.budget}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="troubleshooting" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Guide de dépannage</h2>
+        <div class="space-y-4">
+          {troubleshooting.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-red-600 mb-3">{item.problem}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Causes:</h4>
+                  <ul class="space-y-1">
+                    {item.causes.map((cause, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Solutions:</h4>
+                  <ul class="space-y-1">
+                    {item.solutions.map((solution, idx) => (
+                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Un filtrage et une clarification efficaces de l'huile brute sont essentiels pour produire des huiles comestibles de haute qualité répondant aux normes du marché. En sélectionnant les bonnes méthodes de filtrage, en concevant un système efficace et en mettant en œuvre des pratiques d'entretien appropriées, les producteurs d'huile peuvent garantir une qualité de produit constante et maximiser la satisfaction client.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À COMMENCER VOTRE PRODUCTION D'HUILE ?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à sélectionner le meilleur équipement et à optimiser votre investissement pour maximiser vos rendements.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          Contacter nos experts
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">
+          Parcourir l'équipement
+        </a>
+        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">
+          Retour aux ressources
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

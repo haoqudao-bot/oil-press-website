@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'aflatoxin-control-guide');
+const t = getTranslations('id');
+
+const title = resource?.data.title.id || resource?.data.title.en || 'Panduan Kontrol Aflatoksin';
+const description = resource?.data.description.id || resource?.data.description.en || 'Strategi lengkap untuk mencegah dan mengontrol kontaminasi aflatoksin';
+const seoKeywords = resource?.data.seoKeywords || ['kontrol aflatoksin', 'pencegahan aflatoksin', 'keamanan pangan'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/aflatoxin-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Senior Oil Press Engineer',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/id' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/aflatoxin-control-guide' },
+  ],
+};
+
+const typesOfAflatoxins = [
+  { type: 'Aflatoksin B1', danger: 'Sangat beracun', sources: 'Jagung, kacang tanah, beras', effects: 'Karsinogenik, hepatotoksik' },
+  { type: 'Aflatoksin B2', danger: 'Beracun', sources: 'Kacang tanah, jagung', effects: 'Kurang beracun daripada B1' },
+  { type: 'Aflatoksin G1', danger: 'Beracun', sources: 'Biji-bijian, kacang', effects: 'Karsinogenik' },
+  { type: 'Aflatoksin G2', danger: 'Kurang beracun', sources: 'Biji-bijian', effects: 'Efek ringan' },
+];
+
+const contaminationSources = [
+  { title: 'Kondisi penyimpanan lembap', desc: 'Penyimpanan di area lembap atau tergenang air mendorong pertumbuhan jamur' },
+  { title: 'Waktu penyimpanan yang lama', desc: 'Semakin lama biji disimpan, semakin tinggi risiko' },
+  { title: 'Kondisi iklim', desc: 'Suhu panas dan kelembaban tinggi mendorong pertumbuhan' },
+  { title: 'Sebelum panen', desc: 'Cuaca hujan sebelum panen dapat mengkontaminasi tanaman' },
+];
+
+const preventionStrategies = [
+  { title: 'Kontrol biji', items: ['Periksa kualitas sebelum membeli', 'Hindari biji yang rusak atau berjamur', 'Uji batch untuk aflatoksin'] },
+  { title: 'Penyimpanan yang tepat', items: ['Simpan dalam kondisi kering', 'Gunakan kantong kedap air', 'Kontrol kelembaban relatif'] },
+  { title: 'Pengeringan segera', items: ['Keringkan biji dalam 24 jam', 'Jaga kelembaban di bawah 12%', 'Gunakan pengering industri'] },
+];
+
+const detectionMethods = [
+  { method: 'Tes lapangan cepat', time: '5-10 menit', accuracy: 'Rendah', useCase: 'Verifikasi awal' },
+  { method: 'Tes ELISA', time: '2-4 jam', accuracy: 'Sedang', useCase: 'Kontrol kualitas' },
+  { method: 'HPLC', time: '4-6 jam', accuracy: 'Tinggi', useCase: 'Sertifikasi' },
+];
+
+const regulations = [
+  { region: 'UE', limit: '2 ppb', products: 'Minyak makan' },
+  { region: 'USA', limit: '20 ppb', products: 'Biji-bijian dan minyak' },
+  { region: 'Codex Alimentarius', limit: '10 ppb', products: 'Produk pangan' },
+];
+
+function localePath(path: string): string {
+  return `/id${path}`;
+}
+---
+
+<BaseLayout locale="id" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-red-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-red-500/10 text-red-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          KEAMANAN PANGAN
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pengantar</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Aflatoksin adalah racun yang diproduksi oleh beberapa jamur (Aspergillus flavus dan Aspergillus parasiticus) yang dapat mengkontaminasi biji-bijian yang digunakan untuk produksi minyak. Kontrol aflatoksin sangat penting untuk memastikan keamanan pangan dan memenuhi standar internasional.
+        </p>
+      </section>
+
+      <section id="types" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Jenis Aflatoksin</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {typesOfAflatoxins.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <div class="font-bold text-lg text-red-600 mb-3">{item.type}</div>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Bahaya:</span>
+                  <span class="text-sm text-charcoal-900">{item.danger}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Sumber:</span>
+                  <span class="text-sm text-charcoal-900">{item.sources}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Efek:</span>
+                  <span class="text-sm text-charcoal-900">{item.effects}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="sources" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Sumber Kontaminasi</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {contaminationSources.map((item, index) => (
+            <div key={index} class="bg-orange-50 p-5 rounded-xl border border-orange-200">
+              <h3 class="font-semibold text-lg text-orange-800 mb-2">{item.title}</h3>
+              <p class="text-steel-700 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="prevention" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Strategi Pencegahan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {preventionStrategies.map((item, index) => (
+            <div key={index} class="bg-green-50 p-5 rounded-xl border border-green-200">
+              <h3 class="font-semibold text-lg text-green-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {task}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="detection" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Metode Deteksi</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Metode</th>
+                <th class="px-4 py-3 text-left font-semibold">Waktu</th>
+                <th class="px-4 py-3 text-left font-semibold">Akurasi</th>
+                <th class="px-4 py-3 text-left font-semibold">Penggunaan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detectionMethods.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.method}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.time}</td>
+                  <td class="px-4 py-3 text-emerald-600">{item.accuracy}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.useCase}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="regulations" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Standar dan Peraturan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {regulations.map((item, index) => (
+            <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
+              <h3 class="font-semibold text-lg text-purple-800 mb-3">{item.region}</h3>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Batas:</span>
+                  <span class="text-sm text-red-600 font-bold">{item.limit}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-medium text-steel-500">Produk:</span>
+                  <span class="text-sm text-charcoal-900">{item.products}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Kontrol aflatoksin membutuhkan pendekatan proaktif di setiap tahap rantai pasokan. Dengan menggabungkan seleksi bahan baku yang ketat, penyimpanan yang tepat, dan metode deteksi yang dapat diandalkan, Anda dapat memastikan keamanan produk Anda dan memenuhi standar internasional.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MEMASTIKAN KEAMANAN PRODUKSI ANDA?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim insinyur kami dapat membantu Anda mengimplementasikan prosedur kontrol kualitas yang lengkap.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.resources.backToResources}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

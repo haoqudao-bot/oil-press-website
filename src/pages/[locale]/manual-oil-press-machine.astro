@@ -1,0 +1,325 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allProducts = await getCollection('products');
+const manualProducts = allProducts.filter(p =>
+  p.data.category === 'hydraulic-oil-press' &&
+  (p.data.model?.toLowerCase().includes('hn300') ||
+   p.data.model?.toLowerCase().includes('hn325') ||
+   p.data.model?.toLowerCase().includes('mini') ||
+   p.data.title?.en?.toLowerCase().includes('mini'))
+).slice(0, 4);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const pageTitle = currentLocale === 'fr' ? 'Presse à Huile Manuelle — Pressage Traditionnel, Qualité Moderne' :
+                  currentLocale === 'ar' ? 'مكينة الضغط اليدوي — ضغط تقليدي، جودة عصرية' :
+                  'Mesin Press Minyak Manual — Press Tradisional, Kualitas Modern';
+
+const pageDesc = currentLocale === 'fr' ? 'Presse à huile manuelle à main pour production d\'huile hors réseau et traditionnelle. Pas d\'électricité nécessaire. Haonuo propose également des presses hydrauliques à faible puissance pour un meilleur rendement. Directe d\'usine.' :
+                 currentLocale === 'ar' ? 'مكينة ضغط زيت يدوية لانتاج الزيت خارج الشبكة والتقليدي. لا حاجة إلى كهرباء. Haonuo توفر أيضًا مكائن ضغط هيدروليكي منخفضة الطاقة للحصول على عائد أفضل. مباشرة من المصنع.' :
+                 'Mesin press minyak manual untuk produksi minyak off-grid dan tradisional. Tidak perlu listrik. Haonuo juga menawarkan mesin press hidrolik berdaya rendah untuk hasil lebih baik. Langsung dari pabrik.';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.products, item: `https://www.hydoilpress.com/${currentLocale}/products` },
+    { '@type': 'ListItem', position: 3, name: t.common.manualOilPressMachine, item: `https://www.hydoilpress.com/${currentLocale}/manual-oil-press-machine` },
+  ],
+};
+
+const faqs = [
+  { question: currentLocale === 'fr' ? 'Qu\'est-ce qu\'une presse à huile manuelle ?' :
+              currentLocale === 'ar' ? 'ما هو ماكينة الضغط اليدوي؟' :
+              'Apa itu mesin press minyak manual?',
+    answer: currentLocale === 'fr' ? 'Une presse à huile manuelle est un dispositif actionné à la main qui extrait l\'huile des graines sans électricité. Il utilise une force mécanique appliquée par une manivelle ou un levier à main pour presser l\'huile à partir de graines comme le sésame, l\'arachide et les noix de karité. Les presses manuelles sont idéales pour les zones hors réseau, les villages éloignés et le pressage traditionnel d\'huile où l\'électricité n\'est pas disponible ou fiable.' :
+            currentLocale === 'ar' ? 'مكينة ضغط زيت يدوية هي جهاز يتم تشغيله يدويًا لاستخراج الزيت من البذور بدون كهرباء. تستخدم قوة ميكانيكية يتم تطبيقها بواسطة مقود أو عظمة يدوية لضغط الزيت من البذور مثل السمسم والفول السوداني وجوز الكاريته. المكائن اليدوية مثالية للمناطق خارج الشبكة والقرى النائية والضغط التقليدي للزيت حيث لا توجد كهرباء أو غير موثوقة.' :
+            'Mesin press minyak manual adalah perangkat yang dioperasikan tangan untuk mengekstraksi minyak dari biji tanpa listrik. Menggunakan gaya mekanis yang diterapkan oleh crank tangan atau tuas untuk mempress minyak dari biji seperti wijen, kacang tanah, dan shea nuts. Press manual ideal untuk area off-grid, desa terpencil, dan press minyak tradisional di mana listrik tidak tersedia atau tidak dapat diandalkan.' },
+  { question: currentLocale === 'fr' ? 'Combien d\'huile peut produire une presse manuelle ?' :
+              currentLocale === 'ar' ? 'كم زيت يمكن أن ينتجه المكبس اليدوي؟' :
+              'Berapa minyak yang dapat dihasilkan oleh press manual?',
+    answer: currentLocale === 'fr' ? 'Les presses à huile manuelles produisent généralement 1-3 litres d\'huile par heure selon le type de graine et l\'effort de l\'opérateur. Le rendement est inférieur à celui des presses hydrauliques (généralement 25-35% contre 42-50% pour le sésame). À titre de comparaison, une presse hydraulique Haonuo HN300 produit 3-5 kg par lot en 8-15 minutes avec un rendement beaucoup plus élevé et moins d\'effort physique.' :
+            currentLocale === 'ar' ? 'تنتج المكائن الضاغطة اليدوية عادةً 1-3 لتر من الزيت في الساعة حسب نوع البذرة ومجهود المشغل. العائد أقل من المكائن الهيدروليكية (عادةً 25-35% مقابل 42-50% للسمسم). للمقارنة، مكينة ضغط هيدروليكي Haonuo HN300 تنتج 3-5 كيلوغرام لكل دفعة في 8-15 دقيقة مع عائد أعلى بكثير ومجهود جسدي أقل.' :
+            'Mesin press minyak manual biasanya menghasilkan 1-3 liter minyak per jam tergantung jenis biji dan upaya operator. Hasilnya lebih rendah daripada press hidrolik (biasanya 25-35% vs 42-50% untuk wijen). Sebagai perbandingan, mesin press hidrolik Haonuo HN300 menghasilkan 3-5 kg per batch dalam 8-15 menit dengan hasil jauh lebih tinggi dan tenaga fisik lebih sedikit.' },
+  { question: currentLocale === 'fr' ? 'Une presse manuelle est-elle meilleure qu\'électrique ?' :
+              currentLocale === 'ar' ? 'هل المكبس اليدوي أفضل من الكهربائي؟' :
+              'Apakah press manual lebih baik daripada elektrik?',
+    answer: currentLocale === 'fr' ? 'Les presses manuelles ne sont meilleures que lorsque l\'électricité est complètement indisponible. Dans toutes les autres situations, une presse hydraulique comme la Haonuo HN300 (seulement 2,2 KW, compatible avec un petit groupe électrogène de 5 KVA) offre un rendement beaucoup plus élevé, une production plus rapide, moins de main-d\'œuvre et une meilleure qualité d\'huile. La presse hydraulique nécessite peu de puissance et est le choix recommandé même dans les zones avec une alimentation électrique peu fiable.' :
+            currentLocale === 'ar' ? 'المكائن اليدوية أفضل فقط عندما لا تكون الكهرباء متاحة على الإطلاق. في جميع الحالات الأخرى، مكينة ضغط هيدروليكي مثل Haonuo HN300 (2.2 كيلو وات فقط، متوافقة مع مولد صغير 5 كيلو فولت آمبير) توفر عائدًا أعلى بكثير، إنتاجًا أسرع، أقل من العمل، و جودة زيت أفضل. المكبس الهيدروليكي يحتاج طاقة قليلة وهو الخيار الموصى به حتى في المناطق التي بها كهرباء غير موثوقة.' :
+            'Press manual hanya lebih baik ketika listrik benar-benar tidak tersedia. Untuk semua situasi lain, mesin press hidrolik seperti Haonuo HN300 (hanya 2.2 KW, kompatibel dengan generator kecil 5 KVA) menawarkan hasil jauh lebih tinggi, produksi lebih cepat, tenaga kerja lebih sedikit, dan kualitas minyak lebih baik. Press hidrolik membutuhkan daya minimal dan merupakan pilihan yang direkomendasikan bahkan di area dengan listrik tidak dapat diandalkan.' },
+  { question: currentLocale === 'fr' ? 'Quelles graines fonctionnent le mieux avec une presse manuelle ?' :
+              currentLocale === 'ar' ? 'أي بذور تعمل بشكل أفضل مع المكبس اليدوي؟' :
+              'Biji apa yang paling cocok untuk press manual?',
+    answer: currentLocale === 'fr' ? 'Les graines molles à haute teneur en huile fonctionnent le mieux avec les presses manuelles : le sésame, les noix de karité et l\'arachide sont les plus courantes. Les noix à coquille dure comme les noix et la noix de coco sont très difficiles à presser manuellement. Pour les graines dures, une presse hydraulique est vivement recommandée — la pression plus élevée rend l\'extraction efficace et pratique.' :
+            currentLocale === 'ar' ? 'البذور الناعمة عالية الزيت تعمل بشكل أفضل مع المكائن اليدوية: السمسم وجوز الكاريته والفول السوداني هي الأكثر شيوعًا. الجوز الصلب مثل الجوز والجوز الهندي من الصعب جدًا الضغط بهدوء. للبذور الصلبة، يوصى بشدة باستخدام المكبس الهيدروليكي — الضغط الأعلى يجعل الاستخراج فعالًا وممارسًا.' :
+            'Biji lunak dengan kadar minyak tinggi paling cocok dengan press manual: wijen, shea nuts, dan kacang tanah adalah yang paling umum. Kacang keras seperti kenari dan kelapa sangat sulit dipress secara manual. Untuk biji keras, press hidrolik sangat disarankan — tekanan yang lebih tinggi membuat ekstraksi efisien dan praktis.' },
+  { question: currentLocale === 'fr' ? 'Combien coûte une presse à huile manuelle ?' :
+              currentLocale === 'ar' ? 'كم تكلفة ماكينة الضغط اليدوي؟' :
+              'Berapa harga mesin press minyak manual?',
+    answer: currentLocale === 'fr' ? 'Les presses à huile manuelles sont le point d\'entrée le plus abordable dans la production d\'huile, avec des modèles de base disponibles à faible coût. Cependant, les presses hydrauliques compactes d\'Haonuo (HN300/HN325) sont compétitives et offrent un rendement, une vitesse et une facilité d\'utilisation bien supérieures. Le petit investissement supplémentaire dans une presse hydraulique se rémunère rapidement grâce à une production d\'huile plus élevée et moins de main-d\'œuvre.' :
+            currentLocale === 'ar' ? 'المكائن الضاغطة اليدوية هي نقطة الدخول الأقل تكلفة في إنتاج الزيت، مع طرازات أساسية متاحة بسعر منخفض. ومع ذلك، المكائن الهيدروليكية المدمجة من Haonuo (HN300/HN325) قوية التنافس وتوفر عائدًا وسرعة وسهولة استعمال أفضل بكثير. الاستثمار الصغير الإضافي في المكبس الهيدروليكي ينتج عنه عوائد سريعة من خلال إنتاج زيت أعلى وأقل من العمل.' :
+            'Mesin press minyak manual adalah titik masuk termurah untuk produksi minyak, dengan model dasar tersedia dengan harga murah. Namun, mesin press hidrolik kompak Haonuo (HN300/HN325) memiliki harga kompetitif dan menawarkan hasil, kecepatan, dan kemudahan penggunaan yang jauh lebih baik. Investasi kecil tambahan untuk press hidrolik mengembalikan dirinya sendiri dengan cepat melalui produksi minyak yang lebih tinggi dan tenaga kerja yang lebih sedikit.' },
+  { question: currentLocale === 'fr' ? 'Puis-je passer d\'une presse manuelle à hydraulique plus tard ?' :
+              currentLocale === 'ar' ? 'هل يمكنني الترقية من الضغط اليدوي إلى الهيدروليكي لاحقًا؟' :
+              'Bisakah saya upgrade dari manual ke hidrolik nanti?',
+    answer: currentLocale === 'fr' ? 'Oui. Beaucoup de clients commencent par le pressage manuel et passent à une presse hydraulique Haonuo au fur et à mesure que leur entreprise se développe. La transition est simple — les presses hydrauliques utilisent les mêmes graines mais fournissent un rendement 2-3 fois supérieur avec un effort physique minimal. Haonuo propose des conseils de reprise et des options de financement pour vous aider à développer votre activité quand vous serez prêt.' :
+            currentLocale === 'ar' ? 'نعم. يبدأ العديد من العملاء بالضغط اليدوي ويمرون إلى المكبس الهيدروليكي Haonuo مع نمو أعمالهم. الانتقال بسيط — المكائن الهيدروليكية تستخدم نفس البذور ولكن توفر عائدًا مرتين إلى ثلاثة مرات الأعلى مع مجهود جسدي минимي. Haonuo توفر نصائح استبدال وخيارات تمويل لمساعدتك في توسيع نطاق نشاطك عندما تكون جاهزًا.' :
+            'Ya. Banyak pelanggan memulai dengan press manual dan beralih ke mesin press hidrolik Haonuo seiring pertumbuhan bisnis mereka. Transisi ini sederhana — press hidrolik menggunakan biji yang sama tetapi memberikan hasil 2-3x lebih tinggi dengan tenaga fisik minimal. Haonuo menawarkan panduan trade-in dan opsi pembiayaan untuk membantu Anda meningkatkan skala bisnis ketika siap.' },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
+const keywords = currentLocale === 'fr' 
+  ? ['presse à huile manuelle', 'presse à huile manuelle pour usage domestique', 'presse à huile actionnée à la main', 'extracteur d\'huile manuel', 'presse à huile non électrique']
+  : currentLocale === 'ar'
+  ? ['مكينة ضغط زيت يدوية', 'مكينة ضغط زيت يدوية للاستخدام المنزلي', 'مكبس زيت يدوي', 'مصدر زيت يدوي', 'مكينة ضغط زيت بدون كهرباء']
+  : ['manual oil press machine', 'manual oil press machine for home use', 'hand operated oil press', 'manual oil extractor', 'non electric oil press machine'];
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={pageTitle}
+  description={pageDesc}
+  keywords={keywords}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/products')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{t.common.manualOilPressMachine}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">{pageTitle}</h1>
+      <p class="text-steel-300 text-lg max-w-3xl mb-8">{currentLocale === 'fr' ? 'Presse à huile manuelle à main pour production d\'huile à petite échelle et hors réseau. Pas d\'électricité nécessaire. Idéal pour les zones éloignées, l\'usage domestique et le pressage traditionnel d\'huile.' : currentLocale === 'ar' ? 'مكينة ضغط زيت يدوية لانتاج الزيت على نطاق صغير وخارج الشبكة. لا حاجة إلى كهرباء. مثالية للمناطق النائية، الاستخدام المنزلي، والضغط التقليدي للزيت.' : 'Mesin press minyak manual untuk produksi minyak skala kecil dan off-grid. Tidak perlu listrik. Ideal untuk area terpencil, penggunaan rumah, dan press minyak tradisional.'}</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {currentLocale === 'fr' ? 'Trouver la bonne presse à huile' : currentLocale === 'ar' ? 'العثور على ماكينة الضغط المناسبة' : 'Temukan Mesin Press yang Tepat'}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href={localePath('/hydraulic-oil-press-machine')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
+          {currentLocale === 'fr' ? 'Voir les presses hydrauliques' : currentLocale === 'ar' ? 'عرض المكائن الهيدروليكية' : 'Lihat Press Hidrolik'}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Manual -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Pourquoi Choisir une Presse Manuelle' : currentLocale === 'ar' ? 'لماذا تختار اليدوية' : 'Mengapa Memilih Manual'}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#128293;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Aucune électricité requise' : currentLocale === 'ar' ? 'لا حاجة إلى كهرباء' : 'Tidak Perlu Listrik'}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{currentLocale === 'fr' ? 'Fonctionne complètement hors réseau. Mécanisme actionné à la main qui ne nécessite aucune source d\'énergie — idéal pour les villages éloignés et les zones sans infrastructure électrique.' : currentLocale === 'ar' ? 'تعمل تمامًا خارج الشبكة. آلية تعمل يدوياً لا تحتاج أي مصدر طاقة — مثالية للقرى النائية والمناطق التي بها تجهيز كهرباء.' : 'Beroperasi sepenuhnya off-grid. Mekanisme dioperasikan tangan tanpa membutuhkan sumber daya apapun — ideal untuk desa terpencil dan area tanpa infrastruktur listrik.'}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#128736;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Simple & Fiable' : currentLocale === 'ar' ? 'بسيطة وموثوقة' : 'Sederhana & Andal'}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{currentLocale === 'fr' ? 'Pas de moteur, pas de composants électriques, moins de pièces à entretenir. La conception mécanique simple signifie moins de pannes et des réparations faciles sur le terrain.' : currentLocale === 'ar' ? 'لا محرك، لا مكونات كهربائية، أقل عدد من الأجزاء للحفاظ عليها. التصميم الميكانيكي البسيط يعني أقل حدوث عيوب وإصلاحات سهلة في الميدان.' : 'Tidak ada motor, tidak ada komponen listrik, lebih sedikit bagian untuk dipelihara. Desain mekanis sederhana berarti lebih sedikit kerusakan dan perbaikan mudah di lapangan.'}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#128181;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Abordable' : currentLocale === 'ar' ? 'ميسورة التكلفة' : 'Terjangkau'}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{currentLocale === 'fr' ? 'Un point d\'entrée peu coûteux dans la production d\'huile. Les presses manuelles nécessitent un investissement minimal, rendant la production d\'huile accessible au plus grand nombre d\'utilisateurs.' : currentLocale === 'ar' ? 'نقطة دخول منخفضة التكلفة في إنتاج الزيت. المكائن اليدوية تحتاج استثمارًا минимيًا، مما يجعل إنتاج الزيت متاحًا لأكبر عدد ممكن من المستخدمين.' : 'Titik masuk murah untuk produksi minyak. Press manual membutuhkan investasi minimal, membuat produksi minyak dapat diakses oleh pengguna terbesar.'}</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127980;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Méthode Traditionnelle' : currentLocale === 'ar' ? 'طريقة تقليدية' : 'Metode Tradisional'}</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">{currentLocale === 'fr' ? 'Préserve les traditions de pressage d\'huile culturelles. Le pressage à la main maintient l\'artisanat qui a produit de l\'huile de cuisson pendant des siècles dans de nombreuses communautés.' : currentLocale === 'ar' ? 'يحافظ على تقاليد ضغط الزيت الثقافية. الضغط اليدوي يحافظ على الحرف الذي أنتج زيت الطهي لعدة قرون في العديد من المجتمعات.' : 'Melestarikan tradisi press minyak budaya. Press manual mempertahankan kerajinan yang telah menghasilkan minyak goreng selama berabad-abad di banyak komunitas.'}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Note: Hydraulic Recommendation -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl p-8 border-2 border-amber-200">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl shrink-0">&#128161;</div>
+          <div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Envisagez une Presse Hydraulique pour de Meilleurs Résultats' : currentLocale === 'ar' ? 'فكر في المكبس الهيدروليكي للحصول على نتائج أفضل' : 'Pertimbangkan Press Hidrolik untuk Hasil Lebih Baik'}</h3>
+            <p class="text-steel-600 leading-relaxed mb-3" set:html={currentLocale === 'fr' ? 'Haonuo fabrique principalement des presses à huile hydrauliques, qui ne nécessitent que <strong class="text-charcoal-900">2.2 KW de puissance</strong> — compatible avec un petit générateur de 5 KVA. Même dans les zones hors réseau, une presse hydraulique est le choix recommandé car elle offre:' : currentLocale === 'ar' ? 'Haonuo تصنع أساساً مكائن ضغط زيت هيدروليكي، والتي تحتاج فقط <strong class="text-charcoal-900">2.2 كيلو وات من الطاقة</strong> — متوافقة مع مولد صغير 5 كيلو فولت آمبير. حتى في المناطق خارج الشبكة، المكبس الهيدروليكي هو الخيار الموصى به لأنه يوفر:' : 'Haonuo terutama memproduksi mesin press minyak hidrolik, yang hanya membutuhkan <strong class="text-charcoal-900">2.2 KW daya</strong> — kompatibel dengan generator kecil 5 KVA. Bahkan di area off-grid, press hidrolik adalah pilihan yang direkomendasikan karena menawarkan:'}></p>
+            <ul class="text-steel-600 space-y-2 mb-4">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{currentLocale === 'fr' ? 'Rendement en huile 2-3x plus élevé' : currentLocale === 'ar' ? 'عائد زيت 2-3 مرات أعلى' : 'Hasil minyak 2-3x lebih tinggi'}</strong> — {currentLocale === 'fr' ? '42-50% contre 25-35% pour le sésame' : currentLocale === 'ar' ? '42-50% مقابل 25-35% للسمسم' : '42-50% vs 25-35% untuk wijen'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{currentLocale === 'fr' ? 'Fonctionnement en un clic' : currentLocale === 'ar' ? 'تشغيل بنقرة واحدة' : 'Operasi satu tombol'}</strong> — {currentLocale === 'fr' ? 'aucun effort physique requis' : currentLocale === 'ar' ? 'لا يحتاج إلى مجهود جسدي' : 'tidak memerlukan tenaga fisik'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{currentLocale === 'fr' ? 'Capacité de pressage à froid' : currentLocale === 'ar' ? 'قدرة الضغط البارد' : 'Kapasitas press dingin'}</strong> — {currentLocale === 'fr' ? 'huile de qualité premium' : currentLocale === 'ar' ? 'زيت بجودة عالية' : 'minyak berkualitas premium'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong class="text-charcoal-900">{currentLocale === 'fr' ? 'Fonctionne avec un générateur' : currentLocale === 'ar' ? 'تعمل مع المولد' : 'Bekerja dengan generator'}</strong> — {currentLocale === 'fr' ? '5 KVA suffit' : currentLocale === 'ar' ? '5 كيلو فولت آمبير كافي' : '5 KVA sudah cukup'}</span>
+              </li>
+            </ul>
+            <a href={localePath('/hydraulic-oil-press-machine')} class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              {currentLocale === 'fr' ? 'Explorer les Presses Hydrauliques Haonuo' : currentLocale === 'ar' ? 'استكشف مكائن الضغط الهيدروليكي Haonuo' : 'Jelajahi Mesin Press Hidrolik Haonuo'}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Products -->
+  {manualProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Presses Hydrauliques Compactes — Plus Proches du Cas d\'Usage Manuel' : currentLocale === 'ar' ? 'مكائن الضغط الهيدروليكي المدمجة — الأقرب إلى الاستخدام اليدوي' : 'Press Hidrolik Kompak — Terdekat dengan Kasus Penggunaan Manual'}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {manualProducts.map(product => (
+            <a
+              href={localePath(`/products/${product.slug}`)}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title[currentLocale] || product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Compact%20hydraulic%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
+                <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {(currentLocale === 'id' && product.data.specificationsId?.length > 0 ? product.data.specificationsId : currentLocale === 'ar' && product.data.specificationsAr?.length > 0 ? product.data.specificationsAr : currentLocale === 'fr' && product.data.specificationsFr?.length > 0 ? product.data.specificationsFr : product.data.specifications).slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Popular Manual-Pressed Oils -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Huiles Populaires Pressées Manuellement' : currentLocale === 'ar' ? 'الزيوت الشائعة المضغوطة يدوياً' : 'Minyak Populer yang Dipress Manual'}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127807;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Sésame' : currentLocale === 'ar' ? 'زيت السمسم' : 'Minyak Wijen'}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Traditionnel Asiatique' : currentLocale === 'ar' ? 'آسيوي تقليدي' : 'Tradisional Asia'}</p>
+          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Graines molles idéales pour le pressage manuel. Un pilier du pressage traditionnel d\'huile à travers l\'Asie de l\'Est et du Sud depuis des siècles.' : currentLocale === 'ar' ? 'بذور ناعمة مثالية للضغط اليدوي. ركيزة الضغط التقليدي للزيت عبر آسيا الشرقية والجنوبية لعدة قرون.' : 'Biji lunak ideal untuk press manual. Batu tulang press minyak tradisional di seluruh Asia Timur dan Selatan selama berabad-abad.'}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Rendement manuel: 25-35%' : currentLocale === 'ar' ? 'العائد اليدوي: 25-35%' : 'Hasil manual: 25-35%'}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127804;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Beurre de Karité' : currentLocale === 'ar' ? 'جوز الكاريته' : 'Shea Butter'}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Traditionnel ouest-africain' : currentLocale === 'ar' ? 'تقليدي غرب أفريقيا' : 'Tradisional Afrika Barat'}</p>
+          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Le beurre de karité pressé à la main est un produit traditionnel vital au Ghana, au Nigeria et au Burkina Faso pour la cuisine et les soins de la peau.' : currentLocale === 'ar' ? 'جوز الكاريته المضغوط يدوياً هو منتج تقليدي حيوي في غانا ونيجيريا وبوركينا فاسو للطهي والعناية بالجلد.' : 'Shea butter yang dipress manual adalah produk tradisional penting di Ghana, Nigeria, dan Burkina Faso untuk memasak dan perawatan kulit.'}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Rendement manuel: 30-40%' : currentLocale === 'ar' ? 'العائد اليدوي: 30-40%' : 'Hasil manual: 30-40%'}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129372;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile d\'Arachide' : currentLocale === 'ar' ? 'زيت الفول السوداني' : 'Minyak Kacang Tanah'}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Rurale Africaine' : currentLocale === 'ar' ? 'أفريقيا الريفية' : 'Desa Afrika'}</p>
+          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Le pressage de l\'huile d\'arachide est une tradition rurale répandue à travers l\'Afrique de l\'Ouest, fournissant de l\'huile de cuisson essentielle aux communautés villageoises.' : currentLocale === 'ar' ? 'ضغط زيت الفول السوداني هو تقليد ريفية واسع الانتشار عبر غرب أفريقيا، يوفر زيت الطهي الأساسي لمجتمعات القرى.' : 'Press minyak kacang tanah adalah tradisi pedesaan yang luas di seluruh Afrika Barat, menyediakan minyak goreng esensial untuk komunitas desa.'}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Rendement manuel: 20-30%' : currentLocale === 'ar' ? 'العائد اليدوي: 20-30%' : 'Hasil manual: 20-30%'}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127795;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Palmiste' : currentLocale === 'ar' ? 'زيت نخيل السماد' : 'Minyak Palm Kernel'}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Traitement au niveau village' : currentLocale === 'ar' ? 'معالجة على مستوى القرية' : 'Pengolahan tingkat desa'}</p>
+          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Le traitement du palmiste au niveau village fournit de l\'huile de cuisson abordable et du matériau pour la fabrication de savon dans les régions rurales productrices de palmiers.' : currentLocale === 'ar' ? 'معالجة نخيل السماد على مستوى القرية توفر زيت طهي بأسعار معقولة ومادة لصنع الصابون في المناطق الريفية المنتجة للنخيل.' : 'Pengolahan palm kernel di tingkat desa menyediakan minyak goreng terjangkau dan bahan pembuatan sabun di daerah pedesaan penghasil kelapa sawit.'}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Rendement manuel: 25-35%' : currentLocale === 'ar' ? 'العائد اليدوي: 25-35%' : 'Hasil manual: 25-35%'}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">{currentLocale === 'fr' ? 'Foire aux questions' : currentLocale === 'ar' ? 'أسئلة شائعة' : 'Pertanyaan yang Sering Diajukan'}</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'fr' ? 'Trouver la Bonne Presse à Huile pour Vous' : currentLocale === 'ar' ? 'العثور على ماكينة الضغط المناسبة لك' : 'Temukan Mesin Press Minyak yang Tepat untuk Anda'}</h2>
+      <p class="text-steel-300 text-lg mb-8">{currentLocale === 'fr' ? 'Que vous ayez besoin d\'une presse manuelle pour un usage hors réseau ou d\'une presse hydraulique pour un meilleur rendement, Haonuo peut vous aider à choisir la bonne solution.' : currentLocale === 'ar' ? 'سواء كنت بحاجة إلى مضخة يدوية للاستخدام خارج الشبكة أو مضخة هيدروليكي للحصول على عائد أفضل، يمكن لـ Haonuo مساعدتك في اختيار الحل المناسب.' : 'Apakah Anda membutuhkan press manual untuk penggunaan off-grid atau press hidrolik untuk hasil lebih baik, Haonuo dapat membantu Anda memilih solusi yang tepat.'}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+          {currentLocale === 'fr' ? 'Obtenir un devis gratuit' : currentLocale === 'ar' ? 'احصل على عرض أسعار مجاني' : 'Dapatkan Penawaran Gratis'}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128?text=Hello%20Haonuo%2C%20I%20am%20interested%20in%20a%20manual%20or%20hydraulic%20oil%20press%20machine" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-500 transition-colors text-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-.1413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          {currentLocale === 'fr' ? 'Discuter sur WhatsApp' : currentLocale === 'ar' ? 'واتساب' : 'WhatsApp Kami'}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

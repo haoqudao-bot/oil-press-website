@@ -1,0 +1,543 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const iconPaths: Record<string, string> = {
+  machine: 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z',
+  oem: 'M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82zM7 7h.01',
+  odm: 'M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z',
+  parts: 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z',
+  support: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',
+  upgrade: 'M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15',
+};
+
+const services = [
+  {
+    icon: 'machine',
+    title: currentLocale === 'fr' ? 'Achat de Machine Standard' :
+           currentLocale === 'ar' ? 'شراء آلة قياسية' :
+           'Pembelian Mesin Standar',
+    subtitle: currentLocale === 'fr' ? 'Modèles Prêts à Expédier' :
+              currentLocale === 'ar' ? 'نماذج جاهزة للشحن' :
+              'Model Siap Kirim',
+    description: currentLocale === 'fr' ? 'Choisissez parmi notre gamme complète de presses à huile hydrauliques — du mini HN300 à l\'ultra-haute pression HN500. Chaque machine est testée en usine et prête à être expédiée dans les 20-30 jours ouvrables.' :
+                 currentLocale === 'ar' ? 'اختر من مجموعتنا الكاملة لمكائن الضغط الهيدروليكي — من ميني HN300 إلى HN500 عالية الضغط. كل ماكينة اختبار في المصنع وجاهزة للشحن في 20-30 يوم عمل.' :
+                 'Pilih dari rangkaian mesin press minyak hidrolik kami — dari HN300 mini hingga HN500 ultra-tinggi tekanan. Setiap mesin diuji pabrik dan siap dikirim dalam 20-30 hari kerja.',
+    features: currentLocale === 'fr' ? [
+      '8 modèles standards + 4 modèles spécialisés en stock',
+      'Configurations simple ou double fût disponibles',
+      'Options en acier carbone ou inoxydable de qualité alimentaire',
+      'Kit accessoires complet inclus (toile d\'huile, outils, manuel)',
+      'Test de fonctionnement continu de 48 heures avant expédition',
+    ] : currentLocale === 'ar' ? [
+      '8 نماذج قياسية + 4 نماذج متخصصة في المخزن',
+      'تكوينات مفردة أو مزدوجة متاحة',
+      'خيارات فولاذ كربوني أو فولاذ مقاوم للصدأ من الدرجة الغذائية',
+      'حزمة ملحقات كاملة متضمنة (قماش زيت، أدوات، دليل)',
+      'اختبار تشغيل مستمر لمدة 48 ساعة قبل الشحن',
+    ] : [
+      '8 model standar + 4 model khusus dalam stok',
+      'Konfigurasi barrel tunggal atau ganda tersedia',
+      'Opsi baja karbon atau stainless steel food-grade',
+      'Paket aksesori lengkap termasuk (kain minyak, peralatan, manual)',
+      'Pengujian berkelanjutan 48 jam sebelum pengiriman',
+    ],
+    bestFor: currentLocale === 'fr' ? 'Distributeurs, nouvelles entreprises de pressage d\'huile, acheteurs qui ont besoin de machines rapidement' :
+             currentLocale === 'ar' ? 'الموزعون، الشركات الجديدة لضغط الزيت، المشترين الذين يحتاجون الماكينات بسرعة' :
+             'Distributor, bisnis press minyak baru, pembeli yang membutuhkan mesin cepat',
+  },
+  {
+    icon: 'oem',
+    title: currentLocale === 'fr' ? 'Fabrication OEM / White Label' :
+           currentLocale === 'ar' ? 'تصنيع OEM / ليبل أبيض' :
+           'Manufaktur OEM / White Label',
+    subtitle: currentLocale === 'fr' ? 'Votre Marque, Notre Fabrication' :
+              currentLocale === 'ar' ? 'علامتك التجارية، تصنيعنا' :
+              'Merek Anda, Manufaktur Kami',
+    description: currentLocale === 'fr' ? 'Nous fabriquons des presses à huile hydrauliques sous votre nom de marque. Du logo et de la couleur personnalisés aux spécifications modifiées — nous gérons tout, de la conception à la livraison.' :
+                 currentLocale === 'ar' ? 'نحن نصنع مكائن الضغط الهيدروليكي تحت اسم علامتك التجارية. من الشعار واللون المخصص إلى المواصفات المعدلة — نحن نعالج كل شيء، من التصميم إلى التسليم.' :
+                 'Kami memproduksi mesin press minyak hidrolik di bawah merek Anda. Dari logo dan warna kustom hingga spesifikasi dimodifikasi — kami menangani semuanya, dari desain hingga pengiriman.',
+    features: currentLocale === 'fr' ? [
+      'Nom de marque, logo et schéma de couleurs personnalisés',
+      'Spécifications modifiées pour répondre aux exigences de votre marché',
+      'Emballage personnalisé avec votre branding et documentation',
+      'Manuels d\'utilisation et certificats sous marque privée',
+      'MOQ bas — commencez avec aussi peu que 5 unités',
+    ] : currentLocale === 'ar' ? [
+      'اسم العلامة التجارية والشعار والمخطط اللوني المخصص',
+      'المواصفات المعدلة لتلبية متطلبات سوقك',
+      'تعبئة مخصصة مع علامتك التجارية والوثائق',
+      'دليل استخدام وشهادات تحت العلامة التجارية الخاصة',
+      'حد أدنى كمية طلب منخفض — ابدأ بأقل من 5 وحدات',
+    ] : [
+      'Nama merek, logo, dan skema warna kustom',
+      'Spesifikasi dimodifikasi untuk memenuhi kebutuhan pasar Anda',
+      'Pengemasan kustom dengan branding dan dokumentasi Anda',
+      'Manual pengguna dan sertifikat dengan label pribadi',
+      'MOQ rendah — mulai dengan hanya 5 unit',
+    ],
+    bestFor: currentLocale === 'fr' ? 'Propriétaires de marques, distributeurs qui souhaitent leur propre gamme de produits' :
+             currentLocale === 'ar' ? 'مالكي العلامات التجارية، الموزعون الذين يريدون مجموعة منتجاتهم الخاصة' :
+             'Pemilik merek, distributor yang ingin lini produk sendiri',
+  },
+  {
+    icon: 'odm',
+    title: currentLocale === 'fr' ? 'ODM / Ingénierie Personnalisée' :
+           currentLocale === 'ar' ? 'ODM / هندسة مخصصة' :
+           'ODM / Teknik Kustom',
+    subtitle: currentLocale === 'fr' ? 'Solutions Personnalisées de A à Z' :
+              currentLocale === 'ar' ? 'حلول مخصصة من الصفر' :
+              'Solusi Kustom dari Awal',
+    description: currentLocale === 'fr' ? 'Notre équipe d\'ingénieurs conçoit et construit des presses hydrauliques personnalisées selon vos exigences uniques — des dimensions du fût aux systèmes de pression en passant par l\'intégration de l\'automatisation.' :
+                 currentLocale === 'ar' ? 'فريقنا الهندسي يصمم ويبني مكائن ضغط هيدروليكي مخصصة وفقًا لمتطلباتك الفريدة — من أبعاد البرميل إلى أنظمة الضغط إلى تكامل الأتمتة.' :
+                 'Tim insinyur kami merancang dan membangun mesin press hidrolik kustom sesuai kebutuhan unik Anda — dari dimensi barrel hingga sistem tekanan dan integrasi otomatisasi.',
+    features: currentLocale === 'fr' ? [
+      'Diamètre et hauteur de fût personnalisés pour des graines oléagineuses spécifiques',
+      'Systèmes hydrauliques modifiés pour des exigences de pression spéciales',
+      'Intégration avec des lignes de production existantes et automatisation',
+      'Options de matériaux spéciaux (inoxydable 316L, placage nickel)',
+      'Documentation d\'ingénierie complète et support technique',
+    ] : currentLocale === 'ar' ? [
+      'قطر وارتفاع البرميل المخصص للبذور الزيتية المحددة',
+      'أنظمة هيدروليكية معدلة لمتطلبات الضغط الخاصة',
+      'التكامل مع خطوط الإنتاج القائمة والأتمتة',
+      'خيارات المواد الخاصة (فولاذ مقاوم للصدأ 316L، طلاء النيكل)',
+      'وثائق هندسية كاملة ودعم فني',
+    ] : [
+      'Diameter dan tinggi barrel kustom untuk biji minyak spesifik',
+      'Sistem hidrolik dimodifikasi untuk kebutuhan tekanan khusus',
+      'Integrasi dengan jalur produksi dan otomatisasi yang ada',
+      'Opsi material khusus (stainless steel 316L, pelapisan nikel)',
+      'Dokumentasi teknik lengkap dan dukungan teknis',
+    ],
+    bestFor: currentLocale === 'fr' ? 'Producteurs à grande échelle, entreprises avec des besoins de traitement uniques' :
+             currentLocale === 'ar' ? 'المنتجون على نطاق واسع، الشركات ذات احتياجات معالجة فريدة' :
+             'Produsen skala besar, perusahaan dengan kebutuhan pemrosesan unik',
+  },
+  {
+    icon: 'parts',
+    title: currentLocale === 'fr' ? 'Pièces de Rechange & Accessoires' :
+           currentLocale === 'ar' ? 'قطع الغيار والملحقات' :
+           'Suku Cadang & Aksesori',
+    subtitle: currentLocale === 'fr' ? 'Gardez Vos Machines en Marche' :
+              currentLocale === 'ar' ? 'احافظ على تشغيل آلاتك' :
+              'Jaga Mesin Anda Berjalan',
+    description: currentLocale === 'fr' ? 'Pièces de rechange et accessoires Haonuo authentiques pour maintenir vos presses à huile hydrauliques au meilleur rendement. Expédition rapide dans le monde entier avec garantie de qualité.' :
+                 currentLocale === 'ar' ? 'قطع غيار وملحقات Haonuo الأصيلة للحفاظ على مكائن الضغط الهيدروليكي الخاصة بك بأعلى أداء. شحن سريع في جميع أنحاء العالم مع ضمان الجودة.' :
+                 'Suku cadang dan aksesori Haonuo asli untuk menjaga mesin press minyak hidrolik Anda bekerja dengan performa maksimal. Pengiriman cepat ke seluruh dunia dengan jaminan kualitas.',
+    features: currentLocale === 'fr' ? [
+      'Cylinders hydrauliques, joints et ensembles de pompes',
+      'Fûts d\'huile (tailles standards et personnalisées)',
+      'Tissus de filtre et éléments filtrants',
+      'Composants électriques et panneaux de commande',
+      'Kits de maintenance complets pour chaque modèle',
+    ] : currentLocale === 'ar' ? [
+      'أسطوانات هيدروليكية، مفاصل ومجمعات مضخات',
+      'براميل زيت (أحجام قياسية ومخصصة)',
+      'أقمشة المرشح وعناصر الترشيح',
+      'مكونات كهربائية وألواح التحكم',
+      'حزم صيانة كاملة لكل نموذج',
+    ] : [
+      'Silinder hidrolik, seal, dan pompa',
+      'Barrel minyak (ukuran standar dan kustom)',
+      'Kain filter dan elemen filter',
+      'Komponen listrik dan panel kontrol',
+      'Paket perawatan lengkap untuk setiap model',
+    ],
+    bestFor: currentLocale === 'fr' ? 'Propriétaires de machines Haonuo existantes, équipes de maintenance' :
+             currentLocale === 'ar' ? 'مالكي آلات Haonuo القائمة، فرق الصيانة' :
+             'Pemilik mesin Haonuo yang ada, tim maintenance',
+  },
+  {
+    icon: 'support',
+    title: currentLocale === 'fr' ? 'Support Technique & Formation' :
+           currentLocale === 'ar' ? 'دعم فني وتدريب' :
+           'Dukungan Teknis & Pelatihan',
+    subtitle: currentLocale === 'fr' ? 'Assistance Expert Quand Vous En Avez Besoin' :
+              currentLocale === 'ar' ? 'مساعدة الخبراء عندما تحتاجها' :
+              'Bantuan Ahli Ketika Anda Butuh',
+    description: currentLocale === 'fr' ? 'Support technique complet de l\'installation à l\'exploitation quotidienne. Nos ingénieurs sont disponibles par appel vidéo, WhatsApp ou visite sur place pour assurer votre succès.' :
+                 currentLocale === 'ar' ? 'دعم فني شامل من التثبيت إلى التشغيل اليومي. مهندسوننا متوفرون عبر مكالمة فيديو، واتساب أو زيارة على المكان لضمان نجاحك.' :
+                 'Dukungan teknis komprehensif dari instalasi hingga operasi harian. Teknisi kami tersedia melalui panggilan video, WhatsApp, atau kunjungan langsung untuk memastikan keberhasilan Anda.',
+    features: currentLocale === 'fr' ? [
+      'Guide vidéo d\'installation avec instructions étape par étape',
+      'Dépannage à distance via WhatsApp ou appel vidéo',
+      'Installation et formation sur place (disponible dans certaines régions)',
+      'Programmes de formation opérateur pour votre équipe',
+      'Support technique à vie pour toutes les machines Haonuo',
+    ] : currentLocale === 'ar' ? [
+      'توجيهات تثبيت فيديو مع تعليمات خطوة بخطوة',
+      'إصلاح عن بُعد عبر واتساب أو مكالمة فيديو',
+      'التثبيت والتدريب على المكان (متوفر في بعض المناطق)',
+      'برامج تدريب المشغلين لفريقك',
+      'دعم فني مدى الحياة لجميع آلات Haonuo',
+    ] : [
+      'Panduan instalasi video dengan instruksi langkah demi langkah',
+      'Troubleshooting jarak jauh via WhatsApp atau panggilan video',
+      'Instalasi dan pelatihan di lokasi (tersedia di beberapa wilayah)',
+      'Program pelatihan operator untuk tim Anda',
+      'Dukungan teknis seumur hidup untuk semua mesin Haonuo',
+    ],
+    bestFor: currentLocale === 'fr' ? 'Acheteurs pour la première fois, équipes qui ont besoin de formation pratique' :
+             currentLocale === 'ar' ? 'المشترين لأول مرة، الفرق التي تحتاج تدريبًا عمليًا' :
+             'Pembeli pertama kali, tim yang membutuhkan pelatihan praktis',
+  },
+  {
+    icon: 'upgrade',
+    title: currentLocale === 'fr' ? 'Mise à Niveau & Rétrofit d\'Équipements' :
+           currentLocale === 'ar' ? 'ترقية وتحديث المعدات' :
+           'Upgrade & Retrofit Peralatan',
+    subtitle: currentLocale === 'fr' ? 'Modernisez Vos Machines Existantes' :
+              currentLocale === 'ar' ? 'حدّث آلاتك القائمة' :
+              'Modernisasi Mesin Anda yang Ada',
+    description: currentLocale === 'fr' ? 'Mettez à niveau vos anciennes machines Haonuo ou tierces avec des composants modernes. Améliorez l\'efficacité, la sécurité et le rendement en huile sans acheter une machine toute neuve.' :
+                 currentLocale === 'ar' ? 'قم بإعادة تصميم آلات Haonuo القديمة أو آلات الطرف الثالث بمكونات حديثة. تحسين الكفاءة والسلامة وعائد الزيت دون شراء آلة جديدة بالكامل.' :
+                 'Upgrade mesin Haonuo lama atau pihak ketiga Anda dengan komponen modern. Tingkatkan efisiensi, keamanan, dan hasil minyak tanpa membeli mesin baru.',
+    features: currentLocale === 'fr' ? [
+      'Mises à niveau du système hydraulique pour une pression plus élevée',
+      'Rétrofits de fût en inoxydable pour la conformité qualité alimentaire',
+      'Modernisation du système électrique et mises à niveau de sécurité',
+      'Ajouts d\'automatisation (alimentation automatique, retrait automatique de la tourteau)',
+      'Optimisation des performances pour des graines oléagineuses spécifiques',
+    ] : currentLocale === 'ar' ? [
+      'ترقية أنظمة الهيدروليكية لضغط أعلى',
+      'تجديد البرميل بالفولاذ المقاوم للصدأ لامتثال الدرجة الغذائية',
+      'حديث النظام الكهربائي وترقية الأمان',
+      'إضافة الأتمتة (التغذية الأوتوماتيكية، إزالة الأوتوماتيكية للكيكة)',
+      'تحسين الأداء للبذور الزيتية المحددة',
+    ] : [
+      'Upgrade sistem hidrolik untuk tekanan lebih tinggi',
+      'Retrofit barrel stainless steel untuk kepatuhan food-grade',
+      'Modernisasi sistem listrik dan upgrade keamanan',
+      'Penambahan otomatisasi (pemberian otomatis, pengeluaran ampas otomatis)',
+      'Optimalisasi performa untuk biji minyak spesifik',
+    ],
+    bestFor: currentLocale === 'fr' ? 'Propriétaires de machines existantes cherchant à améliorer les performances' :
+             currentLocale === 'ar' ? 'مالكي المعدات القائمة الذين يسعون إلى تحسين الأداء' :
+             'Pemilik mesin yang ada yang ingin meningkatkan performa',
+  },
+];
+
+const process = [
+  {
+    step: 1,
+    title: currentLocale === 'fr' ? 'Parlez-Nous de Vos Besoins' :
+           currentLocale === 'ar' ? 'أخبرنا عن احتياجاتك' :
+           'Beritahu Kami Kebutuhan Anda',
+    desc: currentLocale === 'fr' ? 'Partagez votre type de graine oléagineuse, votre capacité de production, votre budget et toute exigence de personnalisation. Nous répondons dans les 24 heures.' :
+          currentLocale === 'ar' ? 'شارك نوع بذرتك الزيتية، وسعتك الإنتاجية، وميزانيتك، وأي متطلبات تخصيص. نحن نجيب في غضون 24 ساعة.' :
+          'Bagikan jenis biji minyak Anda, kapasitas produksi, budget, dan kebutuhan kustomisasi apa pun. Kami merespon dalam 24 jam.',
+  },
+  {
+    step: 2,
+    title: currentLocale === 'fr' ? 'Proposition Personnalisée' :
+           currentLocale === 'ar' ? 'اقتراح مخصص' :
+           'Proposal Kustom',
+    desc: currentLocale === 'fr' ? 'Nos ingénieurs conçoivent la solution optimale — qu\'il s\'agisse d\'un modèle standard, d\'une marque OEM ou d\'une machine ODM entièrement personnalisée.' :
+          currentLocale === 'ar' ? 'مهندسوننا يصممون الحل الأمثل — سواء كان ذلك نموذج قياسي، علامة تجارية OEM، أو آلة ODM مخصصة بالكامل.' :
+          'Teknisi kami merancang solusi optimal — apakah itu model standar, merek OEM, atau mesin ODM penuh kustom.',
+  },
+  {
+    step: 3,
+    title: currentLocale === 'fr' ? 'Échantillon & Approbation' :
+           currentLocale === 'ar' ? 'عينة وموافقة' :
+           'Sampel & Persetujuan',
+    desc: currentLocale === 'fr' ? 'Pour les commandes OEM/ODM, nous fournissons des spécifications détaillées et des rendus 3D pour votre approbation avant le début de la production.' :
+          currentLocale === 'ar' ? 'للأوامر OEM/ODM، نحن نقدم مواصفات مفصلة وعروض 3D لموافقتك قبل بدء الإنتاج.' :
+          'Untuk pesanan OEM/ODM, kami memberikan spesifikasi detail dan render 3D untuk persetujuan Anda sebelum produksi dimulai.',
+  },
+  {
+    step: 4,
+    title: currentLocale === 'fr' ? 'Production & Contrôle de Qualité' :
+           currentLocale === 'ar' ? 'إنتاج ومراقبة الجودة' :
+           'Produksi & Kontrol Kualitas',
+    desc: currentLocale === 'fr' ? 'Vos machines sont fabriquées dans notre usine avec un test continu de 48 heures avant expédition.' :
+          currentLocale === 'ar' ? 'آلاتك مصنعة في مصنعنا مع اختبار مستمر لمدة 48 ساعة قبل الشحن.' :
+          'Mesin Anda diproduksi di pabrik kami dengan pengujian berkelanjutan 48 jam sebelum pengiriman.',
+  },
+  {
+    step: 5,
+    title: currentLocale === 'fr' ? 'Livraison Globale' :
+           currentLocale === 'ar' ? 'التسليم العالمي' :
+           'Pengiriman Global',
+    desc: currentLocale === 'fr' ? 'Emballage sécurisé, expédition fiable jusqu\'à votre port, documentation d\'export complète et support technique continu.' :
+          currentLocale === 'ar' ? 'تعبئة آمنة، شحن موثوق إلى مينائك، وثائق تصدير كاملة ودعم فني مستمر.' :
+          'Pengemasan aman, pengiriman terpercaya ke pelabuhan Anda, dokumentasi ekspor lengkap, dan dukungan teknis berkelanjutan.',
+  },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.about, item: `https://www.hydoilpress.com/${currentLocale}/about` },
+    { '@type': 'ListItem', position: 3, name: t.common.services, item: `https://www.hydoilpress.com/${currentLocale}/services` },
+  ],
+};
+
+const pageTitle = currentLocale === 'fr' ? 'Services OEM/ODM & Fabrication | Haonuo Machinery' :
+                  currentLocale === 'ar' ? 'خدمات OEM/ODM والتصنيع | Haonuo Machinery' :
+                  'Layanan OEM/ODM & Manufaktur | Haonuo Machinery';
+
+const pageDesc = currentLocale === 'fr' ? 'Haonuo Machinery propose l\'achat de machines standards, la fabrication OEM white label, l\'ingénierie ODM personnalisée, les pièces de rechange, le support technique et les mises à niveau d\'équipements pour les presses à huile hydrauliques.' :
+                 currentLocale === 'ar' ? 'Haonuo Machinery توفر شراء الماكينات القياسية، تصنيع OEM ليبل أبيض، هندسة ODM المخصصة، قطع الغيار، الدعم الفني، وترقية المعدات لمكائن الضغط الهيدروليكي.' :
+                 'Haonuo Machinery menawarkan pembelian mesin standar, manufaktur OEM white label, teknik ODM kustom, suku cadang, dukungan teknis, dan upgrade peralatan untuk mesin press minyak hidrolik.';
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={pageTitle}
+  description={pageDesc}
+  keywords={['oil press OEM manufacturer', 'hydraulic oil press ODM', 'custom oil press machine', 'oil press machine manufacturer China']}
+  jsonLd={breadcrumbLd}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/about')} class="hover:text-amber-500 transition-colors">{t.nav.about}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">{t.common.services}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          {currentLocale === 'fr' ? 'Direct de l\'Usine • 15+ Ans • 50+ Pays' : currentLocale === 'ar' ? 'مباشرة من المصنع • 15+ سنة • 50+ دولة' : 'Langung dari Pabrik • 15+ Tahun • 50+ Negara'}
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-4">{t.common.services}</h1>
+        <p class="text-steel-500 text-lg max-w-3xl mx-auto">
+          {currentLocale === 'fr' ? 'De l\'achat de machine standard à la fabrication OEM/ODM complètement personnalisée, Haonuo fournit des solutions complètes pour tous les besoins de pressage d\'huile. Choisissez le modèle de service qui correspond à votre entreprise.' :
+           currentLocale === 'ar' ? 'من شراء الماكينة القياسية إلى التصنيع OEM/ODM المخصص بالكامل، Haonuo توفر حلولًا شاملة لجميع احتياجات ضغط الزيت. اختر نموذج الخدمة الذي يتوافق مع عملك.' :
+           'Dari pembelian mesin standar hingga manufaktur OEM/ODM penuh kustom, Haonuo memberikan solusi komprehensif untuk semua kebutuhan press minyak. Pilih model layanan yang sesuai dengan bisnis Anda.'}
+        </p>
+      </div>
+
+      <!-- Service Cards -->
+      <div class="space-y-8 mb-20">
+        {services.map((service, index) => (
+          <div class={`bg-white rounded-2xl border border-steel-100 overflow-hidden ${index === 1 || index === 2 ? 'border-amber-200 shadow-md' : ''}`}>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+              <!-- Left: Info -->
+              <div class={`p-8 ${index === 1 || index === 2 ? 'bg-amber-50/50' : 'bg-steel-50/50'}`}>
+                <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d={iconPaths[service.icon]}/></svg>
+                </div>
+                <h2 class="font-display text-2xl text-charcoal-900 mb-1">{service.title}</h2>
+                <p class="text-amber-600 font-medium text-sm mb-4">{service.subtitle}</p>
+                <p class="text-steel-600 leading-relaxed">{service.description}</p>
+                <div class="mt-4">
+                  <span class="text-xs font-semibold text-steel-400 uppercase tracking-wider">
+                    {currentLocale === 'fr' ? 'Idéal pour' : currentLocale === 'ar' ? 'مثالي لـ' : 'Best For'}
+                  </span>
+                  <p class="text-sm text-steel-700 mt-1">{service.bestFor}</p>
+                </div>
+              </div>
+              <!-- Right: Features -->
+              <div class="lg:col-span-2 p-8">
+                <h3 class="font-display text-lg text-charcoal-900 mb-4">
+                  {currentLocale === 'fr' ? 'Ce qui est inclus' : currentLocale === 'ar' ? 'ما هو مضمن' : 'What\'s Included'}
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {service.features.map(feature => (
+                    <div class="flex items-start gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span class="text-sm text-steel-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <div class="mt-6">
+                  <a href={localePath('/contact')} class="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium transition-colors text-sm">
+                    {currentLocale === 'fr' ? 'Demander un Devis pour ' : currentLocale === 'ar' ? 'طلب عرض أسعار لـ ' : 'Dapatkan Penawaran untuk '}
+                    {service.title.split(' / ')[0].split(' & ')[0]}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- OEM/ODM Highlight -->
+      <div class="bg-gradient-to-br from-steel-900 to-steel-800 rounded-2xl p-8 md:p-12 mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-display text-3xl text-white mb-4">
+              {currentLocale === 'fr' ? 'Pourquoi Collaborer avec Haonuo pour l\'OEM/ODM ?' :
+               currentLocale === 'ar' ? 'لماذا نتعاون مع Haonuo لـ OEM/ODM؟' :
+               'Mengapa Bermitra dengan Haonuo untuk OEM/ODM?'}
+            </h2>
+            <p class="text-steel-300 text-lg mb-8">
+              {currentLocale === 'fr' ? 'En tant que fabricant direct avec plus de 15 ans d\'expertise dans les presses à huile hydrauliques, nous offrons des capacités que les sociétés de négoce ne peuvent tout simplement pas égaler.' :
+               currentLocale === 'ar' ? 'بصفتنا مصنعًا مباشرًا بخبرة تزيد عن 15 عامًا في مكائن الضغط الهيدروليكي، نحن نقدم قدرات لا يمكن لشركات التبادل أن تتقارن بها.' :
+               'Sebagai pabrik langsung dengan lebih dari 15 tahun keahlian dalam mesin press minyak hidrolik, kami menawarkan kemampuan yang tidak dapat ditandingi oleh perusahaan perdagangan.'}
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">
+                    {currentLocale === 'fr' ? 'Accès Direct à l\'Usine' : currentLocale === 'ar' ? 'وصول مباشر إلى المصنع' : 'Akses Langsung ke Pabrik'}
+                  </h3>
+                  <p class="text-steel-400 text-sm">
+                    {currentLocale === 'fr' ? 'Pas d\'intermédiaire — vous travaillez directement avec nos ingénieurs et notre équipe de production. Communication plus rapide, meilleur contrôle de qualité, coûts réduits.' :
+                     currentLocale === 'ar' ? 'لا وسيط — أنت تعمل مباشرة مع مهندسوننا وفريقنا الإنتاج. اتصال أسرع، مراقبة جودة أفضل، تكاليف مخفضة.' :
+                     'Tidak ada perantara — Anda bekerja langsung dengan teknisi dan tim produksi kami. Komunikasi lebih cepat, kontrol kualitas lebih baik, biaya lebih rendah.'}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">
+                    {currentLocale === 'fr' ? 'Expérience d\'Exportation Eprouvée' : currentLocale === 'ar' ? 'تجربة تصدير مثبتة' : 'Pengalaman Ekspor Terbukti'}
+                  </h3>
+                  <p class="text-steel-400 text-sm">
+                    {currentLocale === 'fr' ? 'Expédié avec succès dans 50+ pays avec documentation complète (CO, Formulaire A/E, légalisation de l\'ambassade). Nous nous occupons de la douane et de la conformité.' :
+                     currentLocale === 'ar' ? 'تم الشحن بنجاح إلى 50+ دولة مع وثائق كاملة (CO، نموذج A/E، قانونية السفارة). نحن نتعامل مع الجمارك والامتثال.' :
+                     'Berhasil dikirim ke 50+ negara dengan dokumentasi lengkap (CO, Form A/E, legalisasi kedutaan). Kami menangani bea cukai dan kepatuhan.'}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">
+                    {currentLocale === 'fr' ? 'MOQ Flexible' : currentLocale === 'ar' ? 'حد أدنى كمية طلب مرن' : 'MOQ Fleksibel'}
+                  </h3>
+                  <p class="text-steel-400 text-sm">
+                    {currentLocale === 'fr' ? 'Commencez avec aussi peu que 5 unités pour les commandes OEM. Nous soutenons les entreprises en croissance et comprenons que vous souhaiterez peut-être tester le marché d\'abord.' :
+                     currentLocale === 'ar' ? 'ابدأ بأقل من 5 وحدات لأوامر OEM. نحن ندعم الشركات النامية ونفهم أنك قد ترغب في اختبار السوق أولاً.' :
+                     'Mulai dengan hanya 5 unit untuk pesanan OEM. Kami mendukung bisnis yang berkembang dan memahami bahwa Anda mungkin ingin menguji pasar terlebih dahulu.'}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold mb-1">
+                    {currentLocale === 'fr' ? 'Capacité de Personnalisation Complète' : currentLocale === 'ar' ? 'قدرة تخصيص كاملة' : 'Kemampuan Kustomisasi Penuh'}
+                  </h3>
+                  <p class="text-steel-400 text-sm">
+                    {currentLocale === 'fr' ? 'Des dimensions du fût à la pression hydraulique en passant par le traitement de surface — nous pouvons personnaliser chaque aspect de la machine selon vos spécifications.' :
+                     currentLocale === 'ar' ? 'من أبعاد البرميل إلى الضغط الهيدروليكي إلى المعالجة السطحية — يمكننا تخصيص كل جانب من الآلة وفقًا لمواصفاتك.' :
+                     'Dari dimensi barrel hingga tekanan hidrolik dan perlakuan permukaan — kami dapat menyesuaikan setiap aspek mesin sesuai spesifikasi Anda.'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-steel-800 rounded-xl p-8 border border-steel-700">
+            <h3 class="font-display text-xl text-white mb-4">
+              {currentLocale === 'fr' ? 'Prêt pour des Solutions Personnalisées ?' :
+               currentLocale === 'ar' ? 'هل أنت مستعد للحلول المخصصة؟' :
+               'Siap untuk Solusi Kustom?'}
+            </h3>
+            <p class="text-steel-400 text-sm mb-6">
+              {currentLocale === 'fr' ? 'Que vous ayez besoin de branding OEM, d\'ingénierie ODM personnalisée ou de conception de ligne de production complète, notre équipe est prête à vous aider. Contactez-nous aujourd\'hui pour une consultation gratuite.' :
+               currentLocale === 'ar' ? 'سواء كنت بحاجة إلى علامة تجارية OEM، هندسة ODM المخصصة، أو تصميم خط إنتاج كامل، فريقنا جاهز لمساعدتك. اتصل بنا اليوم للحصول على استشارة مجانية.' :
+               'Apakah Anda membutuhkan branding OEM, teknik ODM kustom, atau desain jalur produksi penuh, tim kami siap membantu. Hubungi kami hari ini untuk konsultasi gratis.'}
+            </p>
+            <ul class="space-y-2 mb-6 text-sm text-steel-300">
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                {currentLocale === 'fr' ? 'Consultation d\'ingénierie gratuite' : currentLocale === 'ar' ? 'استشارة هندسية مجانية' : 'Konsultasi Teknis Gratis'}
+              </li>
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                {currentLocale === 'fr' ? 'Réponse dans les 24 heures' : currentLocale === 'ar' ? 'استجابة في 24 ساعة' : 'Respon dalam 24 Jam'}
+              </li>
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                {currentLocale === 'fr' ? 'Rendus 3D personnalisés pour approbation' : currentLocale === 'ar' ? 'عروض 3D مخصصة للموافقة' : 'Render 3D Kustom untuk Persetujuan'}
+              </li>
+            </ul>
+            <a href={localePath('/contact')} class="block w-full text-center bg-amber-500 text-charcoal-900 font-semibold py-3 rounded-xl hover:bg-amber-400 transition-colors">
+              {currentLocale === 'fr' ? 'Demander un Devis OEM/ODM' : currentLocale === 'ar' ? 'طلب عرض أسعار OEM/ODM' : 'Dapatkan Penawaran OEM/ODM'}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <h2 class="font-display text-3xl text-charcoal-900 mb-3">
+            {currentLocale === 'fr' ? 'Comment Ça Marche' : currentLocale === 'ar' ? 'كيف يعمل' : 'How It Works'}
+          </h2>
+          <p class="text-steel-500 max-w-2xl mx-auto">
+            {currentLocale === 'fr' ? 'De la demande initiale à la livraison et au-delà — notre processus rationalisé garantit une expérience fluide pour chaque type de service.' :
+             currentLocale === 'ar' ? 'من الاستفسار الأول إلى التسليم وما بعد — عمليتنا المنظمة تضمن تجربة سلسة لكل نوع من الخدمات.' :
+             'Dari permintaan awal hingga pengiriman dan selanjutnya — proses kami yang efisien memastikan pengalaman yang mulus untuk setiap jenis layanan.'}
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {process.map(p => (
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-4 bg-amber-500 text-white rounded-full flex items-center justify-center font-display text-xl font-bold">{p.step}</div>
+              <h3 class="font-display text-lg text-charcoal-900 mb-2">{p.title}</h3>
+              <p class="text-sm text-steel-600">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-amber-500 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="font-display text-3xl text-charcoal-900 mb-4">
+          {currentLocale === 'fr' ? 'Prêt à Lancer Votre Projet ?' :
+           currentLocale === 'ar' ? 'هل أنت مستعد لبدء مشروعك؟' :
+           'Siap Memulai Proyek Anda?'}
+        </h2>
+        <p class="text-charcoal-700 text-lg max-w-2xl mx-auto mb-8">
+          {currentLocale === 'fr' ? 'Que vous ayez besoin d\'une seule machine ou d\'une ligne de production OEM personnalisée, notre équipe est prête à vous aider. Obtenez une consultation et un devis gratuits aujourd\'hui.' :
+           currentLocale === 'ar' ? 'سواء كنت بحاجة إلى آلة واحدة أو خط إنتاج OEM مخصص، فريقنا جاهز لمساعدتك. احصل على استشارة وعرض أسعار مجاني اليوم.' :
+           'Apakah Anda membutuhkan satu mesin atau jalur produksi OEM kustom, tim kami siap membantu. Dapatkan konsultasi dan penawaran gratis hari ini.'}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={localePath('/contact')} class="inline-flex items-center justify-center px-8 py-4 bg-charcoal-900 text-white font-semibold rounded-xl hover:bg-charcoal-800 transition-colors">
+            {currentLocale === 'fr' ? 'Demander un Devis' : currentLocale === 'ar' ? 'طلب عرض أسعار' : 'Dapatkan Penawaran'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://wa.me/8618957149128" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 bg-white text-charcoal-900 font-semibold rounded-xl hover:bg-steel-50 transition-colors">
+            {currentLocale === 'fr' ? 'Discuter sur WhatsApp' : currentLocale === 'ar' ? 'التحدث على واتساب' : 'Chat di WhatsApp'}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

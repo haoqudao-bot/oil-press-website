@@ -1,0 +1,489 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+const allProducts = await getCollection('products');
+const allSolutions = await getCollection('solutions');
+const featuredProducts = allProducts.filter(p => p.data.featured).slice(0, 4);
+const featuredSolutions = allSolutions.sort((a, b) => a.data.order - b.data.order).slice(0, 6);
+
+const scaleSolutions = allSolutions
+  .filter(s => ['small-business', 'commercial', 'industrial'].includes(s.data.seedName))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const scaleIcons: Record<string, string> = {
+  'small-business': '🏪',
+  'commercial': '🏭',
+  'industrial': '⚙️',
+};
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const stats = [
+  { value: '15+', label: t.home.statsYears, highlight: t.home.statsHighlight1 },
+  { value: '50+', label: t.home.statsCountries, highlight: t.home.statsHighlight2 },
+  { value: '200+', label: t.home.statsEmployees, highlight: t.home.statsHighlight3 },
+  { value: '3,000', label: t.home.statsArea, highlight: t.home.statsHighlight4 },
+  { value: '2,000+', label: t.home.statsMachines, highlight: t.home.statsHighlight5 },
+];
+
+const advantages = [
+  { title: t.home.feature1Title, desc: t.home.feature1Desc, icon: 'factory' },
+  { title: t.home.feature2Title, desc: t.home.feature2Desc, icon: 'settings' },
+  { title: t.home.feature3Title, desc: t.home.feature3Desc, icon: 'globe' },
+  { title: t.home.feature4Title, desc: t.home.feature4Desc, icon: 'leaf' },
+];
+---
+
+<BaseLayout locale={currentLocale} title={t.home.heroTitle} description={t.site.description}>
+  <!-- Hero Carousel Section -->
+  <section class="relative h-[85vh] min-h-[600px] overflow-hidden" id="hero-carousel">
+    <!-- Slides -->
+    <div class="hero-slides" id="hero-slides">
+      <!-- Slide 1: Image -->
+      <div class="hero-slide active" data-index="0">
+        <div class="absolute inset-0 bg-steel-900">
+          <img
+            src="/images/hero/hydraulic-oil-press-machine.webp"
+            alt="Hydraulic Oil Press"
+            class="w-full h-full object-cover opacity-40"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div class="max-w-2xl">
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+              {t.home.heroTitle}
+            </h1>
+            <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+              {t.home.heroSlide1Tag}
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href={localePath('/contact')} class="btn-primary text-base">
+                {t.home.heroCta}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+                {t.home.heroSecondary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Image -->
+      <div class="hero-slide" data-index="1">
+        <div class="absolute inset-0 bg-steel-900">
+          <img
+            src="/images/hero/cold-press-production-line.webp"
+            alt="Cold Press Technology"
+            class="w-full h-full object-cover opacity-40"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div class="max-w-2xl">
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+              {t.home.heroSlide2Title}
+            </h1>
+            <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+              {t.home.heroSlide2Desc}
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href={localePath('/products/cold-press-hydraulic-oil-press')} class="btn-primary text-base">
+                {t.home.heroSlide2Cta}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href={localePath('/solutions')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+                {t.home.heroSlide2Secondary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Video -->
+      <div class="hero-slide" data-index="2">
+        <div class="absolute inset-0 bg-steel-900">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover opacity-40"
+            poster="/images/hero/factory-workshop.webp"
+          >
+            <source src="/videos/factory-tour.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div class="max-w-2xl">
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+              {t.home.heroSlide3Title}
+            </h1>
+            <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
+              {t.home.heroSlide3Desc}
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href={localePath('/about')} class="btn-primary text-base">
+                {t.home.heroSlide3Cta}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href={localePath('/contact')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+                {t.home.heroSlide3Secondary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10">
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Arrow Controls -->
+    <button id="hero-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors backdrop-blur-sm" aria-label="Previous">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button id="hero-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors backdrop-blur-sm" aria-label="Next">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </section>
+
+  <style>
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      pointer-events: none;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .hero-dot.active {
+      background-color: #f59e0b;
+      width: 2rem;
+      border-radius: 9999px;
+    }
+  </style>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let current = 0;
+    let interval: ReturnType<typeof setInterval>;
+
+    function goToSlide(index: number) {
+      slides[current]?.classList.remove('active');
+      dots[current]?.classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current]?.classList.add('active');
+      dots[current]?.classList.add('active');
+    }
+
+    function startAutoplay() {
+      interval = setInterval(() => goToSlide(current + 1), 6000);
+    }
+
+    function stopAutoplay() {
+      clearInterval(interval);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        stopAutoplay();
+        goToSlide(parseInt(dot.getAttribute('data-slide') || '0'));
+        startAutoplay();
+      });
+    });
+
+    document.getElementById('hero-prev')?.addEventListener('click', () => {
+      stopAutoplay();
+      goToSlide(current - 1);
+      startAutoplay();
+    });
+
+    document.getElementById('hero-next')?.addEventListener('click', () => {
+      stopAutoplay();
+      goToSlide(current + 1);
+      startAutoplay();
+    });
+
+    startAutoplay();
+  </script>
+
+  <!-- Stats Section -->
+  <section class="py-10 md:py-12 bg-amber-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
+        {stats.map(stat => (
+          <div class="text-center">
+            <div class="font-display text-4xl md:text-5xl text-charcoal-900 font-bold">{stat.value}</div>
+            <div class="text-sm text-charcoal-800 font-semibold mt-1">{stat.label}</div>
+            <div class="text-xs text-charcoal-700 mt-0.5">{stat.highlight}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">{t.home.whyChooseUs}</h2>
+        <p class="section-subtitle mx-auto">{t.home.whyChooseUsDesc}</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {advantages.map((item, i) => (
+          <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-steel-50 hover:bg-amber-50 transition-colors duration-300 group border border-transparent hover:border-amber-200" style={`animation-delay: ${i * 100}ms`}>
+            <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 group-hover:bg-amber-600 rounded-xl flex items-center justify-center transition-colors">
+              {item.icon === 'factory' && <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8l4-4 4 4v8"/><path d="M10 20v-6l4-4 4 4v6"/><path d="M18 20v-4l2-2 2 2v4"/><line x1="2" y1="20" x2="22" y2="20"/></svg>}
+              {item.icon === 'settings' && <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>}
+              {item.icon === 'globe' && <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>}
+              {item.icon === 'leaf' && <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>}
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">{item.title}</h3>
+            <p class="text-sm text-steel-600 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="py-16 md:py-24 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-4 reveal">
+        <div>
+          <h2 class="section-title">{t.home.featuredProducts}</h2>
+        </div>
+        <a href={localePath('/products')} class="hidden sm:inline-flex btn-outline text-sm">
+          {t.home.viewAllProducts}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <p class="text-steel-600 max-w-3xl mb-10 reveal">{t.home.featuredProductsIntro}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {featuredProducts.map((product, i) => (
+          <a
+            href={localePath(`/products/${product.slug}`)}
+            class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            style={`animation-delay: ${i * 100}ms`}
+          >
+            <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+              <img
+                src={product.data.images[0]}
+                alt={product.data.title.en}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.onerror=null;this.src='/images/hero/hydraulic-oil-press-machine.webp'"
+              />
+              <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+                <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {t.products.viewDetails}
+                </span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+              <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+              <div class="flex flex-wrap gap-2">
+                {product.data.specifications.slice(0, 2).map(spec => (
+                  <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                    {spec.name}: {spec.value}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href={localePath('/products')} class="btn-outline text-sm">
+          {t.home.viewAllProducts}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-4 reveal">
+        <div>
+          <h2 class="section-title">{t.home.featuredSolutions}</h2>
+        </div>
+        <a href={localePath('/solutions')} class="hidden sm:inline-flex btn-outline text-sm">
+          {t.home.viewAllSolutions}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <p class="text-steel-600 max-w-3xl mb-10 reveal">{t.home.featuredSolutionsIntro}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {featuredSolutions.map((solution, i) => (
+          <a
+            href={localePath(`/solutions/${solution.slug}`)}
+            class="reveal card-hover bg-steel-50 rounded-2xl p-6 group hover:bg-amber-50 transition-colors"
+            style={`animation-delay: ${i * 80}ms`}
+          >
+            <div class="w-12 h-12 bg-amber-500 group-hover:bg-amber-600 rounded-xl flex items-center justify-center mb-4 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M20.7 13A8.5 8.5 0 0 0 13 3.3V13h7.7z"/></svg>
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">
+              {solution.data.title[currentLocale] || solution.data.title.en}
+            </h3>
+            <p class="text-sm text-steel-600 leading-relaxed line-clamp-2">
+              {solution.data.description[currentLocale] || solution.data.description.en}
+            </p>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+              {t.solutions.viewSolution}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 text-center sm:hidden">
+        <a href={localePath('/solutions')} class="btn-outline text-sm">
+          {t.home.viewAllSolutions}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- By Production Scale Section -->
+  <section class="py-16 md:py-24 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">{t.home.byScale}</h2>
+        <p class="section-subtitle mx-auto">{t.home.byScaleSubtitle}</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+        {scaleSolutions.map((solution, i) => (
+          <a
+            href={localePath(`/solutions/${solution.slug}`)}
+            class="reveal card-hover bg-white rounded-2xl p-8 group hover:bg-amber-50 transition-colors border border-steel-100 hover:border-amber-300"
+            style={`animation-delay: ${i * 100}ms`}
+          >
+            <div class="text-4xl mb-4">{scaleIcons[solution.data.seedName] || '🏭'}</div>
+            <h3 class="font-display text-2xl text-charcoal-900 mb-3 group-hover:text-amber-600 transition-colors">
+              {solution.data.title[currentLocale] || solution.data.title.en}
+            </h3>
+            <p class="text-sm text-steel-600 leading-relaxed line-clamp-3">
+              {solution.data.description[currentLocale] || solution.data.description.en}
+            </p>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4">
+              {t.solutions.viewSolution}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted by Buyers From Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 reveal">
+        <h2 class="section-title">{t.home.trustedByTitle}</h2>
+        <p class="section-subtitle mx-auto">{t.home.trustedByDesc}</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 md:gap-6 reveal">
+        {['India', 'Nigeria', 'Pakistan', 'Philippines', 'Kenya', 'Ghana', 'Sri Lanka', 'Tanzania', 'Uganda', 'Egypt', 'Indonesia', 'Myanmar', 'Nepal', 'South Africa'].map(country => (
+          <span class="inline-flex items-center gap-2 bg-steel-50 hover:bg-amber-50 border border-steel-100 hover:border-amber-200 rounded-full px-5 py-2.5 text-sm font-medium text-steel-700 hover:text-amber-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            {country}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-16 md:py-24 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="section-title">{t.home.howItWorksTitle}</h2>
+        <p class="section-subtitle mx-auto">{t.home.howItWorksDesc}</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-4">
+        {[
+          { num: '01', title: t.home.step1Title, desc: t.home.step1Desc, icon: 'mail' },
+          { num: '02', title: t.home.step2Title, desc: t.home.step2Desc, icon: 'solution' },
+          { num: '03', title: t.home.step3Title, desc: t.home.step3Desc, icon: 'factory' },
+          { num: '04', title: t.home.step4Title, desc: t.home.step4Desc, icon: 'ship' },
+          { num: '05', title: t.home.step5Title, desc: t.home.step5Desc, icon: 'support' },
+        ].map((step, i) => (
+          <div class="reveal relative text-center p-6 bg-white rounded-2xl border border-steel-100 hover:border-amber-200 hover:bg-amber-50 transition-colors group" style={`animation-delay: ${i * 80}ms`}>
+            <div class="font-display text-3xl text-amber-500/30 group-hover:text-amber-500/50 mb-2 transition-colors">{step.num}</div>
+            <div class="w-12 h-12 mx-auto mb-3 bg-amber-100 group-hover:bg-amber-500 rounded-xl flex items-center justify-center transition-colors">
+              {step.icon === 'mail' && <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600 group-hover:text-charcoal-900 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>}
+              {step.icon === 'solution' && <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600 group-hover:text-charcoal-900 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>}
+              {step.icon === 'factory' && <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600 group-hover:text-charcoal-900 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8l4-4 4 4v8"/><path d="M10 20v-6l4-4 4 4v6"/><path d="M18 20v-4l2-2 2 2v4"/><line x1="2" y1="20" x2="22" y2="20"/></svg>}
+              {step.icon === 'ship' && <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600 group-hover:text-charcoal-900 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>}
+              {step.icon === 'support' && <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600 group-hover:text-charcoal-900 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>}
+            </div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">{step.title}</h3>
+            <p class="text-xs text-steel-600 leading-relaxed">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">
+        {t.home.ctaTitle}
+      </h2>
+      <p class="text-steel-300 text-lg mb-6 max-w-2xl mx-auto">
+        {t.home.ctaDesc}
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm text-amber-400">
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit1}
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit2}
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit3}
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          {t.home.ctaBenefit4}
+        </span>
+      </div>
+      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        {t.home.ctaButton}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('ar');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+    { '@type': 'ListItem', position: 2, name: 'سياسة الخصوصية', item: 'https://www.hydoilpress.com/ar/privacy-policy' },
+  ],
+};
+---
+
+<BaseLayout title="سياسة الخصوصية" description="سياسة الخصوصية لشركة هاونوو الميكانيكية - خصوصيتك مهمة لنا. تعرف على كيفية جمعنا واستخدامنا وحماية معلوماتك الشخصية." locale="ar">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/ar" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">سياسة الخصوصية</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">سياسة الخصوصية</h1>
+      <p class="text-steel-600 text-lg mb-8">آخر تحديث: 20 يوليو 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. المقدمة</h2>
+          <p class="text-steel-600 leading-relaxed">
+            شركة شاندونغ هاونوو لمجموعة المعدات الميكانيكية المحدودة ("نحن" أو "منا") ملتزمة بحماية خصوصيتك. تشرح سياسة الخصوصية هذه كيف نجمع واستخدم ونفصح عن وحمي معلوماتك الشخصية عندما تزور موقعنا على الويب، أو تستخدم خدماتنا، أو تواصل معنا.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. المعلومات التي نجمعها</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            قد نجمع أنواع المعلومات الشخصية التالية:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li><strong>معلومات الاتصال:</strong> الاسم، عنوان البريد الإلكتروني، رقم الهاتف، اسم الشركة، العنوان وغيرها من تفاصيل الاتصال التي توفرها عند ملء النماذج أو التواصل معنا.</li>
+            <li><strong>معلومات الاستفسار:</strong> التفاصيل حول اهتماماتك بالمنتجات، متطلبات المشروع، والمعلومات الأخرى التي توفرها في استفساراتك.</li>
+            <li><strong>بيانات الاستخدام:</strong> معلومات عن كيفية تفاعلك مع موقعنا على الويب، بما في ذلك الصفحات التي زورتها، والوقت المستغرق، ومعلومات الجهاز.</li>
+            <li><strong>الملفات تعريف الارتباط (Cookies):</strong> نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك. لمزيد من المعلومات، راجع سياسة ملفات تعريف الارتباط.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. كيف نستخدم معلوماتك</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            نستخدم معلوماتك لأغراض التالية:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>الرد على استفساراتك وتقديم معلومات المنتجات لك</li>
+            <li>معالجة طلباتك على العروض والتعيينات</li>
+            <li>تحسين موقعنا على الويب وخدماتنا</li>
+            <li>إرسال تواصل تسويقي (مع موافقتك)</li>
+            <li>الامتثال للالتزامات القانونية</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. مشاركة معلوماتك</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            قد نشارك معلوماتك مع:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>شركائنا والموردين المسؤولين الذين يساعدوننا في تقديم الخدمات</li>
+            <li>سلطات إنفاذ القانون أو السلطات التنظيمية عندما يطلبها القانون</li>
+            <li>أطراف ثالثة بموافقتك الصريحة</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            لا نبيع معلوماتك الشخصية لأطراف ثالثة.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. الأمن</h2>
+          <p class="text-steel-600 leading-relaxed">
+            نتخذ إجراءات معقولة لحماية معلوماتك الشخصية من الوصول أو الاستخدام أو الكشف غير المصرح به. Cependant، لا يوجد نقل بيانات عبر الإنترنت آمن تمامًا، ولا يمكننا ضمان الأمن المطلق لمعلوماتك.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. حقوقك</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            لديك الحق في:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>الوصول إلى معلوماتك الشخصية والحصول على نسخة منها</li>
+            <li>تصحيح أو تحديث معلوماتك الشخصية</li>
+            <li>طلب حذف معلوماتك الشخصية</li>
+            <li>سحب موافقتك على التواصل التسويقي</li>
+          </ul>
+          <p class="text-steel-600 leading-relaxed mt-4">
+            لتمثيل هذه الحقوق، يرجى الاتصال بنا على contact@hydoilpress.com.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">7. التغييرات في هذه السياسة</h2>
+          <p class="text-steel-600 leading-relaxed">
+            قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإعلامك بأي تغيير كبير من خلال نشر السياسة المحدثة على موقعنا على الويب. استمرارك في استخدام موقعنا على الويب بعد أي تغيير يشكل قبولك للسياسة المحدثة.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">8. الاتصال بنا</h2>
+          <p class="text-steel-600 leading-relaxed">
+            إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>البريد الإلكتروني: contact@hydoilpress.com</li>
+            <li>الهاتف: +86-18957149128</li>
+            <li>العنوان: قنجو، ويفانغ، شاندونغ، الصين</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

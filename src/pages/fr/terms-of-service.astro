@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('fr');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+    { '@type': 'ListItem', position: 2, name: 'Conditions d\'utilisation', item: 'https://www.hydoilpress.com/fr/terms-of-service' },
+  ],
+};
+---
+
+<BaseLayout title="Conditions d'utilisation" description="Conditions d'utilisation de Haonuo Machinery - Ces conditions régissent votre utilisation de notre site web et de nos services." locale="fr">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/fr" class="hover:text-amber-500 transition-colors">Accueil</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Conditions d'utilisation</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-6">Conditions d'utilisation</h1>
+      <p class="text-steel-600 text-lg mb-8">Dernière mise à jour: 20 juillet 2026</p>
+
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">1. Acceptation des conditions</h2>
+          <p class="text-steel-600 leading-relaxed">
+            En accédant ou en utilisant notre site web, vous acceptez d'être lié par ces Conditions d'utilisation ("Conditions"). Si vous n'êtes pas d'accord avec une partie quelconque de ces Conditions, vous ne pouvez pas utiliser notre site web ou nos services.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">2. Utilisation du site web</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Vous pouvez utiliser notre site web à des fins commerciales légitimes uniquement. Vous acceptez de ne pas:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2">
+            <li>Utiliser notre site web à des fins illégales ou non autorisées</li>
+            <li>Interférer avec ou perturber le fonctionnement de notre site web</li>
+            <li>Copier, modifier ou distribuer tout contenu de notre site web sans permission</li>
+            <li>Utiliser des outils automatisés pour extraire ou parcourir notre site web</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">3. Propriété intellectuelle</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Tout contenu sur notre site web, y compris le texte, les images, les logos et les marques commerciales, est la propriété de Shandong Haonuo Machinery Equipment Group Co., Ltd. ou de ses concédants de licence et est protégé par les lois sur le droit d'auteur et les marques commerciales. Vous ne pouvez pas reproduire, distribuer ou utiliser tout contenu sans notre consentement écrit préalable.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">4. Informations sur les produits</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Nous faisons tout notre possible pour garantir que les informations sur les produits sur notre site web sont exactes et à jour. Cependant, nous ne garantissons pas l'exactitude, l'exhaustivité ou la fiabilité de toute information sur les produits. Les spécifications et les prix des produits sont susceptibles de changer sans préavis.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. Devis et commandes</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Tous les devis que nous fournissons sont soumis à nos conditions générales et valables pour une période spécifiée. Les commandes sont soumises à notre acceptation, et nous nous réservons le droit de rejeter toute commande pour quelque raison que ce soit.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. Limitation de responsabilité</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Dans la limite maximale autorisée par la loi, Shandong Haonuo Machinery Equipment Group Co., Ltd. ne sera pas responsable de tout dommage indirect, accessoire, spécial ou consécutif résultant de votre utilisation de notre site web ou de nos services.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">7. Loi applicable</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Ces Conditions seront régies par et interprétées conformément aux lois de la République populaire de Chine, sans tenir compte de ses principes de conflit de lois.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">8. Résolution des litiges</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Tout litige découlant de ces Conditions sera résolu par négociation amicale. Si la négociation échoue, le litige sera soumis au tribunal compétent de Qingzhou, Shandong, Chine.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">9. Modifications de ces conditions</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Nous pouvons mettre à jour ces Conditions de temps en temps. Nous vous informerons de tout changement significatif en publiant les conditions mises à jour sur notre site web. Votre utilisation continue de notre site web après tout changement constitue votre acceptation des conditions mises à jour.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl text-charcoal-900 mb-4">10. Nous contacter</h2>
+          <p class="text-steel-600 leading-relaxed">
+            Si vous avez des questions sur ces Conditions, veuillez nous contacter:
+          </p>
+          <ul class="list-disc list-inside text-steel-600 space-y-2 mt-4">
+            <li>Email: contact@hydoilpress.com</li>
+            <li>Téléphone: +86-18957149128</li>
+            <li>Adresse: Qingzhou, Weifang, Shandong, Chine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

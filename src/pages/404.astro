@@ -1,0 +1,39 @@
+﻿﻿﻿﻿﻿﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../i18n';
+
+const { locale = 'en' } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  if (currentLocale === 'en') return path;
+  return `/${currentLocale}${path}`;
+}
+---
+
+<BaseLayout title={t.page404.title} description={t.page404.description}>
+  <section class="py-24 md:py-32 bg-white">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="text-9xl font-display text-amber-500 mb-4">404</div>
+      <h1 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.page404.header}</h1>
+      <p class="text-steel-600 text-lg mb-8 max-w-lg mx-auto">
+        {t.page404.message}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/')} class="btn-primary justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          {t.page404.backToHome}
+        </a>
+        <a href={localePath('/products')} class="btn-secondary justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          {t.page404.browseProducts}
+        </a>
+        <a href={localePath('/contact')} class="btn-secondary justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          {t.page404.contactUs}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

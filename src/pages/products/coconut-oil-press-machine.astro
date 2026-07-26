@@ -1,0 +1,181 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allProducts = await getCollection('products');
+const seedProducts = allProducts.filter(p =>
+  p.data.applicableSeeds.some(s => s.toLowerCase().includes('coconut'))
+).slice(0, 3);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://www.hydoilpress.com/products' },
+    { '@type': 'ListItem', position: 3, name: 'Coconut Oil Press Machine', item: 'https://www.hydoilpress.com/products/coconut-oil-press-machine' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the oil yield of coconut using a hydraulic press?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A hydraulic oil press can extract approximately 60-65% of oil from dried coconut meat (copra). For virgin coconut oil (VCO) from fresh coconut meat, the yield is typically around 30-35% depending on the moisture content and pressing parameters.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can a hydraulic press produce virgin coconut oil (VCO)?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, Haonuo\'s coconut oil hydraulic press is specifically designed for VCO production. The cold press technology operates at low temperatures, preserving the natural flavor, aroma, and MCT content of virgin coconut oil without chemical refining.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much coconut can the machine process per hour?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Depending on the model, Haonuo hydraulic presses can process 50-125 kg of coconut per hour. The HN325 handles 50 kg/hr, HN355 handles 75 kg/hr, HN426 handles 100 kg/hr, and HN500 handles 125 kg/hr.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is stainless steel construction necessary for coconut oil pressing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, coconut juice is highly corrosive to ordinary carbon steel. Haonuo\'s coconut-specific models feature full 304 food-grade stainless steel cladding on the barrel, oil tray, and machine body to ensure corrosion resistance and food safety compliance.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between cold press and hot press for coconut oil?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Cold pressing extracts oil at low temperatures, preserving the natural coconut aroma, flavor, and nutrients — ideal for VCO. Hot pressing involves heating the coconut before pressing, which can increase yield but may alter the flavor and reduce nutritional value. For premium coconut oil, cold pressing is recommended.' },
+    },
+  ],
+};
+
+const faqs = [
+  { question: 'What is the oil yield of coconut using a hydraulic press?', answer: 'A hydraulic oil press can extract approximately 60-65% of oil from dried coconut meat (copra). For virgin coconut oil (VCO) from fresh coconut meat, the yield is typically around 30-35% depending on the moisture content and pressing parameters.' },
+  { question: 'Can a hydraulic press produce virgin coconut oil (VCO)?', answer: 'Yes, Haonuo\'s coconut oil hydraulic press is specifically designed for VCO production. The cold press technology operates at low temperatures, preserving the natural flavor, aroma, and MCT content of virgin coconut oil without chemical refining.' },
+  { question: 'How much coconut can the machine process per hour?', answer: 'Depending on the model, Haonuo hydraulic presses can process 50-125 kg of coconut per hour. The HN325 handles 50 kg/hr, HN355 handles 75 kg/hr, HN426 handles 100 kg/hr, and HN500 handles 125 kg/hr.' },
+  { question: 'Is stainless steel construction necessary for coconut oil pressing?', answer: 'Yes, coconut juice is highly corrosive to ordinary carbon steel. Haonuo\'s coconut-specific models feature full 304 food-grade stainless steel cladding on the barrel, oil tray, and machine body to ensure corrosion resistance and food safety compliance.' },
+  { question: 'What is the difference between cold press and hot press for coconut oil?', answer: 'Cold pressing extracts oil at low temperatures, preserving the natural coconut aroma, flavor, and nutrients — ideal for VCO. Hot pressing involves heating the coconut before pressing, which can increase yield but may alter the flavor and reduce nutritional value. For premium coconut oil, cold pressing is recommended.' },
+];
+---
+
+<BaseLayout
+  title="Coconut Oil Press Machine - Hydraulic Cold Press for VCO"
+  description="Professional coconut oil press machine by Haonuo Machinery. Hydraulic cold press technology for virgin coconut oil (VCO) production. 304 stainless steel construction, 60-65% oil yield. Factory-direct pricing."
+  keywords={['coconut oil press machine', 'coconut oil machine', 'VCO press machine', 'virgin coconut oil press', 'coconut oil extraction machine', 'hydraulic coconut oil press']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/products" class="hover:text-amber-500 transition-colors">Products</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">Coconut Oil Press Machine</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Coconut Oil Press Machine</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">Professional hydraulic cold press for virgin coconut oil (VCO) production — 304 stainless steel, 60-65% oil yield, factory-direct pricing.</p>
+    </div>
+  </section>
+
+  <!-- SEO Introduction -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose-solution">
+        <p>Coconut oil is one of the most sought-after edible oils worldwide, prized for its versatility in cooking, cosmetics, and health supplements. Producing high-quality coconut oil requires specialized equipment that can handle the unique properties of coconut meat and juice. A coconut oil press machine uses hydraulic cold press technology to extract oil from coconut without excessive heat, preserving the natural medium-chain triglycerides (MCTs), lauric acid, and delicate aroma that make virgin coconut oil so valuable.</p>
+        <p>Haonuo Machinery's coconut oil press machines are engineered specifically for coconut processing, featuring full 304 food-grade stainless steel construction to resist the corrosive effects of coconut juice. Whether you are producing virgin coconut oil (VCO) from fresh coconut meat or pressing copra for refined coconut oil, our hydraulic presses deliver consistent yields of 60-65% from dried coconut, with minimal residual oil in the cake. With models ranging from 50 kg/hr to 125 kg/hr capacity, there is a Haonuo coconut oil press suited to every production scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  {seedProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-steel-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">Our Coconut Oil Press Machines</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {seedProducts.map(product => (
+            <a
+              href={`/products/${product.slug}`}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20coconut%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {product.data.specifications.slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Solutions -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Related Solutions</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href="/solutions/coconut-oil-pressing" class="card-hover bg-white rounded-2xl p-6 border border-steel-100 group hover:border-amber-300">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Coconut Oil Pressing Solution</h3>
+          <p class="text-sm text-steel-600 line-clamp-2">Complete coconut oil production line from raw coconut to premium VCO.</p>
+        </a>
+        <a href="/solutions/commercial-oil-press" class="card-hover bg-white rounded-2xl p-6 border border-steel-100 group hover:border-amber-300">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Commercial Oil Press Solution</h3>
+          <p class="text-sm text-steel-600 line-clamp-2">Scalable oil pressing solutions for commercial production facilities.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Ready to Start Your Coconut Oil Business?</h2>
+      <p class="text-steel-300 text-lg mb-8">Contact us for a free quotation and professional equipment recommendation.</p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        Get a Free Quote
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,614 @@
+﻿﻿﻿﻿﻿﻿﻿---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+const modelNames: Record<string, Record<string, string>> = {
+  HN300: { en: 'Mini', fr: 'Mini', ar: 'ميني', id: 'Mini' },
+  HN325: { en: 'Standard', fr: 'Standard', ar: 'قياسي', id: 'Standar' },
+  HN325S: { en: 'Coconut Milk', fr: 'Lait de Coco', ar: 'حليب جوز الهند', id: 'Santan Kelapa' },
+  HN355: { en: 'Heavy Duty', fr: 'Robuste', ar: 'ثقيل', id: 'Heavy Duty' },
+  HN400: { en: 'Medium', fr: 'Moyen', ar: 'متوسط', id: 'Medium' },
+  HN426: { en: 'Cold Press', fr: 'Pressage à Froid', ar: 'ضغط بارد', id: 'Cold Press' },
+  HN480: { en: 'Cold Press', fr: 'Pressage à Froid', ar: 'ضغط بارد', id: 'Cold Press' },
+  HN500: { en: 'Ultra High Pressure', fr: 'Ultra Haute Pression', ar: 'ضغط فائق', id: 'Ultra Tekanan Tinggi' },
+};
+
+const seedNames: Record<string, Record<string, string>> = {
+  Sesame: { en: 'Sesame', fr: 'Sésame', ar: 'سمسم', id: 'Wijen' },
+  Peanut: { en: 'Peanut', fr: 'Arachide', ar: 'فول سوداني', id: 'Kacang Tanah' },
+  Rapeseed: { en: 'Rapeseed', fr: 'Colza', ar: 'قلعة', id: 'Biji Sawi' },
+  TeaSeed: { en: 'Tea Seed', fr: 'Graines de Thé', ar: 'بذور الشاي', id: 'Biji Teh' },
+  Soybean: { en: 'Soybean', fr: 'Soja', ar: 'فول صويا', id: 'Kedelai' },
+  Flaxseed: { en: 'Flaxseed', fr: 'Graines de Lin', ar: 'بذور الكتان', id: 'Biji Rami' },
+  Walnut: { en: 'Walnut', fr: 'Noix', ar: 'جوز', id: 'Kacang Walnut' },
+  Almond: { en: 'Almond', fr: 'Amande', ar: 'لوز', id: 'Almond' },
+  Apricot: { en: 'Apricot', fr: 'Abricot', ar: 'مشمش', id: 'Aprikot' },
+  TigerNut: { en: 'Tiger Nut', fr: 'Noisette de Terre', ar: 'جوز النمر', id: 'Tiger Nut' },
+  Yellowhorn: { en: 'Yellowhorn', fr: 'Xanthoceras', ar: 'قرن صفراء', id: 'Yellowhorn' },
+  PineNut: { en: 'Pine Nut', fr: 'Pignon de Pin', ar: 'صنوبر', id: 'Pine Nut' },
+  Coconut: { en: 'Coconut', fr: 'Coco', ar: 'جوز هند', id: 'Kelapa' },
+  VCO: { en: 'VCO', fr: 'VCO', ar: 'زيت جوز الهند البكر', id: 'VCO' },
+  FruitJuice: { en: 'Fruit Juice', fr: 'Jus de Fruits', ar: 'عصير الفاكهة', id: 'Jus Buah' },
+  Dehydration: { en: 'Dehydration', fr: 'Déshydratation', ar: '탈수', id: 'Dihidrasi' },
+  OilResidue: { en: 'Oil Residue', fr: 'Résidu d\'Huile', ar: 'بقايا الزيت', id: 'Residu Minyak' },
+  Sludge: { en: 'Sludge', fr: 'Boue', ar: 'محمول', id: 'Lumpur' },
+  BeefTallow: { en: 'Beef Tallow', fr: 'Saindoux de Boeuf', ar: 'شحم البقر', id: 'Lemak Sapi' },
+  ChickenFat: { en: 'Chicken Fat', fr: 'Gras de Poulet', ar: 'دهن الدجاج', id: 'Lemak Ayam' },
+  PorkLard: { en: 'Pork Lard', fr: 'Saindoux de Porc', ar: 'شحم الخنزير', id: 'Lemak Babi' },
+};
+
+const models = [
+  {
+    model: 'HN300',
+    pressingForce: '300 Tons',
+    systemPressure: '60 Mpa',
+    cakePressure: '25 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '1.2 / 1.5 T',
+    dimensions: '1100×1100×2350 mm',
+    bestFor: { en: 'Small business, startup', fr: 'Petite entreprise, démarrage', ar: 'شركة صغيرة، بداية', id: 'Bisnis kecil, startup' },
+    seeds: ['Sesame', 'Peanut', 'Rapeseed', 'TeaSeed'],
+    slug: 'mini-hydraulic-oil-press',
+    highlight: false,
+  },
+  {
+    model: 'HN325',
+    pressingForce: '325 Tons',
+    systemPressure: '60 Mpa',
+    cakePressure: '27.78 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '1.42 / 1.72 T',
+    dimensions: '1200×1200×2450 mm',
+    bestFor: { en: 'Most popular, versatile', fr: 'Le plus populaire, polyvalent', ar: 'الأكثر شعبية، متعدد الاستخدامات', id: 'Paling populer, serbaguna' },
+    seeds: ['TeaSeed', 'Rapeseed', 'Peanut', 'Soybean', 'Flaxseed'],
+    slug: 'standard-hydraulic-oil-press',
+    highlight: true,
+  },
+  {
+    model: 'HN325S',
+    pressingForce: '325 Tons',
+    systemPressure: '60 Mpa',
+    cakePressure: '27.78 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '1.42 / 1.72 T',
+    dimensions: '1200×1200×2450 mm',
+    bestFor: { en: 'Coconut milk extraction', fr: 'Extraction de lait de coco', ar: 'استخراج حليب جوز الهند', id: 'Ekstraksi santan kelapa' },
+    seeds: ['Coconut'],
+    slug: 'stainless-steel-hydraulic-oil-press',
+    highlight: false,
+  },
+  {
+    model: 'HN355',
+    pressingForce: '360 Tons',
+    systemPressure: '63 Mpa',
+    cakePressure: '30.15 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '2.1 / 2.5 T',
+    dimensions: '1200×1200×2650 mm',
+    bestFor: { en: 'Higher yield, commercial', fr: 'Rendement plus élevé, commercial', ar: 'عائد أعلى، تجاري', id: 'Hasil lebih tinggi, komersial' },
+    seeds: ['TeaSeed', 'Rapeseed', 'Peanut', 'Soybean', 'Flaxseed'],
+    slug: 'heavy-duty-hydraulic-oil-press',
+    highlight: false,
+  },
+  {
+    model: 'HN400',
+    pressingForce: '500 Tons',
+    systemPressure: '63 Mpa',
+    cakePressure: '38 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '2.0 / 2.3 T',
+    dimensions: '1200×1200×2600 mm',
+    bestFor: { en: 'Walnut, high oil content', fr: 'Noix, teneur en huile élevée', ar: 'جوز، محتوى زيت عالي', id: 'Walnut, kandungan minyak tinggi' },
+    seeds: ['TeaSeed', 'Rapeseed', 'Peanut', 'Walnut', 'Flaxseed'],
+    slug: 'medium-hydraulic-oil-press',
+    highlight: false,
+  },
+  {
+    model: 'HN426',
+    pressingForce: '500 Tons',
+    systemPressure: '70 Mpa',
+    cakePressure: '42 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '2.4 / 2.7 T',
+    dimensions: '1200×1200×2750 mm',
+    bestFor: { en: 'Cold press, premium quality', fr: 'Pressage à froid, qualité premium', ar: 'ضغط بارد، جودة ممتازة', id: 'Cold press, kualitas premium' },
+    seeds: ['Walnut', 'Almond', 'Apricot', 'TigerNut', 'Yellowhorn'],
+    slug: 'cold-press-hydraulic-oil-press',
+    highlight: true,
+  },
+  {
+    model: 'HN480',
+    pressingForce: '600 Tons',
+    systemPressure: '72 Mpa',
+    cakePressure: '48 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '2.8 / 3.1 T',
+    dimensions: '1300×1300×2800 mm',
+    bestFor: { en: 'Hard seeds, max yield', fr: 'Graines dures, rendement maximal', ar: 'بذور صلبة، عائد أقصى', id: 'Biji keras, hasil maksimal' },
+    seeds: ['Walnut', 'PineNut', 'Almond', 'Sesame', 'Apricot'],
+    slug: 'ultra-high-pressure-cold-press',
+    highlight: false,
+  },
+  {
+    model: 'HN500',
+    pressingForce: '620 Tons',
+    systemPressure: '75 Mpa',
+    cakePressure: '52 Mpa/cm²',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '3.5 / 3.88 T',
+    dimensions: '1200×1200×2750 mm',
+    bestFor: { en: 'Industrial, max capacity', fr: 'Industriel, capacité maximale', ar: 'صناعي، سعة أقصى', id: 'Industri, kapasitas maksimal' },
+    seeds: ['All seeds', 'In-shell Walnut', 'Yellowhorn', 'TigerNut'],
+    slug: 'ultra-high-pressure-hydraulic-oil-press',
+    highlight: false,
+  },
+];
+
+const specialtyModels = [
+  {
+    model: 'HN325/355 Sesame',
+    name: { en: 'Sesame Special', fr: 'Spécial Sésame', ar: 'سمسم خاص', id: 'Spesial Wijen' },
+    pressingForce: '325 / 360 T',
+    barrelDiameter: '300 mm',
+    cakePressure: '47 / 51 Mpa/cm²',
+    bestFor: { en: 'Sesame oil specialist', fr: 'Spécialiste de l\'huile de sésame', ar: 'مختص زيت السمسم', id: 'Spesialis minyak wijen' },
+    seeds: ['Sesame', 'In-shell Walnut', 'TeaSeed', 'Rapeseed'],
+    slug: 'sesame-oil-hydraulic-press',
+  },
+  {
+    model: '300 Type Coconut',
+    name: { en: 'Coconut Milk', fr: 'Lait de Coco', ar: 'حليب جوز الهند', id: 'Santan Kelapa' },
+    pressingForce: '300 Tons',
+    barrelDiameter: '600 mm',
+    cakePressure: '10.83 Mpa/cm²',
+    bestFor: { en: 'Coconut milk extraction', fr: 'Extraction de lait de coco', ar: 'استخراج حليب جوز الهند', id: 'Ekstraksi santan kelapa' },
+    seeds: ['Coconut'],
+    slug: 'coconut-oil-hydraulic-press',
+  },
+  {
+    model: 'HN325S',
+    name: { en: 'Coconut Milk', fr: 'Lait de Coco', ar: 'حليب جوز الهند', id: 'Santan Kelapa' },
+    pressingForce: '325 Tons',
+    barrelDiameter: '600 mm',
+    cakePressure: '11.56 Mpa/cm²',
+    bestFor: { en: 'Coconut milk extraction', fr: 'Extraction de lait de coco', ar: 'استخراج حليب جوز الهند', id: 'Ekstraksi santan kelapa' },
+    seeds: ['Coconut'],
+    slug: 'stainless-steel-hydraulic-oil-press',
+  },
+  {
+    model: 'HN325LB',
+    name: { en: 'Large Barrel', fr: 'Grand Fût', ar: 'برميل كبير', id: 'Barel Besar' },
+    pressingForce: '325 Tons',
+    barrelDiameter: '630 mm',
+    cakePressure: '10.64 Mpa/cm²',
+    bestFor: { en: 'Oil residue, dehydration', fr: 'Résidu d\'huile, déshydratation', ar: 'بقايا الزيت، 탈수', id: 'Residu minyak, dehidrasi' },
+    seeds: ['OilResidue', 'Sludge', 'Dehydration'],
+    slug: 'large-barrel-hydraulic-oil-press',
+  },
+  
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
+    { '@type': 'ListItem', position: 2, name: t.nav.products, item: `https://www.hydoilpress.com/${currentLocale}/products` },
+    { '@type': 'ListItem', position: 3, name: t.nav.modelComparison, item: `https://www.hydoilpress.com/${currentLocale}/products/model-comparison` },
+  ],
+};
+
+const faqs = [
+  {
+    question: { en: 'Which model is best for sesame oil?', fr: 'Quel modèle est le meilleur pour l\'huile de sésame ?', ar: 'أي نموذج هو الأفضل لزيت السمسم؟', id: 'Model mana yang terbaik untuk minyak wijen?' },
+    answer: { en: 'For sesame oil, we recommend the HN325/355 Sesame Special model. It features a smaller 300mm barrel diameter that creates higher cake pressure (47-51 Mpa/cm²), which is ideal for extracting maximum oil from small sesame seeds. The standard HN325 also works well for sesame.', fr: 'Pour l\'huile de sésame, nous recommandons le modèle HN325/355 Sesame Special. Il présente un diamètre de fût plus petit de 300 mm qui crée une pression de gâteau plus élevée (47-51 Mpa/cm²), idéale pour extraire le maximum d\'huile des petites graines de sésame. Le modèle standard HN325 fonctionne également bien pour le sésame.', ar: 'لزيت السمسم، نوصي بالنموذج HN325/355 Sesame Special. يتميز بقطعة أسطوانة أصغر بقطر 300 مم مما يخلق ضغط كيك أعلى (47-51 ميجاباسكال/سم²)، وهو مثالي لاستخراج أقصى كمية من زيت بذور السمسم الصغيرة. النموذج القياسي HN325 يعمل أيضًا جيدًا مع السمسم.', id: 'Untuk minyak wijen, kami merekomendasikan model HN325/355 Sesame Special. Memiliki diameter barel 300mm yang lebih kecil menciptakan tekanan cake yang lebih tinggi (47-51 Mpa/cm²), ideal untuk mengekstraksi minyak maksimal dari biji wijen kecil. Model HN325 standar juga bekerja baik untuk wijen.' },
+  },
+  {
+    question: { en: 'What is the difference between cold press and standard models?', fr: 'Quelle est la différence entre les modèles pressage à froid et standard ?', ar: 'ما هو الفرق بين نماذج الضغط البارد والقياسية؟', id: 'Apa perbedaan antara model cold press dan standar?' },
+    answer: { en: 'Cold press models (HN426, HN480) operate at higher system pressure (65-70 Mpa) and cake pressure (42-48 Mpa/cm²), allowing them to extract oil without heating the seeds. This preserves natural nutrients, flavor, and color — resulting in premium-grade oil that commands higher prices. Standard models use lower pressure and may require pre-heating seeds for optimal yield.', fr: 'Les modèles de pressage à froid (HN426, HN480) fonctionnent à une pression système plus élevée (65-70 Mpa) et une pression de gâteau (42-48 Mpa/cm²), leur permettant d\'extraire l\'huile sans chauffer les graines. Cela préserve les nutriments naturels, la saveur et la couleur — résultant en une huile de qualité premium qui demande des prix plus élevés. Les modèles standard utilisent une pression plus faible et peuvent nécessiter un préchauffage des graines pour un rendement optimal.', ar: 'تعمل نماذج الضغط البارد (HN426، HN480) عند ضغط نظام أعلى (65-70 ميجاباسكال) وضغط كيك (42-48 ميجاباسكال/سم²)، مما يسمح لها باستخراج الزيت دون تسخين البذور. هذا يحافظ على المغذيات الطبيعية والنكهة واللون — مما ينتج عنه زيت من الجودة الممتازة الذي يطلب أسعارًا أعلى. تستخدم النماذج القياسية ضغطًا أقل وقد تحتاج إلى تسخين البذور مسبقًا لتحقيق العائد الأمثل.', id: 'Model cold press (HN426, HN480) beroperasi pada tekanan sistem yang lebih tinggi (65-70 Mpa) dan tekanan cake (42-48 Mpa/cm²), memungkinkan mereka mengekstraksi minyak tanpa memanaskan biji. Ini mempertahankan nutrisi alami, rasa, dan warna — menghasilkan minyak berkualitas premium yang memiliki harga lebih tinggi. Model standar menggunakan tekanan lebih rendah dan mungkin memerlukan pemanasan biji sebelumnya untuk hasil optimal.' },
+  },
+  {
+    question: { en: 'Should I choose single or double barrel?', fr: 'Devrais-je choisir un fût simple ou double ?', ar: 'هل يجب أن أختار برميل واحد أو مزدوج؟', id: 'Haruskah saya memilih barel tunggal atau ganda?' },
+    answer: { en: 'If you are just starting out, a single barrel is sufficient and more affordable. For commercial operations, we strongly recommend double barrel — it nearly doubles your throughput while sharing the same hydraulic system, making it much more cost-effective per kg of oil produced.', fr: 'Si vous débutez, un fût simple est suffisant et plus abordable. Pour les opérations commerciales, nous recommandons vivement le fût double — il double presque votre débit tout en partageant le même système hydraulique, ce qui le rend beaucoup plus économique par kg d\'huile produite.', ar: 'إذا كنت على بداية رحلتك، فإن البرميل الواحد كافٍ وأكثر مقارنة. للعمليات التجارية، نوصي بشدة بالبرميل المزدوج — فهو يضاعف إنتاجك تقريبًا بينما يشترك في نفس النظام الهيدروليكي، مما يجعله أكثر فائدة من حيث التكلفة لكل كيلوغرام من الزيت المنتج.', id: 'Jika Anda baru memulai, barel tunggal sudah cukup dan lebih terjangkau. Untuk operasi komersial, kami sangat merekomendasikan barel ganda — hampir menggandakan throughput Anda sambil berbagi sistem hidrolik yang sama, membuatnya jauh lebih hemat biaya per kg minyak yang diproduksi.' },
+  },
+  {
+    question: { en: 'Can the barrel size be customized?', fr: 'La taille du fût peut-elle être personnalisée ?', ar: 'يمكن تخصيص حجم البرميل؟', id: 'Apakah ukuran barel dapat disesuaikan?' },
+    answer: { en: 'Yes! The standard barrel inner diameter is 390mm and height is 800mm, but both can be customized to suit your specific oil seed and production requirements. For example, our sesame model uses a 300mm barrel for higher pressure, and our coconut model uses a 600mm barrel for larger volume.', fr: 'Oui ! Le diamètre intérieur du fût standard est de 390 mm et la hauteur de 800 mm, mais les deux peuvent être personnalisés pour répondre à vos besoins spécifiques en matière de graines oléagineuses et de production. Par exemple, notre modèle sésame utilise un fût de 300 mm pour une pression plus élevée, et notre modèle coco utilise un fût de 600 mm pour un volume plus important.', ar: 'نعم! قطر البرميل الداخلي القياسي هو 390 مم والارتفاع 800 مم، ولكن يمكن تخصيص كليهما لتناسب احتياجات البذور الزيتية والإنتاج الخاصة بك. على سبيل المثال، يستخدم نموذج السمسم لدينا برميل 300 مم للضغط الأعلى، وينتج نموذج الجوز الهند برميل 600 مم للحجم الأكبر.', id: 'Ya! Diameter dalam barel standar adalah 390mm dan tinggi 800mm, tetapi keduanya dapat disesuaikan untuk memenuhi kebutuhan biji minyak dan produksi Anda. Misalnya, model wijen kami menggunakan barel 300mm untuk tekanan lebih tinggi, dan model kelapa kami menggunakan barel 600mm untuk volume yang lebih besar.' },
+  },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question[currentLocale] || faq.question.en,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer[currentLocale] || faq.answer.en },
+  })),
+};
+
+const allLd = [breadcrumbLd, faqLd];
+---
+
+<BaseLayout locale={currentLocale} title={t.nav.modelComparison} description={currentLocale === 'fr' ? 'Comparez tous les modèles de presse à huile hydraulique Haonuo côte à côte. Spécifications HN300 à HN500.' : currentLocale === 'ar' ? 'قارن جميع نماذج آلات الضغط الهيدروليكي لزيت Haonuo جنبًا إلى جنب. مواصفات HN300 إلى HN500.' : 'Compare all Haonuo hydraulic oil press models side by side. HN300 to HN500 specifications.'} keywords={currentLocale === 'fr' ? ['comparaison presse à huile', 'modèle presse hydraulique', 'HN325 vs HN426'] : currentLocale === 'ar' ? ['مقارنة آلة ضغط زيت', 'نموذج ضغط هيدروليكي', 'HN325 مقابل HN426'] : ['hydraulic oil press comparison', 'oil press model comparison', 'HN325 vs HN426']} jsonLd={allLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/products')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{t.nav.modelComparison}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-4">{t.nav.modelComparison}</h1>
+        <p class="text-steel-500 text-lg max-w-3xl mx-auto">
+          {currentLocale === 'fr' ? 'Comparez tous les modèles de presse à huile hydraulique Haonuo côte à côte. Trouvez la bonne machine pour votre type de graine oléagineuse, votre échelle de production et votre budget.' : currentLocale === 'ar' ? 'قارن جميع نماذج آلات الضغط الهيدروليكي لزيت Haonuo جنبًا إلى جنب. ابحث عن الآلة المناسبة لنوع البذرة الزيتية، مقياس الإنتاج، وميزانيتك.' : 'Compare all Haonuo hydraulic oil press models side by side. Find the right machine for your oil seed type, production scale, and budget.'}
+        </p>
+      </div>
+
+      <!-- Quick Guide -->
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12">
+        <h2 class="font-display text-xl text-charcoal-900 mb-4">
+          {currentLocale === 'fr' ? 'Comment choisir le bon modèle' : currentLocale === 'ar' ? 'كيف تختار النموذج الصحيح' : 'How to Choose the Right Model'}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="flex items-start gap-3">
+            <span class="shrink-0 w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-bold text-sm">1</span>
+            <div>
+              <h3 class="font-semibold text-charcoal-900 text-sm">
+                {currentLocale === 'fr' ? 'Par type de graine oléagineuse' : currentLocale === 'ar' ? 'بحسب نوع البذرة الزيتية' : 'By Oil Seed Type'}
+              </h3>
+              <p class="text-steel-600 text-sm">
+                {currentLocale === 'fr' ? 'Graines douces (sésame, arachide) → HN325/355. Graines dures (noix, amande) → HN426/480/500.' : currentLocale === 'ar' ? 'بذور ناعمة (سمسم، فول سوداني) → HN325/355. بذور صلبة (جوز، لوز) → HN426/480/500.' : 'Soft seeds (sesame, peanut) → HN325/355. Hard seeds (walnut, almond) → HN426/480/500.'}
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="shrink-0 w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-bold text-sm">2</span>
+            <div>
+              <h3 class="font-semibold text-charcoal-900 text-sm">
+                {currentLocale === 'fr' ? 'Par échelle de production' : currentLocale === 'ar' ? 'بحسب مقياس الإنتاج' : 'By Production Scale'}
+              </h3>
+              <p class="text-steel-600 text-sm">
+                {currentLocale === 'fr' ? 'Démarrage/petit → HN300/325 fût simple. Commercial → HN355/400 fût double. Industriel → HN500 fût double.' : currentLocale === 'ar' ? 'بداية/صغير → HN300/325 برميل واحد. تجاري → HN355/400 برميل مزدوج. صناعي → HN500 برميل مزدوج.' : 'Startup/small → HN300/325 single barrel. Commercial → HN355/400 double barrel. Industrial → HN500 double barrel.'}
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="shrink-0 w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-bold text-sm">3</span>
+            <div>
+              <h3 class="font-semibold text-charcoal-900 text-sm">
+                {currentLocale === 'fr' ? 'Par qualité de l\'huile' : currentLocale === 'ar' ? 'بحسب جودة الزيت' : 'By Oil Quality'}
+              </h3>
+              <p class="text-steel-600 text-sm">
+                {currentLocale === 'fr' ? 'Qualité standard → Modèles standard. Pressé à froid premium → HN426/480 avec pression de gâteau plus élevée.' : currentLocale === 'ar' ? 'جودة قياسية → نماذج قياسية. ممتازة بضغط بارد → HN426/480 مع ضغط كيك أعلى.' : 'Standard quality → Standard models. Premium cold-pressed → HN426/480 with higher cake pressure.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Comparison Table -->
+      <div class="mb-16">
+        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
+          {currentLocale === 'fr' ? 'Modèles Standard & Haute Pression' : currentLocale === 'ar' ? 'النماذج القياسية والضغط العالي' : 'Standard & High-Pressure Models'}
+        </h2>
+        <p class="text-steel-500 mb-6">
+          <strong class="text-charcoal-900">
+            {currentLocale === 'fr' ? 'Toutes les presses à huile hydrauliques Haonuo sont polyvalentes' : currentLocale === 'ar' ? 'جميع آلات الضغط الهيدروليكي لزيت Haonuo متعددة الاستخدامات' : 'All Haonuo hydraulic oil press machines are versatile'}
+          </strong>
+          {currentLocale === 'fr' ? ' — elles peuvent traiter la plupart des graines oléagineuses, y compris les arachides, le sésame, le colza, les graines de thé, les noix, les amandes et plus encore. La colonne "Graines recommandées" ci-dessous met en évidence les graines pour lesquelles chaque modèle est particulièrement optimisé. Si votre graine oléagineuse n\'est pas répertoriée, ' : currentLocale === 'ar' ? ' — يمكنها معالجة معظم البذور الزيتية بما في ذلك الفول السوداني والسمسم والقلعة وبذور الشاي والجوز واللوز وغيرها. عمود "البذور الموصى بها" أدناه يسلط الضوء على البذور التي يتم تحسين كل نموذج خصيصًا لها. إذا لم يتم تسجيل بذرتك الزيتية، ' : ' — they can process most oil seeds including peanuts, sesame, rapeseed, tea seeds, walnuts, almonds, and more. The "Recommended Seeds" column below highlights seeds for which each model is particularly optimized. If your oil seed isn\'t listed, '}
+          <a href={localePath('/contact')} class="text-amber-600 hover:text-amber-700">{t.nav.contact}</a>
+          {currentLocale === 'fr' ? ' — nous pouvons vous aider à sélectionner la bonne machine.' : currentLocale === 'ar' ? ' — يمكننا مساعدتك في اختيار الآلة المناسبة.' : ' — we can help you select the right machine.'}
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-steel-900 text-white">
+                <th class="px-4 py-3 text-left text-sm font-semibold">
+                  {currentLocale === 'fr' ? 'Spécification' : currentLocale === 'ar' ? 'المواصفات' : 'Specification'}
+                </th>
+                {models.map(m => (
+                  <th class={`px-3 py-3 text-center text-sm font-semibold whitespace-nowrap ${m.highlight ? 'bg-amber-500' : ''}`}>
+                    <div>{m.model}</div>
+                    <div class="text-xs font-normal opacity-80">{modelNames[m.model][currentLocale] || modelNames[m.model].en}</div>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-steel-100 bg-amber-50/50">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Force de Pressage' : currentLocale === 'ar' ? 'قوة الضغط' : 'Pressing Force'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.pressingForce}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Pression Système' : currentLocale === 'ar' ? 'ضغط النظام' : 'System Pressure'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.systemPressure}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100 bg-amber-50/50">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Pression du Gâteau' : currentLocale === 'ar' ? 'ضغط الكيك' : 'Cake Pressure'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.cakePressure}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Diamètre du Fût' : currentLocale === 'ar' ? 'قطر البرميل' : 'Barrel Diameter'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.barrelDiameter}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100 bg-amber-50/50">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Hauteur du Fût' : currentLocale === 'ar' ? 'ارتفاع البرميل' : 'Barrel Height'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.barrelHeight}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Puissance du Moteur' : currentLocale === 'ar' ? 'قوة المحرك' : 'Motor Power'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.motorPower}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100 bg-amber-50/50">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Poids (Simple/Double)' : currentLocale === 'ar' ? 'الوزن (واحد/مزدوج)' : 'Weight (Single/Double)'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.weight}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Dimensions (Simple)' : currentLocale === 'ar' ? 'الأبعاد (واحد)' : 'Dimensions (Single)'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700 text-xs">{m.dimensions}</td>)}
+              </tr>
+              <tr class="border-b border-steel-100 bg-amber-50/50">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Idéal pour' : currentLocale === 'ar' ? 'مثالي لـ' : 'Best For'}
+                </td>
+                {models.map(m => <td class="px-3 py-3 text-sm text-center text-amber-700 font-medium">{m.bestFor[currentLocale] || m.bestFor.en}</td>)}
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Graines Recommandées' : currentLocale === 'ar' ? 'البذور الموصى بها' : 'Recommended Seeds'}
+                </td>
+                {models.map(m => (
+                  <td class="px-3 py-3 text-center">
+                    <div class="flex flex-wrap gap-1 justify-center">
+                      {m.seeds.slice(0, 3).map(seed => (
+                        <span class="text-xs bg-green-50 text-green-700 px-1.5 py-0.5 rounded">
+                          {seedNames[seed]?.[currentLocale] || seedNames[seed]?.en || seed}
+                        </span>
+                      ))}
+                      {m.seeds.length > 3 && (
+                        <span class="text-xs text-steel-400">+{m.seeds.length - 3}</span>
+                      )}
+                    </div>
+                  </td>
+                ))}
+              </tr>
+              <tr class="bg-steel-50/50">
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
+                  {currentLocale === 'fr' ? 'Fonctionne Aussi Avec' : currentLocale === 'ar' ? 'يعمل أيضًا مع' : 'Also Works With'}
+                </td>
+                {models.map(m => (
+                  <td class="px-3 py-3 text-center">
+                    <span class="text-xs text-steel-500">
+                      {currentLocale === 'fr' ? 'La plupart des graines oléagineuses' : currentLocale === 'ar' ? 'معظم البذور الزيتية' : 'Most oil seeds'}
+                    </span>
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="bg-steel-50">
+                <td class="px-4 py-3"></td>
+                {models.map(m => (
+                  <td class="px-3 py-3 text-center">
+                    <a href={localePath(`/products/${m.slug}`)} class="inline-flex items-center text-xs font-semibold text-amber-600 hover:text-amber-700 transition-colors">
+                      {currentLocale === 'fr' ? 'Voir les Spécifications' : currentLocale === 'ar' ? 'عرض المواصفات' : 'View Specifications'}
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                  </td>
+                ))}
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <!-- Specialty Models -->
+      <div class="mb-16">
+        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
+          {currentLocale === 'fr' ? 'Modèles Spécialisés' : currentLocale === 'ar' ? 'النماذج المتخصصة' : 'Specialty Models'}
+        </h2>
+        <p class="text-steel-500 mb-6">
+          {currentLocale === 'fr' ? 'Machines spécialement conçues pour des graines oléagineuses et des applications spécifiques, avec une conception de fût et des paramètres de pressage optimisés.' : currentLocale === 'ar' ? 'آلات مصممة خصيصًا للبذور الزيتية والتطبيقات المحددة، مع تصميم برميل ومعلمات ضغط محسنة.' : 'Purpose-built machines for specific oil seeds and applications with optimized barrel design and pressing parameters.'}
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {specialtyModels.map(m => (
+            <a href={localePath(`/products/${m.slug}`)} class="bg-white rounded-2xl border border-steel-100 p-6 hover:shadow-lg transition-shadow group">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3 class="font-display text-lg text-charcoal-900 mb-1">{m.model}</h3>
+              <p class="text-sm text-amber-600 font-medium mb-3">{m.name[currentLocale] || m.name.en}</p>
+              <div class="space-y-2 text-sm text-steel-600">
+                <div class="flex justify-between">
+                  <span>{currentLocale === 'fr' ? 'Force de Pressage' : currentLocale === 'ar' ? 'قوة الضغط' : 'Pressing Force'}</span>
+                  <span class="font-medium text-charcoal-900">{m.pressingForce}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>{currentLocale === 'fr' ? 'Diamètre du Fût' : currentLocale === 'ar' ? 'قطر البرميل' : 'Barrel Diameter'}</span>
+                  <span class="font-medium text-charcoal-900">{m.barrelDiameter}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>{currentLocale === 'fr' ? 'Pression du Gâteau' : currentLocale === 'ar' ? 'ضغط الكيك' : 'Cake Pressure'}</span>
+                  <span class="font-medium text-charcoal-900">{m.cakePressure}</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1 mt-3">
+                {m.seeds.map(seed => (
+                  <span class="text-xs bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded">
+                    {seedNames[seed]?.[currentLocale] || seedNames[seed]?.en || seed}
+                  </span>
+                ))}
+              </div>
+              <div class="mt-4 flex items-center text-amber-600 group-hover:text-amber-700 transition-colors text-sm font-medium">
+                {currentLocale === 'fr' ? 'Voir les Spécifications' : currentLocale === 'ar' ? 'عرض المواصفات' : 'View Specifications'}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Single vs Double Barrel -->
+      <div class="mb-16">
+        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
+          {currentLocale === 'fr' ? 'Fût Simple vs Fût Double' : currentLocale === 'ar' ? 'برميل واحد مقابل برميل مزدوج' : 'Single Barrel vs Double Barrel'}
+        </h2>
+        <p class="text-steel-500 mb-6">
+          {currentLocale === 'fr' ? 'La plupart des modèles Haonuo sont disponibles en configurations à fût simple et à fût double. Les machines à fût double doublent votre débit avec un système hydraulique partagé.' : currentLocale === 'ar' ? 'تتوفر معظم نماذج Haonuo في إعدادات برميل واحد وبرميل مزدوج. تضاعف آلات البرميل المزدوج إنتاجك مع نظام هيدروليكي مشترك.' : 'Most Haonuo models are available in both single and double barrel configurations. Double barrel machines double your throughput with shared hydraulic system.'}
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl border border-steel-100 p-8">
+            <div class="w-14 h-14 bg-steel-100 rounded-xl flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-steel-700">1</span>
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">
+              {currentLocale === 'fr' ? 'Fût Simple' : currentLocale === 'ar' ? 'برميل واحد' : 'Single Barrel'}
+            </h3>
+            <ul class="space-y-2 text-steel-600">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Investissement plus faible, idéal pour les startups' : currentLocale === 'ar' ? 'استثمار أقل، مثالي للشركات الناشئة' : 'Lower investment, ideal for startups'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Emprise compacte, s\'adapte aux ateliers plus petits' : currentLocale === 'ar' ? 'محمولة صغيرة، تناسب ورش العمل الأصغر' : 'Compact footprint, fits smaller workshops'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Traitement par lots : cycle chargement → pressage → déchargement' : currentLocale === 'ar' ? 'معالجة بالكميات: دورة تحميل → ضغط → تفريغ' : 'Batch processing: load → press → unload cycle'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Capacité de traitement : 8-15 kg par lot' : currentLocale === 'ar' ? 'سعة المعالجة: 8-15 كجم لكل كمية' : 'Processing capacity: 8-15 kg per batch'}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl border-2 border-amber-400 p-8 relative">
+            <span class="absolute -top-3 right-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+              {currentLocale === 'fr' ? 'RECOMMANDÉ' : currentLocale === 'ar' ? 'موصى به' : 'RECOMMENDED'}
+            </span>
+            <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-amber-700">2</span>
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">
+              {currentLocale === 'fr' ? 'Fût Double' : currentLocale === 'ar' ? 'برميل مزدوج' : 'Double Barrel'}
+            </h3>
+            <ul class="space-y-2 text-steel-600">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Débit presque doublé avec système hydraulique partagé' : currentLocale === 'ar' ? 'إنتاج مضاعف تقريبًا مع نظام هيدروليكي مشترك' : 'Nearly 2x throughput with shared hydraulic system'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Fonctionnement continu : un fût presse tandis que l\'autre charge' : currentLocale === 'ar' ? 'تشغيل مستمر: برميل واحد يضغط بينما الآخر يحمل' : 'Continuous operation: one barrel presses while other loads'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Meilleure valeur par kg de sortie' : currentLocale === 'ar' ? 'أفضل قيمة لكل كيلوغرام من الإنتاج' : 'Best value per kg of output'}</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{currentLocale === 'fr' ? 'Capacité de traitement : 16-30 kg par lot' : currentLocale === 'ar' ? 'سعة المعالجة: 16-30 كجم لكل كمية' : 'Processing capacity: 16-30 kg per batch'}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mb-16">
+        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
+          {currentLocale === 'fr' ? 'Foire aux questions' : currentLocale === 'ar' ? 'الأسئلة المتكررة' : 'Frequently Asked Questions'}
+        </h2>
+        <div class="space-y-4">
+          {faqs.map((faq, index) => (
+            <details class="bg-white rounded-xl border border-steel-100 p-6 group">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <h3 class="font-display text-lg text-charcoal-900">{faq.question[currentLocale] || faq.question.en}</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="mt-4 text-steel-600">{faq.answer[currentLocale] || faq.answer.en}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-charcoal-900 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="font-display text-3xl text-white mb-4">
+          {currentLocale === 'fr' ? 'Vous ne savez pas quel modèle choisir ?' : currentLocale === 'ar' ? 'لا تعرف أي نموذج تختار؟' : 'Not Sure Which Model to Choose?'}
+        </h2>
+        <p class="text-steel-300 text-lg max-w-2xl mx-auto mb-8">
+          {currentLocale === 'fr' ? 'Dites-nous votre type de graine oléagineuse, votre objectif de production quotidienne et votre budget. Nos ingénieurs vous recommanderont le meilleur modèle et la meilleure configuration pour vos besoins spécifiques — gratuitement.' : currentLocale === 'ar' ? 'أخبرنا نوع بذرتك الزيتية، هدف إنتاجك اليومي، وميزانيتك. سيوصي مهندسوننا بالنموذج والتهيئة الأفضل لمتطلباتك المحددة — مجانًا.' : 'Tell us your oil seed type, daily production target, and budget. Our engineers will recommend the best model and configuration for your specific needs — free of charge.'}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={localePath('/contact')} class="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-charcoal-900 font-semibold rounded-xl hover:bg-amber-400 transition-colors">
+            {currentLocale === 'fr' ? 'Obtenir une recommandation d\'expert' : currentLocale === 'ar' ? 'الحصول على توصية خبيرة' : 'Get Expert Recommendation'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://wa.me/8618957149128" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 bg-steel-700 text-white font-semibold rounded-xl hover:bg-steel-600 transition-colors">
+            {currentLocale === 'fr' ? 'Discuter sur WhatsApp' : currentLocale === 'ar' ? 'المراسلة على WhatsApp' : 'Chat on WhatsApp'}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

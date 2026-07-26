@@ -1,0 +1,346 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+
+const t = getTranslations('ar');
+const title = 'دليل تصفية وتنقية الزيت الخام';
+const description = 'دليل شامل لتصفية وتنقية الزيت الخام بعد الضغط';
+const seoKeywords = ['تصفية الزيت الخام', 'تنقية الزيت', 'تصفية المكبس الهيدروليكي'];
+const publishedAt = new Date();
+const updatedAt = publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/filtration-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'فريق هندسة هاونو',
+    jobTitle: 'مهندس مكبس زيت كندي',
+    worksFor: { '@type': 'Organization', name: 'مجموعة شاندونغ هاونو للمعدات الميكانيكية' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'هاونو لمعدات الميكانيكا',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+    { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/crude-oil-filtration-guide' },
+  ],
+};
+
+const impurities = [
+  { type: 'الجسيمات الصلبة', description: 'أجزاء البذور، جسيمات اللبن', source: 'عملية الضغط', impact: 'العتامة، الترسيب' },
+  { type: 'مركبات الفوسفور', description: 'الفسفوليبيدات (اللبلاب)', source: 'المواد الخام', impact: 'تكوين الاستحكام' },
+  { type: 'الأحماض الدهنية الحرة', description: 'الثلاثي الغليسريد المهدرس', source: 'التدهور', impact: 'الحموضة، النكهة' },
+  { type: 'مركبات الألوان', description: 'الكاروتينويدات، الكلوروفيل', source: 'المواد الخام', impact: 'اللون الداكن' },
+  { type: 'الرطوبة', description: 'محتوى الماء', source: 'المعالجة', impact: 'مدة الصلاحية، النمو الدقيق' },
+  { type: 'الأفلاتوكسين', description: 'الميكوتوكسينات', source: 'التلوث بالعفن', impact: 'خطر السلامة الغذائية' },
+];
+
+const filtrationMethods = [
+  { name: 'مكبس الترشيح متعدد الطبقات الهوائي', advantages: ['كفاءة الترشيح العالية', 'قدرة التشغيل المستمر', 'الترشيح متعدد المراحل في وحدة واحدة', 'الصيانة السهلة'], stages: [{ mesh: '100-200', purpose: 'إزالة الجسيمات الكبيرة' }, { mesh: '200-300', purpose: 'إزالة الجسيمات الدقيقة' }, { mesh: '300-500', purpose: 'وضوح الزيت الفاخر' }] },
+  { name: 'مكبس الترشيح الصفيحي', advantages: ['قدرة الضغط العالية', 'فعال للزيت الخام عالي المادة الصلبة', 'سهولة إزالة اللبن'], disadvantages: ['التشغيل بالتدريج', 'يتطلب التنظيف اليدوي'] },
+  { name: 'مصفح التسريب', advantages: ['التكلفة المنخفضة', 'سهولة استبدال المرشحات', 'جيد للتصفية المسبقة'], disadvantages: ['قدرة الترشيح المحدودة', 'استبدال المتصفحات المتكرر'] },
+  { name: 'مصفح الطرد المركزي', advantages: ['الدفع العالي', 'الصيانة المنخفضة', 'التشغيل المستمر'], disadvantages: ['استهلاك الطاقة الأعلى', 'أقل فعالية للجسيمات الدقيقة جدًا'] },
+];
+
+const clarifyingAgents = [
+  { agent: 'البنتونيت', function: 'يمتص اللبلاب والملوثات', dosage: '0.5-2%' },
+  { agent: 'الكربون المنشط', function: 'يمتص مركبات الألوان والأفلاتوكسين', dosage: '0.2-1%' },
+  { agent: 'أرض الدياتومية', function: 'تُصفح الجسيمات الدقيقة', dosage: '1-3%' },
+];
+
+const equipmentSelection = [
+  { scale: 'صغير', output: '500-1,500 كجم', system: 'مكبس تصفية واحد', budget: 'الاتصال للحصول على السعر' },
+  { scale: 'متوسط', output: '1,500-3,000 كجم', system: 'التصفية متعددة المراحل', budget: 'الاتصال للحصول على السعر' },
+  { scale: 'كبير', output: '3,000+ كجم', system: 'خط تصفية آلي', budget: 'الاتصال للحصول على السعر' },
+];
+
+const troubleshooting = [
+  { problem: 'الزيت العتيق بعد الترشيح', causes: ['مرشح مسدود أو مكسور', 'حجم الشبكة غير صحيح', 'درجة حرارة الزيت منخفضة جدًا', 'محتوى الرطوبة الزائد'], solutions: ['استبدال المرشح', 'استخدام مرشح بشبكة دقيقة', 'سخن الزيت قبل الترشيح', 'جفف الزيت قبل الترشيح'] },
+  { problem: 'معدل الترشيح المنخفض', causes: ['مرشح مسدود', 'ضغط المضخة غير كافٍ', 'اللزوجة عالية جدًا', 'مدخل مسدود'], solutions: ['تنظيف أو استبدال المرشحات', 'زيادة ضغط المضخة', 'سخن الزيت لإنقاص اللزوجة', 'فتح انسداد المدخل'] },
+  { problem: 'تسرب الزيت', causes: ['الأختام أو الحشوات المتهالكة', 'الاتصالات الضعيفة', 'الضغط الزائد', 'المعدات المكسورة'], solutions: ['استبدال الأختام', 'شد الاتصالات', 'إنقاص الضغط', 'إصلاح أو استبدال المعدات'] },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="ar">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/ar/" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/ar/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-blue-50 to-cyan-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-blue-500/10 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          دليل التصفية
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
+              <div class="text-sm text-steel-500">مهندس مكبس زيت كندي · أكثر من 15 سنة من الخبرة</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">مقدمة</h2>
+        <p class="text-steel-700 leading-relaxed">
+          عملية التصفية والتنقية أمر حاسم لإنتاج الزيوت الصناعية عالية الجودة. بعد الضغط، يحتوي الزيت الخام على berbagai ملوثات يجب إزالتها لتحقيق معايير السوق في الوضوح والنكهة ومدة الصلاحية.
+        </p>
+      </section>
+
+      <section id="impurities" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">فهم ملوثات الزيت الخام</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">أنواع الملوثات</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-red-500 to-rose-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-right font-semibold">نوع الملوث</th>
+                <th class="px-4 py-3 text-right font-semibold">الوصف</th>
+                <th class="px-4 py-3 text-right font-semibold">المصدر</th>
+                <th class="px-4 py-3 text-right font-semibold">التأثير</th>
+              </tr>
+            </thead>
+            <tbody>
+              {impurities.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-red-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.type}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.description}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.source}</td>
+                  <td class="px-4 py-3 text-red-600">{item.impact}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="filtration-methods" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">أساليب التصفية</h2>
+        <div class="space-y-6">
+          {filtrationMethods.map((item, index) => (
+            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-xl text-charcoal-900 mb-4">{item.name}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-green-600 mb-3">المزايا:</h4>
+                  <ul class="space-y-2">
+                    {item.advantages.map((adv, idx) => (
+                      <li key={idx} class="flex items-center gap-2 text-steel-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        {adv}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {item.disadvantages && (
+                  <div>
+                    <h4 class="font-medium text-red-600 mb-3">العيوب:</h4>
+                    <ul class="space-y-2">
+                      {item.disadvantages.map((dis, idx) => (
+                        <li key={idx} class="flex items-center gap-2 text-steel-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                          {dis}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+              {item.stages && (
+                <div class="mt-6 pt-6 border-t border-steel-100">
+                  <h4 class="font-medium text-blue-600 mb-3">المرشحات الموصى بها:</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {item.stages.map((stage, idx) => (
+                      <div key={idx} class="bg-blue-50 p-3 rounded-lg">
+                        <span class="font-semibold text-blue-800">{stage.mesh} شبكة</span>
+                        <p class="text-sm text-steel-600">{stage.purpose}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="oil-settling" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">عملية ترسيب الزيت</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+            <h3 class="font-semibold text-lg text-charcoal-900 mb-4">الترسيب الطبيعي</h3>
+            <ol class="space-y-2 list-decimal list-inside text-steel-700">
+              <li>نقل الزيت الخام إلى خزانات الترسيب</li>
+              <li>اترك للترسيب لمدة 24-72 ساعة</li>
+              <li>تترسب الجسيمات إلى القاع بسبب الجاذبية</li>
+              <li>صفي الزيت الواضح من الأعلى</li>
+            </ol>
+            <div class="mt-4 p-3 bg-steel-50 rounded-lg">
+              <h4 class="font-medium text-steel-500 mb-2">الشروط:</h4>
+              <ul class="text-sm text-steel-700">
+                <li>• درجة الحرارة: 25-30 درجة مئوية</li>
+                <li>• مادة الخزان: الفولاذ المقاوم للصدأ</li>
+                <li>• تهوية مناسبة</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
+            <h3 class="font-semibold text-lg text-charcoal-900 mb-4">الترسيب المتسارع</h3>
+            <ul class="space-y-2 text-steel-700">
+              <li>• السخن لتحريك الجسيمات</li>
+              <li>• إضافة عوامل التنقية (البنتونيت، الكربون المنشط)</li>
+              <li>• استخدام منظمات الصفيحات المائلة</li>
+            </ul>
+            <h4 class="font-medium text-steel-500 mt-4 mb-3">عوامل التنقية:</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead class="text-sm text-steel-500">
+                  <tr>
+                    <th class="text-right pb-2">العامل</th>
+                    <th class="text-right pb-2">الوظيفة</th>
+                    <th class="text-right pb-2">الجرعة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {clarifyingAgents.map((item, idx) => (
+                    <tr key={idx} class="text-sm">
+                      <td class="font-medium text-charcoal-900">{item.agent}</td>
+                      <td class="text-steel-600">{item.function}</td>
+                      <td class="text-amber-600">{item.dosage}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipment-selection" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">دليل اختيار المعدات</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">بناءً على حجم الإنتاج</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-right font-semibold">الحجم</th>
+                <th class="px-4 py-3 text-right font-semibold">المخرجات اليومية</th>
+                <th class="px-4 py-3 text-right font-semibold">النظام الموصى به</th>
+                <th class="px-4 py-3 text-right font-semibold">الميزانية</th>
+              </tr>
+            </thead>
+            <tbody>
+              {equipmentSelection.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.output}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.system}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.budget}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="troubleshooting" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">دليل تصليح الأخطاء</h2>
+        <div class="space-y-4">
+          {troubleshooting.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-red-600 mb-3">{item.problem}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">الأسباب:</h4>
+                  <ul class="space-y-1">
+                    {item.causes.map((cause, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">الحلول:</h4>
+                  <ul class="space-y-1">
+                    {item.solutions.map((solution, idx) => (
+                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
+        <p class="text-steel-700 leading-relaxed">
+          التصفية والتنقية الفعالة للزيت الخام أمر ضروري لإنتاج الزيوت الصناعية عالية الجودة التي تحقق معايير السوق. من خلال اختيار أساليب التصفية المناسبة، تصميم نظام فعال، وتنفيذ ممارسات الصيانة المناسبة، يمكن لموردي الزيت ضمان جودة المنتج المستمرة وزيادة رضا العملاء.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت؟</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لفريقنا الهندسي مساعدتك في اختيار أفضل المعدات وتحسين استثمارك لتحقيق أقصى العائد.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/ar/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          اتصل بالخبراء
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/ar/products" class="btn-outline border-white text-white hover:bg-white/10">
+          تصفح المعدات
+        </a>
+        <a href="/ar/resources" class="btn-outline border-white text-white hover:bg-white/10">
+          العودة للموارد
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

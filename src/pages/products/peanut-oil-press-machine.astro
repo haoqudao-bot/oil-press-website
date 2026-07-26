@@ -1,0 +1,181 @@
+﻿﻿﻿﻿﻿---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allProducts = await getCollection('products');
+const seedProducts = allProducts.filter(p =>
+  p.data.applicableSeeds.some(s => s.toLowerCase().includes('peanut'))
+).slice(0, 3);
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://www.hydoilpress.com/products' },
+    { '@type': 'ListItem', position: 3, name: 'Peanut Oil Press Machine', item: 'https://www.hydoilpress.com/products/peanut-oil-press-machine' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the oil yield of peanut using a hydraulic press?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A hydraulic oil press can extract approximately 40-45% of oil from peanuts. The exact yield depends on the peanut variety, moisture content, and whether the peanuts are roasted before pressing. Roasted peanuts typically yield slightly more oil with a richer flavor.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should peanuts be roasted before pressing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Roasting peanuts before pressing enhances the flavor and aroma of the oil, and can slightly increase oil yield. However, for cold-pressed peanut oil that retains maximum nutritional value, raw peanuts can be pressed directly. The choice depends on whether you prioritize flavor (roasted) or nutrition (cold-pressed).' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between cold-pressed and roasted peanut oil?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Cold-pressed peanut oil is extracted at low temperatures from raw peanuts, preserving nutrients, vitamin E, and a mild peanut flavor. Roasted peanut oil is made from pre-roasted peanuts, producing a darker oil with a stronger, nuttier flavor ideal for cooking. Both have their market — cold-pressed commands a premium for health-conscious consumers.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much peanut can the machine process per hour?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Depending on the model, Haonuo hydraulic presses can process 50-125 kg of peanuts per hour. The HN325 handles 50 kg/hr, HN355 handles 75 kg/hr, HN426 handles 100 kg/hr, and HN500 handles 125 kg/hr. Each batch takes approximately 10-15 minutes.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can the peanut oil press machine also process other seeds?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, Haonuo hydraulic oil presses are versatile machines that can process a wide range of oilseeds including sesame, rapeseed, sunflower, tea seed, flaxseed, and more. The same machine can be used for different materials with minimal adjustment, making it an excellent investment for multi-product oil businesses.' },
+    },
+  ],
+};
+
+const faqs = [
+  { question: 'What is the oil yield of peanut using a hydraulic press?', answer: 'A hydraulic oil press can extract approximately 40-45% of oil from peanuts. The exact yield depends on the peanut variety, moisture content, and whether the peanuts are roasted before pressing. Roasted peanuts typically yield slightly more oil with a richer flavor.' },
+  { question: 'Should peanuts be roasted before pressing?', answer: 'Roasting peanuts before pressing enhances the flavor and aroma of the oil, and can slightly increase oil yield. However, for cold-pressed peanut oil that retains maximum nutritional value, raw peanuts can be pressed directly. The choice depends on whether you prioritize flavor (roasted) or nutrition (cold-pressed).' },
+  { question: 'What is the difference between cold-pressed and roasted peanut oil?', answer: 'Cold-pressed peanut oil is extracted at low temperatures from raw peanuts, preserving nutrients, vitamin E, and a mild peanut flavor. Roasted peanut oil is made from pre-roasted peanuts, producing a darker oil with a stronger, nuttier flavor ideal for cooking. Both have their market — cold-pressed commands a premium for health-conscious consumers.' },
+  { question: 'How much peanut can the machine process per hour?', answer: 'Depending on the model, Haonuo hydraulic presses can process 50-125 kg of peanuts per hour. The HN325 handles 50 kg/hr, HN355 handles 75 kg/hr, HN426 handles 100 kg/hr, and HN500 handles 125 kg/hr. Each batch takes approximately 10-15 minutes.' },
+  { question: 'Can the peanut oil press machine also process other seeds?', answer: 'Yes, Haonuo hydraulic oil presses are versatile machines that can process a wide range of oilseeds including sesame, rapeseed, sunflower, tea seed, flaxseed, and more. The same machine can be used for different materials with minimal adjustment, making it an excellent investment for multi-product oil businesses.' },
+];
+---
+
+<BaseLayout
+  title="Peanut Oil Press Machine - Hydraulic Cold Press for Premium Peanut Oil"
+  description="Professional peanut oil press machine by Haonuo Machinery. Hydraulic cold press technology for premium peanut oil production. 40-45% oil yield, versatile multi-seed capability. Factory-direct pricing."
+  keywords={['peanut oil press machine', 'peanut oil hydraulic press', 'groundnut oil press', 'peanut oil extraction machine', 'cold press peanut oil', 'peanut oil maker']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/products" class="hover:text-amber-500 transition-colors">Products</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">Peanut Oil Press Machine</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Peanut Oil Press Machine</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">Hydraulic cold press for premium peanut oil — 40-45% oil yield, versatile multi-seed capability, factory-direct pricing.</p>
+    </div>
+  </section>
+
+  <!-- SEO Introduction -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose-solution">
+        <p>Peanut oil (also known as groundnut oil) is a popular cooking oil across Asia, Africa, and the Americas, valued for its high smoke point, rich flavor, and health benefits including heart-healthy monounsaturated fats and vitamin E. Producing high-quality peanut oil requires a reliable peanut oil press machine that can efficiently extract oil while preserving the natural taste and nutritional properties. Hydraulic cold press technology is the preferred method for premium peanut oil, applying intense pressure without excessive heat to achieve oil yields of 40-45%.</p>
+        <p>Haonuo Machinery's peanut oil press machines are built for versatility and performance. Whether you produce cold-pressed peanut oil from raw peanuts for the health food market, or roasted peanut oil for culinary use, our hydraulic presses handle both with ease. The same machine can also process sesame, rapeseed, sunflower seeds, and more — making it a versatile investment for any oil production business. With models ranging from 50 to 125 kg/hr capacity, Haonuo has the right machine for every scale of peanut oil production.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  {seedProducts.length > 0 && (
+    <section class="py-12 md:py-16 bg-steel-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">Our Peanut Oil Press Machines</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {seedProducts.map(product => (
+            <a
+              href={`/products/${product.slug}`}
+              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            >
+              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                <img
+                  src={product.data.images[0]}
+                  alt={product.data.title.en}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20peanut%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                />
+              </div>
+              <div class="p-5">
+                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                <div class="flex flex-wrap gap-2">
+                  {product.data.specifications.slice(0, 2).map(spec => (
+                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                      {spec.name}: {spec.value}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {faqs.map((item, i) => (
+          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+              <span class="font-display text-lg text-charcoal-900">{item.question}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Solutions -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Related Solutions</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href="/solutions/peanut-oil-pressing" class="card-hover bg-white rounded-2xl p-6 border border-steel-100 group hover:border-amber-300">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Peanut Oil Pressing Solution</h3>
+          <p class="text-sm text-steel-600 line-clamp-2">Complete peanut oil production line from raw peanuts to premium oil.</p>
+        </a>
+        <a href="/solutions/commercial-oil-press" class="card-hover bg-white rounded-2xl p-6 border border-steel-100 group hover:border-amber-300">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">Commercial Oil Press Solution</h3>
+          <p class="text-sm text-steel-600 line-clamp-2">Scalable oil pressing solutions for commercial production facilities.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-steel-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Ready to Start Your Peanut Oil Business?</h2>
+      <p class="text-steel-300 text-lg mb-8">Contact us for a free quotation and professional equipment recommendation.</p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        Get a Free Quote
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

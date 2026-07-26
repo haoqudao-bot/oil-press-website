@@ -1,0 +1,383 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'oil-press-electrical-requirements-guide');
+const t = getTranslations('ar');
+
+const title = resource?.data.title.ar || 'دليل متطلبات كهرباء المكبس الزيتي';
+const description = resource?.data.description.ar || 'تكوين مصدر الطاقة ومولد الكهرباء';
+const seoKeywords = resource?.data.seoKeywords || ['متطلبات كهرباء المكبس الزيتي', 'مولد الكهرباء للمكبس الزيتي', 'تكوين مصدر الطاقة'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/electrical-guide-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'مهندس مكبس زيتي كبار', worksFor: { '@type': 'Organization', name: 'مجموعة شاندونغ هاونواو لمعدات الميكانيكا' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+    { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/oil-press-electrical-requirements-guide' },
+  ],
+};
+
+const voltageSpecs = ['220 فولت أحادي الطور (شائع في العديد من البلدان)', '380 فولت ثلاثي الطور (المعيار الصناعي)', '415 فولت ثلاثي الطور (بعض المناطق)', 'التردد: 50 هرتز أو 60 هرتز', 'يمكن تخصيص الفولتية بدون أي تكلفة إضافية'];
+const powerConsumption = ['قوة المحرك: جميع طرازات هاونواو: 2.2 كيلو واط', 'الاستمرار: 0.5-1.0 كيلو واط', 'الضغط: 1.5-2.2 كيلو واط', 'الذروة: تصل إلى 3.0 كيلو واط (أثناء تراكم الضغط)'];
+const currentRequirements = ['أحادي الطور (220 فولت): التشغيل 10-15 أمبير، البدء 20-30 أمبير', 'ثلاثي الطور (380 فولت): التشغيل 5-8 أمبير، البدء 10-15 أمبير', 'مقاطع الدوائر الموصى بها: أحادي الطور 30 أمبير، ثلاثي الطور 16 أمبير لكل طور'];
+
+const generatorCapacity = [
+  { model: 'HN325', singlePhase: '5 كيلو فولت أمبير', threePhase: '5 كيلو فولت أمبير' },
+  { model: 'HN355', singlePhase: '5.5 كيلو فولت أمبير', threePhase: '5.5 كيلو فولت أمبير' },
+  { model: 'HN426', singlePhase: '5.5 كيلو فولت أمبير', threePhase: '5.5 كيلو فولت أمبير' },
+  { model: 'HN480', singlePhase: '5.5 كيلو فولت أمبير', threePhase: '5.5 كيلو فولت أمبير' },
+  { model: 'HN500', singlePhase: '7 كيلو فولت أمبير', threePhase: '7 كيلو فولت أمبير' },
+];
+
+const safetyMargin = ['إضافة 20-30% لتيار البدء', ' مراعاة المعدات الأخرى على نفس الدائرة', 'أخذ في الاعتبار انخفاضات الفولتية'];
+const recommendedGenerator = [
+  { models: 'HN325/HN355', size: '6-7 كيلو فولت أمبير' },
+  { models: 'HN426/HN480', size: '7-8 كيلو فولت أمبير' },
+  { models: 'HN500', size: '8-10 كيلو فولت أمبير' },
+];
+
+const generatorSelection = [
+  { title: 'النوع', desc: 'ديزل (الأكثر شيوعاً)، بترول، شمسي' },
+  { title: 'الجودة', desc: 'العلامات التجارية المعروفة، النوع المحول الموصى به' },
+  { title: 'الميزات', desc: 'تنظيم الفولتية، الحماية من الزائد، البدء/الإيقاف التلقائي' },
+];
+
+const wiringRequirements = [
+  { distance: '10م', singlePhase: '2.5 مم²', threePhase: '2.5 مم²' },
+  { distance: '20م', singlePhase: '4 مم²', threePhase: '2.5 مم²' },
+  { distance: '30م', singlePhase: '6 مم²', threePhase: '4 مم²' },
+  { distance: '50م', singlePhase: '10 مم²', threePhase: '6 مم²' },
+];
+
+const controlPanelComponents = ['مفتاح رئيسي', 'مقاطع الدوائر', 'مبدأ المحرك', 'أزرار التحكم', 'إيقاف طارئ', 'أضوء مؤشر'];
+const electricalSafety = ['ارتداء قفازات معزولة', 'استخدام أدوات معزولة', 'اتباع إجراءات القفل/العلامة'];
+const voltageFluctuations = [
+  { type: 'فولتية منخفضة', effects: 'سخونة المحرك، الأداء المنخفض', solution: 'مثبت الفولتية' },
+  { type: 'فولتية عالية', effects: 'تلف المحرك، فشل المكونات', solution: 'محافظ طارد الفولتية' },
+];
+
+const lightningProtection = ['تثبيت موصلة البرق', 'أجهزة الحماية من الصواعق', 'نظام التأريض'];
+const upsInfo = ['التطبيقات: احتياط لوحة التحكم، إيقاف طارئ', 'الحجم: 500-1000 فولت أمبير كافية عادةً'];
+const solarInfo = ['التطبيقات: المواقع خارج الشبكة، العمليات المستدامة', 'الاعتبارات: حجم الألواح الشمسية، تخزين البطاريات، مولد احتياطي موصى به'];
+
+const powerManagement = ['التشغيل خلال الساعات الصافية إذا أمكن', 'المعالجة بالدفعات ل تقليل دورات البدء'];
+const costCalculation = ['تكلفة الطاقة اليومية = (استهلاك الطاقة x الساعات x السعر) / 1000', 'مثال: 2.0 كيلو واط x 8 ساعات x 0.15$ / كيلو واط ساعة = 2.40$ / يوم'];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="ar">
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/ar" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        <a href="/ar/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">دليل تقني</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="text-right">
+            <div class="font-semibold text-charcoal-900">فريق هندسة هاونواو</div>
+            <div class="text-sm text-steel-500">مهندس مكبس زيتي كبار · 15+ سنة خبرة</div>
+          </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">المقدمة</h2>
+        <p class="text-steel-700 leading-relaxed">فهم متطلبات الكهرباء لمكبس الزيت الهيدروليكي الخاص بك أمر بالغ الأهمية لضمان التشغيل الآمن والفعال.</p>
+        <div class="bg-amber-50 border-r-4 border-amber-500 p-5 rounded-l-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>التكوين الكهربائي المناسب يضمن التشغيل الآمن ويطيل عمر المعدات.</p>
+        </div>
+      </section>
+
+      <section id="basic-requirements" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">المتطلبات الكهربائية الأساسية</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">المواصفات الفولتية</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+          {voltageSpecs.map((spec, index) => (
+            <div key={index} class="bg-blue-50 p-4 rounded-lg border border-blue-100 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span class="text-steel-700 text-sm">{spec}</span>
+            </div>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">استهلاك الطاقة</h3>
+        <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-100 mb-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {powerConsumption.map((item, index) => (
+              <div key={index} class="bg-white p-3 rounded-lg text-center">
+                <p class="text-sm text-steel-600">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">المتطلبات التيارية</h3>
+        <div class="space-y-2">
+          {currentRequirements.map((req, index) => (
+            <div key={index} class="bg-white p-4 rounded-lg border border-steel-100 shadow-sm flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="text-steel-700">{req}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="generator" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">متطلبات المولد</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">سعة المولد</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-right font-semibold">النموذج</th><th class="px-4 py-3 text-right font-semibold">أحادي الطور</th><th class="px-4 py-3 text-right font-semibold">ثلاثي الطور</th></tr>
+            </thead>
+            <tbody>
+              {generatorCapacity.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-green-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.model}</td>
+                  <td class="px-4 py-3 text-green-600">{item.singlePhase}</td>
+                  <td class="px-4 py-3 text-green-600">{item.threePhase}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-orange-50 p-5 rounded-xl border border-orange-100">
+            <h4 class="font-semibold text-orange-800 mb-3">هامش الأمان</h4>
+            <ul class="space-y-2">
+              {safetyMargin.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-amber-50 p-5 rounded-xl border border-amber-100">
+            <h4 class="font-semibold text-amber-800 mb-3">حجم المولد الموصى به</h4>
+            <ul class="space-y-2">
+              {recommendedGenerator.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-center justify-between">
+                  <span class="font-bold text-amber-600">{item.size}</span>
+                  <span>{item.models}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">معايير اختيار المولد</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {generatorSelection.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
+              <h4 class="font-semibold text-charcoal-900 mb-2">{item.title}</h4>
+              <p class="text-steel-600 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="power-supply" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تكوين مصدر الطاقة</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">الاتصال بالشبكة</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <h4 class="font-semibold text-blue-800 mb-3">الاتصال أحادي الطور</h4>
+            <ul class="space-y-1 text-steel-700 text-sm">
+              <li>L1 -> مقطع الدائرة -> المحرك</li>
+              <li>N -> المحرك</li>
+              <li>PE -> إطار المعدات</li>
+            </ul>
+          </div>
+          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h4 class="font-semibold text-green-800 mb-3">الاتصال ثلاثي الطور</h4>
+            <ul class="space-y-1 text-steel-700 text-sm">
+              <li>L1, L2, L3 -> مقطع الدائرة -> المحرك</li>
+              <li>N -> لوحة التحكم</li>
+              <li>PE -> إطار المعدات</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">متطلبات الأسلاك</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+              <tr><th class="px-4 py-3 text-right font-semibold">المسافة</th><th class="px-4 py-3 text-right font-semibold">أحادي الطور (220 فولت)</th><th class="px-4 py-3 text-right font-semibold">ثلاثي الطور (380 فولت)</th></tr>
+            </thead>
+            <tbody>
+              {wiringRequirements.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.distance}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.singlePhase}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.threePhase}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">مكونات لوحة التحكم</h3>
+        <div class="flex flex-wrap gap-2">
+          {controlPanelComponents.map((item, index) => (
+            <span key={index} class="bg-steel-100 text-steel-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section id="safety" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">اعتبارات السلامة</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+            <h3 class="font-semibold text-red-800 mb-3">السلامة الكهربائية</h3>
+            <ul class="space-y-2">
+              {electricalSafety.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-orange-50 p-5 rounded-xl border border-orange-100">
+            <h3 class="font-semibold text-orange-800 mb-3">تقلبات الفولتية</h3>
+            <ul class="space-y-3">
+              {voltageFluctuations.map((item, index) => (
+                <li key={index} class="text-sm">
+                  <p class="font-medium text-steel-700">{item.type}</p>
+                  <p class="text-steel-500">{item.effects}</p>
+                  <p class="text-green-600 font-medium">الحل: {item.solution}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
+            <h3 class="font-semibold text-purple-800 mb-3">الحماية من البرق</h3>
+            <ul class="space-y-2">
+              {lightningProtection.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="backup-power" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">حلول الطاقة الاحتياطية</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+            <h3 class="font-semibold text-blue-800 mb-3">UPS (مصدر طاقة غير منقطع)</h3>
+            <ul class="space-y-2">
+              {upsInfo.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h3 class="font-semibold text-green-800 mb-3">أنظمة الطاقة الشمسية</h3>
+            <ul class="space-y-2">
+              {solarInfo.map((item, index) => (
+                <li key={index} class="text-steel-700 flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="energy-efficiency" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">نصائح كفاءة الطاقة</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">إدارة الطاقة</h3>
+        <div class="flex flex-wrap gap-2 mb-8">
+          {powerManagement.map((item, index) => (
+            <span key={index} class="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">حساب التكلفة</h3>
+        <div class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 p-6 rounded-xl text-white">
+          <div class="space-y-2">
+            {costCalculation.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
+        <p class="text-steel-700 leading-relaxed">التكوين الكهربائي المناسب أمر أساسي لضمان التشغيل الآمن والفعال للمكبسات الزيتية الهيدروليكية. للحصول على نصائح مخصصة حول التكوين الكهربائي، اتصل بفريق الدعم الفني của هاونواو.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت الخاص بك؟</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">فريق هندستنا يمكنه مساعدتك في تكوين مصدر الطاقة الأمثل لمعدات المكبس الزيتي الخاص بك.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/ar/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">اتصل بخبرائنا<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/ar/products" class="btn-outline border-white text-white hover:bg-white/10">تصفح المعدات</a>
+        <a href="/ar/resources" class="btn-outline border-white text-white hover:bg-white/10">العودة للموارد</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

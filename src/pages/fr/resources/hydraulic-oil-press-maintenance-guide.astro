@@ -1,0 +1,300 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'hydraulic-oil-press-maintenance-guide');
+const t = getTranslations('fr');
+
+const title = resource?.data.title.fr || resource?.data.title.en || 'Maintenance de presse hydraulique';
+const description = resource?.data.description.fr || resource?.data.description.en || 'Guide complet de maintenance';
+const seoKeywords = resource?.data.seoKeywords || ['maintenance presse hydraulique', 'entretien huile press'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/maintenance-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Senior Oil Press Engineer',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/fr' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/hydraulic-oil-press-maintenance-guide' },
+  ],
+};
+
+const maintenanceSchedule = [
+  { frequency: 'Quotidien', tasks: ['Nettoyer la machine et la zone environnante', 'Vérifier le niveau d\'huile dans le système hydraulique', 'Inspecter la chambre de pressage pour les résidus', 'Vérifier que les dispositifs de sécurité sont fonctionnels'] },
+  { frequency: 'Hebdomadaire', tasks: ['Nettoyer le filtre du réservoir d\'huile hydraulique', 'Vérifier les connexions hydrauliques pour les fuites', 'Inspecter les connexions électriques', 'Graisser les pièces mobiles'] },
+  { frequency: 'Mensuel', tasks: ['Vérifier la qualité de l\'huile hydraulique', 'Inspecter les joints et les garnitures', 'Tester les manomètres', 'Calibrer les capteurs de température'] },
+  { frequency: 'Trimestriel', tasks: ['Remplacer l\'huile hydraulique (toutes les 2 000 heures)', 'Inspecter le cylindre hydraulique', 'Vérifier le cadre et les composants structurels', 'Tester la fonction d\'arrêt d\'urgence'] },
+];
+
+const hydraulicSystem = [
+  { title: 'Gestion de l\'huile hydraulique', items: ['Utiliser de l\'huile hydraulique ISO VG 46', 'Maintenir une température appropriée (30-50°C)', 'Remplacer l\'huile toutes les 2 000 heures de fonctionnement', 'Capacité : <a href="/fr/products/standard-hydraulic-oil-press">HN325</a>/<a href="/fr/products/heavy-duty-hydraulic-oil-press">HN355</a> : 30-40 litres, <a href="/fr/products/ultra-high-pressure-hydraulic-oil-press">HN500</a> : 50-60 litres'] },
+  { title: 'Entretien du cylindre hydraulique', items: ['Gardez la tige du cylindre propre', 'Protégez-la de la poussière et des débris', 'Inspectez les joints pour l\'usure', 'Remplacez-les en cas de fuite'] },
+  { title: 'Maintenance du filtre hydraulique', items: ['Nettoyer toutes les 50-100 heures de fonctionnement', 'Remplacer en cas de dommage ou de saleté excessive', 'Utiliser des filtres de remplacement Haonuo originaux'] },
+];
+
+const electricalSystem = [
+  { title: 'Vérification de l\'alimentation', items: ['Vérifier la tension d\'entrée', 'Vérifier les fluctuations de tension', 'Utiliser des protecteurs contre les surtensions'] },
+  { title: 'Maintenance du moteur', items: ['Vérifier le carter du moteur pour les dommages', 'Inspecter le ventilateur et le système de refroidissement', 'Nettoyer régulièrement les ailettes de refroidissement'] },
+  { title: 'Maintenance du panneau de commande', items: ['Enlever la poussière du panneau', 'Vérifier le fonctionnement des boutons', 'Serrez les connexions terminales'] },
+];
+
+const troubleshooting = [
+  { problem: 'Pression faible', causes: ['Niveau d\'huile hydraulique bas', 'Huile contaminée', 'Pompe usée', 'Joints fuite'], solutions: ['Ajouter de l\'huile', 'Filtrer ou remplacer l\'huile', 'Inspecter la pompe', 'Remplacer les joints'] },
+  { problem: 'Cycle de pressage lent', causes: ['Température de l\'huile hydraulique basse', 'Filtre sale', 'Pompe usée', 'Tension basse'], solutions: ['Chauffer le système', 'Nettoyer le filtre', 'Inspecter la pompe', 'Vérifier l\'alimentation'] },
+  { problem: 'Fuites d\'huile', causes: ['Joints usés', 'Connexions lâches', 'Flexibles endommagés'], solutions: ['Remplacer les joints', 'Serrez les connexions', 'Remplacer les flexibles'] },
+  { problem: 'La machine ne démarre pas', causes: ['Pas d\'alimentation', 'Arrêt d\'urgence activé', 'Garde de sécurité ouverte'], solutions: ['Vérifier l\'alimentation', 'Réinitialiser l\'arrêt d\'urgence', 'Fermer les gardes de sécurité'] },
+];
+
+const spareParts = [
+  { name: 'Éléments filtrants d\'huile hydraulique', stock: 'Critical' },
+  { name: 'Joints et garnitures', stock: 'Critical' },
+  { name: 'Flexibles hydrauliques', stock: 'Wear' },
+  { name: 'Plates de compression', stock: 'Wear' },
+  { name: 'O-rings', stock: 'Consumables' },
+];
+
+function localePath(path: string): string {
+  return `/fr${path}`;
+}
+---
+
+<BaseLayout locale="fr" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-green-50 to-emerald-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-green-500/10 text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          GUIDE D'ENTRETIEN
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Un entretien approprié de la presse à huile est le facteur le plus important pour déterminer la durée de vie de votre presse à huile hydraulique et la constance de la qualité d'huile qu'elle produit.
+        </p>
+      </section>
+
+      <section id="maintenance-schedule" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Calendrier d'entretien</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {maintenanceSchedule.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <div class="flex items-center gap-3 mb-4">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${index === 0 ? 'bg-red-100 text-red-600' : index === 1 ? 'bg-orange-100 text-orange-600' : index === 2 ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+                </div>
+                <h3 class="font-semibold text-lg text-charcoal-900">{item.frequency}</h3>
+              </div>
+              <ul class="space-y-2">
+                {item.tasks.map((task, idx) => (
+                  <li key={idx} class="flex items-center gap-2 text-steel-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {task}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="hydraulic-system" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Entretien du système hydraulique</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {hydraulicSystem.map((item, index) => (
+            <div key={index} class="bg-blue-50 p-5 rounded-xl border border-blue-200">
+              <h3 class="font-semibold text-blue-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm" set:html={task}></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="electrical-system" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Entretien du système électrique</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {electricalSystem.map((item, index) => (
+            <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
+              <h3 class="font-semibold text-purple-800 mb-3">{item.title}</h3>
+              <ul class="space-y-2">
+                {item.items.map((task, idx) => (
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="safety-maintenance" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Entretien de sécurité</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-red-50 p-5 rounded-xl border border-red-200">
+            <h3 class="font-semibold text-red-800 mb-4">Systèmes d'urgence</h3>
+            <ul class="space-y-2">
+              <li class="text-steel-700">• Tester l'arrêt d'urgence mensuellement</li>
+              <li class="text-steel-700">• Assurer une réponse rapide</li>
+              <li class="text-steel-700">• Remplacer en cas de panne</li>
+            </ul>
+          </div>
+          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
+            <h3 class="font-semibold text-orange-800 mb-4">Procédures de verrouillage</h3>
+            <ol class="space-y-1 list-decimal list-inside text-steel-700 text-sm">
+              <li>Éteindre l'alimentation</li>
+              <li>Verrouiller l'interrupteur</li>
+              <li>Poser une étiquette "Ne pas opérer"</li>
+              <li>Vérifier que l'alimentation est coupée</li>
+              <li>Effectuer la maintenance</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="troubleshooting" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Guide de dépannage</h2>
+        <div class="space-y-6">
+          {troubleshooting.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <h3 class="font-semibold text-lg text-red-600 mb-3">{item.problem}</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Causes:</h4>
+                  <ul class="space-y-1">
+                    {item.causes.map((cause, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-steel-500 mb-2">Solutions:</h4>
+                  <ul class="space-y-1">
+                    {item.solutions.map((solution, idx) => (
+                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="spare-parts" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Inventaire de pièces de rechange</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Pièces essentielles</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {spareParts.map((item, index) => (
+            <div key={index} class="bg-white p-4 rounded-xl border border-steel-100 shadow-sm flex justify-between items-center">
+              <span class="text-charcoal-900 font-medium">{item.name}</span>
+              <span class={`px-2 py-1 rounded text-xs font-bold ${item.stock === 'Critical' ? 'bg-red-100 text-red-700' : item.stock === 'Wear' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'}`}>{item.stock}</span>
+            </div>
+          ))}
+        </div>
+        <div class="mt-6 bg-steel-50 p-4 rounded-xl">
+          <h4 class="font-semibold text-charcoal-900 mb-2">Niveaux de stock recommandés</h4>
+          <ul class="text-steel-700 text-sm space-y-1">
+            <li>• Pièces critiques: 1-2 en stock</li>
+            <li>• Pièces d'usure: 2-3 en stock</li>
+            <li>• Consommables: 3-6 mois d'approvisionnement</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">
+          L'entretien régulier de votre presse à huile hydraulique est la clé pour maximiser sa durée de vie et ses performances. Pour obtenir des conseils personnalisés ou commander des pièces de rechange, contactez l'équipe de support technique d'Haonuo.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À COMMENCER VOTRE PRODUCTION D'HUILE?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à sélectionner le meilleur équipement et à optimiser votre investissement pour des rendements maximaux.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.nav.products}
+        </a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
+          {t.resources.backToResources}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

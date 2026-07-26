@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    @apply bg-steel-50 text-charcoal-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-steel-900 text-steel-900 hover:bg-steel-900 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-display text-charcoal-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-steel-600 max-w-2xl;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: auto !important;
+  }
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RTL support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-slide .absolute.inset-0 {
+  background: linear-gradient(to left, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7), transparent);
+}
+
+[dir="rtl"] .prose-solution ul,
+[dir="rtl"] .prose-solution ol {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+[dir="rtl"] .prose-product ul,
+[dir="rtl"] .prose-product ol {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+[dir="rtl"] .prose-solution blockquote {
+  border-left: none;
+  border-right: 4px solid #f59e0b;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .prose-product blockquote {
+  border-left: none;
+  border-right: 4px solid #f59e0b;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .prose-solution thead th,
+[dir="rtl"] .prose-product thead th {
+  text-align: right;
+}
+
+[dir="rtl"] .timeline-content {
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .timeline-dot {
+  right: 0;
+  left: auto;
+}
+
+[dir="rtl"] .product-card {
+  text-align: right;
+}
+
+[dir="rtl"] .btn-primary svg,
+[dir="rtl"] .btn-outline svg {
+  order: -1;
+}
+
+[dir="rtl"] .breadcrumb svg {
+  transform: rotate(180deg);
+}
+
+/* RTL: Hero carousel arrows */
+[dir="rtl"] .hero-prev {
+  right: auto;
+  left: 1rem;
+}
+
+[dir="rtl"] .hero-next {
+  left: auto;
+  right: 1rem;
+}
+
+/* RTL: CTA arrow links */
+[dir="rtl"] .btn-primary svg,
+[dir="rtl"] .btn-outline svg,
+[dir="rtl"] a.inline-flex svg {
+  order: -1;
+}
+
+/* RTL: Flip horizontal arrows in CTA links */
+[dir="rtl"] a svg.arrow-right {
+  transform: rotate(180deg);
+}
+
+/* RTL: Details/summary chevron */
+[dir="rtl"] details summary svg {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* RTL: Form input alignment */
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea {
+  text-align: right;
+}
+
+/* RTL: Numbered lists */
+[dir="rtl"] ol {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+/* RTL: Arabic font optimization */
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3,
+[dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+  font-family: 'Bebas Neue', 'Noto Sans Arabic', sans-serif;
+}
+
+/* Prose styles for solution body content */
+.prose-solution {
+  @apply text-steel-700 leading-relaxed;
+}
+
+.prose-solution h2 {
+  @apply text-3xl md:text-4xl font-display text-charcoal-900 mt-12 mb-6;
+}
+
+.prose-solution h3 {
+  @apply text-2xl font-display text-charcoal-900 mt-8 mb-4;
+}
+
+.prose-solution p {
+  @apply mb-4 text-base leading-7;
+}
+
+.prose-solution ul,
+.prose-solution ol {
+  @apply mb-6 pl-6;
+}
+
+.prose-solution li {
+  @apply mb-2;
+}
+
+.prose-solution ul li {
+  @apply list-disc;
+}
+
+.prose-solution ol li {
+  @apply list-decimal;
+}
+
+.prose-solution table {
+  @apply w-full mb-6 border-collapse;
+}
+
+.prose-solution thead th {
+  @apply bg-steel-50 text-left px-4 py-3 font-semibold text-charcoal-900 border border-steel-200;
+}
+
+.prose-solution tbody td {
+  @apply px-4 py-3 border border-steel-200;
+}
+
+.prose-solution tbody tr:nth-child(even) {
+  @apply bg-steel-50/50;
+}
+
+.prose-solution strong {
+  @apply text-charcoal-900 font-semibold;
+}
+
+.prose-solution blockquote {
+  @apply border-l-4 border-amber-500 pl-4 italic text-steel-600 my-6;
+}
+
+/* Prose styles for product body content */
+.prose-product {
+  @apply text-steel-700 leading-relaxed;
+}
+
+.prose-product h2 {
+  @apply text-3xl md:text-4xl font-display text-charcoal-900 mt-12 mb-6;
+}
+
+.prose-product h3 {
+  @apply text-2xl font-display text-charcoal-900 mt-8 mb-4;
+}
+
+.prose-product p {
+  @apply mb-4 text-base leading-7;
+}
+
+.prose-product ul,
+.prose-product ol {
+  @apply mb-6 pl-6;
+}
+
+.prose-product li {
+  @apply mb-2;
+}
+
+.prose-product ul li {
+  @apply list-disc;
+}
+
+.prose-product ol li {
+  @apply list-decimal;
+}
+
+.prose-product table {
+  @apply w-full mb-6 border-collapse;
+}
+
+.prose-product thead th {
+  @apply bg-steel-50 text-left px-4 py-3 font-semibold text-charcoal-900 border border-steel-200;
+}
+
+.prose-product tbody td {
+  @apply px-4 py-3 border border-steel-200;
+}
+
+.prose-product tbody tr:nth-child(even) {
+  @apply bg-steel-50/50;
+}
+
+.prose-product strong {
+  @apply text-charcoal-900 font-semibold;
+}
+
+.prose-product blockquote {
+  @apply border-l-4 border-amber-500 pl-4 italic text-steel-600 my-6;
+}

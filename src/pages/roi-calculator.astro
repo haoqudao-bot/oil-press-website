@@ -1,0 +1,306 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslations } from '../i18n';
+
+const t = getTranslations('en');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.roi.breadcrumbHome, item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: t.roi.breadcrumbCurrent, item: 'https://www.hydoilpress.com/roi-calculator' },
+  ],
+};
+---
+
+<BaseLayout
+  title={t.roi.title}
+  description={t.roi.description}
+  keywords={['hydraulic oil press ROI calculator', 'oil press investment', 'oil press payback period', 'oil press profit calculator']}
+  jsonLd={[breadcrumbLd]}
+>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">{t.roi.breadcrumbHome}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900">{t.roi.breadcrumbCurrent}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-steel-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.roi.heroTitle}</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">{t.roi.heroDesc}</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <h3 class="font-display text-lg text-amber-800 mb-1">{t.roi.disclaimerTitle}</h3>
+            <p class="text-sm text-amber-700 leading-relaxed" set:html={t.roi.disclaimerText}></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-steel-100 p-8 md:p-10">
+        <div class="space-y-6">
+          <div>
+            <label for="machine-model" class="block font-display text-xl text-charcoal-900 mb-2">{t.roi.machineModel}</label>
+            <select id="machine-model" class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              <option value="HN325">{t.roi.modelHN325}</option>
+              <option value="HN355">{t.roi.modelHN355}</option>
+              <option value="HN426">{t.roi.modelHN426}</option>
+              <option value="HN480">{t.roi.modelHN480}</option>
+              <option value="HN500">{t.roi.modelHN500}</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="machine-price" class="block font-display text-xl text-charcoal-900 mb-2">{t.roi.machinePrice}</label>
+            <input
+              type="number"
+              id="machine-price"
+              min="0"
+              step="100"
+              placeholder={t.roi.machinePricePlaceholder}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1" set:html={t.roi.machinePriceNote}></p>
+          </div>
+
+          <div>
+            <label for="daily-hours" class="block font-display text-xl text-charcoal-900 mb-2">
+              {t.roi.dailyHours} <span id="hours-display" class="text-amber-500">8</span>
+            </label>
+            <input
+              type="range"
+              id="daily-hours"
+              min="1"
+              max="24"
+              value="8"
+              class="w-full h-2 bg-steel-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
+            />
+            <div class="flex justify-between text-xs text-steel-400 mt-1">
+              <span>{t.roi.hoursMin}</span>
+              <span>{t.roi.hoursMax}</span>
+            </div>
+          </div>
+
+          <div>
+            <label for="raw-material" class="block font-display text-xl text-charcoal-900 mb-2">{t.roi.rawMaterial}</label>
+            <select id="raw-material" class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              <option value="sesame">{t.roi.materialSesame}</option>
+              <option value="peanut">{t.roi.materialPeanut}</option>
+              <option value="coconut">{t.roi.materialCoconut}</option>
+              <option value="sunflower">{t.roi.materialSunflower}</option>
+              <option value="rapeseed">{t.roi.materialRapeseed}</option>
+            </select>
+            <p class="text-xs text-steel-400 mt-1">{t.roi.materialNote}</p>
+          </div>
+
+          <div>
+            <label for="material-cost" class="block font-display text-xl text-charcoal-900 mb-2">{t.roi.materialCost}</label>
+            <input
+              type="number"
+              id="material-cost"
+              min="0"
+              step="0.01"
+              placeholder={t.roi.materialCostPlaceholder}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1">{t.roi.materialCostNote}</p>
+          </div>
+
+          <div>
+            <label for="oil-price" class="block font-display text-xl text-charcoal-900 mb-2">{t.roi.oilPrice}</label>
+            <input
+              type="number"
+              id="oil-price"
+              min="0"
+              step="0.01"
+              placeholder={t.roi.oilPricePlaceholder}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1">{t.roi.oilPriceNote}</p>
+          </div>
+
+          <div>
+            <label for="daily-opcost" class="block font-display text-xl text-charcoal-900 mb-2">
+              {t.roi.dailyOpcost}
+            </label>
+            <input
+              type="number"
+              id="daily-opcost"
+              min="0"
+              step="1"
+              placeholder={t.roi.dailyOpcostPlaceholder}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1">{t.roi.dailyOpcostNote}</p>
+          </div>
+
+          <div class="bg-steel-50 rounded-xl p-4 border border-steel-200">
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input type="checkbox" id="acknowledge" class="mt-1 w-4 h-4 text-amber-500 border-steel-300 rounded focus:ring-amber-500" />
+              <span class="text-sm text-steel-600 leading-relaxed" set:html={t.roi.acknowledge}></span>
+            </label>
+          </div>
+
+          <button
+            id="calculate-btn"
+            disabled
+            class="btn-primary w-full justify-center text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {t.roi.calculateBtn}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+
+        <div id="results" class="hidden mt-10 pt-10 border-t border-steel-200">
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+            <p class="text-sm text-amber-800 leading-relaxed" set:html={t.roi.resultDisclaimer}></p>
+          </div>
+
+          <h2 class="font-display text-3xl text-charcoal-900 mb-6">{t.roi.resultsTitle}</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{t.roi.resultDailyOil}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-oil">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{t.roi.resultDailyRevenue}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-revenue">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{t.roi.resultDailyCost}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-cost">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{t.roi.resultDailyOpcost}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-daily-opcost">—</div>
+            </div>
+            <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200">
+              <div class="text-sm text-amber-700 mb-1">{t.roi.resultDailyProfit}</div>
+              <div class="font-display text-3xl text-amber-600" id="result-daily-profit">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{t.roi.resultMonthlyProfit}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-monthly-profit">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{t.roi.resultPayback}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-payback">—</div>
+            </div>
+            <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200">
+              <div class="text-sm text-amber-700 mb-1">{t.roi.resultRoi}</div>
+              <div class="font-display text-4xl text-amber-600" id="result-roi">—</div>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-steel-50 rounded-xl p-5 border border-steel-200">
+            <h4 class="font-display text-sm text-charcoal-900 mb-2">{t.roi.notesTitle}</h4>
+            <ul class="text-xs text-steel-500 space-y-1.5">
+              <li set:html={t.roi.note1}></li>
+              <li>{t.roi.note2}</li>
+              <li>{t.roi.note3}</li>
+              <li>{t.roi.note4}</li>
+              <li>{t.roi.note5}</li>
+              <li>{t.roi.note6}</li>
+              <li set:html={t.roi.note7}></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 p-8 bg-steel-900 rounded-2xl text-center">
+        <h3 class="font-display text-3xl text-white mb-3">{t.roi.ctaTitle}</h3>
+        <p class="text-steel-300 mb-6">{t.roi.ctaDesc}</p>
+        <a href="/contact" class="btn-primary text-lg">
+          {t.roi.ctaBtn}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const machineData: Record<string, { capacity: number; cycleMinutes: number }> = {
+    HN325: { capacity: 100, cycleMinutes: 35 },
+    HN355: { capacity: 100, cycleMinutes: 35 },
+    HN426: { capacity: 100, cycleMinutes: 35 },
+    HN480: { capacity: 100, cycleMinutes: 35 },
+    HN500: { capacity: 100, cycleMinutes: 35 },
+  };
+
+  const oilContent: Record<string, number> = {
+    sesame: 0.48,
+    peanut: 0.45,
+    coconut: 0.60,
+    sunflower: 0.40,
+    rapeseed: 0.38,
+  };
+
+  const utilizationRate = 0.75;
+
+  const hoursSlider = document.getElementById('daily-hours') as HTMLInputElement;
+  const hoursDisplay = document.getElementById('hours-display')!;
+  const ackCheckbox = document.getElementById('acknowledge') as HTMLInputElement;
+  const calcBtn = document.getElementById('calculate-btn') as HTMLButtonElement;
+
+  hoursSlider.addEventListener('input', () => {
+    hoursDisplay.textContent = hoursSlider.value;
+  });
+
+  ackCheckbox.addEventListener('change', () => {
+    calcBtn.disabled = !ackCheckbox.checked;
+  });
+
+  calcBtn.addEventListener('click', () => {
+    if (!ackCheckbox.checked) return;
+
+    const model = (document.getElementById('machine-model') as HTMLSelectElement).value;
+    const machinePrice = parseFloat((document.getElementById('machine-price') as HTMLInputElement).value) || 0;
+    const hours = parseFloat(hoursSlider.value);
+    const material = (document.getElementById('raw-material') as HTMLSelectElement).value;
+    const materialCost = parseFloat((document.getElementById('material-cost') as HTMLInputElement).value) || 0;
+    const oilPrice = parseFloat((document.getElementById('oil-price') as HTMLInputElement).value) || 0;
+    const dailyOpcost = parseFloat((document.getElementById('daily-opcost') as HTMLInputElement).value) || 0;
+
+    const machine = machineData[model];
+    const yieldPct = oilContent[material];
+
+    const batchesPerHour = 60 / machine.cycleMinutes;
+    const effectiveBatchesPerHour = batchesPerHour * utilizationRate;
+    const dailyBatches = effectiveBatchesPerHour * hours;
+    const dailyRawMaterial = machine.capacity * dailyBatches;
+    const dailyOil = dailyRawMaterial * yieldPct;
+    const dailyRevenue = dailyOil * oilPrice;
+    const dailyMaterialCost = dailyRawMaterial * materialCost;
+    const dailyProfit = dailyRevenue - dailyMaterialCost - dailyOpcost;
+    const monthlyProfit = dailyProfit * 25;
+    const paybackMonths = dailyProfit > 0 ? machinePrice / monthlyProfit : Infinity;
+    const annualProfit = monthlyProfit * 12;
+    const annualROI = machinePrice > 0 ? (annualProfit / machinePrice) * 100 : 0;
+
+    const fmt = (n: number) => n >= 1000 ? `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : `$${n.toFixed(2)}`;
+
+    document.getElementById('result-daily-oil')!.textContent = `${dailyOil.toFixed(1)} kg`;
+    document.getElementById('result-daily-revenue')!.textContent = fmt(dailyRevenue);
+    document.getElementById('result-daily-cost')!.textContent = fmt(dailyMaterialCost);
+    document.getElementById('result-daily-opcost')!.textContent = fmt(dailyOpcost);
+    document.getElementById('result-daily-profit')!.textContent = fmt(dailyProfit);
+    document.getElementById('result-monthly-profit')!.textContent = fmt(monthlyProfit);
+    document.getElementById('result-payback')!.textContent = paybackMonths === Infinity ? 'N/A' : `${paybackMonths.toFixed(1)} months`;
+    document.getElementById('result-roi')!.textContent = `${annualROI.toFixed(1)}%`;
+
+    document.getElementById('results')!.classList.remove('hidden');
+  });
+</script>
