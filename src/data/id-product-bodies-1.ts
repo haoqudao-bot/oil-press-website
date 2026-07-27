@@ -1,4 +1,4 @@
-﻿﻿﻿// Indonesian product body content - Part 1 (products 1-8)
+﻿﻿﻿﻿﻿// Indonesian product body content - Part 1 (products 1-8)
 export const idProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## Ringkasan
 

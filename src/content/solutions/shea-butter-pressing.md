@@ -1,4 +1,4 @@
-﻿---
+﻿﻿---
 title:
   en: Shea Butter Pressing Solution
   fr: Solution de Pressage du Beurre de Karité

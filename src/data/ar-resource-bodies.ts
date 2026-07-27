@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿// Arabic resource body content for [locale]/resources/[slug].astro
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿// Arabic resource body content for [locale]/resources/[slug].astro
 export const arResourceBodies: Record<string, string> = {
   'which-seeds-can-be-pressed': `# ما هي البذور التي يمكنك عصرها في معصرة زيت؟ دليل شامل
 

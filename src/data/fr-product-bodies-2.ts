@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Aperçu
 
 La HN480B Presse à Froid Ultra Haute Pression est notre presse à huile hydraulique à froid la plus avancée, délivrant une force de pressage massive de 600 tonnes avec une pression du système de 65 Mpa et une pression superficielle du gâteau de 48 Mpa/cm². Spécialement optimisée pour le pressage des noix avec une solution complète de pressage des noix, elle réduit considérablement le temps de pressage tout en maximisant le rendement en huile. Il s'agit de la force de pressage à froid la plus élevée de notre gamme, conçue spécifiquement pour les producteurs qui exigent le summum en matière de performance de pressage à froid.

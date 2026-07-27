@@ -1,4 +1,4 @@
-﻿﻿﻿export const frProductBodies1: Record<string, string> = {
+﻿﻿﻿﻿﻿export const frProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## Aperçu
 
 La HN325 Presse à Huile Hydraulique Standard est notre presse à huile hydraulique la plus populaire, adoptée par les producteurs d'huile du monde entier pour son excellent rapport qualité-prix et ses performances fiables. En tant que modèle standard à course allongée de notre gamme, elle dispose d'une course de cylindre de 850 mm qui presse jusqu'au fond, traitant facilement des lots de 5 à 100 kg. Que vous soyez un producteur à petite échelle ou que vous dirigiez une opération de taille moyenne, la HN325 offre des résultats d'extraction d'huile constants sur une large gamme de matières.

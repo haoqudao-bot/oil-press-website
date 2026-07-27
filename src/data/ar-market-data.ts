@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿// Arabic market page data for [locale]/markets/[market].astro
+﻿﻿﻿﻿﻿﻿﻿// Arabic market page data for [locale]/markets/[market].astro
 // All translations for the 11 market sub-pages (translated from French)
 
 import type { MarketData } from './fr-market-data';
