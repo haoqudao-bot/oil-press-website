@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -114,7 +114,7 @@ const whatToExpect = [
         <div class="lg:col-span-2">
           <div class="bg-white rounded-2xl p-6 md:p-8 border border-steel-100 shadow-sm">
             <h2 class="font-display text-2xl text-charcoal-900 mb-6">{t.contact.sendInquiry}</h2>
-            <form id="contact-form" action="https://formspree.io/f/mbdqajz" method="POST" class="space-y-5">
+            <form id="contact-form" action="https://formspree.io/f/mbdnqajz" method="POST" class="space-y-5">
               <input type="hidden" name="_subject" value={(t as any).contact?.formSubject || 'Haonuo Website Inquiry'} />
               <input type="text" name="_gotcha" style="display:none" />
               <input type="hidden" name="_next" value={`${Astro.url.origin}/${currentLocale}/contact?success=true`} />
