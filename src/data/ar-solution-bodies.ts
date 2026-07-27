@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿// Arabic solution body content for [locale]/solutions/[slug].astro
+﻿﻿﻿﻿﻿﻿﻿// Arabic solution body content for [locale]/solutions/[slug].astro
 export const arSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## نظرة عامة
 

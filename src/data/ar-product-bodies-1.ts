@@ -1,4 +1,4 @@
-﻿﻿﻿// Arabic product body content - Part 1 (products 1-8)
+﻿﻿﻿﻿﻿// Arabic product body content - Part 1 (products 1-8)
 export const arProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## نظرة عامة
 

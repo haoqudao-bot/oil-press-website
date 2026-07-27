@@ -1,4 +1,4 @@
-﻿﻿﻿export const frSolutionBodies: Record<string, string> = {
+﻿﻿﻿﻿﻿export const frSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Aperçu
 
 L'huile d'amande est l'une des huiles de spécialité les plus précieuses au monde, se vendant à des prix premium sur les marchés des cosmétiques et des aliments de santé. Une **machine de pressage d'huile d'amande** de qualité est essentielle pour les producteurs qui souhaitent extraire cette huile de grande valeur tout en préservant les vitamines, les acides gras et le délicat arôme naturel qui justifient les prix premium.

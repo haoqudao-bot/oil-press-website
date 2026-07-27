@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 2 (products 9-16)
+﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 2 (products 9-16)
 export const idProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Ringkasan
 

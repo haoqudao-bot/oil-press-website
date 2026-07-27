@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿// Arabic product body content - Part 3 (products 17-24)
+﻿﻿﻿﻿﻿﻿﻿// Arabic product body content - Part 3 (products 17-24)
 export const arProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## نظرة عامة
 

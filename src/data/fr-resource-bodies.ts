@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿export const frResourceBodies: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frResourceBodies: Record<string, string> = {
   'which-seeds-can-be-pressed': `# Quelles graines pouvez-vous presser dans une presse à huile ? Guide complet
 
 L'une des questions les plus fréquentes des nouveaux propriétaires de presse à huile est : « Que puis-je réellement presser dans cette machine ? » La réponse est étonnamment large — une presse à huile bien conçue peut extraire l'huile de dizaines de graines, noix et amandes différentes. Cependant, toutes les graines ne sont pas également faciles à presser, et certaines nécessitent une préparation ou un équipement spécial. Ce guide complet couvre toutes les graines pressables que vous êtes susceptible de rencontrer, ainsi que des conseils pratiques sur les graines avec lesquelles commencer et celles à éviter.

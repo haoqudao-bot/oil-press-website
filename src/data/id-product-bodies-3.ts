@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿// Indonesian product body content - Part 3 (products 17-24)
+﻿﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 3 (products 17-24)
 export const idProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Ringkasan
 

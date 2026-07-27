@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿// Indonesian resource body content for [locale]/resources/[slug].astro
+﻿﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian resource body content for [locale]/resources/[slug].astro
 export const idResourceBodies: Record<string, string> = {
   'which-seeds-can-be-pressed': `# Biji Apa yang Dapat Anda Press di Mesin Press Minyak? Panduan Lengkap
 

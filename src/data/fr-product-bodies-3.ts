@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Aperçu
 
 L'Unité Intégrée d'Alimentation, de Broyage et de Torréfaction est une unité de traitement tout-en-un qui combine l'alimentation automatique, le broyage et la torréfaction en un seul groupe de machines — éliminant le besoin de transfert de matériaux entre des équipements séparés. Conçue pour les opérations de pressage d'huile de petite à moyenne taille, ce système intégré rationalise votre ligne de production, de l'entrée des graines brutes à la sortie prête à torréfier, en un flux continu.

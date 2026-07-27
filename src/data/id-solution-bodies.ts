@@ -1,4 +1,4 @@
-﻿﻿﻿// Indonesian solution body content for [locale]/solutions/[slug].astro
+﻿﻿﻿﻿﻿// Indonesian solution body content for [locale]/solutions/[slug].astro
 export const idSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Ringkasan
 

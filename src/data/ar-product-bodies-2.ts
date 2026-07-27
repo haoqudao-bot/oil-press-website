@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿// Arabic product body content - Part 2 (products 9-16)
+﻿﻿﻿﻿﻿﻿﻿﻿// Arabic product body content - Part 2 (products 9-16)
 export const arProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## نظرة عامة
 
