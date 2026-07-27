@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'cold-press-vs-hot-press-oil');
+const t = getTranslations('en');
+
+const title = resource?.data.title.en || 'Cold Press vs Hot Press Oil';
+const description = resource?.data.description.en || 'Which is right for you?';
+const seoKeywords = resource?.data.seoKeywords || ['cold press vs hot press oil', 'cold pressed oil benefits', 'hot pressed oil'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/cold-vs-hot-press-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Oil Processing Specialist', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/cold-press-vs-hot-press-oil' },
+  ],
+};
+
+const comparisonData = [
+  {
+    name: 'Cold Pressed Oil',
+    color: 'blue',
+    temp: 'Room temperature (< 60°C)',
+    pros: ['Retains natural nutrients (vitamins, antioxidants)', 'Preserves original flavor and aroma', 'Higher market value (20-50% premium)', 'Labeled as "raw" or "virgin"', 'Health-conscious consumer preference', 'No thermal degradation'],
+    cons: ['Lower yield (5-15% less)', 'Higher moisture content', 'Shorter shelf life (3-6 months)', 'More expensive to produce', 'May contain more sediment'],
+    bestFor: ['Premium specialty oils', 'Health food market', 'Cosmetic and pharmaceutical use', 'Gourmet and artisan products']
+  },
+  {
+    name: 'Hot Pressed Oil',
+    color: 'amber',
+    temp: 'Heated (120-200°C)',
+    pros: ['Higher yield (5-15% more)', 'Lower moisture content', 'Longer shelf life (12-24 months)', 'Lower production cost', 'Better for bulk cooking oil', 'Kills bacteria and mold spores'],
+    cons: ['Loss of heat-sensitive nutrients', 'Altered flavor profile', 'May contain trans fats', 'Lower market value', 'Not suitable for cosmetic/pharmaceutical use'],
+    bestFor: ['Everyday cooking oil', 'Large-scale production', 'Institutional food service', 'Industrial applications']
+  },
+];
+
+const nutritionComparison = [
+  { nutrient: 'Vitamin E', cold: 'High (preserved)', hot: 'Low (partially destroyed)' },
+  { nutrient: 'Phytosterols', cold: 'High', hot: 'Reduced' },
+  { nutrient: 'Antioxidants', cold: 'High', hot: 'Reduced' },
+  { nutrient: 'Omega-3', cold: 'Preserved', hot: 'Partially destroyed' },
+  { nutrient: 'Flavor Compounds', cold: 'Full, original', hot: 'Altered, nutty' },
+  { nutrient: 'Color', cold: 'Light, natural', hot: 'Darker, toasted' },
+];
+
+const yieldComparison = [
+  { material: 'Sesame', coldYield: '42-48%', hotYield: '48-54%', difference: '+6%' },
+  { material: 'Peanut', coldYield: '38-42%', hotYield: '45-50%', difference: '+7%' },
+  { material: 'Rapeseed', coldYield: '32-36%', hotYield: '38-42%', difference: '+6%' },
+  { material: 'Walnut', coldYield: '45-50%', hotYield: 'Not recommended', difference: 'N/A' },
+  { material: 'Almond', coldYield: '42-48%', hotYield: 'Not recommended', difference: 'N/A' },
+];
+
+const marketComparison = [
+  { market: 'Supermarket Premium', cold: '$15-30/L', hot: '$5-10/L', premium: '200-300%' },
+  { market: 'Wholesale', cold: '$8-15/L', hot: '$3-6/L', premium: '150-200%' },
+  { market: 'Cosmetic', cold: '$20-50/L', hot: 'Not used', premium: '100%+' },
+  { market: 'Pharmaceutical', cold: '$30-80/L', hot: 'Not used', premium: '100%+' },
+];
+
+const equipment = [
+  { type: 'Cold Press Equipment', machines: 'HN426 (cold press designed)', features: 'No heating element, precision pressure control, temperature monitoring' },
+  { type: 'Hot Press Equipment', machines: 'HN325, HN355, HN480', features: 'Built-in roaster, temperature control system, faster operation' },
+];
+
+const decisionGuide = [
+  { question: 'What is your target market?', answer: 'Premium/Health → Cold Press | Mass market → Hot Press' },
+  { question: 'What is your main priority?', answer: 'Quality over quantity → Cold Press | Yield over quality → Hot Press' },
+  { question: 'What is your production scale?', answer: 'Small scale → Cold Press (higher value) | Large scale → Hot Press (higher volume)' },
+  { question: 'What is your storage capability?', answer: 'Limited storage → Hot Press (longer shelf life) | Adequate storage → Cold Press' },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">COMPARISON GUIDE</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Oil Processing Specialist · 15+ Years Experience</div>
+          </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">The choice between cold and hot pressing is one of the most important decisions for oil producers. Both methods produce quality oil, but they serve different markets and purposes.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Cold pressed oil typically commands a 20-50% premium over hot pressed oil in the marketplace. Understanding the trade-offs is key to choosing the right strategy for your business.</p>
+        </div>
+      </section>
+
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Cold Press vs Hot Press</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {comparisonData.map((item, index) => (
+            <div key={index} class={`bg-white rounded-2xl border-2 overflow-hidden shadow-lg ${item.color === 'blue' ? 'border-blue-400' : 'border-amber-400'}`}>
+              <div class={`p-5 ${item.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-display text-xl text-white">{item.name}</h3>
+                <p class="text-white/80 text-sm mt-1">Temperature: {item.temp}</p>
+              </div>
+              <div class="p-5 space-y-4">
+                <div>
+                  <h4 class="font-semibold text-green-700 mb-2 text-sm">Advantages</h4>
+                  <ul class="space-y-1">
+                    {item.pros.map((pro, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-green-500">+</span>{pro}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-red-700 mb-2 text-sm">Disadvantages</h4>
+                  <ul class="space-y-1">
+                    {item.cons.map((con, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-red-500">-</span>{con}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 mb-2 text-sm">Best For</h4>
+                  <div class="flex flex-wrap gap-1">
+                    {item.bestFor.map((b, idx) => <span key={idx} class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">{b}</span>)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="nutrition" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Nutritional Comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead>
+              <tr class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+                <th class="px-4 py-3 text-left font-semibold">Nutrient/Property</th>
+                <th class="px-4 py-3 text-left font-semibold">Cold Pressed</th>
+                <th class="px-4 py-3 text-left font-semibold">Hot Pressed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {nutritionComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.nutrient}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.cold}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hot}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="yield" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Yield Comparison</h2>
+        <p class="text-steel-700 mb-6">Typical yield rates for different materials:</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Material</th><th class="px-4 py-3 text-left font-semibold">Cold Press Yield</th><th class="px-4 py-3 text-left font-semibold">Hot Press Yield</th><th class="px-4 py-3 text-left font-semibold">Hot Advantage</th></tr>
+            </thead>
+            <tbody>
+              {yieldComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.coldYield}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hotYield}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.difference}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="market" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Market Price Comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Market</th><th class="px-4 py-3 text-left font-semibold">Cold Press Price</th><th class="px-4 py-3 text-left font-semibold">Hot Press Price</th><th class="px-4 py-3 text-left font-semibold">Premium</th></tr>
+            </thead>
+            <tbody>
+              {marketComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.market}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.cold}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hot}</td>
+                  <td class="px-4 py-3 text-green-600 font-bold">{item.premium}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="equipment" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Equipment for Each Method</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {equipment.map((item, index) => (
+            <div key={index} class={`bg-white rounded-xl border border-steel-100 overflow-hidden shadow-md`}>
+              <div class={`p-4 ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-semibold text-white">{item.type}</h3>
+              </div>
+              <div class="p-5 space-y-2">
+                <p class="text-sm"><span class="text-steel-500">Recommended:</span> <span class="font-semibold text-charcoal-900">{item.machines}</span></p>
+                <p class="text-sm text-steel-600">{item.features}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="decision" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">How to Choose</h2>
+        <div class="bg-gradient-to-br from-steel-50 to-steel-100 p-6 rounded-xl border border-steel-200">
+          <div class="space-y-4">
+            {decisionGuide.map((item, index) => (
+              <div key={index} class="bg-white p-4 rounded-lg border border-steel-100">
+                <p class="font-semibold text-charcoal-900 mb-2">Q: {item.question}</p>
+                <p class="text-steel-600">A: {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">Both cold and hot pressing have their place in the oil industry. Cold pressing commands higher prices but has lower yields. Hot pressing offers higher yields but at lower prices. The right choice depends on your target market, production scale, and business goals. For most small to medium producers targeting premium markets, cold pressing is the more profitable choice.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">WHICH METHOD IS RIGHT FOR YOU?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Our engineers can help you determine the best pressing method and equipment for your specific business goals.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Get Expert Advice<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/products" class="btn-outline border-white text-white hover:bg-white/10">View Equipment</a>
+        <a href="/resources" class="btn-outline border-white text-white hover:bg-white/10">Back to Resources</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

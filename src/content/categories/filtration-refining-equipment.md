@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 name:
   en: Filtration & Refining Equipment
   fr: Équipement de Filtration et de Raffinage

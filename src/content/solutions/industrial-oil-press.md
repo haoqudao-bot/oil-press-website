@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Industrial Oil Press Solution
   fr: Solution de Pressage d'Huile Industrielle

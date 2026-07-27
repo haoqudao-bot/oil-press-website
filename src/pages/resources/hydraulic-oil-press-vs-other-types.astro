@@ -1,0 +1,286 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'hydraulic-oil-press-vs-other-types');
+const t = getTranslations('en');
+
+const title = resource?.data.title.en || 'Hydraulic Oil Press vs Other Types';
+const description = resource?.data.description.en || 'Choose the right press for your needs';
+const seoKeywords = resource?.data.seoKeywords || ['hydraulic oil press vs screw press', 'oil press comparison', 'which oil press to choose'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/oil-press-comparison-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Oil Press Technical Engineer', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/hydraulic-oil-press-vs-other-types' },
+  ],
+};
+
+const comparisonData = [
+  {
+    name: 'Hydraulic Oil Press',
+    color: 'amber',
+    pros: ['High pressure (up to 60MPa)', 'Suitable for high oil content seeds', 'Gentle pressing = better quality', 'Low noise, low vibration', 'Long service life (15-20 years)', 'Less maintenance required', 'Can press without heating (cold pressing)', 'Smaller footprint', 'Batch operation - flexible'],
+    cons: ['Lower continuous output', 'Higher initial cost', 'Requires more operator attention'],
+    best: ['Small to medium scale production', 'Premium oil (virgin, cold-pressed)', 'High-value specialty oils', 'Artisan and boutique producers']
+  },
+  {
+    name: 'Screw Oil Press',
+    color: 'blue',
+    pros: ['Continuous operation', 'High throughput', 'Lower price', 'Good for large scale', 'Can handle various materials'],
+    cons: ['Lower pressure (20-30MPa)', 'Heating often required', 'Higher noise', 'Wear parts need replacement', 'Not ideal for cold pressing', 'Quality can be lower'],
+    best: ['Large scale commercial production', 'Standard cooking oil', 'Animal feed production', 'Bulk oil processing']
+  },
+  {
+    name: 'Ram Press',
+    color: 'green',
+    pros: ['Traditional method', 'Simple construction', 'Very high pressure possible', 'Good for small scale'],
+    cons: ['Very labor intensive', 'Low production rate', 'Manual operation required', 'Limited capacity'],
+    best: ['Artisanal production', 'Very small batches', 'Traditional methods', 'Remote areas without power']
+  },
+];
+
+const specsTable = [
+  { feature: 'Pressure', hydraulic: '40-60 MPa', screw: '20-30 MPa', ram: '30-50 MPa' },
+  { feature: 'Operation', hydraulic: 'Batch (semi-auto)', screw: 'Continuous', ram: 'Manual batch' },
+  { feature: 'Daily Output', hydraulic: '5-50 kg', screw: '100-1000 kg', ram: '2-10 kg' },
+  { feature: 'Oil Quality', hydraulic: 'Excellent (virgin)', screw: 'Good', ram: 'Very good' },
+  { feature: 'Cold Pressing', hydraulic: 'Yes', screw: 'Limited', ram: 'Yes' },
+  { feature: 'Maintenance', hydraulic: 'Low', screw: 'High (screw wear)', ram: 'Very low' },
+  { feature: 'Lifespan', hydraulic: '15-20 years', screw: '5-10 years', ram: '20+ years' },
+  { feature: 'Power Consumption', hydraulic: '2-3 kW', screw: '5-15 kW', ram: 'Manual/1 kW' },
+  { feature: 'Price Range', hydraulic: '$3000-$20000', screw: '$2000-$15000', ram: '$500-$3000' },
+];
+
+const decisionFramework = [
+  { question: 'What is your daily production target?', hydraulic: '5-50 kg/day', screw: '100-1000 kg/day', ram: '2-10 kg/day' },
+  { question: 'What oil quality do you need?', hydraulic: 'Premium virgin/cold-pressed', screw: 'Standard cooking oil', ram: 'Traditional handmade' },
+  { question: 'What is your budget?', hydraulic: '$3000-$20000', screw: '$2000-$15000', ram: '$500-$3000' },
+  { question: 'Do you need continuous operation?', hydraulic: 'No (batch)', screw: 'Yes', ram: 'No' },
+];
+
+const myths = [
+  { myth: 'Hydraulic presses are only for small scale', fact: 'False - modern hydraulic presses can handle up to 50 kg per hour' },
+  { myth: 'Screw presses always produce more oil', fact: 'False - hydraulic presses can achieve higher yields with certain materials' },
+  { myth: 'Cold pressing always gives less oil', fact: 'False - with proper pre-treatment, cold yield can be 42-50%' },
+  { myth: 'Hydraulic presses require more maintenance', fact: 'False - hydraulic presses have fewer wearing parts' },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">COMPARISON GUIDE</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Oil Press Technical Engineer · 15+ Years Experience</div>
+          </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">When choosing an oil press, understanding the differences between hydraulic, screw, and ram presses is crucial. Each type has its own advantages and is suited to different production needs.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>There is no one "best" oil press - only the best press for your specific needs. This guide will help you understand the key differences and make an informed decision.</p>
+        </div>
+      </section>
+
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Detailed Comparison</h2>
+        <div class="space-y-6">
+          {comparisonData.map((item, index) => (
+            <div key={index} class="bg-white rounded-2xl border-2 overflow-hidden shadow-lg" style={item.color === 'amber' ? 'border-color: #f59e0b' : item.color === 'blue' ? 'border-color: #3b82f6' : 'border-color: #10b981'}>
+              <div class={`p-5 ${item.color === 'amber' ? 'bg-gradient-to-r from-amber-500 to-orange-500' : item.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-green-500 to-emerald-500'}`}>
+                <h3 class="font-display text-xl text-white">{item.name}</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                <div class="p-5 bg-green-50 border-r border-steel-100">
+                  <h4 class="font-semibold text-green-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Advantages
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.pros.map((pro, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                        <span class="text-green-500 mt-0.5">+</span>
+                        {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="p-5 bg-red-50 border-r border-steel-100">
+                  <h4 class="font-semibold text-red-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    Disadvantages
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.cons.map((con, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                        <span class="text-red-500 mt-0.5">-</span>
+                        {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="p-5 bg-blue-50">
+                  <h4 class="font-semibold text-blue-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Best For
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.best.map((b, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="specs" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Technical Specifications Comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead>
+              <tr class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+                <th class="px-4 py-3 text-left font-semibold">Feature</th>
+                <th class="px-4 py-3 text-left font-semibold">Hydraulic</th>
+                <th class="px-4 py-3 text-left font-semibold">Screw</th>
+                <th class="px-4 py-3 text-left font-semibold">Ram</th>
+              </tr>
+            </thead>
+            <tbody>
+              {specsTable.map((row, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{row.feature}</td>
+                  <td class="px-4 py-3 text-amber-600">{row.hydraulic}</td>
+                  <td class="px-4 py-3 text-blue-600">{row.screw}</td>
+                  <td class="px-4 py-3 text-green-600">{row.ram}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="decision" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Decision Framework</h2>
+        <p class="text-steel-700 mb-6">Answer these key questions to determine the best oil press type for your needs:</p>
+        <div class="space-y-4">
+          {decisionFramework.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 shadow-sm overflow-hidden">
+              <div class="bg-steel-50 p-4">
+                <h3 class="font-semibold text-charcoal-900 flex items-center gap-2">
+                  <span class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center text-sm font-bold">{index + 1}</span>
+                  {item.question}
+                </h3>
+              </div>
+              <div class="grid grid-cols-3 gap-0">
+                <div class="p-4 bg-amber-50 border-r border-steel-100">
+                  <p class="text-xs text-steel-500 mb-1">Hydraulic</p>
+                  <p class="text-amber-700 font-medium text-sm">{item.hydraulic}</p>
+                </div>
+                <div class="p-4 bg-blue-50 border-r border-steel-100">
+                  <p class="text-xs text-steel-500 mb-1">Screw</p>
+                  <p class="text-blue-700 font-medium text-sm">{item.screw}</p>
+                </div>
+                <div class="p-4 bg-green-50">
+                  <p class="text-xs text-steel-500 mb-1">Ram</p>
+                  <p class="text-green-700 font-medium text-sm">{item.ram}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="myths" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Common Myths Debunked</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {myths.map((item, index) => (
+            <div key={index} class="bg-gradient-to-r from-purple-50 to-pink-50 p-5 rounded-xl border border-purple-100">
+              <div class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div>
+                  <p class="font-semibold text-charcoal-900 mb-1">Myth: {item.myth}</p>
+                  <p class="text-steel-700 text-sm">Fact: {item.fact}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">For small to medium scale production, premium oil quality, and cold pressing capabilities, a hydraulic oil press is the superior choice. For personalized recommendations, contact our technical team.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">STILL UNDECIDED?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Our engineers can help you choose the perfect oil press for your specific production requirements and budget.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Get Expert Advice<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/products" class="btn-outline border-white text-white hover:bg-white/10">View Hydraulic Presses</a>
+        <a href="/resources" class="btn-outline border-white text-white hover:bg-white/10">Back to Resources</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

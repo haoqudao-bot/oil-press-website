@@ -1,4 +1,4 @@
-﻿﻿---
+---
 title:
   en: Complete Oil Production Line Guide
   fr: Guide complet de ligne de production d'huile

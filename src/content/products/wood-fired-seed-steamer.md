@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Wood-Fired Seed Steamer
   fr: Cuisseur Vapeur à Bois pour Graines

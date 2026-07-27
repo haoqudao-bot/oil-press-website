@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Heavy Duty Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Lourde

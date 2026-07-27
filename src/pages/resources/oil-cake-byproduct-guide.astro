@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'oil-cake-byproduct-guide');
+const t = getTranslations('en');
+
+const title = resource?.data.title.en || 'Oil Cake Byproduct Guide';
+const description = resource?.data.description.en || 'Profit from your oil press byproducts';
+const seoKeywords = resource?.data.seoKeywords || ['oil cake', 'byproduct utilization', 'oil cake uses', 'animal feed', 'fertilizer'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/oil-cake-guide-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Oil Press Engineer', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/oil-cake-byproduct-guide' },
+  ],
+};
+
+const oilCakeTypes = [
+  { name: 'Sesame Cake', protein: '50-55%', fat: '8-10%', fiber: '10-12%', uses: ['Animal feed', 'Fertilizer', 'Soil amendment'] },
+  { name: 'Peanut Cake', protein: '45-50%', fat: '8-12%', fiber: '12-15%', uses: ['Animal feed', 'Aquaculture feed', 'Fertilizer'] },
+  { name: 'Rapeseed Cake', protein: '38-42%', fat: '8-10%', fiber: '15-18%', uses: ['Animal feed', 'Fertilizer', 'Industrial protein source'] },
+  { name: 'Walnut Cake', protein: '35-40%', fat: '10-12%', fiber: '20-25%', uses: ['Fertilizer', 'Soil amendment', 'Cottage industry products'] },
+  { name: 'Soybean Cake', protein: '42-46%', fat: '8-10%', fiber: '12-15%', uses: ['Animal feed', 'Aquaculture feed', 'Food ingredient'] },
+];
+
+const marketValue = [
+  { type: 'Raw Cake (Ground)', price: 'Local market rate' },
+  { type: 'Pelleted Cake', price: '1.5x raw cake price' },
+  { type: 'Dried Cake', price: '1.2x raw cake price' },
+];
+
+const processingSteps = [
+  { title: 'Collection', desc: 'Collect cake from oil press after each batch. Remove any stones or debris.' },
+  { title: 'Grinding', desc: 'Use a hammer mill to grind cake to desired particle size (2-5mm for most applications).' },
+  { title: 'Drying', desc: 'Reduce moisture content to < 10% to prevent mold growth during storage.' },
+  { title: 'Pelletizing (optional)', desc: 'For higher-value animal feed markets, compress into pellets.' },
+  { title: 'Storage', desc: 'Store in dry, well-ventilated area. Use moisture-proof bags for bulk storage.' },
+];
+
+const animalFeedUses = [
+  { animal: 'Cattle', inclusion: 'Up to 20% of feed' },
+  { animal: 'Poultry', inclusion: 'Up to 15% of feed' },
+  { animal: 'Pigs', inclusion: 'Up to 10% of feed' },
+  { animal: 'Aquaculture', inclusion: 'Up to 25% of feed' },
+];
+
+const fertilizerUses = [
+  { use: 'Direct application', desc: 'Spread as soil amendment' },
+  { use: 'Composting', desc: 'Mix with other organic materials' },
+  { use: 'Fertilizer blending', desc: 'Mix with mineral fertilizers' },
+];
+
+const storageConditions = [
+  { icon: 'thermometer', label: 'Temperature', value: '< 25°C' },
+  { icon: 'cloud', label: 'Humidity', value: '< 70% RH' },
+  { icon: 'time', label: 'Moisture', value: '< 12%' },
+  { icon: 'shield', label: 'Shelf life', value: '3-6 months' },
+];
+
+const safetyTips = [
+  'Wear protective clothing when handling cake dust',
+  'Ensure proper ventilation in storage areas',
+  'Regularly inspect for mold and pests',
+  'Follow local agricultural regulations for feed materials',
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">BYPRODUCT GUIDE</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+          </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Oil cake is the solid byproduct remaining after oil extraction from seeds and nuts. While often overlooked, this material can be a significant additional revenue stream for oil producers.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>On average, for every 100kg of seeds processed, you'll get 40-55kg of oil cake. Proper utilization can increase your overall profitability by 10-30%.</p>
+        </div>
+      </section>
+
+      <section id="types" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Types of Oil Cake</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {oilCakeTypes.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="bg-gradient-to-r from-amber-500 to-orange-500 p-4">
+                <h3 class="font-display text-lg text-white">{item.name}</h3>
+              </div>
+              <div class="p-5">
+                <div class="grid grid-cols-3 gap-3 mb-4">
+                  <div class="bg-green-50 p-2 rounded-lg text-center">
+                    <p class="text-xs text-steel-500">Protein</p>
+                    <p class="font-bold text-green-600 text-sm">{item.protein}</p>
+                  </div>
+                  <div class="bg-blue-50 p-2 rounded-lg text-center">
+                    <p class="text-xs text-steel-500">Fat</p>
+                    <p class="font-bold text-blue-600 text-sm">{item.fat}</p>
+                  </div>
+                  <div class="bg-orange-50 p-2 rounded-lg text-center">
+                    <p class="text-xs text-steel-500">Fiber</p>
+                    <p class="font-bold text-orange-600 text-sm">{item.fiber}</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  {item.uses.map((use, idx) => (
+                    <span key={idx} class="bg-steel-100 text-steel-700 text-xs px-2 py-1 rounded">{use}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="processing" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Oil Cake Processing</h2>
+        <div class="space-y-4">
+          {processingSteps.map((step, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">{index + 1}</div>
+                {index < processingSteps.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
+              </div>
+              <div class={index < processingSteps.length - 1 ? 'pb-6' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{step.title}</h3>
+                <p class="text-steel-600">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="uses" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Oil Cake Uses and Applications</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
+            <h3 class="font-display text-xl mb-4 text-green-800 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2Z"/><path d="M12 14V2"/><path d="M9 2h6"/></svg>
+              Animal Feed
+            </h3>
+            <div class="space-y-3">
+              {animalFeedUses.map((item, idx) => (
+                <div key={idx} class="bg-white p-3 rounded-lg flex justify-between items-center">
+                  <span class="font-medium text-charcoal-900">{item.animal}</span>
+                  <span class="text-green-600 text-sm">{item.inclusion}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-100">
+            <h3 class="font-display text-xl mb-4 text-amber-800 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+              Fertilizer
+            </h3>
+            <div class="space-y-3">
+              {fertilizerUses.map((item, idx) => (
+                <div key={idx} class="bg-white p-3 rounded-lg">
+                  <p class="font-medium text-charcoal-900">{item.use}</p>
+                  <p class="text-steel-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="market" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Market Value</h2>
+        <p class="text-steel-700 mb-6">Oil cake represents an important additional revenue stream. Prices vary based on form and local market conditions.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Product Form</th><th class="px-4 py-3 text-left font-semibold">Relative Price</th></tr>
+            </thead>
+            <tbody>
+              {marketValue.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-green-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.type}</td>
+                  <td class="px-4 py-3 text-green-600">{item.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="storage" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Storage and Safety</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          {storageConditions.map((item, index) => (
+            <div key={index} class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200 text-center">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                {item.icon === 'thermometer' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>}
+                {item.icon === 'cloud' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 16.5A2.5 2.5 0 0 0 20 14a2.5 2.5 0 0 0-2.5-2.5h-5.5a4.5 4.5 0 1 0 0 9h2a2.5 2.5 0 0 0 2.5-2.5Z"/></svg>}
+                {item.icon === 'time' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>}
+                {item.icon === 'shield' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+              </div>
+              <p class="text-sm text-steel-500">{item.label}</p>
+              <p class="font-bold text-charcoal-900">{item.value}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Safety Tips</h3>
+        <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+          <ul class="space-y-2">
+            {safetyTips.map((tip, index) => (
+              <li key={index} class="text-steel-700 flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">Oil cake utilization is an important aspect of maximizing profitability. By properly processing and marketing your oil cake byproduct, you can significantly increase the overall return on your oil press investment.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">MAXIMIZE YOUR PROFITS</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Our experts can advise on the best ways to utilize your oil cake byproduct for additional revenue.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Contact Our Experts<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/products" class="btn-outline border-white text-white hover:bg-white/10">Browse Equipment</a>
+        <a href="/resources" class="btn-outline border-white text-white hover:bg-white/10">Back to Resources</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

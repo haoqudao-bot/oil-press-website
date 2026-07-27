@@ -1,0 +1,277 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'complete-oil-production-line-guide');
+const t = getTranslations('en');
+
+const title = resource?.data.title.en || 'Complete Oil Production Line Guide';
+const description = resource?.data.description.en || 'From seed to bottled oil';
+const seoKeywords = resource?.data.seoKeywords || ['oil production line', 'complete oil plant', 'oil processing equipment'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/production-line-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Production Engineer', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/complete-oil-production-line-guide' },
+  ],
+};
+
+const productionStages = [
+  { stage: '1', title: 'Seed Cleaning', equipment: 'Vibrating screen, magnetic separator', desc: 'Remove debris, stones, metal, and damaged seeds. Essential for quality and equipment protection.' },
+  { stage: '2', title: 'Dehulling', equipment: 'Sheller, separator', desc: 'Remove seed coats to improve oil yield and cake quality.' },
+  { stage: '3', title: 'Roasting', equipment: 'Rotary roaster, temperature controller', desc: 'Heat seeds to break down cell walls, improve flavor and yield.' },
+  { stage: '4', title: 'Grinding', equipment: 'Hammer mill, roller mill', desc: 'Reduce seeds to optimal particle size for efficient pressing.' },
+  { stage: '5', title: 'Pressing', equipment: 'Hydraulic oil press', desc: 'Extract oil using high pressure (40-60 MPa). Heart of the production line.' },
+  { stage: '6', title: 'Filtration', equipment: 'Filter press, centrifuge', desc: 'Remove solid particles and water from crude oil.' },
+  { stage: '7', title: 'Drying', equipment: 'Oil dryer, heater', desc: 'Reduce moisture content to <0.1% for shelf stability.' },
+  { stage: '8', title: 'Bottling', equipment: 'Filling machine, capper, labeler', desc: 'Package oil in final containers for retail or wholesale.' },
+];
+
+const capacityOptions = [
+  { scale: 'Home Workshop', capacity: '5-20 kg/day', investment: '$5,000-$15,000', equipment: ['HN325 Press', 'Small roaster', 'Manual filter', 'Hand tools'] },
+  { scale: 'Small Business', capacity: '50-200 kg/day', investment: '$30,000-$80,000', equipment: ['HN355 Press', 'Rotary roaster', 'Filter system', 'Grinder', 'Storage tanks'] },
+  { scale: 'Medium Factory', capacity: '500-2000 kg/day', investment: '$100,000-$300,000', equipment: ['HN426/HN480 Press', 'Full roaster', 'Centrifuge', 'Complete line', 'Automation'] },
+  { scale: 'Large Industrial', capacity: '5000+ kg/day', investment: '$300,000+', equipment: ['Multiple HN500 Presses', 'Industrial roasters', 'Full refining line', 'Complete automation'] },
+];
+
+const layoutTips = [
+  { tip: 'Flow Layout', desc: 'Arrange equipment in a logical flow: raw material → processing → packaging' },
+  { tip: 'Space Planning', desc: 'Allow 2-3x equipment footprint for operation and maintenance' },
+  { tip: 'Utilities', desc: 'Plan electrical, water, and drainage before installation' },
+  { tip: 'Ventilation', desc: 'Install proper ventilation for roasting and pressing areas' },
+  { tip: 'Safety Zones', desc: 'Create safe zones around pressurized equipment' },
+];
+
+const costAnalysis = [
+  { item: 'Core Equipment (Press + Auxiliary)', percentage: '40-50%' },
+  { item: 'Installation & Commissioning', percentage: '10-15%' },
+  { item: 'Building & Infrastructure', percentage: '15-25%' },
+  { item: 'Initial Raw Materials', percentage: '5-10%' },
+  { item: 'Working Capital', percentage: '10-15%' },
+];
+
+const roiProjections = [
+  { scale: 'Home Workshop', investment: '$10,000', monthlyRevenue: '$3,000-5,000', monthlyProfit: '$2,000-3,500', payback: '3-5 months' },
+  { scale: 'Small Business', investment: '$50,000', monthlyRevenue: '$15,000-30,000', monthlyProfit: '$10,000-22,000', payback: '2-4 months' },
+  { scale: 'Medium Factory', investment: '$150,000', monthlyRevenue: '$50,000-100,000', monthlyProfit: '$35,000-75,000', payback: '2-4 months' },
+];
+
+const maintenanceSchedule = [
+  { frequency: 'Daily', tasks: ['Clean equipment', 'Check hydraulic oil level', 'Inspect filters', 'Check safety devices'] },
+  { frequency: 'Weekly', tasks: ['Replace filters', 'Check belt tension', 'Inspect press chamber', 'Lubricate moving parts'] },
+  { frequency: 'Monthly', tasks: ['Change hydraulic oil', 'Inspect hydraulic hoses', 'Calibrate temperature controls', 'Check electrical connections'] },
+  { frequency: 'Quarterly', tasks: ['Full system inspection', 'Replace worn parts', 'Test safety systems', 'Clean storage tanks'] },
+  { frequency: 'Annually', tasks: ['Overhaul hydraulic system', 'Replace hydraulic seals', 'Full electrical inspection', 'Update maintenance records'] },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">COMPLETE GUIDE</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Senior Production Engineer · 15+ Years Experience</div>
+          </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">A complete oil production line converts raw seeds into marketable bottled oil. Understanding the full process helps you plan, budget, and optimize your operation.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Setting up a complete production line is a significant investment but can provide 10-30% higher profit margins compared to selling crude oil. Proper planning is essential for success.</p>
+        </div>
+      </section>
+
+      <section id="stages" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Production Stages</h2>
+        <div class="space-y-4">
+          {productionStages.map((stage, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">{stage.stage}</div>
+                {index < productionStages.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
+              </div>
+              <div class={index < productionStages.length - 1 ? 'pb-6' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{stage.title}</h3>
+                <div class="bg-steel-50 p-4 rounded-lg">
+                  <p class="text-amber-600 text-sm mb-1"><strong>Equipment:</strong> {stage.equipment}</p>
+                  <p class="text-steel-600 text-sm">{stage.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="capacity" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Production Scale Options</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {capacityOptions.map((option, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <div class={`p-4 ${index === 0 ? 'bg-gradient-to-r from-green-500 to-emerald-500' : index === 1 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : index === 2 ? 'bg-gradient-to-r from-amber-500 to-orange-500' : 'bg-gradient-to-r from-purple-500 to-pink-500'}`}>
+                <div class="flex justify-between items-center">
+                  <h3 class="font-display text-lg text-white">{option.scale}</h3>
+                  <span class="bg-white/20 text-white text-sm px-2 py-1 rounded">{option.capacity}</span>
+                </div>
+              </div>
+              <div class="p-5">
+                <p class="text-green-600 font-semibold mb-3">Investment: {option.investment}</p>
+                <p class="text-sm text-steel-500 mb-2">Key Equipment:</p>
+                <ul class="space-y-1">
+                  {option.equipment.map((equip, idx) => (
+                    <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-steel-400 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                      {equip}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="layout" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Facility Layout Tips</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {layoutTips.map((tip, index) => (
+            <div key={index} class="bg-gradient-to-br from-blue-50 to-indigo-50 p-5 rounded-xl border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">{tip.tip}</h4>
+              <p class="text-steel-700 text-sm">{tip.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="cost" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Investment Cost Analysis</h2>
+        <p class="text-steel-700 mb-6">Typical investment breakdown for a complete oil production line:</p>
+        <div class="space-y-3">
+          {costAnalysis.map((item, index) => (
+            <div key={index} class="bg-white p-4 rounded-lg border border-steel-100 flex justify-between items-center">
+              <span class="text-steel-700">{item.item}</span>
+              <div class="flex items-center gap-3">
+                <div class="w-32 bg-steel-100 rounded-full h-2">
+                  <div class="bg-gradient-to-r from-amber-500 to-orange-500 h-2 rounded-full" style={`width: ${parseInt(item.percentage)}%`}></div>
+                </div>
+                <span class="font-semibold text-amber-600 text-sm w-16 text-right">{item.percentage}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="roi" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Return on Investment Projections</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Scale</th><th class="px-4 py-3 text-left font-semibold">Investment</th><th class="px-4 py-3 text-left font-semibold">Monthly Revenue</th><th class="px-4 py-3 text-left font-semibold">Monthly Profit</th><th class="px-4 py-3 text-left font-semibold">Payback</th></tr>
+            </thead>
+            <tbody>
+              {roiProjections.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
+                  <td class="px-4 py-3">{item.investment}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.monthlyRevenue}</td>
+                  <td class="px-4 py-3 text-green-600 font-semibold">{item.monthlyProfit}</td>
+                  <td class="px-4 py-3 text-amber-600 font-semibold">{item.payback}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="maintenance" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Maintenance Schedule</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {maintenanceSchedule.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 shadow-sm overflow-hidden">
+              <div class={`p-3 ${index === 0 ? 'bg-green-100' : index === 1 ? 'bg-blue-100' : index === 2 ? 'bg-amber-100' : index === 3 ? 'bg-purple-100' : 'bg-red-100'}`}>
+                <h3 class="font-semibold text-charcoal-900">{item.frequency}</h3>
+              </div>
+              <div class="p-4">
+                <ul class="space-y-2">
+                  {item.tasks.map((task, idx) => (
+                    <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-steel-400 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                      {task}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">A complete oil production line is a powerful business investment. By carefully planning each stage and working with experienced equipment suppliers, you can build a profitable and sustainable oil production operation. Contact our team for a personalized production line design and quote.</p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">BUILD YOUR OIL PRODUCTION EMPIRE</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Our engineering team can design a complete production line tailored to your specific needs and budget.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Request a Consultation<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/products" class="btn-outline border-white text-white hover:bg-white/10">View Equipment</a>
+        <a href="/resources" class="btn-outline border-white text-white hover:bg-white/10">Back to Resources</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

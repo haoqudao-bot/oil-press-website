@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: "Soybean Oil Pressing Solution"
   fr: "Solution de Pressage d'Huile de Soja"

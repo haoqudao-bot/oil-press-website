@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Thermal Oil Roasting Pan
   fr: Poêle de Torréfaction à Huile Thermique

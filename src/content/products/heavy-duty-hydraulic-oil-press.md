@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Medium Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Moyenne

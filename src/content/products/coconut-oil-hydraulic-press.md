@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Coconut Milk Hydraulic Press
   fr: Presse Hydraulique à Lait de Coco

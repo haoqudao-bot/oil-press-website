@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -158,10 +158,19 @@ const productKeywords = [
             </div>
 
             <div class="pt-6 border-t border-steel-100">
-              <h3 class="font-display text-lg text-charcoal-900 mb-4">{t.common.tools}</h3>
+              <a
+                href="/catalog"
+                class="flex items-center gap-3 px-4 py-3 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group mb-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                <div>
+                  <div class="text-sm font-semibold">{t.nav.catalog}</div>
+                  <div class="text-xs opacity-70">{t.common.browseCatalog}</div>
+                </div>
+              </a>
               <a
                 href="/products/model-comparison"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg text-steel-700 hover:text-amber-500 hover:bg-steel-50 transition-colors group"
+                class="flex items-center gap-3 px-4 py-3 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
                 <div>
