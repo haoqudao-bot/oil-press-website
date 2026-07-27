@@ -1,4 +1,4 @@
-﻿﻿---
+---
 title:
   en: Oil Press Raw Materials Guide
   fr: Guide des matieres premieres pour presse

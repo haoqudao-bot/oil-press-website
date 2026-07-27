@@ -1,4 +1,4 @@
-﻿﻿---
+---
 title:
   en: Complete Peanut Oil Pressing Guide
   fr: Guide complet de pressage de l'huile d'arachide

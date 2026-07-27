@@ -1,4 +1,4 @@
-﻿﻿---
+---
 title:
   en: Aflatoxin Control in Oil Production
   fr: Controle de l'aflatoxine dans la production d'huile

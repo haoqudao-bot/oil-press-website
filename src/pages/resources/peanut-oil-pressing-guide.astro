@@ -1,0 +1,491 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'peanut-oil-pressing-guide');
+const t = getTranslations('en');
+
+const title = resource?.data.title.en || 'Complete Guide to Peanut Oil Pressing Techniques';
+const description = resource?.data.description.en || 'Comprehensive guide for peanut oil production';
+const seoKeywords = resource?.data.seoKeywords || ['peanut oil', 'oil production'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/peanut-oil-guide-hero.webp',
+  author: {
+    '@type': 'Person',
+    name: 'Haonuo Engineering Team',
+    jobTitle: 'Senior Oil Press Technical Engineer',
+    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Haonuo Machinery',
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+  },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/peanut-oil-pressing-guide' },
+  ],
+};
+
+const peanutTypes = [
+  { type: 'Runner', characteristics: 'Medium size, uniform seeds', bestFor: 'General oil production' },
+  { type: 'Virginia', characteristics: 'Large seeds, high quality', bestFor: 'Premium oil, export' },
+  { type: 'Spanish', characteristics: 'Small seeds, high oil content', bestFor: 'High yield production' },
+  { type: 'Valencia', characteristics: 'Multiple seeds per pod', bestFor: 'Niche market' },
+];
+
+const rawMaterialRequirements = [
+  { icon: 'droplet', color: 'blue', title: 'Moisture Content', desc: '7-9% for cold pressing, 5-7% for hot pressing' },
+  { icon: 'flask', color: 'green', title: 'Oil Content', desc: '45-55% (good quality peanuts)' },
+  { icon: 'filter', color: 'purple', title: 'Impurity Level', desc: 'Less than 0.5%' },
+  { icon: 'shield', color: 'red', title: 'Aflatoxin Level', desc: 'AFB1 ≤ 20 μg/kg (retail compliance)' },
+];
+
+const processingSteps = [
+  { step: '1', title: 'Shelling', desc: 'Required for all peanut oil production', details: ['Target: Shelling rate > 95%', 'Equipment: Disc dehuller or hammer mill'] },
+  { step: '2', title: 'Cleaning', desc: 'Remove stones, metal, and other hard impurities', details: ['Magnetic separation for metal contaminants', 'Gravity separation for light impurities'] },
+  { step: '3', title: 'Sorting', desc: 'Visual inspection for moldy or damaged seeds', details: ['Optional: Optical sorting by color and quality'] },
+];
+
+const hotPressParams = [
+  { param: 'Initial Cooking Rate', value: '~500 kg/hour' },
+  { param: 'Roasting Temperature', value: '160-180°C' },
+  { param: 'Roasting Time', value: '25-35 minutes' },
+  { param: 'Cooking Cycle', value: '30-40 minutes/batch' },
+  { param: 'Total Cycle (2 barrels)', value: '~1.5 hours' },
+  { param: 'System Pressure', value: '60 MPa' },
+  { param: 'Motor Power', value: '2.2 kW' },
+];
+
+const coldPressModels = [
+  { model: 'HN355', force: '370 tons', cycle: '~2 hours/batch', bestFor: 'Entry-level cold pressing' },
+  { model: 'HN426', force: '500 tons', cycle: '~2 hours/batch', bestFor: 'Standard cold pressing' },
+  { model: 'HN480', force: '560 tons', cycle: '~2 hours/batch', bestFor: 'High-volume cold pressing' },
+  { model: 'HN500', force: '620 tons', cycle: '~2 hours/batch', bestFor: 'Premium commercial production' },
+];
+
+const hotVsCold = [
+  { feature: 'Oil Yield', hot: '45-55%', cold: '35-40%' },
+  { feature: 'Production Speed', hot: 'Fast (30-40 min/batch)', cold: 'Slow (2+ hours/batch)' },
+  { feature: 'Oil Quality', hot: 'Good, neutral taste', cold: 'Premium, natural aroma' },
+  { feature: 'Market Value', hot: 'Standard', cold: '2-3x higher' },
+  { feature: 'Equipment Cost', hot: 'Lower', cold: 'Higher' },
+];
+
+const aflatoxinControl = [
+  { stage: 'Raw Material', measure: 'Batch inspection', standard: 'AFB1 ≤ 20 μg/kg' },
+  { stage: 'Sorting', measure: 'Optical color sorting', standard: 'Remove moldy seeds' },
+  { stage: 'Roasting', measure: 'Temperature monitoring', standard: '160-180°C' },
+  { stage: 'Filtration', measure: 'Activated carbon adsorption', standard: 'AFB1 ≤ 20 μg/kg' },
+  { stage: 'Finished Oil', measure: 'Batch testing', standard: 'AFB1 ≤ 20 μg/kg' },
+];
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+          PRODUCTION GUIDE
+        </span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
+          {title.toUpperCase()}
+        </h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Senior Oil Press Technical Engineer · 15+ Years Experience</div>
+            </div>
+          </div>
+          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="introduction" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Peanut oil is one of the most popular cooking oils in the world, known for its high smoke point, neutral taste, and nutritional benefits. This comprehensive guide covers all aspects of peanut oil production, from raw material selection to pressing and finished oil.
+        </p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            Whether you are setting up a small-scale production facility or a large commercial factory, this guide provides technical parameters and best practices to achieve high-quality peanut oil with maximum yield.
+          </p>
+        </div>
+      </section>
+
+      <section id="raw-material" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Raw Material Preparation</h2>
+        
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Understanding Peanut Types</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Peanut Type</th><th class="px-4 py-3 text-left font-semibold">Characteristics</th><th class="px-4 py-3 text-left font-semibold">Best For</th></tr>
+            </thead>
+            <tbody>
+              {peanutTypes.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.type}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.characteristics}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.bestFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Raw Material Requirements</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {rawMaterialRequirements.map((item, index) => (
+            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
+              <div class="flex items-start gap-3">
+                <div class={`w-10 h-10 ${item.color === 'blue' ? 'bg-blue-100' : item.color === 'green' ? 'bg-green-100' : item.color === 'purple' ? 'bg-purple-100' : 'bg-red-100'} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                  {item.icon === 'droplet' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S6 13 6 15a7 7 0 0 0 7 7z"/></svg>}
+                  {item.icon === 'flask' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>}
+                  {item.icon === 'filter' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 19 14 12.46 22 3"/></svg>}
+                  {item.icon === 'shield' && <svg xmlns="http://www.w3.org/2000/svg" class={`w-5 h-5 ${item.color === 'blue' ? 'text-blue-600' : item.color === 'green' ? 'text-green-600' : item.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+                </div>
+                <div>
+                  <h4 class="font-semibold text-charcoal-900 mb-1">{item.title}</h4>
+                  <p class="text-steel-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="processing-steps" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Processing Steps</h2>
+        <div class="space-y-6">
+          {processingSteps.map((step, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  {step.step}
+                </div>
+                {index < processingSteps.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
+              </div>
+              <div class={index < processingSteps.length - 1 ? 'pb-8' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{step.title}</h3>
+                <p class="text-steel-600 mb-3">{step.desc}</p>
+                <div class="bg-steel-50 p-4 rounded-lg">
+                  {step.details.map((detail, idx) => (
+                    <p key={idx} class="mb-1 text-steel-700">
+                      {detail.includes(':') ? (
+                        <>
+                          <span class="font-medium text-charcoal-900">{detail.split(':')[0]}:</span>
+                          {detail.split(':').slice(1).join(':')}
+                        </>
+                      ) : (
+                        <>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                          {detail}
+                        </>
+                      )}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="hot-pressing" class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><path d="M18.07 16.94a8 8 0 1 1-11.31 0"/></svg>
+          </div>
+          <h2 class="font-display font-bold text-2xl text-charcoal-900">Hot Pressing Process</h2>
+        </div>
+        
+        <p class="text-steel-700 leading-relaxed mb-6">
+          Hot pressing is the most common method for peanut oil production, offering higher yield and faster processing time.
+        </p>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Equipment Configuration</h3>
+        <div class="bg-steel-50 rounded-xl p-6 mb-6">
+          <h4 class="font-semibold text-charcoal-900 mb-3">Complete Hot Pressing Line:</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">5 x Electric Heating Flat Pans (100 kg/batch)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">5 x <a href="/products/standard-hydraulic-oil-press" class="text-amber-600 hover:underline">HN325 Hydraulic Oil Press</a> (100 kg/batch)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Pneumatic Multilayer Filter Press Machine</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Settling Tank</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Stainless Steel Storage Tank</span>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Production Parameters</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-charcoal-900 to-gray-800 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Parameter</th><th class="px-4 py-3 text-left font-semibold">Specification</th></tr>
+            </thead>
+            <tbody>
+              {hotPressParams.map((item, index) => (
+                <tr key={index} class={`${index % 2 === 0 ? 'bg-white' : 'bg-steel-50'} hover:bg-steel-100 transition-colors`}>
+                  <td class="px-4 py-3 font-medium text-charcoal-900">{item.param}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Expected Production Yield</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-xl border border-green-200">
+            <h4 class="font-semibold text-green-800 mb-2">Good Quality Seeds</h4>
+            <div class="flex justify-between items-center">
+              <span class="text-steel-700">Oil Yield:</span>
+              <span class="font-bold text-green-700 text-lg">45-55%</span>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-steel-700">Residual Oil:</span>
+              <span class="font-semibold text-green-700">6-8%</span>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-5 rounded-xl border border-yellow-200">
+            <h4 class="font-semibold text-yellow-800 mb-2">Average Quality Seeds</h4>
+            <div class="flex justify-between items-center">
+              <span class="text-steel-700">Oil Yield:</span>
+              <span class="font-bold text-yellow-700 text-lg">40-45%</span>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-steel-700">Residual Oil:</span>
+              <span class="font-semibold text-yellow-700">8-10%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cold-pressing" class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 16a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+          </div>
+          <h2 class="font-display font-bold text-2xl text-charcoal-900">Cold Pressing Process</h2>
+        </div>
+        
+        <p class="text-steel-700 leading-relaxed mb-6">
+          Cold pressing preserves the natural flavor and nutritional properties of peanut oil, producing a premium product with higher market value.
+        </p>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Equipment Configuration</h3>
+        <div class="bg-steel-50 rounded-xl p-6 mb-6">
+          <h4 class="font-semibold text-charcoal-900 mb-3">Cold Pressing Line:</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700"><a href="/products/cold-press-hydraulic-oil-press" class="text-amber-600 hover:underline">HN355</a>, <a href="/products/high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN426</a>, <a href="/products/ultra-high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN480</a>, or <a href="/products/heavy-duty-hydraulic-oil-press" class="text-amber-600 hover:underline">HN500</a> Hydraulic Oil Press</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Precision Temperature Control System</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Pneumatic Multilayer Filter Press Machine</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">Temperature-Controlled Storage Tank</span>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Model Comparison</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Model</th><th class="px-4 py-3 text-left font-semibold">Press Force</th><th class="px-4 py-3 text-left font-semibold">Cycle Time</th><th class="px-4 py-3 text-left font-semibold">Best For</th></tr>
+            </thead>
+            <tbody>
+              {coldPressModels.map((item, index) => (
+                <tr key={index} class={`${index % 2 === 0 ? 'bg-white' : 'bg-steel-50'} hover:bg-steel-100 transition-colors`}>
+                  <td class="px-4 py-3 font-medium text-charcoal-900"><a href="/products/cold-press-hydraulic-oil-press" class="text-amber-600 hover:underline">{item.model}</a></td>
+                  <td class="px-4 py-3 text-steel-700">{item.force}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.cycle}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.bestFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="hot-vs-cold" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Hot Pressing vs Cold Pressing</h2>
+        <div class="bg-steel-50 rounded-2xl overflow-hidden border border-steel-200">
+          <div class="grid grid-cols-3 bg-charcoal-900 text-white">
+            <div class="p-6 text-left">
+              <p class="font-semibold text-steel-300">Feature</p>
+            </div>
+            <div class="p-6 text-center border-x border-charcoal-700">
+              <div class="flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><path d="M18.07 16.94a8 8 0 1 1-11.31 0"/></svg>
+                <p class="font-display text-xl">Hot Pressing</p>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <div class="flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 16a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+                <p class="font-display text-xl">Cold Pressing</p>
+              </div>
+            </div>
+          </div>
+          {hotVsCold.map((item, index) => (
+            <div key={index} class={`grid grid-cols-3 p-4 ${index % 2 === 0 ? 'bg-white' : 'bg-steel-50/50'} hover:bg-amber-50/30 transition-colors`}>
+              <div class="text-charcoal-900 font-semibold">{item.feature}</div>
+              <div class="text-center text-amber-600 font-medium border-x border-steel-100">{item.hot}</div>
+              <div class="text-center text-blue-600 font-medium">{item.cold}</div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="p-6 bg-amber-50 rounded-xl border border-amber-100">
+            <h4 class="font-display text-xl text-charcoal-900 mb-3">Best for Hot Pressing</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> High volume production</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Cost-sensitive markets</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Industrial applications</li>
+            </ul>
+          </div>
+          <div class="p-6 bg-blue-50 rounded-xl border border-blue-100">
+            <h4 class="font-display text-xl text-charcoal-900 mb-3">Best for Cold Pressing</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Premium organic markets</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Health-conscious consumers</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Specialty food products</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="quality-control" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Quality Control</h2>
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-200">
+          <h3 class="font-semibold text-xl mb-6 text-charcoal-900">Aflatoxin Management</h3>
+          <div class="grid md:grid-cols-5 gap-4 mb-6">
+            {['Raw Material', 'Sorting', 'Roasting', 'Filtration', 'Finished Oil'].map((stage, index) => (
+              <div key={index} class="text-center p-4 bg-white/80 rounded-xl border border-amber-100">
+                <div class="w-12 h-12 mx-auto mb-2 bg-amber-500/10 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <p class="text-sm font-medium text-charcoal-900">{stage}</p>
+              </div>
+            ))}
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full bg-white rounded-xl border border-steel-200">
+              <thead>
+                <tr class="bg-steel-50">
+                  <th class="py-4 px-6 text-left font-semibold text-charcoal-900 rounded-tl-xl">Stage</th>
+                  <th class="py-4 px-6 text-left font-semibold text-charcoal-900">Control Measure</th>
+                  <th class="py-4 px-6 text-right font-semibold text-charcoal-900 rounded-tr-xl">Acceptance Standard</th>
+                </tr>
+              </thead>
+              <tbody>
+                {aflatoxinControl.map((item, index) => (
+                  <tr key={index} class={`${index % 2 === 0 ? 'bg-white' : 'bg-steel-50'} border-b border-steel-100 last:border-b-0`}>
+                    <td class="py-4 px-6 font-medium text-amber-600">{item.stage}</td>
+                    <td class="py-4 px-6 text-steel-600">{item.measure}</td>
+                    <td class="py-4 px-6 text-right font-medium text-charcoal-900">{item.standard}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
+        <p class="text-steel-700 leading-relaxed">
+          Whether you choose hot or cold pressing, achieving high-quality peanut oil requires careful attention to every stage of production. Our engineering team can help you design and optimize a production line for maximum efficiency and exceptional product quality.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">READY TO START YOUR PEANUT OIL BUSINESS?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Our engineering team can help you design the perfect production line based on your capacity needs and market goals.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          Contact Our Experts
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/products" class="btn-outline border-white text-white hover:bg-white/10">
+          Explore Equipment
+        </a>
+        <a href="/resources" class="btn-outline border-white text-white hover:bg-white/10">
+          Back to Resources
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Standard Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Standard

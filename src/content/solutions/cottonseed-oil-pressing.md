@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Cottonseed Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Coton

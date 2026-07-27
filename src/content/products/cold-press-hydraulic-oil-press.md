@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Cold Press Hydraulic Oil Press
   fr: Presse à Huile Hydraulique à Froid

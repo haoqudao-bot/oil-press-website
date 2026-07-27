@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: "Flaxseed Oil Pressing Solution"
   fr: "Solution de Pressage d'Huile de Lin"

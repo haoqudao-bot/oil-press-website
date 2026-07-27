@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 title:
   en: Large Barrel Hydraulic Oil Press
   fr: Presse à Huile Hydraulique à Grand Fût

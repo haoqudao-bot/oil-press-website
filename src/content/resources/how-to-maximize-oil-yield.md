@@ -1,4 +1,4 @@
-﻿﻿---
+---
 title:
   en: How to Maximize Oil Yield
   fr: Comment maximiser le rendement en huile
