@@ -55,8 +55,8 @@ const buyingChecklist = [
     'Disponibilité du service après-vente',
     'Disponibilité des pièces détachées',
   ]},
-  { category: 'Considérations Budgétaires', items: [
-    'Prix d\'achat de la machine',
+  { category: 'Considérations Opérationnelles', items: [
+    'Capacité de production journalière cible',
     'Coûts d\'installation et de formation',
     'Pièces détachées et maintenance',
     'Coûts d\'exploitation (énergie, main-d\'œuvre)',
@@ -75,7 +75,7 @@ const questionsToAsk = [
   'Quel est votre objectif de production journalière ?',
   'Quelles graines/noix allez-vous transformer ?',
   'Avez-vous besoin de la capacité de pressage à froid ?',
-  'Quelle est votre fourchette budgétaire ?',
+  'Quelle est votre capacité de production cible ?',
   'Avez-vous une source d\'électricité ?',
   'Quel est votre espace de travail disponible ?',
   'Avez-vous besoin de formation et d\'installation ?',
@@ -181,7 +181,6 @@ const redFlags = [
                 <th class="px-4 py-3 text-left font-semibold">Temps de Cycle</th>
                 <th class="px-4 py-3 text-left font-semibold">Pression</th>
                 <th class="px-4 py-3 text-left font-semibold">Idéal Pour</th>
-                <th class="px-4 py-3 text-left font-semibold">Fourchette de Prix</th>
               </tr>
             </thead>
             <tbody>
@@ -195,7 +194,6 @@ const redFlags = [
                     <p class="text-steel-700 text-sm">{item.highlight}</p>
                     <p class="text-steel-500 text-xs">{item.materials}</p>
                   </td>
-                  <td class="px-4 py-3 text-green-600 font-medium">{item.price}</td>
                 </tr>
               ))}
             </tbody>
@@ -239,7 +237,7 @@ const redFlags = [
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-display text-4xl md:text-5xl text-white mb-6">OBTENEZ VOTRE DEVIS GRATUIT DÈS AUJOURD'HUI</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Envoyez-nous vos besoins de production et obtenez une recommandation personnalisée avec prix détaillés.</p>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Envoyez-nous vos besoins de production et obtenez une recommandation personnalisée adaptée à votre activité.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
           {t.resources.ctaButton}
