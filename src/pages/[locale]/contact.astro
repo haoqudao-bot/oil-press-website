@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -13,7 +13,6 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const currentLocale = locale as Locale;
 const t = getTranslations(currentLocale);
-const isSuccess = Astro.url.searchParams.get('success') === 'true';
 const wechatId = '18957149128';
 
 function localePath(path: string): string {
@@ -114,10 +113,9 @@ const whatToExpect = [
         <div class="lg:col-span-2">
           <div class="bg-white rounded-2xl p-6 md:p-8 border border-steel-100 shadow-sm">
             <h2 class="font-display text-2xl text-charcoal-900 mb-6">{t.contact.sendInquiry}</h2>
-            <form id="contact-form" action="https://formspree.io/f/mbdnqajz" method="POST" class="space-y-5">
+            <form id="contact-form" action="https://formspree.io/f/mbdnqajz" method="POST" class="space-y-5" onsubmit="return submitForm(event)">
               <input type="hidden" name="_subject" value={(t as any).contact?.formSubject || 'Haonuo Website Inquiry'} />
               <input type="text" name="_gotcha" style="display:none" />
-              <input type="hidden" name="_next" value={`${Astro.url.origin}/${currentLocale}/contact?success=true`} />
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label for="name" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.name} *</label>
@@ -199,18 +197,21 @@ const whatToExpect = [
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn-primary text-base w-full justify-center">
-                {t.contact.submit}
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <button type="submit" id="submit-btn" class="btn-primary text-base w-full justify-center">
+                <span id="btn-text">{t.contact.submit}</span>
+                <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
             </form>
-            {isSuccess ? (
-              <div id="form-success" class="text-center py-8">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-green-500 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.contact.inquirySent}</h3>
-                <p class="text-steel-500">{t.contact.inquirySentDesc}</p>
-              </div>
-            ) : null}
+            <div id="form-success" class="hidden text-center py-8">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-green-500 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.contact.inquirySent}</h3>
+              <p class="text-steel-500">{t.contact.inquirySentDesc}</p>
+            </div>
+            <div id="form-error" class="hidden text-center py-8">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-red-500 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <h3 class="font-display text-xl text-charcoal-900 mb-2">Submission Failed</h3>
+              <p class="text-steel-500">Please try again or email us directly at info@hydoilpress.com</p>
+            </div>
           </div>
         </div>
 
@@ -367,5 +368,49 @@ const whatToExpect = [
         setTimeout(() => copyToast.classList.add('hidden'), 2000);
       }
     });
+  }
+
+  function submitForm(event) {
+    event.preventDefault();
+    const form = event.target;
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+    const successDiv = document.getElementById('form-success');
+    const errorDiv = document.getElementById('form-error');
+
+    const formData = new FormData(form);
+
+    submitBtn.disabled = true;
+    btnText.textContent = 'Sending...';
+    btnIcon.style.display = 'none';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        form.classList.add('hidden');
+        successDiv.classList.remove('hidden');
+      } else {
+        throw new Error('Submission failed');
+      }
+    })
+    .catch(() => {
+      form.classList.add('hidden');
+      errorDiv.classList.remove('hidden');
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      btnText.textContent = 'Send Inquiry';
+      btnIcon.style.display = '';
+    });
+
+    return false;
   }
 </script>
