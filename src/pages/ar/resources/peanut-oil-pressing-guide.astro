@@ -40,7 +40,7 @@ const breadcrumbLd = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
-    { '@type': 'ListItem', position: 2, name: 'المصادر', item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/peanut-oil-pressing-guide' },
   ],
 };
@@ -69,22 +69,22 @@ const hotPressParams = [
   { param: 'معدل الضغط الأولي', value: '~500 كغ/ساعة' },
   { param: 'درجة حرارة التحمص', value: '160-180 درجة مئوية' },
   { param: 'مدة التحمص', value: '25-35 دقيقة' },
-  { param: 'دورة الضغط', value: '30-40 دقيقة/كمية' },
+  { param: 'دورة الضغط', value: '40-90 دقيقة/كمية' },
   { param: 'الدورة الكلية (2 براميل)', value: '~1.5 ساعة' },
   { param: 'ضغط النظام', value: '60 ميجاباسكال' },
   { param: 'قوة المحرك', value: '2.2 كيلووات' },
 ];
 
 const coldPressModels = [
-  { model: 'HN355', force: '370 طن', cycle: '~2 ساعة/كمية', bestFor: 'ضغط بارد مستوى بداية' },
-  { model: 'HN426', force: '500 طن', cycle: '~2 ساعة/كمية', bestFor: 'ضغط بارد قياسي' },
-  { model: 'HN480', force: '560 طن', cycle: '~2 ساعة/كمية', bestFor: 'ضغط بارد عالي السعة' },
+  { model: 'HN355', force: '360 طن', cycle: '~2 ساعة/كمية', bestFor: 'ضغط بارد مستوى بداية' },
+  { model: 'HN426', force: '426 طن', cycle: '~2 ساعة/كمية', bestFor: 'ضغط بارد قياسي' },
+  { model: 'HN480', force: '480 طن', cycle: '~2 ساعة/كمية', bestFor: 'ضغط بارد عالي السعة' },
   { model: 'HN500', force: '620 طن', cycle: '~2 ساعة/كمية', bestFor: 'إنتاج تجاري فاخر' },
 ];
 
 const hotVsCold = [
   { feature: 'إنتاجية الزيت', hot: '45-55%', cold: '35-40%' },
-  { feature: 'سرعة الإنتاج', hot: 'سريع (30-40 دقيقة/كمية)', cold: 'بطيء (2+ ساعة/كمية)' },
+  { feature: 'سرعة الإنتاج', hot: 'سريع (40-90 دقيقة/كمية)', cold: 'بطيء (2+ ساعة/كمية)' },
   { feature: 'جودة الزيت', hot: 'جيدة، نكهة محايدة', cold: 'فاخرة، رائحة طبيعية' },
   { feature: 'القيمة السوقية', hot: 'قياسية', cold: '2-3x أعلى' },
   { feature: 'كلفة المعدات', hot: 'أقل', cold: 'أعلى' },
@@ -264,6 +264,14 @@ const aflatoxinControl = [
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
               <span class="text-steel-700">مكبس مرشح هوائي متعدد الطبقات</span>
             </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">خزان الترسيب</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">خزان تخزين الفولاذ المقاوم للصدأ</span>
+            </li>
           </ul>
         </div>
         <h3 class="font-semibold text-xl mb-4 text-charcoal-900">معلمات الإنتاج</h3>
@@ -282,6 +290,32 @@ const aflatoxinControl = [
             </tbody>
           </table>
         </div>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">الإنتاج المتوقع للزيت</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-xl border border-green-200">
+            <h4 class="font-semibold text-green-800 mb-2">بذور جيدة الجودة</h4>
+            <div class="flex justify-between items-center">
+              <span class="text-steel-700">إنتاجية الزيت:</span>
+              <span class="font-bold text-green-700 text-lg">45-55%</span>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-steel-700">الزيت المتبقي:</span>
+              <span class="font-semibold text-green-700">6-8%</span>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-5 rounded-xl border border-yellow-200">
+            <h4 class="font-semibold text-yellow-800 mb-2">بذور متوسطة الجودة</h4>
+            <div class="flex justify-between items-center">
+              <span class="text-steel-700">إنتاجية الزيت:</span>
+              <span class="font-bold text-yellow-700 text-lg">40-45%</span>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-steel-700">الزيت المتبقي:</span>
+              <span class="font-semibold text-yellow-700">8-10%</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="cold-pressing" class="mb-12">
@@ -292,8 +326,32 @@ const aflatoxinControl = [
           <h2 class="font-display font-bold text-2xl text-charcoal-900">عملية الضغط البارد</h2>
         </div>
         <p class="text-steel-700 leading-relaxed mb-6">
-          الضغط البارد يحافظ على النكهة الطبيعية والخصائص الغذائية لزيت الفول السوداني.
+          الضغط البارد يحافظ على النكهة الطبيعية والخصائص الغذائية لزيت الفول السوداني، مما ينتج عنه منتج فاخر بقيمة سوقية أعلى.
         </p>
+
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">تكوين المعدات</h3>
+        <div class="bg-steel-50 rounded-xl p-6 mb-6">
+          <h4 class="font-semibold text-charcoal-900 mb-3">خط الضغط البارد:</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700"><a href="/ar/products/heavy-duty-hydraulic-oil-press" class="text-amber-600 hover:underline">HN355</a>، <a href="/ar/products/cold-press-hydraulic-oil-press" class="text-amber-600 hover:underline">HN426</a>، <a href="/ar/products/high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN480</a>، أو <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN500</a> المكبس الهيدروليكي</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">نظام التحكم الدقيق في درجة الحرارة</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">مكبس مرشح هوائي متعدد الطبقات</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
+              <span class="text-steel-700">خزان تخزين متحكم في درجة الحرارة</span>
+            </li>
+          </ul>
+        </div>
+
         <h3 class="font-semibold text-xl mb-4 text-charcoal-900">مقارنة النماذج</h3>
         <div class="overflow-x-auto mb-6">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
@@ -342,19 +400,47 @@ const aflatoxinControl = [
             </div>
           ))}
         </div>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="p-6 bg-amber-50 rounded-xl border border-amber-100">
+            <h4 class="font-display text-xl text-charcoal-900 mb-3">الأفضل للضغط الساخن</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> إنتاج عالي الحجم</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> الأسواق الحساسة للتكلفة</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> التطبيقات الصناعية</li>
+            </ul>
+          </div>
+          <div class="p-6 bg-blue-50 rounded-xl border border-blue-100">
+            <h4 class="font-display text-xl text-charcoal-900 mb-3">الأفضل للضغط البارد</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> الأسواق العضوية الفاخرة</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> المستهلكون المهتمون بالصحة</li>
+              <li class="flex items-center gap-2 text-steel-600"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> منتجات الأغذية الخاصة</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="quality-control" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الرقابة الجودة</h2>
         <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-200">
           <h3 class="font-semibold text-xl mb-6 text-charcoal-900">إدارة الأفلاتوكسين</h3>
+          <div class="grid md:grid-cols-5 gap-4 mb-6">
+            {['المادة الخام', 'الفرز', 'التحمص', 'المرشح', 'الزيت النهائي'].map((stage, index) => (
+              <div key={index} class="text-center p-4 bg-white/80 rounded-xl border border-amber-100">
+                <div class="w-12 h-12 mx-auto mb-2 bg-amber-500/10 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <p class="text-sm font-medium text-charcoal-900">{stage}</p>
+              </div>
+            ))}
+          </div>
           <div class="overflow-x-auto">
             <table class="w-full bg-white rounded-xl border border-steel-200">
               <thead>
                 <tr class="bg-steel-50">
-                  <th class="py-4 px-6 text-right font-semibold text-charcoal-900">المرحلة</th>
+                  <th class="py-4 px-6 text-right font-semibold text-charcoal-900 rounded-tr-xl">المرحلة</th>
                   <th class="py-4 px-6 text-right font-semibold text-charcoal-900">مقياس الرقابة</th>
-                  <th class="py-4 px-6 text-left font-semibold text-charcoal-900">معيار القبول</th>
+                  <th class="py-4 px-6 text-left font-semibold text-charcoal-900 rounded-tl-xl">معيار القبول</th>
                 </tr>
               </thead>
               <tbody>
@@ -374,7 +460,7 @@ const aflatoxinControl = [
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
         <p class="text-steel-700 leading-relaxed">
-          سواء اخترت الضغط الساخن أو الضغط البارد، فإن الحصول على زيت فول سوداني عالي الجودة يتطلب اهتمامًا دقيقًا.
+          سواء اخترت الضغط الساخن أو الضغط البارد، فإن الحصول على زيت فول سوداني عالي الجودة يتطلب اهتمامًا دقيقًا بكل مرحلة من مراحل الإنتاج. يمكن لفريقنا الهندسي مساعدتك في تصميم وتحسين خط الإنتاج لأقصى قدر من الكفاءة وجودة منتج استثنائية.
         </p>
       </section>
     </div>
@@ -383,17 +469,17 @@ const aflatoxinControl = [
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت جاهز لبدء مشروع زيت الفول السوداني؟</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">فريقنا الهندسي يمكنه مساعدتك في تصميم خط الإنتاج المثالي.</p>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لفريقنا الهندسي مساعدتك في تصميم خط الإنتاج المثالي بناءً على احتياجاتك من السعة وأهداف السوق.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/ar/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
           اتصل بمختصينا
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a href="/ar/products" class="btn-outline border-white text-white hover:bg-white/10">
-          تصفح المعدات
+          استكشف المعدات
         </a>
         <a href="/ar/resources" class="btn-outline border-white text-white hover:bg-white/10">
-          العودة للمصادر
+          العودة للموارد
         </a>
       </div>
     </div>

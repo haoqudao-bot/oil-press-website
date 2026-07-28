@@ -64,11 +64,11 @@ const buyingChecklist = [
 ];
 
 const modelSelection = [
-  { model: 'HN325', capacity: '5-10 kg/h', pressure: '50 MPa', materials: 'Sesame, peanut, rapeseed', price: '$3,500-$4,500', highlight: 'Best for home business' },
-  { model: 'HN355', capacity: '10-20 kg/h', pressure: '50 MPa', materials: 'Most oil seeds', price: '$5,000-$6,500', highlight: 'Best for small workshop' },
-  { model: 'HN426', capacity: '15-25 kg/h', pressure: '55 MPa', materials: 'Walnut, almond, coconut', price: '$7,000-$9,000', highlight: 'Premium cold pressing' },
-  { model: 'HN480', capacity: '20-35 kg/h', pressure: '60 MPa', materials: 'Various high-oil seeds', price: '$9,000-$12,000', highlight: 'Medium production' },
-  { model: 'HN500', capacity: '30-50 kg/h', pressure: '60 MPa', materials: 'Commercial scale', price: '$12,000-$18,000', highlight: 'Commercial production' },
+  { model: 'HN325', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '60 MPa', materials: 'Sesame, peanut, rapeseed', highlight: 'Best for home business' },
+  { model: 'HN355', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '63 MPa', materials: 'Most oil seeds', highlight: 'Best for small workshop' },
+  { model: 'HN426', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '70 MPa', materials: 'Walnut, almond, coconut', highlight: 'Premium cold pressing' },
+  { model: 'HN480', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '72 MPa', materials: 'Various high-oil seeds', highlight: 'Medium production' },
+  { model: 'HN500', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '75 MPa', materials: 'Commercial scale', highlight: 'Commercial production' },
 ];
 
 const questionsToAsk = [
@@ -90,22 +90,6 @@ const redFlags = [
   'No technical documentation',
   'Pressure below 40 MPa',
   'Used/refurbished equipment',
-];
-
-const investment = [
-  { type: 'Initial Investment', range: '$3,000 - $18,000', note: 'Depending on model and accessories' },
-  { type: 'Installation & Training', range: '$500 - $2,000', note: 'On-site installation and operator training' },
-  { type: 'Annual Maintenance', range: '$300 - $800', note: 'Spare parts, oil change, inspection' },
-  { type: 'Operational Cost', range: '$0.5 - $1.5 per kg', note: 'Electricity + labor + maintenance' },
-];
-
-const roiExample = [
-  { item: 'Machine: HN325', value: '$4,000' },
-  { item: 'Daily output: 8 kg sesame oil', value: '' },
-  { item: 'Monthly revenue (8 kg x 30 days x $15/kg)', value: '$3,600' },
-  { item: 'Monthly cost (power + labor)', value: '$400' },
-  { item: 'Monthly profit', value: '$3,200' },
-  { item: 'Payback period', value: '≈ 1.2 months' },
 ];
 ---
 
@@ -186,15 +170,16 @@ const roiExample = [
 
       <section id="models" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Model Selection Guide</h2>
+        <p class="text-steel-600 mb-6">All models process <strong>100 kg per batch</strong>. Cycle time varies by material — softer seeds like sesame take about 40 minutes per batch, while hard materials like walnut can take up to 1.5 hours.</p>
         <div class="overflow-x-auto">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
             <thead class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
               <tr>
                 <th class="px-4 py-3 text-left font-semibold">Model</th>
                 <th class="px-4 py-3 text-left font-semibold">Capacity</th>
+                <th class="px-4 py-3 text-left font-semibold">Cycle Time</th>
                 <th class="px-4 py-3 text-left font-semibold">Pressure</th>
                 <th class="px-4 py-3 text-left font-semibold">Best For</th>
-                <th class="px-4 py-3 text-left font-semibold">Price Range</th>
               </tr>
             </thead>
             <tbody>
@@ -202,12 +187,12 @@ const roiExample = [
                 <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
                   <td class="px-4 py-3 font-bold text-amber-600">{item.model}</td>
                   <td class="px-4 py-3 text-charcoal-900">{item.capacity}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.cycle}</td>
                   <td class="px-4 py-3 text-charcoal-900">{item.pressure}</td>
                   <td class="px-4 py-3">
                     <p class="text-steel-700 text-sm">{item.highlight}</p>
                     <p class="text-steel-500 text-xs">{item.materials}</p>
                   </td>
-                  <td class="px-4 py-3 text-green-600 font-medium">{item.price}</td>
                 </tr>
               ))}
             </tbody>
@@ -235,35 +220,6 @@ const roiExample = [
               <div key={index} class="bg-white p-3 rounded-lg flex items-center gap-3 border border-red-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                 <span class="text-steel-700">{flag}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="investment" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Investment Analysis</h2>
-        
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Cost Breakdown</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {investment.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
-              <div class="flex justify-between items-start mb-2">
-                <h4 class="font-semibold text-charcoal-900">{item.type}</h4>
-                <span class="text-amber-600 font-bold">{item.range}</span>
-              </div>
-              <p class="text-steel-500 text-sm">{item.note}</p>
-            </div>
-          ))}
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">ROI Example (HN325)</h3>
-        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
-          <div class="space-y-3">
-            {roiExample.map((item, index) => (
-              <div key={index} class="flex justify-between items-center py-2 border-b border-green-200 last:border-0">
-                <span class="text-steel-700">{item.item}</span>
-                <span class="font-semibold text-green-700">{item.value}</span>
               </div>
             ))}
           </div>

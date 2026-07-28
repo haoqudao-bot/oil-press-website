@@ -7,9 +7,9 @@ const resources = await getCollection('resources');
 const resource = resources.find(r => r.slug === 'hydraulic-oil-press-vs-other-types');
 const t = getTranslations('ar');
 
-const title = resource?.data.title.ar || 'المضخة الهيدروليكية مقابل أنواع المضخات الأخرى';
-const description = resource?.data.description.ar || 'المقارنة مع المضخة اللولبية والاستخراج بالذائبة';
-const seoKeywords = resource?.data.seoKeywords || ['hydraulic vs screw oil press', 'oil extraction methods', 'hydraulic press advantages'];
+const title = resource?.data.title.ar || 'المكبس الهيدروليكي مقابل أنواع المكبسات الأخرى';
+const description = resource?.data.description.ar || 'اختيار المكبس المناسب لاحتياجاتك';
+const seoKeywords = resource?.data.seoKeywords || ['مكبس هيدروليكي مقابل لولبي', 'مقارنة مكابس الزيت', 'أي مكبس زيت تختار'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -18,18 +18,9 @@ const articleLd = {
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/comparison-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'مهندس مطحنة زيت كبار الخبراء',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  image: 'https://www.hydoilpress.com/images/oil-press-comparison-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'مهندس تقني لمكبس الزيت', worksFor: { '@type': 'Organization', name: 'مجموعة شاندونغ هاونو لمعدات الميكانيكا المحدودة' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -39,94 +30,99 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
-    { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/ar' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/ar/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/hydraulic-oil-press-vs-other-types' },
   ],
 };
 
-const extractionMethods = [
-  { name: 'مطحنة زيت هيدروليكية', description: 'تستخدم الضغط الهيدروليكي لاستخراج الزيت', features: ['المعالجة بالدفعات', 'الاستخراج بالضغط العالي', 'مناسبة لمواد مختلفة', 'جودة زيت جيدة'] },
-  { name: 'مطحنة لولبية', description: 'تستخدم لولبة دوارة للضغط واستخراج الزيت', features: ['التشغيل المستمر', 'الضغط الأقل', 'الإنتاجية الأعلى', 'التكلفة الأولية الأقل'] },
-  { name: 'الاستخراج بالذائبة', description: 'تستخدم الذائبات الكيميائية لذوبان الزيت', features: ['الإنتاج الأعلى', 'المقياس الصناعي', 'العملية المعقدة'] },
+const comparisonData = [
+  {
+    name: 'المكبس الهيدروليكي',
+    color: 'amber',
+    pros: ['ضغط عالي (حتى 60MPa)', 'مناسب للبذور عالية الزيت', 'الضغط اللطيف = جودة أفضل', 'ضجيج منخفض، اهتزاز منخفض', 'عمر خدمة طويل (15-20 سنة)', 'صيانة أقل مطلوبة', 'يمكنه الضغط بدون تسخين (الضغط البارد)', 'مساحة أصغر', 'عملية بالدفعات - مرنة'],
+    cons: ['إنتاج مستمر أقل', 'تكلفة أولية أعلى', 'يتطلب مزيداً من انتباه المشغل'],
+    best: ['الإنتاج الصغير إلى المتوسط', 'زيت ممتاز (بكر، مضغوط بارداً)', 'زيوت تخصصية عالية القيمة', 'المنتجين الحرفيين والبوتيك']
+  },
+  {
+    name: 'المكبس اللولبي',
+    color: 'blue',
+    pros: ['عملية مستمرة', 'إنتاجية عالية', 'سعر أقل', 'جيد للإنتاج واسع النطاق', 'يمكنه التعامل مع مواد مختلفة'],
+    cons: ['ضغط أقل (20-30MPa)', 'التسخين مطلوب غالباً', 'ضجيج أعلى', 'أجزاء التآكل تحتاج للاستبدال', 'ليس مثالياً للضغط البارد', 'الجودة قد تكون أقل'],
+    best: ['الإنتاج التجاري واسع النطاق', 'زيت طهي قياسي', 'إنتاج علف الحيوانات', 'معالجة الزيت السائب']
+  },
+  {
+    name: 'مكبس المكبس (Ram)',
+    color: 'green',
+    pros: ['طريقة تقليدية', 'بناء بسيط', 'ضغط عالي جداً ممكن', 'جيد للنطاق الصغير'],
+    cons: ['كثيف العمالة جداً', 'معدل إنتاج منخفض', 'يتطلب عملية يدوية', 'سعة محدودة'],
+    best: ['الإنتاج الحرفي', 'دفعات صغيرة جداً', 'الطرق التقليدية', 'المناطق النائية بدون طاقة']
+  },
 ];
 
-const productionEfficiency = [
-  { aspect: 'التشغيل', hydraulic: 'بالدفعات', screw: 'مستمر', solvent: 'مستمر' },
-  { aspect: 'وقت الدورة', hydraulic: '30-120 دقيقة', screw: '2-5 دقيقة/كغ', solvent: 'مستمر' },
-  { aspect: 'الإنتاج اليومي', hydraulic: '800-2000 كغ', screw: '1500-5000 كغ', solvent: '10000+ كغ' },
+const specsTable = [
+  { feature: 'الضغط', hydraulic: '40-60 MPa', screw: '20-30 MPa', ram: '30-50 MPa' },
+  { feature: 'التشغيل', hydraulic: 'بالدفعات (شبه آلي)', screw: 'مستمر', ram: 'دفعات يدوية' },
+  { feature: 'الإنتاج اليومي', hydraulic: '500-1500 كغ', screw: '100-1000 كغ', ram: '2-10 كغ' },
+  { feature: 'جودة الزيت', hydraulic: 'ممتاز (بكر)', screw: 'جيد', ram: 'جيد جداً' },
+  { feature: 'الضغط البارد', hydraulic: 'نعم', screw: 'محدود', ram: 'نعم' },
+  { feature: 'الصيانة', hydraulic: 'منخفضة', screw: 'عالية (تآكل اللولب)', ram: 'منخفضة جداً' },
+  { feature: 'العمر الافتراضي', hydraulic: '15-20 سنة', screw: '5-10 سنوات', ram: '20+ سنة' },
+  { feature: 'استهلاك الطاقة', hydraulic: '2-3 كيلو واط', screw: '5-15 كيلو واط', ram: 'يدوي/1 كيلو واط' },
+  { feature: 'نطاق السعر', hydraulic: 'اتصل للحصول على الأسعار', screw: 'اتصل للحصول على الأسعار', ram: 'اتصل للحصول على الأسعار' },
 ];
 
-const oilQuality = [
-  { aspect: 'الدرجة الحرارية', hydraulic: '60-100م', screw: '120-150م', solvent: 'بيئة طبيعية' },
-  { aspect: 'حفظ العناصر الغذائية', hydraulic: 'ممتاز', screw: 'متوسط', solvent: 'جيد' },
-  { aspect: 'بقايا الذائبة', hydraulic: 'لا شيء', screw: 'لا شيء', solvent: 'ممكن' },
-  { aspect: 'النكهة', hydraulic: 'طبيعية', screw: 'مُسخنة', solvent: 'محايد' },
+const decisionFramework = [
+  { question: 'ما هو هدفك الإنتاجي اليومي؟', hydraulic: '500-1500 كغ/يوم', screw: '100-1000 كغ/يوم', ram: '2-10 كغ/يوم' },
+  { question: 'ما هي جودة الزيت التي تحتاجها؟', hydraulic: 'بكر ممتاز/مضغوط بارداً', screw: 'زيت طهي قياسي', ram: 'تقليدي يدوي' },
+  { question: 'ما هي ميزانيتك؟', hydraulic: 'اتصل للحصول على الأسعار', screw: 'اتصل للحصول على الأسعار', ram: 'اتصل للحصول على الأسعار' },
+  { question: 'هل تحتاج إلى عملية مستمرة؟', hydraulic: 'لا (بالدفعات)', screw: 'نعم', ram: 'لا' },
 ];
 
-const oilYield = [
-  { material: 'السمسم', hydraulic: '48-54%', screw: '45-50%', solvent: '54-58%' },
-  { material: 'الفول السوداني', hydraulic: '45-50%', screw: '42-47%', solvent: '48-52%' },
-  { material: 'الجوز', hydraulic: '45-50%', screw: 'غير مناسب', solvent: 'غير مناسب' },
+const myths = [
+  { myth: 'المكابس الهيدروليكية فقط للإنتاج الصغير', fact: 'خطأ - يمكن للمكابس الهيدروليكية الحديثة التعامل مع 100 كغ لكل دفعة، مع أوقات دورة من 40 دقيقة إلى 1.5 ساعة حسب المادة' },
+  { myth: 'المكابس اللولبية تنتج زيتاً أكثر دائماً', fact: 'خطأ - يمكن للمكابس الهيدروليكية تحقيق عوائد أعلى مع مواد معينة' },
+  { myth: 'الضغط البارد يعطي زيتاً أقل دائماً', fact: 'خطأ - مع المعالجة المسبقة المناسبة، يمكن أن يكون العائد البارد 42-50%' },
+  { myth: 'المكابس الهيدروليكية تتطلب مزيداً من الصيانة', fact: 'خطأ - المكابس الهيدروليكية بها أجزاء متآكلة أقل' },
 ];
 
-const equipmentCosts = [
-  { aspect: 'التكلفة الأولية', hydraulic: 'متوسطة-عالية', screw: 'منخفضة-متوسطة', solvent: 'عالية جدا' },
-  { aspect: 'الصيانة', hydraulic: 'متوسطة', screw: 'عالية', solvent: 'عالية جدا' },
-  { aspect: 'استهلاك الطاقة', hydraulic: 'منخفض-متوسط', screw: 'متوسط', solvent: 'عالي' },
-];
-
-const advantages = [
-  { title: 'التنوع', desc: 'مجموعة واسعة من المواد: سمسم، فول سوداني، قنب، فول الصويا، جوز، لوز، جوز الهند. طرق ضغط متعددة: الضغط الساخن، الضغط البارد. راجع نماذجنا <a href="/ar/products/standard-hydraulic-oil-press">HN325</a> و <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press">HN500</a>.' },
-  { title: 'جودة الزيت', desc: 'قدرة الضغط البارد: الحفاظ على درجة الحرارة تحت 60 درجة مئوية. الحفاظ على النكهة والعناصر الغذائية الطبيعية. لا تلوث بالذائبة. مناسبة للأسواق العضوية.' },
-  { title: 'تحكم الضغط', desc: 'الاستخراج بالضغط العالي: حتى 75 ميجاباسكال من ضغط النظام. التحكم الدقيق للاستخراج الأمثل.' },
-];
-
-const chooseHydraulic = ['أسواق الزيت العليا: الزيوت المضغوطة بارداً، المنتجات العضوية', 'أنواع متعددة من المواد: معالجة بذور وجوز مختلفة', 'المقياس الصغير إلى المتوسط: الشركات الجديدة، مرافق الإنتاج الصغيرة', 'الإنتاج المتوجه بالجودة: التمييز العلامة التجارية'];
-const chooseScrew = ['الإنتاج عالي الحجم: إنتاج يومي كبير، تشغيل مستمر', 'بذور الزيت التقليدية: سمسم، فول سوداني، قنب', 'المشترين المهتمين بالتكلفة: استثمار أولي أقل'];
-const chooseSolvent = ['العمليات الصناعية: سعة 10000+ كغ/يوم', 'متطلبات الإنتاج القصوى: استخراج كل قطرة زيت', 'إنتاج الزيت المكرر: مرافق التكرير الكبيرة'];
+function localePath(path: string): string {
+  return `/ar${path}`;
+}
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="ar">
+<BaseLayout locale="ar" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href="/ar" class="hover:text-amber-500 transition-colors">الرئيسية</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        <a href="/ar/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-blue-500/10 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          دليل المقارنة
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-right">
-              <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
-              <div class="text-sm text-steel-500">مهندس مطحنة زيت كبار الخبراء · أكثر من 15 سنة خبرة</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">دليل المقارنة</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <span>{publishedAt.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div class="text-right">
+            <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
+            <div class="text-sm text-steel-500">مهندس تقني لمكبس الزيت · +15 سنة خبرة</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -136,55 +132,88 @@ const chooseSolvent = ['العمليات الصناعية: سعة 10000+ كغ/ي
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" dir="rtl">
       <section id="introduction" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">المقدمة</h2>
-        <p class="text-steel-700 leading-relaxed">
-          اختيار طريقة استخراج الزيت المناسبة هو قرار حاسم يؤثر على كفاءة إنتاجك، جودة منتجك، وربحيةك العامة.
-        </p>
+        <p class="text-steel-700 leading-relaxed mb-4">عند اختيار مكبس زيت، يعد فهم الاختلافات بين المكابس الهيدروليكية واللولبية والمكبسية أمراً بالغ الأهمية. لكل نوع مزاياه الخاصة وهو مناسب لاحتياجات إنتاج مختلفة.</p>
+        <div class="bg-amber-50 border-r-4 border-amber-500 p-5 rounded-l-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>لا يوجد مكبس زيت "أفضل" واحد - فقط المكبس الأفضل لاحتياجاتك المحددة. سيساعدك هذا الدليل على فهم الاختلافات الرئيسية واتخاذ قرار مستنير.</p>
+        </div>
       </section>
 
-      <section id="methods-overview" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">نظرة عامة على طرق الاستخراج</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {extractionMethods.map((item, index) => (
-            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md hover:shadow-lg transition-all duration-300">
-              <div class="flex items-center gap-3 mb-4">
-                <h3 class="font-semibold text-xl text-charcoal-900">{item.name}</h3>
-                <div class={`w-10 h-10 rounded-lg flex items-center justify-center ${index === 0 ? 'bg-amber-100 text-amber-600' : index === 1 ? 'bg-blue-100 text-blue-600' : 'bg-purple-100 text-purple-600'}`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مقارنة مفصلة</h2>
+        <div class="space-y-6">
+          {comparisonData.map((item, index) => (
+            <div key={index} class="bg-white rounded-2xl border-2 overflow-hidden shadow-lg" style={item.color === 'amber' ? 'border-color: #f59e0b' : item.color === 'blue' ? 'border-color: #3b82f6' : 'border-color: #10b981'}>
+              <div class={`p-5 ${item.color === 'amber' ? 'bg-gradient-to-r from-amber-500 to-orange-500' : item.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-green-500 to-emerald-500'}`}>
+                <h3 class="font-display text-xl text-white">{item.name}</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                <div class="p-5 bg-green-50 border-l border-steel-100">
+                  <h4 class="font-semibold text-green-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    المزايا
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.pros.map((pro, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                        <span class="text-green-500 mt-0.5">+</span>
+                        {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="p-5 bg-red-50 border-l border-steel-100">
+                  <h4 class="font-semibold text-red-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    العيوب
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.cons.map((con, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                        <span class="text-red-500 mt-0.5">-</span>
+                        {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="p-5 bg-blue-50">
+                  <h4 class="font-semibold text-blue-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    الأفضل لـ
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.best.map((b, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-              <p class="text-steel-600 mb-4">{item.description}</p>
-              <ul class="space-y-2">
-                {item.features.map((feature, idx) => (
-                  <li key={idx} class="flex items-center gap-2 text-steel-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="production-efficiency" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">كفاءة الإنتاج</h2>
+      <section id="specs" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مقارنة المواصفات الفنية</h2>
         <div class="overflow-x-auto">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-right font-semibold">الجوانب</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة الهيدروليكية</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة اللولبية</th>
-                <th class="px-4 py-3 text-right font-semibold">الاستخراج بالذائبة</th>
+            <thead>
+              <tr class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+                <th class="px-4 py-3 text-right font-semibold">الميزة</th>
+                <th class="px-4 py-3 text-right font-semibold">هيدروليكي</th>
+                <th class="px-4 py-3 text-right font-semibold">لولبي</th>
+                <th class="px-4 py-3 text-right font-semibold">مكبس</th>
               </tr>
             </thead>
             <tbody>
-              {productionEfficiency.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
+              {specsTable.map((row, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{row.feature}</td>
+                  <td class="px-4 py-3 text-amber-600">{row.hydraulic}</td>
+                  <td class="px-4 py-3 text-blue-600">{row.screw}</td>
+                  <td class="px-4 py-3 text-green-600">{row.ram}</td>
                 </tr>
               ))}
             </tbody>
@@ -192,162 +221,73 @@ const chooseSolvent = ['العمليات الصناعية: سعة 10000+ كغ/ي
         </div>
       </section>
 
-      <section id="oil-quality" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">جودة الزيت</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-emerald-500 to-teal-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-right font-semibold">الجوانب</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة الهيدروليكية</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة اللولبية</th>
-                <th class="px-4 py-3 text-right font-semibold">الاستخراج بالذائبة</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilQuality.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-emerald-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="oil-yield" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">إنتاج الزيت</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-orange-500 to-amber-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-right font-semibold">المادة</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة الهيدروليكية</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة اللولبية</th>
-                <th class="px-4 py-3 text-right font-semibold">الاستخراج بالذائبة</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilYield.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-orange-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="equipment-costs" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تكلفة المعدات</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-right font-semibold">الجوانب</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة الهيدروليكية</th>
-                <th class="px-4 py-3 text-right font-semibold">المطحنة اللولبية</th>
-                <th class="px-4 py-3 text-right font-semibold">الاستخراج بالذائبة</th>
-              </tr>
-            </thead>
-            <tbody>
-              {equipmentCosts.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-purple-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="advantages" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مزايا المطحنة الهيدروليكية</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {advantages.map((item, index) => (
-            <div key={index} class="bg-gradient-to-br from-amber-50 to-orange-50 p-5 rounded-xl border border-amber-200">
-              <h3 class="font-semibold text-amber-800 mb-2">{item.title}</h3>
-              <p class="text-steel-700 text-sm leading-relaxed" set:html={item.desc}></p>
+      <section id="decision" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">إطار عمل اتخاذ القرار</h2>
+        <p class="text-steel-700 mb-6">أجب على هذه الأسئلة الرئيسية لتحديد أفضل نوع مكبس زيت لاحتياجاتك:</p>
+        <div class="space-y-4">
+          {decisionFramework.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 shadow-sm overflow-hidden">
+              <div class="bg-steel-50 p-4">
+                <h3 class="font-semibold text-charcoal-900 flex items-center gap-2">
+                  <span class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center text-sm font-bold">{index + 1}</span>
+                  {item.question}
+                </h3>
+              </div>
+              <div class="grid grid-cols-3 gap-0">
+                <div class="p-4 bg-amber-50 border-l border-steel-100">
+                  <p class="text-xs text-steel-500 mb-1">هيدروليكي</p>
+                  <p class="text-amber-700 font-medium text-sm">{item.hydraulic}</p>
+                </div>
+                <div class="p-4 bg-blue-50 border-l border-steel-100">
+                  <p class="text-xs text-steel-500 mb-1">لولبي</p>
+                  <p class="text-blue-700 font-medium text-sm">{item.screw}</p>
+                </div>
+                <div class="p-4 bg-green-50">
+                  <p class="text-xs text-steel-500 mb-1">مكبس</p>
+                  <p class="text-green-700 font-medium text-sm">{item.ram}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="when-to-choose" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">متى تختار كل طريقة</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div class="bg-amber-50 p-5 rounded-xl border border-amber-200">
-            <h3 class="font-semibold text-amber-800 mb-4">المطحنة الهيدروليكية</h3>
-            <ul class="space-y-2">
-              {chooseHydraulic.map((item, index) => (
-                <li key={index} class="flex items-start gap-2 text-steel-700 text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">المطحنة اللولبية</h3>
-            <ul class="space-y-2">
-              {chooseScrew.map((item, index) => (
-                <li key={index} class="flex items-start gap-2 text-steel-700 text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-purple-50 p-5 rounded-xl border border-purple-200">
-            <h3 class="font-semibold text-purple-800 mb-4">الاستخراج بالذائبة</h3>
-            <ul class="space-y-2">
-              {chooseSolvent.map((item, index) => (
-                <li key={index} class="flex items-start gap-2 text-steel-700 text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <section id="myths" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخرافات الشائعة</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {myths.map((item, index) => (
+            <div key={index} class="bg-gradient-to-r from-purple-50 to-pink-50 p-5 rounded-xl border border-purple-100">
+              <div class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div>
+                  <p class="font-semibold text-charcoal-900 mb-1">الخرافة: {item.myth}</p>
+                  <p class="text-steel-700 text-sm">الحقيقة: {item.fact}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="conclusion" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
-        <p class="text-steel-700 leading-relaxed">
-          اختيار طريقة استخراج الزيت المناسبة يعتمد على احتياجاتك التجارية المحددة. مطاحن الزيت الهيدروليكية هاونو توفر أفضل توازن بين الجودة والكفاءة والتنوع لمعظم عمليات إنتاج الزيت.
-        </p>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخاتمة</h2>
+        <p class="text-steel-700 leading-relaxed">للإنتاج الصغير إلى المتوسط، وجودة زيت ممتاز، وقدرات الضغط البارد، يعد المكبس الهيدروليكي هو الخيار الأفضل. للحصول على توصيات مخصصة، اتصل بفريقنا الفني.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت الخاص بك؟</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">فريقنا الهندسي يمكنه مساعدتك في اختيار أفضل المعدات وتحسين استثمارك لتحقيق أقصى استرداد.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل ما زلت غير متأكد؟</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لمهندسينا مساعدتك في اختيار المكبس الزيتي المثالي لمتطلبات الإنتاج والميزانية المحددة.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/ar/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          تواصل مع خبرائنا
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          احصل على نصائح الخبراء
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="/ar/products" class="btn-outline border-white text-white hover:bg-white/10">
-          تصفح المعدات
-        </a>
-        <a href="/ar/resources" class="btn-outline border-white text-white hover:bg-white/10">
-          العودة للموارد
-        </a>
+        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">عرض المكابس الهيدروليكية</a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">العودة للموارد</a>
       </div>
     </div>
   </section>
 </BaseLayout>
-

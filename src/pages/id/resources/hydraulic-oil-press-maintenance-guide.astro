@@ -7,9 +7,9 @@ const resources = await getCollection('resources');
 const resource = resources.find(r => r.slug === 'hydraulic-oil-press-maintenance-guide');
 const t = getTranslations('id');
 
-const title = resource?.data.title.id || resource?.data.title.en || 'Pemeliharaan Mesin Press Minyak Hidrolik';
-const description = resource?.data.description.id || resource?.data.description.en || 'Panduan pemeliharaan lengkap';
-const seoKeywords = resource?.data.seoKeywords || ['pemeliharaan mesin press minyak', 'perawatan hidrolik'];
+const title = resource?.data.title.id || 'Perawatan Pengepres Minyak Hidrolik';
+const description = resource?.data.description.id || 'Panduan perawatan yang lengkap';
+const seoKeywords = resource?.data.seoKeywords || ['perawatan pengepres minyak hidrolik', 'servis pengepres minyak'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -19,17 +19,8 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/maintenance-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'Senior Oil Press Engineer',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  author: { '@type': 'Person', name: 'Tim Teknik Haonuo', jobTitle: 'Insinyur Senior Pengepres Minyak', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -39,59 +30,55 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/id' },
-    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/hydraulic-oil-press-maintenance-guide' },
   ],
 };
 
 const maintenanceSchedule = [
-  { frequency: 'Harian', tasks: ['Bersihkan mesin dan area sekitarnya', 'Periksa level minyak pada sistem hidrolik', 'Periksa ruang press untuk sisa-sisa', 'Verifikasi perangkat keamanan berfungsi'] },
-  { frequency: 'Mingguan', tasks: ['Bersihkan filter tangki minyak hidrolik', 'Periksa koneksi hidrolik untuk kebocoran', 'Periksa koneksi listrik', 'Lumasi bagian bergerak'] },
-  { frequency: 'Bulanan', tasks: ['Periksa kualitas minyak hidrolik', 'Periksa seal dan gasket', 'Tes pengukur tekanan', 'Kalibrasi sensor suhu'] },
-  { frequency: 'Triwulan', tasks: ['Ganti minyak hidrolik (setiap 2000 jam)', 'Periksa silinder hidrolik', 'Periksa rangka dan komponen struktural', 'Tes fungsi stop darurat'] },
+  { frequency: 'Harian', tasks: ['Bersihkan mesin dan area sekitar', 'Periksa level oli dalam sistem hidrolik', 'Periksa ruang pengepres dari sisa residu', 'Verifikasi perangkat pengaman berfungsi'] },
+  { frequency: 'Mingguan', tasks: ['Bersihkan filter tangki oli hidrolik', 'Periksa koneksi hidrolik untuk kebocoran', 'Periksa koneksi listrik', 'Lumasi bagian yang bergerak'] },
+  { frequency: 'Bulanan', tasks: ['Periksa kualitas oli hidrolik', 'Periksa segel dan gasket', 'Ukur pengukur tekanan', 'Kalibrasi sensor suhu'] },
+  { frequency: 'Triwulan', tasks: ['Ganti oli hidrolik (setiap 2.000 jam)', 'Periksa silinder hidrolik', 'Periksa rangka dan komponen struktural', 'Ukur fungsi penghentian darurat'] },
 ];
 
 const hydraulicSystem = [
-  { title: 'Pengelolaan Minyak Hidrolik', items: ['Gunakan minyak hidrolik ISO VG 46', 'Pertahankan suhu yang tepat (30-50°C)', 'Ganti minyak setiap 2000 jam operasi', 'Kapasitas: <a href="/id/products/standard-hydraulic-oil-press">HN325</a>/<a href="/id/products/heavy-duty-hydraulic-oil-press">HN355</a>: 30-40 liter, <a href="/id/products/ultra-high-pressure-hydraulic-oil-press">HN500</a>: 50-60 liter'] },
-  { title: 'Perawatan Silinder Hidrolik', items: ['Jaga batang silinder tetap bersih', 'Lindungi dari debu dan puing-puing', 'Periksa seal untuk keausan', 'Ganti jika bocor'] },
-  { title: 'Perawatan Filter Hidrolik', items: ['Bersihkan setiap 50-100 jam operasi', 'Ganti jika rusak atau terlalu kotor', 'Gunakan filter pengganti asli Haonuo'] },
+  { title: 'Manajemen Oli Hidrolik', items: ['Gunakan oli hidrolik ISO VG 46', 'Jaga suhu yang tepat (30-50°C)', 'Ganti oli setiap 2.000 jam operasi', 'Kapasitas: HN325/HN355: 30-40 liter, HN500: 50-60 liter'] },
+  { title: 'Perawatan Silinder Hidrolik', items: ['Jaga batang silinder tetap bersih', 'Lindungi dari debu dan puing', 'Periksa segel untuk keausan', 'Ganti jika bocor'] },
+  { title: 'Perawatan Filter Hidrolik', items: ['Bersihkan setiap 50-100 jam operasi', 'Ganti jika rusak atau terlalu kotor', 'Gunakan filter pengganti Haonuo asli'] },
 ];
 
 const electricalSystem = [
-  { title: 'Pemeriksaan Pasokan', items: ['Verifikasi tegangan input', 'Periksa fluktuasi tegangan', 'Gunakan pelindung lonjakan'] },
-  { title: 'Perawatan Motor', items: ['Periksa casing motor untuk kerusakan', 'Periksa kipas dan sistem pendinginan', 'Bersihkan sirip pendingin secara teratur'] },
-  { title: 'Perawatan Panel Kontrol', items: ['Hapus debu dari panel', 'Periksa fungsi tombol', 'Kencangkan koneksi terminal'] },
+  { title: 'Pemeriksaan Sumber Daya', items: ['Verifikasi tegangan input', 'Periksa fluktuasi tegangan', 'Gunakan pelindung lonjakan'] },
+  { title: 'Perawatan Motor', items: ['Periksa rumah motor dari kerusakan', 'Periksa kipas dan sistem pendingin', 'Bersihkan sirip pendingin secara teratur'] },
+  { title: 'Perawatan Panel Kontrol', items: ['Bersihkan debu dari panel', 'Periksa fungsi tombol', 'Kencangkan koneksi terminal'] },
 ];
 
 const troubleshooting = [
-  { problem: 'Tekanan Rendah', causes: ['Level minyak hidrolik rendah', 'Minyak terkontaminasi', 'Pompa aus', 'Seal bocor'], solutions: ['Tambahkan minyak', 'Filter atau ganti minyak', 'Periksa pompa', 'Ganti seal'] },
-  { problem: 'Siklus Press Lambat', causes: ['Suhu minyak hidrolik rendah', 'Filter kotor', 'Pompa aus', 'Tegangan rendah'], solutions: ['Panaskan sistem', 'Bersihkan filter', 'Periksa pompa', 'Periksa pasokan'] },
-  { problem: 'Kebocoran Minyak', causes: ['Seal aus', 'Koneksi longgar', 'Selang rusak'], solutions: ['Ganti seal', 'Kencangkan koneksi', 'Ganti selang'] },
-  { problem: 'Mesin Tidak Bisa Start', causes: ['Tidak ada daya', 'Stop darurat aktif', 'Pelindung keamanan terbuka'], solutions: ['Periksa pasokan', 'Reset stop darurat', 'Tutup pelindung keamanan'] },
+  { problem: 'Tekanan Rendah', causes: ['Level oli hidrolik rendah', 'Oli terkontaminasi', 'Pompa aus', 'Segel bocor'], solutions: ['Tambahkan oli', 'Saring atau ganti oli', 'Periksa pompa', 'Ganti segel'] },
+  { problem: 'Siklus Pengepresan Lambat', causes: ['Suhu oli hidrolik rendah', 'Filter kotor', 'Pompa aus', 'Tegangan rendah'], solutions: ['Panaskan sistem', 'Bersihkan filter', 'Periksa pompa', 'Periksa sumber daya'] },
+  { problem: 'Kebocoran Oli', causes: ['Segel aus', 'Koneksi longgar', 'Selang rusak'], solutions: ['Ganti segel', 'Kencangkan koneksi', 'Ganti selang'] },
+  { problem: 'Mesin Tidak Bisa Menyala', causes: ['Tidak ada daya', 'Penghentian darurat aktif', 'Pengaman terbuka'], solutions: ['Periksa sumber daya', 'Atur ulang penghentian darurat', 'Tutup pengaman'] },
 ];
 
 const spareParts = [
-  { name: 'Elemen filter minyak hidrolik', stock: 'Critical' },
-  { name: 'Seal dan gasket', stock: 'Critical' },
-  { name: 'Selang hidrolik', stock: 'Wear' },
-  { name: 'Pelat press', stock: 'Wear' },
-  { name: 'O-ring', stock: 'Consumables' },
+  { name: 'Elemen filter oli hidrolik', stock: 'Kritis' },
+  { name: 'Segel dan gasket', stock: 'Kritis' },
+  { name: 'Selang hidrolik', stock: 'Aus' },
+  { name: 'Piringan pengepres', stock: 'Aus' },
+  { name: 'Cincin-O', stock: 'Habis Pakai' },
 ];
-
-function localePath(path: string): string {
-  return `/id${path}`;
-}
 ---
 
-<BaseLayout locale="id" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
@@ -100,28 +87,22 @@ function localePath(path: string): string {
   <section class="bg-gradient-to-br from-green-50 to-emerald-50 py-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <span class="inline-block bg-green-500/10 text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          PANDUAN PERAWATAN
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
+        <span class="inline-block bg-green-500/10 text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">PANDUAN PERAWATAN</span>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+        <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
         <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <div class="text-left">
-              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+              <div class="font-semibold text-charcoal-900">Tim Teknik Haonuo</div>
+              <div class="text-sm text-steel-500">Insinyur Senior Pengepres Minyak · 15+ Tahun Pengalaman</div>
             </div>
           </div>
           <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
           <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
           </div>
         </div>
@@ -132,10 +113,8 @@ function localePath(path: string): string {
   <main class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pengantar</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Perawatan yang tepat untuk mesin press minyak adalah faktor terpenting untuk menentukan umur mesin press hidrolik Anda dan konsistensi kualitas minyak yang dihasilkannya.
-        </p>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
+        <p class="text-steel-700 leading-relaxed">Perawatan yang tepat sangat penting untuk memastikan kinerja dan keandalan jangka panjang pengepres minyak hidrolik Anda.</p>
       </section>
 
       <section id="maintenance-schedule" class="mb-12">
@@ -144,15 +123,15 @@ function localePath(path: string): string {
           {maintenanceSchedule.map((item, index) => (
             <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
               <div class="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${index === 0 ? 'bg-red-100 text-red-600' : index === 1 ? 'bg-orange-100 text-orange-600' : index === 2 ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'}`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+                <div class={`w-10 h-10 rounded-lg flex items-center justify-center ${index === 0 ? 'bg-red-100 text-red-600' : index === 1 ? 'bg-orange-100 text-orange-600' : index === 2 ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
                 </div>
                 <h3 class="font-semibold text-lg text-charcoal-900">{item.frequency}</h3>
               </div>
               <ul class="space-y-2">
                 {item.tasks.map((task, idx) => (
                   <li key={idx} class="flex items-center gap-2 text-steel-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                     {task}
                   </li>
                 ))}
@@ -170,7 +149,7 @@ function localePath(path: string): string {
               <h3 class="font-semibold text-blue-800 mb-3">{item.title}</h3>
               <ul class="space-y-2">
                 {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm" set:html={task}></li>
+                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
                 ))}
               </ul>
             </div>
@@ -196,22 +175,21 @@ function localePath(path: string): string {
 
       <section id="safety-maintenance" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perawatan Keamanan</h2>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div class="bg-red-50 p-5 rounded-xl border border-red-200">
             <h3 class="font-semibold text-red-800 mb-4">Sistem Darurat</h3>
             <ul class="space-y-2">
-              <li class="text-steel-700">• Uji stop darurat setiap bulan</li>
-              <li class="text-steel-700">• Pastikan respon cepat</li>
+              <li class="text-steel-700">• Uji penghentian darurat setiap bulan</li>
+              <li class="text-steel-700">• Pastikan respons cepat</li>
               <li class="text-steel-700">• Ganti jika rusak</li>
             </ul>
           </div>
           <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-            <h3 class="font-semibold text-orange-800 mb-4">Prosedur Lockout/Tagout</h3>
+            <h3 class="font-semibold text-orange-800 mb-4">Prosedur Penguncian/Penandaan</h3>
             <ol class="space-y-1 list-decimal list-inside text-steel-700 text-sm">
               <li>Matikan daya</li>
-              <li>Kunci sakelar daya</li>
-              <li>Letakkan tag "Jangan Operasikan"</li>
+              <li>Kunci saklar daya</li>
+              <li>Pasang label "Jangan Dioperasikan"</li>
               <li>Verifikasi daya mati</li>
               <li>Lakukan perawatan</li>
             </ol>
@@ -220,7 +198,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="troubleshooting" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Panduan Troubleshooting</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Panduan Pemecahan Masalah</h2>
         <div class="space-y-6">
           {troubleshooting.map((item, index) => (
             <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
@@ -249,52 +227,42 @@ function localePath(path: string): string {
       </section>
 
       <section id="spare-parts" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Inventaris Spare Part</h2>
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Spare Part Esensial</h3>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Inventaris Suku Cadang</h2>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Suku Cadang Penting</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {spareParts.map((item, index) => (
             <div key={index} class="bg-white p-4 rounded-xl border border-steel-100 shadow-sm flex justify-between items-center">
               <span class="text-charcoal-900 font-medium">{item.name}</span>
-              <span class={`px-2 py-1 rounded text-xs font-bold ${item.stock === 'Critical' ? 'bg-red-100 text-red-700' : item.stock === 'Wear' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'}`}>{item.stock}</span>
+              <span class={`px-2 py-1 rounded text-xs font-bold ${item.stock === 'Kritis' ? 'bg-red-100 text-red-700' : item.stock === 'Aus' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'}`}>{item.stock}</span>
             </div>
           ))}
         </div>
         <div class="mt-6 bg-steel-50 p-4 rounded-xl">
-          <h4 class="font-semibold text-charcoal-900 mb-2">Tingkat Stok yang Disarankan</h4>
+          <h4 class="font-semibold text-charcoal-900 mb-2">Tingkat Stok yang Direkomendasikan</h4>
           <ul class="text-steel-700 text-sm space-y-1">
-            <li>• Bagian kritis: 1-2 di stok</li>
-            <li>• Bagian aus: 2-3 di stok</li>
-            <li>• Konsumables: 3-6 bulan persediaan</li>
+            <li>• Suku cadang kritis: 1-2 unit stok</li>
+            <li>• Suku cadang aus: 2-3 unit stok</li>
+            <li>• Habis pakai: persediaan 3-6 bulan</li>
           </ul>
         </div>
       </section>
 
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Perawatan rutin mesin press minyak hidrolik Anda adalah kunci untuk memaksimalkan umur dan kinerjanya. Untuk saran perawatan personalisasi atau untuk memesan spare part, hubungi tim dukungan teknis Haonuo.
-        </p>
+        <p class="text-steel-700 leading-relaxed">Perawatan rutin adalah kunci untuk memaksimalkan umur dan kinerja pengepres minyak hidrolik Anda. Untuk saran perawatan yang dipersonalisasi atau untuk memesan suku cadang, hubungi tim dukungan teknis Haonuo.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MULAI PRODUKSI MINYAK ANDA?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim teknisi kami dapat membantu Anda memilih peralatan terbaik dan mengoptimalkan investasi Anda untuk hasil maksimal.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MEMULAI PRODUKSI MINYAK ANDA?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim teknik kami dapat membantu Anda memilih peralatan terbaik dan mengoptimalkan investasi Anda untuk pengembalian maksimal.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          {t.resources.ctaButton}
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">
-          {t.nav.products}
-        </a>
-        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
-          {t.resources.backToResources}
-        </a>
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Hubungi Ahli Kami<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">Lihat Peralatan</a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">Kembali ke Sumber Daya</a>
       </div>
     </div>
   </section>
 </BaseLayout>
-

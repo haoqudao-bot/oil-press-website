@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('id');
+
+const title = 'FAQ Mesin Press Minyak Hidrolik - Pertanyaan yang Sering Diajukan';
+const description = 'Jawaban untuk pertanyaan umum tentang mesin press minyak hidrolik, termasuk operasi, pemeliharaan, pemecahan masalah, dan produksi minyak.';
+const keywords = ['FAQ press minyak hidrolik', 'pemecahan masalah press minyak', 'pemeliharaan press hidrolik'];
+
+const faqCategories = [
+  {
+    id: 'operation',
+    title: 'Operasi & Penggunaan',
+    faqs: [
+      {
+        question: 'Bagaimana cara kerja mesin press minyak hidrolik?',
+        answer: 'Press minyak hidrolik menggunakan tekanan hidrolik untuk mengekstrak minyak dari biji minyak. Mesin terdiri dari rangka utama, silinder hidrolik, ruang press, dan sistem kontrol. Biji minyak dimasukkan ke dalam ruang press, dan silinder hidrolik menerapkan tekanan terkendali untuk memeras minyak. Minyak mengalir melalui filter dan dikumpulkan di tangki penyimpanan.'
+      },
+      {
+        question: 'Berapa tekanan hidrolik maksimum?',
+        answer: 'Mesin press minyak hidrolik kami beroperasi pada tekanan antara 60-75 MPa, tergantung pada model dan aplikasi. Model HN325 menggunakan 60 MPa untuk operasi standar, sedangkan model HN500 tekanan tinggi dapat mencapai hingga 75 MPa untuk bahan sulit seperti kelapa.'
+      },
+      {
+        question: 'Berapa banyak minyak yang bisa saya ekstrak per batch?',
+        answer: 'Hasil minyak tergantung pada jenis bahan, kadar air, dan parameter press. Hasil tipikal meliputi: wijen (45-54%), kacang tanah (42-50%), sawi (38-45%), kedelai (18-22%), kenari (45-50%), dan kelapa (60-65%). Setiap batch memproses 100 kg bahan dengan model standar.'
+      },
+      {
+        question: 'Berapa lama siklus press?',
+        answer: 'Siklus press khas memakan waktu 30-90 menit, termasuk pemuatan, press, dan pembongkaran. Waktu tepatnya tergantung pada jenis bahan, ukuran batch, dan pengaturan tekanan. Press hidrolik beroperasi dalam mode batch, tidak seperti press sekrup yang berkelanjutan.'
+      },
+      {
+        question: 'Bisakah saya menggunakan mesin untuk pengepresan dingin?',
+        answer: 'Ya! Mesin press minyak hidrolik kami dirancang khusus untuk pengepresan panas dan dingin. Untuk pengepresan dingin, suhu dijaga di bawah 60°C untuk melestarikan rasa dan nutrisi alami minyak. Ini sangat ideal untuk minyak kualitas premium dan produk organik.'
+      }
+    ]
+  },
+  {
+    id: 'maintenance',
+    title: 'Pemeliharaan & Perawatan',
+    faqs: [
+      {
+        question: 'Seberapa sering saya harus melakukan pemeliharaan?',
+        answer: 'Kami merekomendasikan pemeriksaan harian (level minyak, pengukur tekanan), pemeliharaan mingguan (pembersihan, pemeriksaan filter), inspeksi bulanan (segel hidrolik, koneksi listrik), dan perbaikan tahunan (pembongkaran lengkap, penggantian bagian aus). Pemeliharaan rutin memperpanjang umur mesin hingga 15-20 tahun.'
+      },
+      {
+        question: 'Minyak hidrolik apa yang harus saya gunakan?',
+        answer: 'Gunakan minyak hidrolik anti-keausan dengan viskositas ISO VG 46 (direkomendasikan) atau ISO VG 32 untuk iklim dingin. Minyak harus memenuhi standar DIN 51524-2 atau setara. Selalu jaga minyak tetap bersih dan ganti filter setiap 500 jam operasi.'
+      },
+      {
+        question: 'Bagaimana cara membersihkan ruang press?',
+        answer: 'Setelah setiap penggunaan, usap ruang press dengan kain bersih untuk menghilangkan sisa minyak dan kue biji. Untuk pembersihan mendalam, gunakan air hangat dengan deterjen ringan. Jangan pernah gunakan pembersih abrasif atau semprotan air bertekanan tinggi pada komponen hidrolik.'
+      },
+      {
+        question: 'Apa saja bagian aus yang umum?',
+        answer: 'Bagian aus utama adalah: segel hidrolik (ganti setiap 2000 jam), elemen filter (setiap 500 jam), kain press (setiap 3-6 bulan), dan katup pelepas tekanan (setiap 5000 jam). Kami menyediakan stok suku cadang lengkap untuk semua model.'
+      }
+    ]
+  },
+  {
+    id: 'troubleshooting',
+    title: 'Pemecahan Masalah',
+    faqs: [
+      {
+        question: 'Press tidak membangun tekanan. Apa yang harus saya periksa?',
+        answer: 'Pertama periksa level minyak hidrolik - harus berada di antara tanda minimum dan maksimum di tangki. Selanjutnya, periksa kebocoran dalam sistem hidrolik (selang, koneksi, segel). Verifikasi katup pelepas tekanan tidak macet terbuka. Jika tekanan masih tidak terbentuk, pompa hidrolik mungkin perlu diperiksa atau diganti.'
+      },
+      {
+        question: 'Output minyak lebih rendah dari yang diharapkan. Mengapa?',
+        answer: 'Output minyak yang rendah dapat disebabkan oleh: tekanan tidak mencukupi (periksa pengukur tekanan), pengaturan suhu salah (terlalu panas atau terlalu dingin), bahan tidak disiapkan dengan benar (kadar air), segel press aus, atau filter tersumbat. Periksa faktor-faktor ini secara sistematis dan sesuaikan parameter.'
+      },
+      {
+        question: 'Mesin mengeluarkan suara tidak biasa. Apakah ini normal?',
+        answer: 'Beberapa suara operasional normal, tetapi suara tidak biasa seperti gerinda, ketukan, atau rengekan menunjukkan potensi masalah. Periksa komponen yang longgar, roda gigi aus, level minyak hidrolik rendah, atau udara yang terjebak dalam sistem. Jika suara berlanjut, hentikan mesin dan hubungi tim dukungan teknis kami.'
+      },
+      {
+        question: 'Bagaimana cara memperbaiki kebocoran minyak hidrolik?',
+        answer: 'Identifikasi sumber kebocoran (selang, koneksi, segel, atau silinder). Kencangkan koneksi yang longgar, ganti selang yang rusak, dan perbaiki segel yang aus. Selalu lepaskan tekanan sistem sebelum mencoba perbaikan apa pun. Jika kebocoran dari silinder hidrolik, kit segel harus diganti.'
+      }
+    ]
+  },
+  {
+    id: 'technical',
+    title: 'Spesifikasi Teknis',
+    faqs: [
+      {
+        question: 'Berapa konsumsi daya?',
+        answer: 'Konsumsi daya bervariasi menurut model: HN325 menggunakan 5,5 kW, HN500 menggunakan 7,5 kW, dan HN800 menggunakan 11 kW. Konsumsi aktual tergantung pada tekanan operasi dan beban. Press hidrolik umumnya lebih hemat energi daripada press sekrup untuk produksi skala kecil hingga menengah.'
+      },
+      {
+        question: 'Berapa dimensi mesin?',
+        answer: 'HN325: 1200 x 800 x 1800 mm (P x L x T), berat 450 kg. HN500: 1500 x 1000 x 2000 mm, berat 680 kg. HN800: 1800 x 1200 x 2200 mm, berat 950 kg. Ukuran khusus tersedia sesuai permintaan.'
+      },
+      {
+        question: 'Persyaratan listrik apa yang diperlukan?',
+        answer: 'Mesin kami memerlukan catu daya 3 fase 400V standar dengan pemutus sirkuit khusus. Sistem kontrol menggunakan 24V DC untuk keamanan. Kami merekomendasikan memasang penstabil tegangan di area dengan tegangan tidak stabil. Ahli listrik yang berkualifikasi harus melakukan pemasangan.'
+      },
+      {
+        question: 'Bisakah mesin digunakan untuk berbagai biji minyak?',
+        answer: 'Ya! Mesin press minyak hidrolik kami serbaguna dan dapat memproses berbagai biji minyak dan kacang, termasuk wijen, kacang tanah, sawi, kedelai, kenari, almond, kelapa, bunga matahari, rami, dan banyak lagi. Cukup sesuaikan pengaturan tekanan dan suhu untuk setiap bahan.'
+      }
+    ]
+  },
+  {
+    id: 'commercial',
+    title: 'Komersial & Layanan',
+    faqs: [
+      {
+        question: 'Berapa periode garansi?',
+        answer: 'Kami memberikan garansi 1 tahun pada semua mesin press minyak hidrolik, mencakup cacat produksi dan kegagalan komponen. Garansi mencakup dukungan teknis gratis dan suku cadang. Garansi diperpanjang tersedia untuk dibeli.'
+      },
+      {
+        question: 'Apakah Anda menawarkan instalasi dan pelatihan?',
+        answer: 'Ya, kami menawarkan layanan instalasi dan pelatihan lengkap. Untuk pelanggan internasional, kami menyediakan manual instalasi yang mendetail, tutorial video, dan dukungan teknis jarak jauh. Instalasi di lokasi tersedia dengan biaya tambahan.'
+      },
+      {
+        question: 'Berapa waktu pengiriman?',
+        answer: 'Model standar tersedia dalam stok dan dapat dikirim dalam 7-14 hari. Pesanan khusus memerlukan 30-45 waktu produksi. Kami mengirim ke seluruh dunia melalui laut (FCL/LCL) atau udara. Waktu pengiriman bervariasi menurut tujuan: 15-30 hari untuk laut, 3-7 hari untuk udara.'
+      },
+      {
+        question: 'Apakah Anda menyediakan suku cadang purna jual?',
+        answer: 'Ya, kami menyediakan stok suku cadang lengkap termasuk segel hidrolik, filter, selang, pengukur tekanan, dan komponen listrik. Suku cadang dapat dipesan langsung atau melalui distributor resmi kami. Kami juga menawarkan kit suku cadang untuk pemeliharaan rutin.'
+      }
+    ]
+  }
+];
+
+const allFaqs = faqCategories.flatMap(cat => cat.faqs);
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer
+    }
+  }))
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.hydoilpress.com/id/faq' }
+  ]
+};
+
+const allLd = [faqLd, breadcrumbLd];
+---
+
+<BaseLayout title={title} description={description} keywords={keywords} jsonLd={allLd} locale="id">
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">FAQ</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-steel-50 to-amber-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-display text-3xl md:text-5xl text-charcoal-900 mb-4">
+        Pertanyaan yang Sering Diajukan
+      </h1>
+      <p class="text-lg text-steel-600 max-w-3xl mx-auto">
+        Temukan jawaban untuk pertanyaan paling umum tentang mesin press minyak hidrolik, termasuk operasi, pemeliharaan, pemecahan masalah, dan spesifikasi teknis.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Categories -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Quick Navigation -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        {faqCategories.map(cat => (
+          <a
+            href={`#${cat.id}`}
+            class="px-4 py-2 rounded-full bg-steel-100 hover:bg-amber-500 hover:text-white text-steel-700 font-medium text-sm transition-colors"
+          >
+            {cat.title}
+          </a>
+        ))}
+      </div>
+
+      <!-- FAQ Sections -->
+      {faqCategories.map(cat => (
+        <section id={cat.id} class="mb-16 scroll-mt-24">
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6 pb-3 border-b border-steel-200">
+            {cat.title}
+          </h2>
+          <div class="space-y-4">
+            {cat.faqs.map((faq, index) => (
+              <details
+                class="group bg-white rounded-xl border border-steel-200 hover:border-amber-300 transition-colors shadow-sm overflow-hidden"
+              >
+                <summary class="flex items-start gap-4 p-5 cursor-pointer list-none">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-charcoal-900 font-bold text-sm flex items-center justify-center group-open:rotate-45 transition-transform">
+                    {index + 1}
+                  </span>
+                  <h3 class="font-display text-lg text-charcoal-900 flex-1">
+                    {faq.question}
+                  </h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="px-5 pb-5 pl-17 text-steel-600 leading-relaxed border-t border-steel-100 pt-4 ml-12">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <!-- Contact CTA -->
+      <section class="mt-16 bg-gradient-to-r from-steel-900 to-steel-700 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="font-display text-2xl md:text-3xl text-white mb-4">
+          Masih punya pertanyaan?
+        </h2>
+        <p class="text-steel-300 mb-6 max-w-xl mx-auto">
+          Tim teknis kami siap membantu. Hubungi kami untuk saran khusus, penawaran harga, dan dukungan purna jual.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/id/contact"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold rounded-lg transition-colors"
+          >
+            Hubungi Kami
+          </a>
+          <a
+            href="/id/products"
+            class="inline-flex items-center gap-2 px-6 py-3 border border-steel-500 hover:border-white text-white font-semibold rounded-lg transition-colors"
+          >
+            Lihat Produk
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

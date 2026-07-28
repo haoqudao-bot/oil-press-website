@@ -72,13 +72,6 @@ const yieldComparison = [
   { material: 'Almond', coldYield: '42-48%', hotYield: 'Not recommended', difference: 'N/A' },
 ];
 
-const marketComparison = [
-  { market: 'Supermarket Premium', cold: '$15-30/L', hot: '$5-10/L', premium: '200-300%' },
-  { market: 'Wholesale', cold: '$8-15/L', hot: '$3-6/L', premium: '150-200%' },
-  { market: 'Cosmetic', cold: '$20-50/L', hot: 'Not used', premium: '100%+' },
-  { market: 'Pharmaceutical', cold: '$30-80/L', hot: 'Not used', premium: '100%+' },
-];
-
 const equipment = [
   { type: 'Cold Press Equipment', machines: 'HN426 (cold press designed)', features: 'No heating element, precision pressure control, temperature monitoring' },
   { type: 'Hot Press Equipment', machines: 'HN325, HN355, HN480', features: 'Built-in roaster, temperature control system, faster operation' },
@@ -212,27 +205,6 @@ const decisionGuide = [
                   <td class="px-4 py-3 text-blue-600">{item.coldYield}</td>
                   <td class="px-4 py-3 text-amber-600">{item.hotYield}</td>
                   <td class="px-4 py-3 text-green-600 font-medium">{item.difference}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="market" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Market Price Comparison</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-              <tr><th class="px-4 py-3 text-left font-semibold">Market</th><th class="px-4 py-3 text-left font-semibold">Cold Press Price</th><th class="px-4 py-3 text-left font-semibold">Hot Press Price</th><th class="px-4 py-3 text-left font-semibold">Premium</th></tr>
-            </thead>
-            <tbody>
-              {marketComparison.map((item, index) => (
-                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.market}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.cold}</td>
-                  <td class="px-4 py-3 text-amber-600">{item.hot}</td>
-                  <td class="px-4 py-3 text-green-600 font-bold">{item.premium}</td>
                 </tr>
               ))}
             </tbody>

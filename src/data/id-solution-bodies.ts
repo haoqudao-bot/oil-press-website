@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿// Indonesian solution body content for [locale]/solutions/[slug].astro
+﻿﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian solution body content for [locale]/solutions/[slug].astro
 export const idSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Ringkasan
 
@@ -222,7 +222,7 @@ Solusi lengkap ini mencakup setiap tahap dari persiapan kelapa mentah melalui fi
 
 ## Peralatan yang Direkomendasikan
 
-- **Press Hidrolik Minyak Kelapa / VCO** — Dirancang khusus untuk penekanan kelapa dengan kemampuan dual-fungsi untuk ekstraksi susu kelapa dan minyak. Barel 390mm menangani 100 kg per batch.
+- **Press Hidrolik Minyak Kelapa / VCO** — Dirancang khusus untuk penekanan kelapa dengan kemampuan dual-fungsi untuk ekstraksi susu kelapa dan minyak. Barel 600mm menangani 180 kg per batch.
 - **Press Filter Minyak Pneumatik** — Sangat penting untuk memproduksi minyak kelapa yang jernih dan bebas endapan. Operasi pneumatik memastikan tekanan filtrasi yang konsisten.
 - **Sistem Pemurnian Minyak Nabati** — Diperlukan untuk produksi minyak kelapa RBD. Tersedia dalam kapasitas 1-100 ton/hari sesuai skala Anda.
 
@@ -493,7 +493,7 @@ Solusi ini mendukung press dingin (untuk minyak sawi Kachi Ghani premium) dan pr
 1. **Pembersihan Biji** — Hilangkan debu, batu, dan kotoran lain dari biji sawi. Biji bersih menghasilkan minyak yang lebih enak dan melindungi peralatan Anda dari kerusakan.
 2. **Pengukusan (Untuk Press Panas)** — Kukus biji sawi pada 90-100°C selama 15-20 menit menggunakan Pengukus Biji Listrik. Ini melunakkan biji, meningkatkan hasil minyak, dan mengurangi kepedasan tajam. Lewati untuk minyak sawi Kachi Ghani press dingin.
 3. **Pendinginan** — Biarkan biji yang dikukus mendingin hingga 50-70°C sebelum ditekan. Suhu yang tepat memastikan aliran minyak optimal tanpa menurunkan kualitas.
-4. **Press Hidrolik** — Masukkan biji sawi yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Setiap batch 25-50 kg diproses dalam 8-12 menit.
+4. **Press Hidrolik** — Masukkan biji sawi yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Setiap batch 100 kg diproses dalam 35-45 menit.
 5. **Filtrasi** — Lewatkan minyak sawi mentah melalui Press Filter Minyak Pneumatik untuk menghilangkan partikel biji dan endapan.
 6. **Pengendapan** — Biarkan minyak yang difiltrasi mengendap selama 24-48 jam. Minyak sawi mendapat manfaat dari pengendapan yang diperpanjang untuk mengembangkan rasa khasnya.
 7. **Pengemasan** — Botolkan minyak sawi yang sudah jadi. Wadah timah tradisional atau botol PET umum di pasar Asia Selatan.
@@ -679,7 +679,7 @@ Solusi ini mendukung press dingin (untuk minyak kacang tanah kaya nutrisi premiu
 1. **Pembersihan & Pengupasan** — Hilangkan batu, kotoran, dan kulit dari kacang tanah. Pengupasan sangat kritis — kulit menyerap minyak dan mengurangi hasil dan kualitas. Penghancur biji kami dapat membantu dengan pengupasan.
 2. **Penghancuran (Opsional)** — Hancurkan ringan kacang tanah yang sudah dikupas untuk meningkatkan luas permukaan untuk penekanan yang lebih efisien.
 3. **Pemanggangan (Untuk Press Panas)** — Panggang kacang tanah pada 130-160°C selama 20-30 menit menggunakan Panci Pemanggangan Minyak Termal. Ini mengembangkan aroma kacang khas dan meningkatkan hasil minyak. Lewati untuk minyak press dingin.
-4. **Press Hidrolik** — Masukkan kacang tanah yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Barel berdiameter dalam 390mm menangani 100 kg per batch dengan siklus 10-12 menit.
+4. **Press Hidrolik** — Masukkan kacang tanah yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Barel berdiameter dalam 390mm menangani 100 kg per batch dengan siklus 35-45 menit.
 5. **Filtrasi** — Lewatkan minyak kacang tanah mentah melalui Press Filter Minyak Pneumatik untuk menghilangkan endapan dan partikel halus.
 6. **Pengendapan** — Biarkan minyak yang difiltrasi mengendap selama 12-24 jam. Pengendapan alami menghasilkan minyak yang lebih jernih.
 7. **Pengemasan** — Botolkan minyak kacang tanah yang sudah jadi. Minyak press dingin harus disimpan dalam botol kaca gelap untuk menjaga kualitas.
@@ -740,7 +740,7 @@ Solusi ini mendukung press dingin (untuk minyak wijen kaya nutrisi premium) dan 
 1. **Pembersihan Biji** — Hilangkan batu, debu, dan kotoran lain menggunakan pembersih biji. Biji bersih menghasilkan minyak berkualitas lebih tinggi dan melindungi peralatan Anda.
 2. **Pemanggangan (Untuk Press Panas)** — Panggang biji wijen pada 160-180°C selama 15-20 menit menggunakan Panci Pemanggangan Minyak Termal. Ini mengembangkan aroma kacang khas dan meningkatkan hasil minyak. Untuk minyak press dingin, lewati langkah ini.
 3. **Pendinginan** — Biarkan biji panggang mendingin hingga 60-80°C sebelum ditekan. Biji yang terlalu panas dapat menurunkan kualitas minyak.
-4. **Press Hidrolik** — Masukkan biji wijen ke dalam Press Hidrolik Minyak Wijen. Barel 390mm memproses 32,100 kg per batch dengan waktu siklus 8-10 menit.
+4. **Press Hidrolik** — Masukkan biji wijen ke dalam Press Hidrolik Minyak Wijen. Barel 300mm memproses 32-50 kg per batch dengan waktu siklus 8-10 menit.
 5. **Filtrasi** — Lewatkan minyak wijen mentah melalui Press Filter Minyak Pneumatik untuk menghilangkan endapan dan partikel halus, menghasilkan minyak yang jernih dan siap pasar.
 6. **Pengendapan & Pengisian Botol** — Biarkan minyak yang difiltrasi mengendap selama 24 jam untuk partikel yang tersisa mengendap, lalu botolkan untuk distribusi.
 
@@ -863,7 +863,7 @@ Solusi ini cocok untuk produksi tingkat desa, operasi kios pasar, toko kecil, da
 1. **Sumber Biji** — Beli biji berkualitas dari petani lokal atau pasar grosir. Mulailah dengan biji yang tersedia dan diminati di wilayah Anda.
 2. **Pembersihan Biji** — Hilangkan batu, debu, dan kotoran. Bahkan pembersihan dasar secara signifikan meningkatkan kualitas minyak dan melindungi mesin Anda.
 3. **Penghancuran Biji (Opsional)** — Gunakan Penghancur Biji Kecepatan Tinggi untuk pra-menghancurkan biji keras seperti kacang tanah dan biji bunga matahari. Ini meningkatkan efisiensi penekanan.
-4. **Press Hidrolik** — Masukkan biji ke dalam Press Hidrolik Standar (HN325). Setiap batch 25-50 kg diproses dalam 8-12 menit. Satu orang dapat mengelola seluruh proses.
+4. **Press Hidrolik** — Masukkan biji ke dalam Press Hidrolik Standar (HN325). Setiap batch 100 kg diproses dalam 35-45 menit. Satu orang dapat mengelola seluruh proses.
 5. **Filtrasi** — Lewatkan minyak mentah melalui Press Filter Minyak Pneumatik untuk minyak yang jernih dan siap pasar.
 6. **Pengemasan & Penjualan** — Kemas minyak dalam botol atau wadah yang sesuai untuk pasar lokal Anda. Jual langsung ke konsumen, restoran, atau pengecer lokal.
 
@@ -959,7 +959,7 @@ Solusi ini menangani baik varietas bunga matahari berminyak tinggi maupun konfek
 1. **Pembersihan Biji** — Hilangkan puing-puing lapangan, batu, dan biji yang rusak. Biji bersih menghasilkan minyak lebih baik dan melindungi peralatan Anda.
 2. **Penghilangan Kulit (Direkomendasikan)** — Hilangkan kulit biji bunga matahari menggunakan penghancur biji kami. Penghilangan kulit meningkatkan hasil 10-15% dan menghasilkan minyak berwarna lebih terang. Untuk penekanan biji utuh, lewati langkah ini.
 3. **Pemanggangan** — Panggang inti tanpa kulit pada 120-150°C selama 15-25 menit menggunakan Panci Pemanggangan Minyak Termal. Ini meningkatkan aliran dan hasil minyak. Untuk minyak press dingin, lewati pemanggangan.
-4. **Press Hidrolik** — Masukkan biji bunga matahari yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Barel 390mm memproses 100 kg per batch dengan siklus 10-12 menit.
+4. **Press Hidrolik** — Masukkan biji bunga matahari yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Barel 390mm memproses 100 kg per batch dengan siklus 35-45 menit.
 5. **Filtrasi** — Lewatkan minyak bunga matahari mentah melalui Press Filter Minyak Pneumatik untuk minyak yang jernih dan siap pasar.
 6. **Pemurnian (Opsional)** — Untuk minyak bunga matahari yang dimurnikan, gunakan Sistem Pemurnian Minyak Nabati untuk memproduksi minyak goreng berwarna terang dan bercita rasa netral.
 7. **Pengemasan** — Botolkan minyak yang sudah jadi. Minyak bunga matahari press dingin harus disimpan dalam wadah gelap untuk mencegah oksidasi.

@@ -63,24 +63,24 @@ const comparisonData = [
 const specsTable = [
   { feature: 'Pressure', hydraulic: '40-60 MPa', screw: '20-30 MPa', ram: '30-50 MPa' },
   { feature: 'Operation', hydraulic: 'Batch (semi-auto)', screw: 'Continuous', ram: 'Manual batch' },
-  { feature: 'Daily Output', hydraulic: '5-50 kg', screw: '100-1000 kg', ram: '2-10 kg' },
+  { feature: 'Daily Output', hydraulic: '500-1500 kg', screw: '100-1000 kg', ram: '2-10 kg' },
   { feature: 'Oil Quality', hydraulic: 'Excellent (virgin)', screw: 'Good', ram: 'Very good' },
   { feature: 'Cold Pressing', hydraulic: 'Yes', screw: 'Limited', ram: 'Yes' },
   { feature: 'Maintenance', hydraulic: 'Low', screw: 'High (screw wear)', ram: 'Very low' },
   { feature: 'Lifespan', hydraulic: '15-20 years', screw: '5-10 years', ram: '20+ years' },
   { feature: 'Power Consumption', hydraulic: '2-3 kW', screw: '5-15 kW', ram: 'Manual/1 kW' },
-  { feature: 'Price Range', hydraulic: '$3000-$20000', screw: '$2000-$15000', ram: '$500-$3000' },
+  { feature: 'Price Range', hydraulic: 'Contact for pricing', screw: 'Contact for pricing', ram: 'Contact for pricing' },
 ];
 
 const decisionFramework = [
-  { question: 'What is your daily production target?', hydraulic: '5-50 kg/day', screw: '100-1000 kg/day', ram: '2-10 kg/day' },
+  { question: 'What is your daily production target?', hydraulic: '500-1500 kg/day', screw: '100-1000 kg/day', ram: '2-10 kg/day' },
   { question: 'What oil quality do you need?', hydraulic: 'Premium virgin/cold-pressed', screw: 'Standard cooking oil', ram: 'Traditional handmade' },
-  { question: 'What is your budget?', hydraulic: '$3000-$20000', screw: '$2000-$15000', ram: '$500-$3000' },
+  { question: 'What is your budget?', hydraulic: 'Contact for pricing', screw: 'Contact for pricing', ram: 'Contact for pricing' },
   { question: 'Do you need continuous operation?', hydraulic: 'No (batch)', screw: 'Yes', ram: 'No' },
 ];
 
 const myths = [
-  { myth: 'Hydraulic presses are only for small scale', fact: 'False - modern hydraulic presses can handle up to 50 kg per hour' },
+  { myth: 'Hydraulic presses are only for small scale', fact: 'False - modern hydraulic presses handle 100 kg per batch, with cycle times from 40 minutes to 1.5 hours depending on material' },
   { myth: 'Screw presses always produce more oil', fact: 'False - hydraulic presses can achieve higher yields with certain materials' },
   { myth: 'Cold pressing always gives less oil', fact: 'False - with proper pre-treatment, cold yield can be 42-50%' },
   { myth: 'Hydraulic presses require more maintenance', fact: 'False - hydraulic presses have fewer wearing parts' },

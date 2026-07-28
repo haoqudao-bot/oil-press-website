@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { getTranslations } from '../i18n';
 
 const { locale = 'en' } = Astro.props;
@@ -84,6 +84,7 @@ const guideItems = [
   { href: '/resources/aflatoxin-control-guide', label: ((t as any).nav?.guideAflatoxin || 'Aflatoxin Control') },
   { href: '/resources/oil-cake-byproduct-guide', label: ((t as any).nav?.guideByproduct || 'By-Product Guide') },
   { href: '/resources/complete-oil-production-line-guide', label: ((t as any).nav?.guideProductionLine || 'Production Line') },
+  { href: '/faq', label: '❓ FAQ' },
 ];
 
 const comparisonItems = [

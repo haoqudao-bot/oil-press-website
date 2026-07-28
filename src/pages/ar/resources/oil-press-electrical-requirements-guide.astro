@@ -55,12 +55,6 @@ const recommendedGenerator = [
   { models: 'HN500', size: '8-10 كيلو فولت أمبير' },
 ];
 
-const generatorSelection = [
-  { title: 'النوع', desc: 'ديزل (الأكثر شيوعاً)، بترول، شمسي' },
-  { title: 'الجودة', desc: 'العلامات التجارية المعروفة، النوع المحول الموصى به' },
-  { title: 'الميزات', desc: 'تنظيم الفولتية، الحماية من الزائد، البدء/الإيقاف التلقائي' },
-];
-
 const wiringRequirements = [
   { distance: '10م', singlePhase: '2.5 مم²', threePhase: '2.5 مم²' },
   { distance: '20م', singlePhase: '4 مم²', threePhase: '2.5 مم²' },
@@ -68,7 +62,6 @@ const wiringRequirements = [
   { distance: '50م', singlePhase: '10 مم²', threePhase: '6 مم²' },
 ];
 
-const controlPanelComponents = ['مفتاح رئيسي', 'مقاطع الدوائر', 'مبدأ المحرك', 'أزرار التحكم', 'إيقاف طارئ', 'أضوء مؤشر'];
 const electricalSafety = ['ارتداء قفازات معزولة', 'استخدام أدوات معزولة', 'اتباع إجراءات القفل/العلامة'];
 const voltageFluctuations = [
   { type: 'فولتية منخفضة', effects: 'سخونة المحرك، الأداء المنخفض', solution: 'مثبت الفولتية' },
@@ -80,7 +73,7 @@ const upsInfo = ['التطبيقات: احتياط لوحة التحكم، إي�
 const solarInfo = ['التطبيقات: المواقع خارج الشبكة، العمليات المستدامة', 'الاعتبارات: حجم الألواح الشمسية، تخزين البطاريات، مولد احتياطي موصى به'];
 
 const powerManagement = ['التشغيل خلال الساعات الصافية إذا أمكن', 'المعالجة بالدفعات ل تقليل دورات البدء'];
-const costCalculation = ['تكلفة الطاقة اليومية = (استهلاك الطاقة x الساعات x السعر) / 1000', 'مثال: 2.0 كيلو واط x 8 ساعات x 0.15$ / كيلو واط ساعة = 2.40$ / يوم'];
+const costCalculation = ['تكلفة الطاقة اليومية = (استهلاك الطاقة x الساعات x السعر) / 1000', 'مثال: تختلف تكلفة الطاقة حسب المنطقة وأسعار التعريفة. اتصل بنا للحصول على تقدير شخصي.'];
 ---
 
 <BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="ar">
@@ -203,48 +196,19 @@ const costCalculation = ['تكلفة الطاقة اليومية = (استهلا
             <ul class="space-y-2">
               {recommendedGenerator.map((item, index) => (
                 <li key={index} class="text-steel-700 flex items-center justify-between">
-                  <span class="font-bold text-amber-600">{item.size}</span>
                   <span>{item.models}</span>
+                  <span class="font-bold text-amber-600">{item.size}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">معايير اختيار المولد</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {generatorSelection.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
-              <h4 class="font-semibold text-charcoal-900 mb-2">{item.title}</h4>
-              <p class="text-steel-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        </section>
 
       <section id="power-supply" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تكوين مصدر الطاقة</h2>
         
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">الاتصال بالشبكة</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
-            <h4 class="font-semibold text-blue-800 mb-3">الاتصال أحادي الطور</h4>
-            <ul class="space-y-1 text-steel-700 text-sm">
-              <li>L1 -> مقطع الدائرة -> المحرك</li>
-              <li>N -> المحرك</li>
-              <li>PE -> إطار المعدات</li>
-            </ul>
-          </div>
-          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
-            <h4 class="font-semibold text-green-800 mb-3">الاتصال ثلاثي الطور</h4>
-            <ul class="space-y-1 text-steel-700 text-sm">
-              <li>L1, L2, L3 -> مقطع الدائرة -> المحرك</li>
-              <li>N -> لوحة التحكم</li>
-              <li>PE -> إطار المعدات</li>
-            </ul>
-          </div>
-        </div>
-
         <h3 class="font-semibold text-xl mb-4 text-charcoal-900">متطلبات الأسلاك</h3>
         <div class="overflow-x-auto mb-8">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
@@ -263,13 +227,7 @@ const costCalculation = ['تكلفة الطاقة اليومية = (استهلا
           </table>
         </div>
 
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">مكونات لوحة التحكم</h3>
-        <div class="flex flex-wrap gap-2">
-          {controlPanelComponents.map((item, index) => (
-            <span key={index} class="bg-steel-100 text-steel-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
-          ))}
-        </div>
-      </section>
+        </section>
 
       <section id="safety" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">اعتبارات السلامة</h2>
@@ -363,7 +321,7 @@ const costCalculation = ['تكلفة الطاقة اليومية = (استهلا
 
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
-        <p class="text-steel-700 leading-relaxed">التكوين الكهربائي المناسب أمر أساسي لضمان التشغيل الآمن والفعال للمكبسات الزيتية الهيدروليكية. للحصول على نصائح مخصصة حول التكوين الكهربائي، اتصل بفريق الدعم الفني của هاونواو.</p>
+        <p class="text-steel-700 leading-relaxed">التكوين الكهربائي المناسب أمر بالغ الأهمية لضمان التشغيل الآمن والفعال للمكبسات الزيتية الهيدروليكية. للحصول على نصائح مخصصة حول التكوين الكهربائي، اتصل بفريق الدعم الفني لدى هاونواو.</p>
       </section>
     </div>
   </main>

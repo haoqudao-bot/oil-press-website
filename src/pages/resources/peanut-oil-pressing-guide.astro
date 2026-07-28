@@ -69,22 +69,22 @@ const hotPressParams = [
   { param: 'Initial Cooking Rate', value: '~500 kg/hour' },
   { param: 'Roasting Temperature', value: '160-180°C' },
   { param: 'Roasting Time', value: '25-35 minutes' },
-  { param: 'Cooking Cycle', value: '30-40 minutes/batch' },
+  { param: 'Cooking Cycle', value: '40-90 minutes/batch' },
   { param: 'Total Cycle (2 barrels)', value: '~1.5 hours' },
   { param: 'System Pressure', value: '60 MPa' },
   { param: 'Motor Power', value: '2.2 kW' },
 ];
 
 const coldPressModels = [
-  { model: 'HN355', force: '370 tons', cycle: '~2 hours/batch', bestFor: 'Entry-level cold pressing' },
-  { model: 'HN426', force: '500 tons', cycle: '~2 hours/batch', bestFor: 'Standard cold pressing' },
-  { model: 'HN480', force: '560 tons', cycle: '~2 hours/batch', bestFor: 'High-volume cold pressing' },
+  { model: 'HN355', force: '360 tons', cycle: '~2 hours/batch', bestFor: 'Entry-level cold pressing' },
+  { model: 'HN426', force: '426 tons', cycle: '~2 hours/batch', bestFor: 'Standard cold pressing' },
+  { model: 'HN480', force: '480 tons', cycle: '~2 hours/batch', bestFor: 'High-volume cold pressing' },
   { model: 'HN500', force: '620 tons', cycle: '~2 hours/batch', bestFor: 'Premium commercial production' },
 ];
 
 const hotVsCold = [
   { feature: 'Oil Yield', hot: '45-55%', cold: '35-40%' },
-  { feature: 'Production Speed', hot: 'Fast (30-40 min/batch)', cold: 'Slow (2+ hours/batch)' },
+  { feature: 'Production Speed', hot: 'Fast (40-90 min/batch)', cold: 'Slow (2+ hours/batch)' },
   { feature: 'Oil Quality', hot: 'Good, neutral taste', cold: 'Premium, natural aroma' },
   { feature: 'Market Value', hot: 'Standard', cold: '2-3x higher' },
   { feature: 'Equipment Cost', hot: 'Lower', cold: 'Higher' },
@@ -339,7 +339,7 @@ const aflatoxinControl = [
           <ul class="space-y-2">
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>
-              <span class="text-steel-700"><a href="/products/cold-press-hydraulic-oil-press" class="text-amber-600 hover:underline">HN355</a>, <a href="/products/high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN426</a>, <a href="/products/ultra-high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN480</a>, or <a href="/products/heavy-duty-hydraulic-oil-press" class="text-amber-600 hover:underline">HN500</a> Hydraulic Oil Press</span>
+              <span class="text-steel-700"><a href="/products/heavy-duty-hydraulic-oil-press" class="text-amber-600 hover:underline">HN355</a>, <a href="/products/cold-press-hydraulic-oil-press" class="text-amber-600 hover:underline">HN426</a>, <a href="/products/high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN480</a>, or <a href="/products/ultra-high-pressure-hydraulic-oil-press" class="text-amber-600 hover:underline">HN500</a> Hydraulic Oil Press</span>
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 14.14 14.14"/><path d="M4.93 19.07 19.07 4.93"/></svg>

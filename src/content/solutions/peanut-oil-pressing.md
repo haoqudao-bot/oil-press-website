@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Peanut Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Arachide
@@ -133,7 +133,7 @@ This solution supports both cold pressing (for premium, nutrient-rich peanut oil
 1. **Cleaning & Shelling** — Remove stones, dirt, and shells from peanuts. Shelling is critical — shells absorb oil and reduce both yield and quality. Our seed crusher can assist with shelling.
 2. **Crushing (Optional)** — Lightly crush shelled peanuts to increase surface area for more efficient pressing.
 3. **Roasting (For Hot Press)** — Roast peanuts at 130-160°C for 20-30 minutes using the Thermal Oil Roasting Pan. This develops the characteristic peanut aroma and increases oil yield. Skip for cold-pressed oil.
-4. **Hydraulic Pressing** — Feed prepared peanuts into the Standard or Heavy Duty Hydraulic Oil Press. The 390mm inner diameter barrel handles 100 kg per batch with an 8-15 minute cycle (varies by seed type).
+4. **Hydraulic Pressing** — Feed prepared peanuts into the Standard or Heavy Duty Hydraulic Oil Press. The 390mm inner diameter barrel handles 100 kg per batch with a 40-90 minute cycle (varies by seed type).
 5. **Filtration** — Pass crude peanut oil through the Pneumatic Oil Filter Press to remove sediment and fine particles.
 6. **Settling** — Allow filtered oil to settle for 12-24 hours. Natural settling produces clearer oil.
 7. **Packaging** — Bottle the finished peanut oil. Cold-pressed oil should be stored in dark glass bottles to preserve quality.

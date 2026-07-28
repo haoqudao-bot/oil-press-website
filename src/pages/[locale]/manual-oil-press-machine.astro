@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { getTranslations, type Locale } from '../../i18n';
@@ -56,9 +56,9 @@ const faqs = [
   { question: currentLocale === 'fr' ? 'Combien d\'huile peut produire une presse manuelle ?' :
               currentLocale === 'ar' ? 'كم زيت يمكن أن ينتجه المكبس اليدوي؟' :
               'Berapa minyak yang dapat dihasilkan oleh press manual?',
-    answer: currentLocale === 'fr' ? 'Les presses à huile manuelles produisent généralement 1-3 litres d\'huile par heure selon le type de graine et l\'effort de l\'opérateur. Le rendement est inférieur à celui des presses hydrauliques (généralement 25-35% contre 42-50% pour le sésame). À titre de comparaison, une presse hydraulique Haonuo HN300 produit 3-5 kg par lot en 8-15 minutes avec un rendement beaucoup plus élevé et moins d\'effort physique.' :
-            currentLocale === 'ar' ? 'تنتج المكائن الضاغطة اليدوية عادةً 1-3 لتر من الزيت في الساعة حسب نوع البذرة ومجهود المشغل. العائد أقل من المكائن الهيدروليكية (عادةً 25-35% مقابل 42-50% للسمسم). للمقارنة، مكينة ضغط هيدروليكي Haonuo HN300 تنتج 3-5 كيلوغرام لكل دفعة في 8-15 دقيقة مع عائد أعلى بكثير ومجهود جسدي أقل.' :
-            'Mesin press minyak manual biasanya menghasilkan 1-3 liter minyak per jam tergantung jenis biji dan upaya operator. Hasilnya lebih rendah daripada press hidrolik (biasanya 25-35% vs 42-50% untuk wijen). Sebagai perbandingan, mesin press hidrolik Haonuo HN300 menghasilkan 3-5 kg per batch dalam 8-15 menit dengan hasil jauh lebih tinggi dan tenaga fisik lebih sedikit.' },
+    answer: currentLocale === 'fr' ? 'Les presses à huile manuelles produisent généralement 1-3 litres d\'huile par heure selon le type de graine et l\'effort de l\'opérateur. Le rendement est inférieur à celui des presses hydrauliques (généralement 25-35% contre 42-50% pour le sésame). À titre de comparaison, une presse hydraulique Haonuo HN300 produit 3-5 kg par lot en 40-90 minutes avec un rendement beaucoup plus élevé et moins d\'effort physique.' :
+            currentLocale === 'ar' ? 'تنتج المكائن الضاغطة اليدوية عادةً 1-3 لتر من الزيت في الساعة حسب نوع البذرة ومجهود المشغل. العائد أقل من المكائن الهيدروليكية (عادةً 25-35% مقابل 42-50% للسمسم). للمقارنة، مكينة ضغط هيدروليكي Haonuo HN300 تنتج 3-5 كيلوغرام لكل دفعة في 40-90 دقيقة مع عائد أعلى بكثير ومجهود جسدي أقل.' :
+            'Mesin press minyak manual biasanya menghasilkan 1-3 liter minyak per jam tergantung jenis biji dan upaya operator. Hasilnya lebih rendah daripada press hidrolik (biasanya 25-35% vs 42-50% untuk wijen). Sebagai perbandingan, mesin press hidrolik Haonuo HN300 menghasilkan 3-5 kg per batch dalam 40-90 menit dengan hasil jauh lebih tinggi dan tenaga fisik lebih sedikit.' },
   { question: currentLocale === 'fr' ? 'Une presse manuelle est-elle meilleure qu\'électrique ?' :
               currentLocale === 'ar' ? 'هل المكبس اليدوي أفضل من الكهربائي؟' :
               'Apakah press manual lebih baik daripada elektrik?',

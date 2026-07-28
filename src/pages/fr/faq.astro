@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('fr');
+
+const title = 'FAQ sur la presse hydraulique à huile - Questions fréquentes';
+const description = 'Réponses aux questions courantes sur les presses hydrauliques à huile, y compris le fonctionnement, la maintenance, le dépannage et la production d\'huile.';
+const keywords = ['FAQ presse hydraulique', 'dépannage presse à huile', 'maintenance presse hydraulique'];
+
+const faqCategories = [
+  {
+    id: 'operation',
+    title: 'Fonctionnement et utilisation',
+    faqs: [
+      {
+        question: 'Comment fonctionne une presse hydraulique à huile ?',
+        answer: 'Une presse hydraulique à huile utilise la pression hydraulique pour extraire l\'huile des graines oléagineuses. La machine se compose d\'un châssis principal, d\'un vérin hydraulique, d\'une chambre de pressage et d\'un système de commande. Les graines oléagineuses sont chargées dans la chambre de pressage, et le vérin hydraulique applique une pression contrôlée pour extraire l\'huile. L\'huile passe par des filtres et est collectée dans un réservoir de stockage.'
+      },
+      {
+        question: 'Quelle est la pression hydraulique maximale ?',
+        answer: 'Nos presses hydrauliques fonctionnent à des pressions comprises entre 60 et 75 MPa, selon le modèle et l\'application. Le modèle HN325 utilise 60 MPa pour un fonctionnement standard, tandis que le modèle HN500 haute pression peut atteindre jusqu\'à 75 MPa pour les matériaux difficiles comme la noix de coco.'
+      },
+      {
+        question: 'Quelle quantité d\'huile puis-je extraire par lot ?',
+        answer: 'Le rendement en huile dépend du type de matériau, de la teneur en humidité et des paramètres de pressage. Les rendements typiques incluent : sésame (45-54 %), arachide (42-50 %), colza (38-45 %), soja (18-22 %), noix (45-50 %) et coco (60-65 %). Chaque lot traite 100 kg de matériau avec les modèles standard.'
+      },
+      {
+        question: 'Combien de temps dure un cycle de pressage ?',
+        answer: 'Un cycle de pressage typique dure 30-90 minutes, y compris le chargement, le pressage et le déchargement. La durée exacte dépend du type de matériau, de la taille du lot et des réglages de pression. Les presses hydrauliques fonctionnent par lots, contrairement aux presses à vis qui sont continues.'
+      },
+      {
+        question: 'Puis-je utiliser la machine pour le pressage à froid ?',
+        answer: 'Oui ! Nos presses hydrauliques sont conçues pour le pressage à chaud et à froid. Pour le pressage à froid, la température est maintenue en dessous de 60°C pour préserver la saveur et les nutriments naturels de l\'huile. C\'est idéal pour les huiles de qualité premium et les produits biologiques.'
+      }
+    ]
+  },
+  {
+    id: 'maintenance',
+    title: 'Maintenance et entretien',
+    faqs: [
+      {
+        question: 'À quelle fréquence dois-je effectuer la maintenance ?',
+        answer: 'Nous recommandons des contrôles quotidiens (niveau d\'huile, manomètre), une maintenance hebdomadaire (nettoyage, contrôle du filtre), une inspection mensuelle (joints hydrauliques, connexions électriques) et une révision annuelle (démontage complet, remplacement des pièces d\'usure). Une maintenance régulière prolonge la durée de vie de la machine à 15-20 ans.'
+      },
+      {
+        question: 'Quelle huile hydraulique dois-je utiliser ?',
+        answer: 'Utilisez une huile hydraulique anti-usure avec un grade de viscosité ISO VG 46 (recommandé) ou ISO VG 32 pour les climats froids. L\'huile doit répondre à la norme DIN 51524-2 ou équivalente. Gardez toujours l\'huile propre et remplacez le filtre toutes les 500 heures de fonctionnement.'
+      },
+      {
+        question: 'Comment nettoyer la chambre de pressage ?',
+        answer: 'Après chaque utilisation, essuyez la chambre de pressage avec un chiffon propre pour éliminer l\'huile résiduelle et la tourte. Pour un nettoyage en profondeur, utilisez de l\'eau chaude avec un détergent doux. N\'utilisez jamais de nettoyants abrasifs ou de jets d\'eau haute pression sur les composants hydrauliques.'
+      },
+      {
+        question: 'Quelles sont les pièces d\'usure courantes ?',
+        answer: 'Les principales pièces d\'usure sont : les joints hydrauliques (remplacement toutes les 2000 heures), les éléments filtrants (toutes les 500 heures), la toile de pressage (tous les 3-6 mois) et la soupape de décharge (toutes les 5000 heures). Nous maintenons un stock complet de pièces détachées pour tous les modèles.'
+      }
+    ]
+  },
+  {
+    id: 'troubleshooting',
+    title: 'Dépannage',
+    faqs: [
+      {
+        question: 'La pression ne monte pas. Que dois-je vérifier ?',
+        answer: 'Vérifiez d\'abord le niveau d\'huile hydraulique - il doit être entre les marques minimum et maximum sur le réservoir. Ensuite, vérifiez les fuites dans le système hydraulique (tuyaux, raccords, joints). Vérifiez que la soupape de décharge n\'est pas bloquée en position ouverte. Si la pression ne monte toujours pas, la pompe hydraulique peut nécessiter une inspection ou un remplacement.'
+      },
+      {
+        question: 'La production d\'huile est inférieure à prévue. Pourquoi ?',
+        answer: 'Une faible production d\'huile peut être causée par : une pression insuffisante (vérifiez le manomètre), des réglages de température incorrects (trop chaud ou trop froid), un matériau mal préparé (teneur en humidité), des joints de pressage usés ou un filtre obstrué. Vérifiez ces facteurs systématiquement et ajustez les paramètres en conséquence.'
+      },
+      {
+        question: 'La machine fait des bruits inhabituels. Est-ce normal ?',
+        answer: 'Un bruit de fonctionnement est normal, mais les bruits inhabituels comme le grincement, le cognement ou le sifflement indiquent des problèmes potentiels. Vérifiez les composants desserrés, les engrenages usés, le faible niveau d\'huile hydraulique ou l\'air piégé dans le système. Si le bruit persiste, arrêtez la machine et contactez notre équipe de support technique.'
+      },
+      {
+        question: 'Comment réparer une fuite d\'huile hydraulique ?',
+        answer: 'Identifiez la source de la fuite (tuyau, raccord, joint ou vérin). Resserrez les raccords desserrés, remplacez les tuyaux endommagés et réparez les joints usés. Relâchez toujours la pression du système avant toute réparation. Si la fuite provient du vérin hydraulique, le kit de joints doit être remplacé.'
+      }
+    ]
+  },
+  {
+    id: 'technical',
+    title: 'Spécifications techniques',
+    faqs: [
+      {
+        question: 'Quelle est la consommation d\'énergie ?',
+        answer: 'La consommation d\'énergie varie selon les modèles : HN325 utilise 5,5 kW, HN500 utilise 7,5 kW et HN800 utilise 11 kW. La consommation réelle dépend de la pression de fonctionnement et de la charge. Les presses hydrauliques sont généralement plus économes en énergie que les presses à vis pour les productions à petite et moyenne échelle.'
+      },
+      {
+        question: 'Quelles sont les dimensions de la machine ?',
+        answer: 'HN325 : 1200 x 800 x 1800 mm (L x l x H), poids 450 kg. HN500 : 1500 x 1000 x 2000 mm, poids 680 kg. HN800 : 1800 x 1200 x 2200 mm, poids 950 kg. Des tailles personnalisées sont disponibles sur demande.'
+      },
+      {
+        question: 'Quelles sont les exigences électriques ?',
+        answer: 'Nos machines nécessitent une alimentation standard triphasée 400V avec un disjoncteur dédié. Le système de commande utilise 24V DC pour la sécurité. Nous recommandons d\'installer un stabilisateur de tension dans les zones où l\'alimentation est instable. Un électricien qualifié doit effectuer l\'installation.'
+      },
+      {
+        question: 'La machine peut-elle être utilisée pour plusieurs graines oléagineuses ?',
+        answer: 'Oui ! Nos presses hydrauliques sont polyvalentes et peuvent traiter un large éventail de graines oléagineuses et de noix, notamment le sésame, l\'arachide, le colza, le soja, la noix, l\'amande, la coco, le tournesol, le lin et bien plus encore. Ajustez simplement les réglages de pression et de température pour chaque matériau.'
+      }
+    ]
+  },
+  {
+    id: 'commercial',
+    title: 'Commercial et service',
+    faqs: [
+      {
+        question: 'Quelle est la période de garantie ?',
+        answer: 'Nous fournissons une garantie de 1 an sur toutes les presses hydrauliques, couvrant les défauts de fabrication et les pannes de composants. La garantie comprend le support technique gratuit et les pièces détachées. Une garantie prolongée est disponible à l\'achat.'
+      },
+      {
+        question: 'Proposez-vous l\'installation et la formation ?',
+        answer: 'Oui, nous proposons des services complets d\'installation et de formation. Pour les clients internationaux, nous fournissons des manuels d\'installation détaillés, des didacticiels vidéo et un support technique à distance. L\'installation sur site est disponible moyennant des frais supplémentaires.'
+      },
+      {
+        question: 'Quel est le délai de livraison ?',
+        answer: 'Les modèles standard sont en stock et peuvent être expédiés sous 7-14 jours. Les commandes personnalisées nécessitent 30-45 jours de production. Nous expédions dans le monde entier par fret maritime (FCL/LCL) ou fret aérien. Le délai de livraison varie selon la destination : 15-30 jours pour le fret maritime, 3-7 jours pour le fret aérien.'
+      },
+      {
+        question: 'Fournissez-vous des pièces détachées après-vente ?',
+        answer: 'Oui, nous maintenons un stock complet de pièces détachées, notamment les joints hydrauliques, les filtres, les tuyaux, les manomètres et les composants électriques. Les pièces détachées peuvent être commandées directement ou via nos distributeurs agréés. Nous proposons également des kits de pièces détachées pour la maintenance routinière.'
+      }
+    ]
+  }
+];
+
+const allFaqs = faqCategories.flatMap(cat => cat.faqs);
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer
+    }
+  }))
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.hydoilpress.com/fr/faq' }
+  ]
+};
+
+const allLd = [faqLd, breadcrumbLd];
+---
+
+<BaseLayout title={title} description={description} keywords={keywords} jsonLd={allLd} locale="fr">
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/fr" class="hover:text-amber-500 transition-colors">Accueil</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">FAQ</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-steel-50 to-amber-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-display text-3xl md:text-5xl text-charcoal-900 mb-4">
+        Questions Fréquentes
+      </h1>
+      <p class="text-lg text-steel-600 max-w-3xl mx-auto">
+        Trouvez les réponses aux questions les plus courantes sur les presses hydrauliques à huile, y compris le fonctionnement, la maintenance, le dépannage et les spécifications techniques.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Categories -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Quick Navigation -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        {faqCategories.map(cat => (
+          <a
+            href={`#${cat.id}`}
+            class="px-4 py-2 rounded-full bg-steel-100 hover:bg-amber-500 hover:text-white text-steel-700 font-medium text-sm transition-colors"
+          >
+            {cat.title}
+          </a>
+        ))}
+      </div>
+
+      <!-- FAQ Sections -->
+      {faqCategories.map(cat => (
+        <section id={cat.id} class="mb-16 scroll-mt-24">
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6 pb-3 border-b border-steel-200">
+            {cat.title}
+          </h2>
+          <div class="space-y-4">
+            {cat.faqs.map((faq, index) => (
+              <details
+                class="group bg-white rounded-xl border border-steel-200 hover:border-amber-300 transition-colors shadow-sm overflow-hidden"
+              >
+                <summary class="flex items-start gap-4 p-5 cursor-pointer list-none">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-charcoal-900 font-bold text-sm flex items-center justify-center group-open:rotate-45 transition-transform">
+                    {index + 1}
+                  </span>
+                  <h3 class="font-display text-lg text-charcoal-900 flex-1">
+                    {faq.question}
+                  </h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="px-5 pb-5 pl-17 text-steel-600 leading-relaxed border-t border-steel-100 pt-4 ml-12">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <!-- Contact CTA -->
+      <section class="mt-16 bg-gradient-to-r from-steel-900 to-steel-700 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="font-display text-2xl md:text-3xl text-white mb-4">
+          Vous avez encore des questions ?
+        </h2>
+        <p class="text-steel-300 mb-6 max-w-xl mx-auto">
+          Notre équipe technique est prête à vous aider. Contactez-nous pour des conseils personnalisés, des devis et un support après-vente.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/fr/contact"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold rounded-lg transition-colors"
+          >
+            Contactez-nous
+          </a>
+          <a
+            href="/fr/products"
+            class="inline-flex items-center gap-2 px-6 py-3 border border-steel-500 hover:border-white text-white font-semibold rounded-lg transition-colors"
+          >
+            Voir les produits
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

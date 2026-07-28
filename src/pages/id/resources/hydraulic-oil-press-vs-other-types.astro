@@ -7,9 +7,9 @@ const resources = await getCollection('resources');
 const resource = resources.find(r => r.slug === 'hydraulic-oil-press-vs-other-types');
 const t = getTranslations('id');
 
-const title = resource?.data.title.id || 'Press Minyak Hidrolik vs Tipe Press Lainnya';
-const description = resource?.data.description.id || 'Perbandingan dengan press sekrup dan ekstraksi pelarut';
-const seoKeywords = resource?.data.seoKeywords || ['hydraulic vs screw oil press', 'oil extraction methods', 'hydraulic press advantages'];
+const title = resource?.data.title.id || 'Pengepres Minyak Hidrolik vs Jenis Lainnya';
+const description = resource?.data.description.id || 'Pilih pengepres yang tepat untuk kebutuhan Anda';
+const seoKeywords = resource?.data.seoKeywords || ['pengepres minyak hidrolik vs ulir', 'perbandingan pengepres minyak', 'pengepres minyak mana yang harus dipilih'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -18,18 +18,9 @@ const articleLd = {
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/comparison-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'Insinyur Press Minyak Senior',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  image: 'https://www.hydoilpress.com/images/oil-press-comparison-hero.webp',
+  author: { '@type': 'Person', name: 'Tim Teknik Haonuo', jobTitle: 'Insinyur Teknis Pengepres Minyak', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -45,46 +36,37 @@ const breadcrumbLd = {
   ],
 };
 
-const extractionMethods = [
-  { name: 'Press Minyak Hidrolik', description: 'Menggunakan tekanan hidrolik untuk mengekstraksi minyak', features: ['Pengolahan batch', 'Ekstraksi tekanan tinggi', 'Cocok untuk berbagai bahan', 'Kualitas minyak baik'] },
-  { name: 'Press Sekrup', description: 'Menggunakan sekrup berputar untuk memampatkan dan mengekstraksi minyak', features: ['Operasi kontinu', 'Tekanan lebih rendah', 'Throughput lebih tinggi', 'Biaya awal lebih rendah'] },
-  { name: 'Ekstraksi Pelarut', description: 'Menggunakan pelarut kimia untuk melarutkan minyak', features: ['Hasil tertinggi', 'Skala industri', 'Proses kompleks'] },
+const comparisonData = [
+  { name: 'Pengepres Minyak Hidrolik', color: 'amber', pros: ['Tekanan tinggi (hingga 60MPa)', 'Cocok untuk biji berkadar minyak tinggi', 'Pengepresan lembut = kualitas lebih baik', 'Noise rendah, getaran rendah', 'Umur pakai panjang (15-20 tahun)', 'Perawatan lebih sedikit', 'Bisa dipres tanpa pemanasan (pengepresan dingin)', 'Jejak kaki lebih kecil', 'Operasi batch - fleksibel'], cons: ['Output kontinu lebih rendah', 'Biaya awal lebih tinggi', 'Butuh lebih banyak perhatian operator'], best: ['Produksi skala kecil hingga menengah', 'Minyak premium (pervak, dingin)', 'Minyak spesial bernilai tinggi', 'Produsen artisanal dan butik'] },
+  { name: 'Pengepres Minyak Ulir', color: 'blue', pros: ['Operasi kontinu', 'Throughput tinggi', 'Harga lebih rendah', 'Bagus untuk skala besar', 'Dapat menangani berbagai bahan'], cons: ['Tekanan lebih rendah (20-30MPa)', 'Seringkali butuh pemanasan', 'Noise lebih tinggi', 'Suku cadang aus perlu diganti', 'Tidak ideal untuk pengepresan dingin', 'Kualitas bisa lebih rendah'], best: ['Produksi komersial skala besar', 'Minyak memasak standar', 'Produksi pakan hewan', 'Pemrosesan minyak curah'] },
+  { name: 'Pengepres Ram', color: 'green', pros: ['Metode tradisional', 'Konstruksi sederhana', 'Tekanan sangat tinggi mungkin', 'Bagus untuk skala kecil'], cons: ['Sangat padat karya', 'Tingkat produksi rendah', 'Butuh operasi manual', 'Kapasitas terbatas'], best: ['Produksi artisanal', 'Batch sangat kecil', 'Metode tradisional', 'Area terpencil tanpa daya'] },
 ];
 
-const productionEfficiency = [
-  { aspect: 'Operasi', hydraulic: 'Batch', screw: 'Kontinu', solvent: 'Kontinu' },
-  { aspect: 'Waktu Siklus', hydraulic: '30-120 menit', screw: '2-5 menit/kg', solvent: 'Kontinu' },
-  { aspect: 'Output Harian', hydraulic: '800-2.000 kg', screw: '1.500-5.000 kg', solvent: '10.000+ kg' },
+const specsTable = [
+  { feature: 'Tekanan', hydraulic: '40-60 MPa', screw: '20-30 MPa', ram: '30-50 MPa' },
+  { feature: 'Operasi', hydraulic: 'Batch (semi-otomatis)', screw: 'Kontinu', ram: 'Batch manual' },
+  { feature: 'Output Harian', hydraulic: '500-1500 kg', screw: '100-1000 kg', ram: '2-10 kg' },
+  { feature: 'Kualitas Minyak', hydraulic: 'Luar biasa (pervak)', screw: 'Baik', ram: 'Sangat baik' },
+  { feature: 'Pengepresan Dingin', hydraulic: 'Ya', screw: 'Terbatas', ram: 'Ya' },
+  { feature: 'Perawatan', hydraulic: 'Rendah', screw: 'Tinggi (keausan ulir)', ram: 'Sangat rendah' },
+  { feature: 'Umur Pakai', hydraulic: '15-20 tahun', screw: '5-10 tahun', ram: '20+ tahun' },
+  { feature: 'Konsumsi Daya', hydraulic: '2-3 kW', screw: '5-15 kW', ram: 'Manual/1 kW' },
+  { feature: 'Rentang Harga', hydraulic: 'Hubungi untuk harga', screw: 'Hubungi untuk harga', ram: 'Hubungi untuk harga' },
 ];
 
-const oilQuality = [
-  { aspect: 'Suhu', hydraulic: '60-100°C', screw: '120-150°C', solvent: 'Ambien' },
-  { aspect: 'Pertahanan Nutrisi', hydraulic: 'Sangat baik', screw: 'Sedang', solvent: 'Baik' },
-  { aspect: 'Sisa Pelarut', hydraulic: 'Tidak ada', screw: 'Tidak ada', solvent: 'Mungkin' },
-  { aspect: 'Rasa', hydraulic: 'Alami', screw: 'Dipanaskan', solvent: 'Netral' },
+const decisionFramework = [
+  { question: 'Berapa target produksi harian Anda?', hydraulic: '500-1500 kg/hari', screw: '100-1000 kg/hari', ram: '2-10 kg/hari' },
+  { question: 'Kualitas minyak apa yang Anda butuhkan?', hydraulic: 'Pervak premium/dingin', screw: 'Minyak memasak standar', ram: 'Tradisional buatan tangan' },
+  { question: 'Berapa anggaran Anda?', hydraulic: 'Hubungi untuk harga', screw: 'Hubungi untuk harga', ram: 'Hubungi untuk harga' },
+  { question: 'Apakah Anda membutuhkan operasi kontinu?', hydraulic: 'Tidak (batch)', screw: 'Ya', ram: 'Tidak' },
 ];
 
-const oilYield = [
-  { material: 'Wijen', hydraulic: '48-54%', screw: '45-50%', solvent: '54-58%' },
-  { material: 'Kacang Tanah', hydraulic: '45-50%', screw: '42-47%', solvent: '48-52%' },
-  { material: 'Kacang Walnut', hydraulic: '45-50%', screw: 'Tidak cocok', solvent: 'Tidak cocok' },
+const myths = [
+  { myth: 'Pengepres hidrolik hanya untuk skala kecil', fact: 'Salah - pengepres hidrolik modern menangani 100 kg per batch, dengan waktu siklus dari 40 menit hingga 1,5 jam tergantung bahan' },
+  { myth: 'Pengepres ulir selalu menghasilkan lebih banyak minyak', fact: 'Salah - pengepres hidrolik dapat mencapai hasil lebih tinggi dengan bahan tertentu' },
+  { myth: 'Pengepresan dingin selalu menghasilkan lebih sedikit minyak', fact: 'Salah - dengan pra-perlakuan yang tepat, hasil dingin bisa 42-50%' },
+  { myth: 'Pengepres hidrolik butuh lebih banyak perawatan', fact: 'Salah - pengepres hidrolik memiliki lebih sedikit bagian yang aus' },
 ];
-
-const equipmentCosts = [
-  { aspect: 'Biaya Awal', hydraulic: 'Sedang-Tinggi', screw: 'Rendah-Sedang', solvent: 'Sangat Tinggi' },
-  { aspect: 'Pemeliharaan', hydraulic: 'Sedang', screw: 'Tinggi', solvent: 'Sangat Tinggi' },
-  { aspect: 'Konsumsi Energi', hydraulic: 'Rendah-Sedang', screw: 'Sedang', solvent: 'Tinggi' },
-];
-
-const advantages = [
-  { title: 'Versatilitas', desc: 'Rentang bahan yang luas: wijen, kacang tanah, sawi, kedelai, walnut, almond, kelapa. Metode press multiple: hot pressing, cold pressing. Lihat model kami <a href="/id/products/standard-hydraulic-oil-press">HN325</a> dan <a href="/id/products/ultra-high-pressure-hydraulic-oil-press">HN500</a>.' },
-  { title: 'Kualitas Minyak', desc: 'Kemampuan cold pressing: mempertahankan suhu di bawah 60°C. Melestarikan rasa dan nutrisi alami. Tidak ada kontaminasi pelarut. Cocok untuk pasar organik.' },
-  { title: 'Kontrol Tekanan', desc: 'Ekstraksi tekanan tinggi: hingga 75 Mpa tekanan sistem. Kontrol presisi untuk ekstraksi optimal.' },
-];
-
-const chooseHydraulic = ['Pasar Minyak Premium: minyak cold-pressed, produk organik', 'Berbagai Jenis Bahan: Memproses berbagai biji dan kacang', 'Skala Kecil-sedang: Startup, fasilitas produksi kecil', 'Produksi Berorientasi Kualitas: Diferensiasi merek'];
-const chooseScrew = ['Produksi Volume Tinggi: Output harian besar, operasi kontinu', 'Biji Minyak Konvensional: Wijen, kacang tanah, sawi', 'Pembeli Peduli Biaya: Investasi awal lebih rendah'];
-const chooseSolvent = ['Operasi Skala Industri: Kapasitas 10.000+ kg/hari', 'Persyaratan Hasil Maksimum: Mengekstraksi setiap tetes minyak', 'Produksi Minyak Rafinasi: Fasilitas rafinasi besar'];
 ---
 
 <BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
@@ -92,41 +74,33 @@ const chooseSolvent = ['Operasi Skala Industri: Kapasitas 10.000+ kg/hari', 'Per
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-blue-500/10 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          PANDUAN PERBANDINGAN
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-left">
-              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Insinyur Press Minyak Senior · Lebih dari 15 Tahun Pengalaman</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">PANDUAN PERBANDINGAN</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Tim Teknik Haonuo</div>
+            <div class="text-sm text-steel-500">Insinyur Teknis Pengepres Minyak · 15+ Tahun Pengalaman</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -136,55 +110,82 @@ const chooseSolvent = ['Operasi Skala Industri: Kapasitas 10.000+ kg/hari', 'Per
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Memilih metode ekstraksi minyak yang tepat adalah keputusan kritis yang mempengaruhi efisiensi produksi, kualitas produk, dan profitabilitas keseluruhan.
-        </p>
+        <p class="text-steel-700 leading-relaxed mb-4">Saat memilih pengepres minyak, memahami perbedaan antara pengepres hidrolik, ulir, dan ram sangat penting. Setiap jenis memiliki kelebihan sendiri dan cocok untuk kebutuhan produksi yang berbeda.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Tidak ada pengepres minyak "terbaik" - hanya pengepres terbaik untuk kebutuhan spesifik Anda. Panduan ini akan membantu Anda memahami perbedaan utama dan membuat keputusan yang tepat.</p>
+        </div>
       </section>
 
-      <section id="methods-overview" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Ringkasan Metode Ekstraksi</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {extractionMethods.map((item, index) => (
-            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md hover:shadow-lg transition-all duration-300">
-              <div class="flex items-center gap-3 mb-4">
-                <div class={`w-10 h-10 rounded-lg flex items-center justify-center ${index === 0 ? 'bg-amber-100 text-amber-600' : index === 1 ? 'bg-blue-100 text-blue-600' : 'bg-purple-100 text-purple-600'}`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
-                </div>
-                <h3 class="font-semibold text-xl text-charcoal-900">{item.name}</h3>
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Mendalam</h2>
+        <div class="space-y-6">
+          {comparisonData.map((item, index) => (
+            <div key={index} class="bg-white rounded-2xl border-2 overflow-hidden shadow-lg" style={item.color === 'amber' ? 'border-color: #f59e0b' : item.color === 'blue' ? 'border-color: #3b82f6' : 'border-color: #10b981'}>
+              <div class={`p-5 ${item.color === 'amber' ? 'bg-gradient-to-r from-amber-500 to-orange-500' : item.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-green-500 to-emerald-500'}`}>
+                <h3 class="font-display text-xl text-white">{item.name}</h3>
               </div>
-              <p class="text-steel-600 mb-4">{item.description}</p>
-              <ul class="space-y-2">
-                {item.features.map((feature, idx) => (
-                  <li key={idx} class="flex items-center gap-2 text-steel-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                <div class="p-5 bg-green-50 border-r border-steel-100">
+                  <h4 class="font-semibold text-green-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Kelebihan
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.pros.map((pro, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-green-500 mt-0.5">+</span>{pro}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="p-5 bg-red-50 border-r border-steel-100">
+                  <h4 class="font-semibold text-red-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    Kekurangan
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.cons.map((con, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-red-500 mt-0.5">-</span>{con}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="p-5 bg-blue-50">
+                  <h4 class="font-semibold text-blue-700 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Cocok Untuk
+                  </h4>
+                  <ul class="space-y-2">
+                    {item.best.map((b, idx) => (
+                      <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="production-efficiency" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Efisiensi Produksi</h2>
+      <section id="specs" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Spesifikasi Teknis</h2>
         <div class="overflow-x-auto">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Aspek</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Hidrolik</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Sekrup</th>
-                <th class="px-4 py-3 text-left font-semibold">Ekstraksi Pelarut</th>
+            <thead>
+              <tr class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+                <th class="px-4 py-3 text-left font-semibold">Fitur</th>
+                <th class="px-4 py-3 text-left font-semibold">Hidrolik</th>
+                <th class="px-4 py-3 text-left font-semibold">Ulir</th>
+                <th class="px-4 py-3 text-left font-semibold">Ram</th>
               </tr>
             </thead>
             <tbody>
-              {productionEfficiency.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
+              {specsTable.map((row, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{row.feature}</td>
+                  <td class="px-4 py-3 text-amber-600">{row.hydraulic}</td>
+                  <td class="px-4 py-3 text-blue-600">{row.screw}</td>
+                  <td class="px-4 py-3 text-green-600">{row.ram}</td>
                 </tr>
               ))}
             </tbody>
@@ -192,162 +193,70 @@ const chooseSolvent = ['Operasi Skala Industri: Kapasitas 10.000+ kg/hari', 'Per
         </div>
       </section>
 
-      <section id="oil-quality" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kualitas Minyak</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-emerald-500 to-teal-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Aspek</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Hidrolik</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Sekrup</th>
-                <th class="px-4 py-3 text-left font-semibold">Ekstraksi Pelarut</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilQuality.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-emerald-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="oil-yield" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Hasil Minyak</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-orange-500 to-amber-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Bahan</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Hidrolik</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Sekrup</th>
-                <th class="px-4 py-3 text-left font-semibold">Ekstraksi Pelarut</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilYield.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-orange-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="equipment-costs" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Biaya Peralatan</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Aspek</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Hidrolik</th>
-                <th class="px-4 py-3 text-left font-semibold">Press Sekrup</th>
-                <th class="px-4 py-3 text-left font-semibold">Ekstraksi Pelarut</th>
-              </tr>
-            </thead>
-            <tbody>
-              {equipmentCosts.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-purple-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.hydraulic}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.screw}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.solvent}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="advantages" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Keunggulan Press Minyak Hidrolik</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {advantages.map((item, index) => (
-            <div key={index} class="bg-gradient-to-br from-amber-50 to-orange-50 p-5 rounded-xl border border-amber-200">
-              <h3 class="font-semibold text-amber-800 mb-2">{item.title}</h3>
-              <p class="text-steel-700 text-sm leading-relaxed" set:html={item.desc}></p>
+      <section id="decision" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kerangka Pengambilan Keputusan</h2>
+        <p class="text-steel-700 mb-6">Jawab pertanyaan kunci ini untuk menentukan jenis pengepres minyak terbaik untuk kebutuhan Anda:</p>
+        <div class="space-y-4">
+          {decisionFramework.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 shadow-sm overflow-hidden">
+              <div class="bg-steel-50 p-4">
+                <h3 class="font-semibold text-charcoal-900 flex items-center gap-2">
+                  <span class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center text-sm font-bold">{index + 1}</span>
+                  {item.question}
+                </h3>
+              </div>
+              <div class="grid grid-cols-3 gap-0">
+                <div class="p-4 bg-amber-50 border-r border-steel-100">
+                  <p class="text-xs text-steel-500 mb-1">Hidrolik</p>
+                  <p class="text-amber-700 font-medium text-sm">{item.hydraulic}</p>
+                </div>
+                <div class="p-4 bg-blue-50 border-r border-steel-100">
+                  <p class="text-xs text-steel-500 mb-1">Ulir</p>
+                  <p class="text-blue-700 font-medium text-sm">{item.screw}</p>
+                </div>
+                <div class="p-4 bg-green-50">
+                  <p class="text-xs text-steel-500 mb-1">Ram</p>
+                  <p class="text-green-700 font-medium text-sm">{item.ram}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="when-to-choose" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kapan Memilih Setiap Metode</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div class="bg-amber-50 p-5 rounded-xl border border-amber-200">
-            <h3 class="font-semibold text-amber-800 mb-4">Press Minyak Hidrolik</h3>
-            <ul class="space-y-2">
-              {chooseHydraulic.map((item, index) => (
-                <li key={index} class="flex items-start gap-2 text-steel-700 text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">Press Sekrup</h3>
-            <ul class="space-y-2">
-              {chooseScrew.map((item, index) => (
-                <li key={index} class="flex items-start gap-2 text-steel-700 text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-purple-50 p-5 rounded-xl border border-purple-200">
-            <h3 class="font-semibold text-purple-800 mb-4">Ekstraksi Pelarut</h3>
-            <ul class="space-y-2">
-              {chooseSolvent.map((item, index) => (
-                <li key={index} class="flex items-start gap-2 text-steel-700 text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <section id="myths" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Mitos Umum yang Disangkal</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {myths.map((item, index) => (
+            <div key={index} class="bg-gradient-to-r from-purple-50 to-pink-50 p-5 rounded-xl border border-purple-100">
+              <div class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div>
+                  <p class="font-semibold text-charcoal-900 mb-1">Mitos: {item.myth}</p>
+                  <p class="text-steel-700 text-sm">Fakta: {item.fact}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Memilih metode ekstraksi minyak yang tepat tergantung pada kebutuhan bisnis Anda. Press minyak hidrolik Haonuo menawarkan keseimbangan terbaik antara kualitas, efisiensi, dan versatilitas untuk sebagian besar operasi produksi minyak.
-        </p>
+        <p class="text-steel-700 leading-relaxed">Untuk produksi skala kecil hingga menengah, kualitas minyak premium, dan kemampuan pengepresan dingin, pengepres minyak hidrolik adalah pilihan yang lebih unggul. Untuk rekomendasi yang dipersonalisasi, hubungi tim teknis kami.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MEMULAI PRODUKSI MINYAK ANDA?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim insinyur kami dapat membantu Anda memilih peralatan terbaik dan mengoptimalkan investasi untuk hasil maksimal.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">MASIH RAGU?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Insinyur kami dapat membantu Anda memilih pengepres minyak yang sempurna untuk kebutuhan dan anggaran produksi spesifik Anda.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          Hubungi Ahli Kami
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">
-          Jelajahi Peralatan
-        </a>
-        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">
-          Kembali ke Sumber Daya
-        </a>
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Dapatkan Saran Ahli<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">Lihat Pengepres Hidrolik</a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">Kembali ke Sumber Daya</a>
       </div>
     </div>
   </section>
 </BaseLayout>
-

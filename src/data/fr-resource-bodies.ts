@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frResourceBodies: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frResourceBodies: Record<string, string> = {
   'which-seeds-can-be-pressed': `# Quelles graines pouvez-vous presser dans une presse à huile ? Guide complet
 
 L'une des questions les plus fréquentes des nouveaux propriétaires de presse à huile est : « Que puis-je réellement presser dans cette machine ? » La réponse est étonnamment large — une presse à huile bien conçue peut extraire l'huile de dizaines de graines, noix et amandes différentes. Cependant, toutes les graines ne sont pas également faciles à presser, et certaines nécessitent une préparation ou un équipement spécial. Ce guide complet couvre toutes les graines pressables que vous êtes susceptible de rencontrer, ainsi que des conseils pratiques sur les graines avec lesquelles commencer et celles à éviter.
@@ -661,8 +661,8 @@ L'une des distinctions les plus importantes dans l'industrie de l'huile de palme
 
 | Équipement | Modèle | Capacité | Idéal pour |
 |----------|-------|----------|----------|
-| Presse hydraulique lourde | HN355 (360T) | 8-15 kg/lot | Production PKO petite à moyenne |
-| Presse hydraulique très haute pression | HN500 (620T) | 20-35 kg/lot | Production PKO moyenne à grande |
+| Presse hydraulique lourde | HN355 (360T) | 100 kg/lot | Production PKO petite à moyenne |
+| Presse hydraulique très haute pression | HN500 (620T) | 100 kg/lot | Production PKO moyenne à grande |
 | Filtre-presse pneumatique | HN-10SL | 10-15 kg/lot | Filtration fine du PKO |
 
 ### Pour le traitement de l'huile de pulpe de palme
@@ -1731,9 +1731,9 @@ La FSSAI (Food Safety and Standards Authority of India) resserre les exigences d
 
 | Échelle | Capacité journalière | Modèle recommandé | Marché cible |
 |---------|---------------------|-------------------|--------------|
-| Démarrage | 100-200 kg/jour | HN355 (10-15 kg/lot) | Vente au détail locale, vente directe |
-| Croissance | 300-500 kg/jour | HN426 (20-25 kg/lot) | Marchés urbains, petites marques |
-| Établi | 500-1000 kg/jour | HN500 (35-50 kg/lot) | Distribution régionale, marques biologiques |
+| Démarrage | 100-200 kg/jour | HN355 (100 kg/lot) | Vente au détail locale, vente directe |
+| Croissance | 300-500 kg/jour | HN426 (100 kg/lot) | Marchés urbains, petites marques |
+| Établi | 500-1000 kg/jour | HN500 (100 kg/lot) | Distribution régionale, marques biologiques |
 | Commercial | 1000+ kg/jour | Plusieurs unités HN500 | Marque nationale, exportation |
 
 ### Perspectives
@@ -1791,10 +1791,10 @@ Haonuo fabrique quatre modèles de presses à huile hydrauliques, chacun conçu 
 
 | Modèle | Capacité | Diamètre de la chambre | Puissance | Prix FOB |
 |--------|----------|----------------------|-----------|----------|
-| **HN325** | 5–10 kg/lot | 325 mm | 2,2 kW | Demander un devis |
-| **HN355** | 10–15 kg/lot | 355 mm | 2,2 kW | Obtenir les prix pour ce modèle |
-| **HN426** | 20–25 kg/lot | 426 mm | 2,2 kW | Nous demander les prix actuels |
-| **HN500** | 35–50 kg/lot | 500 mm | 2,2 kW | Demander les prix pour ce modèle |
+| **HN325** | 100 kg/lot | 325 mm | 2,2 kW | Demander un devis |
+| **HN355** | 100 kg/lot | 355 mm | 2,2 kW | Obtenir les prix pour ce modèle |
+| **HN426** | 100 kg/lot | 426 mm | 2,2 kW | Nous demander les prix actuels |
+| **HN500** | 100 kg/lot | 500 mm | 2,2 kW | Demander les prix pour ce modèle |
 
 ### Ce qui est inclus dans le prix de base
 

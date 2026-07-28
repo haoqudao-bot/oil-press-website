@@ -1,31 +1,30 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
 
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'cold-press-vs-hot-press-oil');
 const t = getTranslations('id');
-const title = 'Cold Press vs Hot Press Minyak';
-const description = 'Perbandingan metode cold pressing dan hot pressing';
-const seoKeywords = ['cold press vs hot press', 'metode ekstraksi minyak', 'keuntungan minyak cold pressed'];
-const publishedAt = new Date();
-const updatedAt = publishedAt;
+
+const title = resource?.data.title.id || resource?.data.title.en || 'Cold Press vs Hot Press Minyak';
+const description = resource?.data.description.id || resource?.data.description.en || 'Mana yang tepat untuk Anda?';
+const seoKeywords = resource?.data.seoKeywords || ['cold press vs hot press oil', 'manfaat minyak cold pressed', 'minyak hot pressed'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+function localePath(path: string): string {
+  return `/id${path}`;
+}
 
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/cold-hot-press-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'Insinyur Press Minyak Senior',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  image: 'https://www.hydoilpress.com/images/cold-vs-hot-press-hero.webp',
+  author: { '@type': 'Person', name: 'Tim Engineering Haonuo', jobTitle: 'Spesialis Pengolahan Minyak', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -35,80 +34,93 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
-    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/id' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/id/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/cold-press-vs-hot-press-oil' },
   ],
 };
 
-const coldPressProcess = ['Pembersihan Biji: Penghapusan kotoran menyeluruh', 'Pengaturan Kelembaban: Sesuaikan ke 7-9% kadar air', 'Pemecahan Lembut: Pecahkan biji tanpa menghasilkan panas', 'Pressing: Terapkan tekanan mekanis selama kira-kira 2 jam per batch', 'Filtrasi Halus: Filtrasi multi-tahap untuk minyak jernih'];
-const coldPressRequirements = ['Tekanan permukaan cake lebih tinggi (42 Mpa/cm2 atau lebih)', 'Desain barrel khusus untuk ekstraksi suhu rendah', 'Sistem pemantauan suhu', 'Model yang cocok: HN426, HN480, HN500'];
-
-const hotPressProcess = ['Pembersihan Biji: Hapus batu, logam, dan kotoran lainnya', 'Pengupasan: Hapus kulit untuk bahan seperti kacang tanah (tingkat penghapusan 95%+)', 'Pengaturan Kelembaban: Sesuaikan ke 5-8% kadar air', 'Panggang: Panaskan pada 160-180°C selama 25-35 menit', 'Pemecahan: Pecahkan biji menjadi partikel lebih kecil', 'Pressing: Terapkan tekanan dalam 30-40 menit per batch'];
-const hotPressRequirements = ['Tekanan pressing standar (27.78 Mpa/cm2 atau lebih)', 'Peralatan panggang', 'Model yang cocok: HN325, HN355, HN480, HN500'];
-
-const oilQualityComparison = [
-  { aspect: 'Suhu', coldPress: '< 60°C (140°F)', hotPress: '160-180°C (320-356°F)' },
-  { aspect: 'Penyimpanan Nutrisi', coldPress: 'Sangat Baik', hotPress: 'Sedang' },
-  { aspect: 'Rasa', coldPress: 'Alami, ringan', hotPress: 'Kaya, kuat' },
-  { aspect: 'Warna', coldPress: 'Lebih terang', hotPress: 'Lebih gelap' },
-  { aspect: 'Titik Asap', coldPress: 'Lebih rendah', hotPress: 'Lebih tinggi' },
-  { aspect: 'Masa Simpan', coldPress: 'Lebih pendek', hotPress: 'Lebih panjang' },
+const comparisonData = [
+  {
+    name: 'Minyak Cold Pressed',
+    color: 'blue',
+    temp: 'Suhu ruang (< 60°C)',
+    pros: ['Mempertahankan nutrisi alami (vitamin, antioksidan)', 'Mempertahankan rasa dan aroma asli', 'Nilai pasar lebih tinggi (premium 20-50%)', 'Dapat diberi label "mentah" atau "virgin"', 'Preferensi konsumen yang sadar kesehatan', 'Tidak ada degradasi termal'],
+    cons: ['Hasil lebih rendah (5-15% lebih sedikit)', 'Kandungan kelembaban lebih tinggi', 'Masa simpan lebih pendek (3-6 bulan)', 'Biaya produksi lebih tinggi', 'Mungkin mengandung lebih banyak sedimen'],
+    bestFor: ['Minyak spesialti premium', 'Pasar makanan kesehatan', 'Penggunaan kosmetik dan farmasi', 'Produk gourmet dan artisanal']
+  },
+  {
+    name: 'Minyak Hot Pressed',
+    color: 'amber',
+    temp: 'Dipanaskan (120-200°C)',
+    pros: ['Hasil lebih tinggi (5-15% lebih banyak)', 'Kandungan kelembaban lebih rendah', 'Masa simpan lebih lama (12-24 bulan)', 'Biaya produksi lebih rendah', 'Lebih baik untuk minyak goreng curah', 'Membunuh bakteri dan spora jamur'],
+    cons: ['Kehilangan nutrisi yang sensitif terhadap panas', 'Profil rasa berubah', 'Mungkin mengandung lemak trans', 'Nilai pasar lebih rendah', 'Tidak cocok untuk penggunaan kosmetik/farmasi'],
+    bestFor: ['Minyak goreng sehari-hari', 'Produksi skala besar', 'Layanan makanan institusional', 'Aplikasi industri']
+  },
 ];
 
-const oilYieldComparison = [
-  { material: 'Wijen', coldPress: '42-48%', hotPress: '48-54%' },
-  { material: 'Kacang Tanah', coldPress: '38-42%', hotPress: '45-50%' },
-  { material: 'Sawit', coldPress: '32-36%', hotPress: '38-42%' },
-  { material: 'Kenari', coldPress: '45-50%', hotPress: 'Tidak disarankan' },
+const nutritionComparison = [
+  { nutrient: 'Vitamin E', cold: 'Tinggi (terjaga)', hot: 'Rendah (sebagian hancur)' },
+  { nutrient: 'Fitosterol', cold: 'Tinggi', hot: 'Berkurang' },
+  { nutrient: 'Antioksidan', cold: 'Tinggi', hot: 'Berkurang' },
+  { nutrient: 'Omega-3', cold: 'Terjaga', hot: 'Sebagian hancur' },
+  { nutrient: 'Senyawa Rasa', cold: 'Penuh, asli', hot: 'Berubah, gurih' },
+  { nutrient: 'Warna', cold: 'Cerah, alami', hot: 'Lebih gelap, sangrai' },
 ];
 
-const chooseColdPress = ['Anda menargetkan konsumen kelas atas yang menghargai minyak alami dan tidak dimurnikan', 'Minyak Anda perlu mempertahankan nilai gizi maksimal', 'Anda mengolah kenari, almond, aprikot, atau kacang keras serupa', 'Anda memproduksi minyak organik, buatan tangan, atau gourmet'];
-const chooseHotPress = ['Anda membutuhkan output harian tinggi untuk pasar komersial', 'Anda ingin memaksimalkan hasil dan meminimalkan limbah', 'Anda memproduksi minyak untuk menggoreng, memasak, atau pencampuran', 'Anda mengolah wijen, kacang tanah, sawit, atau kedelai'];
+const yieldComparison = [
+  { material: 'Wijen', coldYield: '42-48%', hotYield: '48-54%', difference: '+6%' },
+  { material: 'Kacang Tanah', coldYield: '38-42%', hotYield: '45-50%', difference: '+7%' },
+  { material: 'Kanola', coldYield: '32-36%', hotYield: '38-42%', difference: '+6%' },
+  { material: 'Kenari', coldYield: '45-50%', hotYield: 'Tidak disarankan', difference: 'N/A' },
+  { material: 'Almond', coldYield: '42-48%', hotYield: 'Tidak disarankan', difference: 'N/A' },
+];
 
-const hybridApproaches = ['Produksi Musiman: Cold press selama musim permintaan tinggi, hot press selama musim sepi', 'Diversifikasi Produk: Cold press untuk merek minyak premium, hot press untuk minyak goreng besar', 'Pengolahan Spesifik Bahan: Cold press untuk kacang, hot press untuk biji minyak konvensional'];
+const equipment = [
+  { type: 'Peralatan Cold Press', machines: 'HN426 (dirancang untuk cold press)', features: 'Tanpa elemen pemanas, kontrol tekanan presisi, pemantauan suhu' },
+  { type: 'Peralatan Hot Press', machines: 'HN325, HN355, HN480', features: 'Pemanggangan bawaan, sistem kontrol suhu, operasi lebih cepat' },
+];
+
+const decisionGuide = [
+  { question: 'Apa pasar target Anda?', answer: 'Premium/Kesehatan → Cold Press | Pasar massal → Hot Press' },
+  { question: 'Apa prioritas utama Anda?', answer: 'Kualitas di atas kuantitas → Cold Press | Hasil di atas kualitas → Hot Press' },
+  { question: 'Berapa skala produksi Anda?', answer: 'Skala kecil → Cold Press (nilai lebih tinggi) | Skala besar → Hot Press (volume lebih tinggi)' },
+  { question: 'Bagaimana kemampuan penyimpanan Anda?', answer: 'Penyimpanan terbatas → Hot Press (masa simpan lebih lama) | Penyimpanan memadai → Cold Press' },
+];
 ---
 
 <BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href="/id/" class="hover:text-amber-500 transition-colors">Beranda</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-cyan-50 to-blue-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-cyan-500/10 text-cyan-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          PANDUAN PERBANDINGAN
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-left">
-              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Insinyur Press Minyak Senior · 15+ Tahun Pengalaman</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">PANDUAN PERBANDINGAN</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Tim Engineering Haonuo</div>
+            <div class="text-sm text-steel-500">Spesialis Pengolahan Minyak · 15+ Tahun Pengalaman</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -118,189 +130,141 @@ const hybridApproaches = ['Produksi Musiman: Cold press selama musim permintaan 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Pilihan antara cold pressing dan hot pressing adalah dasar strategi produksi minyak Anda. Setiap metode menawarkan keuntungan yang berbeda dalam hal kualitas minyak, hasil, dan efisiensi produksi.
-        </p>
+        <p class="text-steel-700 leading-relaxed mb-4">Pilihan antara cold pressing dan hot pressing adalah salah satu keputusan terpenting bagi produsen minyak. Kedua metode menghasilkan minyak berkualitas, tetapi melayani pasar dan tujuan yang berbeda.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Minyak cold pressed biasanya mendapat premium 20-50% di pasar. Memahami trade-off adalah kunci untuk memilih strategi yang tepat untuk bisnis Anda.</p>
+        </div>
       </section>
 
-      <section id="cold-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Apa itu Cold Pressing?</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          Cold pressing mengekstraksi minyak pada suhu rendah (biasanya di bawah 60°C / 140°F) tanpa menerapkan panas eksternal. Minyak diekstraksi secara murni melalui tekanan mekanis, mempertahankan karakteristik alami bahan baku.
-        </p>
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Cold Press vs Hot Press</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">Proses Cold Pressing</h3>
-            <ol class="space-y-2 list-decimal list-inside text-steel-700">
-              {coldPressProcess.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">Persyaratan Peralatan</h3>
-            <ul class="space-y-2">
-              {coldPressRequirements.map((req, idx) => (
-                <li key={idx} class="flex items-center gap-2 text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {req}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="hot-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Apa itu Hot Pressing?</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          Hot pressing melibatkan memanggang biji sebelum pressing untuk meningkatkan hasil minyak. Proses memanggang memecah struktur biji, membuat ekstraksi minyak lebih mudah dan cepat.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-            <h3 class="font-semibold text-orange-800 mb-4">Proses Hot Pressing</h3>
-            <ol class="space-y-2 list-decimal list-inside text-steel-700">
-              {hotPressProcess.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          </div>
-          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-            <h3 class="font-semibold text-orange-800 mb-4">Persyaratan Peralatan</h3>
-            <ul class="space-y-2">
-              {hotPressRequirements.map((req, idx) => (
-                <li key={idx} class="flex items-center gap-2 text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {req}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="oil-quality" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Kualitas Minyak</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Aspek</th>
-                <th class="px-4 py-3 text-left font-semibold">Cold Pressing</th>
-                <th class="px-4 py-3 text-left font-semibold">Hot Pressing</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilQualityComparison.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-blue-600 font-medium">{item.coldPress}</td>
-                  <td class="px-4 py-3 text-orange-600">{item.hotPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="oil-yield" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Hasil Minyak</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Bahan</th>
-                <th class="px-4 py-3 text-left font-semibold">Hasil Cold Press</th>
-                <th class="px-4 py-3 text-left font-semibold">Hasil Hot Press</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilYieldComparison.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-green-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
-                  <td class="px-4 py-3 text-blue-600 font-medium">{item.coldPress}</td>
-                  <td class="px-4 py-3 text-orange-600 font-medium">{item.hotPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="when-to-choose" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kapan Memilih Cold Press?</h2>
-        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
-          <ul class="space-y-3">
-            {chooseColdPress.map((item, index) => (
-              <li key={index} class="flex items-start gap-3 text-steel-700">
-                <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <h2 class="font-display font-bold text-2xl mb-6 mt-8 text-charcoal-900">Kapan Memilih Hot Press?</h2>
-        <div class="bg-orange-50 rounded-xl p-6 border border-orange-200">
-          <ul class="space-y-3">
-            {chooseHotPress.map((item, index) => (
-              <li key={index} class="flex items-start gap-3 text-steel-700">
-                <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section id="hybrid-approaches" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pendekatan Hibrida</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          Banyak produsen menemukan bahwa kombinasi kedua metode memberikan yang terbaik dari kedua dunia. Berikut adalah beberapa pendekatan hibrida yang umum:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {hybridApproaches.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 16a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+          {comparisonData.map((item, index) => (
+            <div key={index} class={`bg-white rounded-2xl border-2 overflow-hidden shadow-lg ${item.color === 'blue' ? 'border-blue-400' : 'border-amber-400'}`}>
+              <div class={`p-5 ${item.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-display text-xl text-white">{item.name}</h3>
+                <p class="text-white/80 text-sm mt-1">Suhu: {item.temp}</p>
               </div>
-              <p class="text-steel-700">{item}</p>
+              <div class="p-5 space-y-4">
+                <div>
+                  <h4 class="font-semibold text-green-700 mb-2 text-sm">Keuntungan</h4>
+                  <ul class="space-y-1">
+                    {item.pros.map((pro, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-green-500">+</span>{pro}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-red-700 mb-2 text-sm">Kekurangan</h4>
+                  <ul class="space-y-1">
+                    {item.cons.map((con, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-red-500">-</span>{con}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 mb-2 text-sm">Cocok Untuk</h4>
+                  <div class="flex flex-wrap gap-1">
+                    {item.bestFor.map((b, idx) => <span key={idx} class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">{b}</span>)}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
+      <section id="nutrition" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Nutrisi</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead>
+              <tr class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+                <th class="px-4 py-3 text-left font-semibold">Nutrisi/Properti</th>
+                <th class="px-4 py-3 text-left font-semibold">Cold Pressed</th>
+                <th class="px-4 py-3 text-left font-semibold">Hot Pressed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {nutritionComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.nutrient}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.cold}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hot}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="yield" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Hasil</h2>
+        <p class="text-steel-700 mb-6">Tingkat hasil tipikal untuk bahan yang berbeda:</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Bahan</th><th class="px-4 py-3 text-left font-semibold">Hasil Cold Press</th><th class="px-4 py-3 text-left font-semibold">Hasil Hot Press</th><th class="px-4 py-3 text-left font-semibold">Keuntungan Hot</th></tr>
+            </thead>
+            <tbody>
+              {yieldComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.coldYield}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hotYield}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.difference}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="equipment" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Peralatan untuk Setiap Metode</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {equipment.map((item, index) => (
+            <div key={index} class={`bg-white rounded-xl border border-steel-100 overflow-hidden shadow-md`}>
+              <div class={`p-4 ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-semibold text-white">{item.type}</h3>
+              </div>
+              <div class="p-5 space-y-2">
+                <p class="text-sm"><span class="text-steel-500">Direkomendasikan:</span> <span class="font-semibold text-charcoal-900">{item.machines}</span></p>
+                <p class="text-sm text-steel-600">{item.features}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="decision" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Cara Memilih</h2>
+        <div class="bg-gradient-to-br from-steel-50 to-steel-100 p-6 rounded-xl border border-steel-200">
+          <div class="space-y-4">
+            {decisionGuide.map((item, index) => (
+              <div key={index} class="bg-white p-4 rounded-lg border border-steel-100">
+                <p class="font-semibold text-charcoal-900 mb-2">T: {item.question}</p>
+                <p class="text-steel-600">J: {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Pilihan antara cold pressing dan hot pressing tergantung pada tujuan produksi Anda, pasar target, dan sumber daya yang tersedia. Cold pressing menghasilkan minyak premium dengan nilai gizi superior, sedangkan hot pressing memaksimalkan hasil dan efisiensi produksi.
-        </p>
-        <p class="text-steel-700 leading-relaxed mt-4">
-          Untuk rekomendasi personal berdasarkan kebutuhan Anda, hubungi tim engineering kami untuk konsultasi gratis.
-        </p>
+        <p class="text-steel-700 leading-relaxed">Baik cold maupun hot pressing memiliki tempatnya di industri minyak. Cold pressing memiliki harga lebih tinggi tetapi hasil lebih rendah. Hot pressing menawarkan hasil lebih tinggi tetapi dengan harga lebih rendah. Pilihan yang tepat tergantung pada pasar target, skala produksi, dan tujuan bisnis Anda. Bagi sebagian besar produsen kecil hingga menengah yang menargetkan pasar premium, cold pressing adalah pilihan yang lebih menguntungkan.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MULAI PRODUKSI MINYAK ANDA?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim engineering kami dapat membantu Anda memilih metode pressing dan peralatan terbaik untuk kebutuhan produksi Anda.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">METODE MANA YANG TEPAT UNTUK ANDA?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Insinyur kami dapat membantu Anda menentukan metode pressing dan peralatan terbaik untuk tujuan bisnis spesifik Anda.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          Hubungi Ahli Kami
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">
-          Jelajahi Peralatan
-        </a>
-        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">
-          Kembali ke Sumber Daya
-        </a>
+        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">Lihat Peralatan</a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">{t.resources.backToResources}</a>
       </div>
     </div>
   </section>

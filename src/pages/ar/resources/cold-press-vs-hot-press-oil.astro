@@ -1,31 +1,26 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
 
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'cold-press-vs-hot-press-oil');
 const t = getTranslations('ar');
-const title = 'الضغط البارد مقابل الضغط الساخن';
-const description = 'مقارنة بين أساليب الضغط البارد والساخن';
-const seoKeywords = ['ضغط بارد وساخن', 'أساليب استخراج الزيت', 'مزايا الزيت المضغوط بارداً'];
-const publishedAt = new Date();
-const updatedAt = publishedAt;
+
+const title = resource?.data.title.ar || resource?.data.title.en || 'الضغط البارد مقابل الضغط الساخن';
+const description = resource?.data.description.ar || resource?.data.description.en || 'أي الطرق المناسبة لك؟';
+const seoKeywords = resource?.data.seoKeywords || ['الضغط البارد مقابل الساخن', 'فوائد الزيت المضغوط بارداً'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
 
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/cold-hot-press-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'مهندس مكبس زيت وكيل',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  image: 'https://www.hydoilpress.com/images/cold-vs-hot-press-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'متخصص في معالجة الزيت', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -35,80 +30,97 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
-    { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/ar' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/ar/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/cold-press-vs-hot-press-oil' },
   ],
 };
 
-const coldPressProcess = ['تنظيف البذور: إزالة الشوائب الشاملة', 'تكييف الرطوبة: ضبط إلى محتوى رطوبة 7-9%', 'الكسارة الحميدة: كسر البذور دون توليد حرارة', 'الضغط: تطبيق الضغط الميكانيكي لمدة ساعتين تقريبًا لكل دفعة', 'الترشيح الدقيق: ترشيح متعدد المراحل لزيوت صافية'];
-const coldPressRequirements = ['ضغط سطح الكيك الأعلى (42 ميجاباسكال/سم2 أو أكثر)', 'تصميم برميل متخصص لاستخراج درجات الحرارة المنخفضة', 'نظام مراقبة درجة الحرارة', 'النماذج المناسبة: HN426, HN480, HN500'];
-
-const hotPressProcess = ['تنظيف البذور: إزالة الحجارة والمعدن والشوائب الأخرى', 'إزالة الغلاف: إزالة الأغلفة للمواد مثل الفول السوداني (معدل إزالة 95%+)', 'تكييف الرطوبة: ضبط إلى محتوى رطوبة 5-8%', 'التجليب: تسخين عند 160-180 درجة مئوية لمدة 25-35 دقيقة', 'الكسارة: كسر البذور إلى جزيئات أصغر', 'الضغط: تطبيق الضغط في 30-40 دقيقة لكل دفعة'];
-const hotPressRequirements = ['قوة الضغط القياسية (27.78 ميجاباسكال/سم2 أو أكثر)', 'معدات التجليب', 'النماذج المناسبة: HN325, HN355, HN480, HN500'];
-
-const oilQualityComparison = [
-  { aspect: 'درجة الحرارة', coldPress: '< 60°C (140°F)', hotPress: '160-180°C (320-356°F)' },
-  { aspect: 'الحفاظ على المغذيات', coldPress: 'ممتاز', hotPress: 'متوسط' },
-  { aspect: 'النكهة', coldPress: 'طبيعية، خفيفة', hotPress: 'غنية، قوية' },
-  { aspect: 'اللون', coldPress: 'أفتح', hotPress: 'أغمق' },
-  { aspect: 'نقطة الدخان', coldPress: 'أدنى', hotPress: 'أعلى' },
-  { aspect: 'مدة الصلاحية', coldPress: 'أقصر', hotPress: 'أطول' },
+const comparisonData = [
+  {
+    name: 'الزيت المضغوط بارداً',
+    color: 'blue',
+    temp: 'درجة حرارة الغرفة (< 60°C)',
+    pros: ['يحتفظ بالعناصر الغذائية الطبيعية (الفيتامينات، مضادات الأكسدة)', 'يحافظ على النكهة والرائحة الأصلية', 'قيمة سوقية أعلى (زيادة 20-50%)', 'يُسمى "خام" أو "بكر"', 'يفضله المستهلكون المهتمون بالصحة', 'لا يوجد تدهور حراري'],
+    cons: ['عائد أقل (5-15% أقل)', 'محتوى رطوبة أعلى', 'مدة صلاحية أقصر (3-6 أشهر)', 'تكلفة إنتاج أعلى', 'قد يحتوي على المزيد من الرواسب'],
+    bestFor: ['زيوت خاصة ممتازة', 'سوق الأغذية الصحية', 'الاستخدام التجميلي والصيدلاني', 'منتجات الذواقة والحرفية']
+  },
+  {
+    name: 'الزيت المضغوط ساخناً',
+    color: 'amber',
+    temp: 'مسخّن (120-200°C)',
+    pros: ['عائد أعلى (5-15% أكثر)', 'محتوى رطوبة أقل', 'مدة صلاحية أطول (12-24 شهر)', 'تكلفة إنتاج أقل', 'مناسب لزيت الطبخ بالجملة', 'يقتل البكتيريا والجراثيم'],
+    cons: ['فقدان العناصر الغذائية الحساسة للحرارة', 'ملف نكهة متغير', 'قد يحتوي على دهون متحولة', 'قيمة سوقية أقل', 'غير مناسب للاستخدام التجميلي/الصيدلاني'],
+    bestFor: ['زيت الطبخ اليومي', 'الإنتاج واسع النطاق', 'خدمات الطعام المؤسسية', 'التطبيقات الصناعية']
+  },
 ];
 
-const oilYieldComparison = [
-  { material: 'السمسم', coldPress: '42-48%', hotPress: '48-54%' },
-  { material: 'الفول السوداني', coldPress: '38-42%', hotPress: '45-50%' },
-  { material: 'اللفت', coldPress: '32-36%', hotPress: '38-42%' },
-  { material: 'الجوز', coldPress: '45-50%', hotPress: 'غير مقترح' },
+const nutritionComparison = [
+  { nutrient: 'فيتامين E', cold: 'مرتفع (محفوظ)', hot: 'منخفض (مدمر جزئياً)' },
+  { nutrient: 'الفيتوستيرولات', cold: 'مرتفع', hot: 'مخفض' },
+  { nutrient: 'مضادات الأكسدة', cold: 'مرتفع', hot: 'مخفض' },
+  { nutrient: 'أوميغا 3', cold: 'محفوظ', hot: 'مدمر جزئياً' },
+  { nutrient: 'مركبات النكهة', cold: 'كامل، أصلي', hot: 'متغير، جوزي' },
+  { nutrient: 'اللون', cold: 'فاتح، طبيعي', hot: 'داكن، محمص' },
 ];
 
-const chooseColdPress = ['كنت تستهدف المستهلكين ذوي الدخل العالي الذين يقدرون الزيوت الطبيعية وغير المصغرة', 'تحتاج زيتك إلى الحفاظ على القيمة الغذائية القصوى', 'كنت تتعامل مع الجوز واللوز والبرقوق أو الفاكهة الصلبة الأخرى', 'كنت تنتج الزيوت العضوية أو الحرفية أو الفاخرة'];
-const chooseHotPress = ['كنت بحاجة إلى إنتاج يومي عالي للأسواق التجارية', 'تريد زيادة العائد وتقليل النفايات', 'كنت تنتج زيوت للقلي والطهي أو الخلط', 'كنت تتعامل مع السمسم والفول السوداني واللفت أو الصويا'];
+const yieldComparison = [
+  { material: 'السمسم', coldYield: '42-48%', hotYield: '48-54%', difference: '+6%' },
+  { material: 'الفول السوداني', coldYield: '38-42%', hotYield: '45-50%', difference: '+7%' },
+  { material: 'بذور اللفت', coldYield: '32-36%', hotYield: '38-42%', difference: '+6%' },
+  { material: 'الجوز', coldYield: '45-50%', hotYield: 'غير مستحسن', difference: 'N/A' },
+  { material: 'اللوز', coldYield: '42-48%', hotYield: 'غير مستحسن', difference: 'N/A' },
+];
 
-const hybridApproaches = ['الإنتاج الموسمي: الضغط البارد خلال مواسم الطلب العالي، الضغط الساخن خلال مواسم الخمول', 'تنوع الخط الإنتاجي: الضغط البارد لأعلام الزيت الفاخرة، الضغط الساخن للزيت الغذائي الجماعي', 'المعالجة حسب المادة: الضغط البارد للفاكهة الصلبة، الضغط الساخن للبذور الزيتية التقليدية'];
+const equipment = [
+  { type: 'معدات الضغط البارد', machines: 'HN426 (مصمم للضغط البارد)', features: 'لا يوجد عنصر تسخين، تحكم دقيق في الضغط، مراقبة درجة الحرارة' },
+  { type: 'معدات الضغط الساخن', machines: 'HN325, HN355, HN480', features: 'محفّض مدمج، نظام تحكم في درجة الحرارة، تشغيل أسرع' },
+];
+
+const decisionGuide = [
+  { question: 'ما هو سوقك المستهدف؟', answer: 'الممتاز/الصحة ← ضغط بارد | السوق الشامل ← ضغط ساخن' },
+  { question: 'ما هي أولويتك الرئيسية؟', answer: 'الجودة قبل الكمية ← ضغط بارد | العائد قبل الجودة ← ضغط ساخن' },
+  { question: 'ما هو حجم إنتاجك؟', answer: 'النطاق الصغير ← ضغط بارد (قيمة أعلى) | النطاق الكبير ← ضغط ساخن (حجم أعلى)' },
+  { question: 'ما هي قدرتك التخزينية؟', answer: 'تخزين محدود ← ضغط ساخن (مدة صلاحية أطول) | تخزين كافٍ ← ضغط بارد' },
+];
+
+function localePath(path: string): string {
+  return `/ar${path}`;
+}
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="ar">
+<BaseLayout locale="ar" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href="/ar/" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href="/ar/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-cyan-50 to-blue-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-cyan-500/10 text-cyan-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          دليل المقارنة
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-right">
-              <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
-              <div class="text-sm text-steel-500">مهندس المكبس الزيتي الرئيسي · +15 سنوات من الخبرة</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">دليل المقارنة</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
+            <div class="text-sm text-steel-500">متخصص في معالجة الزيت · +15 سنة من الخبرة</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -117,190 +129,142 @@ const hybridApproaches = ['الإنتاج الموسمي: الضغط البار�
   <main class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">مقدمة</h2>
-        <p class="text-steel-700 leading-relaxed">
-          الخيار بين الضغط البارد والضغط الساخن هو أساس استراتيجية إنتاج الزيت الخاصة بك. توفر كل طريقة مزايا مميزة من حيث جودة الزيت والعائد وكفاءة الإنتاج.
-        </p>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">المقدمة</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">الاختيار بين الضغط البارد والساخن هو أحد أهم القرارات لمنتجي الزيت. تنتج الطريقتان زيتاً عالي الجودة، لكنهما يخدمان أسواقاً وأغراضاً مختلفة.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic">عادةً ما يفرض الزيت المضغوط بارداً علاوة سعرية بنسبة 20-50% على الزيت المضغوط ساخناً في السوق. فهم المقايضات هو المفتاح لاختيار الاستراتيجية المناسبة لعملك.</p>
+        </div>
       </section>
 
-      <section id="cold-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">ما هو الضغط البارد؟</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          يُستخرج الزيت بالضغط البارد عند درجات حرارة منخفضة (عادةً أقل من 60 درجة مئوية / 140 درجة فهرنهايت) دون تطبيق حرارة خارجية. يتم استخراج الزيت بواسطة الضغط الميكانيكي فقط، مما يحافظ على الخصائص الطبيعية للمادة الأولية.
-        </p>
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الضغط البارد مقابل الضغط الساخن</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">عملية الضغط البارد</h3>
-            <ol class="space-y-2 list-decimal list-inside text-steel-700">
-              {coldPressProcess.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">متطلبات المعدات</h3>
-            <ul class="space-y-2">
-              {coldPressRequirements.map((req, idx) => (
-                <li key={idx} class="flex items-center gap-2 text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {req}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="hot-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">ما هو الضغط الساخن؟</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          ينطوي الضغط الساخن على تجليب البذور مسبقًا قبل الضغط لزيادة عائد الزيت. عملية التجليب تهدم بنية البذور، مما يجعل استخراج الزيت أسهل وأسرع.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-            <h3 class="font-semibold text-orange-800 mb-4">عملية الضغط الساخن</h3>
-            <ol class="space-y-2 list-decimal list-inside text-steel-700">
-              {hotPressProcess.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          </div>
-          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-            <h3 class="font-semibold text-orange-800 mb-4">متطلبات المعدات</h3>
-            <ul class="space-y-2">
-              {hotPressRequirements.map((req, idx) => (
-                <li key={idx} class="flex items-center gap-2 text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {req}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="oil-quality" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مقارنة جودة الزيت</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">الجوانب</th>
-                <th class="px-4 py-3 text-left font-semibold">الضغط البارد</th>
-                <th class="px-4 py-3 text-left font-semibold">الضغط الساخن</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilQualityComparison.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-blue-600 font-medium">{item.coldPress}</td>
-                  <td class="px-4 py-3 text-orange-600">{item.hotPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="oil-yield" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مقارنة عائد الزيت</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">المادة</th>
-                <th class="px-4 py-3 text-left font-semibold">عائد الضغط البارد</th>
-                <th class="px-4 py-3 text-left font-semibold">عائد الضغط الساخن</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilYieldComparison.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-green-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
-                  <td class="px-4 py-3 text-blue-600 font-medium">{item.coldPress}</td>
-                  <td class="px-4 py-3 text-orange-600 font-medium">{item.hotPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="when-to-choose" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">متى يُختار الضغط البارد؟</h2>
-        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
-          <ul class="space-y-3">
-            {chooseColdPress.map((item, index) => (
-              <li key={index} class="flex items-start gap-3 text-steel-700">
-                <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <h2 class="font-display font-bold text-2xl mb-6 mt-8 text-charcoal-900">متى يُختار الضغط الساخن؟</h2>
-        <div class="bg-orange-50 rounded-xl p-6 border border-orange-200">
-          <ul class="space-y-3">
-            {chooseHotPress.map((item, index) => (
-              <li key={index} class="flex items-start gap-3 text-steel-700">
-                <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section id="hybrid-approaches" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">النهج الهجين</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          يكتشف العديد من المُنتجين أن الجمع بين كلا الطريقتين يوفر أفضل ما في كلا العالمين. إليك بعض النهج الهجينة الشائعة:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {hybridApproaches.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 16a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+          {comparisonData.map((item, index) => (
+            <div key={index} class={`bg-white rounded-2xl border-2 overflow-hidden shadow-lg ${item.color === 'blue' ? 'border-blue-400' : 'border-amber-400'}`}>
+              <div class={`p-5 ${item.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-display text-xl text-white">{item.name}</h3>
+                <p class="text-white/80 text-sm mt-1">درجة الحرارة: {item.temp}</p>
               </div>
-              <p class="text-steel-700">{item}</p>
+              <div class="p-5 space-y-4">
+                <div>
+                  <h4 class="font-semibold text-green-700 mb-2 text-sm">المزايا</h4>
+                  <ul class="space-y-1">
+                    {item.pros.map((pro, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-green-500">+</span>{pro}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-red-700 mb-2 text-sm">العيوب</h4>
+                  <ul class="space-y-1">
+                    {item.cons.map((con, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-red-500">-</span>{con}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 mb-2 text-sm">الأفضل لـ</h4>
+                  <div class="flex flex-wrap gap-1">
+                    {item.bestFor.map((b, idx) => <span key={idx} class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">{b}</span>)}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
+      <section id="nutrition" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">المقارنة الغذائية</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead>
+              <tr class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+                <th class="px-4 py-3 text-right font-semibold">العنصر/الخاصية</th>
+                <th class="px-4 py-3 text-right font-semibold">المضغوط بارداً</th>
+                <th class="px-4 py-3 text-right font-semibold">المضغوط ساخناً</th>
+              </tr>
+            </thead>
+            <tbody>
+              {nutritionComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.nutrient}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.cold}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hot}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="yield" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مقارنة العائد</h2>
+        <p class="text-steel-700 mb-6">معدلات العائد النموذجية للمواد المختلفة:</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-right font-semibold">المادة</th><th class="px-4 py-3 text-right font-semibold">عائد الضغط البارد</th><th class="px-4 py-3 text-right font-semibold">عائد الضغط الساخن</th><th class="px-4 py-3 text-right font-semibold">ميزة الساخن</th></tr>
+            </thead>
+            <tbody>
+              {yieldComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.coldYield}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hotYield}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.difference}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="equipment" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">المعدات لكل طريقة</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {equipment.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 overflow-hidden shadow-md">
+              <div class={`p-4 ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-semibold text-white">{item.type}</h3>
+              </div>
+              <div class="p-5 space-y-2">
+                <p class="text-sm"><span class="text-steel-500">الموصى به:</span> <span class="font-semibold text-charcoal-900">{item.machines}</span></p>
+                <p class="text-sm text-steel-600">{item.features}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="decision" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">كيفية الاختيار</h2>
+        <div class="bg-gradient-to-br from-steel-50 to-steel-100 p-6 rounded-xl border border-steel-200">
+          <div class="space-y-4">
+            {decisionGuide.map((item, index) => (
+              <div key={index} class="bg-white p-4 rounded-lg border border-steel-100">
+                <p class="font-semibold text-charcoal-900 mb-2">س: {item.question}</p>
+                <p class="text-steel-600">ج: {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
-        <p class="text-steel-700 leading-relaxed">
-          الخيار بين الضغط البارد والضغط الساخن يعتمد على أهداف إنتاجك، السوق المستهدف، والموارد المتاحة. ينتج الضغط البارد زيتًا فاخرًا بقيمة غذائية supérieure، بينما يزيد الضغط الساخن من العائد وكفاءة الإنتاج.
-        </p>
-        <p class="text-steel-700 leading-relaxed mt-4">
-          للحصول على توصيات مخصصة بناءً على احتياجاتك المحددة، اتصل بفريقنا الهندسي للحصول على استشارة مجانية.
-        </p>
+        <p class="text-steel-700 leading-relaxed">لكل من الضغط البارد والساخن مكانه في صناعة الزيت. يفرض الضغط البارد أسعاراً أعلى لكن بعائد أقل. يقدم الضغط الساخن عوائد أعلى لكن بأسعار أقل. الاختيار الصحيح يعتمد على سوقك المستهدف وحجم إنتاجك وأهدافك التجارية.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت؟</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">فريقنا الهندسي يمكنه مساعدتك في اختيار أفضل طريقة ضغط ومعدات تناسب احتياجات إنتاجك.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">أي طريقة مناسبة لك؟</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لمهندسينا مساعدتك في تحديد أفضل طريقة ضغط ومعدات لأهدافك التجارية المحددة.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/ar/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          اتصل بخبراؤنا
+        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          احصل على نصيحة متخصصة
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="/ar/products" class="btn-outline border-white text-white hover:bg-white/10">
-          تصفح المعدات
-        </a>
-        <a href="/ar/resources" class="btn-outline border-white text-white hover:bg-white/10">
-          العودة للموارد
-        </a>
+        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">عرض المعدات</a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">العودة للموارد</a>
       </div>
     </div>
   </section>

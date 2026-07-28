@@ -1,15 +1,15 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getTranslations } from '../../../i18n';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
 
 const resources = await getCollection('resources');
 const resource = resources.find(r => r.slug === 'aflatoxin-control-guide');
-const t = getTranslations('ar');
+const t = getTranslations('en');
 
-const title = resource?.data.title.ar || resource?.data.title.en || 'دليل مراقبة الأفلاطوكسين';
-const description = resource?.data.description.ar || resource?.data.description.en || 'إستراتيجيات شاملة لمنع ومراقبة تلوث الأفلاطوكسين في بذور الزيت';
-const seoKeywords = resource?.data.seoKeywords || ['مراقبة الأفلاطوكسين', 'منع الأفلاطوكسين', 'سلامة الغذاء'];
+const title = resource?.data.title.en || 'Aflatoxin Control Guide';
+const description = resource?.data.description.en || 'Comprehensive strategies for preventing and controlling aflatoxin contamination in oil seeds';
+const seoKeywords = resource?.data.seoKeywords || ['aflatoxin control', 'aflatoxin prevention', 'oil food safety'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -22,7 +22,7 @@ const articleLd = {
   author: {
     '@type': 'Person',
     name: 'Haonuo Engineering Team',
-    jobTitle: 'مهندس المكبس الزيتي الرئيسي',
+    jobTitle: 'Senior Oil Press Engineer',
     worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
   },
   publisher: {
@@ -39,56 +39,52 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/ar' },
-    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/ar/resources' },
-    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/aflatoxin-control-guide' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/aflatoxin-control-guide' },
   ],
 };
 
 const typesOfAflatoxins = [
-  { type: 'الأفلاطوكسين B1', danger: 'مُسمٍّ جداً', sources: 'الذرة، الفول السوداني، الأرز', effects: 'مسرطنة، تآكل الكبد' },
-  { type: 'الأفلاطوكسين B2', danger: 'مُسمٍّ', sources: 'الفول السوداني، الذرة', effects: 'أقل سمية من B1' },
-  { type: 'الأفلاطوكسين G1', danger: 'مُسمٍّ', sources: 'الحبوب، المكسرات', effects: 'مسرطنة' },
-  { type: 'الأفلاطوكسين G2', danger: 'أقل سمية', sources: 'الحبوب', effects: 'آثار طفيفة' },
+  { type: 'Aflatoxin B1', danger: 'Highly toxic', sources: 'Corn, peanuts, rice', effects: 'Carcinogenic, hepatotoxic' },
+  { type: 'Aflatoxin B2', danger: 'Toxic', sources: 'Peanuts, corn', effects: 'Less toxic than B1' },
+  { type: 'Aflatoxin G1', danger: 'Toxic', sources: 'Grains, nuts', effects: 'Carcinogenic' },
+  { type: 'Aflatoxin G2', danger: 'Less toxic', sources: 'Grains', effects: 'Minor effects' },
 ];
 
 const contaminationSources = [
-  { title: 'ظروف التخزين الرطبة', desc: 'التخزين في مناطق رطبة أو منحلة تعزز النمو الفطري' },
-  { title: 'مدة التخزين الطويلة', desc: 'كلما طالت مدة تخزين الحبوب، زاد المخاطر' },
-  { title: 'الظروف المناخية', desc: 'درجات الحرارة المرتفعة والرطوبة العالية تعزز النمو' },
-  { title: 'قبل الحصاد', desc: 'الطقس الرطب قبل الحصاد يمكن أن يلوث المحاصيل' },
+  { title: 'Humid Storage Conditions', desc: 'Storage in humid or flooded areas promotes fungal growth', icon: 'droplet' },
+  { title: 'Extended Storage Time', desc: 'The longer seeds are stored, the higher the risk', icon: 'clock' },
+  { title: 'Climate Conditions', desc: 'Warm temperatures and high humidity promote growth', icon: 'sun' },
+  { title: 'Pre-Harvest', desc: 'Wet weather before harvest can contaminate crops', icon: 'cloud-rain' },
 ];
 
 const preventionStrategies = [
-  { title: 'مراقبة الحبوب', items: ['التحقق من الجودة قبل الشراء', 'تجنب الحبوب التالفة أو العفنة', 'اختبار الدفاتر على الأفلاطوكسين'] },
-  { title: 'التخزين المناسب', items: ['الاحتفاظ في ظروف جافة', 'استخدام أكياس غير منفذة للماء', 'مراقبة نسبة الرطوبة'] },
-  { title: 'التجفيف الفوري', items: ['تجفيف الحبوب في غضون 24 ساعة', 'الاحتفاظ بالرطوبة تحت 12%', 'استخدام مجففات صناعية'] },
+  { title: 'Seed Control', items: ['Inspect quality before purchase', 'Avoid damaged or moldy seeds', 'Test batches for aflatoxin'] },
+  { title: 'Proper Storage', items: ['Store in dry conditions', 'Use waterproof bags', 'Control relative humidity'] },
+  { title: 'Immediate Drying', items: ['Dry seeds within 24 hours', 'Maintain moisture below 12%', 'Use industrial dryers'] },
 ];
 
 const detectionMethods = [
-  { method: 'اختبار الحقل السريع', time: '5-10 دقائق', accuracy: 'منخفض', useCase: 'التحقق الأولي' },
-  { method: 'اختبار ELISA', time: '2-4 ساعات', accuracy: 'متوسط', useCase: 'مراقبة الجودة' },
-  { method: 'HPLC', time: '4-6 ساعات', accuracy: 'مرتفع', useCase: 'الشهادة' },
+  { method: 'Rapid Field Test', time: '5-10 minutes', accuracy: 'Low', useCase: 'Initial screening' },
+  { method: 'ELISA Test', time: '2-4 hours', accuracy: 'Medium', useCase: 'Quality control' },
+  { method: 'HPLC', time: '4-6 hours', accuracy: 'High', useCase: 'Certification' },
 ];
 
 const regulations = [
-  { region: 'الاتحاد الأوروبي', limit: '2 بيكوغرام/غرام', products: 'الأعواد الغذائية' },
-  { region: 'الولايات المتحدة', limit: '20 بيكوغرام/غرام', products: 'الحبوب والأعواد' },
-  { region: 'كودكس الأغذية', limit: '10 بيكوغرام/غرام', products: 'المنتجات الغذائية' },
+  { region: 'EU', limit: '2 ppb', products: 'Edible oils' },
+  { region: 'USA', limit: '20 ppb', products: 'Seeds and oils' },
+  { region: 'Codex Alimentarius', limit: '10 ppb', products: 'Food products' },
 ];
-
-function localePath(path: string): string {
-  return `/ar${path}`;
-}
 ---
 
-<BaseLayout locale="ar" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <a href="/resources" class="hover:text-amber-500 transition-colors">Resources</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
@@ -99,7 +95,7 @@ function localePath(path: string): string {
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <span class="inline-block bg-red-500/10 text-red-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          سلامة الغذاء
+          FOOD SAFETY
         </span>
         <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
           {title.toUpperCase()}
@@ -113,14 +109,14 @@ function localePath(path: string): string {
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <div class="text-left">
-              <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
-              <div class="text-sm text-steel-500">مهندس المكبس الزيتي الرئيسي · +15 سنوات من الخبرة</div>
+              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
             </div>
           </div>
           <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
           <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span>{publishedAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
           </div>
         </div>
       </div>
@@ -130,29 +126,29 @@ function localePath(path: string): string {
   <main class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">المقدمة</h2>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
         <p class="text-steel-700 leading-relaxed">
-          الأفلاطوكسينات هي سموم تنتجها بعض الفطريات (Aspergillus flavus و Aspergillus parasiticus) التي يمكن أن تلوث الحبوب المستخدمة لإنتاج الزيت. مراقبة الأفلاطوكسين أمر حيوي لضمان سلامة الغذاء والامتثال للمعايير الدولية.
+          Aflatoxins are toxins produced by certain fungi (Aspergillus flavus and Aspergillus parasiticus) that can contaminate seeds used for oil production. Aflatoxin control is crucial for ensuring food safety and meeting international standards.
         </p>
       </section>
 
       <section id="types" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">أنواع الأفلاطوكسين</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Types of Aflatoxins</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {typesOfAflatoxins.map((item, index) => (
             <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
               <div class="font-bold text-lg text-red-600 mb-3">{item.type}</div>
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
-                  <span class="text-sm font-medium text-steel-500">الخطر:</span>
+                  <span class="text-sm font-medium text-steel-500">Danger:</span>
                   <span class="text-sm text-charcoal-900">{item.danger}</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="text-sm font-medium text-steel-500">المصادر:</span>
+                  <span class="text-sm font-medium text-steel-500">Sources:</span>
                   <span class="text-sm text-charcoal-900">{item.sources}</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="text-sm font-medium text-steel-500">التأثيرات:</span>
+                  <span class="text-sm font-medium text-steel-500">Effects:</span>
                   <span class="text-sm text-charcoal-900">{item.effects}</span>
                 </div>
               </div>
@@ -162,7 +158,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="sources" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مصادر التلوث</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Contamination Sources</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {contaminationSources.map((item, index) => (
             <div key={index} class="bg-orange-50 p-5 rounded-xl border border-orange-200">
@@ -174,7 +170,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="prevention" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">إستراتيجيات الوقاية</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Prevention Strategies</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           {preventionStrategies.map((item, index) => (
             <div key={index} class="bg-green-50 p-5 rounded-xl border border-green-200">
@@ -193,15 +189,15 @@ function localePath(path: string): string {
       </section>
 
       <section id="detection" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">أساليب الكشف</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Detection Methods</h2>
         <div class="overflow-x-auto">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
             <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
               <tr>
-                <th class="px-4 py-3 text-right font-semibold">الطريقة</th>
-                <th class="px-4 py-3 text-right font-semibold">الوقت</th>
-                <th class="px-4 py-3 text-right font-semibold">الدقة</th>
-                <th class="px-4 py-3 text-right font-semibold">الاستخدام</th>
+                <th class="px-4 py-3 text-left font-semibold">Method</th>
+                <th class="px-4 py-3 text-left font-semibold">Time</th>
+                <th class="px-4 py-3 text-left font-semibold">Accuracy</th>
+                <th class="px-4 py-3 text-left font-semibold">Use Case</th>
               </tr>
             </thead>
             <tbody>
@@ -219,18 +215,18 @@ function localePath(path: string): string {
       </section>
 
       <section id="regulations" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">المعايير والقوانين</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Regulations & Standards</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           {regulations.map((item, index) => (
             <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
               <h3 class="font-semibold text-lg text-purple-800 mb-3">{item.region}</h3>
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
-                  <span class="text-sm font-medium text-steel-500">الحد:</span>
+                  <span class="text-sm font-medium text-steel-500">Limit:</span>
                   <span class="text-sm text-red-600 font-bold">{item.limit}</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="text-sm font-medium text-steel-500">المنتجات:</span>
+                  <span class="text-sm font-medium text-steel-500">Products:</span>
                   <span class="text-sm text-charcoal-900">{item.products}</span>
                 </div>
               </div>
@@ -240,9 +236,9 @@ function localePath(path: string): string {
       </section>
 
       <section id="conclusion" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
         <p class="text-steel-700 leading-relaxed">
-          مراقبة الأفلاطوكسين تتطلب نهجاً استباقياً في كل مرحلة من سلسلة التوريد. من خلال الجمع بين اختيار مادة أولية صارم، تخزين مناسب، وطرق كشف موثوقة، يمكنك ضمان سلامة منتجاتك والامتثال للمعايير الدولية.
+          Aflatoxin control requires a proactive approach at every stage of the supply chain. By combining rigorous raw material selection, proper storage, and reliable detection methods, you can ensure product safety and meet international standards.
         </p>
       </section>
     </div>
@@ -250,14 +246,14 @@ function localePath(path: string): string {
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لضمان سلامة إنتاجك؟</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">فريق مهندسينا يمكن مساعدتك في تنفيذ إجراءات مراقبة جودة شاملة.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">READY TO ENSURE YOUR PRODUCTION SAFETY?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Our engineering team can help you implement complete quality control procedures.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+        <a href="/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
           {t.resources.ctaButton}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
+        <a href="/resources" class="btn-outline border-white text-white hover:bg-white/10">
           {t.resources.backToResources}
         </a>
       </div>

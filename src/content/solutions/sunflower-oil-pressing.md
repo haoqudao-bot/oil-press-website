@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Sunflower Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Tournesol
@@ -132,7 +132,7 @@ This solution handles both high-oil and confectionery sunflower seed varieties, 
 1. **Seed Cleaning** — Remove field debris, stones, and damaged seeds. Clean seeds produce better oil and protect your equipment.
 2. **Dehulling (Recommended)** — Remove sunflower seed hulls using our seed crusher. Dehulling increases yield by 10-15% and produces lighter-colored oil. For whole-seed pressing, skip this step.
 3. **Roasting** — Roast dehulled kernels at 120-150°C for 15-25 minutes using the Thermal Oil Roasting Pan. This improves oil flow and yield. For cold-pressed oil, skip roasting.
-4. **Hydraulic Pressing** — Feed prepared sunflower seeds into the Standard or Heavy Duty Hydraulic Oil Press. The 390mm barrel processes 100 kg per batch with an 8-15 minute cycle (varies by seed type).
+4. **Hydraulic Pressing** — Feed prepared sunflower seeds into the Standard or Heavy Duty Hydraulic Oil Press. The 390mm barrel processes 100 kg per batch with a 40-90 minute cycle (varies by seed type).
 5. **Filtration** — Pass crude sunflower oil through the Pneumatic Oil Filter Press for clear, market-ready oil.
 6. **Refining (Optional)** — For refined sunflower oil, use the Edible Oil Refining System to produce light-colored, neutral-flavored cooking oil.
 7. **Packaging** — Bottle the finished oil. Cold-pressed sunflower oil should be stored in dark containers to prevent oxidation.

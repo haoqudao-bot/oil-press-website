@@ -48,10 +48,10 @@ const productionStages = [
 ];
 
 const capacityOptions = [
-  { scale: 'Home Workshop', capacity: '5-20 kg/day', investment: '$5,000-$15,000', equipment: ['HN325 Press', 'Small roaster', 'Manual filter', 'Hand tools'] },
-  { scale: 'Small Business', capacity: '50-200 kg/day', investment: '$30,000-$80,000', equipment: ['HN355 Press', 'Rotary roaster', 'Filter system', 'Grinder', 'Storage tanks'] },
-  { scale: 'Medium Factory', capacity: '500-2000 kg/day', investment: '$100,000-$300,000', equipment: ['HN426/HN480 Press', 'Full roaster', 'Centrifuge', 'Complete line', 'Automation'] },
-  { scale: 'Large Industrial', capacity: '5000+ kg/day', investment: '$300,000+', equipment: ['Multiple HN500 Presses', 'Industrial roasters', 'Full refining line', 'Complete automation'] },
+  { scale: 'Home Workshop', capacity: '100-500 kg/day', equipment: ['HN325 Press', 'Small roaster', 'Manual filter', 'Hand tools'] },
+  { scale: 'Small Business', capacity: '500-2000 kg/day', equipment: ['HN355 Press', 'Rotary roaster', 'Filter system', 'Grinder', 'Storage tanks'] },
+  { scale: 'Medium Factory', capacity: '2000-5000 kg/day', equipment: ['HN426/HN480 Press', 'Full roaster', 'Centrifuge', 'Complete line', 'Automation'] },
+  { scale: 'Large Industrial', capacity: '5000+ kg/day', equipment: ['Multiple HN500 Presses', 'Industrial roasters', 'Full refining line', 'Complete automation'] },
 ];
 
 const layoutTips = [
@@ -68,12 +68,6 @@ const costAnalysis = [
   { item: 'Building & Infrastructure', percentage: '15-25%' },
   { item: 'Initial Raw Materials', percentage: '5-10%' },
   { item: 'Working Capital', percentage: '10-15%' },
-];
-
-const roiProjections = [
-  { scale: 'Home Workshop', investment: '$10,000', monthlyRevenue: '$3,000-5,000', monthlyProfit: '$2,000-3,500', payback: '3-5 months' },
-  { scale: 'Small Business', investment: '$50,000', monthlyRevenue: '$15,000-30,000', monthlyProfit: '$10,000-22,000', payback: '2-4 months' },
-  { scale: 'Medium Factory', investment: '$150,000', monthlyRevenue: '$50,000-100,000', monthlyProfit: '$35,000-75,000', payback: '2-4 months' },
 ];
 
 const maintenanceSchedule = [
@@ -165,7 +159,6 @@ const maintenanceSchedule = [
                 </div>
               </div>
               <div class="p-5">
-                <p class="text-green-600 font-semibold mb-3">Investment: {option.investment}</p>
                 <p class="text-sm text-steel-500 mb-2">Key Equipment:</p>
                 <ul class="space-y-1">
                   {option.equipment.map((equip, idx) => (
@@ -208,28 +201,6 @@ const maintenanceSchedule = [
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section id="roi" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Return on Investment Projections</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
-              <tr><th class="px-4 py-3 text-left font-semibold">Scale</th><th class="px-4 py-3 text-left font-semibold">Investment</th><th class="px-4 py-3 text-left font-semibold">Monthly Revenue</th><th class="px-4 py-3 text-left font-semibold">Monthly Profit</th><th class="px-4 py-3 text-left font-semibold">Payback</th></tr>
-            </thead>
-            <tbody>
-              {roiProjections.map((item, index) => (
-                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
-                  <td class="px-4 py-3">{item.investment}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.monthlyRevenue}</td>
-                  <td class="px-4 py-3 text-green-600 font-semibold">{item.monthlyProfit}</td>
-                  <td class="px-4 py-3 text-amber-600 font-semibold">{item.payback}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Mustard Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Moutarde
@@ -135,7 +135,7 @@ The solution supports both cold pressing (for premium Kachi Ghani mustard oil) a
 1. **Seed Cleaning** — Remove dust, stones, and other impurities from mustard seeds. Clean seeds produce better-tasting oil and protect your equipment from damage.
 2. **Steaming (For Hot Press)** — Steam mustard seeds at 90-100°C for 15-20 minutes using the Electric Seed Steamer. This softens the seeds, increases oil yield, and reduces the sharp pungency. Skip for Kachi Ghani cold-pressed oil.
 3. **Cooling** — Allow steamed seeds to cool to 50-70°C before pressing. Proper temperature ensures optimal oil flow without degrading quality.
-4. **Hydraulic Pressing** — Feed prepared mustard seeds into the Standard or Heavy Duty Hydraulic Oil Press. Each batch of 25-50 kg processes in 30-40 minutes (hot press) or approximately 2 hours (cold press).
+4. **Hydraulic Pressing** — Feed prepared mustard seeds into the Standard or Heavy Duty Hydraulic Oil Press. Each batch of 100 kg processes in 35-45 minutes (hot press) or approximately 2 hours (cold press).
 5. **Filtration** — Pass crude mustard oil through the Pneumatic Oil Filter Press to remove seed particles and sediment.
 6. **Settling** — Allow filtered oil to settle for 24-48 hours. Mustard oil benefits from extended settling to develop its characteristic flavor.
 7. **Packaging** — Bottle the finished mustard oil. Traditional tin containers or PET bottles are common in South Asian markets.

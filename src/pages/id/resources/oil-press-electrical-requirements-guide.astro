@@ -55,12 +55,6 @@ const recommendedGenerator = [
   { models: 'HN500', size: '8-10 kVA' },
 ];
 
-const generatorSelection = [
-  { title: 'Tipe', desc: 'Diesel (paling umum), Bensin, Surya' },
-  { title: 'Kualitas', desc: 'Merek ternama, jenis inverter direkomendasikan' },
-  { title: 'Fitur', desc: 'Regulasi voltase, proteksi overloading, start/stop otomatis' },
-];
-
 const wiringRequirements = [
   { distance: '10m', singlePhase: '2.5 mm²', threePhase: '2.5 mm²' },
   { distance: '20m', singlePhase: '4 mm²', threePhase: '2.5 mm²' },
@@ -68,7 +62,6 @@ const wiringRequirements = [
   { distance: '50m', singlePhase: '10 mm²', threePhase: '6 mm²' },
 ];
 
-const controlPanelComponents = ['Tombol utama', 'Pemutus sirkuit', 'Starter motor', 'Tombol kontrol', 'Stop darurat', 'Lampu indikator'];
 const electricalSafety = ['Gunakan sarung tangan insulasi', 'Gunakan alat insulasi', 'Ikuti prosedur penguncian'];
 const voltageFluctuations = [
   { type: 'Voltase rendah', effects: 'Motor overheating, performa menurun', solution: 'Stabilizer voltase' },
@@ -210,41 +203,11 @@ const costCalculation = ['Biaya Energi per Hari = (Konsumsi Energi x Jam x Tarif
             </ul>
           </div>
         </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Kriteria Seleksi Generator</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {generatorSelection.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
-              <h4 class="font-semibold text-charcoal-900 mb-2">{item.title}</h4>
-              <p class="text-steel-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
       </section>
 
       <section id="power-supply" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Konfigurasi Pasokan Daya</h2>
         
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Koneksi Jaringan</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
-            <h4 class="font-semibold text-blue-800 mb-3">Koneksi Single Phase</h4>
-            <ul class="space-y-1 text-steel-700 text-sm">
-              <li>L1 -> Pemutus Sirkuit -> Motor</li>
-              <li>N -> Motor</li>
-              <li>PE -> Rangka Peralatan</li>
-            </ul>
-          </div>
-          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
-            <h4 class="font-semibold text-green-800 mb-3">Koneksi Three Phase</h4>
-            <ul class="space-y-1 text-steel-700 text-sm">
-              <li>L1, L2, L3 -> Pemutus Sirkuit -> Motor</li>
-              <li>N -> Panel Kontrol</li>
-              <li>PE -> Rangka Peralatan</li>
-            </ul>
-          </div>
-        </div>
-
         <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Persyaratan Kabel</h3>
         <div class="overflow-x-auto mb-8">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
@@ -262,14 +225,6 @@ const costCalculation = ['Biaya Energi per Hari = (Konsumsi Energi x Jam x Tarif
             </tbody>
           </table>
         </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Komponen Panel Kontrol</h3>
-        <div class="flex flex-wrap gap-2">
-          {controlPanelComponents.map((item, index) => (
-            <span key={index} class="bg-steel-100 text-steel-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
-          ))}
-        </div>
-      </section>
 
       <section id="safety" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pertimbangan Keamanan</h2>

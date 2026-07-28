@@ -1,0 +1,249 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslations } from '../i18n';
+
+const t = getTranslations('en');
+
+const title = 'Hydraulic Oil Press FAQ - Frequently Asked Questions';
+const description = 'Answers to common questions about hydraulic oil press machines, including operation, maintenance, troubleshooting, and oil production.';
+const keywords = ['hydraulic oil press FAQ', 'oil press troubleshooting', 'oil press maintenance', 'hydraulic press questions'];
+
+const faqCategories = [
+  {
+    id: 'operation',
+    title: 'Operation & Usage',
+    faqs: [
+      {
+        question: 'How does a hydraulic oil press machine work?',
+        answer: 'A hydraulic oil press uses hydraulic pressure to extract oil from oil seeds. The machine consists of a main frame, hydraulic cylinder, press chamber, and control system. Oil seeds are loaded into the press chamber, and the hydraulic cylinder applies controlled pressure to squeeze out the oil. The oil flows through filters and is collected in a storage tank.'
+      },
+      {
+        question: 'What is the maximum hydraulic pressure?',
+        answer: 'Our hydraulic oil press machines operate at pressures between 60-75 MPa, depending on the model and application. The HN325 model uses 60 MPa for standard operation, while the HN500 ultra-high-pressure model can reach up to 75 MPa for difficult materials like coconuts.'
+      },
+      {
+        question: 'How much oil can I extract per batch?',
+        answer: 'The oil yield depends on the material type, moisture content, and pressing parameters. Typical yields include: sesame (45-54%), peanut (42-50%), rapeseed (38-45%), soybean (18-22%), walnut (45-50%), and coconut (60-65%). Each batch processes 100 kg of material with standard models.'
+      },
+      {
+        question: 'How long does a pressing cycle take?',
+        answer: 'A typical pressing cycle takes 30-90 minutes, including loading, pressing, and unloading. The exact time depends on the material type, batch size, and pressure settings. Hydraulic presses operate in batch mode, unlike screw presses which are continuous.'
+      },
+      {
+        question: 'Can I use the machine for cold pressing?',
+        answer: 'Yes! Our hydraulic oil press machines are specifically designed for both hot and cold pressing. For cold pressing, the temperature is maintained below 60°C to preserve the natural flavor and nutrients of the oil. This is ideal for premium quality oils and organic products.'
+      }
+    ]
+  },
+  {
+    id: 'maintenance',
+    title: 'Maintenance & Care',
+    faqs: [
+      {
+        question: 'How often should I perform maintenance?',
+        answer: 'We recommend daily checks (oil level, pressure gauge), weekly maintenance (cleaning, filter check), monthly inspection (hydraulic seals, electrical connections), and annual overhaul (complete disassembly, replacement of wearing parts). Regular maintenance extends the machine lifespan to 15-20 years.'
+      },
+      {
+        question: 'What hydraulic oil should I use?',
+        answer: 'Use anti-wear hydraulic oil with viscosity grade ISO VG 46 (recommended) or ISO VG 32 for cold climates. The oil should meet standard DIN 51524-2 or equivalent. Always keep the oil clean and replace the filter every 500 operating hours.'
+      },
+      {
+        question: 'How do I clean the press chamber?',
+        answer: 'After each use, wipe the press chamber with a clean cloth to remove residual oil and seed cake. For thorough cleaning, use warm water with mild detergent. Never use abrasive cleaners or high-pressure water jets on hydraulic components.'
+      },
+      {
+        question: 'What are the common wearing parts?',
+        answer: 'The main wearing parts are: hydraulic seals (replace every 2000 hours), filter elements (every 500 hours), press cloth (every 3-6 months), and pressure relief valve (every 5000 hours). We maintain a complete stock of spare parts for all models.'
+      }
+    ]
+  },
+  {
+    id: 'troubleshooting',
+    title: 'Troubleshooting',
+    faqs: [
+      {
+        question: 'The press is not building up pressure. What should I check?',
+        answer: 'First check the hydraulic oil level - it should be between the minimum and maximum marks on the tank. Next, check for leaks in the hydraulic system (hoses, connections, seals). Verify the pressure relief valve is not stuck open. If pressure still doesn\'t build, the hydraulic pump may need inspection or replacement.'
+      },
+      {
+        question: 'The oil output is lower than expected. Why?',
+        answer: 'Low oil output can be caused by: insufficient pressure (check pressure gauge), wrong temperature settings (too hot or too cold), material not properly prepared (moisture content), worn press seals, or filter blockage. Check these factors systematically and adjust parameters accordingly.'
+      },
+      {
+        question: 'The machine is making unusual noises. Is this normal?',
+        answer: 'Some operational noise is normal, but unusual noises like grinding, knocking, or whining indicate potential problems. Check for loose components, worn gears, low hydraulic oil, or trapped air in the system. If the noise persists, stop the machine and contact our technical support team.'
+      },
+      {
+        question: 'How do I fix a hydraulic oil leak?',
+        answer: 'Identify the leak source (hose, fitting, seal, or cylinder). Tighten loose fittings, replace damaged hoses, and service worn seals. Always relieve system pressure before attempting any repairs. If the leak is from the hydraulic cylinder, the seal kit needs to be replaced.'
+      }
+    ]
+  },
+  {
+    id: 'technical',
+    title: 'Technical Specifications',
+    faqs: [
+      {
+        question: 'What is the power consumption?',
+        answer: 'Power consumption varies by model: HN325 uses 5.5 kW, HN500 uses 7.5 kW, and HN800 uses 11 kW. The actual consumption depends on the operating pressure and load. Hydraulic presses are generally more energy-efficient than screw presses for small to medium scale production.'
+      },
+      {
+        question: 'What are the machine dimensions?',
+        answer: 'HN325: 1200 x 800 x 1800 mm (L x W x H), weight 450 kg. HN500: 1500 x 1000 x 2000 mm, weight 680 kg. HN800: 1800 x 1200 x 2200 mm, weight 950 kg. Custom sizes available on request.'
+      },
+      {
+        question: 'What electrical requirements are needed?',
+        answer: 'Our machines require standard 3-phase 400V power supply with a dedicated circuit breaker. The control system uses 24V DC for safety. We recommend installing a voltage stabilizer in areas with unstable power supply. A qualified electrician should handle the installation.'
+      },
+      {
+        question: 'Can the machine be used for multiple oil seeds?',
+        answer: 'Yes! Our hydraulic oil press machines are versatile and can process a wide range of oil seeds and nuts, including sesame, peanut, rapeseed, soybean, walnut, almond, coconut, sunflower, linseed, and more. Simply adjust the pressure and temperature settings for each material.'
+      }
+    ]
+  },
+  {
+    id: 'commercial',
+    title: 'Commercial & Service',
+    faqs: [
+      {
+        question: 'What is the warranty period?',
+        answer: 'We provide a 1-year warranty on all hydraulic oil press machines, covering manufacturing defects and component failures. The warranty includes free technical support and spare parts. Extended warranty available for purchase.'
+      },
+      {
+        question: 'Do you offer installation and training?',
+        answer: 'Yes, we offer complete installation and training services. For international customers, we provide detailed installation manuals, video tutorials, and remote technical support. On-site installation is available for an additional fee.'
+      },
+      {
+        question: 'What is the lead time for delivery?',
+        answer: 'Standard models are in stock and can be shipped within 7-14 days. Custom orders require 30-45 days production time. We ship worldwide via sea freight (FCL/LCL) or air freight. Delivery time varies by destination: 15-30 days for sea freight, 3-7 days for air freight.'
+      },
+      {
+        question: 'Do you provide after-sales spare parts?',
+        answer: 'Yes, we maintain a complete stock of spare parts including hydraulic seals, filters, hoses, gauges, and electrical components. Spare parts can be ordered directly or through our authorized distributors. We also offer spare parts kits for routine maintenance.'
+      }
+    ]
+  }
+];
+
+const allFaqs = faqCategories.flatMap(cat => cat.faqs);
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer
+    }
+  }))
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.hydoilpress.com/faq' }
+  ]
+};
+
+const allLd = [faqLd, breadcrumbLd];
+---
+
+<BaseLayout title={title} description={description} keywords={keywords} jsonLd={allLd}>
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">FAQ</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-steel-50 to-amber-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-display text-3xl md:text-5xl text-charcoal-900 mb-4">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-lg text-steel-600 max-w-3xl mx-auto">
+        Find answers to the most common questions about hydraulic oil press machines, including operation, maintenance, troubleshooting, and technical specifications.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Categories -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Quick Navigation -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        {faqCategories.map(cat => (
+          <a
+            href={`#${cat.id}`}
+            class="px-4 py-2 rounded-full bg-steel-100 hover:bg-amber-500 hover:text-white text-steel-700 font-medium text-sm transition-colors"
+          >
+            {cat.title}
+          </a>
+        ))}
+      </div>
+
+      <!-- FAQ Sections -->
+      {faqCategories.map(cat => (
+        <section id={cat.id} class="mb-16 scroll-mt-24">
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6 pb-3 border-b border-steel-200">
+            {cat.title}
+          </h2>
+          <div class="space-y-4">
+            {cat.faqs.map((faq, index) => (
+              <details
+                class="group bg-white rounded-xl border border-steel-200 hover:border-amber-300 transition-colors shadow-sm overflow-hidden"
+              >
+                <summary class="flex items-start gap-4 p-5 cursor-pointer list-none">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-charcoal-900 font-bold text-sm flex items-center justify-center group-open:rotate-45 transition-transform">
+                    {index + 1}
+                  </span>
+                  <h3 class="font-display text-lg text-charcoal-900 flex-1">
+                    {faq.question}
+                  </h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="px-5 pb-5 pl-17 text-steel-600 leading-relaxed border-t border-steel-100 pt-4 ml-12">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <!-- Contact CTA -->
+      <section class="mt-16 bg-gradient-to-r from-steel-900 to-steel-700 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="font-display text-2xl md:text-3xl text-white mb-4">
+          Still have questions?
+        </h2>
+        <p class="text-steel-300 mb-6 max-w-xl mx-auto">
+          Our technical team is ready to help. Contact us for personalized advice, quotes, and after-sales support.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold rounded-lg transition-colors"
+          >
+            Contact Us
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </a>
+          <a
+            href="/products"
+            class="inline-flex items-center gap-2 px-6 py-3 border border-steel-500 hover:border-white text-white font-semibold rounded-lg transition-colors"
+          >
+            View Products
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>
