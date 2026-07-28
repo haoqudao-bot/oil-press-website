@@ -69,22 +69,22 @@ const hotPressParams = [
   { param: 'Tingkat Pemasakan Awal', value: '~500 kg/jam' },
   { param: 'Suhu Panggang', value: '160-180°C' },
   { param: 'Waktu Panggang', value: '25-35 menit' },
-  { param: 'Siklus Pemasakan', value: '30-40 menit/batch' },
+  { param: 'Siklus Pemasakan', value: '40-90 menit/batch' },
   { param: 'Siklus Total (2 tong)', value: '~1,5 jam' },
   { param: 'Tekanan Sistem', value: '60 MPa' },
   { param: 'Daya Motor', value: '2,2 kW' },
 ];
 
 const coldPressModels = [
-  { model: 'HN355', force: '370 ton', cycle: '~2 jam/batch', bestFor: 'Pemerasan dingin entry-level' },
-  { model: 'HN426', force: '500 ton', cycle: '~2 jam/batch', bestFor: 'Pemerasan dingin standar' },
-  { model: 'HN480', force: '560 ton', cycle: '~2 jam/batch', bestFor: 'Pemerasan dingin volume tinggi' },
+  { model: 'HN355', force: '360 ton', cycle: '~2 jam/batch', bestFor: 'Pemerasan dingin entry-level' },
+  { model: 'HN426', force: '426 ton', cycle: '~2 jam/batch', bestFor: 'Pemerasan dingin standar' },
+  { model: 'HN480', force: '480 ton', cycle: '~2 jam/batch', bestFor: 'Pemerasan dingin volume tinggi' },
   { model: 'HN500', force: '620 ton', cycle: '~2 jam/batch', bestFor: 'Produksi komersial premium' },
 ];
 
 const hotVsCold = [
   { feature: 'Hasil Minyak', hot: '45-55%', cold: '35-40%' },
-  { feature: 'Kecepatan Produksi', hot: 'Cepat (30-40 menit/batch)', cold: 'Lambat (2+ jam/batch)' },
+  { feature: 'Kecepatan Produksi', hot: 'Cepat (40-90 menit/batch)', cold: 'Lambat (2+ jam/batch)' },
   { feature: 'Kualitas Minyak', hot: 'Baik, rasa netral', cold: 'Premium, aroma alami' },
   { feature: 'Nilai Pasar', hot: 'Standar', cold: '2-3x lebih tinggi' },
   { feature: 'Biaya Peralatan', hot: 'Lebih rendah', cold: 'Lebih tinggi' },

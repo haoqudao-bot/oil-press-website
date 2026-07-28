@@ -7,9 +7,9 @@ const resources = await getCollection('resources');
 const resource = resources.find(r => r.slug === 'how-to-maximize-oil-yield');
 const t = getTranslations('id');
 
-const title = resource?.data.title.id || resource?.data.title.en || 'Cara Meningkatkan Hasil Minyak';
-const description = resource?.data.description.id || resource?.data.description.en || 'Tips dan Teknik untuk Peningkatan Ekstraksi Minyak';
-const seoKeywords = resource?.data.seoKeywords || ['meningkatkan hasil minyak', 'efisiensi ekstraksi minyak', 'optimasi pemerasan'];
+const title = resource?.data.title.id || 'Cara Memaksimalkan Hasil Minyak';
+const description = resource?.data.description.id || 'Dapatkan lebih banyak minyak dari setiap biji';
+const seoKeywords = resource?.data.seoKeywords || ['memaksimalkan hasil minyak', 'meningkatkan ekstraksi minyak', 'optimisasi hasil minyak'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -18,18 +18,9 @@ const articleLd = {
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/yield-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'Senior Oil Press Engineer',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  image: 'https://www.hydoilpress.com/images/maximize-yield-hero.webp',
+  author: { '@type': 'Person', name: 'Tim Teknik Haonuo', jobTitle: 'Insinyur Senior Pengepres Minyak', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -39,95 +30,98 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/id' },
-    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/how-to-maximize-oil-yield' },
   ],
 };
 
-const rawMaterialPrep = [
-  { title: 'Pemilihan Biji', items: ['Gunakan biji berkualitas tinggi dengan kadar minyak tinggi', 'Hindari biji yang rusak, jamur, atau terinfeksi', 'Pilih biji yang matang penuh'] },
-  { title: 'Pembersihan Biji', items: ['Hapus batu, logam, dan kotoran keras lainnya', 'Pisahkan biji yang rusak dan patah', 'Target: kurang dari 0,5% kotoran'] },
-  { title: 'Pengupasan', items: ['Meningkatkan kadar minyak efektif per volume', 'Mengurangi keausan peralatan pemeras', 'Tingkat pengupasan direkomendasikan: Kacang tanah 95%+, wijen 98%+'] },
+const yieldFactors = [
+  { icon: 'seed', title: 'Kualitas Bahan Baku', desc: 'Biji berkualitas tinggi = hasil lebih tinggi' },
+  { icon: 'droplet', title: 'Kadar Air', desc: 'Kelembaban optimal = 5-8%' },
+  { icon: 'flame', title: 'Pembersihan', desc: 'Pembersihan yang tepat memecah dinding sel' },
+  { icon: 'gear', title: 'Penggilingan', desc: 'Ukuran partikel yang tepat meningkatkan luas permukaan' },
+  { icon: 'pressure', title: 'Tekanan', desc: 'Tekanan lebih tinggi = lebih banyak ekstraksi minyak' },
+  { icon: 'clock', title: 'Waktu Pengepresan', desc: 'Waktu penahanan yang cukup pada tekanan puncak' },
 ];
 
-const moistureConditioning = [
-  { material: 'Wijen', hotPress: '5-6%', coldPress: '7-8%' },
-  { material: 'Kacang tanah', hotPress: '5-7%', coldPress: '7-9%' },
-  { material: 'Kacang almond', hotPress: '-', coldPress: '7-9%' },
+const moistureGuide = [
+  { material: 'Wijen', optimal: '5-6%', tooDry: 'Rapuh, hasil berkurang', tooWet: 'Emulsifikasi, kue lengket' },
+  { material: 'Kacang Tanah', optimal: '5-7%', tooDry: 'Sulit dipres', tooWet: 'Licin, ekstraksi tidak merata' },
+  { material: 'Kanola', optimal: '6-8%', tooDry: 'Kue keras, hasil rendah', tooWet: 'Kue basah, minyak hilang' },
+  { material: 'Kenari', optimal: '7-9%', tooDry: 'Hancur, sulit dipres', tooWet: 'Risiko jamur' },
 ];
 
-const hotPressing = [
-  { title: 'Proses Penggorengan', items: ['Suhu: 160-180°C', 'Durasi: 25-35 menit', 'Kelembapan keluar: 3-5%'] },
-  { title: 'Parameter Pemerasan', items: ['Mulailah dengan tekanan rendah, tingkatkan secara bertahap', 'Pertahankan tekanan maksimum selama 15-20 menit', 'Waktu siklus standar: 30-40 menit per batch'] },
+const roastingGuide = [
+  { material: 'Wijen', temp: '160-180°C', time: '25-30 menit', color: 'Cokelat keemasan', yield: '48-54%' },
+  { material: 'Kacang Tanah', temp: '165-185°C', time: '30-35 menit', color: 'Cokelat muda', yield: '45-50%' },
+  { material: 'Kanola', temp: '150-170°C', time: '20-25 menit', color: 'Cokelat tua', yield: '38-42%' },
 ];
 
-const coldPressing = [
-  { title: 'Kontrol Suhu', items: ['Pertahankan suhu pemerasan di bawah 60°C', 'Gunakan peralatan pemeras dingin khusus', 'Model yang direkomendasikan: <a href="/id/products/cold-press-hydraulic-oil-press">HN426</a>, <a href="/id/products/high-pressure-hydraulic-oil-press">HN480</a>, <a href="/id/products/ultra-high-pressure-hydraulic-oil-press">HN500</a>'] },
-  { title: 'Optimasi Tekanan', items: ['Pemerasan dingin membutuhkan tekanan lebih tinggi untuk memecah dinding sel', 'Gunakan tekanan permukaan cake 42+ Mpa/cm2', 'Siklus panjang: ~2 jam per batch'] },
+const pressureGuide = [
+  { step: 'Pemuatan', pressure: 'Tekanan pemuatan awal', time: 'Muat bahan secara merata ke dalam ruang pengepres' },
+  { step: 'Pra-Pengepresan', pressure: '30-40 MPa', time: 'Tahan selama 2-3 menit untuk mengeluarkan udara' },
+  { step: 'Pengepresan Utama', pressure: '50-60 MPa', time: 'Tahan selama 5-10 menit tergantung bahan' },
+  { step: 'Pelepasan', pressure: 'Pelepasan bertahap', time: 'Pelepasan perlahan mencegah hilang minyak melalui busa' },
 ];
 
-const postPressing = [
-  { title: 'Filter Minyak', items: ['Filter primer: 100-200 mesh', 'Filter halus: 200-300 mesh', 'Poles: 300-500 mesh (opsional)'] },
-  { title: 'Penyedimentasian Minyak', items: ['Biarkan minyak diam selama 24-48 jam', 'Partikel mengendap di bagian bawah', 'Meningkatkan kejernihan dan kualitas minyak'] },
+const proTips = [
+  { title: 'Bersihkan Biji Secara Menyeluruh', desc: 'Buang semua batu, logam, dan puing sebelum diproses. Bahkan batu kecil dapat merusak pengepres dan mengurangi hasil.' },
+  { title: 'Kupas dengan Benar', desc: 'Buang kulit biji karena menyerap minyak dan mengurangi hasil. Targetkan 95%+ pengupasan untuk sebagian besar biji.' },
+  { title: 'Kontrol Kelembaban Secara Tepat', desc: 'Gunakan pengukur kelembaban jika memungkinkan. Atau uji dengan meremas - bahan harus menyatu tetapi mudah hancur.' },
+  { title: 'Panggang Secara Konsisten', desc: 'Gunakan termometer untuk menjaga suhu pemanggangan yang konsisten. Pemanggangan tidak konsisten = hasil tidak konsisten.' },
+  { title: 'Giling hingga Ukuran Optimal', desc: '2-4mm untuk sebagian besar biji, 3-5mm untuk kacang. Terlalu halus = sulit dipres, terlalu kasar = ekstraksi tidak merata.' },
+  { title: 'Muat Secara Merata', desc: 'Distribusikan bahan secara merata di ruang pengepres. Pemuatan tidak merata menyebabkan tekanan tidak merata dan hasil berkurang.' },
+  { title: 'Waktu Tahan Tekanan Puncak', desc: 'Tahan pada tekanan maksimum selama 5-10 menit. Terburu-buru langkah ini dapat mengurangi hasil sebesar 5-10%.' },
+  { title: 'Pengepresan Progresif', desc: 'Terapkan tekanan secara bertahap daripada tiba-tiba. Tekanan tiba-tiba dapat menjebak minyak di dalam kue.' },
 ];
 
-const qualityControl = [
-  { title: 'Pelacakan Hasil', items: ['Timbang input dan output untuk setiap batch', 'Hitung persentase hasil', 'Ikuti tren dari waktu ke waktu'] },
-  { title: 'Pemeliharaan Peralatan', items: ['Bersihkan ruang pemerasan setelah setiap batch', 'Periksa sistem hidrolik setiap bulan', 'Ganti bagian aus dengan cepat'] },
+const yieldComparison = [
+  { scenario: 'Persiapan Buruk', sesam: '30-35%', peanut: '28-32%', rapeseed: '25-28%' },
+  { scenario: 'Persiapan Rata-rata', sesam: '40-45%', peanut: '38-42%', rapeseed: '32-35%' },
+  { scenario: 'Persiapan Luar Biasa', sesam: '48-54%', peanut: '45-50%', rapeseed: '38-42%' },
 ];
 
-const commonProblems = [
-  { problem: 'Hasil rendah', causes: ['Kualitas biji sedang', 'Kelembapan tidak tepat', 'Penggorengan tidak cukup'], solutions: ['Dapatkan biji berkualitas tinggi', 'Sesuaikan kelembapan', 'Tingkatkan suhu penggorengan'] },
-  { problem: 'Minyak keruh', causes: ['Filter tidak lengkap', 'Kontaminasi air'], solutions: ['Tingkatkan ukuran mesh filter', 'Pastikan pengeringan yang sesuai'] },
-  { problem: 'Waktu pemerasan terlalu lama', causes: ['Biji terlalu kering', 'Ukuran partikel terlalu kecil'], solutions: ['Tingkatkan kandungan kelembapan', 'Sesuaikan parameter penggilingan'] },
+const maintenanceTips = [
+  'Jaga sistem hidrolik tetap terawat untuk tekanan yang konsisten',
+  'Periksa dan ganti filter secara teratur untuk mencegah penyumbatan aliran',
+  'Jaga ruang pengepres tetap bersih untuk menghindari kontaminasi',
+  'Ikuti jadwal perawatan pabrikan',
 ];
-
-function localePath(path: string): string {
-  return `/id${path}`;
-}
 ---
 
-<BaseLayout locale="id" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-green-50 to-emerald-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-green-500/10 text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          OPTIMASI PRODUKSI
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-left">
-              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">PANDUAN PRODUKSI</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Tim Teknik Haonuo</div>
+            <div class="text-sm text-steel-500">Insinyur Senior Pengepres Minyak · 15+ Tahun Pengalaman</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -136,146 +130,30 @@ function localePath(path: string): string {
   <main class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pengantar</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Meningkatkan hasil minyak sangat penting untuk profitabilitas produksi minyak. Bahkan peningkatan kecil dalam efisiensi ekstraksi dapat memiliki dampak signifikan pada hasil Anda.
-        </p>
-      </section>
-
-      <section id="understanding-yield" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Memahami Hasil Minyak</h2>
-        <p class="text-steel-700 leading-relaxed mb-4">
-          Hasil minyak adalah persentase minyak yang diekstraksi dari bahan baku:
-        </p>
-        <div class="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-xl text-white font-mono text-lg">
-          Hasil (%) = (Berat minyak diekstraksi / Berat bahan baku) × 100
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Memaksimalkan hasil minyak adalah kunci profitabilitas dalam produksi minyak. Peningkatan kecil dalam proses dapat meningkatkan keluaran minyak dan pendapatan secara dramatis.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Teknik yang tepat dapat meningkatkan hasil sebesar 10-20%. Itu berarti 10-20 kg lebih banyak minyak dari setiap 100 kg biji yang diproses.</p>
         </div>
       </section>
 
-      <section id="raw-material-prep" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Persiapan Bahan Baku</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {rawMaterialPrep.map((item, index) => (
+      <section id="factors" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Faktor Kunci yang Mempengaruhi Hasil</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {yieldFactors.map((item, index) => (
             <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-lg text-green-600 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900 mt-8">Pengkondisian Kelembapan</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Bahan</th>
-                <th class="px-4 py-3 text-left font-semibold">Kelembapan untuk pemerasan panas</th>
-                <th class="px-4 py-3 text-left font-semibold">Kelembapan untuk pemerasan dingin</th>
-              </tr>
-            </thead>
-            <tbody>
-              {moistureConditioning.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
-                  <td class="px-4 py-3 text-amber-600">{item.hotPress}</td>
-                  <td class="px-4 py-3 text-emerald-600">{item.coldPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="hot-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Optimasi Pemerasan Panas</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {hotPressing.map((item, index) => (
-            <div key={index} class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-              <h3 class="font-semibold text-orange-800 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="cold-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Optimasi Pemerasan Dingin</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {coldPressing.map((item, index) => (
-            <div key={index} class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-              <h3 class="font-semibold text-blue-800 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm" set:html={task}></li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="post-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Teknik Setelah Pemerasan</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {postPressing.map((item, index) => (
-            <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
-              <h3 class="font-semibold text-purple-800 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="quality-control" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kontrol Kualitas</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {qualityControl.map((item, index) => (
-            <div key={index} class="bg-steel-50 p-5 rounded-xl border border-steel-200">
-              <h3 class="font-semibold text-charcoal-900 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="common-problems" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Masalah Umum dan Solusi</h2>
-        <div class="space-y-4">
-          {commonProblems.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-red-600 mb-3">{item.problem}</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h4 class="font-medium text-steel-500 mb-2">Penyebab:</h4>
-                  <ul class="space-y-1">
-                    {item.causes.map((cause, idx) => (
-                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
-                    ))}
-                  </ul>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  {item.icon === 'seed' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a10 10 0 0 0 10-10V2H12a10 10 0 0 0 0 20Z"/><path d="M12 22V12h10"/></svg>}
+                  {item.icon === 'droplet' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S6 13 6 15a7 7 0 0 0 7 7z"/></svg>}
+                  {item.icon === 'flame' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>}
+                  {item.icon === 'gear' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>}
+                  {item.icon === 'pressure' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-6"/></svg>}
+                  {item.icon === 'clock' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>}
                 </div>
                 <div>
-                  <h4 class="font-medium text-steel-500 mb-2">Solusi:</h4>
-                  <ul class="space-y-1">
-                    {item.solutions.map((solution, idx) => (
-                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
-                    ))}
-                  </ul>
+                  <h4 class="font-semibold text-charcoal-900 mb-1">{item.title}</h4>
+                  <p class="text-steel-600 text-sm">{item.desc}</p>
                 </div>
               </div>
             </div>
@@ -283,32 +161,137 @@ function localePath(path: string): string {
         </div>
       </section>
 
+      <section id="moisture" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Optimasi Kadar Air</h2>
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Bahan</th><th class="px-4 py-3 text-left font-semibold">Kelembaban Optimal</th><th class="px-4 py-3 text-left font-semibold">Terlalu Kering</th><th class="px-4 py-3 text-left font-semibold">Terlalu Basah</th></tr>
+            </thead>
+            <tbody>
+              {moistureGuide.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.optimal}</td>
+                  <td class="px-4 py-3 text-red-500 text-sm">{item.tooDry}</td>
+                  <td class="px-4 py-3 text-red-500 text-sm">{item.tooWet}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="roasting" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pemanggangan untuk Hasil Maksimal</h2>
+        <p class="text-steel-700 mb-6">Pemanggangan yang tepat adalah salah satu faktor paling kritis dalam memaksimalkan hasil minyak. Ini memecah dinding sel dan melepaskan minyak yang terjebak.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {roastingGuide.map((item, index) => (
+            <div key={index} class="bg-gradient-to-br from-orange-50 to-amber-50 p-5 rounded-xl border border-orange-100">
+              <h3 class="font-display text-lg mb-3 text-orange-800">{item.material}</h3>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between"><span class="text-steel-500">Suhu:</span><span class="font-semibold text-orange-700">{item.temp}</span></div>
+                <div class="flex justify-between"><span class="text-steel-500">Waktu:</span><span class="font-semibold text-orange-700">{item.time}</span></div>
+                <div class="flex justify-between"><span class="text-steel-500">Warna:</span><span class="font-semibold text-orange-700">{item.color}</span></div>
+                <div class="flex justify-between"><span class="text-steel-500">Hasil:</span><span class="font-bold text-green-600">{item.yield}</span></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="pressure" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Teknik Pengepresan Optimal</h2>
+        <div class="space-y-4">
+          {pressureGuide.map((item, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">{index + 1}</div>
+                {index < pressureGuide.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
+              </div>
+              <div class={index < pressureGuide.length - 1 ? 'pb-6' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{item.step}</h3>
+                <div class="bg-steel-50 p-4 rounded-lg">
+                  <p class="text-amber-600 font-medium mb-1">{item.pressure}</p>
+                  <p class="text-steel-600">{item.time}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="pro-tips" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Tips Profesional</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {proTips.map((tip, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 p-5 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-charcoal-900 mb-1">{tip.title}</h4>
+                  <p class="text-steel-600 text-sm">{tip.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Hasil</h2>
+        <p class="text-steel-700 mb-6">Lihat perbedaan dramatis yang dibuat oleh persiapan yang tepat pada hasil minyak akhir:</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Tingkat Persiapan</th><th class="px-4 py-3 text-left font-semibold">Wijen</th><th class="px-4 py-3 text-left font-semibold">Kacang Tanah</th><th class="px-4 py-3 text-left font-semibold">Kanola</th></tr>
+            </thead>
+            <tbody>
+              {yieldComparison.map((item, index) => (
+                <tr key={index} class={index === 0 ? 'bg-red-50' : index === 1 ? 'bg-amber-50' : 'bg-green-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scenario}</td>
+                  <td class={`px-4 py-3 font-medium ${index === 0 ? 'text-red-600' : index === 1 ? 'text-amber-600' : 'text-green-600'}`}>{item.sesam}</td>
+                  <td class={`px-4 py-3 font-medium ${index === 0 ? 'text-red-600' : index === 1 ? 'text-amber-600' : 'text-green-600'}`}>{item.peanut}</td>
+                  <td class={`px-4 py-3 font-medium ${index === 0 ? 'text-red-600' : index === 1 ? 'text-amber-600' : 'text-green-600'}`}>{item.rapeseed}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="maintenance" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perawatan Peralatan untuk Hasil yang Konsisten</h2>
+        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+          <ul class="space-y-3">
+            {maintenanceTips.map((tip, index) => (
+              <li key={index} class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-steel-700">{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Meningkatkan hasil minyak membutuhkan perhatian pada setiap tahap proses produksi. Dengan mengikuti strategi ini, Anda dapat mendapatkan hasil optimal dan memaksimalkan profitabilitas bisnis produksi minyak Anda.
-        </p>
+        <p class="text-steel-700 leading-relaxed">Memaksimalkan hasil minyak adalah kombinasi dari persiapan yang tepat, teknik yang benar, dan praktik yang konsisten. Dengan menerapkan tips dalam panduan ini, Anda dapat secara signifikan meningkatkan produksi minyak dan profitabilitas. Untuk saran optimasi yang dipersonalisasi, hubungi tim teknik kami.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MEMULAI PRODUKSI MINYAK ANDA?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim insinyur kami dapat membantu Anda memilih peralatan terbaik dan mengoptimalkan investasi Anda untuk hasil maksimal.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">TINGKATKAN HASIL ANDA HARI INI</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Insinyur kami dapat membantu Anda mengoptimalkan setiap langkah proses produksi minyak Anda untuk hasil maksimal.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          {t.resources.ctaButton}
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">
-          {t.nav.products}
-        </a>
-        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
-          {t.resources.backToResources}
-        </a>
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Hubungi Ahli Kami<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">Lihat Peralatan</a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">Kembali ke Sumber Daya</a>
       </div>
     </div>
   </section>
 </BaseLayout>
-

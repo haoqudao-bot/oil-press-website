@@ -221,8 +221,8 @@ const breadcrumbLd = {
             </div>
             <div id="form-error" class="hidden text-center py-8">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-red-500 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              <h3 class="font-display text-xl text-charcoal-900 mb-2">Submission Failed</h3>
-              <p class="text-steel-500">Please try again or email us directly at info@hydoilpress.com</p>
+              <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.contact.inquiryFailed}</h3>
+              <p class="text-steel-500">{t.contact.inquiryFailedDesc}</p>
             </div>
           </div>
         </div>
@@ -353,7 +353,12 @@ const breadcrumbLd = {
   </section>
 </BaseLayout>
 
-<script is:inline define:vars={{ wechatId: "18957149128" }}>
+<script is:inline define:vars={{
+  wechatId: "18957149128",
+  sendingText: t.contact.sending,
+  submitText: t.contact.submit,
+  requiredField: t.contact.requiredField,
+}}>
   const copyBtn = document.querySelector('[data-copy-wechat-page]');
   const copyToast = document.querySelector('[data-copy-toast-page]');
   if (copyBtn && copyToast) {
@@ -377,6 +382,26 @@ const breadcrumbLd = {
     });
   }
 
+  // Add custom validation messages
+  const form = document.getElementById('contact-form');
+  if (form) {
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    inputs.forEach(input => {
+      input.addEventListener('invalid', function(e) {
+        e.preventDefault();
+        if (!input.value.trim()) {
+          input.setCustomValidity(requiredField);
+        } else {
+          input.setCustomValidity('');
+        }
+        input.reportValidity();
+      });
+      input.addEventListener('input', function() {
+        input.setCustomValidity('');
+      });
+    });
+  }
+
   function submitForm(event) {
     event.preventDefault();
     const form = event.target;
@@ -389,7 +414,7 @@ const breadcrumbLd = {
     const formData = new FormData(form);
 
     submitBtn.disabled = true;
-    btnText.textContent = 'Sending...';
+    btnText.textContent = sendingText;
     btnIcon.style.display = 'none';
 
     fetch(form.action, {
@@ -414,7 +439,7 @@ const breadcrumbLd = {
     })
     .finally(() => {
       submitBtn.disabled = false;
-      btnText.textContent = 'Send Inquiry';
+      btnText.textContent = submitText;
       btnIcon.style.display = '';
     });
 

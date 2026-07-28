@@ -491,6 +491,10 @@
     "ourLocation": "موقعنا",
     "inquirySent": "تم إرسال الاستفسار!",
     "inquirySentDesc": "شكرًا لتواصلك معنا. سنرد عليك خلال 24 ساعة.",
+    "inquiryFailed": "فشل الإرسال",
+    "inquiryFailedDesc": "يرجى المحاولة مرة أخرى أو إرسال بريد إلكتروني مباشر إلى info@hydoilpress.com",
+    "sending": "جاري الإرسال...",
+    "requiredField": "هذا الحقل مطلوب",
     "googleMaps": "خرائط جوجل",
     "whatsappPresetMessage": "مرحبًا، أنا مهتم بمنتجات معاصر الزيت لديكم. هل يمكنكم إخباري بالمزيد؟",
     "mapTitle": "موقع هاونوو للآلات - تشينغتشو، ويفانغ، شاندونغ، الصين",
@@ -897,7 +901,7 @@
       },
       {
         "question": "How much does a cold press oil machine cost?",
-        "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with capacities from 50 to 125 kg/hr. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
+        "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
       }
     ],
     "ctaTitle": "Start Producing Premium Cold-Pressed Oil",
@@ -1004,7 +1008,7 @@
       },
       {
         "question": "How does a hydraulic oil press work?",
-        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 Mpa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 8-15 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
+        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 Mpa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
       },
       {
         "question": "What seeds can a hydraulic oil press process?",
@@ -1048,7 +1052,7 @@
     "whyChoose": "Why Choose Hydraulic Pressing for Commercial Production",
     "industrialCapacity": {
       "title": "Industrial Capacity",
-      "desc": "100 kg per batch capacity. Hourly output varies by seed type and pressing cycle time. HN325 processes 100 kg per batch in 8-15 minutes, meeting commercial production targets."
+      "desc": "100 kg per batch capacity. Hourly output varies by seed type and pressing cycle time. HN325 processes 100 kg per batch in 40-90 minutes, meeting commercial production targets."
     },
     "professionalYield": {
       "title": "Professional Yield",
@@ -1103,7 +1107,7 @@
       },
       {
         "question": "How much oil can a hydraulic press produce?",
-        "answer": "Haonuo hydraulic presses process 100 kg per batch. Hourly output varies by seed type and pressing cycle time (8-15 minutes per batch). This is 10-20x more productive than manual presses and 2-3x more efficient than screw presses."
+        "answer": "Haonuo hydraulic presses process 100 kg per batch. Hourly output varies by seed type and pressing cycle time (40-90 minutes per batch). This is 10-20x more productive than manual presses and 2-3x more efficient than screw presses."
       },
       {
         "question": "Is a hydraulic press better than manual or screw presses?",

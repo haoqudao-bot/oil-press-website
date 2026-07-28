@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿export const frSolutionBodies: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Aperçu
 
 L'huile d'amande est l'une des huiles de spécialité les plus précieuses au monde, se vendant à des prix premium sur les marchés des cosmétiques et des aliments de santé. Une **machine de pressage d'huile d'amande** de qualité est essentielle pour les producteurs qui souhaitent extraire cette huile de grande valeur tout en préservant les vitamines, les acides gras et le délicat arôme naturel qui justifient les prix premium.
@@ -223,7 +223,7 @@ Comprendre les rendements attendus est essentiel pour la planification commercia
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique pour Huile de Coco / VCO** — Conçue spécifiquement pour le pressage de la coco avec une double fonction pour l'extraction du lait de coco et de l'huile. Le fût de 300 mm traite 25-50 kg par lot.
+- **Presse Hydraulique pour Huile de Coco / VCO** — Conçue spécifiquement pour le pressage de la coco avec une double fonction pour l'extraction du lait de coco et de l'huile. Le fût de 600 mm traite 180 kg par lot.
 - **Presse Filtrante Pneumatique** — Essentielle pour produire une huile de coco claire et sans sédiment. Le fonctionnement pneumatique assure une pression de filtration constante.
 - **Système de Raffinage d'Huile Alimentaire** — Requis pour la production d'huile de coco RBD. Disponible en capacités de 1 à 100 tonnes/jour pour correspondre à votre échelle.
 
@@ -573,7 +573,7 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 1. **Nettoyage des graines** — Éliminez la poussière, les pierres et autres impuretés des graines de moutarde. Des graines propres produisent une huile de meilleur goût et protègent votre équipement contre les dommages.
 2. **Cuisson à la vapeur (Pour pressage à chaud)** — Faites cuire à la vapeur les graines de moutarde à 90-100°C pendant 15-20 minutes à l'aide du cuiseur à vapeur électrique de graines. Cela ramollit les graines, augmente le rendement en huile et réduit le piquant. À ignorer pour l'huile Kachi Ghani pressée à froid.
 3. **Refroidissement** — Laissez les graines cuites à la vapeur refroidir à 50-70°C avant le pressage. Une température appropriée assure un écoulement optimal de l'huile sans dégrader la qualité.
-4. **Pressage hydraulique** — Introduisez les graines de moutarde préparées dans la presse hydraulique standard ou lourde. Chaque lot de 25-50 kg est traité en 35-45 minutes.
+4. **Pressage hydraulique** — Introduisez les graines de moutarde préparées dans la presse hydraulique standard ou lourde. Chaque lot de 100 kg est traité en 35-45 minutes.
 5. **Filtration** — Faites passer l'huile de moutarde brute à travers la presse filtrante pneumatique pour éliminer les particules de graines et les sédiments.
 6. **Décantation** — Laissez l'huile filtrée reposer pendant 24-48 heures. L'huile de moutarde bénéficie d'une décantation prolongée pour développer sa saveur caractéristique.
 7. **Conditionnement** — Mettez l'huile de moutarde finie en bouteilles. Les conteneurs traditionnels en fer blanc ou les bouteilles PET sont courants sur les marchés sud-asiatiques.
@@ -759,14 +759,14 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 1. **Nettoyage et Décorticage** — Éliminez les pierres, la terre et les coques des arachides. Le décorticage est critique — les coques absorbent l'huile et réduisent à la fois le rendement et la qualité. Notre broyeur de graines peut aider au décorticage.
 2. **Broyage (Optionnel)** — Broyez légèrement les arachides décortiquées pour augmenter la surface pour un pressage plus efficace.
 3. **Torréfaction (Pour pressage à chaud)** — Torréfiez les arachides à 130-160°C pendant 20-30 minutes à l'aide de la poêle de torréfaction thermique. Cela développe l'arôme caractéristique d'arachide et augmente le rendement en huile. À ignorer pour l'huile pressée à froid.
-4. **Pressage hydraulique** — Introduisez les arachides préparées dans la presse hydraulique standard ou lourde. Le fût de 390 mm de diamètre intérieur traite 5-50 kg par lot avec un cycle de 35-45 minutes.
+4. **Pressage hydraulique** — Introduisez les arachides préparées dans la presse hydraulique standard ou lourde. Le fût de 390 mm de diamètre intérieur traite 100 kg par lot avec un cycle de 35-45 minutes.
 5. **Filtration** — Faites passer l'huile d'arachide brute à travers la presse filtrante pneumatique pour éliminer les sédiments et les particules fines.
 6. **Décantation** — Laissez l'huile filtrée reposer pendant 12-24 heures. La décantation naturelle produit une huile plus claire.
 7. **Conditionnement** — Mettez l'huile d'arachide finie en bouteilles. L'huile pressée à froid doit être stockée dans des bouteilles en verre sombre pour préserver la qualité.
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Standard (HN325)** — Idéale pour la production d'huile d'arachide de petite à moyenne envergure. Le fût de 390 mm de diamètre intérieur traite 5-50 kg par lot avec un excellent rendement.
+- **Presse Hydraulique Standard (HN325)** — Idéale pour la production d'huile d'arachide de petite à moyenne envergure. Le fût de 390 mm de diamètre intérieur traite 100 kg par lot avec un excellent rendement.
 - **Presse Hydraulique Lourde (HN355)** — Recommandée pour les opérations plus importantes. Force de pressage plus élevée et option double fût pour un débit accru.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante des arachides, essentielle pour l'huile d'arachide aromatique pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile d'arachide claire et prête pour le marché avec un minimum de main-d'œuvre.
@@ -820,7 +820,7 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 1. **Nettoyage des graines** — Éliminez les pierres, la poussière et autres impuretés à l'aide d'un nettoyeur de graines. Des graines propres produisent une huile de meilleure qualité et protègent votre équipement.
 2. **Torréfaction (Pour pressage à chaud)** — Torréfiez les graines de sésame à 160-180°C pendant 15-20 minutes à l'aide de la poêle de torréfaction thermique. Cela développe l'arôme caractéristique de noix et augmente le rendement en huile. Pour l'huile pressée à froid, ignorez cette étape.
 3. **Refroidissement** — Laissez les graines torréfiées refroidir à 60-80°C avant le pressage. Des graines surchauffées peuvent dégrader la qualité de l'huile.
-4. **Pressage hydraulique** — Introduisez les graines de sésame dans la presse hydraulique pour huile de sésame. Le fût de 300 mm traite 32,5-50 kg par lot avec un temps de cycle de 35-45 minutes.
+4. **Pressage hydraulique** — Introduisez les graines de sésame dans la presse hydraulique pour huile de sésame. Le fût de 300 mm traite 32,5-50 kg par lot avec un temps de cycle de 8-10 minutes.
 5. **Filtration** — Faites passer l'huile de sésame brute à travers la presse filtrante pneumatique pour éliminer les sédiments et les particules fines, produisant une huile claire et prête pour le marché.
 6. **Décantation et Embouteillage** — Laissez l'huile filtrée reposer pendant 24 heures pour que les particules restantes se déposent, puis embouteillez pour la distribution.
 
@@ -943,13 +943,13 @@ Cette solution est idéale pour la production au niveau du village, les opérati
 1. **Approvisionnement en Graines** — Achetez des graines de qualité auprès d'agriculteurs locaux ou de marchés de gros. Commencez par des graines facilement disponibles et demandées dans votre région.
 2. **Nettoyage des Graines** — Éliminez les pierres, la poussière et les impuretés. Même un nettoyage basique améliore significativement la qualité de l'huile et protège votre machine.
 3. **Broyage des Graines (Optionnel)** — Utilisez le broyeur de graines à haute vitesse pour pré-broyer les graines dures comme les arachides et les graines de tournesol. Cela améliore l'efficacité du pressage.
-4. **Pressage hydraulique** — Introduisez les graines dans la presse hydraulique standard (HN325). Chaque lot de 25-50 kg est traité en 35-45 minutes. Une seule personne peut gérer l'ensemble du processus.
+4. **Pressage hydraulique** — Introduisez les graines dans la presse hydraulique standard (HN325). Chaque lot de 100 kg est traité en 35-45 minutes. Une seule personne peut gérer l'ensemble du processus.
 5. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour obtenir une huile claire et prête pour le marché.
 6. **Conditionnement et Ventes** — Conditionnez l'huile dans des bouteilles ou des conteneurs appropriés pour votre marché local. Vendez directement aux consommateurs, aux restaurants ou aux détaillants locaux.
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Standard (HN325)** — Notre modèle d'entrée de gamme avec fût de 300 mm. Traite 25-50 kg par lot, 500-1 500 kg par jour. Le chemin le plus abordable vers le pressage d'huile professionnel.
+- **Presse Hydraulique Standard (HN325)** — Notre modèle d'entrée de gamme avec fût de 390 mm. Traite 100 kg par lot, 500-1 500 kg par jour. Le chemin le plus abordable vers le pressage d'huile professionnel.
 - **Broyeur de Graines à Haute Vitesse** — Pré-broye les graines pour un pressage plus efficace. Particulièrement utile pour les arachides, les graines de tournesol et autres graines dures.
 - **Presse Filtrante Pneumatique** — Produit une huile claire et prête pour le marché. Essentielle pour vendre l'huile à des prix premium.
 
@@ -1039,7 +1039,7 @@ Cette solution gère à la fois les variétés de graines de tournesol riches en
 1. **Nettoyage des graines** — Éliminez les débris de champ, les pierres et les graines endommagées. Des graines propres produisent une meilleure huile et protègent votre équipement.
 2. **Décorticage (Recommandé)** — Retirez les coques des graines de tournesol à l'aide de notre broyeur de graines. Le décorticage augmente le rendement de 10-15 % et produit une huile de couleur plus claire. Pour le pressage de graines entières, ignorez cette étape.
 3. **Torréfaction** — Torréfiez les amandes décortiquées à 120-150°C pendant 15-25 minutes à l'aide de la poêle de torréfaction thermique. Cela améliore l'écoulement de l'huile et le rendement. Pour l'huile pressée à froid, ignorez la torréfaction.
-4. **Pressage hydraulique** — Introduisez les graines de tournesol préparées dans la presse hydraulique standard ou lourde. Le fût de 300 mm traite 25-50 kg par lot avec un cycle de 35-45 minutes.
+4. **Pressage hydraulique** — Introduisez les graines de tournesol préparées dans la presse hydraulique standard ou lourde. Le fût de 390 mm traite 100 kg par lot avec un cycle de 35-45 minutes.
 5. **Filtration** — Faites passer l'huile de tournesol brute à travers la presse filtrante pneumatique pour obtenir une huile claire et prête pour le marché.
 6. **Raffinage (Optionnel)** — Pour l'huile de tournesol raffinée, utilisez le système de raffinage d'huile alimentaire pour produire une huile de cuisson de couleur claire et de saveur neutre.
 7. **Conditionnement** — Mettez l'huile finie en bouteilles. L'huile de tournesol pressée à froid doit être stockée dans des conteneurs sombres pour prévenir l'oxydation.

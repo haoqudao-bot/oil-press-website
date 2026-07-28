@@ -8,8 +8,8 @@ const resource = resources.find(r => r.slug === 'how-to-maximize-oil-yield');
 const t = getTranslations('ar');
 
 const title = resource?.data.title.ar || resource?.data.title.en || 'كيفية تحسين عائد الزيت';
-const description = resource?.data.description.ar || resource?.data.description.en || 'نصائح وتقنيات لتحسين استخراج الزيت';
-const seoKeywords = resource?.data.seoKeywords || ['تحسين عائد الزيت', 'كفاءة استخراج الزيت', 'تحسين الضغط'];
+const description = resource?.data.description.ar || resource?.data.description.en || 'احصل على المزيد من الزيت من كل بذرة';
+const seoKeywords = resource?.data.seoKeywords || ['تحسين عائد الزيت', 'زيادة استخراج الزيت', 'تحسين العائد'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -18,18 +18,9 @@ const articleLd = {
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/yield-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'Senior Oil Press Engineer',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  image: 'https://www.hydoilpress.com/images/maximize-yield-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'مهندس مكبس زيت أول', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -45,42 +36,57 @@ const breadcrumbLd = {
   ],
 };
 
-const rawMaterialPrep = [
-  { title: 'اختيار البذور', items: ['استخدام بذور عالية الجودة ذات محتوى زيت مرتفع', 'التجنب من البذور التالفة أو العفنة أو المصابة بالآفات', 'اختيار البذور الناضجة بالكامل'] },
-  { title: 'تنظيف البذور', items: ['إزالة الحجارة والمعادن والملوثات الصلبة الأخرى', 'فصل البذور التالفة والمكسورة', 'الهدف: أقل من 0.5% من الملوثات'] },
-  { title: 'القش', items: ['يقلل من محتوى الزيت الفعلي لكل حجم', 'يقلل من تآكل معدات الضغط', 'معدل القش الموصى: الفول السوداني 95%+, السمسم 98%+'] },
+const yieldFactors = [
+  { icon: 'seed', title: 'جودة المواد الأولية', desc: 'بذور عالية الجودة = عائد أعلى' },
+  { icon: 'droplet', title: 'محتوى الرطوبة', desc: 'الرطوبة المثالية = 5-8%' },
+  { icon: 'flame', title: 'التحميص', desc: 'التحميص السليم يكسر جدران الخلايا' },
+  { icon: 'gear', title: 'الطحن', desc: 'حجم جسيمات مناسب يزيد مساحة السطح' },
+  { icon: 'pressure', title: 'الضغط', desc: 'ضغط أعلى = استخراج زيت أكثر' },
+  { icon: 'clock', title: 'وقت الضغط', desc: 'وقت كافٍ عند الضغط الذروي' },
 ];
 
-const moistureConditioning = [
-  { material: 'السمسم', hotPress: '5-6%', coldPress: '7-8%' },
-  { material: 'الفول السوداني', hotPress: '5-7%', coldPress: '7-9%' },
-  { material: 'اللوز', hotPress: '-', coldPress: '7-9%' },
+const moistureGuide = [
+  { material: 'السمسم', optimal: '5-6%', tooDry: 'هش، عائد مخفض', tooWet: 'استحلاب، كيك لزج' },
+  { material: 'الفول السوداني', optimal: '5-7%', tooDry: 'صعب الضغط', tooWet: 'انزلاق، استخراج غير متساوٍ' },
+  { material: 'بذور اللفت', optimal: '6-8%', tooDry: 'كيك صلب، عائد منخفض', tooWet: 'كيك رطب، فقدان زيت' },
+  { material: 'الجوز', optimal: '7-9%', tooDry: 'يتفتت، صعب الضغط', tooWet: 'مخاطر العفن' },
 ];
 
-const hotPressing = [
-  { title: 'عملية الاستحمام', items: ['درجة الحرارة: 160-180°C', 'المدة: 25-35 دقيقة', 'رطوبة المخرج: 3-5%'] },
-  { title: 'معاملات الضغط', items: ['البدء بضغط منخفض، زيادة تدريجية', 'الاحتفاظ بالضغط الأقصى لمدة 15-20 دقيقة', 'وقت الدورة القياسية: 30-40 دقيقة لكل طها'] },
+const roastingGuide = [
+  { material: 'السمسم', temp: '160-180°C', time: '25-30 دقيقة', color: 'بني ذهبي', yield: '48-54%' },
+  { material: 'الفول السوداني', temp: '165-185°C', time: '30-35 دقيقة', color: 'بني فاتح', yield: '45-50%' },
+  { material: 'بذور اللفت', temp: '150-170°C', time: '20-25 دقيقة', color: 'بني داكن', yield: '38-42%' },
 ];
 
-const coldPressing = [
-  { title: 'مراقبة درجة الحرارة', items: ['الاحتفاظ بدرجة حرارة الضغط أقل من 60°C', 'استخدام معدات ضغط باردة متخصصة', 'الأمثلة الموصى: <a href="/ar/products/cold-press-hydraulic-oil-press">HN426</a>, <a href="/ar/products/high-pressure-hydraulic-oil-press">HN480</a>, <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press">HN500</a>'] },
-  { title: 'تحسين الضغط', items: ['الضغط البارد يحتاج ضغطًا أعلى لفك جدار الخلية', 'استخدام ضغط السطح البطاني 42+ ميجاباسكال/سم2', 'دورة مطولة: ~2 ساعات لكل طها'] },
+const pressureGuide = [
+  { step: 'التحميل', pressure: 'ضغط تحميل أولي', time: 'تحميل المواد بالتساوي في غرفة الضغط' },
+  { step: 'الضغط المسبق', pressure: '30-40 MPa', time: 'الاحتفاظ لمدة 2-3 دقائق لطرد الهواء' },
+  { step: 'الضغط الرئيسي', pressure: '50-60 MPa', time: 'الاحتفاظ لمدة 5-10 دقائق حسب المادة' },
+  { step: 'الإطلاق', pressure: 'إطلاق تدريجي', time: 'إطلاق بطيء يمنع فقدان الزيت عبر الرغوة' },
 ];
 
-const postPressing = [
-  { title: 'مرشح الزيت', items: ['المرشح الأولي: 100-200 شبكة', 'المرشح الدقيق: 200-300 شبكة', 'اللمعان: 300-500 شبكة (اختياري)'] },
-  { title: 'استقرار الزيت', items: ['اترك الزيت يقف لمدة 24-48 ساعة', 'الجسيمات تهبط في القاع', 'تحسين شفافية جودة الزيت'] },
+const proTips = [
+  { title: 'تنظيف البذور جيداً', desc: 'إزالة جميع الحجارة والمعادن والحطام قبل المعالجة. حتى الحجارة الصغيرة يمكن أن تتلف المكبس وتقلل العائد.' },
+  { title: 'إزالة القشور بشكل صحيح', desc: 'إزالة أغلفة البذور لأنها تمتص الزيت وتقلل العائد. استهدف إزالة 95%+ لمعظم البذور.' },
+  { title: 'التحكم في الرطوبة بدقة', desc: 'استخدم مقياس رطوبة إذا أمكن. أو اختبر بالضغط - يجب أن تتماسك المادة لكنها تنهار بسهولة.' },
+  { title: 'تحميص متسق', desc: 'استخدم مقياس حرارة للحفاظ على درجة حرارة تحميص متسقة. التحميص غير المتسق = عائد غير متسق.' },
+  { title: 'طحن للحجم الأمثل', desc: '2-4 مم لمعظم البذور، 3-5 مم للمكسرات. ناعم جداً = صعب الضغط، خشن جداً = استخراج غير متساوٍ.' },
+  { title: 'تحميل بالتساوي', desc: 'توزيع المواد بالتساوي في غرفة الضغط. التحميل غير المتساوي يسبب ضغط غير متساوٍ وعائد مخفض.' },
+  { title: 'وقت الضغط الذروي', desc: 'الاحتفاظ بالضغط الأقصى لمدة 5-10 دقائق. التسرع في هذه الخطوة يمكن أن يقلل العائد بنسبة 5-10%.' },
+  { title: 'الضغط التدريجي', desc: 'تطبيق الضغط تدريجياً وليس فجأة. الضغط المفاجئ يمكن أن يحصر الزيت في الكيك.' },
 ];
 
-const qualityControl = [
-  { title: 'متابعة العائد', items: ['وزن المدخل والمخرج لكل طها', 'حساب النسبة المئوية للعائد', 'متابعة الاتجاهات بمرور الوقت'] },
-  { title: 'صيانة المعدات', items: ['تنظيف غرفة الضغط بعد كل طها', 'فحص النظام الهيدروليكي شهريًا', 'استبدال الأجزاء المتهالكة بسرعة'] },
+const yieldComparison = [
+  { scenario: 'تحضير رديء', sesam: '30-35%', peanut: '28-32%', rapeseed: '25-28%' },
+  { scenario: 'تحضير متوسط', sesam: '40-45%', peanut: '38-42%', rapeseed: '32-35%' },
+  { scenario: 'تحضير ممتاز', sesam: '48-54%', peanut: '45-50%', rapeseed: '38-42%' },
 ];
 
-const commonProblems = [
-  { problem: 'عائد منخفض', causes: ['جودة البذور المتوسطة', 'رطوبة غير صحيحة', 'استحمام غير كافٍ'], solutions: ['حصول بذور عالية الجودة', 'ضبط الرطوبة', 'زيادة درجة حرارة الاستحمام'] },
-  { problem: 'زيت ضبابي', causes: ['مرشح غير كامل', 'تلوث بالماء'], solutions: ['زيادة حجم شبكة المرشح', 'ضمان تجفيف مناسب'] },
-  { problem: 'وقت الضغط طويل جدًا', causes: ['البذور رقيقة جداً', 'حجم الجسيمات صغير جداً'], solutions: ['زيادة محتوى الرطوبة', 'ضبط معاملات الكسر'] },
+const maintenanceTips = [
+  'الحفاظ على النظام الهيدروليكي بشكل جيد لضمان ضغط متسق',
+  'فحص واستبدال الفلاتر بانتظام لمنع تقييد التدفق',
+  'الحفاظ على غرفة الضغط نظيفة لتجنب التلوث',
+  'اتباع جدول صيانة الشركة المصنعة',
 ];
 
 function localePath(path: string): string {
@@ -101,33 +107,25 @@ function localePath(path: string): string {
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-green-50 to-emerald-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-green-500/10 text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          تحسين الإنتاج
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-left">
-              <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
-              <div class="text-sm text-steel-500">مهندس المكبس الزيتي الرئيسي · +15 سنوات من الخبرة</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">دليل الإنتاج</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">فريق هندسة هاونو</div>
+            <div class="text-sm text-steel-500">مهندس مكبس زيت أول · +15 سنة من الخبرة</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -136,146 +134,25 @@ function localePath(path: string): string {
   <main class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">مقدمة</h2>
-        <p class="text-steel-700 leading-relaxed">
-          تحسين عائد الزيت أمر حيوي لربحية إنتاج الزيت. حتى التحسينات الصغيرة لكفاءة الاستخراج يمكن أن يكون لها تأثير كبير على نتائجك.
-        </p>
-      </section>
-
-      <section id="understanding-yield" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">فهم عائد الزيت</h2>
-        <p class="text-steel-700 leading-relaxed mb-4">
-          عائد الزيت هو النسبة المئوية للزيت المستخرج من المادة الخام:
-        </p>
-        <div class="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-xl text-white font-mono text-lg">
-          العائد (%) = (وزن الزيت المستخرج / وزن المادة الخام) × 100
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">المقدمة</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">يعد تحسين عائد الزيت المفتاح للربحية في إنتاج الزيت. يمكن للتحسينات الصغيرة في العملية أن تزيد بشكل كبير من إنتاج الزيت وإيراداتك.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic">يمكن للتقنية السليمة زيادة العائد بنسبة 10-20%. وهذا يعني 10-20 كجم من الزيت الإضافي من كل 100 كجم من البذور المعالجة.</p>
         </div>
       </section>
 
-      <section id="raw-material-prep" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تحضير المادة الخام</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {rawMaterialPrep.map((item, index) => (
+      <section id="factors" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">العوامل الرئيسية المؤثرة على العائد</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {yieldFactors.map((item, index) => (
             <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-lg text-green-600 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900 mt-8">تنظيف الرطوبة</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-right font-semibold">المادة</th>
-                <th class="px-4 py-3 text-right font-semibold">رطوبة الضغط الساخن</th>
-                <th class="px-4 py-3 text-right font-semibold">رطوبة الضغط البارد</th>
-              </tr>
-            </thead>
-            <tbody>
-              {moistureConditioning.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
-                  <td class="px-4 py-3 text-amber-600">{item.hotPress}</td>
-                  <td class="px-4 py-3 text-emerald-600">{item.coldPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="hot-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تحسين الضغط الساخن</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {hotPressing.map((item, index) => (
-            <div key={index} class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-              <h3 class="font-semibold text-orange-800 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="cold-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تحسين الضغط البارد</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {coldPressing.map((item, index) => (
-            <div key={index} class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-              <h3 class="font-semibold text-blue-800 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm" set:html={task}></li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="post-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تقنيات بعد الضغط</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {postPressing.map((item, index) => (
-            <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
-              <h3 class="font-semibold text-purple-800 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="quality-control" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مراقبة الجودة</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {qualityControl.map((item, index) => (
-            <div key={index} class="bg-steel-50 p-5 rounded-xl border border-steel-200">
-              <h3 class="font-semibold text-charcoal-900 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="common-problems" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">المشكلات الشائعة والحلول</h2>
-        <div class="space-y-4">
-          {commonProblems.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-red-600 mb-3">{item.problem}</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h4 class="font-medium text-steel-500 mb-2">الأسباب:</h4>
-                  <ul class="space-y-1">
-                    {item.causes.map((cause, idx) => (
-                      <li key={idx} class="text-steel-700 text-sm">{cause}</li>
-                    ))}
-                  </ul>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span class="text-amber-600 font-bold text-lg">{index + 1}</span>
                 </div>
                 <div>
-                  <h4 class="font-medium text-steel-500 mb-2">الحلول:</h4>
-                  <ul class="space-y-1">
-                    {item.solutions.map((solution, idx) => (
-                      <li key={idx} class="text-green-600 text-sm">{solution}</li>
-                    ))}
-                  </ul>
+                  <h4 class="font-semibold text-charcoal-900 mb-1">{item.title}</h4>
+                  <p class="text-steel-600 text-sm">{item.desc}</p>
                 </div>
               </div>
             </div>
@@ -283,32 +160,140 @@ function localePath(path: string): string {
         </div>
       </section>
 
+      <section id="moisture" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تحسين محتوى الرطوبة</h2>
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+              <tr><th class="px-4 py-3 text-right font-semibold">المادة</th><th class="px-4 py-3 text-right font-semibold">الرطوبة المثالية</th><th class="px-4 py-3 text-right font-semibold">جاف جداً</th><th class="px-4 py-3 text-right font-semibold">رطب جداً</th></tr>
+            </thead>
+            <tbody>
+              {moistureGuide.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.optimal}</td>
+                  <td class="px-4 py-3 text-red-500 text-sm">{item.tooDry}</td>
+                  <td class="px-4 py-3 text-red-500 text-sm">{item.tooWet}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="roasting" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">التحميص لعائد أقصى</h2>
+        <p class="text-steel-700 mb-6">التحميص السليم هو أحد العوامل الأكثر أهمية في تحسين عائد الزيت. يكسر جدران الخلايا ويطلق الزيت المحاصر.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {roastingGuide.map((item, index) => (
+            <div key={index} class="bg-gradient-to-br from-orange-50 to-amber-50 p-5 rounded-xl border border-orange-100">
+              <h3 class="font-display text-lg mb-3 text-orange-800">{item.material}</h3>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between"><span class="text-steel-500">الحرارة:</span><span class="font-semibold text-orange-700">{item.temp}</span></div>
+                <div class="flex justify-between"><span class="text-steel-500">الوقت:</span><span class="font-semibold text-orange-700">{item.time}</span></div>
+                <div class="flex justify-between"><span class="text-steel-500">اللون:</span><span class="font-semibold text-orange-700">{item.color}</span></div>
+                <div class="flex justify-between"><span class="text-steel-500">العائد:</span><span class="font-bold text-green-600">{item.yield}</span></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="pressure" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تقنية الضغط المثالية</h2>
+        <div class="space-y-4">
+          {pressureGuide.map((item, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">{index + 1}</div>
+                {index < pressureGuide.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
+              </div>
+              <div class={index < pressureGuide.length - 1 ? 'pb-6' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{item.step}</h3>
+                <div class="bg-steel-50 p-4 rounded-lg">
+                  <p class="text-amber-600 font-medium mb-1">{item.pressure}</p>
+                  <p class="text-steel-600">{item.time}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="pro-tips" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">نصائح احترافية</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {proTips.map((tip, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 p-5 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-white text-sm font-bold">{index + 1}</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-charcoal-900 mb-1">{tip.title}</h4>
+                  <p class="text-steel-600 text-sm">{tip.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">مقارنة العائد</h2>
+        <p class="text-steel-700 mb-6">انظر الفرق الدرامي الذي يحدثه التحضير السليم في عائد الزيت النهائي:</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-right font-semibold">مستوى التحضير</th><th class="px-4 py-3 text-right font-semibold">السمسم</th><th class="px-4 py-3 text-right font-semibold">الفول السوداني</th><th class="px-4 py-3 text-right font-semibold">بذور اللفت</th></tr>
+            </thead>
+            <tbody>
+              {yieldComparison.map((item, index) => (
+                <tr key={index} class={index === 0 ? 'bg-red-50' : index === 1 ? 'bg-amber-50' : 'bg-green-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scenario}</td>
+                  <td class={`px-4 py-3 font-medium ${index === 0 ? 'text-red-600' : index === 1 ? 'text-amber-600' : 'text-green-600'}`}>{item.sesam}</td>
+                  <td class={`px-4 py-3 font-medium ${index === 0 ? 'text-red-600' : index === 1 ? 'text-amber-600' : 'text-green-600'}`}>{item.peanut}</td>
+                  <td class={`px-4 py-3 font-medium ${index === 0 ? 'text-red-600' : index === 1 ? 'text-amber-600' : 'text-green-600'}`}>{item.rapeseed}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="maintenance" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">صيانة المعدات لعائد متسق</h2>
+        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+          <ul class="space-y-3">
+            {maintenanceTips.map((tip, index) => (
+              <li key={index} class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-steel-700">{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الخلاصة</h2>
-        <p class="text-steel-700 leading-relaxed">
-          تحسين عائد الزيت يتطلب الانتباه لكل مرحلة من مراحل عملية الإنتاج. باتباع هذه الاستراتيجيات، يمكنك الحصول على عائد متكامل وضمان تحقيق أقصى قدر من ربحية نشاطك في إنتاج الزيت.
-        </p>
+        <p class="text-steel-700 leading-relaxed">يعد تحسين عائد الزيت مزيجاً من التحضير السليم والتقنية الصحيحة والممارسة المتسقة. من خلال تطبيق النصائح في هذا الدليل، يمكنك زيادة إنتاج الزيت وربحيتك بشكل كبير. للحصول على نصائح تخصيصية للتحسين، اتصل بفريقنا الهندسي.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت الخاص بك؟</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">فريق مهندسينا يمكن مساعدتك في اختيار أفضل المعدات وتحسين استثمارك لتحقيق أقصى العائد.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">عزز عائدك اليوم</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لمهندسينا مساعدتك في تحسين كل خطوة من عملية إنتاج الزيت لأقصى عائد.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          {t.resources.ctaButton}
+          اتصل بخبرائنا
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">
-          {t.nav.products}
-        </a>
-        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
-          {t.resources.backToResources}
-        </a>
+        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">تصفح المعدات</a>
+        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">العودة للموارد</a>
       </div>
     </div>
   </section>
 </BaseLayout>
-

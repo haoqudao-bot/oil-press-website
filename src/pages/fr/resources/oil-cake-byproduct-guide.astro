@@ -1,23 +1,28 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
 
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'oil-cake-byproduct-guide');
 const t = getTranslations('fr');
 
-const title = 'Guide d\'utilisation des sous-produits de tourteau d\'huile';
-const description = 'Guide complet pour maximiser la valeur des sous-produits de tourteau d\'huile';
-const seoKeywords = ['utilisation du tourteau', 'tourteau d\'arachide', 'gestion des sous-produits'];
-const publishedAt = new Date();
+const title = resource?.data.title.fr || resource?.data.title.en || 'Guide des Sous-produits de Tourteau d\'Huile';
+const description = resource?.data.description.fr || resource?.data.description.en || 'Profitez de vos sous-produits de presse à huile';
+const seoKeywords = resource?.data.seoKeywords || ['tourteau huile', 'utilisation sous-produits', 'usages tourteau', 'alimentation animale', 'engrais'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
 
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/cake-byproduct-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Ingénieur Chef en Presse à Huile', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  image: 'https://www.hydoilpress.com/images/oil-cake-guide-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Ingénieur Senior en Presse à Huile', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
   publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
 };
 
@@ -25,118 +30,67 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
-    { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/fr' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/fr/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/oil-cake-byproduct-guide' },
   ],
 };
 
-const nutritionalAnalysis = [
-  { component: 'Protéine', peanut: '45-50%', sesame: '35-40%', rapeseed: '38-42%', soybean: '40-45%' },
-  { component: 'Graisse', peanut: '6-10%', sesame: '8-12%', rapeseed: '3-6%', soybean: '1-3%' },
-  { component: 'Fibre', peanut: '8-12%', sesame: '6-8%', rapeseed: '10-15%', soybean: '5-8%' },
-  { component: 'Glucides', peanut: '20-25%', sesame: '25-30%', rapeseed: '25-30%', soybean: '25-30%' },
-  { component: 'Cendres', peanut: '5-7%', sesame: '5-7%', rapeseed: '6-8%', soybean: '5-7%' },
+const oilCakeTypes = [
+  { name: 'Tourteau de Sésame', protein: '50-55%', fat: '8-10%', fiber: '10-12%', uses: ['Alimentation animale', 'Engrais', 'Amendement du sol'] },
+  { name: 'Tourteau d\'Arachide', protein: '45-50%', fat: '8-12%', fiber: '12-15%', uses: ['Alimentation animale', 'Alimentation aquacole', 'Engrais'] },
+  { name: 'Tourteau de Colza', protein: '38-42%', fat: '8-10%', fiber: '15-18%', uses: ['Alimentation animale', 'Engrais', 'Source de protéines industrielle'] },
+  { name: 'Tourteau de Noyer', protein: '35-40%', fat: '10-12%', fiber: '20-25%', uses: ['Engrais', 'Amendement du sol', 'Produits artisanaux'] },
+  { name: 'Tourteau de Soja', protein: '42-46%', fat: '8-10%', fiber: '12-15%', uses: ['Alimentation animale', 'Alimentation aquacole', 'Ingrédient alimentaire'] },
 ];
-
-const keyNutrients = [
-  { icon: 'droplet', title: 'Protéine', desc: 'Protéine végétale de haute qualité pour l\'alimentation animale' },
-  { icon: 'dna', title: 'Acides Aminés', desc: 'Contient des acides aminés essentiels comme la lysine, la méthionine' },
-  { icon: 'gem', title: 'Minéraux', desc: 'Riche en phosphore, calcium, magnésium, potassium' },
-  { icon: 'sun', title: 'Vitamines', desc: 'Vitamines du groupe B, vitamine E' },
-];
-
-const poultryFeed = { benefits: ['Haute protéine favorise la croissance et la production d\'œufs', 'Bonne source d\'énergie', 'Alternative économique à la farine de soja'], inclusion: ['Poulets de chair: 10-20% de l\'alimentation', 'Poules pondeuses: 8-15% de l\'alimentation', 'Dindes: 10-18% de l\'alimentation'] };
-const livestockFeed = { benefits: ['Améliore la production laitière des vaches', 'Renforce la prise de poids des bovins', 'Adapté aux ovins et chèvres'], inclusion: ['Vaches laitières: 15-25% du mélange concentré', 'Bovins de boucherie: 10-20% de l\'alimentation', 'Ovins/chèvres: 10-15% de l\'alimentation'] };
-const aquacultureFeed = { benefits: ['Haute protéine pour la croissance des poissons', 'Alternative durable à la farine de poisson', 'Bonne digestibilité'], inclusion: ['Tilapia: 15-25%', 'Poisson-chat: 10-20%', 'Crevettes: 10-15%'] };
-const swineFeed = { benefits: ['Favorise la prise de poids', 'Améliore le taux de conversion alimentaire', 'Économique'], inclusion: ['Porcs en croissance: 10-20%', 'Porcs à l\'abattage: 8-15%', 'Truies: 10-15%'] };
-
-const traditionalUses = [
-  { name: 'Tourteau d\'Arachide (Kuli-Kuli)', desc: 'Snack populaire en Afrique de l\'Ouest (Nigéria, Ghana). Boulettes de tourteau frites. Haute protéine, dense en énergie.' },
-  { name: 'Production de Tempeh', desc: 'Tourteau de soja fermenté. Aliment traditionnel indonésien. Valeur nutritionnelle élevée.' },
-];
-
-const modernUses = [
-  { name: 'Protéine Isolée', desc: 'Protéine extraite pour les produits alimentaires. Utilisée dans les substituts de viande végétariens. Compléments protéiques.' },
-  { name: 'Produits Sans Gluten', desc: 'Farine de tourteau pour la cuisson sans gluten. Teneur élevée en fibres. Riches en nutriments.' },
-];
-
-const organicFertilizer = { benefits: ['Source d\'azote à libération lente', 'Améliore la structure du sol', 'Renforce l\'activité microbienne du sol'], methods: ['Application directe: 500-1 000 kg/ha', 'Compostage: Mélanger avec déchets organiques', 'Engrais liquide: Extraire les nutriments'] };
-const soilAmendment = { benefits: ['Améliore la rétention d\'eau', 'Renforce l\'aération du sol', 'Augmente la capacité d\'échange cationique'] };
-const animalBedding = { benefits: ['Matériau absorbant', 'Économique', 'Peut être composté après utilisation'] };
-
-const biogasProduction = { process: ['Mélanger le tourteau avec de l\'eau', 'Digestion anaérobie', 'Produire du biogaz (méthane)', 'Utiliser pour la production d\'énergie'], yield: ['200-300 m³ de biogaz par tonne de tourteau', '50-60% de méthane'] };
-const biofuelProduction = { process: ['Extraire l\'huile résiduelle', 'Convertir en biodiesel', 'Utiliser comme carburant de transport'] };
-const activatedCarbon = { process: ['Carboniser le tourteau', 'Activer avec de la vapeur ou des produits chimiques', 'Utiliser pour la filtration et la purification'] };
-
-const crushingEquipment = ['Broyeur à marteaux', 'Broyeur à rouleaux', 'Broyeur à disques'];
-const particleSizes = [
-  { use: 'Alimentation animale', size: '1-3 mm' },
-  { use: 'Engrais', size: '2-5 mm' },
-  { use: 'Industriel', size: 'Poudre fine' },
-];
-
-const pelletizingInfo = { benefits: ['Manipulation améliorée', 'Poussière réduite', 'Densité apparente plus élevée'], equipment: ['Pressoir à granulés à matrice plate', 'Pressoir à granulés à matrice annulaire'], size: '4-8 mm de diamètre' };
-
-const valueAddedProducts = [
-  { title: 'Extraction de Huile Résiduelle', desc: 'Extraction par solvant, Extraction au CO2 supercritique, Récupération supplémentaire de 2-3% d\'huile' },
-  { title: 'Extraction de Protéine', desc: 'Extraction alcaline, Précipitation acide, Production d\'isolat protéique' },
-  { title: 'Extraction de Phytochemicals', desc: 'Antioxydants, Phytostérols, Saponines' },
-];
-
-const qualityControl = [
-  { parameter: 'Teneur en Protéine', standard: '> 40%', method: 'Méthode de Kjeldahl' },
-  { parameter: 'Humidité', standard: '< 12%', method: 'Séchage à l\'étuve' },
-  { parameter: 'Cendres', standard: '< 8%', method: 'Combustion' },
-  { parameter: 'Aflatoxine', standard: '< 20 µg/kg', method: 'HPLC' },
-  { parameter: 'Acides Gras Libres', standard: '< 2%', method: 'Titrage' },
-];
-
-const storageRequirements = ['Stockage sec et bien ventilé', 'Température < 25°C', 'Humidité relative < 65%', 'Utiliser des sacs résistants à l\'humidité'];
 
 const marketValue = [
-  { application: 'Alimentation Animale', price: 'Contactez-nous pour le prix' },
-  { application: 'Engrais Biologique', price: 'Contactez-nous pour le prix' },
-  { application: 'Aliment Humain', price: 'Contactez-nous pour le prix' },
-  { application: 'Industriel', price: 'Contactez-nous pour le prix' },
+  { type: 'Tourteau Brut (Moulu)', price: 'Taux du marché local' },
+  { type: 'Tourteau Granulé', price: '1.5x le prix du tourteau brut' },
+  { type: 'Tourteau Séché', price: '1.2x le prix du tourteau brut' },
 ];
 
-const profitExample = [
-  'Production de 100 tonnes/mois',
-  'Rendement de tourteau: 55 tonnes/mois',
-  'Potentiel de revenu supplémentaire significatif',
-  'Marge bénéficiaire augmente avec le traitement',
-  'Dépend des prix du marché et du niveau de traitement',
+const processingSteps = [
+  { title: 'Collecte', desc: 'Collecter le tourteau de la presse à huile après chaque charge. Enlever les pierres et débris.' },
+  { title: 'Broyage', desc: 'Utiliser un broyeur à marteaux pour moudre le tourteau à la taille de particules souhaitée (2-5mm pour la plupart des applications).' },
+  { title: 'Séchage', desc: 'Réduire la teneur en humidité à < 10% pour prévenir la croissance de moisissure pendant le stockage.' },
+  { title: 'Granulation (optionnel)', desc: 'Pour les marchés de l\'alimentation animale à plus grande valeur, compacter en granulés.' },
+  { title: 'Stockage', desc: 'Stocker dans un endroit sec et bien ventilé. Utiliser des sacs résistants à l\'humidité pour le stockage en vrac.' },
 ];
 
-const investmentRequirements = [
-  { level: 'Broyeur de base', investment: 'Contactez-nous pour le prix', capacity: '50-100 tonnes' },
-  { level: 'Granulation', investment: 'Contactez-nous pour le prix', capacity: '100-300 tonnes' },
-  { level: 'Traitement à valeur ajoutée', investment: 'Contactez-nous pour le prix', capacity: '200-500 tonnes' },
+const animalFeedUses = [
+  { animal: 'Bovins', inclusion: 'Jusqu\'à 20% de l\'alimentation' },
+  { animal: 'Aviculture', inclusion: 'Jusqu\'à 15% de l\'alimentation' },
+  { animal: 'Porcs', inclusion: 'Jusqu\'à 10% de l\'alimentation' },
+  { animal: 'Aquaculture', inclusion: 'Jusqu\'à 25% de l\'alimentation' },
 ];
 
-const wasteReduction = ['Le tourteau est une ressource précieuse, pas un déchet', 'Une utilisation appropriée réduit les déchets en décharge', 'Approche de l\'économie circulaire'];
-const sustainability = ['Ressource renouvelable', 'Biodégradable', 'Production carbone neutre'];
-const pollutionControl = ['Stockage approprié empêche la croissance des moisissures', 'Contrôle de la poussière pendant le traitement', 'Traitement des eaux usées pour les processus d\'extraction'];
+const fertilizerUses = [
+  { use: 'Application directe', desc: 'Épandre comme amendement du sol' },
+  { use: 'Compostage', desc: 'Mélanger avec d\'autres matières organiques' },
+  { use: 'Blend d\'engrais', desc: 'Mélanger avec des engrais minéraux' },
+];
 
-const caseStudy = [
-  'Capacité journalière: 1 000 kg d\'arachides',
-  'Rendement en huile: 45% = 450 kg d\'huile',
-  'Rendement en tourteau: 55% = 550 kg de tourteau',
-  '400 kg de tourteau vendu comme aliment pour animaux',
-  '150 kg de tourteau transformé en granulés',
-  'Revenu mensuel du tourteau: ~4 500 USD',
-  'Coûts de gestion des déchets réduits',
-  'Rentabilité globale améliorée',
-  'Modèle d\'entreprise durable',
+const storageConditions = [
+  { icon: 'thermometer', label: 'Température', value: '< 25°C' },
+  { icon: 'cloud', label: 'Humidité', value: '< 70% HR' },
+  { icon: 'time', label: 'Humidité', value: '< 12%' },
+  { icon: 'shield', label: 'Durée de conservation', value: '3-6 mois' },
+];
+
+const safetyTips = [
+  'Porter des vêtements de protection lors de la manipulation de la poussière de tourteau',
+  'Assurer une ventilation appropriée dans les zones de stockage',
+  'Inspecter régulièrement pour détecter la moisissure et les nuisibles',
+  'Respecter les réglementations agricoles locales pour les matières premières',
 ];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="fr">
+<BaseLayout locale="fr" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href="/fr" class="hover:text-amber-500 transition-colors">Accueil</a>
+        <a href="/fr/" class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <a href="/fr/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
@@ -147,7 +101,7 @@ const caseStudy = [
 
   <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">GUIDE D'UTILISATION</span>
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">GUIDE DES SOUS-PRODUITS</span>
       <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
       <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
       <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
@@ -157,7 +111,7 @@ const caseStudy = [
           </div>
           <div class="text-left">
             <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-            <div class="text-sm text-steel-500">Ingénieur Chef en Presse à Huile · 15+ Ans d'Expérience</div>
+            <div class="text-sm text-steel-500">Ingénieur Senior en Presse à Huile · 15+ ans d'expérience</div>
           </div>
         </div>
         <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
@@ -173,336 +127,116 @@ const caseStudy = [
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
-        <p class="text-steel-700 leading-relaxed">Le tourteau d'huile est le résidu solide restant après extraction de l'huile des graines oléagineuses. Ce sous-produit précieux représente environ 50-60% du poids original des graines et contient des niveaux élevés de protéines, de fibres et d'autres nutriments. Une utilisation appropriée du tourteau peut améliorer considérablement la rentabilité globale des opérations de production d'huile.</p>
+        <p class="text-steel-700 leading-relaxed mb-4">Le tourteau d'huile est le sous-produit solide restant après l'extraction de l'huile des graines et des noix. Bien que souvent négligé, ce matériau peut constituer une source de revenus supplémentaire importante pour les producteurs d'huile.</p>
         <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
-          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Le tourteau n'est pas un déchet - c'est une ressource précieuse qui peut améliorer vos résultats.</p>
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>En moyenne, pour chaque 100kg de graines transformées, vous obtenez 40-55kg de tourteau d'huile. Une utilisation appropriée peut augmenter votre rentabilité globale de 10-30%.</p>
         </div>
       </section>
 
-      <section id="composition" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Composition du Tourteau d'Huile</h2>
-        
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Analyse Nutritionnelle</h3>
-        <div class="overflow-x-auto mb-8">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
-              <tr><th class="px-4 py-3 text-left font-semibold">Composant</th><th class="px-4 py-3 text-left font-semibold">Tourteau d'Arachide</th><th class="px-4 py-3 text-left font-semibold">Tourteau de Sésame</th><th class="px-4 py-3 text-left font-semibold">Tourteau de Colza</th><th class="px-4 py-3 text-left font-semibold">Tourteau de Soja</th></tr>
-            </thead>
-            <tbody>
-              {nutritionalAnalysis.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.component}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.peanut}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.sesame}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.rapeseed}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.soybean}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Nutriments Clés</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {keyNutrients.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm hover:shadow-md transition-shadow">
-              <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-3">
-                {item.icon === 'droplet' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S6 13 6 15a7 7 0 0 0 7 7z"/></svg>}
-                {item.icon === 'dna' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 10c0 3.866-3.582 7-8 7a8.841 8.841 0 0 1-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM12 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>}
-                {item.icon === 'gem' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>}
-                {item.icon === 'sun' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>}
+      <section id="types" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Types de Tourteau d'Huile</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {oilCakeTypes.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div class="bg-gradient-to-r from-amber-500 to-orange-500 p-4">
+                <h3 class="font-display text-lg text-white">{item.name}</h3>
               </div>
-              <h4 class="font-semibold text-charcoal-900 mb-1">{item.title}</h4>
-              <p class="text-steel-600 text-sm">{item.desc}</p>
+              <div class="p-5">
+                <div class="grid grid-cols-3 gap-3 mb-4">
+                  <div class="bg-green-50 p-2 rounded-lg text-center">
+                    <p class="text-xs text-steel-500">Protéines</p>
+                    <p class="font-bold text-green-600 text-sm">{item.protein}</p>
+                  </div>
+                  <div class="bg-blue-50 p-2 rounded-lg text-center">
+                    <p class="text-xs text-steel-500">Graisse</p>
+                    <p class="font-bold text-blue-600 text-sm">{item.fat}</p>
+                  </div>
+                  <div class="bg-orange-50 p-2 rounded-lg text-center">
+                    <p class="text-xs text-steel-500">Fibres</p>
+                    <p class="font-bold text-orange-600 text-sm">{item.fiber}</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  {item.uses.map((use, idx) => (
+                    <span key={idx} class="bg-steel-100 text-steel-700 text-xs px-2 py-1 rounded">{use}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section id="animal-feed" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Applications en Alimentation Animale</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
-            <h3 class="font-semibold text-green-800 mb-3">Alimentation Avicole</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Avantages:</h4>
-            <ul class="space-y-1 text-sm text-steel-600 mb-4">
-              {poultryFeed.benefits.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <h4 class="font-medium text-steel-700 mb-2">Inclusion Recommandée:</h4>
-            <ul class="space-y-1 text-sm text-steel-600">
-              {poultryFeed.inclusion.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
-            <h3 class="font-semibold text-blue-800 mb-3">Alimentation Bovine</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Avantages:</h4>
-            <ul class="space-y-1 text-sm text-steel-600 mb-4">
-              {livestockFeed.benefits.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <h4 class="font-medium text-steel-700 mb-2">Inclusion Recommandée:</h4>
-            <ul class="space-y-1 text-sm text-steel-600">
-              {livestockFeed.inclusion.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-cyan-50 p-5 rounded-xl border border-cyan-100">
-            <h3 class="font-semibold text-cyan-800 mb-3">Alimentation Aquacole</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Avantages:</h4>
-            <ul class="space-y-1 text-sm text-steel-600 mb-4">
-              {aquacultureFeed.benefits.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <h4 class="font-medium text-steel-700 mb-2">Inclusion Recommandée:</h4>
-            <ul class="space-y-1 text-sm text-steel-600">
-              {aquacultureFeed.inclusion.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
-            <h3 class="font-semibold text-purple-800 mb-3">Alimentation Porcine</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Avantages:</h4>
-            <ul class="space-y-1 text-sm text-steel-600 mb-4">
-              {swineFeed.benefits.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <h4 class="font-medium text-steel-700 mb-2">Inclusion Recommandée:</h4>
-            <ul class="space-y-1 text-sm text-steel-600">
-              {swineFeed.inclusion.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="human-food" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Applications en Alimentation Humaine</h2>
-        
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Utilisations Traditionnelles</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {traditionalUses.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
-              <h4 class="font-semibold text-amber-600 mb-2">{item.name}</h4>
-              <p class="text-steel-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Applications Modernes</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {modernUses.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
-              <h4 class="font-semibold text-teal-600 mb-2">{item.name}</h4>
-              <p class="text-steel-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="agricultural" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Applications Agricoles</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
-            <h3 class="font-semibold text-green-800 mb-3">Engrais Biologique</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Avantages:</h4>
-            <ul class="space-y-1 text-sm text-steel-600 mb-4">
-              {organicFertilizer.benefits.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <h4 class="font-medium text-steel-700 mb-2">Méthodes d'Application:</h4>
-            <ul class="space-y-1 text-sm text-steel-600">
-              {organicFertilizer.methods.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-amber-50 p-5 rounded-xl border border-amber-100">
-            <h3 class="font-semibold text-amber-800 mb-3">Amendement du Sol</h3>
-            <ul class="space-y-2 text-sm text-steel-600">
-              {soilAmendment.benefits.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
-            <h3 class="font-semibold text-blue-800 mb-3">Litière Animale</h3>
-            <ul class="space-y-2 text-sm text-steel-600">
-              {animalBedding.benefits.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="industrial" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Applications Industrielles</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-orange-50 p-5 rounded-xl border border-orange-100">
-            <h3 class="font-semibold text-orange-800 mb-3">Production de Biogaz</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Processus:</h4>
-            <ol class="space-y-1 text-sm text-steel-600 mb-4">
-              {biogasProduction.process.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ol>
-            <h4 class="font-medium text-steel-700 mb-2">Rendement:</h4>
-            <ul class="space-y-1 text-sm text-steel-600">
-              {biogasProduction.yield.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-cyan-50 p-5 rounded-xl border border-cyan-100">
-            <h3 class="font-semibold text-cyan-800 mb-3">Production de Biocarburant</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Processus:</h4>
-            <ol class="space-y-1 text-sm text-steel-600">
-              {biofuelProduction.process.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ol>
-          </div>
-          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
-            <h3 class="font-semibold text-purple-800 mb-3">Charbon Actif</h3>
-            <h4 class="font-medium text-steel-700 mb-2">Processus:</h4>
-            <ol class="space-y-1 text-sm text-steel-600">
-              {activatedCarbon.process.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ol>
-          </div>
         </div>
       </section>
 
       <section id="processing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Méthodes de Traitement</h2>
-        
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Broyeage et Trituration</h3>
-        <div class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm mb-6">
-          <h4 class="font-medium text-steel-700 mb-2">Équipement:</h4>
-          <div class="flex flex-wrap gap-2 mb-4">
-            {crushingEquipment.map((item, index) => (
-              <span key={index} class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm">{item}</span>
-            ))}
-          </div>
-          <h4 class="font-medium text-steel-700 mb-2">Taille des Particules:</h4>
-          <div class="space-y-1 text-sm text-steel-600">
-            {particleSizes.map((item, index) => (
-              <p key={index}><span class="font-medium">{item.use}:</span> {item.size}</p>
-            ))}
-          </div>
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Granulation</h3>
-        <div class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm mb-6">
-          <h4 class="font-medium text-steel-700 mb-2">Avantages:</h4>
-          <ul class="space-y-1 text-sm text-steel-600 mb-4">
-            {pelletizingInfo.benefits.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-          <h4 class="font-medium text-steel-700 mb-2">Équipement:</h4>
-          <div class="flex flex-wrap gap-2 mb-4">
-            {pelletizingInfo.equipment.map((item, index) => (
-              <span key={index} class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">{item}</span>
-            ))}
-          </div>
-          <h4 class="font-medium text-steel-700 mb-2">Taille des Granulés:</h4>
-          <p class="text-sm text-steel-600">{pelletizingInfo.size}</p>
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Extraction de Produits à Valeur Ajoutée</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {valueAddedProducts.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-sm">
-              <h4 class="font-semibold text-charcoal-900 mb-2">{item.title}</h4>
-              <p class="text-steel-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="quality-control" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Contrôle de Qualité</h2>
-        
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Paramètres de Test</h3>
-        <div class="overflow-x-auto mb-8">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white">
-              <tr><th class="px-4 py-3 text-left font-semibold">Paramètre</th><th class="px-4 py-3 text-left font-semibold">Norme d'acceptation</th><th class="px-4 py-3 text-left font-semibold">Méthode de test</th></tr>
-            </thead>
-            <tbody>
-              {qualityControl.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-teal-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.parameter}</td>
-                  <td class="px-4 py-3 text-teal-600">{item.standard}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.method}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Exigences de Stockage</h3>
-        <div class="flex flex-wrap gap-2">
-          {storageRequirements.map((item, index) => (
-            <span key={index} class="bg-orange-100 text-orange-700 px-4 py-2 rounded-lg text-sm font-medium">{item}</span>
-          ))}
-        </div>
-      </section>
-
-      <section id="economic" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Considérations Économiques</h2>
-        
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Valeur Marchande</h3>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          {marketValue.map((item, index) => (
-            <div key={index} class="bg-gradient-to-br from-amber-50 to-orange-50 p-4 rounded-xl border border-amber-100 text-center">
-              <p class="text-sm text-steel-500 mb-1">{item.application}</p>
-              <p class="text-xl font-bold text-amber-600">{item.price}</p>
-              <p class="text-xs text-steel-400">USD/tonne</p>
-            </div>
-          ))}
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Amélioration de la Rentabilité</h3>
-        <div class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 p-6 rounded-xl text-white mb-8">
-          <p class="font-semibold mb-4">Exemple: Production de 100 tonnes/mois</p>
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {profitExample.map((item, index) => (
-              <div key={index} class="text-center">
-                <p class="text-sm">{item}</p>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Transformation du Tourteau d'Huile</h2>
+        <div class="space-y-4">
+          {processingSteps.map((step, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">{index + 1}</div>
+                {index < processingSteps.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
               </div>
-            ))}
+              <div class={index < processingSteps.length - 1 ? 'pb-6' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{step.title}</h3>
+                <p class="text-steel-600">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="uses" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Utilisations et Applications du Tourteau</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
+            <h3 class="font-display text-xl mb-4 text-green-800 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2Z"/><path d="M12 14V2"/><path d="M9 2h6"/></svg>
+              Alimentation Animale
+            </h3>
+            <div class="space-y-3">
+              {animalFeedUses.map((item, idx) => (
+                <div key={idx} class="bg-white p-3 rounded-lg flex justify-between items-center">
+                  <span class="font-medium text-charcoal-900">{item.animal}</span>
+                  <span class="text-green-600 text-sm">{item.inclusion}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-100">
+            <h3 class="font-display text-xl mb-4 text-amber-800 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+              Engrais
+            </h3>
+            <div class="space-y-3">
+              {fertilizerUses.map((item, idx) => (
+                <div key={idx} class="bg-white p-3 rounded-lg">
+                  <p class="font-medium text-charcoal-900">{item.use}</p>
+                  <p class="text-steel-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      </section>
 
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Exigences d'Investissement</h3>
+      <section id="market" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Valeur Marchande</h2>
+        <p class="text-steel-700 mb-6">Le tourteau d'huile représente une source de revenus supplémentaire importante. Les prix varient selon la forme et les conditions du marché local.</p>
         <div class="overflow-x-auto">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
-              <tr><th class="px-4 py-3 text-left font-semibold">Niveau de Traitement</th><th class="px-4 py-3 text-left font-semibold">Investissement (USD)</th><th class="px-4 py-3 text-left font-semibold">Capacité Mensuelle</th></tr>
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Forme du Produit</th>
+                <th class="px-4 py-3 text-left font-semibold">Prix Relatif</th>
+              </tr>
             </thead>
             <tbody>
-              {investmentRequirements.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-purple-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.level}</td>
-                  <td class="px-4 py-3 text-purple-600">{item.investment}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.capacity}</td>
+              {marketValue.map((item, index) => (
+                <tr key={index} class="border-b border-steel-100 hover:bg-green-50 transition-colors">
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.type}</td>
+                  <td class="px-4 py-3 text-green-600">{item.price}</td>
                 </tr>
               ))}
             </tbody>
@@ -510,97 +244,56 @@ const caseStudy = [
         </div>
       </section>
 
-      <section id="environmental" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Considérations Environnementales</h2>
+      <section id="storage" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Stockage et Sécurité</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-green-50 p-5 rounded-xl border border-green-100">
-            <h3 class="font-semibold text-green-800 mb-3">Réduction des Déchets</h3>
-            <ul class="space-y-2">
-              {wasteReduction.map((item, index) => (
-                <li key={index} class="text-steel-700 flex items-start gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
-            <h3 class="font-semibold text-blue-800 mb-3">Durabilité</h3>
-            <ul class="space-y-2">
-              {sustainability.map((item, index) => (
-                <li key={index} class="text-steel-700 flex items-start gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
-            <h3 class="font-semibold text-purple-800 mb-3">Contrôle de la Pollution</h3>
-            <ul class="space-y-2">
-              {pollutionControl.map((item, index) => (
-                <li key={index} class="text-steel-700 flex items-start gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          {storageConditions.map((item, index) => (
+            <div key={index} class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200 text-center">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                {item.icon === 'thermometer' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>}
+                {item.icon === 'cloud' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 16.5A2.5 2.5 0 0 0 20 14a2.5 2.5 0 0 0-2.5-2.5h-5.5a4.5 4.5 0 1 0 0 9h2a2.5 2.5 0 0 0 2.5-2.5Z"/></svg>}
+                {item.icon === 'time' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>}
+                {item.icon === 'shield' && <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+              </div>
+              <p class="text-sm text-steel-500">{item.label}</p>
+              <p class="font-bold text-charcoal-900">{item.value}</p>
+            </div>
+          ))}
         </div>
-      </section>
 
-      <section id="case-study" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Étude de Cas</h2>
-        
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Usine de Production d'Huile d'Arachide</h3>
-        <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-              <h4 class="font-semibold text-amber-600 mb-3">Production</h4>
-              <ul class="space-y-1 text-sm text-steel-600">
-                {caseStudy.slice(0, 3).map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-              <h4 class="font-semibold text-green-600 mb-3">Utilisation des Sous-produits</h4>
-              <ul class="space-y-1 text-sm text-steel-600">
-                {caseStudy.slice(3, 6).map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-              <h4 class="font-semibold text-blue-600 mb-3">Avantages Supplémentaires</h4>
-              <ul class="space-y-1 text-sm text-steel-600">
-                {caseStudy.slice(6).map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Conseils de Sécurité</h3>
+        <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+          <ul class="space-y-2">
+            {safetyTips.map((tip, index) => (
+              <li key={index} class="text-steel-700 flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                {tip}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
-        <p class="text-steel-700 leading-relaxed">Les sous-produits de tourteau d'huile représentent une valeur inexploitée significative dans les opérations de production d'huile. En comprenant la composition nutritionnelle et en explorant diverses méthodes d'utilisation, les producteurs peuvent transformer ce qui était considéré comme un déchet en un flux de revenu profitable. Que ce soit utilisé comme aliment pour animaux, engrais biologique ou transformé en produits à valeur ajoutée, le tourteau peut améliorer considérablement la viabilité économique des entreprises de production d'huile.</p>
+        <p class="text-steel-700 leading-relaxed">L'utilisation du tourteau d'huile est un aspect important pour maximiser la rentabilité. En transformant et commercialisant correctement votre sous-produit de tourteau, vous pouvez augmenter considérablement le retour sur investissement de votre presse à huile.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À COMMENCER VOTRE PRODUCTION D'HUILE?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à maximiser la valeur de vos sous-produits de tourteau d'huile.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">MAXIMISEZ VOS PROFITS</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Nos experts peuvent vous conseiller sur les meilleures façons d'utiliser votre sous-produit de tourteau d'huile pour générer des revenus supplémentaires.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Contacter nos experts<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">Parcourir l'équipement</a>
-        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">Retour aux ressources</a>
+        <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">{t.nav.products}</a>
+        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">{t.resources.backToResources}</a>
       </div>
     </div>
   </section>
 </BaseLayout>
-

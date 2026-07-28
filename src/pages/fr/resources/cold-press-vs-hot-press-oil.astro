@@ -1,31 +1,26 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
 
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'cold-press-vs-hot-press-oil');
 const t = getTranslations('fr');
-const title = 'Huile Pressée à Froid vs Pressée à Chaud';
-const description = 'Comparaison des méthodes de pressage à froid et à chaud';
-const seoKeywords = ['pressage froid chaud', 'méthodes extraction huile', 'avantages huile pressée froid'];
-const publishedAt = new Date();
-const updatedAt = publishedAt;
+
+const title = resource?.data.title.fr || resource?.data.title.en || 'Huile Pressée à Froid vs Pressée à Chaud';
+const description = resource?.data.description.fr || resource?.data.description.en || 'Comparaison des méthodes de pressage à froid et à chaud';
+const seoKeywords = resource?.data.seoKeywords || ['pressage froid chaud', 'huile pressée à froid', 'avantages huile pressée froid'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
 
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/cold-hot-press-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'Ingénieur Senior en Presse à Huile',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  image: 'https://www.hydoilpress.com/images/cold-vs-hot-press-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Spécialiste en transformation d\'huile', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -35,80 +30,93 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
-    { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/fr' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/fr/resources' },
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/cold-press-vs-hot-press-oil' },
   ],
 };
 
-const coldPressProcess = ['Nettoyage des graines : Élimination complète des impuretés', 'Conditionnement d\'humidité : Ajuster à 7-9% de teneur en humidité', 'Concassage doux : Briser les graines sans générer de chaleur', 'Pressage : Appliquer une pression mécanique pendant environ 2 heures par charge', 'Filtrage fin : Filtrage en plusieurs étapes pour une huile cristalline'];
-const coldPressRequirements = ['Pression de surface de gâteau plus élevée (42 Mpa/cm2 ou plus)', 'Conception spécialisée du tonneau pour l\'extraction à basse température', 'Système de surveillance de température', 'Modèles adaptés : HN426, HN480, HN500'];
-
-const hotPressProcess = ['Nettoyage des graines : Supprimer les pierres, le métal et autres impuretés', 'Décortication : Supprimer les coques pour les matériaux comme les arachides (taux de suppression 95%+)', 'Conditionnement d\'humidité : Ajuster à 5-8% de teneur en humidité', 'Torréfaction : Chauffer à 160-180°C pendant 25-35 minutes', 'Concassage : Briser les graines en particules plus petites', 'Pressage : Appliquer la pression en 30-40 minutes par charge'];
-const hotPressRequirements = ['Force de pressage standard (27,78 Mpa/cm2 ou plus)', 'Équipement de torréfaction', 'Modèles adaptés : HN325, HN355, HN480, HN500'];
-
-const oilQualityComparison = [
-  { aspect: 'Température', coldPress: '< 60°C (140°F)', hotPress: '160-180°C (320-356°F)' },
-  { aspect: 'Conservation des nutriments', coldPress: 'Excellente', hotPress: 'Modérée' },
-  { aspect: 'Saveur', coldPress: 'Naturelle, douce', hotPress: 'Riche, robuste' },
-  { aspect: 'Couleur', coldPress: 'Plus claire', hotPress: 'Plus foncée' },
-  { aspect: 'Point de fumée', coldPress: 'Plus bas', hotPress: 'Plus haut' },
-  { aspect: 'Durée de conservation', coldPress: 'Plus courte', hotPress: 'Plus longue' },
+const comparisonData = [
+  {
+    name: 'Huile Pressée à Froid',
+    color: 'blue',
+    temp: 'Température ambiante (< 60°C)',
+    pros: ['Conserve les nutriments naturels (vitamines, antioxydants)', 'Préserve la saveur et l\'arôme originaux', 'Valeur marchande plus élevée (premium 20-50%)', 'Étiquetée comme "brute" ou "vierge"', 'Préférence des consommateurs soucieux de leur santé', 'Pas de dégradation thermique'],
+    cons: ['Rendement inférieur (5-15% de moins)', 'Teneur en humidité plus élevée', 'Durée de conservation plus courte (3-6 mois)', 'Production plus chère', 'Peut contenir plus de sédiments'],
+    bestFor: ['Huiles spéciales premium', 'Marché de la santé', 'Utilisation cosmétique et pharmaceutique', 'Produits gastronomiques et artisanaux']
+  },
+  {
+    name: 'Huile Pressée à Chaud',
+    color: 'amber',
+    temp: 'Chauffée (120-200°C)',
+    pros: ['Rendement plus élevé (5-15% de plus)', 'Teneur en humidité plus faible', 'Durée de conservation plus longue (12-24 mois)', 'Coût de production plus faible', 'Meilleure pour l\'huile de cuisson en vrac', 'Tue les bactéries et les spores de moisissure'],
+    cons: ['Perte de nutriments sensibles à la chaleur', 'Profil de saveur modifié', 'Peut contenir des gras trans', 'Valeur marchande plus faible', 'Non adaptée à un usage cosmétique/pharmaceutique'],
+    bestFor: ['Huile de cuisson quotidienne', 'Production à grande échelle', 'Service alimentaire institutionnel', 'Applications industrielles']
+  },
 ];
 
-const oilYieldComparison = [
-  { material: 'Sésame', coldPress: '42-48%', hotPress: '48-54%' },
-  { material: 'Arachide', coldPress: '38-42%', hotPress: '45-50%' },
-  { material: 'Colza', coldPress: '32-36%', hotPress: '38-42%' },
-  { material: 'Noyer', coldPress: '45-50%', hotPress: 'Non recommandé' },
+const nutritionComparison = [
+  { nutrient: 'Vitamine E', cold: 'Élevée (préservée)', hot: 'Basse (partiellement détruite)' },
+  { nutrient: 'Phytostérols', cold: 'Élevée', hot: 'Réduite' },
+  { nutrient: 'Antioxydants', cold: 'Élevée', hot: 'Réduite' },
+  { nutrient: 'Omega-3', cold: 'Préservé', hot: 'Partiellement détruit' },
+  { nutrient: 'Composés aromatiques', cold: 'Complet, original', hot: 'Modifié, plus foncé' },
+  { nutrient: 'Couleur', cold: 'Claire, naturelle', hot: 'Plus foncée, torréfiée' },
 ];
 
-const chooseColdPress = ['Vous ciblez des consommateurs haut de gamme qui apprécient les huiles naturelles et non raffinées', 'Votre huile doit conserver une valeur nutritionnelle maximale', 'Vous traitez des noix, des amandes, des abricots ou des noix à coque dure similaires', 'Vous produisez des huiles organiques, artesanales ou de haute cuisine'];
-const chooseHotPress = ['Vous avez besoin d\'une production journalière élevée pour les marchés commerciaux', 'Vous voulez maximiser le rendement et minimiser les déchets', 'Vous produisez des huiles pour la friture, la cuisson ou le mélange', 'Vous traitez du sésame, des arachides, du colza ou de la soja'];
+const yieldComparison = [
+  { material: 'Sésame', coldYield: '42-48%', hotYield: '48-54%', difference: '+6%' },
+  { material: 'Arachide', coldYield: '38-42%', hotYield: '45-50%', difference: '+7%' },
+  { material: 'Colza', coldYield: '32-36%', hotYield: '38-42%', difference: '+6%' },
+  { material: 'Noix', coldYield: '45-50%', hotYield: 'Non recommandé', difference: 'N/D' },
+  { material: 'Amande', coldYield: '42-48%', hotYield: 'Non recommandé', difference: 'N/D' },
+];
 
-const hybridApproaches = ['Production saisonnière : Pressage à froid pendant les saisons de forte demande, pressage à chaud pendant les creuses', 'Diversification de la gamme : Pressage à froid pour les marques d\'huile premium, pressage à chaud pour les huiles de cuisson en vrac', 'Traitement spécifique aux matériaux : Pressage à froid pour les noix, pressage à chaud pour les graines oléagineuses conventionnelles'];
+const equipment = [
+  { type: 'Équipement de Pressage à Froid', machines: 'HN426 (conçu pour pressage à froid)', features: 'Pas d\'élément chauffant, contrôle de pression de précision, surveillance de température' },
+  { type: 'Équipement de Pressage à Chaud', machines: 'HN325, HN355, HN480', features: 'Torréfacteur intégré, système de contrôle de température, fonctionnement plus rapide' },
+];
+
+const decisionGuide = [
+  { question: 'Quel est votre marché cible ?', answer: 'Premium/santé → Pressage à froid | Marché de masse → Pressage à chaud' },
+  { question: 'Quelle est votre priorité principale ?', answer: 'Qualité plutôt que quantité → Pressage à froid | Rendement plutôt que qualité → Pressage à chaud' },
+  { question: 'Quelle est votre échelle de production ?', answer: 'Petite échelle → Pressage à froid (valeur plus élevée) | Grande échelle → Pressage à chaud (volume plus élevé)' },
+  { question: 'Quelle est votre capacité de stockage ?', answer: 'Stockage limité → Pressage à chaud (durée de conservation plus longue) | Stockage adéquat → Pressage à froid' },
+];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="fr">
+<BaseLayout locale="fr" title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href="/fr/" class="hover:text-amber-500 transition-colors">Accueil</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/fr/" class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <a href="/fr/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-cyan-50 to-blue-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-cyan-500/10 text-cyan-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          GUIDE DE COMPARAISON
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-cyan-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-left">
-              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Ingénieur Senior en Presse à Huile · 15+ Ans d'Expérience</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">GUIDE DE COMPARAISON</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Spécialiste en transformation d'huile · 15+ ans d'expérience</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -118,189 +126,141 @@ const hybridApproaches = ['Production saisonnière : Pressage à froid pendant l
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Le choix entre le pressage à froid et le pressage à chaud est fondamental pour votre stratégie de production d'huile. Chaque méthode offre des avantages distincts en termes de qualité d'huile, de rendement et d'efficacité de production.
-        </p>
+        <p class="text-steel-700 leading-relaxed mb-4">Le choix entre le pressage à froid et le pressage à chaud est l'une des décisions les plus importantes pour les producteurs d'huile. Les deux méthodes produisent une huile de qualité, mais elles servent des marchés et des objectifs différents.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>L'huile pressée à froid commande généralement une prime de 20-50% par rapport à l'huile pressée à chaud sur le marché. Comprendre les compromis est essentiel pour choisir la bonne stratégie pour votre entreprise.</p>
+        </div>
       </section>
 
-      <section id="cold-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Qu'est-ce que le pressage à froid ?</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          Le pressage à froid extrait l'huile à basse température (généralement en dessous de 60°C / 140°F) sans appliquer de chaleur externe. L'huile est extraite purement par pression mécanique, préservant les caractéristiques naturelles de la matière première.
-        </p>
+      <section id="comparison" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pressage à Froid vs Pressage à Chaud</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">Processus de pressage à froid</h3>
-            <ol class="space-y-2 list-decimal list-inside text-steel-700">
-              {coldPressProcess.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          </div>
-          <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
-            <h3 class="font-semibold text-blue-800 mb-4">Exigences en équipement</h3>
-            <ul class="space-y-2">
-              {coldPressRequirements.map((req, idx) => (
-                <li key={idx} class="flex items-center gap-2 text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {req}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="hot-pressing" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Qu'est-ce que le pressage à chaud ?</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          Le pressage à chaud consiste à pré-torréfier les graines avant le pressage pour augmenter le rendement en huile. Le processus de torréfaction déstructure les graines, facilitant et accélérant l'extraction de l'huile.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-            <h3 class="font-semibold text-orange-800 mb-4">Processus de pressage à chaud</h3>
-            <ol class="space-y-2 list-decimal list-inside text-steel-700">
-              {hotPressProcess.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          </div>
-          <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
-            <h3 class="font-semibold text-orange-800 mb-4">Exigences en équipement</h3>
-            <ul class="space-y-2">
-              {hotPressRequirements.map((req, idx) => (
-                <li key={idx} class="flex items-center gap-2 text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {req}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="oil-quality" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Comparaison de la qualité de l'huile</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Aspect</th>
-                <th class="px-4 py-3 text-left font-semibold">Pressage à froid</th>
-                <th class="px-4 py-3 text-left font-semibold">Pressage à chaud</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilQualityComparison.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.aspect}</td>
-                  <td class="px-4 py-3 text-blue-600 font-medium">{item.coldPress}</td>
-                  <td class="px-4 py-3 text-orange-600">{item.hotPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="oil-yield" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Comparaison du rendement en huile</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Matériau</th>
-                <th class="px-4 py-3 text-left font-semibold">Rendement pressage froid</th>
-                <th class="px-4 py-3 text-left font-semibold">Rendement pressage chaud</th>
-              </tr>
-            </thead>
-            <tbody>
-              {oilYieldComparison.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-green-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
-                  <td class="px-4 py-3 text-blue-600 font-medium">{item.coldPress}</td>
-                  <td class="px-4 py-3 text-orange-600 font-medium">{item.hotPress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="when-to-choose" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Quand choisir le pressage à froid ?</h2>
-        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
-          <ul class="space-y-3">
-            {chooseColdPress.map((item, index) => (
-              <li key={index} class="flex items-start gap-3 text-steel-700">
-                <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <h2 class="font-display font-bold text-2xl mb-6 mt-8 text-charcoal-900">Quand choisir le pressage à chaud ?</h2>
-        <div class="bg-orange-50 rounded-xl p-6 border border-orange-200">
-          <ul class="space-y-3">
-            {chooseHotPress.map((item, index) => (
-              <li key={index} class="flex items-start gap-3 text-steel-700">
-                <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section id="hybrid-approaches" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Approches hybrides</h2>
-        <p class="text-steel-700 leading-relaxed mb-6">
-          De nombreux producteurs constatent que la combinaison des deux méthodes offre le meilleur des deux mondes. Voici quelques approches hybrides courantes :
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {hybridApproaches.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <div class="w-10 h-10 bg-amber-500/10 rounded-lg flex items-center justify-center mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 16a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+          {comparisonData.map((item, index) => (
+            <div key={index} class={`bg-white rounded-2xl border-2 overflow-hidden shadow-lg ${item.color === 'blue' ? 'border-blue-400' : 'border-amber-400'}`}>
+              <div class={`p-5 ${item.color === 'blue' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-display text-xl text-white">{item.name}</h3>
+                <p class="text-white/80 text-sm mt-1">Température : {item.temp}</p>
               </div>
-              <p class="text-steel-700">{item}</p>
+              <div class="p-5 space-y-4">
+                <div>
+                  <h4 class="font-semibold text-green-700 mb-2 text-sm">Avantages</h4>
+                  <ul class="space-y-1">
+                    {item.pros.map((pro, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-green-500">+</span>{pro}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-red-700 mb-2 text-sm">Inconvénients</h4>
+                  <ul class="space-y-1">
+                    {item.cons.map((con, idx) => <li key={idx} class="text-steel-700 text-sm flex items-start gap-2"><span class="text-red-500">-</span>{con}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-blue-700 mb-2 text-sm">Idéal pour</h4>
+                  <div class="flex flex-wrap gap-1">
+                    {item.bestFor.map((b, idx) => <span key={idx} class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">{b}</span>)}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
+      <section id="nutrition" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Comparaison Nutritionnelle</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead>
+              <tr class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+                <th class="px-4 py-3 text-left font-semibold">Nutriments/Propriétés</th>
+                <th class="px-4 py-3 text-left font-semibold">Pressé à Froid</th>
+                <th class="px-4 py-3 text-left font-semibold">Pressé à Chaud</th>
+              </tr>
+            </thead>
+            <tbody>
+              {nutritionComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.nutrient}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.cold}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hot}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="yield" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Comparaison du Rendement</h2>
+        <p class="text-steel-700 mb-6">Taux de rendement typiques pour différents matériaux :</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+              <tr><th class="px-4 py-3 text-left font-semibold">Matériau</th><th class="px-4 py-3 text-left font-semibold">Rendement Froid</th><th class="px-4 py-3 text-left font-semibold">Rendement Chaud</th><th class="px-4 py-3 text-left font-semibold">Avantage Chaud</th></tr>
+            </thead>
+            <tbody>
+              {yieldComparison.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.material}</td>
+                  <td class="px-4 py-3 text-blue-600">{item.coldYield}</td>
+                  <td class="px-4 py-3 text-amber-600">{item.hotYield}</td>
+                  <td class="px-4 py-3 text-green-600 font-medium">{item.difference}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="equipment" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Équipement pour Chaque Méthode</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {equipment.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 overflow-hidden shadow-md">
+              <div class={`p-4 ${index === 0 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-amber-500 to-orange-500'}`}>
+                <h3 class="font-semibold text-white">{item.type}</h3>
+              </div>
+              <div class="p-5 space-y-2">
+                <p class="text-sm"><span class="text-steel-500">Recommandé :</span> <span class="font-semibold text-charcoal-900">{item.machines}</span></p>
+                <p class="text-sm text-steel-600">{item.features}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="decision" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Comment Choisir</h2>
+        <div class="bg-gradient-to-br from-steel-50 to-steel-100 p-6 rounded-xl border border-steel-200">
+          <div class="space-y-4">
+            {decisionGuide.map((item, index) => (
+              <div key={index} class="bg-white p-4 rounded-lg border border-steel-100">
+                <p class="font-semibold text-charcoal-900 mb-2">Q : {item.question}</p>
+                <p class="text-steel-600">R : {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Le choix entre le pressage à froid et le pressage à chaud dépend de vos objectifs de production, de votre marché cible et de vos ressources disponibles. Le pressage à froid produit une huile premium avec une valeur nutritionnelle supérieure, tandis que le pressage à chaud maximise le rendement et l'efficacité de production.
-        </p>
-        <p class="text-steel-700 leading-relaxed mt-4">
-          Pour des recommandations personnalisées basées sur vos besoins spécifiques, contactez notre équipe d'ingénieurs pour une consultation gratuite.
-        </p>
+        <p class="text-steel-700 leading-relaxed">Le pressage à froid et le pressage à chaud ont tous deux leur place dans l'industrie de l'huile. Le pressage à froid commande des prix plus élevés mais a des rendements plus faibles. Le pressage à chaud offre des rendements plus élevés mais à des prix plus bas. Le bon choix dépend de votre marché cible, de votre échelle de production et de vos objectifs commerciaux. Pour la plupart des producteurs de petite à moyenne taille ciblant des marchés premium, le pressage à froid est le choix le plus rentable.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À DÉBUTER VOTRE PRODUCTION D'HUILE?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à sélectionner la meilleure méthode de pressage et l'équipement adapté à vos besoins de production.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">QUELLE MÉTHODE EST FAITE POUR VOUS ?</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Nos ingénieurs peuvent vous aider à déterminer la meilleure méthode de pressage et l'équipement adapté à vos objectifs commerciaux spécifiques.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          Contacter nos experts
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          {t.resources.ctaButton}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">
-          Parcourir l'équipement
-        </a>
-        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">
-          Retour aux ressources
-        </a>
+        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">{t.nav.products}</a>
+        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">{t.resources.backToResources}</a>
       </div>
     </div>
   </section>

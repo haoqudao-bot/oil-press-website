@@ -7,9 +7,9 @@ const resources = await getCollection('resources');
 const resource = resources.find(r => r.slug === 'complete-oil-production-line-guide');
 const t = getTranslations('fr');
 
-const title = resource?.data.title.fr || 'Guide Complet de la Ligne de Production d\'Huile';
-const description = resource?.data.description.fr || 'Conception d\'un système de production efficace';
-const seoKeywords = resource?.data.seoKeywords || ['conception de ligne de production d\'huile', 'ligne de presse à huile hydraulique', 'équipement d\'usine d\'huile'];
+const title = resource?.data.title.fr || resource?.data.title.en || 'Guide Complet de la Ligne de Production d\'Huile';
+const description = resource?.data.description.fr || resource?.data.description.en || 'De la graine à l\'huile en bouteille';
+const seoKeywords = resource?.data.seoKeywords || ['ligne de production d\'huile', 'usine d\'huile complète', 'équipement de transformation d\'huile'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -18,8 +18,8 @@ const articleLd = {
   '@type': 'Article',
   headline: title,
   description: description,
-  image: 'https://www.hydoilpress.com/images/production-line-guide-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Ingénieur Senior en Presse à Huile', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  image: 'https://www.hydoilpress.com/images/production-line-hero.webp',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Ingénieur Senior en Production', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
   publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
@@ -36,34 +36,46 @@ const breadcrumbLd = {
   ],
 };
 
-const components = [
-  { name: 'Système de Nettoyage des Graines', items: ['Nettoyeur à tamis vibratoire', 'Séparateur magnétique', 'Séparateur par gravité', 'La capacité doit correspondre ou dépasser le taux d\'entrée des matières premières'] },
-  { name: 'Système de Décorticage', items: ['Décorticage à disques', 'Moulin à marteaux pour décorticage', 'Applications: Arachides, tournesol, noix de coco, sésame'] },
-  { name: 'Système de Conditionnement d\'Humidité', items: ['Conditionneur à vapeur', 'Séchoir à air chaud', 'Cibles d\'humidité: Pressage à chaud 5-8%, Pressage à froid 7-9%'] },
-  { name: 'Système de Torréfaction (Pressage à Chaud Seulement)', items: ['Torréfacteur à tambour', 'Torréfacteur à lit plat', 'Température: 160-180°C, Temps: 25-35 minutes'] },
-  { name: 'Système de Broyage des Graines', items: ['Broyeur à rouleaux', 'Moulin à marteaux', 'Taille des particules: 2-4 mm pour une extraction optimale'] },
-  { name: 'Presse à Huile Hydraulique', items: ['Presse à huile hydraulique Haonuo (HN325, HN355, HN426, HN480, HN500)', 'Capacité: 100 kg par lot', 'Temps de cycle: Pressage à chaud 30-40 minutes, Pressage à froid ~2 heures'] },
-  { name: 'Système de Filtrage de l\'Huile', items: ['Presse filtrante à plaques', 'Filtre à sacs', 'Filtre centrifuge', 'Niveaux de filtration: Primaire 100-200 mailles, Fine 200-300 mailles'] },
-  { name: 'Système de Stockage de l\'Huile', items: ['Réservoirs en acier inoxydable', 'Réservoirs en acier doux (avec revêtement)', 'Huile pressée à froid: Stocker à < 25°C, protégée de la lumière'] },
-  { name: 'Système de Manipulation du Tourteau', items: ['Transporteur de tourteau', 'Broyeur de tourteau', 'Utilisations du tourteau: Alimentation animale, engrais, traitement secondaire'] },
+const productionStages = [
+  { stage: '1', title: 'Nettoyage des graines', equipment: 'Tamis vibrant, séparateur magnétique', desc: 'Éliminer les débris, pierres, métaux et graines endommagées. Essentiel pour la qualité et la protection de l\'équipement.' },
+  { stage: '2', title: 'Décorticage', equipment: 'Égreneur, séparateur', desc: 'Retirer les enveloppes des graines pour améliorer le rendement en huile et la qualité du tourteau.' },
+  { stage: '3', title: 'Torréfaction', equipment: 'Torréfacteur rotatif, contrôleur de température', desc: 'Chauffer les graines pour décomposer les parois cellulaires, améliorer la saveur et le rendement.' },
+  { stage: '4', title: 'Broyage', equipment: 'Moulin à marteaux, moulin à rouleaux', desc: 'Réduire les graines à une taille de particule optimale pour un pressage efficace.' },
+  { stage: '5', title: 'Pressage', equipment: 'Presse à huile hydraulique', desc: 'Extraire l\'huile à haute pression (40-60 MPa). Cœur de la ligne de production.' },
+  { stage: '6', title: 'Filtration', equipment: 'Presse filtrante, centrifugeuse', desc: 'Éliminer les particules solides et l\'eau de l\'huile brute.' },
+  { stage: '7', title: 'Séchage', equipment: 'Séchoir à huile, chauffeur', desc: 'Réduire la teneur en humidité à <0,1% pour la stabilité au stockage.' },
+  { stage: '8', title: 'Mise en bouteille', equipment: 'Remplisseuse, capsuleuse, étiqueteuse', desc: 'Conditionner l\'huile dans les conteneurs finaux pour la vente au détail ou en gros.' },
 ];
 
-const capacityPlanning = [
-  { scale: 'Petit', capacity: '500-1,000 kg', model: 'HN325' },
-  { scale: 'Moyen', capacity: '1,000-2,500 kg', model: 'HN355/HN426' },
-  { scale: 'Grand', capacity: '2,500-4,000 kg', model: 'HN480/HN500' },
+const capacityOptions = [
+  { scale: 'Atelier domestique', capacity: '100-500 kg/jour', equipment: ['Presse HN325', 'Petit torréfacteur', 'Filtre manuel', 'Outils manuels'] },
+  { scale: 'Petite entreprise', capacity: '500-2000 kg/jour', equipment: ['Presse HN355', 'Torréfacteur rotatif', 'Système de filtration', 'Broyeur', 'Réservoirs de stockage'] },
+  { scale: 'Usine moyenne', capacity: '2000-5000 kg/jour', equipment: ['Presse HN426/HN480', 'Torréfacteur complet', 'Centrifugeuse', 'Ligne complète', 'Automatisation'] },
+  { scale: 'Grande usine industrielle', capacity: '5000+ kg/jour', equipment: ['Presses HN500 multiples', 'Torréfacteurs industriels', 'Ligne de raffinage complète', 'Automatisation complète'] },
 ];
 
-const spaceRequirements = [
-  { scale: 'Petit', area: '50-80 m2', height: '3 m' },
-  { scale: 'Moyen', area: '100-150 m2', height: '3-4 m' },
-  { scale: 'Grand', area: '200-300 m2', height: '4-5 m' },
+const layoutTips = [
+  { tip: 'Aménagement en flux', desc: 'Disposer l\'équipement dans un flux logique : matière première → transformation → conditionnement' },
+  { tip: 'Planification de l\'espace', desc: 'Prévoir 2-3x la superficie de l\'équipement pour l\'opération et la maintenance' },
+  { tip: 'Utilités', desc: 'Planifier l\'électricité, l\'eau et l\'évacuation avant l\'installation' },
+  { tip: 'Ventilation', desc: 'Installer une ventilation adéquate pour les zones de torréfaction et de pressage' },
+  { tip: 'Zones de sécurité', desc: 'Créer des zones de sécurité autour de l\'équipement sous pression' },
 ];
 
 const costAnalysis = [
-  { scale: 'Ligne Petit Échelle', items: [{ name: 'Presse hydraulique', cost: 'Contactez-nous pour le prix' }, { name: 'Équipement de soutien', cost: 'Contactez-nous pour le prix' }, { name: 'Installation', cost: 'Contactez-nous pour le prix' }] },
-  { scale: 'Ligne Moyenne Échelle', items: [{ name: 'Presse hydraulique', cost: 'Contactez-nous pour le prix' }, { name: 'Équipement de soutien', cost: 'Contactez-nous pour le prix' }, { name: 'Installation', cost: 'Contactez-nous pour le prix' }] },
-  { scale: 'Ligne Grande Échelle', items: [{ name: 'Presse hydraulique', cost: 'Contactez-nous pour le prix' }, { name: 'Équipement de soutien', cost: 'Contactez-nous pour le prix' }, { name: 'Installation', cost: 'Contactez-nous pour le prix' }] },
+  { item: 'Équipement principal (Presse + Auxiliaire)', percentage: '40-50%' },
+  { item: 'Installation et mise en service', percentage: '10-15%' },
+  { item: 'Bâtiment et infrastructure', percentage: '15-25%' },
+  { item: 'Matières premières initiales', percentage: '5-10%' },
+  { item: 'Fonds de roulement', percentage: '10-15%' },
+];
+
+const maintenanceSchedule = [
+  { frequency: 'Quotidien', tasks: ['Nettoyer l\'équipement', 'Vérifier le niveau d\'huile hydraulique', 'Inspecter les filtres', 'Vérifier les dispositifs de sécurité'] },
+  { frequency: 'Hebdomadaire', tasks: ['Remplacer les filtres', 'Vérifier la tension des courroies', 'Inspecter la chambre de pressage', 'Lubrifier les pièces mobiles'] },
+  { frequency: 'Mensuel', tasks: ['Changer l\'huile hydraulique', 'Inspecter les tuyaux hydrauliques', 'Calibrer les contrôles de température', 'Vérifier les connexions électriques'] },
+  { frequency: 'Trimestriel', tasks: ['Inspection complète du système', 'Remplacer les pièces usées', 'Tester les systèmes de sécurité', 'Nettoyer les réservoirs de stockage'] },
+  { frequency: 'Annuel', tasks: ['Révision du système hydraulique', 'Remplacer les joints hydrauliques', 'Inspection électrique complète', 'Mettre à jour les enregistrements de maintenance'] },
 ];
 ---
 
@@ -80,27 +92,25 @@ const costAnalysis = [
     </div>
   </section>
 
-  <section class="bg-gradient-to-br from-purple-50 to-pink-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-purple-500/10 text-purple-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">CONCEPTION DE LIGNE DE PRODUCTION</span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-left">
-              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Ingénieur Senior en Presse à Huile · 15+ Ans d'Expérience</div>
-            </div>
+  <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">GUIDE COMPLET</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="text-sm text-steel-500">Ingénieur Senior en Production · Plus de 15 ans d'expérience</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -110,172 +120,129 @@ const costAnalysis = [
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Introduction</h2>
-        <p class="text-steel-700 leading-relaxed">La conception d'une ligne de production d'huile complète nécessite une planification minutieuse et l'intégration de plusieurs composants. Une ligne bien conçue maximise l'efficacité, minimise les déchets et garantit une qualité de produit constante.</p>
-      </section>
-
-      <section id="components" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Composants de la Ligne de Production</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {components.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-lg text-purple-600 mb-3">{item.name}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <p class="text-steel-700 leading-relaxed mb-4">Une ligne de production d'huile complète convertit les graines brutes en huile en bouteille commercialisable. Comprendre l'ensemble du processus vous aide à planifier, budgétiser et optimiser votre opération.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>La mise en place d'une ligne de production complète est un investissement important mais peut offrir des marges bénéficiaires 10-30% plus élevées par rapport à la vente d'huile brute. Une planification adéquate est essentielle pour le succès.</p>
         </div>
       </section>
 
-      <section id="capacity-planning" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Planification de la Capacité</h2>
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Exigences de Capacité par Échelle</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Échelle</th>
-                <th class="px-4 py-3 text-left font-semibold">Capacité Quotidienne</th>
-                <th class="px-4 py-3 text-left font-semibold">Modèle Recommandé</th>
-              </tr>
-            </thead>
-            <tbody>
-              {capacityPlanning.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-blue-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.capacity}</td>
-                  <td class="px-4 py-3 text-amber-600 font-medium">{item.model}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <div class="mt-6 bg-gradient-to-r from-steel-50 to-steel-100 p-5 rounded-xl">
-          <h4 class="font-semibold text-charcoal-900 mb-3">Considérations sur l'Équilibre de la Ligne</h4>
-          <ol class="space-y-2 list-decimal list-inside text-steel-700">
-            <li>Capacité de Torréfaction: Devrait être >= 2 x taux de pressage</li>
-            <li>Capacité de Broyage: Devrait correspondre au taux de pressage</li>
-            <li>Capacité de Filtrage: Devrait correspondre à la sortie du pressage</li>
-            <li>Capacité de Stockage: Devrait accueillir 3-5 jours de production</li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="layout-design" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conception de l'Aménagement</h2>
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Principes de Conception</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-green-50 p-4 rounded-xl border border-green-200">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-semibold text-green-800">Efficacité du Flux de Travail</span>
-            </div>
-            <p class="text-steel-700 text-sm mt-1">Minimiser la manipulation des matériaux</p>
-          </div>
-          <div class="bg-red-50 p-4 rounded-xl border border-red-200">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><shield/></svg>
-              <span class="font-semibold text-red-800">Sécurité</span>
-            </div>
-            <p class="text-steel-700 text-sm mt-1">Assurer un accès sûr pour l'opération et la maintenance</p>
-          </div>
-          <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><refresh-cw/></svg>
-              <span class="font-semibold text-blue-800">Flexibilité</span>
-            </div>
-            <p class="text-steel-700 text-sm mt-1">Permettre une expansion future</p>
-          </div>
-          <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><user/></svg>
-              <span class="font-semibold text-amber-800">Ergonomie</span>
-            </div>
-            <p class="text-steel-700 text-sm mt-1">Concevoir pour le confort de l'opérateur</p>
-          </div>
-        </div>
-
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900 mt-8">Exigences en Espace</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Échelle</th>
-                <th class="px-4 py-3 text-left font-semibold">Surface Requise</th>
-                <th class="px-4 py-3 text-left font-semibold">Hauteur</th>
-              </tr>
-            </thead>
-            <tbody>
-              {spaceRequirements.map((item, index) => (
-                <tr key={index} class="border-b border-steel-100 hover:bg-amber-50 transition-colors">
-                  <td class="px-4 py-3 font-semibold text-charcoal-900">{item.scale}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.area}</td>
-                  <td class="px-4 py-3 text-blue-600">{item.height}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="cost-analysis" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Analyse des Coûts</h2>
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Investissement en Capital</h3>
-        <div class="space-y-6">
-          {costAnalysis.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <h4 class="font-semibold text-lg text-charcoal-900 mb-3">{item.scale}</h4>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {item.items.map((cost, idx) => (
-                  <div key={idx} class="bg-gradient-to-br from-steel-50 to-steel-100 p-4 rounded-lg">
-                    <span class="text-steel-500 text-sm">{cost.name}</span>
-                    <p class="font-bold text-amber-600">{cost.cost}</p>
-                  </div>
-                ))}
+      <section id="stages" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Étapes de Production</h2>
+        <div class="space-y-4">
+          {productionStages.map((stage, index) => (
+            <div key={index} class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">{stage.stage}</div>
+                {index < productionStages.length - 1 && <div class="w-0.5 h-full bg-steel-200 mt-2"></div>}
+              </div>
+              <div class={index < productionStages.length - 1 ? 'pb-6' : ''}>
+                <h3 class="font-semibold text-xl mb-2 text-charcoal-900">{stage.title}</h3>
+                <div class="bg-steel-50 p-4 rounded-lg">
+                  <p class="text-amber-600 text-sm mb-1"><strong>Équipement :</strong> {stage.equipment}</p>
+                  <p class="text-steel-600 text-sm">{stage.desc}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
+      </section>
 
-        <div class="mt-6 bg-gradient-to-r from-green-500 to-emerald-500 p-6 rounded-xl text-white">
-          <h4 class="font-semibold text-lg mb-3">Retour sur Investissement</h4>
-          <div class="flex flex-wrap gap-6">
-            <div>
-              <span class="text-white/80">Petit échelle:</span>
-              <span class="font-bold text-xl ml-2">12-18 mois</span>
+      <section id="capacity" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Options d'Échelle de Production</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {capacityOptions.map((option, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <div class={`p-4 ${index === 0 ? 'bg-gradient-to-r from-green-500 to-emerald-500' : index === 1 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : index === 2 ? 'bg-gradient-to-r from-amber-500 to-orange-500' : 'bg-gradient-to-r from-purple-500 to-pink-500'}`}>
+                <div class="flex justify-between items-center">
+                  <h3 class="font-display text-lg text-white">{option.scale}</h3>
+                  <span class="bg-white/20 text-white text-sm px-2 py-1 rounded">{option.capacity}</span>
+                </div>
+              </div>
+              <div class="p-5">
+                <p class="text-sm text-steel-500 mb-2">Équipement clé :</p>
+                <ul class="space-y-1">
+                  {option.equipment.map((equip, idx) => (
+                    <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-steel-400 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                      {equip}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <span class="text-white/80">Moyenne échelle:</span>
-              <span class="font-bold text-xl ml-2">10-15 mois</span>
+          ))}
+        </div>
+      </section>
+
+      <section id="layout" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conseils d'Aménagement des Locaux</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {layoutTips.map((tip, index) => (
+            <div key={index} class="bg-gradient-to-br from-blue-50 to-indigo-50 p-5 rounded-xl border border-blue-100">
+              <h4 class="font-semibold text-blue-800 mb-2">{tip.tip}</h4>
+              <p class="text-steel-700 text-sm">{tip.desc}</p>
             </div>
-            <div>
-              <span class="text-white/80">Grande échelle:</span>
-              <span class="font-bold text-xl ml-2">8-12 mois</span>
+          ))}
+        </div>
+      </section>
+
+      <section id="cost" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Analyse des Coûts d'Investissement</h2>
+        <p class="text-steel-700 mb-6">Répartition typique des investissements pour une ligne de production d'huile complète :</p>
+        <div class="space-y-3">
+          {costAnalysis.map((item, index) => (
+            <div key={index} class="bg-white p-4 rounded-lg border border-steel-100 flex justify-between items-center">
+              <span class="text-steel-700">{item.item}</span>
+              <div class="flex items-center gap-3">
+                <div class="w-32 bg-steel-100 rounded-full h-2">
+                  <div class="bg-gradient-to-r from-amber-500 to-orange-500 h-2 rounded-full" style={`width: ${parseInt(item.percentage)}%`}></div>
+                </div>
+                <span class="font-semibold text-amber-600 text-sm w-16 text-right">{item.percentage}</span>
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="maintenance" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Calendrier de Maintenance</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {maintenanceSchedule.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 shadow-sm overflow-hidden">
+              <div class={`p-3 ${index === 0 ? 'bg-green-100' : index === 1 ? 'bg-blue-100' : index === 2 ? 'bg-amber-100' : index === 3 ? 'bg-purple-100' : 'bg-red-100'}`}>
+                <h3 class="font-semibold text-charcoal-900">{item.frequency}</h3>
+              </div>
+              <div class="p-4">
+                <ul class="space-y-2">
+                  {item.tasks.map((task, idx) => (
+                    <li key={idx} class="text-steel-700 text-sm flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-steel-400 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                      {task}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
-        <p class="text-steel-700 leading-relaxed">La conception d'une ligne de production d'huile complète est un investissement important qui nécessite une planification minutieuse. Haonuo fournit un soutien complet pour la conception de lignes de production d'huile, y compris la sélection d'équipements, la planification de l'aménagement et l'assistance à l'installation.</p>
+        <p class="text-steel-700 leading-relaxed">Une ligne de production d'huile complète est un investissement commercial puissant. En planifiant soigneusement chaque étape et en travaillant avec des fournisseurs d'équipement expérimentés, vous pouvez construire une opération de production d'huile rentable et durable. Contactez notre équipe pour une conception et un devis personnalisés de ligne de production.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">PRÊT À COMMENCER VOTRE PRODUCTION D'HUILE?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut vous aider à sélectionner le meilleur équipement et à optimiser votre investissement pour des rendements maximaux.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">CONSTRUISEZ VOTRE EMPIRE DE PRODUCTION D'HUILE</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Notre équipe d'ingénieurs peut concevoir une ligne de production complète adaptée à vos besoins et budget spécifiques.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Contacter nos experts<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">Parcourir l'équipement</a>
-        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">Retour aux ressources</a>
+        <a href="/fr/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Demander une Consultation<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/fr/products" class="btn-outline border-white text-white hover:bg-white/10">Voir l'Équipement</a>
+        <a href="/fr/resources" class="btn-outline border-white text-white hover:bg-white/10">Retour aux Ressources</a>
       </div>
     </div>
   </section>
 </BaseLayout>
-

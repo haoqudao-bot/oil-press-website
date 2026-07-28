@@ -1,13 +1,17 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
 
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'hydraulic-oil-press-buying-guide');
 const t = getTranslations('id');
-const title = 'Panduan Pembelian Mesin Press Minyak Hidrolik';
-const description = 'Bagaimana memilih mesin yang tepat untuk bisnis Anda';
-const seoKeywords = ['pembelian press hidrolik', 'panduan seleksi press', 'mesin hidrolik'];
-const publishedAt = new Date();
-const updatedAt = publishedAt;
+
+const title = resource?.data.title.id || 'Panduan Membeli Pengepres Minyak Hidrolik';
+const description = resource?.data.description.id || 'Investasikan pada pengepres yang tepat dengan percaya diri';
+const seoKeywords = resource?.data.seoKeywords || ['panduan membeli pengepres minyak', 'cara memilih pengepres minyak', 'daftar periksa pembelian pengepres minyak'];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
 
 const articleLd = {
   '@context': 'https://schema.org',
@@ -15,17 +19,8 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/buying-guide-hero.webp',
-  author: {
-    '@type': 'Person',
-    name: 'Haonuo Engineering Team',
-    jobTitle: 'Insinyur Press Minyak Senior',
-    worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
-  },
+  author: { '@type': 'Person', name: 'Tim Teknik Haonuo', jobTitle: 'Insinyur Senior Pengepres Minyak', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -41,72 +36,96 @@ const breadcrumbLd = {
   ],
 };
 
-const keyFactors = [
-  { title: 'Jenis Bahan Baku', items: ['Biji konvensional: wijen, kacang tanah, sawit, kedelai, biji teh', 'Bahan bershell keras: kenari, almond, biji aprikot, tiger nut', 'Cold press saja: bahan yang membutuhkan ekstraksi suhu rendah'] },
-  { title: 'Skala Produksi', items: ['Skala kecil: 500-1.500 kg/hari', 'Skala menengah: 1.500-3.000 kg/hari', 'Skala besar: 3.000+ kg/hari'] },
-  { title: 'Metode Pressing', items: ['Hot pressing: hasil lebih tinggi, waktu siklus lebih cepat (30-40 menit/batch)', 'Cold pressing: minyak berkualitas premium, waktu siklus lebih lama (2 jam/batch)'] },
+const buyingChecklist = [
+  { category: 'Kebutuhan Produksi', items: [
+    'Target produksi harian (kg/hari)',
+    'Jenis bahan yang akan diproses',
+    'Kualitas minyak yang dibutuhkan (pervak, memasak, dll.)',
+    'Apakah kemampuan pengepresan dingin dibutuhkan?',
+  ]},
+  { category: 'Spesifikasi Teknis', items: [
+    'Tekanan hidrolik (40-60 MPa direkomendasikan)',
+    'Daya motor (2,2 kW standar)',
+    'Tegangan (220V atau 380V)',
+    'Dimensi dan berat mesin',
+  ]},
+  { category: 'Kualitas & Garansi', items: [
+    'Reputasi dan pengalaman pabrikan',
+    'Periode garansi (minimal 1 tahun)',
+    'Ketersediaan layanan purna jual',
+    'Ketersediaan suku cadang',
+  ]},
+  { category: 'Pertimbangan Anggaran', items: [
+    'Harga pembelian mesin',
+    'Biaya instalasi dan pelatihan',
+    'Suku cadang dan perawatan',
+    'Biaya operasional (daya, tenaga kerja)',
+  ]},
 ];
 
-const models = [
-  { name: 'HN325 Standard', bestFor: ['Produsen skala kecil', 'Biji minyak konvensional (wijen, kacang tanah, sawit, kedelai)', 'Operasi hot pressing'], specs: ['Tekanan press 325 ton', 'Tekanan sistem 60 Mpa', 'Tekanan permukaan cake 27.78 Mpa/cm2', 'Kapasitas batch 100 kg', 'Daya motor 2.2 KW'] },
-  { name: 'HN355 Heavy Duty', bestFor: ['Operasi komersial skala menengah', 'Pengolahan bahan sedikit lebih keras', 'Operasi heavy duty berkelanjutan'], specs: ['Tekanan press 360 ton', 'Tekanan sistem 63 Mpa', 'Tekanan permukaan cake 30.15 Mpa/cm2', 'Kapasitas batch 100 kg'] },
-  { name: 'HN426 Cold Press', bestFor: ['Operasi cold pressing', 'Bahan bershell keras (kenari, almond, biji aprikot)', 'Produksi minyak premium'], specs: ['Tekanan press 500 ton', 'Tekanan sistem 70 Mpa', 'Tekanan permukaan cake 42 Mpa/cm2', 'Kapasitas batch 100 kg'] },
-  { name: 'HN480 High Pressure', bestFor: ['Kebutuhan produksi campuran', 'Operasi skala menengah hingga besar', 'Bahan konvensional dan cold press'], specs: ['Tekanan press 560 ton', 'Tekanan sistem 72 Mpa', 'Tekanan permukaan cake 48 Mpa/cm2', 'Kapasitas batch 100 kg'] },
-  { name: 'HN500 Ultra High Pressure', bestFor: ['Operasi industri skala besar', 'Bahan cold press paling keras', 'Kebutuhan hasil maksimal'], specs: ['Tekanan press 620 ton', 'Tekanan sistem 75 Mpa', 'Tekanan permukaan cake 52 Mpa/cm2', 'Kapasitas batch 100 kg'] },
+const modelSelection = [
+  { model: 'HN325', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '60 MPa', materials: 'Wijen, kacang tanah, kanola', highlight: 'Terbaik untuk usaha rumahan' },
+  { model: 'HN355', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '63 MPa', materials: 'Sebagian besar biji minyak', highlight: 'Terbaik untuk bengkel kecil' },
+  { model: 'HN426', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '70 MPa', materials: 'Kenari, almond, kelapa', highlight: 'Pengepresan dingin premium' },
+  { model: 'HN480', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '72 MPa', materials: 'Berbagai biji minyak tinggi', highlight: 'Produksi menengah' },
+  { model: 'HN500', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '75 MPa', materials: 'Skala komersial', highlight: 'Produksi komersial' },
 ];
 
-const decisionTree = [
-  { category: 'Hanya biji konvensional', options: ['Skala kecil -> HN325', 'Skala menengah -> HN355', 'Skala besar -> HN500'] },
-  { category: 'Bahan cold press', options: ['Cold press standar -> HN426', 'Cold press volume tinggi -> HN480', 'Cold press hasil maksimal -> HN500'] },
-  { category: 'Bahan campuran', options: ['Kinerja seimbang -> HN480', 'Versatilitas maksimal -> HN500'] },
+const questionsToAsk = [
+  'Berapa target produksi harian Anda?',
+  'Biji/kacang apa yang akan Anda proses?',
+  'Apakah Anda membutuhkan kemampuan pengepresan dingin?',
+  'Berapa rentang anggaran Anda?',
+  'Apakah Anda memiliki sumber daya listrik?',
+  'Berapa ruang kerja yang tersedia?',
+  'Apakah Anda membutuhkan dukungan pelatihan dan instalasi?',
+  'Apa pasar minyak target Anda (pervak, memasak, kosmetik)?',
 ];
 
-const barrelConfig = [
-  { type: 'Barrel tunggal', features: ['Biaya awal lebih rendah', 'Operasi lebih sederhana', 'Ideal untuk operasi skala kecil atau startup'] },
-  { type: 'Barrel ganda', features: ['Hampir menggandakan throughput', 'Kapasitas operasi berkelanjutan', 'Direkomendasikan untuk penggunaan komersial dan industri'] },
+const redFlags = [
+  'Harga tidak realistis rendah',
+  'Tidak ada garansi yang ditawarkan',
+  'Tidak ada layanan purna jual',
+  'Lokasi pabrikan tidak diketahui',
+  'Tidak ada dokumentasi teknis',
+  'Tekanan di bawah 40 MPa',
+  'Peralatan bekas/peremajaan',
 ];
+
 ---
 
 <BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]} locale="id">
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href="/id/" class="hover:text-amber-500 transition-colors">Beranda</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href="/id" class="hover:text-amber-500 transition-colors">Beranda</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <a href="/id/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
     </div>
   </section>
 
   <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-          PANDUAN PEMBELIAN
-        </span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">
-          {title.toUpperCase()}
-        </h1>
-        <p class="text-xl text-steel-600 mb-8 leading-relaxed">
-          {description}
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div class="text-left">
-              <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Insinyur Press Minyak Senior · 15+ Tahun Pengalaman</div>
-            </div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">PANDUAN PEMBELIAN</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal-900 mb-6 leading-tight">{title.toUpperCase()}</h1>
+      <p class="text-xl text-steel-600 mb-8 leading-relaxed">{description}</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 text-steel-600">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
-          <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div class="text-left">
+            <div class="font-semibold text-charcoal-900">Tim Teknik Haonuo</div>
+            <div class="text-sm text-steel-500">Insinyur Senior Pengepres Minyak · 15+ Tahun Pengalaman</div>
           </div>
+        </div>
+        <div class="h-8 w-px bg-steel-300 hidden md:block"></div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>{publishedAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
       </div>
     </div>
@@ -116,119 +135,113 @@ const barrelConfig = [
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Pendahuluan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Memilih mesin press minyak hidrolik yang tepat adalah keputusan investasi kritis yang langsung mempengaruhi kapasitas produksi, hasil minyak, dan profitabilitas Anda secara keseluruhan. Dengan beberapa model yang tersedia, memahami perbedaan kunci antara mereka sangat penting untuk membuat pilihan yang tepat.
-        </p>
-      </section>
-
-      <section id="key-factors" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Faktor Kunci yang Perlu Dipertimbangkan</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {keyFactors.map((item, index) => (
-            <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-lg text-amber-600 mb-3">{item.title}</h3>
-              <ul class="space-y-2">
-                {item.items.map((task, idx) => (
-                  <li key={idx} class="text-steel-700 text-sm">{task}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <p class="text-steel-700 leading-relaxed mb-4">Berinvestasi dalam pengepres minyak hidrolik adalah keputusan penting yang dapat mengubah bisnis produksi minyak Anda. Panduan komprehensif ini mencakup semua yang perlu Anda ketahui untuk melakukan pembelian yang tepat.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg my-6">
+          <p class="text-steel-700 italic"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 inline mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Pengepres minyak yang baik dapat membayar dirinya sendiri dalam 1-3 bulan. Pembelian yang buruk dapat mengakibatkan frustrasi selama bertahun-tahun dan pendapatan yang hilang. Panduan ini akan membantu Anda menghindari kesalahan yang mahal.</p>
         </div>
       </section>
 
-      <section id="model-comparison" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Perbandingan Model</h2>
-        <div class="space-y-6">
-          {models.map((item, index) => (
-            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-xl text-charcoal-900 mb-4">{item.name} Mesin Press Minyak Hidrolik</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 class="font-medium text-amber-600 mb-3">Cocok untuk:</h4>
-                  <ul class="space-y-2">
-                    {item.bestFor.map((feature, idx) => (
-                      <li key={idx} class="flex items-center gap-2 text-steel-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 class="font-medium text-blue-600 mb-3">Spesifikasi Kunci:</h4>
-                  <ul class="space-y-2">
-                    {item.specs.map((spec, idx) => (
-                      <li key={idx} class="text-steel-700">{spec}</li>
-                    ))}
-                  </ul>
-                </div>
+      <section id="checklist" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Daftar Periksa Pra-Pembelian</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {buyingChecklist.map((item, index) => (
+            <div key={index} class="bg-white rounded-xl border border-steel-100 shadow-md overflow-hidden">
+              <div class={`p-4 ${index === 0 ? 'bg-gradient-to-r from-amber-500 to-orange-500' : index === 1 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : index === 2 ? 'bg-gradient-to-r from-green-500 to-emerald-500' : 'bg-gradient-to-r from-purple-500 to-pink-500'}`}>
+                <h3 class="font-semibold text-white flex items-center gap-2">
+                  <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">{index + 1}</span>
+                  {item.category}
+                </h3>
+              </div>
+              <div class="p-5">
+                <ul class="space-y-2">
+                  {item.items.map((item2, idx) => (
+                    <li key={idx} class="flex items-start gap-3">
+                      <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      </div>
+                      <span class="text-steel-700 text-sm">{item2}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="decision-tree" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pohon Keputusan Seleksi</h2>
-        <h3 class="font-semibold text-xl mb-4 text-charcoal-900">Langkah 1: Tentukan Bahan Baku Utama Anda</h3>
-        <div class="space-y-4">
-          {decisionTree.map((item, index) => (
-            <div key={index} class="bg-gradient-to-br from-steel-50 to-steel-100 p-5 rounded-xl border border-steel-200">
-              <h4 class="font-semibold text-charcoal-900 mb-2">{item.category}</h4>
-              <ul class="space-y-1">
-                {item.options.map((option, idx) => (
-                  <li key={idx} class="text-steel-700">{option}</li>
-                ))}
-              </ul>
+      <section id="models" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Panduan Pemilihan Model</h2>
+        <p class="text-steel-600 mb-6">Semua model memproses <strong>100 kg per batch</strong>. Waktu siklus bervariasi menurut bahan — biji lunak seperti wijen memakan waktu sekitar 40 menit per batch, sementara bahan keras seperti kenari bisa memakan waktu hingga 1,5 jam.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
+            <thead class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold">Model</th>
+                <th class="px-4 py-3 text-left font-semibold">Kapasitas</th>
+                <th class="px-4 py-3 text-left font-semibold">Waktu Siklus</th>
+                <th class="px-4 py-3 text-left font-semibold">Tekanan</th>
+                <th class="px-4 py-3 text-left font-semibold">Cocok Untuk</th>
+              </tr>
+            </thead>
+            <tbody>
+              {modelSelection.map((item, index) => (
+                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                  <td class="px-4 py-3 font-bold text-amber-600">{item.model}</td>
+                  <td class="px-4 py-3 text-charcoal-900">{item.capacity}</td>
+                  <td class="px-4 py-3 text-steel-600">{item.cycle}</td>
+                  <td class="px-4 py-3 text-charcoal-900">{item.pressure}</td>
+                  <td class="px-4 py-3">
+                    <p class="text-steel-700 text-sm">{item.highlight}</p>
+                    <p class="text-steel-500 text-xs">{item.materials}</p>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="questions" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Pertanyaan untuk Ditanyakan kepada Pemasok</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {questionsToAsk.map((question, index) => (
+            <div key={index} class="bg-blue-50 p-4 rounded-xl border border-blue-100 flex items-start gap-3">
+              <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{index + 1}</div>
+              <p class="text-steel-700">{question}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="barrel-configuration" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Konfigurasi Barrel Tunggal vs Ganda</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {barrelConfig.map((item, index) => (
-            <div key={index} class="bg-white p-6 rounded-xl border border-steel-100 shadow-md">
-              <h3 class="font-semibold text-lg text-charcoal-900 mb-4">{item.type}</h3>
-              <ul class="space-y-2">
-                {item.features.map((feature, idx) => (
-                  <li key={idx} class="flex items-center gap-2 text-steel-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <section id="red-flags" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Tanda Peringatan yang Harus Dihindari</h2>
+        <div class="bg-red-50 rounded-xl border border-red-200 p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {redFlags.map((flag, index) => (
+              <div key={index} class="bg-white p-3 rounded-lg flex items-center gap-3 border border-red-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span class="text-steel-700">{flag}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Kesimpulan</h2>
-        <p class="text-steel-700 leading-relaxed">
-          Memilih mesin press minyak hidrolik yang tepat membutuhkan evaluasi hati-hati terhadap persyaratan produksi spesifik Anda, bahan, dan batasan operasional. Untuk rekomendasi pribadi berdasarkan kebutuhan spesifik Anda, hubungi tim insinyur kami untuk konsultasi gratis.
-        </p>
+        <p class="text-steel-700 leading-relaxed">Memilih pengepres minyak hidrolik yang tepat sangat penting untuk keberhasilan bisnis Anda. Dengan mengikuti daftar periksa panduan ini dan bekerja dengan pabrikan yang bereputasi, Anda dapat melakukan investasi percaya diri yang akan membuahkan hasil selama bertahun-tahun.</p>
       </section>
     </div>
   </main>
 
   <section class="bg-gradient-to-br from-amber-500 via-amber-400 to-orange-500 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">SIAP MULAI PRODUKSI MINYAK ANDA?</h2>
-      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Tim insinyur kami dapat membantu Anda memilih peralatan terbaik dan mengoptimalkan investasi Anda untuk pengembalian maksimal.</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6">DAPATKAN PENAWARAN GRATIS ANDA HARI INI</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Kirimkan kebutuhan produksi Anda dan dapatkan rekomendasi yang dipersonalisasi dengan harga detail.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
-          Hubungi Ahli Kami
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">
-          Jelajahi Peralatan
-        </a>
-        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">
-          Kembali ke Sumber Daya
-        </a>
+        <a href="/id/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">Minta Penawaran<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/id/products" class="btn-outline border-white text-white hover:bg-white/10">Lihat Semua Model</a>
+        <a href="/id/resources" class="btn-outline border-white text-white hover:bg-white/10">Kembali ke Sumber Daya</a>
       </div>
     </div>
   </section>

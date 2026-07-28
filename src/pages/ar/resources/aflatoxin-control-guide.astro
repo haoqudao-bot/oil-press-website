@@ -8,7 +8,7 @@ const resource = resources.find(r => r.slug === 'aflatoxin-control-guide');
 const t = getTranslations('ar');
 
 const title = resource?.data.title.ar || resource?.data.title.en || 'دليل مراقبة الأفلاطوكسين';
-const description = resource?.data.description.ar || resource?.data.description.en || 'إستراتيجيات شاملة لمنع ومراقبة تلوث الأفلاطوكسين';
+const description = resource?.data.description.ar || resource?.data.description.en || 'إستراتيجيات شاملة لمنع ومراقبة تلوث الأفلاطوكسين في بذور الزيت';
 const seoKeywords = resource?.data.seoKeywords || ['مراقبة الأفلاطوكسين', 'منع الأفلاطوكسين', 'سلامة الغذاء'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
@@ -22,7 +22,7 @@ const articleLd = {
   author: {
     '@type': 'Person',
     name: 'Haonuo Engineering Team',
-    jobTitle: 'Senior Oil Press Engineer',
+    jobTitle: 'مهندس المكبس الزيتي الرئيسي',
     worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.' },
   },
   publisher: {
@@ -130,7 +130,7 @@ function localePath(path: string): string {
   <main class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">مقدمة</h2>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">المقدمة</h2>
         <p class="text-steel-700 leading-relaxed">
           الأفلاطوكسينات هي سموم تنتجها بعض الفطريات (Aspergillus flavus و Aspergillus parasiticus) التي يمكن أن تلوث الحبوب المستخدمة لإنتاج الزيت. مراقبة الأفلاطوكسين أمر حيوي لضمان سلامة الغذاء والامتثال للمعايير الدولية.
         </p>
@@ -264,4 +264,3 @@ function localePath(path: string): string {
     </div>
   </section>
 </BaseLayout>
-

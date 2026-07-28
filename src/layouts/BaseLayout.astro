@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { type Locale, getTranslations, isRtl } from '../i18n/index.ts';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -70,8 +70,10 @@ const organizationLd = {
   description: (t as any).common?.orgDesc || 'Professional hydraulic oil press manufacturer since 2010',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'No. 88, Nanyang Road, Qingzhou Economic Development Zone',
     addressLocality: 'Qingzhou, Weifang',
     addressRegion: 'Shandong',
+    postalCode: '262500',
     addressCountry: 'CN',
   },
   contactPoint: {
