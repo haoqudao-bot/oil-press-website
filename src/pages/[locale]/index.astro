@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -188,6 +188,7 @@ const advantages = [
             muted
             loop
             playsinline
+            preload="none"
             class="w-full h-full object-cover opacity-40"
             poster="/images/hero/factory-workshop.webp"
           >

@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { type Locale, getTranslations, isRtl } from '../i18n/index.ts';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -125,6 +125,7 @@ const mergedLd = rawLd.flat();
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" />
   <link rel="alternate" hreflang="en" href={`https://www.hydoilpress.com${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
   <link rel="alternate" hreflang="fr" href={`https://www.hydoilpress.com/fr${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
   <link rel="alternate" hreflang="ar" href={`https://www.hydoilpress.com/ar${Astro.url.pathname.replace(/^\/(fr|ar|id)/, '')}`} />
