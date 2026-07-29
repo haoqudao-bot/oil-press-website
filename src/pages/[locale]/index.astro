@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -116,6 +116,10 @@ const advantages = [
           <img
             src="/images/hero/hydraulic-oil-press-machine.webp"
             alt={t.home.heroTitle}
+            width="1200"
+            height="800"
+            fetchpriority="high"
+            decoding="async"
             class="w-full h-full object-cover opacity-40"
           />
           <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
@@ -147,6 +151,10 @@ const advantages = [
           <img
             src="/images/hero/cold-press-production-line.webp"
             alt={t.home.heroSlide2Title}
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
             class="w-full h-full object-cover opacity-40"
           />
           <div class="absolute inset-0 bg-gradient-to-r from-steel-950/90 via-steel-900/70 to-transparent"></div>
@@ -436,6 +444,10 @@ const advantages = [
               <img
                 src={product.data.images[0]}
                 alt={product.data.title[currentLocale] || product.data.title.en}
+                width="400"
+                height="300"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 onerror="this.onerror=null;this.src='/images/hero/hydraulic-oil-press-machine.webp'"
               />
