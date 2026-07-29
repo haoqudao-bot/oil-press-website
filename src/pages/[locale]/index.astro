@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -161,9 +161,9 @@ const advantages = [
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div class="max-w-2xl">
-            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+            <h2 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
               {t.home.heroSlide2Title}
-            </h1>
+            </h2>
             <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
               {t.home.heroSlide2Desc}
             </p>
@@ -188,7 +188,6 @@ const advantages = [
             muted
             loop
             playsinline
-            preload="none"
             class="w-full h-full object-cover opacity-40"
             poster="/images/hero/factory-workshop.webp"
           >
@@ -198,9 +197,9 @@ const advantages = [
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div class="max-w-2xl">
-            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
+            <h2 class="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-6">
               {t.home.heroSlide3Title}
-            </h1>
+            </h2>
             <p class="text-lg sm:text-xl text-steel-200 mb-8 leading-relaxed">
               {t.home.heroSlide3Desc}
             </p>
@@ -447,8 +446,6 @@ const advantages = [
                 alt={product.data.title[currentLocale] || product.data.title.en}
                 width="400"
                 height="300"
-                loading="lazy"
-                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 onerror="this.onerror=null;this.src='/images/hero/hydraulic-oil-press-machine.webp'"
               />
