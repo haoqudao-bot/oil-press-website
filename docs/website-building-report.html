@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B 外贸独立站搭建全流程报告 - Hydoilpress.com</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;max-width:960px;margin:0 auto;padding:40px 20px;line-height:1.8;color:#1f2937;}
+h1{font-size:28px;border-bottom:3px solid #D97706;padding-bottom:12px;color:#1C1C1C;}
+h2{font-size:22px;margin-top:40px;color:#1C1C1C;border-left:4px solid #D97706;padding-left:12px;}
+h3{font-size:18px;}
+h4{font-size:16px;}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14px;}
+th,td{border:1px solid #D1D5DB;padding:10px 12px;text-align:left;}
+th{background:#F9FAFB;font-weight:600;}
+code{background:#F3F4F6;padding:2px 6px;border-radius:4px;font-size:13px;color:#D97706;}
+pre{background:#1C1C1C;color:#F9FAFB;padding:16px;border-radius:8px;overflow-x:auto;}
+pre code{background:none;color:inherit;padding:0;}
+blockquote{border-left:4px solid #D97706;margin:16px 0;padding:8px 16px;background:#FFFBEB;}
+ul,ol{padding-left:24px;}
+li{margin:4px 0;}
+a{color:#2563EB;text-decoration:none;}
+a:hover{text-decoration:underline;}
+hr{border:none;border-top:1px solid #E5E7EB;margin:32px 0;}
+@media print{body{padding:0;}}
+</style>
+</head>
+<body>
+<h1>B2B 外贸独立站搭建全流程报告</h1>
+<h2>Hydoilpress.com 实战案例</h2>
+<blockquote>
+<p><strong>文档版本</strong>：v1.0<br />
+<strong>编写日期</strong>：2026-07-30<br />
+<strong>适用范围</strong>：机械设备 B2B 外贸独立站<br />
+<strong>可复用性</strong>：★★★★★ — 适用于任何产品导向型 B2B 独立站</p>
+</blockquote>
+<hr />
+<h2>目录</h2>
+<ol>
+<li><a href="#1-项目概述">项目概述</a></li>
+<li><a href="#2-技术选型与依据">技术选型与依据</a></li>
+<li><a href="#3-项目初始化">项目初始化</a></li>
+<li><a href="#4-页面架构设计">页面架构设计</a></li>
+<li><a href="#5-核心功能实现">核心功能实现</a></li>
+<li><a href="#6-seo-优化全流程">SEO 优化全流程</a></li>
+<li><a href="#7-多语言国际化">多语言国际化</a></li>
+<li><a href="#8-部署与上线">部署与上线</a></li>
+<li><a href="#9-上线后优化记录">上线后优化记录</a></li>
+<li><a href="#10-问题与解决方案汇总">问题与解决方案汇总</a></li>
+<li><a href="#11-运营与增长策略">运营与增长策略</a></li>
+<li><a href="#12-附录核心配置文件">附录：核心配置文件</a></li>
+</ol>
+<hr />
+<h2>1. 项目概述</h2>
+<h3>1.1 项目背景</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客户</td>
+<td>山东浩诺机械设备集团有限公司</td>
+</tr>
+<tr>
+<td>业务</td>
+<td>液压榨油机制造与出口</td>
+</tr>
+<tr>
+<td>目标市场</td>
+<td>中东、非洲、东南亚、南美</td>
+</tr>
+<tr>
+<td>网站域名</td>
+<td>hydoilpress.com</td>
+</tr>
+<tr>
+<td>网站语言</td>
+<td>中文（不使用）、English、Français、العربية、Indonesia</td>
+</tr>
+<tr>
+<td>核心目标</td>
+<td>获取海外 B2B 询盘，替代阿里巴巴平台依赖</td>
+</tr>
+</tbody>
+</table>
+<h3>1.2 关键指标</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>目标</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google PageSpeed 移动端</td>
+<td>&gt; 90 分</td>
+<td>✅ 86 分（持续优化中）</td>
+</tr>
+<tr>
+<td>搜索引擎收录页面</td>
+<td>356 页（全部）</td>
+<td>🔄 1 页（上线 4 天，正常）</td>
+</tr>
+<tr>
+<td>有效询盘/月</td>
+<td>10+</td>
+<td>🔄 首单询盘已到（塞内加尔）</td>
+</tr>
+<tr>
+<td>支持语言</td>
+<td>4 种</td>
+<td>✅ 已完成</td>
+</tr>
+</tbody>
+</table>
+<h3>1.3 项目周期</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>交付物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>需求分析</td>
+<td>1 天</td>
+<td>网站规划文档</td>
+</tr>
+<tr>
+<td>开发实施</td>
+<td>3-4 天</td>
+<td>完整网站代码</td>
+</tr>
+<tr>
+<td>内容填充</td>
+<td>2-3 天</td>
+<td>产品、文章、FAQ</td>
+</tr>
+<tr>
+<td>SEO 优化</td>
+<td>1 天</td>
+<td>技术 SEO 全部完成</td>
+</tr>
+<tr>
+<td>测试部署</td>
+<td>1 天</td>
+<td>上线运行</td>
+</tr>
+<tr>
+<td>上线后优化</td>
+<td>持续进行</td>
+<td>性能、内容、功能迭代</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>2. 技术选型与依据</h2>
+<h3>2.1 技术栈总览</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>技术</th>
+<th>版本</th>
+<th>选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>框架</td>
+<td><strong>Astro</strong></td>
+<td>v4.x</td>
+<td>静态站点生成、零 JavaScript、极致性能</td>
+</tr>
+<tr>
+<td>样式</td>
+<td><strong>Tailwind CSS</strong></td>
+<td>v3.x</td>
+<td>原子化 CSS、响应式设计、快速开发</td>
+</tr>
+<tr>
+<td>内容</td>
+<td><strong>Astro Content Collections</strong></td>
+<td>-</td>
+<td>Markdown/MDX 驱动、结构化内容</td>
+</tr>
+<tr>
+<td>部署</td>
+<td><strong>Cloudflare Pages</strong></td>
+<td>-</td>
+<td>全球 CDN、免费 SSL、自动 HTTPS、无限流量</td>
+</tr>
+<tr>
+<td>代码托管</td>
+<td><strong>GitHub</strong></td>
+<td>-</td>
+<td>版本控制、Cloudflare 自动部署</td>
+</tr>
+<tr>
+<td>表单</td>
+<td><strong>Formspree</strong></td>
+<td>-</td>
+<td>AJAX 提交、无需服务器、垃圾邮件防护</td>
+</tr>
+<tr>
+<td>分析</td>
+<td><strong>Google Analytics 4</strong></td>
+<td>-</td>
+<td>免费、强大、与 Search Console 集成</td>
+</tr>
+<tr>
+<td>搜索引擎</td>
+<td><strong>Google Search Console</strong></td>
+<td>-</td>
+<td>收录监控、索引请求、数据洞察</td>
+</tr>
+</tbody>
+</table>
+<h3>2.2 为什么选择 Astro？</h3>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>Astro</th>
+<th>Next.js</th>
+<th>Hugo</th>
+<th>Gatsby</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>构建速度</td>
+<td>⭐⭐⭐⭐⭐ 极快</td>
+<td>⭐⭐⭐⭐ 快</td>
+<td>⭐⭐⭐⭐⭐ 极快</td>
+<td>⭐⭐⭐ 中等</td>
+</tr>
+<tr>
+<td>学习曲线</td>
+<td>⭐⭐⭐ 中等</td>
+<td>⭐⭐⭐⭐ 较陡</td>
+<td>⭐⭐⭐ 中等</td>
+<td>⭐⭐⭐ 中等</td>
+</tr>
+<tr>
+<td>SEO 友好</td>
+<td>⭐⭐⭐⭐⭐ 原生支持</td>
+<td>⭐⭐⭐⭐⭐ 原生支持</td>
+<td>⭐⭐⭐⭐⭐ 原生支持</td>
+<td>⭐⭐⭐⭐ 原生支持</td>
+</tr>
+<tr>
+<td>JS 依赖</td>
+<td>⭐⭐⭐⭐⭐ 零 JS</td>
+<td>⭐⭐⭐⭐ 零 JS</td>
+<td>⭐⭐⭐⭐⭐ 零 JS</td>
+<td>⭐⭐⭐⭐ 零 JS</td>
+</tr>
+<tr>
+<td>内容管理</td>
+<td>⭐⭐⭐⭐ Content Collections</td>
+<td>⭐⭐⭐⭐ Headless CMS</td>
+<td>⭐⭐⭐ 模板</td>
+<td>⭐⭐⭐ Contentful</td>
+</tr>
+<tr>
+<td>图片优化</td>
+<td>⭐⭐⭐⭐⭐ 原生支持</td>
+<td>⭐⭐⭐⭐ Next/Image</td>
+<td>⭐⭐⭐ 手动</td>
+<td>⭐⭐⭐ gatsby-plugin-image</td>
+</tr>
+<tr>
+<td>适合场景</td>
+<td>营销站、内容站</td>
+<td>SaaS、应用</td>
+<td>个人博客</td>
+<td>个人站</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：Astro 是 B2B 营销型独立站的最佳选择。</p>
+<h3>2.3 为什么选择 Cloudflare Pages？</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全球 CDN</td>
+<td>100+ 数据中心，全球加速</td>
+</tr>
+<tr>
+<td>自动 HTTPS</td>
+<td>免费 SSL 证书，自动续签</td>
+</tr>
+<tr>
+<td>无限流量</td>
+<td>不会产生额外费用</td>
+</tr>
+<tr>
+<td>免费额度</td>
+<td>500 次构建/月，15 分钟构建时长</td>
+</tr>
+<tr>
+<td>Worker</td>
+<td>可扩展 Serverless 功能</td>
+</tr>
+<tr>
+<td>重定向规则</td>
+<td>无需代码实现 301/302 重定向</td>
+</tr>
+<tr>
+<td>DNS 管理</td>
+<td>集成 DNS，支持 CNAME、MX 等记录</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3. 项目初始化</h2>
+<h3>3.1 环境准备</h3>
+<pre><code class="language-bash"># 安装 Node.js 18+
+# 访问 https://nodejs.org 下载 LTS 版本
+
+# 安装 Astro CLI
+npm create astro@latest -- --template minimal
+
+# 进入项目目录
+cd hydoilpress
+
+# 安装核心依赖
+npx astro add tailwind       # Tailwind CSS
+npx astro add sitemap        # Sitemap 生成
+npm install @astrojs/mdx     # MDX 支持（可选）
+</code></pre>
+<h3>3.2 项目结构</h3>
+<pre><code>hydoilpress/
+├── src/
+│   ├── components/          # 可复用组件
+│   │   ├── Navbar.astro      # 导航栏
+│   │   ├── Footer.astro      # 页脚
+│   │   ├── ChatWidget.astro  # 聊天/询盘组件
+│   │   ├── ProductCard.astro # 产品卡片
+│   │   └── Breadcrumb.astro  # 面包屑
+│   ├── layouts/              # 布局模板
+│   │   └── BaseLayout.astro  # 主布局
+│   ├── pages/                # 页面文件
+│   │   ├── index.astro       # 首页
+│   │   ├── about.astro       # 关于我们
+│   │   ├── contact.astro     # 联系我们
+│   │   ├── products/         # 产品页面
+│   │   ├── solutions/        # 解决方案
+│   │   ├── resources/        # 资源文章
+│   │   ├── markets/          # 市场/地区
+│   │   ├── faq.astro         # FAQ
+│   │   └── [locale]/         # 多语言版本
+│   ├── content/              # 内容集合
+│   │   ├── products/         # 产品数据
+│   │   ├── resources/        # 资源文章
+│   │   └── categories/       # 产品分类
+│   ├── i18n/                 # 国际化
+│   │   ├── en.json           # 英语
+│   │   ├── fr.json           # 法语
+│   │   ├── ar.json           # 阿拉伯语
+│   │   └── id.json           # 印尼语
+│   └── styles/
+│       └── global.css        # 全局样式
+├── public/                   # 静态资源
+│   ├── images/               # 图片
+│   ├── videos/               # 视频
+│   ├── robots.txt            # 爬虫规则
+│   └── _redirects            # 重定向规则
+├── astro.config.mjs          # Astro 配置
+├── tailwind.config.mjs       # Tailwind 配置
+└── package.json              # 项目依赖
+</code></pre>
+<h3>3.3 核心配置</h3>
+<p><strong>astro.config.mjs</strong>：</p>
+<pre><code class="language-javascript">import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+  site: 'https://www.hydoilpress.com',
+  integrations: [tailwind(), sitemap()],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr', 'ar', 'id'],
+    routing: {
+      prefixDefaultLocale: false,  // 英语不带 /en 前缀
+    },
+  },
+});
+</code></pre>
+<p><strong>tailwind.config.mjs</strong>：</p>
+<pre><code class="language-javascript">export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx}'],
+  theme: {
+    extend: {
+      colors: {
+        amber: { 500: '#D97706' },  // 品牌色
+        charcoal: { 900: '#1C1C1C' },
+        steel: { 100: '#F3F4F6', 500: '#6B7280' },
+      },
+      fontFamily: {
+        display: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+};
+</code></pre>
+<hr />
+<h2>4. 页面架构设计</h2>
+<h3>4.1 站点地图</h3>
+<pre><code>hydoilpress.com/
+├── /                          # 首页
+├── /about                     # 关于我们
+├── /contact                   # 联系我们
+├── /products                  # 产品列表
+│   ├── /products/hydraulic-oil-press
+│   ├── /products/cold-press-hydraulic-oil-press
+│   ├── /products/hot-press-oil-machine
+│   └── ...                    # 5+ 产品详情页
+├── /solutions                 # 解决方案
+│   ├── /solutions/peanut-oil-pressing
+│   ├── /solutions/sesame-oil-pressing
+│   ├── /solutions/coconut-oil-pressing
+│   └── ...                    # 10+ 油料解决方案
+├── /resources                 # 资源中心
+│   ├── /resources/hydraulic-oil-press-buying-guide
+│   ├── /resources/cold-press-vs-hot-press-oil
+│   └── ...                    # 10+ 技术文章
+├── /markets                   # 目标市场
+│   ├── /markets/middle-east
+│   ├── /markets/kenya
+│   └── ...                    # 10+ 市场页面
+├── /faq                       # 常见问题
+├── /catalog                   # 产品目录
+├── /privacy-policy            # 隐私政策
+└── /terms-of-service          # 服务条款
+</code></pre>
+<h3>4.2 页面优先级</h3>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>页面</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 P0</td>
+<td>首页、产品列表、核心产品页、联系页</td>
+<td>基础转化路径</td>
+</tr>
+<tr>
+<td>🔴 P0</td>
+<td>关于我们</td>
+<td>建立信任</td>
+</tr>
+<tr>
+<td>🟡 P1</td>
+<td>解决方案页（按油料）</td>
+<td>精准关键词排名</td>
+</tr>
+<tr>
+<td>🟡 P1</td>
+<td>技术文章（资源页）</td>
+<td>SEO 流量入口</td>
+</tr>
+<tr>
+<td>🟢 P2</td>
+<td>市场页面</td>
+<td>地区定向 SEO</td>
+</tr>
+<tr>
+<td>🟢 P2</td>
+<td>FAQ、条款、隐私</td>
+<td>合规与长尾流量</td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 内容集合设计</h3>
+<p><strong>产品集合（products）</strong>：</p>
+<pre><code class="language-yaml">slug: hydraulic-oil-press
+title: { en: &quot;Hydraulic Oil Press&quot;, fr: &quot;...&quot;, ar: &quot;...&quot;, id: &quot;...&quot; }
+description: { en: &quot;...&quot;, ... }
+images: [&quot;/images/products/...&quot;]
+model: HN325
+category: core
+specifications: [{ name: &quot;Capacity&quot;, value: &quot;100 kg/batch&quot; }]
+faq: [{ question: &quot;...&quot;, answer: &quot;...&quot; }]
+related: [&quot;cold-press-oil-machine&quot;]
+applicableSeeds: [&quot;sesame&quot;, &quot;peanut&quot;, &quot;coconut&quot;]
+seoKeywords: &quot;hydraulic oil press, oil press machine&quot;
+</code></pre>
+<p><strong>资源集合（resources）</strong>：</p>
+<pre><code class="language-yaml">slug: hydraulic-oil-press-buying-guide
+title: { en: &quot;Hydraulic Oil Press Buying Guide&quot;, ... }
+description: { en: &quot;...&quot;, ... }
+type: guide
+publishedAt: 2026-07-01
+tags: [&quot;buying&quot;, &quot;guide&quot;, &quot;hydraulic&quot;]
+</code></pre>
+<hr />
+<h2>5. 核心功能实现</h2>
+<h3>5.1 响应式导航</h3>
+<p><strong>文件</strong>：<code>src/components/Navbar.astro</code></p>
+<p><strong>关键特性</strong>：
+- 桌面端：水平导航 + 下拉菜单
+- 移动端：汉堡菜单 + 抽屉式导航
+- 当前页面高亮
+- 语言切换器（EN/FR/AR/ID）
+- 滚动时背景变化
+- 粘性导航栏</p>
+<h3>5.2 产品详情页模板</h3>
+<p><strong>文件</strong>：<code>src/pages/products/[slug].astro</code></p>
+<p><strong>关键特性</strong>：
+- 产品图片画廊（主图 + 缩略图切换）
+- 产品视频嵌入
+- 规格表格
+- FAQ 手风琴
+- 相关产品推荐
+- Schema.org Product + FAQPage + BreadcrumbList 结构化数据
+- 联系 CTA 按钮</p>
+<h3>5.3 联系表单</h3>
+<p><strong>文件</strong>：<code>src/pages/contact.astro</code></p>
+<p><strong>关键特性</strong>：
+- AJAX 异步提交（Formspree）
+- 字段验证（姓名、邮箱、必填消息）
+- 多语言错误提示
+- 成功/失败状态提示
+- 防垃圾邮件（蜜罐字段）
+- Google reCAPTCHA v2（可选）</p>
+<p><strong>⚠️ 关键陷阱</strong>：Astro 的 <code>define:vars</code> 会将脚本包裹在 IIFE 中，导致 <code>onsubmit</code> 找不到 <code>submitForm</code> 函数。解决方案是在函数定义后添加：</p>
+<pre><code class="language-javascript">window.submitForm = submitForm;  // 暴露到全局作用域
+</code></pre>
+<h3>5.4 多语言路由</h3>
+<p><strong>实现方式</strong>：</p>
+<pre><code>英语：/products/hydraulic-oil-press
+法语：/fr/products/hydraulic-oil-press
+阿拉伯语：/ar/products/hydraulic-oil-press
+印尼语：/id/products/hydraulic-oil-press
+</code></pre>
+<p><strong>语言切换器</strong>：</p>
+<pre><code class="language-javascript">function localePath(path: string, locale: string): string {
+  if (locale === 'en') return path;
+  return `/${locale}${path}`;
+}
+</code></pre>
+<hr />
+<h2>6. SEO 优化全流程</h2>
+<h3>6.1 技术 SEO 清单</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>状态</th>
+<th>实现方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>站点地图</td>
+<td>✅</td>
+<td><code>@astrojs/sitemap</code> 自动生成</td>
+</tr>
+<tr>
+<td>robots.txt</td>
+<td>✅</td>
+<td>自定义 <code>/public/robots.txt</code></td>
+</tr>
+<tr>
+<td>Canonical URL</td>
+<td>✅</td>
+<td>每个页面设置唯一 canonical</td>
+</tr>
+<tr>
+<td>hreflang 标签</td>
+<td>✅</td>
+<td>4 种语言 + x-default</td>
+</tr>
+<tr>
+<td>Open Graph</td>
+<td>✅</td>
+<td>og:title/description/image/url</td>
+</tr>
+<tr>
+<td>Twitter Card</td>
+<td>✅</td>
+<td>twitter:card=summary_large_image</td>
+</tr>
+<tr>
+<td>Schema.org</td>
+<td>✅</td>
+<td>Organization, BreadcrumbList, FAQPage, Product, Article</td>
+</tr>
+<tr>
+<td>面包屑</td>
+<td>✅</td>
+<td>HTML 面包屑导航</td>
+</tr>
+<tr>
+<td>页面速度</td>
+<td>✅</td>
+<td>PageSpeed &gt; 85 分</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>✅</td>
+<td>Cloudflare 自动</td>
+</tr>
+<tr>
+<td>移动端优化</td>
+<td>✅</td>
+<td>响应式设计</td>
+</tr>
+<tr>
+<td>图片 Alt</td>
+<td>✅</td>
+<td>所有图片有意义 alt 属性</td>
+</tr>
+<tr>
+<td>内部链接</td>
+<td>✅</td>
+<td>导航、面包屑、相关产品</td>
+</tr>
+<tr>
+<td>404 页面</td>
+<td>✅</td>
+<td>自定义 404.astro</td>
+</tr>
+</tbody>
+</table>
+<h3>6.2 Schema.org 结构化数据</h3>
+<p><strong>Organization</strong>（所有页面）：</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;Organization&quot;,
+  &quot;name&quot;: &quot;Shandong Haonuo Machinery Equipment Group Co., Ltd.&quot;,
+  &quot;url&quot;: &quot;https://www.hydoilpress.com&quot;,
+  &quot;logo&quot;: &quot;https://www.hydoilpress.com/images/logo.png&quot;,
+  &quot;address&quot;: {
+    &quot;@type&quot;: &quot;PostalAddress&quot;,
+    &quot;streetAddress&quot;: &quot;No. 88, Nanyang Road&quot;,
+    &quot;addressLocality&quot;: &quot;Qingzhou&quot;,
+    &quot;addressRegion&quot;: &quot;Shandong&quot;,
+    &quot;postalCode&quot;: &quot;262500&quot;,
+    &quot;addressCountry&quot;: &quot;CN&quot;
+  },
+  &quot;contactPoint&quot;: {
+    &quot;@type&quot;: &quot;ContactPoint&quot;,
+    &quot;telephone&quot;: &quot;+86-xxx-xxxxxxx&quot;,
+    &quot;contactType&quot;: &quot;sales&quot;,
+    &quot;email&quot;: &quot;info@hydoilpress.com&quot;,
+    &quot;availableLanguage&quot;: [&quot;English&quot;, &quot;French&quot;, &quot;Arabic&quot;, &quot;Indonesian&quot;]
+  },
+  &quot;sameAs&quot;: [
+    &quot;https://www.linkedin.com/company/...&quot;,
+    &quot;https://www.facebook.com/...&quot;,
+    &quot;https://www.alibaba.com/...&quot;
+  ]
+}
+</code></pre>
+<p><strong>Product</strong>（产品页）：</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;Product&quot;,
+  &quot;name&quot;: &quot;Hydraulic Oil Press HN325&quot;,
+  &quot;description&quot;: &quot;...&quot;,
+  &quot;image&quot;: &quot;...&quot;,
+  &quot;brand&quot;: { &quot;@type&quot;: &quot;Brand&quot;, &quot;name&quot;: &quot;Haonuo&quot; },
+  &quot;manufacturer&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;Shandong Haonuo Machinery Equipment Group Co., Ltd.&quot;,
+    &quot;url&quot;: &quot;https://www.hydoilpress.com&quot;
+  },
+  &quot;offers&quot;: {
+    &quot;@type&quot;: &quot;Offer&quot;,
+    &quot;priceCurrency&quot;: &quot;USD&quot;,
+    &quot;availability&quot;: &quot;https://schema.org/InStock&quot;,
+    &quot;url&quot;: &quot;https://www.hydoilpress.com/products/hydraulic-oil-press&quot;
+  }
+}
+</code></pre>
+<h3>6.3 关键词策略</h3>
+<table>
+<thead>
+<tr>
+<th>关键词类型</th>
+<th>示例</th>
+<th>搜索意图</th>
+<th>目标页面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心产品词</td>
+<td>hydraulic oil press</td>
+<td>采购</td>
+<td>产品列表、核心产品页</td>
+</tr>
+<tr>
+<td>型号词</td>
+<td>HN325 hydraulic oil press</td>
+<td>精准采购</td>
+<td>产品详情页</td>
+</tr>
+<tr>
+<td>油料词</td>
+<td>sesame oil press machine</td>
+<td>按需求采购</td>
+<td>解决方案页</td>
+</tr>
+<tr>
+<td>问题词</td>
+<td>how to choose oil press</td>
+<td>信息搜索</td>
+<td>资源文章</td>
+</tr>
+<tr>
+<td>地区词</td>
+<td>oil press manufacturer in Kenya</td>
+<td>地区采购</td>
+<td>市场页面</td>
+</tr>
+<tr>
+<td>对比词</td>
+<td>cold press vs hot press oil</td>
+<td>信息搜索</td>
+<td>对比文章</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. 多语言国际化</h2>
+<h3>7.1 翻译文件结构</h3>
+<p><code>src/i18n/</code>
+├── en.json    # 英语（默认）
+├── fr.json    # 法语
+├── ar.json    # 阿拉伯语
+└── id.json    # 印尼语</p>
+<pre><code>
+### 7.2 翻译文件格式
+
+```json
+{
+  &quot;nav&quot;: {
+    &quot;home&quot;: &quot;Home&quot;,
+    &quot;products&quot;: &quot;Products&quot;,
+    &quot;solutions&quot;: &quot;Solutions&quot;,
+    &quot;resources&quot;: &quot;Resources&quot;,
+    &quot;about&quot;: &quot;About Us&quot;,
+    &quot;contact&quot;: &quot;Contact&quot;
+  },
+  &quot;common&quot;: {
+    &quot;companyDesc&quot;: &quot;Professional hydraulic oil press manufacturer since 2010...&quot;,
+    &quot;orgDesc&quot;: &quot;Professional hydraulic oil press manufacturer...&quot;
+  },
+  &quot;contact&quot;: {
+    &quot;title&quot;: &quot;Send Us an Inquiry&quot;,
+    &quot;subtitle&quot;: &quot;We respond within 24 hours&quot;,
+    &quot;name&quot;: &quot;Your Name&quot;,
+    &quot;email&quot;: &quot;Email Address&quot;,
+    &quot;submit&quot;: &quot;Send Inquiry&quot;
+  }
+}
+</code></pre>
+<h3>7.3 语言切换实现</h3>
+<pre><code class="language-astro">---
+const currentLocale = Astro.params.locale || 'en';
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  if (currentLocale === 'en') return path;
+  return `/${currentLocale}${path}`;
+}
+---
+
+&lt;!-- Language Switcher --&gt;
+&lt;nav&gt;
+  {['en', 'fr', 'ar', 'id'].map(locale =&gt; (
+    &lt;a href={localePath(currentPath)}&gt;
+      {localeLabels[locale]}
+    &lt;/a&gt;
+  ))}
+&lt;/nav&gt;
+</code></pre>
+<h3>7.4 hreflang 标签</h3>
+<pre><code class="language-html">&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://www.hydoilpress.com/products&quot; /&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;fr&quot; href=&quot;https://www.hydoilpress.com/fr/products&quot; /&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;ar&quot; href=&quot;https://www.hydoilpress.com/ar/products&quot; /&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;id&quot; href=&quot;https://www.hydoilpress.com/id/products&quot; /&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://www.hydoilpress.com/products&quot; /&gt;
+</code></pre>
+<hr />
+<h2>8. 部署与上线</h2>
+<h3>8.1 GitHub 仓库设置</h3>
+<pre><code class="language-bash"># 初始化 Git
+git init
+git add .
+git commit -m &quot;Initial commit&quot;
+
+# 创建 GitHub 仓库后
+git remote add origin https://github.com/username/hydoilpress.git
+git push -u origin main
+</code></pre>
+<h3>8.2 Cloudflare Pages 部署</h3>
+<p><strong>步骤</strong>：
+1. 登录 <a href="https://dash.cloudflare.com">Cloudflare</a>
+2. 添加 <code>hydoilpress.com</code> 域名
+3. 配置 DNS 记录（从域名注册商切换）
+4. 创建 Pages 项目，连接 GitHub 仓库</p>
+<p><strong>构建配置</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>设置</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>构建命令</td>
+<td><code>npm run build</code></td>
+</tr>
+<tr>
+<td>输出目录</td>
+<td><code>dist</code></td>
+</tr>
+<tr>
+<td>Node.js 版本</td>
+<td><code>18</code>（默认）</td>
+</tr>
+<tr>
+<td>环境变量</td>
+<td>（如有需要）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>自动部署</strong>：每次 push 到 main 分支，Cloudflare 自动构建部署。</p>
+<h3>8.3 DNS 配置</h3>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>主机</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 记录</td>
+<td>@</td>
+<td>Cloudflare IP</td>
+<td>根域名</td>
+</tr>
+<tr>
+<td>A 记录</td>
+<td>www</td>
+<td>Cloudflare IP</td>
+<td>www 子域名</td>
+</tr>
+<tr>
+<td>MX 记录</td>
+<td>@</td>
+<td>ASPMX.L.GOOGLE.COM</td>
+<td>Google Workspace 邮件</td>
+</tr>
+<tr>
+<td>TXT 记录</td>
+<td>@</td>
+<td>google-site-verification=xxx</td>
+<td>Google Search Console 验证</td>
+</tr>
+</tbody>
+</table>
+<h3>8.4 上线后立即完成</h3>
+<ol>
+<li>✅ 提交 sitemap 到 Google Search Console</li>
+<li>✅ 提交 sitemap 到 Bing Webmaster Tools</li>
+<li>✅ 添加 Bing 验证 meta 标签</li>
+<li>✅ 设置 non-www → www 的 301 重定向</li>
+<li>✅ 提交 sitemap 到百度资源平台（中国市场）</li>
+<li>✅ 创建 Google Business Profile</li>
+<li>✅ 创建 Google Analytics 4 属性</li>
+<li>✅ 添加 Cookie 同意 banner（GDPR 合规）</li>
+</ol>
+<hr />
+<h2>9. 上线后优化记录</h2>
+<h3>9.1 第一阶段：内容完善（上线后 1 周）</h3>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>说明</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>添加所有产品详情页</td>
+<td>核心产品 5+ 型号</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>添加所有解决方案页</td>
+<td>按油料类型 10+ 页面</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>添加资源文章</td>
+<td>技术指南、对比、FAQ</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>完善 FAQ 页面</td>
+<td>客户高频问题</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>完善联系表单</td>
+<td>AJAX 提交、多语言</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>填充所有语言版本</td>
+<td>法语/阿拉伯语/印尼语</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3>9.2 第二阶段：性能优化（上线后 2 周）</h3>
+<table>
+<thead>
+<tr>
+<th>优化项</th>
+<th>优化前</th>
+<th>优化后</th>
+<th>提升</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PageSpeed 移动端</td>
+<td>74 分</td>
+<td>86 分</td>
+<td>+12 分</td>
+</tr>
+<tr>
+<td>FCP（首次内容绘制）</td>
+<td>2.7s</td>
+<td>~2.0s</td>
+<td>-26%</td>
+</tr>
+<tr>
+<td>LCP（最大内容绘制）</td>
+<td>5.7s</td>
+<td>~4.0s</td>
+<td>-30%</td>
+</tr>
+<tr>
+<td>渲染阻塞</td>
+<td>Google Fonts 750ms</td>
+<td>移除阻塞</td>
+<td>-100%</td>
+</tr>
+<tr>
+<td>图片优化</td>
+<td>842KB 源图</td>
+<td>保持合理尺寸</td>
+<td>平衡质量与速度</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优化措施</strong>：
+- Google Fonts 从 CSS @import 改为 HTML <code>&lt;link&gt;</code> 标签
+- 产品图片添加 <code>width/height</code> 防止 CLS
+- Hero 图片添加 <code>fetchpriority="high"</code>
+- Cloudflare 设置静态资源缓存规则
+- 图片格式统一为 WebP</p>
+<h3>9.3 第三阶段：SEO 增强（上线后 3 周）</h3>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>说明</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>修复多 H1 标签</td>
+<td>首页轮播从 3 个 H1 改为 1 个 H1 + 2 个 H2</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>统一 URL 版本</td>
+<td>设置 non-www → www 的 301 重定向</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>完善 Schema.org</td>
+<td>每个产品页添加 Product 结构化数据</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>添加 Google Ads 代码</td>
+<td>转化跟踪</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>提交重要页面到 Search Console</td>
+<td>手动提交核心页面加速收录</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3>9.4 第四阶段：转化优化（持续进行）</h3>
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>说明</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表单 AJAX 提交</td>
+<td>修复跳转问题，改为当前页显示结果</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>询盘回复流程</td>
+<td>建立 SOP 回复模板</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>报价单模板</td>
+<td>标准化报价格式</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>客户跟进流程</td>
+<td>WhatsApp 跟进 SOP</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>10. 问题与解决方案汇总</h2>
+<h3>10.1 Astro IIFE 问题</h3>
+<p><strong>问题</strong>：联系表单 <code>onsubmit="return submitForm(event)"</code> 失效，点击后跳转到 Formspree 感谢页。</p>
+<p><strong>根因</strong>：Astro 的 <code>define:vars</code> 将 <code>&lt;script&gt;</code> 包裹在 IIFE 中，<code>submitForm</code> 函数不在全局作用域。</p>
+<p><strong>解决方案</strong>：</p>
+<pre><code class="language-javascript">// 函数定义后添加
+window.submitForm = submitForm;
+</code></pre>
+<p><strong>经验教训</strong>：使用 Astro 的 <code>define:vars</code> 时，所有需要被 HTML 属性调用的函数必须显式暴露到 <code>window</code> 上。</p>
+<h3>10.2 多 H1 标签</h3>
+<p><strong>问题</strong>：Bing Webmaster 检测到首页有 3 个 H1 标签。</p>
+<p><strong>解决方案</strong>：保留第一个轮播的 H1，其余改为 H2（样式不变）。</p>
+<p><strong>经验教训</strong>：每个页面只能有一个 H1 标签，其他重要标题用 H2。</p>
+<h3>10.3 网站收录缓慢</h3>
+<p><strong>问题</strong>：上线 4 天，Google 仅收录 1 页。</p>
+<p><strong>根因</strong>：缺少 non-www → www 的 301 重定向，Google 将两个版本视为独立网站。</p>
+<p><strong>解决方案</strong>：在 Cloudflare 设置重定向规则。</p>
+<p><strong>经验教训</strong>：
+1. 新站收录需要 2-4 周，这是正常节奏
+2. 必须在上线前就设置好 301 重定向
+3. Google Search Console 和 Bing Webmaster Tools 都要提交 sitemap</p>
+<h3>10.4 阿拉伯语文件 Frontmatter 错误</h3>
+<p><strong>问题</strong>：阿拉伯语版本构建失败，报错 <code>Unexpected "return"</code>。</p>
+<p><strong>根因</strong>：子代理同步时多写了一个 <code>---</code>，导致 YAML frontmatter 结构损坏。</p>
+<p><strong>解决方案</strong>：检查并修复 frontmatter 的 <code>---</code> 分隔符。</p>
+<p><strong>经验教训</strong>：每次修改多语言版本后，必须运行 <code>npm run build</code> 验证。</p>
+<h3>10.5 PageSpeed 与用户体验平衡</h3>
+<p><strong>问题</strong>：为提升 PageSpeed 添加 <code>loading="lazy"</code> 导致快速滚动时图片加载慢。</p>
+<p><strong>解决方案</strong>：移除产品图片的 lazy loading，保留 Hero 图片的 <code>fetchpriority="high"</code>。</p>
+<p><strong>经验教训</strong>：
+- 不要为了 PageSpeed 分数牺牲用户体验
+- Hero 视频不要用 <code>preload="none"</code>，会影响电脑端体验
+- 产品卡片图片保持即时加载，避免滚动时出现空白</p>
+<h3>10.6 价格信息移除</h3>
+<p><strong>问题</strong>：产品页面的价格信息会被竞争对手利用。</p>
+<p><strong>解决方案</strong>：所有价格相关内容改为"联系获取报价"或直接移除价格。</p>
+<p><strong>经验教训</strong>：B2B 独立站不要公开具体价格，保持议价空间。</p>
+<hr />
+<h2>11. 运营与增长策略</h2>
+<h3>11.1 第一个月重点</h3>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>任务</th>
+<th>预算</th>
+<th>预期效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 P0</td>
+<td>Google Search Console 提交 sitemap</td>
+<td>免费</td>
+<td>收录加速</td>
+</tr>
+<tr>
+<td>🔴 P0</td>
+<td>Google Business Profile</td>
+<td>免费</td>
+<td>本地搜索展示</td>
+</tr>
+<tr>
+<td>🔴 P0</td>
+<td>阿里巴巴平台注册</td>
+<td>免费</td>
+<td>高质量外链 + 询盘</td>
+</tr>
+<tr>
+<td>🟡 P1</td>
+<td>Google Ads 小预算测试</td>
+<td>¥4,000</td>
+<td>获取精准询盘</td>
+</tr>
+<tr>
+<td>🟡 P1</td>
+<td>每周发布 1 篇资源文章</td>
+<td>免费</td>
+<td>自然 SEO 流量</td>
+</tr>
+<tr>
+<td>🟢 P2</td>
+<td>LinkedIn/Facebook 企业页</td>
+<td>免费</td>
+<td>社媒外链</td>
+</tr>
+</tbody>
+</table>
+<h3>11.2 Google Ads 投放策略</h3>
+<p><strong>初始预算</strong>：¥33/天（¥1,000/月测试）</p>
+<p><strong>关键词选择</strong>：
+| 关键词组 | 匹配类型 | 出价 |
+|----------|----------|------|
+| [hydraulic oil press] | 精确匹配 | ¥15-30 |
+| "oil press machine" | 短语匹配 | ¥15-25 |
+| "sesame oil press" | 短语匹配 | ¥10-20 |
+| "hydraulic oil press manufacturer" | 短语匹配 | ¥8-15 |</p>
+<p><strong>地区定向</strong>：沙特、阿联酋、埃及、肯尼亚、尼日利亚</p>
+<p><strong>否定关键词</strong>：<code>-used -second -cheap -free -how -price</code></p>
+<h3>11.3 内容运营日历</h3>
+<table>
+<thead>
+<tr>
+<th>频率</th>
+<th>内容类型</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每周 1 篇</td>
+<td>技术指南</td>
+<td>"How to Choose the Right Oil Press Machine"</td>
+</tr>
+<tr>
+<td>每周 1 篇</td>
+<td>对比文章</td>
+<td>"Hydraulic vs Screw Oil Press: Which is Better?"</td>
+</tr>
+<tr>
+<td>每月 1 篇</td>
+<td>客户案例</td>
+<td>"Senegal Peanut Oil Factory Installation"</td>
+</tr>
+<tr>
+<td>每月 1 篇</td>
+<td>市场分析</td>
+<td>"Top Oil Press Markets in Africa 2026"</td>
+</tr>
+</tbody>
+</table>
+<h3>11.4 外链建设计划</h3>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>难度</th>
+<th>时间</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阿里巴巴平台注册</td>
+<td>⭐</td>
+<td>2 小时</td>
+<td>高</td>
+</tr>
+<tr>
+<td>LinkedIn 企业页</td>
+<td>⭐</td>
+<td>1 小时</td>
+<td>中</td>
+</tr>
+<tr>
+<td>Facebook 主页</td>
+<td>⭐</td>
+<td>1 小时</td>
+<td>中</td>
+</tr>
+<tr>
+<td>YouTube 频道</td>
+<td>⭐⭐</td>
+<td>3 小时</td>
+<td>高</td>
+</tr>
+<tr>
+<td>行业目录提交</td>
+<td>⭐⭐</td>
+<td>2 小时</td>
+<td>中</td>
+</tr>
+<tr>
+<td>客座博客投稿</td>
+<td>⭐⭐⭐</td>
+<td>长期</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>12. 附录：核心配置文件</h2>
+<h3>12.1 Cloudflare 重定向规则</h3>
+<table>
+<thead>
+<tr>
+<th>设置</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>规则名称</td>
+<td>Non-WWW to WWW</td>
+</tr>
+<tr>
+<td>表达式</td>
+<td><code>http.request.hostname contains "hydoilpress.com" and not(http.request.hostname contains "www.")</code></td>
+</tr>
+<tr>
+<td>状态码</td>
+<td>301</td>
+</tr>
+<tr>
+<td>目标 URL</td>
+<td><code>concat("https://www.", http.request.hostname, http.request.uri)</code></td>
+</tr>
+<tr>
+<td>保留查询字符串</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3>12.2 robots.txt</h3>
+<pre><code>User-agent: *
+Allow: /
+Sitemap: https://www.hydoilpress.com/sitemap-index.xml
+</code></pre>
+<h3>12.3 谷歌验证标签</h3>
+<pre><code class="language-html">&lt;meta name=&quot;google-site-verification&quot; content=&quot;YOUR_VERIFICATION_CODE&quot; /&gt;
+&lt;meta name=&quot;msvalidate.01&quot; content=&quot;1BBADBD1B20D77F8EFD40C58597F8133&quot; /&gt;
+</code></pre>
+<h3>12.4 Google Analytics 代码</h3>
+<pre><code class="language-html">&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-GZLCCQTLZF7&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GZLCCQTLZF7');
+&lt;/script&gt;
+</code></pre>
+<h3>12.5 Google Ads 转化代码</h3>
+<pre><code class="language-html">&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=AW_MEASUREMENT_ID&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW_MEASUREMENT_ID');
+&lt;/script&gt;
+</code></pre>
+<h3>12.6 Cookie 同意代码</h3>
+<pre><code class="language-javascript">// Cookie 同意 banner 逻辑
+function setCookie(name, value, days) {
+  const expires = new Date();
+  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+}
+
+// 检查是否已同意
+if (document.cookie.includes('cookie_consent=accepted')) {
+  // 加载 Google Analytics
+  loadGA();
+}
+</code></pre>
+<hr />
+<h2>附录 A：构建命令速查</h2>
+<pre><code class="language-bash"># 开发模式
+npm run dev
+
+# 生产构建
+npm run build
+
+# 预览构建结果
+npm run preview
+
+# 清理缓存
+npm run clean
+</code></pre>
+<h2>附录 B：文件大小预算</h2>
+<table>
+<thead>
+<tr>
+<th>资源类型</th>
+<th>建议上限</th>
+<th>实现方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>产品图片</td>
+<td>200KB</td>
+<td>WebP 格式，合理分辨率</td>
+</tr>
+<tr>
+<td>Hero 图片</td>
+<td>300KB</td>
+<td>WebP 格式</td>
+</tr>
+<tr>
+<td>视频</td>
+<td>5MB</td>
+<td>H.264 压缩，合理时长</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>50KB</td>
+<td>Tailwind JIT 自动优化</td>
+</tr>
+<tr>
+<td>JS</td>
+<td>30KB</td>
+<td>Astro 零 JS + 必要脚本</td>
+</tr>
+</tbody>
+</table>
+<h2>附录 C：Checklist</h2>
+<ul>
+<li>[x] 域名注册完成</li>
+<li>[x] 域名 DNS 配置完成</li>
+<li>[x] Cloudflare Pages 部署完成</li>
+<li>[x] SSL 证书自动签发</li>
+<li>[x] Google Search Console 验证通过</li>
+<li>[x] Bing Webmaster Tools 验证通过</li>
+<li>[x] Sitemap 提交</li>
+<li>[x] robots.txt 配置</li>
+<li>[x] Canonical URL 设置</li>
+<li>[x] hreflang 标签设置</li>
+<li>[x] Schema.org 结构化数据</li>
+<li>[x] 所有页面 1 个 H1 标签</li>
+<li>[x] 响应式设计</li>
+<li>[x] PageSpeed &gt; 85 分</li>
+<li>[x] 联系表单 AJAX 提交</li>
+<li>[x] 多语言版本（4 种）</li>
+<li>[x] Cookie 同意 banner</li>
+<li>[x] Google Analytics 4</li>
+<li>[x] Google Ads 转化跟踪</li>
+<li>[x] 询盘回复 SOP 建立</li>
+<li>[ ] 阿里巴巴平台注册</li>
+<li>[ ] Google Business Profile</li>
+<li>[ ] LinkedIn 企业页</li>
+<li>[ ] Google Ads 首次投放</li>
+<li>[ ] 持续内容更新</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>文档维护者</strong>：Shandong Haonuo Machinery Equipment Group Co., Ltd.<br />
+<strong>技术支持</strong>：AI 开发助手<br />
+<strong>更新频率</strong>：每月一次或重大变更时更新</p>
+</blockquote>
+</body>
+</html>
