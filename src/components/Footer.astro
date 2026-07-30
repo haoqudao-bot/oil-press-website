@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 const { locale = 'en' } = Astro.props;
 import { getTranslations } from '../i18n';
 const t = getTranslations(locale as any);
@@ -81,14 +81,16 @@ const productLinks = [
       <div>
         <h3 class="font-display text-lg text-white mb-4">{t.footer.contactInfo}</h3>
         <ul class="space-y-3 text-sm text-steel-400">
-          <!-- Email -->
-          <li class="flex items-start gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <div>
-              <div class="text-xs text-steel-500">{t.contact.email}</div>
-              <div class="flex items-center gap-1.5 flex-wrap">
-                <a href="mailto:info@hydoilpress.com" class="hover:text-amber-500 transition-colors font-medium">info@hydoilpress.com</a>
-                <button data-copy-email-footer type="button" class="text-amber-500 hover:text-amber-400 text-xs font-medium transition-colors">{t.chat.copyId}</button>
+          <!-- Email (Highlighted) -->
+          <li class="flex items-start gap-3 p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg">
+            <div class="w-8 h-8 bg-amber-500 rounded-md flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="text-xs text-steel-400 mb-0.5">{t.contact.email}</div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <a href="mailto:info@hydoilpress.com" class="text-amber-400 hover:text-amber-300 font-bold transition-colors">info@hydoilpress.com</a>
+                <button data-copy-email-footer type="button" class="text-amber-500 hover:text-amber-300 text-xs font-medium underline transition-colors">{t.chat.copyId}</button>
                 <span data-copy-email-toast class="hidden text-green-500 text-xs">{t.chat.copied}</span>
               </div>
             </div>
