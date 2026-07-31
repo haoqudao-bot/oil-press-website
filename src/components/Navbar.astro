@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { getTranslations } from '../i18n';
 
 const { locale = 'en' } = Astro.props;
@@ -6,7 +6,8 @@ const currentPath = Astro.url.pathname || '/';
 
 const t = getTranslations(locale as any);
 
-const localeLabels: Record<string, string> = { en: 'EN', fr: 'FR', ar: 'العربية', id: 'ID' };
+const localeLabels: Record<string, string> = { en: '🇬🇧 EN', fr: '🇫🇷 FR', ar: '🇸🇦 العربية', id: '🇮🇩 ID' };
+const localeFlags: Record<string, string> = { en: '🇬🇧', fr: '🇫🇷', ar: '🇸🇦', id: '🇮🇩' };
 const locales = ['en', 'fr', 'ar', 'id'] as const;
 
 // Pages that only exist in English (no [locale] version)
@@ -100,11 +101,11 @@ const comparisonItems = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
-      <a href={localePath('/')} class="flex items-center gap-2 shrink-0">
-        <div class="w-10 h-10 bg-steel-900 rounded-lg flex items-center justify-center">
+      <a href={localePath('/')} class="flex items-center gap-2 min-w-0">
+        <div class="w-10 h-10 bg-steel-900 rounded-lg flex items-center justify-center shrink-0">
           <span class="text-amber-500 font-display text-xl font-bold">HN</span>
         </div>
-        <span class="font-display text-lg md:text-xl text-steel-900 tracking-wide leading-tight">
+        <span class="font-display text-lg md:text-xl text-steel-900 tracking-wide leading-tight min-w-0 whitespace-nowrap">
           HAONUO<br class="hidden sm:block" />
           <span class="text-sm font-normal tracking-widest">MACHINERY</span>
         </span>
