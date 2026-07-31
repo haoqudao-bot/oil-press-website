@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -143,24 +143,14 @@ const whatToExpect = [
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label for="country" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.country}</label>
-                  <select
-                    id="country"
-                    name="country"
-                    class="w-full px-4 py-3 rounded-lg border border-steel-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-colors text-sm bg-white"
-                  >
-                    <option value="">{t.contact.selectCountry}</option>
-                    <option value="Saudi Arabia">{currentLocale === 'fr' ? 'Arabie Saoudite' : currentLocale === 'ar' ? 'المملكة العربية السعودية' : 'Saudi Arabia'}</option>
-                    <option value="UAE">{currentLocale === 'fr' ? 'Émirats Arabes Unis' : currentLocale === 'ar' ? 'الإمارات العربية المتحدة' : 'UAE'}</option>
-                    <option value="Egypt">{currentLocale === 'fr' ? 'Égypte' : currentLocale === 'ar' ? 'مصر' : 'Egypt'}</option>
-                    <option value="Nigeria">{currentLocale === 'fr' ? 'Nigéria' : currentLocale === 'ar' ? 'نيجيريا' : 'Nigeria'}</option>
-                    <option value="Indonesia">{currentLocale === 'fr' ? 'Indonésie' : currentLocale === 'ar' ? 'إندونيسيا' : 'Indonesia'}</option>
-                    <option value="Vietnam">{currentLocale === 'fr' ? 'Viêt Nam' : currentLocale === 'ar' ? 'فيتنام' : 'Vietnam'}</option>
-                    <option value="Thailand">{currentLocale === 'fr' ? 'Thaïlande' : currentLocale === 'ar' ? 'تايلاند' : 'Thailand'}</option>
-                    <option value="Kazakhstan">{currentLocale === 'fr' ? 'Kazakhstan' : currentLocale === 'ar' ? 'كازاخستان' : 'Kazakhstan'}</option>
-                    <option value="Uzbekistan">{currentLocale === 'fr' ? 'Ouzbékistan' : currentLocale === 'ar' ? 'أوزبكستان' : 'Uzbekistan'}</option>
-                    <option value="Other">{t.contact.other}</option>
-                  </select>
+                  <label for="phone" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.phoneLabel}</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder={t.contact.phonePlaceholder}
+                    class="w-full px-4 py-3 rounded-lg border border-steel-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-colors text-sm"
+                  />
                 </div>
                 <div>
                   <label for="company" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.company}</label>
@@ -174,15 +164,41 @@ const whatToExpect = [
                 </div>
               </div>
 
-              <div>
-                <label for="product" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.productInterest}</label>
-                <input
-                  type="text"
-                  id="product"
-                  name="product"
-                  placeholder={t.contact.productPlaceholder}
-                  class="w-full px-4 py-3 rounded-lg border border-steel-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-colors text-sm"
-                />
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="country" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.country}</label>
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    list="country-list"
+                    placeholder={t.contact.countryPlaceholder}
+                    autocomplete="off"
+                    class="w-full px-4 py-3 rounded-lg border border-steel-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-colors text-sm"
+                  />
+                  <datalist id="country-list">
+                    <option value="Saudi Arabia">{currentLocale === 'fr' ? 'Arabie Saoudite' : currentLocale === 'ar' ? 'المملكة العربية السعودية' : 'Saudi Arabia'}</option>
+                    <option value="UAE">{currentLocale === 'fr' ? 'Émirats Arabes Unis' : currentLocale === 'ar' ? 'الإمارات العربية المتحدة' : 'UAE'}</option>
+                    <option value="Egypt">{currentLocale === 'fr' ? 'Égypte' : currentLocale === 'ar' ? 'مصر' : 'Egypt'}</option>
+                    <option value="Nigeria">{currentLocale === 'fr' ? 'Nigéria' : currentLocale === 'ar' ? 'نيجيريا' : 'Nigeria'}</option>
+                    <option value="Indonesia">{currentLocale === 'fr' ? 'Indonésie' : currentLocale === 'ar' ? 'إندونيسيا' : 'Indonesia'}</option>
+                    <option value="Vietnam">{currentLocale === 'fr' ? 'Viêt Nam' : currentLocale === 'ar' ? 'فيتنام' : 'Vietnam'}</option>
+                    <option value="Thailand">{currentLocale === 'fr' ? 'Thaïlande' : currentLocale === 'ar' ? 'تايلاند' : 'Thailand'}</option>
+                    <option value="Kazakhstan">{currentLocale === 'fr' ? 'Kazakhstan' : currentLocale === 'ar' ? 'كازاخستان' : 'Kazakhstan'}</option>
+                    <option value="Uzbekistan">{currentLocale === 'fr' ? 'Ouzbékistan' : currentLocale === 'ar' ? 'أوزبكستان' : 'Uzbekistan'}</option>
+                    <option value="Other">{t.contact.other}</option>
+                  </datalist>
+                </div>
+                <div>
+                  <label for="product" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.productInterest}</label>
+                  <input
+                    type="text"
+                    id="product"
+                    name="product"
+                    placeholder={t.contact.productPlaceholder}
+                    class="w-full px-4 py-3 rounded-lg border border-steel-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-colors text-sm"
+                  />
+                </div>
               </div>
 
               <div>
