@@ -783,7 +783,7 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
   </a>
 </div>
 
-<script>
+<script is:inline>
 function handleInquiry(e){
   e.preventDefault();
   const form = e.target;
@@ -813,6 +813,7 @@ function handleInquiry(e){
   });
   return false;
 }
+window.handleInquiry = handleInquiry;
 </script>
 </body>
 </html>
