@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haonuo Machinery - Logo Final (同宽对齐)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; padding: 40px 20px; }
+  h1 { text-align: center; color: #1B3A5C; margin-bottom: 8px; font-size: 22px; }
+  h2 { text-align: center; color: #627d98; margin-bottom: 30px; font-size: 13px; }
+  .section-label { text-align: center; color: #334e68; margin: 40px 0 20px; font-size: 17px; font-weight: 600; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
+  .card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-align: center; }
+  .card h3 { margin-top: 14px; color: #1B3A5C; font-size: 14px; }
+  .logo-box { display: flex; align-items: center; justify-content: center; padding: 10px; }
+  .navbar-bg { background: #ffffff; border-radius: 12px; padding: 30px 20px; border: 1px solid #eee; }
+  .footer-bg { background: #1A1A2E; border-radius: 12px; padding: 30px 20px; }
+  .orig-bg { background: #ffffff; border-radius: 12px; padding: 30px 20px; border: 2px dashed #bbb; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-left: 8px; }
+</style>
+</head>
+<body>
+<h1>HAONUO Machinery - Logo Final</h1>
+<h2>Fixed: HAONUO & Hydraulic Oil Press same-width aligned · Site colors</h2>
+
+<!-- Original reference -->
+<div class="section-label">① Original (with width fix applied)</div>
+<div class="grid">
+  <div class="card">
+    <div class="logo-box orig-bg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="400" height="250">
+        <defs>
+          <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#051c38"/>
+            <stop offset="100%" stop-color="#0b2341"/>
+          </linearGradient>
+          <linearGradient id="oilGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+            <stop offset="0%" stop-color="#f3cb67"/>
+            <stop offset="35%" stop-color="#e2a737"/>
+            <stop offset="100%" stop-color="#c98218"/>
+          </linearGradient>
+          <linearGradient id="highlightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="50%" stop-color="#ffe89e"/>
+            <stop offset="100%" stop-color="#f3cb67"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(40, 20)">
+          <g id="logo-icon">
+            <path fill="url(#navyGrad)" fill-rule="evenodd" d="
+              M 130,185 L 295,185 L 295,197 L 258,197 L 258,236
+              C 258,237.5 256.5,239 255,239 L 248,239
+              C 246.5,239 245,237.5 245,236 L 245,208
+              C 245,206 243,204 241,204 L 187,204
+              C 185,204 183,206 183,208 L 183,285
+              L 174,285 L 174,197 L 130,197 Z
+              M 196,213 L 232,213
+              C 234,213 235,214 235,216 L 235,238
+              C 235,240 234,241 232,241 L 196,241
+              C 194,241 193,240 193,238 L 193,216
+              C 193,214 194,213 196,213 Z"/>
+            <rect x="200" y="218" width="18" height="18" rx="1" fill="url(#navyGrad)"/>
+            <path fill="url(#oilGrad)" d="
+              M 227,240
+              C 227,240 263,280 263,303
+              C 263,323 247,339 227,339
+              C 207,339 191,323 191,303
+              C 191,280 227,240 227,240 Z"/>
+            <path fill="url(#highlightGrad)" d="
+              M 215,268
+              C 206,280 201,293 201,305
+              C 201,311 202,317 205,322
+              C 201,317 198,310 198,302
+              C 198,290 204,277 213,265
+              C 214.2,263.4 216,265 215,268 Z"/>
+          </g>
+          <g id="logo-text">
+            <!-- HAONUO: stretched to match Hydraulic Oil Press width -->
+            <text x="316" y="250" fill="#081e3d"
+                  font-family="Arial, 'Helvetica Neue', 'Segoe UI', sans-serif"
+                  font-size="52" font-weight="900"
+                  textLength="250" lengthAdjust="spacingAndGlyphs">HAONUO</text>
+            <!-- Hydraulic Oil Press: same textLength for perfect alignment -->
+            <text x="316" y="282" fill="#8e9399"
+                  font-family="Arial, 'Helvetica Neue', 'Segoe UI', sans-serif"
+                  font-size="23.5" font-weight="500"
+                  textLength="250" lengthAdjust="spacingAndGlyphs">Hydraulic Oil Press</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <h3>Original Colors + Width Fix</h3>
+    <p>Only change: both texts forced to same width (250px)</p>
+    <span class="badge" style="background:#e5e7eb;color:#333;">REFERENCE</span>
+  </div>
+</div>
+
+<!-- Navbar version -->
+<div class="section-label">② Navbar Version (Light Background · steel-900 + amber)</div>
+<div class="grid">
+  <div class="card">
+    <div class="logo-box navbar-bg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="400" height="250">
+        <defs>
+          <!-- Steel-900 gradient instead of navy -->
+          <linearGradient id="navyNav" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1B3A5C"/>
+            <stop offset="100%" stop-color="#162d4a"/>
+          </linearGradient>
+          <!-- Site amber gradient for oil drop -->
+          <linearGradient id="oilNav" x1="20%" y1="0%" x2="80%" y2="100%">
+            <stop offset="0%" stop-color="#F0B429"/>
+            <stop offset="50%" stop-color="#E8A838"/>
+            <stop offset="100%" stop-color="#D69E2E"/>
+          </linearGradient>
+          <!-- Highlight for light bg -->
+          <linearGradient id="highlightNav" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#FDE687"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(40, 20)">
+          <g id="logo-icon">
+            <!-- Press body: steel-900 -->
+            <path fill="url(#navyNav)" fill-rule="evenodd" d="
+              M 130,185 L 295,185 L 295,197 L 258,197 L 258,236
+              C 258,237.5 256.5,239 255,239 L 248,239
+              C 246.5,239 245,237.5 245,236 L 245,208
+              C 245,206 243,204 241,204 L 187,204
+              C 185,204 183,206 183,208 L 183,285
+              L 174,285 L 174,197 L 130,197 Z
+              M 196,213 L 232,213
+              C 234,213 235,214 235,216 L 235,238
+              C 235,240 234,241 232,241 L 196,241
+              C 194,241 193,240 193,238 L 193,216
+              C 193,214 194,213 196,213 Z"/>
+            <rect x="200" y="218" width="18" height="18" rx="1" fill="url(#navyNav)"/>
+            <!-- Oil drop: site amber -->
+            <path fill="url(#oilNav)" d="
+              M 227,240
+              C 227,240 263,280 263,303
+              C 263,323 247,339 227,339
+              C 207,339 191,323 191,303
+              C 191,280 227,240 227,240 Z"/>
+            <path fill="url(#highlightNav)" d="
+              M 215,268
+              C 206,280 201,293 201,305
+              C 201,311 202,317 205,322
+              C 201,317 198,310 198,302
+              C 198,290 204,277 213,265
+              C 214.2,263.4 216,265 215,268 Z"/>
+          </g>
+          <g id="logo-text">
+            <!-- HAONUO: steel-900, same width -->
+            <text x="316" y="250" fill="#1B3A5C"
+                  font-family="Arial, 'Helvetica Neue', 'Segoe UI', sans-serif"
+                  font-size="52" font-weight="900"
+                  textLength="250" lengthAdjust="spacingAndGlyphs">HAONUO</text>
+            <!-- Hydraulic Oil Press: steel-500, same width -->
+            <text x="316" y="282" fill="#627d98"
+                  font-family="Arial, 'Helvetica Neue', 'Segoe UI', sans-serif"
+                  font-size="23.5" font-weight="500"
+                  textLength="250" lengthAdjust="spacingAndGlyphs">Hydraulic Oil Press</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <h3>Navbar · Light Background</h3>
+    <p>steel-900 press + amber oil drop + steel-500 subtitle</p>
+    <span class="badge" style="background:#E8A838;color:#1A1A2E;">FOR NAVBAR</span>
+  </div>
+</div>
+
+<!-- Footer version -->
+<div class="section-label">③ Footer Version (Dark Background · charcoal-900)</div>
+<div class="grid">
+  <div class="card">
+    <div class="logo-box footer-bg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="400" height="250">
+        <defs>
+          <!-- Amber-400 for dark bg -->
+          <linearGradient id="navyFt" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F0B429"/>
+            <stop offset="100%" stop-color="#E8A838"/>
+          </linearGradient>
+          <!-- Lighter gold oil drop for dark bg -->
+          <linearGradient id="oilFt" x1="20%" y1="0%" x2="80%" y2="100%">
+            <stop offset="0%" stop-color="#FDE687"/>
+            <stop offset="50%" stop-color="#F0B429"/>
+            <stop offset="100%" stop-color="#E8A838"/>
+          </linearGradient>
+          <!-- Highlight for dark bg -->
+          <linearGradient id="highlightFt" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#FDE687" stop-opacity="0.3"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(40, 20)">
+          <g id="logo-icon">
+            <!-- Press body: amber-400 -->
+            <path fill="url(#navyFt)" fill-rule="evenodd" d="
+              M 130,185 L 295,185 L 295,197 L 258,197 L 258,236
+              C 258,237.5 256.5,239 255,239 L 248,239
+              C 246.5,239 245,237.5 245,236 L 245,208
+              C 245,206 243,204 241,204 L 187,204
+              C 185,204 183,206 183,208 L 183,285
+              L 174,285 L 174,197 L 130,197 Z
+              M 196,213 L 232,213
+              C 234,213 235,214 235,216 L 235,238
+              C 235,240 234,241 232,241 L 196,241
+              C 194,241 193,240 193,238 L 193,216
+              C 193,214 194,213 196,213 Z"/>
+            <rect x="200" y="218" width="18" height="18" rx="1" fill="url(#navyFt)"/>
+            <!-- Oil drop: lighter gold for dark bg -->
+            <path fill="url(#oilFt)" d="
+              M 227,240
+              C 227,240 263,280 263,303
+              C 263,323 247,339 227,339
+              C 207,339 191,323 191,303
+              C 191,280 227,240 227,240 Z"/>
+            <path fill="url(#highlightFt)" d="
+              M 215,268
+              C 206,280 201,293 201,305
+              C 201,311 202,317 205,322
+              C 201,317 198,310 198,302
+              C 198,290 204,277 213,265
+              C 214.2,263.4 216,265 215,268 Z"/>
+          </g>
+          <g id="logo-text">
+            <!-- HAONUO: white for dark bg, same width -->
+            <text x="316" y="250" fill="#ffffff"
+                  font-family="Arial, 'Helvetica Neue', 'Segoe UI', sans-serif"
+                  font-size="52" font-weight="900"
+                  textLength="250" lengthAdjust="spacingAndGlyphs">HAONUO</text>
+            <!-- Hydraulic Oil Press: steel-400, same width -->
+            <text x="316" y="282" fill="#829ab1"
+                  font-family="Arial, 'Helvetica Neue', 'Segoe UI', sans-serif"
+                  font-size="23.5" font-weight="500"
+                  textLength="250" lengthAdjust="spacingAndGlyphs">Hydraulic Oil Press</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <h3>Footer · Dark Background</h3>
+    <p>amber-400 press + light gold drop + white HAONUO + steel-400 subtitle</p>
+    <span class="badge" style="background:#1B3A5C;color:#fff;">FOR FOOTER</span>
+  </div>
+</div>
+
+<!-- What changed -->
+<div class="section-label">④ Summary</div>
+<div class="grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px;">
+  <div class="card" style="padding: 20px;">
+    <div style="font-size: 12px; color:#627d98; line-height:1.8; text-align:left;">
+      <strong style="color:#1B3A5C;">✅ Shape: 100% preserved</strong><br>
+      - Press geometry: identical<br>
+      - Oil drop shape: identical<br>
+      - Oil drop highlight: identical<br>
+      - Font family, sizes: identical<br><br>
+      <strong style="color:#1B3A5C;">✅ Fix applied</strong><br>
+      - HAONUO & Hydraulic Oil Press: now same width via <code style="background:#f0f0f0;padding:1px 4px;border-radius:3px;">textLength="250"</code>
+    </div>
+  </div>
+  <div class="card" style="padding: 20px;">
+    <div style="font-size: 12px; color:#627d98; line-height:1.8; text-align:left;">
+      <strong style="color:#1B3A5C;">✅ Colors adapted</strong><br>
+      - Press: navy → steel-900 (light) / amber-400 (dark)<br>
+      - Oil: original gold → site amber gradient<br>
+      - Text: navy → steel-900 / white<br>
+      - Subtitle: gray → steel-500 / steel-400
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
