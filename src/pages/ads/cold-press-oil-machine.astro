@@ -1,0 +1,822 @@
+---
+const ogImage = 'https://www.hydoilpress.com/images/og-default.webp';
+
+const modelTable = [
+  { model: 'HN325', force: '325 Tons', system: '60 MPa', barrel: '390×800 mm', capacity: '50-80 kg/h', bestFor: 'Soft seeds: Walnut, Almond, Avocado', tag: 'BEST SELLER', hardness: 'Soft' },
+  { model: 'HN355', force: '360 Tons', system: '63 MPa', barrel: '390×800 mm', capacity: '80-120 kg/h', bestFor: 'Medium seeds: Tea Seed, Olive, Premium Oils', tag: '', hardness: 'Medium' },
+  { model: 'HN400', force: '400 Tons', system: '63 MPa', barrel: '390×800 mm', capacity: '120-180 kg/h', bestFor: 'Medium-Hard: Flaxseed, Sesame, Camellia', tag: '', hardness: 'Medium-Hard' },
+  { model: 'HN426', force: '500 Tons', system: '70 MPa', barrel: '390×800 mm', capacity: '180-250 kg/h', bestFor: 'Hard seeds: Coconut VCO, Cold Press, Premium', tag: '', hardness: 'Hard' },
+  { model: 'HN500', force: '620 Tons', system: '75 MPa', barrel: '390×800 mm', capacity: '250-350 kg/h', bestFor: 'Industrial: Large scale, super-hard materials', tag: '', hardness: 'Industrial' },
+];
+
+const quickPicks = [
+  { seed: 'Walnut / Almond', hardness: 'Soft → 325 Tons', model: 'HN325', badge: 'BEST SELLER', desc: 'Most popular for cold press walnut and almond oil. 390mm barrel, 5-100kg per batch. Preserves natural aroma and light color.' },
+  { seed: 'Avocado', hardness: 'Soft → 325 Tons', model: 'HN325', badge: '', desc: 'Cold-pressed avocado oil keeps nutrient value. 325-ton pressure gently extracts oil without damaging quality.' },
+  { seed: 'Tea Seed / Olive', hardness: 'Medium → 400 Tons', model: 'HN400', badge: '', desc: 'Medium pressure for tea seed, olive, and camellia. Cold press to preserve premium oil quality. SS304 option available.' },
+  { seed: 'Coconut (VCO)', hardness: 'Hard → 500 Tons', model: 'HN426', badge: 'VCO GRADE', desc: '500-ton press for virgin coconut oil. SS304 food-grade stainless steel. True cold press ≤45°C for export markets.' },
+  { seed: 'Flaxseed / Hard seeds', hardness: 'Hard → 500 Tons', model: 'HN426', badge: '', desc: 'Flaxseed, perilla, sesame and other hard seeds need 500+ tons. Optional small barrel for concentrated pressure.' },
+  { seed: 'Large scale / Factory', hardness: 'Industrial → 620 Tons', model: 'HN500', badge: 'FLAGSHIP', desc: 'Maximum pressure for super-hard materials. Double-barrel available for continuous production — boosts daily output by 30-50%.' },
+];
+
+const seeds = [
+  { emoji: '🌰', name: 'Walnut', pressure: 'High' },
+  { emoji: '🥜', name: 'Almond', pressure: 'High' },
+  { emoji: '🥥', name: 'Coconut', pressure: 'Medium' },
+  { emoji: '🥑', name: 'Avocado', pressure: 'Medium' },
+  { emoji: '🫒', name: 'Olive', pressure: 'Medium' },
+  { emoji: '🌱', name: 'Flaxseed', pressure: 'High' },
+  { emoji: '🌿', name: 'Sesame', pressure: 'High' },
+  { emoji: '🌻', name: 'Sunflower', pressure: 'Medium' },
+  { emoji: '🟤', name: 'Peanut', pressure: 'High' },
+  { emoji: '🥬', name: 'Rapeseed', pressure: 'High' },
+  { emoji: '🌸', name: 'Camellia', pressure: 'High' },
+  { emoji: '🍃', name: 'Hemp Seed', pressure: 'Medium' },
+];
+
+const painPoints = [
+  { icon: '🔥', title: 'Oil Nutrients Destroyed', desc: 'Hot pressing at 120°C+ kills vitamins, antioxidants, and aroma. Retailers reject "burnt" smelling oil.' },
+  { icon: '💧', title: 'Poor Cold Yield', desc: 'Screw presses at low temp lose 25%+ of oil. Cold press needs enough pressure to extract without heat.' },
+  { icon: '🧪', title: 'Oil Color Dark & Bitter', desc: 'Poor temperature control gives dark, cloudy, bitter-tasting oil that won\'t pass VCO standards.' },
+  { icon: '📦', title: 'No After-Sales Support', desc: 'Middlemen disappear after you pay. When something breaks, you are on your own.' },
+];
+
+const advantages = [
+  { num: '92%', title: 'Higher Profit Margin', desc: 'Patented diaphragm technology extracts 8-12% more oil than ordinary presses. 92%+ oil yield means you sell 10-15% more oil from the same raw materials. That is thousands of dollars extra profit every month.' },
+  { num: '30-40%', title: 'Factory Direct Price', desc: 'You buy directly from our factory in Shandong — no distributors, no middlemen markup. Save 30-40% vs buying through trading companies.' },
+  { num: '2 min', title: 'Easy Operation', desc: 'One-button start. No skilled operator needed. 2-minute training and anyone can run it. Top-discharge design makes cake removal 10x faster than bottom-discharge.' },
+  { num: '10+ yr', title: 'Safe & Durable', desc: '27SiMn steel hydraulic cylinder is safer and lasts longer. Chrome-plated piston rod with 5-layer seals, zero leakage under 620-ton pressure. SS304 food-grade stainless steel barrel option. Industrial-grade components throughout.' },
+  { num: '24h', title: 'Lifetime Support', desc: '1-year factory warranty. Our engineers reply within 24 hours on working days. Spare parts always in stock, shipped via DHL/FedEx in 3-7 days worldwide. Free remote video guidance for life.' },
+  { num: 'OEM', title: 'OEM / ODM', desc: 'From standard machines to fully customized OEM/ODM solutions — stainless steel, double-barrel, automated lines, custom branding. We build to your exact specification.' },
+];
+
+const modelRows = [
+  { model: 'HN325', featured: true, seed: 'Walnut, Almond, Avocado, Macadamia', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 325 Tons', capacity: '≤ 100 kg', note: 'Best seller for cold-pressed premium nut oils.' },
+  { model: 'HN355 / HN400', featured: false, seed: 'Tea Seed, Olive, Camellia, Apricot', process: 'Cold', barrel: 'Φ390 mm', pressure: '370 / 410 Tons', capacity: '≤ 100 kg', note: 'Medium pressure for premium cold-pressed oils.' },
+  { model: 'HN426', featured: false, seed: 'Coconut VCO, Flaxseed, Perilla, Pumpkin Seed', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 500 Tons', capacity: '≤ 100 kg', note: 'VCO grade. True cold press ≤45°C.' },
+  { model: 'HN480 / HN500', featured: false, seed: 'Hemp Seed, Pine Nut, Super-hard premium', process: 'Cold', barrel: 'Φ390 mm', pressure: '600 / 630 Tons', capacity: '≤ 100 kg', note: 'Flagship for extra-hard materials.' },
+  { model: 'HN325S / HN355S', featured: false, seed: 'Sesame (Special)', process: 'Cold', barrel: 'Φ300 mm', pressure: '325 / 355 Tons', capacity: '32.5–50 kg', note: 'Small barrel, concentrated pressure, preserves aroma.' },
+  { model: 'HN426S Stainless', featured: false, seed: 'Coconut VCO (SS304 food-grade)', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 500 Tons', capacity: '≤ 100 kg', note: 'SS304 food-grade for export VCO markets.' },
+  { model: 'HN300C', featured: false, seed: 'Coconut Milk (Special)', process: 'Cold', barrel: 'Φ600 mm', pressure: '≈ 300 Tons', capacity: '150–200 kg', note: 'Coconut specialty. 304 SS corrosion-resistant barrel.' },
+];
+
+const cases = [
+  {
+    flag: 'KE', country: 'Kenya', client: 'Premium Oil Producer (East Africa)',
+    model: 'HN325 x 2 units', seed: 'Avocado & Walnut', capacity: '2T/day',
+    challenge: 'Small-scale farmers needed affordable cold press for premium oils',
+    result: 'Break-even in 5 months, now supplies premium cold-pressed oil to 3 local supermarkets',
+  },
+  {
+    flag: 'TH', country: 'Thailand', client: 'VCO Producer (Southeast Asia)',
+    model: 'HN426S Stainless x 3', seed: 'Coconut', capacity: '3T/day',
+    challenge: 'Wanted food-grade cold press for virgin coconut oil (VCO)',
+    result: 'Premium VCO quality, now supplying 5+ local supermarkets and exporting to neighboring countries',
+  },
+  {
+    flag: 'US', country: 'USA', client: 'Premium Oil Producer (North America)',
+    model: 'HN355 x 1 unit', seed: 'Walnut & Almond', capacity: '1.5T/day',
+    challenge: 'Needed small-batch cold press for niche premium oil market',
+    result: 'Now selling at 3x price vs supermarket, expanded to 2nd unit',
+  },
+];
+
+const faqs = [
+  { q: 'How much does a cold press oil machine cost?', a: 'Prices vary by model, material, and configuration. The best-selling HN325 is our most popular choice for cold press startups. Commercial and industrial models are available for larger operations. We also offer OEM/ODM customization for stainless steel and other special requirements. Tell us your seed type and target capacity — we send exact factory pricing with shipping to your port within 24 hours.' },
+  { q: 'Which cold press model should I buy?', a: 'It depends on 2 key things: (1) which seed you press — soft seeds (walnut, almond, avocado) use HN325, medium-hard seeds (tea seed, olive) use HN400, hard seeds (coconut VCO, flaxseed) use HN426. (2) your daily capacity need — double-barrel versions boost output by 30-50%. Not sure? Tell us your seed + capacity — our engineer recommends 1-2 models with ROI calculation. Free, no obligation.' },
+  { q: 'Is stainless steel available for edible oil?', a: 'Yes. We offer food-grade 304 stainless steel for all product-contact parts on HN325S, HN426S, and HN480BS models. This is required for VCO, extra virgin olive oil, and any product targeting EU/Japan/USA premium markets. The full chamber, pressing plates, oil pan, and oil collection tray are all SS304.' },
+  { q: 'Can your cold press do VCO (Virgin Coconut Oil)?', a: 'Absolutely — this is our #1 most requested cold press application. Our HN426/HN480B series is specifically engineered for VCO production with: (1) true <45°C temperature, (2) stainless steel contact, (3) high pressure for maximum yield from dry coconut copra or wet coconut meat. We also provide VCO process consulting for free if you buy from us.' },
+  { q: 'What oil yield can I expect from cold pressing?', a: 'Cold press yield is seed-specific and slightly lower than hot press, but preserves quality and commands 2-3× higher price. Typical cold yields with HN426: Sesame 88-90%, Peanut 82-85%, Coconut copra 62-65%, Walnut 85-88%, Almond 83-86%, Olive (pomace) 78-82%, Avocado 70-75%. We can do a free ROI calculation for your exact seed & price scenario.' },
+  { q: 'Do you help with lab tests and certification for export?', a: 'Yes. This is a big advantage of working with Haonuo. We provide: (1) sample pressing test before shipment — you can send us 5-10 kg of your seeds and we press them in our lab, send video + pressed oil sample + yield data, (2) assistance with third-party SGS/BV inspection at our factory, (3) documentation for CE, FDA food-contact, and phytosanitary certificates. We also advise on what lab tests importers in your country will require.' },
+  { q: 'What payment and warranty for cold press models?', a: 'Warranty: 1 year full factory warranty for standard parts, lifetime technical support. Payment: 30% TT deposit, 70% before shipment. L/C at sight accepted for orders over $20,000. Trade Assurance (Alibaba) for first-time buyers. Spare parts always in stock, shipped via DHL/FedEx in 3-7 days worldwide.' },
+];
+
+const countries = ['Afghanistan','Albania','Algeria','Argentina','Australia','Austria','Bangladesh','Belgium','Bolivia','Brazil','Bulgaria','Burkina Faso','Cambodia','Cameroon','Canada','Chad','Chile','China','Colombia','Congo','Costa Rica','Côte d\'Ivoire','Cuba','Czech Republic','Denmark','Dominican Republic','Ecuador','Egypt','El Salvador','Ethiopia','Finland','France','Gabon','Gambia','Georgia','Germany','Ghana','Greece','Guatemala','Guinea','Haiti','Honduras','Hungary','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kuwait','Laos','Lebanon','Liberia','Libya','Madagascar','Malawi','Malaysia','Mali','Mauritania','Mauritius','Mexico','Moldova','Morocco','Mozambique','Myanmar','Nepal','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','Norway','Oman','Pakistan','Palestine','Panama','Paraguay','Peru','Philippines','Poland','Portugal','Qatar','Romania','Russia','Rwanda','Saudi Arabia','Senegal','Serbia','Sierra Leone','Singapore','Slovakia','Slovenia','Somalia','South Africa','South Korea','South Sudan','Spain','Sri Lanka','Sudan','Sweden','Switzerland','Syria','Taiwan','Tanzania','Thailand','Togo','Trinidad and Tobago','Tunisia','Turkey','Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe'];
+const products = ['HN355 - Cold Press 360T','HN400 - Cold Press 400T','HN426 - VCO Grade 500T','HN426S - VCO SS304 500T','HN480B - Ultra-Cold 560T','HN480BS - Ultra-Cold SS304 560T','Not sure - Need cold press model advice','Complete VCO Production Line'];
+const capacities = ['Small Business','Commercial','Industrial','Not sure'];
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cold Press Oil Machine | True VCO Grade ≤45°C (2026) | Haonuo</title>
+<meta name="description" content="Professional cold press oil machine factory. 500-560 ton pressure, SS304 food-grade, ≤45°C true VCO temp. 92% oil yield, 2-year cylinder warranty. Get factory price & VCO process guide." />
+<meta property="og:title" content="Cold Press Oil Machine - VCO Grade, Factory Direct from Haonuo" />
+<meta property="og:description" content="True cold press (≤45°C) for coconut VCO, olive, walnut, avocado. 94% max yield, 2-year cylinder warranty." />
+<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Inter',sans-serif;background:#fff;color:#0f172a;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ===== Top Nav (Minimal) ===== */
+.topnav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e2e8f0;backdrop-filter:blur(8px)}
+.topnav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:#0f172a}
+.brand-badge{background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;font-size:11px;padding:3px 8px;border-radius:6px;font-weight:700;letter-spacing:.3px}
+.nav-cta{display:inline-flex;align-items:center;gap:6px;background:#0ea5e9;color:#fff;font-weight:700;padding:10px 18px;border-radius:8px;font-size:14px;transition:all .2s}
+.nav-cta:hover{background:#0369a1;transform:translateY(-1px)}
+@media(max-width:640px){.brand span.desc{display:none}.nav-cta{padding:8px 14px;font-size:13px}}
+
+/* ===== Hero (Cold theme: teal/blue) ===== */
+.hero{background:linear-gradient(135deg,#0c4a6e 0%,#0f766e 100%);color:#fff;padding:56px 0 64px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.15),transparent 70%);border-radius:50%}
+.hero::after{content:"";position:absolute;bottom:-180px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(16,185,129,.12),transparent 70%);border-radius:50%}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:44px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.5px}
+.hero h1 .accent{background:linear-gradient(90deg,#67e8f9,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:17px;line-height:1.7;color:#cbd5e1;margin-bottom:24px}
+.hero .highlight{display:inline-block;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);color:#67e8f9;font-weight:600;padding:6px 14px;border-radius:20px;font-size:13px;margin-bottom:20px}
+.trust-row{display:flex;flex-wrap:wrap;gap:16px 28px;margin:28px 0 24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.trust-row .item{display:flex;align-items:center;gap:8px;color:#cbd5e1;font-size:14px;font-weight:500}
+.trust-row .item strong{color:#fff;font-weight:700}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0ea5e9,#0891b2);color:#fff;font-weight:700;padding:16px 26px;border-radius:10px;font-size:15px;transition:all .2s;box-shadow:0 10px 30px rgba(14,165,233,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(14,165,233,.4)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;font-weight:600;padding:15px 24px;border-radius:10px;font-size:15px;transition:all .2s}
+.btn-secondary:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero h1{font-size:34px}}
+
+/* ===== Form Card ===== */
+.form-card{background:#fff;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4);padding:26px;color:#0f172a}
+.form-card h3{font-size:18px;font-weight:800;margin-bottom:4px;color:#0f172a}
+.form-card .lead{font-size:13px;color:#64748b;margin-bottom:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-row.full{grid-template-columns:1fr}
+.form-card label{display:block;font-size:12px;font-weight:600;color:#334155;margin-bottom:5px}
+.form-card label .req{color:#ef4444}
+.form-card input,.form-card select,.form-card textarea{width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;font-family:inherit;background:#fff;transition:all .15s;color:#0f172a}
+.form-card input:focus,.form-card select:focus,.form-card textarea:focus{outline:none;border-color:#0ea5e9;box-shadow:0 0 0 3px rgba(14,165,233,.15)}
+.form-card textarea{resize:vertical;min-height:70px}
+.form-card .submit{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#0ea5e9,#0891b2);color:#fff;font-weight:700;padding:14px 20px;border-radius:10px;font-size:15px;cursor:pointer;border:none;transition:all .2s;box-shadow:0 8px 24px rgba(14,165,233,.3)}
+.form-card .submit:hover{transform:translateY(-1px)}
+.form-card .note{text-align:center;font-size:12px;color:#64748b;margin-top:12px}
+.form-success{background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:10px;padding:14px;text-align:center;font-size:14px;font-weight:600;margin-top:12px;display:none}
+.form-success.show{display:block}
+
+/* ===== Offer Banner ===== */
+.offer{background:linear-gradient(90deg,#cffafe,#e0f2fe);padding:16px 0;border-bottom:1px solid #a5f3fc}
+.offer-inner{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;font-size:14px;font-weight:600;color:#164e63}
+.offer .chip{background:#0ea5e9;color:#fff;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700}
+.offer .countdown{background:#fff;padding:4px 10px;border-radius:6px;color:#0e7490;font-weight:800;border:1px solid #a5f3fc}
+
+/* ===== Section Shell ===== */
+section{padding:72px 0}
+.section-head{text-align:center;margin-bottom:48px}
+.section-head .eyebrow{display:inline-block;background:#cffafe;color:#155e75;font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:.6px;text-transform:uppercase;margin-bottom:14px}
+.section-head h2{font-size:34px;font-weight:800;letter-spacing:-.4px;margin-bottom:12px}
+.section-head p{font-size:16px;color:#64748b;max-width:640px;margin:0 auto}
+.bg-alt{background:#f8fafc}
+
+/* ===== Pain Points ===== */
+.pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pain-card{background:#fff;border:1px solid #fee2e2;border-radius:14px;padding:24px;position:relative;transition:all .25s}
+.pain-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.06);border-color:#fca5a5}
+.pain-card .icon{font-size:32px;margin-bottom:12px}
+.pain-card h3{font-size:17px;font-weight:700;color:#b91c1c;margin-bottom:8px}
+.pain-card p{font-size:14px;color:#475569;line-height:1.6}
+@media(max-width:900px){.pain-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.pain-grid{grid-template-columns:1fr}}
+
+/* ===== Advantages ===== */
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.adv-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:24px;transition:all .25s}
+.adv-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.06);border-color:#67e8f9}
+.adv-card .num{font-size:30px;font-weight:800;background:linear-gradient(135deg,#0ea5e9,#0f766e);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
+.adv-card h3{font-size:17px;font-weight:700;margin-bottom:8px;color:#0f172a}
+.adv-card p{font-size:14px;color:#64748b}
+@media(max-width:900px){.adv-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.adv-grid{grid-template-columns:1fr}}
+
+/* ===== Seed Selection ===== */
+.seed-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.seed-card{background:#fff;border:2px solid #e2e8f0;border-radius:12px;padding:18px 12px;text-align:center;cursor:pointer;transition:all .2s}
+.seed-card:hover{border-color:#0ea5e9;background:#ecfeff;transform:translateY(-3px)}
+.seed-card .emoji{font-size:36px;margin-bottom:8px}
+.seed-card .name{font-size:13px;font-weight:600;color:#0f172a}
+.seed-card .pressure{font-size:11px;color:#94a3b8;margin-top:4px}
+@media(max-width:900px){.seed-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:560px){.seed-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ===== Truth Box ===== */
+.truth-box{display:flex;gap:16px;background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:14px;padding:24px;margin-bottom:32px}
+.truth-box-icon{font-size:32px;flex-shrink:0}
+.truth-box h3{font-size:17px;font-weight:800;color:#0c4a6e;margin-bottom:8px}
+.truth-box p{font-size:14px;color:#0369a1;line-height:1.7}
+.truth-box strong{color:#0c4a6e}
+
+/* ===== Quick Pick Cards ===== */
+.qs-title{font-size:18px;font-weight:800;color:#0f172a;margin-bottom:16px}
+.qs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.qs-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:22px;position:relative;transition:all .25s}
+.qs-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.06);border-color:#0ea5e9}
+.qs-badge{position:absolute;top:14px;right:14px;background:#0ea5e9;color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:5px;letter-spacing:.4px}
+.qs-seed{font-size:18px;font-weight:800;color:#0f172a;margin-bottom:6px}
+.qs-hardness{font-size:12px;color:#64748b;margin-bottom:12px}
+.qs-model{font-size:14px;font-weight:700;color:#0369a1;margin-bottom:8px}
+.qs-model span{color:#0369a1}
+.qs-desc{font-size:13px;color:#475569;line-height:1.6}
+@media(max-width:900px){.qs-grid{grid-template-columns:1fr}}
+
+/* ===== Model Table ===== */
+.table-wrap{overflow-x:auto;border-radius:14px;border:1px solid #e2e8f0;box-shadow:0 6px 20px rgba(0,0,0,.04)}
+table.models{width:100%;border-collapse:collapse;background:#fff;font-size:14px}
+table.models th{background:linear-gradient(135deg,#0c4a6e,#0f766e);color:#fff;padding:14px 16px;text-align:left;font-weight:600;font-size:13px;letter-spacing:.3px}
+table.models td{padding:14px 16px;border-bottom:1px solid #f1f5f9;color:#334155}
+table.models tr:last-child td{border-bottom:none}
+table.models tr:hover td{background:#ecfeff}
+table.models tr.row-featured{background:linear-gradient(90deg,#cffafe,#e0f2fe)}
+table.models tr.row-featured td{border-bottom:2px solid #67e8f9}
+table.models tr.row-featured .model-name{color:#0369a1;font-weight:900}
+.tag-badge{display:inline-block;background:#0ea5e9;color:#fff;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-left:6px;letter-spacing:.5px}
+table.models .model-name{font-weight:700;color:#0f172a}
+table.models .best{display:inline-block;background:#f0fdfa;color:#0f766e;font-size:12px;font-weight:600;padding:3px 8px;border-radius:6px}
+.model-tip{text-align:center;margin-top:18px;font-size:13px;color:#334155}
+.model-tip strong{color:#0e7490}
+.model-note{text-align:center;margin-top:14px;font-size:12px;color:#475569;line-height:1.7}
+
+/* ===== Select Table (Fig.2 style, rows=models) ===== */
+table.select-table th{background:linear-gradient(135deg,#0c4a6e,#0f766e);font-size:12px;padding:13px 12px;white-space:nowrap;text-align:center}
+table.select-table th:first-child{text-align:left}
+table.select-table td{padding:14px 12px;font-size:13px;vertical-align:middle;line-height:1.6}
+table.select-table td.model-name-cell{font-weight:700;color:#0f172a;white-space:nowrap}
+table.select-table td.model-name-cell .tag-badge{margin-right:8px}
+table.select-table td.td-seed{color:#334155;font-weight:500}
+table.select-table td.td-note{color:#64748b;font-size:12px;max-width:260px}
+table.select-table tr:hover td{background:#ecfeff}
+table.select-table tr.row-featured td{background:#fffbeb;border-top:3px solid #f59e0b}
+table.select-table tr.row-featured td.model-name-cell{color:#0369a1;font-weight:900}
+
+/* ===== Mobile model cards (show on mobile only, hide on desktop) ===== */
+.model-cards{display:none}
+.mcard{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+.mcard-featured{border:2px solid #f59e0b;background:#fffbeb;box-shadow:0 6px 20px rgba(245,158,11,.18);position:relative}
+.mcard-badge{display:inline-block;background:#f59e0b;color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;margin-bottom:10px;letter-spacing:.4px}
+.mcard-row{display:flex;gap:12px;padding:7px 0;border-bottom:1px dashed #f1f5f9}
+.mcard-row:last-child{border-bottom:none}
+.mcard-row.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mcard-row.two > div{display:flex;flex-direction:column;gap:3px}
+.mcard-label{font-size:11px;color:#94a3b8;font-weight:600;letter-spacing:.3px;flex-shrink:0;min-width:72px;padding-top:2px}
+.mcard-val{font-size:13px;color:#334155;font-weight:500;line-height:1.5}
+.mcard-note{font-size:12px;color:#64748b;line-height:1.6}
+@media(max-width:900px){
+  .table-wrap{display:none}
+  .model-cards{display:block}
+  .mcard-label{min-width:60px}
+}
+
+/* ===== Compare-full (Fig.4 style table) ===== */
+table.compare-full th{text-align:center;background:linear-gradient(135deg,#0c4a6e,#0f766e);font-size:12px;padding:14px 10px;white-space:nowrap}
+table.compare-full th:first-child{text-align:left;background:linear-gradient(135deg,#0f172a,#0c4a6e);min-width:150px}
+table.compare-full td{font-size:13px;text-align:center;vertical-align:middle;line-height:1.6;padding:13px 10px}
+table.compare-full td.spec-label{text-align:left;font-weight:700;color:#0f172a;background:#f8fafc;font-size:12px;border-right:1px solid #e2e8f0;white-space:nowrap}
+table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a6e}
+.col-badge{display:block;background:#0ea5e9;color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;margin-bottom:4px;letter-spacing:.4px}
+.check-yes{display:inline-block;background:#dcfce7;color:#166534;padding:3px 10px;border-radius:6px;font-weight:700;font-size:12px}
+
+/* ===== Video Section ===== */
+.video-section{background:linear-gradient(135deg,#0c4a6e,#0f766e);color:#fff;border-radius:20px;padding:48px;margin:0 auto;max-width:1100px}
+.video-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+.video-wrap{aspect-ratio:16/9;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);background:#000}
+.press-video{width:100%;height:100%;display:block;background:#000}
+.video-info h3{font-size:24px;font-weight:800;margin-bottom:12px}
+.video-info p{font-size:15px;color:#cbd5e1;margin-bottom:20px}
+.video-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.video-stat{text-align:center;padding:14px;background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+.video-stat .num{font-size:22px;font-weight:800;color:#67e8f9}
+.video-stat .label{font-size:12px;color:#94a3b8;margin-top:4px}
+@media(max-width:900px){.video-grid{grid-template-columns:1fr}.video-section{padding:32px 20px}}
+
+/* ===== Factory ===== */
+.factory-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.factory-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.factory-photo{aspect-ratio:4/3;border-radius:12px;display:flex;align-items:flex-end;justify-content:flex-start;padding:12px;color:#fff;font-size:12px;font-weight:600;position:relative;overflow:hidden;background:#e2e8f0}
+.factory-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.factory-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 50%);z-index:1}
+.factory-photo span{position:relative;z-index:2}
+.factory-list{margin-top:16px;display:grid;gap:12px}
+.factory-list li{list-style:none;display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#475569}
+.factory-list li::before{content:"✓";flex-shrink:0;background:#cffafe;color:#155e75;font-weight:800;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font-size:12px;margin-top:1px}
+@media(max-width:900px){.factory-grid{grid-template-columns:1fr}}
+
+/* ===== Cases ===== */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:24px;transition:all .25s}
+.case-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.06)}
+.case-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #f1f5f9}
+.case-head .flag{font-size:14px;font-weight:800;background:#cffafe;color:#155e75;padding:6px 10px;border-radius:6px;letter-spacing:.5px}
+.case-head .cname{font-size:13px;font-weight:700;color:#0f172a}
+.case-head .ccountry{font-size:12px;color:#64748b}
+.case-row{margin-bottom:10px}
+.case-row .label{font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.case-row .val{font-size:13px;color:#334155;font-weight:500}
+.case-row .result{background:#ecfdf5;color:#047857;padding:8px 10px;border-radius:8px;font-size:13px;font-weight:600}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr}}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.faq-item{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;transition:all .2s}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 20px;font-size:15px;font-weight:700;color:#0f172a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:inherit}
+.faq-q .chev{color:#0ea5e9;font-size:18px;transition:transform .25s}
+.faq-item.open .faq-q .chev{transform:rotate(45deg)}
+.faq-item.open{border-color:#67e8f9;box-shadow:0 6px 16px rgba(0,0,0,.05)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 20px}
+.faq-item.open .faq-a{max-height:500px;padding:0 20px 18px}
+.faq-a p{color:#475569;font-size:14px;line-height:1.7}
+
+/* ===== CTA Final ===== */
+.final-cta{background:linear-gradient(135deg,#0c4a6e,#0f766e);color:#fff;padding:64px 0;border-radius:20px;margin:40px auto;max-width:1180px;position:relative;overflow:hidden}
+.final-cta::before{content:"";position:absolute;top:-150px;right:-150px;width:400px;height:400px;background:radial-gradient(circle,rgba(14,165,233,.2),transparent 70%);border-radius:50%}
+.final-cta-inner{position:relative;z-index:1;padding:0 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.final-cta h2{font-size:36px;font-weight:800;margin-bottom:12px;letter-spacing:-.4px;text-align:left}
+.final-cta h2 .accent{color:#67e8f9}
+.final-cta .text-lead{font-size:16px;color:#cbd5e1;margin-bottom:20px;text-align:left}
+.final-cta ul{display:grid;gap:10px;margin:22px 0;text-align:left;max-width:460px}
+.final-cta li{list-style:none;font-size:14px;color:#e2e8f0;display:flex;align-items:center;gap:10px}
+.final-cta li::before{content:"✓";color:#22d3ee;font-weight:800;font-size:16px}
+@media(max-width:900px){.final-cta-inner{grid-template-columns:1fr}.final-cta h2{font-size:28px}}
+
+/* ===== Footer ===== */
+.mini-footer{background:#0c4a6e;color:#94a3b8;padding:32px 0;font-size:13px}
+.mini-foot-inner{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.mini-foot-inner a:hover{color:#67e8f9}
+
+/* ===== Floating CTA ===== */
+.float-cta{position:fixed;right:16px;bottom:16px;z-index:90;display:flex;flex-direction:column;gap:8px}
+.float-cta .fc{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:700;padding:12px 16px;border-radius:999px;font-size:13px;box-shadow:0 10px 30px rgba(34,197,94,.4);transition:all .2s;white-space:nowrap}
+.float-cta .fc.quote{background:linear-gradient(135deg,#0ea5e9,#0891b2);box-shadow:0 10px 30px rgba(14,165,233,.45)}
+.float-cta .fc:hover{transform:translateY(-2px) scale(1.03)}
+@media(min-width:768px){.float-cta .fc svg{display:inline}.float-cta .fc span.full{display:inline}.float-cta .fc span.short{display:none}}
+@media(max-width:767px){.float-cta .fc svg{display:none}.float-cta .fc span.full{display:none}.float-cta .fc span.short{display:flex;align-items:center;justify-content:center}.float-cta .fc{width:48px;height:48px;padding:0;border-radius:50%;font-size:20px;box-shadow:0 6px 20px rgba(0,0,0,.25)}.float-cta{gap:8px}}
+</style>
+</head>
+<body>
+
+<!-- MINIMAL NAV -->
+<nav class="topnav">
+  <div class="container topnav-inner">
+    <div class="brand">
+      <div style="width:38px;height:38px;border-radius:8px;background:#0f172a;display:grid;place-items:center;flex-shrink:0">
+        <span style="color:#f59e0b;font-weight:800;font-size:16px;letter-spacing:-.5px">HN</span>
+      </div>
+      <div>
+        <div style="font-weight:800;font-size:17px;letter-spacing:.5px;line-height:1.1">HAONUO</div>
+        <div style="font-size:10px;color:#64748b;font-weight:500;letter-spacing:2px;line-height:1.1">MACHINERY</div>
+      </div>
+    </div>
+    <a href="#inquiry-form" class="nav-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>Get Factory Price</span>
+    </a>
+  </div>
+</nav>
+
+<!-- OFFER BAR -->
+<div class="offer">
+  <div class="container offer-inner">
+    <span class="chip">SPECIAL</span>
+    <span>Contact us this month & get <strong>FREE VCO Process Guide PDF</strong> + <strong>Free sample pressing test</strong></span>
+    <span class="countdown">Limited monthly quota</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="highlight">❄️ True Cold Press · ≤45°C · VCO & Premium Grade Oils</span>
+      <h1>Cold Press Oil Machine — <span class="accent">≤45°C & 94% Yield</span></h1>
+      <p class="sub">Manufacturer-grade cold press technology for <strong>coconut VCO, extra virgin olive, walnut, almond, avocado</strong> and 20+ premium seeds. <strong>SS304 food-grade option</strong>, <strong>2-year hydraulic cylinder warranty</strong>. Ships to 50+ countries.</p>
+      <div class="cta-row">
+        <a href="#inquiry-form" class="btn-primary">
+          Get Factory Price in 24h
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+        <a href="https://wa.me/8618957149128?text=Hello%2C%20I%27m%20interested%20in%20your%20cold%20press%20oil%20machines" class="btn-secondary" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.56 4.19 1.62 5.99L0 24l6.17-1.61A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.16-3.48-8.52zM12 22c-2.05 0-4-.61-5.64-1.66l-.4-.24-3.67.96.97-3.58-.26-.41A9.96 9.96 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg>
+          Cold Press on WhatsApp
+        </a>
+      </div>
+      <div class="trust-row">
+        <div class="item">🌡️ <strong>≤45°C</strong> True Cold Press</div>
+        <div class="item">💎 <strong>SS304</strong> Food-Grade</div>
+        <div class="item">⚡ <strong>94%</strong> Max Yield</div>
+        <div class="item">🌍 <strong>50+</strong> Countries</div>
+      </div>
+    </div>
+
+    <form class="form-card" id="inquiry-form" onsubmit="return handleInquiry(event)">
+      <h3>❄️ Get Factory Price & Model Recommendation</h3>
+      <p class="lead">Free VCO process guide · Reply in 24h · Confidential</p>
+      <div class="form-row">
+        <div>
+          <label for="ads-name">Your Name <span class="req">*</span></label>
+          <input type="text" id="ads-name" name="name" required placeholder="John Smith" />
+        </div>
+        <div>
+          <label for="ads-email">Email <span class="req">*</span></label>
+          <input type="email" id="ads-email" name="email" required placeholder="you@company.com" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="ads-whatsapp">WhatsApp / Phone <span class="req">*</span></label>
+          <input type="tel" id="ads-whatsapp" name="whatsapp" required placeholder="+1 234 567 8900" />
+        </div>
+        <div>
+          <label for="ads-country">Country</label>
+          <input type="text" id="ads-country" name="country" list="country-list" placeholder="Type or select" />
+          <datalist id="country-list">
+            {countries.map(c => <option value={c} />)}
+          </datalist>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div>
+          <label for="ads-msg">Tell us your project <span class="req">*</span></label>
+          <textarea id="ads-msg" name="message" required rows="3" placeholder="Seeds? Daily capacity (kg/T)? SS304 needed? VCO export target?"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="submit">
+        🚀 Get My Factory Price & Recommendation
+      </button>
+      <div class="form-success" id="formSuccess">✅ Request sent! We'll reply with factory price within 24 hours.</div>
+      <p class="note">🔒 Protected & Confidential · Free VCO process guide with your request</p>
+    </form>
+  </div>
+</header>
+
+<!-- PAIN POINTS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Problems</span>
+      <h2>4 Cold Press Problems That Lose You Money</h2>
+      <p>If you sell premium or cold-pressed oil, you are almost certainly facing at least one of these.</p>
+    </div>
+    <div class="pain-grid">
+      {painPoints.map(pp => (
+        <div class="pain-card">
+          <div class="icon">{pp.icon}</div>
+          <h3>{pp.title}</h3>
+          <p>{pp.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Haonuo</span>
+      <h2>Why 2000+ Buyers Choose Haonuo</h2>
+      <p>6 reasons why oil mill owners in 50+ countries trust our machines for their daily production.</p>
+    </div>
+    <div class="adv-grid">
+      {advantages.map(a => (
+        <div class="adv-card">
+          <div class="num">{a.num}</div>
+          <h3>{a.title}</h3>
+          <p>{a.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- MODEL SELECTION -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Model Selection</span>
+      <h2>Choose the Right Machine for Your Business</h2>
+      <p>Select by seed type and hardness — higher hardness requires more pressure.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="models select-table">
+        <colgroup>
+          <col style="width:13%"><col style="width:19%"><col style="width:12%">
+          <col style="width:14%"><col style="width:13%">
+          <col style="width:29%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Best For (Seed Type)</th>
+            <th>Barrel</th>
+            <th>Pressure</th>
+            <th>Capacity</th>
+            <th>Features / Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {modelRows.map(r => (
+            <tr class={r.featured ? 'row-featured' : ''}>
+              <td class="model-name-cell">
+                <div>{r.model}</div>
+                {r.featured ? <span class="tag-badge" style="margin-top:4px;margin-left:0">⭐ BEST SELLER</span> : ''}
+              </td>
+              <td class="td-seed">{r.seed}</td>
+              <td>{r.barrel}</td>
+              <td>{r.pressure}</td>
+              <td>{r.capacity}</td>
+              <td class="td-note">{r.note}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile card layout -->
+    <div class="model-cards">
+      {modelRows.map(r => (
+        <div class={`mcard ${r.featured ? 'mcard-featured' : ''}`}>
+          {r.featured ? <div class="mcard-badge">⭐ BEST SELLER</div> : ''}
+          <div class="mcard-row">
+            <div class="mcard-label">Model</div>
+            <div class="mcard-val"><strong>{r.model}</strong></div>
+          </div>
+          <div class="mcard-row">
+            <div class="mcard-label">Best For</div>
+            <div class="mcard-val">{r.seed}</div>
+          </div>
+          <div class="mcard-row two">
+            <div>
+              <div class="mcard-label">Barrel</div>
+              <div class="mcard-val">{r.barrel}</div>
+            </div>
+            <div>
+              <div class="mcard-label">Pressure</div>
+              <div class="mcard-val">{r.pressure}</div>
+            </div>
+          </div>
+          <div class="mcard-row">
+            <div class="mcard-label">Capacity</div>
+            <div class="mcard-val">{r.capacity}</div>
+          </div>
+          <div class="mcard-row">
+            <div class="mcard-label">Features</div>
+            <div class="mcard-note">{r.note}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="model-note" style="margin-top:8px">💡 To boost daily output, choose the <strong>double-barrel option</strong> — one barrel presses while the other loads, increasing daily output by 40%–50%. FOB Qingdao price — <a href="#inquiry-form" style="color:#0369a1;text-decoration:underline;font-weight:700">ask for exact quote</a>.</p>
+    <p class="model-tip">🤔 <strong>Unsure which model?</strong> <a href="#inquiry-form" style="color:#0e7490;font-weight:700">Get free engineer recommendation →</a> Tell us your (1) seed type and (2) daily target — we send 1-2 machine options within 24 hours. Free, no obligation.</p>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section>
+  <div class="container">
+    <div class="video-section">
+      <div class="video-grid">
+        <div class="video-wrap">
+          <video controls poster="/images/press-barrel.jpg" preload="metadata" playsinline class="press-video">
+            <source src="/videos/hydraulic-press-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>See Our Cold Press Oil Machine in Action</h3>
+          <p>Watch the complete cold pressing cycle: seeds in → hydraulic cold press → premium oil out → cake out. 10 seconds of video is worth 500 words of description.</p>
+          <div class="video-stats">
+            <div class="video-stat">
+              <div class="num">≤45°C</div>
+              <div class="label">True Cold Temp</div>
+            </div>
+            <div class="video-stat">
+              <div class="num">94%</div>
+              <div class="label">Max Cold Yield</div>
+            </div>
+            <div class="video-stat">
+              <div class="num">20+</div>
+              <div class="label">Premium Seeds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACTORY / PROOF -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Real Factory</span>
+      <h2>Visit Our 3,000㎡ Cold Press Factory — Virtually or In Person</h2>
+      <p>Worried about quality? We prove it before you pay — sample pressing, QC videos, third-party inspection welcome.</p>
+    </div>
+    <div class="factory-grid">
+      <div class="factory-photos">
+        <div class="factory-photo"><img src="/images/factory/painting-workshop.webp" alt="Factory" loading="lazy"><span>Factory</span></div>
+        <div class="factory-photo"><img src="/images/factory/quality-control.webp" alt="Workshop" loading="lazy"><span>Workshop</span></div>
+        <div class="factory-photo"><img src="/images/factory/warehouse.webp" alt="Warehouse" loading="lazy"><span>Warehouse</span></div>
+        <div class="factory-photo"><img src="/images/factory/office-building.webp" alt="Shipping" loading="lazy"><span>Shipping</span></div>
+      </div>
+      <div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:10px">Shandong Haonuo — Qingzhou, Weifang</h3>
+        <p style="font-size:14px;color:#64748b;margin-bottom:8px">Founded in 2010 in China's main machinery manufacturing hub. We design, assemble, test, and ship every cold press machine on-site — <strong>never outsourcing core production</strong>.</p>
+        <ul class="factory-list">
+          <li>3,000㎡ factory + 1,500㎡ warehouse</li>
+          <li>80+ skilled workers + 12 senior engineers</li>
+          <li>Full in-house QC: cold press test, oil yield test, temperature log</li>
+          <li>From standard machines to fully customized OEM/ODM manufacturing</li>
+          <li>Qingdao port is just 250km away — fast & cheap shipping</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Success Stories</span>
+      <h2>Real Clients, Real Results</h2>
+      <p>Join 2000+ oil producers in 50+ countries who grow their business with Haonuo.</p>
+    </div>
+    <div class="case-grid">
+      {cases.map(c => (
+        <div class="case-card">
+          <div class="case-head">
+            <div class="flag">{c.flag}</div>
+            <div>
+              <div class="cname">{c.client}</div>
+              <div class="ccountry">{c.country}</div>
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="label">Equipment</div>
+            <div class="val">{c.model}</div>
+          </div>
+          <div class="case-row">
+            <div class="label">Seed & Capacity</div>
+            <div class="val">{c.seed} · {c.capacity}</div>
+          </div>
+          <div class="case-row">
+            <div class="label">Challenge</div>
+            <div class="val">{c.challenge}</div>
+          </div>
+          <div class="case-row">
+            <div class="label">Result</div>
+            <div class="result">🏆 {c.result}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Cold Press FAQ</span>
+      <h2>Questions About Cold Press — Answered</h2>
+      <p>Still unsure? Ask us — our cold press engineer replies within 24 hours.</p>
+    </div>
+    <div class="faq-list">
+      {faqs.map((f, i) => (
+        <div class={`faq-item ${i===0?'open':''}`} onclick="this.classList.toggle('open')">
+          <button class="faq-q" type="button">
+            <span>{f.q}</span>
+            <span class="chev">+</span>
+          </button>
+          <div class="faq-a"><p>{f.a}</p></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA + 2ND FORM -->
+<div class="container">
+  <div class="final-cta">
+    <div class="final-cta-inner">
+      <div>
+        <h2>Ready to Upgrade Your <span class="accent">Cold Press Quality?</span></h2>
+        <p class="text-lead">Get a <strong>factory direct price + VCO process guide</strong> in 24 hours. Free sample pressing test available.</p>
+        <ul>
+          <li>Cold press engineer 1-to-1 consultation</li>
+          <li>Model recommendation with capacity calculation</li>
+          <li>Complete pricing: machine + SS304 upgrade + shipping to your port</li>
+          <li>Standard models or fully customized OEM/ODM solutions</li>
+        </ul>
+      </div>
+      <form class="form-card" onsubmit="return handleInquiry(event)">
+        <h3>❄️ Get My Factory Price</h3>
+        <p class="lead">Free VCO guide included · Reply in 24h</p>
+        <div class="form-row">
+          <div>
+            <label for="ads-name2">Your Name <span class="req">*</span></label>
+            <input type="text" id="ads-name2" name="name" required placeholder="John Smith" />
+          </div>
+          <div>
+            <label for="ads-email2">Email <span class="req">*</span></label>
+            <input type="email" id="ads-email2" name="email" required placeholder="you@company.com" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="ads-whatsapp2">WhatsApp / Phone</label>
+            <input type="tel" id="ads-whatsapp2" name="whatsapp" placeholder="+1 234 567 8900" />
+          </div>
+          <div>
+            <label for="ads-country2">Country</label>
+            <input type="text" id="ads-country2" name="country" list="country-list2" placeholder="Type or select" />
+            <datalist id="country-list2">
+              {countries.map(c => <option value={c} />)}
+            </datalist>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div>
+            <label for="ads-capacity2">Required Capacity</label>
+            <select id="ads-capacity2" name="capacity">
+              <option value="">— Select capacity —</option>
+              {capacities.map(c => <option value={c}>{c}</option>)}
+            </select>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div>
+            <label for="ads-product2">Cold Press Need</label>
+            <select id="ads-product2" name="product">
+              <option value="">— Select product —</option>
+              {products.map(p => <option value={p}>{p}</option>)}
+            </select>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div>
+            <label for="ads-msg2">Your project details <span class="req">*</span></label>
+            <textarea id="ads-msg2" name="message" required placeholder="Seeds? Capacity? Export market? SS304?"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="submit">🚀 Get My Factory Price</button>
+        <p class="note">🔒 Confidential · Free VCO PDF with reply</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="mini-footer">
+  <div class="container mini-foot-inner">
+    <div>© 2026 Shandong Haonuo Machinery Equipment Group Co., Ltd. · Cold Press Division</div>
+    <div style="display:flex;gap:18px">
+      <a href="mailto:info@hydoilpress.com">info@hydoilpress.com</a>
+      <a href="/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+      <a href="/terms-of-service" target="_blank" rel="noopener">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div class="float-cta">
+  <a href="https://wa.me/8618957149128?text=Hello%2C%20I%27m%20interested%20in%20your%20cold%20press%20oil%20machines" class="fc" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.56 4.19 1.62 5.99L0 24l6.17-1.61A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.16-3.48-8.52zM12 22c-2.05 0-4-.61-5.64-1.66l-.4-.24-3.67.96.97-3.58-.26-.41A9.96 9.96 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg>
+    <span class="full">WhatsApp</span><span class="short">💬</span>
+  </a>
+  <a href="#inquiry-form" class="fc quote">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="full">Factory Price</span><span class="short">📨</span>
+  </a>
+</div>
+
+<script>
+function handleInquiry(e){
+  e.preventDefault();
+  const form = e.target;
+  const fd = new FormData(form);
+  const data = Object.fromEntries(fd.entries());
+  const sbj = encodeURIComponent(`[ADS Cold] Factory Price Request from ${data.name || 'Visitor'} (${data.country || '-'})`);
+  const body = encodeURIComponent(
+`Dear Haonuo Cold Press Team,%0D%0A%0D%0AI'd like to get factory price for your cold press oil machines.%0D%0A%0D%0AName: ${data.name || '-'}%0D%0AEmail: ${data.email || '-'}%0D%0AWhatsApp/Phone: ${data.whatsapp || '-'}%0D%0ACountry: ${data.country || '-'}%0D%0ACapacity: ${data.capacity || '-'}%0D%0AProduct/Seeds: ${data.product || '-'}%0D%0AMessage: ${data.message || '-'}%0D%0A%0D%0A---%0D%0APlease include the FREE VCO Process Guide PDF in your reply.%0D%0ASent from Cold Press Ads Landing Page`
+  );
+  const success = form.querySelector('.form-success');
+  if(success){ success.classList.add('show'); }
+  const btn = form.querySelector('.submit');
+  if(btn){ btn.textContent='✅ Sent! Check your email'; btn.disabled=true; }
+  setTimeout(()=>{ window.location.href = `mailto:info@hydoilpress.com?subject=${sbj}&body=${body}`; }, 600);
+  return false;
+}
+</script>
+</body>
+</html>

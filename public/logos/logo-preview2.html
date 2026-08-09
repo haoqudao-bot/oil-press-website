@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haonuo Machinery - Logo Concepts v2</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; padding: 40px 20px; }
+  h1 { text-align: center; color: #1a1a2e; margin-bottom: 40px; font-size: 26px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 900px; margin: 0 auto; }
+  .card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-align: center; transition: transform 0.2s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .card h3 { margin-top: 20px; color: #1a1a2e; font-size: 17px; }
+  .card p { color: #666; font-size: 13px; margin-top: 6px; }
+  .logo-box { display: flex; align-items: center; justify-content: center; height: 100px; }
+  .dark-bg { background: #1a1a2e; border-radius: 12px; padding: 20px 40px; }
+  .light-bg { background: #f8f8f8; border-radius: 12px; padding: 20px 40px; border: 1px solid #eee; }
+</style>
+</head>
+<body>
+<h1>Haonuo Machinery - No Frame / Free Form Concepts</h1>
+<div class="grid">
+
+  <!-- Concept A: No frame, pure oil drop + text -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#fde687"/>
+            <stop offset="50%" stop-color="#f59e0b"/>
+            <stop offset="100%" stop-color="#b45309"/>
+          </linearGradient>
+        </defs>
+        <!-- Oil drop, no frame -->
+        <path d="M24 4 C12 16 4 26 4 34 C4 42 12 48 24 48 C36 48 44 42 44 34 C44 26 36 16 24 4 Z" fill="url(#a1)"/>
+        <ellipse cx="18" cy="18" rx="4" ry="7" fill="#fef3c7" opacity="0.5"/>
+        <!-- HN inside -->
+        <text x="24" y="38" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#1a1a2e">HN</text>
+        <!-- Text -->
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept A: Pure Oil Drop</h3>
+    <p>No frame, golden oil drop with HN inside</p>
+  </div>
+
+  <!-- Concept B: No frame, H formed by oil streams -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+        </defs>
+        <!-- H made of flowing oil, no frame -->
+        <path d="M8 6 C8 12 8 18 14 22 C18 25 18 27 14 30 C8 34 8 40 8 46" stroke="url(#a2)" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M40 6 C40 12 40 18 34 22 C30 25 30 27 34 30 C40 34 40 40 40 46" stroke="url(#a2)" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M14 22 L34 22" stroke="url(#a2)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="8" cy="4" r="3" fill="url(#a2)"/>
+        <circle cx="40" cy="4" r="3" fill="url(#a2)"/>
+        <circle cx="8" cy="48" r="2" fill="url(#a2)" opacity="0.7"/>
+        <circle cx="40" cy="48" r="2" fill="url(#a2)" opacity="0.7"/>
+        <!-- Text -->
+        <text x="54" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="54" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept B: Oil Stream H</h3>
+    <p>Frameless H made of flowing oil, dynamic</p>
+  </div>
+
+  <!-- Concept C: No frame, leaf + oil drop -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#92400e"/>
+          </linearGradient>
+        </defs>
+        <!-- Combined leaf + oil drop, no frame -->
+        <path d="M24 2 C10 10 2 22 2 32 C2 42 10 48 24 48 C38 48 46 42 46 32 C46 22 38 10 24 2 Z" fill="url(#a3)"/>
+        <!-- Vein line -->
+        <path d="M24 6 L24 44" stroke="#fde687" stroke-width="1.5" opacity="0.6"/>
+        <path d="M24 18 L14 14 M24 18 L34 14 M24 28 L12 26 M24 28 L36 26 M24 38 L16 38 M24 38 L32 38" stroke="#fde687" stroke-width="1" opacity="0.4"/>
+        <!-- Highlight -->
+        <ellipse cx="16" cy="14" rx="4" ry="8" fill="#fef3c7" opacity="0.3"/>
+        <!-- Text -->
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept C: Oil Leaf</h3>
+    <p>Organic leaf-oil drop hybrid, natural and premium</p>
+  </div>
+
+  <!-- Concept D: Circular badge, no square -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+          <linearGradient id="a4b" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#f59e0b"/>
+            <stop offset="100%" stop-color="#92400e"/>
+          </linearGradient>
+        </defs>
+        <!-- Circle badge -->
+        <circle cx="24" cy="26" r="24" fill="url(#a4b)"/>
+        <circle cx="24" cy="26" r="20" fill="none" stroke="#fde687" stroke-width="1" opacity="0.4"/>
+        <!-- HN -->
+        <path d="M15 14 L15 38 M15 26 L24 26 M24 14 L24 38" stroke="#fde687" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Oil drop accent at bottom -->
+        <path d="M31 28 C31 28 35 34 35 37 C35 39 33 40 32 40 C31 40 29 39 29 37 C29 34 31 28 31 28Z" fill="#fde687"/>
+        <!-- Text -->
+        <text x="58" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="58" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept D: Gold Coin</h3>
+    <p>Circular gold badge with HN, coin-like premium</p>
+  </div>
+
+  <!-- Concept E: No frame, abstract press arrow + oil -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+        </defs>
+        <!-- Downward press arrow -->
+        <path d="M24 2 L24 22 M14 16 L24 26 L34 16" stroke="url(#a5)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- Oil splash below -->
+        <path d="M24 28 C24 28 30 36 30 40 C30 43 27 44 25 44 C23 44 20 43 20 40 C20 36 24 28 24 28Z" fill="url(#a5)"/>
+        <path d="M12 32 C12 32 16 38 16 40 C16 42 14 42.5 13 42.5 C12 42.5 10 42 10 40 C10 38 12 32 12 32Z" fill="url(#a5)" opacity="0.6"/>
+        <path d="M36 32 C36 32 40 38 40 40 C40 42 38 42.5 37 42.5 C36 42.5 34 42 34 40 C34 38 36 32 36 32Z" fill="url(#a5)" opacity="0.6"/>
+        <!-- Text -->
+        <text x="52" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="52" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept E: Press & Splash</h3>
+    <p>Arrow pressing down + oil splash, no frame at all</p>
+  </div>
+
+  <!-- Concept F: Hexagon shape instead of square -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a6" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+          <linearGradient id="a6b" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#1a1a2e"/>
+            <stop offset="100%" stop-color="#0f0f1a"/>
+          </linearGradient>
+        </defs>
+        <!-- Hexagon -->
+        <path d="M26 2 L46 14 L46 34 L26 46 L6 34 L6 14 Z" fill="url(#a6b)" stroke="url(#a6)" stroke-width="2"/>
+        <!-- HN inside -->
+        <path d="M16 12 L16 36 M16 24 L26 24 M26 12 L26 36" stroke="url(#a6)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Oil drop -->
+        <path d="M33 26 C33 26 38 32 38 35 C38 37 36 38 35 38 C34 38 32 37 32 35 C32 32 33 26 33 26Z" fill="url(#a6)"/>
+        <!-- Text -->
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept F: Hexagon Badge</h3>
+    <p>Hexagonal shape instead of square, HN + oil drop</p>
+  </div>
+
+  <!-- Concept G: No frame, bold H with oil drop cutout -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a7" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#b45309"/>
+          </linearGradient>
+        </defs>
+        <!-- Solid H shape -->
+        <path d="M6 4 L6 48 L14 48 L14 30 L20 30 L20 48 L28 48 L28 4 L20 4 L20 22 L14 22 L14 4 Z" fill="url(#a7)"/>
+        <!-- Oil drop cutout on the crossbar -->
+        <path d="M17 26 C17 26 20 30 20 32 C20 33.5 18.5 34 17.5 34 C16.5 34 15 33.5 15 32 C15 30 17 26 17 26Z" fill="#f8f8f8"/>
+        <!-- Text -->
+        <text x="38" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="38" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept G: Bold H Cutout</h3>
+    <p>Solid gradient H with oil drop cutout, ultra minimalist</p>
+  </div>
+
+  <!-- Concept H: Shield, no square -->
+  <div class="card">
+    <div class="logo-box light-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a8" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+          <linearGradient id="a8b" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#1a1a2e"/>
+            <stop offset="100%" stop-color="#0f0f1a"/>
+          </linearGradient>
+        </defs>
+        <!-- Shield -->
+        <path d="M24 0 L46 8 L46 28 C46 38 38 46 24 50 C10 46 2 38 2 28 L2 8 Z" fill="url(#a8b)" stroke="url(#a8)" stroke-width="2"/>
+        <!-- HN -->
+        <path d="M14 12 L14 38 M14 25 L24 25 M24 12 L24 38" stroke="url(#a8)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Oil drop -->
+        <path d="M32 26 C32 26 37 33 37 36 C37 38 35 39 34 39 C33 39 31 38 31 36 C31 33 32 26 32 26Z" fill="url(#a8)"/>
+        <!-- Text -->
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#1a1a2e" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#d97706" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept H: Shield No-Box</h3>
+    <p>Shield shape, HN + oil drop, authority and trust</p>
+  </div>
+
+</div>
+
+<!-- Dark background versions -->
+<h1 style="margin-top: 50px;">Dark Background Versions</h1>
+<div class="grid">
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a1d" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#fde687"/>
+            <stop offset="50%" stop-color="#f59e0b"/>
+            <stop offset="100%" stop-color="#b45309"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 4 C12 16 4 26 4 34 C4 42 12 48 24 48 C36 48 44 42 44 34 C44 26 36 16 24 4 Z" fill="url(#a1d)"/>
+        <ellipse cx="18" cy="18" rx="4" ry="7" fill="#fef3c7" opacity="0.5"/>
+        <text x="24" y="38" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#1a1a2e">HN</text>
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept A - Dark</h3>
+    <p>Pure oil drop on dark</p>
+  </div>
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a2d" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+        </defs>
+        <path d="M8 6 C8 12 8 18 14 22 C18 25 18 27 14 30 C8 34 8 40 8 46" stroke="url(#a2d)" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M40 6 C40 12 40 18 34 22 C30 25 30 27 34 30 C40 34 40 40 40 46" stroke="url(#a2d)" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M14 22 L34 22" stroke="url(#a2d)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="8" cy="4" r="3" fill="url(#a2d)"/>
+        <circle cx="40" cy="4" r="3" fill="url(#a2d)"/>
+        <circle cx="8" cy="48" r="2" fill="url(#a2d)" opacity="0.7"/>
+        <circle cx="40" cy="48" r="2" fill="url(#a2d)" opacity="0.7"/>
+        <text x="54" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="54" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept B - Dark</h3>
+    <p>Oil stream H on dark</p>
+  </div>
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a3d" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#92400e"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 2 C10 10 2 22 2 32 C2 42 10 48 24 48 C38 48 46 42 46 32 C46 22 38 10 24 2 Z" fill="url(#a3d)"/>
+        <path d="M24 6 L24 44" stroke="#fde687" stroke-width="1.5" opacity="0.6"/>
+        <path d="M24 18 L14 14 M24 18 L34 14 M24 28 L12 26 M24 28 L36 26 M24 38 L16 38 M24 38 L32 38" stroke="#fde687" stroke-width="1" opacity="0.4"/>
+        <ellipse cx="16" cy="14" rx="4" ry="8" fill="#fef3c7" opacity="0.3"/>
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept C - Dark</h3>
+    <p>Oil leaf on dark</p>
+  </div>
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a4d" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+          <linearGradient id="a4bd" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#f59e0b"/>
+            <stop offset="100%" stop-color="#92400e"/>
+          </linearGradient>
+        </defs>
+        <circle cx="24" cy="26" r="24" fill="url(#a4bd)"/>
+        <circle cx="24" cy="26" r="20" fill="none" stroke="#fde687" stroke-width="1" opacity="0.4"/>
+        <path d="M15 14 L15 38 M15 26 L24 26 M24 14 L24 38" stroke="#fde687" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M31 28 C31 28 35 34 35 37 C35 39 33 40 32 40 C31 40 29 39 29 37 C29 34 31 28 31 28Z" fill="#fde687"/>
+        <text x="58" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="58" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept D - Dark</h3>
+    <p>Gold coin on dark</p>
+  </div>
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a5d" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 2 L24 22 M14 16 L24 26 L34 16" stroke="url(#a5d)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M24 28 C24 28 30 36 30 40 C30 43 27 44 25 44 C23 44 20 43 20 40 C20 36 24 28 24 28Z" fill="url(#a5d)"/>
+        <path d="M12 32 C12 32 16 38 16 40 C16 42 14 42.5 13 42.5 C12 42.5 10 42 10 40 C10 38 12 32 12 32Z" fill="url(#a5d)" opacity="0.6"/>
+        <path d="M36 32 C36 32 40 38 40 40 C40 42 38 42.5 37 42.5 C36 42.5 34 42 34 40 C34 38 36 32 36 32Z" fill="url(#a5d)" opacity="0.6"/>
+        <text x="52" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="52" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept E - Dark</h3>
+    <p>Press & splash on dark</p>
+  </div>
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a6d" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+          <linearGradient id="a6bd" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#1a1a2e"/>
+            <stop offset="100%" stop-color="#0f0f1a"/>
+          </linearGradient>
+        </defs>
+        <path d="M26 2 L46 14 L46 34 L26 46 L6 34 L6 14 Z" fill="url(#a6bd)" stroke="url(#a6d)" stroke-width="2"/>
+        <path d="M16 12 L16 36 M16 24 L26 24 M26 12 L26 36" stroke="url(#a6d)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M33 26 C33 26 38 32 38 35 C38 37 36 38 35 38 C34 38 32 37 32 35 C32 32 33 26 33 26Z" fill="url(#a6d)"/>
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept F - Dark</h3>
+    <p>Hexagon badge on dark</p>
+  </div>
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a7d" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#b45309"/>
+          </linearGradient>
+        </defs>
+        <path d="M6 4 L6 48 L14 48 L14 30 L20 30 L20 48 L28 48 L28 4 L20 4 L20 22 L14 22 L14 4 Z" fill="url(#a7d)"/>
+        <path d="M17 26 C17 26 20 30 20 32 C20 33.5 18.5 34 17.5 34 C16.5 34 15 33.5 15 32 C15 30 17 26 17 26Z" fill="#1a1a2e"/>
+        <text x="38" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="38" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept G - Dark</h3>
+    <p>Bold H cutout on dark</p>
+  </div>
+
+  <div class="card">
+    <div class="logo-box dark-bg">
+      <svg width="240" height="52" viewBox="0 0 240 52" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="a8d" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+          <linearGradient id="a8bd" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#1a1a2e"/>
+            <stop offset="100%" stop-color="#0f0f1a"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 0 L46 8 L46 28 C46 38 38 46 24 50 C10 46 2 38 2 28 L2 8 Z" fill="url(#a8bd)" stroke="url(#a8d)" stroke-width="2"/>
+        <path d="M14 12 L14 38 M14 25 L24 25 M24 12 L24 38" stroke="url(#a8d)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M32 26 C32 26 37 33 37 36 C37 38 35 39 34 39 C33 39 31 38 31 36 C31 33 32 26 32 26Z" fill="url(#a8d)"/>
+        <text x="56" y="26" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#f8f8f8" letter-spacing="1">HAONUO</text>
+        <text x="56" y="42" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" letter-spacing="4">MACHINERY</text>
+      </svg>
+    </div>
+    <h3>Concept H - Dark</h3>
+    <p>Shield no-box on dark</p>
+  </div>
+
+</div>
+</body>
+</html>
