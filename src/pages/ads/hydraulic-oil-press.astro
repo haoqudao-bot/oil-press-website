@@ -501,7 +501,7 @@ table.compare-full td.td-featured{background:#fffbeb;font-weight:500;color:#9240
       </div>
     </div>
 
-    <form class="form-card" id="inquiry-form" onsubmit="return handleInquiry(event)">
+    <form class="form-card" id="inquiry-form" action="https://formspree.io/f/xgawojyp" method="POST" onsubmit="return handleInquiry(event)">
       <h3>🎯 Get Factory Price & Model Recommendation</h3>
       <p class="lead">Reply within 24 hours · No spam · 100% confidential</p>
       <div class="form-row">
@@ -808,7 +808,7 @@ table.compare-full td.td-featured{background:#fffbeb;font-weight:500;color:#9240
           <li>Standard models or fully customized OEM/ODM solutions</li>
         </ul>
       </div>
-      <form class="form-card" onsubmit="return handleInquiry(event)">
+      <form class="form-card" action="https://formspree.io/f/xgawojyp" method="POST" onsubmit="return handleInquiry(event)">
         <h3>🎯 Get My Factory Price</h3>
         <p class="lead">Fill once — we handle everything after.</p>
         <div class="form-row">
@@ -828,7 +828,7 @@ table.compare-full td.td-featured{background:#fffbeb;font-weight:500;color:#9240
           </div>
           <div>
             <label for="ads-country2">Country</label>
-          <input type="text" id="ads-country2" name="country" list="country-list2" placeholder="Type or select" />
+            <input type="text" id="ads-country2" name="country" list="country-list2" placeholder="Type or select" />
             <datalist id="country-list2">
               {countries.map(c => <option value={c} />)}
             </datalist>
@@ -836,26 +836,8 @@ table.compare-full td.td-featured{background:#fffbeb;font-weight:500;color:#9240
         </div>
         <div class="form-row full">
           <div>
-            <label for="ads-capacity2">Required Capacity</label>
-          <select id="ads-capacity2" name="capacity">
-            <option value="">— Select capacity —</option>
-            {capacities.map(c => <option value={c}>{c}</option>)}
-          </select>
-          </div>
-        </div>
-        <div class="form-row full">
-          <div>
-            <label for="ads-product2">Product Interest</label>
-          <select id="ads-product2" name="product">
-            <option value="">— Select product —</option>
-            {products.map(p => <option value={p}>{p}</option>)}
-          </select>
-          </div>
-        </div>
-        <div class="form-row full">
-          <div>
             <label for="ads-msg2">Your seed type and capacity needs <span class="req">*</span></label>
-          <textarea id="ads-msg2" name="message" required placeholder="Seeds? Capacity? Budget?"></textarea>
+          <textarea id="ads-msg2" name="message" required rows="3" placeholder="Seed type? Daily capacity? Budget? Specific requirements?"></textarea>
           </div>
         </div>
         <button type="submit" class="submit">🚀 Get My Factory Price</button>
@@ -893,17 +875,31 @@ table.compare-full td.td-featured{background:#fffbeb;font-weight:500;color:#9240
 function handleInquiry(e){
   e.preventDefault();
   const form = e.target;
-  const fd = new FormData(form);
-  const data = Object.fromEntries(fd.entries());
-  const sbj = encodeURIComponent(`[ADS Hydraulic] Factory Price Request from ${data.name || 'Visitor'} (${data.country || '-'})`);
-  const body = encodeURIComponent(
-`Dear Haonuo Team,%0D%0A%0D%0AI'd like to get factory price for your hydraulic oil press machines.%0D%0A%0D%0AName: ${data.name || '-'}%0D%0AEmail: ${data.email || '-'}%0D%0AWhatsApp/Phone: ${data.whatsapp || '-'}%0D%0ACountry: ${data.country || '-'}%0D%0ACapacity: ${data.capacity || '-'}%0D%0AProduct: ${data.product || '-'}%0D%0AMessage: ${data.message || '-'}%0D%0A%0D%0A---%0D%0ASent from Hydraulic Oil Press Ads Landing Page`
-  );
-  const success = form.querySelector('.form-success');
-  if(success){ success.classList.add('show'); }
   const btn = form.querySelector('.submit');
-  if(btn){ btn.textContent='✅ Sent! Check your email'; btn.disabled=true; }
-  setTimeout(()=>{ window.location.href = `mailto:info@hydoilpress.com?subject=${sbj}&body=${body}`; }, 600);
+  const successDiv = form.querySelector('.form-success');
+  const origText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      if (successDiv) { successDiv.classList.add('show'); }
+      btn.textContent = '✅ Sent! We\'ll reply in 24h';
+      btn.disabled = true;
+    } else {
+      throw new Error('Failed');
+    }
+  })
+  .catch(() => {
+    btn.textContent = '❌ Error — Please call +86 189 5714 9128';
+    btn.style.background = '#dc2626';
+  });
   return false;
 }
 </script>
