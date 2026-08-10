@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -240,39 +240,6 @@ const breadcrumbLd = {
                 </div>
               </a>
             ))}
-          </div>
-
-          <!-- Seed-Specific Oil Press Machines -->
-          <div class="mt-10 pt-10 border-t border-steel-100">
-            <h2 class="font-display text-2xl text-charcoal-900 mb-6">{t.common.seedSpecificPress}</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-              <a
-                href={localePath('/products/peanut-oil-press-machine')}
-                class="card-hover bg-white rounded-2xl overflow-hidden border border-amber-200 group"
-              >
-                <div class="aspect-[4/3] bg-amber-50 overflow-hidden relative">
-                  <img
-                    src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Peanut%20oil%20press%20machine%20hydraulic%20cold%20press%20industrial%20equipment%20product%20photo&image_size=landscape_4_3"
-                    alt={t.common.peanutOilPressMachine}
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
-                    <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {t.products.viewDetails}
-                    </span>
-                  </div>
-                </div>
-                <div class="p-5">
-                  <div class="text-xs text-amber-500 font-medium mb-1">Peanut / Groundnut</div>
-                  <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.common.peanutOilPressMachine}</h3>
-                  <p class="text-sm text-steel-500 mb-3 line-clamp-2">{t.common.peanutOilPressDesc}</p>
-                  <div class="flex flex-wrap gap-2 items-center">
-                    <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full whitespace-nowrap">{getLocalizedSeeds({data: {applicableSeeds: ['peanut'], applicableSeedsFr: ['arachide'], applicableSeedsAr: ['فول سوداني'], applicableSeedsId: ['kacang tanah']}})[0]}</span>
-                    <span class="text-xs text-steel-400">+ more</span>
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </div>
