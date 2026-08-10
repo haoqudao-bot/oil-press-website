@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 
@@ -280,22 +280,43 @@ const allLd = [breadcrumbLd, faqLd];
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <div class="text-center mb-12">
-        <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-4">{t.nav.modelComparison}</h1>
+        <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-4">
+          {currentLocale === 'fr' ? 'Comparaison des modèles de presse à huile hydraulique' : currentLocale === 'ar' ? 'مقارنة نماذج آلة الضغط الهيدروليكي للزيت' : 'Hydraulic Oil Press Model Comparison'}
+        </h1>
         <p class="text-steel-500 text-lg max-w-3xl mx-auto">
           {currentLocale === 'fr' ? 'Comparez tous les modèles de presse à huile hydraulique Haonuo côte à côte. Trouvez la bonne machine pour votre type de graine oléagineuse, votre échelle de production et votre budget.' : currentLocale === 'ar' ? 'قارن جميع نماذج آلات الضغط الهيدروليكي لزيت Haonuo جنبًا إلى جنب. ابحث عن الآلة المناسبة لنوع البذرة الزيتية، مقياس الإنتاج، وميزانيتك.' : 'Compare all Haonuo hydraulic oil press models side by side. Find the right machine for your oil seed type, production scale, and budget.'}
         </p>
       </div>
 
-      <!-- Quick Guide -->
-      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12">
-        <h2 class="font-display text-xl text-charcoal-900 mb-4">
-          {currentLocale === 'fr' ? 'Comment choisir le bon modèle' : currentLocale === 'ar' ? 'كيف تختار النموذج الصحيح' : 'How to Choose the Right Model'}
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="flex items-start gap-3">
+      <!-- ===== Hero Guide Card (合并 Quick Guide + Core Truth，统一视觉) ===== -->
+      <div class="mb-16 bg-gradient-to-br from-amber-50 via-white to-blue-50 border border-amber-200 rounded-2xl p-6 md:p-8 shadow-sm">
+        <div class="mb-6">
+          <h2 class="font-display text-xl md:text-2xl text-amber-600 font-bold mb-4 flex items-center gap-2">
+            <span class="text-2xl">💡</span> Before You Compare — 1 Core Truth + 3 Fast Rules
+          </h2>
+          <div class="text-lg font-semibold text-charcoal-900 leading-relaxed">
+            From <b class="text-steel-800">HN300</b> to <b class="text-steel-800">HN500</b>, every standard Haonuo hydraulic press does the same thing: extract oil from seeds.<br><br>
+            The difference between models is <b class="text-amber-600">only 3 things</b>:<br>
+            &nbsp;&nbsp;① <b>How many kg per batch</b> (barrel size)<br>
+            &nbsp;&nbsp;② <b>How much pressing force</b> (real tonnage — determines how hard a seed you can press and how cleanly)<br>
+            &nbsp;&nbsp;③ <b>How big / heavy / expensive the machine is</b> (footprint, transportation, budget)<br><br>
+            <span class="text-base text-steel-700">Choosing the right model depends on just 3 inputs: <b>your seed type, your target daily volume, your budget.</b></span>
+          </div>
+          <div class="mt-6 p-5 bg-white rounded-xl border border-blue-200">
+            <h3 class="text-base font-bold text-blue-700 mb-2">⚠️ Model number ≠ Real tonnage</h3>
+            <div class="text-steel-700 text-sm leading-relaxed">
+              Our model numbers are <b>series codes</b> shared across the industry, <b>not actual tonnage</b>.<br>
+              For example: <b>HN426 = 500 real tons</b>, <b>HN480 = 600 real tons</b>, <b>HN500 = 630 real tons</b>.<br>
+              Don't be misled by the number itself. The <b>real pressing tonnage</b> and <b>barrel diameter</b> are what matter. All tables below list <b>real parameters</b>.
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-amber-100">
+          <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-steel-100 shadow-sm">
             <span class="shrink-0 w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-bold text-sm">1</span>
             <div>
-              <h3 class="font-semibold text-charcoal-900 text-sm">
+              <h3 class="font-semibold text-charcoal-900 text-sm mb-1">
                 {currentLocale === 'fr' ? 'Par type de graine oléagineuse' : currentLocale === 'ar' ? 'بحسب نوع البذرة الزيتية' : 'By Oil Seed Type'}
               </h3>
               <p class="text-steel-600 text-sm">
@@ -303,10 +324,10 @@ const allLd = [breadcrumbLd, faqLd];
               </p>
             </div>
           </div>
-          <div class="flex items-start gap-3">
+          <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-steel-100 shadow-sm">
             <span class="shrink-0 w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-bold text-sm">2</span>
             <div>
-              <h3 class="font-semibold text-charcoal-900 text-sm">
+              <h3 class="font-semibold text-charcoal-900 text-sm mb-1">
                 {currentLocale === 'fr' ? 'Par échelle de production' : currentLocale === 'ar' ? 'بحسب مقياس الإنتاج' : 'By Production Scale'}
               </h3>
               <p class="text-steel-600 text-sm">
@@ -314,10 +335,10 @@ const allLd = [breadcrumbLd, faqLd];
               </p>
             </div>
           </div>
-          <div class="flex items-start gap-3">
+          <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-steel-100 shadow-sm">
             <span class="shrink-0 w-8 h-8 bg-amber-500 text-white rounded-lg flex items-center justify-center font-bold text-sm">3</span>
             <div>
-              <h3 class="font-semibold text-charcoal-900 text-sm">
+              <h3 class="font-semibold text-charcoal-900 text-sm mb-1">
                 {currentLocale === 'fr' ? 'Par qualité de l\'huile' : currentLocale === 'ar' ? 'بحسب جودة الزيت' : 'By Oil Quality'}
               </h3>
               <p class="text-steel-600 text-sm">
@@ -328,50 +349,33 @@ const allLd = [breadcrumbLd, faqLd];
         </div>
       </div>
 
-      <!-- ========== NEW: Model Selection Guide Block ========== -->
-      <!-- Note: Selection guide content is provided in English across all [locale] versions. Translation can be added later without breaking structure. -->
-
-      <!-- Core Truth: Model Number ≠ Real Tonnage -->
-      <div class="mb-12 bg-gradient-to-br from-amber-50 via-white to-blue-50 border border-amber-200 rounded-2xl p-6 md:p-8">
-        <h3 class="font-display text-xl text-amber-600 font-bold mb-4 flex items-center gap-2">
-          <span class="text-2xl">💡</span> One Core Truth — Before You Look at the Spec Table
-        </h3>
-        <div class="text-lg font-semibold text-charcoal-900 leading-relaxed">
-          From <b class="text-steel-800">HN300</b> to <b class="text-steel-800">HN500</b>, every standard Haonuo hydraulic press does the same thing: extract oil from seeds.<br><br>
-          The difference between models is <b class="text-amber-600">only 3 things</b>:<br>
-          &nbsp;&nbsp;① <b>How many kg per batch</b> (barrel size)<br>
-          &nbsp;&nbsp;② <b>How much pressing force</b> (real tonnage — determines how hard a seed you can press and how cleanly)<br>
-          &nbsp;&nbsp;③ <b>How big / heavy / expensive the machine is</b> (footprint, transportation, budget)<br><br>
-          <span class="text-base text-steel-700">Choosing the right model depends on just 3 inputs: <b>your seed type, your target daily volume, your budget.</b></span>
-        </div>
-        <div class="mt-6 p-5 bg-white rounded-xl border border-blue-200">
-          <h4 class="text-base font-bold text-blue-700 mb-2">⚠️ A truth you must know: Model number ≠ Real tonnage</h4>
-          <div class="text-steel-700 text-sm leading-relaxed">
-            Our model numbers are <b>series codes</b> shared across the industry, <b>not actual tonnage</b>.<br>
-            For example: <b>HN426 = 500 real tons</b>, <b>HN480 = 600 real tons</b>, <b>HN500 = 630 real tons</b>.<br>
-            Don't be misled by the number itself. The <b>real pressing tonnage</b> and <b>barrel diameter</b> are what matter. The tables below list <b>real parameters</b> for direct comparison.
+      <!-- Section 1: 🎯 Quick Model Selection (Tab 快速选型) -->
+      <section class="mb-16 pt-2">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-6">
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-2 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-600 text-xl">🎯</span>
+              Quick Model Selection
+            </h2>
+            <p class="text-steel-500">Two ways to narrow it down. Unsure? Start with <b>Pick by Seed</b>.</p>
           </div>
         </div>
-      </div>
 
-      <!-- Quick Pick Tabs: By Seed Table + By Scenario Cards -->
-      <div class="mb-14">
-        <h3 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-2">🎯 Quick Model Selection Guide</h3>
-        <p class="text-steel-500 mb-6">Pick the tab below that matches how you think. Unsure? Start with <b>Pick by Seed</b>.</p>
-
-        <div id="sel-tabs" class="flex flex-wrap gap-2 mb-6 border-b border-steel-200">
-          <button type="button" data-sel-tab="seed" class="sel-tab-btn active px-5 py-3 rounded-t-xl font-semibold text-sm border border-steel-200 border-b-transparent -mb-px bg-white text-amber-600">
-            📊 Pick by Seed (8 seed types)
+        <!-- Tab buttons (胶囊风，和全局 CTA 一致) -->
+        <div id="sel-tabs" class="inline-flex p-1 bg-steel-100 rounded-2xl mb-8 shadow-sm">
+          <button type="button" data-sel-tab="seed" class="sel-tab-btn active px-5 py-2.5 rounded-xl font-semibold text-sm bg-white text-amber-600 shadow">
+            📊 Pick by Seed
           </button>
-          <button type="button" data-sel-tab="scenario" class="sel-tab-btn px-5 py-3 rounded-t-xl font-semibold text-sm border border-transparent hover:border-steel-100 text-steel-600 hover:text-amber-600">
-            🎴 Pick by Scenario (6 quick cards)
+          <button type="button" data-sel-tab="scenario" class="sel-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm text-steel-600 hover:text-amber-600">
+            🎴 Pick by Scenario
           </button>
         </div>
 
         <!-- Tab A: Pick by Seed table -->
         <div id="sel-tab-seed" class="sel-tab-panel">
-          <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-5">
-            <h4 class="font-bold text-amber-700 mb-2 text-sm">⚠️ Quick truth about per-batch capacity</h4>
+          <!-- Truth note first -->
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
+            <h3 class="font-bold text-amber-700 mb-2 text-sm flex items-center gap-1.5"><span>⚠️</span> Quick truth about per-batch capacity</h3>
             <div class="text-steel-700 text-sm leading-relaxed">
               <b>All single-barrel models sharing the same barrel diameter load the same weight per batch,</b> regardless of model tonnage.<br>
               Standard 390 mm barrel: <b>≤ 100 kg / batch</b> for every model from HN300 through HN500.<br>
@@ -381,17 +385,15 @@ const allLd = [breadcrumbLd, faqLd];
           </div>
 
           <div class="overflow-x-auto rounded-2xl shadow-sm border border-steel-100">
-            <table class="w-full min-w-[860px] border-collapse bg-white text-sm">
+            <table class="w-full min-w-[760px] border-collapse bg-white text-sm">
               <thead>
                 <tr class="bg-steel-900 text-white">
                   <th class="px-4 py-3 text-left font-semibold">① Your Main Seed</th>
                   <th class="px-3 py-3 text-center font-semibold">② Hardness</th>
                   <th class="px-3 py-3 text-center font-semibold">③ Recommended Model<br>(Real Tonnage)</th>
-                  <th class="px-3 py-3 text-center font-semibold">④ Process</th>
-                  <th class="px-3 py-3 text-center font-semibold">⑤ Barrel</th>
-                  <th class="px-3 py-3 text-center font-semibold">⑥ Per Batch</th>
-                  <th class="px-3 py-3 text-center font-semibold">⑦ Daily (8 h)</th>
-                  <th class="px-3 py-3 text-left font-semibold">⑧ Why / Notes</th>
+                  <th class="px-3 py-3 text-center font-semibold">④ Barrel</th>
+                  <th class="px-3 py-3 text-center font-semibold">⑤ Per Batch</th>
+                  <th class="px-4 py-3 text-left font-semibold">⑥ Why / Notes</th>
                 </tr>
               </thead>
               <tbody>
@@ -405,11 +407,9 @@ const allLd = [breadcrumbLd, faqLd];
                     <div class="font-black text-lg text-amber-600">HN325</div>
                     <span class="inline-block text-[0.65rem] bg-amber-500 text-white px-2 py-0.5 rounded-full">Best Seller</span>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-amber-700">Hot Press</td>
                   <td class="px-3 py-3 text-center">390 mm</td>
                   <td class="px-3 py-3 text-center font-semibold">≤ 100 kg</td>
-                  <td class="px-3 py-3 text-center">0.9–1.2 T</td>
-                  <td class="px-3 py-3 text-left text-steel-600">Top-selling flagship. First choice for peanut. ~40–50 min / batch; ~9–12 batches in 8 h. Go double-barrel for +30–50% daily output. (Cold press also possible.)</td>
+                  <td class="px-4 py-3 text-left text-steel-600">Top-selling flagship. First choice for peanut. Go double-barrel for +30–50% daily output. (Cold press also possible.)</td>
                 </tr>
                 <tr class="border-b border-steel-100 bg-steel-50/40">
                   <td class="px-4 py-3">
@@ -420,11 +420,9 @@ const allLd = [breadcrumbLd, faqLd];
                   <td class="px-3 py-3 text-center">
                     <div class="font-black text-lg text-steel-800">HN355 / HN400</div>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-blue-700">Cold</td>
                   <td class="px-3 py-3 text-center">390 mm</td>
                   <td class="px-3 py-3 text-center font-semibold">≤ 100 kg</td>
-                  <td class="px-3 py-3 text-center">0.35–0.45 T</td>
-                  <td class="px-3 py-3 text-left text-steel-600">HN355 = 370 real tons, HN400 = 410 real tons. Covers most soft–medium seeds with safety margin. Cold press ~2 h / batch; 3.5–4.5 batches in 8 h. If hard seeds possible, go HN426. High volume → double-barrel.</td>
+                  <td class="px-4 py-3 text-left text-steel-600">HN355 = 370 real tons, HN400 = 410 real tons. Covers most soft–medium seeds with safety margin. If hard seeds possible, go HN426. High volume → double-barrel.</td>
                 </tr>
                 <tr class="border-b border-steel-100">
                   <td class="px-4 py-3">
@@ -436,11 +434,9 @@ const allLd = [breadcrumbLd, faqLd];
                     <div class="font-black text-lg text-steel-800">HN426</div>
                     <span class="inline-block text-[0.65rem] bg-green-600 text-white px-2 py-0.5 rounded-full">Most Popular</span>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-blue-700">Cold</td>
                   <td class="px-3 py-3 text-center">390 mm</td>
                   <td class="px-3 py-3 text-center font-semibold">≤ 100 kg</td>
-                  <td class="px-3 py-3 text-center">0.35–0.45 T</td>
-                  <td class="px-3 py-3 text-left text-steel-600">Real 500 tons. Handles all medium-hard seeds cleanly. For super-hard seeds (copra, hemp), step up to HN480/500.</td>
+                  <td class="px-4 py-3 text-left text-steel-600">Real 500 tons. Handles all medium-hard seeds cleanly. For super-hard seeds (copra, hemp), step up to HN480/500.</td>
                 </tr>
                 <tr class="border-b border-steel-100 bg-steel-50/40">
                   <td class="px-4 py-3">
@@ -451,11 +447,9 @@ const allLd = [breadcrumbLd, faqLd];
                   <td class="px-3 py-3 text-center">
                     <div class="font-black text-lg text-steel-800">HN480 / HN500</div>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-blue-700">Cold</td>
                   <td class="px-3 py-3 text-center">390 mm</td>
                   <td class="px-3 py-3 text-center font-semibold">≤ 100 kg</td>
-                  <td class="px-3 py-3 text-center">0.35–0.45 T</td>
-                  <td class="px-3 py-3 text-left text-steel-600">Flagship real 600–630 tons. Super-hard specialist. 390 mm barrel gives enough cake pressure. Cold press ~2 h / batch. High volume → double-barrel.</td>
+                  <td class="px-4 py-3 text-left text-steel-600">Flagship real 600–630 tons. Super-hard specialist. 390 mm barrel gives enough cake pressure. High volume → double-barrel.</td>
                 </tr>
                 <tr class="border-b border-steel-100">
                   <td class="px-4 py-3">
@@ -467,11 +461,9 @@ const allLd = [breadcrumbLd, faqLd];
                     <div class="font-black text-lg text-steel-800">HN325/355 Sesame</div>
                     <span class="inline-block text-[0.65rem] bg-green-600 text-white px-2 py-0.5 rounded-full">Sesame Only</span>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-blue-700">Cold</td>
                   <td class="px-3 py-3 text-center">300 mm</td>
                   <td class="px-3 py-3 text-center font-semibold">32.5–50 kg</td>
-                  <td class="px-3 py-3 text-center">0.5–0.7 T</td>
-                  <td class="px-3 py-3 text-left text-steel-600">Sesame special config. 300×800 mm barrel concentrates pressure to 47–51 Mpa/cm². Fast cycle preserves sesame aroma and maximizes yield. Up to 50 kg after pre-pressing. (Hot press also works, 30–40 min / batch.)</td>
+                  <td class="px-4 py-3 text-left text-steel-600">Sesame special config. 300×800 mm barrel concentrates pressure to 47–51 Mpa/cm². Fast cycle preserves sesame aroma and maximizes yield. Up to 50 kg after pre-pressing. (Hot press also works.)</td>
                 </tr>
                 <tr class="border-b border-steel-100 bg-steel-50/40">
                   <td class="px-4 py-3">
@@ -483,11 +475,9 @@ const allLd = [breadcrumbLd, faqLd];
                     <div class="font-black text-lg text-steel-800">300 Type Coconut</div>
                     <span class="inline-block text-[0.65rem] bg-green-600 text-white px-2 py-0.5 rounded-full">Coconut Only</span>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-blue-700">Cold</td>
                   <td class="px-3 py-3 text-center">600 mm</td>
                   <td class="px-3 py-3 text-center font-semibold">150–200 kg</td>
-                  <td class="px-3 py-3 text-center">1.4–2.0 T</td>
-                  <td class="px-3 py-3 text-left text-steel-600">Coconut milk specialist. 600×600 mm wide barrel (~170 L), optimized for fresh coconut meat throughput. Barrel, oil pan and full machine outer wrap in <b>304 food-grade stainless steel</b> against coconut juice corrosion. ~40 min / batch.</td>
+                  <td class="px-4 py-3 text-left text-steel-600">Coconut milk specialist. 600×600 mm wide barrel (~170 L), optimized for fresh coconut meat throughput. Barrel, oil pan and full machine outer wrap in <b>304 food-grade stainless steel</b> against coconut juice corrosion.</td>
                 </tr>
                 <tr class="border-b border-steel-100">
                   <td class="px-4 py-3">
@@ -498,11 +488,9 @@ const allLd = [breadcrumbLd, faqLd];
                   <td class="px-3 py-3 text-center">
                     <div class="font-black text-lg text-steel-800">HN325LB</div>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-blue-700">Cold</td>
                   <td class="px-3 py-3 text-center">630 mm</td>
                   <td class="px-3 py-3 text-center font-semibold">≈ 300 kg</td>
-                  <td class="px-3 py-3 text-center">2.4–3.6 T</td>
-                  <td class="px-3 py-3 text-left text-steel-600">Large-volume specialist. 630×1000 mm (~312 L) barrel for high throughput without needing ultra-high pressure. ~40–60 min / batch. Double-barrel version: two independent hydraulic systems for continuous loading/unloading.</td>
+                  <td class="px-4 py-3 text-left text-steel-600">Large-volume specialist. 630×1000 mm (~312 L) barrel for high throughput without needing ultra-high pressure. Double-barrel version: two independent hydraulic systems for continuous loading/unloading.</td>
                 </tr>
                 <tr class="bg-amber-50/40">
                   <td class="px-4 py-3">
@@ -514,24 +502,23 @@ const allLd = [breadcrumbLd, faqLd];
                     <div class="font-black text-lg text-steel-800">Any Model +</div>
                     <span class="inline-block text-[0.65rem] bg-amber-500 text-white px-2 py-0.5 rounded-full">Double-Barrel</span>
                   </td>
-                  <td class="px-3 py-3 text-center font-bold text-amber-700">Hot / Cold</td>
                   <td class="px-3 py-3 text-center">Double<br>390 / 300</td>
                   <td class="px-3 py-3 text-center font-semibold">Per barrel same as above</td>
-                  <td class="px-3 py-3 text-center">+30–50% vs single</td>
-                  <td class="px-3 py-3 text-left text-steel-600">Double-barrel does NOT press two batches at once — it lets you <b>load/unload one barrel while the other is pressing</b>, eliminating idle wait between batches and increasing daily batches. Choose the model based on your seeds, then add double-barrel for higher throughput.</td>
+                  <td class="px-4 py-3 text-left text-steel-600">Double-barrel does NOT press two batches at once — it lets you <b>load/unload one barrel while the other is pressing</b>, eliminating idle wait between batches and increasing daily batches. Choose the model based on your seeds, then add double-barrel for higher throughput.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
+          <!-- Legend & Summary -->
           <div class="flex flex-wrap gap-4 items-center text-xs text-steel-600 mt-4">
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-full bg-amber-500"></span> Hot press = roast then press, faster extraction</span>
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-full bg-blue-600"></span> Cold press = low-temperature, preserves nutrients and premium quality</span>
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-full bg-green-600"></span> Upgrades available (double-barrel / small-barrel)</span>
           </div>
 
-          <div class="mt-6 bg-white border border-steel-200 rounded-xl p-5 shadow-sm">
-            <h4 class="font-bold text-steel-800 mb-3">📋 3 simple rules — never choose the wrong model again</h4>
+          <div class="mt-6 bg-white border border-steel-200 rounded-2xl p-5 shadow-sm">
+            <h3 class="font-bold text-steel-800 mb-3 flex items-center gap-2"><span>📋</span> 3 simple rules — never choose the wrong model again</h3>
             <ul class="space-y-2 text-sm text-steel-700 list-disc pl-5">
               <li><b>Model = pressure, NOT capacity.</b> Same-barrel single-barrel machines load the same weight per batch (390 mm barrel ≤ 100 kg; 300 mm barrel ≤ 60 kg) — from HN300 to HN500. Larger models only allow harder seeds to be pressed cleaner.</li>
               <li><b>Pick the model by seed hardness.</b> Soft seeds (peanut, rapeseed, sesame) 300–400 real tons; medium-hard (tea seed, walnut, flax) 400–500 tons; super-hard (copra, hemp, pine nut) 500–630 tons + optional 300 mm small barrel for concentrated pressure.</li>
@@ -581,22 +568,34 @@ const allLd = [breadcrumbLd, faqLd];
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Collapsible Detailed Selection Guide (English, same block as EN version) -->
-      <div class="mb-14">
+      <!-- Section 2: 📖 Full Selection Guide (详细折叠指南，默认收起) -->
+      <section class="mb-16 pt-4 border-t border-steel-100">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-6">
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-2 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-100 text-blue-600 text-xl">📖</span>
+              Full Selection Guide
+            </h2>
+            <p class="text-steel-500">Expand below for naming rules, real parameters, decision tree, and seed hardness ladder.</p>
+          </div>
+        </div>
+
         <details id="sel-guide-detail" class="bg-white border border-steel-200 rounded-2xl p-6 md:p-8 group shadow-sm">
           <summary class="flex items-center justify-between cursor-pointer list-none">
             <div>
-              <h3 class="font-display text-2xl text-steel-900 flex items-center gap-2">
-                <span class="text-2xl">📖</span> Full 7-Step Selection Guide
+              <h3 class="font-display text-lg text-steel-900 font-semibold flex items-center gap-2">
+                <span class="inline-flex w-8 h-8 rounded-lg bg-blue-600 text-white items-center justify-center text-xs group-open:hidden">Open</span>
+                <span class="inline-flex w-8 h-8 rounded-lg bg-steel-800 text-white items-center justify-center text-xs hidden group-open:inline-flex">Close</span>
+                7-step detailed guide — model naming, real specs, decision tree & seed hardness
               </h3>
-              <p class="text-steel-500 text-sm mt-1">Expand for detailed explanation, decision tree, and suffix meaning.</p>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
 
           <div class="mt-8 space-y-10">
+            <!-- Step 2: Model Naming Convention -->
             <section>
               <h4 class="font-display text-xl text-steel-900 mb-4 flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-steel-900 text-white flex items-center justify-center text-sm font-bold">2</span> Model Number Meaning</h4>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -628,11 +627,12 @@ const allLd = [breadcrumbLd, faqLd];
               </div>
             </section>
 
+            <!-- Step 3: Real Spec Table by Category -->
             <section>
               <h4 class="font-display text-xl text-steel-900 mb-4 flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-steel-900 text-white flex items-center justify-center text-sm font-bold">3</span> Full Real Specs by Category</h4>
-              <p class="text-steel-500 text-sm mb-4">Sorted by actual parameters (not model number). Same model is available with 390 mm standard barrel or 300 mm small barrel.</p>
+              <p class="text-steel-500 text-sm mb-4">Sorted by actual parameters (not model number). Same model is available with 390 mm standard barrel or 300 mm small barrel — the choice changes per-batch capacity and pressure concentration.</p>
 
-              <h5 class="font-bold text-steel-800 mb-3">Hot Press Series</h5>
+              <h5 class="font-bold text-steel-800 mb-3">Hot Press Series (roast → press, faster yield)</h5>
               <div class="overflow-x-auto rounded-xl border border-steel-100 mb-6">
                 <table class="w-full min-w-[720px] border-collapse bg-white text-[0.82rem]">
                   <thead>
@@ -648,7 +648,7 @@ const allLd = [breadcrumbLd, faqLd];
                 </table>
               </div>
 
-              <h5 class="font-bold text-steel-800 mb-3">Cold Press Series</h5>
+              <h5 class="font-bold text-steel-800 mb-3">Cold Press Series (low temp, preserves nutrients)</h5>
               <div class="overflow-x-auto rounded-xl border border-steel-100 mb-6">
                 <table class="w-full min-w-[820px] border-collapse bg-white text-[0.82rem]">
                   <thead>
@@ -684,10 +684,11 @@ const allLd = [breadcrumbLd, faqLd];
               </div>
 
               <p class="text-xs text-steel-500 mt-4 leading-relaxed">
-                NOTE: Standard barrel (390×800 mm) ~96 L ≈ 100 kg / batch of crushed seeds. 300 mm barrel ~57 L ≈ 60 kg / batch. 300 Type Coconut ~170 L ≈ 150–200 kg fresh coconut meat/fiber. HN325LB ~312 L ≈ 300 kg sludge / fruit & veg. 8h daily output estimate: Hot press (HN325) ~0.9–1.2 T; Cold press 390 mm (HN355–500) ~0.35–0.45 T; Sesame special ~0.5–0.7 T; 300 Type Coconut milk ~1.4–2.0 T; HN325LB sludge ~2.4–3.6 T; Super-hard seeds + small barrel (HN480/500) ~0.2–0.25 T. Cold press ~2 h / batch; Hot press / coconut milk / sesame ~30–40 min / batch. We recommend starting with HN325 as the entry point.
+                NOTE: Standard barrel (390×800 mm) ~96 L ≈ ≤100 kg / batch of crushed seeds. 300 mm small barrel ~57 L ≈ ≤60 kg / batch. 300 Type Coconut ~170 L ≈ 150–200 kg fresh coconut meat/fiber. HN325LB ~312 L ≈ ~300 kg sludge / fruit & veg. We recommend starting with HN325 as the entry point for common seeds.
               </p>
             </section>
 
+            <!-- Step 4: 3 Real Variables -->
             <section>
               <h4 class="font-display text-xl text-steel-900 mb-4 flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-steel-900 text-white flex items-center justify-center text-sm font-bold">4</span> The 3 Real Variables in Selection</h4>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -709,32 +710,46 @@ const allLd = [breadcrumbLd, faqLd];
               </div>
             </section>
 
+            <!-- Step 5: Decision Tree (和 Step 2/4 保持一致：卡片编号 Grid) -->
             <section>
               <h4 class="font-display text-xl text-steel-900 mb-4 flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-steel-900 text-white flex items-center justify-center text-sm font-bold">5</span> 4-Step Decision Tree by Scenario</h4>
-              <div class="flex flex-col gap-0">
-                <div class="pl-5 ml-3 border-l-[3px] border-blue-400 py-4 relative"><span class="absolute -left-[10px] top-5 w-[15px] h-[15px] rounded-full bg-steel-900 border-[3px] border-white box-content"></span>
-                  <h5 class="font-bold text-steel-800 mb-1">Step 1: Identity / daily scale?</h5>
-                  <p class="text-sm text-steel-600">Village cooperative / small workshop → <b>HN325</b> (best seller, hot press mainstay for peanut, cold press also possible, entry recommended). <br>Mid-size oil mill / toll processor → <b>HN355 / HN400</b>.<br>Large factory / bulk exporter → <b>HN426 / HN480 / HN500</b>.<br><span class="text-xs text-steel-500">For small-scale trial HN300 is possible but has limited daily volume, not our main recommendation.</span></p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-amber-50 rounded-xl p-5 border-l-4 border-amber-500">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="inline-flex w-7 h-7 rounded-lg bg-amber-500 text-white items-center justify-center text-sm font-bold shrink-0">1</span>
+                    <h5 class="font-bold text-steel-800">Identity / daily scale?</h5>
+                  </div>
+                  <p class="text-sm text-steel-700 leading-relaxed">Village cooperative / small workshop → <b>HN325</b> (best seller, hot press mainstay for peanut, cold press also possible, entry recommended).<br>Mid-size oil mill / toll processor → <b>HN355 / HN400</b>.<br>Large factory / bulk exporter → <b>HN426 / HN480 / HN500</b>.<br><span class="text-xs text-steel-500">For small-scale trial HN300 is possible but has limited daily volume, not our main recommendation.</span></p>
                 </div>
-                <div class="pl-5 ml-3 border-l-[3px] border-blue-400 py-4 relative"><span class="absolute -left-[10px] top-5 w-[15px] h-[15px] rounded-full bg-steel-900 border-[3px] border-white box-content"></span>
-                  <h5 class="font-bold text-steel-800 mb-1">Step 2: What seed do you press? (Hardness → tonnage)</h5>
-                  <p class="text-sm text-steel-600">Soft–medium: peanut, rapeseed, soybean, sunflower, castor, flax → 300–400 real tons sufficient (HN325/355/400).<br>Sesame specialist → HN325/355 Sesame (300 mm small barrel).<br>Medium-hard: tea seed, walnut, flaxseed, almond → 400–500 real tons (HN400/426).<br>Super-hard: copra, hemp seed, pine nut → 500–630 real tons (HN480/500) + consider 300 mm small barrel.<br>Special feeds: fresh coconut meat → 300 Type Coconut; oil sludge / spent bleaching earth / fruit & veg dehydration → HN325LB.</p>
+                <div class="bg-blue-50 rounded-xl p-5 border-l-4 border-blue-500">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="inline-flex w-7 h-7 rounded-lg bg-blue-600 text-white items-center justify-center text-sm font-bold shrink-0">2</span>
+                    <h5 class="font-bold text-steel-800">What seed do you press?</h5>
+                  </div>
+                  <p class="text-sm text-steel-700 leading-relaxed">Soft–medium (peanut, rapeseed, soybean, sunflower, castor, flax) → 300–400 real tons sufficient (HN325/355/400).<br>Sesame specialist → HN325/355 Sesame (300 mm small barrel).<br>Medium-hard (tea seed, walnut, flaxseed, almond) → 400–500 real tons (HN400/426).<br>Super-hard (copra, hemp seed, pine nut) → 500–630 real tons (HN480/500) + 300 mm small barrel option.<br>Special feeds: coconut → 300 Type Coconut; sludge/dehydration → HN325LB.</p>
                 </div>
-                <div class="pl-5 ml-3 border-l-[3px] border-blue-400 py-4 relative"><span class="absolute -left-[10px] top-5 w-[15px] h-[15px] rounded-full bg-steel-900 border-[3px] border-white box-content"></span>
-                  <h5 class="font-bold text-steel-800 mb-1">Step 3: How many kg per day? (→ single vs double barrel)</h5>
-                  <p class="text-sm text-steel-600">Tens of kg / day trial → standard single-barrel 390 mm is sufficient.<br>Hundreds of kg / day → consider <b>double-barrel</b> option (still choose base model by seed type; only add double-barrel configuration).<br>1+ tons / day → definitely <b>double-barrel</b> (available for any model) or multiple machines in parallel. Note: daily volume does not decide which base model to pick.</p>
+                <div class="bg-green-50 rounded-xl p-5 border-l-4 border-green-600">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="inline-flex w-7 h-7 rounded-lg bg-green-600 text-white items-center justify-center text-sm font-bold shrink-0">3</span>
+                    <h5 class="font-bold text-steel-800">How many kg per day?</h5>
+                  </div>
+                  <p class="text-sm text-steel-700 leading-relaxed">Tens of kg / day trial → standard single-barrel 390 mm is sufficient.<br>Hundreds of kg / day → consider <b>double-barrel</b> (still choose base model by seed type; only add double-barrel config).<br>1+ tons / day → definitely <b>double-barrel</b> (available for any model) or multiple machines in parallel.<br><span class="text-xs text-steel-500">Daily volume does NOT decide which base model to pick — seed hardness does.</span></p>
                 </div>
-                <div class="pl-5 ml-3 border-l-[3px] border-blue-400 py-4 relative"><span class="absolute -left-[10px] top-5 w-[15px] h-[15px] rounded-full bg-steel-900 border-[3px] border-white box-content"></span>
-                  <h5 class="font-bold text-steel-800 mb-1">Step 4: Budget and space</h5>
-                  <p class="text-sm text-steel-600">Tight budget / small space → start with HN325, add more machines later.<br>Comfortable budget / hardened floor available → jump straight to HN480/500 double-barrel.<br>Note: HN480/500 weigh 3+ tons — confirm door width, crane access, floor load-bearing.</p>
+                <div class="bg-steel-50 rounded-xl p-5 border-l-4 border-steel-700">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="inline-flex w-7 h-7 rounded-lg bg-steel-700 text-white items-center justify-center text-sm font-bold shrink-0">4</span>
+                    <h5 class="font-bold text-steel-800">Budget and space</h5>
+                  </div>
+                  <p class="text-sm text-steel-700 leading-relaxed">Tight budget / small space → start with HN325, add more machines later.<br>Comfortable budget / hardened floor available → jump straight to HN480/500 double-barrel.<br><span class="text-xs text-steel-500">Note: HN480/500 weigh 3+ tons — confirm door width, crane access, floor load-bearing before ordering.</span></p>
                 </div>
               </div>
             </section>
 
+            <!-- Step 6: Seed Hardness Ladder -->
             <section>
               <h4 class="font-display text-xl text-steel-900 mb-4 flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-steel-900 text-white flex items-center justify-center text-sm font-bold">6</span> Seed Hardness Ladder</h4>
-              <p class="text-steel-500 text-sm mb-4">Different seeds have different hardness, which dictates the minimum recommended model.</p>
-              <div class="overflow-x-auto rounded-xl border border-steel-100">
+              <p class="text-steel-500 text-sm mb-4">Different seeds have different hardness, which dictates the minimum recommended model. An underpowered machine on hard seeds will leave high residual oil.</p>
+              <div class="overflow-x-auto rounded-2xl border border-steel-100 shadow-sm">
                 <table class="w-full min-w-[760px] border-collapse bg-white text-[0.85rem]">
                   <thead>
                     <tr class="bg-steel-800 text-white">
@@ -743,7 +758,7 @@ const allLd = [breadcrumbLd, faqLd];
                   </thead>
                   <tbody>
                     <tr class="border-b border-steel-100"><td class="px-3 py-2">Peanut, soybean, sunflower, rapeseed, castor, flax</td><td class="px-3 py-2 text-center">Soft–Med</td><td class="px-3 py-2 text-center">Hot press primary (cold press OK)</td><td class="px-3 py-2 text-center font-bold">HN325</td><td class="px-3 py-2">Peanut first choice · best-seller for common soft-medium seeds.</td></tr>
-                    <tr class="border-b border-steel-100"><td class="px-3 py-2">Sesame</td><td class="px-3 py-2 text-center">Soft</td><td class="px-3 py-2 text-center">Hot press + 300 mm small barrel</td><td class="px-3 py-2 text-center font-bold">HN325/355 Sesame</td><td class="px-3 py-2">Special small-barrel config for small seeds. High cake pressure 47–51 MPa/cm², 30–40 min per batch, preserves aroma and yield.</td></tr>
+                    <tr class="border-b border-steel-100"><td class="px-3 py-2">Sesame</td><td class="px-3 py-2 text-center">Soft</td><td class="px-3 py-2 text-center">Hot press + 300 mm small barrel</td><td class="px-3 py-2 text-center font-bold">HN325/355 Sesame</td><td class="px-3 py-2">Special small-barrel config for small seeds. High cake pressure 47–51 MPa/cm², preserves aroma and yield.</td></tr>
                     <tr class="border-b border-steel-100"><td class="px-3 py-2">Tea seed, walnut, almond</td><td class="px-3 py-2 text-center">Medium</td><td class="px-3 py-2 text-center">Cold / Hot</td><td class="px-3 py-2 text-center font-bold">HN400</td><td class="px-3 py-2">Cold press preserves nutritional value, needs medium force.</td></tr>
                     <tr class="border-b border-steel-100"><td class="px-3 py-2">Flaxseed, perilla, pumpkin seed</td><td class="px-3 py-2 text-center">Med–Hard</td><td class="px-3 py-2 text-center">Cold press</td><td class="px-3 py-2 text-center font-bold">HN426</td><td class="px-3 py-2">High-value seeds, cold-pressed best. For hard seeds also consider 300 mm small-barrel option.</td></tr>
                     <tr class="border-b border-steel-100"><td class="px-3 py-2">Copra, hemp seed, pine nut</td><td class="px-3 py-2 text-center">Hard</td><td class="px-3 py-2 text-center">Cold + 300 mm small barrel</td><td class="px-3 py-2 text-center font-bold">HN480 / HN500</td><td class="px-3 py-2">Real 600–630 tons needed to extract cleanly from the hardest raw materials.</td></tr>
@@ -755,8 +770,9 @@ const allLd = [breadcrumbLd, faqLd];
             </section>
           </div>
         </details>
-      </div>
+      </section>
 
+      <!-- Tab toggle script (inline, this page only) — 适配胶囊按钮 -->
       <script is:inline>
       (function(){
         var btns = document.querySelectorAll('#sel-tabs .sel-tab-btn');
@@ -764,11 +780,11 @@ const allLd = [breadcrumbLd, faqLd];
         function showTab(name){
           btns.forEach(function(b){
             if(b.getAttribute('data-sel-tab')===name){
-              b.classList.add('active','bg-white','text-amber-600','border-steel-200','border-b-transparent','-mb-px');
-              b.classList.remove('border-transparent','text-steel-600');
+              b.classList.add('active','bg-white','text-amber-600','shadow');
+              b.classList.remove('text-steel-600','hover:text-amber-600');
             } else {
-              b.classList.remove('active','bg-white','text-amber-600','border-steel-200','border-b-transparent','-mb-px');
-              b.classList.add('border-transparent','text-steel-600');
+              b.classList.remove('active','bg-white','text-amber-600','shadow');
+              b.classList.add('text-steel-600','hover:text-amber-600');
             }
           });
           panels.forEach(function(p){
@@ -780,100 +796,76 @@ const allLd = [breadcrumbLd, faqLd];
       })();
       </script>
 
-      <!-- Main Comparison Table -->
-      <div class="mb-16">
-        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
-          {currentLocale === 'fr' ? 'Modèles Standard & Haute Pression' : currentLocale === 'ar' ? 'النماذج القياسية والضغط العالي' : 'Standard & High-Pressure Models'}
-        </h2>
-        <p class="text-steel-500 mb-6">
-          <strong class="text-charcoal-900">
-            {currentLocale === 'fr' ? 'Toutes les presses à huile hydrauliques Haonuo sont polyvalentes' : currentLocale === 'ar' ? 'جميع آلات الضغط الهيدروليكي لزيت Haonuo متعددة الاستخدامات' : 'All Haonuo hydraulic oil press machines are versatile'}
-          </strong>
-          {currentLocale === 'fr' ? ' — elles peuvent traiter la plupart des graines oléagineuses, y compris les arachides, le sésame, le colza, les graines de thé, les noix, les amandes et plus encore. La colonne "Graines recommandées" ci-dessous met en évidence les graines pour lesquelles chaque modèle est particulièrement optimisé. Si votre graine oléagineuse n\'est pas répertoriée, ' : currentLocale === 'ar' ? ' — يمكنها معالجة معظم البذور الزيتية بما في ذلك الفول السوداني والسمسم والقلعة وبذور الشاي والجوز واللوز وغيرها. عمود "البذور الموصى بها" أدناه يسلط الضوء على البذور التي يتم تحسين كل نموذج خصيصًا لها. إذا لم يتم تسجيل بذرتك الزيتية، ' : ' — they can process most oil seeds including peanuts, sesame, rapeseed, tea seeds, walnuts, almonds, and more. The "Recommended Seeds" column below highlights seeds for which each model is particularly optimized. If your oil seed isn\'t listed, '}
-          <a href={localePath('/contact')} class="text-amber-600 hover:text-amber-700">{t.nav.contact}</a>
-          {currentLocale === 'fr' ? ' — nous pouvons vous aider à sélectionner la bonne machine.' : currentLocale === 'ar' ? ' — يمكننا مساعدتك في اختيار الآلة المناسبة.' : ' — we can help you select the right machine.'}
-        </p>
+      <!-- Section 3: 📊 Standard Models Spec Table -->
+      <section class="mb-16 pt-14 border-t border-steel-100">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-6">
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-2 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-steel-100 text-steel-700 text-xl">📊</span>
+              Standard & High-Pressure Models
+            </h2>
+            <p class="text-steel-500">
+              <strong class="text-charcoal-900">All Haonuo hydraulic oil presses are versatile</strong> — they process most oil seeds (peanut, sesame, rapeseed, tea seed, walnut, almond, etc.). The "Recommended Seeds" column highlights special optimizations. If your seed isn't listed, <a href={localePath('/contact')} class="text-amber-600 hover:text-amber-700">contact us</a>.
+            </p>
+          </div>
+        </div>
         <div class="overflow-x-auto">
           <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
             <thead>
               <tr class="bg-steel-900 text-white">
-                <th class="px-4 py-3 text-left text-sm font-semibold">
-                  {currentLocale === 'fr' ? 'Spécification' : currentLocale === 'ar' ? 'المواصفات' : 'Specification'}
-                </th>
+                <th class="px-4 py-3 text-left text-sm font-semibold">Specification</th>
                 {models.map(m => (
                   <th class={`px-3 py-3 text-center text-sm font-semibold whitespace-nowrap ${m.highlight ? 'bg-amber-500' : ''}`}>
                     <div>{m.model}</div>
-                    <div class="text-xs font-normal opacity-80">{modelNames[m.model][currentLocale] || modelNames[m.model].en}</div>
+                    <div class="text-xs font-normal opacity-80">{modelNames[m.model]?.[currentLocale] || modelNames[m.model]?.en}</div>
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
               <tr class="border-b border-steel-100 bg-amber-50/50">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Force de Pressage' : currentLocale === 'ar' ? 'قوة الضغط' : 'Pressing Force'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Pressing Force</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.pressingForce}</td>)}
               </tr>
               <tr class="border-b border-steel-100">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Pression Système' : currentLocale === 'ar' ? 'ضغط النظام' : 'System Pressure'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">System Pressure</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.systemPressure}</td>)}
               </tr>
               <tr class="border-b border-steel-100 bg-amber-50/50">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Pression du Gâteau' : currentLocale === 'ar' ? 'ضغط الكيك' : 'Cake Pressure'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Cake Pressure</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.cakePressure}</td>)}
               </tr>
               <tr class="border-b border-steel-100">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Diamètre du Fût' : currentLocale === 'ar' ? 'قطر البرميل' : 'Barrel Diameter'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Barrel Diameter</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.barrelDiameter}</td>)}
               </tr>
               <tr class="border-b border-steel-100 bg-amber-50/50">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Hauteur du Fût' : currentLocale === 'ar' ? 'ارتفاع البرميل' : 'Barrel Height'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Barrel Height</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.barrelHeight}</td>)}
               </tr>
               <tr class="border-b border-steel-100">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Puissance du Moteur' : currentLocale === 'ar' ? 'قوة المحرك' : 'Motor Power'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Motor Power</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.motorPower}</td>)}
               </tr>
               <tr class="border-b border-steel-100 bg-amber-50/50">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Poids (Simple/Double)' : currentLocale === 'ar' ? 'الوزن (واحد/مزدوج)' : 'Weight (Single/Double)'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Weight (Single/Double)</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700">{m.weight}</td>)}
               </tr>
               <tr class="border-b border-steel-100">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Dimensions (Simple)' : currentLocale === 'ar' ? 'الأبعاد (واحد)' : 'Dimensions (Single)'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Dimensions (Single)</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-steel-700 text-xs">{m.dimensions}</td>)}
               </tr>
               <tr class="border-b border-steel-100 bg-amber-50/50">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Idéal pour' : currentLocale === 'ar' ? 'مثالي لـ' : 'Best For'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Best For</td>
                 {models.map(m => <td class="px-3 py-3 text-sm text-center text-amber-700 font-medium">{m.bestFor[currentLocale] || m.bestFor.en}</td>)}
               </tr>
               <tr>
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Graines Recommandées' : currentLocale === 'ar' ? 'البذور الموصى بها' : 'Recommended Seeds'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Recommended Seeds</td>
                 {models.map(m => (
                   <td class="px-3 py-3 text-center">
                     <div class="flex flex-wrap gap-1 justify-center">
                       {m.seeds.slice(0, 3).map(seed => (
-                        <span class="text-xs bg-green-50 text-green-700 px-1.5 py-0.5 rounded">
-                          {seedNames[seed]?.[currentLocale] || seedNames[seed]?.en || seed}
-                        </span>
+                        <span class="text-xs bg-green-50 text-green-700 px-1.5 py-0.5 rounded">{seedNames[seed]?.[currentLocale] || seedNames[seed]?.en || seed}</span>
                       ))}
                       {m.seeds.length > 3 && (
                         <span class="text-xs text-steel-400">+{m.seeds.length - 3}</span>
@@ -883,14 +875,10 @@ const allLd = [breadcrumbLd, faqLd];
                 ))}
               </tr>
               <tr class="bg-steel-50/50">
-                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">
-                  {currentLocale === 'fr' ? 'Fonctionne Aussi Avec' : currentLocale === 'ar' ? 'يعمل أيضًا مع' : 'Also Works With'}
-                </td>
+                <td class="px-4 py-3 text-sm font-medium text-charcoal-900">Also Works With</td>
                 {models.map(m => (
                   <td class="px-3 py-3 text-center">
-                    <span class="text-xs text-steel-500">
-                      {currentLocale === 'fr' ? 'La plupart des graines oléagineuses' : currentLocale === 'ar' ? 'معظم البذور الزيتية' : 'Most oil seeds'}
-                    </span>
+                    <span class="text-xs text-steel-500">Most oil seeds</span>
                   </td>
                 ))}
               </tr>
@@ -901,7 +889,7 @@ const allLd = [breadcrumbLd, faqLd];
                 {models.map(m => (
                   <td class="px-3 py-3 text-center">
                     <a href={localePath(`/products/${m.slug}`)} class="inline-flex items-center text-xs font-semibold text-amber-600 hover:text-amber-700 transition-colors">
-                      {currentLocale === 'fr' ? 'Voir les Spécifications' : currentLocale === 'ar' ? 'عرض المواصفات' : 'View Specifications'}
+                      View Specifications
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
                   </td>
@@ -910,16 +898,19 @@ const allLd = [breadcrumbLd, faqLd];
             </tfoot>
           </table>
         </div>
-      </div>
+      </section>
 
-      <!-- Specialty Models -->
-      <div class="mb-16">
-        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
-          {currentLocale === 'fr' ? 'Modèles Spécialisés' : currentLocale === 'ar' ? 'النماذج المتخصصة' : 'Specialty Models'}
-        </h2>
-        <p class="text-steel-500 mb-6">
-          {currentLocale === 'fr' ? 'Machines spécialement conçues pour des graines oléagineuses et des applications spécifiques, avec une conception de fût et des paramètres de pressage optimisés.' : currentLocale === 'ar' ? 'آلات مصممة خصيصًا للبذور الزيتية والتطبيقات المحددة، مع تصميم برميل ومعلمات ضغط محسنة.' : 'Purpose-built machines for specific oil seeds and applications with optimized barrel design and pressing parameters.'}
-        </p>
+      <!-- Section 4: 🌟 Specialty Models -->
+      <section class="mb-16 pt-14 border-t border-steel-100">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-6">
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-2 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-purple-100 text-purple-600 text-xl">🌟</span>
+              Specialty Models
+            </h2>
+            <p class="text-steel-500">Purpose-built machines for specific oil seeds and applications with optimized barrel design and pressing parameters.</p>
+          </div>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {specialtyModels.map(m => (
             <a href={localePath(`/products/${m.slug}`)} class="bg-white rounded-2xl border border-steel-100 p-6 hover:shadow-lg transition-shadow group">
@@ -930,109 +921,109 @@ const allLd = [breadcrumbLd, faqLd];
               <p class="text-sm text-amber-600 font-medium mb-3">{m.name[currentLocale] || m.name.en}</p>
               <div class="space-y-2 text-sm text-steel-600">
                 <div class="flex justify-between">
-                  <span>{currentLocale === 'fr' ? 'Force de Pressage' : currentLocale === 'ar' ? 'قوة الضغط' : 'Pressing Force'}</span>
+                  <span>Pressing Force</span>
                   <span class="font-medium text-charcoal-900">{m.pressingForce}</span>
                 </div>
                 <div class="flex justify-between">
-                  <span>{currentLocale === 'fr' ? 'Diamètre du Fût' : currentLocale === 'ar' ? 'قطر البرميل' : 'Barrel Diameter'}</span>
+                  <span>Barrel Diameter</span>
                   <span class="font-medium text-charcoal-900">{m.barrelDiameter}</span>
                 </div>
                 <div class="flex justify-between">
-                  <span>{currentLocale === 'fr' ? 'Pression du Gâteau' : currentLocale === 'ar' ? 'ضغط الكيك' : 'Cake Pressure'}</span>
+                  <span>Cake Pressure</span>
                   <span class="font-medium text-charcoal-900">{m.cakePressure}</span>
                 </div>
               </div>
               <div class="flex flex-wrap gap-1 mt-3">
                 {m.seeds.map(seed => (
-                  <span class="text-xs bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded">
-                    {seedNames[seed]?.[currentLocale] || seedNames[seed]?.en || seed}
-                  </span>
+                  <span class="text-xs bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded">{seedNames[seed]?.[currentLocale] || seedNames[seed]?.en || seed}</span>
                 ))}
               </div>
               <div class="mt-4 flex items-center text-amber-600 group-hover:text-amber-700 transition-colors text-sm font-medium">
-                {currentLocale === 'fr' ? 'Voir les Spécifications' : currentLocale === 'ar' ? 'عرض المواصفات' : 'View Specifications'}
+                View Specifications
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </div>
             </a>
           ))}
         </div>
-      </div>
+      </section>
 
-      <!-- Single vs Double Barrel -->
-      <div class="mb-16">
-        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
-          {currentLocale === 'fr' ? 'Fût Simple vs Fût Double' : currentLocale === 'ar' ? 'برميل واحد مقابل برميل مزدوج' : 'Single Barrel vs Double Barrel'}
-        </h2>
-        <p class="text-steel-500 mb-6">
-          {currentLocale === 'fr' ? 'La plupart des modèles Haonuo sont disponibles en configurations à fût simple et à fût double. Les machines à fût double doublent votre débit avec un système hydraulique partagé.' : currentLocale === 'ar' ? 'تتوفر معظم نماذج Haonuo في إعدادات برميل واحد وبرميل مزدوج. تضاعف آلات البرميل المزدوج إنتاجك مع نظام هيدروليكي مشترك.' : 'Most Haonuo models are available in both single and double barrel configurations. Double barrel machines double your throughput with shared hydraulic system.'}
-        </p>
+      <!-- Section 5: ⚙️ Single vs Double Barrel -->
+      <section class="mb-16 pt-14 border-t border-steel-100">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-6">
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-2 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-green-100 text-green-700 text-xl">⚙️</span>
+              Single Barrel vs Double Barrel
+            </h2>
+            <p class="text-steel-500">Most Haonuo models are available in both single and double barrel configurations. Double barrel nearly doubles throughput with shared hydraulic system.</p>
+          </div>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-white rounded-2xl border border-steel-100 p-8">
             <div class="w-14 h-14 bg-steel-100 rounded-xl flex items-center justify-center mb-4">
               <span class="text-2xl font-bold text-steel-700">1</span>
             </div>
-            <h3 class="font-display text-xl text-charcoal-900 mb-3">
-              {currentLocale === 'fr' ? 'Fût Simple' : currentLocale === 'ar' ? 'برميل واحد' : 'Single Barrel'}
-            </h3>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">Single Barrel</h3>
             <ul class="space-y-2 text-steel-600">
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Investissement plus faible, idéal pour les startups' : currentLocale === 'ar' ? 'استثمار أقل، مثالي للشركات الناشئة' : 'Lower investment, ideal for startups'}</span>
+                <span>Lower investment, ideal for startups</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Emprise compacte, s\'adapte aux ateliers plus petits' : currentLocale === 'ar' ? 'محمولة صغيرة، تناسب ورش العمل الأصغر' : 'Compact footprint, fits smaller workshops'}</span>
+                <span>Compact footprint, fits smaller workshops</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Traitement par lots : cycle chargement → pressage → déchargement' : currentLocale === 'ar' ? 'معالجة بالكميات: دورة تحميل → ضغط → تفريغ' : 'Batch processing: load → press → unload cycle'}</span>
+                <span>Batch processing: load → press → unload cycle</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Capacité de traitement : 8-15 kg par lot' : currentLocale === 'ar' ? 'سعة المعالجة: 8-15 كجم لكل كمية' : 'Processing capacity: 8-15 kg per batch'}</span>
+                <span>Processing capacity: 100 kg per batch</span>
               </li>
             </ul>
           </div>
           <div class="bg-white rounded-2xl border-2 border-amber-400 p-8 relative">
-            <span class="absolute -top-3 right-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-              {currentLocale === 'fr' ? 'RECOMMANDÉ' : currentLocale === 'ar' ? 'موصى به' : 'RECOMMENDED'}
-            </span>
+            <span class="absolute -top-3 right-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">RECOMMENDED</span>
             <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
               <span class="text-2xl font-bold text-amber-700">2</span>
             </div>
-            <h3 class="font-display text-xl text-charcoal-900 mb-3">
-              {currentLocale === 'fr' ? 'Fût Double' : currentLocale === 'ar' ? 'برميل مزدوج' : 'Double Barrel'}
-            </h3>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3">Double Barrel</h3>
             <ul class="space-y-2 text-steel-600">
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Débit presque doublé avec système hydraulique partagé' : currentLocale === 'ar' ? 'إنتاج مضاعف تقريبًا مع نظام هيدروليكي مشترك' : 'Nearly 2x throughput with shared hydraulic system'}</span>
+                <span>Nearly 2x throughput with shared hydraulic system</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Fonctionnement continu : un fût presse tandis que l\'autre charge' : currentLocale === 'ar' ? 'تشغيل مستمر: برميل واحد يضغط بينما الآخر يحمل' : 'Continuous operation: one barrel presses while other loads'}</span>
+                <span>Continuous operation: one barrel presses while other loads</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Meilleure valeur par kg de sortie' : currentLocale === 'ar' ? 'أفضل قيمة لكل كيلوغرام من الإنتاج' : 'Best value per kg of output'}</span>
+                <span>Best value per kg of output</span>
               </li>
               <li class="flex items-start gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>{currentLocale === 'fr' ? 'Capacité de traitement : 16-30 kg par lot' : currentLocale === 'ar' ? 'سعة المعالجة: 16-30 كجم لكل كمية' : 'Processing capacity: 16-30 kg per batch'}</span>
+                <span>Processing capacity: 100 kg per batch (dual barrel)</span>
               </li>
             </ul>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- FAQ -->
-      <div class="mb-16">
-        <h2 class="font-display text-2xl text-charcoal-900 mb-6">
-          {currentLocale === 'fr' ? 'Foire aux questions' : currentLocale === 'ar' ? 'الأسئلة المتكررة' : 'Frequently Asked Questions'}
-        </h2>
+      <!-- Section 6: ❓ FAQ -->
+      <section class="mb-16 pt-14 border-t border-steel-100">
+        <div class="flex items-end justify-between flex-wrap gap-3 mb-6">
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-2 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-700 text-xl">❓</span>
+              Frequently Asked Questions
+            </h2>
+          </div>
+        </div>
         <div class="space-y-4">
-          {faqs.map((faq, index) => (
-            <details class="bg-white rounded-xl border border-steel-100 p-6 group">
+          {faqs.map((faq, i) => (
+            <details class="bg-white rounded-2xl border border-steel-100 p-6 group shadow-sm">
               <summary class="flex items-center justify-between cursor-pointer list-none">
                 <h3 class="font-display text-lg text-charcoal-900">{faq.question[currentLocale] || faq.question.en}</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -1041,23 +1032,19 @@ const allLd = [breadcrumbLd, faqLd];
             </details>
           ))}
         </div>
-      </div>
+      </section>
 
       <!-- CTA -->
       <div class="bg-charcoal-900 rounded-2xl p-8 md:p-12 text-center">
-        <h2 class="font-display text-3xl text-white mb-4">
-          {currentLocale === 'fr' ? 'Vous ne savez pas quel modèle choisir ?' : currentLocale === 'ar' ? 'لا تعرف أي نموذج تختار؟' : 'Not Sure Which Model to Choose?'}
-        </h2>
-        <p class="text-steel-300 text-lg max-w-2xl mx-auto mb-8">
-          {currentLocale === 'fr' ? 'Dites-nous votre type de graine oléagineuse, votre objectif de production quotidienne et votre budget. Nos ingénieurs vous recommanderont le meilleur modèle et la meilleure configuration pour vos besoins spécifiques — gratuitement.' : currentLocale === 'ar' ? 'أخبرنا نوع بذرتك الزيتية، هدف إنتاجك اليومي، وميزانيتك. سيوصي مهندسوننا بالنموذج والتهيئة الأفضل لمتطلباتك المحددة — مجانًا.' : 'Tell us your oil seed type, daily production target, and budget. Our engineers will recommend the best model and configuration for your specific needs — free of charge.'}
-        </p>
+        <h2 class="font-display text-3xl text-white mb-4">Not Sure Which Model to Choose?</h2>
+        <p class="text-steel-300 text-lg max-w-2xl mx-auto mb-8">Tell us your oil seed type, daily production target, and budget. Our engineers will recommend the best model and configuration for your specific needs — free of charge.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={localePath('/contact')} class="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-charcoal-900 font-semibold rounded-xl hover:bg-amber-400 transition-colors">
-            {currentLocale === 'fr' ? 'Obtenir une recommandation d\'expert' : currentLocale === 'ar' ? 'الحصول على توصية خبيرة' : 'Get Expert Recommendation'}
+            Get Expert Recommendation
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <a href="https://wa.me/8618957149128" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 bg-steel-700 text-white font-semibold rounded-xl hover:bg-steel-600 transition-colors">
-            {currentLocale === 'fr' ? 'Discuter sur WhatsApp' : currentLocale === 'ar' ? 'المراسلة على WhatsApp' : 'Chat on WhatsApp'}
+            Chat on WhatsApp
           </a>
         </div>
       </div>
