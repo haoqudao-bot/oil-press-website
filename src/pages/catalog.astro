@@ -8,10 +8,15 @@ const products = await getCollection('products');
 
 const categories = {
   'hydraulic-oil-press': 'Hydraulic Oil Presses',
-  'oil-refining': 'Oil Refining Equipment',
   'seed-processing': 'Seed Processing Equipment',
-  'oil-filtration': 'Oil Filtration Equipment',
+  'filtration-refining-equipment': 'Filtration & Refining Equipment',
 };
+
+const categoryOrder = [
+  'hydraulic-oil-press',
+  'seed-processing',
+  'filtration-refining-equipment',
+];
 
 const hydraulicSortOrder = [
   'HN325',
@@ -43,6 +48,15 @@ if (categorizedProducts['hydraulic-oil-press']) {
     return getHydraulicSortIndex(a) - getHydraulicSortIndex(b);
   });
 }
+
+const sortedCategoryEntries = Object.entries(categorizedProducts).sort(([a], [b]) => {
+  const ai = categoryOrder.indexOf(a);
+  const bi = categoryOrder.indexOf(b);
+  if (ai === -1 && bi === -1) return a.localeCompare(b);
+  if (ai === -1) return 1;
+  if (bi === -1) return -1;
+  return ai - bi;
+});
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -76,7 +90,7 @@ const breadcrumbLd = {
         </button>
       </div>
 
-      {Object.entries(categorizedProducts).map(([category, items]) => (
+      {sortedCategoryEntries.map(([category, items]) => (
         <div key={category} class="mb-4">
           <h2 class="font-display text-3xl text-charcoal-900 mb-6 pb-2 border-b-2 border-amber-500">
             {categories[category] || category.replace('-', ' ')}
