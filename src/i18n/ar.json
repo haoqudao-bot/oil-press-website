@@ -767,116 +767,116 @@
     "bestForLabel": "الأفضل لـ"
   },
   "coldPress": {
-    "title": "Cold Press Oil Machine — Help Preserve Natural Quality | Haonuo",
-    "description": "Professional cold press oil machine for premium oil extraction below 60°C. Can help retain more nutrients and flavor compared to hot pressing. Factory-direct from Haonuo. 1-year warranty.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Cold Press Oil Machine",
-    "heroTitle": "Cold Press Oil Machine — Help Preserve Natural Quality",
-    "heroDesc": "Professional cold press oil machines that extract premium oil below 60°C. Can help retain more nutrients, flavor, and aroma compared to hot pressing. Well-suited for coconut, sesame, walnut, and premium oils. Factory-direct from Haonuo.",
-    "requestQuote": "Request a Quote",
-    "learnHow": "Learn How Cold Press Works",
-    "whyColdPress": "Why Cold Press Matters",
+    "title": "مكبس عصر الزيت البارد — يساعد على الحفاظ على الجودة الطبيعية | Haonuo",
+    "description": "مكبس عصر زيت بارد احترافي لاستخلاص زيت مميز بدرجة حرارة أقل من 60°C. قد يساعد على الاحتفاظ بمزيد من العناصر الغذائية والنكهة مقارنة بالعصر الساخن. بيع مباشر من مصنع هاونو. ضمان لمدة سنة.",
+    "breadcrumbHome": "الرئيسية",
+    "breadcrumbProducts": "المنتجات",
+    "breadcrumbCurrent": "مكبس عصر الزيت البارد",
+    "heroTitle": "مكبس عصر الزيت البارد — يساعد على الحفاظ على الجودة الطبيعية",
+    "heroDesc": "مكابس عصر زيت بارد احترافية تستخلص زيتًا مميزًا بدرجة حرارة أقل من 60°C. قد تساعد على الاحتفاظ بمزيد من العناصر الغذائية والنكهة والرائحة مقارنة بالعصر الساخن. مناسبة لجوز الهند والسمسم والجوز والزيوت المميزة. بيع مباشر من مصنع هاونو.",
+    "requestQuote": "اطلب عرض سعر",
+    "learnHow": "تعرّف على كيفية عمل العصر البارد",
+    "whyColdPress": "لماذا يُعد العصر البارد مهمًا",
     "nutrientPreservation": {
-      "title": "Nutrient Preservation",
-      "desc": "Cold pressing below 60°C helps retain vitamins, antioxidants, and essential fatty acids that may be lost in hot pressing. Your customers get premium quality cold-pressed oil."
+      "title": "الحفاظ على العناصر الغذائية",
+      "desc": "يساعد العصر البارد بدرجة حرارة أقل من 60°C على الاحتفاظ بالفيتامينات ومضادات الأكسدة والأحماض الدهنية الأساسية التي قد تُفقد في العصر الساخن. يحصل عملاؤك على زيت معصور على البارد بجودة مميزة."
     },
     "naturalFlavor": {
-      "title": "Natural Flavor & Aroma",
-      "desc": "No heating means the oil keeps its original taste — critical for premium and organic markets. Sesame stays nutty, coconut stays fragrant, walnut stays rich."
+      "title": "نكهة ورائحة طبيعية",
+      "desc": "عدم التسخين يعني أن الزيت يحتفظ بمذاقه الأصلي — أمر بالغ الأهمية لأسواق الزيوت المميزة والعضوية. السمسم يحتفظ بنكهته الحبّية، وجوز الهند برائحته العطرة، والجوز بغناه."
     },
     "higherMarketValue": {
-      "title": "Higher Market Value",
-      "desc": "Cold-pressed oils command 30-80% premium over refined/hot-pressed oils. Higher quality translates directly to higher profit margins for your business."
+      "title": "قيمة سوقية أعلى",
+      "desc": "تُباع الزيوت المعصورة على البارد بعلاوة سعرية 30-80% مقارنة بالزيوت المكررة/المعصورة ساخنة. الجودة الأعلى تنعكس مباشرة على هوامش ربح أعلى لعملك."
     },
     "versatileApplications": {
-      "title": "Versatile Applications",
-      "desc": "From VCO (Virgin Coconut Oil) to cold-pressed sesame oil for pharmaceutical and cosmetic industries. One machine opens doors to multiple premium markets."
+      "title": "تطبيقات متعددة",
+      "desc": "من زيت جوز الهند البكر (VCO) إلى زيت السمسم المعصور على البارد لصناعات الأدوية ومستحضرات التجميل. آلة واحدة تفتح أبوابًا لعدة أسواق مميزة."
     },
-    "productsTitle": "Our Cold Press Oil Machine Series",
-    "comparisonTitle": "Cold Press vs Hot Press Comparison",
-    "comparisonFeature": "Feature",
-    "comparisonColdPress": "Cold Press",
-    "comparisonHotPress": "Hot Press",
-    "comparisonTemp": "Temperature",
-    "comparisonTempCold": "Below 60°C",
+    "productsTitle": "سلسلة مكابس عصر الزيت البارد لدينا",
+    "comparisonTitle": "مقارنة العصر البارد مقابل الساخن",
+    "comparisonFeature": "الخاصية",
+    "comparisonColdPress": "العصر البارد",
+    "comparisonHotPress": "العصر الساخن",
+    "comparisonTemp": "درجة الحرارة",
+    "comparisonTempCold": "أقل من 60°C",
     "comparisonTempHot": "120-180°C",
-    "comparisonNutrient": "Nutrient Retention",
-    "comparisonNutrientCold": "Generally high (varies by seed type)",
-    "comparisonNutrientHot": "Low (40-60%)",
-    "comparisonYield": "Oil Yield",
-    "comparisonYieldCold": "Standard",
-    "comparisonYieldHot": "Higher",
-    "comparisonQuality": "Oil Quality",
-    "comparisonQualityCold": "Premium, unrefined",
-    "comparisonQualityHot": "Requires refining",
-    "comparisonFlavor": "Flavor/Aroma",
-    "comparisonFlavorCold": "Natural, rich",
-    "comparisonFlavorHot": "Neutral",
-    "comparisonPrice": "Market Price",
-    "comparisonPriceCold": "Typically premium (varies significantly by market and oil type)",
-    "comparisonPriceHot": "Standard",
-    "comparisonBestFor": "Best For",
-    "comparisonBestForCold": "Premium/organic oils",
-    "comparisonBestForHot": "Bulk cooking oil",
-    "readFullComparison": "Read the full Cold Press vs Hot Press comparison",
-    "popularOilsTitle": "Popular Cold-Pressed Oils",
+    "comparisonNutrient": "الاحتفاظ بالعناصر الغذائية",
+    "comparisonNutrientCold": "مرتفع عمومًا (يختلف حسب نوع البذور)",
+    "comparisonNutrientHot": "منخفض (40-60%)",
+    "comparisonYield": "مردود الزيت",
+    "comparisonYieldCold": "قياسي",
+    "comparisonYieldHot": "أعلى",
+    "comparisonQuality": "جودة الزيت",
+    "comparisonQualityCold": "مميز وغير مكرر",
+    "comparisonQualityHot": "يتطلب تكريرًا",
+    "comparisonFlavor": "النكهة/الرائحة",
+    "comparisonFlavorCold": "طبيعي وغني",
+    "comparisonFlavorHot": "محايد",
+    "comparisonPrice": "سعر السوق",
+    "comparisonPriceCold": "مميز عادةً (يختلف بشكل كبير حسب السوق ونوع الزيت)",
+    "comparisonPriceHot": "قياسي",
+    "comparisonBestFor": "الأفضل لـ",
+    "comparisonBestForCold": "الزيوت المميزة/العضوية",
+    "comparisonBestForHot": "زيت الطهي بالجملة",
+    "readFullComparison": "اقرأ مقارنة العصر البارد مقابل الساخن كاملة",
+    "popularOilsTitle": "الزيوت المعصورة على البارد الشائعة",
     "vco": {
-      "title": "Virgin Coconut Oil (VCO)",
-      "region": "Philippines / Indonesia",
-      "desc": "Premium cooking & cosmetic applications",
-      "yield": "Yield: 55-65%",
-      "tag": "High Demand"
+      "title": "زيت جوز الهند البكر (VCO)",
+      "region": "الفلبين / إندونيسيا",
+      "desc": "استخدامات طهي وتجميل مميزة",
+      "yield": "المردود: 55-65%",
+      "tag": "طلب مرتفع"
     },
     "sesameOil": {
-      "title": "Cold-Pressed Sesame Oil",
-      "region": "Middle East / Asia",
-      "desc": "Traditional cooking & health supplements",
-      "yield": "Yield: 42-50%",
-      "tag": "Premium Price"
+      "title": "زيت السمسم المعصور على البارد",
+      "region": "الشرق الأوسط / آسيا",
+      "desc": "الطبخ التقليدي والمكملات الصحية",
+      "yield": "المردود: 42-50%",
+      "tag": "سعر مميز"
     },
     "avocadoOil": {
-      "title": "Avocado Oil",
-      "region": "Global demand",
-      "desc": "Cosmetic & premium cooking",
-      "yield": "Yield: 15-25%",
-      "tag": "Fast Growing"
+      "title": "زيت الأفوكادو",
+      "region": "طلب عالمي",
+      "desc": "التجميل والطهي المميز",
+      "yield": "المردود: 15-25%",
+      "tag": "نمو سريع"
     },
     "oliveOil": {
-      "title": "Cold-Pressed Olive Oil",
-      "region": "Mediterranean",
-      "desc": "Premium food market",
-      "yield": "Yield: 15-25%",
-      "tag": "Established Market"
+      "title": "زيت الزيتون المعصور على البارد",
+      "region": "البحر المتوسط",
+      "desc": "سوق الأغذية المميزة",
+      "yield": "المردود: 15-25%",
+      "tag": "سوق راسخ"
     },
     "walnutOil": {
-      "title": "Walnut Oil",
-      "region": "Europe / Asia",
-      "desc": "Gourmet cooking & supplements",
-      "yield": "Yield: 50-60%",
-      "tag": "Ultra Premium"
+      "title": "زيت الجوز",
+      "region": "أوروبا / آسيا",
+      "desc": "الطهي الفاخر والمكملات",
+      "yield": "المردود: 50-60%",
+      "tag": "فائق الجودة"
     },
     "sunflowerOil": {
-      "title": "Cold-Pressed Sunflower Oil",
-      "region": "Eastern Europe / Africa",
-      "desc": "Health-conscious market",
-      "yield": "Yield: 35-45%",
-      "tag": "High Volume"
+      "title": "زيت عباد الشمس المعصور على البارد",
+      "region": "شرق أوروبا / أفريقيا",
+      "desc": "سوق المهتمين بالصحة",
+      "yield": "المردود: 35-45%",
+      "tag": "كميات كبيرة"
     },
-    "howWorksTitle": "How Cold Press Extraction Works",
+    "howWorksTitle": "كيف يعمل الاستخلاص بالعصر البارد",
     "howWorksStep1": {
-      "title": "Prepare Seeds",
-      "desc": "Clean, dry, and optionally dehull the oil seeds. Proper preparation ensures maximum oil yield and clean, sediment-free oil output."
+      "title": "تحضير البذور",
+      "desc": "نظّف البذور الزيتية وجففها وقشّرها اختياريًا. التحضير الجيد يضمن أقصى مردود للزيت وناتجًا نظيفًا خاليًا من الرواسب."
     },
     "howWorksStep2": {
-      "title": "Cold Press at Low Temperature",
-      "desc": "Hydraulic pressure extracts oil below 60°C. The intense mechanical pressure does the work — no heating or chemicals needed. Nutrients and flavor stay intact."
+      "title": "العصر البارد بدرجة حرارة منخفضة",
+      "desc": "يستخلص الضغط الهيدروليكي الزيت بدرجة حرارة أقل من 60°C. الضغط الميكانيكي القوي هو الذي يقوم بالعمل — دون تسخين أو مواد كيميائية. تبقى العناصر الغذائية والنكهة سليمة."
     },
     "howWorksStep3": {
-      "title": "Filter & Package",
-      "desc": "Natural sediment filtration, no chemical processing needed. The result is pure, premium cold-pressed oil ready for bottling and market."
+      "title": "الترشيح والتعبئة",
+      "desc": "ترشيح طبيعي للرواسب دون معالجة كيميائية. النتيجة زيت معصور على البارد نقي ومميز، جاهز للتعبئة والطرح في السوق."
     },
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "الأسئلة الشائعة",
     "faqs": [
       {
         "question": "What is a cold press oil machine?",
@@ -903,103 +903,103 @@
         "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
       }
     ],
-    "ctaTitle": "Start Producing Premium Cold-Pressed Oil",
-    "ctaDesc": "Contact Haonuo for factory-direct pricing, model recommendations, and free production line design.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "ابدأ إنتاج زيت معصور على البارد مميز",
+    "ctaDesc": "تواصل مع هاونو للحصول على أسعار مباشرة من المصنع وتوصيات الموديلات وتصميم مجاني لخط الإنتاج.",
+    "whatsappUs": "راسلنا عبر واتساب"
   },
   "hydraulic": {
-    "title": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "description": "Professional hydraulic oil press machine for cold pressing sesame, peanut, coconut & 50+ oil seeds. 15+ years manufacturer. Factory-direct pricing. 1-year warranty.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Hydraulic Oil Press Machine",
-    "heroTitle": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "heroDesc": "Professional hydraulic oil press machines for cold pressing sesame, peanut, coconut, and 50+ oil seeds. 15+ years manufacturer. 50+ countries. 1-year warranty.",
-    "requestQuote": "Request a Quote",
-    "compareModels": "Compare Models",
-    "whyChoose": "Why Choose a Hydraulic Oil Press",
+    "title": "مكبس الزيت الهيدروليكي — بيع مباشر من مصنع هاونو",
+    "description": "مكبس زيت هيدروليكي احترافي للعصر البارد للسمسم والفول السوداني وجوز الهند وأكثر من 50 نوعًا من البذور الزيتية. مصنع بخبرة تتجاوز 15 عامًا. أسعار مباشرة من المصنع. ضمان لمدة سنة.",
+    "breadcrumbHome": "الرئيسية",
+    "breadcrumbProducts": "المنتجات",
+    "breadcrumbCurrent": "مكبس الزيت الهيدروليكي",
+    "heroTitle": "مكبس الزيت الهيدروليكي — بيع مباشر من مصنع هاونو",
+    "heroDesc": "مكابس زيت هيدروليكية احترافية للعصر البارد للسمسم والفول السوداني وجوز الهند وأكثر من 50 نوعًا من البذور الزيتية. مصنع بخبرة تتجاوز 15 عامًا. صادرات لأكثر من 50 دولة. ضمان لمدة سنة.",
+    "requestQuote": "اطلب عرض سعر",
+    "compareModels": "مقارنة الموديلات",
+    "whyChoose": "لماذا تختار مكبس الزيت الهيدروليكي",
     "highYield": {
-      "title": "High Oil Yield",
-      "desc": "Typically 42-50% for sesame, 55-65% for coconut depending on seed quality and processing conditions. Results vary.",
-      "stat": "Sesame: 42-50% yield"
+      "title": "مردود زيت مرتفع",
+      "desc": "عادةً 42-50% للسمسم و55-65% لجوز الهند، حسب جودة البذور وظروف المعالجة. تختلف النتائج.",
+      "stat": "السمسم: مردود 42-50%"
     },
     "lowPower": {
-      "title": "Low Power Consumption",
-      "desc": "Only 2.2 KW motor power needed. Compatible with generators, ideal for areas with unstable or no grid electricity.",
-      "stat": "Just 2.2 KW — runs on 5KVA generator"
+      "title": "استهلاك طاقة منخفض",
+      "desc": "لا يحتاج سوى محرك بقدرة 2.2 كيلوواط. متوافق مع المولدات، مثالي للمناطق ذات الكهرباء غير المستقرة أو غير المتوفرة.",
+      "stat": "2.2 كيلوواط فقط — يعمل بمولد 5KVA"
     },
     "versatile": {
-      "title": "Versatile — 50+ Seeds",
-      "desc": "One machine handles sesame, peanut, coconut, walnut, almond, sunflower, flaxseed, mustard, rapeseed, and more.",
-      "stat": "50+ oil seed types supported"
+      "title": "متعدد الاستخدامات — أكثر من 50 بذرة",
+      "desc": "آلة واحدة تعالج السمسم والفول السوداني وجوز الهند والجوز واللوز وعباد الشمس والكتان والخردل والكانولا والمزيد.",
+      "stat": "يدعم أكثر من 50 نوعًا من البذور الزيتية"
     },
     "durable": {
-      "title": "Durable Construction",
-      "desc": "High-strength steel frame, high-frequency quenched and heat-treated. Designed for long service life — estimated 20,000+ hours under normal operating conditions (actual lifespan depends on maintenance and usage patterns).",
-      "stat": "20,000+ hours service life"
+      "title": "بناء متين",
+      "desc": "هيكل من الفولاذ عالي المقاومة مع تقسية بالترددات العالية والمعالجة الحرارية. مصمم لعمر تشغيلي طويل — يقدَّر بأكثر من 20,000 ساعة في ظروف التشغيل العادية (العمر الفعلي يعتمد على الصيانة وأنماط الاستخدام).",
+      "stat": "عمر تشغيلي يزيد عن 20,000 ساعة"
     },
     "easyOperation": {
-      "title": "Easy Operation",
-      "desc": "One-button start with microcomputer control. Automated pressing cycle with one-button start — minimal training needed. We provide video tutorials and remote guidance. Typically 1-2 workers can operate the machine.",
-      "stat": "1-button start, 1-2 workers"
+      "title": "سهولة التشغيل",
+      "desc": "تشغيل بزر واحد مع تحكم بوحدة التحكم الدقيقة. دورة عصر مؤتمتة — لا يحتاج سوى تدريب بسيط. نوفر دروسًا بالفيديو وإرشادًا عن بُعد. عادةً يمكن لعامل أو عاملين تشغيل الآلة.",
+      "stat": "تشغيل بزر واحد، 1-2 عامل"
     },
     "factoryDirect": {
-      "title": "Factory Direct",
-      "desc": "No middleman — buy directly from the manufacturer. Potentially save compared to local distributor prices (actual savings vary by market). Quality assurance is provided directly by the manufacturer.",
-      "stat": "Potentially save vs. distributor prices"
+      "title": "بيع مباشر من المصنع",
+      "desc": "بلا وسطاء — اشترِ مباشرة من المصنع. توفير محتمل مقارنة بأسعار الموزعين المحليين (التوفير الفعلي يختلف حسب السوق). ضمان الجودة يقدمه المصنّع مباشرة.",
+      "stat": "توفير محتمل مقارنة بأسعار الموزعين"
     },
-    "productSeriesTitle": "Our Hydraulic Oil Press Series",
-    "howWorksTitle": "How a Hydraulic Oil Press Works",
+    "productSeriesTitle": "سلسلة مكابس الزيت الهيدروليكية لدينا",
+    "howWorksTitle": "كيف يعمل مكبس الزيت الهيدروليكي",
     "howWorksStep1": {
-      "title": "Load Seeds",
-      "desc": "Fill the press barrel with prepared oil seeds. No pre-processing needed for most seed types — just load and press."
+      "title": "تحميل البذور",
+      "desc": "املأ أسطوانة العصر بالبذور الزيتية المحضرة. لا حاجة لأي معالجة مسبقة لمعظم أنواع البذور — فقط حمّل واعصر."
     },
     "howWorksStep2": {
-      "title": "Apply Pressure",
-      "desc": "The hydraulic system generates up to 620 tons of pressing force at controlled temperatures below 60°C for true cold pressing."
+      "title": "تطبيق الضغط",
+      "desc": "يولّد النظام الهيدروليكي قوة عصر تصل إلى 620 طنًا عند درجات حرارة مضبوطة أقل من 60°C لعصر بارد حقيقي."
     },
     "howWorksStep3": {
-      "title": "Collect Oil",
-      "desc": "Pure, filtered oil flows out through the slotted barrel while the compressed seed cake is ejected automatically by the 4-hook mechanism."
+      "title": "جمع الزيت",
+      "desc": "يتدفق الزيت النقي المُرشّح عبر الأسطوانة المخددة بينما يُقذف كعكة البذور المضغوطة تلقائيًا بواسطة آلية الخطاطيف الأربعة."
     },
-    "applicationsTitle": "Application Scenarios",
+    "applicationsTitle": "سيناريوهات التطبيق",
     "sesameOilApp": {
-      "title": "Cold Pressed Sesame Oil",
-      "desc": "Premium cooking oil for Asian and Middle Eastern markets. Cold pressing preserves the rich aroma and nutty flavor that commands premium prices.",
-      "yield": "Yield: 42-50%"
+      "title": "زيت السمسم المعصور على البارد",
+      "desc": "زيت طهي مميز لأسواق آسيا والشرق الأوسط. يحافظ العصر البارد على الرائحة الغنية والنكهة الحبّية التي تُباع بأسعار مميزة.",
+      "yield": "المردود: 42-50%"
     },
     "coconutOilApp": {
-      "title": "Virgin Coconut Oil",
-      "desc": "High-value VCO production for Philippines, Indonesia, and global health food markets. Food-grade stainless steel models available for food safety compliance.",
-      "yield": "Yield: 55-65%"
+      "title": "زيت جوز الهند البكر",
+      "desc": "إنتاج VCO عالي القيمة للفلبين وإندونيسيا وأسواق الأغذية الصحية العالمية. تتوفر موديلات من الفولاذ المقاوم للصدأ بجودة غذائية لتلبية معايير سلامة الغذاء.",
+      "yield": "المردود: 55-65%"
     },
     "peanutOilApp": {
-      "title": "Peanut / Groundnut Oil",
-      "desc": "Africa's most popular cooking oil. Ideal for groundnut oil businesses in Nigeria, Ghana, and across West Africa. Generator-compatible for rural operations.",
-      "yield": "Yield: 38-45%"
+      "title": "زيت الفول السوداني",
+      "desc": "أكثر زيوت الطهي شيوعًا في أفريقيا. مثالية لأعمال زيت الفول السوداني في نيجيريا وغانا وجميع أنحاء غرب أفريقيا. متوافق مع المولدات للتشغيل في المناطق الريفية.",
+      "yield": "المردود: 38-45%"
     },
     "oliveOilApp": {
-      "title": "Olive Oil",
-      "desc": "Mediterranean and Middle East premium market. Hydraulic cold pressing preserves polyphenols and the distinctive flavor profile demanded by olive oil connoisseurs.",
-      "yield": "Yield: 35-45%"
+      "title": "زيت الزيتون",
+      "desc": "سوق مميز في منطقة المتوسط والشرق الأوسط. يحافظ العصر البارد الهيدروليكي على مركبات البوليفينول والنكهة المميزة التي يبحث عنها عشاق زيت الزيتون.",
+      "yield": "المردود: 35-45%"
     },
     "avocadoOilApp": {
-      "title": "Avocado Oil",
-      "desc": "Growing demand in cosmetics and premium cooking markets. Cold pressing retains vitamins, monounsaturated fats, and the vibrant green color of premium avocado oil.",
-      "yield": "Yield: 30-40%"
+      "title": "زيت الأفوكادو",
+      "desc": "طلب متنامٍ في أسواق مستحضرات التجميل والطهي المميز. يحافظ العصر البارد على الفيتامينات والدهون الأحادية غير المشبعة واللون الأخضر الزاهي لزيت الأفوكادو المميز.",
+      "yield": "المردود: 30-40%"
     },
     "sunflowerOilApp": {
-      "title": "Sunflower Oil",
-      "desc": "Eastern Europe and Africa staple cooking oil. High smoke point and mild flavor make it a versatile choice for both home and commercial food production.",
-      "yield": "Yield: 40-48%"
+      "title": "زيت عباد الشمس",
+      "desc": "زيت الطهي الأساسي في شرق أوروبا وأفريقيا. نقطة تدخينه العالية ونكهته الخفيفة تجعله خيارًا متعدد الاستخدامات للإنتاج الغذائي المنزلي والتجاري.",
+      "yield": "المردود: 40-48%"
     },
-    "comparisonTitle": "Technical Comparison",
-    "comparisonModel": "Model",
-    "comparisonForce": "Pressing Force",
-    "comparisonMotor": "Motor",
-    "comparisonBestFor": "Best For",
-    "compareAllModels": "Compare all models",
-    "faqTitle": "Frequently Asked Questions",
+    "comparisonTitle": "مقارنة تقنية",
+    "comparisonModel": "الموديل",
+    "comparisonForce": "قوة العصر",
+    "comparisonMotor": "المحرك",
+    "comparisonBestFor": "الأفضل لـ",
+    "compareAllModels": "مقارنة جميع الموديلات",
+    "faqTitle": "الأسئلة الشائعة",
     "faqs": [
       {
         "question": "What is a hydraulic oil press machine?",
@@ -1034,71 +1034,71 @@
         "answer": "All Haonuo machines come with a 1-year warranty covering manufacturing defects, plus lifetime technical support. Spare parts are available from stock. Every machine undergoes 48-hour continuous full-load testing before shipment to ensure reliable operation."
       }
     ],
-    "ctaTitle": "Ready to Find the Right Hydraulic Oil Press?",
-    "ctaDesc": "Get a free quotation, shipping estimate, and professional equipment recommendation typically within 24 business hours.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "هل أنت مستعد للعثور على مكبس الزيت الهيدروليكي المناسب؟",
+    "ctaDesc": "احصل على عرض سعر مجاني وتقدير للشحن وتوصية احترافية بالمعدات عادةً خلال 24 ساعة عمل.",
+    "whatsappUs": "راسلنا عبر واتساب"
   },
   "manual": {
-    "title": "Commercial Hydraulic Oil Press — Industrial-Grade Production | Haonuo",
-    "description": "Industrial-grade hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, professional yield, and reliable operation. Factory-direct pricing from Haonuo.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Commercial Hydraulic Oil Press",
-    "heroTitle": "Commercial Hydraulic Oil Press — Industrial-Grade Production",
-    "heroDesc": "Professional hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, 60-75 MPa system pressure, and residual oil below 5%. Factory-direct pricing from Haonuo.",
-    "getPricing": "Get Commercial Pricing",
-    "viewModels": "View All Models",
-    "whyChoose": "Why Choose Hydraulic Pressing for Commercial Production",
+    "title": "مكبس زيت هيدروليكي تجاري — إنتاج بجودة صناعية | Haonuo",
+    "description": "مكابس زيت هيدروليكية بجودة صناعية لإنتاج الزيت التجاري. سعة 100 كجم لكل دفعة، مردود احترافي، وتشغيل موثوق. أسعار مباشرة من مصنع هاونو.",
+    "breadcrumbHome": "الرئيسية",
+    "breadcrumbProducts": "المنتجات",
+    "breadcrumbCurrent": "مكبس الزيت الهيدروليكي التجاري",
+    "heroTitle": "مكبس زيت هيدروليكي تجاري — إنتاج بجودة صناعية",
+    "heroDesc": "مكابس زيت هيدروليكية احترافية لإنتاج الزيت التجاري. سعة 100 كجم لكل دفعة، ضغط نظام 60-75 ميجا باسكال، وزيت متبقٍ أقل من 5%. أسعار مباشرة من مصنع هاونو.",
+    "getPricing": "احصل على الأسعار التجارية",
+    "viewModels": "عرض جميع الموديلات",
+    "whyChoose": "لماذا تختار العصر الهيدروليكي للإنتاج التجاري",
     "industrialCapacity": {
-      "title": "Industrial Capacity",
-      "desc": "100 kg per batch capacity. Hourly output varies by seed type and pressing cycle time. HN325 processes 100 kg per batch in 40-90 minutes, meeting commercial production targets."
+      "title": "طاقة إنتاجية صناعية",
+      "desc": "سعة 100 كجم لكل دفعة. يختلف الإنتاج الساعي حسب نوع البذور ومدة دورة العصر. تعالج HN325 دفعة 100 كجم في 40-90 دقيقة، محققة أهداف الإنتاج التجاري."
     },
     "professionalYield": {
-      "title": "Professional Yield",
-      "desc": "Residual oil below 5% — 2-3x higher extraction efficiency than screw presses. Maximize profit from every kilogram of seeds."
+      "title": "مردود احترافي",
+      "desc": "زيت متبقٍ أقل من 5% — كفاءة استخلاص أعلى بمرتين إلى ثلاث مرات من المكابس اللولبية. حقق أقصى ربح من كل كيلوجرام من البذور."
     },
     "lowPower": {
-      "title": "Low Power Requirement",
-      "desc": "Only 2.2 KW power needed. Compatible with standard 220V single-phase power or a small 5 KVA generator — ideal for any region."
+      "title": "متطلبات طاقة منخفضة",
+      "desc": "لا يحتاج سوى 2.2 كيلوواط. متوافق مع الكهرباء أحادية الطور القياسية 220 فولت أو مولد صغير 5 KVA — مثالي لكل المناطق."
     },
     "costEffective": {
-      "title": "Cost-Effective",
-      "desc": "Factory-direct pricing with 15-20 year service life. High yield and reliability deliver excellent ROI for commercial operations."
+      "title": "فعّال من حيث التكلفة",
+      "desc": "أسعار مباشرة من المصنع مع عمر تشغيلي 15-20 عامًا. مردود مرتفع وموثوقية توفران عائدًا ممتازًا على الاستثمار للعمليات التجارية."
     },
-    "hydraulicAdvantageTitle": "Haonuo Hydraulic Presses — Professional Choice for Commercial Operations",
-    "hydraulicAdvantageDesc": "Haonuo specializes in commercial hydraulic oil presses that deliver industrial-grade performance with minimal power requirements. Even in areas with limited electricity, our hydraulic presses outperform all alternatives because they deliver:",
-    "hydraulicAdvantage1": "100 kg per batch capacity — commercial-scale production",
-    "hydraulicAdvantage2": "Residual oil below 5% — maximum extraction efficiency",
-    "hydraulicAdvantage3": "One-button operation — no physical labor required",
-    "hydraulicAdvantage4": "2.2 KW power — compatible with 5 KVA generator",
-    "exploreHydraulic": "Explore Haonuo Hydraulic Presses",
-    "productModelsTitle": "Commercial Hydraulic Press Models — Entry-Level",
-    "applicationsTitle": "Commercial Oil Production Applications",
+    "hydraulicAdvantageTitle": "مكابس هاونو الهيدروليكية — الخيار الاحترافي للعمليات التجارية",
+    "hydraulicAdvantageDesc": "تتخصص هاونو في مكابس الزيت الهيدروليكية التجارية التي توفر أداءً بجودة صناعية مع احتياجات طاقة دنيا. حتى في المناطق محدودة الكهرباء، تتفوق مكابسنا الهيدروليكية على جميع البدائل لأنها توفر:",
+    "hydraulicAdvantage1": "سعة 100 كجم لكل دفعة — إنتاج ب نطاق تجاري",
+    "hydraulicAdvantage2": "زيت متبقٍ أقل من 5% — كفاءة استخلاص قصوى",
+    "hydraulicAdvantage3": "تشغيل بزر واحد — لا حاجة لجهد بدني",
+    "hydraulicAdvantage4": "2.2 كيلوواط — متوافق مع مولد 5 KVA",
+    "exploreHydraulic": "استكشف المكابس الهيدروليكية من هاونو",
+    "productModelsTitle": "موديلات المكابس الهيدروليكية التجارية — الفئة الأساسية",
+    "applicationsTitle": "تطبيقات إنتاج الزيت التجاري",
     "sesameOilApp": {
-      "title": "Sesame Oil",
-      "tag": "High-Value Specialty",
-      "desc": "Premium cold-pressed sesame oil for culinary and cosmetic applications. Hydraulic presses achieve 42-50% extraction efficiency with residual oil below 5%.",
-      "yield": "Hydraulic yield: 42-50%"
+      "title": "زيت السمسم",
+      "tag": "منتج متخصص عالي القيمة",
+      "desc": "زيت سمسم معصور على البارد مميز للاستخدامات الطهي والتجميل. تحقق المكابس الهيدروليكية كفاءة استخلاص 42-50% مع زيت متبقٍ أقل من 5%.",
+      "yield": "المردود الهيدروليكي: 42-50%"
     },
     "peanutOilApp": {
-      "title": "Peanut Oil",
-      "tag": "Commercial Cooking Oil",
-      "desc": "Widely consumed cooking oil with high demand in Africa and Asia. Industrial hydraulic pressing ensures consistent quality and maximum yield.",
-      "yield": "Hydraulic yield: 38-45%"
+      "title": "زيت الفول السوداني",
+      "tag": "زيت طهي تجاري",
+      "desc": "زيت طهي واسع الاستهلاك وذو طلب مرتفع في أفريقيا وآسيا. يضمن العصر الهيدروليكي الصناعي جودة ثابتة وأقصى مردود.",
+      "yield": "المردود الهيدروليكي: 38-45%"
     },
     "palmKernelOilApp": {
-      "title": "Palm Kernel Oil",
-      "tag": "Industrial Processing",
-      "desc": "High-volume industrial oil for cooking and soap production. Hydraulic presses handle tough palm kernels with excellent efficiency.",
-      "yield": "Hydraulic yield: 45-55%"
+      "title": "زيت نواة النخيل",
+      "tag": "معالجة صناعية",
+      "desc": "زيت صناعي بكميات كبيرة للطبخ وصناعة الصابون. تعالج المكابس الهيدروليكية نوى النخيل الصلبة بكفاءة ممتازة.",
+      "yield": "المردود الهيدروليكي: 45-55%"
     },
     "coconutOilApp": {
-      "title": "Coconut Oil",
-      "tag": "Premium Market",
-      "desc": "Cold-pressed virgin coconut oil for health food and cosmetics markets. Demands high-quality extraction equipment.",
-      "yield": "Hydraulic yield: 55-62%"
+      "title": "زيت جوز الهند",
+      "tag": "سوق مميز",
+      "desc": "زيت جوز هند بكر معصور على البارد لأسواق الأغذية الصحية ومستحضرات التجميل. يتطلب معدات استخلاص عالية الجودة.",
+      "yield": "المردود الهيدروليكي: 55-62%"
     },
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "الأسئلة الشائعة",
     "faqs": [
       {
         "question": "What is a commercial hydraulic oil press?",
@@ -1125,69 +1125,69 @@
         "answer": "Haonuo provides factory-direct pricing without middleman markups. Total cost includes the press, optional roaster and filter, shipping, and installation. With proper maintenance, hydraulic presses deliver 15-20 years of reliable service, making them a cost-effective investment for commercial oil production."
       }
     ],
-    "ctaTitle": "Find the Right Commercial Oil Press",
-    "ctaDesc": "Haonuo hydraulic presses deliver 100 kg per batch industrial capacity with residual oil below 5%. Hourly output varies by seed type. Get your personalized commercial solution today.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "اعثر على مكبس الزيت التجاري المناسب",
+    "ctaDesc": "تقدم مكابس هاونو الهيدروليكية سعة صناعية 100 كجم لكل دفعة مع زيت متبقٍ أقل من 5%. يختلف الإنتاج الساعي حسب نوع البذور. احصل على حلّك التجاري المخصص اليوم.",
+    "whatsappUs": "راسلنا عبر واتساب"
   },
   "roi": {
-    "title": "Hydraulic Oil Press ROI Calculator",
-    "description": "Estimate your return on investment for Haonuo hydraulic oil press machines. Calculate daily oil production, revenue, profit, and payback period.",
-    "breadcrumbHome": "Home",
-    "breadcrumbCurrent": "ROI Calculator",
-    "heroTitle": "Hydraulic Oil Press ROI Calculator",
-    "heroDesc": "Estimate your return on investment",
-    "disclaimerTitle": "Important Disclaimer",
-    "disclaimerText": "This calculator provides <strong>rough estimates only</strong> for your preliminary planning. It is <strong>NOT a guarantee</strong> of actual returns. Actual results depend on many factors including raw material quality, operator skill, local market conditions, electricity costs, labor costs, and maintenance expenses. <strong>Do not make purchasing decisions based solely on these estimates.</strong> Please <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">contact our team</a> for a detailed, case-specific analysis tailored to your business.",
-    "machineModel": "Machine Model",
-    "modelHN325": "HN325 — Standard Hydraulic Oil Press",
-    "modelHN355": "HN355 — Heavy Duty Hydraulic Oil Press",
-    "modelHN426": "HN426 — Cold Press Hydraulic Oil Press",
-    "modelHN480": "HN480 — High Pressure Hydraulic Oil Press",
-    "modelHN500": "HN500 — Ultra High Pressure Hydraulic Oil Press",
-    "machinePrice": "Machine Price (USD)",
-    "machinePricePlaceholder": "Enter your quoted machine price",
-    "machinePriceNote": "Enter the price from your quotation. <a href=\"/contact\" class=\"text-amber-500 underline\">Request a quote</a> if you don't have one yet.",
-    "dailyHours": "Daily Operating Hours:",
-    "hoursMin": "1 hr",
-    "hoursMax": "24 hrs",
-    "rawMaterial": "Raw Material Type",
-    "materialSesame": "Sesame (approx. 45% oil content)",
-    "materialPeanut": "Peanut (approx. 42% oil content)",
-    "materialCoconut": "Coconut (approx. 55% oil content)",
-    "materialSunflower": "Sunflower (approx. 40% oil content)",
-    "materialRapeseed": "Rapeseed (approx. 38% oil content)",
-    "materialNote": "Oil content varies by variety, region, and moisture. Values shown are typical ranges, not guarantees.",
-    "materialCost": "Raw Material Cost per kg (USD)",
-    "materialCostPlaceholder": "Enter raw material cost per kg in your local market",
-    "materialCostNote": "Please enter the actual cost in your local market. Raw material prices fluctuate significantly.",
-    "oilPrice": "Oil Selling Price per kg (USD)",
-    "oilPricePlaceholder": "Enter your expected selling price per kg",
-    "oilPriceNote": "Please enter the actual selling price in your target market. Prices vary by region and quality grade.",
-    "dailyOpcost": "Estimated Daily Operating Costs (USD)",
-    "dailyOpcostPlaceholder": "e.g. electricity, labor, maintenance, packaging",
-    "dailyOpcostNote": "Include electricity, labor, maintenance, packaging, transportation, and other daily costs. This significantly affects actual profitability.",
-    "acknowledge": "I understand that this calculator provides <strong>rough estimates only</strong> and is <strong>not a guarantee</strong> of actual investment returns. Actual results depend on many factors including raw material quality, operating conditions, local market prices, and production efficiency. I will not make purchasing decisions based solely on these estimates.",
-    "calculateBtn": "Calculate ROI",
-    "resultDisclaimer": "<strong>⚠️ These are rough estimates, not guarantees.</strong> Actual returns may be significantly lower or higher depending on your specific conditions. These figures do not account for all real-world variables. <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">Contact us</a> for a personalized analysis.",
-    "resultsTitle": "Your Estimated Returns",
-    "resultDailyOil": "Daily Oil Production (estimated)",
-    "resultDailyRevenue": "Daily Revenue (estimated)",
-    "resultDailyCost": "Daily Raw Material Cost",
-    "resultDailyOpcost": "Daily Operating Costs",
-    "resultDailyProfit": "Daily Net Profit (estimated)",
-    "resultMonthlyProfit": "Monthly Net Profit (25 days, estimated)",
-    "resultPayback": "Estimated Payback Period",
-    "resultRoi": "Estimated Annual ROI",
-    "notesTitle": "Important Notes",
-    "note1": "• All figures are <strong>rough estimates</strong> based on the values you entered and typical industry parameters — they are <strong>NOT guarantees</strong> of actual performance.",
-    "note2": "• Actual oil yield depends on raw material variety, moisture content, pressing temperature, operator skill, and machine condition.",
-    "note3": "• This calculation uses a conservative <strong>60% utilization rate</strong> (batch loading/unloading time, setup, cleaning). Actual throughput may vary.",
-    "note4": "• Operating costs (electricity, labor, maintenance, packaging, transportation, rent) are often underestimated. Please enter realistic figures.",
-    "note5": "• Market prices for both raw materials and finished oil fluctuate. Do not assume constant prices over the payback period.",
-    "note6": "• This calculator does not account for taxes, import duties, shipping costs, or currency exchange risks.",
-    "note7": "• <strong>Haonuo makes no warranty, express or implied, regarding the accuracy or reliability of these estimates.</strong>",
-    "ctaTitle": "Need a Reliable Estimate?",
-    "ctaDesc": "Our team can provide a detailed, case-specific ROI analysis based on your actual market conditions, raw material sources, and production goals.",
-    "ctaBtn": "Get a Personalized Analysis"
+    "title": "حاسبة العائد على الاستثمار لمكبس الزيت الهيدروليكي",
+    "description": "قدّر عائدك على الاستثمار لمكابس الزيت الهيدروليكية من هاونو. احسب إنتاج الزيت اليومي والإيرادات والأرباح وفترة الاسترداد.",
+    "breadcrumbHome": "الرئيسية",
+    "breadcrumbCurrent": "حاسبة العائد على الاستثمار",
+    "heroTitle": "حاسبة العائد على الاستثمار لمكبس الزيت الهيدروليكي",
+    "heroDesc": "قدّر عائدك على الاستثمار",
+    "disclaimerTitle": "إخلاء مسؤولية مهم",
+    "disclaimerText": "توفر هذه الحاسبة <strong>تقديرات تقريبية فقط</strong> للتخطيط الأولي. وهي <strong>ليست ضمانًا</strong> للعوائد الفعلية. تعتمد النتائج الفعلية على عوامل كثيرة بما في ذلك جودة المواد الخام ومهارة المشغل وظروف السوق المحلي وتكاليف الكهرباء وتكاليف العمالة ومصاريف الصيانة. <strong>لا تتخذ قرارات الشراء بناءً على هذه التقديرات فقط.</strong> يرجى <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">التواصل مع فريقنا</a> للحصول على تحليل مفصّل يناسب نشاطك التجاري.",
+    "machineModel": "طراز الماكينة",
+    "modelHN325": "HN325 — مكبس زيت هيدروليكي قياسي",
+    "modelHN355": "HN355 — مكبس زيت هيدروليكي شاقولي",
+    "modelHN426": "HN426 — مكبس زيت هيدروليكي للعصر البارد",
+    "modelHN480": "HN480 — مكبس زيت هيدروليكي عالي الضغط",
+    "modelHN500": "HN500 — مكبس زيت هيدروليكي فائق الضغط",
+    "machinePrice": "سعر الماكينة (دولار أمريكي)",
+    "machinePricePlaceholder": "أدخل سعر الماكينة الوارد في عرض السعر",
+    "machinePriceNote": "أدخل السعر الوارد في عرض السعر. <a href=\"/contact\" class=\"text-amber-500 underline\">اطلب عرض سعر</a> إذا لم يكن لديك بعد.",
+    "dailyHours": "ساعات التشغيل اليومية:",
+    "hoursMin": "1 ساعة",
+    "hoursMax": "24 ساعة",
+    "rawMaterial": "نوع المادة الخام",
+    "materialSesame": "سمسم (نسبة زيت تقارب 45%)",
+    "materialPeanut": "فول سوداني (نسبة زيت تقارب 42%)",
+    "materialCoconut": "جوز الهند (نسبة زيت تقارب 55%)",
+    "materialSunflower": "عباد الشمس (نسبة زيت تقارب 40%)",
+    "materialRapeseed": "بذور اللفت (نسبة زيت تقارب 38%)",
+    "materialNote": "تختلف نسبة الزيت حسب الصنف والمنطقة والرطوبة. القيم المعروضة هي نطاقات نموذجية وليست ضمانات.",
+    "materialCost": "تكلفة المادة الخام لكل كجم (دولار أمريكي)",
+    "materialCostPlaceholder": "أدخل تكلفة المادة الخام لكل كجم في سوقك المحلي",
+    "materialCostNote": "يرجى إدخال التكلفة الفعلية في سوقك المحلي. تتقلب أسعار المواد الخام بشكل كبير.",
+    "oilPrice": "سعر بيع الزيت لكل كجم (دولار أمريكي)",
+    "oilPricePlaceholder": "أدخل سعر البيع المتوقع لكل كجم",
+    "oilPriceNote": "يرجى إدخال سعر البيع الفعلي في سوقك المستهدف. تختلف الأسعار حسب المنطقة ودرجة الجودة.",
+    "dailyOpcost": "تكاليف التشغيل اليومية المقدرة (دولار أمريكي)",
+    "dailyOpcostPlaceholder": "مثال: الكهرباء والعمالة والصيانة والتعبئة",
+    "dailyOpcostNote": "أدرج الكهرباء والعمالة والصيانة والتعبئة والنقل وغيرها من التكاليف اليومية. يؤثر هذا بشكل كبير على الربحية الفعلية.",
+    "acknowledge": "أفهم أن هذه الحاسبة تقدم <strong>تقديرات تقريبية فقط</strong> وليست <strong>ضمانًا</strong> للعوائد الفعلية على الاستثمار. تعتمد النتائج الفعلية على عوامل كثيرة بما في ذلك جودة المواد الخام وظروف التشغيل وأسعار السوق المحلي وكفاءة الإنتاج. لن أتخذ قرارات الشراء بناءً على هذه التقديرات فقط.",
+    "calculateBtn": "احسب العائد على الاستثمار",
+    "resultDisclaimer": "<strong>⚠️ هذه تقديرات تقريبية وليست ضمانات.</strong> قد تكون العوائد الفعلية أقل أو أعلى بشكل كبير حسب ظروفك الخاصة. هذه الأرقام لا تأخذ في الاعتبار جميع المتغيرات الواقعية. <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">اتصل بنا</a> للحصول على تحليل مخصص.",
+    "resultsTitle": "عوائدك المقدرة",
+    "resultDailyOil": "إنتاج الزيت اليومي (تقديري)",
+    "resultDailyRevenue": "الإيرادات اليومية (تقديرية)",
+    "resultDailyCost": "التكلفة اليومية للمواد الخام",
+    "resultDailyOpcost": "تكاليف التشغيل اليومية",
+    "resultDailyProfit": "صافي الربح اليومي (تقديري)",
+    "resultMonthlyProfit": "صافي الربح الشهري (25 يومًا، تقديري)",
+    "resultPayback": "فترة الاسترداد المقدرة",
+    "resultRoi": "العائد السنوي المقدر على الاستثمار",
+    "notesTitle": "ملاحظات مهمة",
+    "note1": "• جميع الأرقام هي <strong>تقديرات تقريبية</strong> بناءً على القيم التي أدخلتها ومعايير الصناعة النموذجية — وهي <strong>ليست ضمانات</strong> للأداء الفعلي.",
+    "note2": "• يعتمد المردود الفعلي للزيت على صنف المادة الخام ومحتوى الرطوبة ودرجة حرارة العصر ومهارة المشغل وحالة الماكينة.",
+    "note3": "• يستخدم هذا الحساب <strong>معدل استخدام متحفظًا قدره 60%</strong> (وقت تحميل/تفريغ الدفعات، الإعداد، التنظيف). قد يختلف الإنتاج الفعلي.",
+    "note4": "• غالبًا ما يتم التقليل من تقدير تكاليف التشغيل (الكهرباء والعمالة والصيانة والتعبئة والنقل والإيجار). يرجى إدخال أرقام واقعية.",
+    "note5": "• تتقلب أسعار السوق للمواد الخام والزيت النهائي على حد سواء. لا تفترض ثبات الأسعار طوال فترة الاسترداد.",
+    "note6": "• لا تأخذ هذه الحاسبة في الاعتبار الضرائب أو رسوم الاستيراد أو تكاليف الشحن أو مخاطر صرف العملات.",
+    "note7": "• <strong>لا يقدم هاونو أي ضمان، صريح أو ضمني، فيما يتعلق بدقة أو موثوقية هذه التقديرات.</strong>",
+    "ctaTitle": "هل تحتاج إلى تقدير موثوق؟",
+    "ctaDesc": "يمكن لفريقنا تقديم تحليل مفصل للعائد على الاستثمار يناسب حالتك، بناءً على ظروف السوق الفعلية ومصادر المواد الخام وأهداف الإنتاج لديك.",
+    "ctaBtn": "احصل على تحليل مخصص"
   }
 }

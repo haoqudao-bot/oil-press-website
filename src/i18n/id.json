@@ -767,116 +767,116 @@
     "bestForLabel": "Terbaik Untuk"
   },
   "coldPress": {
-    "title": "Cold Press Oil Machine — Help Preserve Natural Quality | Haonuo",
-    "description": "Professional cold press oil machine for premium oil extraction below 60°C. Can help retain more nutrients and flavor compared to hot pressing. Factory-direct from Haonuo. 1-year warranty.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Cold Press Oil Machine",
-    "heroTitle": "Cold Press Oil Machine — Help Preserve Natural Quality",
-    "heroDesc": "Professional cold press oil machines that extract premium oil below 60°C. Can help retain more nutrients, flavor, and aroma compared to hot pressing. Well-suited for coconut, sesame, walnut, and premium oils. Factory-direct from Haonuo.",
-    "requestQuote": "Request a Quote",
-    "learnHow": "Learn How Cold Press Works",
-    "whyColdPress": "Why Cold Press Matters",
+    "title": "Mesin Press Minyak Dingin — Membantu Menjaga Kualitas Alami | Haonuo",
+    "description": "Mesin press minyak dingin profesional untuk ekstraksi minyak premium di bawah 60°C. Dapat membantu mempertahankan lebih banyak nutrisi dan rasa dibanding press panas. Langsung dari pabrik Haonuo. Garansi 1 tahun.",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbProducts": "Produk",
+    "breadcrumbCurrent": "Mesin Press Minyak Dingin",
+    "heroTitle": "Mesin Press Minyak Dingin — Membantu Menjaga Kualitas Alami",
+    "heroDesc": "Mesin press minyak dingin profesional yang mengekstraksi minyak premium di bawah 60°C. Dapat membantu mempertahankan lebih banyak nutrisi, rasa, dan aroma dibanding press panas. Cocok untuk kelapa, wijen, kenari, dan minyak premium. Langsung dari pabrik Haonuo.",
+    "requestQuote": "Minta Penawaran",
+    "learnHow": "Pelajari Cara Kerja Press Dingin",
+    "whyColdPress": "Mengapa Press Dingin Penting",
     "nutrientPreservation": {
-      "title": "Nutrient Preservation",
-      "desc": "Cold pressing below 60°C helps retain vitamins, antioxidants, and essential fatty acids that may be lost in hot pressing. Your customers get premium quality cold-pressed oil."
+      "title": "Pelestarian Nutrisi",
+      "desc": "Press dingin di bawah 60°C membantu mempertahankan vitamin, antioksidan, dan asam lemak esensial yang mungkin hilang pada press panas. Pelanggan Anda mendapatkan minyak press dingin bermutu premium."
     },
     "naturalFlavor": {
-      "title": "Natural Flavor & Aroma",
-      "desc": "No heating means the oil keeps its original taste — critical for premium and organic markets. Sesame stays nutty, coconut stays fragrant, walnut stays rich."
+      "title": "Rasa & Aroma Alami",
+      "desc": "Tanpa pemanasan, minyak tetap mempertahankan rasa aslinya — penting untuk pasar premium dan organik. Wijen tetap guri, kelapa tetap wangi, kenari tetap kaya."
     },
     "higherMarketValue": {
-      "title": "Higher Market Value",
-      "desc": "Cold-pressed oils command 30-80% premium over refined/hot-pressed oils. Higher quality translates directly to higher profit margins for your business."
+      "title": "Nilai Pasar Lebih Tinggi",
+      "desc": "Minyak press dingin terjual dengan premi 30-80% dibanding minyak rafinasi/press panas. Mutu lebih tinggi berdampak langsung pada margin laba yang lebih besar untuk bisnis Anda."
     },
     "versatileApplications": {
-      "title": "Versatile Applications",
-      "desc": "From VCO (Virgin Coconut Oil) to cold-pressed sesame oil for pharmaceutical and cosmetic industries. One machine opens doors to multiple premium markets."
+      "title": "Aplikasi Serbaguna",
+      "desc": "Dari VCO (Virgin Coconut Oil) hingga minyak wijen press dingin untuk industri farmasi dan kosmetik. Satu mesin membuka akses ke berbagai pasar premium."
     },
-    "productsTitle": "Our Cold Press Oil Machine Series",
-    "comparisonTitle": "Cold Press vs Hot Press Comparison",
-    "comparisonFeature": "Feature",
-    "comparisonColdPress": "Cold Press",
-    "comparisonHotPress": "Hot Press",
-    "comparisonTemp": "Temperature",
-    "comparisonTempCold": "Below 60°C",
+    "productsTitle": "Seri Mesin Press Minyak Dingin Kami",
+    "comparisonTitle": "Perbandingan Press Dingin vs Press Panas",
+    "comparisonFeature": "Aspek",
+    "comparisonColdPress": "Press Dingin",
+    "comparisonHotPress": "Press Panas",
+    "comparisonTemp": "Suhu",
+    "comparisonTempCold": "Di bawah 60°C",
     "comparisonTempHot": "120-180°C",
-    "comparisonNutrient": "Nutrient Retention",
-    "comparisonNutrientCold": "Generally high (varies by seed type)",
-    "comparisonNutrientHot": "Low (40-60%)",
-    "comparisonYield": "Oil Yield",
-    "comparisonYieldCold": "Standard",
-    "comparisonYieldHot": "Higher",
-    "comparisonQuality": "Oil Quality",
-    "comparisonQualityCold": "Premium, unrefined",
-    "comparisonQualityHot": "Requires refining",
-    "comparisonFlavor": "Flavor/Aroma",
-    "comparisonFlavorCold": "Natural, rich",
-    "comparisonFlavorHot": "Neutral",
-    "comparisonPrice": "Market Price",
-    "comparisonPriceCold": "Typically premium (varies significantly by market and oil type)",
-    "comparisonPriceHot": "Standard",
-    "comparisonBestFor": "Best For",
-    "comparisonBestForCold": "Premium/organic oils",
-    "comparisonBestForHot": "Bulk cooking oil",
-    "readFullComparison": "Read the full Cold Press vs Hot Press comparison",
-    "popularOilsTitle": "Popular Cold-Pressed Oils",
+    "comparisonNutrient": "Retensi Nutrisi",
+    "comparisonNutrientCold": "Umumnya tinggi (tergantung jenis biji)",
+    "comparisonNutrientHot": "Rendah (40-60%)",
+    "comparisonYield": "Rendemen Minyak",
+    "comparisonYieldCold": "Standar",
+    "comparisonYieldHot": "Lebih tinggi",
+    "comparisonQuality": "Kualitas Minyak",
+    "comparisonQualityCold": "Premium, tanpa rafinasi",
+    "comparisonQualityHot": "Perlu rafinasi",
+    "comparisonFlavor": "Rasa/Aroma",
+    "comparisonFlavorCold": "Alami, kaya",
+    "comparisonFlavorHot": "Netral",
+    "comparisonPrice": "Harga Pasar",
+    "comparisonPriceCold": "Umumnya premium (bervariasi cukup besar tergantung pasar dan jenis minyak)",
+    "comparisonPriceHot": "Standar",
+    "comparisonBestFor": "Paling Cocok Untuk",
+    "comparisonBestForCold": "Minyak premium/organik",
+    "comparisonBestForHot": "Minyak Goreng Curah",
+    "readFullComparison": "Baca perbandingan lengkap press dingin vs press panas",
+    "popularOilsTitle": "Minyak Press Dingin Populer",
     "vco": {
-      "title": "Virgin Coconut Oil (VCO)",
-      "region": "Philippines / Indonesia",
-      "desc": "Premium cooking & cosmetic applications",
-      "yield": "Yield: 55-65%",
-      "tag": "High Demand"
+      "title": "Minyak Kelapa Murni (VCO)",
+      "region": "Filipina / Indonesia",
+      "desc": "Aplikasi kuliner & kosmetik premium",
+      "yield": "Rendemen: 55-65%",
+      "tag": "Permintaan Tinggi"
     },
     "sesameOil": {
-      "title": "Cold-Pressed Sesame Oil",
-      "region": "Middle East / Asia",
-      "desc": "Traditional cooking & health supplements",
-      "yield": "Yield: 42-50%",
-      "tag": "Premium Price"
+      "title": "Minyak Wijen Press Dingin",
+      "region": "Timur Tengah / Asia",
+      "desc": "Masakan tradisional & suplemen kesehatan",
+      "yield": "Rendemen: 42-50%",
+      "tag": "Harga Premium"
     },
     "avocadoOil": {
-      "title": "Avocado Oil",
-      "region": "Global demand",
-      "desc": "Cosmetic & premium cooking",
-      "yield": "Yield: 15-25%",
-      "tag": "Fast Growing"
+      "title": "Minyak Alpukat",
+      "region": "Permintaan Global",
+      "desc": "Kosmetik & masakan premium",
+      "yield": "Rendemen: 15-25%",
+      "tag": "Tumbuh Cepat"
     },
     "oliveOil": {
-      "title": "Cold-Pressed Olive Oil",
-      "region": "Mediterranean",
-      "desc": "Premium food market",
-      "yield": "Yield: 15-25%",
-      "tag": "Established Market"
+      "title": "Minyak Zaitun Press Dingin",
+      "region": "Mediterania",
+      "desc": "Pasaran Makanan Premium",
+      "yield": "Rendemen: 15-25%",
+      "tag": "Pasaran Mapan"
     },
     "walnutOil": {
-      "title": "Walnut Oil",
-      "region": "Europe / Asia",
-      "desc": "Gourmet cooking & supplements",
-      "yield": "Yield: 50-60%",
+      "title": "Minyak Kenari",
+      "region": "Eropa / Asia",
+      "desc": "Masakan gourmet & suplemen",
+      "yield": "Rendemen: 50-60%",
       "tag": "Ultra Premium"
     },
     "sunflowerOil": {
-      "title": "Cold-Pressed Sunflower Oil",
-      "region": "Eastern Europe / Africa",
-      "desc": "Health-conscious market",
-      "yield": "Yield: 35-45%",
-      "tag": "High Volume"
+      "title": "Minyak Bunga Matahari Press Dingin",
+      "region": "Eropa Timur / Afrika",
+      "desc": "Pasaran Peduli Kesehatan",
+      "yield": "Rendemen: 35-45%",
+      "tag": "Volume Tinggi"
     },
-    "howWorksTitle": "How Cold Press Extraction Works",
+    "howWorksTitle": "Cara Kerja Ekstraksi Press Dingin",
     "howWorksStep1": {
-      "title": "Prepare Seeds",
-      "desc": "Clean, dry, and optionally dehull the oil seeds. Proper preparation ensures maximum oil yield and clean, sediment-free oil output."
+      "title": "Siapkan Biji",
+      "desc": "Bersihkan, keringkan, dan jika perlu kupaskan biji berminyak. Persiapan yang tepat memastikan rendemen maksimal dan hasil minyak bersih tanpa endapan."
     },
     "howWorksStep2": {
-      "title": "Cold Press at Low Temperature",
-      "desc": "Hydraulic pressure extracts oil below 60°C. The intense mechanical pressure does the work — no heating or chemicals needed. Nutrients and flavor stay intact."
+      "title": "Press Dingin pada Suhu Rendah",
+      "desc": "Tekanan hidrolik mengekstraksi minyak di bawah 60°C. Tekanan mekanis yang kuat yang bekerja — tanpa pemanasan maupun bahan kimia. Nutrisi dan rasa tetap utuh."
     },
     "howWorksStep3": {
-      "title": "Filter & Package",
-      "desc": "Natural sediment filtration, no chemical processing needed. The result is pure, premium cold-pressed oil ready for bottling and market."
+      "title": "Saring & Kemas",
+      "desc": "Filtrasi endapan alami, tanpa pengolahan kimia. Hasilnya minyak press dingin murni bermutu premium, siap dikemas dan dipasarkan."
     },
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "Pertanyaan yang Sering Diajukan",
     "faqs": [
       {
         "question": "What is a cold press oil machine?",
@@ -903,103 +903,103 @@
         "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
       }
     ],
-    "ctaTitle": "Start Producing Premium Cold-Pressed Oil",
-    "ctaDesc": "Contact Haonuo for factory-direct pricing, model recommendations, and free production line design.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "Mulai Produksi Minyak Press Dingin Premium",
+    "ctaDesc": "Hubungi Haonuo untuk harga langsung pabrik, rekomendasi model, dan desain lini produksi gratis.",
+    "whatsappUs": "Chat WhatsApp"
   },
   "hydraulic": {
-    "title": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "description": "Professional hydraulic oil press machine for cold pressing sesame, peanut, coconut & 50+ oil seeds. 15+ years manufacturer. Factory-direct pricing. 1-year warranty.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Hydraulic Oil Press Machine",
-    "heroTitle": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "heroDesc": "Professional hydraulic oil press machines for cold pressing sesame, peanut, coconut, and 50+ oil seeds. 15+ years manufacturer. 50+ countries. 1-year warranty.",
-    "requestQuote": "Request a Quote",
-    "compareModels": "Compare Models",
-    "whyChoose": "Why Choose a Hydraulic Oil Press",
+    "title": "Mesin Press Minyak Hidrolik — Langsung dari Pabrik Haonuo",
+    "description": "Mesin press minyak hidrolik profesional untuk press dingin wijen, kacang tanah, kelapa & 50+ jenis biji berminyak. Pabrikan berpengalaman 15+ tahun. Harga langsung pabrik. Garansi 1 tahun.",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbProducts": "Produk",
+    "breadcrumbCurrent": "Mesin Press Minyak Hidrolik",
+    "heroTitle": "Mesin Press Minyak Hidrolik — Langsung dari Pabrik Haonuo",
+    "heroDesc": "Mesin press minyak hidrolik profesional untuk press dingin wijen, kacang tanah, kelapa, dan 50+ jenis biji berminyak. Pabrikan berpengalaman 15+ tahun. Ekspor ke 50+ negara. Garansi 1 tahun.",
+    "requestQuote": "Minta Penawaran",
+    "compareModels": "Bandingkan Model",
+    "whyChoose": "Mengapa Memilih Mesin Press Minyak Hidrolik",
     "highYield": {
-      "title": "High Oil Yield",
-      "desc": "Typically 42-50% for sesame, 55-65% for coconut depending on seed quality and processing conditions. Results vary.",
-      "stat": "Sesame: 42-50% yield"
+      "title": "Rendemen Minyak Tinggi",
+      "desc": "Umumnya 42-50% untuk wijen dan 55-65% untuk kelapa, tergantung mutu biji dan kondisi pengolahan. Hasil dapat berbeda-beda.",
+      "stat": "Wijen: rendemen 42-50%"
     },
     "lowPower": {
-      "title": "Low Power Consumption",
-      "desc": "Only 2.2 KW motor power needed. Compatible with generators, ideal for areas with unstable or no grid electricity.",
-      "stat": "Just 2.2 KW — runs on 5KVA generator"
+      "title": "Konsumsi Daya Rendah",
+      "desc": "Hanya butuh daya motor 2,2 KW. Kompatibel dengan generator, ideal untuk daerah dengan listrik PLN tidak stabil atau tidak ada.",
+      "stat": "Hanya 2,2 KW — jalan dengan generator 5KVA"
     },
     "versatile": {
-      "title": "Versatile — 50+ Seeds",
-      "desc": "One machine handles sesame, peanut, coconut, walnut, almond, sunflower, flaxseed, mustard, rapeseed, and more.",
-      "stat": "50+ oil seed types supported"
+      "title": "Serbaguna — 50+ Biji",
+      "desc": "Satu mesin mengolah wijen, kacang tanah, kelapa, kenari, almond, bunga matahari, rami, sawi, kanola, dan lainnya.",
+      "stat": "Mendukung 50+ jenis biji berminyak"
     },
     "durable": {
-      "title": "Durable Construction",
-      "desc": "High-strength steel frame, high-frequency quenched and heat-treated. Designed for long service life — estimated 20,000+ hours under normal operating conditions (actual lifespan depends on maintenance and usage patterns).",
-      "stat": "20,000+ hours service life"
+      "title": "Konstruksi Tahan Lama",
+      "desc": "Rangka baja berkekuatan tinggi, dengan quench frekuensi tinggi dan perlakuan panas. Dirancang untuk umur pakai panjang — diperkirakan 20.000+ jam pada kondisi operasi normal (umur sebenarnya bergantung pada perawatan dan pola penggunaan).",
+      "stat": "Umur pakai 20.000+ jam"
     },
     "easyOperation": {
-      "title": "Easy Operation",
-      "desc": "One-button start with microcomputer control. Automated pressing cycle with one-button start — minimal training needed. We provide video tutorials and remote guidance. Typically 1-2 workers can operate the machine.",
-      "stat": "1-button start, 1-2 workers"
+      "title": "Operasi Mudah",
+      "desc": "Mulai dengan satu tombol dengan kontrol mikrokomputer. Siklus press otomatis — pelatihan minimal. Kami menyediakan tutorial video dan panduan jarak jauh. Umumnya 1-2 operator cukup untuk mengoperasikan mesin.",
+      "stat": "Start 1 tombol, 1-2 operator"
     },
     "factoryDirect": {
-      "title": "Factory Direct",
-      "desc": "No middleman — buy directly from the manufacturer. Potentially save compared to local distributor prices (actual savings vary by market). Quality assurance is provided directly by the manufacturer.",
-      "stat": "Potentially save vs. distributor prices"
+      "title": "Langsung dari Pabrik",
+      "desc": "Tanpa perantara — beli langsung dari pabrikan. Potensi hemat dibanding harga distributor lokal (penghematan nyata bervariasi per pasar). Jaminan kualitas diberikan langsung oleh pabrikan.",
+      "stat": "Potensi hemat vs harga distributor"
     },
-    "productSeriesTitle": "Our Hydraulic Oil Press Series",
-    "howWorksTitle": "How a Hydraulic Oil Press Works",
+    "productSeriesTitle": "Seri Mesin Press Minyak Hidrolik Kami",
+    "howWorksTitle": "Cara Kerja Mesin Press Minyak Hidrolik",
     "howWorksStep1": {
-      "title": "Load Seeds",
-      "desc": "Fill the press barrel with prepared oil seeds. No pre-processing needed for most seed types — just load and press."
+      "title": "Muat Biji",
+      "desc": "Isi tabung press dengan biji berminyak yang sudah disiapkan. Tidak perlu pra-pengolahan untuk sebagian besar jenis biji — cukup muat dan press."
     },
     "howWorksStep2": {
-      "title": "Apply Pressure",
-      "desc": "The hydraulic system generates up to 620 tons of pressing force at controlled temperatures below 60°C for true cold pressing."
+      "title": "Berikan Tekanan",
+      "desc": "Sistem hidrolik menghasilkan gaya press hingga 620 ton pada suhu terkendali di bawah 60°C untuk press dingin sejati."
     },
     "howWorksStep3": {
-      "title": "Collect Oil",
-      "desc": "Pure, filtered oil flows out through the slotted barrel while the compressed seed cake is ejected automatically by the 4-hook mechanism."
+      "title": "Kumpulkan Minyak",
+      "desc": "Minyak murni yang tersaring mengalir keluar melalui tabung bergerigi sementara bungkil terpadatkan otomatis dikeluarkan oleh mekanisme 4 kait."
     },
-    "applicationsTitle": "Application Scenarios",
+    "applicationsTitle": "Skenario Aplikasi",
     "sesameOilApp": {
-      "title": "Cold Pressed Sesame Oil",
-      "desc": "Premium cooking oil for Asian and Middle Eastern markets. Cold pressing preserves the rich aroma and nutty flavor that commands premium prices.",
-      "yield": "Yield: 42-50%"
+      "title": "Minyak Wijen Press Dingin",
+      "desc": "Minyak masak premium untuk pasar Asia dan Timur Tengah. Press dingin mempertahankan aroma kaya dan rasa guri yang dihargai premium.",
+      "yield": "Rendemen: 42-50%"
     },
     "coconutOilApp": {
-      "title": "Virgin Coconut Oil",
-      "desc": "High-value VCO production for Philippines, Indonesia, and global health food markets. Food-grade stainless steel models available for food safety compliance.",
-      "yield": "Yield: 55-65%"
+      "title": "Minyak Kelapa Murni",
+      "desc": "Produksi VCO bernilai tinggi untuk Filipina, Indonesia, dan pasar makanan kesehatan global. Tersedia model stainless steel food grade untuk memenuhi standar keamanan pangan.",
+      "yield": "Rendemen: 55-65%"
     },
     "peanutOilApp": {
-      "title": "Peanut / Groundnut Oil",
-      "desc": "Africa's most popular cooking oil. Ideal for groundnut oil businesses in Nigeria, Ghana, and across West Africa. Generator-compatible for rural operations.",
-      "yield": "Yield: 38-45%"
+      "title": "Minyak Kacang Tanah",
+      "desc": "Minyak masak paling populer di Afrika. Ideal untuk bisnis minyak kacang tanah di Nigeria, Ghana, dan seluruh Afrika Barat. Kompatibel generator untuk operasi di daerah pedesaan.",
+      "yield": "Rendemen: 38-45%"
     },
     "oliveOilApp": {
-      "title": "Olive Oil",
-      "desc": "Mediterranean and Middle East premium market. Hydraulic cold pressing preserves polyphenols and the distinctive flavor profile demanded by olive oil connoisseurs.",
-      "yield": "Yield: 35-45%"
+      "title": "Minyak Zaitun",
+      "desc": "Pasaran premium Mediterania dan Timur Tengah. Press dingin hidrolik mempertahankan polifenol dan profil rasa khas yang dicari para penggemar minyak zaitun.",
+      "yield": "Rendemen: 35-45%"
     },
     "avocadoOilApp": {
-      "title": "Avocado Oil",
-      "desc": "Growing demand in cosmetics and premium cooking markets. Cold pressing retains vitamins, monounsaturated fats, and the vibrant green color of premium avocado oil.",
-      "yield": "Yield: 30-40%"
+      "title": "Minyak Alpukat",
+      "desc": "Permintaan meningkat di pasar kosmetik dan masakan premium. Press dingin mempertahankan vitamin, lemak tak jenuh tunggal, dan warna hijau cerah minyak alpukat premium.",
+      "yield": "Rendemen: 30-40%"
     },
     "sunflowerOilApp": {
-      "title": "Sunflower Oil",
-      "desc": "Eastern Europe and Africa staple cooking oil. High smoke point and mild flavor make it a versatile choice for both home and commercial food production.",
-      "yield": "Yield: 40-48%"
+      "title": "Minyak Bunga Matahari",
+      "desc": "Minyak masak pokok di Eropa Timur dan Afrika. Titik asap tinggi dan rasa lembut menjadikannya pilihan serbaguna untuk produksi makanan rumahan maupun komersial.",
+      "yield": "Rendemen: 40-48%"
     },
-    "comparisonTitle": "Technical Comparison",
+    "comparisonTitle": "Perbandingan Teknis",
     "comparisonModel": "Model",
-    "comparisonForce": "Pressing Force",
+    "comparisonForce": "Gaya Press",
     "comparisonMotor": "Motor",
-    "comparisonBestFor": "Best For",
-    "compareAllModels": "Compare all models",
-    "faqTitle": "Frequently Asked Questions",
+    "comparisonBestFor": "Paling Cocok Untuk",
+    "compareAllModels": "Bandingkan semua model",
+    "faqTitle": "Pertanyaan yang Sering Diajukan",
     "faqs": [
       {
         "question": "What is a hydraulic oil press machine?",
@@ -1034,71 +1034,71 @@
         "answer": "All Haonuo machines come with a 1-year warranty covering manufacturing defects, plus lifetime technical support. Spare parts are available from stock. Every machine undergoes 48-hour continuous full-load testing before shipment to ensure reliable operation."
       }
     ],
-    "ctaTitle": "Ready to Find the Right Hydraulic Oil Press?",
-    "ctaDesc": "Get a free quotation, shipping estimate, and professional equipment recommendation typically within 24 business hours.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "Siap Menemukan Mesin Press Minyak Hidrolik yang Tepat?",
+    "ctaDesc": "Dapatkan penawaran gratis, estimasi pengiriman, dan rekomendasi peralatan profesional biasanya dalam 24 jam kerja.",
+    "whatsappUs": "Chat WhatsApp"
   },
   "manual": {
-    "title": "Commercial Hydraulic Oil Press — Industrial-Grade Production | Haonuo",
-    "description": "Industrial-grade hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, professional yield, and reliable operation. Factory-direct pricing from Haonuo.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Commercial Hydraulic Oil Press",
-    "heroTitle": "Commercial Hydraulic Oil Press — Industrial-Grade Production",
-    "heroDesc": "Professional hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, 60-75 MPa system pressure, and residual oil below 5%. Factory-direct pricing from Haonuo.",
-    "getPricing": "Get Commercial Pricing",
-    "viewModels": "View All Models",
-    "whyChoose": "Why Choose Hydraulic Pressing for Commercial Production",
+    "title": "Mesin Press Minyak Hidrolik Komersial — Produksi Kelas Industri | Haonuo",
+    "description": "Mesin press minyak hidrolik kelas industri untuk produksi minyak komersial. Kapasitas 100 kg per batch, rendemen profesional, dan operasi andal. Harga langsung pabrik Haonuo.",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbProducts": "Produk",
+    "breadcrumbCurrent": "Mesin Press Minyak Hidrolik Komersial",
+    "heroTitle": "Mesin Press Minyak Hidrolik Komersial — Produksi Kelas Industri",
+    "heroDesc": "Mesin press minyak hidrolik profesional untuk produksi minyak komersial. Kapasitas 100 kg per batch, tekanan sistem 60-75 MPa, dan minyak sisa di bawah 5%. Harga langsung pabrik Haonuo.",
+    "getPricing": "Dapatkan Harga Komersial",
+    "viewModels": "Lihat Semua Model",
+    "whyChoose": "Mengapa Memilih Press Hidrolik untuk Produksi Komersial",
     "industrialCapacity": {
-      "title": "Industrial Capacity",
-      "desc": "100 kg per batch capacity. Hourly output varies by seed type and pressing cycle time. HN325 processes 100 kg per batch in 40-90 minutes, meeting commercial production targets."
+      "title": "Kapasitas Industri",
+      "desc": "Kapasitas 100 kg per batch. Output per jam bervariasi tergantung jenis biji dan durasi siklus press. HN325 mengolah 100 kg per batch dalam 40-90 menit, memenuhi target produksi komersial."
     },
     "professionalYield": {
-      "title": "Professional Yield",
-      "desc": "Residual oil below 5% — 2-3x higher extraction efficiency than screw presses. Maximize profit from every kilogram of seeds."
+      "title": "Rendemen Profesional",
+      "desc": "Minyak sisa di bawah 5% — efisiensi ekstraksi 2-3 kali lebih tinggi dari mesin press ulir. Maksimalkan laba dari setiap kilogram biji."
     },
     "lowPower": {
-      "title": "Low Power Requirement",
-      "desc": "Only 2.2 KW power needed. Compatible with standard 220V single-phase power or a small 5 KVA generator — ideal for any region."
+      "title": "Kebutuhan Daya Rendah",
+      "desc": "Hanya butuh 2,2 KW. Kompatibel dengan listrik satu fase 220V standar atau generator kecil 5 KVA — ideal untuk semua wilayah."
     },
     "costEffective": {
-      "title": "Cost-Effective",
-      "desc": "Factory-direct pricing with 15-20 year service life. High yield and reliability deliver excellent ROI for commercial operations."
+      "title": "Efisien Biaya",
+      "desc": "Harga langsung pabrik dengan umur pakai 15-20 tahun. Rendemen tinggi dan keandalan memberikan ROI excelan untuk operasi komersial."
     },
-    "hydraulicAdvantageTitle": "Haonuo Hydraulic Presses — Professional Choice for Commercial Operations",
-    "hydraulicAdvantageDesc": "Haonuo specializes in commercial hydraulic oil presses that deliver industrial-grade performance with minimal power requirements. Even in areas with limited electricity, our hydraulic presses outperform all alternatives because they deliver:",
-    "hydraulicAdvantage1": "100 kg per batch capacity — commercial-scale production",
-    "hydraulicAdvantage2": "Residual oil below 5% — maximum extraction efficiency",
-    "hydraulicAdvantage3": "One-button operation — no physical labor required",
-    "hydraulicAdvantage4": "2.2 KW power — compatible with 5 KVA generator",
-    "exploreHydraulic": "Explore Haonuo Hydraulic Presses",
-    "productModelsTitle": "Commercial Hydraulic Press Models — Entry-Level",
-    "applicationsTitle": "Commercial Oil Production Applications",
+    "hydraulicAdvantageTitle": "Mesin Hidrolik Haonuo — Pilihan Profesional untuk Operasi Komersial",
+    "hydraulicAdvantageDesc": "Haonuo berspesialisasi dalam mesin press minyak hidrolik komersial yang memberikan kinerja kelas industri dengan kebutuhan daya minimal. Bahkan di daerah dengan listrik terbatas, mesin hidrolik kami mengungguli semua alternatif karena memberikan:",
+    "hydraulicAdvantage1": "Kapasitas 100 kg per batch — produksi skala komersial",
+    "hydraulicAdvantage2": "Minyak sisa di bawah 5% — efisiensi ekstraksi maksimal",
+    "hydraulicAdvantage3": "Operasi satu tombol — tanpa tenaga fisik",
+    "hydraulicAdvantage4": "2,2 KW — kompatibel dengan generator 5 KVA",
+    "exploreHydraulic": "Jelajahi Mesin Hidrolik Haonuo",
+    "productModelsTitle": "Model Mesin Hidrolik Komersial — Kelas Dasar",
+    "applicationsTitle": "Aplikasi Produksi Minyak Komersial",
     "sesameOilApp": {
-      "title": "Sesame Oil",
-      "tag": "High-Value Specialty",
-      "desc": "Premium cold-pressed sesame oil for culinary and cosmetic applications. Hydraulic presses achieve 42-50% extraction efficiency with residual oil below 5%.",
-      "yield": "Hydraulic yield: 42-50%"
+      "title": "Minyak Wijen",
+      "tag": "Spesialisasi Bernilai Tinggi",
+      "desc": "Minyak wijen press dingin premium untuk aplikasi kuliner dan kosmetik. Mesin hidrolik mencapai efisiensi ekstraksi 42-50% dengan minyak sisa di bawah 5%.",
+      "yield": "Rendemen hidrolik: 42-50%"
     },
     "peanutOilApp": {
-      "title": "Peanut Oil",
-      "tag": "Commercial Cooking Oil",
-      "desc": "Widely consumed cooking oil with high demand in Africa and Asia. Industrial hydraulic pressing ensures consistent quality and maximum yield.",
-      "yield": "Hydraulic yield: 38-45%"
+      "title": "Minyak Kacang Tanah",
+      "tag": "Minyak Masak Komersial",
+      "desc": "Minyak masak yang dikonsumsi luas dengan permintaan tinggi di Afrika dan Asia. Press hidrolik industri menjamin kualitas konsisten dan rendemen maksimal.",
+      "yield": "Rendemen hidrolik: 38-45%"
     },
     "palmKernelOilApp": {
-      "title": "Palm Kernel Oil",
-      "tag": "Industrial Processing",
-      "desc": "High-volume industrial oil for cooking and soap production. Hydraulic presses handle tough palm kernels with excellent efficiency.",
-      "yield": "Hydraulic yield: 45-55%"
+      "title": "Minyak Inti Sawit",
+      "tag": "Pengolahan Industri",
+      "desc": "Minyak industri bervolume besar untuk masakan dan produksi sabun. Mesin hidrolik mengolah inti sawit yang keras dengan efisiensi excelan.",
+      "yield": "Rendemen hidrolik: 45-55%"
     },
     "coconutOilApp": {
-      "title": "Coconut Oil",
-      "tag": "Premium Market",
-      "desc": "Cold-pressed virgin coconut oil for health food and cosmetics markets. Demands high-quality extraction equipment.",
-      "yield": "Hydraulic yield: 55-62%"
+      "title": "Minyak Kelapa",
+      "tag": "Pasaran Premium",
+      "desc": "Minyak kelapa murni press dingin untuk pasar makanan kesehatan dan kosmetik. Membutuhkan peralatan ekstraksi bermutu tinggi.",
+      "yield": "Rendemen hidrolik: 55-62%"
     },
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "Pertanyaan yang Sering Diajukan",
     "faqs": [
       {
         "question": "What is a commercial hydraulic oil press?",
@@ -1125,69 +1125,69 @@
         "answer": "Haonuo provides factory-direct pricing without middleman markups. Total cost includes the press, optional roaster and filter, shipping, and installation. With proper maintenance, hydraulic presses deliver 15-20 years of reliable service, making them a cost-effective investment for commercial oil production."
       }
     ],
-    "ctaTitle": "Find the Right Commercial Oil Press",
-    "ctaDesc": "Haonuo hydraulic presses deliver 100 kg per batch industrial capacity with residual oil below 5%. Hourly output varies by seed type. Get your personalized commercial solution today.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "Temukan Mesin Press Minyak Komersial yang Tepat",
+    "ctaDesc": "Mesin hidrolik Haonuo memberikan kapasitas industri 100 kg per batch dengan minyak sisa di bawah 5%. Output per jam bervariasi tergantung jenis biji. Dapatkan solusi komersial personal Anda hari ini.",
+    "whatsappUs": "Chat WhatsApp"
   },
   "roi": {
-    "title": "Hydraulic Oil Press ROI Calculator",
-    "description": "Estimate your return on investment for Haonuo hydraulic oil press machines. Calculate daily oil production, revenue, profit, and payback period.",
-    "breadcrumbHome": "Home",
-    "breadcrumbCurrent": "ROI Calculator",
-    "heroTitle": "Hydraulic Oil Press ROI Calculator",
-    "heroDesc": "Estimate your return on investment",
-    "disclaimerTitle": "Important Disclaimer",
-    "disclaimerText": "This calculator provides <strong>rough estimates only</strong> for your preliminary planning. It is <strong>NOT a guarantee</strong> of actual returns. Actual results depend on many factors including raw material quality, operator skill, local market conditions, electricity costs, labor costs, and maintenance expenses. <strong>Do not make purchasing decisions based solely on these estimates.</strong> Please <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">contact our team</a> for a detailed, case-specific analysis tailored to your business.",
-    "machineModel": "Machine Model",
-    "modelHN325": "HN325 — Standard Hydraulic Oil Press",
-    "modelHN355": "HN355 — Heavy Duty Hydraulic Oil Press",
-    "modelHN426": "HN426 — Cold Press Hydraulic Oil Press",
-    "modelHN480": "HN480 — High Pressure Hydraulic Oil Press",
-    "modelHN500": "HN500 — Ultra High Pressure Hydraulic Oil Press",
-    "machinePrice": "Machine Price (USD)",
-    "machinePricePlaceholder": "Enter your quoted machine price",
-    "machinePriceNote": "Enter the price from your quotation. <a href=\"/contact\" class=\"text-amber-500 underline\">Request a quote</a> if you don't have one yet.",
-    "dailyHours": "Daily Operating Hours:",
-    "hoursMin": "1 hr",
-    "hoursMax": "24 hrs",
-    "rawMaterial": "Raw Material Type",
-    "materialSesame": "Sesame (approx. 45% oil content)",
-    "materialPeanut": "Peanut (approx. 42% oil content)",
-    "materialCoconut": "Coconut (approx. 55% oil content)",
-    "materialSunflower": "Sunflower (approx. 40% oil content)",
-    "materialRapeseed": "Rapeseed (approx. 38% oil content)",
-    "materialNote": "Oil content varies by variety, region, and moisture. Values shown are typical ranges, not guarantees.",
-    "materialCost": "Raw Material Cost per kg (USD)",
-    "materialCostPlaceholder": "Enter raw material cost per kg in your local market",
-    "materialCostNote": "Please enter the actual cost in your local market. Raw material prices fluctuate significantly.",
-    "oilPrice": "Oil Selling Price per kg (USD)",
-    "oilPricePlaceholder": "Enter your expected selling price per kg",
-    "oilPriceNote": "Please enter the actual selling price in your target market. Prices vary by region and quality grade.",
-    "dailyOpcost": "Estimated Daily Operating Costs (USD)",
-    "dailyOpcostPlaceholder": "e.g. electricity, labor, maintenance, packaging",
-    "dailyOpcostNote": "Include electricity, labor, maintenance, packaging, transportation, and other daily costs. This significantly affects actual profitability.",
-    "acknowledge": "I understand that this calculator provides <strong>rough estimates only</strong> and is <strong>not a guarantee</strong> of actual investment returns. Actual results depend on many factors including raw material quality, operating conditions, local market prices, and production efficiency. I will not make purchasing decisions based solely on these estimates.",
-    "calculateBtn": "Calculate ROI",
-    "resultDisclaimer": "<strong>⚠️ These are rough estimates, not guarantees.</strong> Actual returns may be significantly lower or higher depending on your specific conditions. These figures do not account for all real-world variables. <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">Contact us</a> for a personalized analysis.",
-    "resultsTitle": "Your Estimated Returns",
-    "resultDailyOil": "Daily Oil Production (estimated)",
-    "resultDailyRevenue": "Daily Revenue (estimated)",
-    "resultDailyCost": "Daily Raw Material Cost",
-    "resultDailyOpcost": "Daily Operating Costs",
-    "resultDailyProfit": "Daily Net Profit (estimated)",
-    "resultMonthlyProfit": "Monthly Net Profit (25 days, estimated)",
-    "resultPayback": "Estimated Payback Period",
-    "resultRoi": "Estimated Annual ROI",
-    "notesTitle": "Important Notes",
-    "note1": "• All figures are <strong>rough estimates</strong> based on the values you entered and typical industry parameters — they are <strong>NOT guarantees</strong> of actual performance.",
-    "note2": "• Actual oil yield depends on raw material variety, moisture content, pressing temperature, operator skill, and machine condition.",
-    "note3": "• This calculation uses a conservative <strong>60% utilization rate</strong> (batch loading/unloading time, setup, cleaning). Actual throughput may vary.",
-    "note4": "• Operating costs (electricity, labor, maintenance, packaging, transportation, rent) are often underestimated. Please enter realistic figures.",
-    "note5": "• Market prices for both raw materials and finished oil fluctuate. Do not assume constant prices over the payback period.",
-    "note6": "• This calculator does not account for taxes, import duties, shipping costs, or currency exchange risks.",
-    "note7": "• <strong>Haonuo makes no warranty, express or implied, regarding the accuracy or reliability of these estimates.</strong>",
-    "ctaTitle": "Need a Reliable Estimate?",
-    "ctaDesc": "Our team can provide a detailed, case-specific ROI analysis based on your actual market conditions, raw material sources, and production goals.",
-    "ctaBtn": "Get a Personalized Analysis"
+    "title": "Kalkulator ROI Mesin Press Minyak Hidrolik",
+    "description": "Perkirakan imbal hasil investasi Anda untuk mesin press minyak hidrolik Haonuo. Hitung produksi minyak harian, pendapatan, laba, dan periode pengembalian.",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbCurrent": "Kalkulator ROI",
+    "heroTitle": "Kalkulator ROI Mesin Press Minyak Hidrolik",
+    "heroDesc": "Perkirakan imbal hasil investasi Anda",
+    "disclaimerTitle": "Penafian Penting",
+    "disclaimerText": "Kalkulator ini hanya memberikan <strong>perkiraan kasar</strong> untuk perencanaan awal Anda. Ini <strong>bukan jaminan</strong> atas hasil aktual. Hasil aktual bergantung pada banyak faktor termasuk kualitas bahan baku, keterampilan operator, kondisi pasar setempat, biaya listrik, biaya tenaga kerja, dan biaya perawatan. <strong>Jangan ambil keputusan pembelian hanya berdasarkan perkiraan ini.</strong> Silakan <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">hubungi tim kami</a> untuk analisis terperinci yang disesuaikan dengan bisnis Anda.",
+    "machineModel": "Model Mesin",
+    "modelHN325": "HN325 — Mesin Press Minyak Hidrolik Standar",
+    "modelHN355": "HN355 — Mesin Press Minyak Hidrolik Berat",
+    "modelHN426": "HN426 — Mesin Press Minyak Hidrolik Dingin",
+    "modelHN480": "HN480 — Mesin Press Minyak Hidrolik Tekanan Tinggi",
+    "modelHN500": "HN500 — Mesin Press Minyak Hidrolik Tekanan Sangat Tinggi",
+    "machinePrice": "Harga Mesin (USD)",
+    "machinePricePlaceholder": "Masukkan harga mesin dari penawaran Anda",
+    "machinePriceNote": "Masukkan harga dari penawaran Anda. <a href=\"/contact\" class=\"text-amber-500 underline\">Minta penawaran</a> jika belum memilikinya.",
+    "dailyHours": "Jam Operasional Harian:",
+    "hoursMin": "1 jam",
+    "hoursMax": "24 jam",
+    "rawMaterial": "Jenis Bahan Baku",
+    "materialSesame": "Wijen (kandungan minyak sekitar 45%)",
+    "materialPeanut": "Kacang Tanah (kandungan minyak sekitar 42%)",
+    "materialCoconut": "Kelapa (kandungan minyak sekitar 55%)",
+    "materialSunflower": "Bunga Matahari (kandungan minyak sekitar 40%)",
+    "materialRapeseed": "Biji Kanola (kandungan minyak sekitar 38%)",
+    "materialNote": "Kandungan minyak bervariasi menurut varietas, wilayah, dan kelembapan. Nilai yang ditampilkan adalah rentang tipikal, bukan jaminan.",
+    "materialCost": "Biaya Bahan Baku per kg (USD)",
+    "materialCostPlaceholder": "Masukkan biaya bahan baku per kg di pasar lokal Anda",
+    "materialCostNote": "Masukkan biaya aktual di pasar lokal Anda. Harga bahan baku berfluktuasi signifikan.",
+    "oilPrice": "Harga Jual Minyak per kg (USD)",
+    "oilPricePlaceholder": "Masukkan harga jual yang Anda harapkan per kg",
+    "oilPriceNote": "Masukkan harga jual aktual di pasar target Anda. Harga bervariasi menurut wilayah dan tingkat kualitas.",
+    "dailyOpcost": "Perkiraan Biaya Operasional Harian (USD)",
+    "dailyOpcostPlaceholder": "mis. listrik, tenaga kerja, perawatan, pengemasan",
+    "dailyOpcostNote": "Sertakan listrik, tenaga kerja, perawatan, pengemasan, transportasi, dan biaya harian lainnya. Ini sangat memengaruhi profitabilitas aktual.",
+    "acknowledge": "Saya memahami bahwa kalkulator ini hanya memberikan <strong>perkiraan kasar</strong> dan <strong>bukan jaminan</strong> atas imbal hasil investasi aktual. Hasil aktual bergantung pada banyak faktor termasuk kualitas bahan baku, kondisi operasional, harga pasar setempat, dan efisiensi produksi. Saya tidak akan mengambil keputusan pembelian hanya berdasarkan perkiraan ini.",
+    "calculateBtn": "Hitung ROI",
+    "resultDisclaimer": "<strong>⚠️ Ini adalah perkiraan kasar, bukan jaminan.</strong> Imbal hasil aktual bisa jauh lebih rendah atau lebih tinggi tergantung kondisi spesifik Anda. Angka-angka ini tidak memperhitungkan semua variabel dunia nyata. <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">Hubungi kami</a> untuk analisis yang dipersonalisasi.",
+    "resultsTitle": "Perkiraan Imbal Hasil Anda",
+    "resultDailyOil": "Produksi Minyak Harian (perkiraan)",
+    "resultDailyRevenue": "Pendapatan Harian (perkiraan)",
+    "resultDailyCost": "Biaya Bahan Baku Harian",
+    "resultDailyOpcost": "Biaya Operasional Harian",
+    "resultDailyProfit": "Laba Bersih Harian (perkiraan)",
+    "resultMonthlyProfit": "Laba Bersih Bulanan (25 hari, perkiraan)",
+    "resultPayback": "Perkiraan Periode Pengembalian",
+    "resultRoi": "Perkiraan ROI Tahunan",
+    "notesTitle": "Catatan Penting",
+    "note1": "• Semua angka adalah <strong>perkiraan kasar</strong> berdasarkan nilai yang Anda masukkan dan parameter industri tipikal — semuanya <strong>bukan jaminan</strong> kinerja aktual.",
+    "note2": "• Rendemen minyak aktual bergantung pada varietas bahan baku, kandungan kelembapan, suhu pengepresan, keterampilan operator, dan kondisi mesin.",
+    "note3": "• Perhitungan ini menggunakan <strong>tingkat utilisasi konservatif 60%</strong> (waktu muat/bongkar batch, penyetelan, pembersihan). Kapasitas produksi aktual dapat bervariasi.",
+    "note4": "• Biaya operasional (listrik, tenaga kerja, perawatan, pengemasan, transportasi, sewa) sering kali diremehkan. Masukkan angka yang realistis.",
+    "note5": "• Harga pasar bahan baku maupun minyak jadi berfluktuasi. Jangan berasumsi harga tetap selama periode pengembalian.",
+    "note6": "• Kalkulator ini tidak memperhitungkan pajak, bea impor, biaya pengiriman, atau risiko nilai tukar mata uang.",
+    "note7": "• <strong>Haonuo tidak memberikan jaminan apa pun, tersurat maupun tersirat, mengenai akurasi atau keandalan perkiraan ini.</strong>",
+    "ctaTitle": "Butuh Perkiraan yang Andal?",
+    "ctaDesc": "Tim kami dapat memberikan analisis ROI terperinci sesuai kasus Anda, berdasarkan kondisi pasar aktual, sumber bahan baku, dan target produksi Anda.",
+    "ctaBtn": "Dapatkan Analisis Personal"
   }
 }

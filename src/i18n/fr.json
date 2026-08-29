@@ -767,116 +767,116 @@
     "bestForLabel": "Meilleur Pour"
   },
   "coldPress": {
-    "title": "Cold Press Oil Machine — Help Preserve Natural Quality | Haonuo",
-    "description": "Professional cold press oil machine for premium oil extraction below 60°C. Can help retain more nutrients and flavor compared to hot pressing. Factory-direct from Haonuo. 1-year warranty.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Cold Press Oil Machine",
-    "heroTitle": "Cold Press Oil Machine — Help Preserve Natural Quality",
-    "heroDesc": "Professional cold press oil machines that extract premium oil below 60°C. Can help retain more nutrients, flavor, and aroma compared to hot pressing. Well-suited for coconut, sesame, walnut, and premium oils. Factory-direct from Haonuo.",
-    "requestQuote": "Request a Quote",
-    "learnHow": "Learn How Cold Press Works",
-    "whyColdPress": "Why Cold Press Matters",
+    "title": "Presse à huile à froid — Aide à préserver la qualité naturelle | Haonuo",
+    "description": "Presse à huile à froid professionnelle pour une extraction premium en dessous de 60°C. Peut aider à préserver plus de nutriments et de saveur que le pressage à chaud. Vente directe usine Haonuo. Garantie 1 an.",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbProducts": "Produits",
+    "breadcrumbCurrent": "Presse à huile à froid",
+    "heroTitle": "Presse à huile à froid — Aide à préserver la qualité naturelle",
+    "heroDesc": "Presses à huile à froid professionnelles qui extraient une huile premium en dessous de 60°C. Peuvent aider à préserver davantage de nutriments, de saveur et d'arôme que le pressage à chaud. Adaptées au coco, sésame, noix et huiles premium. Vente directe usine Haonuo.",
+    "requestQuote": "Demander un devis",
+    "learnHow": "Découvrir le fonctionnement du pressage à froid",
+    "whyColdPress": "Pourquoi le pressage à froid est important",
     "nutrientPreservation": {
-      "title": "Nutrient Preservation",
-      "desc": "Cold pressing below 60°C helps retain vitamins, antioxidants, and essential fatty acids that may be lost in hot pressing. Your customers get premium quality cold-pressed oil."
+      "title": "Préservation des nutriments",
+      "desc": "Le pressage à froid en dessous de 60°C aide à préserver les vitamines, antioxydants et acides gras essentiels qui peuvent être perdus lors du pressage à chaud. Vos clients obtiennent une huile pressée à froid de qualité premium."
     },
     "naturalFlavor": {
-      "title": "Natural Flavor & Aroma",
-      "desc": "No heating means the oil keeps its original taste — critical for premium and organic markets. Sesame stays nutty, coconut stays fragrant, walnut stays rich."
+      "title": "Goût et arôme naturels",
+      "desc": "Sans chauffage, l'huile conserve son goût d'origine — essentiel pour les marchés premium et bio. Le sésame reste noisetté, le coco parfumé, la noix riche."
     },
     "higherMarketValue": {
-      "title": "Higher Market Value",
-      "desc": "Cold-pressed oils command 30-80% premium over refined/hot-pressed oils. Higher quality translates directly to higher profit margins for your business."
+      "title": "Valeur marchande plus élevée",
+      "desc": "Les huiles pressées à froid se vendent avec une prime de 30-80 % par rapport aux huiles raffinées/pressées à chaud. Une qualité supérieure se traduit directement par de meilleures marges pour votre activité."
     },
     "versatileApplications": {
-      "title": "Versatile Applications",
-      "desc": "From VCO (Virgin Coconut Oil) to cold-pressed sesame oil for pharmaceutical and cosmetic industries. One machine opens doors to multiple premium markets."
+      "title": "Applications polyvalentes",
+      "desc": "De la VCO (huile de coco vierge) à l'huile de sésame pressée à froid pour les industries pharmaceutique et cosmétique. Une machine ouvre les portes de plusieurs marchés premium."
     },
-    "productsTitle": "Our Cold Press Oil Machine Series",
-    "comparisonTitle": "Cold Press vs Hot Press Comparison",
-    "comparisonFeature": "Feature",
-    "comparisonColdPress": "Cold Press",
-    "comparisonHotPress": "Hot Press",
-    "comparisonTemp": "Temperature",
-    "comparisonTempCold": "Below 60°C",
+    "productsTitle": "Notre série de presses à huile à froid",
+    "comparisonTitle": "Comparaison pressage à froid vs à chaud",
+    "comparisonFeature": "Caractéristique",
+    "comparisonColdPress": "Pressage à froid",
+    "comparisonHotPress": "Pressage à chaud",
+    "comparisonTemp": "Température",
+    "comparisonTempCold": "En dessous de 60°C",
     "comparisonTempHot": "120-180°C",
-    "comparisonNutrient": "Nutrient Retention",
-    "comparisonNutrientCold": "Generally high (varies by seed type)",
-    "comparisonNutrientHot": "Low (40-60%)",
-    "comparisonYield": "Oil Yield",
+    "comparisonNutrient": "Conservation des nutriments",
+    "comparisonNutrientCold": "Généralement élevée (selon le type de graine)",
+    "comparisonNutrientHot": "Faible (40-60 %)",
+    "comparisonYield": "Rendement en huile",
     "comparisonYieldCold": "Standard",
-    "comparisonYieldHot": "Higher",
-    "comparisonQuality": "Oil Quality",
-    "comparisonQualityCold": "Premium, unrefined",
-    "comparisonQualityHot": "Requires refining",
-    "comparisonFlavor": "Flavor/Aroma",
-    "comparisonFlavorCold": "Natural, rich",
-    "comparisonFlavorHot": "Neutral",
-    "comparisonPrice": "Market Price",
-    "comparisonPriceCold": "Typically premium (varies significantly by market and oil type)",
+    "comparisonYieldHot": "Plus élevé",
+    "comparisonQuality": "Qualité de l'huile",
+    "comparisonQualityCold": "Premium, non raffinée",
+    "comparisonQualityHot": "Nécessite un raffinage",
+    "comparisonFlavor": "Saveur/Arôme",
+    "comparisonFlavorCold": "Naturelle, riche",
+    "comparisonFlavorHot": "Neutre",
+    "comparisonPrice": "Prix du marché",
+    "comparisonPriceCold": "Généralement premium (varie considérablement selon le marché et le type d'huile)",
     "comparisonPriceHot": "Standard",
-    "comparisonBestFor": "Best For",
-    "comparisonBestForCold": "Premium/organic oils",
-    "comparisonBestForHot": "Bulk cooking oil",
-    "readFullComparison": "Read the full Cold Press vs Hot Press comparison",
-    "popularOilsTitle": "Popular Cold-Pressed Oils",
+    "comparisonBestFor": "Idéal pour",
+    "comparisonBestForCold": "Huiles premium/bio",
+    "comparisonBestForHot": "Huile de cuisson en vrac",
+    "readFullComparison": "Lire la comparaison complète pressage à froid vs à chaud",
+    "popularOilsTitle": "Huiles pressées à froid populaires",
     "vco": {
-      "title": "Virgin Coconut Oil (VCO)",
-      "region": "Philippines / Indonesia",
-      "desc": "Premium cooking & cosmetic applications",
-      "yield": "Yield: 55-65%",
-      "tag": "High Demand"
+      "title": "Huile de coco vierge (VCO)",
+      "region": "Philippines / Indonésie",
+      "desc": "Applications culinaires et cosmétiques premium",
+      "yield": "Rendement : 55-65 %",
+      "tag": "Forte demande"
     },
     "sesameOil": {
-      "title": "Cold-Pressed Sesame Oil",
-      "region": "Middle East / Asia",
-      "desc": "Traditional cooking & health supplements",
-      "yield": "Yield: 42-50%",
-      "tag": "Premium Price"
+      "title": "Huile de sésame pressée à froid",
+      "region": "Moyen-Orient / Asie",
+      "desc": "Cuisine traditionnelle et compléments alimentaires",
+      "yield": "Rendement : 42-50 %",
+      "tag": "Prix premium"
     },
     "avocadoOil": {
-      "title": "Avocado Oil",
-      "region": "Global demand",
-      "desc": "Cosmetic & premium cooking",
-      "yield": "Yield: 15-25%",
-      "tag": "Fast Growing"
+      "title": "Huile d'avocat",
+      "region": "Demande mondiale",
+      "desc": "Cosmétique et cuisine premium",
+      "yield": "Rendement : 15-25 %",
+      "tag": "En forte croissance"
     },
     "oliveOil": {
-      "title": "Cold-Pressed Olive Oil",
-      "region": "Mediterranean",
-      "desc": "Premium food market",
-      "yield": "Yield: 15-25%",
-      "tag": "Established Market"
+      "title": "Huile d'olive pressée à froid",
+      "region": "Méditerranée",
+      "desc": "Marché alimentaire premium",
+      "yield": "Rendement : 15-25 %",
+      "tag": "Marché établi"
     },
     "walnutOil": {
-      "title": "Walnut Oil",
-      "region": "Europe / Asia",
-      "desc": "Gourmet cooking & supplements",
-      "yield": "Yield: 50-60%",
-      "tag": "Ultra Premium"
+      "title": "Huile de noix",
+      "region": "Europe / Asie",
+      "desc": "Cuisine gastronomique et compléments",
+      "yield": "Rendement : 50-60 %",
+      "tag": "Ultra premium"
     },
     "sunflowerOil": {
-      "title": "Cold-Pressed Sunflower Oil",
-      "region": "Eastern Europe / Africa",
-      "desc": "Health-conscious market",
-      "yield": "Yield: 35-45%",
-      "tag": "High Volume"
+      "title": "Huile de tournesol pressée à froid",
+      "region": "Europe de l'Est / Afrique",
+      "desc": "Marché soucieux de la santé",
+      "yield": "Rendement : 35-45 %",
+      "tag": "Grand volume"
     },
-    "howWorksTitle": "How Cold Press Extraction Works",
+    "howWorksTitle": "Comment fonctionne l'extraction par pressage à froid",
     "howWorksStep1": {
-      "title": "Prepare Seeds",
-      "desc": "Clean, dry, and optionally dehull the oil seeds. Proper preparation ensures maximum oil yield and clean, sediment-free oil output."
+      "title": "Préparer les graines",
+      "desc": "Nettoyez, séchez et éventuellement décortiquez les graines oléagineuses. Une bonne préparation garantit un rendement maximal et une huile propre, sans sédiments."
     },
     "howWorksStep2": {
-      "title": "Cold Press at Low Temperature",
-      "desc": "Hydraulic pressure extracts oil below 60°C. The intense mechanical pressure does the work — no heating or chemicals needed. Nutrients and flavor stay intact."
+      "title": "Presser à froid à basse température",
+      "desc": "La pression hydraulique extrait l'huile en dessous de 60°C. La forte pression mécanique fait le travail — sans chauffage ni produits chimiques. Nutriments et saveur restent intacts."
     },
     "howWorksStep3": {
-      "title": "Filter & Package",
-      "desc": "Natural sediment filtration, no chemical processing needed. The result is pure, premium cold-pressed oil ready for bottling and market."
+      "title": "Filtrer et conditionner",
+      "desc": "Filtration naturelle des sédiments, sans traitement chimique. Le résultat est une huile pressée à froid pure et premium, prête à être embouteillée et commercialisée."
     },
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "Questions fréquentes",
     "faqs": [
       {
         "question": "What is a cold press oil machine?",
@@ -903,103 +903,103 @@
         "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
       }
     ],
-    "ctaTitle": "Start Producing Premium Cold-Pressed Oil",
-    "ctaDesc": "Contact Haonuo for factory-direct pricing, model recommendations, and free production line design.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "Commencez à produire de l'huile pressée à froid premium",
+    "ctaDesc": "Contactez Haonuo pour des prix directs usine, des recommandations de modèles et une conception gratuite de votre ligne de production.",
+    "whatsappUs": "Écrivez-nous sur WhatsApp"
   },
   "hydraulic": {
-    "title": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "description": "Professional hydraulic oil press machine for cold pressing sesame, peanut, coconut & 50+ oil seeds. 15+ years manufacturer. Factory-direct pricing. 1-year warranty.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Hydraulic Oil Press Machine",
-    "heroTitle": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "heroDesc": "Professional hydraulic oil press machines for cold pressing sesame, peanut, coconut, and 50+ oil seeds. 15+ years manufacturer. 50+ countries. 1-year warranty.",
-    "requestQuote": "Request a Quote",
-    "compareModels": "Compare Models",
-    "whyChoose": "Why Choose a Hydraulic Oil Press",
+    "title": "Presse à huile hydraulique — Vente directe usine Haonuo",
+    "description": "Presse à huile hydraulique professionnelle pour le pressage à froid du sésame, de l'arachide, du coco et plus de 50 graines oléagineuses. Fabricant depuis plus de 15 ans. Prix direct usine. Garantie 1 an.",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbProducts": "Produits",
+    "breadcrumbCurrent": "Presse à huile hydraulique",
+    "heroTitle": "Presse à huile hydraulique — Vente directe usine Haonuo",
+    "heroDesc": "Presses à huile hydrauliques professionnelles pour le pressage à froid du sésame, de l'arachide, du coco et plus de 50 graines oléagineuses. Fabricant depuis plus de 15 ans. Plus de 50 pays. Garantie 1 an.",
+    "requestQuote": "Demander un devis",
+    "compareModels": "Comparer les modèles",
+    "whyChoose": "Pourquoi choisir une presse à huile hydraulique",
     "highYield": {
-      "title": "High Oil Yield",
-      "desc": "Typically 42-50% for sesame, 55-65% for coconut depending on seed quality and processing conditions. Results vary.",
-      "stat": "Sesame: 42-50% yield"
+      "title": "Rendement d'huile élevé",
+      "desc": "Généralement 42-50 % pour le sésame et 55-65 % pour le coco, selon la qualité des graines et les conditions de traitement. Les résultats varient.",
+      "stat": "Sésame : rendement de 42-50 %"
     },
     "lowPower": {
-      "title": "Low Power Consumption",
-      "desc": "Only 2.2 KW motor power needed. Compatible with generators, ideal for areas with unstable or no grid electricity.",
-      "stat": "Just 2.2 KW — runs on 5KVA generator"
+      "title": "Faible consommation d'énergie",
+      "desc": "Seulement 2,2 KW de puissance moteur nécessaire. Compatible avec les générateurs, idéal pour les zones à réseau électrique instable ou absent.",
+      "stat": "Seulement 2,2 KW — fonctionne avec un générateur de 5 KVA"
     },
     "versatile": {
-      "title": "Versatile — 50+ Seeds",
-      "desc": "One machine handles sesame, peanut, coconut, walnut, almond, sunflower, flaxseed, mustard, rapeseed, and more.",
-      "stat": "50+ oil seed types supported"
+      "title": "Polyvalente — plus de 50 graines",
+      "desc": "Une seule machine traite sésame, arachide, coco, noix, amande, tournesol, lin, moutarde, colza et plus encore.",
+      "stat": "Plus de 50 types de graines oléagineuses pris en charge"
     },
     "durable": {
-      "title": "Durable Construction",
-      "desc": "High-strength steel frame, high-frequency quenched and heat-treated. Designed for long service life — estimated 20,000+ hours under normal operating conditions (actual lifespan depends on maintenance and usage patterns).",
-      "stat": "20,000+ hours service life"
+      "title": "Construction durable",
+      "desc": "Châssis en acier haute résistance, trempé par haute fréquence et traité thermiquement. Conçu pour une longue durée de vie — estimée à plus de 20 000 heures dans des conditions normales d'utilisation (la durée réelle dépend de l'entretien et des habitudes d'utilisation).",
+      "stat": "Durée de vie de plus de 20 000 heures"
     },
     "easyOperation": {
-      "title": "Easy Operation",
-      "desc": "One-button start with microcomputer control. Automated pressing cycle with one-button start — minimal training needed. We provide video tutorials and remote guidance. Typically 1-2 workers can operate the machine.",
-      "stat": "1-button start, 1-2 workers"
+      "title": "Facilité d'utilisation",
+      "desc": "Démarrage par un seul bouton avec commande par micro-ordinateur. Cycle de pressage automatisé — formation minimale requise. Nous fournissons des tutoriels vidéo et un accompagnement à distance. En général, 1 à 2 opérateurs suffisent pour faire fonctionner la machine.",
+      "stat": "Démarrage 1 bouton, 1-2 opérateurs"
     },
     "factoryDirect": {
-      "title": "Factory Direct",
-      "desc": "No middleman — buy directly from the manufacturer. Potentially save compared to local distributor prices (actual savings vary by market). Quality assurance is provided directly by the manufacturer.",
-      "stat": "Potentially save vs. distributor prices"
+      "title": "Vente directe usine",
+      "desc": "Aucun intermédiaire — achetez directement au fabricant. Économies potentielles par rapport aux prix des distributeurs locaux (les économies réelles varient selon le marché). L'assurance qualité est assurée directement par le fabricant.",
+      "stat": "Économies potentielles vs prix distributeurs"
     },
-    "productSeriesTitle": "Our Hydraulic Oil Press Series",
-    "howWorksTitle": "How a Hydraulic Oil Press Works",
+    "productSeriesTitle": "Notre série de presses à huile hydrauliques",
+    "howWorksTitle": "Comment fonctionne une presse à huile hydraulique",
     "howWorksStep1": {
-      "title": "Load Seeds",
-      "desc": "Fill the press barrel with prepared oil seeds. No pre-processing needed for most seed types — just load and press."
+      "title": "Charger les graines",
+      "desc": "Remplissez le cylindre de pressage avec les graines oléagineuses préparées. Aucun prétraitement nécessaire pour la plupart des graines — chargez et pressez simplement."
     },
     "howWorksStep2": {
-      "title": "Apply Pressure",
-      "desc": "The hydraulic system generates up to 620 tons of pressing force at controlled temperatures below 60°C for true cold pressing."
+      "title": "Appliquer la pression",
+      "desc": "Le système hydraulique génère jusqu'à 620 tonnes de force de pressage à des températures contrôlées en dessous de 60°C pour un véritable pressage à froid."
     },
     "howWorksStep3": {
-      "title": "Collect Oil",
-      "desc": "Pure, filtered oil flows out through the slotted barrel while the compressed seed cake is ejected automatically by the 4-hook mechanism."
+      "title": "Récupérer l'huile",
+      "desc": "L'huile pure et filtrée s'écoule à travers le cylindre rainuré tandis que le tourteau comprimé est éjecté automatiquement par le mécanisme à 4 crochets."
     },
-    "applicationsTitle": "Application Scenarios",
+    "applicationsTitle": "Scénarios d'application",
     "sesameOilApp": {
-      "title": "Cold Pressed Sesame Oil",
-      "desc": "Premium cooking oil for Asian and Middle Eastern markets. Cold pressing preserves the rich aroma and nutty flavor that commands premium prices.",
-      "yield": "Yield: 42-50%"
+      "title": "Huile de sésame pressée à froid",
+      "desc": "Huile de cuisson premium pour les marchés asiatiques et du Moyen-Orient. Le pressage à froid préserve l'arôme riche et le goût de noisette qui commandent des prix premium.",
+      "yield": "Rendement : 42-50 %"
     },
     "coconutOilApp": {
-      "title": "Virgin Coconut Oil",
-      "desc": "High-value VCO production for Philippines, Indonesia, and global health food markets. Food-grade stainless steel models available for food safety compliance.",
-      "yield": "Yield: 55-65%"
+      "title": "Huile de coco vierge",
+      "desc": "Production de VCO à forte valeur pour les Philippines, l'Indonésie et les marchés mondiaux d'aliments santé. Modèles en acier inoxydable de qualité alimentaire disponibles pour la conformité à la sécurité alimentaire.",
+      "yield": "Rendement : 55-65 %"
     },
     "peanutOilApp": {
-      "title": "Peanut / Groundnut Oil",
-      "desc": "Africa's most popular cooking oil. Ideal for groundnut oil businesses in Nigeria, Ghana, and across West Africa. Generator-compatible for rural operations.",
-      "yield": "Yield: 38-45%"
+      "title": "Huile d'arachide",
+      "desc": "L'huile de cuisson la plus populaire d'Afrique. Idéale pour les entreprises d'huile d'arachide au Nigeria, au Ghana et dans toute l'Afrique de l'Ouest. Compatible générateur pour les opérations en zone rurale.",
+      "yield": "Rendement : 38-45 %"
     },
     "oliveOilApp": {
-      "title": "Olive Oil",
-      "desc": "Mediterranean and Middle East premium market. Hydraulic cold pressing preserves polyphenols and the distinctive flavor profile demanded by olive oil connoisseurs.",
-      "yield": "Yield: 35-45%"
+      "title": "Huile d'olive",
+      "desc": "Marché premium méditerranéen et du Moyen-Orient. Le pressage à froid hydraulique préserve les polyphénols et le profil aromatique recherchés par les connaisseurs d'huile d'olive.",
+      "yield": "Rendement : 35-45 %"
     },
     "avocadoOilApp": {
-      "title": "Avocado Oil",
-      "desc": "Growing demand in cosmetics and premium cooking markets. Cold pressing retains vitamins, monounsaturated fats, and the vibrant green color of premium avocado oil.",
-      "yield": "Yield: 30-40%"
+      "title": "Huile d'avocat",
+      "desc": "Demande croissante sur les marchés des cosmétiques et de la cuisine premium. Le pressage à froid conserve les vitamines, les graisses mono-insaturées et la couleur verte éclatante de l'huile d'avocat premium.",
+      "yield": "Rendement : 30-40 %"
     },
     "sunflowerOilApp": {
-      "title": "Sunflower Oil",
-      "desc": "Eastern Europe and Africa staple cooking oil. High smoke point and mild flavor make it a versatile choice for both home and commercial food production.",
-      "yield": "Yield: 40-48%"
+      "title": "Huile de tournesol",
+      "desc": "Huile de cuisson de base en Europe de l'Est et en Afrique. Son point de fumée élevé et sa saveur douce en font un choix polyvalent pour la production alimentaire domestique et commerciale.",
+      "yield": "Rendement : 40-48 %"
     },
-    "comparisonTitle": "Technical Comparison",
-    "comparisonModel": "Model",
-    "comparisonForce": "Pressing Force",
-    "comparisonMotor": "Motor",
-    "comparisonBestFor": "Best For",
-    "compareAllModels": "Compare all models",
-    "faqTitle": "Frequently Asked Questions",
+    "comparisonTitle": "Comparaison technique",
+    "comparisonModel": "Modèle",
+    "comparisonForce": "Force de pressage",
+    "comparisonMotor": "Moteur",
+    "comparisonBestFor": "Idéal pour",
+    "compareAllModels": "Comparer tous les modèles",
+    "faqTitle": "Questions fréquentes",
     "faqs": [
       {
         "question": "What is a hydraulic oil press machine?",
@@ -1034,71 +1034,71 @@
         "answer": "All Haonuo machines come with a 1-year warranty covering manufacturing defects, plus lifetime technical support. Spare parts are available from stock. Every machine undergoes 48-hour continuous full-load testing before shipment to ensure reliable operation."
       }
     ],
-    "ctaTitle": "Ready to Find the Right Hydraulic Oil Press?",
-    "ctaDesc": "Get a free quotation, shipping estimate, and professional equipment recommendation typically within 24 business hours.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "Prêt à trouver la bonne presse à huile hydraulique ?",
+    "ctaDesc": "Obtenez un devis gratuit, une estimation d'expédition et une recommandation d'équipement professionnel, généralement sous 24 heures ouvrées.",
+    "whatsappUs": "Écrivez-nous sur WhatsApp"
   },
   "manual": {
-    "title": "Commercial Hydraulic Oil Press — Industrial-Grade Production | Haonuo",
-    "description": "Industrial-grade hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, professional yield, and reliable operation. Factory-direct pricing from Haonuo.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Commercial Hydraulic Oil Press",
-    "heroTitle": "Commercial Hydraulic Oil Press — Industrial-Grade Production",
-    "heroDesc": "Professional hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, 60-75 MPa system pressure, and residual oil below 5%. Factory-direct pricing from Haonuo.",
-    "getPricing": "Get Commercial Pricing",
-    "viewModels": "View All Models",
-    "whyChoose": "Why Choose Hydraulic Pressing for Commercial Production",
+    "title": "Presse à huile hydraulique commerciale — Production de qualité industrielle | Haonuo",
+    "description": "Presses à huile hydrauliques de qualité industrielle pour la production d'huile commerciale. Capacité de 100 kg par lot, rendement professionnel et fonctionnement fiable. Prix direct usine Haonuo.",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbProducts": "Produits",
+    "breadcrumbCurrent": "Presse à huile hydraulique commerciale",
+    "heroTitle": "Presse à huile hydraulique commerciale — Production de qualité industrielle",
+    "heroDesc": "Presses à huile hydrauliques professionnelles pour la production commerciale d'huile. Capacité de 100 kg par lot, pression système de 60-75 MPa et huile résiduelle inférieure à 5 %. Prix direct usine Haonuo.",
+    "getPricing": "Obtenir les prix commerciaux",
+    "viewModels": "Voir tous les modèles",
+    "whyChoose": "Pourquoi choisir le pressage hydraulique pour la production commerciale",
     "industrialCapacity": {
-      "title": "Industrial Capacity",
-      "desc": "100 kg per batch capacity. Hourly output varies by seed type and pressing cycle time. HN325 processes 100 kg per batch in 40-90 minutes, meeting commercial production targets."
+      "title": "Capacité industrielle",
+      "desc": "Capacité de 100 kg par lot. La production horaire varie selon le type de graine et la durée du cycle de pressage. La HN325 traite 100 kg par lot en 40-90 minutes, atteignant les objectifs de production commerciale."
     },
     "professionalYield": {
-      "title": "Professional Yield",
-      "desc": "Residual oil below 5% — 2-3x higher extraction efficiency than screw presses. Maximize profit from every kilogram of seeds."
+      "title": "Rendement professionnel",
+      "desc": "Huile résiduelle inférieure à 5 % — une efficacité d'extraction 2 à 3 fois supérieure à celle des presses à vis. Maximisez le profit de chaque kilogramme de graines."
     },
     "lowPower": {
-      "title": "Low Power Requirement",
-      "desc": "Only 2.2 KW power needed. Compatible with standard 220V single-phase power or a small 5 KVA generator — ideal for any region."
+      "title": "Faible besoin en énergie",
+      "desc": "Seulement 2,2 KW nécessaires. Compatible avec le réseau 220V monophasé standard ou un petit générateur de 5 KVA — idéal pour toutes les régions."
     },
     "costEffective": {
-      "title": "Cost-Effective",
-      "desc": "Factory-direct pricing with 15-20 year service life. High yield and reliability deliver excellent ROI for commercial operations."
+      "title": "Rentable",
+      "desc": "Prix direct usine avec une durée de vie de 15-20 ans. Rendement élevé et fiabilité pour un excellent retour sur investissement des opérations commerciales."
     },
-    "hydraulicAdvantageTitle": "Haonuo Hydraulic Presses — Professional Choice for Commercial Operations",
-    "hydraulicAdvantageDesc": "Haonuo specializes in commercial hydraulic oil presses that deliver industrial-grade performance with minimal power requirements. Even in areas with limited electricity, our hydraulic presses outperform all alternatives because they deliver:",
-    "hydraulicAdvantage1": "100 kg per batch capacity — commercial-scale production",
-    "hydraulicAdvantage2": "Residual oil below 5% — maximum extraction efficiency",
-    "hydraulicAdvantage3": "One-button operation — no physical labor required",
-    "hydraulicAdvantage4": "2.2 KW power — compatible with 5 KVA generator",
-    "exploreHydraulic": "Explore Haonuo Hydraulic Presses",
-    "productModelsTitle": "Commercial Hydraulic Press Models — Entry-Level",
-    "applicationsTitle": "Commercial Oil Production Applications",
+    "hydraulicAdvantageTitle": "Presses hydrauliques Haonuo — Le choix professionnel pour les opérations commerciales",
+    "hydraulicAdvantageDesc": "Haonuo est spécialisé dans les presses à huile hydrauliques commerciales offrant des performances de qualité industrielle avec des besoins énergétiques minimes. Même dans les zones à électricité limitée, nos presses hydrauliques surpassent toutes les alternatives car elles offrent :",
+    "hydraulicAdvantage1": "Capacité de 100 kg par lot — production à l'échelle commerciale",
+    "hydraulicAdvantage2": "Huile résiduelle inférieure à 5 % — efficacité d'extraction maximale",
+    "hydraulicAdvantage3": "Fonctionnement par un seul bouton — aucun effort physique requis",
+    "hydraulicAdvantage4": "2,2 KW — compatible avec un générateur de 5 KVA",
+    "exploreHydraulic": "Découvrir les presses hydrauliques Haonuo",
+    "productModelsTitle": "Modèles de presses hydrauliques commerciales — Entrée de gamme",
+    "applicationsTitle": "Applications de production d'huile commerciale",
     "sesameOilApp": {
-      "title": "Sesame Oil",
-      "tag": "High-Value Specialty",
-      "desc": "Premium cold-pressed sesame oil for culinary and cosmetic applications. Hydraulic presses achieve 42-50% extraction efficiency with residual oil below 5%.",
-      "yield": "Hydraulic yield: 42-50%"
+      "title": "Huile de sésame",
+      "tag": "Spécialité à forte valeur",
+      "desc": "Huile de sésame pressée à froid premium pour les applications culinaires et cosmétiques. Les presses hydrauliques atteignent 42-50 % d'efficacité d'extraction avec une huile résiduelle inférieure à 5 %.",
+      "yield": "Rendement hydraulique : 42-50 %"
     },
     "peanutOilApp": {
-      "title": "Peanut Oil",
-      "tag": "Commercial Cooking Oil",
-      "desc": "Widely consumed cooking oil with high demand in Africa and Asia. Industrial hydraulic pressing ensures consistent quality and maximum yield.",
-      "yield": "Hydraulic yield: 38-45%"
+      "title": "Huile d'arachide",
+      "tag": "Huile de cuisson commerciale",
+      "desc": "Huile de cuisson largement consommée, très demandée en Afrique et en Asie. Le pressage hydraulique industriel garantit une qualité constante et un rendement maximal.",
+      "yield": "Rendement hydraulique : 38-45 %"
     },
     "palmKernelOilApp": {
-      "title": "Palm Kernel Oil",
-      "tag": "Industrial Processing",
-      "desc": "High-volume industrial oil for cooking and soap production. Hydraulic presses handle tough palm kernels with excellent efficiency.",
-      "yield": "Hydraulic yield: 45-55%"
+      "title": "Huile de palmiste",
+      "tag": "Transformation industrielle",
+      "desc": "Huile industrielle à grand volume pour la cuisine et la savonnerie. Les presses hydrauliques traitent les palmistes durs avec une excellente efficacité.",
+      "yield": "Rendement hydraulique : 45-55 %"
     },
     "coconutOilApp": {
-      "title": "Coconut Oil",
-      "tag": "Premium Market",
-      "desc": "Cold-pressed virgin coconut oil for health food and cosmetics markets. Demands high-quality extraction equipment.",
-      "yield": "Hydraulic yield: 55-62%"
+      "title": "Huile de coco",
+      "tag": "Marché premium",
+      "desc": "Huile de coco vierge pressée à froid pour les marchés des aliments santé et des cosmétiques. Exige un équipement d'extraction de haute qualité.",
+      "yield": "Rendement hydraulique : 55-62 %"
     },
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "Questions fréquentes",
     "faqs": [
       {
         "question": "What is a commercial hydraulic oil press?",
@@ -1125,69 +1125,69 @@
         "answer": "Haonuo provides factory-direct pricing without middleman markups. Total cost includes the press, optional roaster and filter, shipping, and installation. With proper maintenance, hydraulic presses deliver 15-20 years of reliable service, making them a cost-effective investment for commercial oil production."
       }
     ],
-    "ctaTitle": "Find the Right Commercial Oil Press",
-    "ctaDesc": "Haonuo hydraulic presses deliver 100 kg per batch industrial capacity with residual oil below 5%. Hourly output varies by seed type. Get your personalized commercial solution today.",
-    "whatsappUs": "WhatsApp Us"
+    "ctaTitle": "Trouvez la bonne presse à huile commerciale",
+    "ctaDesc": "Les presses hydrauliques Haonuo offrent une capacité industrielle de 100 kg par lot avec une huile résiduelle inférieure à 5 %. La production horaire varie selon le type de graine. Obtenez votre solution commerciale personnalisée dès aujourd'hui.",
+    "whatsappUs": "Écrivez-nous sur WhatsApp"
   },
   "roi": {
-    "title": "Hydraulic Oil Press ROI Calculator",
-    "description": "Estimate your return on investment for Haonuo hydraulic oil press machines. Calculate daily oil production, revenue, profit, and payback period.",
-    "breadcrumbHome": "Home",
-    "breadcrumbCurrent": "ROI Calculator",
-    "heroTitle": "Hydraulic Oil Press ROI Calculator",
-    "heroDesc": "Estimate your return on investment",
-    "disclaimerTitle": "Important Disclaimer",
-    "disclaimerText": "This calculator provides <strong>rough estimates only</strong> for your preliminary planning. It is <strong>NOT a guarantee</strong> of actual returns. Actual results depend on many factors including raw material quality, operator skill, local market conditions, electricity costs, labor costs, and maintenance expenses. <strong>Do not make purchasing decisions based solely on these estimates.</strong> Please <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">contact our team</a> for a detailed, case-specific analysis tailored to your business.",
-    "machineModel": "Machine Model",
-    "modelHN325": "HN325 — Standard Hydraulic Oil Press",
-    "modelHN355": "HN355 — Heavy Duty Hydraulic Oil Press",
-    "modelHN426": "HN426 — Cold Press Hydraulic Oil Press",
-    "modelHN480": "HN480 — High Pressure Hydraulic Oil Press",
-    "modelHN500": "HN500 — Ultra High Pressure Hydraulic Oil Press",
-    "machinePrice": "Machine Price (USD)",
-    "machinePricePlaceholder": "Enter your quoted machine price",
-    "machinePriceNote": "Enter the price from your quotation. <a href=\"/contact\" class=\"text-amber-500 underline\">Request a quote</a> if you don't have one yet.",
-    "dailyHours": "Daily Operating Hours:",
-    "hoursMin": "1 hr",
-    "hoursMax": "24 hrs",
-    "rawMaterial": "Raw Material Type",
-    "materialSesame": "Sesame (approx. 45% oil content)",
-    "materialPeanut": "Peanut (approx. 42% oil content)",
-    "materialCoconut": "Coconut (approx. 55% oil content)",
-    "materialSunflower": "Sunflower (approx. 40% oil content)",
-    "materialRapeseed": "Rapeseed (approx. 38% oil content)",
-    "materialNote": "Oil content varies by variety, region, and moisture. Values shown are typical ranges, not guarantees.",
-    "materialCost": "Raw Material Cost per kg (USD)",
-    "materialCostPlaceholder": "Enter raw material cost per kg in your local market",
-    "materialCostNote": "Please enter the actual cost in your local market. Raw material prices fluctuate significantly.",
-    "oilPrice": "Oil Selling Price per kg (USD)",
-    "oilPricePlaceholder": "Enter your expected selling price per kg",
-    "oilPriceNote": "Please enter the actual selling price in your target market. Prices vary by region and quality grade.",
-    "dailyOpcost": "Estimated Daily Operating Costs (USD)",
-    "dailyOpcostPlaceholder": "e.g. electricity, labor, maintenance, packaging",
-    "dailyOpcostNote": "Include electricity, labor, maintenance, packaging, transportation, and other daily costs. This significantly affects actual profitability.",
-    "acknowledge": "I understand that this calculator provides <strong>rough estimates only</strong> and is <strong>not a guarantee</strong> of actual investment returns. Actual results depend on many factors including raw material quality, operating conditions, local market prices, and production efficiency. I will not make purchasing decisions based solely on these estimates.",
-    "calculateBtn": "Calculate ROI",
-    "resultDisclaimer": "<strong>⚠️ These are rough estimates, not guarantees.</strong> Actual returns may be significantly lower or higher depending on your specific conditions. These figures do not account for all real-world variables. <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">Contact us</a> for a personalized analysis.",
-    "resultsTitle": "Your Estimated Returns",
-    "resultDailyOil": "Daily Oil Production (estimated)",
-    "resultDailyRevenue": "Daily Revenue (estimated)",
-    "resultDailyCost": "Daily Raw Material Cost",
-    "resultDailyOpcost": "Daily Operating Costs",
-    "resultDailyProfit": "Daily Net Profit (estimated)",
-    "resultMonthlyProfit": "Monthly Net Profit (25 days, estimated)",
-    "resultPayback": "Estimated Payback Period",
-    "resultRoi": "Estimated Annual ROI",
-    "notesTitle": "Important Notes",
-    "note1": "• All figures are <strong>rough estimates</strong> based on the values you entered and typical industry parameters — they are <strong>NOT guarantees</strong> of actual performance.",
-    "note2": "• Actual oil yield depends on raw material variety, moisture content, pressing temperature, operator skill, and machine condition.",
-    "note3": "• This calculation uses a conservative <strong>60% utilization rate</strong> (batch loading/unloading time, setup, cleaning). Actual throughput may vary.",
-    "note4": "• Operating costs (electricity, labor, maintenance, packaging, transportation, rent) are often underestimated. Please enter realistic figures.",
-    "note5": "• Market prices for both raw materials and finished oil fluctuate. Do not assume constant prices over the payback period.",
-    "note6": "• This calculator does not account for taxes, import duties, shipping costs, or currency exchange risks.",
-    "note7": "• <strong>Haonuo makes no warranty, express or implied, regarding the accuracy or reliability of these estimates.</strong>",
-    "ctaTitle": "Need a Reliable Estimate?",
-    "ctaDesc": "Our team can provide a detailed, case-specific ROI analysis based on your actual market conditions, raw material sources, and production goals.",
-    "ctaBtn": "Get a Personalized Analysis"
+    "title": "Calculateur de ROI — Presse à huile hydraulique",
+    "description": "Estimez votre retour sur investissement pour les presses à huile hydrauliques Haonuo. Calculez la production quotidienne d'huile, les revenus, les bénéfices et le délai de récupération.",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbCurrent": "Calculateur de ROI",
+    "heroTitle": "Calculateur de ROI — Presse à huile hydraulique",
+    "heroDesc": "Estimez votre retour sur investissement",
+    "disclaimerTitle": "Avertissement important",
+    "disclaimerText": "Ce calculateur fournit <strong>uniquement des estimations approximatives</strong> pour votre planification préliminaire. Il ne constitue <strong>en aucun cas une garantie</strong> des rendements réels. Les résultats réels dépendent de nombreux facteurs, notamment la qualité des matières premières, les compétences de l'opérateur, les conditions du marché local, les coûts d'électricité, les coûts de main-d'œuvre et les frais d'entretien. <strong>Ne prenez pas de décisions d'achat basées uniquement sur ces estimations.</strong> Veuillez <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">contacter notre équipe</a> pour une analyse détaillée et adaptée à votre activité.",
+    "machineModel": "Modèle de machine",
+    "modelHN325": "HN325 — Presse à huile hydraulique standard",
+    "modelHN355": "HN355 — Presse à huile hydraulique lourde",
+    "modelHN426": "HN426 — Presse à huile hydraulique à froid",
+    "modelHN480": "HN480 — Presse à huile hydraulique haute pression",
+    "modelHN500": "HN500 — Presse à huile hydraulique ultra haute pression",
+    "machinePrice": "Prix de la machine (USD)",
+    "machinePricePlaceholder": "Saisissez le prix de la machine indiqué dans votre devis",
+    "machinePriceNote": "Saisissez le prix indiqué dans votre devis. <a href=\"/contact\" class=\"text-amber-500 underline\">Demandez un devis</a> si vous n'en avez pas encore.",
+    "dailyHours": "Heures de fonctionnement par jour :",
+    "hoursMin": "1 h",
+    "hoursMax": "24 h",
+    "rawMaterial": "Type de matière première",
+    "materialSesame": "Sésame (environ 45 % de teneur en huile)",
+    "materialPeanut": "Arachide (environ 42 % de teneur en huile)",
+    "materialCoconut": "Noix de coco (environ 55 % de teneur en huile)",
+    "materialSunflower": "Tournesol (environ 40 % de teneur en huile)",
+    "materialRapeseed": "Colza (environ 38 % de teneur en huile)",
+    "materialNote": "La teneur en huile varie selon la variété, la région et l'humidité. Les valeurs indiquées sont des fourchettes typiques, pas des garanties.",
+    "materialCost": "Coût de la matière première par kg (USD)",
+    "materialCostPlaceholder": "Saisissez le coût de la matière première par kg sur votre marché local",
+    "materialCostNote": "Veuillez saisir le coût réel sur votre marché local. Les prix des matières premières fluctuent fortement.",
+    "oilPrice": "Prix de vente de l'huile par kg (USD)",
+    "oilPricePlaceholder": "Saisissez votre prix de vente prévu par kg",
+    "oilPriceNote": "Veuillez saisir le prix de vente réel sur votre marché cible. Les prix varient selon la région et le niveau de qualité.",
+    "dailyOpcost": "Coûts d'exploitation quotidiens estimés (USD)",
+    "dailyOpcostPlaceholder": "ex. électricité, main-d'œuvre, entretien, emballage",
+    "dailyOpcostNote": "Incluez l'électricité, la main-d'œuvre, l'entretien, l'emballage, le transport et autres coûts quotidiens. Cela affecte considérablement la rentabilité réelle.",
+    "acknowledge": "Je comprends que ce calculateur fournit <strong>uniquement des estimations approximatives</strong> et ne constitue <strong>pas une garantie</strong> des rendements réels de l'investissement. Les résultats réels dépendent de nombreux facteurs, notamment la qualité des matières premières, les conditions d'exploitation, les prix du marché local et l'efficacité de production. Je ne prendrai pas de décisions d'achat basées uniquement sur ces estimations.",
+    "calculateBtn": "Calculer le ROI",
+    "resultDisclaimer": "<strong>⚠️ Ce sont des estimations approximatives, pas des garanties.</strong> Les rendements réels peuvent être nettement inférieurs ou supérieurs selon vos conditions spécifiques. Ces chiffres ne prennent pas en compte toutes les variables réelles. <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">Contactez-nous</a> pour une analyse personnalisée.",
+    "resultsTitle": "Vos rendements estimés",
+    "resultDailyOil": "Production quotidienne d'huile (estimée)",
+    "resultDailyRevenue": "Revenus quotidiens (estimés)",
+    "resultDailyCost": "Coût quotidien des matières premières",
+    "resultDailyOpcost": "Coûts d'exploitation quotidiens",
+    "resultDailyProfit": "Bénéfice net quotidien (estimé)",
+    "resultMonthlyProfit": "Bénéfice net mensuel (25 jours, estimé)",
+    "resultPayback": "Délai de récupération estimé",
+    "resultRoi": "ROI annuel estimé",
+    "notesTitle": "Remarques importantes",
+    "note1": "• Tous les chiffres sont des <strong>estimations approximatives</strong> fondées sur les valeurs saisies et des paramètres industriels typiques — ils ne constituent <strong>pas des garanties</strong> des performances réelles.",
+    "note2": "• Le rendement réel en huile dépend de la variété de la matière première, de la teneur en humidité, de la température de pressage, des compétences de l'opérateur et de l'état de la machine.",
+    "note3": "• Ce calcul utilise un <strong>taux d'utilisation prudent de 60 %</strong> (temps de chargement/déchargement des lots, réglage, nettoyage). Le débit réel peut varier.",
+    "note4": "• Les coûts d'exploitation (électricité, main-d'œuvre, entretien, emballage, transport, loyer) sont souvent sous-estimés. Veuillez saisir des chiffres réalistes.",
+    "note5": "• Les prix du marché des matières premières et de l'huile finie fluctuent. Ne supposez pas des prix constants sur la période de récupération.",
+    "note6": "• Ce calculateur ne prend pas en compte les impôts, les droits d'importation, les frais d'expédition ni les risques de change.",
+    "note7": "• <strong>Haonuo ne donne aucune garantie, expresse ou implicite, concernant l'exactitude ou la fiabilité de ces estimations.</strong>",
+    "ctaTitle": "Besoin d'une estimation fiable ?",
+    "ctaDesc": "Notre équipe peut fournir une analyse de ROI détaillée et adaptée à votre cas, basée sur vos conditions de marché réelles, vos sources de matières premières et vos objectifs de production.",
+    "ctaBtn": "Obtenir une analyse personnalisée"
   }
 }
