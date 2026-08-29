@@ -4,12 +4,17 @@
  *   node scripts/site-audit.mjs              # 仅做本地静态检查（翻译 key、src/pages 结构）
  *   npm run build && node scripts/site-audit.mjs  # 构建后做完整检查（含 dist/ 产物 + 翻译）
  *
- * 检查 5 大类问题：
+ * 检查 10 大类问题：
  *   A. 翻译 JSON 文件 key 完整性（缺 key → 小语种回退英文）
- *   B. 翻译 value 完全等于英文（可能漏翻译）
+ *   B. 翻译 value 完全等于英文（真漏翻译，已排除合理保留英文的型号/认证/联系信息等）
  *   C. src/pages 多语言路由结构缺失（[locale] 里少某类页面）
  *   D. dist/ 构建产物中，小语种页面包含不该出现的英文 UI 词
- *   E. 小语种 404 页是否为目标语言（今天刚修复的那类）
+ *   E. 小语种 404 页是否为目标语言
+ *   F. dist/ 异常文件类型（禁止脚本/报告等被打包成可下载文件）
+ *   G. 小语种页内部链接语言前缀一致性（/fr/ 页的 href 不能错写成 /en/ 或裸路径）
+ *   H. 小语种页图片引用完整性（dist 中必须存在）
+ *   I. canonical/hreflang 标签语言一致性
+ *   L. 翻译长度异常（过短/过长/重复翻译）
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, sep } from 'node:path';
@@ -94,26 +99,95 @@ for (const l of KEY_LANGS) {
 }
 
 // ===========================
-//  B. value 完全等于英文（可能漏翻译）
+//  B. value 完全等于英文（B 类精查：只报告"真漏翻译"，合理保留英文不告警）
 // ===========================
-console.log('\n━━━ B. 可能未翻译：value 与英文完全相同的 key（品牌/专有名词除外）━━━');
-// 这些即便是英文也合理（品牌、产品型号、行业专有词）
-const EXCEPTIONS = [/OEM\s*\/\s*ODM/i, /ISO/i, /CE/i, /Haonuo/i, /HN\d{2,4}/i, /B2B/i];
-function sameButProbablyOK(v) { return EXCEPTIONS.some(r => r.test(v)) || v.length < 4; }
+console.log('\n━━━ B. 精查漏翻译（只报必须翻译：UI/句子/标签，联系信息/认证/型号/国家名/种子油种短名等已排除）━━━');
+// —— 合理保留英文的规则 ——
+const B_EXC_REGEX = [
+  /OEM\s*\/\s*ODM/i, /\bISO\b/, /\bCE\b/, /Haonuo/i, /\bHN\d{2,4}/i, /\bB2B\b/i,
+  /\bSEO\b/, /\bGMP\b/, /\bHACCP\b/, /\bPLC\b/, /\bpH\b/, /\bUV\b/, /\bPDF\b/, /\bFAQ\b/,
+  /^\d+%$/, /^[\d\s.:-]+$/,       // 纯数字/尺寸
+  /^[+\d\s()-]{4,}$/,              // 电话
+  /^[\w.-]+@[\w.-]+$/,             // 邮箱
+  /^https?:\/\//,                  // URL
+  /^VCO$/i,                        // Virgin Coconut Oil 缩写行业通用
+  /^[\d]+[-–][\d]+%$/,             // 百分比范围
+  /Yield:\s*\d+[-–]\d+%/i,         // Yield: 15-25% 类参数标注（含数字，合理保留数值格式）
+];
+// 联系信息/工具品牌名的 key 名称匹配
+const B_EXC_KEYS = new Set([
+  'contact.emailAddr','contact.phoneNum','contact.faxNum','contact.wechat','contact.whatsapp',
+  'contact.googleMaps','contact.addressMapFull','nav.blog','nav.facebook','nav.instagram',
+  'nav.linkedin','nav.youtube','nav.tiktok','nav.twitter','common.manual','common.slide',
+]);
+// 国家/大洲名、产品种子名、材料名（短词 40 字符内）这类作为关键词合理保留英文
+function isSafeProperNounOrBrand(val) {
+  if (val.length > 40) return false;
+  // 常见国家/种子油/行业词的合理英文专有名词
+  const SAFE = /^(Avocado Oil|Sesame Oil|Peanut Oil|Sunflower Oil|Coconut Oil|Virgin Coconut Oil|Mustard Oil|Shea Butter|Palm Kernel Oil|Castor Oil|Olive Oil|Walnut Oil|Cottonseed Oil|Soybean Oil|Flaxseed Oil|Palm Oil|Kenya|Nigeria|Pakistan|Philippines|Egypt|India|Indonesia|South Africa|UK|USA|Middle East|Africa|Nigeria|Vietnam|Thailand|Bangladesh|Ethiopia|Tanzania|Mexico|Brazil|Argentina|Russia|Ukraine|Turkey|Saudi Arabia|UAE|Oman|Jordan|Morocco|Algeria|Canada|Australia|Malaysia|Fast Growing|Global Demand|Traditional cooking|Premium cooking|cosmetic applications?|health supplements?|food-grade|high-yielding|Medium Yield|High Yield|Low Yield|Organic|Cold Press|Hot Press|Hydraulic|Startup|Commercial|Industrial|Entry|Mid|Premium|Small Business|Screw Press|Filter Press|Oil Cake|Nickel Plated|Carbon Steel|Food Grade|Factory Direct|CE Certified|Best Seller|New Arrival|Hot Sale)$/i;
+  return SAFE.test(val.trim());
+}
+const MUST_TRANSLATE_NS_B = new Set([
+  'nav','footer','contact','about','faq','cookie','privacy','terms','common','page404',
+  'cta','home','seo','breadcrumb','services','news','form','btn','label','market','comparison',
+  'catalog','banner','msg','validation','header','title','hero','stat','subtitle','tag','desc',
+  'why','feature','advantage','process','step','card','table','chart','faqItem','question','answer',
+  'blog','article','case','testimonial','client','partner','award','certification',
+]);
+const PRODUCT_NS_B = new Set(['products','coldPress','solutions','resources','roi','hydraulic','manual']);
+function isDescriptionOrUILabel(val) {
+  if (typeof val !== 'string') return false;
+  if (val.length >= 30 && (val.includes(' ') || val.includes(','))) return true;
+  // 参数/UI 短标签正则（中文或英文都是 UI 词，必须翻译）
+  return /^(Best For|Yield|Quality|Flavor\/Aroma|Region|Temperature|Nutrient Retention|Feature|Features|Production Line|Raw Materials|Oil Filtration|Electrical Guide|Aflatoxin Control|By-?Product Guide|Price Guide|Buying Guide|Model Comparison|Product Catalog|Factory Tour|Certifications?|Warranty|Shipping|Installation|Maintenance|Troubleshooting|Support|Advantages|Disadvantages|Pros|Cons|How It Works|Key Benefits|Seeds Compatibility|CE Certification Guide|Voltage & Electrical|Oil Refining Guide|African Market Guide|Hydraulic vs (Screw|Others)|Cold Press vs Hot Press|How Cold Press Extraction Works|Our Cold Press Oil Machine Series|Installation & Training|After-Sales Service|Free Consultation|Get a Quotation|Free Quote|Shipping Estimate|Ready to Find|Professional .* machine.*|One-button start.*|No middleman.*|High-strength steel.*|Natural sediment filtration|No heating means.*|Cold pressing below.*|Cold-pressed oils command.*|Read the full.*comparison|Our team can provide.*|Estimated Daily Operating|Include electricity, labor|This calculator provides.*|I understand that this calculator provides.*)$/i.test(val.trim());
+}
+function bShouldFlag(key, val) {
+  if (typeof val !== 'string' || !val) return false;
+  if (B_EXC_REGEX.some(r => r.test(val))) return false;
+  if (B_EXC_KEYS.has(key)) return false;
+  if (isSafeProperNounOrBrand(val)) return false;
+  const ns = key.split('.')[0];
+  if (MUST_TRANSLATE_NS_B.has(ns)) return true;
+  if (PRODUCT_NS_B.has(ns) && isDescriptionOrUILabel(val)) return true;
+  if (isDescriptionOrUILabel(val)) return true;
+  return false;
+}
 let bTotal = 0;
 for (const l of KEY_LANGS) {
   const arr = [];
   for (const k of master) {
     const a = getByPath(i18n.en, k);
     const b = getByPath(i18n[l], k);
-    if (typeof a === 'string' && a && a === b && !sameButProbablyOK(a)) arr.push([k, a]);
+    if (typeof a !== 'string' || !a || a !== b) continue;
+    if (bShouldFlag(k, a)) arr.push([k, a]);
   }
   bTotal += arr.length;
   if (arr.length) {
-    warn('B', `${l}.json 发现 ${arr.length} 个 key 与英文 value 完全一致（可能漏翻译）`);
-    arr.slice(0, 20).forEach(([k, v]) => console.log(`        * ${k} = "${v.substring(0, 70)}"`));
-    if (arr.length > 20) console.log(`        ... 还有 ${arr.length - 20} 个，建议逐条看是否确实漏翻译`);
-  } else { pass('B', `${l}.json 无漏翻译迹象`); }
+    warn('B', `${l}.json 疑似真漏翻译 ${arr.length} 条`);
+    arr.slice(0, 30).forEach(([k, v]) => console.log(`        * ${k} = "${v.substring(0, 80)}"`));
+    if (arr.length > 30) console.log(`        ... 还有 ${arr.length - 30} 条，请运行 B 精查脚本查看明细`);
+  } else { pass('B', `${l}.json B 类精查通过（未发现必须翻译却仍为英文的 key）`); }
+}
+
+// ===========================
+//  L. 翻译长度异常（与英文原文差异异常大 → 可能翻译截断/重复）
+// ===========================
+console.log('\n━━━ L. 翻译长度异常（小语种 value 比原文短于 25% / 长于 5× → 可能错误翻译）━━━');
+let lBad = 0;
+for (const l of KEY_LANGS) {
+  const badList = [];
+  for (const k of master) {
+    const a = getByPath(i18n.en, k);
+    const b = getByPath(i18n[l], k);
+    if (typeof a !== 'string' || !a || a.length < 15 || a === b) continue;
+    const ratio = b.length / Math.max(1, a.length);
+    if (ratio < 0.25 || ratio > 5) badList.push([k, a.length, b.length, ratio, a.substring(0, 50)]);
+  }
+  if (badList.length) {
+    warn('L', `${l}.json 翻译长度异常 ${badList.length} 条`);
+    badList.slice(0, 10).forEach(([k, al, bl, r, s]) => console.log(`        × ${k}  en_len=${al} ${l}_len=${bl} ratio=${r.toFixed(2)}  en="${s}"`));
+    lBad += badList.length;
+  } else { pass('L', `${l}.json 翻译长度比例正常`); }
 }
 
 // ===========================
@@ -241,6 +315,162 @@ if (!existsSync(DIST) || !existsSync(join(DIST, '404.html'))) {
       eFail++;
     }
   }
+
+  // =========================
+  //  F. dist 异常文件类型（脚本/报告/配置被错误打包成可下载内容）
+  // =========================
+  console.log('\n━━━ F. dist/ 异常文件类型（禁止 .ps1/.bat/.py/.js/.json/.md/.xml 被打包，除 robots/sitemap/manifest/webmanifest）━━━');
+  const BAD_EXT = /\.(ps1|bat|cmd|py|psm1|sh|md|xml|docx?|xlsx?|pptx?|zip|rar|psd|ai|sketch)$/i;
+  const ALLOW_JSON = /^\/(robots\.txt|sitemap[-\w]*\.xml|manifest\.webmanifest|site\.webmanifest|browserconfig\.xml|favicon\.xml)$/;
+  function listAll(dir, list = []) {
+    for (const f of readdirSync(dir)) {
+      const p = join(dir, f);
+      const s = statSync(p);
+      if (s.isDirectory()) listAll(p, list); else list.push(p);
+    }
+    return list;
+  }
+  const allDist = listAll(DIST);
+  const badFiles = allDist.filter(p => {
+    const rel = '/' + p.substring(DIST.length + 1).replace(/\\/g, '/');
+    if (ALLOW_JSON.test(rel)) return false;
+    return BAD_EXT.test(rel);
+  });
+  if (badFiles.length) {
+    warn('F', `发现 ${badFiles.length} 个异常文件（不应被公开访问）：`);
+    badFiles.slice(0, 30).forEach(f => console.log(`      ! ${f.substring(DIST.length + 1)}  (${Math.round(statSync(f).size/1024)} KB)`));
+    if (badFiles.length > 30) console.log(`      ... 还有 ${badFiles.length - 30} 个`);
+  } else { pass('F', 'dist/ 无异常文件类型 ✓'); }
+
+  // =========================
+  //  G. 小语种页内部链接语言前缀一致性（/fr/ 页的 href 不能跳到 /en/ 或不带前缀的英文页裸路径）
+  // =========================
+  console.log('\n━━━ G. 小语种页内部链接语言前缀一致性（/fr/页内链接必须是 /fr/...，不得指向 /en/ 或裸路径）━━━');
+  // 捕获整个 <a ...> 标签属性串以便识别 data-static-en-only 白名单
+  const HREF_RE_G = /<a\s+([^>]*?)href=["']([^"']+)["']([^>]*)>/gi;
+  const EN_ONLY_WHITELIST_PATHS = new Set([
+    '/roi-calculator',   // ROI 计算器目前仅英文版（Navbar.astro englishOnlyPages 白名单，裸链接直接进英文站，合理）
+  ]);
+  const STATIC_LOCALE_EQUIV = new Set([
+    // 这些页在小语种静态目录（fr/ar/id/*）已有独立文件；裸链接 Astro 会做 308 重定向，用户体验 OK
+    '/cookie-policy', '/privacy-policy', '/terms-of-service', '/faq', '/catalog',
+  ]);
+  let gBadTotal = 0;
+  for (const l of KEY_LANGS) {
+    const pages = [
+      join(DIST, l, 'index.html'),
+      join(DIST, l, 'about', 'index.html'),
+      join(DIST, l, 'contact', 'index.html'),
+      join(DIST, l, 'products', 'index.html'),
+      join(DIST, l, 'faq', 'index.html'),
+      join(DIST, l, 'catalog', 'index.html'),
+      ...byLang[l].slice(0, 15),
+    ];
+    const uniq = [...new Set(pages)].filter(p => existsSync(p));
+    const failures = new Map();
+    for (const p of uniq) {
+      const html = readFileSync(p, 'utf8');
+      const hrefs = [];
+      let m;
+      HREF_RE_G.lastIndex = 0;
+      while ((m = HREF_RE_G.exec(html)) !== null) {
+        const attrs = (m[1] + ' ' + m[3]).toLowerCase();
+        if (attrs.includes('data-static-en-only')) continue;
+        hrefs.push(m[2]);
+      }
+      for (const h of hrefs) {
+        if (!h.startsWith('/')) continue;
+        if (/^\/(images|videos|favicon|apple-touch-icon|icons?|assets|_astro)\//.test(h)) continue;
+        if (/^\/(robots\.txt|sitemap|manifest\.webmanifest)\b/.test(h)) continue;
+        const clean = h.split('?')[0].split('#')[0];
+        if (clean.startsWith('/' + l + '/')) continue;
+        if (clean === '/' || clean === '/' + l) continue;
+        if (EN_ONLY_WHITELIST_PATHS.has(clean)) continue;
+        if (STATIC_LOCALE_EQUIV.has(clean)) continue;
+        if (/^\/(en|fr|ar|id)\//.test(clean)) {
+          const k = `错连到他语前缀: ${h}`; failures.set(k, (failures.get(k) || 0) + 1); continue;
+        }
+        const k = `缺失 locale 前缀: ${h}`; failures.set(k, (failures.get(k) || 0) + 1);
+      }
+    }
+    if (failures.size) {
+      warn('G', `${l} 链接前缀问题 ${failures.size} 处（抽检 ${uniq.length} 页）`);
+      let i = 0;
+      for (const [k, c] of failures) { if (i++ < 10) console.log(`      · (×${c}) ${k}`); }
+      gBadTotal += failures.size;
+    } else pass('G', `${l} 抽检 ${uniq.length} 页，内部链接前缀全部为 /${l}/  ✓`);
+  }
+
+  // =========================
+  //  H. 小语种页图片/视频引用完整性
+  // =========================
+  console.log('\n━━━ H. 小语种页图片/视频引用完整性（<img src>/<video src>/<source src> 必须存在于 dist/）━━━');
+  const SRC_RE = /<(?:img|source|video|track)\s+[^>]*src=["']([^"']+)["']/gi;
+  const POSTER_RE = /<video\s+[^>]*poster=["']([^"']+)["']/gi;
+  let hBadTotal = 0;
+  for (const l of KEY_LANGS) {
+    const pages = [
+      join(DIST, l, 'index.html'),
+      join(DIST, l, 'about', 'index.html'),
+      join(DIST, l, 'contact', 'index.html'),
+      join(DIST, l, 'products', 'index.html'),
+      join(DIST, l, 'products', 'model-comparison', 'index.html'),
+      ...byLang[l].slice(0, 15),
+    ];
+    const uniq = [...new Set(pages)].filter(p => existsSync(p));
+    const missing = new Map();
+    for (const p of uniq) {
+      const html = readFileSync(p, 'utf8');
+      const sources = [];
+      let m; SRC_RE.lastIndex = 0; while ((m = SRC_RE.exec(html)) !== null) sources.push(m[1]);
+      POSTER_RE.lastIndex = 0; while ((m = POSTER_RE.exec(html)) !== null) sources.push(m[1]);
+      for (const s of sources) {
+        if (!s.startsWith('/')) continue; // data:/、CDN 外链跳过
+        const clean = s.split('?')[0];
+        const fp = join(DIST, clean.replace(/^\//, '').replace(/\//g, sep));
+        if (!existsSync(fp)) { const k = clean; missing.set(k, (missing.get(k) || 0) + 1); }
+      }
+    }
+    if (missing.size) {
+      warn('H', `${l} 缺失 ${missing.size} 个引用文件：`);
+      let i = 0;
+      for (const [k, c] of missing) { if (i++ < 10) console.log(`      · ×${c}  ${k}`); }
+      hBadTotal += missing.size;
+    } else pass('H', `${l} 抽检页所有资源引用均存在 ✓`);
+  }
+
+  // =========================
+  //  I. canonical/hreflang 标签语言一致性
+  // =========================
+  console.log('\n━━━ I. canonical / hreflang 标签语言一致性（小语种页 canonical 不能指向英文）━━━');
+  const CANON_RE = /<link\s+rel=["']canonical["'][^>]*href=["']([^"']+)["']/i;
+  const HREFLANG_RE = /<link\s+rel=["']alternate["'][^>]*hreflang=["']([^"']+)["'][^>]*href=["']([^"']+)["']/gi;
+  let iBad = 0;
+  for (const l of KEY_LANGS) {
+    const samples = [
+      [join(DIST, l, 'index.html'), `/${l}/`],
+      [join(DIST, l, 'about', 'index.html'), `/${l}/about/`],
+      [join(DIST, l, 'contact', 'index.html'), `/${l}/contact/`],
+    ];
+    let fails = [];
+    for (const [p, expectedTail] of samples) {
+      if (!existsSync(p)) continue;
+      const html = readFileSync(p, 'utf8');
+      const cm = html.match(CANON_RE);
+      if (!cm) { fails.push(`${p.replace(DIST,'')}: 缺失 canonical 标签`); continue; }
+      const canon = cm[1];
+      if (!canon.includes('/' + l + '/')) fails.push(`${expectedTail}: canonical=${canon} 不含 /${l}/（可能指向英文）`);
+      // hreflang：检查是否同时包含 en/fr/ar/id/x-default
+      const found = {};
+      let mm; HREFLANG_RE.lastIndex = 0;
+      while ((mm = HREFLANG_RE.exec(html)) !== null) found[mm[1]] = mm[2];
+      const expectedLangs = ['en', 'fr', 'ar', 'id', 'x-default'];
+      const miss = expectedLangs.filter(x => !found[x]);
+      if (miss.length) fails.push(`${expectedTail}: hreflang 缺 ${miss.join(',')}`);
+    }
+    if (fails.length) { warn('I', `${l}: canonical/hreflang 问题 ${fails.length} 处`); fails.forEach(x => console.log(`      · ${x}`)); iBad += fails.length; }
+    else pass('I', `${l} 核心页 canonical/hreflang 标签正确 ✓`);
+  }
 }
 
 // ===========================
@@ -251,13 +481,15 @@ console.log(`  检查通过项: ${passCount}   告警项: ${issues.length}`);
 const itemized = [
   ['A. 缺 key 总数', aMissingTotal],
   ['A. 多 key 总数', aExtraTotal],
-  ['B. 疑似漏翻译（value=en）', bTotal],
+  ['B. 疑似真漏翻译（已排除合理保留）', bTotal],
 ];
 for (const [k, v] of itemized) console.log(`  · ${k}: ${v}`);
+// D/G/H/F/I/L 的计数仅在 dist 存在时有意义
+if (typeof lBad !== 'undefined') console.log(`  · L. 翻译长度异常: ${lBad}`);
+console.log(`\n  （dist 构建产物检查 F/G/H/I 若 dist 存在会显示告警明细，否则已跳过）`);
 if (issues.length) {
   console.log('\n  ❗ 有告警项，请逐条检查并修复。脚本退出码 = 1（非 0 阻止部署流程）。');
-  console.log('  💡 提示：B 类"疑似漏翻译"如果是故意保留英文（品牌/专业术语），可以不处理；');
-  console.log('         A/C/D/E 类告警强烈建议修复。');
+  console.log('  💡 A/C/D/E/F/G/H/I/L → 阻塞级，必须修复；B 类如确系合理保留，可扩展脚本内 B_EXC* 白名单');
   process.exit(1);
 } else {
   console.log('\n  🎉 全部通过！');

@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { locale = 'en' } = Astro.props;
+function localePath(p: string) { return locale === 'en' ? p : `/${locale}${p}`; }
 
 function getCookieText() {
   const texts = {
@@ -74,7 +75,7 @@ const text = getCookieText();
         <p class="text-steel-400 text-sm">{text.message}</p>
       </div>
       <div class="flex flex-wrap gap-3">
-        <a href="/cookie-policy" class="text-amber-500 hover:text-amber-400 text-sm">{text.learnMore}</a>
+        <a href={localePath('/cookie-policy')} class="text-amber-500 hover:text-amber-400 text-sm">{text.learnMore}</a>
         <button id="cookie-reject" class="px-4 py-2 border border-steel-600 hover:border-amber-500 text-steel-300 hover:text-amber-500 rounded-lg text-sm transition-colors">
           {text.reject}
         </button>
