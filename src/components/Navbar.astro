@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { getTranslations } from '../i18n';
 
 const { locale = 'en' } = Astro.props;
@@ -75,7 +75,7 @@ const scaleSolutions = [
 ];
 
 const guideItems = [
-  { href: '/resources/hydraulic-oil-press-buying-guide', label: ((t as any).nav?.guideBuying || 'Buying Guide') },
+  { href: '/resources/hydraulic-oil-press-buying-guide', label: t.nav.buyingGuide },
   { href: '/resources/peanut-oil-pressing-guide', label: ((t as any).nav?.guidePeanutOil || 'Peanut Oil Guide') },
   { href: '/resources/oil-press-raw-materials-guide', label: ((t as any).nav?.guideRawMaterials || 'Raw Materials Guide') },
   { href: '/resources/how-to-maximize-oil-yield', label: ((t as any).nav?.guideYieldImprovement || 'Maximize Oil Yield') },
