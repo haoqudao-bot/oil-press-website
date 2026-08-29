@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { type Locale, getTranslations, isRtl } from '../i18n/index.ts';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -66,7 +66,9 @@ const organizationLd = {
   '@type': 'Organization',
   '@id': `${orgUrl}/#organization`,
   name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.',
+  alternateName: 'Haonuo Machinery',
   url: orgUrl,
+  sameAs: ['https://grainocraft.com'],
   logo: 'https://www.hydoilpress.com/images/logo.png',
   description: (t as any).common?.orgDesc || 'Professional hydraulic oil press manufacturer since 2010',
   address: {
