@@ -73,7 +73,16 @@
     "guideCeCertification": "Guide de certification CE",
     "guideSeedsCompatibility": "Compatibilité des graines",
     "compHydraulicVsScrew": "Hydraulique vs Vis",
-    "compColdVsHot": "Pressage à froid vs à chaud"
+    "compColdVsHot": "Pressage à froid vs à chaud",
+    "guideRawMaterials": "Guide des matières premières",
+    "guideElectrical": "Guide électrique",
+    "guideProductionLine": "Guide de ligne de production",
+    "guidePeanutOil": "Guide de l'huile d'arachide",
+    "guideFiltration": "Filtration de l'huile",
+    "guideAflatoxin": "Contrôle de l'aflatoxine",
+    "guideByproduct": "Guide des sous-produits",
+    "compHydraulicVsOthers": "Hydraulique vs Autres",
+    "priceGuide": "Guide des prix"
   },
   "home": {
     "heroTitle": "Fabricant Professionnel de Presse à Huile Hydraulique",

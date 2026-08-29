@@ -74,7 +74,15 @@
     "guideCeCertification": "Panduan Sertifikasi CE",
     "guideSeedsCompatibility": "Kompatibilitas Biji",
     "compHydraulicVsScrew": "Hidrolik vs Sekrup",
-    "compColdVsHot": "Press Dingin vs Press Panas"
+    "compColdVsHot": "Press Dingin vs Press Panas",
+    "guideRawMaterials": "Panduan Bahan Baku",
+    "guideElectrical": "Panduan Kelistrikan",
+    "guideProductionLine": "Panduan Garis Produksi",
+    "guidePeanutOil": "Panduan Minyak Kacang Tanah",
+    "guideFiltration": "Penyaringan Minyak",
+    "guideAflatoxin": "Kontrol Aflatoksin",
+    "guideByproduct": "Panduan Produk Sampingan",
+    "compHydraulicVsOthers": "Hidrolik vs Lainnya"
   },
   "home": {
     "heroTitle": "Produsen Mesin Press Minyak Hidrolik Profesional",
