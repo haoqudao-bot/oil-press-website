@@ -5,3 +5,6 @@
 # Example redirects (uncomment if needed):
 # /old-page /new-page 301
 # /blog/* /resources/:splat 301
+
+# Sitemap alias: SEO tools commonly probe /sitemap.xml; actual file is /sitemap-index.xml
+/sitemap.xml /sitemap-index.xml 301

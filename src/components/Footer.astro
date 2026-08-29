@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 const { locale = 'en' } = Astro.props;
 import { getTranslations } from '../i18n';
 const t = getTranslations(locale as any);
@@ -51,7 +51,7 @@ const productLinks = [
 
       <!-- Quick Links -->
       <div>
-        <h3 class="font-display text-lg text-white mb-4">{t.footer.quickLinks}</h3>
+        <p class="font-display text-lg text-white mb-4">{t.footer.quickLinks}</p>
         <ul class="space-y-2">
           {quickLinks.map(link => (
             <li>
@@ -65,7 +65,7 @@ const productLinks = [
 
       <!-- Products -->
       <div>
-        <h3 class="font-display text-lg text-white mb-4">{t.nav.products}</h3>
+        <p class="font-display text-lg text-white mb-4">{t.nav.products}</p>
         <ul class="space-y-2">
           {productLinks.map(link => (
             <li>
@@ -79,7 +79,7 @@ const productLinks = [
 
       <!-- Contact Info -->
       <div>
-        <h3 class="font-display text-lg text-white mb-4">{t.footer.contactInfo}</h3>
+        <p class="font-display text-lg text-white mb-4">{t.footer.contactInfo}</p>
         <ul class="space-y-3 text-sm text-steel-400">
           <!-- Email -->
           <li class="flex items-start gap-2">
