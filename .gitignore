@@ -27,3 +27,6 @@ pnpm-debug.log*
 
 # Windows
 Thumbs.db
+
+# Trae IDE internal docs (strategy/audit documents, keep local only)
+.trae/
