@@ -26,33 +26,6 @@ const isCoconutProduct = product.data.applicableSeeds.includes('coconut milk');
 const allCategories = await getCollection('categories');
 const category = allCategories.find(c => c.slug === product.data.category);
 
-const productLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: product.data.title.en,
-  description: product.data.description?.en || '',
-  image: product.data.images[0] || '',
-  brand: {
-    '@type': 'Brand',
-    name: 'Haonuo',
-  },
-  manufacturer: {
-    '@type': 'Organization',
-    name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.',
-    url: 'https://www.hydoilpress.com',
-  },
-  offers: {
-    '@type': 'Offer',
-    priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-    url: `https://www.hydoilpress.com/products/${product.slug}`,
-    seller: {
-      '@type': 'Organization',
-      name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.',
-    },
-  },
-};
-
 const faqLd = product.data.faq.length > 0 ? {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -76,7 +49,7 @@ const breadcrumbLd = {
   ],
 };
 
-const allLd = [productLd, breadcrumbLd];
+const allLd = [breadcrumbLd];
 if (faqLd) allLd.push(faqLd);
 ---
 

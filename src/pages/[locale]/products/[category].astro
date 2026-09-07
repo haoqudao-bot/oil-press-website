@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -98,13 +98,8 @@ const itemListLd = {
   itemListElement: filteredProducts.map((product, i) => ({
     '@type': 'ListItem',
     position: i + 1,
-    item: {
-      '@type': 'Product',
-      name: product.data.title[currentLocale] || product.data.title.en,
-      url: `https://www.hydoilpress.com/${currentLocale}/products/${product.slug}`,
-      image: product.data.images[0] || '',
-      brand: { '@type': 'Brand', name: 'Haonuo' },
-    },
+    name: product.data.title[currentLocale] || product.data.title.en,
+    url: `https://www.hydoilpress.com/${currentLocale}/products/${product.slug}`,
   })),
 };
 

@@ -75,33 +75,6 @@ function localePath(path: string): string {
   return `/${currentLocale}${path}`;
 }
 
-const productLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: product.data.title[currentLocale] || product.data.title.en,
-  description: product.data.description?.[currentLocale] || product.data.description?.en || '',
-  image: product.data.images[0] || '',
-  brand: {
-    '@type': 'Brand',
-    name: 'Haonuo',
-  },
-  manufacturer: {
-    '@type': 'Organization',
-    name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.',
-    url: 'https://www.hydoilpress.com',
-  },
-  offers: {
-    '@type': 'Offer',
-    priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-    url: `https://www.hydoilpress.com/${currentLocale}/products/${product.slug}`,
-    seller: {
-      '@type': 'Organization',
-      name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.',
-    },
-  },
-};
-
 const faqLd = faqItems.length > 0 ? {
 	  '@context': 'https://schema.org',
 	  '@type': 'FAQPage',
@@ -128,7 +101,7 @@ const breadcrumbLd = {
 // Use localized keywords for all locales (fall back to English if no specific keywords)
 const seoKeywords = product.data.seoKeywords;
 
-const allLd = [productLd, breadcrumbLd];
+const allLd = [breadcrumbLd];
 if (faqLd) allLd.push(faqLd);
 ---
 
