@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -217,6 +217,53 @@ const productKeywords = [
             ))}
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Overview by Category -->
+  <section class="py-12 md:py-16 bg-white border-t border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-2xl md:text-3xl mb-4 text-charcoal-900">Equipment Categories</h2>
+      <p class="text-steel-600 mb-8 leading-relaxed">Haonuo provides four equipment categories covering the complete oil pressing workflow — from seed preparation through pressing to filtration. Each category serves a specific stage in the production line, and most operations need equipment from two or more categories to produce finished oil.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600 font-bold text-sm">1</span>
+            <h3 class="font-display text-lg text-charcoal-900">Seed Processing</h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed">Cleaning, dehulling, and crushing equipment that prepares raw seeds for pressing. Removes debris and foreign matter, increases surface area for oil extraction, and improves yield by 10–20%.</p>
+          <a href="/products/seed-processing-equipment" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">View equipment <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-bold text-sm">2</span>
+            <h3 class="font-display text-lg text-charcoal-900">Roasting & Steaming</h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed">Controlled heat application that breaks down cell walls, reduces oil viscosity, and develops flavor. Increases oil yield by 5–15% compared to pressing unheated seeds.</p>
+          <a href="/products/roasting-steaming-equipment" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">View equipment <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600 font-bold text-sm">3</span>
+            <h3 class="font-display text-lg text-charcoal-900">Hydraulic Oil Press</h3>
+          </div>
+          <p class="text-steel-600 leading-relaxed text-sm">Batch pressing with low temperature retention (below 60°C). 12 models from 7 kg to 25 kg per cycle. Best for high-value seeds where oil quality matters more than throughput.</p>
+          <a href="/products/hydraulic-oil-press" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">View equipment <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 font-bold text-sm">4</span>
+            <h3 class="font-display text-lg text-charcoal-900">Filtration & Refining</h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed">Transforms crude pressed oil into clear, stable, market-ready product. From basic 50-micron filtration for bulk sale to full refining for food-grade retail oil.</p>
+          <a href="/products/filtration-refining-equipment" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">View equipment <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg">
+        <p class="text-steel-700"><strong>Not sure which category you need?</strong> If you are starting from scratch, most operations need equipment from all four categories. For an overview of the complete production process from seed to bottled oil, see our <a href="/resources/complete-oil-production-line-guide" class="text-amber-600 underline hover:text-amber-700">Complete Oil Production Line Guide</a>.</p>
       </div>
     </div>
   </section>

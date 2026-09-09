@@ -1,7 +1,8 @@
-﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
+import { getCategoryContent, type CategoryContent } from '../../../data/category-content';
 
 export async function getStaticPaths() {
   const allCategories = await getCollection('categories');
@@ -113,7 +114,20 @@ const breadcrumbLd = {
   ],
 };
 
+const catContent = getCategoryContent(category.slug, currentLocale) as CategoryContent | null;
+
+const catFaqLd = catContent && catContent.faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: catContent.faq.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+} : null;
+
 const allLd = [itemListLd, breadcrumbLd];
+if (catFaqLd) allLd.push(catFaqLd);
 ---
 
 <BaseLayout locale={currentLocale} title={`${categoryLabel} - ${t.products.title}`} description={category.data.description[currentLocale] || category.data.description.en} keywords={pageKeywords} jsonLd={allLd}>
@@ -265,4 +279,57 @@ const allLd = [itemListLd, breadcrumbLd];
       </div>
     </div>
   </section>
+
+  {catContent && (
+    <section class="py-12 md:py-16 bg-white border-t border-steel-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          {catContent.overview.map((para, i) => (
+            <p class="text-steel-700 leading-relaxed mb-4">{para}</p>
+          ))}
+        </div>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">{currentLocale === 'fr' ? 'Gamme de modèles' : currentLocale === 'ar' ? 'نطاق النماذج' : 'Rentang Model'}</h2>
+        <div class="mb-10 space-y-4">
+          {catContent.modelRange.map((para, i) => (
+            <p class="text-steel-700 leading-relaxed">{para}</p>
+          ))}
+        </div>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">{currentLocale === 'fr' ? 'Critères de sélection' : currentLocale === 'ar' ? 'معايير الاختيار' : 'Kriteria Pemilihan'}</h2>
+        <div class="mb-10 overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-sm">
+            <thead class="bg-steel-50">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-charcoal-900">{currentLocale === 'fr' ? 'Facteur' : currentLocale === 'ar' ? 'العامل' : 'Faktor'}</th>
+                <th class="px-4 py-3 text-left font-semibold text-charcoal-900">{currentLocale === 'fr' ? 'À considérer' : currentLocale === 'ar' ? 'ما يجب مراعاته' : 'Yang perlu dipertimbangkan'}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {catContent.selectionCriteria.map((item, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-steel-50/50'}>
+                  <td class="px-4 py-3 font-semibold text-amber-600 whitespace-nowrap">{item.label}</td>
+                  <td class="px-4 py-3 text-steel-700">{item.desc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg mb-10">
+          <p class="text-steel-700"><strong>{currentLocale === 'fr' ? 'Position dans le processus' : currentLocale === 'ar' ? 'الموضع في العملية' : 'Posisi proses'}:</strong> {catContent.processPosition}</p>
+        </div>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">{currentLocale === 'fr' ? 'Questions fréquentes' : currentLocale === 'ar' ? 'أسئلة شائعة' : 'Pertanyaan Umum'}</h2>
+        <div class="space-y-3">
+          {catContent.faq.map((item, i) => (
+            <details class="bg-steel-50 rounded-lg border border-steel-100 overflow-hidden">
+              <summary class="px-5 py-4 cursor-pointer font-semibold text-charcoal-900 hover:bg-steel-100 transition-colors">
+                {item.question}
+              </summary>
+              <div class="px-5 pb-4 text-steel-700 leading-relaxed">
+                {item.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 </BaseLayout>
