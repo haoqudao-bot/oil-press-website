@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -134,7 +134,7 @@ if (catFaqLd) allLd.push(catFaqLd);
       <div class="flex flex-col lg:flex-row gap-8">
         <!-- Sidebar Filter -->
         <aside class="lg:w-56 shrink-0">
-          <div class="sticky top-24 space-y-8">
+          <div class="sticky top-24 space-y-8 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
             <div>
               <h3 class="font-display text-lg text-charcoal-900 mb-4">Category</h3>
               <nav class="space-y-1">
@@ -272,7 +272,19 @@ if (catFaqLd) allLd.push(catFaqLd);
 
               <!-- Selection Criteria -->
               <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Selection Criteria</h2>
-              <div class="mb-10 overflow-x-auto">
+
+              <!-- Mobile: stacked cards -->
+              <div class="sm:hidden mb-10 space-y-3">
+                {catContent.selectionCriteria.map((item, i) => (
+                  <div class="bg-white rounded-xl border border-steel-100 shadow-sm p-4">
+                    <div class="font-semibold text-amber-600 mb-2">{item.label}</div>
+                    <div class="text-steel-700 text-sm leading-relaxed">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Desktop: table -->
+              <div class="hidden sm:block mb-10 overflow-x-auto">
                 <table class="w-full bg-white rounded-xl border border-steel-100 shadow-sm">
                   <thead class="bg-steel-50">
                     <tr>
