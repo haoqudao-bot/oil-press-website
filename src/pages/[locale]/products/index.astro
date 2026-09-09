@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -242,6 +242,121 @@ const breadcrumbLd = {
             ))}
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Categories -->
+  <section class="py-12 md:py-16 bg-white border-t border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-2xl md:text-3xl mb-4 text-charcoal-900">
+        {currentLocale === 'fr' ? 'Catégories d\'équipement' : currentLocale === 'ar' ? 'فئات المعدات' : 'Kategori Peralatan'}
+      </h2>
+      <p class="text-steel-600 mb-8 leading-relaxed">
+        {currentLocale === 'fr'
+          ? 'Haonuo propose quatre catégories d\'équipement couvrant le workflow complet de pressage d\'huile — de la préparation des graines au pressage puis à la filtration. Chaque catégorie sert une étape spécifique de la ligne de production, et la plupart des opérations ont besoin d\'équipement de deux catégories ou plus pour produire de l\'huile finie.'
+          : currentLocale === 'ar'
+          ? 'توفر Haonuo أربع فئات من المعدات التي تغطي سير عمل كامل لعصر الزيت — من تحضير البذور مروراً بالعصر وحتى الترشيح. تخدم كل فئة مرحلة محددة في خط الإنتاج، وتحتاج معظم العمليات إلى معدات من فئتين أو أكثر لإنتاج زيت نهائي.'
+          : 'Haonuo menyediakan empat kategori peralatan yang mencakup alur kerja pengepresan minyak lengkap — dari persiapan biji hingga pengepresan dan filtrasi. Setiap kategori melayani tahap tertentu dalam jalur produksi, dan sebagian besar operasi memerlukan peralatan dari dua kategori atau lebih untuk menghasilkan minyak jadi.'}
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- 1. Seed Processing -->
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600 font-bold text-sm">1</span>
+            <h3 class="font-display text-lg text-charcoal-900">
+              {currentLocale === 'fr' ? 'Préparation des graines' : currentLocale === 'ar' ? 'معالجة البذور' : 'Pengolahan Biji'}
+            </h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed">
+            {currentLocale === 'fr'
+              ? 'Équipement de nettoyage, décorticage et broyage qui prépare les graines brutes au pressage. Élimine les débris et corps étrangers, augmente la surface d\'extraction de l\'huile et améliore le rendement de 10 à 20 %.'
+              : currentLocale === 'ar'
+              ? 'معدات التنظيف والتقشير والطحن التي تحضر البذور الخام للعصر. تزيل الحطام والشوائب، تزيد مساحة السطح لاستخلاص الزيت، وتحسن الإنتاج بنسبة 10-20٪.'
+              : 'Peralatan pembersihan, pengupasan kulit, dan penghancuran yang mempersiapkan biji mentah untuk pengepresan. Menghilangkan kotoran dan benda asing, meningkatkan luas permukaan untuk ekstraksi minyak, dan meningkatkan hasil sebesar 10-20%.'}
+          </p>
+          <a href={localePath('/products/seed-processing-equipment')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+            {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+        <!-- 2. Roasting & Steaming -->
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-bold text-sm">2</span>
+            <h3 class="font-display text-lg text-charcoal-900">
+              {currentLocale === 'fr' ? 'Torréfaction & Cuisson à la vapeur' : currentLocale === 'ar' ? 'التحميص والبخار' : 'Pemanggangan & Pengukusan'}
+            </h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed">
+            {currentLocale === 'fr'
+              ? 'Application contrôlée de chaleur qui décompose les parois cellulaires, réduit la viscosité de l\'huile et développe la saveur. Augmente le rendement de 5 à 15 % par rapport au pressage de graines non chauffées.'
+              : currentLocale === 'ar'
+              ? 'تطبيق حراري متحكم يكسر جدران الخلايا، يقلل من لزوجة الزيت ويطور النكهة. يزيد من إنتاج الزيت بنسبة 5-15٪ مقارنة بعصر البذور غير المسخنة.'
+              : 'Penerapan panas terkontrol yang memecah dinding sel, mengurangi viskositas minyak, dan mengembangkan rasa. Meningkatkan hasil 5-15% dibanding pengepresan biji yang tidak dipanaskan.'}
+          </p>
+          <a href={localePath('/products/roasting-steaming-equipment')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+            {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+        <!-- 3. Hydraulic Oil Press -->
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600 font-bold text-sm">3</span>
+            <h3 class="font-display text-lg text-charcoal-900">
+              {currentLocale === 'fr' ? 'Presse à huile hydraulique' : currentLocale === 'ar' ? 'مكبس زيت هيدروليكي' : 'Mesin Press Minyak Hidrolik'}
+            </h3>
+          </div>
+          <p class="text-steel-600 leading-relaxed text-sm">
+            {currentLocale === 'fr'
+              ? 'Pressage par lots avec rétention de basse température (inférieure à 60 °C). 12 modèles de 300 à 620 tonnes de force de pressage avec une capacité de 100 kg par lot. Idéal pour les graines de haute valeur où la qualité de l\'huile compte plus que le débit.'
+              : currentLocale === 'ar'
+              ? 'عصر دفعي مع الاحتفاظ بدرجة حرارة منخفضة (أقل من 60 درجة مئوية). 12 نموذجاً من 300 إلى 620 طن من قوة العصر بسعة 100 كجم لكل دفعة. الأفضل للبذور عالية القيمة حيث تكون جودة الزيت أكثر أهمية من الإنتاج.'
+              : 'Pengepresan batch dengan retensi suhu rendah (di bawah 60°C). 12 model dari 300 hingga 620 ton gaya pengepres dengan kapasitas 100 kg per batch. Terbaik untuk biji bernilai tinggi di mana kualitas minyak lebih penting daripada throughput.'}
+          </p>
+          <a href={localePath('/products/hydraulic-oil-press')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+            {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+        <!-- 4. Filtration & Refining -->
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 font-bold text-sm">4</span>
+            <h3 class="font-display text-lg text-charcoal-900">
+              {currentLocale === 'fr' ? 'Filtration & Raffinage' : currentLocale === 'ar' ? 'الترشيح والتكرير' : 'Filtrasi & Pemurnian'}
+            </h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed">
+            {currentLocale === 'fr'
+              ? 'Transforme l\'huile pressée brute en produit clair, stable et prêt à la vente. De la filtration de base à 50 microns pour la vente en vrac au raffinage complet pour l\'huile alimentaire de détail.'
+              : currentLocale === 'ar'
+              ? 'يحول الزيت المعصور الخام إلى منتج صافٍ ومستعد للبيع. من الترشيح الأساسي 50 ميكرون للبيع بالجملة إلى التكرير الكامل لزيت الطعام بالتجزئة.'
+              : 'Mengubah minyak hasil pengepresan kasar menjadi produk yang jernih, stabil, dan siap dipasarkan. Dari filtrasi dasar 50 mikron untuk penjualan curah hingga pemurnian lengkap untuk minyak makanan eceran.'}
+          </p>
+          <a href={localePath('/products/filtration-refining-equipment')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+            {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg">
+        <p class="text-steel-700">
+          <strong>
+            {currentLocale === 'fr' ? 'Vous ne savez pas quelle catégorie vous avez besoin ?' : currentLocale === 'ar' ? 'غير متأكد من الفئة التي تحتاجها؟' : 'Tidak yakin kategori mana yang Anda butuhkan?'}
+          </strong>
+          {currentLocale === 'fr'
+            ? ' Si vous commencez de zéro, la plupart des opérations ont besoin d\'équipement des quatre catégories. Pour un aperçu du processus de production complet de la graine à l\'huile en bouteille, consultez notre '
+            : currentLocale === 'ar'
+            ? ' إذا كنت تبدأ من الصفر، فمعظم العمليات تحتاج إلى معدات من جميع الفئات الأربع. للحصول على نظرة عامة على عملية الإنتاج الكاملة من البذور إلى الزيت المعبأ في زجاجات، راجع '
+            : ' Jika Anda memulai dari awal, sebagian besar operasi memerlukan peralatan dari keempat kategori. Untuk gambaran umum proses produksi lengkap dari biji hingga minyak dalam botol, lihat '}
+          <a href={localePath('/resources/complete-oil-production-line-guide')} class="text-amber-600 underline hover:text-amber-700">
+            {currentLocale === 'fr' ? 'Guide complet de la ligne de production d\'huile' : currentLocale === 'ar' ? 'الدليل الشامل لخط إنتاج الزيت' : 'Panduan Jalur Produksi Minyak Lengkap'}
+          </a>.
+        </p>
       </div>
     </div>
   </section>
