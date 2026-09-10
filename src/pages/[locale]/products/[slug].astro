@@ -194,14 +194,14 @@ if (faqLd) allLd.push(faqLd);
           <!-- Specifications -->
           <div class="mb-8">
             <h2 class="font-display text-2xl text-charcoal-900 mb-4">{t.products.specifications}</h2>
-            <div class="bg-steel-50 rounded-xl overflow-hidden">
+            <div class="bg-steel-50 rounded-xl overflow-hidden divide-y divide-steel-100">
               {specs.map((spec, i) => (
                 <div class:list={[
-                  'flex justify-between px-5 py-3 text-sm',
+                  'flex flex-col sm:flex-row sm:justify-between px-5 py-3 text-sm',
                   i % 2 === 0 ? 'bg-steel-50' : 'bg-white'
                 ]}>
-                  <span class="text-steel-600">{spec.name}</span>
-                  <span class="text-charcoal-900 font-medium">{spec.value}</span>
+                  <span class="text-steel-500 mb-1 sm:mb-0 sm:pr-4">{spec.name}</span>
+                  <span class="text-charcoal-900 font-semibold">{spec.value}</span>
                 </div>
               ))}
             </div>

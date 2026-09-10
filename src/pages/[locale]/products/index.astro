@@ -206,11 +206,11 @@ const breadcrumbLd = {
 
         <!-- Product Grid -->
         <div class="flex-1">
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {sortedProducts.map((product) => (
               <a
                 href={localePath(`/products/${product.slug}`)}
-                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+                class="product-card card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
               >
                 <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
                   <img
@@ -240,6 +240,11 @@ const breadcrumbLd = {
                 </div>
               </a>
             ))}
+          </div>
+          <div id="load-more-wrap" class="mt-8 text-center hidden">
+            <button id="load-more-btn" class="bg-amber-500 hover:bg-amber-400 text-charcoal-900 font-semibold px-8 py-3 rounded-lg transition-colors">
+              {currentLocale === 'fr' ? 'Voir plus' : currentLocale === 'ar' ? 'عرض المزيد' : 'Muat Lebih Banyak'}
+            </button>
           </div>
         </div>
       </div>
@@ -382,4 +387,35 @@ const breadcrumbLd = {
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    (function () {
+      var grid = document.getElementById('product-grid');
+      if (!grid) return;
+      var cards = grid.querySelectorAll('.product-card');
+      var isMobile = !window.matchMedia('(min-width: 1280px)').matches;
+      var initial = isMobile ? 12 : cards.length;
+      var step = isMobile ? 9 : cards.length;
+      var shown = initial;
+      cards.forEach(function (c, i) { if (i >= initial) c.style.display = 'none'; });
+      var wrap = document.getElementById('load-more-wrap');
+      var btn = document.getElementById('load-more-btn');
+      var remainingTxt = { fr: 'restants', ar: 'متبقي', id: 'tersisa' };
+      var locale = document.documentElement.lang || 'en';
+      function update() {
+        if (shown < cards.length) {
+          wrap.classList.remove('hidden');
+          var rest = cards.length - shown;
+          btn.textContent = btn.textContent.replace(/\(.*\)/, '') + ' (' + rest + ' ' + (remainingTxt[locale] || 'left') + ')';
+        } else wrap.classList.add('hidden');
+      }
+      btn.addEventListener('click', function () {
+        var next = Math.min(shown + step, cards.length);
+        for (var i = shown; i < next; i++) cards[i].style.display = '';
+        shown = next;
+        update();
+      });
+      update();
+    })();
+  </script>
 </BaseLayout>
