@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "postbuild": "node scripts/site-audit.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "audit": "node scripts/site-audit.mjs",

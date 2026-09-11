@@ -14,6 +14,7 @@
  *   G. 小语种页内部链接语言前缀一致性（/fr/ 页的 href 不能错写成 /en/ 或裸路径）
  *   H. 小语种页图片引用完整性（dist 中必须存在）
  *   I. canonical/hreflang 标签语言一致性
+ *   J. 内链目标存在性（全站 href/og:url/og:image 链接必须在 dist 有对应文件，杜绝 404 死链）
  *   L. 翻译长度异常（过短/过长/重复翻译）
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -470,6 +471,51 @@ if (!existsSync(DIST) || !existsSync(join(DIST, '404.html'))) {
     }
     if (fails.length) { warn('I', `${l}: canonical/hreflang 问题 ${fails.length} 处`); fails.forEach(x => console.log(`      · ${x}`)); iBad += fails.length; }
     else pass('I', `${l} 核心页 canonical/hreflang 标签正确 ✓`);
+  }
+
+  // =========================
+  //  J. 内链目标存在性（全量 <a href>/canonical/hreflang/og:url/og:image 必须能落到 dist 文件，杜绝 404 死链）
+  // =========================
+  console.log('\n━━━ J. 内链目标存在性（所有内部 href/content 链接必须在 dist 中有对应文件）━━━');
+  const distFiles = new Set(allDist.map(p => '/' + p.substring(DIST.length + 1).replace(/\\/g, '/')));
+  function linkTargetExists(link) {
+    let clean;
+    try { clean = decodeURIComponent(link.split('#')[0].split('?')[0]); }
+    catch { clean = link.split('#')[0].split('?')[0]; }
+    if (clean === '/') return distFiles.has('/index.html');
+    const noSlash = clean.replace(/\/+$/, '');
+    return distFiles.has(noSlash) || distFiles.has(noSlash + '/index.html') || distFiles.has(noSlash + '.html');
+  }
+  // content= 只匹配以 / 或本站域名开头的完整 URL（即 og:image / og:url / twitter:image 这类），纯文本 meta 不受影响
+  const J_LINK_RE = /(?:href|content)=["']((?:\/[^"'/]|https:\/\/(?:www\.)?hydoilpress\.com\/)[^"']*)["']/gi;
+  const jDead = new Map(); // 死链 -> 引用它的页面集合
+  let jChecked = 0;
+  for (const p of allHtml) {
+    const html = readFileSync(p, 'utf8');
+    let m; J_LINK_RE.lastIndex = 0;
+    while ((m = J_LINK_RE.exec(html)) !== null) {
+      let link = m[1];
+      if (link.startsWith('//')) continue; // 协议相对外链
+      if (/^(mailto:|tel:|javascript:|data:)/i.test(link)) continue;
+      if (link.startsWith('https://')) link = link.replace(/^https:\/\/(?:www\.)?hydoilpress\.com/, '');
+      if (!link.startsWith('/')) continue;
+      jChecked++;
+      if (!linkTargetExists(link)) {
+        const rel = p.substring(DIST.length + 1).replace(/\\/g, '/');
+        if (!jDead.has(link)) jDead.set(link, new Set());
+        jDead.get(link).add(rel);
+      }
+    }
+  }
+  if (jDead.size) {
+    warn('J', `发现 ${jDead.size} 个内链死链目标：`);
+    let i = 0;
+    for (const [link, refs] of jDead) {
+      if (i++ < 30) console.log(`      × ${link}  <- ${[...refs].slice(0, 3).join(', ')}${refs.size > 3 ? ` 等${refs.size}个页面` : ''}`);
+    }
+    if (jDead.size > 30) console.log(`      ... 还有 ${jDead.size - 30} 个`);
+  } else {
+    pass('J', `全站 ${jChecked} 个内链目标全部存在 ✓`);
   }
 }
 
