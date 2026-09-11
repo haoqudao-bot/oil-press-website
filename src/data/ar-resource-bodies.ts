@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿// Arabic resource body content for [locale]/resources/[slug].astro
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿// Arabic resource body content for [locale]/resources/[slug].astro
 export const arResourceBodies: Record<string, string> = {
   'which-seeds-can-be-pressed': `# ما هي البذور التي يمكنك عصرها في معصرة زيت؟ دليل شامل
 
@@ -593,7 +593,7 @@ export const arResourceBodies: Record<string, string> = {
 4. راقب العملية وسجل الإعدادات والنتائج
 5. قس عائد الزيت وقارنه بالتوقعات
 
-للحصول على تعليمات مفصلة حول عصر بذور محددة، راجع [دليل البذور القابلة للعصر](/resources/which-seeds-can-be-pressed).`,
+للحصول على تعليمات مفصلة حول عصر بذور محددة، راجع [دليل البذور القابلة للعصر](/resources/oil-press-raw-materials-guide).`,
 
   'palm-oil-pressing-guide': `زيت النخيل هو أكثر الزيوت النباتية استهلاكًا في العالم، يمثل أكثر من 35% من الإنتاج العالمي للزيوت النباتية. من الأسواق النشيطة في لاغوس إلى مزارع سومطرة، زيت النخيل سلعة أساسية تغذي مليارات البشر وتحفز الاقتصادات. لرواد الأعمال والشركات التي ترغب في دخول هذا السوق المربح، فهم عملية عصر زيت النخيل هو الخطوة الأولى نحو إنشاء عملية مربحة.
 
@@ -1157,7 +1157,7 @@ export const arResourceBodies: Record<string, string> = {
 
 **السبب: محتوى رطوبة غير صحيح في البذور**
 - **التشخيص:** تحقق من رطوبة البذور بجهاز قياس الرطوبة.
-- **الحل:** اضبط الرطوبة بالتجفيف أو إضافة رطوبة. راجع [دليل تحسين العائد](/resources/how-to-improve-oil-yield).
+- **الحل:** اضبط الرطوبة بالتجفيف أو إضافة رطوبة. راجع [دليل تحسين العائد](/resources/how-to-maximize-oil-yield).
 
 **السبب: بذور غير مسخنة مسبقًا**
 - **التشخيص:** قس درجة حرارة البذور قبل العصر.
@@ -1299,7 +1299,7 @@ export const arResourceBodies: Record<string, string> = {
 
 ## الصيانة الوقائية
 
-أنسب استكشاف أعطال هو الوقاية. للإجراءات الكاملة للصيانة الوقائية، راجع [دليل صيانة معصرة الزيت](/resources/oil-press-maintenance-guide).
+أنسب استكشاف أعطال هو الوقاية. للإجراءات الكاملة للصيانة الوقائية، راجع [دليل صيانة معصرة الزيت](/resources/hydraulic-oil-press-maintenance-guide).
 
 ممارسات وقائية رئيسية:
 

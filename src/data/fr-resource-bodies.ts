@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frResourceBodies: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frResourceBodies: Record<string, string> = {
   'which-seeds-can-be-pressed': `# Quelles graines pouvez-vous presser dans une presse à huile ? Guide complet
 
 L'une des questions les plus fréquentes des nouveaux propriétaires de presse à huile est : « Que puis-je réellement presser dans cette machine ? » La réponse est étonnamment large — une presse à huile bien conçue peut extraire l'huile de dizaines de graines, noix et amandes différentes. Cependant, toutes les graines ne sont pas également faciles à presser, et certaines nécessitent une préparation ou un équipement spécial. Ce guide complet couvre toutes les graines pressables que vous êtes susceptible de rencontrer, ainsi que des conseils pratiques sur les graines avec lesquelles commencer et celles à éviter.
@@ -587,7 +587,7 @@ Félicitations — vous êtes prêt à presser votre premier lot d'huile ! Suive
 4. Observez le processus et notez les réglages et les résultats
 5. Mesurez le rendement en huile et comparez-le aux attentes
 
-Pour des instructions détaillées sur le pressage de graines spécifiques, consultez notre [guide des graines pressables](/resources/which-seeds-can-be-pressed).`,
+Pour des instructions détaillées sur le pressage de graines spécifiques, consultez notre [guide des graines pressables](/resources/oil-press-raw-materials-guide).`,
 
   'palm-oil-pressing-guide': `L'huile de palme est l'huile végétale la plus consommée au monde, représentant plus de 35% de la production mondiale d'huile végétale. Des marchés animés de Lagos aux plantations de Sumatra, l'huile de palme est une denrée essentielle qui nourrit des milliards de personnes et stimule les économies. Pour les entrepreneurs et les entreprises souhaitant entrer sur ce marché lucratif, comprendre le processus de pressage de l'huile de palme est la première étape vers la création d'une opération rentable.
 
@@ -1148,7 +1148,7 @@ Le faible rendement en huile — obtenir moins d'huile que prévu de vos graines
 
 **Cause : Teneur en humidité des graines incorrecte**
 - **Diagnostic :** Vérifiez l'humidité des graines avec un humidimètre.
-- **Solution :** Ajustez l'humidité en séchant ou en ajoutant de l'humidité. Consultez notre [guide d'amélioration du rendement](/resources/how-to-improve-oil-yield).
+- **Solution :** Ajustez l'humidité en séchant ou en ajoutant de l'humidité. Consultez notre [guide d'amélioration du rendement](/resources/how-to-maximize-oil-yield).
 
 **Cause : Graines non préchauffées**
 - **Diagnostic :** Mesurez la température des graines avant le pressage.
@@ -1290,7 +1290,7 @@ L'apparence et la consistance du gâteau pressé sont des indicateurs de diagnos
 
 ## Maintenance préventive
 
-Le meilleur dépannage est la prévention. Pour des procédures complètes de maintenance préventive, consultez notre [Guide d'entretien de la presse à huile](/resources/oil-press-maintenance-guide).
+Le meilleur dépannage est la prévention. Pour des procédures complètes de maintenance préventive, consultez notre [Guide d'entretien de la presse à huile](/resources/hydraulic-oil-press-maintenance-guide).
 
 Pratiques préventives clés :
 

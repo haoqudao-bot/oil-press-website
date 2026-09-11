@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -290,7 +290,7 @@ const seedDetails: Record<string, {
               </tbody>
             </table>
           </div>
-          <a href={localePath('/resources/which-seeds-can-be-pressed')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
+          <a href={localePath('/resources/oil-press-raw-materials-guide')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
             {currentLocale === 'fr' ? 'Voir le Guide de Compatibilité Complet' : currentLocale === 'ar' ? 'عرض دليل التوافق الكامل' : 'Lihat Panduan Kompatibilitas Lengkap'}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
