@@ -1,14 +1,20 @@
-# Cache static assets for 1 year
-/_astro/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/images/*
-  Cache-Control: public, max-age=31536000
-
-# Cache HTML files for 1 day
+# Default rule FIRST: security headers + 1-day cache for HTML
+# (later rules below override the cache for static assets)
 /*
   Cache-Control: public, max-age=86400
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
+
+# Hashed Astro assets: immutable, 1 year
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images: 1 year
+/images/*
+  Cache-Control: public, max-age=31536000
+
+# Videos: 1 year
+/videos/*
+  Cache-Control: public, max-age=31536000

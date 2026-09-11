@@ -155,10 +155,10 @@ const breadcrumbLd = {
       <div class="hero-slide" data-index="2">
         <div class="absolute inset-0 bg-steel-900">
           <video
-            autoplay
             muted
             loop
             playsinline
+            preload="none"
             class="w-full h-full object-cover opacity-40"
             poster="/images/hero/factory-workshop.webp"
           >
@@ -235,6 +235,16 @@ const breadcrumbLd = {
       current = (index + slides.length) % slides.length;
       slides[current]?.classList.add('active');
       dots[current]?.classList.add('active');
+      syncVideos();
+    }
+
+    // Video loads and plays only when its slide is active (saves ~2MB on initial load)
+    function syncVideos() {
+      document.querySelectorAll('.hero-slide video').forEach(v => {
+        const isActive = v.closest('.hero-slide')?.classList.contains('active');
+        if (isActive) v.play().catch(() => {});
+        else v.pause();
+      });
     }
 
     function startAutoplay() {
