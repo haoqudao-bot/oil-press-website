@@ -221,6 +221,18 @@
   @apply w-full mb-6 border-collapse;
 }
 
+/* 移动端：宽表格在自身容器内横向滚动，不撑破页面布局 */
+@media (max-width: 767px) {
+  .prose-solution table,
+  .prose-product table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .prose-solution thead th {
   @apply bg-steel-50 text-left px-4 py-3 font-semibold text-charcoal-900 border border-steel-200;
 }
