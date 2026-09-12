@@ -39,7 +39,7 @@ function getCookieText() {
 const text = getCookieText();
 ---
 
-<div id="cookie-consent-banner" class="fixed top-0 left-0 right-0 bg-charcoal-900 text-white z-[60] border-b border-charcoal-700 no-print shadow-md">
+<div id="cookie-consent-banner" class="relative z-20 bg-charcoal-900 text-white border-b border-charcoal-700 no-print shadow-md">
   <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
     <div class="flex items-center gap-3 flex-1 min-w-0">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -64,42 +64,20 @@ const text = getCookieText();
   (function() {
     var cookieName = 'haonuo_cookie_consent';
     var banner = document.getElementById('cookie-consent-banner');
-    var navbar = document.getElementById('main-navbar');
-
-    function pushNavbarDown() {
-      if (!banner || !navbar) return;
-      var h = banner.offsetHeight;
-      navbar.style.top = h + 'px';
-    }
-    function restoreNavbar() {
-      if (navbar) navbar.style.top = '';
-    }
+    if (!banner) return;
 
     function setConsent(accepted) {
       document.cookie = cookieName + '=' + (accepted ? 'accepted' : 'rejected') + '; expires=' + new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString() + '; path=/';
-      if (banner) banner.style.display = 'none';
-      restoreNavbar();
+      banner.style.display = 'none';
     }
 
-    function checkConsent() {
-      var consent = document.cookie.split(';').find(function(row) { return row.trim().indexOf(cookieName + '=') === 0; });
-      if (consent) {
-        banner.style.display = 'none';
-      } else {
-        pushNavbarDown();
-      }
-    }
+    // 已做出选择则立即隐藏（脚本紧跟横幅节点，解析即执行，避免闪烁）
+    var consent = document.cookie.split(';').some(function(row) {
+      return row.trim().indexOf(cookieName + '=') === 0;
+    });
+    if (consent) banner.style.display = 'none';
 
     document.getElementById('cookie-accept').addEventListener('click', function() { setConsent(true); });
     document.getElementById('cookie-reject').addEventListener('click', function() { setConsent(false); });
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', checkConsent);
-    } else {
-      checkConsent();
-    }
-    window.addEventListener('resize', function() {
-      if (banner.style.display !== 'none') pushNavbarDown();
-    });
   })();
 </script>

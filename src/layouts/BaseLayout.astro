@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { type Locale, getTranslations, isRtl } from '../i18n/index.ts';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -140,13 +140,17 @@ const mergedLd = rawLd.flat();
   ))}
 </head>
 <body class="min-h-screen flex flex-col font-body">
-  <Navbar locale={currentLocale} />
+  <div class="fixed top-0 inset-x-0 z-50 no-print">
+    <CookieConsentBanner locale={currentLocale} />
+    <Navbar locale={currentLocale} />
+  </div>
+  <!-- Spacer for fixed header -->
+  <div class="h-16 md:h-20"></div>
   <main class="flex-1">
     <slot />
   </main>
   <Footer locale={currentLocale} />
   <ChatWidget locale={currentLocale} />
-  <CookieConsentBanner locale={currentLocale} />
   <script>
     // Scroll reveal animation
     const observer = new IntersectionObserver((entries) => {
