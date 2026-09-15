@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -109,7 +109,7 @@ const readingContent = {
             <p class="text-sm text-steel-600 leading-relaxed mb-3">{card.desc[currentLocale]}</p>
             <ul class="text-sm space-y-1.5">
               {card.links.map(link => (
-                <li><a href={link.href === '/roi-calculator' ? '/roi-calculator' : localePath(link.href)} class="text-amber-600 hover:text-amber-700 underline">{link.label[currentLocale]}</a></li>
+                <li><a href={localePath(link.href)} class="text-amber-600 hover:text-amber-700 underline">{link.label[currentLocale]}</a></li>
               ))}
             </ul>
           </div>
