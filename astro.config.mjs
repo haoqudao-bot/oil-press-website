@@ -7,7 +7,13 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  integrations: [tailwind(), sitemap()],
+  integrations: [
+    tailwind(),
+    sitemap({
+      // 广告落地页（noindex）和 404 页面不进 sitemap
+      filter: (page) => !/\/(ads|404)(\/|$)/.test(page),
+    }),
+  ],
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr', 'ar', 'id'],

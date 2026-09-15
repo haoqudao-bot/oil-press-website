@@ -15,9 +15,10 @@ interface Props {
   jsonLd?: object;
   locale?: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
-const { title, description, keywords, jsonLd, locale = 'en', ogImage } = Astro.props;
+const { title, description, keywords, jsonLd, locale = 'en', ogImage, noindex = false } = Astro.props;
 const currentLocale = locale as Locale;
 const t = getTranslations(currentLocale);
 const rtl = isRtl(currentLocale);
@@ -104,7 +105,7 @@ const mergedLd = rawLd.flat();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
   <meta name="google-site-verification" content="07toNqzXrhC9mvL5gLmZMdMfVBzblwpT0wXMGpoBuEE" />
   <meta name="msvalidate.01" content="1BBADBD1B20D77F8EFD40C58597F8133" />
   <meta name="description" content={pageDesc} />

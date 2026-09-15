@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { getTranslations } from '../i18n';
 
 const { locale = 'en' } = Astro.props;
@@ -22,6 +22,18 @@ function localePath(path: string): string {
     return fallback ? `/${locale}${fallback}` : path;
   }
   return `/${locale}${path}`;
+}
+
+// Per-locale URLs of the CURRENT page — rendered as real <a href> links so
+// search engines can discover and crawl the fr/ar/id equivalents (not just via sitemap).
+let currentPathNoLocale = Astro.url.pathname.replace(/^\/(fr|ar|id)(?=\/|$)/, '');
+if (!currentPathNoLocale) currentPathNoLocale = '/';
+if (!/\.[a-z0-9]+$/i.test(currentPathNoLocale) && !currentPathNoLocale.endsWith('/')) {
+  currentPathNoLocale += '/';
+}
+function switchHref(targetLocale: string): string {
+  if (targetLocale === 'en') return currentPathNoLocale;
+  return currentPathNoLocale === '/' ? `/${targetLocale}/` : `/${targetLocale}${currentPathNoLocale}`;
 }
 
 const productsSubItems = [
@@ -341,15 +353,16 @@ const comparisonItems = [
           </button>
           <div class="absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-steel-100 py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[120px]">
             {locales.map(l => (
-              <button
-                data-lang={l}
+              <a
+                href={switchHref(l)}
+                hreflang={l}
                 class:list={[
-                  'block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-steel-50 lang-switch-btn',
+                  'block px-4 py-2 text-sm transition-colors hover:bg-steel-50 lang-switch-link',
                   l === locale ? 'text-amber-500 font-medium' : 'text-steel-700'
                 ]}
               >
                 {localeLabels[l]}
-              </button>
+              </a>
             ))}
           </div>
         </div>
@@ -502,15 +515,16 @@ const comparisonItems = [
       <!-- Language Switcher -->
       <div class="flex gap-2 pt-3 mt-2 border-t border-steel-100">
         {locales.map(l => (
-          <button
-            data-lang={l}
+          <a
+            href={switchHref(l)}
+            hreflang={l}
             class:list={[
-              'px-3 py-1 text-sm rounded-full border transition-colors lang-switch-btn',
+              'px-3 py-1 text-sm rounded-full border transition-colors lang-switch-link',
               l === locale ? 'bg-amber-500 text-charcoal-900 border-amber-500 font-medium' : 'border-steel-200 text-steel-600 hover:border-amber-500'
             ]}
           >
             {localeLabels[l]}
-          </button>
+          </a>
         ))}
       </div>
 
@@ -554,21 +568,5 @@ const comparisonItems = [
     });
   });
 
-  // Language switcher - navigate to locale URL
-  document.querySelectorAll('.lang-switch-btn').forEach(langBtn => {
-    langBtn.addEventListener('click', () => {
-      const lang = langBtn.getAttribute('data-lang');
-      if (!lang) return;
-
-      const currentPath = window.location.pathname;
-      const pathWithoutLocale = currentPath.replace(/^\/(fr|ar|id)(\/|$)/, '/');
-
-      if (lang === 'en') {
-        window.location.href = pathWithoutLocale + window.location.search;
-      } else {
-        const cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
-        window.location.href = `/${lang}${cleanPath}${window.location.search}`;
-      }
-    });
-  });
+  // Language switching is now handled by real <a href> links (also enables crawler discovery)
 </script>

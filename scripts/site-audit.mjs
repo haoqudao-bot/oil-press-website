@@ -363,6 +363,8 @@ if (!existsSync(DIST) || !existsSync(join(DIST, '404.html'))) {
       while ((m = HREF_RE_G.exec(html)) !== null) {
         const attrs = (m[1] + ' ' + m[3]).toLowerCase();
         if (attrs.includes('data-static-en-only')) continue;
+        // 语言切换器链接：天然指向其他语种（带 hreflang / lang-switch-link 标记），豁免
+        if (attrs.includes('hreflang=') || attrs.includes('lang-switch-link')) continue;
         hrefs.push(m[2]);
       }
       const relPage = relative(join(DIST, l), p).split(sep).join('/');
