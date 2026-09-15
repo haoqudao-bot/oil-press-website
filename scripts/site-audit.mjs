@@ -15,6 +15,7 @@
  *   H. 小语种页图片引用完整性（dist 中必须存在）
  *   I. canonical/hreflang 标签语言一致性
  *   J. 内链目标存在性（全站 href/og:url/og:image 链接必须在 dist 有对应文件，杜绝 404 死链）
+ *   K. 语言切换器可抓取性（必须是真实 <a href hreflang>，禁止 data-lang 按钮/JS 伪链接）
  *   L. 翻译长度异常（过短/过长/重复翻译）
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -511,6 +512,48 @@ if (!existsSync(DIST) || !existsSync(join(DIST, '404.html'))) {
   } else {
     pass('J', `全站 ${jChecked} 个内链目标全部存在 ✓`);
   }
+
+  // =========================
+  //  K. 语言切换器可抓取性：必须是真实 <a href hreflang>，禁止 button/JS 伪链接
+  //     （历史教训：data-lang 按钮式切换器导致 261 个小语种页无内链入口、长期不收录）
+  // =========================
+  console.log('\n━━━ K. 语言切换器可抓取性（禁止 data-lang 按钮/JS 伪链接，必须为 <a href hreflang>）━━━');
+  let kBad = 0;
+  // 1) 负向：非 <a> 元素带 data-lang，或残留旧 class —— 一律视为 JS 伪切换器回归
+  const DATALANG_RE = /<(?!a\b)([a-zA-Z0-9]+)\b[^>]*\bdata-lang=/gi;
+  const kHits = new Map();
+  for (const p of allHtml) {
+    const html = readFileSync(p, 'utf8');
+    let m; DATALANG_RE.lastIndex = 0;
+    while ((m = DATALANG_RE.exec(html)) !== null) {
+      const key = `<${m[1].toLowerCase()} data-lang=…> JS 伪语言链接`;
+      kHits.set(key, (kHits.get(key) || 0) + 1);
+    }
+    if (/\blang-switch-btn\b/.test(html)) {
+      const key = 'class="lang-switch-btn" 旧 JS 切换器残留';
+      kHits.set(key, (kHits.get(key) || 0) + 1);
+    }
+  }
+  for (const [key, c] of kHits) { warn('K', `${key}（${c} 个页面）`); kBad += c; }
+  // 2) 正向：英文抽样页必须真实链接到 /fr/ /ar/ /id/ 三个对应页
+  const kSamples = [
+    join(DIST, 'index.html'),
+    join(DIST, 'products', 'heavy-duty-hydraulic-oil-press', 'index.html'),
+    join(DIST, 'contact', 'index.html'),
+  ];
+  let kSampleBad = 0;
+  const ANCHOR_LOC_RE = /<a\b[^>]*\bhref=["']\/(fr|ar|id)\b[^"']*["'][^>]*>/gi;
+  for (const p of kSamples) {
+    if (!existsSync(p)) continue;
+    const html = readFileSync(p, 'utf8');
+    const found = new Set([...html.matchAll(ANCHOR_LOC_RE)].map(x => x[1]));
+    const missing = ['fr', 'ar', 'id'].filter(l => !found.has(l));
+    if (missing.length) {
+      warn('K', `${p.replace(DIST, '')} 缺少指向 ${missing.join('/')} 的真实 <a href> 语言链接`);
+      kSampleBad++;
+    }
+  }
+  if (!kBad && !kSampleBad) pass('K', '全站无 JS 伪语言链接，英文抽样页均含 fr/ar/id 真实切换链接 ✓');
 }
 
 // ===========================
@@ -529,7 +572,7 @@ if (typeof lBad !== 'undefined') console.log(`  · L. 翻译长度异常: ${lBad
 console.log(`\n  （dist 构建产物检查 F/G/H/I 若 dist 存在会显示告警明细，否则已跳过）`);
 if (issues.length) {
   console.log('\n  ❗ 有告警项，请逐条检查并修复。脚本退出码 = 1（非 0 阻止部署流程）。');
-  console.log('  💡 A/C/D/E/F/G/H/I/L → 阻塞级，必须修复；B 类如确系合理保留，可扩展脚本内 B_EXC* 白名单');
+  console.log('  💡 A/C/D/E/F/G/H/I/J/K/L → 阻塞级，必须修复；B 类如确系合理保留，可扩展脚本内 B_EXC* 白名单');
   process.exit(1);
 } else {
   console.log('\n  🎉 全部通过！');

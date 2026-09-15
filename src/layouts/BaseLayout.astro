@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { type Locale, getTranslations, isRtl } from '../i18n/index.ts';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -163,25 +163,6 @@ const mergedLd = rawLd.flat();
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Language switcher - navigate to locale URL
-    document.querySelectorAll('.lang-switch-btn').forEach(langBtn => {
-      langBtn.addEventListener('click', () => {
-        const lang = langBtn.getAttribute('data-lang');
-        if (!lang) return;
-
-        const currentPath = window.location.pathname;
-        // Remove existing locale prefix
-        const pathWithoutLocale = currentPath.replace(/^\/(fr|ar|id)(\/|$)/, '/');
-
-        if (lang === 'en') {
-          window.location.href = pathWithoutLocale;
-        } else {
-          const cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
-          window.location.href = '/' + lang + cleanPath;
-        }
-      });
-    });
   </script>
   <GoogleAnalytics />
   <Clarity />
