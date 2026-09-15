@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -50,6 +50,65 @@ const typeColors: Record<string, string> = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.resources.title}</h1>
       <p class="text-steel-300 text-lg max-w-2xl">{t.resources.subtitle}</p>
+    </div>
+  </section>
+
+  <!-- Start Here: Reading Path -->
+  <section class="py-12 md:py-16 bg-white border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-3">Start Here — A Reading Path for New Buyers</h2>
+        <p class="text-steel-600 leading-relaxed">These guides follow the same decision path our sales engineers walk buyers through: <strong class="text-charcoal-900">(1) choose your pressing method and raw material, (2) size the machine to your daily output, (3) plan power, filtration and the full production line</strong>. If you are new to oil pressing, read the four topic groups below in order — each links to the most relevant guide.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-steel-50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full bg-amber-500 text-charcoal-900 font-display font-bold flex items-center justify-center text-sm flex-shrink-0">1</span>
+            <h3 class="font-display text-lg text-charcoal-900">Choose your method &amp; material</h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed mb-3">Cold pressing preserves nutrients; hot pressing gives higher yield. First confirm which fits your seeds and market.</p>
+          <ul class="text-sm space-y-1.5">
+            <li><a href="/resources/cold-press-vs-hot-press-oil" class="text-amber-600 hover:text-amber-700 underline">Cold Press vs Hot Press Oil</a></li>
+            <li><a href="/resources/oil-press-raw-materials-guide" class="text-amber-600 hover:text-amber-700 underline">Oil Press Raw Materials Guide</a></li>
+          </ul>
+        </div>
+        <div class="bg-steel-50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full bg-amber-500 text-charcoal-900 font-display font-bold flex items-center justify-center text-sm flex-shrink-0">2</span>
+            <h3 class="font-display text-lg text-charcoal-900">Select the right machine</h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed mb-3">Compare hydraulic, screw and manual presses, then match model capacity to your planned daily output.</p>
+          <ul class="text-sm space-y-1.5">
+            <li><a href="/resources/hydraulic-oil-press-buying-guide" class="text-amber-600 hover:text-amber-700 underline">Hydraulic Oil Press Buying Guide</a></li>
+            <li><a href="/resources/hydraulic-oil-press-vs-other-types" class="text-amber-600 hover:text-amber-700 underline">Hydraulic Press vs Other Press Types</a></li>
+          </ul>
+        </div>
+        <div class="bg-steel-50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full bg-amber-500 text-charcoal-900 font-display font-bold flex items-center justify-center text-sm flex-shrink-0">3</span>
+            <h3 class="font-display text-lg text-charcoal-900">Improve quality &amp; yield</h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed mb-3">Get more oil per batch, filter it to market-ready clarity, and turn press cake into a second income stream.</p>
+          <ul class="text-sm space-y-1.5">
+            <li><a href="/resources/how-to-maximize-oil-yield" class="text-amber-600 hover:text-amber-700 underline">How to Maximize Oil Yield</a></li>
+            <li><a href="/resources/crude-oil-filtration-guide" class="text-amber-600 hover:text-amber-700 underline">Crude Oil Filtration Guide</a></li>
+            <li><a href="/resources/oil-cake-byproduct-guide" class="text-amber-600 hover:text-amber-700 underline">Oil Cake By-product Guide</a></li>
+          </ul>
+        </div>
+        <div class="bg-steel-50 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full bg-amber-500 text-charcoal-900 font-display font-bold flex items-center justify-center text-sm flex-shrink-0">4</span>
+            <h3 class="font-display text-lg text-charcoal-900">Plan &amp; run your business</h3>
+          </div>
+          <p class="text-sm text-steel-600 leading-relaxed mb-3">Plan the full line, prepare the right power supply, maintain the machine, and check when the investment pays back.</p>
+          <ul class="text-sm space-y-1.5">
+            <li><a href="/resources/complete-oil-production-line-guide" class="text-amber-600 hover:text-amber-700 underline">Complete Oil Production Line Guide</a></li>
+            <li><a href="/resources/oil-press-electrical-requirements-guide" class="text-amber-600 hover:text-amber-700 underline">Electrical Requirements Guide</a></li>
+            <li><a href="/resources/hydraulic-oil-press-maintenance-guide" class="text-amber-600 hover:text-amber-700 underline">Maintenance Guide</a></li>
+            <li><a href="/roi-calculator" class="text-amber-600 hover:text-amber-700 underline">ROI Calculator</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 

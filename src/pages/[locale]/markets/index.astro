@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 
@@ -184,9 +184,40 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 2, name: t.nav.allMarkets || 'Markets', item: `https://www.hydoilpress.com/${currentLocale}/markets` },
   ],
 };
+
+const supportContent = {
+  sectionTitle: { en: 'How We Support Buyers in Every Region', fr: 'Comment nous accompagnons les acheteurs dans chaque région', ar: 'كيف ندعم المشترين في كل منطقة', id: 'Bagaimana Kami Mendukung Pembeli di Setiap Wilayah' },
+  sectionSub: { en: 'Exporting an oil press is more than shipping a machine. Here is what we arrange for every export order, wherever your mill is located.', fr: 'Exporter une presse à huile, c\'est plus qu\'expédier une machine. Voici ce que nous organisons pour chaque commande export, où que se trouve votre huilerie.', ar: 'تصدير معصرة الزيت ليس مجرد شحن آلة. إليك ما نرتّبه لكل طلبية تصدير، أينما كان موقع معصرتك.', id: 'Mengekspor mesin press minyak lebih dari sekadar mengirim mesin. Berikut yang kami siapkan untuk setiap pesanan ekspor, di mana pun lokasi pabrik Anda.' },
+  s1Title: { en: 'Sea freight from Qingdao', fr: 'Fret maritime depuis Qingdao', ar: 'شحن بحري من تشينغداو', id: 'Pengiriman laut dari Qingdao' },
+  s1Body: { en: 'Machines leave our Qingdao factory in export-grade packaging. Quotations are FOB Qingdao; CIF to your nearest port — such as Apapa or Tin Can, Mombasa, Jebel Ali, or Mumbai — can be calculated on request, and we advise on the best port for landlocked countries.', fr: 'Les machines quittent notre usine de Qingdao dans un emballage qualité export. Devis en FOB Qingdao ; le CIF vers votre port le plus proche — Apapa ou Tin Can, Mombasa, Jebel Ali ou Mumbai — est calculable sur demande, et nous conseillons le meilleur port pour les pays enclavés.', ar: 'تغادر الآلات مصنعنا في تشينغداو بتغليف مخصص للتصدير. العروض FOB تشينغداو؛ ويمكن حساب CIF إلى أقرب ميناء لديك — مثل أبابا أو تين كان أو مومباسا أو جبل علي أو مومباي — عند الطلب، وننصح بأفضل ميناء للدول غير الساحلية.', id: 'Mesin dikirim dari pabrik Qingdao dengan pengemasan standar ekspor. Penawaran FOB Qingdao; CIF ke pelabuhan terdekat — seperti Apapa/Tin Can, Mombasa, Jebel Ali, atau Mumbai — dapat dihitung sesuai permintaan, dan kami menyarankan pelabuhan terbaik untuk negara yang terkurung daratan.' },
+  s2Title: { en: 'Electrical system matched to your country', fr: 'Système électrique adapté à votre pays', ar: 'نظام كهربائي مطابق لبلدك', id: 'Sistem kelistrikan sesuai negara Anda' },
+  s2Body: { en: 'Motors and control panels are built to your local voltage and frequency (220V/50Hz single-phase or 380V three-phase, for example). Most models use an efficient 2.2 kW motor and can also run from a correctly sized generator, with the recommended kVA confirmed before order.', fr: 'Moteurs et armoires sont construits selon votre tension et fréquence locales (220V/50Hz monophasé ou 380V triphasé, par exemple). La plupart des modèles utilisent un moteur efficace de 2,2 kW et peuvent aussi fonctionner sur groupe électrogène correctement dimensionné, avec le kVA recommandé confirmé avant commande.', ar: 'تُصنع المحرارات ولوحات التحكم حسب الفولتية والتردد المحلي (220 فولت/50 هرتز أحادي الطور أو 380 فولت ثلاثي الطور). تعمل معظم الطرازات بمحرك 2.2 كيلوواط الموفر ويمكن تشغيلها بمولد كهربائي بسعة مناسبة، مع تأكيد القدرة الموصى بها بالكيلوفولت أمبير قبل الطلب.', id: 'Motor dan panel kontrol dibuat sesuai tegangan dan frekuensi lokal Anda (misalnya 220V/50Hz satu fase atau 380V tiga fase). Sebagian besar model memakai motor hemat 2,2 kW dan dapat dijalankan dengan genset berkapasitas sesuai, dengan rekomendasi kVA dikonfirmasi sebelum pesan.' },
+  s3Title: { en: 'Installation guidance, no technician needed', fr: 'Assistance à l\'installation, sans technicien sur place', ar: 'إرشاد التركيب دون الحاجة لفني', id: 'Panduan instalasi, tanpa teknisi lapangan' },
+  s3Body: { en: 'Every machine ships with an English operating manual. Our engineers provide remote installation and operation guidance by video call and WhatsApp before and after delivery. A standard hydraulic press needs only 1–2 workers and no special foundation training.', fr: 'Chaque machine est livrée avec un manuel en anglais. Nos ingénieurs assurent à distance l\'assistance à l\'installation et à l\'utilisation par vidéo et WhatsApp avant et après livraison. Une presse hydraulique standard ne nécessite que 1 à 2 ouvriers et aucune formation particulière.', ar: 'تأتي كل آلة مع دليل تشغيل باللغة الإنجليزية. يقدم مهندسونا إرشاد التركيب والتشغيل عن بُعد عبر الفيديو وواتساب قبل وبعد التسليم. لا تحتاج المكبسة الهيدروليكية القياسية سوى عامل أو عاملين وبدون تدريب خاص.', id: 'Setiap mesin dikirim dengan buku manual bahasa Inggris. Teknisi kami memberikan panduan instalasi dan pengoperasian jarak jauh melalui panggilan video dan WhatsApp sebelum dan sesudah pengiriman. Mesin press hidrolik standar hanya butuh 1–2 pekerja tanpa pelatihan khusus.' },
+  s4Title: { en: 'Warranty and fast spare parts', fr: 'Garantie et pièces détachées rapides', ar: 'ضمان وقطع غيار سريعة', id: 'Garansi dan suku cadang cepat' },
+  s4Body: { en: 'All machines carry a 1-year warranty, and wear parts plus common spare components are kept ready for fast international dispatch — so peak-season production is not interrupted waiting for parts.', fr: 'Toutes les machines bénéficient d\'une garantie 1 an, et les pièces d\'usure ainsi que les composants de rechange courants sont prêts pour une expédition internationale rapide — la production de haute saison n\'est jamais interrompue en attente de pièces.', ar: 'جميع الآلات مشمولة بضمان سنة واحدة، والقطع الاستهلاكية وقطع الغيار الشائعة جاهزة للشحن الدولي السريع — حتى لا يتوقف إنتاج الموسم الذروة بانتظار القطع.', id: 'Semua mesin bergaransi 1 tahun, dan suku cadang aus serta komponen umum siap dikirim internasional dengan cepat — sehingga produksi musim puncak tidak terhenti menunggu suku cadang.' },
+  faqTitle: { en: 'International Orders — Frequently Asked Questions', fr: 'Commandes internationales — questions fréquentes', ar: 'الطلبات الدولية — أسئلة شائعة', id: 'Pesanan internasional — pertanyaan umum' },
+  faqs: [
+    { q: { en: 'Do you ship oil press machines to my country?', fr: 'Livrez-vous des presses à huile dans mon pays ?', ar: 'هل تشحنون آلات عصر الزيت إلى بلدي؟', id: 'Apakah Anda mengirim mesin press minyak ke negara saya?' }, a: { en: 'Yes. We export worldwide by sea from Qingdao, China. Quotations are normally FOB Qingdao; tell us your destination port (such as Apapa or Tin Can, Mombasa, Jebel Ali, or Mumbai) and we can also calculate CIF.', fr: 'Oui. Nous exportons dans le monde entier par voie maritime depuis Qingdao, Chine. Les devis sont normalement en FOB Qingdao ; indiquez-nous votre port de destination (Apapa ou Tin Can, Mombasa, Jebel Ali ou Mumbai) et nous pouvons aussi calculer le CIF.', ar: 'نعم. نصدّر إلى جميع أنحاء العالم بحرًا من تشينغداو، الصين. العروض عادةً FOB تشينغداو؛ أخبرنا بميناء الوصول (مثل أبابا أو تين كان أو مومباسا أو جبل علي أو مومباي) ويمكننا حساب CIF أيضًا.', id: 'Ya. Kami mengekspor ke seluruh dunia lewat jalur laut dari Qingdao, Tiongkok. Penawaran biasanya FOB Qingdao; beri tahu pelabuhan tujuan Anda (seperti Apapa/Tin Can, Mombasa, Jebel Ali, atau Mumbai) dan kami bisa menghitung CIF juga.' } },
+    { q: { en: 'Can the machine run on our local electrical power?', fr: 'La machine peut-elle fonctionner avec notre électricité locale ?', ar: 'هل يمكن تشغيل الآلة بكهربائنا المحلية؟', id: 'Bisakah mesin berjalan dengan listrik lokal kami?' }, a: { en: 'Yes. The electrical system and motor are built to your local voltage and frequency, for example 220V/50Hz single-phase or 380V three-phase. Areas with unreliable grid power can use a generator; we confirm the recommended kVA for each model.', fr: 'Oui. Le système électrique et le moteur sont construits selon votre tension et fréquence locales, par exemple 220V/50Hz monophasé ou 380V triphasé. Les zones au réseau instable peuvent utiliser un groupe électrogène ; nous confirmons le kVA recommandé pour chaque modèle.', ar: 'نعم. يُصنع النظام الكهربائي والمحرك حسب الفولتية والتردد المحلي، مثل 220 فولت/50 هرتز أحادي الطور أو 380 فولت ثلاثي الطور. يمكن استخدام مولد كهربائي في المناطق غير المستقرة؛ ونؤكد القدرة بالكيلوفولت أمبير الموصى بها لكل طراز.', id: 'Ya. Sistem kelistrikan dan motor dibuat sesuai tegangan dan frekuensi lokal, misalnya 220V/50Hz satu fase atau 380V tiga fase. Area dengan listrik tidak stabil bisa memakai genset; kami konfirmasikan kVA yang disarankan untuk tiap model.' } },
+    { q: { en: 'Which machine model fits the oil seeds in my country?', fr: 'Quel modèle convient aux graines oléagineuses de mon pays ?', ar: 'أي طراز يناسب البذور الزيتية في بلدي؟', id: 'Model mana yang cocok untuk biji minyak di negara saya?' }, a: { en: 'Oil seeds differ by region — palm fruit and groundnut in West Africa, sesame in the Sahel and Middle East, and coconut in Southeast Asia. Open your country page above, or tell us your raw material and planned daily output, and we will recommend a configuration.', fr: 'Les graines varient selon les régions — fruit de palme et arachide en Afrique de l\'Ouest, sésame au Sahel et au Moyen-Orient, coco en Asie du Sud-Est. Ouvrez votre page pays ci-dessus, ou indiquez-nous votre matière et la production quotidienne prévue, et nous recommanderons une configuration.', ar: 'تختلف البذور حسب المنطقة — ثمار النخيل والفول السوداني في غرب أفريقيا، والسمسم في الساحل والشرق الأوسط، وجوز الهند في جنوب شرق آسيا. افتح صفحة بلدك أعلاه، أو أخبرنا بالمادة الخام والإنتاج اليومي المخطط، وسنوصي بالتجهيز المناسب.', id: 'Biji berbeda menurut wilayah — buah sawit dan kacang tanah di Afrika Barat, wijen di Sahel dan Timur Tengah, kelapa di Asia Tenggara. Buka halaman negara Anda di atas, atau beri tahu bahan baku dan rencana produksi harian, dan kami akan merekomendasikan konfigurasi.' } },
+    { q: { en: 'What after-sales support is included?', fr: 'Quel support après-vente est inclus ?', ar: 'ما دعم ما بعد البيع المتضمن؟', id: 'Dukungan purna jual apa yang termasuk?' }, a: { en: 'Every export order includes an English operating manual, remote installation and operation guidance by video and WhatsApp, a 1-year warranty, and spare parts service with fast dispatch.', fr: 'Chaque commande export inclut un manuel en anglais, une assistance à distance à l\'installation et à l\'utilisation par vidéo et WhatsApp, une garantie 1 an et un service de pièces détachées en expédition rapide.', ar: 'تتضمن كل طلبية تصدير دليل تشغيل باللغة الإنجليزية، وإرشاد التركيب والتشغيل عن بُعد عبر الفيديو وواتساب، وضمان سنة واحدة، وخدمة قطع غيار بشحن سريع.', id: 'Setiap pesanan ekspor mencakup manual bahasa Inggris, panduan instalasi dan pengoperasian jarak jauh via video dan WhatsApp, garansi 1 tahun, serta layanan suku cadang dengan pengiriman cepat.' } },
+    { q: { en: 'Can I inspect or see the machine before ordering?', fr: 'Puis-je inspecter ou voir la machine avant de commander ?', ar: 'هل يمكنني فحص الآلة أو رؤيتها قبل الطلب؟', id: 'Bisakah saya memeriksa atau melihat mesin sebelum memesan?' }, a: { en: 'You are welcome to visit our factory in Qingdao, China. If travel is not possible, we can arrange a live video call and share working videos of the exact model you are interested in.', fr: 'Vous êtes le bienvenu dans notre usine de Qingdao, Chine. Si le déplacement n\'est pas possible, nous pouvons organiser un appel vidéo en direct et partager des vidéos de fonctionnement du modèle exact qui vous intéresse.', ar: 'نرحب بزيارتك لمصنعنا في تشينغداو، الصين. وإذا تعذّر السفر، يمكننا ترتيب مكالمة فيديو مباشرة ومشاركة فيديوهات تشغيل الطراز الذي يهمك بالضبط.', id: 'Anda dipersilakan mengunjungi pabrik kami di Qingdao, Tiongkok. Jika perjalanan tidak memungkinkan, kami dapat mengatur panggilan video langsung dan membagikan video pengoperasian model yang Anda minati.' } },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: supportContent.faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q[currentLocale] || f.q.en,
+    acceptedAnswer: { '@type': 'Answer', text: f.a[currentLocale] || f.a.en },
+  })),
+};
 ---
 
-<BaseLayout locale={currentLocale} title={currentLocale === 'fr' ? 'Marchés Mondiaux & Solutions Régionales de Presse à Huile | Haonuo' : currentLocale === 'ar' ? 'أسواق عالمية وحلول إقليمية لآلات الضغط الهيدروليكي | Haonuo' : 'Global Markets & Regional Oil Press Solutions | Haonuo'} description={currentLocale === 'fr' ? 'Les presses à huile hydrauliques Haonuo servent plus de 50 pays dans le monde. Découvrez les solutions régionales, les analyses de marché et les histoires de succès.' : currentLocale === 'ar' ? 'تخدم آلات الضغط الهيدروليكي لزيت Haonuo أكثر من 50 دولة في جميع أنحاء العالم. اكتشف الحلول الإقليمية والمناقشات السوقية وقصص النجاح.' : 'Haonuo hydraulic oil press machines serve 50+ countries worldwide. Explore regional solutions, market insights, and success stories.'} keywords={currentLocale === 'fr' ? ['press à huile mondial', '50 pays presse hydraulique', 'fabricant presse à huile international'] : currentLocale === 'ar' ? ['آلة ضغط زيت عالمي', '50 دولة ضغط هيدروليكي', 'مصنع ضغط زيت دولي'] : ['oil press machine global', 'hydraulic oil press 50 countries', 'oil press manufacturer worldwide']} jsonLd={breadcrumbLd}>
+<BaseLayout locale={currentLocale} title={currentLocale === 'fr' ? 'Marchés Mondiaux & Solutions Régionales de Presse à Huile | Haonuo' : currentLocale === 'ar' ? 'أسواق عالمية وحلول إقليمية لآلات الضغط الهيدروليكي | Haonuo' : 'Global Markets & Regional Oil Press Solutions | Haonuo'} description={currentLocale === 'fr' ? 'Les presses à huile hydrauliques Haonuo servent plus de 50 pays dans le monde. Découvrez les solutions régionales, les analyses de marché et les histoires de succès.' : currentLocale === 'ar' ? 'تخدم آلات الضغط الهيدروليكي لزيت Haonuo أكثر من 50 دولة في جميع أنحاء العالم. اكتشف الحلول الإقليمية والمناقشات السوقية وقصص النجاح.' : 'Haonuo hydraulic oil press machines serve 50+ countries worldwide. Explore regional solutions, market insights, and success stories.'} keywords={currentLocale === 'fr' ? ['press à huile mondial', '50 pays presse hydraulique', 'fabricant presse à huile international'] : currentLocale === 'ar' ? ['آلة ضغط زيت عالمي', '50 دولة ضغط هيدروليكي', 'مصنع ضغط زيت دولي'] : ['oil press machine global', 'hydraulic oil press 50 countries', 'oil press manufacturer worldwide']} jsonLd={{ '@context': 'https://schema.org', '@graph': [breadcrumbLd, faqLd] }}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -382,6 +413,51 @@ const breadcrumbLd = {
             <p class="text-sm text-steel-600">
               {currentLocale === 'fr' ? 'Support WhatsApp disponible à toute heure, partout.' : currentLocale === 'ar' ? 'دعم WhatsApp متوفر على مدار الساعة، في أي مكان.' : 'WhatsApp support available anytime, anywhere.'}
             </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regional Buyer Support -->
+      <div class="mb-16">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-3xl text-charcoal-900 mb-3">{supportContent.sectionTitle[currentLocale]}</h2>
+          <p class="text-steel-500 max-w-2xl mx-auto">{supportContent.sectionSub[currentLocale]}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[supportContent.s1Title, supportContent.s2Title, supportContent.s3Title, supportContent.s4Title].map((title, idx) => {
+            const bodies = [supportContent.s1Body, supportContent.s2Body, supportContent.s3Body, supportContent.s4Body];
+            const icons = [
+              '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+              '<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>',
+              '<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+              '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+            ];
+            return (
+              <div class="bg-white rounded-xl border border-steel-100 p-6">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons[idx]} />
+                  </div>
+                  <h3 class="font-display text-lg text-charcoal-900">{title[currentLocale]}</h3>
+                </div>
+                <p class="text-sm text-steel-600 leading-relaxed">{bodies[idx][currentLocale]}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <!-- International Orders FAQ -->
+      <div class="mb-16">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-display text-3xl text-charcoal-900 mb-8 text-center">{supportContent.faqTitle[currentLocale]}</h2>
+          <div class="space-y-4">
+            {supportContent.faqs.map((f, i) => (
+              <details class="group bg-white rounded-xl border border-steel-100 p-5" open={i === 0}>
+                <summary class="font-semibold text-charcoal-900 cursor-pointer list-none flex items-center justify-between gap-4">{f.q[currentLocale]}<span class="text-amber-600 group-open:rotate-45 transition-transform text-xl leading-none flex-shrink-0">+</span></summary>
+                <p class="text-sm text-steel-600 leading-relaxed mt-3">{f.a[currentLocale]}</p>
+              </details>
+            ))}
           </div>
         </div>
       </div>
