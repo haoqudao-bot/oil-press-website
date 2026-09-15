@@ -18,7 +18,7 @@
  *   L. 翻译长度异常（过短/过长/重复翻译）
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
-import { join, sep } from 'node:path';
+import { join, sep, relative } from 'node:path';
 
 const ROOT = process.cwd();
 const DIST = join(ROOT, 'dist');
@@ -344,33 +344,19 @@ if (!existsSync(DIST) || !existsSync(join(DIST, '404.html'))) {
   } else { pass('F', 'dist/ 无异常文件类型 ✓'); }
 
   // =========================
-  //  G. 小语种页内部链接语言前缀一致性（/fr/ 页的 href 不能跳到 /en/ 或不带前缀的英文页裸路径）
+  //  G. 小语种页内部链接语言前缀一致性（全量扫描：/fr/ 页的 href 不得指向已有小语种版的英文裸路径）
   // =========================
-  console.log('\n━━━ G. 小语种页内部链接语言前缀一致性（/fr/页内链接必须是 /fr/...，不得指向 /en/ 或裸路径）━━━');
+  console.log('\n━━━ G. 小语种页内部链接语言前缀一致性（全量扫描，不得错连英文页裸路径）━━━');
   // 捕获整个 <a ...> 标签属性串以便识别 data-static-en-only 白名单
   const HREF_RE_G = /<a\s+([^>]*?)href=["']([^"']+)["']([^>]*)>/gi;
-  const EN_ONLY_WHITELIST_PATHS = new Set([
-    '/roi-calculator',   // ROI 计算器目前仅英文版（Navbar.astro englishOnlyPages 白名单，裸链接直接进英文站，合理）
-  ]);
-  const STATIC_LOCALE_EQUIV = new Set([
-    // 这些页在小语种静态目录（fr/ar/id/*）已有独立文件；裸链接 Astro 会做 308 重定向，用户体验 OK
-    '/cookie-policy', '/privacy-policy', '/terms-of-service', '/faq', '/catalog',
-  ]);
   let gBadTotal = 0;
+  const gChecked = {};
   for (const l of KEY_LANGS) {
-    const pages = [
-      join(DIST, l, 'index.html'),
-      join(DIST, l, 'about', 'index.html'),
-      join(DIST, l, 'contact', 'index.html'),
-      join(DIST, l, 'products', 'index.html'),
-      join(DIST, l, 'faq', 'index.html'),
-      join(DIST, l, 'catalog', 'index.html'),
-      ...byLang[l].slice(0, 15),
-    ];
-    const uniq = [...new Set(pages)].filter(p => existsSync(p));
+    gChecked[l] = 0;
     const failures = new Map();
-    for (const p of uniq) {
+    for (const p of byLang[l]) {
       const html = readFileSync(p, 'utf8');
+      gChecked[l]++;
       const hrefs = [];
       let m;
       HREF_RE_G.lastIndex = 0;
@@ -379,6 +365,7 @@ if (!existsSync(DIST) || !existsSync(join(DIST, '404.html'))) {
         if (attrs.includes('data-static-en-only')) continue;
         hrefs.push(m[2]);
       }
+      const relPage = relative(join(DIST, l), p).split(sep).join('/');
       for (const h of hrefs) {
         if (!h.startsWith('/')) continue;
         if (/^\/(images|videos|favicon|apple-touch-icon|icons?|assets|_astro)\//.test(h)) continue;
@@ -386,20 +373,25 @@ if (!existsSync(DIST) || !existsSync(join(DIST, '404.html'))) {
         const clean = h.split('?')[0].split('#')[0];
         if (clean.startsWith('/' + l + '/')) continue;
         if (clean === '/' || clean === '/' + l) continue;
-        if (EN_ONLY_WHITELIST_PATHS.has(clean)) continue;
-        if (STATIC_LOCALE_EQUIV.has(clean)) continue;
         if (/^\/(en|fr|ar|id)\//.test(clean)) {
-          const k = `错连到他语前缀: ${h}`; failures.set(k, (failures.get(k) || 0) + 1); continue;
+          const k = `错连到他语前缀: ${h}  (${relPage})`; failures.set(k, (failures.get(k) || 0) + 1); continue;
         }
-        const k = `缺失 locale 前缀: ${h}`; failures.set(k, (failures.get(k) || 0) + 1);
+        // 裸英文路径：仅当该页的小语种版本真实存在时才判错（纯英文版页面允许保留裸链）
+        const targetRel = clean.replace(/^\//, '');
+        const localTarget = join(DIST, l, targetRel);
+        const hasLocal = existsSync(join(localTarget, 'index.html')) || existsSync(localTarget + '.html') || existsSync(localTarget);
+        if (hasLocal) {
+          const k = `缺 locale 前缀（${l} 版已存在）: ${h}  (${relPage})`;
+          failures.set(k, (failures.get(k) || 0) + 1);
+        }
       }
     }
     if (failures.size) {
-      warn('G', `${l} 链接前缀问题 ${failures.size} 处（抽检 ${uniq.length} 页）`);
+      warn('G', `${l} 链接前缀问题 ${failures.size} 处（全量扫描 ${gChecked[l]} 页）`);
       let i = 0;
-      for (const [k, c] of failures) { if (i++ < 10) console.log(`      · (×${c}) ${k}`); }
+      for (const [k, c] of failures) { if (i++ < 15) console.log(`      · (×${c}) ${k}`); }
       gBadTotal += failures.size;
-    } else pass('G', `${l} 抽检 ${uniq.length} 页，内部链接前缀全部为 /${l}/  ✓`);
+    } else pass('G', `${l} 全量 ${gChecked[l]} 页，内部链接前缀全部正确 ✓`);
   }
 
   // =========================

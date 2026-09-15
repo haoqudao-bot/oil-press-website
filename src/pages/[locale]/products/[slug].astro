@@ -47,17 +47,27 @@ const faqItems = currentLocale === 'id' && product.data.faqId?.length > 0
   ? product.data.faqFr
   : product.data.faq;
 
+// Prefix internal links inside translated markdown bodies with the current locale,
+// so links authored as /products/... in fr/ar/id body data stay on the localized site.
+function localizeBodyLinks(html: string): string {
+  return html.replace(/href="(\/[^"]*)"/g, (match, href: string) => {
+    if (href === '/' || href.startsWith(`/${currentLocale}/`)) return match;
+    if (/^\/(?:_astro|images|videos|fonts|favicon|robots|sitemap|manifest)/.test(href)) return match;
+    return `href="/${currentLocale}${href}"`;
+  });
+}
+
 // Arabic body content
 const arBodyHtml = currentLocale === 'ar' && arProductBodies[slug as string]
-  ? marked(arProductBodies[slug as string])
+  ? localizeBodyLinks(marked(arProductBodies[slug as string]) as string)
   : null;
 // French body content
 const frBodyHtml = currentLocale === 'fr' && frProductBodies[slug as string]
-  ? marked(frProductBodies[slug as string])
+  ? localizeBodyLinks(marked(frProductBodies[slug as string]) as string)
   : null;
 // Indonesian body content
 const idBodyHtml = currentLocale === 'id' && idProductBodies[slug as string]
-  ? marked(idProductBodies[slug as string])
+  ? localizeBodyLinks(marked(idProductBodies[slug as string]) as string)
   : null;
 
 const allProducts = await getCollection('products');

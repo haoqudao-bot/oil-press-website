@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { getTranslations } from '../i18n';
 
 const { locale = 'en' } = Astro.props;
@@ -12,10 +12,7 @@ const locales = ['en', 'fr', 'ar', 'id'] as const;
 
 // Pages that only exist in English (no [locale] version)
 // Value: '' = stay on English page; '/path' = redirect to locale version of that path
-const englishOnlyPages: Record<string, string> = {
-  '/solutions/all-oil-types': '/solutions',
-  '/solutions/by-scale': '/solutions',
-};
+const englishOnlyPages: Record<string, string> = {};
 
 function localePath(path: string): string {
   if (locale === 'en') return path;
