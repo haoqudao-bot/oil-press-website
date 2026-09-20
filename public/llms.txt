@@ -11,7 +11,8 @@ Site languages: English (/), French (/fr), Arabic (/ar), Indonesian (/id)
 ## Products
 
 - [Hydraulic Oil Press Machine](https://www.hydoilpress.com/products/hydraulic-oil-press): Flagship hydraulic oil press, 100 kg per batch, supports hot press and cold press, 1-year warranty
-- [Cold Press Oil Machine](https://www.hydoilpress.com/cold-press-oil-machine): Cold pressing below 60°C to help preserve nutrients and flavor for premium oils
+- [Cold Press Hydraulic Oil Press](https://www.hydoilpress.com/products/cold-press-hydraulic-oil-press): Cold pressing below 60°C to help preserve nutrients and flavor for premium oils
+- [Large-Barrel Hydraulic Oil Press](https://www.hydoilpress.com/products/large-barrel-hydraulic-oil-press): Large-capacity barrel (630mm diameter) designed for palm fruit pulp and high-volume commercial pressing
 - [Seed Processing Equipment](https://www.hydoilpress.com/products/seed-processing-equipment): Cleaning and crushing equipment for oil seeds
 - [Roasting & Steaming Equipment](https://www.hydoilpress.com/products/roasting-steaming-equipment): Heat treatment equipment before pressing
 - [Filtration & Refining Equipment](https://www.hydoilpress.com/products/filtration-refining-equipment): Crude oil filtration and refining
@@ -20,6 +21,7 @@ Site languages: English (/), French (/fr), Arabic (/ar), Indonesian (/id)
 
 - [About Us](https://www.hydoilpress.com/about): Company profile, factory details, manufacturing capability
 - [Solutions by Oil Seed](https://www.hydoilpress.com/solutions): Pressing solutions for 50+ oil seeds
+- [Palm Oil Pressing Solution](https://www.hydoilpress.com/solutions/palm-oil-pressing): Complete palm oil pressing solution with digester integration, low-temperature pressing for carotene preservation
 - [ROI Calculator](https://www.hydoilpress.com/roi-calculator): Interactive tool to estimate payback period of a hydraulic oil press
 - [Resources & Guides](https://www.hydoilpress.com/resources): Buying guides, maintenance guides, cold press vs hot press comparison
 - [FAQ](https://www.hydoilpress.com/faq): Common questions about operation, maintenance and shipping
@@ -33,3 +35,4 @@ Site languages: English (/), French (/fr), Arabic (/ar), Indonesian (/id)
 - Pressing time: 40-90 minutes per batch, varies by seed type
 - Supported seeds: 50+ oil seeds including coconut, sesame, groundnut, mustard, tea seed, walnut
 - Shipping: Worldwide export, experienced with ports in 50+ countries
+- Palm oil: Specialized large-barrel solution for palm fruit pulp, low-temperature pressing (30–40°C) to preserve carotene, serving clients in Nigeria and across Africa
