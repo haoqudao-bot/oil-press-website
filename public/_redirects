@@ -1,10 +1,12 @@
 # Cloudflare Pages Redirect Rules
 # Format: source destination status_code
 
-# No redirects needed - English pages are at root level (prefixDefaultLocale: false)
-# Example redirects (uncomment if needed):
-# /old-page /new-page 301
-# /blog/* /resources/:splat 301
+# Cold press old URL → new product page
+/cold-press-oil-machine /products/cold-press-hydraulic-oil-press 301
+/cold-press-oil-machine/ /products/cold-press-hydraulic-oil-press 301
+/fr/cold-press-oil-machine /fr/products/cold-press-hydraulic-oil-press 301
+/ar/cold-press-oil-machine /ar/products/cold-press-hydraulic-oil-press 301
+/id/cold-press-oil-machine /id/products/cold-press-hydraulic-oil-press 301
 
 # Sitemap alias: SEO tools commonly probe /sitemap.xml; actual file is /sitemap-index.xml
 /sitemap.xml /sitemap-index.xml 301

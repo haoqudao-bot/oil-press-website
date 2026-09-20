@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# AI search engines — explicitly allow for GEO visibility
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://www.hydoilpress.com/sitemap-index.xml
