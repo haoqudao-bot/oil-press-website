@@ -100,7 +100,7 @@ export const frMarketData: Record<string, MarketData> = {
     seeds: [
       { emoji: '🟡', name: 'Moutarde', description: 'Le kachi ghani (pressage à froid de moutarde) est une tradition culinaire indienne. Environ 33-40% de teneur en huile. Saveur piquante distinctive pour la cuisine nord-indienne.', yield: 'Rendement : 30-38%' },
       { emoji: '🫘', name: 'Sésame', description: 'L\'huile de sésame est prisée dans le sud de l\'Inde et à l\'exportation. Pressée à froid, elle conserve sa saveur de noisette et ses bienfaits pour la santé.', yield: 'Rendement : 42-50%' },
-      { emoji: '🥜', name: 'Arachide', description: 'L\'huile d\'arachide est un aliment de base dans les foyers indiens. 40-50% de teneur en huile. Point de fumée élevé idéal pour la friture.', yield: 'Rendement : 38-45%' },
+      { emoji: '🥜', name: 'Arachide', description: 'L\'huile d\'arachide est un aliment de base dans les foyers indiens. 40-50% de teneur en huile. Point de fumée élevé adapté pour la friture.', yield: 'Rendement : 38-45%' },
       { emoji: '🥥', name: 'Coco', description: 'L\'huile de coco vierge est en forte demande pour la cuisine, les cosmétiques et l\'Ayurveda. Les pressoirs hydrauliques à froid préservent la qualité VCO.', yield: 'Rendement : 55-65%' },
     ],
     productsTitle: 'Machines Recommandées pour l\'Inde',
@@ -276,7 +276,7 @@ export const frMarketData: Record<string, MarketData> = {
     faqTitle: 'Foire aux questions',
     faqs: [
       { question: 'Quel est le prix d\'une presse à huile en Égypte ?', answer: 'Contactez-nous pour un devis personnalisé. Nous proposons des prix compétitifs direct usine et pouvons établir un devis en livres égyptiennes (EGP).' },
-      { question: 'La machine peut-elle presser le sésame pour le tahini et l\'huile ?', answer: 'Oui. Nos presses hydrauliques sont parfaitement adaptées pour le pressage du sésame. Le pressage à froid préserve la saveur naturelle du sésame, idéale pour le tahini et l\'huile de sésame premium.' },
+      { question: 'La machine peut-elle presser le sésame pour le tahini et l\'huile ?', answer: 'Oui. Nos presses hydrauliques sont parfaitement adaptées pour le pressage du sésame. Le pressage à froid préserve la saveur naturelle du sésame, adaptée pour le tahini et l\'huile de sésame premium.' },
       { question: 'Quelle tension est utilisée en Égypte ?', answer: 'L\'Égypte utilise 220V/50Hz. Toutes nos machines sont compatibles avec cette alimentation et peuvent être personnalisées si nécessaire sans frais supplémentaires.' },
       { question: 'Combien de temps prend l\'expédition vers Alexandrie ?', answer: 'Le fret maritime de Qingdao, Chine vers Alexandrie prend 20-24 jours. Nous gérons toute la documentation d\'exportation.' },
       { question: 'Quelles sont les réglementations d\'importation en Égypte ?', answer: 'L\'enregistrement GOEIC est requis pour l\'importation de machines en Égypte. Nous fournissons toute la documentation nécessaire, y compris le certificat d\'origine et la facture commerciale, pour faciliter l\'enregistrement GOEIC et le dédouanement.' },

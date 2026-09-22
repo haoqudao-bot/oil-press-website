@@ -19,8 +19,8 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/filtration-guide-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Production Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
-  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -172,7 +172,7 @@ const storageTips = [
                     {method.cons.map((con, idx) => <p key={idx} class="text-xs text-steel-700">- {con}</p>)}
                   </div>
                   <div class="bg-blue-50 p-3 rounded-lg">
-                    <p class="text-xs text-blue-600 mb-1">Idéal pour</p>
+                    <p class="text-xs text-blue-600 mb-1">Adapté pour</p>
                     <p class="text-xs text-steel-700">{method.bestFor}</p>
                   </div>
                 </div>

@@ -5,10 +5,10 @@ title:
   ar: معصرة زيت هيدروليكية قياسية
   id: Mesin Press Minyak Hidrolik Standar
 description:
-  en: "325-ton hydraulic oil press with 60 Mpa system pressure. Ideal for sesame, peanut, and rapeseed cold pressing with 100kg capacity per batch."
+  en: "325-ton hydraulic oil press with 60 Mpa system pressure. Well-suited for sesame, peanut, and rapeseed cold pressing with 100kg capacity per batch."
   fr: "Presse à huile hydraulique 325 tonnes, 60 Mpa. Pressage à froid sésame, arachide, colza, 100kg par lot."
-  ar: "معصرة زيت هيدروليكية 325 طن بضغط نظام 60 ميجاباسكال. مثالية للعصر البارد للسمسم والفول السوداني واللفت بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik 325 ton dengan tekanan sistem 60 Mpa. Ideal untuk press dingin wijen, kacang tanah, dan rapeseed dengan kapasitas 100kg per batch."
+  ar: "معصرة زيت هيدروليكية 325 طن بضغط نظام 60 ميجاباسكال. مناسبة للعصر البارد للسمسم والفول السوداني واللفت بقدرة 100 كجم لكل دفعة."
+  id: "Mesin press minyak hidrolik 325 ton dengan tekanan sistem 60 Mpa. Cocok untuk press dingin wijen, kacang tanah, dan rapeseed dengan kapasitas 100kg per batch."
 category: hydraulic-oil-press
 model: HN325
 modelId: ''
@@ -58,7 +58,7 @@ faq:
   - question: How long does one pressing cycle take for peanuts?
     answer: For hot pressing (with pre-roasting), one complete cycle takes 30-40 minutes per batch. For cold pressing, the cycle takes approximately 2 hours to preserve oil quality. The microcomputer control system automates the entire process from feeding to cake discharge. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature.
   - question: What is the recommended raw material moisture content for pressing?
-    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the ideal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
+    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What pre-processing equipment is needed before the hydraulic press?
     answer: Complete oil production typically requires several pre-processing stages Seed cleaning and sorting to remove impurities and damaged seeds; 2) Dehulling for high-shell-content materials like peanuts (shell removal rate at least 95 percent); 3) Moisture conditioning to reach optimal levels; 4) Roasting (for hot pressing) at 160-180 degrees Celsius to develop flavor and color; 5) Seed crushing for improved oil flow. The press itself is the core, but pre-processing directly impacts oil yield and quality.
   - question: What is the difference between single and double barrel configurations?
@@ -125,7 +125,7 @@ faqFr:
   - question: Combien de temps dure un cycle de pressage pour les arachides ?
     answer: Pour le pressage à chaud (avec torréfaction préalable), un cycle complet dure 30 à 40 minutes par lot. Pour le pressage à froid, le cycle dure environ 2 heures pour préserver la qualité de l'huile. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau. Le temps de cycle réel dépend de facteurs tels que la teneur en humidité de la graine, le degré de sécheresse du gâteau souhaité et la température de pressage.
   - question: Quelle teneur en humidité recommandée pour la matière première ?
-    answer: La teneur en humidité optimale varie selon le type de matière et la méthode de pressage. Pour le pressage à chaud, nous recommandons 5-8% d'humidité avant la torréfaction, la matière torréfiée atteignant 3-5% d'humidité. Pour le pressage à froid, la plage idéale est de 7-9% d'humidité. Un contrôle de l'humidité est crucial — trop haut cause une émulsification de l'huile et une perte de rendement, tandis que trop bas augmente la friction et réduit le débit.
+    answer: La teneur en humidité optimale varie selon le type de matière et la méthode de pressage. Pour le pressage à chaud, nous recommandons 5-8% d'humidité avant la torréfaction, la matière torréfiée atteignant 3-5% d'humidité. Pour le pressage à froid, la plage optimale est de 7-9% d'humidité. Un contrôle de l'humidité est crucial — trop haut cause une émulsification de l'huile et une perte de rendement, tandis que trop bas augmente la friction et réduit le débit.
   - question: Quels équipements de prétraitement sont nécessaires avant la presse hydraulique ?
     answer: La production complète d'huile nécessite généralement plusieurs étapes de prétraitement  Nettoyage et tri des graines pour éliminer les impuretés et les graines endommagées ; 2) Écorticage pour les matières à haute teneur en coquille comme les arachides (taux d'élimination de la coquille at least 95 percent) ; 3) Conditionnement d'humidité pour atteindre les niveaux optimaux ; 4) Torréfaction (pour le pressage à chaud) à 160-180 degrees Celsius pour développer saveur et couleur ; 5) Concassage des graines pour améliorer le flux d'huile. La presse elle-même est le cœur, mais le prétraitement influe directement sur le rendement et la qualité de l'huile.
   - question: Quelle est la différence entre les configurations à un et à deux fûts ?
@@ -224,7 +224,7 @@ faqAr:
   - question: "كم يستغرق دورة العصر الواحدة للفول السوداني؟"
     answer: "بالنسبة للعصر الساخن (مع تقليب مسبق)، تستغرق الدورة الكاملة 30-40 دقيقة لكل دفعة. بالنسبة للعصر البارد، تستغرق الدورة حوالي 2 ساعات للحفاظ على جودة الزيت. يقوم نظام التحكم بالحاسوب المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكعكة. يعتمد وقت الدورة الفعلي على عوامل مثل محتوى الرطوبة في البذرة، ودرجة جفاف الكعكة المطلوبة، ودرجة حرارة العصر."
   - question: "ما هي نسبة الرطوبة الموصى بها للمادة الخام؟"
-    answer: "تختلف نسبة الرطوبة المثلى حسب نوع المادة وطريقة العصر. بالنسبة للعصر الساخن، نوصي بـ 5-8% رطوبة قبل التقليب، مع أن المادة المقلوبة تصل إلى 3-5% رطوبة. بالنسبة للعصر البارد، النطاق المثالي هو 7-9% رطوبة. التحكم في الرطوبة أمر حيوي — فالرطوبة الزائدة تسبب استحلال الزيت وخسارة في العائد، بينما الرطوبة المنخفضة تزيد من الاحتكاك وتقلل من الإنتاج."
+    answer: "تختلف نسبة الرطوبة المثلى حسب نوع المادة وطريقة العصر. بالنسبة للعصر الساخن، نوصي بـ 5-8% رطوبة قبل التقليب، مع أن المادة المقلوبة تصل إلى 3-5% رطوبة. بالنسبة للعصر البارد، النطاق المناسب هو 7-9% رطوبة. التحكم في الرطوبة أمر حيوي — فالرطوبة الزائدة تسبب استحلال الزيت وخسارة في العائد، بينما الرطوبة المنخفضة تزيد من الاحتكاك وتقلل من الإنتاج."
   - question: "ما هي المعدات اللازمة للتجهيز السابق للمعصرة الهيدروليكية؟"
     answer: "تتطلب إنتاج الزيت الكامل عادةً عدة مراحل من التجهيز السابق تنظيف البذور وفرزها لإزالة الشوائب والبذور التالفة؛ 2) إزالة القشرة للمواد ذات المحتوى العالي من القشرة مثل الفول السوداني (معدل إزالة القشرة at least 95 percent)؛ 3) تنظيم الرطوبة ل erreichen المستويات المثلى؛ 4) التقليب (بالنسبة للعصر الساخن) عند 160-180 درجة مئوية لتطوير النكهة واللون؛ 5) سحق البذور لتحسين تدفق الزيت. المعصرة نفسها هي القلب، لكن التجهيز السابق يؤثر مباشرة على عائد الزيت ونجوعته."
   - question: "ما الفرق بين تكويني البرميل المفرد والمزدوج؟"
@@ -259,7 +259,7 @@ faqId:
   - question: "Berapa lama satu siklus press untuk kacang tanah?"
     answer: "Untuk press panas (dengan pengovenan sebelumnya), satu siklus penuh membutuhkan 30-40 menit per batch. Untuk press dingin, siklus membutuhkan sekitar 2 jam untuk menjaga kualitas minyak. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran kue. Waktu siklus aktual tergantung pada faktor-faktor seperti kadar air biji, tingkat kekeringan kue yang diinginkan, dan suhu press."
   - question: "Berapa kadar air bahan baku yang disarankan untuk press?"
-    answer: "Kadar air optimal bervariasi tergantung jenis bahan dan metode press. Untuk press panas, kami sarankan 5-8% kadar air sebelum pengovenan, dengan bahan yang dioven mencapai 3-5% kadar air. Untuk press dingin, rentang ideal adalah 7-9% kadar air. Pengendalian kadar air sangat penting — terlalu tinggi menyebabkan emulsifikasi minyak dan hilangnya hasil, sementara terlalu rendah meningkatkan gesekan dan mengurangi throughput."
+    answer: "Kadar air optimal bervariasi tergantung jenis bahan dan metode press. Untuk press panas, kami sarankan 5-8% kadar air sebelum pengovenan, dengan bahan yang dioven mencapai 3-5% kadar air. Untuk press dingin, rentang optimal adalah 7-9% kadar air. Pengendalian kadar air sangat penting — terlalu tinggi menyebabkan emulsifikasi minyak dan hilangnya hasil, sementara terlalu rendah meningkatkan gesekan dan mengurangi throughput."
   - question: "Peralatan pra-pemrosesan apa yang diperlukan sebelum mesin press hidrolik?"
     answer: "Produksi minyak lengkap biasanya memerlukan beberapa tahap pra-pemrosesan Pembersihan dan pengurutan biji untuk menghilangkan kotoran dan biji rusak; 2) Pembongkaran kulit untuk bahan dengan kadar kulit tinggi seperti kacang tanah (tingkat pengurangan kulit at least 95 percent); 3) Pengaturan kadar air untuk mencapai level optimal; 4) Pengovenan (untuk press panas) pada 160-180 degrees Celsius untuk mengembangkan rasa dan warna; 5) Pemecahan biji untuk meningkatkan aliran minyak. Mesin press itu sendiri adalah intinya, tetapi pra-pemrosesan secara langsung mempengaruhi hasil dan kualitas minyak."
   - question: "Apa perbedaan antara konfigurasi barrel tunggal dan ganda?"
@@ -365,7 +365,7 @@ We recommend consulting our engineers to design a balanced production line tailo
 
 ## Applications & Suitable Materials
 
-The HN325 is ideal for pressing a wide variety of conventional oil seeds:
+The HN325 is well-suited for pressing a wide variety of conventional oil seeds:
 
 - **Oil Seeds**: Tea seed, rapeseed, peanut, soybean, lacquer oil seed, flaxseed
 - **Other Materials**: Sunflower seed, cottonseed, and similar conventional pressing materials
@@ -382,7 +382,7 @@ The HN325 is ideal for pressing a wide variety of conventional oil seeds:
 
 ## Regional Advantages
 
-**Southeast Asia (Indonesia, Malaysia, Thailand, Vietnam):** The HN325 is ideal for small-to-medium coconut and peanut oil production. Compatible with 220V/50Hz power supply standard in the region. Stainless steel barrel option available for food-grade coconut oil production.
+**Southeast Asia (Indonesia, Malaysia, Thailand, Vietnam):** The HN325 is well-suited for small-to-medium coconut and peanut oil production. Compatible with 220V/50Hz power supply standard in the region. Stainless steel barrel option available for food-grade coconut oil production.
 
 **Africa (Nigeria, Kenya, Ghana, Tanzania):** Built for tough conditions — the HN325's simple mechanical design means fewer breakdowns and easier repairs. Runs on standard 220V single-phase power or portable generator (5kVA minimum). Spare parts available from stock with 3-day shipping to Lagos or Mombasa.
 

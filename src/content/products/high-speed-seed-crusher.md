@@ -41,7 +41,7 @@ applicableSeeds:
   - hard shell seeds
 faq:
   - question: What is the processing capacity of the High Speed Seed Crusher?
-    answer: The 220 Type High Speed Seed Crusher processes 750 kg/h (1500 jin/h) with its 11 KW motor running at 1460 RPM, making it ideal for commercial oil pressing operations.
+    answer: The 220 Type High Speed Seed Crusher processes 750 kg/h (1500 jin/h) with its 11 KW motor running at 1460 RPM, making it well-suited for commercial oil pressing operations.
   - question: What materials can this equipment process?
     answer: The 220 Type is specifically designed for hard-shell oil seeds including tea seeds (with or without shell), yellowhorn, avocado seeds, and other hard-shelled materials like walnuts and palm kernels. It can process these without prior de-shelling.
   - question: What power supply is required?
@@ -84,7 +84,7 @@ applicableSeedsFr:
   - graines à coque dure
 faqFr:
   - question: Quelle est la capacité de traitement du Broyeur de Graines à Grande Vitesse ?
-    answer: Le broyeur de graines à grande vitesse 220 Type traite 750 kg/h (1 500 jin/h) avec son moteur de 11 KW fonctionnant à 1 460 tr/min, ce qui le rend idéal pour les opérations commerciales de pressage d'huile.
+    answer: Le broyeur de graines à grande vitesse 220 Type traite 750 kg/h (1 500 jin/h) avec son moteur de 11 KW fonctionnant à 1 460 tr/min, ce qui le rend adapté pour les opérations commerciales de pressage d'huile.
   - question: Quels matériaux cet équipement peut-il traiter ?
     answer: Le 220 Type est spécialement conçu pour les graines oléagineuses à coque dure, notamment les graines de thé (avec ou sans coque), le xanthocère, les graines d'avocat et d'autres matériaux à coque dure comme les noix et les noyaux de palme. Il peut traiter ces matériaux sans décorticage préalable.
   - question: Quelle alimentation électrique est requise ?
@@ -170,7 +170,7 @@ faqAr:
     answer: "كسارة البذور عالية السرعة هي خطوة معالجة مسبقة أساسية قبل عصر الزيت الهيدروليكي. تُغذى البذور المسحوقة من هذه الآلة مباشرة في معصرة الزيت الهيدروليكية، مما يحسن كفاءة استخلاص الزيت بشكل كبير — خاصةً للمواد ذات القشرة الصلبة التي لا يمكن عصرها بكفاءة وهي كاملة."
 faqId:
   - question: Berapa kapasitas pengolahan Penghancur Biji Kecepatan Tinggi?
-    answer: Penghancur Biji Kecepatan Tinggi Type 220 memproses 750 kg/jam (1500 jin/jam) dengan motor 11 KW beroperasi pada 1460 RPM, menjadikannya ideal untuk operasi press minyak komersial.
+    answer: Penghancur Biji Kecepatan Tinggi Type 220 memproses 750 kg/jam (1500 jin/jam) dengan motor 11 KW beroperasi pada 1460 RPM, menjadikannya cocok untuk operasi press minyak komersial.
   - question: Bahan apa saja yang dapat diproses oleh peralatan ini?
     answer: Type 220 secara khusus dirancang untuk biji minyak bercangkang keras termasuk biji teh (dengan atau tanpa cangkang), yellowhorn, biji alpukat, dan bahan bercangkang keras lainnya seperti kenari dan inti sawit. Dapat memproses bahan-bahan ini tanpa pengupasan cangkang terlebih dahulu.
   - question: Pasokan daya apa yang dibutuhkan?
@@ -228,7 +228,7 @@ The 220 Type is specifically designed for hard-shell oil seeds that are difficul
 - **Avocado seeds** — dense, tough pit material
 - **Other hard-shell seeds and materials** — walnuts, palm kernels, and similar
 
-This crusher is the ideal preprocessing solution before hydraulic pressing of hard-shell seeds, significantly improving oil extraction efficiency.
+This crusher is a well-proven preprocessing solution before hydraulic pressing of hard-shell seeds, significantly improving oil extraction efficiency.
 
 ## Why Choose Haonuo
 

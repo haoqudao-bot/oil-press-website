@@ -19,8 +19,8 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/buying-guide-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Production Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
-  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  author: { '@type': 'Person', name: 'Eason', jobTitle: 'Senior Hydraulic Press Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -64,8 +64,8 @@ const buyingChecklist = [
 ];
 
 const modelSelection = [
-  { model: 'HN325', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '60 MPa', materials: 'Sésame, arachide, colza', highlight: 'Idéal pour les entreprises domestiques' },
-  { model: 'HN355', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '63 MPa', materials: 'La plupart des graines oléagineuses', highlight: 'Idéal pour les petits ateliers' },
+  { model: 'HN325', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '60 MPa', materials: 'Sésame, arachide, colza', highlight: 'Adapté pour les entreprises domestiques' },
+  { model: 'HN355', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '63 MPa', materials: 'La plupart des graines oléagineuses', highlight: 'Adapté pour les petits ateliers' },
   { model: 'HN426', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '70 MPa', materials: 'Noyer, amande, coco', highlight: 'Pressage à froid premium' },
   { model: 'HN480', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '72 MPa', materials: 'Diverses graines à haute teneur en huile', highlight: 'Production moyenne' },
   { model: 'HN500', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '75 MPa', materials: 'Échelle commerciale', highlight: 'Production commerciale' },
@@ -118,7 +118,7 @@ const redFlags = [
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <div class="text-left">
-            <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
+            <div class="font-semibold text-charcoal-900">Eason</div>
             <div class="text-sm text-steel-500">Ingénieur Senior en Presse à Huile · 15+ ans d'expérience</div>
           </div>
         </div>
@@ -180,7 +180,7 @@ const redFlags = [
                 <th class="px-4 py-3 text-left font-semibold">Capacité</th>
                 <th class="px-4 py-3 text-left font-semibold">Temps de Cycle</th>
                 <th class="px-4 py-3 text-left font-semibold">Pression</th>
-                <th class="px-4 py-3 text-left font-semibold">Idéal Pour</th>
+                <th class="px-4 py-3 text-left font-semibold">Adapté Pour</th>
               </tr>
             </thead>
             <tbody>

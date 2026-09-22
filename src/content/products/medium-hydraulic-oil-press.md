@@ -58,7 +58,7 @@ faq:
   - question: How long does one pressing cycle take?
     answer: Hot pressing (with pre-roasting) completes in 30-40 minutes per batch. Cold pressing takes approximately 2 hours to preserve oil quality at low temperatures. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for pressing?
-    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the ideal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
+    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What is the difference between single and double barrel configurations?
     answer: A single barrel press processes one batch at a time. A double barrel press has two barrels on sliding rails — while one barrel is pressing, you can load the other, nearly doubling your throughput. We recommend the double barrel for commercial and industrial operations.
   - question: What power supply does the HN400 require?
@@ -290,7 +290,7 @@ The HN400 cylinder paired with a 390 mm inner diameter barrel achieves a cake su
 
 ## Applications & Suitable Materials
 
-The HN400 is ideal for pressing a wide variety of conventional and semi-hard oil seeds:
+The HN400 is well-suited for pressing a wide variety of conventional and semi-hard oil seeds:
 
 - **Cold-Press Materials**: Tea seed, walnut kernel, flaxseed
 - **Conventional Materials**: Rapeseed, peanut, soybean

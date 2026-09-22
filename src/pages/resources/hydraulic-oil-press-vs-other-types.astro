@@ -19,8 +19,8 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/oil-press-comparison-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Production Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
-  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -48,7 +48,7 @@ const comparisonData = [
     name: 'Screw Oil Press',
     color: 'blue',
     pros: ['Continuous operation', 'High throughput', 'Lower price', 'Good for large scale', 'Can handle various materials'],
-    cons: ['Lower pressure (20-30MPa)', 'Heating often required', 'Higher noise', 'Wear parts need replacement', 'Not ideal for cold pressing', 'Quality can be lower'],
+    cons: ['Lower pressure (20-30MPa)', 'Heating often required', 'Higher noise', 'Wear parts need replacement', 'Not well-suited for cold pressing', 'Quality can be lower'],
     best: ['Large scale commercial production', 'Standard cooking oil', 'Animal feed production', 'Bulk oil processing']
   },
   {

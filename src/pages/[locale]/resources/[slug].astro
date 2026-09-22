@@ -24,6 +24,19 @@ const { resource } = Astro.props;
 const t = getTranslations(currentLocale);
 const { Content } = await resource.render();
 
+const easonSlugs = new Set([
+  'hydraulic-oil-press-buying-guide',
+  'how-to-maximize-oil-yield',
+  'peanut-oil-pressing-guide',
+  'hydraulic-oil-press-maintenance-guide',
+  'oil-press-electrical-requirements-guide',
+]);
+const isEasonArticle = easonSlugs.has(resource.slug);
+const authorName = isEasonArticle ? 'Eason' : 'Haonuo Engineering Team';
+const authorTitle = isEasonArticle
+  ? 'Senior Hydraulic Press Engineer · 15+ Years Experience'
+  : 'Haonuo Engineering Team';
+
 // Arabic body content
 const arBodyHtml = currentLocale === 'ar' && arResourceBodies[resource.slug]
   ? marked(arResourceBodies[resource.slug])
@@ -104,8 +117,8 @@ const seoKeywords = resource.data.seoKeywords;
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <div class="text-left">
-              <p class="text-base font-semibold text-charcoal-900">Haonuo Engineering Team</p>
-              <p class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</p>
+              <p class="text-base font-semibold text-charcoal-900">{authorName}</p>
+              <p class="text-sm text-steel-500">{authorTitle}</p>
             </div>
           </div>
           <div class="hidden md:block w-px h-10 bg-steel-200"></div>

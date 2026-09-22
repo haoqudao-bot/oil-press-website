@@ -191,12 +191,12 @@
     "statsCountries": "Negara yang Dilayani di Seluruh Dunia",
     "statsEmployees": "Pekerja & Insinyur Terampil",
     "statsArea": "m² Fasilitas Produksi",
-    "statsMachines": "Mesin yang Dikirim",
+    "statsMachines": "Pembeli Dilayani",
     "statsHighlight1": "Sejak 2010",
     "statsHighlight2": "6 Benua",
     "statsHighlight3": "Tim Ahli",
     "statsHighlight4": "Kualitas Teruji",
-    "statsHighlight5": "Terkirim",
+    "statsHighlight5": "Di Seluruh Dunia",
     "byScale": "Temukan Mesin yang Tepat berdasarkan Skala Produksi",
     "byScaleSubtitle": "Baik Anda memulai atau meningkatkan skala, kami memiliki mesin press minyak hidrolik yang tepat dengan harga yang tepat untuk tujuan bisnis Anda.",
     "smallBusinessTitle": "Komersial",
@@ -218,7 +218,7 @@
     "step4Title": "Pengiriman Global",
     "step4Desc": "Kemasan aman dan pengiriman andal ke pelabuhan Anda dengan dokumentasi ekspor lengkap dan asuransi.",
     "step5Title": "Dukungan Purna Jual",
-    "step5Desc": "Dukungan teknik seumur hidup, panduan instalasi video, dan jaminan suku cadang untuk ketenangan pikiran Anda.",
+    "step5Desc": "Dukungan teknik seumur hidup, panduan instalasi video, dan jaminan suku cadang untuk keandalan jangka panjang.",
     "learnMore": "Pelajari Lebih Lanjut",
     "premiumMaterialsDetail1": "Silinder Hidrolik: baja 27SiMn, 900MPa/cm²",
     "premiumMaterialsDetail2": "Batang Piston: dilapisi krom, 5 lapisan seal",
@@ -308,7 +308,7 @@
     "storyTitle": "Cerita Kami",
     "storyP1": "Didirikan pada tahun 2010 di Qingzhou, Shandong — kota dengan tradisi mendalam dalam rekayasa mekanis — Haonuo Machinery dimulai dengan misi sederhana: membuat mesin press minyak hidrolik yang handal dan efisien yang membantu produsen minyak memaksimalkan hasil dan meminimalkan biaya.",
     "storyP2": "Pendiri kami, dengan lebih dari 20 tahun pengalaman dalam sistem hidrolik, menyadari bahwa banyak produsen minyak kesulitan dengan press efisiensi rendah dan pemasok tidak handal. Mulai dari bengkel kecil dengan hanya 10 pekerja, kami fokus tanpa henti pada kualitas produk dan kepuasan pelanggan.",
-    "storyP3": "Hari ini, dedikasi itu telah menjadikan kami produsen mesin press minyak hidrolik yang mapan di Tiongkok, dipercaya oleh ribuan pelanggan di 50+ negara — dari India dan Nigeria hingga Filipina dan Timur Tengah. Cerita kami masih ditulis, dan kami mengundang Anda untuk menjadi bagian dari itu.",
+    "storyP3": "Hari ini, dedikasi itu telah menjadikan kami produsen mesin press minyak hidrolik yang mapan di Tiongkok, dipercaya oleh ribuan pelanggan di 50+ negara — dari India dan Nigeria hingga Filipina dan Timur Tengah. Cerita kami terus berlanjut, dan kami selalu mengembangkan produk kami.",
     "overviewTitle": "Produsen Mesin Press Minyak Hidrolik Profesional",
     "overviewP2": "Terletak di Qingzhou, Weifang, Provinsi Shandong — pusat pembuatan mesin terkenal di Tiongkok — pabrik kami seluas 3.000m² dilengkapi dengan pusat mesin CNC canggih, jalur perakitan profesional, dan sistem kontrol kualitas ketat. Dengan lebih dari 200 karyawan terampil, kami memberikan peralatan press minyak yang handal kepada pelanggan di seluruh dunia.",
     "overviewP3": "Sebagai produsen mesin press minyak Tiongkok langsung, kami memberikan harga langsung dari pabrik, dukungan teknis komprehensif, dan layanan after-sales seumur hidup kepada setiap pelanggan.",
@@ -476,7 +476,7 @@
     "productInterest": "Produk yang Diminati",
     "productPlaceholder": "Ketik atau pilih produk",
     "messagePlaceholder": "Apa yang ingin Anda press? (buah sawit, inti sawit, kacang tanah, wijen...). Produksi harian yang diharapkan dalam ton? Mesin standar atau kustom? Kebutuhan lain?",
-    "messageHint": "💡 Tips: Beritahu kami bahan minyak, produksi harian dan jenis mesin (standar/kustom), kami akan mengirimkan penawaran yang disesuaikan lebih cepat.",
+    "messageHint": "Tips: Beritahu kami bahan minyak, produksi harian dan jenis mesin (standar/kustom), kami akan mengirimkan penawaran yang disesuaikan lebih cepat.",
     "response24h": "Kami merespons dalam 24 jam",
     "quickContact": "Metode Kontak Cepat",
     "whatToExpect": "Apa yang Diharapkan Setelah Menghubungi Kami",
@@ -926,7 +926,7 @@
     },
     "lowPower": {
       "title": "Konsumsi Daya Rendah",
-      "desc": "Hanya butuh daya motor 2,2 KW. Kompatibel dengan generator, ideal untuk daerah dengan listrik PLN tidak stabil atau tidak ada.",
+      "desc": "Hanya butuh daya motor 2,2 KW. Kompatibel dengan generator, cocok untuk daerah dengan listrik PLN tidak stabil atau tidak ada.",
       "stat": "Hanya 2,2 KW — jalan dengan generator 5KVA"
     },
     "versatile": {
@@ -976,7 +976,7 @@
     },
     "peanutOilApp": {
       "title": "Minyak Kacang Tanah",
-      "desc": "Minyak masak paling populer di Afrika. Ideal untuk bisnis minyak kacang tanah di Nigeria, Ghana, dan seluruh Afrika Barat. Kompatibel generator untuk operasi di daerah pedesaan.",
+      "desc": "Minyak masak paling populer di Afrika. Cocok untuk bisnis minyak kacang tanah di Nigeria, Ghana, dan seluruh Afrika Barat. Kompatibel generator untuk operasi di daerah pedesaan.",
       "yield": "Rendemen: 38-45%"
     },
     "oliveOilApp": {
@@ -1004,7 +1004,7 @@
     "faqs": [
       {
         "question": "What is a hydraulic oil press machine?",
-        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them ideal for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
+        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them well-suited for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
       },
       {
         "question": "How does a hydraulic oil press work?",
@@ -1024,11 +1024,11 @@
       },
       {
         "question": "What is the difference between cold press and hot press?",
-        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — ideal for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
+        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — well-suited for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
       },
       {
         "question": "Can the machine run on a generator?",
-        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them ideal for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
+        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them well-suited for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
       },
       {
         "question": "What warranty do you provide?",
@@ -1060,7 +1060,7 @@
     },
     "lowPower": {
       "title": "Kebutuhan Daya Rendah",
-      "desc": "Hanya butuh 2,2 KW. Kompatibel dengan listrik satu fase 220V standar atau generator kecil 5 KVA — ideal untuk semua wilayah."
+      "desc": "Hanya butuh 2,2 KW. Kompatibel dengan listrik satu fase 220V standar atau generator kecil 5 KVA — cocok untuk semua wilayah."
     },
     "costEffective": {
       "title": "Efisien Biaya",

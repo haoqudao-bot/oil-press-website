@@ -49,7 +49,7 @@ faq:
   - question: What materials can this equipment process?
     answer: The wood-fired steamer is designed for pre-press seed steaming of tea seeds, rapeseed, peanuts, sesame, and other oil seeds requiring pre-press steaming — especially in areas without reliable electrical infrastructure.
   - question: What power supply is required?
-    answer: No electricity is required for the heating process. The steamer operates with coal, wood, or gas fuel, making it ideal for remote locations, off-grid workshops, or facilities with unreliable power supply.
+    answer: No electricity is required for the heating process. The steamer operates with coal, wood, or gas fuel, making it well-suited for remote locations, off-grid workshops, or facilities with unreliable power supply.
   - question: How easy is it to operate and maintain?
     answer: Our equipment is designed for simple operation with minimal training required. Routine maintenance involves regular cleaning and lubrication. The integrated water tank with drain outlet simplifies operation and maintenance. We provide detailed operation manuals and video tutorials with every machine.
   - question: What warranty do you provide?
@@ -94,7 +94,7 @@ faqFr:
   - question: Quels matériaux cet équipement peut-il traiter?
     answer: Le cuisseur vapeur à bois est conçu pour l'étuvage des graines avant pressage — graines de thé, colza, arachides, sésame et autres graines oléagineuses nécessitant un étuvage avant pressage — en particulier dans les zones sans infrastructure électrique fiable.
   - question: Quelle alimentation électrique est requise?
-    answer: Aucune électricité n'est requise pour le processus de chauffage. Le cuisseur vapeur fonctionne au charbon, au bois ou au gaz, ce qui le rend idéal pour les endroits isolés, les ateliers hors réseau ou les installations avec une alimentation électrique peu fiable.
+    answer: Aucune électricité n'est requise pour le processus de chauffage. Le cuisseur vapeur fonctionne au charbon, au bois ou au gaz, ce qui le rend adapté pour les endroits isolés, les ateliers hors réseau ou les installations avec une alimentation électrique peu fiable.
   - question: Est-il facile à utiliser et à entretenir?
     answer: Notre équipement est conçu pour un fonctionnement simple nécessitant une formation minimale. L'entretien courant implique un nettoyage et une lubrification réguliers. Le réservoir d'eau intégré avec orifice de drainage simplifie l'utilisation et l'entretien. Nous fournissons des manuels d'utilisation détaillés et des tutoriels vidéo avec chaque machine.
   - question: Quelle garantie fournissez-vous?
@@ -184,7 +184,7 @@ faqId:
   - question: Bahan apa saja yang dapat diproses oleh peralatan ini?
     answer: Pengukus kayu dirancang untuk pengukusan biji sebelum penekanan — biji teh, biji rapeseed, kacang tanah, biji wijen, dan biji minyak lainnya yang memerlukan pengukusan sebelum penekanan — terutama di daerah tanpa infrastruktur listrik yang andal.
   - question: Pasokan daya apa yang diperlukan?
-    answer: Tidak diperlukan listrik untuk proses pemanasan. Pengukus beroperasi dengan bahan bakar batu bara, kayu, atau gas, menjadikannya ideal untuk lokasi terpencil, bengkel luar jaringan, atau fasilitas dengan pasokan listrik yang tidak andal.
+    answer: Tidak diperlukan listrik untuk proses pemanasan. Pengukus beroperasi dengan bahan bakar batu bara, kayu, atau gas, menjadikannya cocok untuk lokasi terpencil, bengkel luar jaringan, atau fasilitas dengan pasokan listrik yang tidak andal.
   - question: Seberapa mudah pengoperasian dan perawatannya?
     answer: Peralatan kami dirancang untuk pengoperasian sederhana dengan pelatihan minimal. Perawatan rutin melibatkan pembersihan dan pelumasan secara berkala. Tangki air terintegrasi dengan saluran pembuangan menyederhanakan pengoperasian dan perawatan. Kami menyediakan manual pengoperasian terperinci dan tutorial video dengan setiap mesin.
   - question: Garansi apa yang Anda berikan?
@@ -216,7 +216,7 @@ updatedAt: 2025-11-01
 
 ## Overview
 
-The 60 Type Wood-Fired Seed Steamer is a versatile, multi-fuel steaming solution built around a rugged Q355B carbon steel stove body. Designed to operate with coal, wood, or gas heating, this steamer requires no electrical power for the heating process — making it the ideal choice for remote locations, off-grid workshops, or facilities with unreliable power supply.
+The 60 Type Wood-Fired Seed Steamer is a versatile, multi-fuel steaming solution built around a rugged Q355B carbon steel stove body. Designed to operate with coal, wood, or gas heating, this steamer requires no electrical power for the heating process — making it a well-proven choice for remote locations, off-grid workshops, or facilities with unreliable power supply.
 
 The stove interior features integrated heat-collecting channels that maximize the heating surface area, significantly reducing fuel consumption compared to simple firebox designs. An integrated water tank with drain outlet is positioned near the stove base for convenient operation and maintenance. The steaming pot is crafted from 304 stainless steel with a mirror finish, ensuring food-grade safety and easy cleaning.
 

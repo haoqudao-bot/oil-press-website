@@ -52,7 +52,7 @@ applicableSeeds:
   - sunflower seed
 faq:
   - question: What is the processing capacity of the Thermal Oil Roasting Pan?
-    answer: The Thermal Oil Roasting Pan processes 100-150 kg per batch (200-300 jin) with its 1000 mm inner diameter pot, making it ideal for small-to-medium oil pressing operations.
+    answer: The Thermal Oil Roasting Pan processes 100-150 kg per batch (200-300 jin) with its 1000 mm inner diameter pot, making it well-suited for small-to-medium oil pressing operations.
   - question: What materials can this equipment process?
     answer: The roasting pan is designed for pre-press seed conditioning across tea seeds, rapeseed, peanuts, sesame, and sunflower seeds — ensuring uniform roasting for optimal pressing moisture and temperature.
   - question: What power supply is required?
@@ -104,7 +104,7 @@ applicableSeedsFr:
   - graines de tournesol
 faqFr:
   - question: Quelle est la capacité de traitement de la Poêle de Torréfaction à Huile Thermique?
-    answer: La Poêle de Torréfaction à Huile Thermique traite 100-150 kg par lot (200-300 jin) avec sa marmite de 1000 mm de diamètre intérieur, ce qui la rend idéale pour les opérations de pressage d'huile de petite à moyenne taille.
+    answer: La Poêle de Torréfaction à Huile Thermique traite 100-150 kg par lot (200-300 jin) avec sa marmite de 1000 mm de diamètre intérieur, ce qui la rend adaptée pour les opérations de pressage d'huile de petite à moyenne taille.
   - question: Quels matériaux cet équipement peut-il traiter?
     answer: La poêle de torréfaction est conçue pour le conditionnement des graines avant pressage — graines de thé, colza, arachides, sésame et graines de tournesol — garantissant une torréfaction uniforme pour une humidité et une température de pressage optimales.
   - question: Quelle alimentation électrique est requise?
@@ -208,7 +208,7 @@ faqAr:
     answer: "تُعد مقلاة التحميص بالزيت الحراري خطوة معالجة أولية أساسية قبل العصر الهيدروليكي. تحقق البذور المحمصة بشكل صحيح عائداً أعلى من الزيت وكفاءة عصر أفضل. تُغذى البذور المحمصة مباشرة في معصرة الزيت الهيدروليكية، مما يخلق خط إنتاج متكامل للتحميص والعصر. يضمن توزيع الحرارة المتساوي تكييفاً متجانساً للبذور لنتائج عصر متسقة."
 faqId:
   - question: Berapa kapasitas pemrosesan Panci Sangrai Minyak Termal?
-    answer: Panci Sangrai Minyak Termal memproses 100-150 kg per batch (200-300 jin) dengan panci diameter dalam 1000 mm, menjadikannya ideal untuk operasi penekanan minyak skala kecil hingga menengah.
+    answer: Panci Sangrai Minyak Termal memproses 100-150 kg per batch (200-300 jin) dengan panci diameter dalam 1000 mm, menjadikannya cocok untuk operasi penekanan minyak skala kecil hingga menengah.
   - question: Bahan apa saja yang dapat diproses oleh peralatan ini?
     answer: Panci sangrai dirancang untuk pengondisian biji sebelum penekanan — biji teh, biji rapeseed, kacang tanah, biji wijen, dan biji bunga matahari — memastikan penyangraian yang seragam untuk kelembapan dan suhu penekanan yang optimal.
   - question: Pasokan daya apa yang diperlukan?
@@ -256,7 +256,7 @@ Thermal oil heating provides a key advantage over direct-heat methods: more even
 - **Rock wool insulation layer** — minimizes heat loss, reduces energy consumption
 - **Stainless steel exterior** — attractive appearance, corrosion-resistant, easy to clean
 - **Optional electric control box** — automated heating/rotation start-stop with alarm functions for unattended operation
-- **100–150 kg per batch** — ideal capacity for small-to-medium oil pressing operations
+- **100–150 kg per batch** — a practical capacity for small-to-medium oil pressing operations
 
 ## Applications & Suitable Materials
 

@@ -19,11 +19,11 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/aflatoxin-guide-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Production Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
   publisher: {
     '@type': 'Organization',
     name: 'Haonuo Machinery',
-    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' },
+    logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' },
   },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
@@ -109,7 +109,7 @@ function localePath(path: string): string {
             </div>
             <div class="text-left">
               <div class="font-semibold text-charcoal-900">Haonuo Engineering Team</div>
-              <div class="text-sm text-steel-500">Senior Oil Press Engineer · 15+ Years Experience</div>
+              <div class="text-sm text-steel-500">Engineering Team · Haonuo Machinery</div>
             </div>
           </div>
           <div class="h-8 w-px bg-steel-300 hidden md:block"></div>

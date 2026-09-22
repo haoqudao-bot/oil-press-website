@@ -19,8 +19,8 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/oil-press-comparison-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Production Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
-  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -38,7 +38,7 @@ const breadcrumbLd = {
 
 const comparisonData = [
   { name: 'Pengepres Minyak Hidrolik', color: 'amber', pros: ['Tekanan tinggi (hingga 60MPa)', 'Cocok untuk biji berkadar minyak tinggi', 'Pengepresan lembut = kualitas lebih baik', 'Noise rendah, getaran rendah', 'Umur pakai panjang (15-20 tahun)', 'Perawatan lebih sedikit', 'Bisa dipres tanpa pemanasan (pengepresan dingin)', 'Jejak kaki lebih kecil', 'Operasi batch - fleksibel'], cons: ['Output kontinu lebih rendah', 'Biaya awal lebih tinggi', 'Butuh lebih banyak perhatian operator'], best: ['Produksi skala kecil hingga menengah', 'Minyak premium (pervak, dingin)', 'Minyak spesial bernilai tinggi', 'Produsen artisanal dan butik'] },
-  { name: 'Pengepres Minyak Ulir', color: 'blue', pros: ['Operasi kontinu', 'Throughput tinggi', 'Harga lebih rendah', 'Bagus untuk skala besar', 'Dapat menangani berbagai bahan'], cons: ['Tekanan lebih rendah (20-30MPa)', 'Seringkali butuh pemanasan', 'Noise lebih tinggi', 'Suku cadang aus perlu diganti', 'Tidak ideal untuk pengepresan dingin', 'Kualitas bisa lebih rendah'], best: ['Produksi komersial skala besar', 'Minyak memasak standar', 'Produksi pakan hewan', 'Pemrosesan minyak curah'] },
+  { name: 'Pengepres Minyak Ulir', color: 'blue', pros: ['Operasi kontinu', 'Throughput tinggi', 'Harga lebih rendah', 'Bagus untuk skala besar', 'Dapat menangani berbagai bahan'], cons: ['Tekanan lebih rendah (20-30MPa)', 'Seringkali butuh pemanasan', 'Noise lebih tinggi', 'Suku cadang aus perlu diganti', 'Tidak cocok untuk pengepresan dingin', 'Kualitas bisa lebih rendah'], best: ['Produksi komersial skala besar', 'Minyak memasak standar', 'Produksi pakan hewan', 'Pemrosesan minyak curah'] },
   { name: 'Pengepres Ram', color: 'green', pros: ['Metode tradisional', 'Konstruksi sederhana', 'Tekanan sangat tinggi mungkin', 'Bagus untuk skala kecil'], cons: ['Sangat padat karya', 'Tingkat produksi rendah', 'Butuh operasi manual', 'Kapasitas terbatas'], best: ['Produksi artisanal', 'Batch sangat kecil', 'Metode tradisional', 'Area terpencil tanpa daya'] },
 ];
 

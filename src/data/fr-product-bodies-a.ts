@@ -26,7 +26,7 @@ Le cylindre HN325 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 ## Applications et Matières Adaptées
 
-La HN325 est idéal pour presser une grande variété de graines oléagineuses conventionnelles :
+La HN325 est adapté pour presser une grande variété de graines oléagineuses conventionnelles :
 
 - **Graines Oléagineuses** : Graine de thé, colza, arachide, soja, graine de laque, lin
 - **Autres Matières** : Graine de tournesol, graine de coton et matières de pressage conventionnelles similaires
@@ -43,7 +43,7 @@ La HN325 est idéal pour presser une grande variété de graines oléagineuses c
 
 ## Avantages Régionaux
 
-**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN325 est idéal pour la production d'huile de coco et d'arachide à petite et moyenne échelle. Compatible avec l'alimentation standard 220V/50Hz de la région. Option de fût en acier inoxydable disponible pour la production d'huile de coco de qualité alimentaire.
+**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN325 est adapté pour la production d'huile de coco et d'arachide à petite et moyenne échelle. Compatible avec l'alimentation standard 220V/50Hz de la région. Option de fût en acier inoxydable disponible pour la production d'huile de coco de qualité alimentaire.
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** Conçu pour les conditions difficiles — la conception mécanique simple du HN325 signifie moins de pannes et des réparations plus faciles. Fonctionne sur alimentation monophasée 220V standard ou groupe électrogène portable (5 kVA minimum). Pièces de rechange disponibles en stock avec expédition en 3 jours vers Lagos ou Mombasa.
 
@@ -144,7 +144,7 @@ La HN426 traite toutes les matières ci-dessus avec un excellent rendement en hu
 
 ## Avantages Régionaux
 
-**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN426 est la presse à froid idéale pour la production de VCO (Huile de Coco Vierge) premium. La température reste inférieure à 50°C pendant le pressage, préservant la teneur naturelle en acide laurique de l'huile de coco et l'arôme frais de la noix de coco.
+**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN426 est la presse à froid adaptée pour la production de VCO (Huile de Coco Vierge) premium. La température reste inférieure à 50°C pendant le pressage, préservant la teneur naturelle en acide laurique de l'huile de coco et l'arôme frais de la noix de coco.
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** Bien qu'il s'agisse principalement d'une presse à froid, la HN426 gère également le pressage à chaud pour l'huile d'arachide et de sésame. Sa conception polyvalente en fait une excellente machine polyvalente pour les producteurs d'huile africains qui traitent plusieurs types de graines.
 
@@ -187,7 +187,7 @@ La Presse à Huile Hydraulique Haute Pression HN480 comble le fossé entre notre
 
 La Mini Presse à Huile Hydraulique HN300 est notre presse à huile hydraulique la plus compacte et la plus accessible, spécialement conçue comme machine de pressage d'huile de sésame dédiée. Également connue sous le nom de petit moulin à huile de sésame ou presse à huile de sésame de style traditionnel, elle est légère, facile à utiliser et parfaitement adaptée à la production d'huile de sésame et de petites graines. Avec 300 tonnes de force de pressage et une pression système de 63 Mpa, la HN300 offre une extraction d'huile fiable dans un encombrement réduit.
 
-Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 25 Mpa/cm², fournissant une pression suffisante pour que le sésame, l'arachide, le colza et la graine de thé soient entièrement pressés en un seul cycle. Ses dimensions globales compactes de 1100×1100×2350 mm la rendent idéale pour les ateliers à espace limité, tandis que la configuration à fût unique de 1,2 tonne permet une installation et un déplacement faciles.
+Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 25 Mpa/cm², fournissant une pression suffisante pour que le sésame, l'arachide, le colza et la graine de thé soient entièrement pressés en un seul cycle. Ses dimensions globales compactes de 1100×1100×2350 mm la rendent adaptée pour les ateliers à espace limité, tandis que la configuration à fût unique de 1,2 tonne permet une installation et un déplacement faciles.
 
 ## Avantages Clés
 
@@ -210,9 +210,9 @@ Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 ## Applications et Matières Adaptées
 
-La HN300 est idéal pour presser le sésame et autres petites graines oléagineuses :
+La HN300 est adapté pour presser le sésame et autres petites graines oléagineuses :
 
-- **Idéal Pour** : Sésame (l'application principale), produisant une huile de sésame aromatique authentique
+- **Adapté Pour** : Sésame (l'application principale), produisant une huile de sésame aromatique authentique
 - **Également Adapté** : Arachide, colza, graine de thé
 - **Autres Matières** : Petites graines similaires et matières de pressage conventionnelles
 
@@ -253,7 +253,7 @@ Le cylindre HN400 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 ## Applications et Matières Adaptées
 
-La HN400 est idéal pour presser une grande variété de graines oléagineuses conventionnelles et semi-dures :
+La HN400 est adapté pour presser une grande variété de graines oléagineuses conventionnelles et semi-dures :
 
 - **Matières de Pressage à Froid** : Graine de thé, amande de noix, lin
 - **Matières Conventionnelles** : Colza, arachide, soja
@@ -273,12 +273,12 @@ La HN400 est idéal pour presser une grande variété de graines oléagineuses c
 
 La Presse à Huile Hydraulique en Acier Inoxydable HN325S est la variante de qualité alimentaire de notre populaire modèle Standard HN325, dotée d'une construction en acier inoxydable de qualité alimentaire pour le fût et toutes les surfaces de contact avec l'huile. Conçue spécifiquement pour les marchés d'exportation et les marques d'huile premium qui exigent une conformité stricte en matière de sécurité alimentaire, la HN325S utilise des matériaux de contact alimentaire conformes à la FDA, conformes aux normes internationales de sécurité alimentaire, y compris les réglementations de l'UE. Remarque : Nos machines n'ont pas été certifiées ou approuvées séparément par la FDA. Elle offre les mêmes performances de pressage fiables de 325 tonnes que le modèle standard tout en assurant le plus haut niveau d'hygiène et de sécurité des matériaux.
 
-Avec 325 tonnes de force de pressage, une pression système de 60 Mpa et une pression superficielle du gâteau de 27,78 Mpa/cm², la HN325S traite toutes les graines oléagineuses conventionnelles avec aisance. Le fût en acier inoxydable et les surfaces de contact empêchent la contamination, la corrosion et la lixiviation des métaux, faisant de cette machine le choix idéal pour les producteurs ciblant les marchés premium, la certification biologique et l'exportation internationale.
+Avec 325 tonnes de force de pressage, une pression système de 60 Mpa et une pression superficielle du gâteau de 27,78 Mpa/cm², la HN325S traite toutes les graines oléagineuses conventionnelles avec aisance. Le fût en acier inoxydable et les surfaces de contact empêchent la contamination, la corrosion et la lixiviation des métaux, faisant de cette machine un bon choix pour les producteurs ciblant les marchés premium, la certification biologique et l'exportation internationale.
 
 ## Avantages Clés
 
 - **Acier Inoxydable de Qualité Alimentaire** — Le fût et toutes les surfaces de contact avec l'huile sont construits en acier inoxydable de qualité alimentaire, empêchant la contamination et garantissant la plus pure qualité d'huile.
-- **Conformité Internationale** — Utilise des matériaux de contact alimentaire conformes à la FDA, conformes aux normes de sécurité alimentaire de l'UE. Remarque : Les machines n'ont pas été certifiées ou approuvées séparément par la FDA. Idéale pour les marchés d'exportation et les marques d'huile premium.
+- **Conformité Internationale** — Utilise des matériaux de contact alimentaire conformes à la FDA, conformes aux normes de sécurité alimentaire de l'UE. Remarque : Les machines n'ont pas été certifiées ou approuvées séparément par la FDA. Adaptée pour les marchés d'exportation et les marques d'huile premium.
 - **Résistante à la Corrosion** — La construction en acier inoxydable élimine les problèmes de rouille et de corrosion, prolongeant la durée de service et réduisant les besoins d'entretien.
 - **Mêmes Performances Éprouvées** — Délivre une force de pressage identique de 325 tonnes et une pression de gâteau de 27,78 Mpa/cm² comme le modèle HN325 standard.
 - **Prête pour les Marques Premium** — La conception hygiénique en acier inoxydable supporte un positionnement premium, la certification biologique et les allégations de produits à étiquette propre.

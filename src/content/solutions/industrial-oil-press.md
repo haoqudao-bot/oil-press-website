@@ -152,7 +152,7 @@ This solution is designed for large-scale oil production facilities, oil refiner
 - **Ultra High Pressure Hydraulic Oil Press (HN500)** — Our most powerful model, delivering up to 60 MPa pressing force. Achieves competitive residual oil rates. Double-barrel configuration available for maximum throughput.
 - **High Pressure Hydraulic Oil Press (HN480)** — Second most powerful model, suitable for most industrial pressing applications. Excellent balance of force and throughput.
 - **Industrial Seed Crusher (370 Type)** — Heavy-duty seed processing machine designed for industrial-scale throughput. Handles cleaning, crushing, and dehulling.
-- **Pneumatic Oil Filter Press** — Industrial-grade filtration for high-volume oil clarification. Matches press throughput for seamless integration.
+- **Pneumatic Oil Filter Press** — Industrial-grade filtration for high-volume oil clarification. Matches press throughput for smooth integration.
 - **Edible Oil Refining System (1-100 T/D)** — Complete refining line for producing RBD (Refined, Bleached, Deodorized) finished oil. Available in capacities from 1 to 100 tons per day.
 
 ## Frequently Asked Questions
@@ -167,14 +167,14 @@ Our Ultra High Pressure model (HN500) with double-barrel configuration processes
 Yes. For industrial-scale equipment, we provide complete on-site installation, commissioning, and operator training services. Our engineers travel to your facility worldwide to ensure your production line operates at peak efficiency from day one.
 
 **Can you supply a complete turnkey oil production line?**
-Yes. We supply complete turnkey solutions from seed receiving to packaged oil, including seed processing, pressing, filtration, refining, and packaging. Our engineering team designs the layout and integrates all equipment for seamless operation.
+Yes. We supply complete turnkey solutions from seed receiving to packaged oil, including seed processing, pressing, filtration, refining, and packaging. Our engineering team designs the layout and integrates all equipment for smooth operation.
 
 **What is the residual oil rate for industrial pressing?**
 Our Ultra High Pressure model achieves residual oil rates below 4% for most materials, and below 5% for even the most challenging oilseeds. This is significantly better than screw press systems that typically leave 6-10% residual oil.
 
 ## Complete Production Line
 
-An industrial oil production line integrates multiple processing stages into a seamless, continuous operation. Here is the typical layout for a 10-50 T/D (tons per day) production line:
+An industrial oil production line integrates multiple processing stages into a smooth, continuous operation. Here is the typical layout for a 10-50 T/D (tons per day) production line:
 
 **Stage 1 — Seed Receiving & Storage**
 → Bulk seed delivery → Quality inspection → Silo/warehouse storage
@@ -224,7 +224,7 @@ Our industrial hydraulic oil presses are engineered for demanding continuous ope
 ## Why Choose Haonuo
 
 - **Maximum extraction efficiency** — Our ultra-high-pressure hydraulic presses achieve residual oil rates below 4%, extracting more oil from every ton of raw material and directly improving your bottom line.
-- **Complete turnkey solutions** — From seed receiving to packaged oil, we design, supply, and install complete production lines. One supplier, one point of contact, seamless integration.
+- **Complete turnkey solutions** — From seed receiving to packaged oil, we design, supply, and install complete production lines. One supplier, one point of contact, smooth integration.
 - **Global installation support** — Our engineers provide on-site installation and training worldwide, ensuring your industrial system operates at peak efficiency from commissioning.
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary). No trading company markups on six-figure investments.
 - **Proven at industrial scale** — Our industrial oil press systems are operating in large-scale facilities across India, Indonesia, Nigeria, Egypt, and Brazil — processing thousands of tons of oilseeds annually.

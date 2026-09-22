@@ -57,7 +57,7 @@ faq:
   - question: How long does one pressing cycle take?
     answer: Hot pressing (with pre-roasting) completes in 30-40 minutes per batch. Cold pressing takes approximately 2 hours to preserve oil quality at low temperatures. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for pressing?
-    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the ideal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
+    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What is the difference between single and double barrel configurations?
     answer: A single barrel press processes one batch at a time. A double barrel press has two barrels with independent hydraulic systems — while one barrel is pressing, the top-cake cylinder on the other barrel allows simultaneous unloading and reloading, nearly doubling your throughput.
   - question: What power supply does the HN325LB require?
@@ -260,7 +260,7 @@ updatedAt: 2025-11-01
 
 The Large Barrel Hydraulic Oil Press is an enlarged-capacity version of the HN325 cylinder model, designed for applications that demand high single-batch processing volume rather than extreme pressing force. Equipped with two independent hydraulic systems, each barrel operates autonomously — the main cylinder presses one barrel while the top-cake cylinder on the other barrel allows simultaneous unloading and reloading. This dual-system design eliminates idle time and maximizes your daily throughput.
 
-The 630 mm inner diameter, 1000 mm high barrel provides substantial capacity for bulk materials. With a cake surface pressure of 10.64 Mpa/cm², this model is ideal for materials that do not require high pressing force but benefit from large batch sizes, such as oil sludge, textile sludge, fruit and vegetable dehydration, and oil field waste.
+The 630 mm inner diameter, 1000 mm high barrel provides substantial capacity for bulk materials. With a cake surface pressure of 10.64 Mpa/cm², this model is well-suited for materials that do not require high pressing force but benefit from large batch sizes, such as oil sludge, textile sludge, fruit and vegetable dehydration, and oil field waste.
 
 ## Key Advantages
 

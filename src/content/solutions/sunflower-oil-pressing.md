@@ -139,7 +139,7 @@ This solution handles both high-oil and confectionery sunflower seed varieties, 
 
 ## Recommended Equipment
 
-- **Standard Hydraulic Oil Press (HN325)** — Ideal for small to medium sunflower oil production. Handles both whole seeds and dehulled kernels effectively.
+- **Standard Hydraulic Oil Press (HN325)** — Well-suited for small to medium sunflower oil production. Handles both whole seeds and dehulled kernels effectively.
 - **Heavy Duty Hydraulic Oil Press (HN355)** — Recommended for larger operations with double-barrel option for higher throughput.
 - **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting. Essential for maximizing yield from sunflower seeds.
 - **Pneumatic Oil Filter Press** — Automated filtration for clear, premium sunflower oil.
@@ -156,12 +156,12 @@ Dehulling is strongly recommended. Sunflower seed hulls absorb 10-15% of the oil
 Cold-pressed sunflower oil retains more vitamin E, phytosterols, and natural flavor. It has a golden color and nutty taste, commanding premium prices in health food markets. Refined sunflower oil is lighter in color, has a neutral taste, and a higher smoke point, making it more versatile for cooking.
 
 **Which sunflower seed variety is best for oil pressing?**
-High-oil varieties with 45-50% oil content are ideal. Popular pressing varieties include Peredovik, VNIIMK, and HAOL 414. Black-seeded varieties typically have higher oil content than striped confectionery types.
+High-oil varieties with 45-50% oil content are the preferred choice. Popular pressing varieties include Peredovik, VNIIMK, and HAOL 414. Black-seeded varieties typically have higher oil content than striped confectionery types.
 
 ## Why Choose Haonuo
 
 - **Optimized for sunflower pressing** — Our hydraulic presses are calibrated for sunflower seed characteristics, achieving residual oil rates below 5% for maximum profitability.
 - **Dehulling-compatible design** — Our equipment handles both whole seeds and dehulled kernels, giving you flexibility in your production process.
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
-- **Complete production lines** — From seed cleaning to bottled oil, we provide every component for a seamless sunflower oil production operation.
+- **Complete production lines** — From seed cleaning to bottled oil, we provide every component for a smooth sunflower oil production operation.
 - **Proven in Eastern Europe and Africa** — Our sunflower oil press machines operate successfully in Ukraine, Russia, Turkey, Tanzania, and Mozambique — key sunflower oil producing regions.

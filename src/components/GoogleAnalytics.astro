@@ -6,16 +6,31 @@ const GA_MEASUREMENT_ID = isValidId ? rawId : null;
 
 {GA_MEASUREMENT_ID && (
   <script is:inline define:vars={{ id: GA_MEASUREMENT_ID }}>
+    // GDPR/UK GDPR：仅在访客点击 Accept（或此前已同意）后才加载 GA
     (function() {
-      var script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
-      document.head.appendChild(script);
+      function hasConsent() {
+        return document.cookie.split(';').some(function(row) {
+          return row.trim().indexOf('haonuo_cookie_consent=accepted') === 0;
+        });
+      }
 
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', id);
+      var loaded = false;
+      function loadGA() {
+        if (loaded || !hasConsent()) return;
+        loaded = true;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', id);
+      }
+
+      loadGA();
+      document.addEventListener('haonuo-consent-changed', loadGA);
     })();
   </script>
 )}

@@ -53,7 +53,7 @@ processStepsId:
     description: Saring untuk mendapatkan minyak alpukat yang jernih dan premium
 faq:
   - question: Can I cold press avocado oil?
-    answer: Yes, our Cold Press Hydraulic Oil Press (HN426) is ideal for avocado oil cold pressing, preserving nutrients and natural green color.
+    answer: Yes, our Cold Press Hydraulic Oil Press (HN426) is well-suited for avocado oil cold pressing, preserving nutrients and natural green color.
   - question: What is the oil content of avocados?
     answer: Avocados contain 15-25% oil depending on variety and ripeness. Hass avocados typically have higher oil content.
   - question: Can I press avocado seeds?
@@ -64,7 +64,7 @@ faq:
     answer: With our cold press model, you can process 300-1,000 kg of avocado pulp per day depending on operation hours.
 faqFr:
   - question: Puis-je presser à froid l'huile d'avocat ?
-    answer: Oui, notre presse hydraulique à froid (HN426) est idéale pour le pressage à froid de l'huile d'avocat, préservant les nutriments et la couleur verte naturelle.
+    answer: Oui, notre presse hydraulique à froid (HN426) est adaptée pour le pressage à froid de l'huile d'avocat, préservant les nutriments et la couleur verte naturelle.
   - question: Quelle est la teneur en huile des avocats ?
     answer: Les avocats contiennent 15 à 25 % d'huile selon la variété et la maturité. Les avocats Hass ont généralement une teneur en huile plus élevée.
   - question: Puis-je presser les noyaux d'avocat ?
@@ -75,7 +75,7 @@ faqFr:
     answer: Avec notre modèle de pressage à froid, vous pouvez traiter 300 à 1 000 kg de pulpe d'avocat par jour selon les heures de fonctionnement.
 faqAr:
   - question: هل يمكنني عصر زيت الأفوكادو على البارد؟
-    answer: نعم، مضغوطنا الهيدروليكي على البارد (HN426) مثالي لعصر زيت الأفوكادو على البارد، مع الحفاظ على المغذيات واللون الأخضر الطبيعي.
+    answer: نعم، مضغوطنا الهيدروليكي على البارد (HN426) مناسب لعصر زيت الأفوكادو على البارد، مع الحفاظ على المغذيات واللون الأخضر الطبيعي.
   - question: ما هو محتوى الزيت في الأفوكادو؟
     answer: يحتوي الأفوكادو على 15-25% زيت حسب الصنف ودرجة النضج. عادةً ما يكون لأصناف هاس محتوى زيتي أعلى.
   - question: هل يمكنني عصر بذور الأفوكادو؟
@@ -86,7 +86,7 @@ faqAr:
     answer: مع طراز الضغط على البارد لدينا، يمكن معالجة 300-1000 كجم من لب الأفوكادو يومياً حسب ساعات التشغيل.
 faqId:
   - question: Bisakah saya menekan dingin minyak alpukat?
-    answer: Ya, Cold Press Hydraulic Oil Press (HN426) kami ideal untuk penekanan dingin minyak alpukat, menjaga nutrisi dan warna hijau alami.
+    answer: Ya, Cold Press Hydraulic Oil Press (HN426) kami cocok untuk penekanan dingin minyak alpukat, menjaga nutrisi dan warna hijau alami.
   - question: Berapa kandungan minyak alpukat?
     answer: Alpukat mengandung 15-25% minyak tergantung varietas dan tingkat kematangan. Alpukat Hass biasanya memiliki kandungan minyak yang lebih tinggi.
   - question: Bisakah saya menekan biji alpukat?
@@ -107,7 +107,7 @@ order: 8
 
 Avocado oil has surged in popularity as a premium cooking and cosmetic oil, prized for its high smoke point, rich monounsaturated fat content, and distinctive buttery flavor. A specialized **avocado oil press machine** is essential for producers who want to extract this high-value oil while preserving the nutrients and natural green color that justify premium pricing.
 
-Haonuo's avocado oil pressing solution is built around our cold press hydraulic technology, which is the ideal method for avocado oil extraction. Unlike screw presses that generate friction heat up to 120°C, our hydraulic **avocado oil extraction machine** operates below 60°C, preserving the oleic acid, vitamin E, lutein, and chlorophyll that give avocado oil its health benefits and characteristic emerald green color.
+Haonuo's avocado oil pressing solution is built around our cold press hydraulic technology, which is the preferred method for avocado oil extraction. Unlike screw presses that generate friction heat up to 120°C, our hydraulic **avocado oil extraction machine** operates below 60°C, preserving the oleic acid, vitamin E, lutein, and chlorophyll that give avocado oil its health benefits and characteristic emerald green color.
 
 This solution is designed for the growing avocado oil market in Mexico, Kenya, New Zealand, South Africa, and the United States, where demand for premium cold-pressed avocado oil continues to outpace supply.
 

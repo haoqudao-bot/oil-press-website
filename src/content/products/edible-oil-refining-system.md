@@ -35,7 +35,7 @@ faq:
   - question: What types of oil can be refined?
     answer: Our refining equipment can process a wide range of crude oils including peanut oil, soybean oil, sunflower oil, rapeseed oil, palm oil, coconut oil, and more. The refining process removes impurities, free fatty acids, phospholipids, and odors.
   - question: What is the difference between stainless steel and carbon steel models?
-    answer: Stainless steel models are food-grade and corrosion-resistant, ideal for edible oil production. Carbon steel models are more economical and suitable for industrial oil processing where food-grade standards are not required.
+    answer: Stainless steel models are food-grade and corrosion-resistant, well-suited for edible oil production. Carbon steel models are more economical and suitable for industrial oil processing where food-grade standards are not required.
   - question: What refining processes does the equipment perform?
     answer: The equipment performs degumming, neutralization (deacidification), decolorization (bleaching), and deodorization — the four core refining processes to produce high-quality refined oil.
   - question: What is the oil loss rate during refining?
@@ -110,7 +110,7 @@ faqAr:
   - question: "ما أنواع الزيوت التي يمكن تكريرها؟"
     answer: "يمكن لمعدات التكرير لدينا معالجة مجموعة واسعة من الزيوت الخام بما في ذلك زيت الفول السوداني وزيت الصويا وزيت عباد الشمس وزيت اللفت وزيت النخيل وزيت جوز الهند والمزيد. تزيل عملية التكرير الشوائب والأحماض الدهنية الحرة والفوسفوليبيدات والروائح."
   - question: "ما الفرق بين طرازات الفولاذ المقاوم للصدأ والفولاذ الكربوني؟"
-    answer: "طرازات الفولاذ المقاوم للصدأ بدرجة غذائية ومقاومة للتآكل، مثالية لإنتاج الزيت الصالح للأكل. طرازات الفولاذ الكربوني أكثر اقتصادية ومناسبة لمعالجة الزيت الصناعي حيث لا تكون معايير الدرجة الغذائية مطلوبة."
+    answer: "طرازات الفولاذ المقاوم للصدأ بدرجة غذائية ومقاومة للتآكل، مناسبة لإنتاج الزيت الصالح للأكل. طرازات الفولاذ الكربوني أكثر اقتصادية ومناسبة لمعالجة الزيت الصناعي حيث لا تكون معايير الدرجة الغذائية مطلوبة."
   - question: "ما عمليات التكرير التي تؤديها المعدات؟"
     answer: "تؤدي المعدات إزالة الصمغ والتعادل (إزالة الحموضة) وإزالة اللون (التبييض) وإزالة الروائح — عمليات التكرير الأساسية الأربع لإنتاج زيت مكرر عالي الجودة."
   - question: "ما معدل فقدان الزيت أثناء التكرير؟"
@@ -131,7 +131,7 @@ faqId:
   - question: Jenis minyak apa saja yang dapat dimurnikan?
     answer: Peralatan pemurnian kami dapat memproses berbagai jenis minyak mentah termasuk minyak kacang tanah, minyak kedelai, minyak bunga matahari, minyak rapeseed, minyak sawit, minyak kelapa, dan lainnya. Proses pemurnian menghilangkan kotoran, asam lemak bebas, fosfolipid, dan bau.
   - question: Apa perbedaan antara model baja tahan karat dan baja karbon?
-    answer: Model baja tahan karat bersifat food-grade dan tahan korosi, ideal untuk produksi minyak nabati. Model baja karbon lebih ekonomis dan cocok untuk pemrosesan minyak industri yang tidak memerlukan standar food-grade.
+    answer: Model baja tahan karat bersifat food-grade dan tahan korosi, cocok untuk produksi minyak nabati. Model baja karbon lebih ekonomis dan cocok untuk pemrosesan minyak industri yang tidak memerlukan standar food-grade.
   - question: Proses pemurnian apa saja yang dilakukan peralatan ini?
     answer: Peralatan ini melakukan degumming, netralisasi (deasidifikasi), dekolorisasi (pemutihan), dan deodorisasi — empat proses pemurnian inti untuk menghasilkan minyak murni berkualitas tinggi.
   - question: Berapa tingkat kehilangan minyak selama pemurnian?

@@ -142,4 +142,4 @@ Haonuo Machinery's walnut oil pressing solution is specifically designed for pro
 - **Temperature control system** — Built-in temperature monitoring ensures pressing stays below 60°C to preserve omega-3
 - **Food-grade stainless steel option** — Available for customers requiring the highest hygiene standards
 - **Proven in Middle East markets** — Our machines are operating successfully in Saudi Arabia, UAE, and Iran
-- **1-year warranty + lifetime support** — Complete peace of mind with spare parts shipped promptly
+- **1-year warranty + lifetime support** — Full coverage with spare parts shipped promptly

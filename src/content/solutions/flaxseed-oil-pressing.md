@@ -7,7 +7,7 @@ title:
 seedName: flaxseed
 icon: flaxseed
 description:
-  en: "Premium cold-pressed flaxseed oil solution. Rich in omega-3 fatty acids. Ideal for health supplements and gourmet cooking markets."
+  en: "Premium cold-pressed flaxseed oil solution. Rich in omega-3 fatty acids. Well-suited for health supplements and gourmet cooking markets."
   fr: "Solution d'huile de lin pressée à froid premium. Riche en acides gras oméga-3."
   ar: "حل زيت بذور الكتان المضغوط على البارد الممتاز. غني بأحماض أوميغا-3 الدهنية."
   id: "Solusi minyak biji rami press dingin premium. Kaya akan asam lemak omega-3."

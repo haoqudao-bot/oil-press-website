@@ -13,9 +13,9 @@ const quickPicks = [
   { seed: 'Walnut / Almond', hardness: 'Soft → 325 Tons', model: 'HN325', badge: 'BEST SELLER', desc: 'Most popular for cold press walnut and almond oil. 390mm barrel, 5-100kg per batch. Preserves natural aroma and light color.' },
   { seed: 'Avocado', hardness: 'Soft → 325 Tons', model: 'HN325', badge: '', desc: 'Cold-pressed avocado oil keeps nutrient value. 325-ton pressure gently extracts oil without damaging quality.' },
   { seed: 'Tea Seed / Olive', hardness: 'Medium → 400 Tons', model: 'HN400', badge: '', desc: 'Medium pressure for tea seed, olive, and camellia. Cold press to preserve premium oil quality. SS304 option available.' },
-  { seed: 'Coconut (VCO)', hardness: 'Hard → 500 Tons', model: 'HN426', badge: 'VCO GRADE', desc: '500-ton press for virgin coconut oil. SS304 food-grade stainless steel. True cold press ≤45°C for export markets.' },
+  { seed: 'Coconut (VCO)', hardness: 'Hard → 500 Tons', model: 'HN426', badge: 'VCO GRADE', desc: '500-ton press for virgin coconut oil. SS304 food-grade stainless steel. Low-temperature pressing below 60°C for export markets.' },
   { seed: 'Flaxseed / Hard seeds', hardness: 'Hard → 500 Tons', model: 'HN426', badge: '', desc: 'Flaxseed, perilla, sesame and other hard seeds need 500+ tons. Optional small barrel for concentrated pressure.' },
-  { seed: 'Large scale / Factory', hardness: 'Industrial → 620 Tons', model: 'HN500', badge: 'FLAGSHIP', desc: 'Maximum pressure for super-hard materials. Double-barrel available for continuous production — boosts daily output by 30-50%.' },
+  { seed: 'Large scale / Factory', hardness: 'Industrial → 620 Tons', model: 'HN500', badge: 'FLAGSHIP', desc: 'Maximum pressure for super-hard materials. Double-barrel available for continuous production — one barrel presses while the other is loaded and unloaded.' },
 ];
 
 const seeds = [
@@ -35,16 +35,16 @@ const seeds = [
 
 const painPoints = [
   { icon: '🔥', title: 'Oil Nutrients Destroyed', desc: 'Hot pressing at 120°C+ kills vitamins, antioxidants, and aroma. Retailers reject "burnt" smelling oil.' },
-  { icon: '💧', title: 'Poor Cold Yield', desc: 'Screw presses at low temp lose 25%+ of oil. Cold press needs enough pressure to extract without heat.' },
+  { icon: '💧', title: 'Poor Cold Yield', desc: 'Screw presses rely on friction heat; at low temperature more oil stays in the cake. Cold press needs enough static pressure to extract without heat.' },
   { icon: '🧪', title: 'Oil Color Dark & Bitter', desc: 'Poor temperature control gives dark, cloudy, bitter-tasting oil that won\'t pass VCO standards.' },
   { icon: '📦', title: 'No After-Sales Support', desc: 'Middlemen disappear after you pay. When something breaks, you are on your own.' },
 ];
 
 const advantages = [
-  { num: '92%', title: 'Higher Profit Margin', desc: 'Patented diaphragm technology extracts 8-12% more oil than ordinary presses. 92%+ oil yield means you sell 10-15% more oil from the same raw materials. That is thousands of dollars extra profit every month.' },
-  { num: '30-40%', title: 'Factory Direct Price', desc: 'You buy directly from our factory in Shandong — no distributors, no middlemen markup. Save 30-40% vs buying through trading companies.' },
-  { num: '2 min', title: 'Easy Operation', desc: 'One-button start. No skilled operator needed. 2-minute training and anyone can run it. Top-discharge design makes cake removal 10x faster than bottom-discharge.' },
-  { num: '10+ yr', title: 'Safe & Durable', desc: '27SiMn steel hydraulic cylinder is safer and lasts longer. Chrome-plated piston rod with 5-layer seals, zero leakage under 620-ton pressure. SS304 food-grade stainless steel barrel option. Industrial-grade components throughout.' },
+  { num: '60+ MPa', title: 'Thorough Extraction', desc: 'High static hydraulic pressure squeezes the cake harder than manual or low-pressure methods, so less oil is left behind. Actual yield depends on seed variety, moisture content, and preparation.' },
+  { num: 'DIRECT', title: 'Factory-Direct Price', desc: 'You buy directly from our factory in Shandong — no trading company in between, no reseller markup.' },
+  { num: 'EASY', title: 'Easy Operation', desc: 'Simple button controls. No skilled operator is needed — staff learn the routine in a short training. Top-discharge design makes cake removal faster than bottom-discharge models.' },
+  { num: '10+ yr', title: 'Safe & Durable', desc: '27SiMn steel hydraulic cylinder is built for long service life. Chrome-plated piston rod with multi-layer seals keeps leakage low at high pressure. SS304 food-grade stainless steel barrel option. Industrial-grade components throughout.' },
   { num: '24h', title: 'Lifetime Support', desc: '1-year factory warranty. Our engineers reply within 24 hours on working days. Spare parts always in stock, shipped via DHL/FedEx in 3-7 days worldwide. Free remote video guidance for life.' },
   { num: 'OEM', title: 'OEM / ODM', desc: 'From standard machines to fully customized OEM/ODM solutions — stainless steel, double-barrel, automated lines, custom branding. We build to your exact specification.' },
 ];
@@ -52,41 +52,20 @@ const advantages = [
 const modelRows = [
   { model: 'HN325', featured: true, seed: 'Walnut, Almond, Avocado, Macadamia', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 325 Tons', capacity: '≤ 100 kg', note: 'Best seller for cold-pressed premium nut oils.' },
   { model: 'HN355 / HN400', featured: false, seed: 'Tea Seed, Olive, Camellia, Apricot', process: 'Cold', barrel: 'Φ390 mm', pressure: '370 / 410 Tons', capacity: '≤ 100 kg', note: 'Medium pressure for premium cold-pressed oils.' },
-  { model: 'HN426', featured: false, seed: 'Coconut VCO, Flaxseed, Perilla, Pumpkin Seed', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 500 Tons', capacity: '≤ 100 kg', note: 'VCO grade. True cold press ≤45°C.' },
+  { model: 'HN426', featured: false, seed: 'Coconut VCO, Flaxseed, Perilla, Pumpkin Seed', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 500 Tons', capacity: '≤ 100 kg', note: 'VCO grade. Low-temperature pressing below 60°C.' },
   { model: 'HN480 / HN500', featured: false, seed: 'Hemp Seed, Pine Nut, Super-hard premium', process: 'Cold', barrel: 'Φ390 mm', pressure: '600 / 630 Tons', capacity: '≤ 100 kg', note: 'Flagship for extra-hard materials.' },
   { model: 'HN325/355 Sesame', featured: false, seed: 'Sesame (Special)', process: 'Cold', barrel: 'Φ300 mm', pressure: '325 / 355 Tons', capacity: '32.5–50 kg', note: 'Small barrel, concentrated pressure, preserves aroma.' },
   { model: 'HN426S Stainless', featured: false, seed: 'Coconut VCO (SS304 food-grade)', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 500 Tons', capacity: '≤ 100 kg', note: 'SS304 food-grade for export VCO markets.' },
   { model: '300 Type Coconut', featured: false, seed: 'Coconut Milk (Special)', process: 'Cold', barrel: 'Φ600 mm', pressure: '≈ 300 Tons', capacity: '150–200 kg', note: 'Coconut specialty. 304 SS corrosion-resistant barrel.' },
 ];
 
-const cases = [
-  {
-    flag: 'KE', country: 'Kenya', client: 'Premium Oil Producer (East Africa)',
-    model: 'HN325 x 2 units', seed: 'Avocado & Walnut', capacity: '2T/day',
-    challenge: 'Small-scale farmers needed affordable cold press for premium oils',
-    result: 'Break-even in 5 months, now supplies premium cold-pressed oil to 3 local supermarkets',
-  },
-  {
-    flag: 'TH', country: 'Thailand', client: 'VCO Producer (Southeast Asia)',
-    model: 'HN426S Stainless x 3', seed: 'Coconut', capacity: '3T/day',
-    challenge: 'Wanted food-grade cold press for virgin coconut oil (VCO)',
-    result: 'Premium VCO quality, now supplying 5+ local supermarkets and exporting to neighboring countries',
-  },
-  {
-    flag: 'US', country: 'USA', client: 'Premium Oil Producer (North America)',
-    model: 'HN355 x 1 unit', seed: 'Walnut & Almond', capacity: '1.5T/day',
-    challenge: 'Needed small-batch cold press for niche premium oil market',
-    result: 'Now selling at 3x price vs supermarket, expanded to 2nd unit',
-  },
-];
-
 const faqs = [
   { q: 'How much does a cold press oil machine cost?', a: 'Prices vary by model, material, and configuration. The best-selling HN325 is our most popular choice for cold press startups. Commercial and industrial models are available for larger operations. We also offer OEM/ODM customization for stainless steel and other special requirements. Tell us your seed type and target capacity — we send exact factory pricing with shipping to your port within 24 hours.' },
-  { q: 'Which cold press model should I buy?', a: 'It depends on 2 key things: (1) which seed you press — soft seeds (walnut, almond, avocado) use HN325, medium-hard seeds (tea seed, olive) use HN400, hard seeds (coconut VCO, flaxseed) use HN426. (2) your daily capacity need — double-barrel versions boost output by 30-50%. Not sure? Tell us your seed + capacity — our engineer recommends 1-2 models with ROI calculation. Free, no obligation.' },
-  { q: 'Is stainless steel available for edible oil?', a: 'Yes. We offer food-grade 304 stainless steel for all product-contact parts on HN325S, HN426S, and HN480BS models. This is required for VCO, extra virgin olive oil, and any product targeting EU/Japan/USA premium markets. The full chamber, pressing plates, oil pan, and oil collection tray are all SS304.' },
-  { q: 'Can your cold press do VCO (Virgin Coconut Oil)?', a: 'Absolutely — this is our #1 most requested cold press application. Our HN426/HN480B series is specifically engineered for VCO production with: (1) true <45°C temperature, (2) stainless steel contact, (3) high pressure for maximum yield from dry coconut copra or wet coconut meat. We also provide VCO process consulting for free if you buy from us.' },
-  { q: 'What oil yield can I expect from cold pressing?', a: 'Cold press yield is seed-specific and slightly lower than hot press, but preserves quality and commands 2-3× higher price. Typical cold yields with HN426: Sesame 88-90%, Peanut 82-85%, Coconut copra 62-65%, Walnut 85-88%, Almond 83-86%, Olive (pomace) 78-82%, Avocado 70-75%. We can do a free ROI calculation for your exact seed & price scenario.' },
-  { q: 'Do you help with lab tests and certification for export?', a: 'Yes. This is a big advantage of working with Haonuo. We provide: (1) sample pressing test before shipment — you can send us 5-10 kg of your seeds and we press them in our lab, send video + pressed oil sample + yield data, (2) assistance with third-party SGS/BV inspection at our factory, (3) documentation for CE, FDA food-contact, and phytosanitary certificates. We also advise on what lab tests importers in your country will require.' },
+  { q: 'Which cold press model should I buy?', a: 'It depends on 2 key things: (1) which seed you press — soft seeds (walnut, almond, avocado) use HN325, medium-hard seeds (tea seed, olive) use HN400, hard seeds (coconut VCO, flaxseed) use HN426. (2) your daily capacity need — double-barrel versions keep production continuous, with one barrel pressing while the other is loaded. Not sure? Tell us your seed + capacity — our engineer recommends 1-2 models with ROI calculation. Free, no obligation.' },
+  { q: 'Is stainless steel available for edible oil?', a: 'Yes. We offer food-grade 304 stainless steel for all product-contact parts on HN325S, HN426S, and HN480BS models. This is commonly required for VCO, extra virgin olive oil, and products targeting premium markets. The full chamber, pressing plates, oil pan, and oil collection tray can be made in SS304.' },
+  { q: 'Can your cold press do VCO (Virgin Coconut Oil)?', a: 'Yes — VCO is one of the most common cold-press applications for the HN426/HN480B series: (1) low-temperature pressing below 60°C, (2) stainless steel contact parts, (3) high pressure for copra or wet coconut meat. We also share VCO process guidance with buyers.' },
+  { q: 'What oil yield can I expect from cold pressing?', a: 'Yield is seed-specific and depends on variety, moisture content, and preparation (roasting, grinding, moisture adjustment). Cold pressing can give slightly lower yield than hot pressing, but the oil usually sells as a premium product. We do not quote one fixed number — tell us your seed and how you prepare it, and we will share the reference yield range from our test records for similar material.' },
+  { q: 'Can I see a test run, and do you support export inspection?', a: 'Yes. (1) Before shipment we can record an in-factory test run with a similar seed and send you the full video. (2) You may arrange a third-party inspection company to inspect the machines at our factory before loading. (3) We provide standard export/shipping documents and can advise on the import paperwork your country typically requires.' },
   { q: 'What payment and warranty for cold press models?', a: 'Warranty: 1 year full factory warranty for standard parts, lifetime technical support. Payment: 30% TT deposit, 70% before shipment. L/C at sight accepted for orders over $20,000. Trade Assurance (Alibaba) for first-time buyers. Spare parts always in stock, shipped via DHL/FedEx in 3-7 days worldwide.' },
 ];
 
@@ -99,10 +78,10 @@ const capacities = ['Small Business','Commercial','Industrial','Not sure'];
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cold Press Oil Machine | True VCO Grade ≤45°C (2026) | Haonuo</title>
-<meta name="description" content="Professional cold press oil machine factory. 500-560 ton pressure, SS304 food-grade, ≤45°C true VCO temp. 92% oil yield, 2-year cylinder warranty. Get factory price & VCO process guide." />
+<title>Cold Press Oil Machine | Low-Temperature VCO Grade (2026) | Haonuo</title>
+<meta name="description" content="Professional cold press oil machine factory. 500-560 ton pressure, SS304 food-grade option, low-temperature pressing below 60°C for VCO. 1-year warranty. Get factory price & VCO process guide." />
 <meta property="og:title" content="Cold Press Oil Machine - VCO Grade, Factory Direct from Haonuo" />
-<meta property="og:description" content="True cold press (≤45°C) for coconut VCO, olive, walnut, avocado. 94% max yield, 2-year cylinder warranty." />
+<meta property="og:description" content="Low-temperature cold press (below 60°C) for coconut VCO, olive, walnut, avocado. High hydraulic pressure, SS304 option, 1-year factory warranty." />
 <meta property="og:image" content={ogImage} />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -385,7 +364,7 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
 <div class="offer">
   <div class="container offer-inner">
     <span class="chip">SPECIAL</span>
-    <span>Contact us this month & get <strong>FREE VCO Process Guide PDF</strong> + <strong>Free sample pressing test</strong></span>
+    <span>Contact us this month & get the <strong>FREE VCO Process Guide PDF</strong> + model recommendation for your seed</span>
     <span class="countdown">Limited monthly quota</span>
   </div>
 </div>
@@ -394,9 +373,9 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="highlight">❄️ True Cold Press · ≤45°C · VCO & Premium Grade Oils</span>
-      <h1>Cold Press Oil Machine — <span class="accent">≤45°C & 94% Yield</span></h1>
-      <p class="sub">Manufacturer-grade cold press technology for <strong>coconut VCO, extra virgin olive, walnut, almond, avocado</strong> and 20+ premium seeds. <strong>SS304 food-grade option</strong>, <strong>2-year hydraulic cylinder warranty</strong>. Ships to 50+ countries.</p>
+      <span class="highlight">❄️ True Cold Press · Below 60°C · VCO & Premium Grade Oils</span>
+      <h1>Cold Press Oil Machine — <span class="accent">Low Temp, High Pressure</span></h1>
+      <p class="sub">Manufacturer-grade cold press technology for <strong>coconut VCO, extra virgin olive, walnut, almond, avocado</strong> and 20+ premium seeds. <strong>SS304 food-grade option</strong>, <strong>1-year factory warranty</strong>. Ships to 50+ countries.</p>
       <div class="cta-row">
         <a href="#inquiry-form" class="btn-primary">
           Get Factory Price in 24h
@@ -408,9 +387,9 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
         </a>
       </div>
       <div class="trust-row">
-        <div class="item">🌡️ <strong>≤45°C</strong> True Cold Press</div>
+        <div class="item">🌡️ <strong>≤60°C</strong> Cold Press</div>
         <div class="item">💎 <strong>SS304</strong> Food-Grade</div>
-        <div class="item">⚡ <strong>94%</strong> Max Yield</div>
+        <div class="item">⚡ <strong>60+ MPa</strong> System Pressure</div>
         <div class="item">🌍 <strong>50+</strong> Countries</div>
       </div>
     </div>
@@ -448,7 +427,7 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
         </div>
       </div>
       <button type="submit" class="submit">
-        🚀 Get My Factory Price & Recommendation
+        Get My Factory Price & Recommendation
       </button>
       <div class="form-success" id="formSuccess">✅ Request sent! We'll reply with factory price within 24 hours.</div>
       <p class="note">🔒 Protected & Confidential · Free VCO process guide with your request</p>
@@ -574,7 +553,7 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
       ))}
     </div>
 
-    <p class="model-note" style="margin-top:8px">💡 To boost daily output, choose the <strong>double-barrel option</strong> — one barrel presses while the other loads, increasing daily output by 40%–50%. FOB Qingdao price — <a href="#inquiry-form" style="color:#0369a1;text-decoration:underline;font-weight:700">ask for exact quote</a>.</p>
+    <p class="model-note" style="margin-top:8px">To keep production continuous, choose the <strong>double-barrel option</strong> — one barrel presses while the other is loaded and unloaded. FOB Qingdao price — <a href="#inquiry-form" style="color:#0369a1;text-decoration:underline;font-weight:700">ask for exact quote</a>.</p>
     <p class="model-tip">🤔 <strong>Unsure which model?</strong> <a href="#inquiry-form" style="color:#0e7490;font-weight:700">Get free engineer recommendation →</a> Tell us your (1) seed type and (2) daily target — we send 1-2 machine options within 24 hours. Free, no obligation.</p>
   </div>
 </section>
@@ -595,12 +574,12 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
           <p>Watch the complete cold pressing cycle: seeds in → hydraulic cold press → premium oil out → cake out. 10 seconds of video is worth 500 words of description.</p>
           <div class="video-stats">
             <div class="video-stat">
-              <div class="num">≤45°C</div>
-              <div class="label">True Cold Temp</div>
+              <div class="num">≤60°C</div>
+              <div class="label">Cold Press Temp</div>
             </div>
             <div class="video-stat">
-              <div class="num">94%</div>
-              <div class="label">Max Cold Yield</div>
+              <div class="num">60+ MPa</div>
+              <div class="label">System Pressure</div>
             </div>
             <div class="video-stat">
               <div class="num">50+</div>
@@ -619,7 +598,7 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
     <div class="section-head">
       <span class="eyebrow">Real Factory</span>
       <h2>Visit Our 3,000㎡ Cold Press Factory — Virtually or In Person</h2>
-      <p>Worried about quality? We prove it before you pay — sample pressing, QC videos, third-party inspection welcome.</p>
+      <p>Worried about quality? We prove it before you pay — in-factory test-run videos, QC checks, and third-party inspection are welcome.</p>
     </div>
     <div class="factory-grid">
       <div class="factory-photos">
@@ -639,46 +618,6 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
           <li>Qingdao port is just 250km away — fast & cheap shipping</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUCCESS STORIES -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Success Stories</span>
-      <h2>Real Clients, Real Results</h2>
-      <p>Join 2000+ oil producers in 50+ countries who grow their business with Haonuo.</p>
-    </div>
-    <div class="case-grid">
-      {cases.map(c => (
-        <div class="case-card">
-          <div class="case-head">
-            <div class="flag">{c.flag}</div>
-            <div>
-              <div class="cname">{c.client}</div>
-              <div class="ccountry">{c.country}</div>
-            </div>
-          </div>
-          <div class="case-row">
-            <div class="label">Equipment</div>
-            <div class="val">{c.model}</div>
-          </div>
-          <div class="case-row">
-            <div class="label">Seed & Capacity</div>
-            <div class="val">{c.seed} · {c.capacity}</div>
-          </div>
-          <div class="case-row">
-            <div class="label">Challenge</div>
-            <div class="val">{c.challenge}</div>
-          </div>
-          <div class="case-row">
-            <div class="label">Result</div>
-            <div class="result">🏆 {c.result}</div>
-          </div>
-        </div>
-      ))}
     </div>
   </div>
 </section>
@@ -711,7 +650,7 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
     <div class="final-cta-inner">
       <div>
         <h2>Ready to Upgrade Your <span class="accent">Cold Press Quality?</span></h2>
-        <p class="text-lead">Get a <strong>factory direct price + VCO process guide</strong> in 24 hours. Free sample pressing test available.</p>
+        <p class="text-lead">Get a <strong>factory direct price + VCO process guide</strong> in 24 hours. We can also record an in-factory test-run video with a similar seed before shipment.</p>
         <ul>
           <li>Cold press engineer 1-to-1 consultation</li>
           <li>Model recommendation with capacity calculation</li>
@@ -751,7 +690,7 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
             <textarea id="ads-msg2" name="message" required rows="3" placeholder="Seeds? Daily capacity (kg/T)? SS304 needed? VCO export target?"></textarea>
           </div>
         </div>
-        <button type="submit" class="submit">🚀 Get My Factory Price</button>
+        <button type="submit" class="submit">Get My Factory Price</button>
         <div class="form-success">✅ Request sent! We'll reply with factory price within 24 hours.</div>
         <p class="note">🔒 Confidential · Free VCO PDF with reply</p>
       </form>

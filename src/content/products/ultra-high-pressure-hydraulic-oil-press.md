@@ -63,7 +63,7 @@ faq:
   - question: How long does one pressing cycle take?
     answer: Hot pressing (with pre-roasting) completes in 30-40 minutes per batch. Cold pressing takes approximately 2 hours to preserve oil quality at low temperatures. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for pressing?
-    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the ideal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
+    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What is the difference between single and double barrel configurations?
     answer: A single barrel press processes one batch at a time. A double barrel press has two barrels on sliding rails — while one barrel is pressing, you can load the other, nearly doubling your throughput. We recommend the double barrel for commercial and industrial operations.
   - question: What power supply does the HN500 require?
@@ -341,7 +341,7 @@ Whether you are cold pressing walnut kernels, in-shell walnuts, apricot kernels,
 ### Conventional Materials
 - Tea seed, rapeseed, peanut, soybean, flaxseed, lacquer oil seed
 
-The HN500 delivers competitive residual oil rates across all material types, making it the ideal choice for producers who prioritize maximum oil yield and product quality.
+The HN500 delivers competitive residual oil rates across all material types, making it a well-proven choice for producers who prioritize maximum oil yield and product quality.
 
 ## Why Choose Haonuo
 
@@ -353,7 +353,7 @@ The HN500 delivers competitive residual oil rates across all material types, mak
 
 ## Regional Advantages
 
-**Southeast Asia (Indonesia, Malaysia, Thailand, Vietnam):** The HN500's 620-ton pressing force maximizes oil extraction from palm kernel and copra, achieving residual oil rates below 6%. Ideal for large-scale coconut oil operations in the Philippines and Indonesia.
+**Southeast Asia (Indonesia, Malaysia, Thailand, Vietnam):** The HN500's 620-ton pressing force maximizes oil extraction from palm kernel and copra, achieving residual oil rates below 6%. Well-suited for large-scale coconut oil operations in the Philippines and Indonesia.
 
 **Africa (Nigeria, Kenya, Ghana, Tanzania):** The HN500 is built for industrial-scale groundnut and shea butter processing. Its robust frame and heavy-duty hydraulic system withstand continuous 12-hour daily operation common in African production facilities.
 

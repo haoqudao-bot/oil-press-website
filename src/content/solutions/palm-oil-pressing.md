@@ -141,7 +141,7 @@ This solution covers the complete process from kernel separation through pressin
 ## Recommended Equipment
 
 - **Heavy Duty Hydraulic Oil Press (HN355)** — Provides the high pressure needed for palm kernel oil extraction. Recommended for small to medium operations.
-- **Ultra High Pressure Hydraulic Oil Press (HN500)** — Delivers maximum pressure for competitive residual oil rates. Ideal for larger operations seeking maximum yield.
+- **Ultra High Pressure Hydraulic Oil Press (HN500)** — Delivers maximum pressure for competitive residual oil rates. Well-suited for larger operations seeking maximum yield.
 - **Pneumatic Oil Filter Press** — Efficient filtration for clean palm kernel oil with minimal sediment.
 - **Edible Oil Refining System** — Required for producing food-grade RBD palm kernel oil. Available in 1-100 ton/day capacities.
 

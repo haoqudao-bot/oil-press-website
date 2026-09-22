@@ -5,10 +5,10 @@ title:
   ar: معصرة زيت هيدروليكية مصغرة
   id: Mesin Press Minyak Hidrolik Mini
 description:
-  en: "300-ton compact hydraulic oil press with 60 Mpa pressure. Entry-level model ideal for sesame and small seed pressing with 100kg capacity per batch."
+  en: "300-ton compact hydraulic oil press with 60 Mpa pressure. Entry-level model well-suited for sesame and small seed pressing with 100kg capacity per batch."
   fr: "Presse à huile hydraulique 300 tonnes, 60 Mpa. Sésame et petites graines, 100kg par lot."
-  ar: "معصرة زيت هيدروليكية مدمجة 300 طن بضغط 60 ميجاباسكال. موديل ابتدائي مثالي للسمسم والبذور الصغيرة بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik kompak 300 ton dengan tekanan 60 Mpa. Model entry-level ideal untuk wijen dan biji kecil dengan kapasitas 100kg per batch."
+  ar: "معصرة زيت هيدروليكية مدمجة 300 طن بضغط 60 ميجاباسكال. موديل ابتدائي مناسب للسمسم والبذور الصغيرة بقدرة 100 كجم لكل دفعة."
+  id: "Mesin press minyak hidrolik kompak 300 ton dengan tekanan 60 Mpa. Model entry-level cocok untuk wijen dan biji kecil dengan kapasitas 100kg per batch."
 category: hydraulic-oil-press
 model: HN300
 modelId: ''
@@ -56,7 +56,7 @@ faq:
   - question: How long does one pressing cycle take?
     answer: Hot pressing (with pre-roasting) completes in 30-40 minutes per batch. Cold pressing takes approximately 2 hours to preserve oil quality at low temperatures. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for pressing?
-    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the ideal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
+    answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What is the difference between single and double barrel configurations?
     answer: A single barrel press processes one batch at a time. A double barrel press has two barrels on sliding rails — while one barrel is pressing, you can load the other, nearly doubling your throughput. We recommend the double barrel for commercial and industrial operations.
   - question: What power supply does the HN300 require?
@@ -259,7 +259,7 @@ updatedAt: 2025-11-01
 
 The HN300 Mini Hydraulic Oil Press is our most compact and accessible hydraulic oil press, specifically designed as a dedicated sesame oil press machine. Also known as a small sesame oil mill or traditional-style sesame oil press, it is lightweight, easy to operate, and perfectly suited for sesame and small seed oil production. With 300 tons of pressing force and a 60 Mpa system pressure, the HN300 delivers reliable oil extraction in a space-saving footprint.
 
-The HN300 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 25 Mpa/cm², providing sufficient pressure for sesame, peanut, rapeseed, and tea seed to be fully pressed in a single cycle. Its compact 1100×1100×2350 mm overall dimensions make it ideal for workshops with limited space, while the lightweight 1.2-ton single-barrel configuration allows for easy installation and relocation.
+The HN300 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 25 Mpa/cm², providing sufficient pressure for sesame, peanut, rapeseed, and tea seed to be fully pressed in a single cycle. Its compact 1100×1100×2350 mm overall dimensions make it well-suited for workshops with limited space, while the lightweight 1.2-ton single-barrel configuration allows for easy installation and relocation.
 
 ## Key Advantages
 
@@ -282,7 +282,7 @@ The HN300 cylinder paired with a 390 mm inner diameter barrel achieves a cake su
 
 ## Applications & Suitable Materials
 
-The HN300 is ideal for pressing sesame and other small oil seeds:
+The HN300 is well-suited for pressing sesame and other small oil seeds:
 
 - **Best For**: Sesame (the primary application), producing authentic aromatic sesame oil
 - **Also Suitable**: Peanut, rapeseed, tea seed

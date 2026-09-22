@@ -26,7 +26,7 @@ Le cylindre HN325 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 ## Applications et Matières Adaptées
 
-La HN325 est idéale pour le pressage d'une grande variété de graines oléagineuses conventionnelles :
+La HN325 est adaptée pour le pressage d'une grande variété de graines oléagineuses conventionnelles :
 
 - **Graines Oléagineuses** : Graine de thé, colza, arachide, soja, graine de laque, lin
 - **Autres Matières** : Graine de tournesol, graine de coton et matières de pressage conventionnelles similaires
@@ -43,7 +43,7 @@ La HN325 est idéale pour le pressage d'une grande variété de graines oléagin
 
 ## Avantages Régionaux
 
-**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN325 est idéale pour la production d'huile de coco et d'arachide de petite à moyenne taille. Compatible avec l'alimentation standard 220V/50Hz de la région. Option de fût en acier inoxydable disponible pour la production d'huile de coco de qualité alimentaire.
+**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN325 est adaptée pour la production d'huile de coco et d'arachide de petite à moyenne taille. Compatible avec l'alimentation standard 220V/50Hz de la région. Option de fût en acier inoxydable disponible pour la production d'huile de coco de qualité alimentaire.
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** Conçue pour des conditions difficiles — la conception mécanique simple de la HN325 signifie moins de pannes et des réparations plus faciles. Fonctionne sur l'alimentation monophasée standard 220V ou un groupe électrogène portable (minimum 5 kVA). Pièces de rechange disponibles en stock avec expédition en 3 jours vers Lagos ou Mombasa.
 
@@ -144,7 +144,7 @@ La HN426 traite toutes les matières ci-dessus avec un excellent rendement en hu
 
 ## Avantages Régionaux
 
-**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN426 est la presse à froid idéale pour la production premium de VCO (Vierge Huile de Coco). La température reste inférieure à 50°C pendant le pressage, préservant la teneur naturelle en acide laurique de l'huile de coco et son arôme frais de coco.
+**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN426 est la presse à froid adaptée pour la production premium de VCO (Vierge Huile de Coco). La température reste inférieure à 50°C pendant le pressage, préservant la teneur naturelle en acide laurique de l'huile de coco et son arôme frais de coco.
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** Bien que principalement une presse à froid, la HN426 gère également le pressage à chaud pour l'huile d'arachide et de sésame. Sa conception polyvalente en fait une excellente machine polyvalente pour les producteurs d'huile africains qui traitent plusieurs types de graines.
 
@@ -187,7 +187,7 @@ La HN480 Presse à Huile Hydraulique Haute Pression comble le fossé entre notre
 
 La HN300 Mini Presse à Huile Hydraulique est notre presse à huile hydraulique la plus compacte et la plus accessible, spécialement conçue comme machine de pressage d'huile de sésame dédiée. Également connue sous le nom de petit moulin à huile de sésame ou presse à huile de sésame de style traditionnel, elle est légère, facile à utiliser et parfaitement adaptée à la production d'huile de sésame et de petites graines. Avec 300 tonnes de force de pressage et une pression système de 63 Mpa, la HN300 offre une extraction d'huile fiable dans un format compact.
 
-Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 25 Mpa/cm², fournissant une pression suffisante pour que le sésame, l'arachide, le colza et la graine de thé soient entièrement pressés en un seul cycle. Ses dimensions globales compactes de 1100×1100×2350 mm la rendent idéale pour les ateliers avec un espace limité, tandis que la configuration à un seul fût de 1,2 tonne permet une installation et un déplacement faciles.
+Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 25 Mpa/cm², fournissant une pression suffisante pour que le sésame, l'arachide, le colza et la graine de thé soient entièrement pressés en un seul cycle. Ses dimensions globales compactes de 1100×1100×2350 mm la rendent adaptée pour les ateliers avec un espace limité, tandis que la configuration à un seul fût de 1,2 tonne permet une installation et un déplacement faciles.
 
 ## Avantages Clés
 
@@ -210,9 +210,9 @@ Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 ## Applications et Matières Adaptées
 
-La HN300 est idéale pour le pressage du sésame et d'autres petites graines oléagineuses :
+La HN300 est adaptée pour le pressage du sésame et d'autres petites graines oléagineuses :
 
-- **Idéal Pour** : Sésame (l'application principale), produisant une authentique huile de sésame aromatique
+- **Adapté Pour** : Sésame (l'application principale), produisant une authentique huile de sésame aromatique
 - **Aussi Adapté** : Arachide, colza, graine de thé
 - **Autres Matières** : Petites graines similaires et matières de pressage conventionnelles
 
@@ -253,7 +253,7 @@ Le cylindre HN400 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 ## Applications et Matières Adaptées
 
-La HN400 est idéale pour le pressage d'une grande variété de graines oléagineuses conventionnelles et semi-dures :
+La HN400 est adaptée pour le pressage d'une grande variété de graines oléagineuses conventionnelles et semi-dures :
 
 - **Matières de Pressage à Froid** : Graine de thé, amande de noix, lin
 - **Matières Conventionnelles** : Colza, arachide, soja
@@ -273,7 +273,7 @@ La HN400 est idéale pour le pressage d'une grande variété de graines oléagin
 
 La HN325S Presse à Lait de Coco en Acier Inoxydable est spécialement conçue pour extraire du lait de coco et de la crème de coco de haute qualité à partir de chair de coco fraîche. Dotée d'une construction en acier inoxydable de qualité alimentaire pour toutes les surfaces de contact, cette machine garantit une hygiène maximale et une pureté du produit pour la production de lait de coco.
 
-Avec 325 tonnes de force de pressage et une pression système de 60 Mpa, la HN325S extrait efficacement le lait de coco tout en préservant la saveur naturelle et les nutriments. Le fût en acier inoxydable empêche la contamination, faisant de cette machine le choix idéal pour la production commerciale de lait de coco exigeant les normes d'hygiène les plus strictes.
+Avec 325 tonnes de force de pressage et une pression système de 60 Mpa, la HN325S extrait efficacement le lait de coco tout en préservant la saveur naturelle et les nutriments. Le fût en acier inoxydable empêche la contamination, faisant de cette machine un bon choix pour la production commerciale de lait de coco exigeant les normes d'hygiène les plus strictes.
 
 ## Avantages Clés
 
@@ -281,7 +281,7 @@ Avec 325 tonnes de force de pressage et une pression système de 60 Mpa, la HN32
 - **Conception Hygiénique** — Des surfaces lisses et une construction facile à nettoyer répondent aux normes de sécurité alimentaire les plus strictes pour la production laitière et de boissons.
 - **Résistante à la Corrosion** — La construction en acier inoxydable élimine les problèmes de rouille et de corrosion, prolongeant la durée de vie et réduisant les besoins d'entretien.
 - **Extraction à Haute Pression** — La force de pressage de 325 tonnes garantit une efficacité d'extraction maximale du lait de coco.
-- **Production de Qualité Premium** — La conception hygiénique préserve le goût naturel et les nutriments du lait de coco, idéale pour les marchés premium.
+- **Production de Qualité Premium** — La conception hygiénique préserve le goût naturel et les nutriments du lait de coco, adaptée pour les marchés premium.
 - **Productivité à Double Fût** — La configuration à double fût permet un fonctionnement continu — chargez un fût pendant que l'autre presse.
 
 ## Technologie Principale
@@ -299,7 +299,7 @@ Avec 325 tonnes de force de pressage et une pression système de 60 Mpa, la HN32
 La HN325S est spécialement conçue pour la production de lait de coco :
 
 - **Chair de Coco Fraîche** — La matière première principale pour l'extraction du lait de coco
-- **Production de Crème de Coco** — Idéale pour produire de la crème de coco épaisse pour les marchés premium
+- **Production de Crème de Coco** — Adaptée pour produire de la crème de coco épaisse pour les marchés premium
 - **Traitement Commercial de Lait de Coco** — Convient aux installations de production de lait de coco de petite à moyenne échelle
 
 ## Pourquoi Choisir Haonuo
@@ -344,7 +344,7 @@ Que vous pressiez à froid des amandes de noix, des noix en coque, des amandes d
 ### Matières Conventionnelles
 - Graine de thé, colza, arachide, soja, lin, graine de laque
 
-La HN500 délivre des taux d'huile résiduelle compétitifs sur tous les types de matières, ce qui en fait le choix idéal pour les producteurs qui privilégient le rendement maximal en huile et la qualité du produit.
+La HN500 délivre des taux d'huile résiduelle compétitifs sur tous les types de matières, ce qui en fait un bon choix pour les producteurs qui privilégient le rendement maximal en huile et la qualité du produit.
 
 ## Pourquoi Choisir Haonuo
 
@@ -356,7 +356,7 @@ La HN500 délivre des taux d'huile résiduelle compétitifs sur tous les types d
 
 ## Avantages Régionaux
 
-**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La force de pressage de 620 tonnes de la HN500 maximise l'extraction d'huile des amandes de palme et du coprah, atteignant des taux d'huile résiduelle inférieurs à 6 %. Idéale pour les opérations d'huile de coco à grande échelle aux Philippines et en Indonésie.
+**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La force de pressage de 620 tonnes de la HN500 maximise l'extraction d'huile des amandes de palme et du coprah, atteignant des taux d'huile résiduelle inférieurs à 6 %. Adaptée pour les opérations d'huile de coco à grande échelle aux Philippines et en Indonésie.
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** La HN500 est conçue pour le traitement industriel d'arachide et de beurre de karité. Son cadre robuste et son système hydraulique lourds résistent au fonctionnement continu de 12 heures quotidien courant dans les installations de production africaines.
 

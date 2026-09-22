@@ -61,7 +61,7 @@ faq:
   - question: How long does one pressing cycle take?
     answer: Cold pressing requires longer cycle times to preserve oil quality at low temperatures. A typical cold pressing cycle takes approximately 2 hours per batch depending on the material and desired cake dryness. Hot pressing (with pre-roasting) completes in 30-40 minutes. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for cold pressing?
-    answer: For cold pressing, the ideal moisture content range is 7-9%. This moisture level ensures smooth oil extraction while maintaining low-temperature conditions. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
+    answer: For cold pressing, the optimal moisture content range is 7-9%. This moisture level ensures smooth oil extraction while maintaining low-temperature conditions. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What pre-processing equipment is needed for cold pressing?
     answer: Cold pressing requires careful pre-processing Seed cleaning and color sorting to remove impurities and damaged seeds; 2) Dehulling for high-shell-content materials (shell removal rate at least 95 percent); 3) Moisture conditioning to reach optimal 7-9% moisture; 4) Gentle crushing to break seeds without generating heat (below 60 degrees Celsius). Unlike hot pressing, cold pressing does not involve roasting, preserving natural nutrients and flavors.
   - question: What is the difference between single and double barrel configurations?
@@ -304,14 +304,14 @@ The HN480B features a 480 mm cylinder outer diameter with a 360 mm piston inner 
 
 ## Applications & Suitable Materials
 
-The HN480B is ideal for pressing the most challenging cold-press materials:
+The HN480B is well-suited for pressing the most challenging cold-press materials:
 
 - **Walnut Specialist**: Walnut kernel, in-shell walnut — our complete walnut pressing solution ensures optimal results
 - **Other Cold-Press Materials**: Apricot kernel, almond, pine nut
 - **Conventional Materials**: Sesame, peanut, tea seed, flaxseed
 - **Other Materials**: Similar hard-shell and premium oil seeds
 
-The HN480B delivers the highest oil yield from cold-press materials, making it the ideal choice for producers of premium walnut oil, almond oil, and other high-value cold-pressed oils.
+The HN480B delivers the highest oil yield from cold-press materials, making it a well-proven choice for producers of premium walnut oil, almond oil, and other high-value cold-pressed oils.
 
 ## Why Choose Haonuo
 

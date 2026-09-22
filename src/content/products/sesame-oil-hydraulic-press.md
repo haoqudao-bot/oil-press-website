@@ -59,7 +59,7 @@ faq:
   - question: How long does one pressing cycle take?
     answer: A typical hot pressing cycle takes 30-40 minutes for sesame depending on the desired cake dryness and moisture content. The rapid cycle is critical for sesame's temperature-sensitive pressing — minimizing heat loss preserves oil quality and maximizes yield. For cold pressing, the cycle takes approximately 2 hours. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for sesame pressing?
-    answer: For sesame hot pressing, we recommend 5-8% moisture content before roasting. The roasted sesame should reach 3-5% moisture for optimal oil extraction. For cold pressing, the ideal range is 7-9% moisture. Proper moisture control is critical for sesame — too high causes oil emulsification, while too low increases friction and reduces yield.
+    answer: For sesame hot pressing, we recommend 5-8% moisture content before roasting. The roasted sesame should reach 3-5% moisture for optimal oil extraction. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical for sesame — too high causes oil emulsification, while too low increases friction and reduces yield.
   - question: What is the difference between single and double barrel configurations?
     answer: A single barrel press processes one batch at a time. A double barrel press has two barrels on sliding rails — while one barrel is pressing, you can load the other, nearly doubling your throughput. We recommend the double barrel for commercial and industrial operations.
   - question: What power supply does the Sesame Oil Hydraulic Press require?

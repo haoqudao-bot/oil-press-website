@@ -75,7 +75,7 @@ faq:
   - question: What certifications does the equipment have?
     answer: All equipment undergoes full-load testing before shipment. For the pneumatic filter press, the full-load test verifies filtration clarity and press cycle performance under maximum operating pressure.
   - question: How does this equipment integrate with a hydraulic oil press?
-    answer: The pneumatic oil filter press connects directly to the hydraulic oil press output. Crude oil from the press is drawn into the filter through the suction hose, automatically filtered through the 20-layer filter plate system, and discharged as clean, market-ready oil creating a seamless press-to-filter production line.
+    answer: The pneumatic oil filter press connects directly to the hydraulic oil press output. Crude oil from the press is drawn into the filter through the suction hose, automatically filtered through the 20-layer filter plate system, and discharged as clean, market-ready oil creating a smooth press-to-filter production line.
 faqFr:
   - question: Quelle est la capacité de traitement du filtre-presse pneumatique à huile ?
     answer: Le filtre-presse pneumatique HN-10SL dispose de 10 m² de surface de filtration avec 20 couches de plaques filtrantes, capable de fonctionner en continu 24h/24 à pression constante automatique. La capacité de traitement varie selon la viscosité de l'huile et le niveau d'impuretés.

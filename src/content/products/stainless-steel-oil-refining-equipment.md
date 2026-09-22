@@ -38,7 +38,7 @@ faq:
   - question: What types of oil can be refined?
     answer: Our refining equipment can process a wide range of crude oils including peanut oil, soybean oil, sunflower oil, rapeseed oil, palm oil, coconut oil, and more. The refining process removes impurities, free fatty acids, phospholipids, and odors.
   - question: What is the difference between stainless steel and carbon steel models?
-    answer: Stainless steel models are food-grade and corrosion-resistant, ideal for edible oil production. Carbon steel models are more economical and suitable for industrial oil processing where food-grade standards are not required.
+    answer: Stainless steel models are food-grade and corrosion-resistant, well-suited for edible oil production. Carbon steel models are more economical and suitable for industrial oil processing where food-grade standards are not required.
   - question: What refining processes does the equipment perform?
     answer: The equipment performs degumming, neutralization (deacidification), decolorization (bleaching), and deodorization — the four core refining processes to produce high-quality refined oil.
   - question: What is the oil loss rate during refining?
@@ -119,7 +119,7 @@ faqAr:
   - question: "ما أنواع الزيوت التي يمكن تكريرها؟"
     answer: "يمكن لمعدات التكرير لدينا معالجة مجموعة واسعة من الزيوت الخام بما في ذلك زيت الفول السوداني وزيت الصويا وزيت عباد الشمس وزيت اللفت وزيت النخيل وزيت جوز الهند والمزيد. تزيل عملية التكرير الشوائب والأحماض الدهنية الحرة والفوسفوليبيدات والروائح."
   - question: "ما الفرق بين طرازات الفولاذ المقاوم للصدأ والفولاذ الكربوني؟"
-    answer: "طرازات الفولاذ المقاوم للصدأ بدرجة غذائية ومقاومة للتآكل، مثالية لإنتاج الزيت الصالح للأكل. طرازات الفولاذ الكربوني أكثر اقتصادية ومناسبة لمعالجة الزيت الصناعي حيث لا تكون معايير الدرجة الغذائية مطلوبة."
+    answer: "طرازات الفولاذ المقاوم للصدأ بدرجة غذائية ومقاومة للتآكل، مناسبة لإنتاج الزيت الصالح للأكل. طرازات الفولاذ الكربوني أكثر اقتصادية ومناسبة لمعالجة الزيت الصناعي حيث لا تكون معايير الدرجة الغذائية مطلوبة."
   - question: "ما عمليات التكرير التي تؤديها المعدات؟"
     answer: "تؤدي المعدات إزالة الصمغ والتعادل (إزالة الحموضة) وإزالة اللون (التبييض) وإزالة الروائح — عمليات التكرير الأساسية الأربع لإنتاج زيت مكرر عالي الجودة."
   - question: "ما معدل فقدان الزيت أثناء التكرير؟"
@@ -140,7 +140,7 @@ faqId:
   - question: Jenis minyak apa saja yang dapat dimurnikan?
     answer: Peralatan pemurnian kami dapat memproses berbagai jenis minyak mentah termasuk minyak kacang tanah, minyak kedelai, minyak bunga matahari, minyak rapeseed, minyak sawit, minyak kelapa, dan lainnya. Proses pemurnian menghilangkan kotoran, asam lemak bebas, fosfolipid, dan bau.
   - question: Apa perbedaan antara model baja tahan karat dan baja karbon?
-    answer: Model baja tahan karat bersifat food-grade dan tahan korosi, ideal untuk produksi minyak nabati. Model baja karbon lebih ekonomis dan cocok untuk pemrosesan minyak industri yang tidak memerlukan standar food-grade.
+    answer: Model baja tahan karat bersifat food-grade dan tahan korosi, cocok untuk produksi minyak nabati. Model baja karbon lebih ekonomis dan cocok untuk pemrosesan minyak industri yang tidak memerlukan standar food-grade.
   - question: Proses pemurnian apa saja yang dilakukan peralatan ini?
     answer: Peralatan ini melakukan degumming, netralisasi (deasidifikasi), dekolorisasi (pemutihan), dan deodorisasi — empat proses pemurnian inti untuk menghasilkan minyak murni berkualitas tinggi.
   - question: Berapa tingkat kehilangan minyak selama pemurnian?
@@ -167,12 +167,12 @@ updatedAt: 2025-11-01
 
 The Haonuo Stainless Steel Oil Refining Equipment is a food-grade refining solution constructed entirely from stainless steel for all oil-contact surfaces. Designed for producers who require the highest standards of hygiene and regulatory compliance, this system transforms crude oil into premium-quality RBD oil while using FDA-compliant food contact materials consistent with international food safety standards including EU regulations. Note: Our machines have not been separately certified or approved by the FDA. Available in capacities from 1 to 50 tons per day, every system is engineered to order to match your specific crude oil type and product requirements.
 
-The stainless steel construction eliminates the risk of metal contamination, corrosion, and rust that can compromise oil quality and safety. This makes the system ideal for premium oil brands, organic certification, and export markets where food safety compliance is non-negotiable. The complete refining process — from degumming through deodorization — is housed in sanitary stainless steel vessels, ensuring your finished oil meets the strictest quality standards.
+The stainless steel construction eliminates the risk of metal contamination, corrosion, and rust that can compromise oil quality and safety. This makes the system well-suited for premium oil brands, organic certification, and export markets where food safety compliance is non-negotiable. The complete refining process — from degumming through deodorization — is housed in sanitary stainless steel vessels, ensuring your finished oil meets the strictest quality standards.
 
 ## Key Advantages
 
 - **Food-Grade Stainless Steel** — All oil-contact surfaces are constructed from food-grade stainless steel, preventing contamination and ensuring the purest oil quality.
-- **International Compliance** — Meets FDA and EU food safety standards, ideal for export markets and premium oil brands requiring strict regulatory compliance.
+- **International Compliance** — Meets FDA and EU food safety standards, well-suited for export markets and premium oil brands requiring strict regulatory compliance.
 - **Fully Customizable Capacity** — From 1 T/D pilot systems to 50 T/D production plants, engineered to match your exact production requirements.
 - **Complete Process Coverage** — Degumming through deodorization in one integrated system, with all vessels in sanitary stainless steel.
 - **Corrosion Resistant** — Stainless steel construction eliminates rust and corrosion concerns, reducing maintenance and extending service life.
@@ -195,7 +195,7 @@ The Stainless Steel Oil Refining Equipment is suitable for refining all types of
 - **Premium Products**: Organic oils, cold-pressed oils, specialty oils for export and premium markets
 - **Regulatory Markets**: Products destined for FDA-regulated, EU-compliant, or other strictly regulated markets
 
-This system is the ideal choice for producers who need to deliver the highest quality refined oil while meeting the strictest food safety and hygiene standards.
+This system is a well-proven choice for producers who need to deliver the highest quality refined oil while meeting the strictest food safety and hygiene standards.
 
 ## Why Choose Haonuo
 

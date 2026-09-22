@@ -19,8 +19,8 @@ const articleLd = {
   headline: title,
   description: description,
   image: 'https://www.hydoilpress.com/images/maximize-yield-hero.webp',
-  author: { '@type': 'Person', name: 'Haonuo Engineering Team', jobTitle: 'Senior Production Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
-  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/images/logo.png' } },
+  author: { '@type': 'Person', name: 'Eason', jobTitle: 'Senior Hydraulic Press Engineer', url: 'https://www.hydoilpress.com/about', worksFor: { '@type': 'Organization', name: 'Shandong Haonuo Machinery Equipment Group Co., Ltd.', url: 'https://www.hydoilpress.com' } },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
   datePublished: publishedAt.toISOString(),
   dateModified: updatedAt.toISOString(),
   keywords: seoKeywords.join(', '),
@@ -38,7 +38,7 @@ const breadcrumbLd = {
 
 const yieldFactors = [
   { icon: 'seed', title: 'جودة المواد الأولية', desc: 'بذور عالية الجودة = عائد أعلى' },
-  { icon: 'droplet', title: 'محتوى الرطوبة', desc: 'الرطوبة المثالية = 5-8%' },
+  { icon: 'droplet', title: 'محتوى الرطوبة', desc: 'الرطوبة المناسبة = 5-8%' },
   { icon: 'flame', title: 'التحميص', desc: 'التحميص السليم يكسر جدران الخلايا' },
   { icon: 'gear', title: 'الطحن', desc: 'حجم جسيمات مناسب يزيد مساحة السطح' },
   { icon: 'pressure', title: 'الضغط', desc: 'ضغط أعلى = استخراج زيت أكثر' },
@@ -165,7 +165,7 @@ function localePath(path: string): string {
         <div class="overflow-x-auto mb-4">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
             <thead class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
-              <tr><th class="px-4 py-3 text-right font-semibold">المادة</th><th class="px-4 py-3 text-right font-semibold">الرطوبة المثالية</th><th class="px-4 py-3 text-right font-semibold">جاف جداً</th><th class="px-4 py-3 text-right font-semibold">رطب جداً</th></tr>
+              <tr><th class="px-4 py-3 text-right font-semibold">المادة</th><th class="px-4 py-3 text-right font-semibold">الرطوبة المناسبة</th><th class="px-4 py-3 text-right font-semibold">جاف جداً</th><th class="px-4 py-3 text-right font-semibold">رطب جداً</th></tr>
             </thead>
             <tbody>
               {moistureGuide.map((item, index) => (
@@ -200,7 +200,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="pressure" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تقنية الضغط المثالية</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">تقنية الضغط المناسبة</h2>
         <div class="space-y-4">
           {pressureGuide.map((item, index) => (
             <div key={index} class="flex gap-5">

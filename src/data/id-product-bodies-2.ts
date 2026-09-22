@@ -34,7 +34,7 @@ HN480B cocok untuk menekan bahan press dingin paling menuntut:
 - **Bahan Konvensional**: Wijen, kacang tanah, biji teh, biji rami
 - **Bahan Lainnya**: Biji bercangkang keras serupa dan biji minyak premium
 
-HN480B memberikan hasil minyak tertinggi untuk bahan press dingin, menjadikannya pilihan ideal bagi produsen minyak walnut premium, minyak almond, dan minyak press dingin bernilai tinggi lainnya.
+HN480B memberikan hasil minyak tertinggi untuk bahan press dingin, menjadikannya pilihan yang cocok bagi produsen minyak walnut premium, minyak almond, dan minyak press dingin bernilai tinggi lainnya.
 
 ## Mengapa Memilih Haonuo
 
@@ -258,7 +258,7 @@ Penghancuk ini adalah solusi pra-pemrosesan yang tepat sebelum press minyak hidr
 
   'industrial-seed-crusher': `## Ringkasan
 
-Penghancuk Biji Industri Model 370 adalah versi kapasitas tinggi yang ditingkatkan dari Model 220 kami yang sudah terbukti — memberikan 2,6 kali lipat kapasitas pemrosesan untuk operasi penggilingan biji minyak skala besar. Dengan motor bertenaga 18,5 KW dan kecepatan rotasi 3260 rpm, penghancuk industri ini memproses bahan bercangkang keras yang sama seperti Model 220 tetapi dalam volume jauh lebih tinggi, menjadikannya pilihan ideal bagi fasilitas press minyak komersial dan industri.
+Penghancuk Biji Industri Model 370 adalah versi kapasitas tinggi yang ditingkatkan dari Model 220 kami yang sudah terbukti — memberikan 2,6 kali lipat kapasitas pemrosesan untuk operasi penggilingan biji minyak skala besar. Dengan motor bertenaga 18,5 KW dan kecepatan rotasi 3260 rpm, penghancuk industri ini memproses bahan bercangkang keras yang sama seperti Model 220 tetapi dalam volume jauh lebih tinggi, menjadikannya pilihan yang cocok bagi fasilitas press minyak komersial dan industri.
 
 Baik Anda berkembang dari Model 220 atau memulai langsung dengan kapasitas industri, Model 370 memberikan kekuatan penggilingan dan aliran produksi yang diperlukan rencana produksi Anda.
 

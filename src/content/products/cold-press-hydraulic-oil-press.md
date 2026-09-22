@@ -63,7 +63,7 @@ faq:
   - question: How long does one pressing cycle take?
     answer: Cold pressing requires longer cycle times to preserve oil quality at low temperatures. A typical cold pressing cycle takes approximately 2 hours per batch depending on the material and desired cake dryness. Hot pressing (with pre-roasting) completes in 30-40 minutes. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for cold pressing?
-    answer: For cold pressing, the ideal moisture content range is 7-9%. This moisture level ensures smooth oil extraction while maintaining low-temperature conditions. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
+    answer: For cold pressing, the optimal moisture content range is 7-9%. This moisture level ensures smooth oil extraction while maintaining low-temperature conditions. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What pre-processing equipment is needed for cold pressing?
     answer: Cold pressing requires careful pre-processing steps including seed cleaning and color sorting to remove impurities, dehulling for high-shell-content materials with shell removal rate at least 95 percent, moisture conditioning to reach optimal 7-9 percent moisture, and gentle crushing to break seeds without generating heat below 60 degrees Celsius. Unlike hot pressing, cold pressing does not involve roasting, preserving natural nutrients and flavors.
   - question: What is the difference between single and double barrel configurations?
@@ -355,7 +355,7 @@ The HN426 handles all of the above with excellent oil yield. For conventional ma
 
 ## Regional Advantages
 
-**Southeast Asia (Indonesia, Malaysia, Thailand, Vietnam):** The HN426 is the ideal cold press for premium VCO (Virgin Coconut Oil) production. Temperature stays below 50 degrees Celsius during pressing, preserving coconut oil's natural lauric acid content and fresh coconut aroma.
+**Southeast Asia (Indonesia, Malaysia, Thailand, Vietnam):** The HN426 is a well-proven cold press for premium VCO (Virgin Coconut Oil) production. Temperature stays below 50 degrees Celsius during pressing, preserving coconut oil's natural lauric acid content and fresh coconut aroma.
 
 **Africa (Nigeria, Kenya, Ghana, Tanzania):** While primarily a cold press, the HN426 also handles hot pressing for groundnut and sesame oil. Its versatile design makes it a great all-around machine for African oil producers who process multiple seed types.
 

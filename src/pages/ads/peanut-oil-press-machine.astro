@@ -10,12 +10,12 @@ const modelTable = [
 ];
 
 const quickPicks = [
-  { seed: 'Peanut / Groundnut', hardness: 'Soft → 325 Tons', model: 'HN325', badge: 'BEST SELLER', desc: 'Most popular. 390mm barrel, 5-100kg per batch. Hot press (cooked) or cold press. Perfect for small to medium peanut oil businesses.' },
-  { seed: 'Sesame', hardness: 'Soft → 325 Tons', model: 'HN325 Sesame', badge: 'SESAME SPECIAL', desc: '300mm small barrel for concentrated pressure. 32.5-50kg per batch. Short press cycle preserves sesame aroma and maximizes oil yield.' },
-  { seed: 'Peanut + Sesame Mix', hardness: 'Medium → 400 Tons', model: 'HN400', badge: '', desc: 'Medium pressure for mixed peanut/sesame or peanut + other blends. 5-100kg per batch. Great for blended oil products.' },
-  { seed: 'Cold Press Peanut', hardness: 'Medium-Hard → 500 Tons', model: 'HN426', badge: 'COLD PRESS', desc: 'Cold-pressed peanut oil for premium bottled products. Light color, fresh aroma, commands 2-3× higher market price.' },
-  { seed: 'Groundnut Shell / Hard', hardness: 'Hard → 500 Tons', model: 'HN426', badge: '', desc: 'For groundnut with shell or harder varieties. 500-ton pressure ensures complete extraction. Stainless steel option available.' },
-  { seed: 'Large scale / Factory', hardness: 'Industrial → 620 Tons', model: 'HN500', badge: 'FLAGSHIP', desc: 'Maximum pressure for industrial peanut oil production. Double-barrel available for continuous production — boosts daily output by 30-50%.' },
+  { seed: 'Peanut / Groundnut', hardness: 'Soft → 325 Tons', model: 'HN325', badge: 'BEST SELLER', desc: 'Most popular. 390mm barrel, 5-100kg per batch. Hot press (cooked) or cold press. Well suited for small to medium peanut oil businesses.' },
+  { seed: 'Sesame', hardness: 'Soft → 325 Tons', model: 'HN325 Sesame', badge: 'SESAME SPECIAL', desc: '300mm small barrel for concentrated pressure. 32.5-50kg per batch. Short press cycle preserves sesame aroma.' },
+  { seed: 'Peanut + Sesame Mix', hardness: 'Medium → 400 Tons', model: 'HN400', badge: '', desc: 'Medium pressure for mixed peanut/sesame or peanut + other blends. 5-100kg per batch. A good fit for blended oil products.' },
+  { seed: 'Cold Press Peanut', hardness: 'Medium-Hard → 500 Tons', model: 'HN426', badge: 'COLD PRESS', desc: 'Cold-pressed peanut oil for premium bottled products. Light color, fresh aroma — positioned for the premium market.' },
+  { seed: 'Groundnut Shell / Hard', hardness: 'Hard → 500 Tons', model: 'HN426', badge: '', desc: 'For groundnut with shell or harder varieties. 500-ton pressure for thorough extraction. Stainless steel option available.' },
+  { seed: 'Large scale / Factory', hardness: 'Industrial → 620 Tons', model: 'HN500', badge: 'FLAGSHIP', desc: 'Maximum pressure for industrial peanut oil production. Double-barrel available for continuous production — one barrel presses while the other is loaded and unloaded.' },
 ];
 
 const seeds = [
@@ -34,17 +34,17 @@ const seeds = [
 ];
 
 const painPoints = [
-  { icon: '💧', title: 'Low Peanut Oil Yield', desc: 'Traditional screw presses leave 15-20% oil in the groundnut cake. That\'s pure profit lost.' },
+  { icon: '💧', title: 'Low Peanut Oil Yield', desc: 'If pressure or preparation is wrong, oil stays in the groundnut cake — and that oil is profit left on the table.' },
   { icon: '🔥', title: 'Overheated Oil', desc: 'High-temp pressing burns peanut oil, making it dark and bitter. Premium groundnut oil needs cold press.' },
   { icon: '⚙️', title: 'Machine Jams on Peanut', desc: 'Cheap machines jam on sticky peanut paste. Downtime costs you production days.' },
   { icon: '📦', title: 'No After-Sales Support', desc: 'Middlemen disappear after payment. When parts break, you\'re stuck.' },
 ];
 
 const advantages = [
-  { num: '92%', title: 'Higher Profit Margin', desc: 'Patented diaphragm technology extracts 8-12% more oil than ordinary presses. 92%+ oil yield means you sell 10-15% more oil from the same raw materials. That is thousands of dollars extra profit every month.' },
-  { num: '30-40%', title: 'Factory Direct Price', desc: 'You buy directly from our factory in Shandong — no distributors, no middlemen markup. Save 30-40% vs buying through trading companies.' },
-  { num: '2 min', title: 'Easy Operation', desc: 'One-button start. No skilled operator needed. 2-minute training and anyone can run it. Top-discharge design makes cake removal 10x faster than bottom-discharge.' },
-  { num: '10+ yr', title: 'Safe & Durable', desc: '27SiMn steel hydraulic cylinder is safer and lasts longer. Chrome-plated piston rod with 5-layer seals, zero leakage under 620-ton pressure. Nickel-plated food-grade barrel. Industrial-grade components throughout.' },
+  { num: '60+ MPa', title: 'Thorough Extraction', desc: 'High static hydraulic pressure squeezes the cake harder than manual or low-pressure methods, so less oil is left behind. Actual yield depends on groundnut variety, moisture content, and roasting.' },
+  { num: 'DIRECT', title: 'Factory-Direct Price', desc: 'You buy directly from our factory in Shandong — no trading company in between, no reseller markup.' },
+  { num: 'EASY', title: 'Easy Operation', desc: 'Simple button controls. No skilled operator is needed — staff learn the routine in a short training. Top-discharge design makes cake removal faster than bottom-discharge models.' },
+  { num: '10+ yr', title: 'Safe & Durable', desc: '27SiMn steel hydraulic cylinder is built for long service life. Chrome-plated piston rod with multi-layer seals keeps leakage low at high pressure. Nickel-plated food-grade barrel. Industrial-grade components throughout.' },
   { num: '24h', title: 'Lifetime Support', desc: '1-year factory warranty. Our engineers reply within 24 hours on working days. Spare parts always in stock, shipped via DHL/FedEx in 3-7 days worldwide. Free remote video guidance for life.' },
   { num: 'OEM', title: 'OEM / ODM', desc: 'From standard machines to fully customized OEM/ODM solutions — stainless steel, double-barrel, automated lines, custom branding. We build to your exact specification.' },
 ];
@@ -59,34 +59,13 @@ const modelRows = [
   { model: 'HN325LB', featured: false, seed: 'Oil sludge, groundnut cake dehydration', process: 'Cold', barrel: 'Φ630 mm', pressure: '≈ 320 Tons', capacity: '≈ 300 kg', note: 'Large barrel for high-volume sludge & dehydration.' },
 ];
 
-const cases = [
-  {
-    flag: 'NG', country: 'Nigeria', client: 'Peanut Oil Producer (West Africa)',
-    model: 'HN325 x 3 units', seed: 'Peanut / Groundnut', capacity: '3T/day',
-    challenge: 'Farmers needed affordable, reliable peanut oil press for local processing',
-    result: 'Breakeven in 5 months, oil yield +15% vs screw press, now their 3rd HN325',
-  },
-  {
-    flag: 'GH', country: 'Ghana', client: 'Groundnut Oil Producer (West Africa)',
-    model: 'HN325 x 2 units', seed: 'Peanut / Groundnut', capacity: '2T/day',
-    challenge: 'Farmers wanted to process groundnut locally instead of selling raw',
-    result: 'Revenue +200% in 6 months, now supplying local markets and exporting to Togo',
-  },
-  {
-    flag: 'IN', country: 'India', client: 'Peanut Oil Producer (South Asia)',
-    model: 'HN400 x 4 units', seed: 'Peanut / Groundnut', capacity: '8T/day',
-    challenge: 'Wanted cold press premium groundnut oil for export',
-    result: 'Exporting to UAE & Saudi Arabia, premium oil sells at 3x local price',
-  },
-];
-
 const faqs = [
   { q: 'How much does a peanut oil press machine cost?', a: 'Prices vary by model, material, and configuration. The best-selling HN325 is our most popular choice for peanut/groundnut startups. Commercial and industrial models are available for larger peanut oil operations. We also offer OEM/ODM customization for stainless steel, double-barrel, and other special requirements. Tell us your seed type and target capacity — we send exact factory pricing with shipping to your port within 24 hours.' },
-  { q: 'Which peanut oil press model should I buy?', a: 'It depends on 2 key things: (1) which seed you press — soft seeds (peanut, sesame) use HN325, medium-hard seeds (peanut blends, cold press) use HN400, hard seeds (shelled groundnut, VCO) use HN426. (2) your daily capacity need — double-barrel versions boost output by 30-50%. Not sure? Tell us your seed + capacity — our engineer recommends 1-2 models with ROI calculation. Free, no obligation.' },
-  { q: 'What is the oil yield for peanut/groundnut?', a: 'Our hydraulic press achieves 80-85% oil yield on peanut/groundnut — meaning only 15-20% oil remains in the cake. Compare that to traditional screw presses which leave 25-35% oil behind. Send us 5-10 kg of your groundnut and we press it free in our lab, sending you the exact yield % and oil sample photo.' },
+  { q: 'Which peanut oil press model should I buy?', a: 'It depends on 2 key things: (1) which seed you press — soft seeds (peanut, sesame) use HN325, medium-hard seeds (peanut blends, cold press) use HN400, hard seeds (shelled groundnut, VCO) use HN426. (2) your daily capacity need — double-barrel versions keep production continuous, with one barrel pressing while the other is loaded. Not sure? Tell us your seed + capacity — our engineer recommends 1-2 models with ROI calculation. Free, no obligation.' },
+  { q: 'What is the oil yield for peanut/groundnut?', a: 'There is no single fixed number — yield depends on the groundnut variety, moisture content, roasting, and how the meal is prepared. High static hydraulic pressure leaves less oil in the cake than manual or low-pressure methods. Tell us your groundnut type and how you prepare it, and we will share the reference yield range from our test records for similar material.' },
   { q: 'Can you ship to Nigeria/Ghana/other African countries?', a: 'Yes. We have shipped to 50+ countries with strong demand across Africa: Nigeria, Ghana, Kenya, Egypt, Ethiopia, Tanzania, Uganda, South Africa and more. Sea shipping to Lagos (Nigeria), Tema (Ghana) and Mombasa (Kenya) takes about 25-40 days. Air freight available for urgent spare parts via DHL/FedEx.' },
   { q: 'Can I press both hot and cold peanut oil?', a: 'Yes. The HN426 and HN500 support cold press for premium, light-colored groundnut oil that keeps full aroma and nutrients. For higher volume commercial oil you can run hot press. Tell us whether you sell premium bottled oil or bulk cooking oil — we configure the heating system and barrel accordingly.' },
-  { q: 'Can I test my groundnut samples before buying?', a: 'Yes! Send us 5-10 kg of your peanut/groundnut. We press it in our factory lab, record a video, and send you: (1) oil yield percentage, (2) oil sample photo, (3) cake quality, (4) recommended model. This is 100% free — you only pay shipping to our factory.' },
+  { q: 'Can I see a test run before buying?', a: 'Yes. Before shipment we can record an in-factory test run with a similar seed and send you the full video, including oil flow and cake condition. You may also arrange a third-party inspection company to check the machines at our factory before loading.' },
   { q: 'Do you provide installation support?', a: 'Yes. We provide: (1) detailed written manuals and setup videos (English), (2) free remote video guidance via WhatsApp/WeChat during installation, (3) optional on-site engineer visit for large projects (at cost). Most clients install by themselves with our video guidance — the machine comes 90% assembled.' },
   { q: 'What is the warranty?', a: 'All machines come with 1-year factory warranty covering parts and labor. We also provide lifetime technical support via video call, WhatsApp, and email. Spare parts always in stock, shipped via DHL/FedEx in 3-7 days worldwide.' },
 ];
@@ -101,9 +80,9 @@ const capacities = ['Small Business (30-80 kg/h)','Commercial (80-180 kg/h)','In
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Peanut Oil Press Machine | Factory Direct Price (2026) | Haonuo</title>
-<meta name="description" content="Professional peanut oil press machine manufacturer since 2010. Up to 85% oil yield on groundnut, 1-year warranty, ships to 50+ countries. Get factory direct price within 24 hours." />
+<meta name="description" content="Professional peanut/groundnut oil press machine manufacturer since 2010. 60+ MPa hydraulic pressure, 1-year warranty, ships to 50+ countries. Get factory direct price within 24 hours." />
 <meta property="og:title" content="Peanut Oil Press Machine - Factory Direct from Haonuo" />
-<meta property="og:description" content="85% peanut oil yield, 15+ years experience, 1-year factory warranty. Get your factory price in 24 hours." />
+<meta property="og:description" content="High-pressure hydraulic press for peanut/groundnut oil, 15+ years manufacturing experience, 1-year factory warranty. Get your factory price in 24 hours." />
 <meta property="og:image" content={ogImage} />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -386,7 +365,7 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
 <div class="offer">
   <div class="container offer-inner">
     <span class="chip">SPECIAL</span>
-    <span>Contact us this month & get <strong>FREE groundnut oil yield test</strong> + <strong>3% factory discount</strong></span>
+    <span>Contact us this month & get a <strong>FREE model & capacity recommendation</strong> with factory pricing</span>
     <span class="countdown">Limited monthly quota</span>
   </div>
 </div>
@@ -395,8 +374,8 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="highlight">🥜 Factory Direct · Built for Peanut/Groundnut Oil · Africa's #1 Choice</span>
-      <h1>Peanut Oil Press Machine — <span class="accent">Up to 85% Oil Yield</span></h1>
+      <span class="highlight">🥜 Factory Direct · Built for Peanut / Groundnut Oil Production</span>
+      <h1>Peanut Oil Press Machine — <span class="accent">High Pressure, Drier Cake</span></h1>
       <p class="sub">Professional manufacturer since 2010. Specialized for <strong>peanut/groundnut oil production</strong>. <strong>1-year factory warranty</strong>, lifetime engineer support, shipped to 50+ countries.</p>
       <div class="cta-row">
         <a href="#inquiry-form" class="btn-primary">
@@ -412,7 +391,7 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
         <div class="item">🏭 <strong>15+</strong> Years</div>
         <div class="item">🌍 <strong>50+</strong> Countries</div>
         <div class="item">🛡️ <strong>1-Year</strong> Warranty</div>
-        <div class="item">⚡ <strong>2000+</strong> Machines</div>
+        <div class="item">⚡ <strong>2000+</strong> Buyers</div>
       </div>
     </div>
 
@@ -449,7 +428,7 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
         </div>
       </div>
       <button type="submit" class="submit">
-        🚀 Get My Factory Price & Recommendation
+        Get My Factory Price & Recommendation
       </button>
       <div class="form-success" id="formSuccess">✅ Request sent! We'll reply with factory price within 24 hours.</div>
       <p class="note">🔒 Your information is protected. We never share or spam.</p>
@@ -575,7 +554,7 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
       ))}
     </div>
 
-    <p class="model-note" style="margin-top:8px">💡 To boost daily output, choose the <strong>double-barrel option</strong> — one barrel presses while the other loads, increasing daily output by 40%–50%. FOB Qingdao price — <a href="#inquiry-form" style="color:#166534;text-decoration:underline;font-weight:700">ask for exact quote</a>.</p>
+    <p class="model-note" style="margin-top:8px">To keep production continuous, choose the <strong>double-barrel option</strong> — one barrel presses while the other is loaded and unloaded. FOB Qingdao price — <a href="#inquiry-form" style="color:#166534;text-decoration:underline;font-weight:700">ask for exact quote</a>.</p>
     <p class="model-tip">🤔 <strong>Unsure which model?</strong> <a href="#inquiry-form" style="color:#4d7c0f;font-weight:700">Get free engineer recommendation →</a> Tell us your (1) seed type and (2) daily target — we send 1-2 machine options within 24 hours. Free, no obligation.</p>
   </div>
 </section>
@@ -596,8 +575,8 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
           <p>Watch the complete pressing cycle: groundnut in → hydraulic press → peanut oil out → cake out. 10 seconds of video is worth 500 words of description.</p>
           <div class="video-stats">
             <div class="video-stat">
-              <div class="num">85%</div>
-              <div class="label">Oil Yield</div>
+              <div class="num">60+ MPa</div>
+              <div class="label">System Pressure</div>
             </div>
             <div class="video-stat">
               <div class="num">100 kg</div>
@@ -640,46 +619,6 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
           <li>Qingdao port is just 250km away — fast & cheap shipping</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUCCESS STORIES -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Success Stories</span>
-      <h2>Real Clients, Real Results</h2>
-      <p>Join 2000+ oil producers in 50+ countries who grow their business with Haonuo.</p>
-    </div>
-    <div class="case-grid">
-      {cases.map(c => (
-        <div class="case-card">
-          <div class="case-head">
-            <div class="flag">{c.flag}</div>
-            <div>
-              <div class="cname">{c.client}</div>
-              <div class="ccountry">{c.country}</div>
-            </div>
-          </div>
-          <div class="case-row">
-            <div class="label">Equipment</div>
-            <div class="val">{c.model}</div>
-          </div>
-          <div class="case-row">
-            <div class="label">Seed & Capacity</div>
-            <div class="val">{c.seed} · {c.capacity}</div>
-          </div>
-          <div class="case-row">
-            <div class="label">Challenge</div>
-            <div class="val">{c.challenge}</div>
-          </div>
-          <div class="case-row">
-            <div class="label">Result</div>
-            <div class="result">🏆 {c.result}</div>
-          </div>
-        </div>
-      ))}
     </div>
   </div>
 </section>
@@ -752,7 +691,7 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
             <textarea id="ads-msg2" name="message" required rows="3" placeholder="Seed type? Daily/Monthly capacity? Budget range? Any specific requirements?"></textarea>
           </div>
         </div>
-        <button type="submit" class="submit">🚀 Get My Factory Price</button>
+        <button type="submit" class="submit">Get My Factory Price</button>
         <div class="form-success">✅ Request sent! We'll reply with factory price within 24 hours.</div>
         <p class="note">🔒 Protected & Confidential · Reply in 24h</p>
       </form>

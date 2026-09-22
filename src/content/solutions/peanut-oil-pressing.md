@@ -140,7 +140,7 @@ This solution supports both cold pressing (for premium, nutrient-rich peanut oil
 
 ## Recommended Equipment
 
-- **Standard Hydraulic Oil Press (HN325)** — Ideal for small to medium peanut oil production. The 390mm inner diameter barrel processes 100 kg per batch with excellent yield.
+- **Standard Hydraulic Oil Press (HN325)** — Well-suited for small to medium peanut oil production. The 390mm inner diameter barrel processes 100 kg per batch with excellent yield.
 - **Heavy Duty Hydraulic Oil Press (HN355)** — Recommended for larger operations. Higher pressing force and double-barrel option for increased throughput.
 - **Thermal Oil Roasting Pan** — Precise temperature control for consistent peanut roasting, essential for aromatic hot-pressed peanut oil.
 - **Pneumatic Oil Filter Press** — Automated filtration for clear, market-ready peanut oil with minimal labor.
@@ -164,5 +164,5 @@ Properly filtered and stored peanut oil has a shelf life of 18-24 months. Cold-p
 - **Proven peanut oil expertise** — Our hydraulic presses are specifically optimized for peanut pressing, achieving residual oil rates below 5% — significantly better than screw expellers.
 - **Dual cold/hot press flexibility** — One machine serves both premium cold-pressed and aromatic hot-pressed peanut oil markets.
 - **Factory-direct pricing** — Buy directly from the manufacturer. No trading company markups means you save compared to trading company prices (actual savings vary).
-- **Complete production line** — From cleaning and roasting to pressing, filtration, and packaging, we supply every component for a seamless operation.
+- **Complete production line** — From cleaning and roasting to pressing, filtration, and packaging, we supply every component for a smooth operation.
 - **Trusted in major markets** — Our peanut oil press machines are running successfully in China, India, Nigeria, and Senegal — the world's largest peanut-producing countries.

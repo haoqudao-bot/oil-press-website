@@ -934,7 +934,7 @@ Choisir la bonne presse hydraulique est une décision d'investissement critique 
 ## Comparaison des modèles
 
 ### HN325 Presse hydraulique standard
-Le HN325 est notre cheval de bataille d'entrée de gamme, idéal pour les opérations de petite à moyenne taille traitant des graines oléagineuses conventionnelles.
+Le HN325 est notre cheval de bataille d'entrée de gamme, adapté pour les opérations de petite à moyenne taille traitant des graines oléagineuses conventionnelles.
 
 **Convient à :**
 - Producteurs de petite échelle
@@ -1027,7 +1027,7 @@ Le HN500 est notre modèle phare, conçu pour les applications industrielles les
 **Simple baril :**
 - Coût initial plus bas
 - Fonctionnement plus simple
-- Idéal pour les opérations de petite échelle ou de démarrage
+- Adapté pour les opérations de petite échelle ou de démarrage
 
 **Double baril :**
 - Double le débit presque

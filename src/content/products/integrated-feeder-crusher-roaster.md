@@ -121,7 +121,7 @@ faqAr:
   - question: "ما الشهادات التي تمتلكها المعدة؟"
     answer: "جميع المعدات تخضع لاختبار التحميل الكامل قبل الشحن. لوحدة المعالجة المتكاملة، يتحقق اختبار التحميل الكامل من التشغيل المتزامن لمراحل المعالجة الثلاث تحت حمل مستمر."
   - question: "كيف تتكامل هذه المعدة مع معصرة الزيت الهيدروليكية؟"
-    answer: "وحدة التغذية والسحق والتحميص المتكاملة هي رفيقة المعالجة المسبقة المثالية لمعصرة الزيت الهيدروليكية. تدخل البذور الخام ويخرج مواد معالج بالكامل (مسحوق ومحمص) بشكل مستمر، جاهز للتغذية مباشرة في معصرة الزيت الهيدروليكية — مما يُنشئ خط إنتاج كامل من البذور إلى الزيت بأقل قدر من المناولة اليدوية."
+    answer: "وحدة التغذية والسحق والتحميص المتكاملة هي رفيقة المعالجة المسبقة المناسبة لمعصرة الزيت الهيدروليكية. تدخل البذور الخام ويخرج مواد معالج بالكامل (مسحوق ومحمص) بشكل مستمر، جاهز للتغذية مباشرة في معصرة الزيت الهيدروليكية — مما يُنشئ خط إنتاج كامل من البذور إلى الزيت بأقل قدر من المناولة اليدوية."
 faqId:
   - question: Berapa kapasitas pemrosesan Unitas Terpadu Pengumpan Penghancur Pengsangrai?
     answer: Unitas Terpadu Pengumpan Penghancur Pengsangrai memproses 500-1000 kg/h tergantung konfigurasi, menggabungkan pengumpanan otomatis, penghancuran, dan penyangraian dalam satu operasi berkelanjutan.
@@ -142,7 +142,7 @@ faqId:
   - question: Sertifikasi apa yang dimiliki peralatan ini?
     answer: Semua peralatan menjalani pengujian beban penuh sebelum pengiriman. Untuk unit pemrosesan terintegrasi, pengujian beban penuh memverifikasi pengoperasian sinkron dari ketiga tahap pemrosesan di bawah beban berkelanjutan.
   - question: Bagaimana peralatan ini terintegrasi dengan mesin press minyak hidrolik?
-    answer: Unitas terpadu pengumpan penghancur pengsangrai adalah pendamping pra-pemrosesan yang ideal untuk mesin press minyak hidrolik. Biji mentah masuk dan material yang sepenuhnya diproses (dihancurkan dan disangrai) keluar secara berkelanjutan, siap untuk dimasukkan langsung ke mesin press minyak hidrolik — menciptakan lini produksi biji-ke-minyak yang lengkap dengan penanganan manual minimal.
+    answer: Unitas terpadu pengumpan penghancur pengsangrai adalah pendamping pra-pemrosesan yang cocok untuk mesin press minyak hidrolik. Biji mentah masuk dan material yang sepenuhnya diproses (dihancurkan dan disangrai) keluar secara berkelanjutan, siap untuk dimasukkan langsung ke mesin press minyak hidrolik — menciptakan lini produksi biji-ke-minyak yang lengkap dengan penanganan manual minimal.
 videoUrl: ''
 seoKeywords:
   - oil seed processing machine
@@ -176,7 +176,7 @@ By consolidating three essential preprocessing steps into one compact footprint,
 
 ## Applications & Suitable Materials
 
-This integrated system is ideal for oil seed processing lines where space and labor efficiency are priorities:
+This integrated system is well-suited for oil seed processing lines where space and labor efficiency are priorities:
 
 - **Tea seeds** — complete feed-crush-roast preprocessing
 - **Rapeseed (canola)** — high-throughput continuous processing

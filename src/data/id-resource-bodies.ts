@@ -826,7 +826,7 @@ Memilih mesin press minyak hidrolik yang tepat adalah keputusan investasi kritis
 ## Perbandingan Model
 
 ### HN325 Mesin Press Minyak Hidrolik Standard
-HN325 adalah stapel kami untuk entry-level, ideal untuk operasi kecil hingga menengah yang mengolah biji minyak tradisional.
+HN325 adalah stapel kami untuk entry-level, cocok untuk operasi kecil hingga menengah yang mengolah biji minyak tradisional.
 
 **Cocok untuk:**
 - Produsen skala kecil
@@ -919,7 +919,7 @@ HN500 adalah model unggulan kami, dirancang untuk aplikasi industri dengan gaya 
 **Satu Barrel:**
 - Biaya awal lebih rendah
 - Operasi lebih mudah
-- Ideal untuk operasi kecil atau startup
+- Cocok untuk operasi kecil atau startup
 
 **Dua Barrel:**
 - Produksi hampir dua kali lipat

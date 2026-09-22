@@ -5,10 +5,10 @@ title:
   ar: كسارة كيك الزيت الصناعية
   id: Penghancur Kue Minyak Industri
 description:
-  en: "Industrial-grade oil cake crusher for crushing pressed oil cakes into fine powder. Ideal for recycling oil cake residue, producing animal feed, or further processing."
-  fr: "Broyeur de tourteaux industriel pour réduire les tourteaux pressés en poudre fine. Idéal pour le recyclage des résidus, la production d'alimentation animale."
-  ar: "كسارة كيك الزيت الصناعية لسحق كيك الزيت المضغوط إلى مسحوق دقيق. مثالية لإعادة تدوير بقايا كيك الزيت أو إنتاج العلف الحيواني."
-  id: "Penghancur kue minyak tingkat industri untuk menghancurkan kue minyak yang telah ditekan menjadi bubuk halus. Ideal untuk mendaur ulang residu kue minyak atau produksi pakan ternak."
+  en: "Industrial-grade oil cake crusher for crushing pressed oil cakes into fine powder. Well-suited for recycling oil cake residue, producing animal feed, or further processing."
+  fr: "Broyeur de tourteaux industriel pour réduire les tourteaux pressés en poudre fine. Adapté pour le recyclage des résidus, la production d'alimentation animale."
+  ar: "كسارة كيك الزيت الصناعية لسحق كيك الزيت المضغوط إلى مسحوق دقيق. مناسبة لإعادة تدوير بقايا كيك الزيت أو إنتاج العلف الحيواني."
+  id: "Penghancur kue minyak tingkat industri untuk menghancurkan kue minyak yang telah ditekan menjadi bubuk halus. Cocok untuk mendaur ulang residu kue minyak atau produksi pakan ternak."
 category: seed-processing-equipment
 model: 370 Type
 modelId: ''
@@ -38,7 +38,7 @@ applicableSeeds:
   - rapeseed cake
 faq:
   - question: What is the processing capacity of the Industrial Oil Cake Crusher?
-    answer: The 370 Type Industrial Oil Cake Crusher processes up to 2000 kg/h with its powerful 18.5 KW motor running at 3260 RPM — ideal for large-scale oil cake recycling operations.
+    answer: The 370 Type Industrial Oil Cake Crusher processes up to 2000 kg/h with its powerful 18.5 KW motor running at 3260 RPM — well-suited for large-scale oil cake recycling operations.
   - question: What materials can this equipment process?
     answer: The 370 Type is designed specifically for crushing pressed oil cakes into fine powder. It handles sesame cake, peanut cake, rapeseed cake, and various other oil press cake residues efficiently.
   - question: What power supply is required?
@@ -77,7 +77,7 @@ applicableSeedsFr:
   - tourteau de colza
 faqFr:
   - question: Quelle est la capacité de traitement du Broyeur de Tourteaux Industriel ?
-    answer: Le broyeur de tourteaux industriel 370 Type traite jusqu'à 2 000 kg/h avec son puissant moteur de 18,5 KW fonctionnant à 3 260 tr/min — idéal pour les opérations de recyclage de tourteaux à grande échelle.
+    answer: Le broyeur de tourteaux industriel 370 Type traite jusqu'à 2 000 kg/h avec son puissant moteur de 18,5 KW fonctionnant à 3 260 tr/min — adapté pour les opérations de recyclage de tourteaux à grande échelle.
   - question: Quels matériaux cet équipement peut-il traiter ?
     answer: Le 370 Type est spécialement conçu pour réduire les tourteaux pressés en poudre fine. Il traite efficacement les tourteaux de sésame, d'arachide, de colza et divers autres résidus de tourteaux.
   - question: Quelle alimentation électrique est requise ?
@@ -134,7 +134,7 @@ applicableSeedsId:
   - kue sawit
 faqAr:
   - question: "ما هي قدرة المعالجة لكسارة كيك الزيت الصناعية؟"
-    answer: "تُعالج كسارة كيك الزيت الصناعية Type 370 ما يصل إلى 2000 كجم/ساعة بمحركها القوي بقوة 18.5 كيلو واط يعمل عند 3260 دورة/دقيقة — مثالية لعمليات إعادة تدوير كيك الزيت على نطاق واسع."
+    answer: "تُعالج كسارة كيك الزيت الصناعية Type 370 ما يصل إلى 2000 كجم/ساعة بمحركها القوي بقوة 18.5 كيلو واط يعمل عند 3260 دورة/دقيقة — مناسبة لعمليات إعادة تدوير كيك الزيت على نطاق واسع."
   - question: "ما المواد التي يمكن لهذه المعدة معالجتها؟"
     answer: "مصممة خصيصًا لسحق كيك الزيت المضغوط إلى مسحوق دقيق. تعالج كيك السمسم، كيك الفول السوداني، كيك الخردل، وغيرها من بقايا كيك الزيت بكفاءة."
   - question: "ما مصدر الطاقة المطلوب؟"
@@ -155,7 +155,7 @@ faqAr:
     answer: "تُستخدم كسارة كيك الزيت الصناعية عادةً بعد عمليات عصر الزيت. تسحق بقايا كيك الزيت المضغوط إلى مسحوق دقيق، يمكن استخدامه لإنتاج العلف الحيواني أو تطبيقات أخرى، مما يخلق قيمة إضافية من المنتج الجانبي لعصر الزيت."
 faqId:
   - question: Berapa kapasitas pengolahan Penghancur Kue Minyak Industri?
-    answer: Penghancur Kue Minyak Industri Type 370 memproses hingga 2000 kg/jam dengan motor 18.5 KW yang bertenaga beroperasi pada 3260 RPM — ideal untuk operasi daur ulang kue minyak skala besar.
+    answer: Penghancur Kue Minyak Industri Type 370 memproses hingga 2000 kg/jam dengan motor 18.5 KW yang bertenaga beroperasi pada 3260 RPM — cocok untuk operasi daur ulang kue minyak skala besar.
   - question: Bahan apa saja yang dapat diproses oleh peralatan ini?
     answer: Type 370 dirancang khusus untuk menghancurkan kue minyak yang telah ditekan menjadi bubuk halus. Ini menangani kue wijen, kue kacang tanah, kue sawit, dan berbagai residu kue minyak lainnya dengan efisien.
   - question: Pasokan daya apa yang dibutuhkan?
@@ -210,10 +210,10 @@ The 370 Type specializes in processing pressed oil cake residues:
 
 - **Sesame cake** — high-protein residue after oil extraction
 - **Peanut cake** — nutrient-rich byproduct from peanut oil pressing
-- **Rapeseed cake** — high-fiber residue ideal for animal feed
+- **Rapeseed cake** — high-fiber residue well-suited for animal feed
 - **Other oil press cakes** — sunflower, cottonseed, and various oil cake residues
 
-Ideal for oil pressing plants, feed mills, and any operation requiring efficient oil cake recycling.
+Well-suited for oil pressing plants, feed mills, and any operation requiring efficient oil cake recycling.
 
 ## Why Choose Haonuo
 

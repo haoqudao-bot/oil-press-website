@@ -191,12 +191,12 @@
     "statsCountries": "دول مخدومة حول العالم",
     "statsEmployees": "عمال ومهندسون مهرة",
     "statsArea": "م² منشأة إنتاج",
-    "statsMachines": "آلات تم تسليمها",
+    "statsMachines": "مشترين تم خدمتهم",
     "statsHighlight1": "منذ 2010",
     "statsHighlight2": "6 قارات",
     "statsHighlight3": "فريق خبير",
     "statsHighlight4": "جودة مختبرة",
-    "statsHighlight5": "تم تسليمها",
+    "statsHighlight5": "في جميع أنحاء العالم",
     "byScale": "اعثر على الآلة المناسبة حسب حجم الإنتاج",
     "byScaleSubtitle": "سواء كنت تبدأ أو تتوسع، لدينا معصرة الزيت الهيدروليكية المناسبة بالسعر المناسب لأهدافك.",
     "smallBusinessTitle": "التجاري",
@@ -218,7 +218,7 @@
     "step4Title": "الشحن العالمي",
     "step4Desc": "تغليف آمن وشحن موثوق إلى مينائك مع وثائق تصدير كاملة وتأمين.",
     "step5Title": "الدعم بعد البيع",
-    "step5Desc": "دعم فني مدى الحياة وأدلة تركيب بالفيديو وضمان قطع الغيار لراحة بالك.",
+    "step5Desc": "دعم فني مدى الحياة وأدلة تركيب بالفيديو وضمان قطع الغيار للموثوقية طويلة الأمد.",
     "learnMore": "أعرف المزيد",
     "premiumMaterialsDetail1": "أسطوانة هيدروليكية: فولاذ 27SiMn, 900ميجا باسكال/سم²",
     "premiumMaterialsDetail2": "قضبان البستن: مطلي بالكروم، 5 طبقات اختم",
@@ -308,7 +308,7 @@
     "storyTitle": "قصتنا",
     "storyP1": "أسسناها في عام 2010 في تشينغتشو، شاندونغ - مدينة ذات تقليد عميق في الهندسة الميكانيكية - بدأت هاونيو الميكانيكا بمهمة بسيطة: بناء آلات ضغط الزيت الهيدروليكي الموثوقة والعالية الكفاءة التي تساعد منتجي الزيت على زيادة العائد وزيادة التكلفة.",
     "storyP2": "مؤسسنا، الذي يمتلك أكثر من 20 سنة من الخبرة في الأنظمة الهيدروليكية، لاحظ أن العديد من منتجي الزيت كانوا يواجهون صعوبات مع المضخات منخفضة الكفاءة والموردين غير الموثوقين. بدأنا من ورشة صغيرة مع 10 عمال فقط، ركزنا بلا هوادة على جودة المنتج ورضا العميل.",
-    "storyP3": "اليوم، جعل هذا الالتزامنا مصنعًا مؤسسيًا لآلة ضغط الزيت الهيدروليكي في الصين، موثوقًا من قبل آلاف العملاء في أكثر من 50 دولة - من الهند والنيجيريا إلى الفلبين والشرق الأوسط. قصتنا لا تزال مكتوبة، وندعوك للمشاركة فيها.",
+    "storyP3": "اليوم، جعل هذا الالتزامنا مصنعًا مؤسسيًا لآلة ضغط الزيت الهيدروليكي في الصين، موثوقًا من قبل آلاف العملاء في أكثر من 50 دولة - من الهند والنيجيريا إلى الفلبين والشرق الأوسط. قصتنا لا تزال مستمرة، ونعملدائمًا على تطوير منتجاتنا.",
     "overviewTitle": "مصنع آلة الضغط الهيدروليكي للزيت المحترف",
     "overviewP2": "موجود في تشينغتشو، ويفانغ، مقاطعة شاندونغ - مركز التصنيع الميكانيكي الشهير في الصين - مصنعنا الذي يبلغ مساحته 3000 متر مربع مجهز بمراكز التصنيع الحاسوبية المتقدمة، وخطوط التجميع المهنية، وأنظمة مراقبة الجودة الصارمة. مع أكثر من 200 موظف مؤهل، نوفر معدات ضغط الزيت الموثوقة للعملاء في جميع أنحاء العالم.",
     "overviewP3": "كمصنع صيني مباشر لآلة ضغط الزيت، نقدم أسعار مباشرة من المصنع، ودعم فني شامل، وخدمة ما بعد البيع مدى الحياة لكل عميل.",
@@ -476,7 +476,7 @@
     "productInterest": "المنتج المطلوب",
     "productPlaceholder": "اكتب أو اختر منتج",
     "messagePlaceholder": "ماذا تريد أن تعصر؟ (ثمار النخيل، نوى النخيل، الفول السوداني، السمسم...). الإنتاج اليومي المتوقع بالأطنان؟ آلة قياسية أم مخصصة؟ أي متطلبات أخرى؟",
-    "messageHint": "💡 نصيحة: أخبرنا بالمادة الزيتية والإنتاج اليومي ونوع الآلة (قياسية أو مخصصة)، وسنرسل لك عرض سعر مخصص بشكل أسرع.",
+    "messageHint": "نصيحة: أخبرنا بالمادة الزيتية والإنتاج اليومي ونوع الآلة (قياسية أو مخصصة)، وسنرسل لك عرض سعر مخصص بشكل أسرع.",
     "response24h": "نرد خلال 24 ساعة",
     "quickContact": "طرق الاتصال السريعة",
     "whatToExpect": "ما تتوقعه بعد الاتصال بنا",
@@ -926,7 +926,7 @@
     },
     "lowPower": {
       "title": "استهلاك طاقة منخفض",
-      "desc": "لا يحتاج سوى محرك بقدرة 2.2 كيلوواط. متوافق مع المولدات، مثالي للمناطق ذات الكهرباء غير المستقرة أو غير المتوفرة.",
+      "desc": "لا يحتاج سوى محرك بقدرة 2.2 كيلوواط. متوافق مع المولدات، مناسب للمناطق ذات الكهرباء غير المستقرة أو غير المتوفرة.",
       "stat": "2.2 كيلوواط فقط — يعمل بمولد 5KVA"
     },
     "versatile": {
@@ -976,7 +976,7 @@
     },
     "peanutOilApp": {
       "title": "زيت الفول السوداني",
-      "desc": "أكثر زيوت الطهي شيوعًا في أفريقيا. مثالية لأعمال زيت الفول السوداني في نيجيريا وغانا وجميع أنحاء غرب أفريقيا. متوافق مع المولدات للتشغيل في المناطق الريفية.",
+      "desc": "أكثر زيوت الطهي شيوعًا في أفريقيا. مناسبة لأعمال زيت الفول السوداني في نيجيريا وغانا وجميع أنحاء غرب أفريقيا. متوافق مع المولدات للتشغيل في المناطق الريفية.",
       "yield": "المردود: 38-45%"
     },
     "oliveOilApp": {
@@ -1004,7 +1004,7 @@
     "faqs": [
       {
         "question": "What is a hydraulic oil press machine?",
-        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them ideal for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
+        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them well-suited for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
       },
       {
         "question": "How does a hydraulic oil press work?",
@@ -1024,11 +1024,11 @@
       },
       {
         "question": "What is the difference between cold press and hot press?",
-        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — ideal for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
+        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — well-suited for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
       },
       {
         "question": "Can the machine run on a generator?",
-        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them ideal for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
+        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them well-suited for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
       },
       {
         "question": "What warranty do you provide?",
@@ -1060,7 +1060,7 @@
     },
     "lowPower": {
       "title": "متطلبات طاقة منخفضة",
-      "desc": "لا يحتاج سوى 2.2 كيلوواط. متوافق مع الكهرباء أحادية الطور القياسية 220 فولت أو مولد صغير 5 KVA — مثالي لكل المناطق."
+      "desc": "لا يحتاج سوى 2.2 كيلوواط. متوافق مع الكهرباء أحادية الطور القياسية 220 فولت أو مولد صغير 5 KVA — مناسب لكل المناطق."
     },
     "costEffective": {
       "title": "فعّال من حيث التكلفة",

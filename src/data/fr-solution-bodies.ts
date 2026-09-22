@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frSolutionBodies: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Aperçu
 
 L'huile d'amande est l'une des huiles de spécialité les plus précieuses au monde, se vendant à des prix premium sur les marchés des cosmétiques et des aliments de santé. Une **machine de pressage d'huile d'amande** de qualité est essentielle pour les producteurs qui souhaitent extraire cette huile de grande valeur tout en préservant les vitamines, les acides gras et le délicat arôme naturel qui justifient les prix premium.
@@ -65,7 +65,7 @@ L'huile d'amande a deux marchés principaux : les cosmétiques (hydratants, soin
 
 L'huile d'avocat a connu une popularité croissante en tant qu'huile de cuisson et cosmétique premium, prisée pour son point de fumée élevé, sa riche teneur en graisses monoinsaturées et sa saveur beurrée distinctive. Une **machine de pressage d'huile d'avocat** spécialisée est essentielle pour les producteurs qui souhaitent extraire cette huile de grande valeur tout en préservant les nutriments et la couleur verte naturelle qui justifient les prix premium.
 
-La solution de pressage d'huile d'avocat de Haonuo est construite autour de notre technologie de presse hydraulique à froid, qui constitue la méthode idéale pour l'extraction d'huile d'avocat. Notre **machine d'extraction d'huile d'avocat** hydraulique fonctionne en dessous de 60°C, préservant l'acide oléique, la vitamine E, la lutéine et la chlorophylle qui confèrent à l'huile d'avocat ses bienfaits pour la santé et sa caractéristique couleur émeraude.
+La solution de pressage d'huile d'avocat de Haonuo est construite autour de notre technologie de presse hydraulique à froid, qui constitue la méthode adaptée pour l'extraction d'huile d'avocat. Notre **machine d'extraction d'huile d'avocat** hydraulique fonctionne en dessous de 60°C, préservant l'acide oléique, la vitamine E, la lutéine et la chlorophylle qui confèrent à l'huile d'avocat ses bienfaits pour la santé et sa caractéristique couleur émeraude.
 
 Cette solution est conçue pour le marché croissant de l'huile d'avocat au Mexique, au Kenya, en Nouvelle-Zélande, en Afrique du Sud et aux États-Unis, où la demande d'huile d'avocat pressée à froid premium continue de dépasser l'offre.
 
@@ -286,7 +286,7 @@ Que vous dirigiez une installation de production d'huile dédiée, une usine de 
 ## Équipement Recommandé
 
 - **Presse Hydraulique Lourde (HN355)** — La machine de travail de la production d'huile commerciale. Disponible en configuration double fût pour un débit de 2 000-5 000 kg/jour. Gère le pressage à froid et à chaud.
-- **Presse Hydraulique à Froid (HN426)** — Spécialisée pour la production d'huile pressée à froid premium. Option double fût disponible. Idéale pour servir les marchés des aliments de santé et biologiques.
+- **Presse Hydraulique à Froid (HN426)** — Spécialisée pour la production d'huile pressée à froid premium. Option double fût disponible. Adaptée pour servir les marchés des aliments de santé et biologiques.
 - **Broyeur-Chargeur-Torpéfacteur Intégré** — Unité de préparation de graines tout-en-un qui automatise le nettoyage, le broyage et la torréfaction. Réduit la main-d'œuvre et assure une préparation constante pour un débit commercial.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante de divers types de graines. Essentielle pour la production d'huile pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration à haut volume correspondant au débit de la presse commerciale. Produit une huile claire, prête pour le marché.
@@ -318,7 +318,7 @@ Une configuration double fût dispose de deux chambres de pressage indépendante
 | Surface au Sol | ~3 m² | ~4,5 m² |
 | Consommation Électrique | Un seul moteur | Double moteur (hydraulique partagée) |
 | Main-d'Œuvre Requise | 1 opérateur | 1-2 opérateurs |
-| Idéal Pour | Démarrages, production mono-graine | Opérations multi-graines, haut volume |
+| Adapté Pour | Démarrages, production mono-graine | Opérations multi-graines, haut volume |
 | Prime de Prix | Prix de base | ~60-70 % de plus que le simple |
 
 **Quand choisir le simple fût :** Vous débutez, traitez un seul type de graine, ou avez un espace et un budget limités.
@@ -580,7 +580,7 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Standard (HN325)** — Excellente pour la production d'huile de moutarde de petite à moyenne envergure. Idéale pour l'huile de moutarde Kachi Ghani pressée à froid.
+- **Presse Hydraulique Standard (HN325)** — Excellente pour la production d'huile de moutarde de petite à moyenne envergure. Adaptée pour l'huile de moutarde Kachi Ghani pressée à froid.
 - **Presse Hydraulique Lourde (HN355)** — Recommandée pour les opérations plus importantes nécessitant un débit quotidien plus élevé.
 - **Cuiseur à Vapeur Électrique de Graines** — Conçu spécifiquement pour la cuisson à la vapeur des graines de moutarde avec un contrôle précis de la température. Essentiel pour la production d'huile de moutarde pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de moutarde propre et prête pour le marché avec un minimum de main-d'œuvre.
@@ -611,7 +611,7 @@ Oui. Nos presses hydrauliques à huile peuvent traiter les graines de moutarde, 
 
 L'huile d'olive est la pierre angulaire de la cuisine méditerranéenne et l'une des huiles de cuisson les plus appréciées au monde, l'huile d'olive extra vierge (EVOO) se vendant à des prix premium sur les marchés mondiaux. Une **machine de pressage d'huile d'olive** de qualité est essentielle pour les oléiculteurs et les producteurs d'huile qui souhaitent extraire la meilleure huile de leur récolte tout en préservant la saveur, l'arôme et les propriétés nutritionnelles qui définissent l'huile d'olive premium.
 
-La solution de pressage d'huile d'olive de Haonuo est construite autour de notre technologie de presse hydraulique à froid, qui constitue la méthode idéale pour produire de l'huile d'olive extra vierge. Notre **presse hydraulique à huile d'olive** applique une pression douce et uniforme à des températures inférieures à 60°C, préservant les polyphénols, l'acide oléique et les délicates saveurs fruitées qui distinguent une huile d'olive véritablement exceptionnelle.
+La solution de pressage d'huile d'olive de Haonuo est construite autour de notre technologie de presse hydraulique à froid, qui constitue la méthode adaptée pour produire de l'huile d'olive extra vierge. Notre **presse hydraulique à huile d'olive** applique une pression douce et uniforme à des températures inférieures à 60°C, préservant les polyphénols, l'acide oléique et les délicates saveurs fruitées qui distinguent une huile d'olive véritablement exceptionnelle.
 
 Cette solution est conçue pour les producteurs d'huile d'olive méditerranéens, du Moyen-Orient et du Nouveau Monde qui exigent la plus haute qualité de leur récolte d'olives.
 
@@ -651,7 +651,7 @@ Cette solution est conçue pour les producteurs d'huile d'olive méditerranéens
 Nos machines de pressage d'huile d'olive sont disponibles dans diverses configurations, du modèle à froid aux modèles haute capacité. Nous offrons des prix directs d'usine sans majoration d'intermédiaire. Décrivez-nous vos objectifs de production pour un devis adapté.
 
 **Comment le pressage hydraulique se compare-t-il à l'extraction traditionnelle d'huile d'olive ?**
-L'extraction traditionnelle d'huile d'olive utilise des broyeurs à marteaux pour écraser les olives en pâte, puis des centrifugeuses pour séparer l'huile. Notre presse hydraulique est plus simple, plus abordable et idéale pour les petits et moyens producteurs. Elle produit une véritable huile d'olive extra vierge pressée à froid sans la complexité et le coût des systèmes à centrifugeuse.
+L'extraction traditionnelle d'huile d'olive utilise des broyeurs à marteaux pour écraser les olives en pâte, puis des centrifugeuses pour séparer l'huile. Notre presse hydraulique est plus simple, plus abordable et adaptée pour les petits et moyens producteurs. Elle produit une véritable huile d'olive extra vierge pressée à froid sans la complexité et le coût des systèmes à centrifugeuse.
 
 **Qu'est-ce qui différencie l'huile d'olive extra vierge de l'huile d'olive ordinaire ?**
 L'huile d'olive extra vierge (EVOO) est le grade le plus élevé, produite par pressage à froid sans aucun traitement chimique ni raffinage. Elle doit avoir une acidité inférieure à 0,8 % et réussir une évaluation sensorielle pour le fruité, l'amertume et le piquant. Notre presse hydraulique à froid est spécifiquement conçue pour produire une huile répondant aux normes EVOO.
@@ -706,7 +706,7 @@ Cette solution couvre le processus complet, de la séparation des amandes au pre
 ## Équipement Recommandé
 
 - **Presse Hydraulique Lourde (HN355)** — Fournit la pression élevée nécessaire pour l'extraction d'huile de palmiste. Recommandée pour les opérations de petite à moyenne envergure.
-- **Presse Hydraulique Ultra Haute Pression (HN500)** — Délivre une pression maximale pour des taux d'huile résiduelle compétitifs. Idéale pour les opérations plus importantes recherchant un rendement maximal.
+- **Presse Hydraulique Ultra Haute Pression (HN500)** — Délivre une pression maximale pour des taux d'huile résiduelle compétitifs. Adaptée pour les opérations plus importantes recherchant un rendement maximal.
 - **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de palmiste propre avec un minimum de sédiments.
 - **Système de Raffinage d'Huile Alimentaire** — Requis pour produire de l'huile de palmiste RBD de qualité alimentaire. Disponible en capacités de 1 à 100 tonnes/jour.
 
@@ -766,7 +766,7 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Standard (HN325)** — Idéale pour la production d'huile d'arachide de petite à moyenne envergure. Le fût de 390 mm de diamètre intérieur traite 100 kg par lot avec un excellent rendement.
+- **Presse Hydraulique Standard (HN325)** — Adaptée pour la production d'huile d'arachide de petite à moyenne envergure. Le fût de 390 mm de diamètre intérieur traite 100 kg par lot avec un excellent rendement.
 - **Presse Hydraulique Lourde (HN355)** — Recommandée pour les opérations plus importantes. Force de pressage plus élevée et option double fût pour un débit accru.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante des arachides, essentielle pour l'huile d'arachide aromatique pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile d'arachide claire et prête pour le marché avec un minimum de main-d'œuvre.
@@ -920,7 +920,7 @@ Lancer une entreprise de pressage d'huile ne nécessite pas un investissement ma
 
 La solution de pressage d'huile pour petite entreprise de Haonuo est construite autour de notre presse hydraulique standard (HN325) — notre modèle le plus abordable et le plus compact, conçu spécifiquement pour les applications de **machine de pressage d'huile pour petite entreprise**. Malgré son faible encombrement, cette machine délivre des performances de pressage de qualité professionnelle avec des taux d'huile résiduelle inférieurs à 5 %, ce qui signifie que vous extrayez plus d'huile de chaque kilogramme de graines que vous traitez.
 
-Cette solution est idéale pour la production au niveau du village, les opérations d'étals de marché, les petites boutiques et les startups d'huile à travers l'Afrique, l'Asie du Sud et l'Asie du Sud-Est. Le faible seuil d'investissement, le fonctionnement simple et la compatibilité polyvalente des graines en font le chemin le plus accessible vers l'industrie rentable du pressage d'huile.
+Cette solution est adaptée pour la production au niveau du village, les opérations d'étals de marché, les petites boutiques et les startups d'huile à travers l'Afrique, l'Asie du Sud et l'Asie du Sud-Est. Le faible seuil d'investissement, le fonctionnement simple et la compatibilité polyvalente des graines en font le chemin le plus accessible vers l'industrie rentable du pressage d'huile.
 
 ## Rendements Attendus en Huile
 
@@ -1046,7 +1046,7 @@ Cette solution gère à la fois les variétés de graines de tournesol riches en
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Standard (HN325)** — Idéale pour la production d'huile de tournesol de petite à moyenne envergure. Gère efficacement les graines entières et les amandes décortiquées.
+- **Presse Hydraulique Standard (HN325)** — Adaptée pour la production d'huile de tournesol de petite à moyenne envergure. Gère efficacement les graines entières et les amandes décortiquées.
 - **Presse Hydraulique Lourde (HN355)** — Recommandée pour les opérations plus importantes avec option double fût pour un débit plus élevé.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante. Essentielle pour maximiser le rendement des graines de tournesol.
 - **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile de tournesol claire et premium.
@@ -1063,7 +1063,7 @@ Le décorticage est fortement recommandé. Les coques de tournesol absorbent 10-
 L'huile de tournesol pressée à froid conserve plus de vitamine E, de phytostérols et de saveur naturelle. Elle a une couleur dorée et un goût de noix, se vendant à des prix premium sur les marchés d'aliments santé. L'huile de tournesol raffinée est plus claire, a un goût neutre et un point de fumée plus élevé, la rendant plus polyvalente pour la cuisson.
 
 **Quelle variété de graines de tournesol est la meilleure pour le pressage d'huile ?**
-Les variétés riches en huile avec 45-50 % de teneur en huile sont idéales. Les variétés de pressage populaires incluent Peredovik, VNIIMK et HAOL 414. Les variétés à graines noires ont généralement une teneur en huile plus élevée que les types de confiserie rayés.
+Les variétés riches en huile avec 45-50 % de teneur en huile sont particulièrement adaptées. Les variétés de pressage populaires incluent Peredovik, VNIIMK et HAOL 414. Les variétés à graines noires ont généralement une teneur en huile plus élevée que les types de confiserie rayés.
 
 ## Pourquoi Choisir Haonuo
 
@@ -1111,5 +1111,5 @@ La solution de pressage d'huile de noix de Haonuo Machinery est spécifiquement 
 - **Système de contrôle de température** — Surveillance intégrée de la température garantissant que le pressage reste en dessous de 60°C pour préserver les oméga-3
 - **Option acier inoxydable de qualité alimentaire** — Disponible pour les clients exigeant les normes d'hygiène les plus élevées
 - **Prouvé dans les marchés du Moyen-Orient** — Nos machines sont utilisées avec succès en Arabie Saoudite, aux Émirats Arabes Unis et en Iran
-- **Garantie de 1 an + support à vie** — Tranquillité d'esprit complète avec pièces de rechange expédiées sous 48 heures`
+- **Garantie de 1 an + support à vie** — Couverture complète avec pièces de rechange expédiées sous 48 heures`
 };

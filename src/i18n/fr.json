@@ -191,12 +191,12 @@
     "statsCountries": "Pays Desservis dans le Monde",
     "statsEmployees": "Ouvriers & Ingénieurs Qualifiés",
     "statsArea": "m² Installation de Production",
-    "statsMachines": "Machines Livrées",
+    "statsMachines": "Acheteurs Servis",
     "statsHighlight1": "Depuis 2010",
     "statsHighlight2": "6 Continents",
     "statsHighlight3": "Équipe Expert",
     "statsHighlight4": "Qualité Testée",
-    "statsHighlight5": "Livrées",
+    "statsHighlight5": "Dans le Monde",
     "byScale": "Trouvez la Bonne Machine par Échelle de Production",
     "byScaleSubtitle": "Que vous commenciez ou que vous vous développiez, nous avons la presse à huile hydraulique qu'il vous faut au bon prix pour vos objectifs commerciaux.",
     "smallBusinessTitle": "Commerciale",
@@ -218,7 +218,7 @@
     "step4Title": "Expédition Mondiale",
     "step4Desc": "Emballage sécurisé et expédition fiable vers votre port avec documentation d'exportation complète et assurance.",
     "step5Title": "Support Après-Vente",
-    "step5Desc": "Support technique à vie, guides d'installation vidéo et garantie de pièces de rechange pour votre tranquillité.",
+    "step5Desc": "Support technique à vie, guides d'installation vidéo et garantie de pièces de rechange pour une fiabilité à long terme.",
     "learnMore": "En savoir plus",
     "premiumMaterialsDetail1": "Cylindre hydraulique : acier 27SiMn, 900MPa/cm²",
     "premiumMaterialsDetail2": "Tige de piston : revêtue de chrome, 5 couches de joints",
@@ -308,12 +308,12 @@
     "storyTitle": "Notre Histoire",
     "storyP1": "Fondée en 2010 à Qingzhou, dans la province du Shandong — une ville avec une longue tradition en ingénierie mécanique — Haonuo Machinery a commencé avec une mission simple : construire des presses à huile hydrauliques fiables et efficaces qui aident les producteurs d'huile à maximiser leur rendement et à minimiser leurs coûts.",
     "storyP2": "Notre fondateur, avec plus de 20 ans d'expérience dans les systèmes hydrauliques, a reconnu que de nombreux producteurs d'huile rencontraient des difficultés avec des presses à faible efficacité et des fournisseurs peu fiables. Partant d'un petit atelier avec seulement 10 travailleurs, nous nous sommes concentrés sans relâche sur la qualité du produit et la satisfaction client.",
-    "storyP3": "Aujourd'hui, ce dévouement nous a fait devenir un fabricant établi de presses à huile hydrauliques en Chine, confié par des milliers de clients dans plus de 50 pays — de l'Inde et du Nigeria aux Philippines et au Moyen-Orient. Notre histoire est encore en cours d'écriture, et nous vous invitons à en faire partie.",
+    "storyP3": "Aujourd'hui, ce dévouement nous a fait devenir un fabricant établi de presses à huile hydrauliques en Chine, confié par des milliers de clients dans plus de 50 pays — de l'Inde et du Nigeria aux Philippines et au Moyen-Orient.",
     "overviewTitle": "Fabricant Professionnel de Presses à Huile Hydrauliques",
     "overviewP2": "Situé à Qingzhou, Weifang, province du Shandong — le centre de fabrication de machines réputé en Chine — notre usine de 3 000 m² est équipée de centres d'usinage CNC avancés, de lignes d'assemblage professionnelles et de systèmes stricts de contrôle de qualité. Avec plus de 200 employés qualifiés, nous livrons des équipements de pressage d'huile fiables à des clients du monde entier.",
     "overviewP3": "En tant que fabricant chinois direct de presses à huile, nous offrons des prix directs de fabrique, un support technique complet et un service après-vente à vie à chaque client.",
     "manufacturingTitle": "Capacités de Fabrication",
-    "manufacturingDesc": "Notre usine de 3 000 m² à Qingzhou est équipée de machines de pointe et dotée de plus de 200 professionnels qualifiés dédiés à la production de presses à huile hydrauliques de haute qualité.",
+    "manufacturingDesc": "Notre usine de 3 000 m² à Qingzhou est équipée de machines modernes et dotée de plus de 200 professionnels qualifiés dédiés à la production de presses à huile hydrauliques de haute qualité.",
     "capCncTitle": "Centres d'Usinage CNC",
     "capCncDesc": "Tours et fraiseuses CNC avancés garantissent des pièces de précision avec des tolérances inférieures à ±0,01mm",
     "capAssemblyTitle": "Lignes d'Assemblage Professionnelles",
@@ -476,7 +476,7 @@
     "productInterest": "Produit d'intérêt",
     "productPlaceholder": "Saisissez ou sélectionnez un produit",
     "messagePlaceholder": "Que voulez-vous presser ? (fruit de palme, palmiste, arachide, sésame...). Production quotidienne attendue en tonnes ? Machine standard ou sur mesure ? Autres besoins ?",
-    "messageHint": "💡 Astuce : Indiquez la matière oléagineuse, la production quotidienne et le type de machine (standard/sur mesure), nous vous enverrons un devis personnalisé plus rapidement.",
+    "messageHint": "Astuce : Indiquez la matière oléagineuse, la production quotidienne et le type de machine (standard/sur mesure), nous vous enverrons un devis personnalisé plus rapidement.",
     "response24h": "Nous répondons sous 24 heures",
     "quickContact": "Moyens de Contact Rapides",
     "whatToExpect": "À quoi s'attendre après nous avoir contactés",
@@ -817,7 +817,7 @@
     "comparisonPrice": "Prix du marché",
     "comparisonPriceCold": "Généralement premium (varie considérablement selon le marché et le type d'huile)",
     "comparisonPriceHot": "Standard",
-    "comparisonBestFor": "Idéal pour",
+    "comparisonBestFor": "Adapté pour",
     "comparisonBestForCold": "Huiles premium/bio",
     "comparisonBestForHot": "Huile de cuisson en vrac",
     "readFullComparison": "Lire la comparaison complète pressage à froid vs à chaud",
@@ -926,7 +926,7 @@
     },
     "lowPower": {
       "title": "Faible consommation d'énergie",
-      "desc": "Seulement 2,2 KW de puissance moteur nécessaire. Compatible avec les générateurs, idéal pour les zones à réseau électrique instable ou absent.",
+      "desc": "Seulement 2,2 KW de puissance moteur nécessaire. Compatible avec les générateurs, adapté pour les zones à réseau électrique instable ou absent.",
       "stat": "Seulement 2,2 KW — fonctionne avec un générateur de 5 KVA"
     },
     "versatile": {
@@ -976,7 +976,7 @@
     },
     "peanutOilApp": {
       "title": "Huile d'arachide",
-      "desc": "L'huile de cuisson la plus populaire d'Afrique. Idéale pour les entreprises d'huile d'arachide au Nigeria, au Ghana et dans toute l'Afrique de l'Ouest. Compatible générateur pour les opérations en zone rurale.",
+      "desc": "L'huile de cuisson la plus populaire d'Afrique. Adaptée pour les entreprises d'huile d'arachide au Nigeria, au Ghana et dans toute l'Afrique de l'Ouest. Compatible générateur pour les opérations en zone rurale.",
       "yield": "Rendement : 38-45 %"
     },
     "oliveOilApp": {
@@ -998,13 +998,13 @@
     "comparisonModel": "Modèle",
     "comparisonForce": "Force de pressage",
     "comparisonMotor": "Moteur",
-    "comparisonBestFor": "Idéal pour",
+    "comparisonBestFor": "Adapté pour",
     "compareAllModels": "Comparer tous les modèles",
     "faqTitle": "Questions fréquentes",
     "faqs": [
       {
         "question": "What is a hydraulic oil press machine?",
-        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them ideal for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
+        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them well-suited for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
       },
       {
         "question": "How does a hydraulic oil press work?",
@@ -1024,11 +1024,11 @@
       },
       {
         "question": "What is the difference between cold press and hot press?",
-        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — ideal for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
+        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — well-suited for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
       },
       {
         "question": "Can the machine run on a generator?",
-        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them ideal for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
+        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them well-suited for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
       },
       {
         "question": "What warranty do you provide?",
@@ -1060,7 +1060,7 @@
     },
     "lowPower": {
       "title": "Faible besoin en énergie",
-      "desc": "Seulement 2,2 KW nécessaires. Compatible avec le réseau 220V monophasé standard ou un petit générateur de 5 KVA — idéal pour toutes les régions."
+      "desc": "Seulement 2,2 KW nécessaires. Compatible avec le réseau 220V monophasé standard ou un petit générateur de 5 KVA — adapté pour toutes les régions."
     },
     "costEffective": {
       "title": "Rentable",

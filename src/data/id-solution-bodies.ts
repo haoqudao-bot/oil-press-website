@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian solution body content for [locale]/solutions/[slug].astro
+﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian solution body content for [locale]/solutions/[slug].astro
 export const idSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Ringkasan
 
@@ -983,7 +983,7 @@ Penghilangan kulit sangat direkomendasikan. Kulit biji bunga matahari menyerap 1
 Minyak bunga matahari press dingin mempertahankan lebih banyak vitamin E, fitosterol, dan rasa alami. Ini memiliki warna keemasan dan rasa kacang, dijual dengan harga premium di pasar makanan kesehatan. Minyak bunga matahari yang dimurnikan lebih terang warnanya, memiliki rasa netral, dan titik asap lebih tinggi, membuatnya lebih serbaguna untuk memasak.
 
 **Varietas biji bunga matahari mana yang terbaik untuk penekanan minyak?**
-Varietas berminyak tinggi dengan kandungan minyak 45-50% adalah yang ideal. Varietas penekanan populer termasuk Peredovik, VNIIMK, dan HAOL 414. Varietas berbiji hitam biasanya memiliki kandungan minyak lebih tinggi daripada tipe konfeksi bergaris.
+Varietas berminyak tinggi dengan kandungan minyak 45-50% adalah yang paling cocok. Varietas penekanan populer termasuk Peredovik, VNIIMK, dan HAOL 414. Varietas berbiji hitam biasanya memiliki kandungan minyak lebih tinggi daripada tipe konfeksi bergaris.
 
 ## Mengapa Memilih Haonuo
 
@@ -1031,5 +1031,5 @@ Solusi penekanan minyak kenari Haonuo Machinery secara khusus dirancang untuk pr
 - **Sistem kontrol suhu** — Pemantauan suhu bawaan memastikan penekanan tetap di bawah 60°C untuk menjaga omega-3
 - **Opsi baja tahan karat kelas makanan** — Tersedia untuk pelanggan yang membutuhkan standar higiene tertinggi
 - **Terbukti di pasar Timur Tengah** — Mesin kami beroperasi dengan sukses di Arab Saudi, UEA, dan Iran
-- **Garansi 1 tahun + dukungan seumur hidup** — Ketenangan pikiran lengkap dengan suku cadang dikirim dalam 48 jam`,
+- **Garansi 1 tahun + dukungan seumur hidup** — Cakupan lengkap dengan suku cadang dikirim dalam 48 jam`,
 };

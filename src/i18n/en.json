@@ -191,12 +191,12 @@
     "statsCountries": "Countries Served Worldwide",
     "statsEmployees": "Skilled Workers & Engineers",
     "statsArea": "m² Production Facility",
-    "statsMachines": "Machines Delivered",
+    "statsMachines": "Buyers Served",
     "statsHighlight1": "Since 2010",
     "statsHighlight2": "6 Continents",
     "statsHighlight3": "Expert Team",
     "statsHighlight4": "Quality Tested",
-    "statsHighlight5": "Delivered",
+    "statsHighlight5": "Worldwide",
     "byScale": "Find the Right Machine by Production Scale",
     "byScaleSubtitle": "Whether you're starting out or scaling up, we have the right hydraulic oil press at the right price for your business goals.",
     "smallBusinessTitle": "Commercial",
@@ -218,7 +218,7 @@
     "step4Title": "Global Shipping",
     "step4Desc": "Safe packaging and reliable shipping to your port with full export documentation and insurance.",
     "step5Title": "After-Sales Support",
-    "step5Desc": "Lifetime technical support, video installation guides, and spare parts guarantee for your peace of mind.",
+    "step5Desc": "Lifetime technical support, video installation guides, and spare parts guarantee for long-term reliability.",
     "learnMore": "Learn More",
     "premiumMaterialsDetail1": "Hydraulic Cylinder: 27SiMn steel, 900MPa per cm²",
     "premiumMaterialsDetail2": "Piston Rod: Chrome plated, 5-layer seals",
@@ -308,12 +308,12 @@
     "storyTitle": "Our Story",
     "storyP1": "Founded in 2010 in Qingzhou, Shandong — a city with a deep tradition in mechanical engineering — Haonuo Machinery began with a simple mission: to build reliable, efficient hydraulic oil press machines that help oil producers maximize their yield and minimize their costs.",
     "storyP2": "Our founder, with over 20 years of experience in hydraulic systems, recognized that many oil producers were struggling with low-efficiency presses and unreliable suppliers. Starting from a small workshop with just 10 workers, we focused relentlessly on product quality and customer satisfaction.",
-    "storyP3": "Today, that dedication has made us an established hydraulic oil press machine manufacturer in China, trusted by thousands of customers across 50+ countries — from India and Nigeria to the Philippines and the Middle East. Our story is still being written, and we invite you to be part of it.",
+    "storyP3": "Today, that dedication has made us an established hydraulic oil press machine manufacturer in China, trusted by thousands of customers across 50+ countries — from India and Nigeria to the Philippines and the Middle East.",
     "overviewTitle": "Professional Hydraulic Oil Press Machine Manufacturer",
     "overviewP2": "Located in Qingzhou, Weifang, Shandong Province — China's renowned machinery manufacturing hub — our 3,000m² factory is equipped with advanced CNC machining centers, professional assembly lines, and strict quality control systems. With over 200 skilled employees, we deliver reliable oil pressing equipment to customers worldwide.",
     "overviewP3": "As a direct oil press machine China manufacturer, we provide factory-direct pricing, comprehensive technical support, and lifetime after-sales service to every customer.",
     "manufacturingTitle": "Manufacturing Capabilities",
-    "manufacturingDesc": "Our 3,000m² factory in Qingzhou is equipped with state-of-the-art machinery and staffed by 200+ skilled professionals dedicated to producing high-quality hydraulic oil press machines.",
+    "manufacturingDesc": "Our 3,000m² factory in Qingzhou is equipped with modern machinery and staffed by 200+ skilled professionals dedicated to producing high-quality hydraulic oil press machines.",
     "capCncTitle": "CNC Machining Centers",
     "capCncDesc": "Advanced CNC lathes and milling machines ensure precision parts with tolerances within ±0.01mm",
     "capAssemblyTitle": "Professional Assembly Lines",
@@ -476,7 +476,7 @@
     "productInterest": "Product of Interest",
     "productPlaceholder": "Type or select a product",
     "messagePlaceholder": "What do you want to press? (palm fruit, palm kernel, peanut, sesame...). Expected daily output in tons? Standard machine or custom? Any other requirements?",
-    "messageHint": "💡 Tip: Tell us the oil material, daily output and machine type (standard/custom), we'll send a tailored quotation faster.",
+    "messageHint": "Tip: Tell us the oil material, daily output and machine type (standard/custom), we'll send a tailored quotation faster.",
     "response24h": "We respond within 24 hours",
     "quickContact": "Quick Contact Methods",
     "whatToExpect": "What to Expect After You Contact Us",
@@ -926,7 +926,7 @@
     },
     "lowPower": {
       "title": "Low Power Consumption",
-      "desc": "Only 2.2 KW motor power needed. Compatible with generators, ideal for areas with unstable or no grid electricity.",
+      "desc": "Only 2.2 KW motor power needed. Compatible with generators, well-suited for areas with unstable or no grid electricity.",
       "stat": "Just 2.2 KW — runs on 5KVA generator"
     },
     "versatile": {
@@ -976,7 +976,7 @@
     },
     "peanutOilApp": {
       "title": "Peanut / Groundnut Oil",
-      "desc": "Africa's most popular cooking oil. Ideal for groundnut oil businesses in Nigeria, Ghana, and across West Africa. Generator-compatible for rural operations.",
+      "desc": "Africa's most popular cooking oil. Well-suited for groundnut oil businesses in Nigeria, Ghana, and across West Africa. Generator-compatible for rural operations.",
       "yield": "Yield: 38-45%"
     },
     "oliveOilApp": {
@@ -1004,7 +1004,7 @@
     "faqs": [
       {
         "question": "What is a hydraulic oil press machine?",
-        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them ideal for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
+        "answer": "A hydraulic oil press machine uses hydraulic pressure to extract oil from seeds and nuts. Unlike screw presses that generate heat through friction, hydraulic presses apply uniform static pressure at controlled temperatures, making them well-suited for cold pressing premium oils like sesame, walnut, and coconut oil. The process preserves natural nutrients, flavor, and aroma."
       },
       {
         "question": "How does a hydraulic oil press work?",
@@ -1024,11 +1024,11 @@
       },
       {
         "question": "What is the difference between cold press and hot press?",
-        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — ideal for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
+        "answer": "Cold press operates below 60°C preserving nutrients, natural flavor, and aroma — well-suited for premium oils like sesame, walnut, and virgin coconut oil. Hot press involves roasting seeds before pressing, which increases yield slightly but may alter flavor and reduce nutritional value. Hydraulic oil presses are naturally suited for cold pressing because they apply static pressure without friction-generated heat."
       },
       {
         "question": "Can the machine run on a generator?",
-        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them ideal for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
+        "answer": "Yes, Haonuo hydraulic presses only need 2.2 KW motor power, making them fully compatible with a 5-7 KVA generator. This makes them well-suited for areas with unstable or no grid electricity, such as rural Nigeria, Kenya, and other regions across Africa and Southeast Asia."
       },
       {
         "question": "What warranty do you provide?",
@@ -1060,7 +1060,7 @@
     },
     "lowPower": {
       "title": "Low Power Requirement",
-      "desc": "Only 2.2 KW power needed. Compatible with standard 220V single-phase power or a small 5 KVA generator — ideal for any region."
+      "desc": "Only 2.2 KW power needed. Compatible with standard 220V single-phase power or a small 5 KVA generator — well-suited for any region."
     },
     "costEffective": {
       "title": "Cost-Effective",

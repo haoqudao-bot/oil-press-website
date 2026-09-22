@@ -7,10 +7,10 @@ title:
 seedName: mustard
 icon: mustard
 description:
-  en: Mustard oil press machine for high-yield cold pressed mustard oil extraction. Hydraulic press technology ideal for South Asian markets. Haonuo factory price.
-  fr: Machine de pressage d'huile de moutarde pour extraction à froid à haut rendement. Technologie de pressage hydraulique idéale pour les marchés sud-asiatiques.
-  ar: آلة عصر زيت الخردل لاستخراج زيت الخردل المضغوط على البارد عالي العائد. تقنية الضغط الهيدروليكي مثالية لأسواق جنوب آسيا.
-  id: Mesin press minyak sawi untuk ekstraksi minyak sawi dingin hasil tinggi. Teknologi press hidrolik ideal untuk pasar Asia Selatan.
+  en: Mustard oil press machine for high-yield cold pressed mustard oil extraction. Hydraulic press technology well-suited for South Asian markets. Haonuo factory price.
+  fr: Machine de pressage d'huile de moutarde pour extraction à froid à haut rendement. Technologie de pressage hydraulique adaptée pour les marchés sud-asiatiques.
+  ar: آلة عصر زيت الخردل لاستخراج زيت الخردل المضغوط على البارد عالي العائد. تقنية الضغط الهيدروليكي مناسبة لأسواق جنوب آسيا.
+  id: Mesin press minyak sawi untuk ekstraksi minyak sawi dingin hasil tinggi. Teknologi press hidrolik cocok untuk pasar Asia Selatan.
 recommendedProducts:
   - standard-hydraulic-oil-press
   - heavy-duty-hydraulic-oil-press
@@ -142,7 +142,7 @@ The solution supports both cold pressing (for premium Kachi Ghani mustard oil) a
 
 ## Recommended Equipment
 
-- **Standard Hydraulic Oil Press (HN325)** — Excellent for small to medium mustard oil production. Ideal for Kachi Ghani cold-pressed mustard oil.
+- **Standard Hydraulic Oil Press (HN325)** — Excellent for small to medium mustard oil production. Well-suited for Kachi Ghani cold-pressed mustard oil.
 - **Heavy Duty Hydraulic Oil Press (HN355)** — Recommended for larger operations with higher daily throughput requirements.
 - **Electric Seed Steamer** — Purpose-built for mustard seed steaming with precise temperature control. Essential for hot-pressed mustard oil production.
 - **Pneumatic Oil Filter Press** — Efficient filtration for clean, market-ready mustard oil with minimal labor.
