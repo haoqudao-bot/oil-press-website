@@ -30,3 +30,9 @@ Thumbs.db
 
 # Trae IDE internal docs (strategy/audit documents, keep local only)
 .trae/
+
+# Quotation tool (contains sensitive cost data, keep local only)
+quotation-tool/
+
+# Client development tracker (contains lead/customer data, keep local only)
+client-dev/
