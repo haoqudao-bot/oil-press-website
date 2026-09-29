@@ -419,6 +419,8 @@ const breadcrumbLd = {
     const successDiv = document.getElementById('form-success');
     const errorDiv = document.getElementById('form-error');
 
+    const formData = new FormData(form);
+
     // Append Turnstile token if present
     const turnstileResponse = form.querySelector('input[name="cf-turnstile-response"]');
     if (turnstileResponse) {
