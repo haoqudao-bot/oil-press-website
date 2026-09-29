@@ -36,3 +36,9 @@ quotation-tool/
 
 # Client development tracker (contains lead/customer data, keep local only)
 client-dev/
+
+# Local-only scripts and assets (not part of website deployment)
+factory-gallery/
+make_quotation_cn.py
+gsc-submission-plan.txt
+debug.log
