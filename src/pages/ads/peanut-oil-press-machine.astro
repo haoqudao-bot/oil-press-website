@@ -395,7 +395,10 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
       </div>
     </div>
 
-    <form class="form-card" id="inquiry-form" action="https://formspree.io/f/mbgrdvyn" method="POST" onsubmit="return handleInquiry(event)">
+    <form class="form-card" id="inquiry-form" action="/api/inquiry" method="POST" onsubmit="return handleInquiry(event)">
+      <input type="hidden" name="source" value="Ads - Peanut Oil Press Machine" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAFIiDuJVsJp4_WlY"></div>
       <h3>🎯 Get Factory Price & Model Recommendation</h3>
       <p class="lead">Reply within 24 hours · No spam · 100% confidential</p>
       <div class="form-row">
@@ -659,7 +662,10 @@ table.compare-full td.td-featured{background:#dcfce7;font-weight:500;color:#1453
           <li>Standard models or fully customized OEM/ODM solutions</li>
         </ul>
       </div>
-      <form class="form-card" action="https://formspree.io/f/mbgrdvyn" method="POST" onsubmit="return handleInquiry(event)">
+      <form class="form-card" action="/api/inquiry" method="POST" onsubmit="return handleInquiry(event)">
+        <input type="hidden" name="source" value="Ads - Peanut Oil Press Machine (Bottom)" />
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFIiDuJVsJp4_WlY"></div>
         <h3>🎯 Get My Factory Price</h3>
         <p class="lead">Fill once — we handle everything after.</p>
         <div class="form-row">
@@ -755,5 +761,6 @@ function handleInquiry(e){
 }
 window.handleInquiry = handleInquiry;
 </script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>

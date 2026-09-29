@@ -124,9 +124,10 @@ const breadcrumbLd = {
           <div class="bg-white rounded-2xl p-6 md:p-8 border border-steel-100 shadow-sm">
             <h2 class="font-display text-2xl text-charcoal-900 mb-2">{t.contact.sendInquiry}</h2>
             <p class="text-sm text-steel-500 mb-6">{t.contact.response24h}</p>
-            <form id="contact-form" action="https://formspree.io/f/mbdnqajz" method="POST" class="space-y-5" onsubmit="return submitForm(event)">
-              <input type="hidden" name="_subject" value={t.contact.formSubject} />
+            <form id="contact-form" action="/api/inquiry" method="POST" class="space-y-5" onsubmit="return submitForm(event)">
+              <input type="hidden" name="source" value={t.contact.formSubject} />
               <input type="text" name="_gotcha" style="display:none" />
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAAFIiDuJVsJp4_WlY"></div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label for="name" class="block text-sm font-medium text-charcoal-900 mb-1.5">{t.contact.name} *</label>
@@ -435,6 +436,12 @@ const breadcrumbLd = {
 
     const formData = new FormData(form);
 
+    // Append Turnstile token if present
+    const turnstileResponse = form.querySelector('input[name="cf-turnstile-response"]');
+    if (turnstileResponse) {
+      formData.append('cf-turnstile-response', turnstileResponse.value);
+    }
+
     submitBtn.disabled = true;
     btnText.textContent = sendingText;
     btnIcon.style.display = 'none';
@@ -470,3 +477,4 @@ const breadcrumbLd = {
 
   window.submitForm = submitForm;
 </script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

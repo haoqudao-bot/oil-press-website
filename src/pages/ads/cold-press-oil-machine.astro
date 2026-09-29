@@ -394,7 +394,10 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
       </div>
     </div>
 
-    <form class="form-card" id="inquiry-form" action="https://formspree.io/f/xwlevdbj" method="POST" onsubmit="return handleInquiry(event)">
+    <form class="form-card" id="inquiry-form" action="/api/inquiry" method="POST" onsubmit="return handleInquiry(event)">
+      <input type="hidden" name="source" value="Ads - Cold Press Oil Machine" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAFIiDuJVsJp4_WlY"></div>
       <h3>❄️ Get Factory Price & Model Recommendation</h3>
       <p class="lead">Free VCO process guide · Reply in 24h · Confidential</p>
       <div class="form-row">
@@ -658,7 +661,10 @@ table.compare-full td.td-featured{background:#e0f2fe;font-weight:500;color:#0c4a
           <li>Standard models or fully customized OEM/ODM solutions</li>
         </ul>
       </div>
-      <form class="form-card" action="https://formspree.io/f/xwlevdbj" method="POST" onsubmit="return handleInquiry(event)">
+      <form class="form-card" action="/api/inquiry" method="POST" onsubmit="return handleInquiry(event)">
+        <input type="hidden" name="source" value="Ads - Cold Press Oil Machine (Bottom)" />
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFIiDuJVsJp4_WlY"></div>
         <h3>❄️ Get My Factory Price</h3>
         <p class="lead">Free VCO guide included · Reply in 24h</p>
         <div class="form-row">
@@ -754,5 +760,6 @@ function handleInquiry(e){
 }
 window.handleInquiry = handleInquiry;
 </script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
