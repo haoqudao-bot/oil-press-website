@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getTranslations } from '../i18n';
 
@@ -9,539 +9,543 @@ function localePath(path: string): string {
   return path;
 }
 
-const stats = [
-  { value: '15+', label: t.home.statsYears },
-  { value: '50+', label: t.home.statsCountries },
-  { value: '200+', label: t.home.statsEmployees },
-  { value: '2,000', label: t.home.statsArea },
-];
-
-const milestones = [
-    { year: '2010', event: t.about.milestone2010 },
-    { year: '2013', event: t.about.milestone2013 },
-    { year: '2016', event: t.about.milestone2016 },
-    { year: '2020', event: t.about.milestone2020 },
-    { year: '2025', event: t.about.milestone2025 },
-  ];
-
-  const certificates = [];
-
-  const capabilities = [
-    { icon: 'cnc', title: t.about.capCncTitle, desc: t.about.capCncDesc },
-    { icon: 'assembly', title: t.about.capAssemblyTitle, desc: t.about.capAssemblyDesc },
-    { icon: 'qc', title: t.about.capQcTitle, desc: t.about.capQcDesc },
-    { icon: 'rd', title: t.about.capRdTitle, desc: t.about.capRdDesc },
-    { icon: 'paint', title: t.about.capPaintTitle, desc: t.about.capPaintDesc },
-    { icon: 'warehouse', title: t.about.capWarehouseTitle, desc: t.about.capWarehouseDesc },
-  ];
-
-  const whyChooseUs = [
-    { title: t.about.why1Title, desc: t.about.why1Desc },
-    { title: t.about.why2Title, desc: t.about.why2Desc },
-    { title: t.about.why3Title, desc: t.about.why3Desc },
-    { title: t.about.why4Title, desc: t.about.why4Desc },
-    { title: t.about.why5Title, desc: t.about.why5Desc },
-    { title: t.about.why6Title, desc: t.about.why6Desc },
-  ];
-
-  const keyMarkets = [
-    { region: t.about.regionSouthAsia, countries: ['India', 'Pakistan', 'Sri Lanka'] },
-    { region: t.about.regionAfrica, countries: ['Nigeria', 'Kenya', 'Ghana', 'Tanzania', 'Uganda'] },
-    { region: t.about.regionSeAsia, countries: ['Philippines', 'Indonesia', 'Vietnam', 'Thailand', 'Myanmar'] },
-    { region: t.about.regionMiddleEast, countries: ['Saudi Arabia', 'UAE', 'Egypt', 'Turkey', 'Iraq'] },
-  ];
-  const breadcrumbLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: t.about.breadcrumbHome, item: 'https://www.hydoilpress.com/' },
-      { '@type': 'ListItem', position: 2, name: t.about.breadcrumbAbout, item: 'https://www.hydoilpress.com/about' },
-    ],
-  };
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.about.breadcrumbHome, item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: t.about.breadcrumbAbout, item: 'https://www.hydoilpress.com/about' },
+  ],
+};
 ---
 
-<BaseLayout title={t.about.title} description="Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. Factory with 200+ employees, exporting to 50+ countries." jsonLd={breadcrumbLd}>
-  <!-- Breadcrumb -->
-  <section class="bg-steel-50 py-4 border-b border-steel-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.about.breadcrumbHome}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <span class="text-charcoal-900 font-semibold">{t.about.breadcrumbAbout}</span>
-      </nav>
-    </div>
-  </section>
+<BaseLayout title={t.about.title} description="Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. Factory with 2,000 m² owned workshop, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment." jsonLd={breadcrumbLd} overlayHeader>
+  <style is:global>
+    :root{
+      --steel-50:#F0F4F8; --steel-100:#D9E2EC; --steel-200:#BCCCDC; --steel-400:#829AB1;
+      --steel-500:#627D98; --steel-600:#486581; --steel-700:#334E68; --steel-800:#243B53;
+      --steel-900:#1B3A5C; --steel-950:#102A43;
+      --amber-400:#F0B429; --amber-500:#E8A838; --amber-600:#D69E2E;
+      --charcoal:#1A1A2E;
+      --maxw:1240px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{color:var(--charcoal);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    .display{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.01em}
+    .kicker{font-family:'Bebas Neue',sans-serif;color:var(--amber-600);letter-spacing:.28em;font-size:15px;display:flex;align-items:center;gap:14px;margin-bottom:16px}
+    .kicker::before{content:"";width:36px;height:2px;background:var(--amber-500)}
+    .kicker.center{justify-content:center}
+    .sec{padding:92px 0}
+    .sec-head{margin-bottom:52px;max-width:720px}
+    .sec-head.center{margin-inline:auto;text-align:center}
+    .sec-head.center .kicker{justify-content:center}
+    .sec-head h2{font-size:clamp(28px,3.4vw,42px);line-height:1.12;font-weight:800;color:var(--steel-950);letter-spacing:-.02em}
+    .sec-head p{color:var(--steel-500);margin-top:14px;font-size:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:14px 28px;border-radius:6px;transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;touch-action:manipulation}
+    .btn-amber{background:var(--amber-500);color:var(--steel-950)}
+    .btn-amber:hover{background:var(--amber-400);transform:translateY(-1px)}
+    .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff;background:transparent}
+    .btn-ghost:hover{background:#fff;color:var(--steel-900)}
+    .btn-dark{background:var(--steel-900);color:#fff}
+    .btn-dark:hover{background:var(--steel-800);transform:translateY(-1px)}
+    .go{color:var(--amber-600);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+    .go:hover{color:var(--amber-500)}
+    .btn:focus-visible,a:focus-visible,input:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--amber-400);outline-offset:2px}
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
 
-  <!-- Page Header -->
-  <section class="bg-steel-900 py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.about.title}</h1>
-      <p class="text-steel-300 text-lg max-w-2xl">{t.about.subtitle}</p>
-    </div>
-  </section>
+    /* hero */
+    .hero{position:relative;min-height:560px;height:62vh;background:var(--steel-950);overflow:hidden;display:flex;align-items:flex-end}
+    .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroin 1.2s ease both}
+    @keyframes heroin{from{transform:scale(1.07);filter:blur(2px)}to{transform:scale(1);filter:blur(0)}}
+    .hero .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,26,43,.94) 0%,rgba(16,42,67,.72) 44%,rgba(16,42,67,.25) 100%)}
+    .hero .veil::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,26,43,.85) 0%,rgba(10,26,43,0) 42%)}
+    .hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:86px;color:#fff}
+    .crumb{font-size:13px;color:rgba(255,255,255,.72);margin-bottom:18px;display:flex;gap:8px;align-items:center}
+    .crumb b{color:var(--amber-400);font-weight:600}
+    .hero h1{font-size:clamp(32px,4.6vw,54px);line-height:1.06;font-weight:800;letter-spacing:-.02em;max-width:860px;animation:rise .8s .15s ease both}
+    .hero .sub{margin-top:18px;font-size:clamp(16px,1.4vw,19px);color:rgba(255,255,255,.88);max-width:640px;animation:rise .8s .3s ease both}
+    .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;animation:rise .8s .45s ease both}
+    @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+    .hero-chips{position:absolute;z-index:3;right:0;bottom:0;background:rgba(16,42,67,.6);backdrop-filter:blur(12px);border-left:1px solid rgba(255,255,255,.14);border-top:1px solid rgba(255,255,255,.14)}
+    .hero-chips ul{list-style:none;display:flex}
+    .hero-chips li{padding:18px 26px;border-right:1px solid rgba(255,255,255,.1)}
+    .hero-chips li:last-child{border-right:0}
+    .hero-chips .n{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--amber-400);line-height:1}
+    .hero-chips .l{font-size:12px;color:rgba(255,255,255,.75);margin-top:4px}
 
-  <!-- Company Overview -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <img
-            src="/images/factory/factory-building-yellow.webp"
-            alt={t.about.overviewImgAlt}
-            class="w-full rounded-2xl shadow-lg"
-          />
-        </div>
-        <div class="reveal">
-          <h2 class="section-title">{t.about.overviewTitle}</h2>
-          <p class="text-steel-600 leading-relaxed mb-4">
-            {t.about.overviewP1}
-          </p>
-          <p class="text-steel-600 leading-relaxed mb-4">
-            {t.about.overviewP2}
-          </p>
-          <p class="text-steel-600 leading-relaxed mb-8">
-            {t.about.overviewP3}
-          </p>
+    /* overview */
+    .ov{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+    .ov-media{position:relative}
+    .ov-media .main{border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(16,42,67,.4)}
+    .ov-media .main img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .ov h2{font-size:clamp(28px,3vw,38px);line-height:1.15;font-weight:800;color:var(--steel-950);letter-spacing:-.02em}
+    .ov .legal{font-size:14px;color:var(--amber-600);font-weight:700;letter-spacing:.04em;margin-bottom:10px}
+    .ov p{color:var(--steel-600);margin-top:16px;font-size:15.5px}
+    .ov p b{color:var(--steel-900)}
+    .ov-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+    .ov-stats .st{border:1px solid var(--steel-100);border-top:3px solid var(--amber-500);border-radius:8px;padding:18px 14px;background:#fff}
+    .ov-stats .n{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--steel-900);line-height:1}
+    .ov-stats .l{font-size:11.5px;color:var(--steel-500);margin-top:6px;letter-spacing:.02em}
 
-          <!-- Stats -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {stats.map(stat => (
-              <div class="text-center">
-                <div class="font-display text-3xl md:text-4xl text-amber-500">{stat.value}</div>
-                <div class="text-xs text-steel-500 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+    /* horizontal history strip */
+    .hist{background:var(--steel-50);border-top:1px solid var(--steel-100);border-bottom:1px solid var(--steel-100)}
+    .hstrip{display:grid;grid-template-columns:repeat(5,1fr);position:relative;gap:22px}
+    .hstrip::before{content:"";position:absolute;top:8px;left:5%;right:5%;height:2px;background:linear-gradient(90deg,var(--amber-500),var(--steel-200))}
+    .hs{position:relative;padding-top:30px}
+    .hs .dot{position:absolute;top:1px;left:0;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--amber-500);box-shadow:0 0 0 5px rgba(232,168,56,.15)}
+    .hs .yr{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--steel-900);line-height:1;margin-bottom:10px}
+    .hs .yr.now{color:var(--amber-600)}
+    .hs h4{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-600);margin-bottom:8px}
+    .hs p{font-size:13px;color:var(--steel-600);line-height:1.6}
+
+    /* personas */
+    .persona{background:var(--steel-50)}
+    .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .pc{background:#fff;border:1px solid var(--steel-100);border-radius:12px;padding:30px 28px;display:flex;flex-direction:column;gap:10px;transition:transform .25s ease,box-shadow .25s ease}
+    .pc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(16,42,67,.4)}
+    .pc .who{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.2em;color:var(--amber-600)}
+    .pc h4{font-size:19px;font-weight:800;color:var(--steel-950);line-height:1.3}
+    .pc p{font-size:14px;color:var(--steel-600)}
+    .pc ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:6px 0 10px}
+    .pc li{font-size:13.5px;color:var(--steel-600);padding-left:22px;position:relative}
+    .pc li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:2px;background:var(--amber-500)}
+    .pc .go{margin-top:auto}
+
+    /* returns */
+    .ret{background:var(--steel-950);color:#fff}
+    .ret .sec-head h2{color:#fff}
+    .ret .sec-head p{color:rgba(255,255,255,.65)}
+    .ret .kicker{color:var(--amber-400)}
+    .ret-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden}
+    .ret-grid .rs{padding:38px 28px;border-right:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.02)}
+    .ret-grid .rs:last-child{border-right:0}
+    .ret-grid .n{font-family:'Bebas Neue',sans-serif;font-size:58px;color:var(--amber-400);line-height:1}
+    .ret-grid .h{font-size:15px;font-weight:700;margin:12px 0 6px;color:#fff}
+    .ret-grid .d{font-size:13px;color:rgba(255,255,255,.62)}
+
+    /* journey */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+    .sc{background:#fff;border:1px solid var(--steel-100);border-radius:12px;padding:32px 28px;position:relative;transition:transform .25s ease,box-shadow .25s ease}
+    .sc:hover{transform:translateY(-5px);box-shadow:0 24px 48px -24px rgba(16,42,67,.35)}
+    .sc::before{counter-increment:step;content:"0" counter(step);font-family:'Bebas Neue',sans-serif;font-size:54px;color:rgba(232,168,56,.25);line-height:1;display:block;margin-bottom:8px}
+    .sc .when{font-size:11.5px;font-weight:800;letter-spacing:.14em;color:var(--amber-600);text-transform:uppercase;margin-bottom:8px}
+    .sc h4{font-size:18px;font-weight:800;color:var(--steel-950);margin-bottom:10px}
+    .sc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .sc li{font-size:13.5px;color:var(--steel-600);padding-left:22px;position:relative}
+    .sc li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:2px;background:var(--amber-500)}
+
+    /* lines */
+    .lines{background:var(--steel-50)}
+    .line-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .lc{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--steel-100);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+    .lc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(16,42,67,.4)}
+    .lc .body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+    .lc h4{font-size:17px;font-weight:700;color:var(--steel-950)}
+    .lc p{font-size:13px;color:var(--steel-500);flex:1}
+    .lc .go{font-size:13.5px}
+    .line-note{margin-top:34px;text-align:center;font-size:15px;color:var(--steel-600)}
+    .line-note a{color:var(--amber-600);font-weight:700}
+
+    /* gallery */
+    .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px;grid-auto-flow:dense}
+    .gi{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 14px 36px -22px rgba(16,42,67,.4)}
+    .gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .gi:hover img{transform:scale(1.05)}
+    .gi .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 12px;background:linear-gradient(0deg,rgba(10,26,43,.88),transparent);color:#fff;font-size:12.5px;font-weight:600}
+    .gi.big{grid-column:span 2;grid-row:span 1}
+
+    /* globe */
+    .globe{background:var(--steel-50)}
+    .reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .rc2{background:#fff;border:1px solid var(--steel-100);border-radius:12px;padding:24px 20px}
+    .rc2 h4{font-size:15px;font-weight:800;color:var(--steel-950);display:flex;align-items:center;gap:9px;margin-bottom:14px}
+    .rc2 h4 .dot{width:9px;height:9px;border-radius:50%;background:var(--amber-500)}
+    .rc2 ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .rc2 li{font-size:13.5px;color:var(--steel-600);display:flex;gap:9px;align-items:center}
+    .rc2 li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--steel-200);flex:none}
+    .globe-more{margin-top:34px;text-align:center;font-size:14px;color:var(--steel-500)}
+
+    /* materials */
+    .mat{background:#0E1E30;color:#fff}
+    .mat .sec-head h2{color:#fff}
+    .mat .sec-head p{color:rgba(255,255,255,.65)}
+    .mat .kicker{color:var(--amber-400)}
+    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .mc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px 24px;position:relative;transition:border-color .2s ease,background .2s ease}
+    .mc:hover{border-color:rgba(240,180,41,.5);background:rgba(255,255,255,.06)}
+    .mc .no{font-family:'Bebas Neue',sans-serif;font-size:40px;color:rgba(240,180,41,.55);line-height:1}
+    .mc h4{font-size:16.5px;font-weight:700;margin:10px 0 8px;color:#fff;display:flex;flex-direction:column;gap:2px}
+    .mc h4 span{font-size:12px;font-weight:500;color:var(--amber-400);letter-spacing:.02em}
+    .mc p{font-size:13px;color:rgba(255,255,255,.66)}
+    .mc .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+    .mc .chips span{font-size:11px;font-weight:700;color:var(--amber-400);border:1px solid rgba(240,180,41,.4);padding:4px 9px;border-radius:999px;letter-spacing:.03em}
+
+    /* services */
+    .serv{background:#FFF8E8}
+    .sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+    .sv{background:#fff;border-radius:14px;padding:34px 28px;box-shadow:0 12px 30px -20px rgba(16,42,67,.25);border:1px solid rgba(232,168,56,.18);display:flex;flex-direction:column;gap:14px;transition:transform .3s ease,box-shadow .3s ease}
+    .sv:hover{transform:translateY(-4px);box-shadow:0 20px 44px -22px rgba(16,42,67,.35)}
+    .sv .ic{width:52px;height:52px;border-radius:12px;background:#FDECC8;color:var(--amber-600);display:flex;align-items:center;justify-content:center;flex:none}
+    .sv h4{font-size:20px;font-weight:700;color:var(--steel-950);font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;margin:0}
+    .sv p{font-size:14.5px;color:var(--steel-600);line-height:1.7;margin:0}
+    .sv-cta{margin-top:40px;text-align:center}
+    .sv-cta a{color:var(--amber-600);font-weight:700;font-size:15px}
+
+    /* final cta */
+    .fcta{position:relative;background:var(--steel-950);color:#fff;overflow:hidden}
+    .fcta img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.16}
+    .fcta .wrap{position:relative;z-index:2;padding:88px 24px;text-align:center}
+    .fcta h2{font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.15}
+    .fcta p{color:rgba(255,255,255,.78);margin-top:14px;font-size:16px}
+    .fcta .cta-row{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .fcta .mail{margin-top:22px;font-size:14px;color:rgba(255,255,255,.7)}
+    .fcta .mail a{color:var(--amber-400);font-weight:700;border-bottom:1px solid rgba(240,180,41,.5)}
+
+    @media (max-width:1024px){
+      .hstrip{gap:14px}
+      .hs .yr{font-size:34px}
+      .hs p{font-size:12.5px}
+      .line-grid{grid-template-columns:repeat(2,1fr)}
+      .reg-grid{grid-template-columns:repeat(2,1fr)}
+      .mat-grid{grid-template-columns:repeat(2,1fr)}
+      .ret-grid{grid-template-columns:repeat(2,1fr)}
+      .ret-grid .rs:nth-child(2){border-right:0}
+      .ret-grid .rs:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
+      .pg{grid-template-columns:1fr}
+      .ov-stats{grid-template-columns:repeat(2,1fr)}
+      .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+      .gi.big{grid-column:span 2;grid-row:span 1}
+      .hero-chips{display:none}
+    }
+    @media (max-width:720px){
+      .sec{padding:64px 0}
+      .hstrip{grid-template-columns:1fr;gap:0}
+      .hstrip::before{left:7px;right:auto;top:10px;bottom:10px;width:2px;height:auto;background:linear-gradient(var(--amber-500),var(--steel-200))}
+      .hs{padding:0 0 28px 32px}
+      .hs:last-child{padding-bottom:0}
+      .hs .dot{top:3px}
+      .ov{grid-template-columns:1fr;gap:40px}
+      .ov-stats{margin-top:48px}
+      .steps{grid-template-columns:1fr}
+      .line-grid,.reg-grid,.mat-grid{grid-template-columns:1fr}
+      .sv-grid{grid-template-columns:1fr}
+      .ret-grid{grid-template-columns:1fr}
+      .ret-grid .rs{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
+      .ret-grid .rs:last-child{border-bottom:0}
+      .gal{grid-template-columns:1fr;grid-auto-rows:220px}
+      .gi.big{grid-column:span 1}
+      .hero{height:auto;min-height:0}
+      .hero .wrap{padding:90px 0 54px}
+    }
+  </style>
+
+  <!-- 01 HERO -->
+  <header class="hero">
+    <img class="bg" src="/images/factory/workshop-cranes.webp" alt="Haonuo workshop with overhead cranes and hydraulic oil presses">
+    <div class="veil"></div>
+    <div class="wrap">
+      <div class="crumb"><a href={localePath('/')}>Home</a><span>/</span><b>About</b></div>
+      <h1>Buying an oil press starts with choosing a factory you can trust</h1>
+      <p class="sub">Haonuo Machinery has answered that question for buyers in 50+ countries since 2010 — a real 2,000&nbsp;m² factory, nameplate tonnage you can verify, and a 48-hour test before every shipment.</p>
+      <div class="hero-cta">
+        <a class="btn btn-amber" href={localePath('/contact')}>Get a Quote in 24h</a>
+        <a class="btn btn-ghost" href="#proof">Why Buyers Trust Us</a>
       </div>
     </div>
-  </section>
-
-  <!-- Our Story -->
-  <section class="py-16 md:py-24 bg-amber-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="section-title">{t.about.storyTitle}</h2>
-      <p class="text-lg text-steel-700 leading-relaxed mb-6">
-        {t.about.storyP1}
-      </p>
-      <p class="text-lg text-steel-700 leading-relaxed mb-6">
-        {t.about.storyP2}
-      </p>
-      <p class="text-lg text-steel-700 leading-relaxed">
-        {t.about.storyP3}
-      </p>
+    <div class="hero-chips">
+      <ul>
+        <li><div class="n">2010</div><div class="l">Established</div></li>
+        <li><div class="n">50+</div><div class="l">Export Countries</div></li>
+        <li><div class="n">300–620T</div><div class="l">Pressing Force</div></li>
+      </ul>
     </div>
-  </section>
+  </header>
 
-  <!-- Mission -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="section-title">{t.about.mission}</h2>
-      <p class="text-lg text-steel-700 leading-relaxed">
-        {t.about.missionDesc}
-      </p>
-    </div>
-  </section>
-
-  <!-- History Timeline -->
-  <section class="py-16 md:py-24 bg-steel-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12 reveal">{t.about.history}</h2>
-      <div class="relative">
-        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-steel-200 md:-translate-x-0.5"></div>
-
-        {milestones.map((item, i) => (
-          <div class:list={[
-            'relative flex items-start mb-8 last:mb-0 reveal',
-            i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-          ]}>
-            <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full -translate-x-1.5 md:-translate-x-1.5 mt-2 z-10"></div>
-            <div class:list={[
-              'ml-12 md:ml-0 md:w-1/2',
-              i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'
-            ]}>
-              <div class="font-display text-2xl text-amber-500 mb-1">{item.year}</div>
-              <p class="text-steel-700 text-sm leading-relaxed">{item.event}</p>
-            </div>
-          </div>
-        ))}
+  <!-- 02 OVERVIEW -->
+  <section class="sec">
+    <div class="wrap ov">
+      <div class="ov-media reveal">
+        <div class="main"><img src="/images/factory/factory-building-yellow.webp" alt="Haonuo Machinery factory entrance and office building in Qingzhou, Shandong"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- Manufacturing Capabilities -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.manufacturingTitle}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.manufacturingDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {capabilities.map((cap, i) => (
-          <div class="reveal p-6 bg-steel-50 rounded-2xl hover:bg-amber-50 transition-colors" style={`animation-delay: ${i * 80}ms`}>
-            <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center mb-4">
-              {cap.icon === 'cnc' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
-              )}
-              {cap.icon === 'assembly' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              )}
-              {cap.icon === 'qc' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              )}
-              {cap.icon === 'rd' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
-              )}
-              {cap.icon === 'paint' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-              )}
-              {cap.icon === 'warehouse' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              )}
-            </div>
-            <h3 class="font-display text-lg text-charcoal-900 mb-2">{cap.title}</h3>
-            <p class="text-sm text-steel-600 leading-relaxed">{cap.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Quality Assurance -->
-  <section class="py-16 md:py-24 bg-steel-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal text-white">{t.about.qualityTitle}</h2>
-      <p class="text-center text-steel-300 max-w-2xl mx-auto mb-12 reveal">{t.about.qualityDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="reveal text-center p-8 bg-white/5 rounded-2xl border border-white/10">
-          <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="font-display text-xl mb-3">{t.about.qualityIsoTitle}</h3>
-          <p class="text-sm text-steel-300 leading-relaxed">{t.about.qualityIsoDesc}</p>
-        </div>
-        <div class="reveal text-center p-8 bg-white/5 rounded-2xl border border-white/10">
-          <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3 class="font-display text-xl mb-3">{t.about.qualityMaterialTitle}</h3>
-          <p class="text-sm text-steel-300 leading-relaxed">{t.about.qualityMaterialDesc}</p>
-        </div>
-        <div class="reveal text-center p-8 bg-white/5 rounded-2xl border border-white/10">
-          <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          </div>
-          <h3 class="font-display text-xl mb-3">{t.about.qualityInspectionTitle}</h3>
-          <p class="text-sm text-steel-300 leading-relaxed">{t.about.qualityInspectionDesc}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Global Reach -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.globalTitle}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.globalDesc}</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        {keyMarkets.map((market, i) => (
-          <div class="reveal p-6 bg-steel-50 rounded-2xl" style={`animation-delay: ${i * 80}ms`}>
-            <h3 class="font-display text-lg text-amber-500 mb-3">{market.region}</h3>
-            <ul class="space-y-1.5">
-              {market.countries.map(country => (
-                <li class="flex items-center gap-2 text-sm text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  {country}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div class="text-center reveal">
-        <p class="text-steel-500 text-sm">{t.about.globalMore}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="py-16 md:py-24 bg-amber-50" id="why-choose-us">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.whyChooseTitle}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.whyChooseDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {whyChooseUs.map((reason, i) => (
-          <div class="reveal bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow" style={`animation-delay: ${i * 80}ms`}>
-            <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center mb-4 font-display text-lg text-charcoal-900">{i + 1}</div>
-            <h3 class="font-display text-lg text-charcoal-900 mb-2">{reason.title}</h3>
-            <p class="text-sm text-steel-600 leading-relaxed">{reason.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Premium Materials Details -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="section-title">{t.about.premiumMaterialsTitle}</h2>
-        <p class="section-subtitle mx-auto">{t.about.premiumMaterialsDesc}</p>
-      </div>
-      <div class="bg-steel-900 rounded-2xl p-6 md:p-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">A</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matA_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matA_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matA_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matA_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matA_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matA_tag3}</span>
-            </div>
-          </div>
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">B</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matB_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matB_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matB_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matB_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matB_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matB_tag3}</span>
-            </div>
-          </div>
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">C</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matC_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matC_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matC_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matC_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matC_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matC_tag3}</span>
-            </div>
-          </div>
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">D</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matD_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matD_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matD_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matD_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matD_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matD_tag3}</span>
-            </div>
-          </div>
+      <div class="ov-copy reveal">
+        <div class="kicker">WHO YOU'RE BUYING FROM</div>
+        <h2>One factory, one contract, one responsible party</h2>
+        <p class="legal">Shandong Haonuo Machinery Equipment Group Co., Ltd. · Qingzhou, Shandong</p>
+        <p>When you buy from Haonuo, you buy at <b>factory-direct price</b> — the same price our long-term distributors pay. There is no agent between you and the people who weld, machine and test your machine.</p>
+        <p>Since 2010 we've put presses into sesame mills in Nigeria, peanut plants in India and coconut VCO workshops in the Philippines. Most of our new orders come from <b>buyers returning for a second or third machine</b> — the clearest proof a machine is doing its job.</p>
+        <div class="ov-stats">
+          <div class="st"><div class="n">2010</div><div class="l">Founded · Qingzhou</div></div>
+          <div class="st"><div class="n">2,000 m²</div><div class="l">Owned Workshop</div></div>
+          <div class="st"><div class="n">50+</div><div class="l">Export Countries</div></div>
+          <div class="st"><div class="n">300–620T</div><div class="l">Pressing Force Range</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- High Returns Details -->
-  <section class="py-16 md:py-24 bg-steel-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="section-title">{t.about.highReturnsTitle}</h2>
-        <p class="section-subtitle mx-auto">{t.about.highReturnsDesc}</p>
+  <!-- 02B COMPANY HISTORY -->
+  <section class="sec hist">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">Our Journey</div>
+        <h2>Fifteen years, one product family</h2>
       </div>
-      <div class="bg-charcoal-900 rounded-2xl p-6 md:p-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns1_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns1_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">92%</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns1_label}</div>
-          </div>
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns2_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns2_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">-40%</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns2_label}</div>
-          </div>
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns3_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns3_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">&lt;60°C</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns3_label}</div>
-          </div>
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns4_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns4_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">50+</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns4_label}</div>
-          </div>
+      <div class="hstrip reveal">
+        <div class="hs">
+          <div class="dot"></div>
+          <div class="yr">2010</div>
+          <h4>Workshop Opens</h4>
+          <p>The first vertical hydraulic oil presses for sesame and peanut roll out of our own Qingzhou floor.</p>
+        </div>
+        <div class="hs">
+          <div class="dot"></div>
+          <div class="yr">2013</div>
+          <h4>First Exports</h4>
+          <p>Units ship to South and Southeast Asia — humidity, dust and remote service become design inputs.</p>
+        </div>
+        <div class="hs">
+          <div class="dot"></div>
+          <div class="yr">2016</div>
+          <h4>500–620 T Platform</h4>
+          <p>The HN426 / HN500 series brings true ultra-high-pressure cold pressing for walnut, almond and premium seeds.</p>
+        </div>
+        <div class="hs">
+          <div class="dot"></div>
+          <div class="yr">2020</div>
+          <h4>40+ Countries</h4>
+          <p>English manuals, video-guided installation and standing spare-parts inventory become standard on every order.</p>
+        </div>
+        <div class="hs">
+          <div class="dot"></div>
+          <div class="yr now">Today</div>
+          <h4>50+ Countries</h4>
+          <p>Full seed-to-bottle lines from one factory, and the 365-ton HN365 now in series production.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Easy Operation Details -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="section-title">{t.about.easyOperationTitle}</h2>
-        <p class="section-subtitle mx-auto">{t.about.easyOperationDesc}</p>
+  <!-- 04 PERSONAS -->
+  <section class="sec persona">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">START WITH YOUR SITUATION</div>
+        <h2>Which one sounds like you?</h2>
+        <p>Tell us where you are — the recommendation, layout and quotation we send back will match it.</p>
       </div>
-      <div class="bg-steel-800 rounded-2xl p-6 md:p-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">01</span>
-              <h4 class="font-display text-lg text-white">{t.about.op1_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op1_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              {t.about.op1_highlight}
-            </div>
-          </div>
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">02</span>
-              <h4 class="font-display text-lg text-white">{t.about.op2_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op2_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-              {t.about.op2_highlight}
-            </div>
-          </div>
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">03</span>
-              <h4 class="font-display text-lg text-white">{t.about.op3_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op3_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-              {t.about.op3_highlight}
-            </div>
-          </div>
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">04</span>
-              <h4 class="font-display text-lg text-white">{t.about.op4_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op4_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              {t.about.op4_highlight}
-            </div>
-          </div>
+      <div class="pg">
+        <div class="pc reveal">
+          <div class="who">STARTUP FOUNDER</div>
+          <h4>I'm starting an oil pressing business</h4>
+          <p>Honest advice on the right model for your seed and budget.</p>
+          <ul>
+            <li>Free seed &amp; moisture assessment</li>
+            <li>Model sized to your daily output</li>
+          </ul>
+          <a class="go" href={localePath('/contact')}>Get my starter quote →</a>
+        </div>
+        <div class="pc reveal">
+          <div class="who">EXPANDING WORKSHOP</div>
+          <h4>My press can't keep up</h4>
+          <p>Bigger tonnage, double barrel, or a full line — the right upgrade.</p>
+          <ul>
+            <li>Double-barrel: +30–50% daily output</li>
+            <li>Roasters, crushers, filters in one line</li>
+          </ul>
+          <a class="go" href={localePath('/contact')}>Plan my expansion →</a>
+        </div>
+        <div class="pc reveal">
+          <div class="who">ESTABLISHED MILL</div>
+          <h4>I run an established oil mill</h4>
+          <p>Stable specs, real tonnage, parts and docs you can count on.</p>
+          <ul>
+            <li>HN500 / HN426: 500–620 ton presses</li>
+            <li>Bulk spare-parts kits &amp; export docs</li>
+          </ul>
+          <a class="go" href={localePath('/contact')}>Request mill-grade quote →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Factory Tour -->
-  <section class="py-16 md:py-24 bg-steel-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.factoryTourTitle}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.factoryTourDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {[
-          { src: '/images/factory/workshop-cranes.webp', label: 'Overhead crane bays — welding and assembly workshop' },
-          { src: '/images/factory/factory-building-yellow.webp', label: 'Factory entrance and office building — Qingzhou, Shandong' },
-          { src: '/images/factory/finished-presses.webp', label: 'Finished hydraulic presses lined up for dispatch' },
-          { src: '/images/factory/export-loading.webp', label: 'Export packing and container loading at Qingdao' },
-          { src: '/images/factory/factory-exterior.webp', label: 'Haonuo factory, Qingzhou' },
-        ].map((img, i) => (
-          <div class="reveal aspect-[4/3] rounded-2xl overflow-hidden group" style={`animation-delay: ${i * 80}ms`}>
-            <img
-              src={img.src}
-              alt={img.label}
-              loading="lazy"
-              decoding="async"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              onerror={`this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<div class="flex items-center justify-center h-full bg-steel-100 text-steel-400 text-sm">${img.label}</div>'`}
-            />
-          </div>
-        ))}
-        <a href="/contact" class="reveal aspect-[4/3] rounded-2xl overflow-hidden group bg-steel-900 flex flex-col items-center justify-center text-center p-8 hover:bg-steel-800 transition-colors" style="animation-delay: 400ms">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-amber-500 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3l-4 4-4-4"/><path d="M8 21V13M16 21V13M2 13h20"/></svg>
-          <h3 class="font-display text-xl text-white mb-2">See the workshop yourself</h3>
-          <p class="text-steel-300 text-sm mb-4">Book an in-person visit or a live video factory tour before ordering.</p>
-          <span class="text-amber-500 font-semibold text-sm inline-flex items-center gap-1.5">
-            Arrange a visit
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </span>
-        </a>
+  <!-- 05 PROOF -->
+  <section class="sec ret" id="proof">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">WHAT OUR MACHINES CHANGE</div>
+        <h2>The numbers your business will feel</h2>
+      </div>
+      <div class="ret-grid reveal">
+        <div class="rs"><div class="n">92%</div><div class="h">Oil Extraction Rate</div><div class="d">Up to 92% yield on suited seeds — more bottles sold from every ton you buy.</div></div>
+        <div class="rs"><div class="n">−40%</div><div class="h">Energy per Ton</div><div class="d">Hydraulic pressing uses ~40% less power than screw presses — your margin, not the meter's.</div></div>
+        <div class="rs"><div class="n">&lt;60°C</div><div class="h">True Cold Press</div><div class="d">Aroma and nutrients survive — so does the premium cold-press price tag.</div></div>
+        <div class="rs"><div class="n">50+</div><div class="h">Oil-Bearing Materials</div><div class="d">Sesame, peanut, coconut, walnut, shea, rapeseed, flaxseed, palm kernel — one supplier covers them all.</div></div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="py-16 md:py-20 bg-amber-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.about.servicesSectionTitle}</h2>
-        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{t.about.servicesSectionDesc}</p>
+  <!-- 06 JOURNEY -->
+  <section class="sec" id="journey">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">HOW BUYING WORKS</div>
+        <h2>See your machine run before you pay</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[
-          { icon: '🏷️', title: t.about.serviceStandardTitle, desc: t.about.serviceStandardDesc },
-          { icon: '🏭', title: t.about.serviceOemTitle, desc: t.about.serviceOemDesc },
-          { icon: '🔧', title: t.about.serviceTechTitle, desc: t.about.serviceTechDesc },
-        ].map((svc, i) => (
-          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow reveal" style={`animation-delay: ${i * 60}ms`}>
-            <span class="text-3xl mb-3 block">{svc.icon}</span>
-            <h3 class="font-display text-lg text-charcoal-900 mb-2">{svc.title}</h3>
-            <p class="text-steel-600 text-sm">{svc.desc}</p>
-          </div>
-        ))}
-      </div>
-      <div class="text-center mt-8 reveal">
-        <a href={localePath('/services')} class="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-semibold transition-colors">
-          {currentLocale === 'fr' ? 'Voir Tous les Services' : currentLocale === 'ar' ? 'عرض جميع الخدمات' : 'View All Services'}
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </a>
+      <div class="steps reveal">
+        <div class="sc">
+          <div class="when">Day 0 — free</div>
+          <h4>Tell us your seed &amp; target</h4>
+          <ul>
+            <li>Quotation within 24 hours</li>
+            <li>FOB Qingdao pricing</li>
+          </ul>
+        </div>
+        <div class="sc">
+          <div class="when">Production — you watch</div>
+          <h4>Watch it being built &amp; tested</h4>
+          <ul>
+            <li>Weekly photos &amp; videos</li>
+            <li>48-hour test, videos approved before shipment</li>
+          </ul>
+        </div>
+        <div class="sc">
+          <div class="when">After arrival — for years</div>
+          <h4>Start producing with support</h4>
+          <ul>
+            <li>Video-guided installation</li>
+            <li>24h response, lifetime parts support</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-16 md:py-24 bg-steel-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{t.about.ctaTitle}</h2>
-      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">{t.about.ctaDesc}</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="btn-primary text-base">
-          {t.about.ctaButton1}
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="https://wa.me/8618957149128?text=Hello, I'm interested in your hydraulic oil press machines. Please send me a quotation." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-          {t.about.ctaButton2}
-        </a>
+  <!-- 08 RANGE -->
+  <section class="sec lines" id="lines">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">OUR PRODUCT LINE</div>
+        <h2>Hydraulic Oil Presses and the equipment around them</h2>
+        <p>From a single press to a full production line — crushers, roasters, filters and refining, all from one factory.</p>
       </div>
+      <div class="line-grid">
+        <div class="lc reveal"><div class="body"><h4>Hydraulic Oil Presses</h4><p>HN300–HN500, 300–620 real tons. Single or double barrel, hot or cold press, sesame / coconut / large-barrel specials.</p><a class="go" href={localePath('/contact')}>Quote my press →</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>Crushers &amp; Conveyors</h4><p>Pulverizers, feeder-crushers and screw elevators for consistent particle size and steady feeding.</p><a class="go" href={localePath('/contact')}>Add to my line →</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>Roasters &amp; Steamers</h4><p>Thermal-oil roasting pans and steam cookers that condition seed for maximum yield and aroma.</p><a class="go" href={localePath('/contact')}>Quote roasting →</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>Filtration &amp; Refining</h4><p>Filter presses and refining systems that take crude oil to clear, bottled-ready quality.</p><a class="go" href={localePath('/contact')}>Quote filtration →</a></div></div>
+      </div>
+      <p class="line-note reveal">Not sure which line you need? <a href={localePath('/contact')}>Send your seed and daily target — we'll size it for you.</a></p>
+    </div>
+  </section>
+
+  <!-- 09 FACTORY TOUR -->
+  <section class="sec" id="tour">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">INSIDE THE FACTORY</div>
+        <h2>See where your machine will be born</h2>
+        <p>Welding, machining, assembly, 48-hour testing, painting and container loading — all under our own roof in Qingzhou.</p>
+      </div>
+      <div class="gal reveal">
+        <div class="gi big"><img src="/images/factory/workshop-cranes.webp" alt="Overhead crane bays across the welding and assembly hall"><div class="cap">Assembly hall — overhead crane bays</div></div>
+        <div class="gi big"><img src="/images/factory/buyer-inspection.webp" alt="Buyers visiting the Haonuo workshop and inspecting presses"><div class="cap">Buyers inspecting presses on site</div></div>
+        <div class="gi"><img src="/images/factory/factory-building-yellow.webp" alt="Haonuo Machinery factory entrance and office building in Qingzhou"><div class="cap">Haonuo factory, Qingzhou</div></div>
+        <div class="gi"><img src="/images/factory/factory-exterior.webp" alt="Exterior of the hydraulic press workshop building"><div class="cap">Workshop building exterior</div></div>
+        <div class="gi"><img src="/images/factory/press-lineup.webp" alt="Row of finished orange-cylinder hydraulic oil presses"><div class="cap">Finished hydraulic press line</div></div>
+        <div class="gi"><img src="/images/factory/machining-workshop.webp" alt="Packaged hydraulic presses ready for dispatch in the workshop"><div class="cap">Machines packed for dispatch</div></div>
+        <div class="gi"><img src="/images/factory/two-production-rows.webp" alt="Two rows of hydraulic presses facing each other on the production floor"><div class="cap">Two production lines under one roof</div></div>
+        <div class="gi"><img src="/images/factory/control-cabinets.webp" alt="Hydraulic control cabinets with pressure gauges lined up"><div class="cap">Hydraulic control cabinets</div></div>
+        <div class="gi"><img src="/images/factory/stainless-filter-units.webp" alt="Stainless steel filtration units in assembly"><div class="cap">Stainless filtration units</div></div>
+        <div class="gi"><img src="/images/factory/stainless-roasting-pans.webp" alt="Stainless steel seed roasting pans on the factory floor"><div class="cap">Stainless roasting pans</div></div>
+        <div class="gi"><img src="/images/factory/quality-control.webp" alt="Assembly and control stations across the workshop floor"><div class="cap">Assembly &amp; control stations</div></div>
+        <div class="gi"><img src="/images/factory/assembly-line.webp" alt="Packaged stainless presses lined up for loading with a truck behind"><div class="cap">Packed presses ready to load</div></div>
+        <div class="gi"><img src="/images/factory/export-loading.webp" alt="Wrapped red-cylinder presses lined up outside the yellow factory building"><div class="cap">Machines lined up outside the factory</div></div>
+        <div class="gi"><img src="/images/factory/truck-loading.webp" alt="Truck loaded with packaged presses outside the factory workshop"><div class="cap">Loading for road transport</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 GLOBAL -->
+  <section class="sec globe" id="globe">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">Global Reach</div>
+        <h2>Trusted in 50+ countries</h2>
+        <p>Our hydraulic oil press machines are trusted by customers in 50+ countries. Key markets include India, Nigeria, Pakistan, Philippines, Kenya, and the Middle East.</p>
+      </div>
+      <div class="reg-grid reveal">
+        <div class="rc2"><h4><span class="dot"></span>South Asia</h4><ul><li>India</li><li>Pakistan</li><li>Sri Lanka</li></ul></div>
+        <div class="rc2"><h4><span class="dot"></span>Africa</h4><ul><li>Nigeria</li><li>Kenya</li><li>Ghana</li><li>Tanzania</li><li>Uganda</li></ul></div>
+        <div class="rc2"><h4><span class="dot"></span>Southeast Asia</h4><ul><li>Philippines</li><li>Indonesia</li><li>Vietnam</li><li>Thailand</li><li>Myanmar</li></ul></div>
+        <div class="rc2"><h4><span class="dot"></span>Middle East</h4><ul><li>Saudi Arabia</li><li>UAE</li><li>Egypt</li><li>Turkey</li><li>Iraq</li></ul></div>
+      </div>
+      <p class="globe-more reveal">…and many more countries across Central Asia, South America, and Europe.</p>
+    </div>
+  </section>
+
+  <!-- 11 MATERIALS -->
+  <section class="sec mat">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">WHY NOT THE CHEAPER MACHINE?</div>
+        <h2>Because this is where cheap presses fail</h2>
+        <p>Four components decide whether a press lasts 3 years or 15. Compare any quote against this list.</p>
+      </div>
+      <div class="mat-grid reveal">
+        <div class="mc"><div class="no">A</div><h4>Hydraulic Cylinder <span>27SiMn Alloy Steel</span></h4><p>Built with 27SiMn alloy steel, holding strength and toughness under 60–75&nbsp;MPa. Bore from 325&nbsp;mm (HN325) to 500&nbsp;mm (HN500) — every cylinder machined, heat-treated and pressure-tested before assembly.</p><div class="chips"><span>27SiMn STEEL</span><span>60–75 MPa</span><span>2200 psi+</span></div></div>
+        <div class="mc"><div class="no">B</div><h4>Press Barrel <span>Q690 High-Strength Steel</span></h4><p>Welded from Q690 steel with seamless flange rings, ground and electroplated to prevent rust. Slotted drainage is roughly 15× that of drilled barrels — faster oil flow, higher yield.</p><div class="chips"><span>Q690 STEEL</span><span>15× OIL FLOW</span><span>SEAMLESS FLANGE</span></div></div>
+        <div class="mc"><div class="no">C</div><h4>Base Frame <span>Q355B Structural Steel</span></h4><p>30&nbsp;mm plate on HN426, 50&nbsp;mm on HN500. Thick Q355B steel means the frame will not deform under years of ultra-high-pressure cycling.</p><div class="chips"><span>Q355B STEEL</span><span>30–50 mm PLATE</span><span>TESTED 500+ TONS</span></div></div>
+        <div class="mc"><div class="no">D</div><h4>Motors &amp; Valves <span>Pure Copper · Solenoid</span></h4><p>6-pole pure-copper 2.2&nbsp;kW motor runs quietly. Rust-proof electroplated valves with enlarged oil ports — faster flow, fewer leaks, smooth shock-free cycling.</p><div class="chips"><span>2.2 kW MOTOR</span><span>6-POLE COPPER</span><span>SOLENOID VALVES</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11b SERVICES -->
+  <section class="sec serv">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">OUR SERVICES</div>
+        <h2>Beyond manufacturing — full support from order to operation</h2>
+        <p>From OEM customization to lifetime technical assistance, we cover every step after your press leaves the floor.</p>
+      </div>
+      <div class="sv-grid reveal">
+        <div class="sv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h4>Standard Supply</h4>
+          <p>Direct factory ordering with complete documentation, export-ready packaging, and global shipping coordination.</p>
+        </div>
+        <div class="sv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h4>OEM / ODM</h4>
+          <p>Custom branding, label design, and machine modifications. Build your own brand with our manufacturing expertise.</p>
+        </div>
+        <div class="sv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h4>Technical Support &amp; Parts</h4>
+          <p>Lifetime remote support, genuine spare parts, and equipment upgrades — always available when you need them.</p>
+        </div>
+      </div>
+      <div class="sv-cta reveal"><a href={localePath('/services')}>View All Services →</a></div>
+    </div>
+  </section>
+
+  <!-- 12 FINAL CTA -->
+  <section class="fcta" id="quote">
+    <img class="bg" src="/images/factory/finished-presses.webp" alt="">
+    <div class="wrap">
+      <div class="kicker center" style="justify-content:center;color:var(--amber-400)">TALK TO THE FACTORY</div>
+      <h2>Tell us your seed and daily output —<br>get a sized quotation within 24 hours</h2>
+      <p>Model recommendation, line layout, FOB Qingdao pricing and lead time. Free, specific, and no obligation.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href={localePath('/contact')}>Request a Quote</a>
+        <a class="btn btn-ghost" href={localePath('/products')}>Browse Products</a>
+      </div>
+      <div class="mail">Or email us directly: <a href="mailto:info@hydoilpress.com">info@hydoilpress.com</a></div>
     </div>
   </section>
 </BaseLayout>

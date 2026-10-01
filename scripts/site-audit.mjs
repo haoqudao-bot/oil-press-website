@@ -115,6 +115,7 @@ const B_EXC_REGEX = [
   /^VCO$/i,                        // Virgin Coconut Oil 缩写行业通用
   /^[\d]+[-–][\d]+%$/,             // 百分比范围
   /Yield:\s*\d+[-–]\d+%/i,         // Yield: 15-25% 类参数标注（含数字，合理保留数值格式）
+  /^\d+([-–]\d+)?\s*(MPa|psi|bar|kW|mm|cm|m|m²|m³|tons?|T|kg|g|L|ml)\b/i,  // 数值+国际单位（MPa/psi/kW/mm 等无需翻译）
 ];
 // 联系信息/工具品牌名的 key 名称匹配
 const B_EXC_KEYS = new Set([

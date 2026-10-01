@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -15,7 +15,6 @@ const currentLocale = locale as Locale;
 const t = getTranslations(currentLocale);
 
 function localePath(path: string): string {
-  if (currentLocale === 'en') return path;
   return `/${currentLocale}${path}`;
 }
 
@@ -28,38 +27,7 @@ const breadcrumbLd = {
   ],
 };
 
-const stats = [
-  { value: '15+', label: t.home.statsYears },
-  { value: '50+', label: t.home.statsCountries },
-  { value: '200+', label: t.home.statsEmployees },
-  { value: '2,000', label: t.home.statsArea },
-];
-
-const milestones = [
-  { year: '2010', event: t.about.milestone2010 },
-  { year: '2013', event: t.about.milestone2013 },
-  { year: '2016', event: t.about.milestone2016 },
-  { year: '2020', event: t.about.milestone2020 },
-  { year: '2025', event: t.about.milestone2025 },
-];
-
-const capabilities = [
-  { icon: 'cnc', title: t.about.capCncTitle, desc: t.about.capCncDesc },
-  { icon: 'assembly', title: t.about.capAssemblyTitle, desc: t.about.capAssemblyDesc },
-  { icon: 'qc', title: t.about.capQcTitle, desc: t.about.capQcDesc },
-  { icon: 'rd', title: t.about.capRdTitle, desc: t.about.capRdDesc },
-  { icon: 'paint', title: t.about.capPaintTitle, desc: t.about.capPaintDesc },
-  { icon: 'warehouse', title: t.about.capWarehouseTitle, desc: t.about.capWarehouseDesc },
-];
-
-const whyChooseUs = [
-  { title: t.about.why1Title, desc: t.about.why1Desc },
-  { title: t.about.why2Title, desc: t.about.why2Desc },
-  { title: t.about.why3Title, desc: t.about.why3Desc },
-  { title: t.about.why4Title, desc: t.about.why4Desc },
-  { title: t.about.why5Title, desc: t.about.why5Desc },
-  { title: t.about.why6Title, desc: t.about.why6Desc },
-];
+const v = t.about.v3;
 
 const keyMarkets = [
   { region: t.about.regionSouthAsia, countries: currentLocale === 'ar' ? ['الهند', 'باكستان', 'سريلانكا'] : currentLocale === 'fr' ? ['Inde', 'Pakistan', 'Sri Lanka'] : ['India', 'Pakistan', 'Sri Lanka'] },
@@ -68,484 +36,486 @@ const keyMarkets = [
   { region: t.about.regionMiddleEast, countries: currentLocale === 'ar' ? ['المملكة العربية السعودية', 'الإمارات العربية المتحدة', 'مصر', 'تركيا', 'العراق'] : currentLocale === 'fr' ? ['Arabie Saoudite', 'Émirats Arabes Unis', 'Égypte', 'Turquie', 'Irak'] : ['Saudi Arabia', 'UAE', 'Egypt', 'Turkey', 'Iraq'] },
 ];
 
-const factoryImages = [
-  { src: '/images/factory/workshop-cranes.webp', label: t.about.factoryLabel1 },
-  { src: '/images/factory/factory-building-yellow.webp', label: t.about.factoryLabel2 },
-  { src: '/images/factory/finished-presses.webp', label: t.about.factoryLabel3 },
-  { src: '/images/factory/export-loading.webp', label: t.about.factoryLabel4 },
-  { src: '/images/factory/factory-exterior.webp', label: t.about.factoryLabel5 },
+const galCaptions = [
+  v.galCap1, v.galCap2, v.galCap3, v.galCap4, v.galCap5, v.galCap6,
+  v.galCap7, v.galCap8, v.galCap9, v.galCap10, v.galCap11, v.galCap12,
+  v.galCap13, v.galCap14,
 ];
-
-const services = [
-  { icon: '🏷️', title: t.about.service1Title, desc: t.about.service1Desc },
-  { icon: '🏭', title: t.about.service2Title, desc: t.about.service2Desc },
-  { icon: '🔧', title: t.about.service3Title, desc: t.about.service3Desc },
+const galImages = [
+  'workshop-cranes.webp', 'buyer-inspection.webp', 'factory-building-yellow.webp',
+  'factory-exterior.webp', 'press-lineup.webp', 'machining-workshop.webp',
+  'two-production-rows.webp', 'control-cabinets.webp', 'stainless-filter-units.webp',
+  'stainless-roasting-pans.webp', 'quality-control.webp', 'assembly-line.webp',
+  'export-loading.webp', 'truck-loading.webp',
 ];
 ---
 
-<BaseLayout locale={currentLocale} title={t.about.title} description={t.about.companyDesc} jsonLd={breadcrumbLd}>
-  <!-- Breadcrumb -->
-  <section class="bg-steel-50 py-4 border-b border-steel-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center gap-2 text-sm text-steel-500">
-        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <span class="text-charcoal-900 font-semibold">{t.nav.about}</span>
-      </nav>
+<BaseLayout locale={currentLocale} title={t.about.title} description="Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. Factory with 2,000 m² owned workshop, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment." jsonLd={breadcrumbLd} overlayHeader>
+  <style is:global>
+    :root{
+      --steel-50:#F0F4F8; --steel-100:#D9E2EC; --steel-200:#BCCCDC; --steel-400:#829AB1;
+      --steel-500:#627D98; --steel-600:#486581; --steel-700:#334E68; --steel-800:#243B53;
+      --steel-900:#1B3A5C; --steel-950:#102A43;
+      --amber-400:#F0B429; --amber-500:#E8A838; --amber-600:#D69E2E;
+      --charcoal:#1A1A2E;
+      --maxw:1240px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{color:var(--charcoal);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    .display{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.01em}
+    .kicker{font-family:'Bebas Neue',sans-serif;color:var(--amber-600);letter-spacing:.28em;font-size:15px;display:flex;align-items:center;gap:14px;margin-bottom:16px}
+    .kicker::before{content:"";width:36px;height:2px;background:var(--amber-500)}
+    .kicker.center{justify-content:center}
+    .sec{padding:92px 0}
+    .sec-head{margin-bottom:52px;max-width:720px}
+    .sec-head.center{margin-inline:auto;text-align:center}
+    .sec-head.center .kicker{justify-content:center}
+    .sec-head h2{font-size:clamp(28px,3.4vw,42px);line-height:1.12;font-weight:800;color:var(--steel-950);letter-spacing:-.02em}
+    .sec-head p{color:var(--steel-500);margin-top:14px;font-size:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:14px 28px;border-radius:6px;transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;touch-action:manipulation}
+    .btn-amber{background:var(--amber-500);color:var(--steel-950)}
+    .btn-amber:hover{background:var(--amber-400);transform:translateY(-1px)}
+    .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff;background:transparent}
+    .btn-ghost:hover{background:#fff;color:var(--steel-900)}
+    .btn-dark{background:var(--steel-900);color:#fff}
+    .btn-dark:hover{background:var(--steel-800);transform:translateY(-1px)}
+    .go{color:var(--amber-600);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+    .go:hover{color:var(--amber-500)}
+    .btn:focus-visible,a:focus-visible,input:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--amber-400);outline-offset:2px}
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    /* hero */
+    .hero{position:relative;min-height:560px;height:62vh;background:var(--steel-950);overflow:hidden;display:flex;align-items:flex-end}
+    .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroin 1.2s ease both}
+    @keyframes heroin{from{transform:scale(1.07);filter:blur(2px)}to{transform:scale(1);filter:blur(0)}}
+    .hero .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,26,43,.94) 0%,rgba(16,42,67,.72) 44%,rgba(16,42,67,.25) 100%)}
+    .hero .veil::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,26,43,.85) 0%,rgba(10,26,43,0) 42%)}
+    .hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:86px;color:#fff}
+    .crumb{font-size:13px;color:rgba(255,255,255,.72);margin-bottom:18px;display:flex;gap:8px;align-items:center}
+    .crumb b{color:var(--amber-400);font-weight:600}
+    .hero h1{font-size:clamp(32px,4.6vw,54px);line-height:1.06;font-weight:800;letter-spacing:-.02em;max-width:860px;animation:rise .8s .15s ease both}
+    .hero .sub{margin-top:18px;font-size:clamp(16px,1.4vw,19px);color:rgba(255,255,255,.88);max-width:640px;animation:rise .8s .3s ease both}
+    .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;animation:rise .8s .45s ease both}
+    @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+    .hero-chips{position:absolute;z-index:3;right:0;bottom:0;background:rgba(16,42,67,.6);backdrop-filter:blur(12px);border-left:1px solid rgba(255,255,255,.14);border-top:1px solid rgba(255,255,255,.14)}
+    .hero-chips ul{list-style:none;display:flex}
+    .hero-chips li{padding:18px 26px;border-right:1px solid rgba(255,255,255,.1)}
+    .hero-chips li:last-child{border-right:0}
+    .hero-chips .n{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--amber-400);line-height:1}
+    .hero-chips .l{font-size:12px;color:rgba(255,255,255,.75);margin-top:4px}
+
+    /* overview */
+    .ov{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+    .ov-media{position:relative}
+    .ov-media .main{border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(16,42,67,.4)}
+    .ov-media .main img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .ov h2{font-size:clamp(28px,3vw,38px);line-height:1.15;font-weight:800;color:var(--steel-950);letter-spacing:-.02em}
+    .ov .legal{font-size:14px;color:var(--amber-600);font-weight:700;letter-spacing:.04em;margin-bottom:10px}
+    .ov p{color:var(--steel-600);margin-top:16px;font-size:15.5px}
+    .ov p b{color:var(--steel-900)}
+    .ov-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+    .ov-stats .st{border:1px solid var(--steel-100);border-top:3px solid var(--amber-500);border-radius:8px;padding:18px 14px;background:#fff}
+    .ov-stats .n{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--steel-900);line-height:1}
+    .ov-stats .l{font-size:11.5px;color:var(--steel-500);margin-top:6px;letter-spacing:.02em}
+
+    /* horizontal history strip */
+    .hist{background:var(--steel-50);border-top:1px solid var(--steel-100);border-bottom:1px solid var(--steel-100)}
+    .hstrip{display:grid;grid-template-columns:repeat(5,1fr);position:relative;gap:22px}
+    .hstrip::before{content:"";position:absolute;top:8px;left:5%;right:5%;height:2px;background:linear-gradient(90deg,var(--amber-500),var(--steel-200))}
+    .hs{position:relative;padding-top:30px}
+    .hs .dot{position:absolute;top:1px;left:0;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--amber-500);box-shadow:0 0 0 5px rgba(232,168,56,.15)}
+    .hs .yr{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--steel-900);line-height:1;margin-bottom:10px}
+    .hs .yr.now{color:var(--amber-600)}
+    .hs h4{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-600);margin-bottom:8px}
+    .hs p{font-size:13px;color:var(--steel-600);line-height:1.6}
+
+    /* personas */
+    .persona{background:var(--steel-50)}
+    .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .pc{background:#fff;border:1px solid var(--steel-100);border-radius:12px;padding:30px 28px;display:flex;flex-direction:column;gap:10px;transition:transform .25s ease,box-shadow .25s ease}
+    .pc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(16,42,67,.4)}
+    .pc .who{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.2em;color:var(--amber-600)}
+    .pc h4{font-size:19px;font-weight:800;color:var(--steel-950);line-height:1.3}
+    .pc p{font-size:14px;color:var(--steel-600)}
+    .pc ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:6px 0 10px}
+    .pc li{font-size:13.5px;color:var(--steel-600);padding-left:22px;position:relative}
+    .pc li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:2px;background:var(--amber-500)}
+    .pc .go{margin-top:auto}
+
+    /* returns */
+    .ret{background:var(--steel-950);color:#fff}
+    .ret .sec-head h2{color:#fff}
+    .ret .sec-head p{color:rgba(255,255,255,.65)}
+    .ret .kicker{color:var(--amber-400)}
+    .ret-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden}
+    .ret-grid .rs{padding:38px 28px;border-right:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.02)}
+    .ret-grid .rs:last-child{border-right:0}
+    .ret-grid .n{font-family:'Bebas Neue',sans-serif;font-size:58px;color:var(--amber-400);line-height:1}
+    .ret-grid .h{font-size:15px;font-weight:700;margin:12px 0 6px;color:#fff}
+    .ret-grid .d{font-size:13px;color:rgba(255,255,255,.62)}
+
+    /* journey */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+    .sc{background:#fff;border:1px solid var(--steel-100);border-radius:12px;padding:32px 28px;position:relative;transition:transform .25s ease,box-shadow .25s ease}
+    .sc:hover{transform:translateY(-5px);box-shadow:0 24px 48px -24px rgba(16,42,67,.35)}
+    .sc::before{counter-increment:step;content:"0" counter(step);font-family:'Bebas Neue',sans-serif;font-size:54px;color:rgba(232,168,56,.25);line-height:1;display:block;margin-bottom:8px}
+    .sc .when{font-size:11.5px;font-weight:800;letter-spacing:.14em;color:var(--amber-600);text-transform:uppercase;margin-bottom:8px}
+    .sc h4{font-size:18px;font-weight:800;color:var(--steel-950);margin-bottom:10px}
+    .sc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .sc li{font-size:13.5px;color:var(--steel-600);padding-left:22px;position:relative}
+    .sc li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:2px;background:var(--amber-500)}
+
+    /* lines */
+    .lines{background:var(--steel-50)}
+    .line-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .lc{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--steel-100);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+    .lc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(16,42,67,.4)}
+    .lc .body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+    .lc h4{font-size:17px;font-weight:700;color:var(--steel-950)}
+    .lc p{font-size:13px;color:var(--steel-500);flex:1}
+    .lc .go{font-size:13.5px}
+    .line-note{margin-top:34px;text-align:center;font-size:15px;color:var(--steel-600)}
+    .line-note a{color:var(--amber-600);font-weight:700}
+
+    /* gallery */
+    .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px;grid-auto-flow:dense}
+    .gi{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 14px 36px -22px rgba(16,42,67,.4)}
+    .gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .gi:hover img{transform:scale(1.05)}
+    .gi .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 12px;background:linear-gradient(0deg,rgba(10,26,43,.88),transparent);color:#fff;font-size:12.5px;font-weight:600}
+    .gi.big{grid-column:span 2;grid-row:span 1}
+
+    /* globe */
+    .globe{background:var(--steel-50)}
+    .reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .rc2{background:#fff;border:1px solid var(--steel-100);border-radius:12px;padding:24px 20px}
+    .rc2 h4{font-size:15px;font-weight:800;color:var(--steel-950);display:flex;align-items:center;gap:9px;margin-bottom:14px}
+    .rc2 h4 .dot{width:9px;height:9px;border-radius:50%;background:var(--amber-500)}
+    .rc2 ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .rc2 li{font-size:13.5px;color:var(--steel-600);display:flex;gap:9px;align-items:center}
+    .rc2 li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--steel-200);flex:none}
+    .globe-more{margin-top:34px;text-align:center;font-size:14px;color:var(--steel-500)}
+
+    /* materials */
+    .mat{background:#0E1E30;color:#fff}
+    .mat .sec-head h2{color:#fff}
+    .mat .sec-head p{color:rgba(255,255,255,.65)}
+    .mat .kicker{color:var(--amber-400)}
+    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .mc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px 24px;position:relative;transition:border-color .2s ease,background .2s ease}
+    .mc:hover{border-color:rgba(240,180,41,.5);background:rgba(255,255,255,.06)}
+    .mc .no{font-family:'Bebas Neue',sans-serif;font-size:40px;color:rgba(240,180,41,.55);line-height:1}
+    .mc h4{font-size:16.5px;font-weight:700;margin:10px 0 8px;color:#fff;display:flex;flex-direction:column;gap:2px}
+    .mc h4 span{font-size:12px;font-weight:500;color:var(--amber-400);letter-spacing:.02em}
+    .mc p{font-size:13px;color:rgba(255,255,255,.66)}
+    .mc .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+    .mc .chips span{font-size:11px;font-weight:700;color:var(--amber-400);border:1px solid rgba(240,180,41,.4);padding:4px 9px;border-radius:999px;letter-spacing:.03em}
+
+    /* services */
+    .serv{background:#FFF8E8}
+    .sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+    .sv{background:#fff;border-radius:14px;padding:34px 28px;box-shadow:0 12px 30px -20px rgba(16,42,67,.25);border:1px solid rgba(232,168,56,.18);display:flex;flex-direction:column;gap:14px;transition:transform .3s ease,box-shadow .3s ease}
+    .sv:hover{transform:translateY(-4px);box-shadow:0 20px 44px -22px rgba(16,42,67,.35)}
+    .sv .ic{width:52px;height:52px;border-radius:12px;background:#FDECC8;color:var(--amber-600);display:flex;align-items:center;justify-content:center;flex:none}
+    .sv h4{font-size:20px;font-weight:700;color:var(--steel-950);font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;margin:0}
+    .sv p{font-size:14.5px;color:var(--steel-600);line-height:1.7;margin:0}
+    .sv-cta{margin-top:40px;text-align:center}
+    .sv-cta a{color:var(--amber-600);font-weight:700;font-size:15px}
+
+    /* final cta */
+    .fcta{position:relative;background:var(--steel-950);color:#fff;overflow:hidden}
+    .fcta img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.16}
+    .fcta .wrap{position:relative;z-index:2;padding:88px 24px;text-align:center}
+    .fcta h2{font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.15}
+    .fcta p{color:rgba(255,255,255,.78);margin-top:14px;font-size:16px}
+    .fcta .cta-row{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .fcta .mail{margin-top:22px;font-size:14px;color:rgba(255,255,255,.7)}
+    .fcta .mail a{color:var(--amber-400);font-weight:700;border-bottom:1px solid rgba(240,180,41,.5)}
+
+    @media (max-width:1024px){
+      .hstrip{gap:14px}
+      .hs .yr{font-size:34px}
+      .hs p{font-size:12.5px}
+      .line-grid{grid-template-columns:repeat(2,1fr)}
+      .reg-grid{grid-template-columns:repeat(2,1fr)}
+      .mat-grid{grid-template-columns:repeat(2,1fr)}
+      .ret-grid{grid-template-columns:repeat(2,1fr)}
+      .ret-grid .rs:nth-child(2){border-right:0}
+      .ret-grid .rs:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
+      .pg{grid-template-columns:1fr}
+      .ov-stats{grid-template-columns:repeat(2,1fr)}
+      .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+      .gi.big{grid-column:span 2;grid-row:span 1}
+      .hero-chips{display:none}
+    }
+    @media (max-width:720px){
+      .sec{padding:64px 0}
+      .hstrip{grid-template-columns:1fr;gap:0}
+      .hstrip::before{left:7px;right:auto;top:10px;bottom:10px;width:2px;height:auto;background:linear-gradient(var(--amber-500),var(--steel-200))}
+      .hs{padding:0 0 28px 32px}
+      .hs:last-child{padding-bottom:0}
+      .hs .dot{top:3px}
+      .ov{grid-template-columns:1fr;gap:40px}
+      .ov-stats{margin-top:48px}
+      .steps{grid-template-columns:1fr}
+      .line-grid,.reg-grid,.mat-grid{grid-template-columns:1fr}
+      .sv-grid{grid-template-columns:1fr}
+      .ret-grid{grid-template-columns:1fr}
+      .ret-grid .rs{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
+      .ret-grid .rs:last-child{border-bottom:0}
+      .gal{grid-template-columns:1fr;grid-auto-rows:220px}
+      .gi.big{grid-column:span 1}
+      .hero{height:auto;min-height:0}
+      .hero .wrap{padding:90px 0 54px}
+    }
+  </style>
+
+  <!-- 01 HERO -->
+  <header class="hero">
+    <img class="bg" src="/images/factory/workshop-cranes.webp" alt="Haonuo workshop with overhead cranes and hydraulic oil presses">
+    <div class="veil"></div>
+    <div class="wrap">
+      <div class="crumb"><a href={localePath('/')}>{t.nav.home}</a><span>/</span><b>{t.nav.about}</b></div>
+      <h1>{v.heroH1}</h1>
+      <p class="sub">{v.heroSub}</p>
+      <div class="hero-cta">
+        <a class="btn btn-amber" href={localePath('/contact')}>{v.heroCta1}</a>
+        <a class="btn btn-ghost" href="#proof">{v.heroCta2}</a>
+      </div>
     </div>
-  </section>
-
-  <!-- Page Header -->
-  <section class="bg-steel-900 py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.about.title}</h1>
-      <p class="text-steel-300 text-lg max-w-2xl">{t.about.subtitle}</p>
+    <div class="hero-chips">
+      <ul>
+        <li><div class="n">2010</div><div class="l">{v.heroChip1L}</div></li>
+        <li><div class="n">50+</div><div class="l">{v.heroChip2L}</div></li>
+        <li><div class="n">300–620T</div><div class="l">{v.heroChip3L}</div></li>
+      </ul>
     </div>
-  </section>
+  </header>
 
-  <!-- Company Overview -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <img
-            src="/images/factory/factory-building-yellow.webp"
-            alt={t.about.overviewImgAlt}
-            class="w-full rounded-2xl shadow-lg"
-          />
-        </div>
-        <div class="reveal">
-          <h2 class="section-title">{t.about.overviewTitle}</h2>
-          <p class="text-steel-600 leading-relaxed mb-4">
-            {t.about.companyDesc}
-          </p>
-          <p class="text-steel-600 leading-relaxed mb-4">
-            {t.about.overviewP2}
-          </p>
-          <p class="text-steel-600 leading-relaxed mb-8">
-            {t.about.overviewP3}
-          </p>
-
-          <!-- Stats -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {stats.map(stat => (
-              <div class="text-center">
-                <div class="font-display text-3xl md:text-4xl text-amber-500">{stat.value}</div>
-                <div class="text-xs text-steel-500 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+  <!-- 02 OVERVIEW -->
+  <section class="sec">
+    <div class="wrap ov">
+      <div class="ov-media reveal">
+        <div class="main"><img src="/images/factory/factory-building-yellow.webp" alt="Haonuo Machinery factory entrance and office building in Qingzhou, Shandong"></div>
+      </div>
+      <div class="ov-copy reveal">
+        <div class="kicker">{v.ovKicker}</div>
+        <h2>{v.ovH2}</h2>
+        <p class="legal">{v.ovLegal}</p>
+        <p>{v.ovP1}</p>
+        <p>{v.ovP2}</p>
+        <div class="ov-stats">
+          <div class="st"><div class="n">2010</div><div class="l">{v.ovStat1L}</div></div>
+          <div class="st"><div class="n">2,000 m²</div><div class="l">{v.ovStat2L}</div></div>
+          <div class="st"><div class="n">50+</div><div class="l">{v.ovStat3L}</div></div>
+          <div class="st"><div class="n">300–620T</div><div class="l">{v.ovStat4L}</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Story -->
-  <section class="py-16 md:py-24 bg-amber-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="section-title">{t.about.storyTitle}</h2>
-      <p class="text-lg text-steel-700 leading-relaxed mb-6">
-        {t.about.storyP1}
-      </p>
-      <p class="text-lg text-steel-700 leading-relaxed mb-6">
-        {t.about.storyP2}
-      </p>
-      <p class="text-lg text-steel-700 leading-relaxed">
-        {t.about.storyP3}
-      </p>
+  <!-- 02B COMPANY HISTORY -->
+  <section class="sec hist">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">{v.histKicker}</div>
+        <h2>{v.histH2}</h2>
+      </div>
+      <div class="hstrip reveal">
+        <div class="hs"><div class="dot"></div><div class="yr">2010</div><h4>{v.hist1H4}</h4><p>{v.hist1P}</p></div>
+        <div class="hs"><div class="dot"></div><div class="yr">2013</div><h4>{v.hist2H4}</h4><p>{v.hist2P}</p></div>
+        <div class="hs"><div class="dot"></div><div class="yr">2016</div><h4>{v.hist3H4}</h4><p>{v.hist3P}</p></div>
+        <div class="hs"><div class="dot"></div><div class="yr">2020</div><h4>{v.hist4H4}</h4><p>{v.hist4P}</p></div>
+        <div class="hs"><div class="dot"></div><div class="yr now">Today</div><h4>{v.hist5H4}</h4><p>{v.hist5P}</p></div>
+      </div>
     </div>
   </section>
 
-  <!-- Mission -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="section-title">{t.about.mission}</h2>
-      <p class="text-lg text-steel-700 leading-relaxed">
-        {t.about.missionDesc}
-      </p>
+  <!-- 04 PERSONAS -->
+  <section class="sec persona">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">{v.persKicker}</div>
+        <h2>{v.persH2}</h2>
+        <p>{v.persP}</p>
+      </div>
+      <div class="pg">
+        <div class="pc reveal">
+          <div class="who">{v.pers1Who}</div>
+          <h4>{v.pers1H4}</h4>
+          <p>{v.pers1P}</p>
+          <ul><li>{v.pers1Li1}</li><li>{v.pers1Li2}</li></ul>
+          <a class="go" href={localePath('/contact')}>{v.pers1Cta}</a>
+        </div>
+        <div class="pc reveal">
+          <div class="who">{v.pers2Who}</div>
+          <h4>{v.pers2H4}</h4>
+          <p>{v.pers2P}</p>
+          <ul><li>{v.pers2Li1}</li><li>{v.pers2Li2}</li></ul>
+          <a class="go" href={localePath('/contact')}>{v.pers2Cta}</a>
+        </div>
+        <div class="pc reveal">
+          <div class="who">{v.pers3Who}</div>
+          <h4>{v.pers3H4}</h4>
+          <p>{v.pers3P}</p>
+          <ul><li>{v.pers3Li1}</li><li>{v.pers3Li2}</li></ul>
+          <a class="go" href={localePath('/contact')}>{v.pers3Cta}</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- History Timeline -->
-  <section class="py-16 md:py-24 bg-steel-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12 reveal">{t.about.history}</h2>
-      <div class="relative">
-        <div class="absolute start-4 md:start-1/2 top-0 bottom-0 w-0.5 bg-steel-200 md:-translate-x-0.5"></div>
-        <div class="absolute end-4 md:end-1/2 top-0 bottom-0 w-0.5 bg-steel-200 md:translate-x-0.5 hidden md:block"></div>
+  <!-- 05 PROOF -->
+  <section class="sec ret" id="proof">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">{v.retKicker}</div>
+        <h2>{v.retH2}</h2>
+      </div>
+      <div class="ret-grid reveal">
+        <div class="rs"><div class="n">92%</div><div class="h">{v.ret1H}</div><div class="d">{v.ret1D}</div></div>
+        <div class="rs"><div class="n">−40%</div><div class="h">{v.ret2H}</div><div class="d">{v.ret2D}</div></div>
+        <div class="rs"><div class="n">&lt;60°C</div><div class="h">{v.ret3H}</div><div class="d">{v.ret3D}</div></div>
+        <div class="rs"><div class="n">50+</div><div class="h">{v.ret4H}</div><div class="d">{v.ret4D}</div></div>
+      </div>
+    </div>
+  </section>
 
-        {milestones.map((item, i) => (
-          <div class:list={[
-            'relative flex items-start mb-8 last:mb-0 reveal',
-            i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-          ]}>
-            <div class="absolute start-4 md:start-1/2 w-3 h-3 bg-amber-500 rounded-full -translate-x-1.5 md:-translate-x-1.5 mt-2 z-10"></div>
-            <div class="absolute end-4 md:end-1/2 w-3 h-3 bg-amber-500 rounded-full translate-x-1.5 md:translate-x-1.5 mt-2 z-10 hidden md:block"></div>
-            <div class:list={[
-              'ms-12 md:ms-0 md:w-1/2',
-              i % 2 === 0 ? 'md:pe-12' : 'md:ps-12'
-            ]}>
-              <div class="font-display text-2xl text-amber-500 mb-1">{item.year}</div>
-              <p class="text-steel-700 text-sm leading-relaxed">{item.event}</p>
-            </div>
+  <!-- 06 JOURNEY -->
+  <section class="sec" id="journey">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">{v.jourKicker}</div>
+        <h2>{v.jourH2}</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="sc"><div class="when">{v.jour1When}</div><h4>{v.jour1H4}</h4><ul><li>{v.jour1Li1}</li><li>{v.jour1Li2}</li></ul></div>
+        <div class="sc"><div class="when">{v.jour2When}</div><h4>{v.jour2H4}</h4><ul><li>{v.jour2Li1}</li><li>{v.jour2Li2}</li></ul></div>
+        <div class="sc"><div class="when">{v.jour3When}</div><h4>{v.jour3H4}</h4><ul><li>{v.jour3Li1}</li><li>{v.jour3Li2}</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 RANGE -->
+  <section class="sec lines" id="lines">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">{v.linesKicker}</div>
+        <h2>{v.linesH2}</h2>
+        <p>{v.linesP}</p>
+      </div>
+      <div class="line-grid">
+        <div class="lc reveal"><div class="body"><h4>{v.line1H4}</h4><p>{v.line1P}</p><a class="go" href={localePath('/contact')}>{v.line1Cta}</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>{v.line2H4}</h4><p>{v.line2P}</p><a class="go" href={localePath('/contact')}>{v.line2Cta}</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>{v.line3H4}</h4><p>{v.line3P}</p><a class="go" href={localePath('/contact')}>{v.line3Cta}</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>{v.line4H4}</h4><p>{v.line4P}</p><a class="go" href={localePath('/contact')}>{v.line4Cta}</a></div></div>
+      </div>
+      <p class="line-note reveal">{v.linesNote}</p>
+    </div>
+  </section>
+
+  <!-- 09 FACTORY TOUR -->
+  <section class="sec" id="tour">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">{v.galKicker}</div>
+        <h2>{v.galH2}</h2>
+        <p>{v.galP}</p>
+      </div>
+      <div class="gal reveal">
+        {galImages.map((src, i) => (
+          <div class={`gi${i < 2 ? ' big' : ''}`}>
+            <img src={`/images/factory/${src}`} alt={galCaptions[i]}>
+            <div class="cap">{galCaptions[i]}</div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Manufacturing Capabilities -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.manufacturingTitle}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.manufacturingDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {capabilities.map((cap, i) => (
-          <div class="reveal p-6 bg-steel-50 rounded-2xl hover:bg-amber-50 transition-colors" style={`animation-delay: ${i * 80}ms`}>
-            <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center mb-4">
-              {cap.icon === 'cnc' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
-              )}
-              {cap.icon === 'assembly' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              )}
-              {cap.icon === 'qc' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              )}
-              {cap.icon === 'rd' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
-              )}
-              {cap.icon === 'paint' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-              )}
-              {cap.icon === 'warehouse' && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              )}
-            </div>
-            <h3 class="font-display text-lg text-charcoal-900 mb-2">{cap.title}</h3>
-            <p class="text-sm text-steel-600 leading-relaxed">{cap.desc}</p>
+  <!-- 10 GLOBAL -->
+  <section class="sec globe" id="globe">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">{v.globeKicker}</div>
+        <h2>{v.globeH2}</h2>
+        <p>{v.globeP}</p>
+      </div>
+      <div class="reg-grid reveal">
+        {keyMarkets.map((m) => (
+          <div class="rc2">
+            <h4><span class="dot"></span>{m.region}</h4>
+            <ul>{m.countries.map((c) => <li>{c}</li>)}</ul>
           </div>
         ))}
       </div>
+      <p class="globe-more reveal">{t.about.globalMore}</p>
     </div>
   </section>
 
-  <!-- Quality Assurance -->
-  <section class="py-16 md:py-24 bg-steel-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal text-white">{t.about.qualityTitle}</h2>
-      <p class="text-center text-steel-300 max-w-2xl mx-auto mb-12 reveal">{t.about.qualityDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="reveal text-center p-8 bg-white/5 rounded-2xl border border-white/10">
-          <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="font-display text-xl mb-3">{t.about.qualityIsoTitle}</h3>
-          <p class="text-sm text-steel-300 leading-relaxed">{t.about.qualityIsoDesc}</p>
+  <!-- 11 MATERIALS -->
+  <section class="sec mat">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">{v.matKicker}</div>
+        <h2>{v.matH2}</h2>
+        <p>{v.matP}</p>
+      </div>
+      <div class="mat-grid reveal">
+        <div class="mc"><div class="no">A</div><h4>{v.matA_title}<span>{v.matA_sub}</span></h4><p>{v.matA_desc}</p><div class="chips"><span>{v.matA_tag1}</span><span>{v.matA_tag2}</span><span>{v.matA_tag3}</span></div></div>
+        <div class="mc"><div class="no">B</div><h4>{v.matB_title}<span>{v.matB_sub}</span></h4><p>{v.matB_desc}</p><div class="chips"><span>{v.matB_tag1}</span><span>{v.matB_tag2}</span><span>{v.matB_tag3}</span></div></div>
+        <div class="mc"><div class="no">C</div><h4>{v.matC_title}<span>{v.matC_sub}</span></h4><p>{v.matC_desc}</p><div class="chips"><span>{v.matC_tag1}</span><span>{v.matC_tag2}</span><span>{v.matC_tag3}</span></div></div>
+        <div class="mc"><div class="no">D</div><h4>{v.matD_title}<span>{v.matD_sub}</span></h4><p>{v.matD_desc}</p><div class="chips"><span>{v.matD_tag1}</span><span>{v.matD_tag2}</span><span>{v.matD_tag3}</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11b SERVICES -->
+  <section class="sec serv">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <div class="kicker center">{v.servKicker}</div>
+        <h2>{v.servH2}</h2>
+        <p>{v.servP}</p>
+      </div>
+      <div class="sv-grid reveal">
+        <div class="sv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h4>{v.serv1H4}</h4>
+          <p>{v.serv1P}</p>
         </div>
-        <div class="reveal text-center p-8 bg-white/5 rounded-2xl border border-white/10">
-          <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h3 class="font-display text-xl mb-3">{t.about.qualityMaterialTitle}</h3>
-          <p class="text-sm text-steel-300 leading-relaxed">{t.about.qualityMaterialDesc}</p>
+        <div class="sv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h4>{v.serv2H4}</h4>
+          <p>{v.serv2P}</p>
         </div>
-        <div class="reveal text-center p-8 bg-white/5 rounded-2xl border border-white/10">
-          <div class="w-14 h-14 mx-auto mb-4 bg-amber-500 rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-charcoal-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          </div>
-          <h3 class="font-display text-xl mb-3">{t.about.qualityInspectionTitle}</h3>
-          <p class="text-sm text-steel-300 leading-relaxed">{t.about.qualityInspectionDesc}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Global Reach -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.globalTitle}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.globalDesc}</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        {keyMarkets.map((market, i) => (
-          <div class="reveal p-6 bg-steel-50 rounded-2xl" style={`animation-delay: ${i * 80}ms`}>
-            <h3 class="font-display text-lg text-amber-500 mb-3">{market.region}</h3>
-            <ul class="space-y-1.5">
-              {market.countries.map(country => (
-                <li class="flex items-center gap-2 text-sm text-steel-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  {country}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div class="text-center reveal">
-        <p class="text-steel-500 text-sm">{t.about.globalMore}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="py-16 md:py-24 bg-amber-50" id="why-choose-us">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.whyChooseTitle}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.whyChooseDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {whyChooseUs.map((reason, i) => (
-          <div class="reveal bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow" style={`animation-delay: ${i * 80}ms`}>
-            <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center mb-4 font-display text-lg text-charcoal-900">{i + 1}</div>
-            <h3 class="font-display text-lg text-charcoal-900 mb-2">{reason.title}</h3>
-            <p class="text-sm text-steel-600 leading-relaxed">{reason.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Premium Materials Details -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="section-title">{t.about.premiumMaterialsTitle}</h2>
-        <p class="section-subtitle mx-auto">{t.about.premiumMaterialsDesc}</p>
-      </div>
-      <div class="bg-steel-900 rounded-2xl p-6 md:p-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">A</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matA_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matA_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matA_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matA_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matA_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matA_tag3}</span>
-            </div>
-          </div>
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">B</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matB_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matB_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matB_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matB_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matB_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matB_tag3}</span>
-            </div>
-          </div>
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">C</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matC_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matC_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matC_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matC_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matC_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matC_tag3}</span>
-            </div>
-          </div>
-          <div class="bg-steel-800/50 border border-amber-500/30 rounded-xl p-6">
-            <div class="flex items-center gap-4 mb-4">
-              <span class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold text-lg">D</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{t.about.matD_title}</h4>
-                <div class="text-xs text-amber-500">{t.about.matD_sub}</div>
-              </div>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.matD_desc}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matD_tag1}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matD_tag2}</span>
-              <span class="text-xs bg-amber-500/20 text-amber-500 px-3 py-1.5 rounded-full">{t.about.matD_tag3}</span>
-            </div>
-          </div>
+        <div class="sv">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h4>{v.serv3H4}</h4>
+          <p>{v.serv3P}</p>
         </div>
       </div>
+      <div class="sv-cta reveal"><a href={localePath('/services')}>{v.servCta}</a></div>
     </div>
   </section>
 
-  <!-- High Returns Details -->
-  <section class="py-16 md:py-24 bg-steel-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="section-title">{t.about.highReturnsTitle}</h2>
-        <p class="section-subtitle mx-auto">{t.about.highReturnsDesc}</p>
+  <!-- 12 FINAL CTA -->
+  <section class="fcta" id="quote">
+    <img class="bg" src="/images/factory/finished-presses.webp" alt="">
+    <div class="wrap">
+      <div class="kicker center" style="justify-content:center;color:var(--amber-400)">{v.fctaKicker}</div>
+      <h2>{v.fctaH2}</h2>
+      <p>{v.fctaP}</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href={localePath('/contact')}>{v.fctaBtn1}</a>
+        <a class="btn btn-ghost" href={localePath('/products')}>{v.fctaBtn2}</a>
       </div>
-      <div class="bg-charcoal-900 rounded-2xl p-6 md:p-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns1_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns1_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">92%</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns1_label}</div>
-          </div>
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns2_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns2_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">-40%</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns2_label}</div>
-          </div>
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns3_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns3_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">&lt;60°C</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns3_label}</div>
-          </div>
-          <div class="bg-charcoal-800/50 border border-amber-500/20 rounded-xl p-6 text-center">
-            <div class="w-14 h-14 mx-auto mb-3 bg-amber-500/10 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>
-            </div>
-            <h4 class="font-display text-lg text-white mb-2">{t.about.returns4_title}</h4>
-            <p class="text-sm text-steel-400 mb-3">{t.about.returns4_desc}</p>
-            <div class="text-4xl font-display text-amber-500 font-bold">50+</div>
-            <div class="text-xs text-steel-500 mt-1">{t.about.returns4_label}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Easy Operation Details -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="section-title">{t.about.easyOperationTitle}</h2>
-        <p class="section-subtitle mx-auto">{t.about.easyOperationDesc}</p>
-      </div>
-      <div class="bg-steel-800 rounded-2xl p-6 md:p-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">01</span>
-              <h4 class="font-display text-lg text-white">{t.about.op1_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op1_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              {t.about.op1_highlight}
-            </div>
-          </div>
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">02</span>
-              <h4 class="font-display text-lg text-white">{t.about.op2_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op2_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-              {t.about.op2_highlight}
-            </div>
-          </div>
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">03</span>
-              <h4 class="font-display text-lg text-white">{t.about.op3_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op3_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-              {t.about.op3_highlight}
-            </div>
-          </div>
-          <div class="bg-steel-700/50 border border-amber-500/20 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 font-bold">04</span>
-              <h4 class="font-display text-lg text-white">{t.about.op4_title}</h4>
-            </div>
-            <p class="text-sm text-steel-300 leading-relaxed mb-4">{t.about.op4_desc}</p>
-            <div class="flex items-center gap-2 text-amber-500 font-semibold text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              {t.about.op4_highlight}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Factory Tour -->
-  <section class="py-16 md:py-24 bg-steel-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4 reveal">{t.about.factory}</h2>
-      <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.factoryDesc}</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {factoryImages.map((img, i) => (
-          <div class="reveal aspect-[4/3] rounded-2xl overflow-hidden group" style={`animation-delay: ${i * 80}ms`}>
-            <img
-              src={img.src}
-              alt={img.label}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              onerror={`this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<div class="flex items-center justify-center h-full bg-steel-100 text-steel-400 text-sm">${img.label}</div>'`}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="py-16 md:py-20 bg-amber-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.about.servicesTitle}</h2>
-        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{t.about.servicesDesc}</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {services.map((svc, i) => (
-          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow reveal" style={`animation-delay: ${i * 60}ms`}>
-            <span class="text-3xl mb-3 block">{svc.icon}</span>
-            <h3 class="font-display text-lg text-charcoal-900 mb-2">{svc.title}</h3>
-            <p class="text-steel-600 text-sm">{svc.desc}</p>
-          </div>
-        ))}
-      </div>
-      <div class="text-center mt-8 reveal">
-        <a href={localePath('/services')} class="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-semibold transition-colors">
-          {t.about.viewAllServices}
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 md:py-24 bg-steel-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{t.about.ctaTitle}</h2>
-      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">{t.about.ctaDesc}</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="btn-primary text-base">
-          {t.about.ctaButton1}
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href={`https://wa.me/8618957149128?text=${encodeURIComponent((t as any).contact?.whatsappPresetMessage || 'Hello, I am interested in your hydraulic oil press products. Please send me a quote.')}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-          {t.about.ctaButton2}
-        </a>
-      </div>
+      <div class="mail">{v.fctaMail} <a href="mailto:info@hydoilpress.com">info@hydoilpress.com</a></div>
     </div>
   </section>
 </BaseLayout>
