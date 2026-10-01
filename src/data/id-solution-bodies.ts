@@ -158,7 +158,7 @@ Solusi ini mendukung press dingin (untuk minyak jarak kelas obat dan kosmetik) d
 
 ## Peralatan yang Direkomendasikan
 
-- **Press Hidrolik Heavy Duty (HN355)** — Menyediakan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi biji jarak menyeluruh. Cocok untuk press dingin maupun panas.
+- **Press Hidrolik Heavy Duty (HN365)** — Menyediakan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi biji jarak menyeluruh. Cocok untuk press dingin maupun panas.
 - **Press Hidrolik Ultra High Pressure (HN500)** — Direkomendasikan untuk hasil maksimal dari biji jarak. Mencapai tingkat minyak sisa yang kompetitif.
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan biji jarak. Sangat penting untuk produksi minyak kelas industri press panas.
 - **Press Filter Minyak Pneumatik** — Menghasilkan minyak jarak bersih yang cocok untuk aplikasi industri maupun obat.
@@ -252,7 +252,7 @@ Minyak kelapa perawan yang difiltrasi dengan benar memiliki masa simpan 2-3 tahu
 
 Untuk produsen minyak mapan dan bisnis yang berkembang, **mesin press minyak komersial** harus menghasilkan throughput tinggi yang konsisten, performa yang andal, dan kualitas minyak kelas profesional — shift demi shift, hari demi hari. Solusi press minyak komersial Haonuo dirancang tepat untuk permintaan ini.
 
-Solusi komersial kami dibangun di sekitar Press Hidrolik Heavy Duty (HN355) dan Cold Press (HN426), keduanya tersedia dengan konfigurasi barel ganda yang secara efektif menggandakan kapasitas produksi Anda tanpa menggandakan ruang lantai. Mesin **press hidrolik komersial** ini menghasilkan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi menyeluruh, mencapai tingkat minyak sisa di bawah 5% pada semua biji minyak umum.
+Solusi komersial kami dibangun di sekitar Press Hidrolik Heavy Duty (HN365) dan Cold Press (HN426), keduanya tersedia dengan konfigurasi barel ganda yang secara efektif menggandakan kapasitas produksi Anda tanpa menggandakan ruang lantai. Mesin **press hidrolik komersial** ini menghasilkan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi menyeluruh, mencapai tingkat minyak sisa di bawah 5% pada semua biji minyak umum.
 
 Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makanan, atau operasi penekanan koperasi, solusi ini menyediakan throughput, keandalan, dan kualitas minyak yang dibutuhkan bisnis Anda.
 
@@ -277,14 +277,14 @@ Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makana
 
 1. **Penerimaan & Penyimpanan Biji** — Siapkan penyimpanan yang tepat untuk pengiriman biji curah. Pertahankan kualitas biji dengan kondisi penyimpanan yang kering dan berventilasi.
 2. **Pemrosesan Biji Otomatis** — Gunakan Integrated Feeder Crusher Roaster untuk pembersihan, penghancuran, dan pemanggangan otomatis dalam satu langkah. Ini mengurangi tenaga kerja dan memastikan persiapan yang konsisten.
-3. **Press Hidrolik** — Masukkan biji yang sudah disiapkan ke dalam Heavy Duty (HN355) atau Cold Press (HN426) dengan konfigurasi barel ganda. Setiap barel memproses secara independen, memungkinkan operasi hampir kontinu.
+3. **Press Hidrolik** — Masukkan biji yang sudah disiapkan ke dalam Heavy Duty (HN365) atau Cold Press (HN426) dengan konfigurasi barel ganda. Setiap barel memproses secara independen, memungkinkan operasi hampir kontinu.
 4. **Filtrasi** — Lewatkan minyak mentah melalui Press Filter Minyak Pneumatik untuk kejernihan kelas komersial. Filtrasi volume tinggi sesuai dengan throughput press.
 5. **Kontrol Kualitas** — Uji minyak untuk keasaman, kejernihan, dan karakteristik sensorik. Terapkan pelacakan batch untuk keterlacakan komersial.
 6. **Pengemasan** — Kemas minyak jadi dalam botol, jeriken, atau drum untuk distribusi grosir dan ritel. Operasi komersial biasanya menggunakan peralatan pengisian semi-otomatis.
 
 ## Peralatan yang Direkomendasikan
 
-- **Press Hidrolik Heavy Duty (HN355)** — Tulang punggung produksi minyak komersial. Tersedia dalam konfigurasi barel ganda untuk throughput 2.000-5.000 kg/hari. Menangani press dingin maupun panas.
+- **Press Hidrolik Heavy Duty (HN365)** — Tulang punggung produksi minyak komersial. Tersedia dalam konfigurasi barel ganda untuk throughput 2.000-5.000 kg/hari. Menangani press dingin maupun panas.
 - **Press Hidrolik Cold Press (HN426)** — Khusus untuk produksi minyak press dingin premium. Opsi barel ganda tersedia. Cocok untuk melayani pasar makanan kesehatan dan organik.
 - **Integrated Feeder Crusher Roaster** — Unit persiapan biji serbaguna yang mengotomatisasi pembersihan, penghancuran, dan pemanggangan. Mengurangi tenaga kerja dan memastikan persiapan yang konsisten untuk throughput komersial.
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan konsisten berbagai jenis biji. Sangat penting untuk produksi minyak press panas.
@@ -296,7 +296,7 @@ Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makana
 Mesin press minyak komersial kami tersedia dalam berbagai konfigurasi dari barel tunggal hingga barel ganda dengan aksesoris lengkap. Kami menawarkan harga langsung pabrik yang menghemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Ceritakan tentang setup produksi Anda dan kami akan menyiapkan penawaran paket komersial.
 
 **Apa press minyak terbaik untuk penggunaan komersial?**
-Untuk sebagian besar operasi komersial, kami merekomendasikan Heavy Duty (HN355) dengan konfigurasi barel ganda. Ini menawarkan keseimbangan yang baik antara gaya press, throughput, dan keserbagunaan. Jika pasar Anda menuntut minyak press dingin premium, Cold Press (HN426) adalah pilihan yang lebih baik.
+Untuk sebagian besar operasi komersial, kami merekomendasikan Heavy Duty (HN365) dengan konfigurasi barel ganda. Ini menawarkan keseimbangan yang baik antara gaya press, throughput, dan keserbagunaan. Jika pasar Anda menuntut minyak press dingin premium, Cold Press (HN426) adalah pilihan yang lebih baik.
 
 **Berapa banyak minyak yang dapat dihasilkan press komersial per hari?**
 Dengan konfigurasi barel ganda beroperasi 8-10 jam, model komersial kami memproses 2.000-5.000 kg biji per hari. Output minyak aktual tergantung pada jenis biji: sekitar 900-2.500 liter minyak wijen, 800-2.000 liter minyak kacang tanah, atau 1.100-3.100 liter minyak bunga matahari per hari.
@@ -334,7 +334,7 @@ Solusi penekanan minyak biji kapas Haonuo Machinery dirancang untuk tantangan un
 1. **Penghilangan Serat** — Hilangkan serat kapas menggunakan mesin penghilang serat. Langkah ini kritis — serat menyerap 3-5% hasil minyak Anda.
 2. **Penghilangan Kulit** — Pisahkan kulit dari inti. Kulit hanya mengandung 1-2% minyak dan mengurangi hasil keseluruhan.
 3. **Pengeringan** — Gulung inti menjadi serpihan tipis (0,3-0,5mm) untuk merusak dinding sel dan meningkatkan pelepasan minyak.
-4. **Press Hidrolik** — Muat serpihan ke dalam Press Hidrolik Heavy Duty HN355. Terapkan tekanan 63 MPa selama 10-12 menit per batch.
+4. **Press Hidrolik** — Muat serpihan ke dalam Press Hidrolik Heavy Duty HN365. Terapkan tekanan 63 MPa selama 10-12 menit per batch.
 5. **Filtrasi** — Lewatkan minyak mentah melalui press filter pneumatik.
 6. **Pemurnian** — Langkah kritis: degumming, netralisasi, pemutihan, dan deodorisasi untuk menghilangkan gossypol dan asam lemak bebas.
 
@@ -342,14 +342,14 @@ Solusi penekanan minyak biji kapas Haonuo Machinery dirancang untuk tantangan un
 
 | Peralatan | Model | Tujuan |
 |---|---|---|
-| Press Hidrolik Heavy Duty | HN355 (360T) | Penekanan utama biji kapas |
+| Press Hidrolik Heavy Duty | HN365 (365T) | Penekanan utama biji kapas |
 | Screw Pre-Press Expeller | HN-CG60 | Pra-penekanan untuk operasi skala besar |
 | Press Filter Minyak Pneumatik | HN-10SL | Filtrasi minyak mentah |
 | Sistem Pemurnian Minyak Nabati | Kustom | Penghilangan gossypol dan pemurnian |
 
 ## Mengapa Memilih Haonuo untuk Produksi Minyak Biji Kapas
 
-- **Konstruksi heavy duty** — HN355 kami dibangun untuk sifat berserat dan abrasif dari pemrosesan biji kapas
+- **Konstruksi heavy duty** — HN365 kami dibangun untuk sifat berserat dan abrasif dari pemrosesan biji kapas
 - **Lini produksi lengkap** — Dari penghilangan serat hingga pemurnian, kami menyediakan rantai peralatan penuh
 - **Terbukti di pasar Afrika** — Mesin kami beroperasi dengan sukses di Nigeria, Ghana, dan Tanzania
 - **Harga terjangkau** — Harga langsung pabrik membuat produksi minyak biji kapas profesional dapat diakses
@@ -501,7 +501,7 @@ Solusi ini mendukung press dingin (untuk minyak sawi Kachi Ghani premium) dan pr
 ## Peralatan yang Direkomendasikan
 
 - **Press Hidrolik Standar (HN325)** — Sangat baik untuk produksi minyak sawi kecil hingga menengah. Cocok untuk minyak sawi Kachi Ghani press dingin.
-- **Press Hidrolik Heavy Duty (HN355)** — Direkomendasikan untuk operasi yang lebih besar dengan persyaratan throughput harian yang lebih tinggi.
+- **Press Hidrolik Heavy Duty (HN365)** — Direkomendasikan untuk operasi yang lebih besar dengan persyaratan throughput harian yang lebih tinggi.
 - **Pengukus Biji Listrik** — Dirancang khusus untuk pengukusan biji sawi dengan kontrol suhu presisi. Sangat penting untuk produksi minyak sawi press panas.
 - **Press Filter Minyak Pneumatik** — Filtrasi efisien untuk minyak sawi yang bersih dan siap pasar dengan tenaga kerja minimal.
 
@@ -625,7 +625,7 @@ Solusi ini mencakup proses lengkap dari pemisahan inti melalui penekanan, filtra
 
 ## Peralatan yang Direkomendasikan
 
-- **Press Hidrolik Heavy Duty (HN355)** — Menyediakan tekanan tinggi yang diperlukan untuk ekstraksi minyak inti sawit. Direkomendasikan untuk operasi kecil hingga menengah.
+- **Press Hidrolik Heavy Duty (HN365)** — Menyediakan tekanan tinggi yang diperlukan untuk ekstraksi minyak inti sawit. Direkomendasikan untuk operasi kecil hingga menengah.
 - **Press Hidrolik Ultra High Pressure (HN500)** — Menghasilkan tekanan maksimal untuk tingkat minyak sisa kompetitif. Cocok untuk operasi yang lebih besar yang mencari hasil maksimal.
 - **Press Filter Minyak Pneumatik** — Filtrasi efisien untuk minyak inti sawit yang bersih dengan endapan minimal.
 - **Sistem Pemurnian Minyak Nabati** — Diperlukan untuk memproduksi minyak inti sawit RBD kelas makanan. Tersedia dalam kapasitas 1-100 ton/hari.
@@ -687,7 +687,7 @@ Solusi ini mendukung press dingin (untuk minyak kacang tanah kaya nutrisi premiu
 ## Peralatan yang Direkomendasikan
 
 - **Press Hidrolik Standar (HN325)** — Cocok untuk produksi minyak kacang tanah kecil hingga menengah. Barel berdiameter dalam 390mm memproses 100 kg per batch dengan hasil yang sangat baik.
-- **Press Hidrolik Heavy Duty (HN355)** — Direkomendasikan untuk operasi yang lebih besar. Gaya press lebih tinggi dan opsi barel ganda untuk throughput yang meningkat.
+- **Press Hidrolik Heavy Duty (HN365)** — Direkomendasikan untuk operasi yang lebih besar. Gaya press lebih tinggi dan opsi barel ganda untuk throughput yang meningkat.
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan kacang konsisten, sangat penting untuk minyak kacang tanah press panas aromatik.
 - **Press Filter Minyak Pneumatik** — Filtrasi otomatis untuk minyak kacang tanah yang jernih dan siap pasar dengan tenaga kerja minimal.
 
@@ -807,7 +807,7 @@ Solusi ini secara khusus dirancang untuk kondisi operasi Afrika Barat, dengan ko
 
 ## Peralatan yang Direkomendasikan
 
-- **Press Hidrolik Heavy Duty (HN355)** — Model minimum yang direkomendasikan untuk penekanan mentega shea. Menyediakan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi menyeluruh.
+- **Press Hidrolik Heavy Duty (HN365)** — Model minimum yang direkomendasikan untuk penekanan mentega shea. Menyediakan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi menyeluruh.
 - **Press Hidrolik Ultra High Pressure (HN500)** — Direkomendasikan untuk hasil maksimal dari kacang shea. Mencapai tingkat lemak sisa kompetitif.
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu pemanggangan presisi sangat kritis untuk pemrosesan kacang shea. Panci pemanggangan kami memastikan hasil yang konsisten.
 - **Press Filter Minyak Pneumatik** — Menghasilkan mentega shea bersih dan murni tanpa partikel kacang dan endapan.
@@ -967,7 +967,7 @@ Solusi ini menangani baik varietas bunga matahari berminyak tinggi maupun konfek
 ## Peralatan yang Direkomendasikan
 
 - **Press Hidrolik Standar (HN325)** — Cocok untuk produksi minyak bunga matahari kecil hingga menengah. Menangani biji utuh dan inti tanpa kulit secara efektif.
-- **Press Hidrolik Heavy Duty (HN355)** — Direkomendasikan untuk operasi yang lebih besar dengan opsi barel ganda untuk throughput lebih tinggi.
+- **Press Hidrolik Heavy Duty (HN365)** — Direkomendasikan untuk operasi yang lebih besar dengan opsi barel ganda untuk throughput lebih tinggi.
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan konsisten. Sangat penting untuk memaksimalkan hasil dari biji bunga matahari.
 - **Press Filter Minyak Pneumatik** — Filtrasi otomatis untuk minyak bunga matahari yang jernih dan premium.
 

@@ -54,8 +54,8 @@ The HN325 is our entry-level workhorse, well-suited for small-to-medium operatio
 - 100 kg batch capacity
 - 2.2 KW motor power
 
-### HN355 Heavy Duty Hydraulic Oil Press
-The HN355 is our most popular commercial model, offering 10% more pressing force than the HN325 with a reinforced frame.
+### HN365 Heavy Duty Hydraulic Oil Press
+The HN365 is our most popular commercial model, offering 10% more pressing force than the HN325 with a reinforced frame.
 
 **Best For:**
 - Medium-scale commercial operations
@@ -63,7 +63,7 @@ The HN355 is our most popular commercial model, offering 10% more pressing force
 - Continuous heavy-duty operation
 
 **Key Specifications:**
-- 360-ton pressing force
+- 365-ton pressing force
 - 63 Mpa system pressure
 - 30.15 Mpa/cm2 cake surface pressure
 - 100 kg batch capacity
@@ -116,7 +116,7 @@ The HN500 is our flagship model, designed for the most demanding industrial appl
 
 **Conventional seeds only:**
 - Small scale -> HN325
-- Medium scale -> HN355
+- Medium scale -> HN365
 - Large scale -> HN500
 
 **Cold-press materials:**

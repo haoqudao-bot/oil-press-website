@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import { type Locale, getTranslations, isRtl } from '../i18n/index.ts';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -16,9 +16,11 @@ interface Props {
   locale?: string;
   ogImage?: string;
   noindex?: boolean;
+  /** Transparent header that overlays the first screen (homepage hero) */
+  overlayHeader?: boolean;
 }
 
-const { title, description, keywords, jsonLd, locale = 'en', ogImage, noindex = false } = Astro.props;
+const { title, description, keywords, jsonLd, locale = 'en', ogImage, noindex = false, overlayHeader = false } = Astro.props;
 const currentLocale = locale as Locale;
 const t = getTranslations(currentLocale);
 const rtl = isRtl(currentLocale);
@@ -93,7 +95,6 @@ const organizationLd = {
       : ['English', 'French', 'Arabic', 'Indonesian'],
   },
   foundingDate: '2010',
-  numberOfEmployees: 200,
 };
 
 const rawLd = jsonLd ? [organizationLd, jsonLd] : [organizationLd];
@@ -148,10 +149,10 @@ const mergedLd = rawLd.flat();
 <body class="min-h-screen flex flex-col font-body">
   <div class="fixed top-0 inset-x-0 z-50 no-print">
     <CookieConsentBanner locale={currentLocale} />
-    <Navbar locale={currentLocale} />
+    <Navbar locale={currentLocale} overlay={overlayHeader} />
   </div>
-  <!-- Spacer for fixed header -->
-  <div class="h-16 md:h-20"></div>
+  <!-- Spacer for fixed header (skipped in overlay mode: hero sits underneath) -->
+  {!overlayHeader && <div class="h-16 md:h-20"></div>}
   <main class="flex-1">
     <slot />
   </main>

@@ -50,7 +50,7 @@ Designing a complete oil production line requires careful planning and integrati
 - Particle size: 2-4 mm for optimal extraction
 
 ### 6. Hydraulic Oil Press
-- Haonuo hydraulic oil press (HN325, HN355, HN426, HN480, HN500)
+- Haonuo hydraulic oil press (HN325, HN365, HN426, HN480, HN500)
 - Capacity: 100 kg per batch
 - Cycle time: Hot pressing 30-40 minutes, Cold pressing ~2 hours
 
@@ -77,7 +77,7 @@ Designing a complete oil production line requires careful planning and integrati
 | Scale | Daily Capacity | Recommended Model |
 |-------|---------------|-------------------|
 | Small | 500-1,000 kg | HN325 |
-| Medium | 1,000-2,500 kg | HN355/HN426 |
+| Medium | 1,000-2,500 kg | HN365/HN426 |
 | Large | 2,500-4,000 kg | HN480/HN500 |
 
 ### Line Balance Considerations
@@ -106,7 +106,7 @@ Designing a complete oil production line requires careful planning and integrati
 
 ### Power Supply
 - HN325: 5kVA minimum
-- HN355/HN426: 5.5kVA minimum
+- HN365/HN426: 5.5kVA minimum
 - HN500: 7kVA minimum
 - Additional for supporting equipment: 10-20kVA
 

@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -32,7 +32,7 @@ const stats = [
   { value: '15+', label: t.home.statsYears },
   { value: '50+', label: t.home.statsCountries },
   { value: '200+', label: t.home.statsEmployees },
-  { value: '3,000', label: t.home.statsArea },
+  { value: '2,000', label: t.home.statsArea },
 ];
 
 const milestones = [
@@ -69,12 +69,11 @@ const keyMarkets = [
 ];
 
 const factoryImages = [
-  { src: '/images/factory/machining-workshop.webp', label: t.about.factoryLabel1 },
-  { src: '/images/factory/assembly-line.webp', label: t.about.factoryLabel2 },
-  { src: '/images/factory/quality-control.webp', label: t.about.factoryLabel3 },
-  { src: '/images/factory/warehouse.webp', label: t.about.factoryLabel4 },
-  { src: '/images/factory/painting-workshop.webp', label: t.about.factoryLabel5 },
-  { src: '/images/factory/office-building.webp', label: t.about.factoryLabel6 },
+  { src: '/images/factory/workshop-cranes.webp', label: t.about.factoryLabel1 },
+  { src: '/images/factory/factory-building-yellow.webp', label: t.about.factoryLabel2 },
+  { src: '/images/factory/finished-presses.webp', label: t.about.factoryLabel3 },
+  { src: '/images/factory/export-loading.webp', label: t.about.factoryLabel4 },
+  { src: '/images/factory/factory-exterior.webp', label: t.about.factoryLabel5 },
 ];
 
 const services = [
@@ -110,7 +109,7 @@ const services = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="reveal">
           <img
-            src="/images/hero/hydraulic-oil-press-production.webp"
+            src="/images/factory/factory-building-yellow.webp"
             alt={t.about.overviewImgAlt}
             class="w-full rounded-2xl shadow-lg"
           />

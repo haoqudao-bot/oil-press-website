@@ -95,7 +95,7 @@
     "heroSlide2Cta": "Explore Cold Press",
     "heroSlide2Secondary": "View Solutions",
     "heroSlide3Title": "Factory Direct Manufacturer",
-    "heroSlide3Desc": "3000m² factory with 200+ skilled workers. No middleman — you get the best price directly from the manufacturer.",
+    "heroSlide3Desc": "Welding, assembly and full-pressure load testing all happen in our own Qingzhou workshop — see where every press is built before it ships.",
     "heroSlide3Cta": "Factory Tour",
     "heroSlide3Secondary": "Get a Quote",
     "viewDetails": "View Specifications",
@@ -165,7 +165,7 @@
     "feature4Title": "Cold Press Specialist",
     "feature4Desc": "Our hydraulic cold press technology is designed to help retain more natural nutrients and flavor compared to hot pressing.",
     "factoryStrengthTitle": "Our Factory Strength",
-    "factoryStrengthDesc": "Our 3000m² manufacturing facility is equipped with precision machining and assembly lines, staffed by 200+ skilled workers and engineers. Every hydraulic oil press machine undergoes rigorous quality control before shipping to ensure reliable performance for your oil production business.",
+    "factoryStrengthDesc": "Our 2,000m² manufacturing facility is equipped with precision machining and assembly lines, staffed by 200+ skilled workers and engineers. Every hydraulic oil press machine undergoes rigorous quality control before shipping to ensure reliable performance for your oil production business.",
     "factoryStrengthItem1": "Advanced CNC machining center for precision parts manufacturing",
     "factoryStrengthItem2": "Complete assembly line with quality testing at every stage",
     "factoryStrengthItem3": "Strict quality control system ensuring consistent product standards",
@@ -214,7 +214,7 @@
     "step2Title": "Custom Solution",
     "step2Desc": "Our engineers design the optimal machine configuration and provide a detailed factory-price quotation.",
     "step3Title": "Factory Production",
-    "step3Desc": "Your machine is manufactured and rigorously tested in our 3000m² facility with strict quality standards.",
+    "step3Desc": "Your machine is manufactured and rigorously tested in our 2,000m² facility with strict quality standards.",
     "step4Title": "Global Shipping",
     "step4Desc": "Safe packaging and reliable shipping to your port with full export documentation and insurance.",
     "step5Title": "After-Sales Support",
@@ -232,7 +232,183 @@
     "easyOperationDetail2": "Top Discharge: 10X faster cake removal",
     "easyOperationDetail3": "Diaphragm System: +8-12% higher yield",
     "easyOperationDetail4": "Low Maintenance: 5 MIN/day upkeep",
-    "browseDetails": "Browse Details"
+    "browseDetails": "Browse Details",
+    "statsHomeEstablished": "Established",
+    "statsHomeWorkshop": "Owned Workshop",
+    "statsHomeCountries": "Export Countries",
+    "statsHomeBuyers": "Buyers Served Worldwide",
+    "marqueeAriaLabel": "Oilseeds we press",
+    "marqueeSeeds": [
+      "Sesame",
+      "Peanut",
+      "Coconut",
+      "Mustard",
+      "Sunflower",
+      "Shea Butter",
+      "Rapeseed",
+      "Walnut",
+      "Camellia",
+      "Avocado",
+      "Palm Kernel",
+      "Soybean"
+    ],
+    "heroSlide1ImgAlt": "Haonuo assembly workshop with overhead crane bays and hydraulic oil presses in production",
+    "heroSlide2ImgAlt": "Cold press hydraulic oil press production line",
+    "heroVideoAriaLabel": "Video tour of the Haonuo factory workshop",
+    "heroDotAriaLabel1": "Slide 1: workshop",
+    "heroDotAriaLabel2": "Slide 2: cold press technology",
+    "heroDotAriaLabel3": "Slide 3: factory direct",
+    "prevSlideAriaLabel": "Previous slide",
+    "nextSlideAriaLabel": "Next slide",
+    "prevEquipmentAriaLabel": "Previous equipment",
+    "nextEquipmentAriaLabel": "Next equipment",
+    "modelImgAltSuffix": "hydraulic oil press",
+    "viewDetailsText": "View Details",
+    "exploreText": "Explore",
+    "section01Kicker": "01 — THE RANGE",
+    "section01Title": "Most Popular Hydraulic Oil Presses",
+    "section01Sub": "Proven models requested by buyers worldwide — 325 to 620 tons of pressing force.",
+    "models": [
+      {
+        "badge": "325 Tons",
+        "name": "HN325 Hydraulic Oil Press",
+        "desc": "Best-selling dual-barrel commercial press — 325 tons, 60 MPa system pressure."
+      },
+      {
+        "badge": "365 Tons",
+        "name": "HN365 Hydraulic Oil Press",
+        "desc": "Upgraded from the HN355 — 3 cm high-strength steel frame, double-station barrels."
+      },
+      {
+        "badge": "500 Tons",
+        "name": "HN426 Hydraulic Oil Press",
+        "desc": "500-ton ultra-high pressure for hard seeds — single or dual barrel."
+      },
+      {
+        "badge": "620 Tons",
+        "name": "HN500 Hydraulic Oil Press",
+        "desc": "Flagship 620-ton press for large-scale processors and tonnage operations."
+      }
+    ],
+    "section02Kicker": "02 — COMPLETE LINES",
+    "section02Title": "Our Product Range",
+    "section02Sub": "Everything you need to extract oil, from a single press to a full production line.",
+    "lineItems": [
+      "Hydraulic Oil Press",
+      "Oil Pulverizer",
+      "Seed Roasting Machine",
+      "Steamer for Oilseeds",
+      "Screw Elevator",
+      "Oil Filter Machine"
+    ],
+    "lineCtaBannerPre": "Planning a line? Tell us your ",
+    "lineCtaBannerStrong": "seed, target tons per day and voltage",
+    "lineCtaBannerPost": " — we return a machine count, layout and FOB quote.",
+    "lineCtaButton": "Plan my line",
+    "section03Kicker": "03 — BY OILSEED & SCALE",
+    "section03Title": "Find Your Oilseed Setup",
+    "section03Sub": "Pick your seed, then match the machine count to your daily target.",
+    "section04Kicker": "04 — PRESS ANATOMY",
+    "section04Title": "Seven Parts Take the Load",
+    "section04Sub": "The parts that fail cheap presses are the cylinder, barrel and valve block. This is exactly where Haonuo spends the steel.",
+    "anatomyImageAlt": "Diagram of the seven core components inside a Haonuo hydraulic press",
+    "parts": [
+      {
+        "no": "01",
+        "title": "Hydraulic cylinder",
+        "body": "<strong class=\"text-amber-400 font-semibold\">27SiMn alloy steel (GB/T 3077)</strong>, quenched and tempered for hardness and toughness under repeated 60–75 MPa cycling."
+      },
+      {
+        "no": "02",
+        "title": "Pressure plate",
+        "body": "Spreads cylinder force evenly across the cake, keeping pressure uniform edge to edge."
+      },
+      {
+        "no": "03",
+        "title": "Slotted barrel",
+        "body": "<strong class=\"text-amber-400 font-semibold\">Q690 high-strength steel</strong>, welded and plated; strip slots drain oil faster than drilled barrels."
+      },
+      {
+        "no": "04",
+        "title": "Food-contact surfaces",
+        "body": "Barrel interior and outlet are <strong class=\"text-amber-400 font-semibold\">nickel-plated, food-grade</strong> — carbon steel never touches the oil."
+      },
+      {
+        "no": "05",
+        "title": "Control panel",
+        "body": "Pressure gauges, adjustable cycle timer and safety interlocks on one button-controlled panel."
+      },
+      {
+        "no": "06",
+        "title": "Directional valve",
+        "body": "Plated valve block with enlarged ports for fast, low-shock cycle switching."
+      },
+      {
+        "no": "07",
+        "title": "Hydraulic oil tank",
+        "body": "Integrated reservoir, filter and cooling keep system oil clean and temperature stable."
+      }
+    ],
+    "section05Kicker": "05 — FACTORY DIRECT",
+    "section05Title": "Built, Then Run Under Pressure, Before It Leaves",
+    "section05Sub": "No trading company and no showroom stock. Welding, assembly, control cabinets and load testing happen in our own Qingzhou workshop — buyers are welcome to inspect in person before their machine ships.",
+    "factoryFigCaption1": "Buyer Inspection · Assembly Workshop",
+    "factoryFigCaption2": "Finished Presses · Pre-Dispatch",
+    "factoryFigCaption3": "Crane Bays · Welding & Assembly",
+    "factoryFigCaption4": "Export Packing & Container Loading",
+    "factoryFigCaption5": "Our Factory · Qingzhou, Shandong",
+    "factoryImgAlt1": "Overseas buyers inspecting finished hydraulic presses during a factory visit",
+    "factoryImgAlt2": "Finished hydraulic oil presses lined up before dispatch",
+    "factoryImgAlt3": "Haonuo workshop interior showing overhead crane bays, welding and assembly",
+    "factoryImgAlt4": "Machines wrapped and secured for export container loading",
+    "factoryImgAlt5": "Haonuo factory building exterior with assembly bays in Qingzhou",
+    "promises": [
+      {
+        "title": "Full-pressure test",
+        "body": "Every press is run to working pressure and checked for leaks before packing."
+      },
+      {
+        "title": "Spare parts included",
+        "body": "Wear parts ship with the order so day-one failures never stop the line."
+      },
+      {
+        "title": "English manual & support",
+        "body": "Printed English manual with remote guidance from our own engineers by email and chat."
+      },
+      {
+        "title": "On-site installation",
+        "body": "Engineer installation available overseas; buyer covers travel and accommodation."
+      }
+    ],
+    "section06Kicker": "06 — QUESTIONS",
+    "section06Title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "How do I pick the right press model for my seeds?",
+        "a": "Start from your raw material and your daily output target. Small shops working sesame or peanut usually run the HN300 or HN325; hard, low-oil seeds such as walnut or camellia call for the HN365 or above, while the HN426 and HN500 fit high-volume plants. Send us your seed type and target capacity and we will size the machine honestly — not upward."
+      },
+      {
+        "q": "What is the difference between cold pressing and hot pressing?",
+        "a": "Cold pressing skips roasting, keeps oil temperature low and preserves natural nutrients and a light flavor preferred by premium markets, though the yield is smaller and downstream refining is often needed. Hot pressing roasts the seed first, extracting more oil with a stronger aroma for mainstream cooking oil. Every Haonuo model runs both processes."
+      },
+      {
+        "q": "How long does production take after I order?",
+        "a": "Standard configurations are normally completed within 15–25 working days after the deposit arrives; custom setups may take 30–40 days depending on workshop load. Your confirmed loading window is written into the proforma invoice."
+      },
+      {
+        "q": "Do you provide installation and operator training?",
+        "a": "Most single-press buyers install the machine themselves using the printed English manual and our online support. For complete lines, a Haonuo engineer can travel to your site for installation and training; the buyer covers flights, visa, accommodation and a daily service fee."
+      }
+    ],
+    "section07Kicker": "07 — GET A QUOTE",
+    "section07Title": "Tell Us Your Seed and Daily Target",
+    "section07Sub": "Replies come from the factory, usually within one working day. Include your voltage if you know it.",
+    "quoteBenefits": [
+      "Model recommendation with barrel and pressure specs",
+      "FOB Qingdao price and production lead time",
+      "Machine count and workshop layout for multi-press lines",
+      "Free consultation · Factory-direct pricing · Custom solution for your oil seed and production scale"
+    ]
   },
   "products": {
     "title": "Our Products",
@@ -310,10 +486,10 @@
     "storyP2": "Our founder, with over 20 years of experience in hydraulic systems, recognized that many oil producers were struggling with low-efficiency presses and unreliable suppliers. Starting from a small workshop with just 10 workers, we focused relentlessly on product quality and customer satisfaction.",
     "storyP3": "Today, that dedication has made us an established hydraulic oil press machine manufacturer in China, trusted by thousands of customers across 50+ countries — from India and Nigeria to the Philippines and the Middle East.",
     "overviewTitle": "Professional Hydraulic Oil Press Machine Manufacturer",
-    "overviewP2": "Located in Qingzhou, Weifang, Shandong Province — China's renowned machinery manufacturing hub — our 3,000m² factory is equipped with advanced CNC machining centers, professional assembly lines, and strict quality control systems. With over 200 skilled employees, we deliver reliable oil pressing equipment to customers worldwide.",
+    "overviewP2": "Located in Qingzhou, Weifang, Shandong Province — China's renowned machinery manufacturing hub — our 2,000m² factory is equipped with advanced CNC machining centers, professional assembly lines, and strict quality control systems. With over 200 skilled employees, we deliver reliable oil pressing equipment to customers worldwide.",
     "overviewP3": "As a direct oil press machine China manufacturer, we provide factory-direct pricing, comprehensive technical support, and lifetime after-sales service to every customer.",
     "manufacturingTitle": "Manufacturing Capabilities",
-    "manufacturingDesc": "Our 3,000m² factory in Qingzhou is equipped with modern machinery and staffed by 200+ skilled professionals dedicated to producing high-quality hydraulic oil press machines.",
+    "manufacturingDesc": "Our 2,000m² factory in Qingzhou is equipped with modern machinery and staffed by 200+ skilled professionals dedicated to producing high-quality hydraulic oil press machines.",
     "capCncTitle": "CNC Machining Centers",
     "capCncDesc": "Advanced CNC lathes and milling machines ensure precision parts with tolerances within ±0.01mm",
     "capAssemblyTitle": "Professional Assembly Lines",
@@ -352,12 +528,12 @@
     "why6Title": "Lifetime Technical Support",
     "why6Desc": "Free installation guidance, operation training, and lifetime technical support via video call, WhatsApp, or on-site service.",
     "factoryDesc": "Take a virtual tour of our manufacturing facility. Factory visits are also welcome — contact us to schedule a tour.",
-    "factoryLabel1": "Machining Workshop",
-    "factoryLabel2": "Assembly Line",
-    "factoryLabel3": "Quality Control Center",
-    "factoryLabel4": "Finished Product Warehouse",
-    "factoryLabel5": "Painting Workshop",
-    "factoryLabel6": "Office Building",
+    "factoryLabel1": "Overhead crane bays — welding and assembly workshop",
+    "factoryLabel2": "Factory entrance and office building — Qingzhou, Shandong",
+    "factoryLabel3": "Finished hydraulic presses lined up for dispatch",
+    "factoryLabel4": "Export packing and container loading at Qingdao",
+    "factoryLabel5": "Haonuo factory, Qingzhou",
+    "factoryLabel6": "Haonuo factory, Qingzhou",
     "ctaTitle": "Ready to Get Factory-Direct Pricing?",
     "ctaDesc": "Contact us today for a free quotation on hydraulic oil press machines. As a direct manufacturer, we offer competitive pricing and full technical support.",
     "ctaButton1": "Request a Quote",
@@ -371,8 +547,8 @@
     "milestone2013": "Completed first export order to Southeast Asia, marking the start of international business",
     "milestone2016": "Expanded to 50+ export countries across Middle East and Africa; developed ultra-high pressure hydraulic press series",
     "milestone2020": "Exported to 40+ countries worldwide; established dedicated after-sales service network in Africa and South Asia",
-    "milestone2025": "Reached 50+ export countries with 200+ employees; new 3,000m² modern factory with tripled production capacity",
-    "overviewImgAlt": "Haonuo Machinery Factory - Hydraulic Oil Press Manufacturer",
+    "milestone2025": "Reached 50+ export countries with 200+ employees; new 2,000m² modern factory with tripled production capacity",
+    "overviewImgAlt": "Haonuo Machinery factory entrance and office building in Qingzhou, Shandong",
     "servicesTitle": "Our Services",
     "servicesDesc": "Beyond manufacturing — we provide comprehensive business support, from OEM customization to lifetime technical assistance.",
     "service1Title": "Standard Supply",
@@ -901,7 +1077,7 @@
       },
       {
         "question": "How much does a cold press oil machine cost?",
-        "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
+        "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN365, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
       }
     ],
     "ctaTitle": "Start Producing Premium Cold-Pressed Oil",
@@ -1141,7 +1317,7 @@
     "disclaimerText": "This calculator provides <strong>rough estimates only</strong> for your preliminary planning. It is <strong>NOT a guarantee</strong> of actual returns. Actual results depend on many factors including raw material quality, operator skill, local market conditions, electricity costs, labor costs, and maintenance expenses. <strong>Do not make purchasing decisions based solely on these estimates.</strong> Please <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">contact our team</a> for a detailed, case-specific analysis tailored to your business.",
     "machineModel": "Machine Model",
     "modelHN325": "HN325 — Standard Hydraulic Oil Press",
-    "modelHN355": "HN355 — Heavy Duty Hydraulic Oil Press",
+    "modelHN365": "HN365 — Heavy Duty Hydraulic Oil Press",
     "modelHN426": "HN426 — Cold Press Hydraulic Oil Press",
     "modelHN480": "HN480 — High Pressure Hydraulic Oil Press",
     "modelHN500": "HN500 — Ultra High Pressure Hydraulic Oil Press",

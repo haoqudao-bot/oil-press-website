@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getTranslations } from '../i18n';
 
@@ -13,7 +13,7 @@ const stats = [
   { value: '15+', label: t.home.statsYears },
   { value: '50+', label: t.home.statsCountries },
   { value: '200+', label: t.home.statsEmployees },
-  { value: '3,000', label: t.home.statsArea },
+  { value: '2,000', label: t.home.statsArea },
 ];
 
 const milestones = [
@@ -86,7 +86,7 @@ const milestones = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="reveal">
           <img
-            src="/images/hero/hydraulic-oil-press-production.webp"
+            src="/images/factory/factory-building-yellow.webp"
             alt={t.about.overviewImgAlt}
             class="w-full rounded-2xl shadow-lg"
           />
@@ -468,22 +468,32 @@ const milestones = [
       <p class="text-center text-steel-600 max-w-2xl mx-auto mb-12 reveal">{t.about.factoryTourDesc}</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {[
-          { src: '/images/factory/machining-workshop.webp', label: t.about.factoryLabel1 },
-          { src: '/images/factory/assembly-line.webp', label: t.about.factoryLabel2 },
-          { src: '/images/factory/quality-control.webp', label: t.about.factoryLabel3 },
-          { src: '/images/factory/warehouse.webp', label: t.about.factoryLabel4 },
-          { src: '/images/factory/painting-workshop.webp', label: t.about.factoryLabel5 },
-          { src: '/images/factory/office-building.webp', label: t.about.factoryLabel6 },
+          { src: '/images/factory/workshop-cranes.webp', label: 'Overhead crane bays — welding and assembly workshop' },
+          { src: '/images/factory/factory-building-yellow.webp', label: 'Factory entrance and office building — Qingzhou, Shandong' },
+          { src: '/images/factory/finished-presses.webp', label: 'Finished hydraulic presses lined up for dispatch' },
+          { src: '/images/factory/export-loading.webp', label: 'Export packing and container loading at Qingdao' },
+          { src: '/images/factory/factory-exterior.webp', label: 'Haonuo factory, Qingzhou' },
         ].map((img, i) => (
           <div class="reveal aspect-[4/3] rounded-2xl overflow-hidden group" style={`animation-delay: ${i * 80}ms`}>
             <img
               src={img.src}
               alt={img.label}
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               onerror={`this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<div class="flex items-center justify-center h-full bg-steel-100 text-steel-400 text-sm">${img.label}</div>'`}
             />
           </div>
         ))}
+        <a href="/contact" class="reveal aspect-[4/3] rounded-2xl overflow-hidden group bg-steel-900 flex flex-col items-center justify-center text-center p-8 hover:bg-steel-800 transition-colors" style="animation-delay: 400ms">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-amber-500 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3l-4 4-4-4"/><path d="M8 21V13M16 21V13M2 13h20"/></svg>
+          <h3 class="font-display text-xl text-white mb-2">See the workshop yourself</h3>
+          <p class="text-steel-300 text-sm mb-4">Book an in-person visit or a live video factory tour before ordering.</p>
+          <span class="text-amber-500 font-semibold text-sm inline-flex items-center gap-1.5">
+            Arrange a visit
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
       </div>
     </div>
   </section>

@@ -191,7 +191,7 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
             <label for="machine-model" class="block font-display text-xl text-charcoal-900 mb-2">{labelMachineModel}</label>
             <select id="machine-model" class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
               <option value="HN325">HN325 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Standard' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي قياسية' : 'Mesin Press Hidrolik Standar'}</option>
-              <option value="HN355">HN355 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Lourde' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي ثقيلة' : 'Mesin Press Hidrolik Berat'}</option>
+              <option value="HN365">HN365 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Lourde' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي ثقيلة' : 'Mesin Press Hidrolik Berat'}</option>
               <option value="HN426">HN426 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique à Froid' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي بارد' : 'Mesin Press Hidrolik Dingin'}</option>
               <option value="HN480">HN480 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Haute Pression' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي عالية الضغط' : 'Mesin Press Hidrolik Tekanan Tinggi'}</option>
             </select>
@@ -382,7 +382,7 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
   // Machine data - conservative estimates with utilization rate
   const machineData: Record<string, { capacity: number; cycleMinutes: number }> = {
     HN325: { capacity: 10, cycleMinutes: 15 },
-    HN355: { capacity: 15, cycleMinutes: 15 },
+    HN365: { capacity: 15, cycleMinutes: 15 },
     HN426: { capacity: 20, cycleMinutes: 15 },
     HN480: { capacity: 25, cycleMinutes: 15 },
   };

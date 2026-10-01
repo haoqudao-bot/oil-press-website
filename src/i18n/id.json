@@ -95,7 +95,7 @@
     "heroSlide2Cta": "Jelajahi Press Dingin",
     "heroSlide2Secondary": "Lihat Solusi",
     "heroSlide3Title": "Produsen Langsung Pabrik",
-    "heroSlide3Desc": "Pabrik 3000m² dengan 200+ pekerja terampil. Tanpa perantara — Anda mendapatkan harga kompetitif langsung dari produsen.",
+    "heroSlide3Desc": "Pabrik 2000m² dengan 200+ pekerja terampil. Tanpa perantara — Anda mendapatkan harga kompetitif langsung dari produsen.",
     "heroSlide3Cta": "Tur Pabrik",
     "heroSlide3Secondary": "Dapatkan Penawaran",
     "viewDetails": "Lihat Detail",
@@ -165,7 +165,7 @@
     "feature4Title": "Spesialis Press Dingin",
     "feature4Desc": "Teknologi press dingin hidrolik kami membantu mempertahankan nutrisi alami dalam minyak kelapa, wijen, kacang tanah, dan mustard — kualitas premium yang pelanggan Anda bayar lebih (hasil dapat bervariasi).",
     "factoryStrengthTitle": "Kekuatan Pabrik Kami",
-    "factoryStrengthDesc": "Fasilitas manufaktur kami seluas 3000m² dilengkapi dengan pusat mesin CNC presisi dan jalur perakitan, dengan 200+ pekerja dan insinyur terampil. Setiap mesin press minyak hidrolik melalui kontrol kualitas ketat sebelum pengiriman untuk memastikan kinerja andal untuk bisnis produksi minyak Anda.",
+    "factoryStrengthDesc": "Fasilitas manufaktur kami seluas 2000m² dilengkapi dengan pusat mesin CNC presisi dan jalur perakitan, dengan 200+ pekerja dan insinyur terampil. Setiap mesin press minyak hidrolik melalui kontrol kualitas ketat sebelum pengiriman untuk memastikan kinerja andal untuk bisnis produksi minyak Anda.",
     "factoryStrengthItem1": "Pusat mesin CNC maju untuk manufaktur bagian presisi",
     "factoryStrengthItem2": "Jalur perakitan lengkap dengan pengujian kualitas di setiap tahap",
     "factoryStrengthItem3": "Sistem kontrol kualitas ketat memastikan standar produk konsisten",
@@ -214,7 +214,7 @@
     "step2Title": "Solusi Kustom",
     "step2Desc": "Insinyur kami merancang konfigurasi mesin optimal dan memberikan penawaran harga pabrik yang detail.",
     "step3Title": "Produksi Pabrik",
-    "step3Desc": "Mesin Anda diproduksi dan diuji secara ketat di fasilitas 3000m² kami dengan standar kualitas yang ketat.",
+    "step3Desc": "Mesin Anda diproduksi dan diuji secara ketat di fasilitas 2000m² kami dengan standar kualitas yang ketat.",
     "step4Title": "Pengiriman Global",
     "step4Desc": "Kemasan aman dan pengiriman andal ke pelabuhan Anda dengan dokumentasi ekspor lengkap dan asuransi.",
     "step5Title": "Dukungan Purna Jual",
@@ -232,7 +232,183 @@
     "easyOperationDetail2": "Pengeluaran dari Atas: 10X lebih cepat",
     "easyOperationDetail3": "Sistem Diafragma: +8-12% hasil lebih tinggi",
     "easyOperationDetail4": "Pemeliharaan Rendah: 5 MIN/hari",
-    "browseDetails": "Lihat Detail"
+    "browseDetails": "Lihat Detail",
+    "statsHomeEstablished": "Didirikan",
+    "statsHomeWorkshop": "Workshop Milik Sendiri",
+    "statsHomeCountries": "Negara Ekspor",
+    "statsHomeBuyers": "Pembeli Terlayani di Seluruh Dunia",
+    "marqueeAriaLabel": "Biji minyak yang kami press",
+    "marqueeSeeds": [
+      "Wijen",
+      "Kacang Tanah",
+      "Kelapa",
+      "Sawi",
+      "Bunga Matahari",
+      "Mentega Shea",
+      "Biji Sawi",
+      "Kacang Walnut",
+      "Kamelia",
+      "Alpukat",
+      "Inti Sawit",
+      "Kedelai"
+    ],
+    "heroSlide1ImgAlt": "Workshop perakitan Haonuo dengan crane overhead dan mesin press minyak hidrolik dalam produksi",
+    "heroSlide2ImgAlt": "Lini produksi mesin press minyak hidrolik cold press",
+    "heroVideoAriaLabel": "Video tur workshop pabrik Haonuo",
+    "heroDotAriaLabel1": "Slide 1: bengkel",
+    "heroDotAriaLabel2": "Slide 2: teknologi cold press",
+    "heroDotAriaLabel3": "Slide 3: langsung dari pabrik",
+    "prevSlideAriaLabel": "Slide sebelumnya",
+    "nextSlideAriaLabel": "Slide berikutnya",
+    "prevEquipmentAriaLabel": "Peralatan sebelumnya",
+    "nextEquipmentAriaLabel": "Peralatan berikutnya",
+    "modelImgAltSuffix": "mesin press minyak hidrolik",
+    "viewDetailsText": "Lihat Detail",
+    "exploreText": "Jelajahi",
+    "section01Kicker": "01 — RANGKAIAN PRODUK",
+    "section01Title": "Mesin Press Minyak Hidrolik Terpopuler",
+    "section01Sub": "Model teruji yang diminta pembeli di seluruh dunia — gaya penekanan 325 hingga 620 ton.",
+    "models": [
+      {
+        "badge": "325 Ton",
+        "name": "Mesin Press Minyak Hidrolik HN325",
+        "desc": "Press komersial dual-barrel terlaris — 325 ton, tekanan sistem 60 MPa."
+      },
+      {
+        "badge": "365 Ton",
+        "name": "Mesin Press Minyak Hidrolik HN365",
+        "desc": "Peningkatan dari HN355 — rangka baja kekuatan tinggi 3 cm, barrel stasiun ganda."
+      },
+      {
+        "badge": "500 Ton",
+        "name": "Mesin Press Minyak Hidrolik HN426",
+        "desc": "Tekanan ultra-tinggi 500 ton untuk biji keras — barrel tunggal atau ganda."
+      },
+      {
+        "badge": "620 Ton",
+        "name": "Mesin Press Minyak Hidrolik HN500",
+        "desc": "Press andalan 620 ton untuk pengolah skala besar dan operasi tonase."
+      }
+    ],
+    "section02Kicker": "02 — LINI LENGKAP",
+    "section02Title": "Rangkaian Produk Kami",
+    "section02Sub": "Semua yang Anda butuhkan untuk mengekstrak minyak, dari satu press hingga lini produksi penuh.",
+    "lineItems": [
+      "Mesin Press Minyak Hidrolik",
+      "Penggiling Biji Minyak",
+      "Mesin Sangrai Biji",
+      "Pengukus Biji Minyak",
+      "Elevator Ulir",
+      "Mesin Penyaring Minyak"
+    ],
+    "lineCtaBannerPre": "Merencanakan lini? Beri tahu kami ",
+    "lineCtaBannerStrong": "biji, target ton per hari, dan tegangan listrik Anda",
+    "lineCtaBannerPost": " — kami kirimkan jumlah mesin, tata letak, dan penawaran FOB.",
+    "lineCtaButton": "Rencanakan lini saya",
+    "section03Kicker": "03 — BERDASARKAN BIJI & SKALA",
+    "section03Title": "Temukan Konfigurasi Biji Minyak Anda",
+    "section03Sub": "Pilih biji Anda, lalu sesuaikan jumlah mesin dengan target harian Anda.",
+    "section04Kicker": "04 — ANATOMI PRESS",
+    "section04Title": "Tujuh Komponen Menahan Beban",
+    "section04Sub": "Komponen yang gagal pada press murah adalah silinder, barrel, dan blok katup. Di sinilah tepatnya Haonuo berinvestasi pada baja.",
+    "anatomyImageAlt": "Diagram tujuh komponen inti di dalam press hidrolik Haonuo",
+    "parts": [
+      {
+        "no": "01",
+        "title": "Silinder hidrolik",
+        "body": "<strong class=\"text-amber-400 font-semibold\">Baja paduan 27SiMn (GB/T 3077)</strong>, dikeraskan dan di-temper untuk kekerasan dan ketangguhan pada siklus 60–75 MPa berulang."
+      },
+      {
+        "no": "02",
+        "title": "Pelat penekan",
+        "body": "Menyebarkan gaya silinder secara merata ke seluruh bungkil, menjaga tekanan seragam dari tepi ke tepi."
+      },
+      {
+        "no": "03",
+        "title": "Barrel berlubang bilah",
+        "body": "<strong class=\"text-amber-400 font-semibold\">Baja kekuatan tinggi Q690</strong>, dilas dan dilapisi; alur bilah mengalirkan minyak lebih cepat daripada barrel bor."
+      },
+      {
+        "no": "04",
+        "title": "Permukaan kontak pangan",
+        "body": "Interior barrel dan saluran keluar <strong class=\"text-amber-400 font-semibold\">dilapisi nikel, food-grade</strong> — baja karbon tidak pernah menyentuh minyak."
+      },
+      {
+        "no": "05",
+        "title": "Panel kontrol",
+        "body": "Pengukur tekanan, timer siklus yang dapat diatur, dan interlock pengaman dalam satu panel tombol."
+      },
+      {
+        "no": "06",
+        "title": "Katup arah",
+        "body": "Blok katup berlapis dengan port yang diperbesar untuk pergantian siklus cepat dan minim hentakan."
+      },
+      {
+        "no": "07",
+        "title": "Tangki oli hidrolik",
+        "body": "Reservoir, filter, dan pendingin terintegrasi menjaga oli sistem tetap bersih dan suhu stabil."
+      }
+    ],
+    "section05Kicker": "05 — LANGSUNG DARI PABRIK",
+    "section05Title": "Dibangun, Lalu Diuji di Bawah Tekanan, Sebelum Dikirim",
+    "section05Sub": "Tanpa perusahaan dagang dan tanpa stok showroom. Pengelasan, perakitan, kabinet kontrol, dan uji beban dilakukan di workshop kami sendiri di Qingzhou — pembeli dipersilakan memeriksa langsung sebelum mesin mereka dikirim.",
+    "factoryFigCaption1": "Inspeksi Pembeli · Workshop Perakitan",
+    "factoryFigCaption2": "Press Jadi · Pra-Pengiriman",
+    "factoryFigCaption3": "Ruang Crane · Pengelasan & Perakitan",
+    "factoryFigCaption4": "Pengemasan Ekspor & Pemuatan Kontainer",
+    "factoryFigCaption5": "Pabrik Kami · Qingzhou, Shandong",
+    "factoryImgAlt1": "Pembeli luar negeri memeriksa press hidrolik jadi saat kunjungan pabrik",
+    "factoryImgAlt2": "Mesin press minyak hidrolik jadi berjajar sebelum pengiriman",
+    "factoryImgAlt3": "Interior workshop Haonuo dengan crane overhead, pengelasan, dan perakitan",
+    "factoryImgAlt4": "Mesin dikemas dan diamankan untuk pemuatan kontainer ekspor",
+    "factoryImgAlt5": "Eksterior gedung pabrik Haonuo dengan ruang perakitan di Qingzhou",
+    "promises": [
+      {
+        "title": "Uji tekanan penuh",
+        "body": "Setiap press dijalankan hingga tekanan kerja dan diperiksa kebocorannya sebelum dikemas."
+      },
+      {
+        "title": "Suku cadang disertakan",
+        "body": "Komponen aus dikirim bersama pesanan agar kerusakan di hari pertama tidak menghentikan lini."
+      },
+      {
+        "title": "Manual Inggris & dukungan",
+        "body": "Manual Inggris tercetak dengan panduan jarak jauh dari teknisi kami melalui email dan chat."
+      },
+      {
+        "title": "Instalasi di lokasi",
+        "body": "Instalasi oleh teknisi tersedia di luar negeri; pembeli menanggung perjalanan dan akomodasi."
+      }
+    ],
+    "section06Kicker": "06 — PERTANYAAN",
+    "section06Title": "Pertanyaan yang Sering Diajukan",
+    "faqs": [
+      {
+        "q": "Bagaimana memilih model press yang tepat untuk biji saya?",
+        "a": "Mulailah dari bahan baku dan target produksi harian Anda. Toko kecil yang mengolah wijen atau kacang tanah biasanya menjalankan HN300 atau HN325; biji keras dan rendah minyak seperti walnut atau kamelia membutuhkan HN365 ke atas, sementara HN426 dan HN500 cocok untuk pabrik bervolume tinggi. Kirimkan jenis biji dan kapasitas target Anda, dan kami akan merekomendasikan mesin secara jujur — tidak dilebih-lebihkan."
+      },
+      {
+        "q": "Apa perbedaan cold pressing dan hot pressing?",
+        "a": "Cold pressing melewatkan penyangraian, menjaga suhu minyak tetap rendah dan mempertahankan nutrisi alami serta rasa ringan yang disukai pasar premium, meski hasilnya lebih kecil dan sering perlu pemurnian lanjutan. Hot pressing menyangrai biji terlebih dahulu, mengekstrak lebih banyak minyak dengan aroma lebih kuat untuk minyak goreng umum. Setiap model Haonuo menjalankan kedua proses."
+      },
+      {
+        "q": "Berapa lama produksi setelah saya memesan?",
+        "a": "Konfigurasi standar biasanya selesai dalam 15–25 hari kerja setelah uang muka diterima; konfigurasi khusus bisa memakan waktu 30–40 hari tergantung beban workshop. Jadwal pemuatan yang dikonfirmasi dicantumkan dalam faktur proforma."
+      },
+      {
+        "q": "Apakah Anda menyediakan instalasi dan pelatihan operator?",
+        "a": "Sebagian besar pembeli press tunggal memasang mesin sendiri menggunakan manual Inggris tercetak dan dukungan online kami. Untuk lini lengkap, teknisi Haonuo dapat datang ke lokasi Anda untuk instalasi dan pelatihan; pembeli menanggung tiket pesawat, visa, akomodasi, dan biaya layanan harian."
+      }
+    ],
+    "section07Kicker": "07 — MINTA PENAWARAN",
+    "section07Title": "Beri Tahu Kami Biji dan Target Harian Anda",
+    "section07Sub": "Balasan datang langsung dari pabrik, biasanya dalam satu hari kerja. Sertakan tegangan listrik Anda jika tahu.",
+    "quoteBenefits": [
+      "Rekomendasi model dengan spesifikasi barrel dan tekanan",
+      "Harga FOB Qingdao dan waktu produksi",
+      "Jumlah mesin dan tata letak workshop untuk lini multi-press",
+      "Konsultasi gratis · Harga langsung pabrik · Solusi khusus untuk biji dan skala produksi Anda"
+    ]
   },
   "products": {
     "title": "Produk Kami",
@@ -310,10 +486,10 @@
     "storyP2": "Pendiri kami, dengan lebih dari 20 tahun pengalaman dalam sistem hidrolik, menyadari bahwa banyak produsen minyak kesulitan dengan press efisiensi rendah dan pemasok tidak handal. Mulai dari bengkel kecil dengan hanya 10 pekerja, kami fokus tanpa henti pada kualitas produk dan kepuasan pelanggan.",
     "storyP3": "Hari ini, dedikasi itu telah menjadikan kami produsen mesin press minyak hidrolik yang mapan di Tiongkok, dipercaya oleh ribuan pelanggan di 50+ negara — dari India dan Nigeria hingga Filipina dan Timur Tengah. Cerita kami terus berlanjut, dan kami selalu mengembangkan produk kami.",
     "overviewTitle": "Produsen Mesin Press Minyak Hidrolik Profesional",
-    "overviewP2": "Terletak di Qingzhou, Weifang, Provinsi Shandong — pusat pembuatan mesin terkenal di Tiongkok — pabrik kami seluas 3.000m² dilengkapi dengan pusat mesin CNC canggih, jalur perakitan profesional, dan sistem kontrol kualitas ketat. Dengan lebih dari 200 karyawan terampil, kami memberikan peralatan press minyak yang handal kepada pelanggan di seluruh dunia.",
+    "overviewP2": "Terletak di Qingzhou, Weifang, Provinsi Shandong — pusat pembuatan mesin terkenal di Tiongkok — pabrik kami seluas 2.000m² dilengkapi dengan pusat mesin CNC canggih, jalur perakitan profesional, dan sistem kontrol kualitas ketat. Dengan lebih dari 200 karyawan terampil, kami memberikan peralatan press minyak yang handal kepada pelanggan di seluruh dunia.",
     "overviewP3": "Sebagai produsen mesin press minyak Tiongkok langsung, kami memberikan harga langsung dari pabrik, dukungan teknis komprehensif, dan layanan after-sales seumur hidup kepada setiap pelanggan.",
     "manufacturingTitle": "Kemampuan Manufaktur",
-    "manufacturingDesc": "Pabrik kami seluas 3.000m² di Qingzhou dilengkapi dengan mesin canggih dan staf oleh 200+ profesional terampil yang berdedikasi untuk memproduksi mesin press minyak hidrolik berkualitas tinggi.",
+    "manufacturingDesc": "Pabrik kami seluas 2.000m² di Qingzhou dilengkapi dengan mesin canggih dan staf oleh 200+ profesional terampil yang berdedikasi untuk memproduksi mesin press minyak hidrolik berkualitas tinggi.",
     "capCncTitle": "Pusat Mesin CNC",
     "capCncDesc": "Mesin bubut dan frais CNC canggih memastikan bagian presisi dengan toleransi dalam ±0.01mm",
     "capAssemblyTitle": "Jalur Perakitan Profesional",
@@ -352,12 +528,12 @@
     "why6Title": "Dukungan Teknis Seumur Hidup",
     "why6Desc": "Panduan instalasi gratis, pelatihan operasi, dan dukungan teknis seumur hidup melalui panggilan video, WhatsApp, atau layanan on-site.",
     "factoryDesc": "Lakukan tur virtual fasilitas manufaktur kami. Kunjungan pabrik juga diterima — hubungi kami untuk menjadwalkan tur.",
-    "factoryLabel1": "Bengkel Mesin",
-    "factoryLabel2": "Jalur Perakitan",
-    "factoryLabel3": "Pusat Kontrol Kualitas",
-    "factoryLabel4": "Gudang Produk Jadi",
-    "factoryLabel5": "Bengkel Cat",
-    "factoryLabel6": "Gedung Kantor",
+    "factoryLabel1": "Teluk derek overhead — bengkel pengelasan dan perakitan",
+    "factoryLabel2": "Pintu masuk pabrik dan gedung kantor — Qingzhou, Shandong",
+    "factoryLabel3": "Press hidrolik jadi berjajar untuk pengiriman",
+    "factoryLabel4": "Pengemasan ekspor dan pemuatan kontainer di Qingdao",
+    "factoryLabel5": "Pabrik Haonuo, Qingzhou",
+    "factoryLabel6": "Pabrik Haonuo, Qingzhou",
     "ctaTitle": "Siap Mendapatkan Harga Langsung dari Pabrik?",
     "ctaDesc": "Hubungi kami hari ini untuk penawaran gratis tentang mesin press minyak hidrolik. Sebagai produsen langsung, kami menawarkan harga kompetitif dan dukungan teknis lengkap.",
     "ctaButton1": "Dapatkan Penawaran",
@@ -371,8 +547,8 @@
     "milestone2013": "Menyelesaikan pesanan ekspor pertama ke Asia Tenggara, menandai dimulainya bisnis internasional",
     "milestone2016": "Berkembang ke 50+ negara ekspor di Timur Tengah dan Afrika; mengembangkan seri press hidrolik tekanan ultra tinggi",
     "milestone2020": "Mengekspor ke 40+ negara di seluruh dunia; mendirikan jaringan layanan purna jual khusus di Afrika dan Asia Selatan",
-    "milestone2025": "Mencapai 50+ negara ekspor dengan 200+ karyawan; pabrik modern 3.000m² baru dengan kapasitas produksi berlipat tiga",
-    "overviewImgAlt": "Pabrik Haonuo Machinery - Produsen Mesin Press Minyak Hidrolik",
+    "milestone2025": "Mencapai 50+ negara ekspor dengan 200+ karyawan; pabrik modern 2.000m² baru dengan kapasitas produksi berlipat tiga",
+    "overviewImgAlt": "Pintu masuk pabrik Haonuo Machinery dan gedung kantor di Qingzhou, Shandong",
     "servicesTitle": "Layanan Kami",
     "servicesDesc": "Di luar manufaktur — kami menyediakan dukungan bisnis komprehensif, dari kustomisasi OEM hingga bantuan teknis seumur hidup.",
     "service1Title": "Pasokan Standar",
@@ -901,7 +1077,7 @@
       },
       {
         "question": "How much does a cold press oil machine cost?",
-        "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN355, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
+        "answer": "Contact Haonuo for factory-direct cold press oil machine pricing. Our cold press hydraulic oil presses are available in multiple models (HN325, HN365, HN426, HN500) with 100 kg per batch capacity and cycle times of 40-90 minutes depending on the material. As a direct manufacturer, we offer competitive pricing with no middleman markup. All machines include a 1-year warranty, lifetime technical support, and free voltage customization for your local power supply."
       }
     ],
     "ctaTitle": "Mulai Produksi Minyak Press Dingin Premium",
@@ -1141,7 +1317,7 @@
     "disclaimerText": "Kalkulator ini hanya memberikan <strong>perkiraan kasar</strong> untuk perencanaan awal Anda. Ini <strong>bukan jaminan</strong> atas hasil aktual. Hasil aktual bergantung pada banyak faktor termasuk kualitas bahan baku, keterampilan operator, kondisi pasar setempat, biaya listrik, biaya tenaga kerja, dan biaya perawatan. <strong>Jangan ambil keputusan pembelian hanya berdasarkan perkiraan ini.</strong> Silakan <a href=\"/contact\" class=\"text-amber-800 underline font-medium\">hubungi tim kami</a> untuk analisis terperinci yang disesuaikan dengan bisnis Anda.",
     "machineModel": "Model Mesin",
     "modelHN325": "HN325 — Mesin Press Minyak Hidrolik Standar",
-    "modelHN355": "HN355 — Mesin Press Minyak Hidrolik Berat",
+    "modelHN365": "HN365 — Mesin Press Minyak Hidrolik Berat",
     "modelHN426": "HN426 — Mesin Press Minyak Hidrolik Dingin",
     "modelHN480": "HN480 — Mesin Press Minyak Hidrolik Tekanan Tinggi",
     "modelHN500": "HN500 — Mesin Press Minyak Hidrolik Tekanan Sangat Tinggi",

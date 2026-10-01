@@ -18,11 +18,20 @@ function localePath(path: string): string {
   return `/${currentLocale}${path}`;
 }
 
+/* Localized "On request" for unreleased HN365 specs */
+const onRequestMap: Record<string, string> = {
+  en: 'On request',
+  fr: 'Sur demande',
+  ar: 'عند الطلب',
+  id: 'Sesuai permintaan',
+};
+const localSpec = (v: string): string => (v === 'On request' ? onRequestMap[currentLocale] || v : v);
+
 const modelNames: Record<string, Record<string, string>> = {
   HN300: { en: 'Mini', fr: 'Mini', ar: 'ميني', id: 'Mini' },
   HN325: { en: 'Standard', fr: 'Standard', ar: 'قياسي', id: 'Standar' },
   HN325S: { en: 'Coconut Milk', fr: 'Lait de Coco', ar: 'حليب جوز الهند', id: 'Santan Kelapa' },
-  HN355: { en: 'Heavy Duty', fr: 'Robuste', ar: 'ثقيل', id: 'Heavy Duty' },
+  HN365: { en: 'Heavy Duty (New)', fr: 'Robuste (Nouveau)', ar: 'ثقيل (جديد)', id: 'Heavy Duty (Baru)' },
   HN400: { en: 'Medium', fr: 'Moyen', ar: 'متوسط', id: 'Medium' },
   HN426: { en: 'Cold Press', fr: 'Pressage à Froid', ar: 'ضغط بارد', id: 'Cold Press' },
   HN480: { en: 'Cold Press', fr: 'Pressage à Froid', ar: 'ضغط بارد', id: 'Cold Press' },
@@ -97,19 +106,19 @@ const models = [
     highlight: true,
   },
   {
-    model: 'HN355',
-    pressingForce: '360 Tons',
-    systemPressure: '63 Mpa',
-    cakePressure: '30.15 Mpa/cm²',
-    barrelDiameter: '390 mm',
-    barrelHeight: '800 mm',
-    motorPower: '2.2 KW',
-    weight: '2.1 / 2.5 T',
-    dimensions: '1200×1200×2650 mm',
-    bestFor: { en: 'Higher yield, commercial', fr: 'Rendement plus élevé, commercial', ar: 'عائد أعلى، تجاري', id: 'Hasil lebih tinggi, komersial' },
-    seeds: ['TeaSeed', 'Rapeseed', 'Peanut', 'Soybean', 'Flaxseed'],
-    slug: 'heavy-duty-hydraulic-oil-press',
-    highlight: false,
+    model: 'HN365',
+    pressingForce: '365 Tons',
+    systemPressure: 'On request',
+    cakePressure: '30 MPa/cm²',
+    barrelDiameter: 'On request',
+    barrelHeight: 'On request',
+    motorPower: 'On request',
+    weight: 'On request',
+    dimensions: 'On request',
+    bestFor: { en: 'Hard seeds, commercial', fr: 'Graines dures, commercial', ar: 'بذور صلبة، تجاري', id: 'Biji keras, komersial' },
+    seeds: ['Walnut', 'TeaSeed', 'Peanut', 'Rapeseed', 'Flaxseed'],
+    slug: 'hn365-hydraulic-oil-press',
+    highlight: true,
   },
   {
     model: 'HN400',
@@ -195,15 +204,15 @@ const seedCards = [
     badgeColor: 'blue',
     seeds: ['TeaSeed', 'Walnut', 'Flaxseed'],
     seedHint: { en: 'Multi-seed workshop', fr: 'Atelier multi-graines', ar: 'ورشة متعددة البذور', id: 'Workshop multi-biji' },
-    model: 'HN355 / 400',
+    model: 'HN365 / 400',
     modelColor: 'steel',
     desc: {
-      en: '370–410 real tons. Entry to mid cold-press for most medium seeds — bottled-oil grade.',
-      fr: '370–410 tonnes réelles. Pressage à froid d\'entrée à moyen pour la plupart des graines moyennes — qualité huile embouteillée.',
-      ar: '370–410 أطنان حقيقية. ضغط بارد من المبتدئ إلى المتوسط لمعظم البذور المتوسطة — درجة زيت معبأ.',
-      id: '370–410 ton nyata. Cold press pemula hingga menengah untuk sebagian besar biji sedang — kualitas minyak botolan.',
+      en: '365–410 real tons. Entry to mid cold-press for most medium seeds — bottled-oil grade.',
+      fr: '365–410 tonnes réelles. Pressage à froid d\'entrée à moyen pour la plupart des graines moyennes — qualité huile embouteillée.',
+      ar: '365–410 أطنان حقيقية. ضغط بارد من المبتدئ إلى المتوسط لمعظم البذور المتوسطة — درجة زيت معبأ.',
+      id: '365–410 ton nyata. Cold press pemula hingga menengah untuk sebagian besar biji sedang — kualitas minyak botolan.',
     },
-    href: '/products/heavy-duty-hydraulic-oil-press',
+    href: '/products/hn365-hydraulic-oil-press',
   },
   {
     badge: { en: 'Most Popular', fr: 'Le plus populaire', ar: 'الأكثر شعبية', id: 'Paling Populer' },
@@ -240,7 +249,7 @@ const seedCards = [
     badgeColor: 'purple',
     seeds: ['Sesame'],
     seedHint: { en: 'Specialty', fr: 'Spécialité', ar: 'متخصص', id: 'Spesialis' },
-    model: 'HN325/355 Sesame',
+    model: 'HN325/365 Sesame',
     modelColor: 'purple',
     desc: {
       en: '300 mm small barrel concentrates pressure 47–51 MPa/cm². Fast cycle preserves aroma, max yield.',
@@ -327,15 +336,15 @@ const scenarioCards = [
       ar: 'ورشة متوسطة · بذور مميزة متغيرة',
       id: 'Workshop menengah · biji premium variatif',
     },
-    model: 'HN355 / 400',
+    model: 'HN365 / 400',
     modelColor: 'blue',
     desc: {
-      en: '370–410 real tons. Entry to mid cold-press for tea seed, walnut, flax — bottled-oil grade.',
-      fr: '370–410 tonnes réelles. Pressage à froid d\'entrée à moyen pour graine de thé, noix, lin — qualité huile embouteillée.',
-      ar: '370–410 أطنان حقيقية. ضغط بارد من المبتدئ إلى المتوسط لبذور الشاي والجوز والكتان — درجة زيت معبأ.',
-      id: '370–410 ton nyata. Cold press pemula hingga menengah untuk biji teh, walnut, flax — kualitas minyak botolan.',
+      en: '365–410 real tons. Entry to mid cold-press for tea seed, walnut, flax — bottled-oil grade.',
+      fr: '365–410 tonnes réelles. Pressage à froid d\'entrée à moyen pour graine de thé, noix, lin — qualité huile embouteillée.',
+      ar: '365–410 أطنان حقيقية. ضغط بارد من المبتدئ إلى المتوسط لبذور الشاي والجوز والكتان — درجة زيت معبأ.',
+      id: '365–410 ton nyata. Cold press pemula hingga menengah untuk biji teh, walnut, flax — kualitas minyak botolan.',
     },
-    href: '/products/heavy-duty-hydraulic-oil-press',
+    href: '/products/hn365-hydraulic-oil-press',
   },
   {
     badge: { en: 'Most Popular', fr: 'Le plus populaire', ar: 'الأكثر شعبية', id: 'Paling Populer' },
@@ -665,7 +674,7 @@ function tr(obj: Record<string, string>): string {
           <div class="text-xs text-steel-300 mt-1">{tr(ui.statEngineers)}</div>
         </div>
         <div class="text-center">
-          <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">3,000</div>
+          <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">2,000</div>
           <div class="text-xs text-steel-300 mt-1">{tr(ui.statFacility)}</div>
         </div>
         <div class="text-center">
@@ -838,31 +847,37 @@ function tr(obj: Record<string, string>): string {
             <tbody>
               <tr class="border-b border-steel-100 bg-amber-50/50">
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specPressingForce)}</td>
-                {models.map(m => <td class="px-3 py-3 text-center text-steel-700 font-bold text-amber-700">{m.pressingForce}</td>)}
+                {models.map(m => <td class="px-3 py-3 text-center text-steel-700 font-bold text-amber-700">{localSpec(m.pressingForce)}</td>)}
               </tr>
               <tr class="border-b border-steel-100">
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specSystemPressure)}</td>
-                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{m.systemPressure}</td>)}
+                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{localSpec(m.systemPressure)}</td>)}
               </tr>
               <tr class="border-b border-steel-100 bg-amber-50/50">
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specCakePressure)}</td>
-                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{m.cakePressure}</td>)}
+                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{localSpec(m.cakePressure)}</td>)}
               </tr>
               <tr class="border-b border-steel-100">
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specBarrel)}</td>
-                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{m.barrelDiameter} × {m.barrelHeight}</td>)}
+                {models.map(m => (
+                  <td class="px-3 py-3 text-center text-steel-700">
+                    {m.barrelDiameter === 'On request' && m.barrelHeight === 'On request'
+                      ? localSpec('On request')
+                      : `${localSpec(m.barrelDiameter)} × ${localSpec(m.barrelHeight)}`}
+                  </td>
+                ))}
               </tr>
               <tr class="border-b border-steel-100">
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specMotor)}</td>
-                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{m.motorPower}</td>)}
+                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{localSpec(m.motorPower)}</td>)}
               </tr>
               <tr class="border-b border-steel-100 bg-amber-50/50">
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specWeight)}</td>
-                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{m.weight}</td>)}
+                {models.map(m => <td class="px-3 py-3 text-center text-steel-700">{localSpec(m.weight)}</td>)}
               </tr>
               <tr class="border-b border-steel-100">
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specDimensions)}</td>
-                {models.map(m => <td class="px-3 py-3 text-center text-steel-700 text-xs">{m.dimensions}</td>)}
+                {models.map(m => <td class="px-3 py-3 text-center text-steel-700 text-xs">{localSpec(m.dimensions)}</td>)}
               </tr>
               <tr>
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specTopSeeds)}</td>

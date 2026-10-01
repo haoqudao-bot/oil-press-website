@@ -342,7 +342,7 @@ Le pressage à chaud consiste à torréfier préalablement les graines avant le 
 ### Exigences en équipement pour le pressage à chaud
 - Force de pressage standard (27.78 Mpa/cm2 ou plus)
 - Équipement de torréfaction
-- Modèles adaptés : HN325, HN355, HN480, HN500
+- Modèles adaptés : HN325, HN365, HN480, HN500
 
 ## Comparaison des différences clés
 
@@ -411,7 +411,7 @@ La plupart des presses à huile hydrauliques Haonuo sont configurées pour :
 | Modèle | Puissance moteur | Puissance minimale requise |
 |--------|------------------|----------------------------|
 | HN325 | 2,2 kW | 5 kVA |
-| HN355 | 2,2 kW | 5,5 kVA |
+| HN365 | 2,2 kW | 5,5 kVA |
 | HN426 | 2,2 kW | 5,5 kVA |
 | HN480 | 3,0 kW | 7 kVA |
 | HN500 | 5,5 kW | 10 kVA |
@@ -435,7 +435,7 @@ La plupart des presses à huile hydrauliques Haonuo sont configurées pour :
 ### Générateur électrique
 
 Si une alimentation réseau n'est pas disponible :
-- Générateur de 10-15 kVA pour HN325/HN355
+- Générateur de 10-15 kVA pour HN325/HN365
 - Générateur de 15-20 kVA pour HN426/HN480
 - Générateur de 20-30 kVA pour HN500
 
@@ -642,7 +642,7 @@ La conception d'une ligne de production d'huile complète nécessite une planifi
 - Taille des particules : 2-4 mm pour une extraction optimale
 
 ### 6. Presse hydraulique
-- Presse hydraulique Haonuo (HN325, HN355, HN426, HN480, HN500)
+- Presse hydraulique Haonuo (HN325, HN365, HN426, HN480, HN500)
 - Capacité : 100 kg par lot
 - Temps de cycle : Pressage à chaud 30-40 minutes, Pressage à froid ~2 heures
 
@@ -669,7 +669,7 @@ La conception d'une ligne de production d'huile complète nécessite une planifi
 | Échelle | Capacité journalière | Modèle recommandé |
 |---------|---------------------|-------------------|
 | Petite | 500-1 000 kg | HN325 |
-| Moyenne | 1 000-2 500 kg | HN355/HN426 |
+| Moyenne | 1 000-2 500 kg | HN365/HN426 |
 | Grande | 2 500-4 000 kg | HN480/HN500 |
 
 ## Conclusion
@@ -703,7 +703,7 @@ L'huile d'arachide est l'une des huiles comestibles les plus populaires au monde
 ## Processus de pressage
 
 ### Pressage à chaud
-- Modèles recommandés : HN325, HN355, HN480
+- Modèles recommandés : HN325, HN365, HN480
 - Temps de cycle : 30-40 minutes
 - Rendement : 45-50%
 
@@ -764,7 +764,7 @@ La sélection des bonnes matières premières est cruciale pour une production d
 - Écorticage : Retrait ≥ 98% recommandé
 - Torréfaction : 160-180°C pendant 25-30 minutes
 - Rendement : Chaud 48-54%, Froid 42-48%
-- Modèles recommandés : HN325, HN355, HN426
+- Modèles recommandés : HN325, HN365, HN426
 
 ### 2. Arachides
 - Teneur en huile : 45-50%
@@ -772,7 +772,7 @@ La sélection des bonnes matières premières est cruciale pour une production d
 - Écorticage : Retrait ≥ 95% recommandé
 - Torréfaction : 165-185°C pendant 30-35 minutes
 - Rendement : Chaud 45-50%, Froid 38-42%
-- Modèles recommandés : HN325, HN355, HN480
+- Modèles recommandés : HN325, HN365, HN480
 
 ### 3. Colza
 - Teneur en huile : 40-45%
@@ -780,7 +780,7 @@ La sélection des bonnes matières premières est cruciale pour une production d
 - Écorticage : Retrait 85-90%
 - Torréfaction : 150-170°C pendant 20-25 minutes
 - Rendement : Chaud 38-42%, Froid 32-36%
-- Modèles recommandés : HN325, HN355, HN500
+- Modèles recommandés : HN325, HN365, HN500
 
 ### 4. Noix
 - Teneur en huile : 60-70%
@@ -948,8 +948,8 @@ Le HN325 est notre cheval de bataille d'entrée de gamme, adapté pour les opér
 - Capacité par lot : 100 kg
 - Puissance moteur : 2,2 KW
 
-### HN355 Presse hydraulique robuste
-Le HN355 est notre modèle commercial le plus populaire, offrant 10% de force de pressage supplémentaire par rapport au HN325 avec un cadre renforcé.
+### HN365 Presse hydraulique robuste
+Le HN365 est notre modèle commercial le plus populaire, offrant 10% de force de pressage supplémentaire par rapport au HN325 avec un cadre renforcé.
 
 **Convient à :**
 - Opérations commerciales de moyenne échelle
@@ -957,7 +957,7 @@ Le HN355 est notre modèle commercial le plus populaire, offrant 10% de force de
 - Fonctionnement continu robuste
 
 **Spécifications clés :**
-- Force de pressage : 360 tonnes
+- Force de pressage : 365 tonnes
 - Pression système : 63 Mpa
 - Pression de surface du gâteau : 30,15 Mpa/cm2
 - Capacité par lot : 100 kg
@@ -1010,7 +1010,7 @@ Le HN500 est notre modèle phare, conçu pour les applications industrielles les
 
 **Graines conventionnelles uniquement :**
 - Petite échelle -> HN325
-- Moyenne échelle -> HN355
+- Moyenne échelle -> HN365
 - Grande échelle -> HN500
 
 **Matériaux de pressage à froid :**

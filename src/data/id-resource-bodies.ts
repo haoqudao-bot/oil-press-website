@@ -238,7 +238,7 @@ Press panas melibatkan sangrai biji sebelumnya sebelum press untuk meningkatkan 
 ### Persyaratan Peralatan untuk Press Panas
 - Tekanan gaya standar (27.78 MPa/cm² atau lebih)
 - Alat sangrai
-- Model yang sesuai: HN325, HN355, HN480, HN500
+- Model yang sesuai: HN325, HN365, HN480, HN500
 
 ## Perbandingan Perbedaan Utama
 
@@ -307,7 +307,7 @@ Sebagian besar mesin press minyak hidrolik Haonuo dirancang untuk:
 | Model | Daya Motor | Daya Minimum yang Diperlukan |
 |-------|------------|------------------------------|
 | HN325 | 2.2 kW | 5 kVA |
-| HN355 | 2.2 kW | 5.5 kVA |
+| HN365 | 2.2 kW | 5.5 kVA |
 | HN426 | 2.2 kW | 5.5 kVA |
 | HN480 | 3.0 kW | 7 kVA |
 | HN500 | 5.5 kW | 10 kVA |
@@ -329,7 +329,7 @@ Sebagian besar mesin press minyak hidrolik Haonuo dirancang untuk:
 ### Generator Listrik
 
 Jika tidak ada pasokan jaringan:
-- Generator 10-15 kVA untuk HN325/HN355
+- Generator 10-15 kVA untuk HN325/HN365
 - Generator 15-20 kVA untuk HN426/HN480
 - Generator 20-30 kVA untuk HN500
 
@@ -534,7 +534,7 @@ Perancangan lini produksi minyak lengkap membutuhkan perencanaan cermat dan inte
 - Ukuran partikel: 2-4 mm untuk ekstraksi optimal
 
 ### 6. Mesin Press Minyak Hidrolik
-- Mesin press minyak hidrolik Haonuo (HN325, HN355, HN426, HN480, HN500)
+- Mesin press minyak hidrolik Haonuo (HN325, HN365, HN426, HN480, HN500)
 - Kapasitas: 100 kg per batch
 - Waktu siklus: press panas 30-40 menit, press dingin ~2 jam
 
@@ -561,7 +561,7 @@ Perancangan lini produksi minyak lengkap membutuhkan perencanaan cermat dan inte
 | Skala | Kapasitas Harian | Model yang Disarankan |
 |-------|------------------|------------------------|
 | Kecil | 500-1000 kg | HN325 |
-| Menengah | 1000-2500 kg | HN355/HN426 |
+| Menengah | 1000-2500 kg | HN365/HN426 |
 | Besar | 2500-4000 kg | HN480/HN500 |
 
 ## Kesimpulan
@@ -595,7 +595,7 @@ Minyak kacang tanah adalah salah satu minyak makan paling populer di dunia, terk
 ## Proses Press
 
 ### Press Panas
-- Model yang disarankan: HN325, HN355, HN480
+- Model yang disarankan: HN325, HN365, HN480
 - Waktu siklus: 30-40 menit
 - Hasil: 45-50%
 
@@ -656,7 +656,7 @@ Pemilihan bahan baku yang tepat sangat penting untuk produksi minyak yang sukses
 - Pengupasan: Pengupasan ≥ 98% disarankan
 - Sangrai: 160-180°C selama 25-30 menit
 - Hasil: panas 48-54%, dingin 42-48%
-- Model yang disarankan: HN325, HN355, HN426
+- Model yang disarankan: HN325, HN365, HN426
 
 ### 2. Kacang Tanah
 - Kandungan minyak: 45-50%
@@ -664,7 +664,7 @@ Pemilihan bahan baku yang tepat sangat penting untuk produksi minyak yang sukses
 - Pengupasan: Pengupasan ≥ 95% disarankan
 - Sangrai: 165-185°C selama 30-35 menit
 - Hasil: panas 45-50%, dingin 38-42%
-- Model yang disarankan: HN325, HN355, HN480
+- Model yang disarankan: HN325, HN365, HN480
 
 ### 3. Mustard
 - Kandungan minyak: 40-45%
@@ -672,7 +672,7 @@ Pemilihan bahan baku yang tepat sangat penting untuk produksi minyak yang sukses
 - Pengupasan: Pengupasan 85-90%
 - Sangrai: 150-170°C selama 20-25 menit
 - Hasil: panas 38-42%, dingin 32-36%
-- Model yang disarankan: HN325, HN355, HN500
+- Model yang disarankan: HN325, HN365, HN500
 
 ### 4. Kelapa
 - Kandungan minyak: 60-70%
@@ -840,8 +840,8 @@ HN325 adalah stapel kami untuk entry-level, cocok untuk operasi kecil hingga men
 - Kapasitas batch: 100 kg
 - Daya motor: 2.2 kW
 
-### HN355 Mesin Press Minyak Hidrolik Kuat
-HN355 adalah model komersial kami yang paling populer, memberikan 10% gaya tekan tambahan dibandingkan HN325 dengan bingkai yang lebih kuat.
+### HN365 Mesin Press Minyak Hidrolik Kuat
+HN365 adalah model komersial kami yang paling populer, memberikan 10% gaya tekan tambahan dibandingkan HN325 dengan bingkai yang lebih kuat.
 
 **Cocok untuk:**
 - Operasi komersial skala menengah
@@ -849,7 +849,7 @@ HN355 adalah model komersial kami yang paling populer, memberikan 10% gaya tekan
 - Operasi kontinu tahan lama
 
 **Spesifikasi Utama:**
-- Gaya tekan: 360 ton
+- Gaya tekan: 365 ton
 - Tekanan sistem: 63 MPa
 - Tekanan permukaan cake: 30.15 MPa/cm²
 - Kapasitas batch: 100 kg
@@ -902,7 +902,7 @@ HN500 adalah model unggulan kami, dirancang untuk aplikasi industri dengan gaya 
 
 **Hanya Biji Tradisional:**
 - Skala kecil -> HN325
-- Skala menengah -> HN355
+- Skala menengah -> HN365
 - Skala besar -> HN500
 
 **Bahan Press Dingin:**

@@ -53,7 +53,7 @@ Hot pressing involves pre-roasting the seeds before pressing to increase oil yie
 ### Hot Pressing Equipment Requirements
 - Standard pressing force (27.78 Mpa/cm2 or more)
 - Roasting equipment
-- Suitable models: HN325, HN355, HN480, HN500
+- Suitable models: HN325, HN365, HN480, HN500
 
 ## Key Differences Comparison
 

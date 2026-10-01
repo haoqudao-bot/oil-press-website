@@ -46,21 +46,21 @@ const keyCharacteristics = [
 
 const modelToSlug = {
   'HN325': 'standard-hydraulic-oil-press',
-  'HN355': 'heavy-duty-hydraulic-oil-press',
+  'HN365': 'hn365-hydraulic-oil-press',
   'HN426': 'cold-press-hydraulic-oil-press',
   'HN480': 'high-pressure-hydraulic-oil-press',
   'HN500': 'ultra-high-pressure-hydraulic-oil-press',
 };
 
 const oilMaterials = [
-  { name: 'بذور السمسم', oilContent: '45-55%', moisture: '5-6% ساخن، 7-8% بارد', dehulling: '98%+', roasting: '160-180 درجة مئوية، 25-30 دقيقة', yield: 'ساخن 48-54%، بارد 42-48%', models: ['HN325', 'HN355', 'HN426'], hot: true, cold: true },
-  { name: 'الفول السوداني', oilContent: '45-50%', moisture: '5-7% ساخن', dehulling: '95%+', roasting: '165-185 درجة مئوية، 30-35 دقيقة', yield: 'ساخن 45-50%، بارد 38-42%', models: ['HN325', 'HN355', 'HN480'], hot: true, cold: true },
-  { name: 'رأس الخردل', oilContent: '40-45%', moisture: '6-8% ساخن', dehulling: '85-90%', roasting: '150-170 درجة مئوية، 20-25 دقيقة', yield: 'ساخن 38-42%، بارد 32-36%', models: ['HN325', 'HN355', 'HN500'], hot: true, cold: true },
+  { name: 'بذور السمسم', oilContent: '45-55%', moisture: '5-6% ساخن، 7-8% بارد', dehulling: '98%+', roasting: '160-180 درجة مئوية، 25-30 دقيقة', yield: 'ساخن 48-54%، بارد 42-48%', models: ['HN325', 'HN365', 'HN426'], hot: true, cold: true },
+  { name: 'الفول السوداني', oilContent: '45-50%', moisture: '5-7% ساخن', dehulling: '95%+', roasting: '165-185 درجة مئوية، 30-35 دقيقة', yield: 'ساخن 45-50%، بارد 38-42%', models: ['HN325', 'HN365', 'HN480'], hot: true, cold: true },
+  { name: 'رأس الخردل', oilContent: '40-45%', moisture: '6-8% ساخن', dehulling: '85-90%', roasting: '150-170 درجة مئوية، 20-25 دقيقة', yield: 'ساخن 38-42%، بارد 32-36%', models: ['HN325', 'HN365', 'HN500'], hot: true, cold: true },
   { name: 'الجوز', oilContent: '60-70%', moisture: '7-9% بارد', dehulling: 'إزالة كاملة', roasting: 'لا تحمص', yield: 'بارد 45-50%', models: ['HN426', 'HN480', 'HN500'], hot: false, cold: true },
   { name: 'لوز', oilContent: '50-60%', moisture: '7-9% بارد', dehulling: 'إزالة كاملة', roasting: 'لا تحمص', yield: 'بارد 42-48%', models: ['HN426', 'HN480', 'HN500'], hot: false, cold: true },
   { name: 'جوز الهند', oilContent: '60-70%', moisture: '6-8%', dehulling: 'إزالة القشرة والغلاف', roasting: 'غير مُتاح', yield: 'ساخن 60-65%، بارد 55-60%', models: ['HN426', 'HN480', 'HN500'], hot: true, cold: true },
   { name: 'فول الصويا', oilContent: '18-22%', moisture: '7-9% ساخن', dehulling: '90%+', roasting: '140-160 درجة مئوية، 25-30 دقيقة', yield: 'ساخن 18-22%، بارد 15-18%', models: ['HN480', 'HN500'], hot: true, cold: true },
-  { name: 'بذور الشاي', oilContent: '30-40%', moisture: '5-7% ساخن', dehulling: 'إزالة القشور', roasting: '150-170 درجة مئوية، 25-30 دقيقة', yield: 'ساخن 28-35%', models: ['HN325', 'HN355', 'HN426'], hot: true, cold: false },
+  { name: 'بذور الشاي', oilContent: '30-40%', moisture: '5-7% ساخن', dehulling: 'إزالة القشور', roasting: '150-170 درجة مئوية، 25-30 دقيقة', yield: 'ساخن 28-35%', models: ['HN325', 'HN365', 'HN426'], hot: true, cold: false },
 ];
 
 const preparationSteps = [

@@ -3,7 +3,7 @@ const ogImage = 'https://www.hydoilpress.com/images/og-default.webp';
 
 const modelTable = [
   { model: 'HN325', force: '325 Tons', system: '60 MPa', barrel: '390×800 mm', capacity: '50-80 kg/h', bestFor: 'Soft seeds: Peanut, Sesame, Rapeseed, Soybean', tag: 'BEST SELLER', hardness: 'Soft' },
-  { model: 'HN355', force: '360 Tons', system: '63 MPa', barrel: '390×800 mm', capacity: '80-120 kg/h', bestFor: 'Medium seeds: Tea Seed, Walnut, Almond', tag: '', hardness: 'Medium' },
+  { model: 'HN365', force: '365 Tons', system: 'On request', barrel: 'On request', capacity: 'On request', bestFor: 'Medium seeds: Tea Seed, Walnut, Almond', tag: 'NEW', hardness: 'Medium' },
   { model: 'HN400', force: '400 Tons', system: '63 MPa', barrel: '390×800 mm', capacity: '120-180 kg/h', bestFor: 'Medium-Hard: Flaxseed, Avocado, Premium Oils', tag: '', hardness: 'Medium-Hard' },
   { model: 'HN426', force: '500 Tons', system: '70 MPa', barrel: '390×800 mm', capacity: '180-250 kg/h', bestFor: 'Hard seeds: Coconut, Cold Press, VCO', tag: '', hardness: 'Hard' },
   { model: 'HN500', force: '620 Tons', system: '75 MPa', barrel: '390×800 mm', capacity: '250-350 kg/h', bestFor: 'Industrial: Large scale, super-hard materials', tag: '', hardness: 'Industrial' },
@@ -51,10 +51,10 @@ const advantages = [
 
 const modelRows = [
   { model: 'HN325', featured: true, seed: 'Peanut, Sesame, Rapeseed, Soybean', process: 'Hot / Cold', barrel: 'Φ390 mm', pressure: '≈ 325 Tons', capacity: '≤ 100 kg', note: 'Best-selling flagship model. First choice for peanut. Covers peanut, sesame, rapeseed and other common oil seeds.' },
-  { model: 'HN355 / HN400', featured: false, seed: 'Tea Seed, Walnut, Almond, Apricot', process: 'Cold', barrel: 'Φ390 mm', pressure: '370 / 410 Tons', capacity: '≤ 100 kg', note: 'High-value cold-press oils. Preserves premium quality.' },
+  { model: 'HN365 / HN400', featured: false, seed: 'Tea Seed, Walnut, Almond, Apricot', process: 'Cold', barrel: 'Φ390 mm', pressure: '365 / 410 Tons', capacity: '≤ 100 kg', note: 'High-value cold-press oils. Preserves premium quality.' },
   { model: 'HN426', featured: false, seed: 'Flaxseed, Perilla, Pumpkin Seed, Sunflower', process: 'Cold', barrel: 'Φ390 mm', pressure: '≈ 500 Tons', capacity: '≤ 100 kg', note: 'Full model for hard seeds. Premium cold-press quality.' },
   { model: 'HN480 / HN500', featured: false, seed: 'Coconut, Hemp Seed, Pine Nut', process: 'Cold', barrel: 'Φ390 mm', pressure: '600 / 630 Tons', capacity: '≤ 100 kg', note: 'Flagship for extra-hard materials. Maximum pressure for premium cold-press.' },
-  { model: 'HN325/355 Sesame', featured: false, seed: 'Sesame (Special)', process: 'Cold / Hot', barrel: 'Φ300 mm', pressure: '325 / 355 Tons', capacity: '32.5–50 kg', note: 'Special for sesame oil. Small barrel for concentrated pressure, preserves natural aroma.' },
+  { model: 'HN325/365 Sesame', featured: false, seed: 'Sesame (Special)', process: 'Cold / Hot', barrel: 'Φ300 mm', pressure: '325 / 365 Tons', capacity: '32.5–50 kg', note: 'Special for sesame oil. Small barrel for concentrated pressure, preserves natural aroma.' },
   { model: '300 Type Coconut', featured: false, seed: 'Coconut Milk (Special)', process: 'Cold', barrel: 'Φ600 mm', pressure: '≈ 300 Tons', capacity: '150–200 kg', note: 'Special for coconut milk/water extraction. 304 SS corrosion-resistant barrel.' },
   { model: 'HN325LB', featured: false, seed: 'Oil sludge, fruit & veg dehydration', process: 'Cold', barrel: 'Φ630 mm', pressure: '≈ 320 Tons', capacity: '≈ 300 kg', note: 'Large barrel for high-volume sludge & dehydration.' },
 ];
@@ -71,7 +71,7 @@ const faqs = [
 ];
 
 const countries = ['Afghanistan','Albania','Algeria','Argentina','Australia','Austria','Bangladesh','Belgium','Bolivia','Brazil','Bulgaria','Burkina Faso','Cambodia','Cameroon','Canada','Chad','Chile','China','Colombia','Congo','Costa Rica','Côte d\'Ivoire','Cuba','Czech Republic','Denmark','Dominican Republic','Ecuador','Egypt','El Salvador','Ethiopia','Finland','France','Gabon','Gambia','Georgia','Germany','Ghana','Greece','Guatemala','Guinea','Haiti','Honduras','Hungary','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kuwait','Laos','Lebanon','Liberia','Libya','Madagascar','Malawi','Malaysia','Mali','Mauritania','Mauritius','Mexico','Moldova','Morocco','Mozambique','Myanmar','Nepal','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','Norway','Oman','Pakistan','Palestine','Panama','Paraguay','Peru','Philippines','Poland','Portugal','Qatar','Romania','Russia','Rwanda','Saudi Arabia','Senegal','Serbia','Sierra Leone','Singapore','Slovakia','Slovenia','Somalia','South Africa','South Korea','South Sudan','Spain','Sri Lanka','Sudan','Sweden','Switzerland','Syria','Taiwan','Tanzania','Thailand','Togo','Trinidad and Tobago','Tunisia','Turkey','Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe'];
-const products = ['HN300 - Entry Level 300T','HN325 - Popular 325T','HN325S - Stainless Steel 330T','HN355 - Heavy Duty 360T','HN400 - Commercial 400T','HN426 - Cold Press 500T','HN480B - Ultra Cold Press 560T','HN500 - Ultra High Pressure 620T','Not sure - Need recommendation','Complete Production Line'];
+const products = ['HN300 - Entry Level 300T','HN325 - Popular 325T','HN325S - Stainless Steel 330T','HN365 - Heavy Duty 365T','HN400 - Commercial 400T','HN426 - Cold Press 500T','HN480B - Ultra Cold Press 560T','HN500 - Ultra High Pressure 620T','Not sure - Need recommendation','Complete Production Line'];
 const capacities = ['Small Business (30-80 kg/h)','Commercial (80-180 kg/h)','Industrial (180-350+ kg/h)','Not sure - Need advice'];
 ---
 <!doctype html>
@@ -663,7 +663,7 @@ table.compare-full td.td-featured{background:#fffbeb;font-weight:500;color:#9240
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Real Factory</span>
-      <h2>Visit Our 3,000㎡ Factory — Virtually or In Person</h2>
+      <h2>Visit Our 2,000㎡ Factory — Virtually or In Person</h2>
       <p>Worry we are a middleman? We are not — and we can prove it.</p>
     </div>
     <div class="factory-grid">
@@ -677,7 +677,7 @@ table.compare-full td.td-featured{background:#fffbeb;font-weight:500;color:#9240
         <h3 style="font-size:22px;font-weight:800;margin-bottom:10px">Shandong Haonuo — Qingzhou, Weifang</h3>
         <p style="font-size:14px;color:#64748b;margin-bottom:8px">Founded in 2010 in China's main machinery manufacturing hub. We design, assemble, test, and ship every machine on-site — <strong>never outsourcing core production</strong>.</p>
         <ul class="factory-list">
-          <li>3,000㎡ factory + 1,500㎡ warehouse</li>
+          <li>2,000㎡ factory + 1,500㎡ warehouse</li>
           <li>80+ skilled workers + 12 senior engineers</li>
           <li>Full in-house QC: pressure test, oil yield test, leak test</li>
           <li>From standard machines to fully customized OEM/ODM manufacturing</li>

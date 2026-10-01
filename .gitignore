@@ -39,6 +39,7 @@ client-dev/
 
 # Local-only scripts and assets (not part of website deployment)
 factory-gallery/
+design-preview/
 make_quotation_cn.py
 gsc-submission-plan.txt
 debug.log

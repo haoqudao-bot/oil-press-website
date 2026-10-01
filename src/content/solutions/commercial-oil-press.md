@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Commercial Oil Press Solution
   fr: Solution de Pressage d'Huile Commerciale
@@ -21,7 +21,7 @@ processSteps:
   - step: Seed Processing
     description: Use the Integrated Feeder Crusher Roaster for automated seed preparation
   - step: Hydraulic Pressing
-    description: Press using Heavy Duty (HN355) or Cold Press (HN426) with double-barrel option for higher throughput
+    description: Press using Heavy Duty (HN365) or Cold Press (HN426) with double-barrel option for higher throughput
   - step: Filtration
     description: Filter using the Pneumatic Oil Filter Press for commercial-grade oil
   - step: Packaging
@@ -30,7 +30,7 @@ processStepsFr:
   - step: Traitement des graines
     description: Utiliser le broyeur-chargeur-torpéfacteur intégré pour la préparation automatisée des graines
   - step: Pressage hydraulique
-    description: Presser à l'aide du modèle lourd (HN355) ou à froid (HN426) avec option double fût pour un débit plus élevé
+    description: Presser à l'aide du modèle lourd (HN365) ou à froid (HN426) avec option double fût pour un débit plus élevé
   - step: Filtration
     description: Filtrer à l'aide de la presse filtrante pneumatique pour une huile de qualité commerciale
   - step: Conditionnement
@@ -39,7 +39,7 @@ processStepsAr:
   - step: معالجة البذور
     description: استخدام وحدة التغذية والسحق والتحميص المتكاملة لتحضير البذور آلياً
   - step: الضغط الهيدروليكي
-    description: العصر باستخدام الطراز الثقيل (HN355) أو مضغوط الضغط البارد (HN426) مع خيار البرميل المزدوج لإنتاجية أعلى
+    description: العصر باستخدام الطراز الثقيل (HN365) أو مضغوط الضغط البارد (HN426) مع خيار البرميل المزدوج لإنتاجية أعلى
   - step: الترشيح
     description: الترشيح باستخدام المضغوط الترشيحي الهوائي لزيت بجودة تجارية
   - step: التعبئة
@@ -48,14 +48,14 @@ processStepsId:
   - step: Pengolahan Biji
     description: Gunakan Integrated Feeder Crusher Roaster untuk persiapan biji otomatis
   - step: Press Hidrolik
-    description: Tekan menggunakan Heavy Duty (HN355) atau Cold Press (HN426) dengan opsi barel ganda untuk throughput lebih tinggi
+    description: Tekan menggunakan Heavy Duty (HN365) atau Cold Press (HN426) dengan opsi barel ganda untuk throughput lebih tinggi
   - step: Filtrasi
     description: Saring menggunakan Pneumatic Oil Filter Press untuk minyak kualitas komersial
   - step: Pengemasan
     description: Kemas minyak jadi untuk distribusi grosir atau ritel
 faq:
   - question: What is the best oil press for commercial use?
-    answer: For commercial production, we recommend the Heavy Duty (HN355) or Cold Press (HN426) models with double-barrel configuration. These offer higher pressing force and continuous operation.
+    answer: For commercial production, we recommend the Heavy Duty (HN365) or Cold Press (HN426) models with double-barrel configuration. These offer higher pressing force and continuous operation.
   - question: How much oil can a commercial press produce per day?
     answer: With double-barrel configuration and 8-10 hours of operation, our commercial models can process 2,000-5,000 kg of seeds per day.
   - question: Do you offer complete production lines?
@@ -63,10 +63,10 @@ faq:
   - question: What is the price of a commercial oil press machine?
     answer: Request a quote for your preferred model. We offer factory-direct pricing with no middleman markup.
   - question: Can I get a double-barrel configuration?
-    answer: Yes, both the HN355 and HN426 models are available in double-barrel configurations, effectively doubling your throughput with the same footprint.
+    answer: Yes, both the HN365 and HN426 models are available in double-barrel configurations, effectively doubling your throughput with the same footprint.
 faqFr:
   - question: Quelle est la meilleure presse à huile pour un usage commercial ?
-    answer: Pour la production commerciale, nous recommandons les modèles lourd (HN355) ou à froid (HN426) avec configuration double fût. Ils offrent une force de pressage plus élevée et un fonctionnement continu.
+    answer: Pour la production commerciale, nous recommandons les modèles lourd (HN365) ou à froid (HN426) avec configuration double fût. Ils offrent une force de pressage plus élevée et un fonctionnement continu.
   - question: Combien d'huile une presse commerciale peut-elle produire par jour ?
     answer: Avec une configuration double fût et 8 à 10 heures de fonctionnement, nos modèles commerciaux peuvent traiter 2 000 à 5 000 kg de graines par jour.
   - question: Proposez-vous des lignes de production complètes ?
@@ -74,10 +74,10 @@ faqFr:
   - question: Quel est le prix d'une machine de pressage d'huile commerciale ?
     answer: Demandez un devis pour votre modèle préféré. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Puis-je obtenir une configuration double fût ?
-    answer: Oui, les modèles HN355 و HN426 sont disponibles en configurations double fût, doublant effectivement votre débit avec le même encombrement.
+    answer: Oui, les modèles HN365 و HN426 sont disponibles en configurations double fût, doublant effectivement votre débit avec le même encombrement.
 faqAr:
   - question: ما هو أفضل معصرة للاستخدام التجاري؟
-    answer: للإنتاج التجاري، نوصي بالطرازين الثقيل (HN355) أو مضغوط الضغط البارد (HN426) مع تكوين البرميل المزدوج. توفر هذه قوة ضغط أعلى وتشغيلاً مستمراً.
+    answer: للإنتاج التجاري، نوصي بالطرازين الثقيل (HN365) أو مضغوط الضغط البارد (HN426) مع تكوين البرميل المزدوج. توفر هذه قوة ضغط أعلى وتشغيلاً مستمراً.
   - question: كم زيت يمكن لمعصرة تجارية إنتاجه يومياً؟
     answer: مع تكوين البرميل المزدوج و8-10 ساعات تشغيل، يمكن لطرازاتنا التجارية معالجة 2000-5000 كجم من البذور يومياً.
   - question: هل تقدمون خطوط إنتاج كاملة؟
@@ -85,10 +85,10 @@ faqAr:
   - question: ما هو سعر آلة العصر التجاري؟
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: هل يمكنني الحصول على تكوين برميل مزدوج؟
-    answer: نعم، يتوفر طرازا HN355 و HN426 بتكوينات برميل مزدوج، مما يضاعف إنتاجيتك فعلياً بنفس المساحة.
+    answer: نعم، يتوفر طرازا HN365 و HN426 بتكوينات برميل مزدوج، مما يضاعف إنتاجيتك فعلياً بنفس المساحة.
 faqId:
   - question: Press minyak apa yang direkomendasikan untuk penggunaan komersial?
-    answer: Untuk produksi komersial, kami merekomendasikan model Heavy Duty (HN355) atau Cold Press (HN426) dengan konfigurasi barel ganda. Keduanya menawarkan gaya tekan lebih tinggi dan operasi berkelanjutan.
+    answer: Untuk produksi komersial, kami merekomendasikan model Heavy Duty (HN365) atau Cold Press (HN426) dengan konfigurasi barel ganda. Keduanya menawarkan gaya tekan lebih tinggi dan operasi berkelanjutan.
   - question: Berapa banyak minyak yang bisa dihasilkan press komersial per hari?
     answer: Dengan konfigurasi barel ganda dan 8-10 jam operasi, model komersial kami dapat memproses 2.000-5.000 kg biji per hari.
   - question: Apakah Anda menawarkan lini produksi lengkap?
@@ -96,7 +96,7 @@ faqId:
   - question: Berapa harga mesin press minyak komersial?
     answer: Hubungi kami untuk harga sesuai model pilihan Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Bisakah saya mendapatkan konfigurasi barel ganda?
-    answer: Ya, kedua model HN355 dan HN426 tersedia dalam konfigurasi barel ganda, secara efektif menggandakan throughput Anda dengan jejak yang sama.
+    answer: Ya, kedua model HN365 dan HN426 tersedia dalam konfigurasi barel ganda, secara efektif menggandakan throughput Anda dengan jejak yang sama.
 seoKeywords:
   - commercial oil press machine
   - commercial oil press machine price
@@ -113,7 +113,7 @@ order: 13
 
 For established oil producers and growing businesses, a **commercial oil press machine** must deliver consistent high throughput, reliable performance, and professional-grade oil quality — shift after shift, day after day. Haonuo's commercial oil press solution is engineered for exactly this demand.
 
-Our commercial solution is built around the Heavy Duty (HN355) and Cold Press (HN426) hydraulic oil presses, both available with double-barrel configurations that effectively double your production capacity without doubling your floor space. These **commercial hydraulic oil press** machines deliver the sustained high pressure needed for thorough extraction, achieving residual oil rates below 5% across all common oilseeds.
+Our commercial solution is built around the Heavy Duty (HN365) and Cold Press (HN426) hydraulic oil presses, both available with double-barrel configurations that effectively double your production capacity without doubling your floor space. These **commercial hydraulic oil press** machines deliver the sustained high pressure needed for thorough extraction, achieving residual oil rates below 5% across all common oilseeds.
 
 Whether you are running a dedicated oil production facility, a food processing plant, or a cooperative pressing operation, this solution provides the throughput, reliability, and oil quality your business demands.
 
@@ -138,14 +138,14 @@ Whether you are running a dedicated oil production facility, a food processing p
 
 1. **Seed Receiving & Storage** — Set up proper storage for bulk seed deliveries. Maintain seed quality with dry, ventilated storage conditions.
 2. **Automated Seed Processing** — Use the Integrated Feeder Crusher Roaster for automated cleaning, crushing, and roasting in a single pass. This reduces labor and ensures consistent preparation.
-3. **Hydraulic Pressing** — Feed prepared seeds into the Heavy Duty (HN355) or Cold Press (HN426) with double-barrel configuration. Each barrel processes independently, enabling near-continuous operation.
+3. **Hydraulic Pressing** — Feed prepared seeds into the Heavy Duty (HN365) or Cold Press (HN426) with double-barrel configuration. Each barrel processes independently, enabling near-continuous operation.
 4. **Filtration** — Pass crude oil through the Pneumatic Oil Filter Press for commercial-grade clarity. High-volume filtration matches press throughput.
 5. **Quality Control** — Test oil for acidity, clarity, and sensory characteristics. Implement batch tracking for commercial traceability.
 6. **Packaging** — Package finished oil in bottles, jerry cans, or drums for wholesale and retail distribution. Commercial operations typically use semi-automated filling equipment.
 
 ## Recommended Equipment
 
-- **Heavy Duty Hydraulic Oil Press (HN355)** — The workhorse of commercial oil production. Available in double-barrel configuration for 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) throughput. Handles both cold and hot pressing.
+- **Heavy Duty Hydraulic Oil Press (HN365)** — The workhorse of commercial oil production. Available in double-barrel configuration for 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) throughput. Handles both cold and hot pressing.
 - **Cold Press Hydraulic Oil Press (HN426)** — Specialized for premium cold-pressed oil production. Double-barrel option available. Well-suited for serving health food and organic markets.
 - **Integrated Feeder Crusher Roaster** — All-in-one seed preparation unit that automates cleaning, crushing, and roasting. Reduces labor and ensures consistent preparation for commercial throughput.
 - **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting of various seed types. Essential for hot-pressed oil production.
@@ -157,7 +157,7 @@ Whether you are running a dedicated oil production facility, a food processing p
 Our commercial oil press machines are available in various configurations from single-barrel to double-barrel with complete accessories. We offer factory-direct pricing that saves compared to trading company prices (actual savings vary). Tell us about your production setup and we'll prepare a commercial package quote.
 
 **What is the best oil press for commercial use?**
-For most commercial operations, we recommend the Heavy Duty (HN355) with double-barrel configuration. It offers the best balance of pressing force, throughput, and versatility. If your market demands premium cold-pressed oil, the Cold Press (HN426) is the better choice.
+For most commercial operations, we recommend the Heavy Duty (HN365) with double-barrel configuration. It offers the best balance of pressing force, throughput, and versatility. If your market demands premium cold-pressed oil, the Cold Press (HN426) is the better choice.
 
 **How much oil can a commercial press produce per day?**
 With double-barrel configuration operating 8-10 hours, our commercial models process 2,000-5,000 kg of seeds per day. Actual oil output depends on seed type: approximately 900-2,500 liters of sesame oil, 800-2,000 liters of peanut oil, or 1,100-3,100 liters of sunflower oil per day.
@@ -188,7 +188,7 @@ A double-barrel configuration has two independent pressing chambers that operate
 ## Commercial Application Scenarios
 
 ### Food Processing Factory
-Dedicated oil production lines for food manufacturers who need consistent, high-volume oil supply. Double-barrel configuration ensures you meet daily production targets. Many of our commercial clients in India and Nigeria run 10-12 hour shifts with our HN355 double-barrel systems.
+Dedicated oil production lines for food manufacturers who need consistent, high-volume oil supply. Double-barrel configuration ensures you meet daily production targets. Many of our commercial clients in India and Nigeria run 10-12 hour shifts with our HN365 double-barrel systems.
 
 ### Restaurant & Hotel Chain
 Produce your own premium cooking oil for multiple restaurant locations. Cold-pressed oil from our HN426 adds a "house-pressed" premium label that customers value. One commercial press can supply 5-10 restaurant locations.

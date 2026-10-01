@@ -46,21 +46,21 @@ const keyCharacteristics = [
 
 const modelToSlug = {
   'HN325': 'standard-hydraulic-oil-press',
-  'HN355': 'heavy-duty-hydraulic-oil-press',
+  'HN365': 'hn365-hydraulic-oil-press',
   'HN426': 'cold-press-hydraulic-oil-press',
   'HN480': 'high-pressure-hydraulic-oil-press',
   'HN500': 'ultra-high-pressure-hydraulic-oil-press',
 };
 
 const oilMaterials = [
-  { name: 'Biji wijen', oilContent: '45-55%', moisture: '5-6% panas, 7-8% dingin', dehulling: '98%+', roasting: '160-180°C, 25-30 menit', yield: 'Panas 48-54%, Dingin 42-48%', models: ['HN325', 'HN355', 'HN426'], hot: true, cold: true },
-  { name: 'Kacang tanah', oilContent: '45-50%', moisture: '5-7% panas', dehulling: '95%+', roasting: '165-185°C, 30-35 menit', yield: 'Panas 45-50%, Dingin 38-42%', models: ['HN325', 'HN355', 'HN480'], hot: true, cold: true },
-  { name: 'Biji kolza', oilContent: '40-45%', moisture: '6-8% panas', dehulling: '85-90%', roasting: '150-170°C, 20-25 menit', yield: 'Panas 38-42%, Dingin 32-36%', models: ['HN325', 'HN355', 'HN500'], hot: true, cold: true },
+  { name: 'Biji wijen', oilContent: '45-55%', moisture: '5-6% panas, 7-8% dingin', dehulling: '98%+', roasting: '160-180°C, 25-30 menit', yield: 'Panas 48-54%, Dingin 42-48%', models: ['HN325', 'HN365', 'HN426'], hot: true, cold: true },
+  { name: 'Kacang tanah', oilContent: '45-50%', moisture: '5-7% panas', dehulling: '95%+', roasting: '165-185°C, 30-35 menit', yield: 'Panas 45-50%, Dingin 38-42%', models: ['HN325', 'HN365', 'HN480'], hot: true, cold: true },
+  { name: 'Biji kolza', oilContent: '40-45%', moisture: '6-8% panas', dehulling: '85-90%', roasting: '150-170°C, 20-25 menit', yield: 'Panas 38-42%, Dingin 32-36%', models: ['HN325', 'HN365', 'HN500'], hot: true, cold: true },
   { name: 'Kacang walnut', oilContent: '60-70%', moisture: '7-9% dingin', dehulling: 'Penghapusan lengkap', roasting: 'Tanpa panggang', yield: 'Dingin 45-50%', models: ['HN426', 'HN480', 'HN500'], hot: false, cold: true },
   { name: 'Kacang almond', oilContent: '50-60%', moisture: '7-9% dingin', dehulling: 'Penghapusan lengkap', roasting: 'Tanpa panggang', yield: 'Dingin 42-48%', models: ['HN426', 'HN480', 'HN500'], hot: false, cold: true },
   { name: 'Kelapa', oilContent: '60-70%', moisture: '6-8%', dehulling: 'Hapus cangkang & kulit', roasting: 'Tidak berlaku', yield: 'Panas 60-65%, Dingin 55-60%', models: ['HN426', 'HN480', 'HN500'], hot: true, cold: true },
   { name: 'Biji kedelai', oilContent: '18-22%', moisture: '7-9% panas', dehulling: '90%+', roasting: '140-160°C, 25-30 menit', yield: 'Panas 18-22%, Dingin 15-18%', models: ['HN480', 'HN500'], hot: true, cold: true },
-  { name: 'Biji teh', oilContent: '30-40%', moisture: '5-7% panas', dehulling: 'Hapus cangkang', roasting: '150-170°C, 25-30 menit', yield: 'Panas 28-35%', models: ['HN325', 'HN355', 'HN426'], hot: true, cold: false },
+  { name: 'Biji teh', oilContent: '30-40%', moisture: '5-7% panas', dehulling: 'Hapus cangkang', roasting: '150-170°C, 25-30 menit', yield: 'Panas 28-35%', models: ['HN325', 'HN365', 'HN426'], hot: true, cold: false },
 ];
 
 const preparationSteps = [

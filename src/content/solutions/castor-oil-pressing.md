@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Castor Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Ricin
@@ -138,7 +138,7 @@ This solution supports both cold pressing (for medicinal and cosmetic-grade cast
 
 ## Recommended Equipment
 
-- **Heavy Duty Hydraulic Oil Press (HN355)** — Provides the sustained high pressure needed for thorough castor seed extraction. Suitable for both cold and hot pressing.
+- **Heavy Duty Hydraulic Oil Press (HN365)** — Provides the sustained high pressure needed for thorough castor seed extraction. Suitable for both cold and hot pressing.
 - **Ultra High Pressure Hydraulic Oil Press (HN500)** — Recommended for maximum yield from castor seeds. Achieves competitive residual oil rates.
 - **Thermal Oil Roasting Pan** — Precise temperature control for roasting castor seeds. Essential for hot-pressed industrial-grade oil production.
 - **Pneumatic Oil Filter Press** — Produces clean castor oil suitable for both industrial and medicinal applications.

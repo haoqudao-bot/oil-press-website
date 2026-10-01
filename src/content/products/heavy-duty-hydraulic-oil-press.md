@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Medium Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Moyenne
@@ -39,8 +39,9 @@ specifications:
     value: 1200×1200×2650 / 2100×1200×2650 mm
   - name: Cake Surface Pressure
     value: 30.15 Mpa/cm²
-featured: true
+featured: false
 related:
+  - hn365-hydraulic-oil-press
   - standard-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
 applicableSeeds:

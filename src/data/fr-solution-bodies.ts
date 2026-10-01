@@ -157,7 +157,7 @@ Cette solution prend en charge à la fois le pressage à froid (pour l'huile de 
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Lourde (HN355)** — Fournit la pression élevée soutenue nécessaire pour une extraction approfondie des graines de ricin. Adaptée au pressage à froid et à chaud.
+- **Presse Hydraulique Lourde (HN365)** — Fournit la pression élevée soutenue nécessaire pour une extraction approfondie des graines de ricin. Adaptée au pressage à froid et à chaud.
 - **Presse Hydraulique Ultra Haute Pression (HN500)** — Recommandée pour un rendement maximal des graines de ricin. Atteint des taux d'huile résiduelle compétitifs.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour la torréfaction des graines de ricin. Essentielle pour la production d'huile industrielle pressée à chaud.
 - **Presse Filtrante Pneumatique** — Produit une huile de ricin propre convenant aux applications industrielles et médicinales.
@@ -253,7 +253,7 @@ L'huile de coco vierge correctement filtrée a une durée de conservation de 2 �
 
 Pour les producteurs d'huile établis et les entreprises en croissance, une **machine de pressage d'huile commerciale** doit offrir un débit élevé constant, des performances fiables et une qualité d'huile professionnelle — poste après poste, jour après jour. La solution de pressage d'huile commerciale de Haonuo est conçue exactement pour cette exigence.
 
-Notre solution commerciale est construite autour des presses hydrauliques Lourde (HN355) et à Froid (HN426), toutes deux disponibles en configurations double fût qui doublent effectivement votre capacité de production sans doubler votre surface au sol. Ces **presses hydrauliques à huile commerciales** délivrent la pression élevée soutenue nécessaire pour une extraction approfondie, atteignant des taux d'huile résiduelle inférieurs à 5 % sur toutes les graines oléagineuses courantes.
+Notre solution commerciale est construite autour des presses hydrauliques Lourde (HN365) et à Froid (HN426), toutes deux disponibles en configurations double fût qui doublent effectivement votre capacité de production sans doubler votre surface au sol. Ces **presses hydrauliques à huile commerciales** délivrent la pression élevée soutenue nécessaire pour une extraction approfondie, atteignant des taux d'huile résiduelle inférieurs à 5 % sur toutes les graines oléagineuses courantes.
 
 Que vous dirigiez une installation de production d'huile dédiée, une usine de transformation alimentaire ou une opération de pressage coopérative, cette solution offre le débit, la fiabilité et la qualité d'huile que votre entreprise exige.
 
@@ -278,14 +278,14 @@ Que vous dirigiez une installation de production d'huile dédiée, une usine de 
 
 1. **Réception et Stockage des Graines** — Configurez un stockage approprié pour les livraisons de graines en vrac. Maintenez la qualité des graines avec des conditions de stockage sèches et ventilées.
 2. **Traitement Automatisé des Graines** — Utilisez le broyeur-chargeur-torpéfacteur intégré pour un nettoyage, un broyage et une torréfaction automatisés en un seul passage. Cela réduit la main-d'œuvre et assure une préparation constante.
-3. **Pressage hydraulique** — Introduisez les graines préparées dans la presse Lourde (HN355) ou à Froid (HN426) avec configuration double fût. Chaque fût fonctionne indépendamment, permettant un fonctionnement quasi continu.
+3. **Pressage hydraulique** — Introduisez les graines préparées dans la presse Lourde (HN365) ou à Froid (HN426) avec configuration double fût. Chaque fût fonctionne indépendamment, permettant un fonctionnement quasi continu.
 4. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour une clarté de qualité commerciale. La filtration à haut volume correspond au débit de la presse.
 5. **Contrôle Qualité** — Testez l'huile pour l'acidité, la clarté et les caractéristiques sensorielles. Implémentez le suivi des lots pour la traçabilité commerciale.
 6. **Conditionnement** — Conditionnez l'huile finie dans des bouteilles, des bidons ou des fûts pour la distribution en gros et au détail. Les opérations commerciales utilisent généralement un équipement de remplissage semi-automatisé.
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Lourde (HN355)** — La machine de travail de la production d'huile commerciale. Disponible en configuration double fût pour un débit de 2 000-5 000 kg/jour. Gère le pressage à froid et à chaud.
+- **Presse Hydraulique Lourde (HN365)** — La machine de travail de la production d'huile commerciale. Disponible en configuration double fût pour un débit de 2 000-5 000 kg/jour. Gère le pressage à froid et à chaud.
 - **Presse Hydraulique à Froid (HN426)** — Spécialisée pour la production d'huile pressée à froid premium. Option double fût disponible. Adaptée pour servir les marchés des aliments de santé et biologiques.
 - **Broyeur-Chargeur-Torpéfacteur Intégré** — Unité de préparation de graines tout-en-un qui automatise le nettoyage, le broyage et la torréfaction. Réduit la main-d'œuvre et assure une préparation constante pour un débit commercial.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante de divers types de graines. Essentielle pour la production d'huile pressée à chaud.
@@ -297,7 +297,7 @@ Que vous dirigiez une installation de production d'huile dédiée, une usine de 
 Nos machines de pressage d'huile commerciale sont disponibles dans diverses configurations, du modèle simple fût au modèle double fût avec accessoires complets. Nous offrons des prix directs d'usine qui permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient). Décrivez-nous votre configuration de production et nous préparerons un devis commercial personnalisé.
 
 **Quelle est la meilleure presse à huile pour un usage commercial ?**
-Pour la plupart des opérations commerciales, nous recommandons la Lourde (HN355) avec configuration double fût. Elle offre le meilleur équilibre entre force de pressage, débit et polyvalence. Si votre marché exige une huile pressée à froid premium, la Presse à Froid (HN426) est le meilleur choix.
+Pour la plupart des opérations commerciales, nous recommandons la Lourde (HN365) avec configuration double fût. Elle offre le meilleur équilibre entre force de pressage, débit et polyvalence. Si votre marché exige une huile pressée à froid premium, la Presse à Froid (HN426) est le meilleur choix.
 
 **Combien d'huile une presse commerciale peut-elle produire par jour ?**
 Avec une configuration double fût fonctionnant 8-10 heures, nos modèles commerciaux traitent 2 000-5 000 kg de graines par jour. La production réelle d'huile dépend du type de graine : environ 900-2 500 litres d'huile de sésame, 800-2 000 litres d'huile d'arachide, ou 1 100-3 100 litres d'huile de tournesol par jour.
@@ -328,7 +328,7 @@ Une configuration double fût dispose de deux chambres de pressage indépendante
 ## Scénarios d'Application Commerciale
 
 ### Usine de Transformation Alimentaire
-Lignes de production d'huile dédiées pour les fabricants alimentaires nécessitant un approvisionnement en huile constant et à haut volume. La configuration double fût garantit que vous atteignez vos objectifs de production quotidienne. Beaucoup de nos clients commerciaux en Inde et au Nigeria font fonctionner nos systèmes HN355 double fût sur des postes de 10-12 heures.
+Lignes de production d'huile dédiées pour les fabricants alimentaires nécessitant un approvisionnement en huile constant et à haut volume. La configuration double fût garantit que vous atteignez vos objectifs de production quotidienne. Beaucoup de nos clients commerciaux en Inde et au Nigeria font fonctionner nos systèmes HN365 double fût sur des postes de 10-12 heures.
 
 ### Chaîne de Restaurants et Hôtels
 Produisez votre propre huile de cuisson premium pour plusieurs établissements. L'huile pressée à froid de notre HN426 ajoute un label premium « pressée maison » que les clients apprécient. Une seule presse commerciale peut approvisionner 5 à 10 établissements.
@@ -366,7 +366,7 @@ La solution de pressage d'huile de coton de Haonuo Machinery est conçue pour le
 1. **Écabossage** — Retirez la fibre de coton à l'aide d'une machine d'écabossage. Cette étape est critique — la fibre absorbe 3-5 % de votre rendement en huile.
 2. **Décorticage** — Séparez les coques des amandes. Les coques ne contiennent que 1-2 % d'huile et réduisent le rendement global.
 3. **Aplatissement** — Roulez les amandes en flocons fins (0,3-0,5 mm) pour rompre les parois cellulaires et améliorer la libération de l'huile.
-4. **Pressage hydraulique** — Chargez les flocons dans la presse hydraulique lourde HN355. Appliquez une pression de 63 MPa pendant 35-45 minutes par lot.
+4. **Pressage hydraulique** — Chargez les flocons dans la presse hydraulique lourde HN365. Appliquez une pression de 63 MPa pendant 35-45 minutes par lot.
 5. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique.
 6. **Raffinage** — Étape critique : dégommage, neutralisation, blanchiment et désodorisation pour éliminer le gossypol et les acides gras libres.
 
@@ -374,13 +374,13 @@ La solution de pressage d'huile de coton de Haonuo Machinery est conçue pour le
 
 | Équipement | Modèle | Objectif |
 |----------|-------|---------|
-| Presse Hydraulique Lourde | HN355 (360T) | Pressage primaire des graines de coton |
+| Presse Hydraulique Lourde | HN365 (365T) | Pressage primaire des graines de coton |
 | Presse Filtrante Pneumatique | HN-10SL | Filtration de l'huile brute |
 | Système de Raffinage d'Huile Alimentaire | Sur Mesure | Élimination du gossypol et raffinage |
 
 ## Pourquoi Choisir Haonuo pour la Production d'Huile de Coton
 
-- **Construction robuste** — Notre HN355 est construite pour la nature abrasive et riche en fibres du traitement des graines de coton
+- **Construction robuste** — Notre HN365 est construite pour la nature abrasive et riche en fibres du traitement des graines de coton
 - **Ligne de production complète** — De l'écabossage au raffinage, nous fournissons la chaîne d'équipement complète
 - **Prouvé dans les marchés africains** — Nos machines sont utilisées avec succès au Nigeria, au Ghana et en Tanzanie
 - **Prix abordables** — Les prix directs d'usine rendent la production professionnelle d'huile de coton accessible
@@ -581,7 +581,7 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 ## Équipement Recommandé
 
 - **Presse Hydraulique Standard (HN325)** — Excellente pour la production d'huile de moutarde de petite à moyenne envergure. Adaptée pour l'huile de moutarde Kachi Ghani pressée à froid.
-- **Presse Hydraulique Lourde (HN355)** — Recommandée pour les opérations plus importantes nécessitant un débit quotidien plus élevé.
+- **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes nécessitant un débit quotidien plus élevé.
 - **Cuiseur à Vapeur Électrique de Graines** — Conçu spécifiquement pour la cuisson à la vapeur des graines de moutarde avec un contrôle précis de la température. Essentiel pour la production d'huile de moutarde pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de moutarde propre et prête pour le marché avec un minimum de main-d'œuvre.
 
@@ -705,7 +705,7 @@ Cette solution couvre le processus complet, de la séparation des amandes au pre
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Lourde (HN355)** — Fournit la pression élevée nécessaire pour l'extraction d'huile de palmiste. Recommandée pour les opérations de petite à moyenne envergure.
+- **Presse Hydraulique Lourde (HN365)** — Fournit la pression élevée nécessaire pour l'extraction d'huile de palmiste. Recommandée pour les opérations de petite à moyenne envergure.
 - **Presse Hydraulique Ultra Haute Pression (HN500)** — Délivre une pression maximale pour des taux d'huile résiduelle compétitifs. Adaptée pour les opérations plus importantes recherchant un rendement maximal.
 - **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de palmiste propre avec un minimum de sédiments.
 - **Système de Raffinage d'Huile Alimentaire** — Requis pour produire de l'huile de palmiste RBD de qualité alimentaire. Disponible en capacités de 1 à 100 tonnes/jour.
@@ -767,7 +767,7 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 ## Équipement Recommandé
 
 - **Presse Hydraulique Standard (HN325)** — Adaptée pour la production d'huile d'arachide de petite à moyenne envergure. Le fût de 390 mm de diamètre intérieur traite 100 kg par lot avec un excellent rendement.
-- **Presse Hydraulique Lourde (HN355)** — Recommandée pour les opérations plus importantes. Force de pressage plus élevée et option double fût pour un débit accru.
+- **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes. Force de pressage plus élevée et option double fût pour un débit accru.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante des arachides, essentielle pour l'huile d'arachide aromatique pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile d'arachide claire et prête pour le marché avec un minimum de main-d'œuvre.
 
@@ -887,7 +887,7 @@ Cette solution est conçue spécifiquement pour les conditions de fonctionnement
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Lourde (HN355)** — Le modèle minimum recommandé pour le pressage du beurre de karité. Fournit la pression élevée soutenue nécessaire pour une extraction approfondie.
+- **Presse Hydraulique Lourde (HN365)** — Le modèle minimum recommandé pour le pressage du beurre de karité. Fournit la pression élevée soutenue nécessaire pour une extraction approfondie.
 - **Presse Hydraulique Ultra Haute Pression (HN500)** — Recommandée pour un rendement maximal des noix de karité. Atteint des taux de matières grasses résiduelles compétitifs.
 - **Poêle de Torréfaction Thermique** — Le contrôle précis de la température de torréfaction est critique pour le traitement des noix de karité. Notre poêle de torréfaction assure des résultats constants.
 - **Presse Filtrante Pneumatique** — Produit un beurre de karité propre et pur, exempt de particules de noix et de sédiments.
@@ -1047,7 +1047,7 @@ Cette solution gère à la fois les variétés de graines de tournesol riches en
 ## Équipement Recommandé
 
 - **Presse Hydraulique Standard (HN325)** — Adaptée pour la production d'huile de tournesol de petite à moyenne envergure. Gère efficacement les graines entières et les amandes décortiquées.
-- **Presse Hydraulique Lourde (HN355)** — Recommandée pour les opérations plus importantes avec option double fût pour un débit plus élevé.
+- **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes avec option double fût pour un débit plus élevé.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante. Essentielle pour maximiser le rendement des graines de tournesol.
 - **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile de tournesol claire et premium.
 

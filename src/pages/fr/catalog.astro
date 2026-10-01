@@ -20,7 +20,7 @@ const categoryOrder = [
 
 const hydraulicSortOrder = [
   'HN325',
-  'HN355',
+  'HN365',
   'HN426',
   'HN480',
   'HN500',
@@ -30,6 +30,17 @@ const hydraulicSortOrder = [
   'HN325S',
 ];
 
+/* Catalog-facing model labels (HN355 superseded by HN365) */
+const modelLabelOverrides = {
+  'HN325/355 Sesame': 'HN325/365 Sesame',
+};
+
+/* Catalog-facing text: retired HN355 references display as HN365 (product page unchanged) */
+const catalogText = (s: string) => (s || '').replace(/355/g, '365');
+
+/* Models retired from the catalog page (still available as product pages) */
+const catalogHiddenSlugs = new Set(['heavy-duty-hydraulic-oil-press']);
+
 function getHydraulicSortIndex(product) {
   const model = product.data.model;
   const index = hydraulicSortOrder.indexOf(model);
@@ -37,6 +48,7 @@ function getHydraulicSortIndex(product) {
 }
 
 const categorizedProducts = products.reduce((acc, product) => {
+  if (catalogHiddenSlugs.has(product.slug)) return acc;
   const category = product.data.category || 'other';
   if (!acc[category]) acc[category] = [];
   acc[category].push(product);
@@ -112,19 +124,19 @@ const breadcrumbLd = {
                     <div class="flex justify-between items-start mb-2">
                       <h3 class="font-display text-xl text-charcoal-900">{product.data.title.fr || product.data.title.en}</h3>
                       <span class="bg-amber-100 text-amber-700 text-sm px-2 py-1 rounded font-medium">
-                        {product.data.model}
+                        {modelLabelOverrides[product.data.model] || product.data.model}
                       </span>
                     </div>
                     <p class="text-steel-600 text-sm mb-4 line-clamp-2">
-                      {product.data.description.fr || product.data.description.en}
+                      {catalogText(product.data.description.fr || product.data.description.en)}
                     </p>
                     <div class="border-t border-steel-100 pt-4">
                       <h4 class="font-semibold text-charcoal-900 mb-2 text-sm">Spécifications:</h4>
                       <ul class="text-steel-600 text-xs space-y-1">
                         {specs.slice(0, 4).map(spec => (
                           <li key={spec.name} class="flex justify-between">
-                            <span>{spec.name}:</span>
-                            <span class="font-medium">{spec.value}</span>
+                            <span>{catalogText(spec.name)}:</span>
+                            <span class="font-medium">{catalogText(spec.value)}</span>
                           </li>
                         ))}
                       </ul>

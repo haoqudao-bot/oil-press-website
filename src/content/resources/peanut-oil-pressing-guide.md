@@ -98,7 +98,7 @@ Cold pressing preserves the natural flavor and nutritional properties of peanut 
 ### Equipment Configuration
 
 **Cold Press Line:**
-1. HN355, HN426, HN480, or HN500 Hydraulic Oil Press
+1. HN365, HN426, HN480, or HN500 Hydraulic Oil Press
 2. Precision Temperature Control System
 3. Pneumatic Multi-layer Filter Press
 4. Temperature-Controlled Storage Tanks
@@ -107,7 +107,7 @@ Cold pressing preserves the natural flavor and nutritional properties of peanut 
 
 | Model | Pressing Force | Cycle Time | Best For |
 |-------|---------------|------------|----------|
-| HN355 | 370 tons | ~2 hours/batch | Entry-level cold press |
+| HN365 | 365 tons | ~2 hours/batch | Entry-level cold press |
 | HN426 | 500 tons | ~2 hours/batch | Standard cold press |
 | HN480 | 560 tons | ~2 hours/batch | High-volume cold press |
 | HN500 | 620 tons | ~2 hours/batch | Premium cold press |
