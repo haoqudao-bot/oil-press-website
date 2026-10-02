@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 2 (products 9-16)
+﻿﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 2 (products 9-16)
 export const idProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Ringkasan
 
@@ -184,51 +184,6 @@ Mesin ini adalah pilihan yang tepat untuk menekan susu kelapa dan memproduksi VC
 **Afrika (Nigeria, Kenya, Ghana, Tanzania):** Juga cocok untuk produksi minyak kelapa di wilayah pesisir Afrika. Desain sederhana dan andal memerlukan perawatan minimal — hal penting di wilayah di mana layanan teknis mungkin tidak tersedia dengan mudah.
 
 **Timur Tengah (Arab Saudi, UEA, Mesir):** Tersedia dengan barel baja tahan karat kelas pangan untuk produksi minyak kelapa premium yang memenuhi standar keamanan pangan Dewan Kerjasama Teluk.`,
-
-  'animal-fat-hydraulic-press': `## Ringkasan
-
-Mesin Press Lemak Hewani Hidrolik HN-300AF adalah mesin press hidrolik khusus yang dirancang untuk menekan lemak hewani dan mengeringkan bahan kimia. Dilengkapi barel besar berdiameter 1250 mm dan tinggi 1100 mm, mesin ini menyediakan kapasitas besar yang diperlukan untuk memproses lemak hewani dan bahan curah yang tidak mampu ditangani oleh mesin press minyak standar. Dengan gaya press 300 ton dan tekanan sistem 63 Mpa, HN-300AF mengekstraksi lemak secara efisien dari lemak sapi, lemak unggas, lemak bebek, dan lemak babi, sekaligus berfungsi sebagai mesin press pengering yang bertenaga untuk bahan kimia mentah, tanah putih, residu minyak, dan lumpur air limbah.
-
-Desain barel berukuran besar adalah faktor pembeda utama mesin ini. Sementara mesin press minyak hidrolik standar menggunakan barel berdiameter 390 mm, barel HN-300AF berdiameter 1250 mm mengakomodasi sifat bervolume besar dan berdensitas rendah dari bahan lemak hewani mentah. Setiap dimensi barel dapat disesuaikan untuk memenuhi persyaratan spesifik pelanggan, menjadikannya solusi yang benar-benar serbaguna untuk aplikasi penekanan non-standar.
-
-## Keunggulan Utama
-
-- **Spesialis Lemak Hewani** — Dirancang khusus untuk menekan lemak sapi, lemak unggas, lemak bebek, dan lemak babi secara efisien dengan hasil yang baik.
-- **Kapasitas Barel Besar** — Barel berdiameter 1250 mm × tinggi 1100 mm menangani sifat bervolume besar dan berdensitas rendah dari bahan lemak hewani mentah.
-- **Pengeringan Bahan Kimia** — Juga unggul dalam penekanan dan pengeringan bahan kimia mentah, tanah putih, residu minyak, dan lumpur air limbah.
-- **Barel Dapat Disesuaikan Sepenuhnya** — Diameter dan tinggi barel dapat disesuaikan dengan kebutuhan bahan spesifik dan volume produksi Anda.
-- **Gaya Press 300 Ton** — Daya besar untuk ekstraksi lemak dan pengeringan bahan yang efisien dalam satu siklus.
-- **Aplikasi Ganda** — Satu mesin menangani penekanan lemak hewani, pengeringan kimia, pemrosesan lumpur, dan pemrosesan residu minyak.
-
-## Teknologi Inti
-
-- **Barel Alur Tipe Batang** — Area ekstraksi minyak yang jauh lebih besar dibandingkan barel berlubang, mencapai hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian internal, hasil bervariasi) per batch, kini dalam ukuran ekstra besar untuk lemak hewani.
-- **Sistem Hidrolik Jerman** — Pompa gabungan tekanan ultra-tinggi memberikan tekanan kerja hingga 63 Mpa untuk ekstraksi yang konsisten dan bertenaga.
-- **Pengeluaran Kue Press 4 Kait** — Sistem pengeluaran kue press yang mudah dan andal yang mengurangi waktu henti antar siklus penekanan, bahkan dengan konfigurasi barel besar.
-- **Rangka Baja Karbon Tinggi** — Layanan tahan lama di bawah operasi kontinu. Umur layanan aktual bergantung pada kondisi operasional dan perawatan.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dengan operasi satu tombol. Pelatihan dasar disarankan; kami menyediakan tutorial video dan panduan jarak jauh.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi energi dibandingkan mesin press generasi sebelumnya (penghematan aktual bervariasi tergantung kondisi operasional).
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
-
-## Aplikasi & Bahan yang Sesuai
-
-HN-300AF dirancang untuk aplikasi penekanan khusus yang melampaui biji minyak konvensional:
-
-- **Lemak Hewani**: Lemak sapi, lemak unggas, lemak bebek, lemak babi
-- **Bahan Kimia**: Penekanan dan pengeringan bahan kimia mentah
-- **Aplikasi Industri**: Penekanan tanah putih, penekanan residu minyak, penekanan lumpur hidrokarbon
-- **Lingkungan**: Pengeringan lumpur instalasi pengolahan air limbah
-- **Pengolahan Pangan**: Pengeringan buah dan sayuran
-
-Mesin ini adalah pilihan tepat bagi produsen dan prosesor yang perlu menekan atau mengeringkan bahan non-standar yang memerlukan barel berkapasitas besar.
-
-## Mengapa Memilih Haonuo
-
-- **Harga Langsung Pabrik** — Beli langsung dari produsen dan hilangkan markup perantara. HN-300AF menawarkan kemampuan penekanan khusus lemak hewani dengan harga kompetitif.
-- **Rekayasa Desain Kustom** — Kami memahami bahwa aplikasi penekanan lemak hewani dan bahan kimia memiliki persyaratan unik, dan kami menyesuaikan setiap mesin untuk memenuhi kebutuhan spesifik Anda.
-- **Jaminan Kualitas** — Setiap mesin menjalani pengujian ketat sebelum pengiriman, termasuk uji tekanan hidrolik beban penuh dan verifikasi siklus operasional.
-- **Dukungan Purna Jual** — Dukungan teknis komprehensif, ketersediaan suku cadang, dan bantuan pemecahan masalah jarak jauh untuk menjaga fasilitas Anda berjalan lancar.
-- **Opsi Penyesuaian** — Dimensi barel, panjang langkah, dan parameter lain dapat disesuaikan sepenuhnya dengan kebutuhan bahan dan produksi spesifik Anda.`,
 
   'high-speed-seed-crusher': `## Ringkasan
 

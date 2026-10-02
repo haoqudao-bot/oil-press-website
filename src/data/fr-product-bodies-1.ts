@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿export const frProductBodies1: Record<string, string> = {
+﻿﻿﻿﻿export const frProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## Aperçu
 
 La presse à huile hydraulique standard HN325 traite jusqu'à 100 kg de graines oléagineuses par lot de 40 à 90 minutes selon la matière, ce qui convient aux petites et moyennes huileries pressant environ une tonne de graines par jour. Sa force de pressage de 325 tonnes et sa pression système de 60 Mpa laissent 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines conventionnelles (tests internes, les résultats peuvent varier). Le moteur de 2,2 kW fonctionne sur une alimentation standard 220V/380V, et un à deux opérateurs suffisent.
@@ -377,5 +377,46 @@ La HN500 délivre des taux d'huile résiduelle compétitifs sur tous les types d
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** La HN500 est conçue pour le traitement industriel d'arachide et de beurre de karité. Son cadre robuste et son système hydraulique lourds résistent au fonctionnement continu de 12 heures quotidien courant dans les installations de production africaines.
 
 **Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** La HN500 est notre meilleure recommandation pour la production d'huile de noix et d'huile de noix de haute valeur. La pression ultra-haute extrait un maximum d'huile des noix à coque dure tandis que le système de contrôle de température préserve les délicats acides gras oméga-3.`,
+
+  'hn365-hydraulic-oil-press': `## Aperçu
+
+La presse à huile hydraulique verticale HN365 affiche une force de pressage de 365 tonnes avec une pression superficielle de gâteau de 30 MPa/cm², conçue pour les huileries moyennes et grandes qui ont dépassé les capacités des machines de classe 325. Son agencement vertical à double station fait alterner deux fûts afin que l'un puisse être chargé pendant que l'autre presse, prenant en charge le pressage à chaud et à froid de l'arachide, du sésame, de la noix et d'autres graines oléagineuses par lots de 40 à 90 minutes selon la matière. L'huile résiduelle dans le gâteau se situe généralement à 6–8 % (tests internes, les résultats varient).
+
+La HN365 est notre presse à huile hydraulique verticale haute pression améliorée, développée pour les huileries moyennes et grandes qui ont dépassé une machine de classe 325. Elle affiche une **force de pressage de 365 tonnes** avec une **pression superficielle de gâteau de 30 MPa/cm²**, reposant sur un châssis constitué d'une **tôle d'acier haute résistance de 3 cm**. La force supplémentaire se fait sentir là où elle compte : les graines oléagineuses dures telles que la noix et la camélia sont pressées plus complètement, avec moins d'huile résiduelle dans le gâteau.
+
+La structure verticale économise de l'espace au sol et transmet la force du cylindre directement vers le bas, de sorte que la pression est uniforme, les gâteaux se forment proprement et le châssis conserve sa précision lors de longues séries à haute pression. Un grand **fût à double station** permet à une station de presser pendant que l'autre est chargée, maintenant la machine en activité pendant toute l'équipe.
+
+## Avantages Clés
+
+- **Améliorée par rapport à la HN355** — Châssis vertical renforcé, force de 365 tonnes et hydraulique à cartouche moderne dans la même classe de machine.
+- **365 Tonnes sur les graines dures** — Une pression de gâteau de 30 MPa/cm² presse l'arachide, la noix, la camélia et le lin plus complètement qu'une presse de classe 325.
+- **Châssis en acier haute résistance de 3 cm** — Tôle épaissie avec une charge nominale plus élevée ; la pression verticale se transmet avec presque aucune perte et le châssis ne se déforme pas sous des cycles répétés.
+- **Productivité à double station** — Les fûts alternants suppriment le temps mort de chargement et augmentent la production journalière sans agrandir l'encombrement.
+- **Pressage à chaud et à froid** — La pression, la course et le temps de maintien sont réglables ; basculez entre les modes manuel et semi-automatique avec un seul bouton.
+- **Pièces de contact de qualité alimentaire** — Intérieur du fût et sortie d'huile nickelés ; l'acier au carbone n'entre jamais en contact avec l'huile.
+
+## Construction & Hydraulique
+
+La HN365 utilise un **groupe hydraulique à cartouche intégré** avec très peu de points de suintement. La pression monte en douceur sans choc ni à-coups, et les composants électriques de marque résistent aux interférences pour un fonctionnement stable de 24 heures. Le moteur démarre par un **circuit étoile-triangle (Y-Δ) à tension réduite**, ce qui diminue le courant de démarrage et réduit la contrainte sur les réseaux faibles et les groupes électrogènes.
+
+Le cylindre hydraulique est en **acier allié 27SiMn (GB/T 3077)**, trempé et revenu pour obtenir le bon équilibre entre dureté et ténacité lors de cycles répétés à haute pression. Les pièces d'usure — colonnes, plateau de pression et fût — sont renforcées, et la conception modulaire simplifie le démontage, le nettoyage et la maintenance pour les techniciens locaux.
+
+## Applications
+
+La HN365 couvre une large gamme de cultures oléagineuses tendres et dures :
+
+- **Graines tendres** : arachide, sésame, colza, tournesol, soja
+- **Graines dures** : noix, graine de camélia (thé), lin, amande
+- **Procédés** : huile aromatique pressée à chaud après torréfaction, et huile pressée à froid à basse température pour les marchés haut de gamme
+
+> **Remarque** : Pour une ligne complète, associez la HN365 à un torréfacteur (deux presses par torréfacteur est l'équilibre courant), un broyeur de graines, un élévateur à vis et un filtre à huile. Indiquez-nous votre graine et les tonnes visées par jour, nous confirmerons le nombre de machines.
+
+## Qualité, Livraison & Support
+
+- Chaque presse est **testée sous pleine pression de service et vérifiée pour les fuites** avant l'emballage.
+- Les modèles standard sont normalement prêts sous **15 à 25 jours ouvrés** après acompte ; votre semaine de chargement est confirmée sur la facture proforma.
+- Terme commercial : **FOB Qingdao** — acompte T/T de 30 %, solde de 70 % avant expédition.
+- Manuel en anglais, guidage vidéo en ligne et pièces de rechange en stock sont inclus ; l'installation par un ingénieur à l'étranger est possible, les frais de voyage étant à la charge de l'acheteur.
+- Les certificats d'essai de matériau (**MTC**) pour les composants en 27SiMn et Q690 sont disponibles sur demande.`,
 };
 export default frProductBodies1;

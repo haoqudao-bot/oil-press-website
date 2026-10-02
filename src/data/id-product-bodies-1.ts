@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿// Indonesian product body content - Part 1 (products 1-8)
+﻿﻿﻿﻿// Indonesian product body content - Part 1 (products 1-8)
 export const idProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## Ringkasan
 
@@ -378,4 +378,45 @@ HN500 memberikan tingkat minyak sisa yang kompetitif di semua jenis bahan, menja
 **Afrika (Nigeria, Kenya, Ghana, Tanzania):** HN500 dibangun untuk pemrosesan kacang tanah dan mentega shea skala industri. Rangka kokoh dan sistem hidrolik beratnya menahan operasi 12 jam per hari yang umum di fasilitas produksi Afrika.
 
 **Timur Tengah (Arab Saudi, UEA, Mesir):** HN500 adalah rekomendasi teratas kami untuk produksi minyak walnut dan minyak kacang bernilai tinggi. Tekanan ultra tinggi mengekstraksi minyak maksimum dari kacak bercangkang keras sementara sistem kontrol suhu menjaga asam lemak omega-3 yang sensitif.`,
+
+  'hn365-hydraulic-oil-press': `## Ringkasan
+
+Mesin press minyak hidrolik vertikal HN365 memiliki gaya press 365 ton dengan tekanan permukaan kue press 30 MPa/cm², dirancang untuk pabrik minyak skala menengah dan besar yang telah melampaui kapasitas mesin kelas 325. Tata letak vertikal stasiun gandanya membuat dua barel bekerja bergantian sehingga satu dapat dimuat sementara yang lain menekan, mendukung press panas dan dingin untuk kacang tanah, wijen, kenari, dan biji minyak lainnya dalam batch 40–90 menit tergantung bahannya. Minyak sisa dalam kue press umumnya berada di 6–8% (pengujian internal, hasil bervariasi).
+
+HN365 adalah mesin press minyak hidrolik vertikal tekanan tinggi kami yang ditingkatkan, dikembangkan untuk pabrik minyak skala menengah dan besar yang telah melampaui mesin kelas 325. Memiliki **gaya press 365 ton** dengan **tekanan permukaan kue press 30 MPa/cm²**, dibangun di atas rangka yang terbuat dari **pelat baja kekuatan tinggi 3 cm**. Gaya tambahan ini terlihat di tempat yang penting: biji minyak keras seperti kenari dan biji kamelia tertekan lebih lengkap, dengan sisa minyak yang lebih sedikit di dalam kue press.
+
+Struktur vertikal menghemat ruang lantai dan meneruskan gaya silinder lurus ke bawah, sehingga tekanan merata, kue press terbentuk rapi, dan rangka mempertahankan presisinya selama pengoperasian tekanan tinggi yang lama. **Barel stasiun ganda** yang besar memungkinkan satu stasiun menekan sementara yang lain dimuat, menjaga mesin tetap bekerja sepanjang shift.
+
+## Keunggulan Utama
+
+- **Ditingkatkan dari HN355** — Rangka vertikal yang diperkuat, gaya 365 ton, dan hidrolik kartrid modern dalam kelas mesin yang sama.
+- **365 Ton untuk Biji Keras** — Tekanan kue press 30 MPa/cm² menekan kacang tanah, kenari, kamelia, dan biji rami lebih lengkap dibandingkan mesin press kelas 325.
+- **Rangka Baja Kekuatan Tinggi 3 cm** — Pelat yang dipertebal dengan beban nominal lebih tinggi; tekanan vertikal merambat hampir tanpa kehilangan dan rangka tidak berubah bentuk di bawah siklus berulang.
+- **Produktivitas Stasiun Ganda** — Barel bergantian menghilangkan waktu tunggu saat pemuatan dan meningkatkan output harian tanpa memperluas jejak lantai.
+- **Press Panas dan Dingin** — Tekanan, langkah, dan waktu tahan dapat diatur; beralih antara mode manual dan semi-otomatis dengan satu tombol.
+- **Bagian Kontak Kelas Pangan** — Bagian dalam barel dan saluran keluar minyak berlapis nikel; baja karbon tidak pernah menyentuh minyak.
+
+## Konstruksi & Hidrolik
+
+HN365 menggunakan **paket hidrolik katup kartrid terintegrasi** dengan sangat sedikit titik rembesan. Tekanan naik secara halus tanpa benturan atau getaran, dan komponen listrik bermerek menahan interferensi untuk pengoperasian 24 jam yang stabil. Motor mulai melalui **sirkuit bintang-segitiga (Y-Δ) tegangan tereduksi**, yang memperlembut arus mulai dan mengurangi beban pada jaringan listrik yang lemah dan generator.
+
+Silinder hidrolik terbuat dari **baja paduan 27SiMn (GB/T 3077)**, dikeraskan dan ditemper untuk keseimbangan yang tepat antara kekerasan dan ketangguhan di bawah siklus tekanan tinggi berulang. Bagian yang aus — kolom, pelat tekan, dan barel — diperkuat, dan desain modular menyederhanakan pembongkaran, pembersihan, dan perawatan bagi teknisi lokal.
+
+## Aplikasi
+
+HN365 mencakup berbagai tanaman penghasil minyak yang lunak dan keras:
+
+- **Biji Lunak**: kacang tanah, wijen, biji rapeseed, biji bunga matahari, kedelai
+- **Biji Keras**: kenari, biji kamelia (teh), biji rami, almond
+- **Proses**: minyak aromatis hasil press panas setelah penyangraian, dan minyak press dingin suhu rendah untuk pasar premium
+
+> **Catatan**: Untuk lini lengkap, pasangkan HN365 dengan penyangrai (sekitar dua mesin press per penyangrai adalah keseimbangan umum), penghancur biji, elevator ulir, dan penyaring minyak. Beritahu kami jenis biji dan target tonase harian Anda, dan kami akan mengonfirmasi jumlah mesin.
+
+## Kualitas, Pengiriman & Dukungan
+
+- Setiap mesin press **dijalankan di bawah tekanan kerja penuh dan diperiksa kebocorannya** sebelum dikemas.
+- Model standar biasanya siap dalam **15–25 hari kerja** setelah uang muka; minggu pemuatan Anda dikonfirmasi pada faktur proforma.
+- Syarat perdagangan: **FOB Qingdao** — uang muka T/T 30%, sisa 70% sebelum pengiriman.
+- Termasuk manual bahasa Inggris, panduan video daring, dan suku cadang yang tersedia; instalasi insinyur luar negeri tersedia dengan biaya perjalanan ditanggung pembeli.
+- Sertifikat uji bahan (**MTC**) untuk komponen 27SiMn dan Q690 tersedia berdasarkan permintaan.`,
 };

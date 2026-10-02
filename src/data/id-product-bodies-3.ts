@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 3 (products 17-24)
+﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 3 (products 17-24)
 export const idProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Ringkasan
 
@@ -187,41 +187,6 @@ HN-10SL memisahkan bahan padat dari cair di berbagai industri:
 - **Otomatis untuk Efisiensi** — Siklus otomatis penuh mengurangi biaya tenaga kerja dan memastikan kualitas penyaringan yang konsisten
 - **Jaminan Kualitas** — Setiap unit diuji di bawah tekanan dan diverifikasi fungsionalnya sebelum pengiriman
 - **Dukungan Komprehensif** — Bantuan instalasi, pasokan media penyaring, dan layanan purna jual yang responsif`,
-
-  'cake-wrapping-machine': `## Ringkasan
-
-Mesin Pembungkusan Kue Press HN-CW01 adalah peralatan pendukung penting untuk operasi mesin press minyak hidrolik, dirancang untuk membentuk kue press biji minyak yang konsisten sebelum penekanan. Kue press yang terbungkus dengan benar memastikan distribusi tekanan yang merata selama press hidrolik, yang secara langsung berarti hasil minyak lebih tinggi dan hasil ekstraksi yang lebih konsisten. Tersedia dalam konfigurasi manual dan semi-otomatis, mesin ini memproses 60-80 kue press per jam dan kompatibel dengan kue press biji teh, kue press biji rapeseed, dan semua jenis kue press lainnya untuk mesin press hidrolik.
-
-Pembungkusan kue press adalah langkah pra-pemrosesan kritis yang diabaikan banyak operator. Tanpa kue press yang terbentuk dengan benar, mesin press minyak hidrolik tidak dapat mencapai distribusi tekanan optimal, yang menghasilkan ekstraksi yang tidak merata, hasil minyak lebih rendah, dan pemborosan bahan mentah. HN-CW01 memastikan setiap kue press terbentuk secara seragam dan terbungkus dengan benar, memungkinkan mesin press minyak hidrolik beroperasi pada efisiensi maksimum.
-
-## Keunggulan Utama
-
-- **Peralatan Pendukung Esensial** — Pendamping yang sangat diperlukan untuk operasi mesin press minyak hidrolik apa pun, memastikan hasil press yang baik melalui pembentukan kue press yang konsisten.
-- **Bentuk Kue Press Konsisten** — Menghasilkan kue press secara konsisten untuk distribusi tekanan yang merata selama penekanan, secara langsung meningkatkan hasil minyak.
-- **60-80 Kue Press/Jam** — Aliran yang cukup untuk memenuhi kebutuhan pengumpanan sebagian besar operasi mesin press minyak hidrolik.
-- **Mode Manual dan Semi-Otomatis** — Pilih mode operasi yang sesuai dengan skala produksi dan ketersediaan tenaga kerja Anda.
-- **Kompatibilitas Universal** — Bekerja dengan kue press biji teh, kue press biji rapeseed, kue press kacang tanah, kue press kedelai, dan semua jenis kue press lainnya untuk mesin press hidrolik.
-- **Sederhana dan Andal** — Desain mekanis kokoh dengan bagian bergerak minimal memastikan operasi yang andal dan persyaratan perawatan yang dikurangi.
-
-## Aplikasi & Bahan yang Sesuai
-
-HN-CW01 dirancang untuk membungkus kue press dalam operasi mesin press minyak hidrolik:
-
-- **Kue Press Biji Teh** — Aplikasi utama, produksi kue press biji teh yang konsisten untuk press yang baik
-- **Kue Press Biji Rapeseed** — Pembentukan kue press yang konsisten untuk ekstraksi minyak rapeseed yang efektif
-- **Kue Press Kacang Tanah** — Pembungkusan yang tepat memastikan distribusi tekanan merata untuk hasil minyak kacang tanah yang tinggi
-- **Kue Press Kedelai** — Kue press yang konsisten untuk hasil press kedelai yang stabil
-- **Semua Kue Press Mesin Press Hidrolik** — Kompatibel dengan kue press biji minyak apa pun yang digunakan dalam operasi press hidrolik
-
-Mesin ini adalah pendamping yang cocok untuk pra-pemrosesan mesin press minyak hidrolik apa pun, memastikan bahwa proses penekanan mencapai efisiensi dan hasil minyak yang optimal.
-
-## Mengapa Memilih Haonuo
-
-- **Harga Langsung Pabrik** — Beli langsung dari produsen dan hilangkan markup perantara pada peralatan pendukung esensial ini.
-- **Kompatibilitas Terbukti** — Dirancang dan diuji untuk bekerja lancar dengan seluruh jajaran mesin press minyak hidrolik kami.
-- **Jaminan Kualitas** — Setiap mesin diuji sebelum pengiriman untuk memastikan performa yang andal dan kualitas kue press yang konsisten.
-- **Dukungan Purna Jual** — Dukungan teknis komprehensif, ketersediaan suku cadang, dan panduan operasional untuk menjaga produksi Anda berjalan baik.
-- **Perawatan Sederhana** — Desain kokoh dengan suku cadang yang mudah diperoleh memastikan waktu henti minimal dan biaya kepemilikan rendah.`,
 
   'stainless-steel-oil-refining-equipment': `## Ringkasan
 

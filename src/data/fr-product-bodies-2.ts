@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Aperçu
 
 La presse à froid ultra haute pression HN480B applique 600 tonnes de force de pressage à 65 Mpa de pression système et 48 Mpa/cm² de pression superficielle du gâteau — la force de pressage à froid la plus élevée de la gamme Haonuo — pour les producteurs de noix, d'amandes d'abricot et de yellowhorn. Les lots durent 40 à 90 minutes selon la matière avec 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier), le tout couvert par une garantie d'un an.
@@ -183,51 +183,6 @@ Le fût de 630 mm de diamètre intérieur et 1000 mm de haut offre une capacité
 - **Assurance Qualité** — Chaque machine est testée en conditions de charge complète, y compris la vérification du fonctionnement simultané du double système, avant l'expédition.
 - **Support Après-Vente** — De l'installation et la mise en service à l'optimisation des procédés pour votre matériau spécifique, notre équipe technique fournit un support complet.
 - **Options de Personnalisation** — Les dimensions du fût, la configuration du système hydraulique et les spécifications du cylindre de gâteau supérieur peuvent être personnalisées selon vos exigences de traitement exactes.`,
-
-  'animal-fat-hydraulic-press': `## Aperçu
-
-La Presse Hydraulique pour Graisses Animales HN-300AF est une presse hydraulique spécialisée conçue pour le pressage des graisses animales et la déshydratation de matériaux chimiques. Dotée d'un grand fût de 1250 mm de diamètre et de 1100 mm de hauteur, elle offre la capacité substantielle nécessaire pour traiter les graisses animales et les matériaux volumineux que les presses à huile standard ne peuvent pas traiter. Avec une force de pressage de 300 tonnes et une pression du système de 63 Mpa, la HN-300AF extrait efficacement les graisses du suif de bœuf, de la graisse de volaille, de la graisse de canard et du saindoux de porc, tout en servant également de presse de déshydratation puissante pour les matières premières chimiques, l'argile blanche, les résidus d'huile et les boues d'eaux usées.
-
-La conception du fût surdimensionné est le facteur différenciateur clé de cette machine. Alors que les presses à huile hydrauliques standard utilisent des fûts de 390 mm, le fût de 1250 mm du HN-300AF s'adapte à la nature à grand volume et faible densité des matières premières de graisses animales. Chaque dimension du fût peut être personnalisée pour répondre aux exigences spécifiques des clients, ce qui en fait une solution véritablement polyvalente pour les applications de pressage non standard.
-
-## Avantages Clés
-
-- **Spécialisée pour les Graisses Animales** — Conçue spécifiquement pour le pressage du suif de bœuf, de la graisse de volaille, de la graisse de canard et du saindoux de porc avec une efficacité et un rendement optimaux.
-- **Grande Capacité du Fût** — Le fût de 1250 mm de diamètre × 1100 mm de hauteur traite la nature à grand volume et faible densité des matières premières de graisses animales.
-- **Déshydratation de Matériaux Chimiques** — Excelle également dans le pressage et la déshydratation des matières premières chimiques, de l'argile blanche, des résidus d'huile et des boues d'eaux usées.
-- **Fût Entièrement Personnalisable** — Le diamètre et la hauteur du fût peuvent être adaptés à vos exigences spécifiques en matière de matériaux et à vos volumes de production.
-- **Force de Pressage de 300 Tonnes** — Puissance substantielle pour une extraction efficace des graisses et une déshydratation des matériaux en un seul cycle.
-- **Polyvalence Multi-Applications** — Une seule machine traite le pressage des graisses animales, la déshydratation chimique, le traitement des boues et le traitement des résidus d'huile.
-
-## Technologie de Base
-
-- **Fût à Fentes de Type Barre** — surface d'extraction d'huile significativement plus grande que les fûts percés, atteignant environ 2 à 3 % de rendement supérieur (selon des tests internes, les résultats peuvent varier) par lot, désormais en format surdimensionné pour les graisses animales.
-- **Système Hydraulique Allemand** — La pompe combinée ultra-haute pression délivre une pression de fonctionnement allant jusqu'à 63 Mpa pour une extraction constante et puissante.
-- **Retrait du Gâteau à 4 Crochets** — Système de déchargement du gâteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage, même avec les configurations à grand fût.
-- **Cadre en Acier à Haut Carbone** — Service durable en fonctionnement continu. La durée de vie réelle dépend des conditions de fonctionnement et de l'entretien.
-- **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé avec fonctionnement à un seul bouton. Formation de base recommandée ; nous fournissons des tutoriels vidéo et un accompagnement à distance.
-- **Efficacité Énergétique** — Conçue pour réduire la consommation d'énergie par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
-- **Efficacité de Main-d'Œuvre** — Seuls 1 à 2 opérateurs sont nécessaires, réduisant les besoins en main-d'œuvre par rapport aux méthodes de pressage manuelles.
-
-## Applications & Matériaux Adaptés
-
-La HN-300AF est conçue pour des applications de pressage spécialisées au-delà des graines oléagineuses conventionnelles :
-
-- **Graisses Animales** : Suif de bœuf, graisse de volaille, graisse de canard, saindoux de porc
-- **Matériaux Chimiques** : Pressage et déshydratation de matières premières chimiques
-- **Applications Industrielles** : Pressage d'argile blanche, pressage de résidus d'huile, pressage de boues d'hydrocarbures
-- **Environnemental** : Déshydratation des boues de stations d'épuration
-- **Transformation Alimentaire** : Déshydratation de fruits et légumes
-
-Cette machine est un bon choix pour les producteurs et les transformateurs qui ont besoin de presser ou de déshydrater des matériaux non standard nécessitant un fût à grande capacité.
-
-## Pourquoi Choisir Haonuo
-
-- **Prix Direct Usine** — Achetez directement auprès du fabricant et éliminez les marges des intermédiaires. La HN-300AF offre une capacité de pressage spécialisée des graisses animales à un prix compétitif.
-- **Ingénierie Sur Mesure** — Nous comprenons que les applications de pressage de graisses animales et de matériaux chimiques ont des exigences uniques, et nous personnalisons chaque machine pour répondre à vos besoins spécifiques.
-- **Assurance Qualité** — Chaque machine subit des tests rigoureux avant l'expédition, notamment des tests de pression hydraulique en charge complète et la vérification des cycles de fonctionnement.
-- **Support Après-Vente** — Support technique complet, disponibilité des pièces de rechange et assistance de dépannage à distance pour maintenir le bon fonctionnement de votre installation.
-- **Options de Personnalisation** — Les dimensions du fût, la longueur de course et d'autres paramètres peuvent être entièrement personnalisés pour correspondre à vos exigences spécifiques en matière de matériaux et de production.`,
 
   'high-speed-seed-crusher': `## Aperçu
 

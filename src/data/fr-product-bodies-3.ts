@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Aperçu
 
 Le groupe intégré alimentateur-broyeur-torréfacteur All-in-One combine l'alimentation automatique, le broyage et la torréfaction dans un seul ensemble de machines, permettant aux petites et moyennes huileries de passer de la graine brute à un produit prêt à presser sans équipement de transfert entre les étapes. Il réduit la main-d'œuvre et les pertes de manutention sur les lignes de prétraitement alimentant les presses à huile hydrauliques.
@@ -293,39 +293,5 @@ Principes physiques et chimiques combinés pour l'élimination ciblée des impur
 - **Solutions évolutives** — commencez petit et développez-vous au fur et à mesure que votre marché croît ; la conception modulaire supporte les augmentations futures de capacité
 - **Support technique continu** — optimisation des procédés, dépannage et fourniture de pièces de rechange pour la durée de vie de votre usine`,
 
-  'cake-wrapping-machine': `## Aperçu
-
-La Machine d'Emballage de Tourteau HN-CW01 est un équipement auxiliaire essentiel pour les opérations de presse à huile hydraulique, conçue pour former des tourteaux de graines oléagineuses uniformes avant le pressage. Des tourteaux correctement emballés assurent une distribution uniforme de la pression lors du pressage hydraulique, ce qui se traduit directement par un rendement en huile plus élevé et des résultats d'extraction plus constants. Disponible en configurations manuelle et semi-automatique, cette machine traite 60-80 tourteaux par heure et est compatible avec les tourteaux de graines de thé, les tourteaux de colza et tous les autres types de tourteaux pour presse hydraulique.
-
-L'emballage des tourteaux est une étape de prétraitement critique que de nombreux opérateurs négligent. Sans tourteaux correctement formés, les presses à huile hydrauliques ne peuvent pas atteindre une distribution optimale de la pression, entraînant une extraction inégale, un rendement en huile inférieur et un gaspillage de matière première. Le HN-CW01 garantit que chaque tourteau est uniformément façonné et correctement emballé, permettant à votre presse à huile hydraulique de fonctionner à son efficacité maximale.
-
-## Avantages Clés
-
-- **Équipement Auxiliaire Essentiel** — Un compagnon indispensable pour toute opération de presse à huile hydraulique, garantissant des résultats de pressage optimaux grâce à une formation uniforme des tourteaux.
-- **Forme de Tourteau Uniforme** — Produit des tourteaux de forme constante pour une distribution uniforme de la pression lors du pressage, améliorant directement le rendement en huile.
-- **60-80 Tourteaux/Heure** — Débit suffisant pour répondre aux exigences d'alimentation de la plupart des opérations de presse à huile hydraulique.
-- **Modes Manuel & Semi-Automatique** — Choisissez le mode de fonctionnement qui correspond le mieux à votre échelle de production et à votre disponibilité en main-d'œuvre.
-- **Compatibilité Universelle** — Fonctionne avec les tourteaux de graines de thé, les tourteaux de colza, les tourteaux d'arachide, les tourteaux de soja et tous les autres types de tourteaux pour presse hydraulique.
-- **Simple & Fiable** — Conception mécanique robuste avec un minimum de pièces mobiles garantissant un fonctionnement fiable et des exigences de maintenance réduites.
-
-## Applications & Matériaux Adaptés
-
-Le HN-CW01 est conçu pour l'emballage des tourteaux dans les opérations de presse à huile hydraulique :
-
-- **Tourteau de Graines de Thé** — L'application principale, produisant des tourteaux de graines de thé uniformes pour un pressage optimal
-- **Tourteau de Colza** — Formation constante de tourteaux pour une extraction efficace de l'huile de colza
-- **Tourteau d'Arachide** — Un emballage approprié assure une distribution uniforme de la pression pour un rendement maximal en huile d'arachide
-- **Tourteau de Soja** — Tourteaux uniformes pour des résultats de pressage de soja constants
-- **Tous les Tourteaux de Presse Hydraulique** — Compatible avec tout tourteau de graine oléagineuse utilisé dans les opérations de pressage hydraulique
-
-Cette machine est le compagnon de prétraitement adapté pour toute presse à huile hydraulique, garantissant que votre opération de pressage atteint une efficacité et un rendement en huile maximaux.
-
-## Pourquoi Choisir Haonuo
-
-- **Prix Direct Usine** — Achetez directement au fabricant et éliminez les majorations des intermédiaires sur cet équipement auxiliaire essentiel.
-- **Compatibilité Prouvée** — Conçue et testée pour fonctionner de manière transparente avec notre gamme complète de presses à huile hydrauliques.
-- **Assurance Qualité** — Chaque machine est testée avant expédition pour garantir des performances fiables et une qualité de tourteau constante.
-- **Support Après-Vente** — Support technique complet, disponibilité des pièces de rechange et guidage opérationnel pour maintenir votre production en bon fonctionnement.
-- **Maintenance Simple** — Conception robuste avec des pièces de rechange facilement disponibles garantissant un temps d'arrêt minimal et un faible coût total de possession.`,
 };
 export default frProductBodies3;
