@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -108,6 +108,7 @@ if (faqLd) allLd.push(faqLd);
                     alt={`${product.data.title.en} ${i + 1}`}
                     width="150"
                     height="150"
+                    loading="lazy"
                     class="w-full h-full object-cover"
                     onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20detail%20photo%2C%20professional%20photography&image_size=square'"
                   />
@@ -246,6 +247,7 @@ if (faqLd) allLd.push(faqLd);
                     alt={rp.data.title.en}
                     width="400"
                     height="300"
+                    loading="lazy"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
                   />

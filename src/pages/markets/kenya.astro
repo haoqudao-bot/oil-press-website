@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
@@ -60,7 +60,7 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in Kenya | Haonuo"
+  title="Oil Press Machine in Kenya "
   description="Professional oil press machine for Kenya. Hydraulic cold press for sunflower, peanut, sesame, cottonseed oil. Factory-direct pricing in KES. Shipping to Mombasa 25-30 days. 1-year warranty."
   keywords={['oil press machine Kenya', 'oil press machine price Kenya', 'sunflower oil press Kenya', 'hydraulic oil press Kenya']}
   jsonLd={[breadcrumbLd, faqLd]}
@@ -131,7 +131,7 @@ const faqs = [
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
             >
               <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-                <img
+                <img loading="lazy"
                   src={product.data.images[0]}
                   alt={product.data.title.en}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

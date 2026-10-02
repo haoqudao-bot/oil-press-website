@@ -443,6 +443,13 @@ const breadcrumbLd = {
         form.reset();
         form.classList.add('hidden');
         successDiv.classList.remove('hidden');
+        // GA4 conversion tracking
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            currency: 'USD',
+            value: 1,
+          });
+        }
       } else {
         throw new Error('Submission failed');
       }

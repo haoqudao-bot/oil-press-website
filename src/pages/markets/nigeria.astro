@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
@@ -60,7 +60,7 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in Nigeria | Haonuo"
+  title="Oil Press Machine in Nigeria "
   description="Professional oil press machine for Nigeria. Hydraulic cold press for groundnut, palm kernel, sesame, cottonseed oil. Factory-direct pricing in Naira. Shipping to Lagos 25-30 days. 1-year warranty."
   keywords={['oil press machine in Nigeria', 'groundnut oil machine price in Nigeria', 'palm kernel oil press Nigeria', 'oil press machine Lagos', 'groundnut oil extraction machine Nigeria', 'hydraulic oil press Nigeria']}
   jsonLd={[breadcrumbLd, faqLd]}
@@ -131,7 +131,7 @@ const faqs = [
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
             >
               <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-                <img
+                <img loading="lazy"
                   src={product.data.images[0]}
                   alt={product.data.title.en}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

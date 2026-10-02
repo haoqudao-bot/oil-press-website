@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 const { locale = 'en' } = Astro.props;
 import { getTranslations } from '../i18n';
 const t = getTranslations(locale as any);
@@ -27,6 +27,10 @@ const productLinks = [
   { href: '/products/seed-processing-equipment', label: t.nav.seedProcessing },
   { href: '/products/roasting-steaming-equipment', label: t.nav.roastingSteaming },
   { href: '/products/filtration-refining-equipment', label: t.nav.filtrationRefining },
+  { href: '/products/heavy-duty-hydraulic-oil-press', label: 'Heavy Duty Press' },
+  { href: '/products/cold-press-hydraulic-oil-press', label: 'Cold Press Machine' },
+  { href: '/products/sesame-oil-hydraulic-press', label: 'Sesame Oil Press' },
+  { href: '/products/coconut-oil-hydraulic-press', label: 'Coconut Oil Press' },
 ];
 ---
 

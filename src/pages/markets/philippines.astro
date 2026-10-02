@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
@@ -60,7 +60,7 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in Philippines | Haonuo"
+  title="Oil Press Machine in Philippines "
   description="Professional oil press machine for Philippines. Hydraulic cold press for VCO coconut oil, peanut, moringa oil. Factory-direct pricing. Shipping to Manila 12-16 days. 1-year warranty."
   keywords={['oil press machine Philippines', 'coconut oil press machine Philippines', 'VCO machine Philippines', 'virgin coconut oil machine price Philippines', 'oil press machine Manila', 'hydraulic oil press Philippines']}
   jsonLd={[breadcrumbLd, faqLd]}
@@ -131,7 +131,7 @@ const faqs = [
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
             >
               <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-                <img
+                <img loading="lazy"
                   src={product.data.images[0]}
                   alt={product.data.title.en}
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
