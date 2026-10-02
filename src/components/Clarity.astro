@@ -3,7 +3,7 @@ const CLARITY_ID = 'y148gpq3n6';
 ---
 
 <script is:inline>
-  // GDPR/UK GDPR：仅在访客点击 Accept（或此前已同意）后才加载 Clarity
+  // GDPR/UK GDPR: load Clarity only after visitor clicks Accept (or previously consented)
   (function() {
     function hasConsent() {
       return document.cookie.split(';').some(function(row) {

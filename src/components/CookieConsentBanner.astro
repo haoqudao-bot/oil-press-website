@@ -69,11 +69,11 @@ const text = getCookieText();
     function setConsent(accepted) {
       document.cookie = cookieName + '=' + (accepted ? 'accepted' : 'rejected') + '; expires=' + new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString() + '; path=/';
       banner.style.display = 'none';
-      // 通知 GA/Clarity 等第三方脚本：仅同意后才允许加载
+      // Notify GA/Clarity and other third-party scripts: only load after consent
       document.dispatchEvent(new CustomEvent('haonuo-consent-changed', { detail: accepted }));
     }
 
-    // 已做出选择则立即隐藏（脚本紧跟横幅节点，解析即执行，避免闪烁）
+    // Hide immediately if user already chose (inline script runs right after the banner node to avoid flicker)
     var consent = document.cookie.split(';').some(function(row) {
       return row.trim().indexOf(cookieName + '=') === 0;
     });
