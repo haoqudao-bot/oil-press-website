@@ -20,6 +20,7 @@ Site languages: English (/), French (/fr), Arabic (/ar), Indonesian (/id)
 ## Key Pages
 
 - [About Us](https://www.hydoilpress.com/about): Company profile, factory details, manufacturing capability
+- [Model Comparison](https://www.hydoilpress.com/products/model-comparison): Buyer decision matrix — compare HN300–HN500 models by seed type, daily output and budget tier
 - [Solutions by Oil Seed](https://www.hydoilpress.com/solutions): Pressing solutions for 50+ oil seeds
 - [Palm Oil Pressing Solution](https://www.hydoilpress.com/solutions/palm-oil-pressing): Complete palm oil pressing solution with digester integration, low-temperature pressing for carotene preservation
 - [ROI Calculator](https://www.hydoilpress.com/roi-calculator): Interactive tool to estimate payback period of a hydraulic oil press
@@ -30,7 +31,7 @@ Site languages: English (/), French (/fr), Arabic (/ar), Indonesian (/id)
 ## Facts
 
 - Founded: 2010
-- Facility: 3,000 m² factory in Qingzhou, Weifang, Shandong, China
+- Facility: 2,000 m² owned workshop in Qingzhou, Weifang, Shandong, China
 - Batch capacity: 100 kg per batch (hydraulic oil press)
 - Pressing time: 40-90 minutes per batch, varies by seed type
 - Supported seeds: 50+ oil seeds including coconut, sesame, groundnut, mustard, tea seed, walnut

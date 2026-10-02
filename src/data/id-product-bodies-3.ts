@@ -2,6 +2,8 @@
 export const idProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Ringkasan
 
+Unit terintegrasi feeder crusher roaster All-in-One menggabungkan pengumpanan otomatis, penghancuran, dan penyangraian dalam satu grup mesin, sehingga pabrik minyak skala kecil-menengah dapat memindahkan biji mentah menjadi hasil siap press tanpa peralatan transfer antar tahap. Mengurangi kebutuhan tenaga kerja dan kehilangan bahan pada lini pra-pemrosesan yang memasok mesin press hidrolik.
+
 Unit Pengumpan, Penggiling, dan Penggoreng Terintegrasi adalah unit pemrosesan komprehensif yang menggabungkan pengumpanan otomatis, penggilingan, dan penggorengan dalam satu rangkaian mesin — menghilangkan kebutuhan untuk memindahkan bahan antar peralatan terpisah. Dirancang untuk operasi press minyak skala kecil hingga menengah, sistem terintegrasi ini menyederhanakan lini produksi Anda, dari biji mentah masuk hingga keluar dalam keadaan digoreng dan siap, dalam aliran kontinu.
 
 Dengan mengintegrasikan tiga langkah pra-pemrosesan penting dalam satu ruang kompak, mesin ini mengurangi kebutuhan tenaga kerja, mengurangi kehilangan selama penanganan bahan, dan meningkatkan efisiensi produksi secara keseluruhan secara signifikan. Konfigurasi khusus tersedia untuk menyesuaikan dengan jenis biji spesifik Anda dan persyaratan aliran.
@@ -37,6 +39,8 @@ Sangat cocok untuk bengkel press minyak skala kecil hingga menengah, fasilitas p
 - **Skalabilitas Modular** — Mulai dengan unit terintegrasi dan tambahkan kapasitas seiring pertumbuhan bisnis Anda`,
 
   'electric-seed-steamer': `## Ringkasan
+
+Pengukus biji listrik 27 KW mengkondisikan hingga 100 kg biji minyak per batch dengan siklus uap penuh sekitar 20 menit, dibangun untuk bengkel penekanan minyak yang membutuhkan pengukusan biji konsisten sebelum penekanan. Tangki air ganda baja tahan karat 304 dan perpipaan food-grade-nya cocok untuk produksi minyak nabati, dan unit ini bergaransi 1 tahun.
 
 Pengukus Biji Listrik 27 KW adalah model yang diperbarui sepenuhnya dilengkapi dengan desain tangki air ganda tebal — tangki utama untuk pemanasan dan tangki sekunder menggunakan injeksi air bertekanan negatif untuk operasi yang aman dan andal. Kedua tangki dan semua pipa penhubung terbuat dari baja tahan karat 304 untuk resistensi korosi dan keamanan pangan. Dengan kapasitas maksimum 100 kg per batch dan siklus pengukusan lengkap dalam 20 menit, pengukus ini memberikan pengondisian biji yang efektif dan konsisten untuk operasi press minyak.
 
@@ -76,6 +80,8 @@ Cocok untuk bengkel press minyak skala kecil hingga menengah, terutama yang memi
 
   'wood-fired-seed-steamer': `## Ringkasan
 
+Pengukus biji berbahan bakar kayu 60 Type mengukus biji minyak menggunakan batu bara, kayu, atau gas tanpa memerlukan listrik untuk pemanasan, menjadikannya praktis untuk bengkel minyak terpencil atau di luar jaringan listrik yang pasokannya tidak stabil. Bodi baja karbon Q355B dengan saluran pengumpul panas terintegrasi mengurangi konsumsi bahan bakar dibanding tungku sederhana, dan unit ini bergaransi 1 tahun.
+
 Pengukus Biji Kayu Model 60 adalah solusi pengukusan serbaguna dan multi-bahan bakar yang dibangun berdasarkan badan kompor baja karbon Q355B yang tahan lama. Dirancang untuk beroperasi dengan batu bara, kayu bakar, atau gas, pengukus ini tidak memerlukan catu daya listrik untuk proses pemanasan — menjadikannya pilihan yang tepat untuk lokasi terpencil, bengkel off-grid, atau fasilitas dengan catu daya listrik yang tidak andal.
 
 Bagian dalam kompor memiliki saluran pengumpulan panas terintegrasi yang memaksimalkan permukaan pemanasan, secara signifikan mengurangi konsumsi bahan bakar dibandingkan desain pembakaran sederhana. Tangki air terintegrasi dengan lubang pengurasan ditempatkan di dekat dasar kompor untuk operasi dan perawatan yang praktis. Ketel pengukusan terbuat dari baja tahan karat 304 dengan finishing cermin, memastikan keamanan pangan dan kemudahan pembersihan.
@@ -112,6 +118,8 @@ Sangat cocok untuk bengkel press minyak pedesaan, unit pemrosesan bergerak, dan 
 
   'thermal-oil-roasting-pan': `## Ringkasan
 
+Wajan penyangrai minyak termal menggunakan pemanas listrik minyak termal untuk menyangrai biji minyak secara merata di seluruh permukaan wajan, cocok untuk pabrik minyak yang membutuhkan penyangraian konsisten dan berulang sebelum penekanan. Dasar wajan berlapis ganda yang diperkuat, penggerak motor-reducer, dan insulasi wol batuan berbalut stainless steel mengurangi kehilangan panas, dan wajan ini bergaransi 1 tahun.
+
 Penggoreng Minyak Termal adalah sistem penggorengan biji profesional yang menggunakan pemanasan listrik minyak termal untuk distribusi panas yang sangat konsisten dan operasi yang hemat energi. Dilengkapi dengan dasar ketel berlapis ganda yang diperkuat, motor pengurang kecepatan terintegrasi, dan isolasi wol batu yang diselimuti baja tahan karat, penggoreng ini memberikan hasil penggorengan yang konsisten dan berkualitas tinggi sambil meminimalkan kehilangan energi.
 
 Pemanasan minyak termal memberikan keunggulan utama dibandingkan metode pemanasan langsung: distribusi panas yang lebih merata di seluruh permukaan ketel dan pendinginan yang lebih lambat saat pemanasan dihentikan, yang berarti penghematan energi yang signifikan dalam lini produksi panjang. Lemari kontrol listrik opsional menambahkan fungsi mulai/berhenti otomatis untuk pemanasan, kontrol rotasi, dan alarm untuk operasi tanpa pengawasan.
@@ -145,6 +153,8 @@ Penggoreng ini dirancang untuk mengondisikan biji sebelum penekanan di berbagai 
 - **Dukungan Teknis Komprehensif** — Bantuan instalasi, pelatihan operator, dan layanan purna jual yang responsif`,
 
   'pneumatic-oil-filter-press': `## Ringkasan
+
+Filter press minyak pneumatik HN-10SL menyaring minyak mentah melalui 20 lapisan pelat kertas saring dengan luas filtrasi 10 m² pada tekanan kerja 0,2–0,3 Mpa, beroperasi otomatis 24 jam dengan tekanan konstan untuk pabrik minyak yang membutuhkan klarifikasi berkelanjutan. Dibangun dari baja tahan karat 304L food-grade dengan konsumsi 1,1–2,2 kW, menangani minyak pada 15–170 °C, dan bergaransi 1 tahun.
 
 Mesin Press Filter Minyak Pneumatik HN-10SL adalah sistem penyaringan otomatis penuh dan dikontrol secara listrik, dibangun seluruhnya dari baja tahan karat 304L kelas pangan untuk resistensi asam dan alkali yang unggul. Dilengkapi dengan 20 lapisan pelat filter dengan total 10 m² area penyaringan, mesin press filter ini memberikan kualitas penyaringan yang sangat baik dengan kehilangan cairan minimal — dan mampu beroperasi secara kontinu 24 jam dengan tekanan otomatis konstan.
 
@@ -215,6 +225,8 @@ Mesin ini adalah pendamping yang cocok untuk pra-pemrosesan mesin press minyak h
 
   'stainless-steel-oil-refining-equipment': `## Ringkasan
 
+Lini peralatan pemurnian minyak stainless steel Haonuo memproses 1 hingga 50 ton minyak mentah per hari menjadi minyak RBD, dengan semua permukaan kontak minyak dari baja tahan karat food-grade bagi produsen yang harus memenuhi persyaratan ketat higiene dan kepatuhan ekspor. Setiap sistem dikonfigurasi sesuai kapasitas pembeli dan jenis minyak mentahnya, serta dilindungi garansi 1 tahun.
+
 Peralatan Pemurnian Minyak Baja Tahan Karat Haonuo adalah solusi pemurnian kelas pangan yang dibangun seluruhnya dari baja tahan karat untuk semua permukaan kontak minyak. Dirancang untuk produsen yang menuntut standar kebersihan dan kepatuhan regulasi tertinggi, sistem ini mengubah minyak mentah menjadi minyak RBD premium menggunakan bahan kontak pangan yang mematuhi FDA, konsisten dengan standar keamanan pangan internasional termasuk regulasi UE. Catatan: Mesin kami belum mendapat sertifikasi atau persetujuan terpisah dari FDA. Tersedia dalam kapasitas dari 1 hingga 50 ton per hari, setiap sistem dirancang sesuai pesanan untuk menyesuaikan dengan jenis minyak mentah spesifik dan persyaratan produk Anda.
 
 Konstruksi baja tahan karat menghilangkan risiko kontaminasi logam, korosi, dan karat yang dapat membahayakan kualitas dan keamanan minyak. Ini menjadikan sistem cocok untuk merek minyak premium, sertifikasi organik, dan pasar ekspor di mana kepatuhan keamanan pangan tidak dapat dinegosiasi. Seluruh proses pemurnian — dari degumming hingga deodorisasi — berlangsung dalam tangki baja tahan karat higenis, memastikan minyak akhir Anda memenuhi standar kualitas paling ketat.
@@ -256,6 +268,8 @@ Sistem ini adalah pilihan yang cocok bagi produsen yang harus menghasilkan minya
 - **Dukungan Teknis Berkelanjutan** — Optimalisasi proses, pemecahan masalah, dan pasokan suku cadang sepanjang umur pabrik Anda.`,
 
   'edible-oil-refining-system': `## Ringkasan
+
+Sistem pemurnian minyak nabati Haonuo memurnikan 1 hingga 100 ton minyak mentah per hari menjadi minyak RBD siap pasar, menghilangkan gosipol, fosfolipid, dan impuritas lain sambil mempertahankan tokoferol dan sterol. Kapasitas dan tahap proses dikonfigurasi per proyek, cocok untuk pabrik minyak dari pemurni batch kecil hingga pabrik industri, dengan garansi 1 tahun.
 
 Sistem Pemurnian Minyak Pangan Haonuo adalah solusi pemurnian yang dapat disesuaikan sepenuhnya, dirancang untuk mengubah minyak mentah menjadi minyak RBD berkualitas tinggi yang siap pasar. Kotoran dalam minyak mentah — termasuk gossypol, fosfolipid, protein, gula, zat lendir, mineral, dan kelembapan — tidak hanya menurunkan nilai gizi dan membahayakan penyimpanan aman, tetapi juga menciptakan kesulitan serius dalam pemrosesan lanjutan. Sistem ini menghilangkan kotoran berbahaya sambil mempertahankan komponen bermanfaat seperti tokoferol (vitamin E) dan sterol.
 

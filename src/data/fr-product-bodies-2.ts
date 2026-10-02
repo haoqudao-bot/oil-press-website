@@ -1,6 +1,8 @@
 ﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Aperçu
 
+La presse à froid ultra haute pression HN480B applique 600 tonnes de force de pressage à 65 Mpa de pression système et 48 Mpa/cm² de pression superficielle du gâteau — la force de pressage à froid la plus élevée de la gamme Haonuo — pour les producteurs de noix, d'amandes d'abricot et de yellowhorn. Les lots durent 40 à 90 minutes selon la matière avec 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier), le tout couvert par une garantie d'un an.
+
 La HN480B Presse à Froid Ultra Haute Pression est notre presse à huile hydraulique à froid la plus avancée, délivrant une force de pressage massive de 600 tonnes avec une pression du système de 65 Mpa et une pression superficielle du gâteau de 48 Mpa/cm². Spécialement optimisée pour le pressage des noix avec une solution complète de pressage des noix, elle réduit considérablement le temps de pressage tout en maximisant le rendement en huile. Il s'agit de la force de pressage à froid la plus élevée de notre gamme, conçue spécifiquement pour les producteurs qui exigent le summum en matière de performance de pressage à froid.
 
 La HN480B est dotée d'un diamètre extérieur de cylindre de 480 mm avec un diamètre intérieur de piston de 360 mm, générant la pression extrême nécessaire pour presser à froid les noix, les amandes, les pignons de pin et autres matériaux à coque dure en un seul cycle. Notre solution de pressage des noix exclusive garantit que les cerneaux de noix et les noix en coque sont traités efficacement, réduisant le temps de pressage et augmentant le rendement en huile par rapport aux méthodes conventionnelles de pressage à froid.
@@ -45,6 +47,8 @@ La HN480B offre le rendement en huile le plus élevé pour les matériaux de pre
 
   'sesame-oil-hydraulic-press': `## Aperçu
 
+La presse à huile hydraulique pour sésame HN325/355 contient 32,5 kg de sésame par lot (jusqu'à 50 kg avec pré-compression) et termine un cycle de pressage à chaud en 30 à 40 minutes environ, convenant aux huileries de sésame et aux producteurs de tahini travaillant par lots quotidiens petits à moyens. Son fût plus étroit de 300 mm concentre la force à 47–51 Mpa/cm² de pression superficielle du gâteau, laissant 6 à 8 % d'huile résiduelle (tests internes, les résultats peuvent varier). Le moteur de 2,2 kW fonctionne sur alimentation standard 220V/380V.
+
 La Presse Hydraulique à Huile de Sésame est une presse à huile hydraulique conçue spécifiquement pour l'extraction de l'huile de sésame. Le pressage du sésame exige un contrôle strict de la température — pour éviter les pertes de chaleur et la réduction du rendement en huile, le pressage doit être effectué dans le plus court délai possible. Ce modèle associe le cylindre HN325 ou HN355 à un fût plus étroit de 300 mm de diamètre intérieur, concentrant la force de pressage pour atteindre une pression superficielle du gâteau de 47 à 51 Mpa/cm², permettant au sésame d'être entièrement pressé en un seul cycle rapide.
 
 Le fût de 300 mm de diamètre intérieur et 800 mm de haut contient 32,5 kg de sésame par lot. Avec une pré-compression pour créer un espace supplémentaire, un seul lot peut traiter jusqu'à 50 kg de sésame — nettement plus que les presses hydrauliques à huile de sésame de style coréen, offrant une capacité supérieure et un meilleur rapport qualité-prix.
@@ -85,6 +89,8 @@ Le fût de 300 mm de diamètre intérieur et 800 mm de haut contient 32,5 kg de 
 - **Options de Personnalisation** — Les dimensions du fût et les paramètres de pressage peuvent être ajustés pour correspondre à votre variété spécifique de sésame et au rendement en huile souhaité.`,
 
   'coconut-oil-hydraulic-press': `## Aperçu
+
+La presse hydraulique 300 Type Coconut applique 300 tonnes de force de pressage à travers un fût de 600 mm de diamètre revêtu d'acier inoxydable 304 de qualité alimentaire, conçue pour le pressage du lait de coco et la production d'huile de coco vierge là où la résistance à la corrosion compte. Elle sert les transformateurs de coco des régions tropicales ; le moteur de 2,2 kW maintient une demande électrique modeste et la machine est garantie un an.
 
 La Presse Hydraulique à Huile de Coco / VCO est un modèle de type 300 spécialement personnalisé pour le traitement de la coco et d'autres applications sensibles à la corrosion. Le fût, le bac à huile et l'ensemble de l'extérieur de la machine — y compris la tête de pressage — sont gainés d'acier inoxydable 304 de qualité alimentaire, offrant une protection complète contre les effets corrosifs du jus de coco et de liquides similaires.
 
@@ -132,6 +138,8 @@ Cette machine est le choix de prédilection pour le pressage du jus de coco et l
 **Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Disponible avec fût en acier inoxydable de qualité alimentaire pour la production d'huile de coco premium répondant aux normes de sécurité alimentaire du CCG.`,
 
   'large-barrel-hydraulic-oil-press': `## Aperçu
+
+La presse à huile hydraulique HN325 Large Barrel utilise un fût de 630 mm de diamètre intérieur et 1000 mm de hauteur avec deux systèmes hydrauliques indépendants, de sorte qu'un fût presse pendant que l'autre est déchargé et rechargé — conçue pour les huileries qui privilégient le volume par lot à la force de pressage maximale. Le temps de lot est de 40 à 90 minutes selon la matière, avec 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines (tests internes, les résultats peuvent varier).
 
 La Presse à Huile Hydraulique à Grand Fût est une version à capacité élargie du modèle à cylindre HN325, conçue pour les applications qui exigent un volume de traitement par lot élevé plutôt qu'une force de pressage extrême. Équipée de deux systèmes hydrauliques indépendants, chaque fût fonctionne de manière autonome — le cylindre principal presse un fût tandis que le cylindre de gâteau supérieur de l'autre fût permet le déchargement et le rechargement simultanés. Cette conception à double système élimine les temps morts et maximise votre débit quotidien.
 
@@ -223,6 +231,8 @@ Cette machine est un bon choix pour les producteurs et les transformateurs qui o
 
   'high-speed-seed-crusher': `## Aperçu
 
+Le broyeur de graines à grande vitesse 220 Type traite 750 kg de graines oléagineuses par heure avec un moteur de 11 kW à 1460 tr/min, au service des huileries qui doivent broyer les graines à coque dure avant le pressage hydraulique. Des grilles interchangeables permettent à l'opérateur de régler la taille des particules en sortie, jusqu'au niveau micronique avec la grille la plus fine, selon la recette de pressage.
+
 Le Broyeur de Graines à Grande Vitesse 220 Type est une machine de prétraitement de graines oléagineuses de qualité professionnelle construite autour d'une conception structurelle de type volant d'inertie. Conçu pour le broyage des graines à coque dure, il dispose de tamis interchangeables permettant aux opérateurs d'ajuster la taille des particules en sortie à la demande — avec le tamis le plus fin capable de produire des particules de taille micron. Ce broyeur est une étape de prétraitement essentielle avant le pressage hydraulique de l'huile, garantissant un rendement optimal en huile à partir de matières premières dures et à coque dure.
 
 Avec un débit de 750 kg/h et un moteur robuste de 11 KW fonctionnant à 1460 tr/min, cette machine offre des performances de broyage constantes et à grand volume pour les opérations commerciales de pressage d'huile de toutes tailles.
@@ -256,6 +266,8 @@ Ce broyeur est la solution de prétraitement bien adaptée avant le pressage hyd
 - **Garantie de pièces de rechange** — tamis de remplacement et pièces d'usure disponibles pour une livraison rapide`,
 
   'industrial-seed-crusher': `## Aperçu
+
+Le broyeur industriel de tourteaux 370 Type réduit en poudre fine les tourteaux de pressage — sésame, arachide, colza et résidus similaires — avec un moteur de 18,5 kW à 3260 tr/min. Il est conçu pour les huileries et les fabricants d'aliments animaux qui transforment les coproduits de pressage en aliments pour animaux ou autres produits à valeur ajoutée.
 
 Le Broyeur de Graines Industriel 370 Type est la version améliorée à haute capacité de notre éprouvé 220 Type — offrant 2,6× le débit de traitement pour les opérations de broyage de graines oléagineuses à grande échelle. Avec un puissant moteur de 18,5 KW et une vitesse de rotation de 3260 tr/min, ce broyeur de qualité industrielle traite les mêmes matériaux à coque dure que le 220 Type mais à un volume nettement supérieur, ce qui en fait le choix de prédilection pour les installations commerciales et industrielles de pressage d'huile.
 

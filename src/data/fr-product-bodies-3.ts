@@ -1,6 +1,8 @@
 ﻿﻿﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Aperçu
 
+Le groupe intégré alimentateur-broyeur-torréfacteur All-in-One combine l'alimentation automatique, le broyage et la torréfaction dans un seul ensemble de machines, permettant aux petites et moyennes huileries de passer de la graine brute à un produit prêt à presser sans équipement de transfert entre les étapes. Il réduit la main-d'œuvre et les pertes de manutention sur les lignes de prétraitement alimentant les presses à huile hydrauliques.
+
 L'Unité Intégrée d'Alimentation, de Broyage et de Torréfaction est une unité de traitement tout-en-un qui combine l'alimentation automatique, le broyage et la torréfaction en un seul groupe de machines — éliminant le besoin de transfert de matériaux entre des équipements séparés. Conçue pour les opérations de pressage d'huile de petite à moyenne taille, ce système intégré rationalise votre ligne de production, de l'entrée des graines brutes à la sortie prête à torréfier, en un flux continu.
 
 En consolidant trois étapes essentielles de prétraitement en un seul espace compact, cette machine réduit les besoins en main-d'œuvre, minimise les pertes lors de la manipulation des matériaux et améliore considérablement l'efficacité globale de la production. Des configurations personnalisées sont disponibles pour correspondre à vos types de graines spécifiques et à vos exigences de débit.
@@ -36,6 +38,8 @@ Particulièrement adapté aux ateliers de pressage d'huile de petite à moyenne 
 - **Extensibilité modulaire** — commencez avec l'unité intégrée et ajoutez de la capacité au fur et à mesure que votre entreprise croît`,
 
   'electric-seed-steamer': `## Aperçu
+
+Le cuiseur-vapeur électrique de graines 27 KW conditionne jusqu'à 100 kg de graines oléagineuses par lot avec un cycle de pleine vapeur d'environ 20 minutes, conçu pour les ateliers de pressage qui exigent un traitement vapeur régulier avant le pressage. Ses doubles réservoirs d'eau en acier inoxydable 304 et sa tuyauterie de qualité alimentaire conviennent à la production d'huile comestible, et l'appareil est garanti un an.
 
 Le Cuisseur Vapeur Électrique 27 KW est un modèle entièrement mis à niveau doté d'une conception à double cuve d'eau épaissie — la cuve principale assure le chauffage tandis que la cuve auxiliaire utilise l'injection d'eau à pression négative pour un fonctionnement sûr et fiable. Les deux cuves et tous les tuyaux de raccordement sont construits en acier inoxydable 304 pour la résistance à la corrosion et la sécurité alimentaire. Avec une capacité maximale de 100 kg par lot et un cycle de vapeur complète de 20 minutes, ce cuisseur vapeur offre un conditionnement de graines efficace et constant pour les opérations de pressage d'huile.
 
@@ -75,6 +79,8 @@ Adapté pour les ateliers de pressage d'huile de petite à moyenne taille, en pa
 
   'wood-fired-seed-steamer': `## Aperçu
 
+Le cuiseur-vapeur de graines à bois 60 Type cuit les graines oléagineuses à la vapeur au charbon, au bois ou au gaz sans aucune alimentation électrique pour le chauffage, ce qui le rend pratique pour les ateliers d'huilerie éloignés ou hors réseau à l'électricité instable. Son corps en acier au carbone Q355B avec canaux de collecte de chaleur intégrés réduit la consommation de combustible par rapport aux foyers simples, et il est garanti un an.
+
 Le Cuisseur Vapeur à Bois de Type 60 est une solution d'étuvage polyvalente et multi-combustible construite autour d'un corps de poêle robuste en acier au carbone Q355B. Conçu pour fonctionner au charbon, au bois ou au gaz, ce cuisseur vapeur ne nécessite aucune alimentation électrique pour le processus de chauffage — ce qui en fait un bon choix pour les endroits isolés, les ateliers hors réseau ou les installations avec une alimentation électrique peu fiable.
 
 L'intérieur du poêle est doté de canaux de collecte de chaleur intégrés qui maximisent la surface de chauffage, réduisant considérablement la consommation de combustible par rapport aux simples conceptions de foyer. Un réservoir d'eau intégré avec orifice de drainage est positionné près de la base du poêle pour un fonctionnement et un entretien pratiques. La marmite d'étuvage est fabriquée en acier inoxydable 304 avec une finition miroir, garantissant la sécurité alimentaire et un nettoyage facile.
@@ -111,6 +117,8 @@ Particulièrement adapté aux ateliers ruraux de pressage d'huile, aux unités d
 
   'thermal-oil-roasting-pan': `## Aperçu
 
+La poêle de torréfaction à huile thermique utilise le chauffage électrique par huile thermique pour torréfier les graines oléagineuses uniformément sur toute la surface de la cuve, convenant aux huileries qui exigent une torréfaction reproductible et régulière avant le pressage. Un fond de cuve renforcé à double couche, un entraînement par motoréducteur et une isolation en laine de roche enveloppée d'inox limitent les pertes de chaleur, et l'appareil est garanti un an.
+
 La Poêle de Torréfaction à Huile Thermique est un système de torréfaction de graines de qualité professionnelle qui utilise le chauffage électrique à huile thermique pour une distribution de température exceptionnellement uniforme et un fonctionnement économe en énergie. Dotée d'un fond de marmite renforcé à double couche, d'un entraînement motoréducteur intégré et d'une isolation en laine de roche enveloppée d'acier inoxydable, ce torréfacteur offre des résultats de torréfaction constants et de haute qualité tout en minimisant les pertes d'énergie.
 
 Le chauffage à huile thermique offre un avantage clé par rapport aux méthodes de chauffage direct : une distribution de chaleur plus uniforme sur toute la surface de la marmite et un refroidissement plus lent à l'arrêt du chauffage, ce qui se traduit par des économies d'énergie significatives sur les longues séries de production. Une armoire de commande électrique en option ajoute des fonctions de démarrage/arrêt automatisé du chauffage, de contrôle de la rotation et d'alarme pour un fonctionnement sans surveillance.
@@ -145,6 +153,8 @@ Cette poêle de torréfaction est conçue pour le conditionnement des graines av
 
   'pneumatic-oil-filter-press': `## Aperçu
 
+Le filtre-presse pneumatique à huile HN-10SL filtre l'huile brute à travers 20 couches de plaques à papier filtre totalisant 10 m² de surface de filtration à une pression de service de 0,2 à 0,3 Mpa, fonctionnant 24 heures sur 24 en régulation automatique de pression constante pour les huileries qui exigent une clarification continue. Construit en acier inoxydable 304L de qualité alimentaire et consommant 1,1 à 2,2 kW, il traite l'huile de 15 à 170 °C et est garanti un an.
+
 Le Filtre-Presse Pneumatique à Huile HN-10SL est un système de filtration entièrement automatique et contrôlé électriquement, construit entièrement en acier inoxydable 304L de qualité alimentaire pour une résistance supérieure aux acides et aux alcalis. Doté de 20 couches de plaques filtrantes avec 10 m² de surface de filtration totale, ce filtre-presse offre une excellente qualité de filtration avec une perte de liquide minimale — et il est capable de fonctionner en continu 24h/24 à pression constante automatique.
 
 Conçu pour une simplicité plug-and-play : branchez l'alimentation et le tuyau d'aspiration, activez l'interrupteur d'aspiration, et le système aspire automatiquement l'huile, la filtre à travers le média en papier filtre, et s'arrête lorsque la chambre à huile est pleine. La sortie d'huile propre s'ouvre ensuite pour libérer le produit filtré. Ce cycle entièrement automatisé élimine le besoin d'une surveillance constante par l'opérateur, ce qui le rend bien adapté aux environnements de production continue.
@@ -178,6 +188,8 @@ Le HN-10SL assure la séparation sol-liquide dans diverses industries :
 - **Support complet** — assistance à l'installation, fourniture de médias filtrants et service après-vente réactif`,
 
   'stainless-steel-oil-refining-equipment': `## Aperçu
+
+La ligne de raffinage d'huile en acier inoxydable Haonuo traite 1 à 50 tonnes d'huile brute par jour en huile RBD, avec toutes les surfaces en contact avec l'huile en acier inoxydable de qualité alimentaire pour les producteurs soumis à des exigences strictes d'hygiène et de conformité à l'export. Chaque système est configuré selon la capacité et le type d'huile brute de l'acheteur, et couvert par une garantie d'un an.
 
 L'Équipement de Raffinage d'Huile en Acier Inoxydable Haonuo est une solution de raffinage de qualité alimentaire construite entièrement en acier inoxydable pour toutes les surfaces en contact avec l'huile. Conçu pour les producteurs qui exigent les normes les plus élevées d'hygiène et de conformité réglementaire, ce système transforme l'huile brute en huile RBD de qualité premium tout en utilisant des matériaux de contact alimentaire conformes à la FDA et compatibles avec les normes internationales de sécurité alimentaire, y compris les réglementations de l'UE. Remarque : Nos machines n'ont pas été certifiées ou approuvées séparément par la FDA. Disponible dans des capacités de 1 à 50 tonnes par jour, chaque système est conçu sur commande pour correspondre à votre type d'huile brute spécifique et à vos exigences de produit.
 
@@ -220,6 +232,8 @@ Ce système est un bon choix pour les producteurs qui doivent livrer l'huile raf
 - **Support technique continu** — Optimisation des procédés, dépannage et fourniture de pièces de rechange pour la durée de vie de votre usine.`,
 
   'edible-oil-refining-system': `## Aperçu
+
+Le système de raffinage d'huile alimentaire Haonuo raffine 1 à 100 tonnes d'huile brute par jour en huile RBD prête à la vente, éliminant le gossypol, les phospholipides et autres impuretés tout en conservant les tocophérols et les stérols. La capacité et les étapes de traitement sont configurées par projet, convenant aux huileries allant de la petite raffinerie par lots à l'usine industrielle, avec une garantie d'un an.
 
 Le Système de Raffinage d'Huile Comestible Haonuo est une solution de raffinage entièrement personnalisable conçue pour transformer l'huile brute (cru) en huile RBD de haute qualité, prête pour le marché. Les impuretés dans l'huile brute — y compris le gossypol, les phospholipides, les protéines, les sucres, les substances mucilagineuses, les métaux et l'humidité — non seulement réduisent la valeur comestible et compromettent la conservation sûre, mais créent également de graves difficultés pour le traitement approfondi. Ce système élimine les impuretés nocives tout en préservant les composants bénéfiques tels que les tocophérols (vitamine E) et les stérols.
 

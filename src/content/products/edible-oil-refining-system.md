@@ -163,6 +163,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The Haonuo edible oil refining system refines 1 to 100 tons of crude oil per day into market-ready RBD oil, removing gossypol, phospholipids and other impurities while retaining tocopherols and sterols. Capacity and process stages are configured per project, suiting oil mills from small batch refineries to industrial plants, with a 1-year warranty.
+
 The Haonuo Edible Oil Refining System is a fully customizable refining solution designed to transform crude (raw) oil into high-quality, market-ready RBD oil. Impurities in crude oil — including gossypol, phospholipids, proteins, sugars, mucilaginous substances, metals, and moisture — not only reduce edible value and compromise safe storage, but also create serious difficulties for deep processing. This system removes harmful impurities while preserving beneficial components such as tocopherols (vitamin E) and sterols.
 
 Available in capacities from 1 to 100 tons per day, our refining system scientifically combines mechanical, chemical, and physical-chemical methods to achieve optimal refining efficiency. Every system is engineered to order, ensuring the process flow, equipment selection, and automation level match your specific crude oil type and product requirements.

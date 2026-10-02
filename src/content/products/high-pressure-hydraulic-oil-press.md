@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: High Pressure Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Haute Pression
@@ -18,7 +18,7 @@ specifications:
   - name: System Pressure
     value: 72 Mpa
   - name: Pressing Force
-    value: 560 Tonnes (estimé)
+    value: 560 Tonnes (estimated)
   - name: Motor Power
     value: 2.2 KW
   - name: Cylinder Outer Diameter
@@ -95,7 +95,7 @@ faqFr:
   - question: Quelles matières premières la HN480 peut-il presser ?
     answer: Le HN480 peut presser le sésame, l'arachide, le colza, les graines de tournesol, le lin, les graines de thé, le soja, les graines de coton et plus encore. Il traite également efficacement les matières à froid comme les amandes de noix et les amandes d'abricot.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du gâteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau.
+    answer: Le pressage à chaud (avec pré-torréfaction) se termine en 30 à 40 minutes par lot. Le pressage à froid prend environ 2 heures pour préserver la qualité de l'huile à basse température. La durée réelle du cycle dépend de facteurs tels que l'humidité des graines, le degré de sécheresse du gâteau souhaité et la température de pressage. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau.
   - question: Quelle est la différence entre les configurations à un et à deux fûts ?
     answer: Une presse à un seul fût traite un lot à la fois. Une presse à double fût dispose de deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, doublant presque votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
   - question: Quelle alimentation électrique la HN480 nécessite-t-il ?
@@ -222,6 +222,8 @@ updatedAt: 2025-11-01
 ---
 
 ## Overview
+
+The HN480 high pressure hydraulic oil press delivers an estimated 560 tons of pressing force at 72 Mpa system pressure, positioned between the HN426 cold-press model and the HN500 flagship for medium-to-large oil mills. It handles both conventional and cold-press oil extraction in 40–90 minute batches depending on the material, leaving 6–8% residual oil in the cake (internal testing, results vary).
 
 The HN480 High Pressure Hydraulic Oil Press bridges the gap between our HN426 cold-press specialist and the HN500 ultra-high-pressure flagship. With a 480 mm cylinder diameter and an estimated 560-ton pressing force at 72 Mpa system pressure, it delivers substantial power for both conventional and cold-press oil extraction — an optimal balance of performance and value for medium-to-large-scale operations.
 

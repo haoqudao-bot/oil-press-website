@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -276,10 +276,10 @@ const breadcrumbLd = {
           </div>
           <p class="text-sm text-steel-600 leading-relaxed">
             {currentLocale === 'fr'
-              ? 'Équipement de nettoyage, décorticage et broyage qui prépare les graines brutes au pressage. Élimine les débris et corps étrangers, augmente la surface d\'extraction de l\'huile et améliore le rendement de 10 à 20 %.'
+              ? 'Équipement de nettoyage, décorticage et broyage qui prépare les graines brutes au pressage. Élimine les débris et corps étrangers et augmente la surface pour une libération d\'huile plus complète au pressage.'
               : currentLocale === 'ar'
-              ? 'معدات التنظيف والتقشير والطحن التي تحضر البذور الخام للعصر. تزيل الحطام والشوائب، تزيد مساحة السطح لاستخلاص الزيت، وتحسن الإنتاج بنسبة 10-20٪.'
-              : 'Peralatan pembersihan, pengupasan kulit, dan penghancuran yang mempersiapkan biji mentah untuk pengepresan. Menghilangkan kotoran dan benda asing, meningkatkan luas permukaan untuk ekstraksi minyak, dan meningkatkan hasil sebesar 10-20%.'}
+              ? 'معدات التنظيف والتقشير والطحن التي تحضر البذور الخام للعصر. تزيل الحطام والشوائب وتزيد مساحة السطح لتحرير الزيت بشكل أكثر اكتمالاً أثناء العصر.'
+              : 'Peralatan pembersihan, pengupasan kulit, dan penghancuran yang mempersiapkan biji mentah untuk pengepresan. Menghilangkan kotoran dan benda asing serta meningkatkan luas permukaan untuk pelepasan minyak yang lebih sempurna saat pengepresan.'}
           </p>
           <a href={localePath('/products/seed-processing-equipment')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
             {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}

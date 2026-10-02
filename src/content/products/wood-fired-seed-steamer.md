@@ -216,6 +216,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The 60 Type wood-fired seed steamer steams oilseeds using coal, wood or gas with no electrical power needed for heating, making it practical for remote or off-grid oil workshops with unreliable electricity. Its Q355B carbon steel body with integrated heat-collecting channels reduces fuel consumption compared with simple firebox designs, and it is covered by a 1-year warranty.
+
 The 60 Type Wood-Fired Seed Steamer is a versatile, multi-fuel steaming solution built around a rugged Q355B carbon steel stove body. Designed to operate with coal, wood, or gas heating, this steamer requires no electrical power for the heating process — making it a well-proven choice for remote locations, off-grid workshops, or facilities with unreliable power supply.
 
 The stove interior features integrated heat-collecting channels that maximize the heating surface area, significantly reducing fuel consumption compared to simple firebox designs. An integrated water tank with drain outlet is positioned near the stove base for convenient operation and maintenance. The steaming pot is crafted from 304 stainless steel with a mirror finish, ensuring food-grade safety and easy cleaning.

@@ -165,6 +165,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The Haonuo stainless steel oil refining equipment line processes 1 to 50 tons of crude oil per day into RBD oil, with all oil-contact surfaces in food-grade stainless steel for producers who must meet strict hygiene and export compliance requirements. Each system is configured to the buyer's capacity and crude oil type, and covered by a 1-year warranty.
+
 The Haonuo Stainless Steel Oil Refining Equipment is a food-grade refining solution constructed entirely from stainless steel for all oil-contact surfaces. Designed for producers who require the highest standards of hygiene and regulatory compliance, this system transforms crude oil into premium-quality RBD oil while using FDA-compliant food contact materials consistent with international food safety standards including EU regulations. Note: Our machines have not been separately certified or approved by the FDA. Available in capacities from 1 to 50 tons per day, every system is engineered to order to match your specific crude oil type and product requirements.
 
 The stainless steel construction eliminates the risk of metal contamination, corrosion, and rust that can compromise oil quality and safety. This makes the system well-suited for premium oil brands, organic certification, and export markets where food safety compliance is non-negotiable. The complete refining process — from degumming through deodorization — is housed in sanitary stainless steel vessels, ensuring your finished oil meets the strictest quality standards.

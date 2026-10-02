@@ -309,6 +309,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN500 ultra high pressure hydraulic oil press delivers 620 tons of pressing force with 52 Mpa/cm² cake surface pressure on a 5 cm steel-plate frame, built for oil mills cold pressing the hardest materials such as walnut kernels and tiger nuts. Single-cycle batches of 40–90 minutes (depending on the material) leave 6–8% residual oil in the cake (internal testing, results vary), and the machine is covered by a 1-year warranty.
+
 The HN500 Ultra High Pressure Hydraulic Oil Press is the flagship of our product line, built for the most demanding oil extraction challenges. Featuring a massive 5 cm thick steel plate frame — the heaviest in our range — it delivers a staggering 620-ton pressing force with 52 Mpa/cm² cake surface pressure. This is the machine for operators who need maximum oil yield from the toughest cold-press materials.
 
 Whether you are cold pressing walnut kernels, in-shell walnuts, apricot kernels, yellowhorn, or tiger nuts, the HN500 extracts every last drop in a single cycle. Its exceptional pressure also means conventional oil seeds achieve competitive residual oil rates, directly improving your bottom line.

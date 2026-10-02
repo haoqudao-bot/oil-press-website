@@ -257,6 +257,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN300 mini hydraulic oil press is a compact 300-ton machine with 60 Mpa system pressure, built for sesame and small-seed oil production in village workshops and small oil mills with limited floor space. Batches run 40–90 minutes depending on the material at 25 Mpa/cm² cake surface pressure, leaving 6–8% residual oil in the cake (internal testing, results vary). The 2.2 kW motor keeps power demand modest.
+
 The HN300 Mini Hydraulic Oil Press is our most compact and accessible hydraulic oil press, specifically designed as a dedicated sesame oil press machine. Also known as a small sesame oil mill or traditional-style sesame oil press, it is lightweight, easy to operate, and perfectly suited for sesame and small seed oil production. With 300 tons of pressing force and a 60 Mpa system pressure, the HN300 delivers reliable oil extraction in a space-saving footprint.
 
 The HN300 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 25 Mpa/cm², providing sufficient pressure for sesame, peanut, rapeseed, and tea seed to be fully pressed in a single cycle. Its compact 1100×1100×2350 mm overall dimensions make it well-suited for workshops with limited space, while the lightweight 1.2-ton single-barrel configuration allows for easy installation and relocation.

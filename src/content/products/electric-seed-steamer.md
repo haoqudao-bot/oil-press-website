@@ -228,6 +228,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The 27 KW electric seed steamer conditions up to 100 kg of oilseeds per batch with a full-steam cycle of about 20 minutes, built for oil pressing workshops that need consistent seed steaming before pressing. Its 304 stainless steel dual water tanks and food-grade piping suit edible oil production, and the unit is covered by a 1-year warranty.
+
 The 27 KW Electric Seed Steamer is a completely upgraded model featuring a thickened dual water tank design — the main tank handles heating while the auxiliary tank uses negative-pressure water injection for safe, reliable operation. Both tanks and all connecting pipes are constructed from 304 stainless steel for corrosion resistance and food-grade safety. With a maximum capacity of 100 kg per batch and a 20-minute full-steam cycle, this steamer delivers efficient, consistent seed conditioning for oil pressing operations.
 
 Safety and maintainability are at the core of this design: electrical and water sections are physically separated, the control panel offers 3-level adjustable heating with an emergency stop switch, and a quick-open electrical inspection port enables fast servicing. The separable pot body design makes discharging easy, while dedicated drain ports on both tanks simplify scale removal.

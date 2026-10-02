@@ -311,6 +311,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN426 cold press hydraulic oil press applies 500 tons of pressing force at 70 Mpa system pressure, cold pressing hard-shell materials such as walnut kernels, apricot kernels and tiger nuts in a single cycle. It suits producers of premium cold-pressed oils who cannot apply heat to the material; batches run 40–90 minutes depending on the material, with 6–8% residual oil in the cake (internal testing, results vary). The 2.2 kW motor works on standard 220V/380V power.
+
 The HN426 Cold Press Hydraulic Oil Press is our dedicated cold pressing specialist, engineered to extract oil from delicate and hard-shell materials without heat degradation. With a 500-ton pressing force and 42 Mpa/cm² cake surface pressure, it delivers the power needed to cold press walnut kernels, in-shell walnuts, apricot kernels, yellowhorn, tiger nuts, and similar challenging materials — all fully extracted in a single cycle.
 
 Built on a 3 cm thick steel plate frame, the HN426 combines structural robustness with precision hydraulic control. Cold pressing preserves the natural flavor, aroma, and nutritional value of your oil, commanding premium prices in the market. If you are producing high-value cold-pressed oils, this machine is designed to maximize both your oil yield and your profit margin.

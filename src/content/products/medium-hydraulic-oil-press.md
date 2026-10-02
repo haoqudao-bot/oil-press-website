@@ -265,6 +265,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN400 medium hydraulic oil press provides 500 tons of pressing force with 38 Mpa/cm² cake surface pressure, covering both conventional hot pressing and cold pressing for producers who want one machine for both. Batches run 40–90 minutes depending on the material, with 6–8% residual oil in the cake (internal testing, results vary), and the 2.2 kW motor runs on standard 220V/380V supply.
+
 The HN400 Medium Hydraulic Oil Press bridges the gap between our standard and cold-press models, offering 500 tons of pressing force with 38 Mpa/cm² cake surface pressure. This versatile machine is suitable for cold pressing and works effectively in all seasons without being constrained by climate conditions. Whether you are processing conventional oil seeds or venturing into cold-press production, the HN400 provides the power and flexibility you need.
 
 The HN400 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 38 Mpa/cm², enabling most conventional and semi-hard materials to be fully pressed in a single cycle. Its cold-press capability means you can produce premium cold-pressed oils from tea seed, walnut kernel, and flaxseed while maintaining the natural flavor and nutritional value of your product.

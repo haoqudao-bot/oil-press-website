@@ -279,6 +279,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN480B ultra high pressure cold press applies 600 tons of pressing force at 65 Mpa system pressure and 48 Mpa/cm² cake surface pressure — the highest cold-press force in Haonuo's lineup — for walnut, apricot kernel and yellowhorn producers. Batches run 40–90 minutes depending on the material with 6–8% residual oil in the cake (internal testing, results vary), backed by a 1-year warranty.
+
 The HN480B Ultra High Pressure Cold Press is our most advanced cold-press hydraulic oil press, delivering a massive 600-ton pressing force with 65 Mpa system pressure and 48 Mpa/cm² cake surface pressure. Specifically optimized for walnut pressing with a complete walnut pressing solution, it dramatically shortens pressing time while maximizing oil yield. This is the highest cold-press force in our lineup, purpose-built for producers who demand the ultimate in cold-press performance.
 
 The HN480B features a 480 mm cylinder outer diameter with a 360 mm piston inner diameter, generating the extreme pressure needed to cold press walnuts, almonds, pine nuts, and other hard-shell materials in a single cycle. Our proprietary walnut pressing solution ensures that both walnut kernels and in-shell walnuts are efficiently processed, reducing pressing time and increasing oil yield compared to conventional cold-press methods.

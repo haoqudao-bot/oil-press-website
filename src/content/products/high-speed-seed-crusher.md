@@ -206,6 +206,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The 220 Type high speed seed crusher processes 750 kg of oilseeds per hour with an 11 kW motor at 1460 RPM, serving oil mills that need to crush hard-shell seeds before hydraulic pressing. Interchangeable screen meshes let operators set the output particle size, down to micron-level with the finest mesh, to match the pressing recipe.
+
 The 220 Type High Speed Seed Crusher is a professional-grade oil seed preprocessing machine built around a flywheel-style structural design. Engineered for hard-shell seed crushing, it features interchangeable screen meshes that allow operators to adjust output particle size on demand — with the finest mesh capable of producing micron-level particles. This crusher is an essential preprocessing step before hydraulic oil pressing, ensuring optimal oil yield from tough, hard-shelled raw materials.
 
 With a throughput of 750 kg/h and a robust 11 KW motor running at 1460 RPM, this machine delivers consistent, high-volume crushing performance for commercial oil pressing operations of all sizes.

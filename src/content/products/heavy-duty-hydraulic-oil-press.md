@@ -292,6 +292,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN355 heavy-duty hydraulic oil press processes up to 100 kg of oilseeds per 40–90 minute batch, aimed at oil mills that need more pressing force than the standard HN325. It delivers 360 tons of pressing force at 60 Mpa system pressure on a 3 cm steel-plate frame, leaving 6–8% residual oil in the cake for most oilseeds (internal testing, results vary). A 2.2 kW motor and a one-to-two-person crew keep running costs low for small and medium oil mills.
+
 The HN355 Heavy Duty Hydraulic Oil Press is built for operators who demand more pressing power and greater durability. Featuring a robust 3 cm thick steel plate frame, this model delivers a 360-ton pressing force with a cake surface pressure of 30.15 Mpa/cm² — a meaningful step up from the standard HN325. Conventional oil seeds are fully pressed in a single cycle, maximizing oil yield and minimizing waste.
 
 The reinforced steel frame not only withstands higher operating pressures but also ensures long-term structural stability under continuous heavy-duty use. If your production demands exceed what the standard model can deliver, the HN355 provides the extra margin of power you need without stepping up to a cold-press specialist.

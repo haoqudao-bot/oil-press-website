@@ -194,6 +194,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN-10SL pneumatic oil filter press filters crude oil through 20 filter-paper plate layers with 10 m² of filtration area at 0.2–0.3 Mpa working pressure, running 24-hour automatic constant-pressure operation for oil mills that need continuous clarification. Built from 304L food-grade stainless steel and drawing 1.1–2.2 kW, it handles oil at 15–170 °C and is covered by a 1-year warranty.
+
 The HN-10SL Pneumatic Oil Filter Press is a fully automatic, electrically controlled filtration system built entirely from 304L food-grade stainless steel for superior acid and alkali resistance. Featuring 20 filter plate layers with 10 m² of total filtration area, this filter press delivers excellent filtration quality with minimal liquid loss and it's capable of 24-hour automatic constant-pressure continuous operation.
 
 Designed for plug-and-play simplicity: connect the power and suction hose, turn on the suction switch, and the system automatically draws in oil, filters it through the filter paper media, and stops when the oil chamber is full. The clean oil outlet then opens to release filtered product. This fully automated cycle eliminates the need for constant operator attention, making it well-suited for continuous production environments.

@@ -54,7 +54,7 @@ processStepsId:
     description: Saring minyak yang ditekan untuk minyak kacang yang jernih dan berkualitas
 faq:
   - question: What is the oil content of peanuts?
-    answer: Peanuts typically contain 45-55% oil. Our hydraulic press can extract over 95% of the available oil.
+    answer: Peanuts typically contain 45-55% oil. Our hydraulic press leaves just 6-8% residual oil in the cake (based on internal testing; results vary by seed and moisture).
   - question: Can I press peanuts with shells?
     answer: It's recommended to shell peanuts before pressing for better oil quality. Shells can be removed using our seed crusher.
   - question: Cold press vs hot press peanut oil?
@@ -65,7 +65,7 @@ faq:
     answer: Our standard model processes 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (single barrel), while the heavy-duty model handles 600-1,200 kg/day (hot press) or 300-400 kg/day (cold press) (single barrel) or 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) (double barrel) depending on configuration and operation hours.
 faqFr:
   - question: Quelle est la teneur en huile des arachides ?
-    answer: Les arachides contiennent généralement 45 à 55 % d'huile. Notre presse hydraulique peut extraire plus de 95 % de l'huile disponible.
+    answer: Les arachides contiennent généralement 45 à 55 % d'huile. Notre presse hydraulique ne laisse que 6 à 8 % d'huile résiduelle dans le tourteau (basé sur des tests internes ; les résultats varient selon la graine et l'humidité).
   - question: Puis-je presser des arachides avec leurs coques ?
     answer: Il est recommandé de décortiquer les arachides avant le pressage pour une meilleure qualité d'huile. Les coques peuvent être retirées à l'aide de notre broyeur de graines.
   - question: Pressage à froid ou à chaud pour l'huile d'arachide ?
@@ -76,7 +76,7 @@ faqFr:
     answer: Notre modèle standard traite 500 à 1 500 kg/jour, tandis que le modèle lourd traite 1 500 à 3 000 kg/jour selon les heures de fonctionnement.
 faqAr:
   - question: ما هو محتوى الزيت في الفول السوداني؟
-    answer: يحتوي الفول السوداني عادةً على 45-55% زيت. يمكن لمضغوطنا الهيدروليكي استخراج أكثر من 95% من الزيت المتاح.
+    answer: يحتوي الفول السوداني عادةً على 45-55% زيت. يترك مكبسنا الهيدروليكي 6-8% فقط من الزيت المتبقي في الكعكة (بناءً على اختبارات داخلية؛ تختلف النتائج حسب البذور والرطوبة).
   - question: هل يمكنني عصر الفول السوداني بالقشر؟
     answer: يُنصح بتقشير الفول السوداني قبل العصر للحصول على جودة زيت أفضل. يمكن إزالة القشور باستخدام محطم البذور لدينا.
   - question: ضغط بارد أم ساخن لزيت الفول السوداني؟
@@ -87,7 +87,7 @@ faqAr:
     answer: يعالج طرازنا القياسي 500-1500 كجم/يوم، بينما يعالج الطراز الثقيل 1500-3000 كجم/يوم حسب ساعات التشغيل.
 faqId:
   - question: Berapa kandungan minyak kacang?
-    answer: Kacang biasanya mengandung 45-55% minyak. Press hidrolik kami dapat mengekstrak lebih dari 95% minyak yang tersedia.
+    answer: Kacang biasanya mengandung 45-55% minyak. Press hidrolik kami menyisakan hanya 6-8% sisa minyak dalam bungkil (berdasarkan pengujian internal; hasil bervariasi menurut biji dan kadar air).
   - question: Apakah saya bisa menekan kacang dengan kulitnya?
     answer: Disarankan untuk mengupas kacang sebelum ditekan untuk kualitas minyak yang lebih baik. Kulit dapat dihilangkan menggunakan seed crusher kami.
   - question: Press dingin vs press panas untuk minyak kacang?

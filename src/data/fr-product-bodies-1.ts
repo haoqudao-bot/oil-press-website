@@ -1,6 +1,8 @@
 ﻿﻿﻿﻿﻿export const frProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## Aperçu
 
+La presse à huile hydraulique standard HN325 traite jusqu'à 100 kg de graines oléagineuses par lot de 40 à 90 minutes selon la matière, ce qui convient aux petites et moyennes huileries pressant environ une tonne de graines par jour. Sa force de pressage de 325 tonnes et sa pression système de 60 Mpa laissent 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines conventionnelles (tests internes, les résultats peuvent varier). Le moteur de 2,2 kW fonctionne sur une alimentation standard 220V/380V, et un à deux opérateurs suffisent.
+
 La HN325 Presse à Huile Hydraulique Standard est notre presse à huile hydraulique la plus populaire, adoptée par les producteurs d'huile du monde entier pour son excellent rapport qualité-prix et ses performances fiables. En tant que modèle standard à course allongée de notre gamme, elle dispose d'une course de cylindre de 850 mm qui presse jusqu'au fond, traitant facilement des lots de 5 à 100 kg. Que vous soyez un producteur à petite échelle ou que vous dirigiez une opération de taille moyenne, la HN325 offre des résultats d'extraction d'huile constants sur une large gamme de matières.
 
 Le cylindre HN325 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 27,78 Mpa/cm², permettant à la plupart des graines oléagineuses conventionnelles d'être entièrement pressées en un seul cycle. Cela peut contribuer à un rendement en huile plus élevé et à un taux d'huile résiduelle plus faible dans le gâteau. Le retour sur investissement réel dépend de nombreux facteurs, notamment les conditions du marché et l'efficacité de fonctionnement.
@@ -51,6 +53,8 @@ La HN325 est adaptée pour le pressage d'une grande variété de graines oléagi
 
   'heavy-duty-hydraulic-oil-press': `## Aperçu
 
+La presse à huile hydraulique lourde HN355 traite jusqu'à 100 kg de graines oléagineuses par lot de 40 à 90 minutes, destinée aux huileries qui ont besoin de plus de force de pressage que la HN325 standard. Elle délivre 360 tonnes de force de pressage à 60 Mpa de pression système sur un châssis en tôle d'acier de 3 cm, laissant 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines (tests internes, les résultats peuvent varier). Son moteur de 2,2 kW et une équipe d'une à deux personnes maintiennent des coûts d'exploitation réduits.
+
 La HN355 Presse à Huile Hydraulique Lourde est conçue pour les opérateurs qui exigent davantage de puissance de pressage et une plus grande durabilité. Dotée d'un robuste cadre en plaque d'acier de 3 cm d'épaisseur, ce modèle délivre une force de pressage de 360 tonnes avec une pression superficielle du gâteau de 30,15 Mpa/cm² — une avancée significative par rapport à la HN325 standard. Les graines oléagineuses conventionnelles sont entièrement pressées en un seul cycle, maximisant le rendement en huile et minimisant les déchets.
 
 Le cadre en acier renforcé résiste non seulement à des pressions de fonctionnement plus élevées, mais assure également une stabilité structurelle à long terme sous une utilisation lourde continue. Si vos exigences de production dépassent ce que le modèle standard peut offrir, la HN355 vous fournit la marge de puissance supplémentaire dont vous avez besoin sans passer à un spécialiste du pressage à froid.
@@ -99,6 +103,8 @@ La HN355 excelle avec les graines oléagineuses conventionnelles et les matière
 **Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Excellente pour la production d'huile de sésame et de noix avec capacité de pressage à froid. L'option double fût double le débit pour les opérations commerciales.`,
 
   'cold-press-hydraulic-oil-press': `## Aperçu
+
+La presse à huile hydraulique à froid HN426 applique 500 tonnes de force de pressage à 70 Mpa de pression système, pressant à froid les matières à coque dure comme les cerneaux de noix, les amandes d'abricot et les souchets en un seul cycle. Elle convient aux producteurs d'huiles premium pressées à froid qui ne peuvent pas chauffer la matière ; les lots durent 40 à 90 minutes selon la matière, avec 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier). Le moteur de 2,2 kW fonctionne sur alimentation standard 220V/380V.
 
 La HN426 Presse à Huile Hydraulique à Froid est notre spécialiste dédié du pressage à froid, conçue pour extraire l'huile de matières délicates et à coque dure sans dégradation thermique. Avec une force de pressage de 500 tonnes et une pression superficielle du gâteau de 42 Mpa/cm², elle délivre la puissance nécessaire pour presser à froid les amandes de noix, les noix en coque, les amandes d'abricot, le xanthocère, le souchet et des matières similaires difficiles — toutes entièrement extraites en un seul cycle.
 
@@ -152,6 +158,8 @@ La HN426 traite toutes les matières ci-dessus avec un excellent rendement en hu
 
   'high-pressure-hydraulic-oil-press': `## Aperçu
 
+La presse à huile hydraulique haute pression HN480 délivre une force de pressage estimée à 560 tonnes à 72 Mpa de pression système, positionnée entre le modèle pressage à froid HN426 et le fleuron HN500 pour les huileries moyennes et grandes. Elle gère l'extraction d'huile conventionnelle et à froid en lots de 40 à 90 minutes selon la matière, laissant 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier).
+
 La HN480 Presse à Huile Hydraulique Haute Pression comble le fossé entre notre spécialiste du pressage à froid HN426 et le vaisseau amiral ultra-haute pression HN500. Avec un diamètre de cylindre de 480 mm et une force de pressage estimée à 560 tonnes à une pression système de 72 Mpa, elle délivre une puissance substantielle pour l'extraction d'huile conventionnelle et à froid — un équilibre optimal entre performance et valeur pour les opérations de moyenne à grande envergure.
 
 ## Avantages Clés
@@ -184,6 +192,8 @@ La HN480 Presse à Huile Hydraulique Haute Pression comble le fossé entre notre
 - **Options de Personnalisation** — Les dimensions du fût et les paramètres de pressage peuvent être adaptés à vos besoins.`,
 
   'mini-hydraulic-oil-press': `## Aperçu
+
+La mini presse à huile hydraulique HN300 est une machine compacte de 300 tonnes avec 60 Mpa de pression système, conçue pour la production d'huile de sésame et de petites graines dans les ateliers villageois et les petites huileries à l'espace limité. Les lots durent 40 à 90 minutes selon la matière à 25 Mpa/cm² de pression superficielle du gâteau, laissant 6 à 8 % d'huile résiduelle (tests internes, les résultats peuvent varier). Le moteur de 2,2 kW maintient une demande électrique modeste.
 
 La HN300 Mini Presse à Huile Hydraulique est notre presse à huile hydraulique la plus compacte et la plus accessible, spécialement conçue comme machine de pressage d'huile de sésame dédiée. Également connue sous le nom de petit moulin à huile de sésame ou presse à huile de sésame de style traditionnel, elle est légère, facile à utiliser et parfaitement adaptée à la production d'huile de sésame et de petites graines. Avec 300 tonnes de force de pressage et une pression système de 63 Mpa, la HN300 offre une extraction d'huile fiable dans un format compact.
 
@@ -228,6 +238,8 @@ La HN300 est adaptée pour le pressage du sésame et d'autres petites graines ol
 
   'medium-hydraulic-oil-press': `## Aperçu
 
+La presse à huile hydraulique moyenne HN400 fournit 500 tonnes de force de pressage avec 38 Mpa/cm² de pression superficielle du gâteau, couvrant le pressage à chaud conventionnel et le pressage à froid pour les producteurs qui veulent une seule machine pour les deux. Les lots durent 40 à 90 minutes selon la matière, avec 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier), et le moteur de 2,2 kW fonctionne sur alimentation standard 220V/380V.
+
 La HN400 Presse à Huile Hydraulique Moyenne comble le fossé entre nos modèles standard et de pressage à froid, offrant 500 tonnes de force de pressage avec une pression superficielle du gâteau de 38 Mpa/cm². Cette machine polyvalente est adaptée au pressage à froid et fonctionne efficacement en toutes saisons sans être contrainte par les conditions climatiques. Que vous traitiez des graines oléagineuses conventionnelles ou que vous vous lanciez dans la production de pressage à froid, la HN400 vous fournit la puissance et la flexibilité dont vous avez besoin.
 
 Le cylindre HN400 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 38 Mpa/cm², permettant à la plupart des matières conventionnelles et semi-dures d'être entièrement pressées en un seul cycle. Sa capacité de pressage à froid signifie que vous pouvez produire des huiles pressées à froid premium à partir de graine de thé, d'amande de noix et de lin tout en préservant la saveur naturelle et la valeur nutritionnelle de votre produit.
@@ -271,6 +283,8 @@ La HN400 est adaptée pour le pressage d'une grande variété de graines oléagi
 
   'stainless-steel-hydraulic-oil-press': `## Aperçu
 
+La presse à huile hydraulique en acier inoxydable HN325S délivre 325 tonnes de force de pressage à 60 Mpa de pression système, avec de l'acier inoxydable de qualité alimentaire sur toutes les surfaces de contact, conçue pour la production commerciale de lait et de crème de coco. Elle convient aux transformateurs alimentaires qui exigent un pressage hygiénique et résistant à la corrosion de la chair de coco fraîche, fonctionne avec un moteur de 2,2 kW et est couverte par une garantie d'un an.
+
 La HN325S Presse à Lait de Coco en Acier Inoxydable est spécialement conçue pour extraire du lait de coco et de la crème de coco de haute qualité à partir de chair de coco fraîche. Dotée d'une construction en acier inoxydable de qualité alimentaire pour toutes les surfaces de contact, cette machine garantit une hygiène maximale et une pureté du produit pour la production de lait de coco.
 
 Avec 325 tonnes de force de pressage et une pression système de 60 Mpa, la HN325S extrait efficacement le lait de coco tout en préservant la saveur naturelle et les nutriments. Le fût en acier inoxydable empêche la contamination, faisant de cette machine un bon choix pour la production commerciale de lait de coco exigeant les normes d'hygiène les plus strictes.
@@ -311,6 +325,8 @@ La HN325S est spécialement conçue pour la production de lait de coco :
 - **Options de Personnalisation** — Les dimensions du fût, la longueur de course et d'autres paramètres peuvent être personnalisés pour correspondre à vos exigences spécifiques en matière de coco et de production.`,
 
   'ultra-high-pressure-hydraulic-oil-press': `## Aperçu
+
+La presse à huile hydraulique ultra haute pression HN500 délivre 620 tonnes de force de pressage avec 52 Mpa/cm² de pression superficielle du gâteau sur un châssis en tôle d'acier de 5 cm, conçue pour les huileries pressant à froid les matières les plus dures comme les cerneaux de noix et les souchets. Des lots en un seul cycle de 40 à 90 minutes (selon la matière) laissent 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier), et la machine est couverte par une garantie d'un an.
 
 La HN500 Presse à Huile Hydraulique Ultra Haute Pression est le vaisseau amiral de notre gamme de produits, conçue pour les défis d'extraction d'huile les plus exigeants. Dotée d'un cadre massif en plaque d'acier de 5 cm d'épaisseur — le plus lourd de notre gamme — elle délivre une force de pressage impressionnante de 620 tonnes avec une pression superficielle du gâteau de 52 Mpa/cm². C'est la machine pour les opérateurs qui ont besoin d'un rendement maximal en huile des matières les plus difficiles à presser à froid.
 

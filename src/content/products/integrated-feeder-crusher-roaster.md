@@ -160,6 +160,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The All-in-One integrated feeder crusher roaster combines automatic feeding, crushing and roasting in a single machine group, so small-to-medium oil mills can move raw seed to roast-ready output without transfer equipment between steps. It cuts labor and material handling losses on seed preprocessing lines feeding hydraulic oil presses.
+
 The Integrated Feeder Crusher Roaster is an all-in-one processing unit that combines automatic feeding, crushing, and roasting into a single machine group — eliminating the need for material transfer between separate pieces of equipment. Designed for small-to-medium oil pressing operations, this integrated system streamlines your production line from raw seed input to roast-ready output in one continuous flow.
 
 By consolidating three essential preprocessing steps into one compact footprint, this machine reduces labor requirements, minimizes material handling losses, and significantly improves overall production efficiency. Custom configurations are available to match your specific seed types and throughput requirements.

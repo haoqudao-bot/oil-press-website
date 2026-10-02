@@ -258,6 +258,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN325 Large Barrel hydraulic oil press uses a 630 mm inner diameter, 1000 mm high barrel with two independent hydraulic systems, so one barrel presses while the other is unloaded and reloaded — built for oil mills that prioritize single-batch volume over peak pressing force. Batch time runs 40–90 minutes depending on the material, with 6–8% residual oil in the cake for most oilseeds (internal testing, results vary).
+
 The Large Barrel Hydraulic Oil Press is an enlarged-capacity version of the HN325 cylinder model, designed for applications that demand high single-batch processing volume rather than extreme pressing force. Equipped with two independent hydraulic systems, each barrel operates autonomously — the main cylinder presses one barrel while the top-cake cylinder on the other barrel allows simultaneous unloading and reloading. This dual-system design eliminates idle time and maximizes your daily throughput.
 
 The 630 mm inner diameter, 1000 mm high barrel provides substantial capacity for bulk materials. With a cake surface pressure of 10.64 Mpa/cm², this model is well-suited for materials that do not require high pressing force but benefit from large batch sizes, such as oil sludge, textile sludge, fruit and vegetable dehydration, and oil field waste.

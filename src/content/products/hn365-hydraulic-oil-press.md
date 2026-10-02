@@ -86,6 +86,8 @@ updatedAt: 2026-10-01
 
 ## Overview
 
+The HN365 vertical hydraulic oil press is rated at 365 tons of pressing force with 30 Mpa/cm² cake surface pressure, built for medium and large oil mills that have outgrown 325-class machines. Its vertical double-station layout alternates two barrels so one can be loaded while the other presses, supporting hot and cold pressing of peanut, sesame, walnut and other oilseeds in 40–90 minute batches depending on the material. Residual oil in the cake typically stays at 6–8% (internal testing, results vary).
+
 The HN365 is our upgraded high-pressure vertical hydraulic oil press, developed for medium and large oil mills that have outgrown a 325-class machine. It is rated at **365 tons of pressing force** with **30 MPa/cm² cake surface pressure**, built on a frame made from **3 cm high-strength steel plate**. The extra force shows up where it matters: hard oilseeds such as walnut and camellia finish more completely, with lower residual oil left in the cake.
 
 The vertical structure saves floor space and sends cylinder force straight down, so pressure is even, cakes form neatly and the frame holds its precision over long high-pressure runs. A large **double-station barrel** lets one station press while the other is loaded, keeping the machine working through the whole shift.

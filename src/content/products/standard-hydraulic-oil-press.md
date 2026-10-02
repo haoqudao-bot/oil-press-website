@@ -303,6 +303,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN325 standard hydraulic oil press handles up to 100 kg of oilseeds per 40–90 minute batch, depending on the material, making it suited to small and mid-size oil mills pressing roughly a ton of seed per day. Its 325-ton pressing force and 60 Mpa system pressure leave 6–8% residual oil in the cake for most conventional oilseeds (internal testing, results vary). The 2.2 kW motor runs on standard 220V/380V supply, and one to two operators can run the machine.
+
 The HN325 Standard Hydraulic Oil Press is our popular hydraulic oil press machine, trusted by oil producers worldwide for its outstanding value and reliable performance. As the standard extended-stroke model in our lineup, it features an 850 mm cylinder stroke that presses all the way to the bottom, handling 100 kg per batch with ease. Whether you are a small-scale producer or running a mid-size operation, the HN325 delivers consistent oil extraction results across a wide range of materials.
 
 The HN325 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 27.78 Mpa/cm², enabling most conventional oil seeds to be fully pressed in a single cycle. This can contribute to higher oil yield and lower residual oil in the cake. Actual return on investment depends on many factors including market conditions and operating efficiency.

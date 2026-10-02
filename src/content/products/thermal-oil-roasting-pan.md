@@ -244,6 +244,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The Thermal Oil Roasting Pan uses thermal oil electric heating to roast oilseeds evenly across the whole pot surface, suiting oil mills that need repeatable, consistent roasting before pressing. A double-layer reinforced pot bottom, motor-reducer drive and rock wool insulation wrapped in stainless steel cut heat loss, and the roaster is covered by a 1-year warranty.
+
 The Thermal Oil Roasting Pan is a professional-grade seed roasting system that uses thermal oil electric heating for exceptionally uniform temperature distribution and energy-efficient operation. Featuring a double-layer reinforced pot bottom, integrated motor-reducer drive, and rock wool insulation wrapped in stainless steel, this roaster delivers consistent, high-quality roasting results while minimizing energy waste.
 
 Thermal oil heating provides a key advantage over direct-heat methods: more even heat distribution across the entire pot surface and slower cooling when heating stops, which translates to significant energy savings over long production runs. An optional electric control box adds automated heating start/stop, rotation control, and alarm functions for hands-off operation.

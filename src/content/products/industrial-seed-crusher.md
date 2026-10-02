@@ -191,6 +191,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The 370 Type industrial oil cake crusher grinds pressed oil cakes — sesame, peanut, rapeseed and similar residues — into fine powder with an 18.5 kW motor at 3260 RPM. It is built for oil mills and feed producers turning press-cake byproducts into animal feed or other value products.
+
 The 370 Type Industrial Oil Cake Crusher is designed for crushing pressed oil cakes into fine powder after oil extraction. With a powerful 18.5 KW motor and 3260 RPM rotation speed, this industrial-grade crusher efficiently processes various oil cake residues, creating value from byproducts for animal feed production or other applications.
 
 Whether you need to recycle sesame cake, peanut cake, rapeseed cake, or other oil press residues, the 370 Type provides the crushing power and throughput your production line demands.

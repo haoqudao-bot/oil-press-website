@@ -2,6 +2,8 @@
 export const idProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Ringkasan
 
+Mesin cold press tekanan ultra tinggi HN480B menerapkan gaya press 600 ton pada tekanan sistem 65 Mpa dan tekanan permukaan kue press 48 Mpa/cm² — gaya cold press tertinggi dalam lini Haonuo — untuk produsen walnut, biji aprikot, dan yellowhorn. Batch berjalan 40–90 menit tergantung bahan dengan 6–8% minyak sisa dalam kue press (pengujian internal, hasil dapat bervariasi), semuanya dilindungi garansi 1 tahun.
+
 Mesin Press Dingin Tekanan Ultra Tinggi HN480B adalah mesin press minyak hidrolik press dingin paling canggih kami, memberikan gaya press luar biasa 600 ton dengan tekanan sistem 65 Mpa dan tekanan permukaan kue press 48 Mpa/cm². Dioptimalkan secara khusus untuk penekanan walnut dengan solusi penekanan walnut yang komprehensif, mesin ini mengurangi waktu penekanan secara signifikan sambil memaksimalkan hasil minyak. Ini adalah gaya press dingin tertinggi dalam jajaran kami, dirancang khusus untuk produsen yang menuntut performa press dingin maksimum.
 
 HN480B menampilkan diameter silinder luar 480 mm dengan diameter piston dalam 360 mm, menghasilkan tekanan luar biasa yang diperlukan untuk press dingin walnut, almond, pinus, dan bahan bercangkang keras lainnya dalam satu siklus. Solusi penekanan walnut eksklusif kami memastikan pemrosesan efisien dari serabut walnut dan walnut dengan cangkang, mengurangi waktu penekanan dan meningkatkan hasil minyak dibandingkan metode press dingin tradisional.
@@ -45,6 +47,8 @@ HN480B memberikan hasil minyak tertinggi untuk bahan press dingin, menjadikannya
 - **Opsi Penyesuaian** — Dimensi barel, panjang langkah, dan spesifikasi lain dapat disesuaikan dengan persyaratan produksi dan karakteristik bahan Anda secara tepat.`,
 
   'large-barrel-hydraulic-oil-press': `## Ringkasan
+
+Mesin press minyak hidrolik HN325 Large Barrel menggunakan barel berdiameter dalam 630 mm dan tinggi 1000 mm dengan dua sistem hidrolik independen, sehingga satu barel menekan sementara barel lain dibongkar dan dimuat ulang — dibangun untuk pabrik minyak yang mengutamakan volume per batch dibanding gaya press puncak. Waktu batch 40–90 menit tergantung bahan, dengan 6–8% minyak sisa dalam kue press untuk sebagian besar biji (pengujian internal, hasil dapat bervariasi).
 
 Mesin Press Minyak Hidrolik Barel Besar adalah versi kapasitas yang diperluas dari silinder HN325, dirancang untuk aplikasi yang memerlukan volume pemrosesan tinggi per batch daripada gaya press maksimum. Dilengkapi dengan dua sistem hidrolik independen, setiap barel beroperasi secara mandiri — silinder utama menekan satu barel sementara silinder kue press atas pada barel lain memungkinkan pengeluaran dan pemuatan ulang secara bersamaan. Desain sistem ganda ini menghilangkan waktu henti dan menggandakan produktivitas harian Anda.
 
@@ -91,6 +95,8 @@ Barel berdiameter dalam 630 mm dan tinggi 1000 mm menyediakan kapasitas besar un
 
   'sesame-oil-hydraulic-press': `## Ringkasan
 
+Mesin press minyak wijen hidrolik HN325/355 menampung 32,5 kg wijen per batch (hingga 50 kg dengan pra-kompresi) dan menyelesaikan siklus penekanan panas dalam sekitar 30–40 menit, cocok untuk pabrik minyak wijen dan produsen tahini dengan batch harian skala kecil-menengah. Barelnya yang lebih sempit berdiameter 300 mm memusatkan gaya hingga 47–51 Mpa/cm² tekanan permukaan kue press, meninggalkan 6–8% minyak sisa (pengujian internal, hasil dapat bervariasi). Motor 2,2 kW berjalan pada listrik standar 220V/380V.
+
 Mesin Press Minyak Wijen Hidrolik adalah mesin press minyak hidrolik yang dirancang khusus untuk mengekstraksi minyak wijen. Penekanan wijen memerlukan kontrol suhu yang ketat — untuk menghindari kehilangan panas dan penurunan hasil minyak, penekanan harus dilakukan dalam waktu sesingkat mungkin. Model ini menggabungkan silinder HN325 atau HN355 dengan barel yang lebih sempit berdiameter dalam 300 mm, memusatkan gaya press untuk mencapai tekanan permukaan kue press antara 47 hingga 51 Mpa/cm², memungkinkan wijen ditekan secara penuh dalam satu siklus cepat.
 
 Barel berdiameter dalam 300 mm dan tinggi 800 mm menampung 32,5 kg wijen per batch. Dengan pra-tekanan untuk menciptakan ruang tambahan, satu batch dapat memproses hingga 50 kg wijen — jauh lebih banyak daripada mesin press minyak wijen hidrolik gaya Korea, memberikan kapasitas lebih tinggi dan rasio kualitas-harga yang lebih baik.
@@ -131,6 +137,8 @@ Barel berdiameter dalam 300 mm dan tinggi 800 mm menampung 32,5 kg wijen per bat
 - **Opsi Penyesuaian** — Dimensi barel dan parameter penekanan dapat disesuaikan dengan varietas wijen spesifik Anda dan hasil minyak yang diinginkan.`,
 
   'coconut-oil-hydraulic-press': `## Ringkasan
+
+Mesin press hidrolik 300 Type Coconut menerapkan gaya press 300 ton melalui barel berdiameter 600 mm berlapis baja tahan karat 304 food-grade, dibangun untuk penekanan santan dan produksi virgin coconut oil di mana ketahanan korosi penting. Melayani pengolah kelapa di wilayah tropis; motor 2,2 kW menjaga kebutuhan listrik tetap rendah, dan mesin bergaransi 1 tahun.
 
 Mesin Press Minyak Kelapa / Minyak Kelapa Perawan Hidrolik adalah model Tipe 300 yang didedikasikan secara khusus untuk pemrosesan kelapa dan aplikasi lain yang sensitif terhadap korosi. Barel, bak penampung minyak, dan semua bagian luar mesin — termasuk kepala press — dilapisi baja tahan karat 304 kelas pangan, memberikan perlindungan penuh terhadap efek korosif susu kelapa dan cairan serupa.
 
@@ -224,6 +232,8 @@ Mesin ini adalah pilihan tepat bagi produsen dan prosesor yang perlu menekan ata
 
   'high-speed-seed-crusher': `## Ringkasan
 
+Penghancur biji kecepatan tinggi 220 Type memproses 750 kg biji minyak per jam dengan motor 11 kW pada 1460 RPM, melayani pabrik minyak yang perlu menghancurkan biji bercangkang keras sebelum penekanan hidrolik. Ayakan yang dapat diganti memungkinkan operator mengatur ukuran partikel keluaran, hingga tingkat mikron dengan ayakan terhalus, sesuai resep penekanan.
+
 Penghancuk Biji Kecepatan Tinggi Model 220 adalah mesin pra-pemrosesan biji minyak profesional yang dibangun berdasarkan desain struktural tipe flywheel. Dirancang untuk menggiling biji bercangkang keras, mesin ini dilengkapi dengan saringan yang dapat diganti yang memungkinkan operator menyesuaikan ukuran partikel keluaran sesuai permintaan — dengan saringan terkecil mampu menghasilkan partikel berukuran mikron. Penghancuk ini adalah langkah pra-pemrosesan penting sebelum press minyak hidrolik, memastikan hasil minyak yang baik dari bahan mentah yang keras dan bercangkang keras.
 
 Dengan kapasitas aliran 750 kg/jam dan motor tahan lama 11 KW yang beroperasi pada 1460 rpm, mesin ini memberikan performa penggilingan yang stabil dan bervolume untuk operasi press minyak komersial dari semua ukuran.
@@ -257,6 +267,8 @@ Penghancuk ini adalah solusi pra-pemrosesan yang tepat sebelum press minyak hidr
 - **Jaminan Suku Cadang** — Saringan pengganti dan bagian aus tersedia untuk pengiriman cepat`,
 
   'industrial-seed-crusher': `## Ringkasan
+
+Penghancur bungkil industri 370 Type menggiling bungkil hasil press — wijen, kacang tanah, rapeseed, dan residu serupa — menjadi bubuk halus dengan motor 18,5 kW pada 3260 RPM. Dibangun untuk pabrik minyak dan produsen pakan yang mengubah produk samping bungkil menjadi pakan ternak atau produk bernilai lainnya.
 
 Penghancuk Biji Industri Model 370 adalah versi kapasitas tinggi yang ditingkatkan dari Model 220 kami yang sudah terbukti — memberikan 2,6 kali lipat kapasitas pemrosesan untuk operasi penggilingan biji minyak skala besar. Dengan motor bertenaga 18,5 KW dan kecepatan rotasi 3260 rpm, penghancuk industri ini memproses bahan bercangkang keras yang sama seperti Model 220 tetapi dalam volume jauh lebih tinggi, menjadikannya pilihan yang cocok bagi fasilitas press minyak komersial dan industri.
 

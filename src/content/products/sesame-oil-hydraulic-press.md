@@ -266,6 +266,8 @@ updatedAt: 2025-11-01
 
 ## Overview
 
+The HN325/355 Sesame hydraulic oil press holds 32.5 kg of sesame per batch (up to 50 kg with pre-compression) and finishes a hot pressing cycle in about 30–40 minutes, suiting sesame oil mills and tahini producers running small-to-medium daily batches. Its narrower 300 mm barrel concentrates force to 47–51 Mpa/cm² cake surface pressure, leaving 6–8% residual oil in the cake (internal testing, results vary). The 2.2 kW motor runs on standard 220V/380V power.
+
 The Sesame Oil Hydraulic Press is a purpose-built hydraulic oil press machine designed specifically for sesame oil extraction. Sesame pressing demands strict temperature control — to prevent heat loss and reduced oil yield, pressing must be completed in the shortest possible time. This model pairs the HN325 or HN355 cylinder with a narrower 300 mm inner diameter barrel, concentrating the pressing force to achieve 47–51 Mpa/cm² cake surface pressure, allowing sesame to be fully pressed clean in a single rapid cycle.
 
 The 300 mm inner diameter, 800 mm high barrel holds 32.5 kg of sesame per batch. With pre-compression to create additional space, a single batch can process up to 50 kg of sesame — significantly more than Korean-style hydraulic sesame oil presses, offering superior capacity and value for money.

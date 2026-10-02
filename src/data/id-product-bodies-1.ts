@@ -2,6 +2,8 @@
 export const idProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## Ringkasan
 
+Mesin press minyak hidrolik standar HN325 menangani hingga 100 kg biji minyak per batch selama 40–90 menit tergantung bahan, cocok untuk pabrik minyak skala kecil dan menengah yang memeras sekitar satu ton biji per hari. Gaya press 325 ton dan tekanan sistem 60 Mpa meninggalkan 6–8% minyak sisa dalam kue press untuk sebagian besar biji konvensional (pengujian internal, hasil dapat bervariasi). Motor 2,2 kW berjalan pada listrik standar 220V/380V, dan cukup dijalankan 1–2 operator.
+
 Mesin Press Minyak Hidrolik Standar HN325 adalah mesin press minyak hidrolik kami yang paling populer, dipercaya oleh produsen minyak di seluruh dunia karena nilai yang luar biasa dan performa yang andal. Sebagai model standar dengan langkah silinder yang diperpanjang dalam lini produk kami, mesin ini memiliki langkah silinder 850 mm yang menekan hingga dasar, menangani ukuran batch dari 5 hingga 100 kg dengan mudah. Baik Anda seorang produsen skala kecil atau menjalankan operasi skala menengah, HN325 memberikan hasil ekstraksi minyak yang konsisten di berbagai jenis bahan.
 
 Silinder HN325 dipasangkan dengan barel berdiameter dalam 390 mm mencapai tekanan permukaan kue press sebesar 27,78 Mpa/cm², memungkinkan sebagian besar biji minyak konvensional untuk ditekan secara penuh dalam satu siklus. Hal ini dapat berkontribusi pada hasil minyak yang lebih tinggi dan minyak sisa yang lebih rendah dalam kue press. Pengembalian investasi aktual bergantung pada banyak faktor termasuk kondisi pasar dan efisiensi operasional.
@@ -52,6 +54,8 @@ HN325 cocok untuk menekan berbagai biji minyak konvensional:
 
   'heavy-duty-hydraulic-oil-press': `## Ringkasan
 
+Mesin press minyak hidrolik tugas berat HN355 memproses hingga 100 kg biji minyak per batch selama 40–90 menit, ditujukan untuk pabrik minyak yang membutuhkan gaya press lebih besar dari HN325 standar. Mesin ini menghasilkan gaya press 360 ton pada tekanan sistem 60 Mpa di atas rangka pelat baja 3 cm, meninggalkan 6–8% minyak sisa dalam kue press untuk sebagian besar biji (pengujian internal, hasil dapat bervariasi). Motor 2,2 kW dan kru satu hingga dua orang menjaga biaya operasional tetap rendah.
+
 Mesin Press Minyak Hidrolik Berat HN355 dibangun untuk operator yang menuntut daya press lebih besar dan daya tahan lebih tinggi. Menampilkan rangka pelat baja tebal 3 cm yang kokoh, model ini memberikan gaya press 360 ton dengan tekanan permukaan kue press 30,15 Mpa/cm² — peningkatan berarti dari HN325 standar. Biji minyak konvensional ditekan secara penuh dalam satu siklus, memaksimalkan hasil minyak dan meminimalkan pemborosan.
 
 Rangka baja yang diperkuat tidak hanya menahan tekanan operasional yang lebih tinggi tetapi juga memastikan stabilitas struktural jangka panjang di bawah penggunaan berat yang terus-menerus. Jika tuntutan produksi Anda melampaui apa yang dapat diberikan model standar, HN355 menyediakan margin daya tambahan yang Anda butuhkan tanpa beralih ke spesialis press dingin.
@@ -100,6 +104,8 @@ HN355 unggul dengan biji minyak konvensional dan bahan yang mendapat manfaat dar
 **Timur Tengah (Arab Saudi, UEA, Mesir):** Sangat baik untuk produksi minyak wijen dan walnut dengan kemampuan press dingin. Opsi barel ganda menggandakan throughput untuk operasi komersial.`,
 
   'cold-press-hydraulic-oil-press': `## Ringkasan
+
+Mesin press minyak hidrolik cold press HN426 menerapkan gaya press 500 ton pada tekanan sistem 70 Mpa, memeras dingin bahan bercangkang keras seperti inti walnut dan biji aprikot dalam satu siklus. Cocok untuk produsen minyak premium cold-pressed yang tidak dapat memanaskan bahan; batch berjalan 40–90 menit tergantung bahan, dengan 6–8% minyak sisa dalam kue press (pengujian internal, hasil dapat bervariasi). Motor 2,2 kW berjalan pada listrik standar 220V/380V.
 
 Mesin Press Minyak Hidrolik Press Dingin HN426 adalah spesialis press dingin khusus kami, direkayasa untuk mengekstraksi minyak dari bahan yang sensitif dan bercangkang keras tanpa degradasi panas. Dengan gaya press 500 ton dan tekanan permukaan kue press 42 Mpa/cm², mesin ini memberikan daya yang dibutuhkan untuk press dingin inti walnut, walnut dengan cangkang, biji aprikot, xanthoceras, biji tiger nut, dan bahan menantang serupa — semuanya diekstraksi secara penuh dalam satu siklus.
 
@@ -153,6 +159,8 @@ HN426 menangani semua bahan di atas dengan hasil minyak yang sangat baik. Untuk 
 
   'high-pressure-hydraulic-oil-press': `## Ringkasan
 
+Mesin press minyak hidrolik tekanan tinggi HN480 menghasilkan gaya press diperkirakan 560 ton pada tekanan sistem 72 Mpa, berada di antara model cold press HN426 dan andalan HN500 untuk pabrik minyak skala menengah hingga besar. Mesin ini menangani ekstraksi minyak konvensional maupun cold press dalam batch 40–90 menit tergantung bahan, meninggalkan 6–8% minyak sisa dalam kue press (pengujian internal, hasil dapat bervariasi).
+
 Mesin Press Minyak Hidrolik Tekanan Tinggi HN480 menjembatani kesenjangan antara spesialis press dingin HN426 dan andalan HN500 tekanan ultra tinggi. Dengan diameter silinder 480 mm dan gaya press estimasi 560 ton pada tekanan sistem 72 Mpa, mesin ini memberikan daya substansial untuk ekstraksi minyak konvensional maupun press dingin — keseimbangan optimal antara performa dan nilai untuk operasi skala menengah hingga besar.
 
 ## Keunggulan Utama
@@ -185,6 +193,8 @@ Mesin Press Minyak Hidrolik Tekanan Tinggi HN480 menjembatani kesenjangan antara
 - **Opsi Penyesuaian** — Dimensi barel dan parameter penekanan dapat disesuaikan dengan kebutuhan Anda.`,
 
   'mini-hydraulic-oil-press': `## Ringkasan
+
+Mesin press minyak hidrolik mini HN300 adalah mesin ringkas 300 ton dengan tekanan sistem 60 Mpa, dibangun untuk produksi minyak wijen dan biji kecil di bengkel desa dan pabrik minyak kecil dengan ruang terbatas. Batch berjalan 40–90 menit tergantung bahan pada tekanan permukaan kue press 25 Mpa/cm², meninggalkan 6–8% minyak sisa (pengujian internal, hasil dapat bervariasi). Motor 2,2 kW menjaga kebutuhan listrik tetap rendah.
 
 Mesin Press Minyak Hidrolik Mini HN300 adalah mesin press minyak hidrolik paling kompak dan terjangkau kami, dirancang khusus sebagai mesin press minyak wijen khusus. Juga dikenal sebagai penggilingan minyak wijen kecil atau mesin press minyak wijen gaya tradisional, mesin ini ringan, mudah dioperasikan, dan sangat cocok untuk produksi minyak wijen dan biji kecil. Dengan gaya press 300 ton dan tekanan sistem 63 Mpa, HN300 memberikan ekstraksi minyak yang andal dalam jejak yang hemat ruang.
 
@@ -229,6 +239,8 @@ HN300 cocok untuk menekan wijen dan biji minyak kecil lainnya:
 
   'medium-hydraulic-oil-press': `## Ringkasan
 
+Mesin press minyak hidrolik menengah HN400 menyediakan gaya press 500 ton dengan tekanan permukaan kue press 38 Mpa/cm², mencakup penekanan panas konvensional dan cold press bagi produsen yang menginginkan satu mesin untuk keduanya. Batch berjalan 40–90 menit tergantung bahan, dengan 6–8% minyak sisa dalam kue press (pengujian internal, hasil dapat bervariasi), dan motor 2,2 kW berjalan pada listrik standar 220V/380V.
+
 Mesin Press Minyak Hidrolik Medium HN400 menjembatani kesenjangan antara model standar dan model press dingin kami, menawarkan 500 ton gaya press dengan tekanan permukaan kue press 38 Mpa/cm². Mesin serbaguna ini cocok untuk press dingin dan bekerja secara efektif di semua musim tanpa dibatasi oleh kondisi iklim. Baik Anda memproses biji minyak konvensional atau terjun ke produksi press dingin, HN400 memberikan daya dan fleksibilitas yang Anda butuhkan.
 
 Silinder HN400 dipasangkan dengan barel berdiameter dalam 390 mm mencapai tekanan permukaan kue press 38 Mpa/cm², memungkinkan sebagian besar bahan konvensional dan semi-keras ditekan secara penuh dalam satu siklus. Kemampuan press dinginnya berarti Anda dapat memproduksi minyak press dingin premium dari biji teh, inti walnut, dan biji rami sambil menjaga rasa alami dan nilai gizi produk Anda.
@@ -272,6 +284,8 @@ HN400 cocok untuk menekan berbagai biji minyak konvensional dan semi-keras:
 
   'stainless-steel-hydraulic-oil-press': `## Ringkasan
 
+Mesin press minyak hidrolik stainless steel HN325S menghasilkan gaya press 325 ton pada tekanan sistem 60 Mpa dengan baja tahan karat food-grade di semua permukaan kontak, dibangun untuk produksi komersial santan dan krim kelapa. Cocok untuk pengolah makanan yang membutuhkan penekanan higienis dan tahan korosi pada daging kelapa segar, berjalan dengan motor 2,2 kW, dan dilindungi garansi 1 tahun.
+
 Mesin Press Santan Kelapa Baja Tahan Karat HN325S dirancang khusus untuk mengekstraksi santan kelapa dan krim kelapa berkualitas tinggi dari daging kelapa segar. Dengan konstruksi baja tahan karat food-grade untuk semua permukaan kontak, mesin ini memastikan kebersihan maksimal dan kemurnian produk untuk produksi santan kelapa.
 
 Dengan gaya press 325 ton dan tekanan sistem 60 Mpa, HN325S mengekstraksi santan kelapa secara efisien sambil mempertahankan rasa alami dan nutrisi. Barel baja tahan karat mencegah kontaminasi, menjadikan mesin ini pilihan cocok untuk produksi santan kelapa komersial yang membutuhkan standar kebersihan tertinggi.
@@ -312,6 +326,8 @@ HN325S dirancang khusus untuk produksi santan kelapa:
 - **Opsi Penyesuaian** — Dimensi barel, panjang langkah, dan parameter lain dapat disesuaikan dengan kebutuhan spesifik Anda untuk produksi kelapa.`,
 
   'ultra-high-pressure-hydraulic-oil-press': `## Ringkasan
+
+Mesin press minyak hidrolik tekanan ultra tinggi HN500 menghasilkan gaya press 620 ton dengan tekanan permukaan kue press 52 Mpa/cm² di atas rangka pelat baja 5 cm, dibangun untuk pabrik minyak yang memeras dingin bahan terkeras seperti inti walnut dan biji aprikot. Batch satu siklus selama 40–90 menit (tergantung bahan) meninggalkan 6–8% minyak sisa dalam kue press (pengujian internal, hasil dapat bervariasi), dan mesin ini dilindungi garansi 1 tahun.
 
 Mesin Press Minyak Hidrolik Tekanan Ultra Tinggi HN500 adalah andalan lini produk kami, dibangun untuk tantangan ekstraksi minyak paling berat. Menampilkan rangka pelat baja tebal 5 cm yang masif — terberat dalam jajaran kami — mesin ini memberikan gaya press 620 ton yang menakjubkan dengan tekanan permukaan kue press 52 Mpa/cm². Ini adalah mesin untuk operator yang membutuhkan hasil minyak maksimum dari bahan press dingin tersulit.
 
