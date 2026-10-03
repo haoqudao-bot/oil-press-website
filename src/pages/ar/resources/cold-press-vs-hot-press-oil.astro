@@ -95,7 +95,7 @@ function localePath(path: string): string {
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <a href={localePath('/resources/')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
@@ -259,12 +259,12 @@ function localePath(path: string): string {
       <h2 class="font-display text-4xl md:text-5xl text-white mb-6">أي طريقة مناسبة لك؟</h2>
       <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لمهندسينا مساعدتك في تحديد أفضل طريقة ضغط ومعدات لأهدافك التجارية المحددة.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+        <a href={localePath('/contact/')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
           احصل على نصيحة متخصصة
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">عرض المعدات</a>
-        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">العودة للموارد</a>
+        <a href={localePath('/products/')} class="btn-outline border-white text-white hover:bg-white/10">عرض المعدات</a>
+        <a href={localePath('/resources/')} class="btn-outline border-white text-white hover:bg-white/10">العودة للموارد</a>
       </div>
     </div>
   </section>

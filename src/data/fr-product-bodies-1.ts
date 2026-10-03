@@ -1,4 +1,4 @@
-﻿﻿﻿﻿export const frProductBodies1: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `## Aperçu
 
 La presse à huile hydraulique standard HN325 traite jusqu'à 100 kg de graines oléagineuses par lot de 40 à 90 minutes selon la matière, ce qui convient aux petites et moyennes huileries pressant environ une tonne de graines par jour. Sa force de pressage de 325 tonnes et sa pression système de 60 Mpa laissent 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines conventionnelles (tests internes, les résultats peuvent varier). Le moteur de 2,2 kW fonctionne sur une alimentation standard 220V/380V, et un à deux opérateurs suffisent.

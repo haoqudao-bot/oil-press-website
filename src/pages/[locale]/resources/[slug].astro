@@ -87,7 +87,7 @@ const seoKeywords = resource.data.seoKeywords;
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <a href={localePath('/resources/')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{resource.data.title[currentLocale] || resource.data.title.en}</span>
       </nav>
@@ -207,7 +207,7 @@ const seoKeywords = resource.data.seoKeywords;
             <h3 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-3">{t.resources.ctaTitle}</h3>
             <p class="text-lg text-steel-600">{t.resources.ctaDesc}</p>
           </div>
-          <a href={localePath('/contact')} class="btn-primary text-base px-6 py-3 whitespace-nowrap">
+          <a href={localePath('/contact/')} class="btn-primary text-base px-6 py-3 whitespace-nowrap">
             {t.resources.ctaButton}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -216,7 +216,7 @@ const seoKeywords = resource.data.seoKeywords;
 
       <!-- Back Button -->
       <div class="mt-10 flex justify-center">
-        <a href={localePath('/resources')} class="inline-flex items-center gap-2 px-6 py-3 text-steel-600 hover:text-amber-600 hover:bg-amber-50 rounded-xl transition-all duration-200 font-medium">
+        <a href={localePath('/resources/')} class="inline-flex items-center gap-2 px-6 py-3 text-steel-600 hover:text-amber-600 hover:bg-amber-50 rounded-xl transition-all duration-200 font-medium">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
           {t.resources.backToResources}
         </a>

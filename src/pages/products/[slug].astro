@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -73,7 +73,7 @@ if (faqLd) allLd.push(faqLd);
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href="/" class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href="/products" class="hover:text-amber-500 transition-colors">{t.products.title}</a>
+        <a href="/products/" class="hover:text-amber-500 transition-colors">{t.products.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900">{product.data.title.en}</span>
       </nav>
@@ -192,7 +192,7 @@ if (faqLd) allLd.push(faqLd);
 
           <!-- CTA Buttons -->
           <div class="space-y-3">
-            <a href="/contact" class="btn-primary text-base w-full justify-center">
+            <a href="/contact/" class="btn-primary text-base w-full justify-center">
               {t.products.requestQuote}
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -264,7 +264,7 @@ if (faqLd) allLd.push(faqLd);
 
       <!-- Back Button -->
       <div class="mt-12">
-        <a href="/products" class="inline-flex items-center gap-2 text-steel-600 hover:text-amber-500 transition-colors">
+        <a href="/products/" class="inline-flex items-center gap-2 text-steel-600 hover:text-amber-500 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
           Back to Products
         </a>

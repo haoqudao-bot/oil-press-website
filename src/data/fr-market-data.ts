@@ -52,7 +52,7 @@ export interface MarketData {
 
 export const frMarketData: Record<string, MarketData> = {
   nigeria: {
-    title: 'Presse à Huile au Nigéria | Haonuo',
+    title: 'Presse à Huile au Nigéria',
     description: 'Presse à huile professionnelle pour le Nigéria. Presse hydraulique à froid pour arachide, palmiste, sésame et coton. Prix direct usine en Naira. Expédition vers Lagos 25-30 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile au Nigéria — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile d\'arachide, de palmiste, de sésame et de coton. Prix direct usine, expédition vers Lagos en 25-30 jours, garantie 1 an.',
@@ -92,7 +92,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   india: {
-    title: 'Presse à Huile en Inde | Haonuo',
+    title: 'Presse à Huile en Inde',
     description: 'Presse à huile hydraulique pour l\'Inde. Presse à froid pour moutarde (kachi ghani), sésame, arachide et coco. Prix direct usine. Expédition vers Mumbai en 18-22 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile en Inde — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de moutarde (kachi ghani), de sésame, d\'arachide et de coco. Prix direct usine, expédition vers Mumbai en 18-22 jours, garantie 1 an.',
@@ -132,7 +132,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   indonesia: {
-    title: 'Presse à Huile en Indonésie | Haonuo',
+    title: 'Presse à Huile en Indonésie',
     description: 'Presse à huile hydraulique pour l\'Indonésie. Presse à froid pour coco (VCO) et palmiste. Prix direct usine. Expédition vers Jakarta en 15-20 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile en Indonésie — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de coco vierge (VCO) et de palmiste. Prix direct usine, expédition vers Jakarta en 15-20 jours, garantie 1 an.',
@@ -171,7 +171,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   pakistan: {
-    title: 'Presse à Huile au Pakistan | Haonuo',
+    title: 'Presse à Huile au Pakistan',
     description: 'Presse à huile hydraulique pour le Pakistan. Presse à froid pour tournesol, moutarde, sésame et coton. Prix direct usine. Expédition vers Karachi en 20-25 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile au Pakistan — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de tournesol, de moutarde, de sésame et de coton. Prix direct usine, expédition vers Karachi en 20-25 jours, garantie 1 an.',
@@ -211,7 +211,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   philippines: {
-    title: 'Presse à Huile aux Philippines | Haonuo',
+    title: 'Presse à Huile aux Philippines',
     description: 'Presse à huile hydraulique pour les Philippines. Presse à froid pour coco vierge (VCO) et arachide. Prix direct usine. Expédition vers Manille en 12-16 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile aux Philippines — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de coco vierge (VCO) et d\'huile d\'arachide. Prix direct usine, expédition vers Manille en 12-16 jours, garantie 1 an.',
@@ -251,7 +251,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   egypt: {
-    title: 'Presse à Huile en Égypte | Haonuo',
+    title: 'Presse à Huile en Égypte',
     description: 'Presse à huile hydraulique pour l\'Égypte. Presse à froid pour sésame, olive et arachide. Prix direct usine. Expédition vers Alexandrie en 20-24 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile en Égypte — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de sésame, d\'olive et d\'arachide. Prix direct usine, expédition vers Alexandrie en 20-24 jours, garantie 1 an.',
@@ -291,7 +291,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   'south-africa': {
-    title: 'Presse à Huile en Afrique du Sud | Haonuo',
+    title: 'Presse à Huile en Afrique du Sud',
     description: 'Presse à huile hydraulique pour l\'Afrique du Sud. Presse à froid pour tournesol, arachide, soja et colza. Prix direct usine. Expédition vers Durban en 22-26 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile en Afrique du Sud — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de tournesol, d\'arachide, de soja et de colza. Prix direct usine, expédition vers Durban en 22-26 jours, garantie 1 an.',
@@ -331,7 +331,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   kenya: {
-    title: 'Presse à Huile au Kenya | Haonuo',
+    title: 'Presse à Huile au Kenya',
     description: 'Presse à huile hydraulique pour le Kenya. Presse à froid pour tournesol, arachide et sésame. Prix direct usine. Expédition vers Mombasa en 25-30 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile au Kenya — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de tournesol, d\'arachide et de sésame. Prix direct usine, expédition vers Mombasa en 25-30 jours, garantie 1 an.',
@@ -371,7 +371,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   uk: {
-    title: 'Presse à Huile au Royaume-Uni | Haonuo',
+    title: 'Presse à Huile au Royaume-Uni',
     description: 'Presse à huile hydraulique pour le Royaume-Uni. Presse à froid pour colza, chanvre et lin. Prix direct usine. Expédition vers Felixstowe en 28-35 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile au Royaume-Uni — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de colza, de chanvre et de lin pressées à froid. Prix direct usine, expédition vers Felixstowe en 28-35 jours, garantie 1 an.',
@@ -411,7 +411,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   usa: {
-    title: 'Presse à Huile aux États-Unis | Haonuo',
+    title: 'Presse à Huile aux États-Unis',
     description: 'Presse à huile hydraulique pour les États-Unis. Presse à froid pour tournesol, arachide, chanvre et amande. Prix direct usine. Expédition vers Los Angeles en 30-40 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile aux États-Unis — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de tournesol, d\'arachide, de chanvre et d\'amande pressées à froid. Prix direct usine, expédition vers Los Angeles en 30-40 jours, garantie 1 an.',
@@ -451,7 +451,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   'middle-east': {
-    title: 'Presse à Huile au Moyen-Orient | Haonuo',
+    title: 'Presse à Huile au Moyen-Orient',
     description: 'Presse à huile hydraulique pour le Moyen-Orient. Presse à froid pour sésame, noix et olive. Prix direct usine. Expédition vers Djeddah et Dubaï en 20-25 jours. Garantie 1 an.',
     heroTitle: 'Presse à Huile au Moyen-Orient — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de sésame, de noix et d\'olive pressées à froid. Prix direct usine, expédition vers Djeddah et Dubaï en 20-25 jours, garantie 1 an.',

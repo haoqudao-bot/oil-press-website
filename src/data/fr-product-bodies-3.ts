@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Aperçu
 
 Le groupe intégré alimentateur-broyeur-torréfacteur All-in-One combine l'alimentation automatique, le broyage et la torréfaction dans un seul ensemble de machines, permettant aux petites et moyennes huileries de passer de la graine brute à un produit prêt à presser sans équipement de transfert entre les étapes. Il réduit la main-d'œuvre et les pertes de manutention sur les lignes de prétraitement alimentant les presses à huile hydrauliques.

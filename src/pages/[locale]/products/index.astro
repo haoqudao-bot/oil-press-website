@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -137,7 +137,7 @@ const breadcrumbLd = {
               <h3 class="font-display text-lg text-charcoal-900 mb-4">{t.products.allCategories}</h3>
               <nav class="space-y-1">
                 <a
-                  href={localePath('/products')}
+                  href={localePath('/products/')}
                   class="block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors bg-amber-500 text-charcoal-900"
                 >
                   {t.products.allCategories}
@@ -156,21 +156,21 @@ const breadcrumbLd = {
             <div class="pt-6 border-t border-steel-100">
               <nav class="space-y-1">
                 <a
-                  href={localePath('/hydraulic-oil-press-machine')}
+                  href={localePath('/hydraulic-oil-press-machine/')}
                   class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                   <span>{t.common.hydraulicOilPressMachine}</span>
                 </a>
                 <a
-                  href={localePath('/cold-press-oil-machine')}
+                  href={localePath('/cold-press-oil-machine/')}
                   class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                   <span>{t.common.coldPressOilMachine}</span>
                 </a>
                 <a
-                  href={localePath('/manual-oil-press-machine')}
+                  href={localePath('/manual-oil-press-machine/')}
                   class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
@@ -181,7 +181,7 @@ const breadcrumbLd = {
 
             <div class="pt-6 border-t border-steel-100">
               <a
-                href={localePath('/catalog')}
+                href={localePath('/catalog/')}
                 class="flex items-center gap-3 px-4 py-3 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group mb-2"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -191,7 +191,7 @@ const breadcrumbLd = {
                 </div>
               </a>
               <a
-                href={localePath('/products/model-comparison')}
+                href={localePath('/products/model-comparison/')}
                 class="flex items-center gap-3 px-4 py-3 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
@@ -281,7 +281,7 @@ const breadcrumbLd = {
               ? 'معدات التنظيف والتقشير والطحن التي تحضر البذور الخام للعصر. تزيل الحطام والشوائب وتزيد مساحة السطح لتحرير الزيت بشكل أكثر اكتمالاً أثناء العصر.'
               : 'Peralatan pembersihan, pengupasan kulit, dan penghancuran yang mempersiapkan biji mentah untuk pengepresan. Menghilangkan kotoran dan benda asing serta meningkatkan luas permukaan untuk pelepasan minyak yang lebih sempurna saat pengepresan.'}
           </p>
-          <a href={localePath('/products/seed-processing-equipment')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+          <a href={localePath('/products/seed-processing-equipment/')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
             {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
@@ -301,7 +301,7 @@ const breadcrumbLd = {
               ? 'تطبيق حراري متحكم يكسر جدران الخلايا، يقلل من لزوجة الزيت ويطور النكهة. يزيد من إنتاج الزيت بنسبة 5-15٪ مقارنة بعصر البذور غير المسخنة.'
               : 'Penerapan panas terkontrol yang memecah dinding sel, mengurangi viskositas minyak, dan mengembangkan rasa. Meningkatkan hasil 5-15% dibanding pengepresan biji yang tidak dipanaskan.'}
           </p>
-          <a href={localePath('/products/roasting-steaming-equipment')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+          <a href={localePath('/products/roasting-steaming-equipment/')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
             {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
@@ -321,7 +321,7 @@ const breadcrumbLd = {
               ? 'عصر دفعي مع الاحتفاظ بدرجة حرارة منخفضة (أقل من 60 درجة مئوية). 12 نموذجاً من 300 إلى 620 طن من قوة العصر بسعة 100 كجم لكل دفعة. الأفضل للبذور عالية القيمة حيث تكون جودة الزيت أكثر أهمية من الإنتاج.'
               : 'Pengepresan batch dengan retensi suhu rendah (di bawah 60°C). 12 model dari 300 hingga 620 ton gaya pengepres dengan kapasitas 100 kg per batch. Terbaik untuk biji bernilai tinggi di mana kualitas minyak lebih penting daripada throughput.'}
           </p>
-          <a href={localePath('/products/hydraulic-oil-press')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+          <a href={localePath('/products/hydraulic-oil-press/')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
             {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
@@ -341,7 +341,7 @@ const breadcrumbLd = {
               ? 'يحول الزيت المعصور الخام إلى منتج صافٍ ومستعد للبيع. من الترشيح الأساسي 50 ميكرون للبيع بالجملة إلى التكرير الكامل لزيت الطعام بالتجزئة.'
               : 'Mengubah minyak hasil pengepresan kasar menjadi produk yang jernih, stabil, dan siap dipasarkan. Dari filtrasi dasar 50 mikron untuk penjualan curah hingga pemurnian lengkap untuk minyak makanan eceran.'}
           </p>
-          <a href={localePath('/products/filtration-refining-equipment')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
+          <a href={localePath('/products/filtration-refining-equipment/')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-3 hover:text-amber-600">
             {currentLocale === 'fr' ? 'Voir l\'équipement' : currentLocale === 'ar' ? 'عرض المعدات' : 'Lihat peralatan'}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
@@ -358,7 +358,7 @@ const breadcrumbLd = {
             : currentLocale === 'ar'
             ? ' إذا كنت تبدأ من الصفر، فمعظم العمليات تحتاج إلى معدات من جميع الفئات الأربع. للحصول على نظرة عامة على عملية الإنتاج الكاملة من البذور إلى الزيت المعبأ في زجاجات، راجع '
             : ' Jika Anda memulai dari awal, sebagian besar operasi memerlukan peralatan dari keempat kategori. Untuk gambaran umum proses produksi lengkap dari biji hingga minyak dalam botol, lihat '}
-          <a href={localePath('/resources/complete-oil-production-line-guide')} class="text-amber-600 underline hover:text-amber-700">
+          <a href={localePath('/resources/complete-oil-production-line-guide/')} class="text-amber-600 underline hover:text-amber-700">
             {currentLocale === 'fr' ? 'Guide complet de la ligne de production d\'huile' : currentLocale === 'ar' ? 'الدليل الشامل لخط إنتاج الزيت' : 'Panduan Jalur Produksi Minyak Lengkap'}
           </a>.
         </p>
@@ -376,7 +376,7 @@ const breadcrumbLd = {
         {currentLocale === 'fr' ? 'Nos ingénieurs peuvent recommander la meilleure machine pour vos graines oléagineuses, votre capacité et votre budget. Obtenez un devis gratuit dans les 24 heures.' : currentLocale === 'ar' ? 'يمكن لمهندسينا التوصية بأفضل آلة لزيت البذور الخاصة بك، والقدرة، والميزانية. احصل على عرض أسعار مجاني خلال 24 ساعة.' : 'Insinyur kami dapat merekomendasikan mesin terbaik untuk biji minyak, kapasitas, dan anggaran Anda. Dapatkan penawaran harga gratis dalam 24 jam.'}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 text-charcoal-900 font-bold px-8 py-4 rounded-xl hover:from-amber-400 hover:to-amber-300 transition-all shadow-lg hover:shadow-xl">
+        <a href={localePath('/contact/')} class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 text-charcoal-900 font-bold px-8 py-4 rounded-xl hover:from-amber-400 hover:to-amber-300 transition-all shadow-lg hover:shadow-xl">
           {currentLocale === 'fr' ? 'Demander un devis' : currentLocale === 'ar' ? 'طلب عرض سعر' : 'Minta Penawaran'}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>

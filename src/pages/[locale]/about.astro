@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -284,7 +284,7 @@ const galImages = [
       <h1>{v.heroH1}</h1>
       <p class="sub">{v.heroSub}</p>
       <div class="hero-cta">
-        <a class="btn btn-amber" href={localePath('/contact')}>{v.heroCta1}</a>
+        <a class="btn btn-amber" href={localePath('/contact/')}>{v.heroCta1}</a>
         <a class="btn btn-ghost" href="#proof">{v.heroCta2}</a>
       </div>
     </div>
@@ -350,21 +350,21 @@ const galImages = [
           <h4>{v.pers1H4}</h4>
           <p>{v.pers1P}</p>
           <ul><li>{v.pers1Li1}</li><li>{v.pers1Li2}</li></ul>
-          <a class="go" href={localePath('/contact')}>{v.pers1Cta}</a>
+          <a class="go" href={localePath('/contact/')}>{v.pers1Cta}</a>
         </div>
         <div class="pc reveal">
           <div class="who">{v.pers2Who}</div>
           <h4>{v.pers2H4}</h4>
           <p>{v.pers2P}</p>
           <ul><li>{v.pers2Li1}</li><li>{v.pers2Li2}</li></ul>
-          <a class="go" href={localePath('/contact')}>{v.pers2Cta}</a>
+          <a class="go" href={localePath('/contact/')}>{v.pers2Cta}</a>
         </div>
         <div class="pc reveal">
           <div class="who">{v.pers3Who}</div>
           <h4>{v.pers3H4}</h4>
           <p>{v.pers3P}</p>
           <ul><li>{v.pers3Li1}</li><li>{v.pers3Li2}</li></ul>
-          <a class="go" href={localePath('/contact')}>{v.pers3Cta}</a>
+          <a class="go" href={localePath('/contact/')}>{v.pers3Cta}</a>
         </div>
       </div>
     </div>
@@ -410,10 +410,10 @@ const galImages = [
         <p>{v.linesP}</p>
       </div>
       <div class="line-grid">
-        <div class="lc reveal"><div class="body"><h4>{v.line1H4}</h4><p>{v.line1P}</p><a class="go" href={localePath('/contact')}>{v.line1Cta}</a></div></div>
-        <div class="lc reveal"><div class="body"><h4>{v.line2H4}</h4><p>{v.line2P}</p><a class="go" href={localePath('/contact')}>{v.line2Cta}</a></div></div>
-        <div class="lc reveal"><div class="body"><h4>{v.line3H4}</h4><p>{v.line3P}</p><a class="go" href={localePath('/contact')}>{v.line3Cta}</a></div></div>
-        <div class="lc reveal"><div class="body"><h4>{v.line4H4}</h4><p>{v.line4P}</p><a class="go" href={localePath('/contact')}>{v.line4Cta}</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>{v.line1H4}</h4><p>{v.line1P}</p><a class="go" href={localePath('/contact/')}>{v.line1Cta}</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>{v.line2H4}</h4><p>{v.line2P}</p><a class="go" href={localePath('/contact/')}>{v.line2Cta}</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>{v.line3H4}</h4><p>{v.line3P}</p><a class="go" href={localePath('/contact/')}>{v.line3Cta}</a></div></div>
+        <div class="lc reveal"><div class="body"><h4>{v.line4H4}</h4><p>{v.line4P}</p><a class="go" href={localePath('/contact/')}>{v.line4Cta}</a></div></div>
       </div>
       <p class="line-note reveal">{v.linesNote}</p>
     </div>
@@ -500,7 +500,7 @@ const galImages = [
           <p>{v.serv3P}</p>
         </div>
       </div>
-      <div class="sv-cta reveal"><a href={localePath('/services')}>{v.servCta}</a></div>
+      <div class="sv-cta reveal"><a href={localePath('/services/')}>{v.servCta}</a></div>
     </div>
   </section>
 
@@ -512,8 +512,8 @@ const galImages = [
       <h2>{v.fctaH2}</h2>
       <p>{v.fctaP}</p>
       <div class="cta-row">
-        <a class="btn btn-amber" href={localePath('/contact')}>{v.fctaBtn1}</a>
-        <a class="btn btn-ghost" href={localePath('/products')}>{v.fctaBtn2}</a>
+        <a class="btn btn-amber" href={localePath('/contact/')}>{v.fctaBtn1}</a>
+        <a class="btn btn-ghost" href={localePath('/products/')}>{v.fctaBtn2}</a>
       </div>
       <div class="mail">{v.fctaMail} <a href="mailto:info@hydoilpress.com">info@hydoilpress.com</a></div>
     </div>

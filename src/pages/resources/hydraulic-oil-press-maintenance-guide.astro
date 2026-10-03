@@ -48,7 +48,7 @@ const maintenanceSchedule = [
 ];
 
 const hydraulicSystem = [
-  { title: 'Hydraulic Oil Management', items: ['Use ISO VG 46 hydraulic oil', 'Maintain proper temperature (30-50°C)', 'Replace oil every 2,000 operating hours', 'Capacity: <a href="/products/standard-hydraulic-oil-press">HN325</a>/<a href="/products/hn365-hydraulic-oil-press">HN365</a>: 30-40 liters, <a href="/products/ultra-high-pressure-hydraulic-oil-press">HN500</a>: 50-60 liters'] },
+  { title: 'Hydraulic Oil Management', items: ['Use ISO VG 46 hydraulic oil', 'Maintain proper temperature (30-50°C)', 'Replace oil every 2,000 operating hours', 'Capacity: <a href="/products/standard-hydraulic-oil-press/">HN325</a>/<a href="/products/hn365-hydraulic-oil-press/">HN365</a>: 30-40 liters, <a href="/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>: 50-60 liters'] },
   { title: 'Hydraulic Cylinder Care', items: ['Keep cylinder rod clean', 'Protect from dust and debris', 'Inspect seals for wear', 'Replace if leaking'] },
   { title: 'Hydraulic Filter Maintenance', items: ['Clean every 50-100 operating hours', 'Replace if damaged or excessively dirty', 'Use genuine Haonuo replacement filters'] },
 ];
@@ -82,7 +82,7 @@ const spareParts = [
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href="/" class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href="/resources" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <a href="/resources/" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
@@ -285,14 +285,14 @@ const spareParts = [
       <h2 class="font-display text-4xl md:text-5xl text-white mb-6">READY TO START YOUR OIL PRODUCTION?</h2>
       <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">Our engineering team can help you select the best equipment and optimize your investment for maximum returns.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+        <a href="/contact/" class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
           {t.resources.ctaButton}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="/products" class="btn-outline border-white text-white hover:bg-white/10">
+        <a href="/products/" class="btn-outline border-white text-white hover:bg-white/10">
           {t.nav.products}
         </a>
-        <a href="/resources" class="btn-outline border-white text-white hover:bg-white/10">
+        <a href="/resources/" class="btn-outline border-white text-white hover:bg-white/10">
           {t.resources.backToResources}
         </a>
       </div>

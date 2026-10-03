@@ -115,7 +115,7 @@ const keywords = currentLocale === 'fr'
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/products')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
+        <a href={localePath('/products/')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold">{t.common.manualOilPressMachine}</span>
       </nav>
@@ -128,11 +128,11 @@ const keywords = currentLocale === 'fr'
       <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">{pageTitle}</h1>
       <p class="text-steel-300 text-lg max-w-3xl mb-8">{currentLocale === 'fr' ? 'Presse à huile manuelle à main pour production d\'huile à petite échelle et hors réseau. Pas d\'électricité nécessaire. Adapté pour les zones éloignées, l\'usage domestique et le pressage traditionnel d\'huile.' : currentLocale === 'ar' ? 'مكينة ضغط زيت يدوية لانتاج الزيت على نطاق صغير وخارج الشبكة. لا حاجة إلى كهرباء. مناسبة للمناطق النائية، الاستخدام المنزلي، والضغط التقليدي للزيت.' : 'Mesin press minyak manual untuk produksi minyak skala kecil dan off-grid. Tidak perlu listrik. Cocok untuk area terpencil, penggunaan rumah, dan press minyak tradisional.'}</p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        <a href={localePath('/contact/')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
           {currentLocale === 'fr' ? 'Trouver la bonne presse à huile' : currentLocale === 'ar' ? 'العثور على ماكينة الضغط المناسبة' : 'Temukan Mesin Press yang Tepat'}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href={localePath('/hydraulic-oil-press-machine')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
+        <a href={localePath('/hydraulic-oil-press-machine/')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
           {currentLocale === 'fr' ? 'Voir les presses hydrauliques' : currentLocale === 'ar' ? 'عرض المكائن الهيدروليكية' : 'Lihat Press Hidrolik'}
         </a>
       </div>
@@ -195,7 +195,7 @@ const keywords = currentLocale === 'fr'
                 <span><strong class="text-charcoal-900">{currentLocale === 'fr' ? 'Fonctionne avec un générateur' : currentLocale === 'ar' ? 'تعمل مع المولد' : 'Bekerja dengan generator'}</strong> — {currentLocale === 'fr' ? '5 KVA suffit' : currentLocale === 'ar' ? '5 كيلو فولت آمبير كافي' : '5 KVA sudah cukup'}</span>
               </li>
             </ul>
-            <a href={localePath('/hydraulic-oil-press-machine')} class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+            <a href={localePath('/hydraulic-oil-press-machine/')} class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
               {currentLocale === 'fr' ? 'Explorer les Presses Hydrauliques Haonuo' : currentLocale === 'ar' ? 'استكشف مكائن الضغط الهيدروليكي Haonuo' : 'Jelajahi Mesin Press Hidrolik Haonuo'}
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -311,7 +311,7 @@ const keywords = currentLocale === 'fr'
       <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'fr' ? 'Trouver la Bonne Presse à Huile pour Vous' : currentLocale === 'ar' ? 'العثور على ماكينة الضغط المناسبة لك' : 'Temukan Mesin Press Minyak yang Tepat untuk Anda'}</h2>
       <p class="text-steel-300 text-lg mb-8">{currentLocale === 'fr' ? 'Que vous ayez besoin d\'une presse manuelle pour un usage hors réseau ou d\'une presse hydraulique pour un meilleur rendement, Haonuo peut vous aider à choisir la bonne solution.' : currentLocale === 'ar' ? 'سواء كنت بحاجة إلى مضخة يدوية للاستخدام خارج الشبكة أو مضخة هيدروليكي للحصول على عائد أفضل، يمكن لـ Haonuo مساعدتك في اختيار الحل المناسب.' : 'Apakah Anda membutuhkan press manual untuk penggunaan off-grid atau press hidrolik untuk hasil lebih baik, Haonuo dapat membantu Anda memilih solusi yang tepat.'}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        <a href={localePath('/contact/')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
           {currentLocale === 'fr' ? 'Obtenir un devis gratuit' : currentLocale === 'ar' ? 'احصل على عرض أسعار مجاني' : 'Dapatkan Penawaran Gratis'}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>

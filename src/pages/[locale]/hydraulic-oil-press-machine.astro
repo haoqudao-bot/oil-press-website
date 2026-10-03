@@ -115,7 +115,7 @@ const faqLd = {
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/products')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
+        <a href={localePath('/products/')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold">{t.common.hydraulicOilPressMachine}</span>
       </nav>
@@ -128,11 +128,11 @@ const faqLd = {
       <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">{pageTitle}</h1>
       <p class="text-steel-300 text-lg max-w-3xl mb-8">{pageDesc}</p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        <a href={localePath('/contact/')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
           {currentLocale === 'fr' ? 'Demander un devis' : currentLocale === 'ar' ? 'طلب عرض أسعار' : 'Minta Penawaran'}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href={localePath('/products/model-comparison')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
+        <a href={localePath('/products/model-comparison/')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
           {currentLocale === 'fr' ? 'Comparer les modèles' : currentLocale === 'ar' ? 'مقارنة النماذج' : 'Bandingkan Model'}
         </a>
       </div>
@@ -375,7 +375,7 @@ const faqLd = {
           </tbody>
         </table>
       </div>
-      <p class="text-center text-sm text-steel-500 mt-4">{currentLocale === 'fr' ? 'Tous les modèles disponibles en configurations à fût simple et double. Taille de fût personnalisable.' : currentLocale === 'ar' ? 'جميع النماذج متوفرة بتهيئات البرميل المفرد والمزدوج. حجم البرميل قابل للتخصيص.' : 'Semua model tersedia dalam konfigurasi barrel tunggal dan ganda. Ukuran barrel dapat disesuaikan.'} <a href={localePath('/products/model-comparison')} class="text-amber-500 hover:underline">{currentLocale === 'fr' ? 'Comparer tous les modèles →' : currentLocale === 'ar' ? 'مقارنة جميع النماذج ←' : 'Bandingkan semua model →'}</a></p>
+      <p class="text-center text-sm text-steel-500 mt-4">{currentLocale === 'fr' ? 'Tous les modèles disponibles en configurations à fût simple et double. Taille de fût personnalisable.' : currentLocale === 'ar' ? 'جميع النماذج متوفرة بتهيئات البرميل المفرد والمزدوج. حجم البرميل قابل للتخصيص.' : 'Semua model tersedia dalam konfigurasi barrel tunggal dan ganda. Ukuran barrel dapat disesuaikan.'} <a href={localePath('/products/model-comparison/')} class="text-amber-500 hover:underline">{currentLocale === 'fr' ? 'Comparer tous les modèles →' : currentLocale === 'ar' ? 'مقارنة جميع النماذج ←' : 'Bandingkan semua model →'}</a></p>
     </div>
   </section>
 
@@ -403,7 +403,7 @@ const faqLd = {
       <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'fr' ? 'Prêt à Trouver la Bonne Presse à Huile Hydraulique ?' : currentLocale === 'ar' ? 'هل أنت مستعد لمعرفة ماكينة الضغط الهيدروليكي المناسبة؟' : 'Siap Temukan Mesin Press Minyak Hidrolik yang Tepat?'}</h2>
       <p class="text-steel-300 text-lg mb-8">{currentLocale === 'fr' ? 'Obtenez un devis gratuit, une estimation d\'expédition et une recommandation d\'équipement professionnelle généralement dans les 24 heures ouvrables.' : currentLocale === 'ar' ? 'احصل على عرض أسعار مجاني، تقدير الشحن، والتوصية المهنية للمعدات عادةً في غضون 24 ساعة عمل.' : 'Dapatkan penawaran gratis, estimasi pengiriman, dan rekomendasi peralatan profesional biasanya dalam 24 jam kerja.'}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        <a href={localePath('/contact/')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
           {currentLocale === 'fr' ? 'Demander un devis' : currentLocale === 'ar' ? 'طلب عرض أسعار' : 'Minta Penawaran'}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>

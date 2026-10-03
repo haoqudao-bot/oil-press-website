@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 const { locale = 'en' } = Astro.props;
 import { getTranslations } from '../i18n';
 const t = getTranslations(locale as any);
@@ -15,28 +15,43 @@ function localePath(path: string): string {
 
 const quickLinks = [
   { href: '/', label: t.nav.home },
-  { href: '/products', label: t.nav.products },
-  { href: '/solutions', label: t.nav.solutions },
-  { href: '/resources', label: t.nav.resources },
-  { href: '/about', label: t.nav.about },
-  { href: '/contact', label: t.nav.contact },
+  { href: '/products/', label: t.nav.products },
+  { href: '/solutions/', label: t.nav.solutions },
+  { href: '/resources/', label: t.nav.resources },
+  { href: '/about/', label: t.nav.about },
+  { href: '/contact/', label: t.nav.contact },
 ];
 
 const productLinks = [
-  { href: '/products/hydraulic-oil-press', label: t.nav.hydraulicOilPress },
-  { href: '/products/seed-processing-equipment', label: t.nav.seedProcessing },
-  { href: '/products/roasting-steaming-equipment', label: t.nav.roastingSteaming },
-  { href: '/products/filtration-refining-equipment', label: t.nav.filtrationRefining },
-  { href: '/products/heavy-duty-hydraulic-oil-press', label: 'Heavy Duty Press' },
-  { href: '/products/cold-press-hydraulic-oil-press', label: 'Cold Press Machine' },
-  { href: '/products/sesame-oil-hydraulic-press', label: 'Sesame Oil Press' },
-  { href: '/products/coconut-oil-hydraulic-press', label: 'Coconut Oil Press' },
+  { href: '/products/hydraulic-oil-press/', label: t.nav.hydraulicOilPress },
+  { href: '/products/seed-processing-equipment/', label: t.nav.seedProcessing },
+  { href: '/products/roasting-steaming-equipment/', label: t.nav.roastingSteaming },
+  { href: '/products/filtration-refining-equipment/', label: t.nav.filtrationRefining },
+  { href: '/products/heavy-duty-hydraulic-oil-press/', label: 'Heavy Duty Press' },
+  { href: '/products/cold-press-hydraulic-oil-press/', label: 'Cold Press Machine' },
+  { href: '/products/sesame-oil-hydraulic-press/', label: 'Sesame Oil Press' },
+  { href: '/products/coconut-oil-hydraulic-press/', label: 'Coconut Oil Press' },
+  { href: '/products/medium-hydraulic-oil-press/', label: 'Medium Press (HN355)' },
+  { href: '/products/ultra-high-pressure-cold-press/', label: 'Ultra High Pressure' },
+  { href: '/products/stainless-steel-hydraulic-oil-press/', label: 'Stainless Steel Press' },
+  { href: '/products/stainless-steel-oil-refining-equipment/', label: 'SS Refining System' },
+  { href: '/products/integrated-feeder-crusher-roaster/', label: 'Feeder-Crusher-Roaster' },
+  { href: '/products/wood-fired-seed-steamer/', label: 'Wood-Fired Steamer' },
+];
+
+const solutionLinks = [
+  { href: '/solutions/', label: t.nav.solutions },
+  { href: '/solutions/by-scale/', label: locale === 'fr' ? 'Par Échelle de Production' : locale === 'ar' ? 'حسب حجم الإنتاج' : locale === 'id' ? 'Berdasarkan Skala Produksi' : 'By Production Scale' },
+  { href: '/solutions/commercial-oil-press/', label: locale === 'fr' ? 'Presse Commerciale' : locale === 'ar' ? 'مكبس تجاري' : locale === 'id' ? 'Press Komersial' : 'Commercial Oil Press' },
+  { href: '/solutions/industrial-oil-press/', label: locale === 'fr' ? 'Presse Industrielle' : locale === 'ar' ? 'مكبس صناعي' : locale === 'id' ? 'Press Industri' : 'Industrial Oil Press' },
+  { href: '/solutions/small-business-oil-press/', label: locale === 'fr' ? 'Petite Entreprise' : locale === 'ar' ? 'للمشاريع الصغيرة' : locale === 'id' ? 'Usaha Kecil' : 'Small Business Press' },
+  { href: '/solutions/all-oil-types/', label: locale === 'fr' ? 'Tous les Types d\'Huile' : locale === 'ar' ? 'جميع أنواع الزيوت' : locale === 'id' ? 'Semua Jenis Minyak' : 'All Oil Types' },
 ];
 ---
 
 <footer class="bg-charcoal-900 text-steel-200 no-print">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
       <!-- Company Info -->
       <div>
         <div class="flex items-center gap-2.5 mb-4">
@@ -72,6 +87,20 @@ const productLinks = [
         <p class="font-display text-lg text-white mb-4">{t.nav.products}</p>
         <ul class="space-y-2">
           {productLinks.map(link => (
+            <li>
+              <a href={localePath(link.href)} class="text-sm text-steel-400 hover:text-amber-500 transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Solutions -->
+      <div>
+        <p class="font-display text-lg text-white mb-4">{t.nav.solutions}</p>
+        <ul class="space-y-2">
+          {solutionLinks.map(link => (
             <li>
               <a href={localePath(link.href)} class="text-sm text-steel-400 hover:text-amber-500 transition-colors">
                 {link.label}
@@ -134,9 +163,9 @@ const productLinks = [
     <!-- Copyright -->
     <div class="mt-6 pt-6 border-t border-charcoal-800 text-center text-sm text-steel-500">
       <div class="flex flex-wrap justify-center gap-4 mb-4">
-        <a href={localePath('/privacy-policy')} class="hover:text-amber-500 transition-colors">{t.footer.privacy}</a>
-        <a href={localePath('/terms-of-service')} class="hover:text-amber-500 transition-colors">{t.footer.terms}</a>
-        <a href={localePath('/cookie-policy')} class="hover:text-amber-500 transition-colors">{t.footer.cookie}</a>
+        <a href={localePath('/privacy-policy/')} class="hover:text-amber-500 transition-colors">{t.footer.privacy}</a>
+        <a href={localePath('/terms-of-service/')} class="hover:text-amber-500 transition-colors">{t.footer.terms}</a>
+        <a href={localePath('/cookie-policy/')} class="hover:text-amber-500 transition-colors">{t.footer.cookie}</a>
       </div>
       <p>{t.footer.copyright}</p>
     </div>

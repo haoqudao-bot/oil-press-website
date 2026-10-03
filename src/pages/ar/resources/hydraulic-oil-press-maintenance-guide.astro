@@ -48,7 +48,7 @@ const maintenanceSchedule = [
 ];
 
 const hydraulicSystem = [
-  { title: 'إدارة الزيت الهيدروليكي', items: ['استخدام زيت هيدروليكي ISO VG 46', 'الحفاظ على درجة حرارة مناسبة (30-50 درجة مئوية)', 'استبدال الزيت كل 2000 ساعة عمل', 'السعة : <a href="/ar/products/standard-hydraulic-oil-press">HN325</a>/<a href="/ar/products/hn365-hydraulic-oil-press">HN365</a> : 30-40 لتر، <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press">HN500</a> : 50-60 لتر'] },
+  { title: 'إدارة الزيت الهيدروليكي', items: ['استخدام زيت هيدروليكي ISO VG 46', 'الحفاظ على درجة حرارة مناسبة (30-50 درجة مئوية)', 'استبدال الزيت كل 2000 ساعة عمل', 'السعة : <a href="/ar/products/standard-hydraulic-oil-press/">HN325</a>/<a href="/ar/products/hn365-hydraulic-oil-press/">HN365</a> : 30-40 لتر، <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a> : 50-60 لتر'] },
   { title: 'صيانة الاسطوانة الهيدروليكية', items: ['الاحتفاظ بقضيب الاسطوانة نظيفاً', 'الحماية من الغبار والخردل', 'فحص الختمات بحثاً عن التآكل', 'الاستبدال في حال التسرب'] },
   { title: 'صيانة مرشح الهيدروليكي', items: ['التنظيف كل 50-100 ساعة عمل', 'الاستبدال في حال الإصابة أو التسرب الزائد', 'استخدام مرشحات استبدال Haonuo الأصلية'] },
 ];
@@ -85,7 +85,7 @@ function localePath(path: string): string {
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/resources')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+        <a href={localePath('/resources/')} class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold line-clamp-1">{title}</span>
       </nav>
@@ -278,14 +278,14 @@ function localePath(path: string): string {
       <h2 class="font-display text-4xl md:text-5xl text-white mb-6">هل أنت مستعد لبدء إنتاج الزيت؟</h2>
       <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">يمكن لفريقنا الهندسي مساعدتك في اختيار الأفضل إعداد لاحتياجاتك الخاصة ومقياس الإنتاج وميزانيتك.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={localePath('/contact')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
+        <a href={localePath('/contact/')} class="btn-primary bg-white text-charcoal-900 hover:bg-gray-100">
           {t.resources.ctaButton}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white/10">
+        <a href={localePath('/products/')} class="btn-outline border-white text-white hover:bg-white/10">
           {t.nav.products}
         </a>
-        <a href={localePath('/resources')} class="btn-outline border-white text-white hover:bg-white/10">
+        <a href={localePath('/resources/')} class="btn-outline border-white text-white hover:bg-white/10">
           {t.resources.backToResources}
         </a>
       </div>

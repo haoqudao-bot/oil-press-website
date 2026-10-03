@@ -58,7 +58,7 @@ const scaleSolutions = [
     typicalCapacity: '50-500 kg/jour',
     investmentRange: currentLocale === 'fr' ? 'Contactez pour les prix' : currentLocale === 'ar' ? 'اتصل للأسعار' : 'Hubungi untuk harga',
     roiPeriod: currentLocale === 'fr' ? 'Variable significativement (voir FAQ ci-dessous)' : currentLocale === 'ar' ? 'يختلف بشكل كبير (انظر الأسئلة الشائعة أدناه)' : 'Bervariasi signifikan (lihat FAQ di bawah)',
-    link: localePath('/solutions/small-business-oil-press'),
+    link: localePath('/solutions/small-business-oil-press/'),
   },
   {
     id: 'commercial',
@@ -78,7 +78,7 @@ const scaleSolutions = [
     typicalCapacity: currentLocale === 'fr' ? '500 kg - 5 tonnes/jour' : currentLocale === 'ar' ? '500 كجم - 5 طن/يوم' : '500 kg - 5 ton/hari',
     investmentRange: currentLocale === 'fr' ? 'Contactez pour les prix' : currentLocale === 'ar' ? 'اتصل للأسعار' : 'Hubungi untuk harga',
     roiPeriod: currentLocale === 'fr' ? 'Env. 6-12+ mois*' : currentLocale === 'ar' ? 'تقريباً 6-12+ شهر*' : 'Est. 6-12+ bulan*',
-    link: localePath('/solutions/commercial-oil-press'),
+    link: localePath('/solutions/commercial-oil-press/'),
   },
   {
     id: 'industrial',
@@ -98,7 +98,7 @@ const scaleSolutions = [
     typicalCapacity: currentLocale === 'fr' ? '5+ tonnes/jour' : currentLocale === 'ar' ? '5+ طن/يوم' : '5+ ton/hari',
     investmentRange: currentLocale === 'fr' ? 'Contactez pour les prix' : currentLocale === 'ar' ? 'اتصل للأسعار' : 'Hubungi untuk harga',
     roiPeriod: currentLocale === 'fr' ? 'Env. 12-24+ mois*' : currentLocale === 'ar' ? 'تقريباً 12-24+ شهر*' : 'Est. 12-24+ bulan*',
-    link: localePath('/solutions/industrial-oil-press'),
+    link: localePath('/solutions/industrial-oil-press/'),
   },
 ];
 
@@ -135,7 +135,7 @@ const faqItems = [
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/solutions')} class="hover:text-amber-500 transition-colors">{t.nav.solutions}</a>
+        <a href={localePath('/solutions/')} class="hover:text-amber-500 transition-colors">{t.nav.solutions}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold">{currentLocale === 'fr' ? 'Par Échelle de Production' : currentLocale === 'ar' ? 'حسب حجم الإنتاج' : 'Berdasarkan Skala Produksi'}</span>
       </nav>
@@ -321,7 +321,7 @@ const faqItems = [
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{currentLocale === 'fr' ? 'Toujours Incertain de l\'Échelle ?' : currentLocale === 'ar' ? 'لا تزال غير متأكد من الحجم؟' : 'Masih Belum Yakin dengan Skala?'}</h2>
       <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">{currentLocale === 'fr' ? 'Dites-nous votre matière première, capacité quotidienne et budget — nos ingénieurs vous recommanderont la meilleure installation de presse à huile pour votre entreprise.' : currentLocale === 'ar' ? 'أخبرنا بمادتك الخام وسعتك اليومية وميزانيتك — مهندسونا سيوصون بأفضل إعداد مكينة ضغط لمشروعك.' : 'Beritahu kami bahan baku, kapasitas harian, dan anggaran Anda — insinyur kami akan merekomendasikan pengaturan mesin press minyak terbaik untuk bisnis Anda.'}</p>
-      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+      <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
         {currentLocale === 'fr' ? 'Consultation Gratuite' : currentLocale === 'ar' ? 'استشارة مجانية' : 'Konsultasi Gratis'}
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>

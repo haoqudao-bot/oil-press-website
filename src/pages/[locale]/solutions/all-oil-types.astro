@@ -168,7 +168,7 @@ const seedDetails: Record<string, {
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/solutions')} class="hover:text-amber-500 transition-colors">{t.nav.solutions}</a>
+        <a href={localePath('/solutions/')} class="hover:text-amber-500 transition-colors">{t.nav.solutions}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold">{currentLocale === 'fr' ? 'Tous les Types d\'Huile' : currentLocale === 'ar' ? 'جميع أنواع الزيت' : 'Semua Jenis Minyak'}</span>
       </nav>
@@ -290,7 +290,7 @@ const seedDetails: Record<string, {
               </tbody>
             </table>
           </div>
-          <a href={localePath('/resources/oil-press-raw-materials-guide')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
+          <a href={localePath('/resources/oil-press-raw-materials-guide/')} class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
             {currentLocale === 'fr' ? 'Voir le Guide de Compatibilité Complet' : currentLocale === 'ar' ? 'عرض دليل التوافق الكامل' : 'Lihat Panduan Kompatibilitas Lengkap'}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -308,7 +308,7 @@ const seedDetails: Record<string, {
       <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">
         {currentLocale === 'fr' ? 'Dites-nous votre matière première, capacité quotidienne et budget — nos ingénieurs vous recommanderont la meilleure installation de presse à huile pour votre entreprise.' : currentLocale === 'ar' ? 'أخبرنا بمادتك الخام وسعتك اليومية وميزانيتك — مهندسونا سيوصون بأفضل إعداد مكينة ضغط لمشروعك.' : 'Beritahu kami bahan baku, kapasitas harian, dan anggaran Anda — insinyur kami akan merekomendasikan pengaturan mesin press minyak terbaik untuk bisnis Anda.'}
       </p>
-      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+      <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
         {currentLocale === 'fr' ? 'Consultation Gratuite' : currentLocale === 'ar' ? 'استشارة مجانية' : 'Konsultasi Gratis'}
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>

@@ -103,7 +103,7 @@ const seoKeywords = solution.data.seoKeywords;
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/solutions')} class="hover:text-amber-500 transition-colors">{t.solutions.title}</a>
+        <a href={localePath('/solutions/')} class="hover:text-amber-500 transition-colors">{t.solutions.title}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900">{solution.data.title[currentLocale] || solution.data.title.en}</span>
       </nav>
@@ -244,7 +244,7 @@ const seoKeywords = solution.data.seoKeywords;
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{t.solutions.ctaTitle}</h2>
       <p class="text-steel-300 text-lg mb-8">{t.solutions.ctaDesc}</p>
-      <a href={localePath('/contact')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+      <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
         {t.solutions.ctaButton}
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>

@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 
@@ -217,14 +217,14 @@ const faqLd = {
 };
 ---
 
-<BaseLayout locale={currentLocale} title={currentLocale === 'fr' ? 'Marchés Mondiaux & Solutions Régionales de Presse à Huile | Haonuo' : currentLocale === 'ar' ? 'أسواق عالمية وحلول إقليمية لآلات الضغط الهيدروليكي | Haonuo' : 'Global Markets & Regional Oil Press Solutions | Haonuo'} description={currentLocale === 'fr' ? 'Les presses à huile hydrauliques Haonuo servent plus de 50 pays dans le monde. Découvrez les solutions régionales, les analyses de marché et les histoires de succès.' : currentLocale === 'ar' ? 'تخدم آلات الضغط الهيدروليكي لزيت Haonuo أكثر من 50 دولة في جميع أنحاء العالم. اكتشف الحلول الإقليمية والمناقشات السوقية وقصص النجاح.' : 'Haonuo hydraulic oil press machines serve 50+ countries worldwide. Explore regional solutions, market insights, and success stories.'} keywords={currentLocale === 'fr' ? ['press à huile mondial', '50 pays presse hydraulique', 'fabricant presse à huile international'] : currentLocale === 'ar' ? ['آلة ضغط زيت عالمي', '50 دولة ضغط هيدروليكي', 'مصنع ضغط زيت دولي'] : ['oil press machine global', 'hydraulic oil press 50 countries', 'oil press manufacturer worldwide']} jsonLd={{ '@context': 'https://schema.org', '@graph': [breadcrumbLd, faqLd] }}>
+<BaseLayout locale={currentLocale} title={currentLocale === 'fr' ? 'Marchés Mondiaux & Solutions Régionales de Presse à Huile' : currentLocale === 'ar' ? 'أسواق عالمية وحلول إقليمية لآلات الضغط الهيدروليكي' : 'Pasar Global & Solusi Mesin Press Minyak Regional'} description={currentLocale === 'fr' ? 'Les presses à huile hydrauliques Haonuo servent plus de 50 pays dans le monde. Découvrez les solutions régionales, les analyses de marché et les histoires de succès.' : currentLocale === 'ar' ? 'تخدم آلات الضغط الهيدروليكي لزيت Haonuo أكثر من 50 دولة في جميع أنحاء العالم. اكتشف الحلول الإقليمية والمناقشات السوقية وقصص النجاح.' : 'Haonuo hydraulic oil press machines serve 50+ countries worldwide. Explore regional solutions, market insights, and success stories.'} keywords={currentLocale === 'fr' ? ['press à huile mondial', '50 pays presse hydraulique', 'fabricant presse à huile international'] : currentLocale === 'ar' ? ['آلة ضغط زيت عالمي', '50 دولة ضغط هيدروليكي', 'مصنع ضغط زيت دولي'] : ['oil press machine global', 'hydraulic oil press 50 countries', 'oil press manufacturer worldwide']} jsonLd={{ '@context': 'https://schema.org', '@graph': [breadcrumbLd, faqLd] }}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
         <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <a href={localePath('/markets')} class="hover:text-amber-500 transition-colors">{t.common.allMarkets || 'Markets'}</a>
+        <a href={localePath('/markets/')} class="hover:text-amber-500 transition-colors">{t.common.allMarkets || 'Markets'}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <span class="text-charcoal-900 font-semibold">{t.common.allMarkets || 'Markets'}</span>
       </nav>
@@ -310,7 +310,7 @@ const faqLd = {
           </h2>
           <p class="text-steel-500 max-w-2xl mx-auto">
             {currentLocale === 'fr' ? 'Ce sont nos plus grands marchés avec un support local dédié et une expérience terrain étendue. Vous ne voyez pas votre pays ? ' : currentLocale === 'ar' ? 'هذه هي أسواقنا الأكبر مع دعم محلي مختص وخبرة واسعة على الأرض. لم ترى دولتك؟ ' : 'These are our largest markets with dedicated local support and extensive on-the-ground experience. Don\'t see your country? '}
-            <a href={localePath('/contact')} class="text-amber-600 hover:text-amber-700 font-medium underline">{t.nav.contact}</a>
+            <a href={localePath('/contact/')} class="text-amber-600 hover:text-amber-700 font-medium underline">{t.nav.contact}</a>
             {currentLocale === 'fr' ? ' — nous expédions dans le monde entier.' : currentLocale === 'ar' ? ' — نوفر الشحن إلى جميع أنحاء العالم.' : ' — we ship worldwide.'}
           </p>
         </div>
@@ -471,7 +471,7 @@ const faqLd = {
           {currentLocale === 'fr' ? 'Nous servons activement plus de 50 pays et nous nous étendons rapidement. Il est probable que nous puissions expédier à votre emplacement avec un support complet. Contactez notre équipe pour discuter de vos besoins spécifiques.' : currentLocale === 'ar' ? 'نحن نخدم بنشاط أكثر من 50 دولة ونحن نتوسع بسرعة. من المحتمل أن نتمكن من الشحن إلى موقعك مع دعم كامل. اتصل بفريقنا لمناقشة احتياجاتك المحددة.' : 'We actively serve 50+ countries and are expanding rapidly. Chances are, we can ship to your location with full support. Contact our team to discuss your specific requirements.'}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={localePath('/contact')} class="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-charcoal-900 font-semibold rounded-xl hover:bg-amber-400 transition-colors">
+          <a href={localePath('/contact/')} class="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-charcoal-900 font-semibold rounded-xl hover:bg-amber-400 transition-colors">
             {t.common.getInTouch || 'Get in Touch'}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>

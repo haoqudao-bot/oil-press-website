@@ -50,21 +50,21 @@ const seedIcons: Record<string, string> = {
 
 /* Four core models — image and model verified one-to-one */
 const modelMeta = [
-  { img: '/images/models/hn325.webp', href: '/products/standard-hydraulic-oil-press' },
-  { img: '/images/models/hn365.webp', href: '/products/hn365-hydraulic-oil-press' },
-  { img: '/images/models/hn426.webp', href: '/products/cold-press-hydraulic-oil-press' },
-  { img: '/images/models/hn500.webp', href: '/products/ultra-high-pressure-hydraulic-oil-press' },
+  { img: '/images/models/hn325.webp', href: '/products/standard-hydraulic-oil-press/' },
+  { img: '/images/models/hn365.webp', href: '/products/hn365-hydraulic-oil-press/' },
+  { img: '/images/models/hn426.webp', href: '/products/cold-press-hydraulic-oil-press/' },
+  { img: '/images/models/hn500.webp', href: '/products/ultra-high-pressure-hydraulic-oil-press/' },
 ];
 const models = t.home.models.map((m, i) => ({ ...m, ...modelMeta[i] }));
 
 /* Complete-line equipment — one row, arrow carousel (no sludge/residue press) */
 const lineMeta = [
-  { img: '/images/models/hn500.webp', href: '/products/hydraulic-oil-press' },
-  { img: '/images/line/pulverizer.webp', href: '/products/seed-processing-equipment' },
-  { img: '/images/line/roaster.webp', href: '/products/roasting-steaming-equipment' },
-  { img: '/images/line/steamer.webp', href: '/products/roasting-steaming-equipment' },
-  { img: '/images/line/elevator.webp', href: '/products/seed-processing-equipment' },
-  { img: '/images/line/filter.webp', href: '/products/filtration-refining-equipment' },
+  { img: '/images/models/hn500.webp', href: '/products/hydraulic-oil-press/' },
+  { img: '/images/line/pulverizer.webp', href: '/products/seed-processing-equipment/' },
+  { img: '/images/line/roaster.webp', href: '/products/roasting-steaming-equipment/' },
+  { img: '/images/line/steamer.webp', href: '/products/roasting-steaming-equipment/' },
+  { img: '/images/line/elevator.webp', href: '/products/seed-processing-equipment/' },
+  { img: '/images/line/filter.webp', href: '/products/filtration-refining-equipment/' },
 ];
 const lineItems = t.home.lineItems.map((title, i) => ({ title, ...lineMeta[i] }));
 
@@ -154,11 +154,11 @@ const modelListLd = {
               {t.home.heroSlide1Tag}
             </p>
             <div class="flex flex-wrap gap-4">
-              <a href={localePath('/contact')} class="btn-primary text-base">
+              <a href={localePath('/contact/')} class="btn-primary text-base">
                 {t.home.heroSlide1Cta}
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
-              <a href={localePath('/products')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+              <a href={localePath('/products/')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
                 {t.home.heroSlide1Secondary}
               </a>
             </div>
@@ -190,11 +190,11 @@ const modelListLd = {
               {t.home.heroSlide2Desc}
             </p>
             <div class="flex flex-wrap gap-4">
-              <a href={localePath('/cold-press-oil-machine')} class="btn-primary text-base">
+              <a href={localePath('/cold-press-oil-machine/')} class="btn-primary text-base">
                 {t.home.heroSlide2Cta}
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
-              <a href={localePath('/solutions')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+              <a href={localePath('/solutions/')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
                 {t.home.heroSlide2Secondary}
               </a>
             </div>
@@ -229,11 +229,11 @@ const modelListLd = {
               {t.home.heroSlide3Desc}
             </p>
             <div class="flex flex-wrap gap-4">
-              <a href={localePath('/about')} class="btn-primary text-base">
+              <a href={localePath('/about/')} class="btn-primary text-base">
                 {t.home.heroSlide3Cta}
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
-              <a href={localePath('/contact')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
+              <a href={localePath('/contact/')} class="btn-outline border-white text-white hover:bg-white hover:text-steel-900 text-base">
                 {t.home.heroSlide3Secondary}
               </a>
             </div>
@@ -369,7 +369,7 @@ const modelListLd = {
           <h2 class="font-display text-3xl md:text-5xl text-steel-900 leading-none">{t.home.section01Title}</h2>
           <p class="text-steel-500 mt-3 max-w-2xl text-sm md:text-base">{t.home.section01Sub}</p>
         </div>
-        <a href={localePath('/products')} class="hidden md:inline-flex btn-outline text-sm whitespace-nowrap">{t.home.viewAllProducts}</a>
+        <a href={localePath('/products/')} class="hidden md:inline-flex btn-outline text-sm whitespace-nowrap">{t.home.viewAllProducts}</a>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
@@ -404,7 +404,7 @@ const modelListLd = {
       </div>
 
       <div class="mt-8 text-center md:hidden">
-        <a href={localePath('/products')} class="btn-outline text-sm">{t.home.viewAllProducts}</a>
+        <a href={localePath('/products/')} class="btn-outline text-sm">{t.home.viewAllProducts}</a>
       </div>
     </div>
   </section>
@@ -457,7 +457,7 @@ const modelListLd = {
 
       <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-steel-900 rounded-xl px-6 py-5 reveal">
         <p class="text-steel-100 text-sm md:text-base">{t.home.lineCtaBannerPre}<strong class="text-amber-400">{t.home.lineCtaBannerStrong}</strong>{t.home.lineCtaBannerPost}</p>
-        <a href={localePath('/contact')} class="btn-primary shrink-0">{t.home.lineCtaButton}</a>
+        <a href={localePath('/contact/')} class="btn-primary shrink-0">{t.home.lineCtaButton}</a>
       </div>
     </div>
   </section>
@@ -503,7 +503,7 @@ const modelListLd = {
       </div>
 
       <div class="mt-8 text-center">
-        <a href={localePath('/solutions')} class="btn-outline text-sm">{t.home.viewAllSolutions}</a>
+        <a href={localePath('/solutions/')} class="btn-outline text-sm">{t.home.viewAllSolutions}</a>
       </div>
     </div>
   </section>

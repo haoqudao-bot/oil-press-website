@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Aperçu
 
 La presse à froid ultra haute pression HN480B applique 600 tonnes de force de pressage à 65 Mpa de pression système et 48 Mpa/cm² de pression superficielle du gâteau — la force de pressage à froid la plus élevée de la gamme Haonuo — pour les producteurs de noix, d'amandes d'abricot et de yellowhorn. Les lots durent 40 à 90 minutes selon la matière avec 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier), le tout couvert par une garantie d'un an.
