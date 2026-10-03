@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getTranslations } from '../i18n';
 
@@ -19,7 +19,7 @@ const breadcrumbLd = {
 };
 ---
 
-<BaseLayout title={t.about.title} description="Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. Factory with 2,000 m² owned workshop, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment." jsonLd={breadcrumbLd} overlayHeader>
+<BaseLayout title={t.about.title} description="Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. 200+ skilled employees, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment." jsonLd={breadcrumbLd} overlayHeader>
   <style is:global>
     :root{
       --steel-50:#F0F4F8; --steel-100:#D9E2EC; --steel-200:#BCCCDC; --steel-400:#829AB1;
@@ -41,6 +41,7 @@ const breadcrumbLd = {
     .kicker.center{justify-content:center}
     .sec{padding:92px 0}
     .sec-head{margin-bottom:52px;max-width:720px}
+    .sec-head.wide{max-width:1100px}
     .sec-head.center{margin-inline:auto;text-align:center}
     .sec-head.center .kicker{justify-content:center}
     .sec-head h2{font-size:clamp(28px,3.4vw,42px);line-height:1.12;font-weight:800;color:var(--steel-950);letter-spacing:-.02em}
@@ -242,7 +243,7 @@ const breadcrumbLd = {
       .gi{grid-column:span 1}
       .gi.big{grid-column:span 2;grid-row:span 1}
       .hero{height:auto;min-height:0}
-      .hero .wrap{padding:90px 0 54px}
+      .hero .wrap{padding:90px 20px 54px}
     }
   </style>
 
@@ -253,10 +254,10 @@ const breadcrumbLd = {
     <div class="wrap">
       <div class="crumb"><a href={localePath('/')}>Home</a><span>/</span><b>About</b></div>
       <h1>Buying an oil press starts with choosing a factory you can trust</h1>
-      <p class="sub">Haonuo Machinery has answered that question for buyers in 50+ countries since 2010 — a real 2,000&nbsp;m² factory, nameplate tonnage you can verify, and a 48-hour test before every shipment.</p>
+      <p class="sub">Haonuo Machinery has answered that question for buyers in 50+ countries since 2010 — 200+ skilled employees, nameplate tonnage you can verify, and a 48-hour test before every shipment.</p>
       <div class="hero-cta">
         <a class="btn btn-amber" href={localePath('/contact/')}>Get Factory Price</a>
-        <a class="btn btn-ghost" href="#proof">Why Buyers Trust Us</a>
+        <a class="btn btn-ghost" href="#tour">Tour the Factory</a>
       </div>
     </div>
     <div class="hero-chips">
@@ -282,7 +283,7 @@ const breadcrumbLd = {
         <p>Since 2010 we've put presses into sesame mills in Nigeria, peanut plants in India and coconut VCO workshops in the Philippines. Most of our new orders come from <b>buyers returning for a second or third machine</b> — the clearest proof a machine is doing its job.</p>
         <div class="ov-stats">
           <div class="st"><div class="n">2010</div><div class="l">Founded · Qingzhou</div></div>
-          <div class="st"><div class="n">2,000 m²</div><div class="l">Owned Workshop</div></div>
+          <div class="st"><div class="n">200+</div><div class="l">Skilled Employees</div></div>
           <div class="st"><div class="n">50+</div><div class="l">Export Countries</div></div>
           <div class="st"><div class="n">300–620T</div><div class="l">Pressing Force Range</div></div>
         </div>
@@ -430,7 +431,7 @@ const breadcrumbLd = {
   <!-- 08 RANGE -->
   <section class="sec lines" id="lines">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head wide reveal">
         <div class="kicker">OUR PRODUCT LINE</div>
         <h2>Hydraulic Oil Presses and the equipment around them</h2>
         <p>From a single press to a full production line — crushers, roasters, filters and refining, all from one factory.</p>
@@ -448,7 +449,7 @@ const breadcrumbLd = {
   <!-- 09 FACTORY TOUR -->
   <section class="sec" id="tour">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head wide reveal">
         <div class="kicker">INSIDE THE FACTORY</div>
         <h2>See where your machine will be born</h2>
         <p>Welding, machining, assembly, 48-hour testing, painting and container loading — all under our own roof in Qingzhou.</p>
@@ -491,7 +492,7 @@ const breadcrumbLd = {
   <!-- 11 MATERIALS -->
   <section class="sec mat">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head wide reveal">
         <div class="kicker">WHY NOT THE CHEAPER MACHINE?</div>
         <h2>Because this is where cheap presses fail</h2>
         <p>Four components decide whether a press lasts 3 years or 15. Compare any quote against this list.</p>
@@ -508,7 +509,7 @@ const breadcrumbLd = {
   <!-- 11b SERVICES -->
   <section class="sec serv">
     <div class="wrap">
-      <div class="sec-head center reveal">
+      <div class="sec-head center wide reveal">
         <div class="kicker center">OUR SERVICES</div>
         <h2>Beyond manufacturing — full support from order to operation</h2>
         <p>From OEM customization to lifetime technical assistance, we cover every step after your press leaves the floor.</p>

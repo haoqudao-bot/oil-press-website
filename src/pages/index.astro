@@ -98,7 +98,7 @@ const countryOptions = [
 
 const stats = [
   { value: '2010', label: 'Established' },
-  { value: '2,000 m²', label: 'Owned Workshop' },
+  { value: '200+', label: 'Skilled Employees' },
   { value: '50+', label: 'Export Countries' },
   { value: '2,000+', label: 'Buyers Served Worldwide' },
 ];
@@ -578,60 +578,78 @@ const modelListLd = {
   </section>
 
   <!-- ============ 05 FACTORY ============ -->
-  <section class="py-14 md:py-16 bg-white" id="factory">
+  <section class="py-10 md:py-12 bg-white" id="factory">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl mb-8 md:mb-10 reveal">
+      <div class="mb-5 md:mb-6 reveal">
         <p class="font-display text-amber-600 tracking-[0.25em] text-sm mb-2">05 — FACTORY DIRECT</p>
-        <h2 class="font-display text-3xl md:text-5xl text-steel-900 leading-none mb-3">Built, Then Run Under Pressure, Before It Leaves</h2>
-        <p class="text-steel-500 text-sm md:text-base">No trading company and no showroom stock. Welding, assembly, control cabinets and load testing happen in our own Qingzhou workshop — buyers are welcome to inspect in person before their machine ships.</p>
+        <h2 class="font-display text-3xl md:text-4xl xl:text-[38px] 2xl:text-[42px] text-steel-900 leading-tight xl:leading-none mb-3 xl:whitespace-nowrap">Built, Then Run Under Pressure, Before It Leaves</h2>
+        <p class="text-steel-500 text-sm md:text-base max-w-3xl xl:max-w-none">No trading company and no showroom stock. Welding, assembly, control cabinets and load testing happen in our own Qingzhou workshop — buyers are welcome to inspect in person before their machine ships.</p>
       </div>
 
-      <figure class="reveal relative rounded-2xl overflow-hidden aspect-[21/8] bg-steel-100">
-        <img
-          src="/images/factory/buyer-inspection.webp"
-          alt="Overseas buyers inspecting finished hydraulic presses during a factory visit"
-          width="5472"
-          height="3648"
-          loading="lazy"
-          decoding="async"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-gradient-to-t from-steel-950/70 to-transparent"></div>
-        <figcaption class="absolute left-6 bottom-5 z-10 text-white font-bold text-xs md:text-sm tracking-[0.12em] uppercase flex items-center gap-3">
-          <span class="w-7 h-0.5 bg-amber-500"></span>
-          Buyer Inspection · Assembly Workshop
-        </figcaption>
-      </figure>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
+        <figure class="reveal relative rounded-2xl overflow-hidden aspect-[21/9] bg-steel-100">
+          <img
+            src="/images/factory/workshop-cranes.webp"
+            alt="Overhead crane bays across the welding and assembly hall"
+            width="5472"
+            height="3648"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/70 to-transparent"></div>
+          <figcaption class="absolute left-6 bottom-5 z-10 text-white font-bold text-xs md:text-sm tracking-[0.12em] uppercase flex items-center gap-3">
+            <span class="w-7 h-0.5 bg-amber-500"></span>
+            Assembly Hall · Overhead Crane Bays
+          </figcaption>
+        </figure>
+        <figure class="reveal relative rounded-2xl overflow-hidden aspect-[21/9] bg-steel-100">
+          <img
+            src="/images/factory/buyer-inspection.webp"
+            alt="Overseas buyers inspecting finished hydraulic presses during a factory visit"
+            width="5472"
+            height="3648"
+            loading="lazy"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-steel-950/70 to-transparent"></div>
+          <figcaption class="absolute left-6 bottom-5 z-10 text-white font-bold text-xs md:text-sm tracking-[0.12em] uppercase flex items-center gap-3">
+            <span class="w-7 h-0.5 bg-amber-500"></span>
+            Buyer Inspection · Assembly Workshop
+          </figcaption>
+        </figure>
+      </div>
 
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mt-4 md:mt-5">
-        <figure class="reveal relative rounded-2xl overflow-hidden aspect-[4/3] bg-steel-100 group">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mt-3 md:mt-4">
+        <figure class="reveal relative rounded-xl overflow-hidden aspect-[4/3] bg-steel-100 group">
           <img src="/images/factory/finished-presses.webp" alt="Finished hydraulic oil presses lined up before dispatch" width="1600" height="900" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
           <div class="absolute inset-0 bg-gradient-to-t from-steel-950/65 to-transparent"></div>
           <figcaption class="absolute left-4 bottom-3 z-10 text-white font-bold text-[11px] md:text-xs tracking-[0.1em] uppercase">Finished Presses · Pre-Dispatch</figcaption>
         </figure>
-        <figure class="reveal relative rounded-2xl overflow-hidden aspect-[4/3] bg-steel-100 group">
-          <img src="/images/factory/workshop-cranes.webp" alt="Haonuo workshop interior showing overhead crane bays, welding and assembly" width="5472" height="3648" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        <figure class="reveal relative rounded-xl overflow-hidden aspect-[4/3] bg-steel-100 group">
+          <img src="/images/factory/assembly-line.webp" alt="Packaged stainless presses lined up for loading with a truck behind" width="1600" height="900" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
           <div class="absolute inset-0 bg-gradient-to-t from-steel-950/65 to-transparent"></div>
-          <figcaption class="absolute left-4 bottom-3 z-10 text-white font-bold text-[11px] md:text-xs tracking-[0.1em] uppercase">Crane Bays · Welding &amp; Assembly</figcaption>
+          <figcaption class="absolute left-4 bottom-3 z-10 text-white font-bold text-[11px] md:text-xs tracking-[0.1em] uppercase">Packed Presses · Ready to Load</figcaption>
         </figure>
-        <figure class="reveal relative rounded-2xl overflow-hidden aspect-[4/3] bg-steel-100 group">
+        <figure class="reveal relative rounded-xl overflow-hidden aspect-[4/3] bg-steel-100 group">
           <img src="/images/factory/export-loading.webp" alt="Machines wrapped and secured for export container loading" width="1600" height="1000" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
           <div class="absolute inset-0 bg-gradient-to-t from-steel-950/65 to-transparent"></div>
           <figcaption class="absolute left-4 bottom-3 z-10 text-white font-bold text-[11px] md:text-xs tracking-[0.1em] uppercase">Export Packing &amp; Container Loading</figcaption>
         </figure>
-        <figure class="reveal relative rounded-2xl overflow-hidden aspect-[4/3] bg-steel-100 group">
+        <figure class="reveal relative rounded-xl overflow-hidden aspect-[4/3] bg-steel-100 group">
           <img src="/images/factory/factory-exterior.webp" alt="Haonuo factory building exterior with assembly bays in Qingzhou" width="1600" height="1200" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
           <div class="absolute inset-0 bg-gradient-to-t from-steel-950/65 to-transparent"></div>
           <figcaption class="absolute left-4 bottom-3 z-10 text-white font-bold text-[11px] md:text-xs tracking-[0.1em] uppercase">Our Factory · Qingzhou, Shandong</figcaption>
         </figure>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-steel-100 rounded-2xl mt-8 overflow-hidden reveal">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-steel-100 rounded-2xl mt-5 overflow-hidden reveal">
         {promises.map(p => (
-          <div class="p-5 sm:border-l border-steel-100 first:border-l-0 max-sm:border-t max-sm:first:border-t-0">
-            <p class="font-display text-amber-600 tracking-[0.2em] text-xs mb-2">{promises.indexOf(p) + 1 < 10 ? `0${promises.indexOf(p) + 1}` : promises.indexOf(p) + 1}</p>
-            <h3 class="font-bold text-charcoal-900 text-base mb-1">{p.title}</h3>
-            <p class="text-sm text-steel-500 leading-relaxed">{p.body}</p>
+          <div class="p-4 sm:border-l border-steel-100 first:border-l-0 max-sm:border-t max-sm:first:border-t-0">
+            <p class="font-display text-amber-600 tracking-[0.2em] text-xs mb-1">{promises.indexOf(p) + 1 < 10 ? `0${promises.indexOf(p) + 1}` : promises.indexOf(p) + 1}</p>
+            <h3 class="font-bold text-charcoal-900 text-sm mb-0.5">{p.title}</h3>
+            <p class="text-xs text-steel-500 leading-relaxed">{p.body}</p>
           </div>
         ))}
       </div>

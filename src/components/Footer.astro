@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 const { locale = 'en' } = Astro.props;
 import { getTranslations } from '../i18n';
 const t = getTranslations(locale as any);
@@ -27,26 +27,18 @@ const productLinks = [
   { href: '/products/seed-processing-equipment/', label: t.nav.seedProcessing },
   { href: '/products/roasting-steaming-equipment/', label: t.nav.roastingSteaming },
   { href: '/products/filtration-refining-equipment/', label: t.nav.filtrationRefining },
-  { href: '/products/heavy-duty-hydraulic-oil-press/', label: 'Heavy Duty Press' },
-  { href: '/products/cold-press-hydraulic-oil-press/', label: 'Cold Press Machine' },
-  { href: '/products/sesame-oil-hydraulic-press/', label: 'Sesame Oil Press' },
-  { href: '/products/coconut-oil-hydraulic-press/', label: 'Coconut Oil Press' },
-  { href: '/products/medium-hydraulic-oil-press/', label: 'Medium Press (HN355)' },
-  { href: '/products/ultra-high-pressure-cold-press/', label: 'Ultra High Pressure' },
-  { href: '/products/stainless-steel-hydraulic-oil-press/', label: 'Stainless Steel Press' },
-  { href: '/products/stainless-steel-oil-refining-equipment/', label: 'SS Refining System' },
-  { href: '/products/integrated-feeder-crusher-roaster/', label: 'Feeder-Crusher-Roaster' },
-  { href: '/products/wood-fired-seed-steamer/', label: 'Wood-Fired Steamer' },
+  { href: '/products/model-comparison/', label: t.nav.modelComparison },
 ];
 
 const solutionLinks = [
   { href: '/solutions/', label: t.nav.solutions },
   { href: '/solutions/by-scale/', label: locale === 'fr' ? 'Par Échelle de Production' : locale === 'ar' ? 'حسب حجم الإنتاج' : locale === 'id' ? 'Berdasarkan Skala Produksi' : 'By Production Scale' },
-  { href: '/solutions/commercial-oil-press/', label: locale === 'fr' ? 'Presse Commerciale' : locale === 'ar' ? 'مكبس تجاري' : locale === 'id' ? 'Press Komersial' : 'Commercial Oil Press' },
-  { href: '/solutions/industrial-oil-press/', label: locale === 'fr' ? 'Presse Industrielle' : locale === 'ar' ? 'مكبس صناعي' : locale === 'id' ? 'Press Industri' : 'Industrial Oil Press' },
-  { href: '/solutions/small-business-oil-press/', label: locale === 'fr' ? 'Petite Entreprise' : locale === 'ar' ? 'للمشاريع الصغيرة' : locale === 'id' ? 'Usaha Kecil' : 'Small Business Press' },
-  { href: '/solutions/all-oil-types/', label: locale === 'fr' ? 'Tous les Types d\'Huile' : locale === 'ar' ? 'جميع أنواع الزيوت' : locale === 'id' ? 'Semua Jenis Minyak' : 'All Oil Types' },
+  { href: '/solutions/all-oil-types/', label: (t as any).common?.byOilType || 'By Oil Type' },
+  { href: '/markets/', label: locale === 'fr' ? 'Par Marché' : locale === 'ar' ? 'حسب السوق' : locale === 'id' ? 'Berdasarkan Pasar' : 'By Market' },
+  { href: '/services/', label: t.nav.services },
 ];
+
+const sitemapLabel = locale === 'fr' ? 'Plan du site' : locale === 'ar' ? 'خريطة الموقع' : locale === 'id' ? 'Peta Situs' : 'Sitemap';
 ---
 
 <footer class="bg-charcoal-900 text-steel-200 no-print">
@@ -166,6 +158,7 @@ const solutionLinks = [
         <a href={localePath('/privacy-policy/')} class="hover:text-amber-500 transition-colors">{t.footer.privacy}</a>
         <a href={localePath('/terms-of-service/')} class="hover:text-amber-500 transition-colors">{t.footer.terms}</a>
         <a href={localePath('/cookie-policy/')} class="hover:text-amber-500 transition-colors">{t.footer.cookie}</a>
+        <a href="/sitemap-index.xml" class="hover:text-amber-500 transition-colors">{sitemapLabel}</a>
       </div>
       <p>{t.footer.copyright}</p>
     </div>

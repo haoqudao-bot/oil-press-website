@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -50,12 +50,12 @@ const galImages = [
 
 <BaseLayout locale={currentLocale} title={t.about.title} description={
   currentLocale === 'fr'
-    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — fabricant professionnel de presses à huile hydrauliques depuis 2010. Usine avec atelier propre de 2 000 m², exportant vers plus de 50 pays. Presses réelles de 300 à 620 tonnes testées 48 heures avant expédition.'
+    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — fabricant professionnel de presses à huile hydrauliques depuis 2010. 200+ employés qualifiés, exportant vers plus de 50 pays. Presses réelles de 300 à 620 tonnes testées 48 heures avant expédition.'
     : currentLocale === 'ar'
-    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — مصنع محترف لمكابس الزيت الهيدروليكية منذ 2010. مصنع يضم ورشة مملوكة بمساحة 2,000 م²، يصدّر إلى أكثر من 50 دولة. مكابس حقيقية بقدرة 300–620 طن تُختبر 48 ساعة قبل الشحن.'
+    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — مصنع محترف لمكابس الزيت الهيدروليكية منذ 2010. أكثر من 200 موظف ماهر، يصدّر إلى أكثر من 50 دولة. مكابس حقيقية بقدرة 300–620 طن تُختبر 48 ساعة قبل الشحن.'
     : currentLocale === 'id'
-    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — produsen profesional mesin press minyak hidrolik sejak 2010. Pabrik dengan bengkel milik sendiri seluas 2.000 m², mengekspor ke lebih dari 50 negara. Press asli 300–620 ton diuji 48 jam sebelum pengiriman.'
-    : 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. Factory with 2,000 m² owned workshop, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment.'
+    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — produsen profesional mesin press minyak hidrolik sejak 2010. 200+ karyawan terampil, mengekspor ke lebih dari 50 negara. Press asli 300–620 ton diuji 48 jam sebelum pengiriman.'
+    : 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. 200+ skilled employees, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment.'
 } jsonLd={breadcrumbLd} overlayHeader>
   <style is:global>
     :root{
@@ -78,6 +78,7 @@ const galImages = [
     .kicker.center{justify-content:center}
     .sec{padding:92px 0}
     .sec-head{margin-bottom:52px;max-width:720px}
+    .sec-head.wide{max-width:1100px}
     .sec-head.center{margin-inline:auto;text-align:center}
     .sec-head.center .kicker{justify-content:center}
     .sec-head h2{font-size:clamp(28px,3.4vw,42px);line-height:1.12;font-weight:800;color:var(--steel-950);letter-spacing:-.02em}
@@ -277,7 +278,7 @@ const galImages = [
       .gal{grid-template-columns:1fr;grid-auto-rows:220px}
       .gi.big{grid-column:span 1;grid-row:span 1}
       .hero{height:auto;min-height:0}
-      .hero .wrap{padding:90px 0 54px}
+      .hero .wrap{padding:90px 20px 54px}
     }
   </style>
 
@@ -291,7 +292,7 @@ const galImages = [
       <p class="sub">{v.heroSub}</p>
       <div class="hero-cta">
         <a class="btn btn-amber" href={localePath('/contact/')}>{v.heroCta1}</a>
-        <a class="btn btn-ghost" href="#proof">{v.heroCta2}</a>
+        <a class="btn btn-ghost" href="#tour">{v.heroCta2}</a>
       </div>
     </div>
     <div class="hero-chips">
@@ -317,7 +318,7 @@ const galImages = [
         <p>{v.ovP2}</p>
         <div class="ov-stats">
           <div class="st"><div class="n">2010</div><div class="l">{v.ovStat1L}</div></div>
-          <div class="st"><div class="n">2,000 m²</div><div class="l">{v.ovStat2L}</div></div>
+          <div class="st"><div class="n">200+</div><div class="l">{v.ovStat2L}</div></div>
           <div class="st"><div class="n">50+</div><div class="l">{v.ovStat3L}</div></div>
           <div class="st"><div class="n">300–620T</div><div class="l">{v.ovStat4L}</div></div>
         </div>
@@ -410,7 +411,7 @@ const galImages = [
   <!-- 08 RANGE -->
   <section class="sec lines" id="lines">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head wide reveal">
         <div class="kicker">{v.linesKicker}</div>
         <h2>{v.linesH2}</h2>
         <p>{v.linesP}</p>
@@ -428,7 +429,7 @@ const galImages = [
   <!-- 09 FACTORY TOUR -->
   <section class="sec" id="tour">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head wide reveal">
         <div class="kicker">{v.galKicker}</div>
         <h2>{v.galH2}</h2>
         <p>{v.galP}</p>
@@ -467,7 +468,7 @@ const galImages = [
   <!-- 11 MATERIALS -->
   <section class="sec mat">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head wide reveal">
         <div class="kicker">{v.matKicker}</div>
         <h2>{v.matH2}</h2>
         <p>{v.matP}</p>
@@ -484,7 +485,7 @@ const galImages = [
   <!-- 11b SERVICES -->
   <section class="sec serv">
     <div class="wrap">
-      <div class="sec-head center reveal">
+      <div class="sec-head center wide reveal">
         <div class="kicker center">{v.servKicker}</div>
         <h2>{v.servH2}</h2>
         <p>{v.servP}</p>
