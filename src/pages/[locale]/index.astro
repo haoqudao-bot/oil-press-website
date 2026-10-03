@@ -660,7 +660,7 @@ const modelListLd = {
         </div>
 
         <div class="reveal">
-          <form id="hp-form" action="/api/inquiry" method="POST" class="bg-white rounded-2xl p-6 md:p-8 border border-steel-100 shadow-sm" onsubmit="return submitHomeForm(event)">
+          <form id="hp-form" action="/api/inquiry" method="POST" class="bg-white rounded-2xl p-6 md:p-8 border border-steel-100 shadow-sm text-charcoal-900" onsubmit="return submitHomeForm(event)">
             <input type="hidden" name="source" value={t.contact.formSubject} />
             <input type="text" name="_gotcha" style="display:none" />
             <h3 class="font-display text-2xl text-charcoal-900 mb-2">{t.contact.sendInquiry}</h3>
@@ -768,6 +768,8 @@ const modelListLd = {
               ></textarea>
             </div>
 
+            <div class="cf-turnstile mt-5" data-sitekey="0x4AAAAAAFIiDuJVsJp4_WlY"></div>
+
             <button id="hp-btn" type="submit" class="btn-primary text-base w-full justify-center mt-6">
               <span id="hp-btn-text">{t.contact.submit}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -788,4 +790,6 @@ const modelListLd = {
       </div>
     </div>
   </section>
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </BaseLayout>
