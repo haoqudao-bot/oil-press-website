@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -138,7 +138,7 @@ const pageTitle = currentLocale === 'fr' ? 'Nos Produits de Presses à Huile' :
         <aside class="lg:w-56 shrink-0">
           <div class="sticky top-24 space-y-8">
             <div>
-              <h3 class="font-display text-lg text-charcoal-900 mb-4">{t.products.allCategories}</h3>
+              <h2 class="font-display text-lg text-charcoal-900 mb-4">{t.products.allCategories}</h2>
               <nav class="space-y-1">
                 <a
                   href={localePath('/products/')}
