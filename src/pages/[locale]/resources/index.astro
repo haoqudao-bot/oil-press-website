@@ -70,9 +70,13 @@ const readingContent = {
     ]},
   ],
 };
+
+const pageTitle = currentLocale === 'fr' ? 'Ressources et Guides sur les Presses à Huile' :
+                  currentLocale === 'ar' ? 'موارد ودليل معاصر الزيت الهيدروليكية' :
+                  'Sumber Daya & Panduan Mesin Press Minyak';
 ---
 
-<BaseLayout locale={currentLocale} title={t.resources.title} description={t.resources.subtitle} jsonLd={breadcrumbLd}>
+<BaseLayout locale={currentLocale} title={pageTitle} description={t.resources.subtitle} jsonLd={breadcrumbLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

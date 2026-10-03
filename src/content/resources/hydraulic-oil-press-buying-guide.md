@@ -5,10 +5,10 @@ title:
   ar: دليل شراء المكبس الزيتي الهيدروليكي
   id: Panduan Membeli Mesin Press Minyak Hidrolik
 description:
-  en: How to choose the right machine for your business
-  fr: Comment choisir la bonne machine pour votre entreprise
-  ar: كيفية اختيار الماكينة المناسبة لعملك
-  id: Cara memilih mesin yang tepat untuk bisnis Anda
+  en: Complete buying guide for hydraulic oil press machines covering capacity selection, pressure requirements, material quality, supplier evaluation, and budget planning
+  fr: Guide d'achat complet pour presses à huile hydrauliques couvrant la sélection de capacité, les exigences de pression, la qualité des matériaux et la planification budgétaire
+  ar: دليل شراء كامل لمكابس الزيت الهيدروليكية يغطي اختيار السعة ومتطلبات الضغط وجودة المواد وتقييم المورد والتخطيط المالي
+  id: Panduan membeli lengkap mesin press minyak hidrolik mencakup pemilihan kapasitas, kebutuhan tekanan, kualitas material, evaluasi supplier, dan perencanaan budget
 type: guide
 publishedAt: 2026-07-15
 seoKeywords:

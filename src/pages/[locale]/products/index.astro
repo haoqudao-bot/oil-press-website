@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -105,9 +105,13 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 2, name: t.products.title, item: `https://www.hydoilpress.com/${currentLocale}/products` },
   ],
 };
+
+const pageTitle = currentLocale === 'fr' ? 'Nos Produits de Presses à Huile' :
+                  currentLocale === 'ar' ? 'منتجاتنا من معاصر الزيت الهيدروليكية' :
+                  'Produk Mesin Press Minyak Hidrolik Kami';
 ---
 
-<BaseLayout locale={currentLocale} title={t.products.title} description={t.products.subtitle} jsonLd={breadcrumbLd}>
+<BaseLayout locale={currentLocale} title={pageTitle} description={t.products.subtitle} jsonLd={breadcrumbLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

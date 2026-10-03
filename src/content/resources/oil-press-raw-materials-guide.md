@@ -5,10 +5,10 @@ title:
   ar: دليل المواد الأولية للمكبس الزيتي
   id: Panduan Bahan Baku Press Minyak
 description:
-  en: Best seeds and nuts for extraction
-  fr: Meilleures graines et noix pour l'extraction
-  ar: أفضل البذور والمكسرات للاستخراج
-  id: Biji dan kacang terbaik untuk ekstraksi
+  en: Comprehensive guide to oil press raw materials covering 20+ seeds and nuts including oil content, pressing characteristics, pretreatment requirements, and market prices
+  fr: Guide complet des matières premières pour presse couvrant 20+ graines et noix avec taux d'huile, caractéristiques de pressage, exigences de prétraitement et prix du marché
+  ar: دليل شامل للمواد الأولية للمكبس الزيتي يغطي أكثر من 20 بذرة وجوز بما في ذلك محتوى الزيت وخصائص العصر ومتطلبات المعالجة المسبقة وأسعار السوق
+  id: Panduan komprehensif bahan baku press minyak mencakup 20+ biji dan kacang termasuk kandungan minyak, karakteristik press, kebutuhan pra-perlakuan, dan harga pasar
 type: guide
 publishedAt: 2026-07-17
 seoKeywords:

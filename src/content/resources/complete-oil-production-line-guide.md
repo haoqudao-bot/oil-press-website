@@ -5,10 +5,10 @@ title:
   ar: دليل خط إنتاج الزيت الكامل
   id: Panduan Garis Produksi Minyak Lengkap
 description:
-  en: Designing an efficient production system
-  fr: Concevoir un systeme de production efficace
-  ar: تصميم نظام إنتاج فعال
-  id: Merancang sistem produksi yang efisien
+  en: Complete oil production line design guide from raw material cleaning, pressing, filtering to refining, including equipment selection, layout planning, and cost estimation
+  fr: Guide complet de conception de ligne de production d'huile du nettoyage des matières premières au pressage, filtrage et raffinage, incluant la sélection d'équipements et la planification
+  ar: دليل تصميم خط إنتاج الزيت الكامل من تنظيف المواد الأولية إلى العصر والترشيح والتكرير، بما في ذلك اختيار المعدات وتخطيط المصنع وتقدير التكلفة
+  id: Panduan lengkap desain lini produksi minyak dari pembersihan bahan baku, pengepresan, penyaringan hingga pemurnian, termasuk pemilihan peralatan dan estimasi biaya
 type: guide
 publishedAt: 2026-07-11
 seoKeywords:

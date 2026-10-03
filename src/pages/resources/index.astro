@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -26,7 +26,7 @@ const typeColors: Record<string, string> = {
 };
 ---
 
-<BaseLayout title={t.resources.title} description={t.resources.subtitle} jsonLd={{
+<BaseLayout title="Oil Press Resources & Guides" description={t.resources.subtitle} jsonLd={{
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [

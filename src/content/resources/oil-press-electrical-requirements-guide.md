@@ -5,10 +5,10 @@ title:
   ar: المتطلبات الكهربائية للمكبس الزيتي
   id: Persyaratan Listrik Mesin Press
 description:
-  en: Power supply and generator configuration
-  fr: Alimentation electrique et configuration du generateur
-  ar: إمداد الطاقة وتكوين المولد
-  id: Konfigurasi pasokan daya dan generator
+  en: Electrical requirements guide for oil press machines covering voltage specifications, power consumption, generator sizing, wiring standards, and safety compliance
+  fr: Guide des exigences électriques pour presses à huile couvrant les spécifications de tension, la consommation électrique, le dimensionnement du générateur et la conformité sécurité
+  ar: دليل المتطلبات الكهربائية لمكابس الزيت يغطي مواصفات الجهد واستهلاك الطاقة وحجم المولد ومعايير الأسلاك والامتثال للسلامة
+  id: Panduan kebutuhan listrik mesin press minyak mencakup spesifikasi tegangan, konsumsi daya, ukuran generator, standar kabel, dan kepatuhan keselamatan
 type: guide
 publishedAt: 2026-07-18
 seoKeywords:

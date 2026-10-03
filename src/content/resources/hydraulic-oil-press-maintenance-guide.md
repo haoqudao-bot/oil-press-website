@@ -5,10 +5,10 @@ title:
   ar: دليل صيانة المكبس الزيتي الهيدروليكي
   id: Pemeliharaan Mesin Press Minyak Hidrolik
 description:
-  en: Complete maintenance guide
-  fr: Guide complet de maintenance
-  ar: دليل صيانة شامل
-  id: Panduan pemeliharaan lengkap
+  en: Complete hydraulic oil press maintenance guide covering daily, weekly, monthly, and annual maintenance schedules to maximize machine life and prevent downtime
+  fr: Guide complet de maintenance de presse hydraulique couvrant les programmes quotidiens, hebdomadaires, mensuels et annuels pour maximiser la durée de vie et prévenir les arrêts
+  ar: دليل صيانة المكبس الزيتي الهيدروليكي الشامل يغطي جداول الصيانة اليومية والأسبوعية والشهرية والسنوية لتعظيم عمر الماكينة ومنع التوقف
+  id: Panduan pemeliharaan mesin press minyak hidrolik lengkap mencakup jadwal harian, mingguan, bulanan, dan tahunan untuk memaksimalkan umur mesin dan mencegah downtime
 type: guide
 publishedAt: 2026-07-16
 seoKeywords:

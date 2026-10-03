@@ -5,10 +5,10 @@ title:
   ar: العصر البارد مقابل العصر الساخن للزيت
   id: Cold Press vs Hot Press Minyak
 description:
-  en: Comparison of cold and hot pressing methods
-  fr: Comparaison des methodes de pressage a froid et a chaud
-  ar: مقارنة بين طرق العصر البارد والساخن
-  id: Perbandingan metode cold press dan hot press
+  en: Cold press vs hot press oil comparison covering nutrient retention, oil yield, equipment investment, and market positioning to help you choose the right process
+  fr: Comparaison pressage à froid vs à chaud couvrant la rétention des nutriments, le rendement, l'investissement en équipement et le positionnement marché pour choisir le bon procédé
+  ar: مقارنة العصر البارد مقابل العصر الساخن تغطي الاحتفاظ بالمغذيات وعائد الزيت والاستثمار في المعدات وموقع السوق لمساعدتك في اختيار العملية الصحيحة
+  id: Perbandingan cold press vs hot press minyak mencakup retensi nutrisi, hasil minyak, investasi peralatan, dan positioning pasar untuk memilih proses yang tepat
 type: comparison
 publishedAt: 2026-07-14
 seoKeywords:

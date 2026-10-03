@@ -5,10 +5,10 @@ title:
   ar: كيفية زيادة عائد الزيت
   id: Cara Memaksimalkan Hasil Minyak
 description:
-  en: Tips and techniques for better oil extraction
-  fr: Conseils et techniques pour une meilleure extraction d'huile
-  ar: نصائح وتقنيات لاستخراج زيت أفضل
-  id: Tips dan teknik untuk ekstraksi minyak yang lebih baik
+  en: Proven techniques to maximize oil yield including seed preparation, moisture control, temperature optimization, and pressing parameters for higher extraction rates
+  fr: Techniques éprouvées pour maximiser le rendement en huile incluant la préparation des graines, le contrôle de l'humidité, l'optimisation de la température et les paramètres de pressage
+  ar: تقنيات مثبتة لزيادة عائد الزيت بما في ذلك إعداد البذور والتحكم في الرطوبة وتحسين درجة الحرارة ومعلمات العصر لمعدلات استخراج أعلى
+  id: Teknik terbukti memaksimalkan hasil minyak termasuk persiapan biji, kontrol kelembaban, optimasi suhu, dan parameter press untuk tingkat ekstraksi lebih tinggi
 type: guide
 publishedAt: 2026-07-12
 seoKeywords:

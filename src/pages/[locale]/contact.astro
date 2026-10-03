@@ -50,9 +50,13 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 2, name: t.contact.title, item: `https://www.hydoilpress.com/${currentLocale}/contact` },
   ],
 };
+
+const pageTitle = currentLocale === 'fr' ? 'Contactez-nous pour Tarifs et Support' :
+                  currentLocale === 'ar' ? 'اتصل بنا للأسعار والدعم' :
+                  'Hubungi Kami untuk Harga & Dukungan';
 ---
 
-<BaseLayout locale={currentLocale} title={t.contact.title} description={t.contact.subtitle} jsonLd={breadcrumbLd}>
+<BaseLayout locale={currentLocale} title={pageTitle} description={t.contact.subtitle} jsonLd={breadcrumbLd}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">

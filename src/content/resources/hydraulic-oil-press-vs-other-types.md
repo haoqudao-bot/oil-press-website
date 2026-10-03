@@ -5,10 +5,10 @@ title:
   ar: المكبس الهيدروليكي مقابل أنواع المكابس الأخرى
   id: Hidrolik vs Jenis Press Minyak Lain
 description:
-  en: Comparison with screw and solvent extraction
-  fr: Comparaison avec la vis et l'extraction par solvant
-  ar: مقارنة مع المكبس اللولبي واستخراج بالمذيبات
-  id: Perbandingan dengan screw dan solvent extraction
+  en: Hydraulic oil press vs screw press vs solvent extraction comparison covering oil quality, residual oil rate, equipment cost, operating cost, and applicable scenarios
+  fr: Comparaison presse hydraulique vs presse à vis vs extraction par solvant couvrant la qualité d'huile, le taux d'huile résiduelle, le coût des équipements et les scénarios applicables
+  ar: مقارنة المكبس الهيدروليكي مقابل المكبس اللولبي مقابل الاستخلاص بالمذيبات تغطي جودة الزيت ومعدل الزيت المتبقي وتكلفة المعدات وسيناريوهات التطبيق
+  id: Perbandingan press hidrolik vs screw press vs solvent extraction mencakup kualitas minyak, sisa minyak, biaya peralatan, biaya operasional, dan skenario aplikasi
 type: comparison
 publishedAt: 2026-07-13
 seoKeywords:
