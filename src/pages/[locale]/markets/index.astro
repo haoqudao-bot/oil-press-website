@@ -217,7 +217,7 @@ const faqLd = {
 };
 ---
 
-<BaseLayout locale={currentLocale} title={currentLocale === 'fr' ? 'Marchés Mondiaux & Solutions Régionales de Presse à Huile' : currentLocale === 'ar' ? 'أسواق عالمية وحلول إقليمية لآلات الضغط الهيدروليكي' : 'Pasar Global & Solusi Mesin Press Minyak Regional'} description={currentLocale === 'fr' ? 'Les presses à huile hydrauliques Haonuo servent plus de 50 pays dans le monde. Découvrez les solutions régionales, les analyses de marché et les histoires de succès.' : currentLocale === 'ar' ? 'تخدم آلات الضغط الهيدروليكي لزيت Haonuo أكثر من 50 دولة في جميع أنحاء العالم. اكتشف الحلول الإقليمية والمناقشات السوقية وقصص النجاح.' : 'Haonuo hydraulic oil press machines serve 50+ countries worldwide. Explore regional solutions, market insights, and success stories.'} keywords={currentLocale === 'fr' ? ['press à huile mondial', '50 pays presse hydraulique', 'fabricant presse à huile international'] : currentLocale === 'ar' ? ['آلة ضغط زيت عالمي', '50 دولة ضغط هيدروليكي', 'مصنع ضغط زيت دولي'] : ['oil press machine global', 'hydraulic oil press 50 countries', 'oil press manufacturer worldwide']} jsonLd={{ '@context': 'https://schema.org', '@graph': [breadcrumbLd, faqLd] }}>
+<BaseLayout locale={currentLocale} title={currentLocale === 'fr' ? 'Marchés Mondiaux & Solutions Régionales de Presse à Huile' : currentLocale === 'ar' ? 'أسواق عالمية وحلول إقليمية لآلات الضغط الهيدروليكي' : 'Pasar Global & Solusi Mesin Press Minyak'} description={currentLocale === 'fr' ? 'Les presses à huile hydrauliques Haonuo servent plus de 50 pays dans le monde. Découvrez les solutions régionales, les analyses de marché et les histoires de succès.' : currentLocale === 'ar' ? 'تخدم آلات الضغط الهيدروليكي لزيت Haonuo أكثر من 50 دولة في جميع أنحاء العالم. اكتشف الحلول الإقليمية والمناقشات السوقية وقصص النجاح.' : currentLocale === 'id' ? 'Mesin press minyak hidrolik Haonuo melayani 50+ negara di seluruh dunia. Jelajahi solusi regional, wawasan pasar, dan kisah sukses.' : 'Haonuo hydraulic oil press machines serve 50+ countries worldwide. Explore regional solutions, market insights, and success stories.'} keywords={currentLocale === 'fr' ? ['press à huile mondial', '50 pays presse hydraulique', 'fabricant presse à huile international'] : currentLocale === 'ar' ? ['آلة ضغط زيت عالمي', '50 دولة ضغط هيدروليكي', 'مصنع ضغط زيت دولي'] : currentLocale === 'id' ? ['mesin press minyak global', 'press hidrolik 50 negara', 'produsen mesin press minyak dunia'] : ['oil press machine global', 'hydraulic oil press 50 countries', 'oil press manufacturer worldwide']} jsonLd={{ '@context': 'https://schema.org', '@graph': [breadcrumbLd, faqLd] }}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,13 +237,13 @@ const faqLd = {
       <div class="text-center mb-12">
         <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          {currentLocale === 'fr' ? '50+ Pays & 6 Continents' : currentLocale === 'ar' ? '50+ دولة و 6 قارات' : '50+ Countries & 6 Continents'}
+          {currentLocale === 'fr' ? '50+ Pays & 6 Continents' : currentLocale === 'ar' ? '50+ دولة و 6 قارات' : currentLocale === 'id' ? '50+ Negara & 6 Benua' : '50+ Countries & 6 Continents'}
         </div>
         <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-4">
-          {currentLocale === 'fr' ? 'Presses à Huile Hydrauliques — Marchés Mondiaux & Solutions Régionales' : currentLocale === 'ar' ? 'آلات الضغط الهيدروليكي لزيت — أسواق عالمية وحلول إقليمية' : 'Hydraulic Oil Press Machine — Global Markets & Regional Solutions'}
+          {currentLocale === 'fr' ? 'Presses à Huile Hydrauliques — Marchés Mondiaux & Solutions Régionales' : currentLocale === 'ar' ? 'آلات الضغط الهيدروليكي لزيت — أسواق عالمية وحلول إقليمية' : currentLocale === 'id' ? 'Mesin Press Minyak Hidrolik — Pasar Global & Solusi Regional' : 'Hydraulic Oil Press Machine — Global Markets & Regional Solutions'}
         </h1>
         <p class="text-steel-500 text-lg max-w-3xl mx-auto">
-          {currentLocale === 'fr' ? 'Portée mondiale, expertise locale. Fidélisé par des producteurs d\'huile dans plus de 50 pays à travers l\'Afrique, l\'Asie, le Moyen-Orient, l\'Amérique du Sud, l\'Europe et l\'Océanie. Voici nos marchés régionaux phares avec un support dédié et une expérience terrain étendue.' : currentLocale === 'ar' ? 'نطاق عالمي، خبرة محلية. موثوق به من قبل مُنتجي الزيت في أكثر من 50 دولة في جميع أنحاء أفريقيا وآسيا والشرق الأوسط وأمريكا الجنوبية وأوروبا وأوقيانوسيا. إليك أسواقنا الإقليمية المميزة مع دعم مختص وخبرة واسعة على الأرض.' : 'Global Reach, Local Expertise. Trusted by oil producers in 50+ countries across Africa, Asia, Middle East, South America, Europe, and Oceania. Below are our featured regional markets with dedicated support and extensive on-the-ground experience.'}
+          {currentLocale === 'fr' ? 'Portée mondiale, expertise locale. Fidélisé par des producteurs d\'huile dans plus de 50 pays à travers l\'Afrique, l\'Asie, le Moyen-Orient, l\'Amérique du Sud, l\'Europe et l\'Océanie. Voici nos marchés régionaux phares avec un support dédié et une expérience terrain étendue.' : currentLocale === 'ar' ? 'نطاق عالمي، خبرة محلية. موثوق به من قبل مُنتجي الزيت في أكثر من 50 دولة في جميع أنحاء أفريقيا وآسيا والشرق الأوسط وأمريكا الجنوبية وأوروبا وأوقيانوسيا. إليك أسواقنا الإقليمية المميزة مع دعم مختص وخبرة واسعة على الأرض.' : currentLocale === 'id' ? 'Jangkauan global, keahlian lokal. Dipercaya produsen minyak di 50+ negara di Afrika, Asia, Timur Tengah, Amerika Selatan, Eropa, dan Oseania. Berikut pasar regional unggulan kami dengan dukungan khusus dan pengalaman lapangan yang luas.' : 'Global Reach, Local Expertise. Trusted by oil producers in 50+ countries across Africa, Asia, Middle East, South America, Europe, and Oceania. Below are our featured regional markets with dedicated support and extensive on-the-ground experience.'}
         </p>
       </div>
 
@@ -273,10 +273,10 @@ const faqLd = {
       <div class="mb-16">
         <div class="text-center mb-10">
           <h2 class="font-display text-3xl text-charcoal-900 mb-3">
-            {currentLocale === 'fr' ? 'Empreinte Régionale' : currentLocale === 'ar' ? 'البصمة الإقليمية' : 'Regional Footprint'}
+            {currentLocale === 'fr' ? 'Empreinte Régionale' : currentLocale === 'ar' ? 'البصمة الإقليمية' : currentLocale === 'id' ? 'Jejak Regional' : 'Regional Footprint'}
           </h2>
           <p class="text-steel-500 max-w-2xl mx-auto">
-            {currentLocale === 'fr' ? 'Nos presses à huile hydrauliques fonctionnent avec succès sur 6 continents. Voici une ventilation de notre présence mondiale.' : currentLocale === 'ar' ? 'تعمل آلات الضغط الهيدروليكي لزيت لدينا بنجاح على 6 قارات. إليك تفصيل حضورنا العالمي.' : 'Our hydraulic oil press machines are operating successfully across 6 continents. Here\'s a breakdown of our global presence.'}
+            {currentLocale === 'fr' ? 'Nos presses à huile hydrauliques fonctionnent avec succès sur 6 continents. Voici une ventilation de notre présence mondiale.' : currentLocale === 'ar' ? 'تعمل آلات الضغط الهيدروليكي لزيت لدينا بنجاح على 6 قارات. إليك تفصيل حضورنا العالمي.' : currentLocale === 'id' ? 'Mesin press minyak hidrolik kami beroperasi dengan sukses di 6 benua. Berikut rincian kehadiran global kami.' : 'Our hydraulic oil press machines are operating successfully across 6 continents. Here\'s a breakdown of our global presence.'}
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -306,12 +306,12 @@ const faqLd = {
       <div class="mb-16">
         <div class="text-center mb-10">
           <h2 class="font-display text-3xl text-charcoal-900 mb-3">
-            {currentLocale === 'fr' ? 'Marchés Régionaux Phares' : currentLocale === 'ar' ? 'أسواق إقليمية مميزة' : 'Featured Regional Markets'}
+            {currentLocale === 'fr' ? 'Marchés Régionaux Phares' : currentLocale === 'ar' ? 'أسواق إقليمية مميزة' : currentLocale === 'id' ? 'Pasar Regional Unggulan' : 'Featured Regional Markets'}
           </h2>
           <p class="text-steel-500 max-w-2xl mx-auto">
-            {currentLocale === 'fr' ? 'Ce sont nos plus grands marchés avec un support local dédié et une expérience terrain étendue. Vous ne voyez pas votre pays ? ' : currentLocale === 'ar' ? 'هذه هي أسواقنا الأكبر مع دعم محلي مختص وخبرة واسعة على الأرض. لم ترى دولتك؟ ' : 'These are our largest markets with dedicated local support and extensive on-the-ground experience. Don\'t see your country? '}
+            {currentLocale === 'fr' ? 'Ce sont nos plus grands marchés avec un support local dédié et une expérience terrain étendue. Vous ne voyez pas votre pays ? ' : currentLocale === 'ar' ? 'هذه هي أسواقنا الأكبر مع دعم محلي مختص وخبرة واسعة على الأرض. لم ترى دولتك؟ ' : currentLocale === 'id' ? 'Ini adalah pasar terbesar kami dengan dukungan lokal khusus dan pengalaman lapangan yang luas. Tidak melihat negara Anda? ' : 'These are our largest markets with dedicated local support and extensive on-the-ground experience. Don\'t see your country? '}
             <a href={localePath('/contact/')} class="text-amber-600 hover:text-amber-700 font-medium underline">{t.nav.contact}</a>
-            {currentLocale === 'fr' ? ' — nous expédions dans le monde entier.' : currentLocale === 'ar' ? ' — نوفر الشحن إلى جميع أنحاء العالم.' : ' — we ship worldwide.'}
+            {currentLocale === 'fr' ? ' — nous expédions dans le monde entier.' : currentLocale === 'ar' ? ' — نوفر الشحن إلى جميع أنحاء العالم.' : currentLocale === 'id' ? ' — kami mengirim ke seluruh dunia.' : ' — we ship worldwide.'}
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -369,7 +369,7 @@ const faqLd = {
       <!-- Why Choose Haonuo Globally -->
       <div class="mb-16 bg-steel-50 rounded-2xl p-8">
         <h2 class="font-display text-2xl text-charcoal-900 mb-6 text-center">
-          {currentLocale === 'fr' ? 'Pourquoi Haonuo est Fidélisé dans le Monde Entier' : currentLocale === 'ar' ? 'لماذا يُعتمد العالم على Haonuo' : 'Why Haonuo is Trusted Worldwide'}
+          {currentLocale === 'fr' ? 'Pourquoi Haonuo est Fidélisé dans le Monde Entier' : currentLocale === 'ar' ? 'لماذا يُعتمد العالم على Haonuo' : currentLocale === 'id' ? 'Mengapa Haonuo Dipercaya di Seluruh Dunia' : 'Why Haonuo is Trusted Worldwide'}
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="text-center">
@@ -377,19 +377,19 @@ const faqLd = {
               <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             </div>
             <h3 class="font-display text-lg text-charcoal-900 mb-1">
-              {currentLocale === 'fr' ? '15+ Ans d\'Expérience' : currentLocale === 'ar' ? '15+ سنة خبرة' : '15+ Years Experience'}
+              {currentLocale === 'fr' ? '15+ Ans d\'Expérience' : currentLocale === 'ar' ? '15+ سنة خبرة' : currentLocale === 'id' ? 'Pengalaman 15+ Tahun' : '15+ Years Experience'}
             </h3>
             <p class="text-sm text-steel-600">
-              {currentLocale === 'fr' ? 'Depuis 2010, nous perfectionnons la technologie des presses hydrauliques.' : currentLocale === 'ar' ? 'منذ عام 2010، نقوم بتحسين تقنية آلات الضغط الهيدروليكي.' : 'Since 2010, we\'ve been perfecting hydraulic oil press technology.'}
+              {currentLocale === 'fr' ? 'Depuis 2010, nous perfectionnons la technologie des presses hydrauliques.' : currentLocale === 'ar' ? 'منذ عام 2010، نقوم بتحسين تقنية آلات الضغط الهيدروليكي.' : currentLocale === 'id' ? 'Sejak 2010, kami terus menyempurnakan teknologi mesin press minyak hidrolik.' : 'Since 2010, we\'ve been perfecting hydraulic oil press technology.'}
             </p>
           </div>
           <div class="text-center">
             <div class="w-14 h-14 mx-auto mb-4 bg-amber-100 rounded-xl flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
-            <h3 class="font-display text-lg text-charcoal-900 mb-1">50+ {currentLocale === 'fr' ? 'Pays' : currentLocale === 'ar' ? 'دول' : 'Countries'}</h3>
+            <h3 class="font-display text-lg text-charcoal-900 mb-1">50+ {currentLocale === 'fr' ? 'Pays' : currentLocale === 'ar' ? 'دولة' : currentLocale === 'id' ? 'Negara' : 'Countries'}</h3>
             <p class="text-sm text-steel-600">
-              {currentLocale === 'fr' ? 'Nos machines fonctionnent avec succès sur 6 continents.' : currentLocale === 'ar' ? 'تعمل آلاتنا بنجاح على 6 قارات.' : 'Our machines are operating successfully across 6 continents.'}
+              {currentLocale === 'fr' ? 'Nos machines fonctionnent avec succès sur 6 continents.' : currentLocale === 'ar' ? 'تعمل آلاتنا بنجاح على 6 قارات.' : currentLocale === 'id' ? 'Mesin kami beroperasi dengan sukses di 6 benua.' : 'Our machines are operating successfully across 6 continents.'}
             </p>
           </div>
           <div class="text-center">
@@ -397,10 +397,10 @@ const faqLd = {
               <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <h3 class="font-display text-lg text-charcoal-900 mb-1">
-              {currentLocale === 'fr' ? 'Garantie 1 An' : currentLocale === 'ar' ? 'ضمان 1 سنة' : '1-Year Warranty'}
+              {currentLocale === 'fr' ? 'Garantie 1 An' : currentLocale === 'ar' ? 'ضمان 1 سنة' : currentLocale === 'id' ? 'Garansi 1 Tahun' : '1-Year Warranty'}
             </h3>
             <p class="text-sm text-steel-600">
-              {currentLocale === 'fr' ? 'Couverture complète avec notre garantie complète.' : currentLocale === 'ar' ? 'تغطية كاملة مع ضماننا الشامل.' : 'Full coverage with our comprehensive warranty.'}
+              {currentLocale === 'fr' ? 'Couverture complète avec notre garantie complète.' : currentLocale === 'ar' ? 'تغطية كاملة مع ضماننا الشامل.' : currentLocale === 'id' ? 'Cakupan penuh dengan garansi komprehensif kami.' : 'Full coverage with our comprehensive warranty.'}
             </p>
           </div>
           <div class="text-center">
@@ -408,10 +408,10 @@ const faqLd = {
               <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h3 class="font-display text-lg text-charcoal-900 mb-1">
-              {currentLocale === 'fr' ? 'Support 24/7' : currentLocale === 'ar' ? 'دعم 24/7' : '24/7 Support'}
+              {currentLocale === 'fr' ? 'Support 24/7' : currentLocale === 'ar' ? 'دعم 24/7' : currentLocale === 'id' ? 'Dukungan 24/7' : '24/7 Support'}
             </h3>
             <p class="text-sm text-steel-600">
-              {currentLocale === 'fr' ? 'Support WhatsApp disponible à toute heure, partout.' : currentLocale === 'ar' ? 'دعم WhatsApp متوفر على مدار الساعة، في أي مكان.' : 'WhatsApp support available anytime, anywhere.'}
+              {currentLocale === 'fr' ? 'Support WhatsApp disponible à toute heure, partout.' : currentLocale === 'ar' ? 'دعم WhatsApp متوفر على مدار الساعة، في أي مكان.' : currentLocale === 'id' ? 'Dukungan WhatsApp tersedia kapan saja, di mana saja.' : 'WhatsApp support available anytime, anywhere.'}
             </p>
           </div>
         </div>
@@ -465,10 +465,10 @@ const faqLd = {
       <!-- CTA Section -->
       <div class="bg-charcoal-900 rounded-2xl p-8 md:p-12 text-center">
         <h2 class="font-display text-3xl text-white mb-4">
-          {currentLocale === 'fr' ? 'Votre Pays n\'est Pas Listé ?' : currentLocale === 'ar' ? 'لم ترى دولتك في القائمة؟' : 'Don\'t See Your Country Listed?'}
+          {currentLocale === 'fr' ? 'Votre Pays n\'est Pas Listé ?' : currentLocale === 'ar' ? 'لم ترى دولتك في القائمة؟' : currentLocale === 'id' ? 'Negara Anda Tidak Terdaftar?' : 'Don\'t See Your Country Listed?'}
         </h2>
         <p class="text-steel-300 text-lg max-w-2xl mx-auto mb-8">
-          {currentLocale === 'fr' ? 'Nous servons activement plus de 50 pays et nous nous étendons rapidement. Il est probable que nous puissions expédier à votre emplacement avec un support complet. Contactez notre équipe pour discuter de vos besoins spécifiques.' : currentLocale === 'ar' ? 'نحن نخدم بنشاط أكثر من 50 دولة ونحن نتوسع بسرعة. من المحتمل أن نتمكن من الشحن إلى موقعك مع دعم كامل. اتصل بفريقنا لمناقشة احتياجاتك المحددة.' : 'We actively serve 50+ countries and are expanding rapidly. Chances are, we can ship to your location with full support. Contact our team to discuss your specific requirements.'}
+          {currentLocale === 'fr' ? 'Nous servons activement plus de 50 pays et nous nous étendons rapidement. Il est probable que nous puissions expédier à votre emplacement avec un support complet. Contactez notre équipe pour discuter de vos besoins spécifiques.' : currentLocale === 'ar' ? 'نحن نخدم بنشاط أكثر من 50 دولة ونحن نتوسع بسرعة. من المحتمل أن نتمكن من الشحن إلى موقعك مع دعم كامل. اتصل بفريقنا لمناقشة احتياجاتك المحددة.' : currentLocale === 'id' ? 'Kami aktif melayani 50+ negara dan berkembang pesat. Kemungkinan besar kami dapat mengirim ke lokasi Anda dengan dukungan penuh. Hubungi tim kami untuk membahas kebutuhan spesifik Anda.' : 'We actively serve 50+ countries and are expanding rapidly. Chances are, we can ship to your location with full support. Contact our team to discuss your specific requirements.'}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={localePath('/contact/')} class="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-charcoal-900 font-semibold rounded-xl hover:bg-amber-400 transition-colors">

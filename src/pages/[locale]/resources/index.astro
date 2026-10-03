@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -17,6 +17,23 @@ const t = getTranslations(currentLocale);
 
 const allResources = await getCollection('resources');
 const sortedResources = allResources.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+
+const newsItems = sortedResources.filter(r => r.data.type === 'news');
+const guideItems = sortedResources.filter(r => ['guide', 'comparison'].includes(r.data.type));
+
+const sectionLabels: Record<string, Record<string, string>> = {
+  newsTitle: { fr: 'Actualités', ar: 'أخبار وتحديثات', id: 'Berita & Pembaruan' },
+  guidesTitle: { fr: 'Guides et Tutoriels', ar: 'أدلة ودروس تعليمية', id: 'Panduan & Tutorial' },
+  toolsTitle: { fr: 'Outils', ar: 'أدوات', id: 'Alat' },
+  toolBadge: { fr: 'Outil', ar: 'أداة', id: 'Alat' },
+  roiTitle: { fr: 'Calculateur de rentabilité', ar: 'حاسبة العائد على الاستثمار', id: 'Kalkulator ROI' },
+  roiDesc: {
+    fr: 'Calculez votre retour sur investissement pour une presse à huile hydraulique. Indiquez votre capacité quotidienne prévue et le coût des graines pour estimer vos bénéfices.',
+    ar: 'احسب عائد الاستثمار لآلة عصر الزيت الهيدروليكي. أدخل طاقتك اليومية المتوقعة وتكلفة البذور لمعرفة أرباحك المتوقعة.',
+    id: 'Hitung pengembalian investasi mesin press minyak hidrolik Anda. Masukkan perkiraan kapasitas harian dan biaya biji untuk melihat proyeksi keuntungan Anda.',
+  },
+  startCalculating: { fr: 'Commencer le calcul', ar: 'ابدأ الحساب', id: 'Mulai Hitung' },
+};
 
 const typeLabels: Record<string, string> = {
   comparison: t.resources.comparison,
@@ -122,10 +139,16 @@ const pageTitle = currentLocale === 'fr' ? 'Ressources et Guides sur les Presses
     </div>
   </section>
 
-  <section class="py-12 md:py-16">
+  <!-- News Section -->
+  {newsItems.length > 0 && (
+  <section class="py-12 md:py-16 bg-amber-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-8">
+        <span class="text-2xl">📰</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">{sectionLabels.newsTitle[currentLocale]}</h2>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {sortedResources.map((resource, i) => (
+        {newsItems.map((resource, i) => (
           <a
             href={localePath(`/resources/${resource.slug}`)}
             class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -153,6 +176,78 @@ const pageTitle = currentLocale === 'fr' ? 'Ressources et Guides sur les Presses
             </div>
           </a>
         ))}
+      </div>
+    </div>
+  </section>
+  )}
+
+  <!-- Guides & Tutorials Section -->
+  {guideItems.length > 0 && (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-8">
+        <span class="text-2xl">📖</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">{sectionLabels.guidesTitle[currentLocale]}</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {guideItems.map((resource, i) => (
+          <a
+            href={localePath(`/resources/${resource.slug}`)}
+            class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+            style={`animation-delay: ${i * 80}ms`}
+          >
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <span class={`text-xs font-medium px-2.5 py-1 rounded-full ${typeColors[resource.data.type] || 'bg-steel-100 text-steel-700'}`}>
+                  {typeLabels[resource.data.type] || resource.data.type}
+                </span>
+                <time class="text-xs text-steel-400">
+                  {resource.data.publishedAt.toLocaleDateString(currentLocale === 'fr' ? 'fr-FR' : currentLocale === 'ar' ? 'ar-SA' : 'id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </time>
+              </div>
+              <h3 class="font-display text-xl text-charcoal-900 mb-3 group-hover:text-amber-600 transition-colors">
+                {resource.data.title[currentLocale] || resource.data.title.en}
+              </h3>
+              <p class="text-sm text-steel-600 leading-relaxed line-clamp-3 mb-4">
+                {resource.data.description[currentLocale] || resource.data.description.en}
+              </p>
+              <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium">
+                {t.resources.readMore}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  )}
+
+  <!-- Tools Section -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-8">
+        <span class="text-2xl">🛠️</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">{sectionLabels.toolsTitle[currentLocale]}</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <a href={localePath('/roi-calculator/')} class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group no-underline">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-amber-100 text-amber-700">{sectionLabels.toolBadge[currentLocale]}</span>
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-3 group-hover:text-amber-600 transition-colors">
+              {sectionLabels.roiTitle[currentLocale]}
+            </h3>
+            <p class="text-sm text-steel-600 leading-relaxed line-clamp-3 mb-4">
+              {sectionLabels.roiDesc[currentLocale]}
+            </p>
+            <span class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium">
+              {sectionLabels.startCalculating[currentLocale]}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
       </div>
     </div>
   </section>

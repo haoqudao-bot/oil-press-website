@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -82,6 +82,90 @@ function localePath(path: string): string {
 function getText(record: Record<string, Record<string, string>>, key: string): string {
   return record[key]?.[currentLocale] || record[key]?.['en'] || '';
 }
+
+const whyHydraulic = {
+  title: { en: 'Why Choose Hydraulic Oil Pressing', fr: 'Pourquoi Choisir le Pressage Hydraulique', ar: 'لماذا تختار العصر الهيدروليكي للزيت', id: 'Mengapa Memilih Press Minyak Hidrolik' },
+  sub: {
+    en: 'Hydraulic oil pressing technology offers unique advantages for quality-conscious oil producers worldwide.',
+    fr: 'La technologie de pressage hydraulique offre des avantages uniques aux producteurs d\'huile soucieux de qualité dans le monde entier.',
+    ar: 'تقدم تقنية العصر الهيدروليكي مزايا فريدة لمنتجي الزيت المهتمين بالجودة حول العالم.',
+    id: 'Teknologi press hidrolik menawarkan keunggulan unik bagi produsen minyak yang mengutamakan kualitas di seluruh dunia.',
+  },
+};
+
+const advantageCards = [
+  { title: { en: 'High Oil Yield', fr: 'Rendement en Huile Élevé', ar: 'عائد زيت مرتفع', id: 'Hasil Minyak Tinggi' },
+    desc: {
+      en: 'High oil yield with approximately 90-95% extraction efficiency based on our internal testing (results vary). Efficient extraction helps retain more oil in every batch.',
+      fr: 'Rendement élevé avec une efficacité d\'extraction d\'environ 90-95 % selon nos tests internes (les résultats varient). Une extraction efficace retient plus d\'huile dans chaque lot.',
+      ar: 'عائد زيت مرتفع بكفاءة استخلاص حوالي 90-95% وفق اختباراتنا الداخلية (تختلف النتائج). الاستخلاص الفعال يحافظ على مزيد من الزيت في كل دفعة.',
+      id: 'Hasil minyak tinggi dengan efisiensi ekstraksi sekitar 90-95% berdasarkan pengujian internal kami (hasil bervariasi). Ekstraksi efisien membantu mempertahankan lebih banyak minyak di setiap batch.',
+    }, icon: 'yield' },
+  { title: { en: 'Cold Press Capability', fr: 'Capacité de Pressage à Froid', ar: 'القدرة على العصر على البارد', id: 'Mampu Cold Press' },
+    desc: {
+      en: 'Preserve natural nutrients, flavor, and color through low-temperature pressing. Premium oil commands higher market prices.',
+      fr: 'Préservez les nutriments naturels, la saveur et la couleur grâce au pressage à basse température. L\'huile premium atteint des prix de marché plus élevés.',
+      ar: 'حافظ على العناصر الغذائية الطبيعية والنكهة واللون من خلال العصر بدرجة حرارة منخفضة. الزيت الممتاز يحقق أسعار سوق أعلى.',
+      id: 'Pertahankan nutrisi alami, rasa, dan warna melalui pengepresan suhu rendah. Minyak premium mendapat harga pasar lebih tinggi.',
+    }, icon: 'shield' },
+  { title: { en: 'Wide Seed Compatibility', fr: 'Large Compatibilité de Graines', ar: 'توافق واسع مع البذور', id: 'Kompatibilitas Biji yang Luas' },
+    desc: {
+      en: 'One machine handles sesame, peanut, coconut, walnut, almond, sunflower, and 50+ oil seeds with minimal adjustments.',
+      fr: 'Une seule machine traite le sésame, l\'arachide, la coco, la noix, l\'amande, le tournesol et plus de 50 graines oléagineuses avec des réglages minimes.',
+      ar: 'ماكينة واحدة تعالج السمسم والفول السوداني وجوز الهند والجوز واللوز وعباد الشمس وأكثر من 50 بذرة زيتية بتعديلات بسيطة.',
+      id: 'Satu mesin menangani wijen, kacang tanah, kelapa, kenari, almond, bunga matahari, dan 50+ biji minyak dengan penyesuaian minimal.',
+    }, icon: 'globe' },
+  { title: { en: 'Low Maintenance', fr: 'Faible Maintenance', ar: 'صيانة منخفضة', id: 'Perawatan Rendah' },
+    desc: {
+      en: "Simple mechanical design with fewer moving parts. Reduced downtime and lower operating costs over the machine's lifetime.",
+      fr: 'Conception mécanique simple avec moins de pièces mobiles. Moins d\'arrêts et des coûts d\'exploitation réduits sur toute la durée de vie de la machine.',
+      ar: 'تصميم ميكانيكي بسيط بأجزاء متحركة أقل. توقف أقل وتكاليف تشغيل أقل على مدار عمر الماكينة.',
+      id: 'Desain mekanis sederhana dengan lebih sedikit bagian bergerak. Mengurangi waktu henti dan biaya operasional selama masa pakai mesin.',
+    }, icon: 'chat' },
+];
+
+const trustSection = {
+  title: { en: 'Trusted by Oil Producers in 50+ Countries', fr: 'La Confiance des Producteurs d\'Huile dans 50+ Pays', ar: 'ثقة منتجي الزيت في أكثر من 50 دولة', id: 'Dipercaya Produsen Minyak di 50+ Negara' },
+  sub: {
+    en: 'From small home businesses to large industrial plants, our solutions power oil production worldwide.',
+    fr: 'Des petites entreprises familiales aux grandes usines industrielles, nos solutions font tourner la production d\'huile dans le monde entier.',
+    ar: 'من الأعمال المنزلية الصغيرة إلى المصانع الصناعية الكبرى، حلولنا تشغّل إنتاج الزيت حول العالم.',
+    id: 'Dari usaha rumahan kecil hingga pabrik industri besar, solusi kami menggerakkan produksi minyak di seluruh dunia.',
+  },
+};
+
+const guaranteeCards = [
+  { title: { en: '1-year warranty', fr: 'Garantie 1 an', ar: 'ضمان سنة واحدة', id: 'Garansi 1 tahun' },
+    desc: {
+      en: 'Full coverage on manufacturing defects plus lifetime technical support by phone, email, and video call.',
+      fr: 'Couverture complète des défauts de fabrication, plus support technique à vie par téléphone, e-mail et appel vidéo.',
+      ar: 'تغطية كاملة لعيوب التصنيع بالإضافة إلى دعم فني مدى الحياة عبر الهاتف والبريد الإلكتروني ومكالمات الفيديو.',
+      id: 'Cakupan penuh untuk cacat produksi ditambah dukungan teknis seumur hidup melalui telepon, email, dan panggilan video.',
+    }, icon: 'shield' },
+  { title: { en: 'Production & Shipping', fr: 'Production & Expédition', ar: 'الإنتاج والشحن', id: 'Produksi & Pengiriman' },
+    desc: {
+      en: 'Production: 20-30 working days. Shipping transit varies by destination (typically 6-10 weeks total from order to arrival). Full export documentation provided.',
+      fr: "Production : 20-30 jours ouvrés. Le transit maritime varie selon la destination (généralement 6-10 semaines au total, de la commande à l'arrivée). Documents d'exportation complets fournis.",
+      ar: 'الإنتاج: 20-30 يوم عمل. يختلف وقت الشحن البحري حسب الوجهة (عادةً 6-10 أسابيع إجمالاً من الطلب حتى الوصول). يتم توفير وثائق التصدير كاملة.',
+      id: 'Produksi: 20-30 hari kerja. Transit pengiriman bervariasi berdasarkan tujuan (biasanya total 6-10 minggu dari pesanan hingga tiba). Dokumen ekspor lengkap disediakan.',
+    }, icon: 'clock' },
+  { title: { en: 'Factory-Direct Pricing', fr: 'Prix Direct Usine', ar: 'أسعار مباشرة من المصنع', id: 'Harga Langsung Pabrik' },
+    desc: {
+      en: 'As a direct manufacturer, we offer competitive factory-direct prices with no trading company markups.',
+      fr: "En tant que fabricant direct, nous proposons des prix usine compétitifs sans la marge d'une société de négoce.",
+      ar: 'بصفتنا مصنعًا مباشرًا، نقدم أسعار المصنع التنافسية دون هوامش الشركات الوسيطة.',
+      id: 'Sebagai produsen langsung, kami menawarkan harga pabrik yang kompetitif tanpa markup perusahaan perdagangan.',
+    }, icon: 'hand' },
+];
+
+const iconPaths: Record<string, string> = {
+  yield: '<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+  chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  clock: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+  hand: '<path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>',
+};
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -241,6 +325,48 @@ const breadcrumbLd = {
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </span>
           </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Hydraulic Oil Press -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{whyHydraulic.title[currentLocale]}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{whyHydraulic.sub[currentLocale]}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {advantageCards.map(card => (
+          <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+            <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={iconPaths[card.icon]}></svg>
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">{card.title[currentLocale]}</h3>
+            <p class="text-sm text-steel-600">{card.desc[currentLocale]}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Haonuo -->
+  <section class="py-16 md:py-20 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{trustSection.title[currentLocale]}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{trustSection.sub[currentLocale]}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {guaranteeCards.map(card => (
+          <div class="bg-white rounded-2xl p-6 border border-steel-100">
+            <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={iconPaths[card.icon]}></svg>
+            </div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">{card.title[currentLocale]}</h3>
+            <p class="text-steel-600 text-sm">{card.desc[currentLocale]}</p>
+          </div>
         ))}
       </div>
     </div>
