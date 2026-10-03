@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getTranslations } from '../i18n';
 
@@ -152,12 +152,12 @@ const breadcrumbLd = {
     .line-note a{color:var(--amber-600);font-weight:700}
 
     /* gallery */
-    .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px;grid-auto-flow:dense}
-    .gi{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 14px 36px -22px rgba(16,42,67,.4)}
+    .gal{display:grid;grid-template-columns:repeat(10,1fr);grid-auto-rows:200px;gap:16px;grid-auto-flow:dense}
+    .gi{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 14px 36px -22px rgba(16,42,67,.4);grid-column:span 2}
     .gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
     .gi:hover img{transform:scale(1.05)}
     .gi .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 12px;background:linear-gradient(0deg,rgba(10,26,43,.88),transparent);color:#fff;font-size:12.5px;font-weight:600}
-    .gi.big{grid-column:span 2;grid-row:span 1}
+    .gi.big{grid-column:span 5;grid-row:span 1}
 
     /* globe */
     .globe{background:var(--steel-50)}
@@ -218,7 +218,8 @@ const breadcrumbLd = {
       .ret-grid .rs:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
       .pg{grid-template-columns:1fr}
       .ov-stats{grid-template-columns:repeat(2,1fr)}
-      .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+      .gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px}
+      .gi{grid-column:span 2}
       .gi.big{grid-column:span 2;grid-row:span 1}
       .hero-chips{display:none}
     }
@@ -237,8 +238,9 @@ const breadcrumbLd = {
       .ret-grid{grid-template-columns:1fr}
       .ret-grid .rs{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
       .ret-grid .rs:last-child{border-bottom:0}
-      .gal{grid-template-columns:1fr;grid-auto-rows:220px}
-      .gi.big{grid-column:span 1}
+      .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px}
+      .gi{grid-column:span 1}
+      .gi.big{grid-column:span 2;grid-row:span 1}
       .hero{height:auto;min-height:0}
       .hero .wrap{padding:90px 0 54px}
     }
@@ -454,8 +456,6 @@ const breadcrumbLd = {
       <div class="gal reveal">
         <div class="gi big"><img src="/images/factory/workshop-cranes.webp" alt="Overhead crane bays across the welding and assembly hall"><div class="cap">Assembly hall — overhead crane bays</div></div>
         <div class="gi big"><img src="/images/factory/buyer-inspection.webp" alt="Buyers visiting the Haonuo workshop and inspecting presses"><div class="cap">Buyers inspecting presses on site</div></div>
-        <div class="gi"><img src="/images/factory/factory-building-yellow.webp" alt="Haonuo Machinery factory entrance and office building in Qingzhou"><div class="cap">Haonuo factory, Qingzhou</div></div>
-        <div class="gi"><img src="/images/factory/factory-exterior.webp" alt="Exterior of the hydraulic press workshop building"><div class="cap">Workshop building exterior</div></div>
         <div class="gi"><img src="/images/factory/press-lineup.webp" alt="Row of finished orange-cylinder hydraulic oil presses"><div class="cap">Finished hydraulic press line</div></div>
         <div class="gi"><img src="/images/factory/machining-workshop.webp" alt="Packaged hydraulic presses ready for dispatch in the workshop"><div class="cap">Machines packed for dispatch</div></div>
         <div class="gi"><img src="/images/factory/two-production-rows.webp" alt="Two rows of hydraulic presses facing each other on the production floor"><div class="cap">Two production lines under one roof</div></div>
