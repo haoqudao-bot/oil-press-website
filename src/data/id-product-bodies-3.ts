@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian product body content - Part 3 (products 17-24)
+// Indonesian product body content - Part 3 (products 17-24)
 export const idProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Ringkasan
 
@@ -154,20 +154,21 @@ Penggoreng ini dirancang untuk mengondisikan biji sebelum penekanan di berbagai 
 
   'pneumatic-oil-filter-press': `## Ringkasan
 
-Filter press minyak pneumatik HN-10SL menyaring minyak mentah melalui 20 lapisan pelat kertas saring dengan luas filtrasi 10 m² pada tekanan kerja 0,2–0,3 Mpa, beroperasi otomatis 24 jam dengan tekanan konstan untuk pabrik minyak yang membutuhkan klarifikasi berkelanjutan. Dibangun dari baja tahan karat 304L food-grade dengan konsumsi 1,1–2,2 kW, menangani minyak pada 15–170 °C, dan bergaransi 1 tahun.
+Filter press minyak pneumatik HN-10SL menyaring minyak mentah melalui 20 lapisan pelat kertas saring dengan luas filtrasi 10 m² pada tekanan kerja 0,2–0,3 MPa, beroperasi otomatis 24 jam dengan tekanan konstan untuk pabrik minyak yang membutuhkan klarifikasi berkelanjutan. Dibangun dari baja tahan karat 304L food-grade dengan konsumsi 1,1–2,2 kW, menangani minyak pada 15–170 °C, dan bergaransi 1 tahun.
 
 Mesin Press Filter Minyak Pneumatik HN-10SL adalah sistem penyaringan otomatis penuh dan dikontrol secara listrik, dibangun seluruhnya dari baja tahan karat 304L kelas pangan untuk resistensi asam dan alkali yang unggul. Dilengkapi dengan 20 lapisan pelat filter dengan total 10 m² area penyaringan, mesin press filter ini memberikan kualitas penyaringan yang sangat baik dengan kehilangan cairan minimal — dan mampu beroperasi secara kontinu 24 jam dengan tekanan otomatis konstan.
 
-Dirancang untuk kemudahan pasang dan jalankan: hubungkan catu daya dan selang hisap, nyalakan saklar hisap, dan sistem akan otomatis menyedot minyak, menyaringnya melalui media kertas filter, dan berhenti saat ruang minyak terisi. Kemudian katup keluaran minyak bersih terbuka untuk melepaskan produk yang tersaring. Siklus otomatis penuh ini menghilangkan kebutuhan pemantauan operator terus-menerus, menjadikannya cocok untuk lingkungan produksi kontinu.
+Pengoperasiannya hanya dengan satu saklar: hubungkan catu daya dan selang hisap, nyalakan saklar hisap, dan sistem secara otomatis menyedot minyak, menyaringnya melalui media kertas filter, dan berhenti sendiri saat tekanan setel tercapai. Buka katup keluaran minyak maka minyak bersih yang tersaring mengalir langsung ke drum minyak bersih atau drum produk jadi — tanpa pompa transfer. Siklus otomatis penuh ini menghilangkan pemantauan operator terus-menerus dan cocok untuk produksi kontinu. Dengan area penyaringan 10 m² dan tekanan kerja 0,3 MPa, mesin ini dirancang untuk mengimbangi press hidrolik HN325/365/426/500.
 
 ## Keunggulan Utama
 
 - **Baja Tahan Karat 304L Kelas Pangan di Seluruh Bagian** — Resistensi korosi yang sangat baik untuk aplikasi minyak pangan dan kimia; peningkatan 316L tersedia untuk lingkungan keras
 - **Desain Pelat Filter 20 Lapisan** — 10 m² area penyaringan memastikan penyaringan halus dengan kehilangan cairan minimal
-- **Operasi Otomatis Penuh** — Penyedotan otomatis, penyaringan otomatis, penghentian otomatis saat penuh, dan pengeluaran minyak bersih otomatis
+- **Operasi Otomatis Satu Saklar** — Penyedotan otomatis, penyaringan otomatis, penghentian diatur tekanan, lalu pengeluaran langsung minyak bersih
 - **Layanan Kontinu 24 Jam** — Operasi tekanan konstan mendukung produksi sepanjang hari
-- **Rentang Suhu Lebar** — Penyaringan pada 15-170°C, mengakomodasi minyak press panas dan dingin
+- **Rentang Suhu Lebar** — Penyaringan pada 15–170 °C, mengakomodasi minyak press panas dan dingin
 - **Keamanan yang Diatur Tekanan** — Penghentian otomatis pada batas tekanan melindungi peralatan dan kualitas produk
+- **Dirancang untuk Lini Press** — Dirancang untuk mengimbangi press hidrolik HN325 / HN365 / HN426 / HN500
 - **Instalasi Sederhana** — Koneksi listrik tiga fase + netral, selang hisap, keluaran minyak, dan lubang pengurasan sudah termasuk
 
 ## Aplikasi & Bahan yang Sesuai
@@ -293,4 +294,103 @@ Prinsip fisik dan kimia yang dikombinasikan untuk penghilangan kotoran secara te
 - **Pengiriman Proyek Siap Operasi** — Dari rekayasa proses hingga instalasi, uji coba operasi, dan pelatihan
 - **Solusi yang Dapat Diskalakan** — Mulai kecil dan kembangkan seiring pertumbuhan pasar Anda; desain modular mendukung peningkatan kapasitas di masa depan
 - **Dukungan Teknis Berkelanjutan** — Optimalisasi proses, pemecahan masalah, dan pasokan suku cadang sepanjang umur pabrik Anda`,
+
+  'hn-cg60-oilseed-pre-press': `## Ringkasan
+
+Pre-press biji minyak HN-CG60 adalah expeller ulir yang dipasang di awal lini, sebelum sangrai dan pengepresan hidrolik. Mesin menghancurkan biji dan menggulingkannya menjadi serpihan atau kue kasar, memecah sel minyak dan memperluas area yang dipanaskan. Sekitar 35 hingga 40% minyak dilepaskan pada tahap pertama ini, lalu bahan yang sudah dipress dipindahkan ke sangrai dan press hidrolik utama. Pabrik yang menambahkan tahap ini biasanya melihat hasil minyak total naik 3 hingga 5%.
+
+Tata letak dua tahap ini — pre-press ulir lalu finishing hidrolik — adalah konfigurasi standar untuk mustard, lobak, dan kacang tanah di India, Asia Tenggara, dan Afrika. Mesin dikirimkan dalam keadaan terpasang penuh, tidak memerlukan instalasi khusus, dan satu pekerja mengoperasikannya.
+
+## Keunggulan Utama
+
+- **Hasil total lebih tinggi** — mengambil 35 hingga 40% minyak sebelum press utama, menaikkan produksi pabrik 3 hingga 5%
+- **Dua pilihan kapasitas** — 7,5 kW untuk sekitar 500 kg/jam, atau 11 kW untuk sekitar 750 kg/jam
+- **Tapak kecil** — rangka 1030 × 1000 × 750 mm, sekitar 1 m² dan 174 kg, cocok dengan lini yang ada
+- **Ketebalan serpihan dapat diatur** — kerucut keluar mengatur celah, hasil sesuai resep pengepresan Anda
+- **Konsumsi rendah dan aus minim** — penggerak mekanis langsung dengan bagian aus yang dikeraskan, berjalan senyap dan tahan lama
+- **Siap jalan** — dikirimkan terpasang dan teruji; cukup sambungkan listrik dan mulai
+
+## Struktur & Konstruksi
+
+Biji masuk ke corong dan didorong ulir melalui ruang pengepresan, di mana biji dihancurkan, digosok, dan dipress menjadi serpihan. Kerucut di keluaran mengatur celah, memberi kendali atas ketebalan serpihan dan kekencangan pre-press. Seluruhnya — motor, ruang pengepresan, dan corong — berdiri pada rangka baja kompak, dan penggerak berjalan melalui sabuk dan katrol untuk meredam beban kejut dan menekan biaya perawatan.
+
+## Aplikasi & Bahan yang Cocok
+
+HN-CG60 menangani banyak biji minyak dengan mengatur celah kerucut:
+
+- **Biji lobak dan mustard** — lini klasik dua tahap di India, Asia Tenggara, dan Afrika
+- **Kacang tanah** — biji berminyak tinggi di mana tahap pertama menangkap sebagian besar minyak bebas
+- **Kedelai, biji rami, wijen, kenari, bunga matahari, biji kapas** — semuanya ditangani dengan pengaturan celah
+
+## Mengapa Memilih Haonuo
+
+- **Harga langsung pabrik** — peralatan pre-press kompetitif langsung dari produsen
+- **Desain dua tahap terbukti** — banyak digunakan untuk lini mustard, lobak, dan kacang tanah
+- **Waktu tunggu cepat** — model standar keluar dari pabrik dalam 7 hingga 15 hari
+- **Dukungan lengkap** — manual bahasa Inggris, panduan video, suku cadang, dan instalasi luar negeri opsional`,
+
+  'vertical-screw-conveyor': `## Ringkasan
+
+Konveyor ulir vertikal Haonuo dibangun seluruhnya dari baja tahan karat dan memindahkan biji minyak — kacang tanah, biji lobak, kedelai, wijen, biji bunga matahari, dan bahan berbutir lainnya — dari bak di lantai ke dalam corong press, pemanggang, atau saringan minyak. Dengan tinggi angkat 2 meter dan motor geared 1,1 kW, ia memberikan aliran bahan yang stabil dan merata sehingga mesin di hilir tidak kekurangan atau kelebihan bahan, dan menggantikan pekerja yang jika tidak akan mengisi biji sepanjang hari.
+
+Bak pengisian 600×600×600 mm menampung cukup bahan untuk satu putaran tanpa pengawasan, dan tabung ulir tertutup menahan debu serta tumpahan di dalam konveyor bukan di lantai bengkel. Dapat dibaut langsung ke press hidrolik, mesin saringan minyak, dan pemanggang kami, sehingga satu operator dapat mengelola pengisian, pengepresan, dan penyaringan secara bersamaan.
+
+## Keunggulan Utama
+
+- **Pengisian otomatis stabil** — kecepatan ulir konstan memberikan aliran merata, konsistensi sangrai dan press tetap tinggi
+- **Pengangkutan tertutup, bebas debu** — bahan berjalan di dalam tabung tertutup, bengkel tetap bersih dan aman
+- **Konstruksi penuh baja tahan karat** — food-grade, tahan korosi, cocok untuk bengkel berminyak dan lembap
+- **Bak 600×600×600 mm** — cukup untuk satu putaran tanpa pengawasan; satu operator mengelola pengisian, press, dan saring
+- **Koneksi langsung** — dibaut ke press, saringan, dan pemanggang tanpa konveyor transfer tambahan
+- **Konsumsi rendah, umur panjang** — motor geared 1,1 kW hemat daya; bagian aus standar menekan perawatan
+
+## Struktur & Konstruksi
+
+Ulir, tabung, bak, dan rangka semuanya dari baja tahan karat — bersih, tahan korosi, dan food-grade. Motor geared 1,1 kW memutar ulir dengan kecepatan stabil, mengangkat material 2 meter dari bak di lantai ke corong atas. Tata letak vertikal menempati ruang lantai lebih sedikit dibanding konveyor miring dengan tinggi angkat yang sama, dan mesin mudah dipasang serta dipindahkan.
+
+## Aplikasi & Bahan yang Cocok
+
+- **Pengisian press otomatis** — mengangkat biji ke corong press hidrolik pada laju optimal
+- **Pengisian pemanggang dan saringan** — dipadukan dengan pemanggang drum atau wajan dan saringan minyak
+- **Biji minyak berbutir** — kacang tanah, biji lobak, kedelai, wijen, biji bunga matahari, dan bahan alir serupa
+- **Pengangkutan biji-bijian dan pangan umum** — cocok untuk lini pengolahan pangan di mana kebersihan penting
+
+## Mengapa Memilih Haonuo
+
+- **Otomasi hemat tenaga kerja** — menghilangkan pekerjaan manual terberat di pabrik kecil
+- **Konstruksi baja tahan karat food-grade** — cocok untuk bengkel minyak nabati
+- **Harga langsung pabrik** — peralatan bantu kompetitif langsung dari produsen
+- **Dukungan lengkap** — manual bahasa Inggris, panduan video, suku cadang, dan instalasi luar negeri opsional`,
+
+  'automatic-drum-roaster': `## Ringkasan
+
+Pemanggang drum ini digunakan untuk memanggang biji minyak sebelum press panas, tahap yang mengeluarkan aroma dan menurunkan kelembapan untuk hasil lebih tinggi. Terdiri dari rangka, corong pengisian, drum putar, dan tudung tanpa api. Motor menggerakkan drum melalui sabuk V dan roda rantai, memutar biji terus menerus, sementara pemanasan elektromagnetik memasok panas tanpa api yang dapat diatur. Kontrol otomatis satu tombol membuat rutinitas harian sederhana.
+
+Tersedia tiga ukuran standar — 100#, 130#, dan 130# diperkuat — mencakup batch sekitar 160 kg hingga 450 kg. Ukuran lain dapat dibuat sesuai pesanan untuk menyesuaikan kapasitas press Anda.
+
+## Keunggulan Utama
+
+- **Pemanggangan merata, tidak gosong** — putaran drum ditambah pemanas tanpa api memberikan sangrai seragam dan menjaga rasa serta warna minyak
+- **Tiga kapasitas standar** — 160–220 kg (100#), 200–350 kg (130#) atau 360–450 kg (130# diperkuat) per batch
+- **Operasi otomatis satu tombol** — atur suhu dan waktu, mesin memanggang dan berhenti sendiri
+- **Tanpa api dan aman** — pemanasan elektromagnetik menghilangkan risiko api dari pemanggang gas atau batu bara dan menjaga bengkel lebih bersih
+- **Drum tertutup** — cepat panas dan menahan panas untuk efisiensi energi
+- **Ukuran dapat disesuaikan** — dimensi drum dan daya pemanas disesuaikan dengan lini produksi Anda
+
+## Struktur & Konstruksi
+
+Drum tertutup cepat panas dan menahan panas, dan putaran terus menerus berarti setiap biji dipanaskan merata — tidak ada lapisan bawah gosong atau lapisan atas setengah sangrai, yang persis dibutuhkan minyak press berkualitas. Daya pemanas dan suhu sangrai diatur secara terpisah dan dijaga otomatis, dengan pemutusan saat titik setel tercapai.
+
+## Aplikasi & Bahan yang Cocok
+
+- **Lini minyak press panas** — tahap sangrai standar sebelum press untuk wijen, kacang tanah, biji lobak, bunga matahari, biji rami, dan kamelia
+- **Minyak aromatik** — di mana aroma sangrai menjadi nilai jual utama
+- **Kacang, biji-bijian, dan bahan pangan** — pemanggangan serbaguna di luar biji minyak
+
+## Mengapa Memilih Haonuo
+
+- **Konsistensi batch demi batch** — drum elektromagnetik tertutup memberikan hasil yang dapat diulang tanpa operator terampil
+- **Hemat energi** — pemanasan elektromagnetik tanpa api efisien dan bersih
+- **Harga langsung pabrik** — peralatan pemanggangan kompetitif langsung dari produsen
+- **Dukungan lengkap** — manual bahasa Inggris, panduan video, suku cadang, dan instalasi luar negeri opsional`,
 };

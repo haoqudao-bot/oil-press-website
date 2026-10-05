@@ -1,25 +1,25 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies2: Record<string, string> = {
+export const frProductBodies2: Record<string, string> = {
   'ultra-high-pressure-cold-press': `## Aperçu
 
-La presse à froid ultra haute pression HN480B applique 600 tonnes de force de pressage à 65 Mpa de pression système et 48 Mpa/cm² de pression superficielle du gâteau — la force de pressage à froid la plus élevée de la gamme Haonuo — pour les producteurs de noix, d'amandes d'abricot et de yellowhorn. Les lots durent 40 à 90 minutes selon la matière avec 6 à 8 % d'huile résiduelle dans le gâteau (tests internes, les résultats peuvent varier), le tout couvert par une garantie d'un an.
+La presse à froid ultra haute pression HN480B applique 600 tonnes de force de pressage à 65 MPa de pression système et 48 MPa de pression superficielle du gâteau — la force de pressage à froid la plus élevée de la gamme Haonuo — pour les producteurs de noix, d'amandes d'abricot et de yellowhorn. Les lots durent 40 à 90 minutes selon la matière avec 6 à 8 % d'huile résiduelle dans le gâteau (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation), le tout couvert par une garantie d'un an.
 
-La HN480B Presse à Froid Ultra Haute Pression est notre presse à huile hydraulique à froid la plus avancée, délivrant une force de pressage massive de 600 tonnes avec une pression du système de 65 Mpa et une pression superficielle du gâteau de 48 Mpa/cm². Spécialement optimisée pour le pressage des noix avec une solution complète de pressage des noix, elle réduit considérablement le temps de pressage tout en maximisant le rendement en huile. Il s'agit de la force de pressage à froid la plus élevée de notre gamme, conçue spécifiquement pour les producteurs qui exigent le summum en matière de performance de pressage à froid.
+La HN480B Presse à Froid Ultra Haute Pression est notre presse à huile hydraulique à froid la plus avancée, délivrant une force de pressage massive de 600 tonnes avec une pression du système de 65 MPa et une pression superficielle du gâteau de 48 MPa. Spécialement optimisée pour le pressage des noix avec une solution complète de pressage des noix, elle réduit considérablement le temps de pressage tout en maximisant le rendement en huile. Il s'agit de la force de pressage à froid la plus élevée de notre gamme, conçue spécifiquement pour les producteurs qui exigent le summum en matière de performance de pressage à froid.
 
 La HN480B est dotée d'un diamètre extérieur de cylindre de 480 mm avec un diamètre intérieur de piston de 360 mm, générant la pression extrême nécessaire pour presser à froid les noix, les amandes, les pignons de pin et autres matériaux à coque dure en un seul cycle. Notre solution de pressage des noix exclusive garantit que les cerneaux de noix et les noix en coque sont traités efficacement, réduisant le temps de pressage et augmentant le rendement en huile par rapport aux méthodes conventionnelles de pressage à froid.
 
 ## Avantages Clés
 
-- **Force de Pressage à Froid la Plus Élevée** — 600 tonnes de force de pressage avec une pression superficielle du gâteau de 48 Mpa/cm², la capacité de pressage à froid la plus puissante de notre gamme.
+- **Force de Pressage à Froid la Plus Élevée** — 600 tonnes de force de pressage avec une pression superficielle du gâteau de 48 MPa, la capacité de pressage à froid la plus puissante de notre gamme.
 - **Solution Complète de Pressage des Noix** — Procédé exclusif spécialement optimisé pour le pressage des noix, réduisant considérablement le temps de pressage et augmentant le rendement en huile.
-- **Pression du Système de 65 Mpa** — La pompe combinée ultra-haute pression délivre une pression de fonctionnement allant jusqu'à 65 Mpa pour les applications de pressage à froid les plus exigeantes.
+- **Pression du Système de 65 MPa** — La pompe combinée ultra-haute pression délivre une pression de fonctionnement allant jusqu'à 65 MPa pour les applications de pressage à froid les plus exigeantes.
 - **Pressage à Froid en Un Seul Cycle** — Les matériaux à coque dure et de pressage à froid, y compris les noix en coque, sont entièrement extraits en un seul cycle — aucun re-pressage nécessaire.
 - **Qualité d'Huile Premium** — Le pressage à froid préserve les antioxydants naturels, les vitamines et les composés aromatiques, permettant d'obtenir des prix premium sur le marché.
 - **Productivité à Double Fût** — La configuration à double fût avec doubles rails coulissants permet un fonctionnement continu pour une production quotidienne maximale.
 
 ## Technologie de Base
 
-- **Fût à Fentes de Type Barre** — surface d'extraction d'huile significativement plus grande que les fûts percés, atteignant environ 2 à 3 % de rendement en huile supérieur (selon des tests internes, les résultats peuvent varier) par lot.
-- **Système Hydraulique Allemand** — La pompe combinée ultra-haute pression délivre une pression de fonctionnement allant jusqu'à 65 Mpa pour les applications de pressage à froid les plus exigeantes.
+- **Fût à Fentes de Type Barre** — surface d'extraction d'huile significativement plus grande que les fûts percés, atteignant environ 2 à 3 % de rendement en huile supérieur (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) par lot.
+- **Système Hydraulique Allemand** — La pompe combinée ultra-haute pression délivre une pression de fonctionnement allant jusqu'à 65 MPa pour les applications de pressage à froid les plus exigeantes.
 - **Retrait du Gâteau à 4 Crochets** — Système de déchargement du gâteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage.
 - **Cadre en Acier à Haut Carbone** — Service durable en fonctionnement continu. La durée de vie réelle dépend des conditions de fonctionnement et de l'entretien.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé avec fonctionnement à un seul bouton. Formation de base recommandée ; nous fournissons des tutoriels vidéo et un accompagnement à distance.
@@ -47,24 +47,24 @@ La HN480B offre le rendement en huile le plus élevé pour les matériaux de pre
 
   'sesame-oil-hydraulic-press': `## Aperçu
 
-La presse à huile hydraulique pour sésame HN325/355 contient 32,5 kg de sésame par lot (jusqu'à 50 kg avec pré-compression) et termine un cycle de pressage à chaud en 30 à 40 minutes environ, convenant aux huileries de sésame et aux producteurs de tahini travaillant par lots quotidiens petits à moyens. Son fût plus étroit de 300 mm concentre la force à 47–51 Mpa/cm² de pression superficielle du gâteau, laissant 6 à 8 % d'huile résiduelle (tests internes, les résultats peuvent varier). Le moteur de 2,2 kW fonctionne sur alimentation standard 220V/380V.
+La presse à huile hydraulique pour sésame HN325/355 contient 32,5 kg de sésame par lot (jusqu'à 50 kg avec pré-compression) et termine un cycle de pressage à chaud en 30 à 40 minutes environ, convenant aux huileries de sésame et aux producteurs de tahini travaillant par lots quotidiens petits à moyens. Son fût plus étroit de 300 mm concentre la force à 47–51 MPa de pression superficielle du gâteau, laissant 6 à 8 % d'huile résiduelle (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Le moteur de 2,2 kW fonctionne sur alimentation standard 220V/380V.
 
-La Presse Hydraulique à Huile de Sésame est une presse à huile hydraulique conçue spécifiquement pour l'extraction de l'huile de sésame. Le pressage du sésame exige un contrôle strict de la température — pour éviter les pertes de chaleur et la réduction du rendement en huile, le pressage doit être effectué dans le plus court délai possible. Ce modèle associe le cylindre HN325 ou HN355 à un fût plus étroit de 300 mm de diamètre intérieur, concentrant la force de pressage pour atteindre une pression superficielle du gâteau de 47 à 51 Mpa/cm², permettant au sésame d'être entièrement pressé en un seul cycle rapide.
+La Presse Hydraulique à Huile de Sésame est une presse à huile hydraulique conçue spécifiquement pour l'extraction de l'huile de sésame. Le pressage du sésame exige un contrôle strict de la température — pour éviter les pertes de chaleur et la réduction du rendement en huile, le pressage doit être effectué dans le plus court délai possible. Ce modèle associe le cylindre HN325 ou HN355 à un fût plus étroit de 300 mm de diamètre intérieur, concentrant la force de pressage pour atteindre une pression superficielle du gâteau de 47 à 51 MPa, permettant au sésame d'être entièrement pressé en un seul cycle rapide.
 
 Le fût de 300 mm de diamètre intérieur et 800 mm de haut contient 32,5 kg de sésame par lot. Avec une pré-compression pour créer un espace supplémentaire, un seul lot peut traiter jusqu'à 50 kg de sésame — nettement plus que les presses hydrauliques à huile de sésame de style coréen, offrant une capacité supérieure et un meilleur rapport qualité-prix.
 
 ## Avantages Clés
 
-- **Optimisée pour le Sésame** — Le fût plus étroit de 300 mm concentre la force de pressage à 47–51 Mpa/cm², permettant une extraction complète de l'huile de sésame en un seul cycle rapide.
+- **Optimisée pour le Sésame** — Le fût plus étroit de 300 mm concentre la force de pressage à 47–51 MPa, permettant une extraction complète de l'huile de sésame en un seul cycle rapide.
 - **Conception Sensible à la Température** — Le cycle de pressage rapide minimise les pertes de chaleur, préservant la qualité de l'huile de sésame et maximisant le rendement en huile.
 - **Grande Capacité par Lot** — 32,5 kg de charge standard, jusqu'à 50 kg avec pré-compression — dépassant largement les presses à huile de sésame de style coréen en capacité par lot unique.
 - **Performance Polyvalente** — Excelle également dans le pressage des noix en coque (sauf les noix de fer) en environ 30 minutes par lot, et offre des taux d'huile résiduelle encore plus bas sur les matériaux conventionnels.
-- **Deux Options de Puissance** — Disponible en configurations HN325 (47 Mpa/cm²) et HN355 (51 Mpa/cm²) pour correspondre à vos besoins de production et à votre budget.
+- **Deux Options de Puissance** — Disponible en configurations HN325 (47 MPa) et HN355 (51 MPa) pour correspondre à vos besoins de production et à votre budget.
 
 ## Technologie de Base
 
-- **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile significativement plus grande que les fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % supérieur (selon des tests internes, les résultats peuvent varier) — essentiel pour le sésame où une extraction rapide et complète préserve la qualité et maximise la production. Pas de colmatage, pas de nettoyage entre les lots.
-- **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haut-bas. Pression de fonctionnement allant jusqu'à 60/63 Mpa avec retour rapide du cylindre.
+- **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile significativement plus grande que les fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % supérieur (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) — essentiel pour le sésame où une extraction rapide et complète préserve la qualité et maximise la production. Pas de colmatage, pas de nettoyage entre les lots.
+- **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haut-bas. Pression de fonctionnement allant jusqu'à 60/63 MPa avec retour rapide du cylindre.
 - **Retrait du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets garantit un déchargement du gâteau facile et fiable — même après un pressage de nuit.
 - **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour un service durable. La durée de vie réelle dépend des conditions de fonctionnement et de l'entretien sous une force de pressage de 325/360 tonnes.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement à l'huile finie en quelques minutes — crucial pour le cycle de pressage du sésame sensible à la température.
@@ -106,8 +106,8 @@ Cette machine est le choix de prédilection pour le pressage du jus de coco et l
 
 ## Technologie de Base
 
-- **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile significativement plus grande que les fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % supérieur (selon des tests internes, les résultats peuvent varier). Pas de colmatage, pas de nettoyage entre les lots.
-- **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haut-bas. Pression de fonctionnement allant jusqu'à 60 Mpa avec retour rapide du cylindre.
+- **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile significativement plus grande que les fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % supérieur (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Pas de colmatage, pas de nettoyage entre les lots.
+- **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haut-bas. Pression de fonctionnement allant jusqu'à 60 MPa avec retour rapide du cylindre.
 - **Retrait du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets garantit un déchargement du gâteau facile et fiable — même après un pressage de nuit de fibres et de chair de coco.
 - **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour un service durable. La durée de vie réelle dépend des conditions de fonctionnement et de l'entretien sous une force de pressage de 300 tonnes.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement à l'huile finie en quelques minutes.
@@ -139,24 +139,24 @@ Cette machine est le choix de prédilection pour le pressage du jus de coco et l
 
   'large-barrel-hydraulic-oil-press': `## Aperçu
 
-La presse à huile hydraulique HN325 Large Barrel utilise un fût de 630 mm de diamètre intérieur et 1000 mm de hauteur avec deux systèmes hydrauliques indépendants, de sorte qu'un fût presse pendant que l'autre est déchargé et rechargé — conçue pour les huileries qui privilégient le volume par lot à la force de pressage maximale. Le temps de lot est de 40 à 90 minutes selon la matière, avec 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines (tests internes, les résultats peuvent varier).
+La presse à huile hydraulique HN325 Large Barrel utilise un fût de 630 mm de diamètre intérieur et 1000 mm de hauteur avec deux systèmes hydrauliques indépendants, de sorte qu'un fût presse pendant que l'autre est déchargé et rechargé — conçue pour les huileries qui privilégient le volume par lot à la force de pressage maximale. Le temps de lot est de 40 à 90 minutes selon la matière, avec 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation).
 
 La Presse à Huile Hydraulique à Grand Fût est une version à capacité élargie du modèle à cylindre HN325, conçue pour les applications qui exigent un volume de traitement par lot élevé plutôt qu'une force de pressage extrême. Équipée de deux systèmes hydrauliques indépendants, chaque fût fonctionne de manière autonome — le cylindre principal presse un fût tandis que le cylindre de gâteau supérieur de l'autre fût permet le déchargement et le rechargement simultanés. Cette conception à double système élimine les temps morts et maximise votre débit quotidien.
 
-Le fût de 630 mm de diamètre intérieur et 1000 mm de haut offre une capacité substantielle pour les matériaux en vrac. Avec une pression superficielle du gâteau de 10,64 Mpa/cm², ce modèle est adapté pour les matériaux qui ne nécessitent pas une force de pressage élevée mais bénéficient de grands lots, tels que les boues d'hydrocarbures, les boues textiles, la déshydratation de fruits et légumes, et les déchets de champ pétrolifère.
+Le fût de 630 mm de diamètre intérieur et 1000 mm de haut offre une capacité substantielle pour les matériaux en vrac. Avec une pression superficielle du gâteau de 10,64 MPa, ce modèle est adapté pour les matériaux qui ne nécessitent pas une force de pressage élevée mais bénéficient de grands lots, tels que les boues d'hydrocarbures, les boues textiles, la déshydratation de fruits et légumes, et les déchets de champ pétrolifère.
 
 ## Avantages Clés
 
 - **Capacité de Fût Massive** — Le fût de 630 mm de diamètre intérieur × 1000 mm de hauteur traite de grands volumes par lot, réduisant le nombre de cycles nécessaires pour traiter les matériaux en vrac.
 - **Double Système Hydraulique Indépendant** — Chaque fût fonctionne indépendamment avec son propre circuit hydraulique, de sorte que le pressage d'un côté ne bloque jamais le chargement ou le déchargement de l'autre.
-- **Conception à Gâteau Supérieur** — Le cylindre de gâteau supérieur (60 Tonnes / 30 Mpa) pousse le gâteau par le haut, rendant le déchargement rapide et pratique même avec des matériaux à grand volume.
+- **Conception à Gâteau Supérieur** — Le cylindre de gâteau supérieur (60 Tonnes / 30 MPa) pousse le gâteau par le haut, rendant le déchargement rapide et pratique même avec des matériaux à grand volume.
 - **Débit Élevé** — La combinaison de la grande capacité du fût et du fonctionnement à double système offre le volume de traitement quotidien le plus élevé de notre gamme pour les matériaux basse pression.
 - **Application Polyvalente** — De la déshydratation des résidus d'huile à l'extraction de jus de fruits et au traitement des boues industrielles, une machine répond à plusieurs besoins de traitement.
 
 ## Technologie de Base
 
-- **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile significativement plus grande que les fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % supérieur (selon des tests internes, les résultats peuvent varier). Pas de colmatage, pas de nettoyage entre les lots — particulièrement bénéfique pour le traitement à grand volume de boues et de résidus.
-- **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haut-bas. Pression de fonctionnement allant jusqu'à 60 Mpa avec retour rapide du cylindre.
+- **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile significativement plus grande que les fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % supérieur (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Pas de colmatage, pas de nettoyage entre les lots — particulièrement bénéfique pour le traitement à grand volume de boues et de résidus.
+- **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haut-bas. Pression de fonctionnement allant jusqu'à 60 MPa avec retour rapide du cylindre.
 - **Retrait du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets garantit un déchargement du gâteau facile et fiable — même après un pressage de nuit de matériaux volumineux.
 - **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour un service durable. La durée de vie réelle dépend des conditions de fonctionnement et de l'entretien sous une force de pressage de 325 tonnes.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement au produit fini en quelques minutes.

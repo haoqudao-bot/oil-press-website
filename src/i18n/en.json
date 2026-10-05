@@ -133,7 +133,7 @@
     "highReturnsTitle": "Maximize Your Profitability",
     "highReturnsDesc": "Advanced hydraulic oil press technology delivers exceptional ROI for your oil production business.",
     "returns1_title": "High Extraction Rate",
-    "returns1_desc": "Residual oil in the cake stays as low as 6-8% for most materials (based on internal testing; results vary by seed type and moisture). The bar-type slotted barrel extracts more oil from every batch.",
+    "returns1_desc": "Residual oil in the cake stays as low as 6-8% for most materials (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). The bar-type slotted barrel extracts more oil from every batch.",
     "returns1_label": "extraction rate",
     "returns2_title": "Energy Efficiency",
     "returns2_desc": "A 2.2 kW 6-pole motor drives the full pressing cycle — no boiler and no high-power industrial connection needed. Lower operating costs, higher profit margins.",
@@ -171,7 +171,7 @@
     "factoryStrengthItem1": "Advanced CNC machining center for precision parts manufacturing",
     "factoryStrengthItem2": "Complete assembly line with quality testing at every stage",
     "factoryStrengthItem3": "Strict quality control system ensuring consistent product standards",
-    "factoryStrengthItem4": "Efficient production capacity with 20-30 working days delivery time",
+    "factoryStrengthItem4": "Efficient production capacity — standard models ready in 15-25 working days, custom configurations in 30-45 days",
     "factoryStrengthStat1": "Production Facility",
     "factoryStrengthStat2": "Skilled Workers",
     "factoryStrengthStat3": "Working Days Production",
@@ -192,7 +192,7 @@
     "statsYears": "Years of Manufacturing Excellence",
     "statsCountries": "Countries Served Worldwide",
     "statsEmployees": "Skilled Workers & Engineers",
-    "statsArea": "m² Production Facility",
+    "statsArea": "Skilled Workers & Engineers",
     "statsMachines": "Buyers Served",
     "statsHighlight1": "Since 2010",
     "statsHighlight2": "6 Continents",
@@ -236,7 +236,7 @@
     "easyOperationDetail4": "Low Maintenance: 5 MIN/day upkeep",
     "browseDetails": "Browse Details",
     "statsHomeEstablished": "Established",
-    "statsHomeWorkshop": "Skilled Employees",
+    "statsHomeWorkshop": "Skilled Workers & Engineers",
     "statsHomeCountries": "Export Countries",
     "statsHomeBuyers": "Buyers Served Worldwide",
     "marqueeAriaLabel": "Oilseeds we press",
@@ -297,11 +297,9 @@
     "section02Sub": "Everything you need to extract oil, from a single press to a full production line.",
     "lineItems": [
       "Hydraulic Oil Press",
-      "Oil Pulverizer",
-      "Seed Roasting Machine",
-      "Steamer for Oilseeds",
-      "Screw Elevator",
-      "Oil Filter Machine"
+      "Seed Processing",
+      "Roasting & Steaming",
+      "Filtration & Refining"
     ],
     "lineCtaBannerPre": "Planning a line? Tell us your ",
     "lineCtaBannerStrong": "seed, target tons per day and voltage",
@@ -490,7 +488,7 @@
     "storyP2": "Our founder, with over 20 years of experience in hydraulic systems, recognized that many oil producers were struggling with low-efficiency presses and unreliable suppliers. Starting from a small workshop with just 10 workers, we focused relentlessly on product quality and customer satisfaction.",
     "storyP3": "Today, that dedication has made us an established hydraulic oil press machine manufacturer in China, trusted by thousands of customers across 50+ countries — from India and Nigeria to the Philippines and the Middle East.",
     "overviewTitle": "Professional Hydraulic Oil Press Machine Manufacturer",
-    "overviewP2": "Located in Qingzhou, Weifang, Shandong Province — China's renowned machinery manufacturing hub — our factory is equipped with advanced CNC machining centers, professional assembly lines, and strict quality control systems. With over 200 skilled employees, we deliver reliable oil pressing equipment to customers worldwide.",
+    "overviewP2": "Located in Qingzhou, Weifang, Shandong Province — China's renowned machinery manufacturing hub — our factory is equipped with advanced CNC machining centers, professional assembly lines, and strict quality control systems. With over 200 skilled workers and engineers, we deliver reliable oil pressing equipment to customers worldwide.",
     "overviewP3": "As a direct oil press machine China manufacturer, we provide factory-direct pricing, comprehensive technical support, and lifetime after-sales service to every customer.",
     "manufacturingTitle": "Manufacturing Capabilities",
     "manufacturingDesc": "Our factory in Qingzhou is equipped with modern machinery and staffed by 200+ skilled professionals dedicated to producing high-quality hydraulic oil press machines.",
@@ -505,7 +503,7 @@
     "capPaintTitle": "Surface Treatment",
     "capPaintDesc": "Professional sandblasting and anti-corrosion coating for long-lasting machine durability",
     "capWarehouseTitle": "Large Inventory",
-    "capWarehouseDesc": "Sufficient raw material and spare parts stock for production within 20-30 working days (shipping time additional)",
+    "capWarehouseDesc": "Sufficient raw material and spare parts stock — standard models ready in 15-25 working days, custom configurations in 30-45 days (shipping time additional)",
     "qualityTitle": "Quality Assurance",
     "qualityDesc": "Every hydraulic oil press machine undergoes rigorous quality checks before leaving our factory, ensuring reliable performance and long service life.",
     "qualityIsoTitle": "Quality Management",
@@ -528,7 +526,7 @@
     "why4Title": "Global Export Experience",
     "why4Desc": "Successfully exported to 50+ countries with full documentation support including CO, Form A/E, and embassy legalization.",
     "why5Title": "Fast Delivery & Response",
-    "why5Desc": "20-30 working days production time; inquiries answered within 24 hours with professional technical consultation.",
+    "why5Desc": "Standard models ready in 15-25 working days and custom configurations in 30-45 days; inquiries answered within 24 hours with professional technical consultation.",
     "why6Title": "Lifetime Technical Support",
     "why6Desc": "Free installation guidance, operation training, and lifetime technical support via video call, WhatsApp, or on-site service.",
     "factoryDesc": "Take a virtual tour of our manufacturing facility. Factory visits are also welcome — contact us to schedule a tour.",
@@ -604,7 +602,7 @@
     "highReturnsTitle": "Maximize Your Profitability",
     "highReturnsDesc": "Advanced hydraulic oil press technology delivers exceptional ROI for your oil production business.",
     "returns1_title": "High Extraction Rate",
-    "returns1_desc": "Residual oil in the cake stays as low as 6-8% for most materials (based on internal testing; results vary by seed type and moisture). The bar-type slotted barrel extracts more oil from every batch.",
+    "returns1_desc": "Residual oil in the cake stays as low as 6-8% for most materials (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). The bar-type slotted barrel extracts more oil from every batch.",
     "returns1_label": "extraction rate",
     "returns2_title": "Energy Efficiency",
     "returns2_desc": "A 2.2 kW 6-pole motor drives the full pressing cycle — no boiler and no high-power industrial connection needed. Lower operating costs, higher profit margins.",
@@ -631,7 +629,7 @@
     "op4_highlight": "5 MIN/DAY Maintenance",
     "v3": {
       "heroH1": "Buying an oil press starts with choosing a factory you can trust",
-      "heroSub": "Haonuo Machinery has answered that question for buyers in 50+ countries since 2010 — 200+ skilled employees, nameplate tonnage you can verify, and a 48-hour test before every shipment.",
+      "heroSub": "Haonuo Machinery has answered that question for buyers in 50+ countries since 2010 — 200+ skilled workers and engineers, nameplate tonnage you can verify, and a 48-hour test before every shipment.",
       "heroCta1": "Get Factory Price",
       "heroCta2": "Tour the Factory",
       "heroChip1L": "Established",
@@ -640,10 +638,10 @@
       "ovKicker": "WHO YOU'RE BUYING FROM",
       "ovH2": "One factory, one contract, one responsible party",
       "ovLegal": "Shandong Haonuo Machinery Equipment Group Co., Ltd. · Qingzhou, Shandong",
-      "ovP1": "When you buy from Haonuo, you buy at factory-direct price — the same price our long-term distributors pay. There is no agent between you and the people who weld, machine and test your machine.",
+      "ovP1": "When you buy from Haonuo, you buy at factory-direct price. There is no agent between you and the people who weld, machine and test your machine.",
       "ovP2": "Since 2010 we've put presses into sesame mills in Nigeria, peanut plants in India and coconut VCO workshops in the Philippines. Most of our new orders come from buyers returning for a second or third machine — the clearest proof a machine is doing its job.",
       "ovStat1L": "Founded · Qingzhou",
-      "ovStat2L": "Owned Workshop",
+      "ovStat2L": "Skilled Workers & Engineers",
       "ovStat3L": "Export Countries",
       "ovStat4L": "Pressing Force Range",
       "histKicker": "Our Journey",
@@ -682,7 +680,7 @@
       "retKicker": "WHAT OUR MACHINES CHANGE",
       "retH2": "The numbers your business will feel",
       "ret1H": "Residual Oil in Cake",
-      "ret1D": "Bar-type slotted barrel leaves just 6-8% residual oil in the cake — more oil in your drum from every ton (internal testing, results vary).",
+      "ret1D": "Bar-type slotted barrel leaves just 6-8% residual oil in the cake — more oil in your drum from every ton (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation).",
       "ret2H": "Low-Power Motor",
       "ret2D": "A 2.2 kW pure-copper motor runs the full cycle — no boiler, no industrial power line needed.",
       "ret3H": "True Cold Press",
@@ -819,7 +817,7 @@
     "expect2Title": "Custom Solution",
     "expect2Desc": "We design the optimal machine configuration based on your oil seed type, capacity, and budget requirements.",
     "expect3Title": "Factory Production",
-    "expect3Desc": "Your machine is manufactured and tested in our factory within 20-30 working days (shipping time additional).",
+    "expect3Desc": "Your machine is manufactured and tested in our factory within 15-25 working days for standard models (custom configurations 30-45 days; shipping time additional).",
     "expect4Title": "Global Delivery",
     "expect4Desc": "Safe packaging and reliable shipping to your nearest port with full export documentation.",
     "ourLocation": "Our Location",
@@ -929,11 +927,9 @@
     "services": "Services",
     "hydraulicOilPressMachine": "Hydraulic Oil Press Machine",
     "coldPressOilMachine": "Cold Press Oil Machine",
-    "manualOilPressMachine": "Manual Oil Press Machine",
     "compareAllModels": "Compare all models",
     "browseCatalog": "Browse catalog",
     "sheaButter": "Shea Butter",
-    "manual": "Manual",
     "countriesServed": "Countries Served",
     "continents": "Continents",
     "happyClients": "Happy Clients",
@@ -959,7 +955,7 @@
     "standardPurchase": {
       "title": "Standard Machine Purchase",
       "subtitle": "Ready-to-Ship Models",
-      "description": "Choose from our complete range of hydraulic oil press machines — from HN300 mini to HN500 ultra-high pressure. Every machine is factory-tested and ready to ship within 20-30 working days.",
+      "description": "Choose from our complete range of hydraulic oil press machines — from HN300 mini to HN500 ultra-high pressure. Every machine is factory-tested; standard models ship within 15-25 working days, custom configurations within 30-45 days.",
       "features": [
         "8 standard models + 4 specialty models in stock",
         "Single or double barrel configurations available",
@@ -1063,8 +1059,7 @@
         "subtitle": "Whether you need OEM branding, ODM custom engineering, or full production line design, our team is ready to help. Contact us today for a free consultation.",
         "benefits": [
           "Free engineering consultation",
-          "24-hour response time",
-          "Custom 3D renders for approval"
+          "24-hour response time"
         ],
         "cta": "Request OEM/ODM Quote"
       }
@@ -1082,7 +1077,7 @@
       },
       "step3": {
         "title": "Sample & Approval",
-        "desc": "For OEM/ODM orders, we provide detailed specifications and 3D renders for your approval before production begins."
+        "desc": "For OEM/ODM orders, we provide detailed specifications for your approval before production begins."
       },
       "step4": {
         "title": "Production & QC",
@@ -1232,7 +1227,7 @@
       },
       {
         "question": "What is the yield of cold press oil machine?",
-        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on internal testing, results vary), minimizing the yield gap between cold and hot pressing methods."
+        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
       },
       {
         "question": "How much does a cold press oil machine cost?",
@@ -1343,7 +1338,7 @@
       },
       {
         "question": "How does a hydraulic oil press work?",
-        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 Mpa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
+        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 MPa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
       },
       {
         "question": "What seeds can a hydraulic oil press process?",
@@ -1351,7 +1346,7 @@
       },
       {
         "question": "What is the oil yield of a hydraulic oil press?",
-        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on internal testing, results vary), with residual oil in cake as low as 6-8%."
+        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), with residual oil in cake as low as 6-8%."
       },
       {
         "question": "How much does a hydraulic oil press machine cost?",
@@ -1372,97 +1367,6 @@
     ],
     "ctaTitle": "Ready to Find the Right Hydraulic Oil Press?",
     "ctaDesc": "Get a free quotation, shipping estimate, and professional equipment recommendation typically within 24 business hours.",
-    "whatsappUs": "WhatsApp Us"
-  },
-  "manual": {
-    "title": "Commercial Hydraulic Oil Press — Industrial-Grade Production | Haonuo",
-    "description": "Industrial-grade hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, professional yield, and reliable operation. Factory-direct pricing from Haonuo.",
-    "breadcrumbHome": "Home",
-    "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Commercial Hydraulic Oil Press",
-    "heroTitle": "Commercial Hydraulic Oil Press — Industrial-Grade Production",
-    "heroDesc": "Professional hydraulic oil press machines for commercial oil production. 100 kg per batch capacity, 60-75 MPa system pressure, and residual oil below 5%. Factory-direct pricing from Haonuo.",
-    "getPricing": "Get Commercial Pricing",
-    "viewModels": "View All Models",
-    "whyChoose": "Why Choose Hydraulic Pressing for Commercial Production",
-    "industrialCapacity": {
-      "title": "Industrial Capacity",
-      "desc": "100 kg per batch capacity. Hourly output varies by seed type and pressing cycle time. HN325 processes 100 kg per batch in 40-90 minutes, meeting commercial production targets."
-    },
-    "professionalYield": {
-      "title": "Professional Yield",
-      "desc": "Residual oil below 5% — 2-3x higher extraction efficiency than screw presses. Maximize profit from every kilogram of seeds."
-    },
-    "lowPower": {
-      "title": "Low Power Requirement",
-      "desc": "Only 2.2 KW power needed. Compatible with standard 220V single-phase power or a small 5 KVA generator — well-suited for any region."
-    },
-    "costEffective": {
-      "title": "Cost-Effective",
-      "desc": "Factory-direct pricing with 15-20 year service life. High yield and reliability deliver excellent ROI for commercial operations."
-    },
-    "hydraulicAdvantageTitle": "Haonuo Hydraulic Presses — Professional Choice for Commercial Operations",
-    "hydraulicAdvantageDesc": "Haonuo specializes in commercial hydraulic oil presses that deliver industrial-grade performance with minimal power requirements. Even in areas with limited electricity, our hydraulic presses outperform all alternatives because they deliver:",
-    "hydraulicAdvantage1": "100 kg per batch capacity — commercial-scale production",
-    "hydraulicAdvantage2": "Residual oil below 5% — maximum extraction efficiency",
-    "hydraulicAdvantage3": "One-button operation — no physical labor required",
-    "hydraulicAdvantage4": "2.2 KW power — compatible with 5 KVA generator",
-    "exploreHydraulic": "Explore Haonuo Hydraulic Presses",
-    "productModelsTitle": "Commercial Hydraulic Press Models — Entry-Level",
-    "applicationsTitle": "Commercial Oil Production Applications",
-    "sesameOilApp": {
-      "title": "Sesame Oil",
-      "tag": "High-Value Specialty",
-      "desc": "Premium cold-pressed sesame oil for culinary and cosmetic applications. Hydraulic presses achieve 42-50% extraction efficiency with residual oil below 5%.",
-      "yield": "Hydraulic yield: 42-50%"
-    },
-    "peanutOilApp": {
-      "title": "Peanut Oil",
-      "tag": "Commercial Cooking Oil",
-      "desc": "Widely consumed cooking oil with high demand in Africa and Asia. Industrial hydraulic pressing ensures consistent quality and maximum yield.",
-      "yield": "Hydraulic yield: 38-45%"
-    },
-    "palmKernelOilApp": {
-      "title": "Palm Kernel Oil",
-      "tag": "Industrial Processing",
-      "desc": "High-volume industrial oil for cooking and soap production. Hydraulic presses handle tough palm kernels with excellent efficiency.",
-      "yield": "Hydraulic yield: 45-55%"
-    },
-    "coconutOilApp": {
-      "title": "Coconut Oil",
-      "tag": "Premium Market",
-      "desc": "Cold-pressed virgin coconut oil for health food and cosmetics markets. Demands high-quality extraction equipment.",
-      "yield": "Hydraulic yield: 55-62%"
-    },
-    "faqTitle": "Frequently Asked Questions",
-    "faqs": [
-      {
-        "question": "What is a commercial hydraulic oil press?",
-        "answer": "A commercial hydraulic oil press is an industrial-grade machine that extracts oil from seeds using hydraulic pressure. It operates at 60-75 MPa system pressure, achieving residual oil rates below 5% — significantly more efficient than manual or screw presses. Haonuo hydraulic presses are designed for commercial production with 100 kg per batch capacity (hourly output varies by seed type)."
-      },
-      {
-        "question": "How much oil can a hydraulic press produce?",
-        "answer": "Haonuo hydraulic presses process 100 kg per batch. Hourly output varies by seed type and pressing cycle time (40-90 minutes per batch). This is 10-20x more productive than manual presses and 2-3x more efficient than screw presses."
-      },
-      {
-        "question": "Is a hydraulic press better than manual or screw presses?",
-        "answer": "Absolutely. Hydraulic presses leave just 6-8% residual oil in the cake for most materials (based on internal testing; results vary), produce premium cold-pressed oil, and require minimal physical labor. Even with a small 5 KVA generator, hydraulic presses are the recommended choice for commercial production in any region."
-      },
-      {
-        "question": "What seeds work best with hydraulic presses?",
-        "answer": "Hydraulic presses excel with all oil seeds: sesame, peanut, walnut, almond, sunflower, coconut, flaxseed, and 50+ more. The high pressure (60-75 MPa) ensures efficient extraction even from hard-shell nuts that manual presses cannot handle effectively."
-      },
-      {
-        "question": "What is the power requirement for hydraulic presses?",
-        "answer": "Haonuo hydraulic presses require only 2.2 KW — compatible with standard 220V single-phase power or a small 5 KVA generator. This makes them suitable for areas with limited or unreliable electricity infrastructure."
-      },
-      {
-        "question": "What is the total cost of ownership?",
-        "answer": "Haonuo provides factory-direct pricing without middleman markups. Total cost includes the press, optional roaster and filter, shipping, and installation. With proper maintenance, hydraulic presses deliver 15-20 years of reliable service, making them a cost-effective investment for commercial oil production."
-      }
-    ],
-    "ctaTitle": "Find the Right Commercial Oil Press",
-    "ctaDesc": "Haonuo hydraulic presses deliver 100 kg per batch industrial capacity with residual oil below 5%. Hourly output varies by seed type. Get your personalized commercial solution today.",
     "whatsappUs": "WhatsApp Us"
   },
   "roi": {

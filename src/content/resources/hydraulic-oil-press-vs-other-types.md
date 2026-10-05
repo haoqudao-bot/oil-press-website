@@ -91,7 +91,7 @@ Choosing the right oil extraction method is a critical decision that affects you
 - Suitable for organic markets
 
 ### Pressure Control
-- High pressure extraction: up to 75 Mpa system pressure
+- High pressure extraction: up to 75 MPa system pressure
 - Precision control for optimal extraction
 
 ## When to Choose Hydraulic Oil Press

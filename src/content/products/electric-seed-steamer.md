@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Electric Seed Steamer
   fr: Cuisseur Vapeur Électrique pour Graines
@@ -60,7 +60,7 @@ faq:
   - question: Can this equipment be customized?
     answer: Yes, we can customize specifications such as capacity, power supply, and material contact parts to meet your specific production requirements.
   - question: How is the equipment shipped?
-    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to 20-30 working days production time (shipping time additional). Air freight is available for urgent orders.
+    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional). Air freight is available for urgent orders.
   - question: Do you provide installation support?
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician for on-site installation. For the electric steamer, ensure your installation has adequate electrical supply (verify voltage matches your unit's rating) and ventilation for steam exhaust.
   - question: What certifications does the equipment have?
@@ -108,7 +108,7 @@ faqFr:
   - question: Cet équipement peut-il être personnalisé?
     answer: Oui, nous pouvons personnaliser les spécifications telles que la capacité, l'alimentation électrique et les pièces en contact avec le matériau pour répondre à vos exigences de production spécifiques.
   - question: Comment l'équipement est-il expédié?
-    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15-20 jours, vers les ports africains 25-35 jours. Ceci s'ajoute à un délai de production de 20-30 jours ouvrés (délai d'expédition en supplément). Le fret aérien est disponible pour les commandes urgentes.
+    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15-20 jours, vers les ports africains 25-35 jours. Ceci s'ajoute à un délai de production de 15 à 25 jours ouvrés pour les modèles standard et de 30 à 45 jours pour les configurations personnalisées (délai d'expédition en supplément). Le fret aérien est disponible pour les commandes urgentes.
   - question: Fournissez-vous un support d'installation?
     answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien pour l'installation sur site. Pour l'étuveuse électrique, assurez-vous qu'un circuit électrique dédié est disponible et que la machine est positionnée près de votre presse à huile pour un transfert efficace du matériau.
   - question: Quelles certifications l'équipement possède-t-il?
@@ -183,7 +183,7 @@ faqAr:
   - question: "هل يمكن تخصيص هذه المعدات؟"
     answer: "نعم، يمكننا تخصيص المواصفات مثل القدرة ومصدر الطاقة وقطع التلامس مع المادة لتلبية متطلبات إنتاجك المحددة."
   - question: "كيف يتم شحن المعدات؟"
-    answer: "تُشحن المعدات في صندوق خشبي عبر الشحن البحري. يستغرق التوصيل إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً. هذا بالإضافة إلى 20-30 يوم عمل كوقت إنتاج (وقت الشحن إضافي). الشحن الجوي متاح للطلبات العاجلة."
+    answer: "تُشحن المعدات في صندوق خشبي عبر الشحن البحري. يستغرق التوصيل إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً. هذا بالإضافة إلى 15-25 يوم عمل إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (وقت الشحن إضافي). الشحن الجوي متاح للطلبات العاجلة."
   - question: "هل تقدمون دعم التركيب؟"
     answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني للتركيب في الموقع. بالنسبة للبخاخة الكهربائية، تأكد من أن موقع التركيب يتوفر على إمداد كهربائي كافٍ (تحقق من تطابق الجهد مع تصنيف وحدتك) وتهوية لانبعاثات البخار."
   - question: "ما الشهادات التي تمتلكها المعدات؟"
@@ -204,7 +204,7 @@ faqId:
   - question: Apakah peralatan ini dapat disesuaikan?
     answer: Ya, kami dapat menyesuaikan spesifikasi seperti kapasitas, pasokan daya, dan bagian kontak material agar memenuhi kebutuhan produksi spesifik Anda.
   - question: Bagaimana peralatan ini dikirim?
-    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini selain waktu produksi 20-30 hari kerja (waktu pengiriman tambahan). Pengiriman udara tersedia untuk pesanan mendesak.
+    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini selain waktu produksi 15-25 hari kerja untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus (waktu pengiriman tambahan). Pengiriman udara tersedia untuk pesanan mendesak.
   - question: Apakah Anda menyediakan dukungan pemasangan?
     answer: Ya, kami menyediakan manual pemasangan terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi untuk pemasangan di lokasi. Untuk pengukus listrik, pastikan pemasangan Anda memiliki pasokan listrik yang memadai (verifikasi tegangan sesuai dengan rating unit Anda) dan ventilasi untuk pembuangan uap.
   - question: Sertifikasi apa yang dimiliki peralatan ini?

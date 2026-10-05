@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian resource body content for [locale]/resources/[slug].astro
+// Indonesian resource body content for [locale]/resources/[slug].astro
 export const idResourceBodies: Record<string, string> = {
   'hydraulic-oil-press-maintenance-guide': `**Perawatan mesin press minyak yang tepat** adalah faktor tunggal terpenting dalam menentukan berapa lama mesin press hidrolik Anda bertahan dan seberapa konsisten menghasilkan minyak berkualitas tinggi. Mesin yang terawat dengan baik dapat beroperasi efisien selama 15-20 tahun, sementara yang terabaikan mungkin mulai menunjukkan masalah dalam tahun pertama.
 
@@ -218,7 +218,7 @@ Press dingin mengekstrak minyak pada suhu rendah (umumnya di bawah 60°C / 140°
 5. Filtering halus: Filtering multi-tahap untuk membuat minyak jernih
 
 ### Persyaratan Peralatan untuk Press Dingin
-- Tekanan permukaan cake tinggi (42 MPa/cm² atau lebih)
+- Tekanan permukaan cake tinggi (42 MPa atau lebih)
 - Desain barrel khusus untuk ekstraksi suhu rendah
 - Sistem pengawasan suhu
 - Model yang sesuai: HN426, HN480, HN500
@@ -236,7 +236,7 @@ Press panas melibatkan sangrai biji sebelumnya sebelum press untuk meningkatkan 
 6. Press: Menerapkan tekanan selama 30-40 menit per batch
 
 ### Persyaratan Peralatan untuk Press Panas
-- Tekanan gaya standar (27.78 MPa/cm² atau lebih)
+- Tekanan gaya standar (27.78 MPa atau lebih)
 - Alat sangrai
 - Model yang sesuai: HN325, HN365, HN480, HN500
 
@@ -836,7 +836,7 @@ HN325 adalah stapel kami untuk entry-level, cocok untuk operasi kecil hingga men
 **Spesifikasi Utama:**
 - Gaya tekan: 325 ton
 - Tekanan sistem: 60 MPa
-- Tekanan permukaan cake: 27.78 MPa/cm²
+- Tekanan permukaan cake: 27.78 MPa
 - Kapasitas batch: 100 kg
 - Daya motor: 2.2 kW
 
@@ -851,7 +851,7 @@ HN365 adalah model komersial kami yang paling populer, memberikan 10% gaya tekan
 **Spesifikasi Utama:**
 - Gaya tekan: 365 ton
 - Tekanan sistem: 63 MPa
-- Tekanan permukaan cake: 30.15 MPa/cm²
+- Tekanan permukaan cake: 30.15 MPa
 - Kapasitas batch: 100 kg
 
 ### HN426 Mesin Press Minyak Hidrolik Dingin
@@ -865,7 +865,7 @@ HN426 adalah khasanah kami untuk press dingin, dirancang untuk bahan keras yang 
 **Spesifikasi Utama:**
 - Gaya tekan: 500 ton
 - Tekanan sistem: 70 MPa
-- Tekanan permukaan cake: 42 MPa/cm²
+- Tekanan permukaan cake: 42 MPa
 - Kapasitas batch: 100 kg
 
 ### HN480 Mesin Press Minyak Hidrolik Tekanan Tinggi
@@ -879,7 +879,7 @@ HN480 menjembatani HN426 dan HN500, memberikan kinerja seimbang untuk aplikasi t
 **Spesifikasi Utama:**
 - Gaya tekan: 560 ton
 - Tekanan sistem: 72 MPa
-- Tekanan permukaan cake: 48 MPa/cm²
+- Tekanan permukaan cake: 48 MPa
 - Kapasitas batch: 100 kg
 
 ### HN500 Mesin Press Minyak Hidrolik Tekanan Ekstrem
@@ -893,7 +893,7 @@ HN500 adalah model unggulan kami, dirancang untuk aplikasi industri dengan gaya 
 **Spesifikasi Utama:**
 - Gaya tekan: 620 ton
 - Tekanan sistem: 75 MPa
-- Tekanan permukaan cake: 52 MPa/cm²
+- Tekanan permukaan cake: 52 MPa
 - Kapasitas batch: 100 kg
 
 ## Pohon Keputusan Pemilihan

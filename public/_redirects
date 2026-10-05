@@ -3,3 +3,14 @@
 
 # Sitemap alias: SEO tools commonly probe /sitemap.xml; actual file is /sitemap-index.xml
 /sitemap.xml /sitemap-index.xml 301
+
+# Discontinued manual oil press page (manual machines are not manufactured);
+# send visitors to the smallest hydraulic model instead
+/manual-oil-press-machine /products/mini-hydraulic-oil-press/ 301
+/manual-oil-press-machine/ /products/mini-hydraulic-oil-press/ 301
+/fr/manual-oil-press-machine /fr/products/mini-hydraulic-oil-press/ 301
+/fr/manual-oil-press-machine/ /fr/products/mini-hydraulic-oil-press/ 301
+/ar/manual-oil-press-machine /ar/products/mini-hydraulic-oil-press/ 301
+/ar/manual-oil-press-machine/ /ar/products/mini-hydraulic-oil-press/ 301
+/id/manual-oil-press-machine /id/products/mini-hydraulic-oil-press/ 301
+/id/manual-oil-press-machine/ /id/products/mini-hydraulic-oil-press/ 301

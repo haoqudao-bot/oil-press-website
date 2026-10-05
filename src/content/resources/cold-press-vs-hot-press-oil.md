@@ -33,7 +33,7 @@ Cold pressing extracts oil at low temperatures (typically below 60°C / 140°F) 
 5. Fine Filtration: Multiple-stage filtration for crystal-clear oil
 
 ### Cold Pressing Equipment Requirements
-- Higher cake surface pressure (42 Mpa/cm2 or more)
+- Higher cake surface pressure (42 MPa or more)
 - Specialized barrel design for low-temperature extraction
 - Temperature monitoring system
 - Suitable models: HN426, HN480, HN500
@@ -51,7 +51,7 @@ Hot pressing involves pre-roasting the seeds before pressing to increase oil yie
 6. Pressing: Apply pressure at 30-40 minutes per batch
 
 ### Hot Pressing Equipment Requirements
-- Standard pressing force (27.78 Mpa/cm2 or more)
+- Standard pressing force (27.78 MPa or more)
 - Roasting equipment
 - Suitable models: HN325, HN365, HN480, HN500
 

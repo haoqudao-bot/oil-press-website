@@ -1,14 +1,14 @@
-﻿---
+---
 title:
   en: Standard Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Standard
   ar: معصرة زيت هيدروليكية قياسية
   id: Mesin Press Minyak Hidrolik Standar
 description:
-  en: "325-ton hydraulic oil press with 60 Mpa system pressure. Well-suited for sesame, peanut, and rapeseed cold pressing with 100kg capacity per batch."
-  fr: "Presse à huile hydraulique 325 tonnes, 60 Mpa. Pressage à froid sésame, arachide, colza, 100kg par lot."
+  en: "325-ton hydraulic oil press with 60 MPa system pressure. Well-suited for sesame, peanut, and rapeseed cold pressing with 100kg capacity per batch."
+  fr: "Presse à huile hydraulique 325 tonnes, 60 MPa. Pressage à froid sésame, arachide, colza, 100kg par lot."
   ar: "معصرة زيت هيدروليكية 325 طن بضغط نظام 60 ميجاباسكال. مناسبة للعصر البارد للسمسم والفول السوداني واللفت بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik 325 ton dengan tekanan sistem 60 Mpa. Cocok untuk press dingin wijen, kacang tanah, dan rapeseed dengan kapasitas 100kg per batch."
+  id: "Mesin press minyak hidrolik 325 ton dengan tekanan sistem 60 MPa. Cocok untuk press dingin wijen, kacang tanah, dan rapeseed dengan kapasitas 100kg per batch."
 category: hydraulic-oil-press
 model: HN325
 modelId: ''
@@ -18,7 +18,7 @@ specifications:
   - name: Model (Single/Double)
     value: HN325 Simple / HN325 Double
   - name: System Pressure
-    value: 60 Mpa
+    value: 60 MPa
   - name: Pressing Force
     value: 325 Tonnes
   - name: Motor Power
@@ -38,7 +38,7 @@ specifications:
   - name: Overall Dimensions (Single/Double)
     value: 1200×1200×2450 / 2100×1200×2450 mm
   - name: Cake Surface Pressure
-    value: 27.78 Mpa/cm²
+    value: 27.78 MPa
 featured: true
 related:
   - heavy-duty-hydraulic-oil-press
@@ -52,7 +52,7 @@ applicableSeeds:
   - flaxseed
 faq:
   - question: What is the oil yield of the HN325 hydraulic oil press?
-    answer: The oil yield depends on the raw material. For example, sesame yields 42-54%, peanuts 40-50%, and rapeseed 35-45%. The HN325's 325-ton pressing force and bar-type slotted barrel design achieve approximately 2-3% higher yield (based on internal testing, results vary) than traditional drilled barrel presses.
+    answer: The oil yield depends on the raw material. For example, sesame yields 42-54%, peanuts 40-50%, and rapeseed 35-45%. The HN325's 325-ton pressing force and bar-type slotted barrel design achieve approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled barrel presses.
   - question: What raw materials can the HN325 press?
     answer: The HN325 can press sesame, peanut, rapeseed, sunflower seed, flaxseed, tea seed, soybean, cottonseed, and more. For hard-shell materials like walnuts and almonds, we recommend our cold press or ultra-high pressure models.
   - question: How long does one pressing cycle take for peanuts?
@@ -70,26 +70,26 @@ faq:
   - question: What warranty do you provide?
     answer: We provide a 1-year warranty covering all manufacturing defects, plus lifetime technical support. For the HN325, this includes specific coverage for the hydraulic pump station and microcomputer control panel. Spare parts are available from stock.
   - question: How is the machine shipped and how long does delivery take?
-    answer: The machine is shipped in a wooden crate via sea freight. Sea freight transit to most Asian ports takes 15-20 days from departure, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to 20-30 working days production time (shipping time additional). Total time from order to arrival is typically 5-10 weeks depending on destination. Air freight is available for urgent orders.
+    answer: The machine is shipped in a wooden crate via sea freight. Sea freight transit to most Asian ports takes 15-20 days from departure, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional). Total time from order to arrival is typically 5-10 weeks depending on destination. Air freight is available for urgent orders.
   - question: Do you provide installation and training?
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For the HN325, ensure your installation floor can support at least 2 tonnes and has a minimum ceiling height of 2.5m. For large orders, we can send a technician to your facility for on-site installation and training at cost.
   - question: What certifications does the machine have?
-    answer: All machines undergo 48-hour continuous full-load testing before shipment. For the HN325, the full-load test is conducted at 60 Mpa system pressure with 325 tonnes of pressing force.
+    answer: All machines undergo 48-hour continuous full-load testing before shipment. For the HN325, the full-load test is conducted at 60 MPa system pressure with 325 tonnes of pressing force.
   - question: Can the barrel size be customized?
     answer: Yes, barrel inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger barrels for bulk materials and food-grade stainless steel barrels for edible oil production.
   - question: What is the residual oil rate in the cake?
-    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on internal testing, results vary) from every batch.
+    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
   - question: Can the machine operate on generator power?
     answer: Yes, our machines are fully compatible with generator power. For the HN325, we recommend a minimum 5kVA generator. The machine starts easily and runs stably on generator power, making it suitable for areas with unreliable electricity supply such as rural Nigeria, Kenya, and other African regions.
   - question: Do you provide voltage customization for different countries?
     answer: Yes, we customize the electrical system to match your local power supply at no extra charge. Common configurations include 220V/50Hz (Southeast Asia, Africa, Middle East), 110V/60Hz (Philippines, parts of South America), and 380V/50Hz (industrial three-phase). Simply specify your local voltage when ordering.
   - question: How quickly can I get spare parts in Africa or the Middle East?
-    answer: We maintain stock of common spare parts (seals, filter cloth, hydraulic oil, control panel components). Standard parts typically ship promptly via DHL/FedEx. Transit time is approximately 5-7 days to most African and Middle Eastern countries, though customs clearance may add additional time. For Nigeria, we have worked with local agents in Lagos who may carry commonly needed parts. Contact us to confirm current local availability.
+    answer: We maintain stock of common spare parts (seals, filter cloth, hydraulic oil, control panel components). Standard parts typically ship promptly via DHL/FedEx. Transit time is approximately 5-7 days to most African and Middle Eastern countries, though customs clearance may add additional time.
 specificationsFr:
   - name: Modèle (Simple/Double)
     value: HN325 Simple / HN325 Double
   - name: Pression du système
-    value: 60 Mpa
+    value: 60 MPa
   - name: Force de pressage
     value: 325 Tonnes
   - name: Puissance du moteur
@@ -109,7 +109,7 @@ specificationsFr:
   - name: Dimensions globales (Simple/Double)
     value: 1200×1200×2450 / 2100×1200×2450 mm
   - name: Pression superficielle du gâteau
-    value: 27.78 Mpa/cm²
+    value: 27.78 MPa
 applicableSeedsFr:
   - graine de thé
   - colza
@@ -119,7 +119,7 @@ applicableSeedsFr:
   - lin
 faqFr:
   - question: Quel est le rendement en huile de la presse à huile hydraulique HN325 ?
-    answer: Le rendement en huile dépend de la matière première. Par exemple, le sésame produit 42 à 54 %, les arachides 40 à 50 % et le colza 35 à 45 %. La force de pressage de 325 tonnes du HN325 et la conception du fût à fentes de type barre permettent d'obtenir un rendement environ 2 à 3 % plus élevé (sur la base de tests internes, les résultats peuvent varier) que les presses traditionnelles à fût percé.
+    answer: Le rendement en huile dépend de la matière première. Par exemple, le sésame produit 42 à 54 %, les arachides 40 à 50 % et le colza 35 à 45 %. La force de pressage de 325 tonnes du HN325 et la conception du fût à fentes de type barre permettent d'obtenir un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) que les presses traditionnelles à fût percé.
   - question: Quelles matières premières la HN325 peut-il presser ?
     answer: Le HN325 peut presser le sésame, l'arachide, le colza, les graines de tournesol, le lin, les graines de thé, le soja, les graines de coton et plus encore. Pour les matières à coque dure comme les noix et les amandes, nous recommandons nos modèles à froid ou ultra-haute pression.
   - question: Combien de temps dure un cycle de pressage pour les arachides ?
@@ -137,21 +137,21 @@ faqFr:
   - question: Quelle garantie fournissez-vous ?
     answer: Nous fournissons une garantie de 1 an couvrant tous les défauts de fabrication, ainsi qu'un support technique à vie. Pour le HN325, cela inclut une couverture spécifique de la station de pompe hydraulique et du panneau de commande micro-informatique. Les pièces de rechange sont disponibles en stock .
   - question: Comment la machine est-elle expédiée et combien de temps dure la livraison ?
-    answer: La machine est expédiée dans une caisse en bois par fret maritime. Le transit par fret maritime vers la plupart des ports asiatiques prend 15 à 20 jours à partir du départ, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 20-30 jours ouvrables de temps de production (délai d'expédition en supplément). Le délai total de la commande à l'arrivée est généralement de 5 à 10 semaines selon la destination. Le fret aérien est disponible pour les commandes urgentes.
+    answer: La machine est expédiée dans une caisse en bois par fret maritime. Le transit par fret maritime vers la plupart des ports asiatiques prend 15 à 20 jours à partir du départ, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 15 à 25 jours ouvrés de production pour les modèles standard et 30 à 45 jours pour les configurations personnalisées (délai d'expédition en supplément). Le délai total de la commande à l'arrivée est généralement de 5 à 10 semaines selon la destination. Le fret aérien est disponible pour les commandes urgentes.
   - question: Fournissez-vous l'installation et la formation ?
     answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour le HN325, assurez-vous que votre sol d'installation peut supporter au moins 2 tonnes et dispose d'une hauteur sous plafond minimale de 2,5 m. Pour les grosses commandes, nous pouvons envoyer un technicien dans vos installations pour une installation et une formation sur site à coût.
   - question: Quelles certifications la machine possède-t-elle ?
-    answer: Toutes les machines subissent un test en charge continue de 48 heures avant l'expédition. Pour le HN325, le test en charge complète est effectué à une pression système de 60 Mpa avec 325 tonnes de force de pressage.
+    answer: Toutes les machines subissent un test en charge continue de 48 heures avant l'expédition. Pour le HN325, le test en charge complète est effectué à une pression système de 60 MPa avec 325 tonnes de force de pressage.
   - question: La taille du fût peut-elle être personnalisée ?
     answer: Oui, le diamètre intérieur et la hauteur du fût peuvent être personnalisés pour correspondre à vos exigences spécifiques en matière de matière et de taille de lot. Les personnalisations courantes incluent des fûts plus grands pour les matières en vrac et des fûts en acier inoxydable de qualité alimentaire pour la production d'huile comestible.
   - question: Quel est le taux d'huile résiduelle dans le gâteau ?
-    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matières avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile supplémentaire (sur la base de tests internes, les résultats peuvent varier) de chaque lot.
+    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matières avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile supplémentaire (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
   - question: La machine peut-elle fonctionner sur alimentation de groupe électrogène ?
     answer: Oui, nos machines sont entièrement compatibles avec l'alimentation par groupe électrogène. Pour la HN325, nous recommandons un groupe électrogène d'au moins 5 kVA. La machine démarre facilement et fonctionne de manière stable sur groupe électrogène, ce qui la rend adaptée aux zones avec une alimentation électrique peu fiable telles que les régions rurales du Nigeria, du Kenya et d'autres régions africaines.
   - question: Fournissez-vous la personnalisation de la tension pour différents pays ?
     answer: Oui, nous personnalisons le système électrique pour correspondre à votre alimentation locale sans frais supplémentaires. Les configurations courantes incluent 220 V/50 Hz (Asie du Sud-Est, Afrique, Moyen-Orient), 110 V/60 Hz (Philippines, certaines parties de l'Amérique du Sud) et 380 V/50 Hz (triphasé industriel). Indiquez simplement votre tension locale lors de la commande.
   - question: Comment puis-je obtenir rapidement des pièces de rechange en Afrique ou au Moyen-Orient ?
-    answer: Nous maintenons un stock de pièces de rechange courantes (joints, tissu filtrant, huile hydraulique, composants de panneau de commande). Les pièces standard sont généralement expédiées dans les 48 heures via DHL/FedEx. Le temps de transit est d'environ 5 à 7 jours vers la plupart des pays africains et du Moyen-Orient, bien que le dédouanement puisse ajouter du temps supplémentaire. Pour le Nigeria, nous avons travaillé avec des agents locaux à Lagos qui peuvent avoir les pièces couramment nécessaires. Contactez-nous pour confirmer la disponibilité locale actuelle.
+    answer: Nous maintenons un stock de pièces de rechange courantes (joints, tissu filtrant, huile hydraulique, composants de panneau de commande). Les pièces standard sont généralement expédiées dans les 48 heures via DHL/FedEx. Le temps de transit est d'environ 5 à 7 jours vers la plupart des pays africains et du Moyen-Orient, bien que le dédouanement puisse ajouter du temps supplémentaire. Contactez-nous pour confirmer la disponibilité locale actuelle.
 specificationsAr:
   - name: "الطراز (مفرد/مزدوج)"
     value: "HN325 مفرد / HN325 مزدوج"
@@ -181,7 +181,7 @@ specificationsId:
   - name: "Model (Tunggal/Ganda)"
     value: "HN325 Tunggal / HN325 Ganda"
   - name: "Tekanan Sistem"
-    value: "60 Mpa"
+    value: "60 MPa"
   - name: "Gaya Press"
     value: "325 Ton"
   - name: "Daya Motor"
@@ -201,7 +201,7 @@ specificationsId:
   - name: "Dimensi Keseluruhan (Tunggal/Ganda)"
     value: "1200×1200×2450 / 2100×1200×2450 mm"
   - name: "Tekanan Permukaan Kue Press"
-    value: "27.78 Mpa/cm²"
+    value: "27.78 MPa"
 applicableSeedsAr:
   - "بذور الشاي"
   - "بذور اللفت"
@@ -218,7 +218,7 @@ applicableSeedsId:
   - "biji rami"
 faqAr:
   - question: "ما هو عائد الزيت من معصرة الزيت الهيدروليكية HN325؟"
-    answer: "يعتمد عائد الزيت على المادة الخام. على سبيل المثال، ينتج السمسم 42-54٪، والفول السوداني 40-50٪، وبذور اللفت 35-45٪. تتيح قوة ضغط 325 طن وتصميم البرميل ذو الفتحات الشريطية في HN325 الحصول على عائد أعلى بنحو 2-3٪ (بناءً على اختبارات داخلية، النتائج قد تختلف) مقارنة بمعاصر البرميل المثقوب التقليدية."
+    answer: "يعتمد عائد الزيت على المادة الخام. على سبيل المثال، ينتج السمسم 42-54٪، والفول السوداني 40-50٪، وبذور اللفت 35-45٪. تتيح قوة ضغط 325 طن وتصميم البرميل ذو الفتحات الشريطية في HN325 الحصول على عائد أعلى بنحو 2-3٪ (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بمعاصر البرميل المثقوب التقليدية."
   - question: "ما المواد الخام التي يمكن لـ HN325 عصرها؟"
     answer: "يمكن لـ HN325 عصر السمسم والفول السوداني وبذور اللفت وبذور عباد الشمس وبذور الكتان وبذور الشاي وفول الصويا وبذور القطن والمزيد. بالنسبة للمواد ذات القشرة الصلبة مثل الجوز واللوز، نوصي بطرازات العصر البارد أو فائقة الضغط."
   - question: "كم يستغرق دورة العصر الواحدة للفول السوداني؟"
@@ -236,7 +236,7 @@ faqAr:
   - question: "ما الضمان الذي تقدمونه؟"
     answer: "نقدم ضماناً لمدة عام واحد يغطي جميع عيوب التصنيع، بالإضافة إلى دعم فني مدى الحياة. بالنسبة لـ HN325، يشمل ذلك تغطية محددة لمحطة المضخة الهيدروليكية ولوحة التحكم بالحاسوب المصغر. قطع الغيار متوفرة من المخزون ويمكن شحنها خلال 48 ساعة حول العالم."
   - question: "كيف يتم شحن الآلة وكم تستغرق التوصيلة؟"
-    answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق الشحن البحري إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً، وإلى موانئ أمريكا الجنوبية 30-40 يوماً. هذا بالإضافة إلى 20-30 يوم عمل كوقت إنتاج (وقت الشحن إضافي). الوقت الإجمالي من الطلب إلى الوصول عادةً 5-10 أسابيع حسب الوجهة. الشحن الجوي متاح للطلبات العاجلة."
+    answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق الشحن البحري إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً، وإلى موانئ أمريكا الجنوبية 30-40 يوماً. هذا بالإضافة إلى 15-25 يوم عمل إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (وقت الشحن إضافي). الوقت الإجمالي من الطلب إلى الوصول عادةً 5-10 أسابيع حسب الوجهة. الشحن الجوي متاح للطلبات العاجلة."
   - question: "هل تقدمون خدمة التركيب والتدريب؟"
     answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. بالنسبة لـ HN325، تأكد من أن أرضية التركيب يمكنها تحمل 2 طن على الأقل وأن ارتفاع السقف لا يقل عن 2.5 متر. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة."
   - question: "ما الشهادات التي تمتلكها الآلة؟"
@@ -244,16 +244,16 @@ faqAr:
   - question: "هل يمكن تخصيص حجم البرميل؟"
     answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع للبرميل ليتوافق مع متطلبات مادتك وحجم دفعتك المحددة. تشمل التخصيصات الشائعة براميل أكبر للمواد السائبة وبراميل من الفولاذ المقاوم للصدأ بدرجة غذائية لإنتاج الزيت الصالح للأكل."
   - question: "ما معدل بقايا الزيت في الكعكة؟"
-    answer: "معدل بقايا الزيت في الكعكة عادةً 6-8٪ لمعظم المواد مع تصميمنا للبرميل ذو الفتحات الشريطية، مقارنة بـ 10-12٪ مع معاصر البرميل المثقوب التقليدية. هذا يعني أنك تستخرج نحو 2-3٪ زيت إضافي (بناءً على اختبارات داخلية، النتائج قد تختلف) من كل دفعة."
+    answer: "معدل بقايا الزيت في الكعكة عادةً 6-8٪ لمعظم المواد مع تصميمنا للبرميل ذو الفتحات الشريطية، مقارنة بـ 10-12٪ مع معاصر البرميل المثقوب التقليدية. هذا يعني أنك تستخرج نحو 2-3٪ زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
   - question: "هل يمكن تشغيل الآلة بمولد كهربائي؟"
     answer: "نعم، آلاتنا متوافقة تماماً مع طاقة المولد. بالنسبة لـ HN325، نوصي بمولد بحد أدنى 5 كيلوفولت أمبير. تبدأ الآلة بسهولة وتعمل باستقرار على طاقة المولد، مما يجعلها مناسبة للمناطق ذات إمداد كهربائي غير موثوق مثل المناطق الريفية في نيجيريا وكينيا ومناطق أفريقية أخرى."
   - question: "هل تقدمون تخصيص الجهد لدول مختلفة؟"
     answer: "نعم، نخصص النظام الكهربائي ليتوافق مع مصدر الطاقة المحلي لديك بدون رسوم إضافية. تشمل التكوينات الشائعة 220 فولت/50 هرتز (جنوب شرق آسيا، أفريقيا، الشرق الأوسط)، و110 فولت/60 هرتز (الفلبين، أجزاء من أمريكا الجنوبية)، و380 فولت/50 هرتز (صناعي ثلاثي الأطوار). ما عليك سوى تحديد جهدك المحلي عند الطلب."
   - question: "كيف يمكنني الحصول على قطع الغيار بسرعة في أفريقيا أو الشرق الأوسط؟"
-    answer: "نحتفظ بمخزون من قطع الغيار الشائعة (حلقات، قماش ترشيح، زيت هيدروليكي، مكونات لوحة التحكم). تُشحن القطع القياسية عادةً خلال 48 ساعة عبر DHL/FedEx. وقت العبور حوالي 5-7 أيام إلى معظم الدول الأفريقية والشرق أوسطية، رغم أن التخليص الجمركي قد يضيف وقتاً إضافياً. بالنسبة لنيجيريا، عملنا مع وكلاء محليين في لاغوس قد يحملون القطع الشائعة الحاجة. تواصل معنا لتأكيد التوفر المحلي الحالي."
+    answer: "نحتفظ بمخزون من قطع الغيار الشائعة (حلقات، قماش ترشيح، زيت هيدروليكي، مكونات لوحة التحكم). تُشحن القطع القياسية عادةً خلال 48 ساعة عبر DHL/FedEx. وقت العبور حوالي 5-7 أيام إلى معظم الدول الأفريقية والشرق أوسطية، رغم أن التخليص الجمركي قد يضيف وقتاً إضافياً. تواصل معنا لتأكيد التوفر المحلي الحالي."
 faqId:
   - question: "Berapa hasil minyak dari mesin press minyak hidrolik HN325?"
-    answer: "Hasil minyak tergantung pada bahan baku. Misalnya, wijen menghasilkan 42-54%, kacang tanah 40-50%, dan rapeseed 35-45%. Gaya press 325 ton dan desain barrel beralur tipe bar HN325 mencapai hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian internal, hasil dapat bervariasi) dibandingkan mesin press barrel berlubang tradisional."
+    answer: "Hasil minyak tergantung pada bahan baku. Misalnya, wijen menghasilkan 42-54%, kacang tanah 40-50%, dan rapeseed 35-45%. Gaya press 325 ton dan desain barrel beralur tipe bar HN325 mencapai hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press barrel berlubang tradisional."
   - question: "Bahan baku apa saja yang dapat ditekan oleh HN325?"
     answer: "HN325 dapat menekan wijen, kacang tanah, rapeseed, biji bunga matahari, biji rami, biji teh, kedelai, biji kapas, dan lainnya. Untuk bahan bertempurung keras seperti kenari dan almond, kami merekomendasikan model press dingin atau tekanan ultra-tinggi kami."
   - question: "Berapa lama satu siklus press untuk kacang tanah?"
@@ -271,21 +271,21 @@ faqId:
   - question: "Garansi apa yang Anda berikan?"
     answer: "Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk HN325, ini mencakup cakupan khusus untuk stasiun pompa hidrolik dan panel kontrol mikrokomputer. Suku cadang tersedia dari stok dan dapat dikirim dalam 48 jam ke seluruh dunia."
   - question: "Bagaimana mesin dikirim dan berapa lama pengiriman membutuhkan waktu?"
-    answer: "Mesin dikirim dalam peti kayu melalui pengiriman laut. Transit pengiriman laut ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari dari keberangkatan, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini selain 20-30 hari kerja waktu produksi (waktu pengiriman tambahan). Total waktu dari pesanan hingga kedatangan biasanya 5-10 minggu tergantung tujuan. Pengiriman udara tersedia untuk pesanan mendesak."
+    answer: "Mesin dikirim dalam peti kayu melalui pengiriman laut. Transit pengiriman laut ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari dari keberangkatan, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini selain 15-25 hari kerja produksi untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus (waktu pengiriman tambahan). Total waktu dari pesanan hingga kedatangan biasanya 5-10 minggu tergantung tujuan. Pengiriman udara tersedia untuk pesanan mendesak."
   - question: "Apakah Anda menyediakan instalasi dan pelatihan?"
     answer: "Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk HN325, pastikan lantai instalasi Anda dapat menopang setidaknya 2 ton dan memiliki tinggi langit-langit minimum 2,5m. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya."
   - question: "Sertifikasi apa yang dimiliki mesin?"
-    answer: "Semua mesin menjalani pengujian beban penuh berkelanjutan 48 jam sebelum pengiriman. Untuk HN325, pengujian beban penuh dilakukan pada tekanan sistem 60 Mpa dengan gaya press 325 ton."
+    answer: "Semua mesin menjalani pengujian beban penuh berkelanjutan 48 jam sebelum pengiriman. Untuk HN325, pengujian beban penuh dilakukan pada tekanan sistem 60 MPa dengan gaya press 325 ton."
   - question: "Apakah ukuran barrel dapat disesuaikan?"
     answer: "Ya, diameter dalam dan tinggi barrel dapat disesuaikan agar sesuai dengan persyaratan bahan dan ukuran batch spesifik Anda. Penyesuaian umum termasuk barrel yang lebih besar untuk bahan curah dan barrel baja tahan karat food-grade untuk produksi minyak edible."
   - question: "Berapa tingkat minyak sisa dalam kue?"
-    answer: "Tingkat minyak sisa dalam kue biasanya 6-8% untuk sebagian besar bahan dengan desain barrel beralur tipe bar kami, dibandingkan dengan 10-12% dengan mesin press barrel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% lebih banyak minyak (berdasarkan pengujian internal, hasil dapat bervariasi) dari setiap batch."
+    answer: "Tingkat minyak sisa dalam kue biasanya 6-8% untuk sebagian besar bahan dengan desain barrel beralur tipe bar kami, dibandingkan dengan 10-12% dengan mesin press barrel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% lebih banyak minyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch."
   - question: "Apakah mesin dapat beroperasi dengan daya generator?"
     answer: "Ya, mesin kami sepenuhnya kompatibel dengan daya generator. Untuk HN325, kami merekomendasikan generator minimum 5kVA. Mesin mudah menyala dan berjalan stabil dengan daya generator, cocok untuk daerah dengan pasokan listrik tidak andal seperti daerah pedesaan Nigeria, Kenya, dan wilayah Afrika lainnya."
   - question: "Apakah Anda menyediakan penyesuaian tegangan untuk berbagai negara?"
     answer: "Ya, kami menyesuaikan sistem kelistrikan agar sesuai dengan pasokan daya lokal Anda tanpa biaya tambahan. Konfigurasi umum termasuk 220V/50Hz (Asia Tenggara, Afrika, Timur Tengah), 110V/60Hz (Filipina, sebagian Amerika Selatan), dan 380V/50Hz (tiga fasa industri). Cukup tentukan tegangan lokal Anda saat memesan."
   - question: "Seberapa cepat saya bisa mendapatkan suku cadang di Afrika atau Timur Tengah?"
-    answer: "Kami menyimpan stok suku cadang umum (segel, kain filter, minyak hidrolik, komponen panel kontrol). Suku cadang standar biasanya dikirim dalam 48 jam melalui DHL/FedEx. Waktu transit sekitar 5-7 hari ke sebagian besar negara Afrika dan Timur Tengah, meskipun bea cukai dapat menambah waktu tambahan. Untuk Nigeria, kami telah bekerja dengan agen lokal di Lagos yang mungkin menyediakan suku cadang yang umum dibutuhkan. Hubungi kami untuk mengonfirmasi ketersediaan lokal saat ini."
+    answer: "Kami menyimpan stok suku cadang umum (segel, kain filter, minyak hidrolik, komponen panel kontrol). Suku cadang standar biasanya dikirim dalam 48 jam melalui DHL/FedEx. Waktu transit sekitar 5-7 hari ke sebagian besar negara Afrika dan Timur Tengah, meskipun bea cukai dapat menambah waktu tambahan. Hubungi kami untuk mengonfirmasi ketersediaan lokal saat ini."
 videoUrl: ''
 seoKeywords:
   - hydraulic oil press machine
@@ -303,11 +303,11 @@ updatedAt: 2025-11-01
 
 ## Overview
 
-The HN325 standard hydraulic oil press handles up to 100 kg of oilseeds per 40–90 minute batch, depending on the material, making it suited to small and mid-size oil mills pressing roughly a ton of seed per day. Its 325-ton pressing force and 60 Mpa system pressure leave 6–8% residual oil in the cake for most conventional oilseeds (internal testing, results vary). The 2.2 kW motor runs on standard 220V/380V supply, and one to two operators can run the machine.
+The HN325 standard hydraulic oil press handles up to 100 kg of oilseeds per 40–90 minute batch, depending on the material, making it suited to small and mid-size oil mills pressing roughly a ton of seed per day. Its 325-ton pressing force and 60 MPa system pressure leave 6–8% residual oil in the cake for most conventional oilseeds (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). The 2.2 kW motor runs on standard 220V/380V supply, and one to two operators can run the machine.
 
 The HN325 Standard Hydraulic Oil Press is our popular hydraulic oil press machine, trusted by oil producers worldwide for its outstanding value and reliable performance. As the standard extended-stroke model in our lineup, it features an 850 mm cylinder stroke that presses all the way to the bottom, handling 100 kg per batch with ease. Whether you are a small-scale producer or running a mid-size operation, the HN325 delivers consistent oil extraction results across a wide range of materials.
 
-The HN325 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 27.78 Mpa/cm², enabling most conventional oil seeds to be fully pressed in a single cycle. This can contribute to higher oil yield and lower residual oil in the cake. Actual return on investment depends on many factors including market conditions and operating efficiency.
+The HN325 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 27.78 MPa, enabling most conventional oil seeds to be fully pressed in a single cycle. This can contribute to higher oil yield and lower residual oil in the cake. Actual return on investment depends on many factors including market conditions and operating efficiency.
 
 ## Production Process & Line Configuration
 
@@ -351,14 +351,14 @@ We recommend consulting our engineers to design a balanced production line tailo
 - **Popular Value** — One of our most ordered models, offering competitive price-to-performance for general-purpose oil pressing.
 - **Full-Stroke Pressing** — 850 mm cylinder stroke presses to the bottom, ensuring complete oil extraction from every batch.
 - **Versatile Capacity** — Handles 100 kg per batch, suitable for both small and medium production runs.
-- **Single-Cycle Efficiency** — 27.78 Mpa/cm² cake pressure is sufficient for most conventional materials to be fully pressed in one cycle.
+- **Single-Cycle Efficiency** — 27.78 MPa cake pressure is sufficient for most conventional materials to be fully pressed in one cycle.
 - **Dual-Barrel Productivity** — Double-barrel configuration with dual sliding rails lets you load one barrel while the other is pressing, nearly doubling your throughput.
 - **Customizable Barrel** — Barrel diameter and height can be tailored to your specific material requirements.
 
 ## Core Technology
 
-- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on internal testing, results vary). No clogging, no cleaning between batches.
-- **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 60 Mpa with rapid cylinder return.
+- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). No clogging, no cleaning between batches.
+- **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 60 MPa with rapid cylinder return.
 - **4-Hook Cake Removal** — Innovative 4-hook mechanism ensures easy, reliable cake discharge — even after overnight pressing.
 - **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service under 325-ton pressing force. Actual service life depends on operating conditions and maintenance.
 - **Microcomputer Control** — Automated pressing cycle from loading to finished oil in minutes.

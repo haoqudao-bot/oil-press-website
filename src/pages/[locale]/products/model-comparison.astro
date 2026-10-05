@@ -31,10 +31,12 @@ const modelNames: Record<string, Record<string, string>> = {
   HN300: { en: 'Mini', fr: 'Mini', ar: 'ميني', id: 'Mini' },
   HN325: { en: 'Standard', fr: 'Standard', ar: 'قياسي', id: 'Standar' },
   HN325S: { en: 'Coconut Milk', fr: 'Lait de Coco', ar: 'حليب جوز الهند', id: 'Santan Kelapa' },
-  HN365: { en: 'Heavy Duty (New)', fr: 'Robuste (Nouveau)', ar: 'ثقيل (جديد)', id: 'Heavy Duty (Baru)' },
+  HN355: { en: 'Medium (previous gen.)', fr: 'Moyen (génération précédente)', ar: 'متوسط (الجيل السابق)', id: 'Medium (generasi lama)' },
+  HN365: { en: 'Upgraded Heavy Duty', fr: 'Robuste Amélioré', ar: 'ثقيل مطوّر', id: 'Heavy Duty yang Ditingkatkan' },
   HN400: { en: 'Medium', fr: 'Moyen', ar: 'متوسط', id: 'Medium' },
   HN426: { en: 'Cold Press', fr: 'Pressage à Froid', ar: 'ضغط بارد', id: 'Cold Press' },
-  HN480: { en: 'Cold Press', fr: 'Pressage à Froid', ar: 'ضغط بارد', id: 'Cold Press' },
+  HN480: { en: 'High Pressure', fr: 'Haute Pression', ar: 'ضغط عالٍ', id: 'Tekanan Tinggi' },
+  HN480B: { en: 'Ultra-High-Pressure Cold Press', fr: 'Pressoir à Froid Ultra-Haute Pression', ar: 'عصر بارد فائق الضغط', id: 'Cold Press Tekanan Ultra Tinggi' },
   HN500: { en: 'Ultra High Pressure', fr: 'Ultra Haute Pression', ar: 'ضغط فائق', id: 'Ultra Tekanan Tinggi' },
 };
 
@@ -73,112 +75,134 @@ const seedNames: Record<string, Record<string, string>> = {
   AnySeedDoubleBarrel: { en: 'Any seed + double barrel', fr: 'Toute graine + double-fût', ar: 'أي بذور + برميل مزدوج', id: 'Biji apa pun + double-barrel' },
 };
 
-// ===== Standard models (matches English new design: 7 models, no HN325S) =====
+// ===== Core range: four flagship models =====
 const models = [
-  {
-    model: 'HN300',
-    pressingForce: '300 Tons',
-    systemPressure: '60 Mpa',
-    cakePressure: '25 Mpa/cm²',
-    barrelDiameter: '390 mm',
-    barrelHeight: '800 mm',
-    motorPower: '2.2 KW',
-    weight: '1.2 / 1.5 T',
-    dimensions: '1100×1100×2350 mm',
-    bestFor: { en: 'Small business, startup', fr: 'Petite entreprise, démarrage', ar: 'شركة صغيرة، بداية', id: 'Bisnis kecil, startup' },
-    seeds: ['Sesame', 'Peanut', 'Rapeseed', 'TeaSeed'],
-    slug: 'mini-hydraulic-oil-press',
-    highlight: false,
-  },
   {
     model: 'HN325',
     pressingForce: '325 Tons',
-    systemPressure: '60 Mpa',
-    cakePressure: '27.78 Mpa/cm²',
+    systemPressure: '60 MPa',
+    cakePressure: '27.78 MPa',
     barrelDiameter: '390 mm',
     barrelHeight: '800 mm',
     motorPower: '2.2 KW',
     weight: '1.42 / 1.72 T',
-    dimensions: '1200×1200×2450 mm',
-    bestFor: { en: 'Most popular, versatile', fr: 'Le plus populaire, polyvalent', ar: 'الأكثر شعبية، متعدد الاستخدامات', id: 'Paling populer, serbaguna' },
-    seeds: ['TeaSeed', 'Rapeseed', 'Peanut', 'Soybean', 'Flaxseed'],
+    dimensions: '1200×1200×2450 / 2100×1200×2450 mm',
+    bestFor: { en: 'Best seller · soft & medium seeds', fr: 'Best-seller · graines tendres et moyennes', ar: 'الأكثر مبيعًا · بذور طرية ومتوسطة', id: 'Best seller · biji lunak dan sedang' },
+    seeds: ['Peanut', 'Sesame', 'Rapeseed', 'TeaSeed', 'Soybean'],
     slug: 'standard-hydraulic-oil-press',
     highlight: true,
   },
   {
     model: 'HN365',
     pressingForce: '365 Tons',
-    systemPressure: 'On request',
-    cakePressure: '30 MPa/cm²',
-    barrelDiameter: 'On request',
-    barrelHeight: 'On request',
-    motorPower: 'On request',
-    weight: 'On request',
-    dimensions: 'On request',
-    bestFor: { en: 'Hard seeds, commercial', fr: 'Graines dures, commercial', ar: 'بذور صلبة، تجاري', id: 'Biji keras, komersial' },
-    seeds: ['Walnut', 'TeaSeed', 'Peanut', 'Rapeseed', 'Flaxseed'],
+    systemPressure: '63 MPa',
+    cakePressure: '30 MPa',
+    barrelDiameter: '390 mm',
+    barrelHeight: '800 mm',
+    motorPower: '2.2 KW',
+    weight: '2.1 / 2.5 T',
+    dimensions: '1200×1200×2650 / 2100×1200×2650 mm',
+    bestFor: { en: 'Hard seeds · all-day double station', fr: 'Graines dures · double station toute la journée', ar: 'بذور صلبة · محطتان طوال اليوم', id: 'Biji keras · stasiun ganda sepanjang hari' },
+    seeds: ['Walnut', 'TeaSeed', 'Peanut', 'Sesame', 'Almond'],
     slug: 'hn365-hydraulic-oil-press',
     highlight: true,
   },
   {
-    model: 'HN400',
-    pressingForce: '500 Tons',
-    systemPressure: '63 Mpa',
-    cakePressure: '38 Mpa/cm²',
-    barrelDiameter: '390 mm',
-    barrelHeight: '800 mm',
-    motorPower: '2.2 KW',
-    weight: '2.0 / 2.3 T',
-    dimensions: '1200×1200×2600 mm',
-    bestFor: { en: 'Walnut, high oil content', fr: 'Noix, teneur en huile élevée', ar: 'جوز، محتوى زيت عالي', id: 'Walnut, kandungan minyak tinggi' },
-    seeds: ['TeaSeed', 'Rapeseed', 'Peanut', 'Walnut', 'Flaxseed'],
-    slug: 'medium-hydraulic-oil-press',
-    highlight: false,
-  },
-  {
     model: 'HN426',
     pressingForce: '500 Tons',
-    systemPressure: '70 Mpa',
-    cakePressure: '42 Mpa/cm²',
+    systemPressure: '70 MPa',
+    cakePressure: '42 MPa',
     barrelDiameter: '390 mm',
     barrelHeight: '800 mm',
     motorPower: '2.2 KW',
     weight: '2.4 / 2.7 T',
-    dimensions: '1200×1200×2750 mm',
-    bestFor: { en: 'Cold press, premium quality', fr: 'Pressage à froid, qualité premium', ar: 'ضغط بارد، جودة ممتازة', id: 'Cold press, kualitas premium' },
-    seeds: ['Walnut', 'Almond', 'Apricot', 'TigerNut', 'Yellowhorn'],
+    dimensions: '1200×1200×2750 / 2100×1200×2750 mm',
+    bestFor: { en: 'Cold-press flagship · premium oil', fr: 'Fleuron du pressage à froid · huile premium', ar: 'الرائد في العصر البارد · زيت ممتاز', id: 'Andalan cold press · minyak premium' },
+    seeds: ['Walnut', 'Almond', 'Apricot', 'TeaSeed', 'Flaxseed'],
     slug: 'cold-press-hydraulic-oil-press',
     highlight: true,
   },
   {
-    model: 'HN480',
-    pressingForce: '600 Tons',
-    systemPressure: '72 Mpa',
-    cakePressure: '48 Mpa/cm²',
-    barrelDiameter: '390 mm',
-    barrelHeight: '800 mm',
-    motorPower: '2.2 KW',
-    weight: '2.8 / 3.1 T',
-    dimensions: '1300×1300×2800 mm',
-    bestFor: { en: 'Hard seeds, max yield', fr: 'Graines dures, rendement maximal', ar: 'بذور صلبة، عائد أقصى', id: 'Biji keras, hasil maksimal' },
-    seeds: ['Walnut', 'PineNut', 'Almond', 'Sesame', 'Apricot'],
-    slug: 'ultra-high-pressure-cold-press',
-    highlight: false,
-  },
-  {
     model: 'HN500',
     pressingForce: '620 Tons',
-    systemPressure: '75 Mpa',
-    cakePressure: '52 Mpa/cm²',
+    systemPressure: '75 MPa',
+    cakePressure: '52 MPa',
     barrelDiameter: '390 mm',
     barrelHeight: '800 mm',
     motorPower: '2.2 KW',
     weight: '3.5 / 3.88 T',
-    dimensions: '1200×1200×2750 mm',
-    bestFor: { en: 'Industrial, max capacity', fr: 'Industriel, capacité maximale', ar: 'صناعي، سعة أقصى', id: 'Industri, kapasitas maksimal' },
-    seeds: ['AllSeeds', 'InShellWalnut', 'Yellowhorn', 'TigerNut'],
+    dimensions: '1200×1200×2750 / 2100×1200×2750 mm',
+    bestFor: { en: 'Flagship · hardest seeds, max force', fr: 'Fleuron · graines les plus dures, force maximale', ar: 'الطراز الرائد · أصلب البذور، أقصى قوة', id: 'Andalan · biji terkeras, gaya maksimum' },
+    seeds: ['AllSeeds', 'InShellWalnut', 'Copra', 'Yellowhorn', 'TigerNut'],
     slug: 'ultra-high-pressure-hydraulic-oil-press',
-    highlight: false,
+    highlight: true,
+  },
+];
+
+// ===== Specialized & custom models (compact list) =====
+const customModels = [
+  {
+    model: 'HN300',
+    name: { en: 'Mini', fr: 'Mini', ar: 'ميني', id: 'Mini' },
+    pressingForce: '300 Tons', cakePressure: '25 MPa',
+    note: { en: 'Compact starter press for small workshops', fr: 'Presse de démarrage compacte pour petits ateliers', ar: 'معصرة مدمجة للمبتدئين في الورش الصغيرة', id: 'Mesin pemula ringkas untuk workshop kecil' },
+    slug: 'mini-hydraulic-oil-press',
+  },
+  {
+    model: 'HN355',
+    name: { en: 'Medium (previous gen.)', fr: 'Moyen (génération précédente)', ar: 'متوسط (الجيل السابق)', id: 'Medium (generasi lama)' },
+    pressingForce: '360 Tons', cakePressure: '30.15 MPa',
+    note: { en: 'Previous generation — succeeded by the upgraded HN365', fr: 'Génération précédente — remplacée par le HN365 amélioré', ar: 'الجيل السابق — حلّ محله HN365 المطوّر', id: 'Generasi sebelumnya — digantikan HN365 yang ditingkatkan' },
+    slug: 'medium-hydraulic-oil-press',
+  },
+  {
+    model: 'HN400',
+    name: { en: 'Medium', fr: 'Moyen', ar: 'متوسط', id: 'Medium' },
+    pressingForce: '500 Tons', cakePressure: '38 MPa',
+    note: { en: 'High-throughput medium press for soft & medium seeds', fr: 'Presse moyenne à haut débit pour graines tendres et moyennes', ar: 'معصرة متوسطة بإنتاجية عالية للبذور الطرية والمتوسطة', id: 'Mesin sedang ber-throughput tinggi untuk biji lunak dan sedang' },
+    slug: 'heavy-duty-hydraulic-oil-press',
+  },
+  {
+    model: 'HN480',
+    name: { en: 'High Pressure', fr: 'Haute Pression', ar: 'ضغط عالٍ', id: 'Tekanan Tinggi' },
+    pressingForce: '560 Tons', cakePressure: 'On request',
+    note: { en: '560 t high-pressure step-up between HN426 and HN500', fr: 'Palier haute pression de 560 t entre HN426 et HN500', ar: 'فئة ضغط عالٍ بقوة 560 طن بين HN426 وHN500', id: 'Tingkatan tekanan tinggi 560 t antara HN426 dan HN500' },
+    slug: 'high-pressure-hydraulic-oil-press',
+  },
+  {
+    model: 'HN480B',
+    name: { en: 'Ultra-High-Pressure Cold Press', fr: 'Pressoir à Froid Ultra-Haute Pression', ar: 'عصر بارد فائق الضغط', id: 'Cold Press Tekanan Ultra Tinggi' },
+    pressingForce: '600 Tons', cakePressure: '48 MPa',
+    note: { en: 'Custom 600 t cold-press variant of the HN426, made to order', fr: 'Variante sur mesure 600 t du HN426 pour pressage à froid, fabriquée sur commande', ar: 'نسخة مخصصة للعصر البارد بقوة 600 طن من HN426، تُصنع عند الطلب', id: 'Varian cold press 600 t khusus dari HN426, dibuat sesuai pesanan' },
+    slug: 'ultra-high-pressure-cold-press',
+  },
+  {
+    model: 'HN325/365 Sesame',
+    name: { en: 'Sesame Special', fr: 'Spécial Sésame', ar: 'إصدار السمسم الخاص', id: 'Khusus Wijen' },
+    pressingForce: '325 / 365 T', cakePressure: '47 / 30 MPa',
+    note: { en: '300 mm small barrel, fast cycles, sesame specialist', fr: 'Petit fût de 300 mm, cycles rapides, spécialiste du sésame', ar: 'برميل صغير 300 مم، دورات سريعة، متخصص السمسم', id: 'Barel kecil 300 mm, siklus cepat, spesialis wijen' },
+    slug: 'sesame-oil-hydraulic-press',
+  },
+  {
+    model: '300 Type Coconut',
+    name: { en: 'Coconut Milk', fr: 'Lait de Coco', ar: 'حليب جوز الهند', id: 'Santan Kelapa' },
+    pressingForce: '300 Tons', cakePressure: '10.83 MPa',
+    note: { en: '600 mm barrel, full 304 stainless, coconut milk extraction', fr: 'Fût de 600 mm, inox 304 intégral, extraction du lait de coco', ar: 'برميل 600 مم، ستانلس 304 كامل، استخلاص حليب جوز الهند', id: 'Barel 600 mm, stainless 304 penuh, ekstraksi santan' },
+    slug: 'coconut-oil-hydraulic-press',
+  },
+  {
+    model: 'HN325S',
+    name: { en: 'Stainless Coconut Milk', fr: 'Lait de Coco Inox', ar: 'حليب جوز الهند ستانلس', id: 'Santan Stainless' },
+    pressingForce: '325 Tons', cakePressure: '27.78 MPa',
+    note: { en: '304 stainless coconut milk press, food-grade wet pressing', fr: 'Presse à lait de coco en inox 304, pressage humide alimentaire', ar: 'معصرة حليب جوز الهند ستانلس 304، عصر رطب غذائي', id: 'Mesin santan stainless 304, pengepresan basah food-grade' },
+    slug: 'stainless-steel-hydraulic-oil-press',
+  },
+  {
+    model: 'HN325LB',
+    name: { en: 'Large Barrel', fr: 'Grand Fût', ar: 'برميل كبير', id: 'Barel Besar' },
+    pressingForce: '325 Tons', cakePressure: '10.64 MPa',
+    note: { en: '630×1000 mm barrel (~312 L), oil residue & dehydration', fr: 'Fût 630×1000 mm (~312 L), résidus d\'huile et déshydratation', ar: 'برميل 630×1000 مم (~312 لتر)، بقايا الزيت والتجفيف', id: 'Barel 630×1000 mm (~312 L), residu minyak & dehidrasi' },
+    slug: 'large-barrel-hydraulic-oil-press',
   },
 ];
 
@@ -204,13 +228,13 @@ const seedCards = [
     badgeColor: 'blue',
     seeds: ['TeaSeed', 'Walnut', 'Flaxseed'],
     seedHint: { en: 'Multi-seed workshop', fr: 'Atelier multi-graines', ar: 'ورشة متعددة البذور', id: 'Workshop multi-biji' },
-    model: 'HN365 / 400',
+    model: 'HN365',
     modelColor: 'steel',
     desc: {
-      en: '365–410 real tons. Entry to mid cold-press for most medium seeds — bottled-oil grade.',
-      fr: '365–410 tonnes réelles. Pressage à froid d\'entrée à moyen pour la plupart des graines moyennes — qualité huile embouteillée.',
-      ar: '365–410 أطنان حقيقية. ضغط بارد من المبتدئ إلى المتوسط لمعظم البذور المتوسطة — درجة زيت معبأ.',
-      id: '365–410 ton nyata. Cold press pemula hingga menengah untuk sebagian besar biji sedang — kualitas minyak botolan.',
+      en: '365 tons, 30 MPa cake pressure on a vertical double-station frame — the upgrade pick for medium seeds and all-day batches.',
+      fr: '365 tonnes, pression de gâteau de 30 MPa sur châssis vertical double station — le choix de montée en gamme pour les graines moyennes et les lots toute la journée.',
+      ar: '365 طناً، ضغط كعكة 30 ميجاباسكال على هيكل رأسي مزدوج المحطات — خيار الترقية للبذور المتوسطة ودفعات اليوم الكامل.',
+      id: '365 ton, tekanan cake 30 MPa pada rangka stasiun ganda vertikal — pilihan peningkatan untuk biji sedang dan batch sepanjang hari.',
     },
     href: '/products/hn365-hydraulic-oil-press/',
   },
@@ -222,10 +246,10 @@ const seedCards = [
     model: 'HN426',
     modelColor: 'green',
     desc: {
-      en: 'Real 500 tons, 42 MPa/cm² cake pressure. Sweet spot for all medium-hard premium seeds.',
-      fr: '500 tonnes réelles, pression de gâteau 42 MPa/cm². Point adapté pour toutes les graines premium mi-dures.',
+      en: 'Real 500 tons, 42 MPa cake pressure. Sweet spot for all medium-hard premium seeds.',
+      fr: '500 tonnes réelles, pression de gâteau 42 MPa. Point adapté pour toutes les graines premium mi-dures.',
       ar: '500 طن حقيقي، ضغط كعكة 42 ميجاباسكال/سم². النقطة المناسبة لجميع البذور المتوسطة الصلابة المميزة.',
-      id: '500 ton nyata, tekanan cake 42 MPa/cm². Titik manis untuk semua biji premium sedang-keras.',
+      id: '500 ton nyata, tekanan cake 42 MPa. Titik manis untuk semua biji premium sedang-keras.',
     },
     href: '/products/cold-press-hydraulic-oil-press/',
   },
@@ -234,13 +258,13 @@ const seedCards = [
     badgeColor: 'steel',
     seeds: ['Copra', 'Hemp', 'PineNut'],
     seedHint: { en: 'Hard seeds', fr: 'Graines dures', ar: 'بذور صلبة', id: 'Biji keras' },
-    model: 'HN480 / 500',
+    model: 'HN500',
     modelColor: 'steel',
     desc: {
-      en: '600–630 real ton flagship. Only reliable choice for super-hard seeds. High volume → double-barrel.',
-      fr: 'Navire amiral 600–630 tonnes réelles. Seul choix fiable pour les graines super-dures. Volume élevé → double-fût.',
-      ar: 'نموذج رائد 600–630 طن حقيقي. الخيار الموثوق الوحيد للبذور فائقة الصلابة. حجم كبير → برميل مزدوج.',
-      id: 'Andalan 600–630 ton nyata. Satu-satunya pilihan andal untuk biji super-keras. Volume tinggi → double-barrel.',
+      en: '620-ton flagship, 52 MPa cake pressure — the highest force in the range. First choice for super-hard seeds; double-barrel for high volume.',
+      fr: 'Fleuron de 620 tonnes, pression de gâteau de 52 MPa — la force la plus élevée de la gamme. Premier choix pour les graines super-dures ; double-fût pour gros volume.',
+      ar: 'طراز رائد بقوة 620 طناً، ضغط كعكة 52 ميجاباسكال — أعلى قوة في التشكيلة. الخيار الأول للبذور فائقة الصلابة؛ برميل مزدوج للأحجام الكبيرة.',
+      id: 'Andalan 620 ton, tekanan cake 52 MPa — gaya tertinggi dalam lini. Pilihan pertama untuk biji super-keras; double-barrel untuk volume tinggi.',
     },
     href: '/products/ultra-high-pressure-hydraulic-oil-press/',
   },
@@ -252,10 +276,10 @@ const seedCards = [
     model: 'HN325/365 Sesame',
     modelColor: 'purple',
     desc: {
-      en: '300 mm small barrel concentrates pressure 47–51 MPa/cm². Fast cycle preserves aroma, max yield.',
-      fr: 'Petit fût de 300 mm concentre la pression 47–51 MPa/cm². Cycle rapide préserve l\'arôme, rendement maximal.',
+      en: '300 mm small barrel concentrates pressure 47–51 MPa. Fast cycle preserves aroma, max yield.',
+      fr: 'Petit fût de 300 mm concentre la pression 47–51 MPa. Cycle rapide préserve l\'arôme, rendement maximal.',
       ar: 'برميل صغير 300 مم يركز الضغط 47–51 ميجاباسكال/سم². دورة سريعة تحافظ على النكهة، أقصى عائد.',
-      id: 'Barel kecil 300 mm memusatkan tekanan 47–51 MPa/cm². Siklus cepat menjaga aroma, hasil maksimal.',
+      id: 'Barel kecil 300 mm memusatkan tekanan 47–51 MPa. Siklus cepat menjaga aroma, hasil maksimal.',
     },
     href: '/products/sesame-oil-hydraulic-press/',
   },
@@ -336,13 +360,13 @@ const scenarioCards = [
       ar: 'ورشة متوسطة · بذور مميزة متغيرة',
       id: 'Workshop menengah · biji premium variatif',
     },
-    model: 'HN365 / 400',
+    model: 'HN365',
     modelColor: 'blue',
     desc: {
-      en: '365–410 real tons. Entry to mid cold-press for tea seed, walnut, flax — bottled-oil grade.',
-      fr: '365–410 tonnes réelles. Pressage à froid d\'entrée à moyen pour graine de thé, noix, lin — qualité huile embouteillée.',
-      ar: '365–410 أطنان حقيقية. ضغط بارد من المبتدئ إلى المتوسط لبذور الشاي والجوز والكتان — درجة زيت معبأ.',
-      id: '365–410 ton nyata. Cold press pemula hingga menengah untuk biji teh, walnut, flax — kualitas minyak botolan.',
+      en: '365 t, 30 MPa cake pressure. Vertical double-station, 3 cm steel plate, cartridge valves — the upgrade for tea seed, walnut and medium seeds.',
+      fr: '365 t, pression de gâteau de 30 MPa. Double station verticale, tôle d\'acier de 3 cm, vannes à cartouche — la montée en gamme pour graine de thé, noix et graines moyennes.',
+      ar: '365 طناً، ضغط كعكة 30 ميجاباسكال. محطتان رأسيتان، صفيحة فولذية 3 سم، صمامات خرطوشية — ترقية لبذور الشاي والجوز والبذور المتوسطة.',
+      id: '365 t, tekanan cake 30 MPa. Stasiun ganda vertikal, pelat baja 3 cm, katup kartrid — peningkatan untuk biji teh, kenari, dan biji sedang.',
     },
     href: '/products/hn365-hydraulic-oil-press/',
   },
@@ -374,13 +398,13 @@ const scenarioCards = [
       ar: 'مصنع · مصدّر بالجملة',
       id: 'Pabrik · eksportir grosir',
     },
-    model: 'HN480 / 500',
+    model: 'HN500',
     modelColor: 'steel',
     desc: {
-      en: '600–630 real ton flagship. Only reliable choice for super-hard seeds. Double-barrel = max cycles.',
-      fr: 'Navire amiral 600–630 tonnes réelles. Seul choix fiable pour les graines super-dures. Double-fût = cycles maximaux.',
-      ar: 'نموذج رائد 600–630 طن حقيقي. الخيار الموثوق الوحيد للبذور فائقة الصلابة. برميل مزدوج = أقصى دورات.',
-      id: 'Andalan 600–630 ton nyata. Satu-satunya pilihan andal untuk biji super-keras. Double-barrel = siklus maksimal.',
+      en: '620-ton flagship with 52 MPa cake pressure. The reliable choice for super-hard seeds. Double-barrel = max cycles.',
+      fr: 'Fleuron de 620 tonnes avec pression de gâteau de 52 MPa. Le choix fiable pour les graines super-dures. Double-fût = cycles maximaux.',
+      ar: 'طراز رائد بقوة 620 طناً مع ضغط كعكة 52 ميجاباسكال. الخيار الموثوق للبذور فائقة الصلابة. برميل مزدوج = أقصى دورات.',
+      id: 'Andalan 620 ton dengan tekanan cake 52 MPa. Pilihan andal untuk biji super-keras. Double-barrel = siklus maksimal.',
     },
     href: '/products/ultra-high-pressure-hydraulic-oil-press/',
   },
@@ -463,7 +487,6 @@ const ui = {
   statYears: { en: 'Years of manufacturing', fr: 'Années de fabrication', ar: 'سنوات التصنيع', id: 'Tahun manufaktur' },
   statCountries: { en: 'Countries served', fr: 'Pays desservis', ar: 'الدول المخدومة', id: 'Negara dilayani' },
   statEngineers: { en: 'Engineers & workers', fr: 'Ingénieurs et ouvriers', ar: 'المهندسون والعمال', id: 'Insinyur & pekerja' },
-  statFacility: { en: 'm² production facility', fr: 'm² d\'usine de production', ar: 'م² منشأة الإنتاج', id: 'm² fasilitas produksi' },
   statMachines: { en: 'Buyers served', fr: 'Acheteurs servis', ar: 'مشترين مخدومين', id: 'Pembeli dilayani' },
   tabSeed: { en: '📊 Pick by Seed', fr: '📊 Choisir par graine', ar: '📊 اختر حسب البذور', id: '📊 Pilih berdasarkan Biji' },
   tabScenario: { en: '🎴 Pick by Scenario', fr: '🎴 Choisir par scénario', ar: '🎴 اختر حسب السيناريو', id: '🎴 Pilih berdasarkan Skenario' },
@@ -481,13 +504,27 @@ const ui = {
   tipsTitle: { en: 'Selection tips', fr: 'Conseils de sélection', ar: 'نصائح الاختيار', id: 'Tips pemilihan' },
   tipsSubtitle: { en: 'Three things to know before comparing specs.', fr: 'Trois choses à savoir avant de comparer les spécifications.', ar: 'ثلاثة أشياء يجب معرفتها قبل مقارنة المواصفات.', id: 'Tiga hal yang perlu diketahui sebelum membandingkan spesifikasi.' },
   tip1Title: { en: 'Model = Force, NOT Capacity', fr: 'Modèle = Force, PAS Capacité', ar: 'النموذج = قوة، وليس سعة', id: 'Model = Gaya, BUKAN Kapasitas' },
-  tip1Body: { en: 'Same barrel → same weight per batch. 390 mm: ≤ 100 kg/batch (HN300–HN500 all same). 300 mm small barrel: ≤ 60 kg/batch.', fr: 'Même fût → même poids par lot. 390 mm : ≤ 100 kg/lot (HN300–HN500 tous identiques). Petit fût 300 mm : ≤ 60 kg/lot.', ar: 'نفس البرميل → نفس الوزن لكل دفعة. 390 مم: ≤ 100 كجم/دفعة (HN300–HN500 جميعها متساوية). برميل صغير 300 مم: ≤ 60 كجم/دفعة.', id: 'Barel sama → berat per batch sama. 390 mm: ≤ 100 kg/batch (HN300–HN500 semua sama). Barel kecil 300 mm: ≤ 60 kg/batch.' },
+  tip1Body: { en: 'Same barrel → same weight per batch. Standard 390 mm models: ≤ 100 kg/batch (HN300, HN325, HN400, HN426, HN500); the HN365 double-station frame is configured to order. 300 mm sesame barrel: ≤ 60 kg/batch.', fr: 'Même fût → même poids par lot. Modèles standard en 390 mm : ≤ 100 kg/lot (HN300, HN325, HN400, HN426, HN500) ; le châssis double station du HN365 est configuré sur commande. Petit fût sésame 300 mm : ≤ 60 kg/lot.', ar: 'نفس البرميل → نفس الوزن لكل دفعة. الطرازات القياسية 390 مم: ≤ 100 كجم/دفعة (HN300، HN325، HN400، HN426، HN500)؛ يُهيأ هيكل HN365 مزدوج المحطات عند الطلب. برميل السمسم 300 مم: ≤ 60 كجم/دفعة.', id: 'Barel sama → berat per batch sama. Model standar 390 mm: ≤ 100 kg/batch (HN300, HN325, HN400, HN426, HN500); rangka stasiun ganda HN365 dikonfigurasi sesuai pesanan. Barel wijen 300 mm: ≤ 60 kg/batch.' },
   tip2Title: { en: 'Pick by Seed Hardness', fr: 'Choisir par dureté de graine', ar: 'اختر حسب صلابة البذور', id: 'Pilih berdasarkan Kekerasan Biji' },
-  tip2Body: { en: 'Soft 300–400T; Medium 400–500T; Hard 600–630T. Bigger model only presses harder seeds more cleanly.', fr: 'Tendre 300–400 T ; Moyen 400–500 T ; Dur 600–630 T. Un modèle plus grand ne presse que les graines plus dures plus proprement.', ar: 'طرية 300–400 طن؛ متوسطة 400–500 طن؛ صلبة 600–630 طن. النموذج الأكبر يضغط فقط البذور الأصلب بشكل أنظف.', id: 'Lunak 300–400 T; Sedang 400–500 T; Keras 600–630 T. Model lebih besar hanya menekan biji lebih keras dengan lebih bersih.' },
+  tip2Body: { en: 'Soft seeds → HN325 (325 t); hard seeds & long shifts → HN365 (365 t); premium cold pressing → HN426 (500 t); the hardest seeds → HN500 (620 t, 52 MPa cake pressure).', fr: 'Graines tendres → HN325 (325 t) ; graines dures et longues équipes → HN365 (365 t) ; pressage à froid premium → HN426 (500 t) ; graines les plus dures → HN500 (620 t, pression de gâteau de 52 MPa).', ar: 'البذور الطرية ← HN325 (325 طن)؛ البذور الصلبة والورديات الطويلة ← HN365 (365 طن)؛ العصر البارد الممتاز ← HN426 (500 طن)؛ أصلب البذور ← HN500 (620 طن، ضغط كعكة 52 ميجاباسكال).', id: 'Biji lunak → HN325 (325 t); biji keras & shift panjang → HN365 (365 t); cold press premium → HN426 (500 t); biji terkeras → HN500 (620 t, tekanan cake 52 MPa).' },
   tip3Title: { en: 'More Batches → Double-Barrel', fr: 'Plus de lots → Double-fût', ar: 'المزيد من الدفعات → برميل مزدوج', id: 'Lebih Banyak Batch → Double-Barrel' },
   tip3Body: { en: 'One presses while you load/unload the other. Removes idle time between batches — +30–50% more daily batches.', fr: 'L\'un presse pendant que vous chargez/déchargez l\'autre. Supprime le temps mort entre les lots — +30–50% de lots quotidiens supplémentaires.', ar: 'واحد يضغط بينما تُحمِّل/تُفرِّغ الآخر. يزيل وقت الخمول بين الدفعات — +30–50% دفعات يومية إضافية.', id: 'Satu menekan sementara Anda memuat/membongkar yang lain. Menghilangkan waktu menganggur antar batch — +30–50% lebih banyak batch harian.' },
-  specTitle: { en: 'Full spec comparison table', fr: 'Tableau complet de comparaison des spécifications', ar: 'جدول مقارنة المواصفات الكامل', id: 'Tabel perbandingan spesifikasi lengkap' },
-  specSubtitle: { en: 'Tap to expand the complete model side-by-side comparison with real parameter values.', fr: 'Touchez pour développer la comparaison complète côte à côte des modèles avec des valeurs de paramètres réelles.', ar: 'اضغط لتوسيع مقارنة النماذج الكاملة جنباً إلى جنب مع قيم المعلمات الحقيقية.', id: 'Ketuk untuk memperluas perbandingan model berdampingan lengkap dengan nilai parameter nyata.' },
+  specTitle: { en: 'Core range spec comparison', fr: 'Comparaison des spécifications de la gamme principale', ar: 'مقارنة مواصفات التشكيلة الأساسية', id: 'Perbandingan spesifikasi lini inti' },
+  specSubtitle: { en: 'Complete side-by-side parameters for the four core models.', fr: 'Paramètres côte à côte complets pour les quatre modèles principaux.', ar: 'معلمات كاملة جنباً إلى جنب للطرازات الأساسية الأربعة.', id: 'Parameter lengkap berdampingan untuk empat model inti.' },
+  coreBadge: { en: 'CORE RANGE — 4 FLAGSHIP MODELS', fr: 'GAMME PRINCIPALE — 4 MODÈLES PHARES', ar: 'التشكيلة الأساسية — 4 طرازات رائدة', id: 'LINI INTI — 4 MODEL ANDALAN' },
+  coreHeading: { en: 'HN325 · HN365 · HN426 · HN500', fr: 'HN325 · HN365 · HN426 · HN500', ar: 'HN325 · HN365 · HN426 · HN500', id: 'HN325 · HN365 · HN426 · HN500' },
+  coreSubtitle: { en: 'Ninety percent of oil mills choose from these four. Pick by pressing force and cake pressure — every one of them does both hot and cold pressing.', fr: 'Quatre-vingt-dix pour cent des huileries choisissent parmi ces quatre modèles. Choisissez par force de pressage et pression de gâteau — chacun fait aussi bien le pressage à chaud qu\'à froid.', ar: 'تختار تسعون بالمئة من معاصر الزيت من بين هذه الطرازات الأربعة. اختر حسب قوة الضغط وضغط الكعكة — كل منها يقوم بالعصر الساخن والبارد.', id: 'Sembilan puluh persen pabrik minyak memilih dari empat model ini. Pilih berdasarkan gaya tekan dan tekanan cake — semuanya bisa press panas dan dingin.' },
+  specFootnote: { en: '* The HN365 is the upgraded successor to the HN355 on the vertical double-station frame (3 cm high-strength steel plate, cartridge valve block, 365 t force, 30 MPa cake pressure). Barrel, motor, weight and footprint carry over from the HN355 platform; the vertical double-station configuration and other options are confirmed on the quotation data sheet. The HN325, HN426 and HN500 share the standard 390 × 800 mm barrel at up to 100 kg per batch.', fr: '* Le HN365 est la version améliorée qui succède au HN355 sur le châssis vertical double station (tôle d\'acier haute résistance de 3 cm, bloc de valves à cartouches, force de 365 t, pression de gâteau de 30 MPa). Fût, moteur, poids et encombrement reprennent la plateforme HN355 ; la configuration verticale double station et les autres options sont confirmées sur la fiche technique du devis. Les HN325, HN426 et HN500 partagent le fût standard 390 × 800 mm jusqu\'à 100 kg par lot.', ar: '* HN365 هو النسخة المطورة من HN355 على هيكل رأسي مزدوج المحطات (صفيحة فولاذية عالية المقاومة 3 سم، بلوك صمامات خرطوشية، قوة 365 طن، ضغط كعكة 30 ميجاباسكال). البرميل والمحرك والوزن والأبعاد موروثة من منصة HN355؛ ويُؤكد تكوين المحطتين الرأسيتين والخيارات الأخرى في ورقة بيانات عرض السعر. تشترك HN325 وHN426 وHN500 في البرميل القياسي 390 × 800 مم حتى 100 كجم لكل دفعة.', id: '* HN365 adalah penerus yang ditingkatkan dari HN355 pada rangka stasiun ganda vertikal (pelat baja berkekuatan tinggi 3 cm, blok katup kartrid, gaya 365 t, tekanan cake 30 MPa). Barel, motor, bobot, dan footprint mewarisi platform HN355; konfigurasi stasiun ganda vertikal dan opsi lainnya dikonfirmasi pada lembar data penawaran. HN325, HN426, dan HN500 berbagi barel standar 390 × 800 mm hingga 100 kg per batch.' },
+  customBadge: { en: 'SPECIALIZED & CUSTOM', fr: 'SPÉCIALISÉ & SUR MESURE', ar: 'متخصص ومخصص', id: 'SPESIALIS & KHUSUS' },
+  customTitle: { en: 'Specialized & made-to-order models', fr: 'Modèles spécialisés et fabriqués sur commande', ar: 'طرازات متخصصة ومصنوعة عند الطلب', id: 'Model spesialis dan dibuat sesuai pesanan' },
+  customSubtitle: { en: 'Compact starters, previous generations and application-specific machines. Tell us your seed and target output — we will confirm whether a core model fits better.', fr: 'Presses de démarrage compactes, générations précédentes et machines dédiées à une application. Dites-nous votre graine et votre production cible — nous confirmerons si un modèle principal convient mieux.', ar: 'معاصر مدمجة للمبتدئين وأجيال سابقة وماكينات مخصصة لتطبيقات معينة. أخبرنا ببذورك والإنتاج المستهدف — سنؤكد ما إذا كان أحد طرازات التشكيلة الأساسية أنسب.', id: 'Mesin pemula ringkas, generasi sebelumnya, dan mesin khusus aplikasi. Beritahu kami biji dan target output Anda — kami akan konfirmasi apakah model inti lebih cocok.' },
+  customExpand: { en: 'View the full specialized & custom model table', fr: 'Voir le tableau complet des modèles spécialisés et sur mesure', ar: 'عرض الجدول الكامل للطرازات المتخصصة والمخصصة', id: 'Lihat tabel lengkap model spesialis dan khusus' },
+  customColModel: { en: 'Model', fr: 'Modèle', ar: 'النموذج', id: 'Model' },
+  customColForce: { en: 'Pressing force', fr: 'Force de pressage', ar: 'قوة الضغط', id: 'Gaya tekan' },
+  customColCake: { en: 'Cake pressure', fr: 'Pression de gâteau', ar: 'ضغط الكعكة', id: 'Tekanan cake' },
+  customColNote: { en: 'Positioning', fr: 'Positionnement', ar: 'التصنيف', id: 'Posisi' },
+  customColPage: { en: 'Page', fr: 'Page', ar: 'الصفحة', id: 'Halaman' },
+  customView: { en: 'View', fr: 'Voir', ar: 'عرض', id: 'Lihat' },
   specSpecification: { en: 'Specification', fr: 'Spécification', ar: 'المواصفات', id: 'Spesifikasi' },
   specPressingForce: { en: 'Real pressing force', fr: 'Force de pressage réelle', ar: 'قوة الضغط الحقيقية', id: 'Gaya penekanan nyata' },
   specSystemPressure: { en: 'System pressure', fr: 'Pression système', ar: 'ضغط النظام', id: 'Tekanan sistem' },
@@ -523,10 +560,10 @@ const faqs = [
       id: 'Bagaimana cara memilih model penekan minyak Haonuo yang tepat?',
     },
     answer: {
-      en: 'Pick by seed type or scenario above. Every standard model presses most oil seeds — the difference is pressing force (harder seeds need larger tonnage) and barrel config (single for startup, double for commercial). For sesame use the Sesame Special, for coconut milk use the 300 Type Coconut.',
-      fr: 'Choisissez par type de graine ou scénario ci-dessus. Chaque modèle standard presse la plupart des graines oléagineuses — la différence est la force de pressage (les graines plus dures nécessitent une force plus élevée) et la configuration du fût (simple pour démarrage, double pour commercial). Pour le sésame, utilisez le Sésame Spécial, pour le lait de coco, utilisez le 300 Type Coco.',
-      ar: 'اختر حسب نوع البذور أو السيناريو أعلاه. كل نموذج قياسي يضغط معظم البذور الزيتية — الفرق هو قوة الضغط (البذور الأصلب تحتاج قوة أكبر) وتكوين البرميل (مفرد للبدء، مزدوج للتجاري). للسمسم استخدم السمسم الخاص، لحليب جوز الهند استخدم 300 Type Coconut.',
-      id: 'Pilih berdasarkan jenis biji atau skenario di atas. Setiap model standar menekan sebagian besar biji minyak — perbedaannya adalah gaya penekanan (biji yang lebih keras butuh tonnage lebih besar) dan konfigurasi barel (tunggal untuk startup, ganda untuk komersial). Untuk wijen gunakan Spesialis Wijen, untuk santan kelapa gunakan 300 Type Coconut.',
+      en: 'Most buyers choose one of the four core models by seed hardness: HN325 for everyday soft seeds, HN365 for hard seeds and all-day double-station work, HN426 for premium cold pressing, and HN500 for the hardest seeds at maximum force. Specialized models cover sesame, coconut milk and oil-residue dehydration.',
+      fr: 'La plupart des acheteurs choisissent l\'un des quatre modèles principaux selon la dureté des graines : HN325 pour les graines tendres courantes, HN365 pour les graines dures et le travail en double station toute la journée, HN426 pour le pressage à froid premium, et HN500 pour les graines les plus dures à force maximale. Les modèles spécialisés couvrent le sésame, le lait de coco et la déshydratation des résidus d\'huile.',
+      ar: 'يختار معظم المشترين أحد الطرازات الأساسية الأربعة حسب صلابة البذور: HN325 للبذور الطرية اليومية، وHN365 للبذور الصلبة والعمل مزدوج المحطات طوال اليوم، وHN426 للعصر البارد الممتاز، وHN500 لأصلب البذور بأقصى قوة. تغطي الطرازات المتخصصة السمسم وحليب جوز الهند وتجفيف بقايا الزيت.',
+      id: 'Sebagian besar pembeli memilih salah satu dari empat model inti berdasarkan kekerasan biji: HN325 untuk biji lunak sehari-hari, HN365 untuk biji keras dan kerja stasiun ganda sepanjang hari, HN426 untuk cold press premium, dan HN500 untuk biji terkeras dengan gaya maksimum. Model spesialis mencakup wijen, santan kelapa, dan dehidrasi residu minyak.',
     },
   },
   {
@@ -537,10 +574,10 @@ const faqs = [
       id: 'Apakah nomor model yang lebih tinggi berarti lebih banyak kg per batch?',
     },
     answer: {
-      en: 'No. Every standard model holds the same 100 kg per batch (390 mm barrel). Higher model number = more pressing force for harder seeds. To press more batches per shift, add a double barrel — not a bigger model number.',
-      fr: 'Non. Chaque modèle standard contient le même 100 kg par lot (fût de 390 mm). Un numéro de modèle plus élevé = plus de force de pressage pour les graines plus dures. Pour presser plus de lots par quart, ajoutez un double-fût — pas un plus grand numéro de modèle.',
-      ar: 'لا. كل نموذج قياسي يحمل نفس 100 كجم لكل دفعة (برميل 390 مم). رقم النموذج الأعلى = المزيد من قوة الضغط للبذور الأصلب. لضغط المزيد من الدفعات لكل وردية، أضف برميل مزدوج — وليس رقم نموذج أكبر.',
-      id: 'Tidak. Setiap model standar menampung 100 kg per batch yang sama (barel 390 mm). Nomor model lebih tinggi = lebih banyak gaya penekanan untuk biji lebih keras. Untuk menekan lebih banyak batch per shift, tambahkan double-barrel — bukan nomor model yang lebih besar.',
+      en: 'No. The model number indicates pressing force, not batch capacity. The HN325, HN426 and HN500 share the same 390 mm barrel at up to 100 kg per batch; the HN365 is a vertical double-station frame configured to order. To run more batches per shift, choose double-barrel configuration — not a bigger model number.',
+      fr: 'Non. Le numéro de modèle indique la force de pressage, pas la capacité par lot. Les HN325, HN426 et HN500 partagent le même fût de 390 mm jusqu\'à 100 kg par lot ; le HN365 est un châssis vertical double station configuré sur commande. Pour traiter plus de lots par équipe, choisissez la configuration double-fût — pas un numéro de modèle plus élevé.',
+      ar: 'لا. رقم الطراز يشير إلى قوة الضغط، وليس سعة الدفعة. تشترك HN325 وHN426 وHN500 في نفس البرميل 390 مم حتى 100 كجم لكل دفعة؛ أما HN365 فهو هيكل رأسي مزدوج المحطات يُهيأ عند الطلب. لتشغيل دفعات أكثر لكل وردية، اختر تكوين البرميل المزدوج — وليس رقم طراز أكبر.',
+      id: 'Tidak. Nomor model menunjukkan gaya tekan, bukan kapasitas batch. HN325, HN426, dan HN500 berbagi barel 390 mm yang sama hingga 100 kg per batch; HN365 adalah rangka stasiun ganda vertikal yang dikonfigurasi sesuai pesanan. Untuk menjalankan lebih banyak batch per shift, pilih konfigurasi double-barrel — bukan nomor model yang lebih besar.',
     },
   },
   {
@@ -551,10 +588,10 @@ const faqs = [
       id: 'Barel tunggal atau ganda?',
     },
     answer: {
-      en: 'Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn\'t press 2 batches at once — it shares one hydraulic system between two barrels.',
-      fr: 'Démarrage / test du marché → fût simple (coût réduit, compact). Commercial / opération continue → double-fût (l\'un presse, l\'autre charge, élimine le temps mort entre les lots). Le double-fût ne presse pas 2 lots à la fois — il partage un système hydraulique entre deux fûts.',
-      ar: 'بدء / اختبار السوق → برميل مفرد (تكلفة أقل، مدمج). تجاري / تشغيل مستمر → برميل مزدوج (واحد يضغط، والآخر يُحمَّل، يلغي وقت الخمول بين الدفعات). البرميل المزدوج لا يضغط دفعتين في وقت واحد — بل يشترك في نظام هيدروليكي واحد بين برميلين.',
-      id: 'Startup / uji pasar → barel tunggal (biaya lebih rendah, ringkas). Komersial / operasi kontinu → barel ganda (satu menekan, yang lain dimuat, menghilangkan waktu menganggur antar batch). Barel ganda tidak menekan 2 batch sekaligus — ia berbagi satu sistem hidrolik antara dua barel.',
+      en: 'Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn\'t press 2 batches at once — it shares one hydraulic system between two barrels. The HN365 extends this with an alternating vertical double-station layout.',
+      fr: 'Démarrage / test du marché → fût simple (coût réduit, compact). Commercial / opération continue → double-fût (l\'un presse, l\'autre charge, élimine le temps mort entre les lots). Le double-fût ne presse pas 2 lots à la fois — il partage un système hydraulique entre deux fûts. Le HN365 prolonge cette configuration avec une disposition verticale à double station alternée.',
+      ar: 'بدء / اختبار السوق → برميل مفرد (تكلفة أقل، مدمج). تجاري / تشغيل مستمر → برميل مزدوج (واحد يضغط، والآخر يُحمَّل، يلغي وقت الخمول بين الدفعات). البرميل المزدوج لا يضغط دفعتين في وقت واحد — بل يشترك في نظام هيدروليكي واحد بين برميلين. يوسع HN365 هذا التكوين بتصميم رأسي مزدوج المحطات بالتناوب.',
+      id: 'Startup / uji pasar → barel tunggal (biaya lebih rendah, ringkas). Komersial / operasi kontinu → barel ganda (satu menekan, yang lain dimuat, menghilangkan waktu menganggur antar batch). Barel ganda tidak menekan 2 batch sekaligus — ia berbagi satu sistem hidrolik antara dua barel. HN365 memperluas konfigurasi ini dengan tata letak stasiun ganda vertikal yang bergantian.',
     },
   },
   {
@@ -565,10 +602,10 @@ const faqs = [
       id: 'Apa perbedaan antara cold press dan hot press?',
     },
     answer: {
-      en: 'Cold press (HN426+) extracts oil without heating seeds — preserves nutrients, flavor, color for premium-grade oil. Hot press roasts seeds first for faster yield at standard prices. Cold press can also do hot press; hot press cannot do cold press.',
-      fr: 'Le pressage à froid (HN426+) extrait l\'huile sans chauffer les graines — préserve les nutriments, la saveur, la couleur pour une huile de qualité premium. Le pressage à chaud grille d\'abord les graines pour un rendement plus rapide à des prix standard. Le pressage à froid peut aussi faire du pressage à chaud ; le pressage à chaud ne peut pas faire du pressage à froid.',
-      ar: 'الضغط البارد (HN426+) يستخرج الزيت دون تسخين البذور — يحافظ على المغذيات والنكهة واللون لزيت درجة ممتازة. الضغط الساخن يحمص البذور أولاً للحصول على عائد أسرع بأسعار قياسية. الضغط البارد يمكنه أيضًا القيام بالضغط الساخن؛ الضغط الساخن لا يمكنه القيام بالضغط البارد.',
-      id: 'Cold press (HN426+) mengekstraksi minyak tanpa memanaskan biji — menjaga nutrisi, rasa, warna untuk minyak kelas premium. Hot press memanggang biji dulu untuk hasil lebih cepat dengan harga standar. Cold press juga bisa melakukan hot press; hot press tidak bisa melakukan cold press.',
+      en: 'Every Haonuo hydraulic press can cold press — cold and hot pressing differ in seed preparation, not the machine. The HN426 (500 t, 42 MPa cake pressure) is the cold-press flagship for premium oil; the HN480B is a made-to-order 600 t variant for the hardest cold-press materials. The HN325 and HN365 are the usual choices when most production is hot-pressed.',
+      fr: 'Chaque presse hydraulique Haonuo peut presser à froid — le pressage à froid et à chaud diffère par la préparation des graines, pas par la machine. Le HN426 (500 t, pression de gâteau de 42 MPa) est le fleuron du pressage à froid pour l\'huile premium ; le HN480B est une variante 600 t sur commande pour les matières de pressage à froid les plus dures. Les HN325 et HN365 sont les choix habituels lorsque la production est majoritairement pressée à chaud.',
+      ar: 'كل معصرة هيدروليكية من Haonuo يمكنها العصر البارد — يختلف العصر البارد والساخن في تحضير البذور، وليس في الماكينة. HN426 (500 طن، ضغط كعكة 42 ميجاباسكال) هو رائد العصر البارد للزيوت الممتازة؛ وHN480B نسخة بقوة 600 طن تُصنع عند الطلب لأصلب مواد العصر البارد. وHN325 وHN365 هما الخياران المعتادان عندما يكون معظم الإنتاج بالعصر الساخن.',
+      id: 'Setiap penekan hidrolik Haonuo bisa cold press — cold dan hot press berbeda pada penyiapan biji, bukan mesinnya. HN426 (500 t, tekanan cake 42 MPa) adalah andalan cold press untuk minyak premium; HN480B adalah varian 600 t sesuai pesanan untuk bahan cold press terkeras. HN325 dan HN365 adalah pilihan umum ketika sebagian besar produksi menggunakan hot press.',
     },
   },
   {
@@ -617,10 +654,10 @@ const pageTitle = {
 };
 
 const pageDescription = {
-  en: 'Compare all Haonuo hydraulic oil press models side by side. Pick by seed type or scenario — find your model instantly. HN300 to HN500 plus sesame, coconut, sludge specialists.',
-  fr: 'Comparez tous les modèles de presse à huile hydraulique Haonuo côte à côte. Choisissez par type de graine ou scénario — trouvez votre modèle instantanément. HN300 à HN500 plus sésame, coco, boue.',
-  ar: 'قارن جميع نماذج معاصر الزيت الهيدروليكي Haonuo جنباً إلى جنب. اختر حسب نوع البذور أو السيناريو — اعثر على نموذجك فوراً. HN300 إلى HN500 بالإضافة إلى سمسم، جوز هند، حمأة.',
-  id: 'Bandingkan semua model penekan minyak hidrolik Haonuo berdampingan. Pilih berdasarkan jenis biji atau skenario — temukan model Anda secara instan. HN300 hingga HN500 plus wijen, kelapa, lumpur.',
+  en: 'Compare the four Haonuo core hydraulic oil presses — HN325, HN365, HN426, HN500 — by pressing force, cake pressure and barrel specs, plus specialized sesame, coconut and custom models.',
+  fr: 'Comparez les quatre presses à huile hydrauliques principales de Haonuo — HN325, HN365, HN426, HN500 — par force de pressage, pression de gâteau et spécifications de fût, ainsi que les modèles spécialisés sésame, coco et sur mesure.',
+  ar: 'قارن معاصر الزيت الهيدروليكية الأساسية الأربعة من Haonuo — HN325 وHN365 وHN426 وHN500 — من حيث قوة الضغط وضغط الكعكة ومواصفات البرميل، بالإضافة إلى طرازات السمسم وجوز الهند والطرازات المخصصة.',
+  id: 'Bandingkan empat penekan minyak hidrolik inti Haonuo — HN325, HN365, HN426, HN500 — berdasarkan gaya tekan, tekanan cake, dan spesifikasi barel, ditambah model khusus wijen, kelapa, dan custom.',
 };
 
 const pageKeywords = {
@@ -660,7 +697,7 @@ function tr(obj: Record<string, string>): string {
           {tr(ui.heroSubtitleLead)}<b class="text-amber-400">{tr(ui.heroSubtitleSeed)}</b>{tr(ui.heroSubtitleOr)}<b class="text-amber-400">{tr(ui.heroSubtitleScenario)}</b>{tr(ui.heroSubtitleTail)}
         </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 pt-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-4">
         <div class="text-center">
           <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">15+</div>
           <div class="text-xs text-steel-300 mt-1">{tr(ui.statYears)}</div>
@@ -672,10 +709,6 @@ function tr(obj: Record<string, string>): string {
         <div class="text-center">
           <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">200+</div>
           <div class="text-xs text-steel-300 mt-1">{tr(ui.statEngineers)}</div>
-        </div>
-        <div class="text-center">
-          <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">2,000</div>
-          <div class="text-xs text-steel-300 mt-1">{tr(ui.statFacility)}</div>
         </div>
         <div class="text-center">
           <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">2,000+</div>
@@ -820,10 +853,15 @@ function tr(obj: Record<string, string>): string {
     </div>
   </section>
 
-  <!-- ===== FULL SPEC TABLE (collapsible) ===== -->
+  <!-- ===== CORE RANGE SPEC TABLE ===== -->
   <section id="full-specs" class="py-10 md:py-14 scroll-mt-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <details class="bg-white rounded-2xl border border-steel-100 shadow-sm group">
+      <div class="text-center mb-8">
+        <div class="inline-block text-xs font-bold tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full mb-3">{tr(ui.coreBadge)}</div>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{tr(ui.coreHeading)}</h2>
+        <p class="text-steel-500 text-sm mt-2 max-w-2xl mx-auto">{tr(ui.coreSubtitle)}</p>
+      </div>
+      <details open class="bg-white rounded-2xl border border-steel-100 shadow-sm group">
         <summary class="flex items-center justify-between cursor-pointer list-none p-6 md:p-8">
           <div>
             <h2 class="font-display text-xl md:text-2xl text-charcoal-900 font-bold">{tr(ui.specTitle)}</h2>
@@ -861,7 +899,7 @@ function tr(obj: Record<string, string>): string {
                 <td class="px-4 py-3 font-medium text-charcoal-900">{tr(ui.specBarrel)}</td>
                 {models.map(m => (
                   <td class="px-3 py-3 text-center text-steel-700">
-                    {m.barrelDiameter === 'On request' && m.barrelHeight === 'On request'
+                    {m.barrelDiameter === 'On request'
                       ? localSpec('On request')
                       : `${localSpec(m.barrelDiameter)} × ${localSpec(m.barrelHeight)}`}
                   </td>
@@ -909,10 +947,59 @@ function tr(obj: Record<string, string>): string {
           </table>
         </div>
       </details>
+      <p class="text-xs text-steel-500 mt-4 leading-relaxed">{tr(ui.specFootnote)}</p>
+
+      <!-- Specialized & custom models -->
+      <div class="mt-12">
+        <div class="text-center mb-8">
+          <div class="inline-block text-xs font-bold tracking-widest text-steel-500 bg-steel-100 px-3 py-1 rounded-full mb-3">{tr(ui.customBadge)}</div>
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{tr(ui.customTitle)}</h2>
+          <p class="text-steel-500 text-sm mt-2 max-w-2xl mx-auto">{tr(ui.customSubtitle)}</p>
+        </div>
+        <details class="bg-white rounded-2xl border border-steel-100 shadow-sm group">
+          <summary class="flex items-center justify-between cursor-pointer list-none p-6 md:px-8 md:py-6">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-steel-100 text-charcoal-900 font-bold text-sm shrink-0">{customModels.length}</span>
+              <h2 class="font-display text-lg md:text-xl text-charcoal-900 font-bold">{tr(ui.customExpand)}</h2>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-4 md:px-8 pb-8 overflow-x-auto">
+          <table class="w-full min-w-[760px] border-collapse bg-white text-sm">
+            <thead>
+              <tr class="bg-steel-900 text-white">
+                <th class="px-4 py-3 text-left font-semibold">{tr(ui.customColModel)}</th>
+                <th class="px-3 py-3 text-center font-semibold">{tr(ui.customColForce)}</th>
+                <th class="px-3 py-3 text-center font-semibold">{tr(ui.customColCake)}</th>
+                <th class="px-3 py-3 text-left font-semibold">{tr(ui.customColNote)}</th>
+                <th class="px-3 py-3 text-center font-semibold">{tr(ui.customColPage)}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {customModels.map((m, i) => (
+                <tr class={i % 2 === 0 ? 'border-b border-steel-100 bg-steel-50/40' : 'border-b border-steel-100'}>
+                  <td class="px-4 py-3 whitespace-nowrap">
+                    <div class="font-bold text-charcoal-900">{m.model}</div>
+                    <div class="text-xs text-steel-500">{m.name[currentLocale] || m.name.en}</div>
+                  </td>
+                  <td class="px-3 py-3 text-center text-steel-700 font-semibold">{localSpec(m.pressingForce)}</td>
+                  <td class="px-3 py-3 text-center text-steel-700">{localSpec(m.cakePressure)}</td>
+                  <td class="px-3 py-3 text-steel-600">{m.note[currentLocale] || m.note.en}</td>
+                  <td class="px-3 py-3 text-center">
+                    <a href={localePath(`/products/${m.slug}`)} class="inline-flex items-center text-xs font-semibold text-amber-600 hover:text-amber-700 whitespace-nowrap">
+                      {tr(ui.customView)}
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
-
-  <!-- ===== FAQ ===== -->
   <section class="py-10 md:py-14">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-8">

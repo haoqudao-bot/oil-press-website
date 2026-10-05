@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿// Arabic resource body content for [locale]/resources/[slug].astro
+// Arabic resource body content for [locale]/resources/[slug].astro
 export const arResourceBodies: Record<string, string> = {
   'hydraulic-oil-press-maintenance-guide': `**الصيانة السليمة لمعصرة الزيت** هي العامل الأهم في تحديد عمر معصرة الزيت الهيدروليكية وثبات جودة الزيت الذي تنتجه. الآلة المُصانة جيدًا يمكن أن تعمل بكفاءة لمدة 15-20 سنة، بينما الآلة المهملة قد تبدأ بإظهار مشاكل من السنة الأولى.
 

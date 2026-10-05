@@ -61,14 +61,12 @@ const models = [
   },
 ];
 
-/* Complete-line equipment — one row, arrow carousel (no sludge/residue press) */
+/* Four core product categories — one row */
 const lineItems = [
   { title: 'Hydraulic Oil Press', img: '/images/models/hn500.webp', href: '/products/hydraulic-oil-press/' },
-  { title: 'Oil Pulverizer', img: '/images/line/pulverizer.webp', href: '/products/seed-processing-equipment/' },
-  { title: 'Seed Roasting Machine', img: '/images/line/roaster.webp', href: '/products/roasting-steaming-equipment/' },
-  { title: 'Steamer for Oilseeds', img: '/images/line/steamer.webp', href: '/products/roasting-steaming-equipment/' },
-  { title: 'Screw Elevator', img: '/images/line/elevator.webp', href: '/products/seed-processing-equipment/' },
-  { title: 'Oil Filter Machine', img: '/images/line/filter.webp', href: '/products/filtration-refining-equipment/' },
+  { title: 'Seed Processing', img: '/images/line/pulverizer.webp', href: '/products/seed-processing-equipment/' },
+  { title: 'Roasting & Steaming', img: '/images/line/roaster.webp', href: '/products/roasting-steaming-equipment/' },
+  { title: 'Filtration & Refining', img: '/images/products/pneumatic-oil-filter-press.webp', href: '/products/filtration-refining-equipment/' },
 ];
 
 const marqueeSeeds = ['Sesame','Peanut','Coconut','Mustard','Sunflower','Shea Butter','Rapeseed','Walnut','Camellia','Avocado','Palm Kernel','Soybean'];
@@ -98,7 +96,7 @@ const countryOptions = [
 
 const stats = [
   { value: '2010', label: 'Established' },
-  { value: '200+', label: 'Skilled Employees' },
+  { value: '200+', label: 'Skilled Workers & Engineers' },
   { value: '50+', label: 'Export Countries' },
   { value: '2,000+', label: 'Buyers Served Worldwide' },
 ];
@@ -307,10 +305,6 @@ const modelListLd = {
     .mq-track span::after { content: ""; width: 7px; height: 7px; border-radius: 9999px; background: #1B3A5C; }
     @keyframes mq { to { transform: translateX(-50%); } }
     @media (prefers-reduced-motion: reduce) { .mq-track { animation: none; } }
-
-    /* Line carousel: hide scrollbar, snap */
-    #line-track { scrollbar-width: none; -ms-overflow-style: none; }
-    #line-track::-webkit-scrollbar { display: none; }
   </style>
 
   <script>
@@ -344,17 +338,6 @@ const modelListLd = {
     heroEl?.addEventListener('mouseenter', stopAutoplay);
     heroEl?.addEventListener('mouseleave', startAutoplay);
     startAutoplay();
-
-    /* Complete-lines arrow carousel */
-    const track = document.getElementById('line-track');
-    function lineStep(dir: number) {
-      if (!track) return;
-      const card = track.querySelector<HTMLElement>('.line-card');
-      const amount = card ? card.offsetWidth + 20 : 300;
-      track.scrollBy({ left: dir * amount, behavior: reduceMotion ? 'auto' : 'smooth' });
-    }
-    document.getElementById('line-prev')?.addEventListener('click', () => lineStep(-1));
-    document.getElementById('line-next')?.addEventListener('click', () => lineStep(1));
 
     /* Homepage inquiry form */
     function submitHomeForm(event: Event) {
@@ -462,12 +445,12 @@ const modelListLd = {
         </div>
       </div>
 
-      <div class="reveal relative group/line">
-        <div id="line-track" class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+      <div class="reveal">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {lineItems.map(item => (
             <a
               href={item.href}
-              class="line-card group relative snap-start shrink-0 w-[78%] sm:w-[46%] lg:w-[calc((100%-60px)/4)] aspect-[4/3] rounded-2xl overflow-hidden block"
+              class="line-card group relative aspect-[4/3] rounded-2xl overflow-hidden block"
             >
               <img
                 src={item.img}
@@ -489,12 +472,6 @@ const modelListLd = {
             </a>
           ))}
         </div>
-        <button id="line-prev" class="absolute left-1 md:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-steel-900/85 hover:bg-amber-500 hover:text-charcoal-900 text-white flex items-center justify-center transition-colors shadow-lg backdrop-blur-sm" aria-label="Previous equipment">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button id="line-next" class="absolute right-1 md:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-steel-900/85 hover:bg-amber-500 hover:text-charcoal-900 text-white flex items-center justify-center transition-colors shadow-lg backdrop-blur-sm" aria-label="Next equipment">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
       </div>
 
       <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-steel-900 rounded-xl px-6 py-5 reveal">

@@ -133,7 +133,7 @@
     "highReturnsTitle": "Maximisez votre rentabilité",
     "highReturnsDesc": "La technologie avancée de presse hydraulique à huile offre un ROI exceptionnel pour votre entreprise d'extraction d'huile.",
     "returns1_title": "Taux d'Extraction Élevé",
-    "returns1_desc": "L'huile résiduelle dans le tourteau reste aussi basse que 6-8% pour la plupart des matières (basé sur des tests internes ; les résultats varient selon le type de graine et l'humidité). Le fût à barres fendues extrait plus d'huile de chaque lot.",
+    "returns1_desc": "L'huile résiduelle dans le tourteau reste aussi basse que 6-8% pour la plupart des matières (test usine Haonuo : sésame et arachide calibrés à 6-8 % d'humidité). Le fût à barres fendues extrait plus d'huile de chaque lot.",
     "returns1_label": "taux d'extraction",
     "returns2_title": "Économie d'Énergie",
     "returns2_desc": "Un moteur 6 pôles de 2,2 kW entraîne tout le cycle de pressage — sans chaudière ni branchement industriel haute puissance. Coûts d'exploitation réduits, marges bénéficiaires plus élevées.",
@@ -171,7 +171,7 @@
     "factoryStrengthItem1": "Centre d'usinage CNC avancé pour la fabrication de pièces de précision",
     "factoryStrengthItem2": "Ligne d'assemblage complète avec tests de qualité à chaque étape",
     "factoryStrengthItem3": "Système de contrôle de qualité strict garantissant des normes constantes",
-    "factoryStrengthItem4": "Capacité de production efficace avec 20-30 jours ouvrables de délai de livraison",
+    "factoryStrengthItem4": "Capacité de production efficace — modèles standard prêts en 15 à 25 jours ouvrés, configurations personnalisées en 30 à 45 jours",
     "factoryStrengthStat1": "Surface de Production",
     "factoryStrengthStat2": "Travailleurs Qualifiés",
     "factoryStrengthStat3": "Jours de Production",
@@ -192,7 +192,7 @@
     "statsYears": "Années d'Excellence en Fabrication",
     "statsCountries": "Pays Desservis dans le Monde",
     "statsEmployees": "Ouvriers & Ingénieurs Qualifiés",
-    "statsArea": "m² Installation de Production",
+    "statsArea": "Employés et ingénieurs qualifiés",
     "statsMachines": "Acheteurs Servis",
     "statsHighlight1": "Depuis 2010",
     "statsHighlight2": "6 Continents",
@@ -222,7 +222,7 @@
     "step5Title": "Support Après-Vente",
     "step5Desc": "Support technique à vie, guides d'installation vidéo et garantie de pièces de rechange pour une fiabilité à long terme.",
     "learnMore": "En savoir plus",
-    "premiumMaterialsDetail1": "Cylindre hydraulique : acier 27SiMn, 900MPa/cm²",
+    "premiumMaterialsDetail1": "Cylindre hydraulique : acier 27SiMn, 900 MPa",
     "premiumMaterialsDetail2": "Tige de piston : revêtue de chrome, 5 couches de joints",
     "premiumMaterialsDetail3": "Fût de pressage : barres clés 2cm + anneaux d'acier 5cm",
     "premiumMaterialsDetail4": "Cadre de base : acier Q355B, résistance 355MPa",
@@ -236,7 +236,7 @@
     "easyOperationDetail4": "Faible entretien : 5 MIN/jour",
     "browseDetails": "Parcourir les détails",
     "statsHomeEstablished": "Année de fondation",
-    "statsHomeWorkshop": "Employés Qualifiés",
+    "statsHomeWorkshop": "Ouvriers et Ingénieurs Qualifiés",
     "statsHomeCountries": "Pays d'exportation",
     "statsHomeBuyers": "Acheteurs servis dans le monde",
     "marqueeAriaLabel": "Oléagineux que nous pressons",
@@ -296,12 +296,10 @@
     "section02Title": "Notre Gamme de Produits",
     "section02Sub": "Tout ce qu'il faut pour extraire l'huile, d'une presse unique à une ligne de production complète.",
     "lineItems": [
-      "Presse à Huile Hydraulique",
-      "Broyeur d'Oléagineux",
-      "Machine de Torréfaction des Graines",
-      "Cuiseur-Vapeur pour Oléagineux",
-      "Élévateur à Vis",
-      "Filtre à Huile"
+      "Presse à huile hydraulique",
+      "Traitement des graines",
+      "Torréfaction & Étuvage",
+      "Filtration & Raffinage"
     ],
     "lineCtaBannerPre": "Vous planifiez une ligne ? Indiquez-nous votre ",
     "lineCtaBannerStrong": "graine, tonnage journalier cible et tension",
@@ -490,7 +488,7 @@
     "storyP2": "Notre fondateur, avec plus de 20 ans d'expérience dans les systèmes hydrauliques, a reconnu que de nombreux producteurs d'huile rencontraient des difficultés avec des presses à faible efficacité et des fournisseurs peu fiables. Partant d'un petit atelier avec seulement 10 travailleurs, nous nous sommes concentrés sans relâche sur la qualité du produit et la satisfaction client.",
     "storyP3": "Aujourd'hui, ce dévouement nous a fait devenir un fabricant établi de presses à huile hydrauliques en Chine, confié par des milliers de clients dans plus de 50 pays — de l'Inde et du Nigeria aux Philippines et au Moyen-Orient.",
     "overviewTitle": "Fabricant Professionnel de Presses à Huile Hydrauliques",
-    "overviewP2": "Situé à Qingzhou, Weifang, province du Shandong — le centre de fabrication de machines réputé en Chine — notre usine est équipée de centres d'usinage CNC avancés, de lignes d'assemblage professionnelles et de systèmes stricts de contrôle de qualité. Avec plus de 200 employés qualifiés, nous livrons des équipements de pressage d'huile fiables à des clients du monde entier.",
+    "overviewP2": "Situé à Qingzhou, Weifang, province du Shandong — le centre de fabrication de machines réputé en Chine — notre usine est équipée de centres d'usinage CNC avancés, de lignes d'assemblage professionnelles et de systèmes stricts de contrôle de qualité. Avec plus de 200 ouvriers et ingénieurs qualifiés, nous livrons des équipements de pressage d'huile fiables à des clients du monde entier.",
     "overviewP3": "En tant que fabricant chinois direct de presses à huile, nous offrons des prix directs de fabrique, un support technique complet et un service après-vente à vie à chaque client.",
     "manufacturingTitle": "Capacités de Fabrication",
     "manufacturingDesc": "Notre usine à Qingzhou est équipée de machines modernes et dotée de plus de 200 professionnels qualifiés dédiés à la production de presses à huile hydrauliques de haute qualité.",
@@ -505,7 +503,7 @@
     "capPaintTitle": "Traitement de Surface",
     "capPaintDesc": "Sablage professionnel et revêtement anticorrosion pour une durabilité longue durée de la machine",
     "capWarehouseTitle": "Grand Stock",
-    "capWarehouseDesc": "Stock suffisant de matières premières et de pièces de rechange pour une production dans les 20-30 jours ouvrables (délai d'expédition supplémentaire)",
+    "capWarehouseDesc": "Stock suffisant de matières premières et de pièces de rechange — modèles standard prêts en 15 à 25 jours ouvrés, configurations personnalisées en 30 à 45 jours (délai d'expédition supplémentaire)",
     "qualityTitle": "Assurance Qualité",
     "qualityDesc": "Chaque presse à huile hydraulique subit des contrôles de qualité rigoureux avant de quitter notre usine, garantissant des performances fiables et une longue durée de vie.",
     "qualityIsoTitle": "Gestion de la Qualité",
@@ -528,7 +526,7 @@
     "why4Title": "Expérience d'Exportation Globale",
     "why4Desc": "Exportations réussies vers plus de 50 pays avec support complet de documentation incluant CO, Form A/E et légalisation consulaire.",
     "why5Title": "Livraison Rapide & Réponse",
-    "why5Desc": "Délai de production de 20-30 jours ouvrables ; demandes répondues dans les 24 heures avec consultation technique professionnelle.",
+    "why5Desc": "Modèles standard prêts en 15 à 25 jours ouvrés et configurations personnalisées en 30 à 45 jours ; demandes répondues dans les 24 heures avec consultation technique professionnelle.",
     "why6Title": "Support Technique à Vie",
     "why6Desc": "Guidance d'installation gratuite, formation à l'utilisation et support technique à vie via appel vidéo, WhatsApp ou service sur site.",
     "factoryDesc": "Visitez virtuellement notre installation de fabrication. Les visites d'usine sont également les bienvenues — contactez-nous pour planifier une visite.",
@@ -581,7 +579,7 @@
     "matA_sub": "Acier 27SiMn (trempe et revenu spéciaux)",
     "matA_desc": "Nos cylindres utilisent de l'acier 27SiMn de qualité supérieure avec un traitement de trempe et de revenu spécial. Chaque cylindre coûte plus de 1 400 USD et résiste à une pression de 900 MPa par centimètre carré avec un traitement thermique de surface pour une résistance à l'usure exceptionnelle.",
     "matA_tag1": "Acier 27SiMn",
-    "matA_tag2": "900 MPa/cm²",
+    "matA_tag2": "900 MPa",
     "matA_tag3": "1 400+ USD/cylindre",
     "matB_title": "Tige de piston + joints",
     "matB_sub": "Revêtement chrome & traitement thermique",
@@ -604,7 +602,7 @@
     "highReturnsTitle": "Maximisez votre rentabilité",
     "highReturnsDesc": "La technologie avancée de presse hydraulique à huile offre un ROI exceptionnel pour votre entreprise d'extraction d'huile.",
     "returns1_title": "Taux d'extraction élevé",
-    "returns1_desc": "L'huile résiduelle dans le tourteau reste aussi basse que 6-8% pour la plupart des matières (basé sur des tests internes ; les résultats varient selon le type de graine et l'humidité). Le fût à barres fendues extrait plus d'huile de chaque lot.",
+    "returns1_desc": "L'huile résiduelle dans le tourteau reste aussi basse que 6-8% pour la plupart des matières (test usine Haonuo : sésame et arachide calibrés à 6-8 % d'humidité). Le fût à barres fendues extrait plus d'huile de chaque lot.",
     "returns1_label": "taux d'extraction",
     "returns2_title": "Efficacité énergétique",
     "returns2_desc": "Un moteur 6 pôles de 2,2 kW entraîne tout le cycle de pressage — sans chaudière ni branchement industriel haute puissance. Coûts d'exploitation réduits, marges bénéficiaires plus élevées.",
@@ -631,7 +629,7 @@
     "op4_highlight": "5 MIN/jour d'entretien",
     "v3": {
       "heroH1": "Acheter une presse à huile commence par choisir une usine digne de confiance",
-      "heroSub": "Haonuo Machinery a répondu à cette question pour des acheteurs dans plus de 50 pays depuis 2010 — 200+ employés qualifiés, un tonnage nominal vérifiable, et un test de 48 heures avant chaque expédition.",
+      "heroSub": "Haonuo Machinery a répondu à cette question pour des acheteurs dans plus de 50 pays depuis 2010 — 200+ ouvriers et ingénieurs qualifiés, un tonnage nominal vérifiable, et un test de 48 heures avant chaque expédition.",
       "heroCta1": "Obtenir le Prix Usine",
       "heroCta2": "Visiter l'Usine",
       "heroChip1L": "Création",
@@ -643,7 +641,7 @@
       "ovP1": "Quand vous achetez chez Haonuo, vous achetez au prix usine direct — le même prix que celui payé par nos distributeurs de longue date. Aucun intermédiaire entre vous et ceux qui soudent, usinent et testent votre machine.",
       "ovP2": "Depuis 2010, nous avons installé des presses dans des moulins à sésame au Nigeria, des usines d'arachide en Inde et des ateliers d'huile de coco VCO aux Philippines. La plupart de nos nouvelles commandes viennent d'acheteurs qui reviennent pour une deuxième ou troisième machine — la preuve la plus claire qu'une machine fait son travail.",
       "ovStat1L": "Fondée · Qingzhou",
-      "ovStat2L": "Atelier propriétaire",
+      "ovStat2L": "Ouvriers et Ingénieurs Qualifiés",
       "ovStat3L": "Pays exportateurs",
       "ovStat4L": "Gamme de force de pressage",
       "histKicker": "Notre parcours",
@@ -682,7 +680,7 @@
       "retKicker": "CE QUE NOS MACHINES CHANGENT",
       "retH2": "Les chiffres que votre entreprise ressentira",
       "ret1H": "Huile résiduelle dans le tourteau",
-      "ret1D": "Le fût à barres fendues ne laisse que 6-8% d'huile résiduelle dans le tourteau — plus d'huile dans votre fût à chaque tonne (tests internes, résultats variables).",
+      "ret1D": "Le fût à barres fendues ne laisse que 6-8% d'huile résiduelle dans le tourteau — plus d'huile dans votre fût à chaque tonne (test usine Haonuo : sésame et arachide calibrés à 6-8 % d'humidité).",
       "ret2H": "Moteur basse consommation",
       "ret2D": "Un moteur en cuivre pur de 2,2 kW assure tout le cycle — pas de chaudière, pas de ligne électrique industrielle.",
       "ret3H": "Vrai pressage à froid",
@@ -819,7 +817,7 @@
     "expect2Title": "Solution Personnalisée",
     "expect2Desc": "Nous concevons la configuration optimale en fonction de votre type de graine, capacité et budget.",
     "expect3Title": "Production en Usine",
-    "expect3Desc": "Votre machine est fabriquée et testée dans notre usine sous 20-30 jours ouvrables (délai d'expédition en supplément).",
+    "expect3Desc": "Votre machine est fabriquée et testée dans notre usine sous 15 à 25 jours ouvrés pour les modèles standard (configurations personnalisées : 30 à 45 jours ; délai d'expédition en supplément).",
     "expect4Title": "Livraison Mondiale",
     "expect4Desc": "Emballage sécurisé et expédition fiable vers votre port le plus proche avec documentation d'exportation complète.",
     "ourLocation": "Notre Emplacement",
@@ -926,11 +924,9 @@
     "services": "Services",
     "hydraulicOilPressMachine": "Presse à Huile Hydraulique",
     "coldPressOilMachine": "Presse à Huile à Froid",
-    "manualOilPressMachine": "Presse à Huile Manuelle",
     "compareAllModels": "Comparer tous les modèles",
     "browseCatalog": "Parcourir le catalogue",
     "sheaButter": "Beurre de Karité",
-    "manual": "Manuelle",
     "slide": "Diapositive",
     "previous": "Précédent",
     "next": "Suivant",
@@ -959,7 +955,7 @@
     "standardPurchase": {
       "title": "Achat de Machine Standard",
       "subtitle": "Modèles Prêts à Expédier",
-      "description": "Choisissez parmi notre gamme complète de presses hydrauliques à huile — du HN300 mini à HN500 haute pression. Chaque machine est testée en usine et prête à être expédiée dans les 20-30 jours ouvrables.",
+      "description": "Choisissez parmi notre gamme complète de presses hydrauliques à huile — du HN300 mini à HN500 haute pression. Chaque machine est testée en usine ; les modèles standard sont expédiés en 15 à 25 jours ouvrés, les configurations personnalisées en 30 à 45 jours.",
       "features": [
         "8 modèles standard + 4 modèles spécialisés en stock",
         "Configurations simple ou double baril disponibles",
@@ -1063,8 +1059,7 @@
         "subtitle": "Que vous ayez besoin de branding OEM, d'ingénierie ODM personnalisée ou de conception complète de ligne de production, notre équipe est prête à vous aider. Contactez-nous aujourd'hui pour une consultation gratuite.",
         "benefits": [
           "Consultation d'ingénierie gratuite",
-          "Réponse dans les 24 heures",
-          "Rendu 3D personnalisé pour approbation"
+          "Réponse dans les 24 heures"
         ],
         "cta": "Demander un Devis OEM/ODM"
       }
@@ -1082,7 +1077,7 @@
       },
       "step3": {
         "title": "Échantillon & Approbation",
-        "desc": "Pour les commandes OEM/ODM, nous fournissons des spécifications détaillées et des rendus 3D pour votre approbation avant le début de la production."
+        "desc": "Pour les commandes OEM/ODM, nous fournissons des spécifications détaillées pour votre approbation avant le début de la production."
       },
       "step4": {
         "title": "Production & Contrôle Qualité",
@@ -1232,7 +1227,7 @@
       },
       {
         "question": "What is the yield of cold press oil machine?",
-        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on internal testing, results vary), minimizing the yield gap between cold and hot pressing methods."
+        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
       },
       {
         "question": "How much does a cold press oil machine cost?",
@@ -1343,7 +1338,7 @@
       },
       {
         "question": "How does a hydraulic oil press work?",
-        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 Mpa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
+        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 MPa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
       },
       {
         "question": "What seeds can a hydraulic oil press process?",
@@ -1351,7 +1346,7 @@
       },
       {
         "question": "What is the oil yield of a hydraulic oil press?",
-        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on internal testing, results vary), with residual oil in cake as low as 6-8%."
+        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), with residual oil in cake as low as 6-8%."
       },
       {
         "question": "How much does a hydraulic oil press machine cost?",
@@ -1372,97 +1367,6 @@
     ],
     "ctaTitle": "Prêt à trouver la bonne presse à huile hydraulique ?",
     "ctaDesc": "Obtenez un devis gratuit, une estimation d'expédition et une recommandation d'équipement professionnel, généralement sous 24 heures ouvrées.",
-    "whatsappUs": "Écrivez-nous sur WhatsApp"
-  },
-  "manual": {
-    "title": "Presse à huile hydraulique commerciale — Production de qualité industrielle | Haonuo",
-    "description": "Presses à huile hydrauliques de qualité industrielle pour la production d'huile commerciale. Capacité de 100 kg par lot, rendement professionnel et fonctionnement fiable. Prix direct usine Haonuo.",
-    "breadcrumbHome": "Accueil",
-    "breadcrumbProducts": "Produits",
-    "breadcrumbCurrent": "Presse à huile hydraulique commerciale",
-    "heroTitle": "Presse à huile hydraulique commerciale — Production de qualité industrielle",
-    "heroDesc": "Presses à huile hydrauliques professionnelles pour la production commerciale d'huile. Capacité de 100 kg par lot, pression système de 60-75 MPa et huile résiduelle inférieure à 5 %. Prix direct usine Haonuo.",
-    "getPricing": "Obtenir les prix commerciaux",
-    "viewModels": "Voir tous les modèles",
-    "whyChoose": "Pourquoi choisir le pressage hydraulique pour la production commerciale",
-    "industrialCapacity": {
-      "title": "Capacité industrielle",
-      "desc": "Capacité de 100 kg par lot. La production horaire varie selon le type de graine et la durée du cycle de pressage. La HN325 traite 100 kg par lot en 40-90 minutes, atteignant les objectifs de production commerciale."
-    },
-    "professionalYield": {
-      "title": "Rendement professionnel",
-      "desc": "Huile résiduelle inférieure à 5 % — une efficacité d'extraction 2 à 3 fois supérieure à celle des presses à vis. Maximisez le profit de chaque kilogramme de graines."
-    },
-    "lowPower": {
-      "title": "Faible besoin en énergie",
-      "desc": "Seulement 2,2 KW nécessaires. Compatible avec le réseau 220V monophasé standard ou un petit générateur de 5 KVA — adapté pour toutes les régions."
-    },
-    "costEffective": {
-      "title": "Rentable",
-      "desc": "Prix direct usine avec une durée de vie de 15-20 ans. Rendement élevé et fiabilité pour un excellent retour sur investissement des opérations commerciales."
-    },
-    "hydraulicAdvantageTitle": "Presses hydrauliques Haonuo — Le choix professionnel pour les opérations commerciales",
-    "hydraulicAdvantageDesc": "Haonuo est spécialisé dans les presses à huile hydrauliques commerciales offrant des performances de qualité industrielle avec des besoins énergétiques minimes. Même dans les zones à électricité limitée, nos presses hydrauliques surpassent toutes les alternatives car elles offrent :",
-    "hydraulicAdvantage1": "Capacité de 100 kg par lot — production à l'échelle commerciale",
-    "hydraulicAdvantage2": "Huile résiduelle inférieure à 5 % — efficacité d'extraction maximale",
-    "hydraulicAdvantage3": "Fonctionnement par un seul bouton — aucun effort physique requis",
-    "hydraulicAdvantage4": "2,2 KW — compatible avec un générateur de 5 KVA",
-    "exploreHydraulic": "Découvrir les presses hydrauliques Haonuo",
-    "productModelsTitle": "Modèles de presses hydrauliques commerciales — Entrée de gamme",
-    "applicationsTitle": "Applications de production d'huile commerciale",
-    "sesameOilApp": {
-      "title": "Huile de sésame",
-      "tag": "Spécialité à forte valeur",
-      "desc": "Huile de sésame pressée à froid premium pour les applications culinaires et cosmétiques. Les presses hydrauliques atteignent 42-50 % d'efficacité d'extraction avec une huile résiduelle inférieure à 5 %.",
-      "yield": "Rendement hydraulique : 42-50 %"
-    },
-    "peanutOilApp": {
-      "title": "Huile d'arachide",
-      "tag": "Huile de cuisson commerciale",
-      "desc": "Huile de cuisson largement consommée, très demandée en Afrique et en Asie. Le pressage hydraulique industriel garantit une qualité constante et un rendement maximal.",
-      "yield": "Rendement hydraulique : 38-45 %"
-    },
-    "palmKernelOilApp": {
-      "title": "Huile de palmiste",
-      "tag": "Transformation industrielle",
-      "desc": "Huile industrielle à grand volume pour la cuisine et la savonnerie. Les presses hydrauliques traitent les palmistes durs avec une excellente efficacité.",
-      "yield": "Rendement hydraulique : 45-55 %"
-    },
-    "coconutOilApp": {
-      "title": "Huile de coco",
-      "tag": "Marché premium",
-      "desc": "Huile de coco vierge pressée à froid pour les marchés des aliments santé et des cosmétiques. Exige un équipement d'extraction de haute qualité.",
-      "yield": "Rendement hydraulique : 55-62 %"
-    },
-    "faqTitle": "Questions fréquentes",
-    "faqs": [
-      {
-        "question": "What is a commercial hydraulic oil press?",
-        "answer": "A commercial hydraulic oil press is an industrial-grade machine that extracts oil from seeds using hydraulic pressure. It operates at 60-75 MPa system pressure, achieving residual oil rates below 5% — significantly more efficient than manual or screw presses. Haonuo hydraulic presses are designed for commercial production with 100 kg per batch capacity (hourly output varies by seed type)."
-      },
-      {
-        "question": "How much oil can a hydraulic press produce?",
-        "answer": "Haonuo hydraulic presses process 100 kg per batch. Hourly output varies by seed type and pressing cycle time (40-90 minutes per batch). This is 10-20x more productive than manual presses and 2-3x more efficient than screw presses."
-      },
-      {
-        "question": "Is a hydraulic press better than manual or screw presses?",
-        "answer": "Absolutely. Hydraulic presses leave just 6-8% residual oil in the cake for most materials (based on internal testing; results vary), produce premium cold-pressed oil, and require minimal physical labor. Even with a small 5 KVA generator, hydraulic presses are the recommended choice for commercial production in any region."
-      },
-      {
-        "question": "What seeds work best with hydraulic presses?",
-        "answer": "Hydraulic presses excel with all oil seeds: sesame, peanut, walnut, almond, sunflower, coconut, flaxseed, and 50+ more. The high pressure (60-75 MPa) ensures efficient extraction even from hard-shell nuts that manual presses cannot handle effectively."
-      },
-      {
-        "question": "What is the power requirement for hydraulic presses?",
-        "answer": "Haonuo hydraulic presses require only 2.2 KW — compatible with standard 220V single-phase power or a small 5 KVA generator. This makes them suitable for areas with limited or unreliable electricity infrastructure."
-      },
-      {
-        "question": "What is the total cost of ownership?",
-        "answer": "Haonuo provides factory-direct pricing without middleman markups. Total cost includes the press, optional roaster and filter, shipping, and installation. With proper maintenance, hydraulic presses deliver 15-20 years of reliable service, making them a cost-effective investment for commercial oil production."
-      }
-    ],
-    "ctaTitle": "Trouvez la bonne presse à huile commerciale",
-    "ctaDesc": "Les presses hydrauliques Haonuo offrent une capacité industrielle de 100 kg par lot avec une huile résiduelle inférieure à 5 %. La production horaire varie selon le type de graine. Obtenez votre solution commerciale personnalisée dès aujourd'hui.",
     "whatsappUs": "Écrivez-nous sur WhatsApp"
   },
   "roi": {

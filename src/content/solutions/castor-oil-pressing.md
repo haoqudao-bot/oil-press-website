@@ -12,7 +12,7 @@ description:
   ar: آلة عصر زيت الخروع لاستخراج زيت الخروع الصناعي والطبي. ضغط هيدروليكي عالي الضغط بمعدل متبقي منخفض.
   id: Mesin press minyak jarak untuk ekstraksi minyak jarak industri dan obat. Press hidrolik tekanan tinggi dengan sisa rendah.
 recommendedProducts:
-  - heavy-duty-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
@@ -63,6 +63,11 @@ faq:
     answer: Get pricing for your production needs. We offer factory-direct pricing with no middleman markup.
   - question: Is castor oil safe to handle during pressing?
     answer: Castor seeds contain ricin, a toxic protein. However, ricin is not oil-soluble and remains in the seed cake after pressing. Always wear gloves when handling raw castor seeds and cake.
+  - question: "What are the main uses of castor oil?"
+    answer: "Castor oil has diverse applications: pharmaceuticals (laxatives, ointments), cosmetics (hair care, skin care), industrial lubricants, biodiesel, polyurethane production, and specialty chemicals. The ricinoleic acid content makes it irreplaceable in many applications."
+  - question: "Can I produce both medicinal and industrial castor oil?"
+    answer: "Yes. Cold-pressed castor oil meets pharmaceutical and cosmetic standards. Hot-pressed castor oil is suitable for industrial applications. Our equipment handles both methods with adjustable pressing parameters."
+
 faqFr:
   - question: Quelle est la teneur en huile des graines de ricin ?
     answer: Les graines de ricin contiennent 45 à 55 % d'huile, l'une des plus élevées parmi les graines oléagineuses.
@@ -74,6 +79,11 @@ faqFr:
     answer: Obtenez un prix selon vos besoins de production. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: L'huile de ricin est-elle sûre à manipuler pendant le pressage ?
     answer: Les graines de ricin contiennent de la ricine, une protéine toxique. Cependant, la ricine n'est pas soluble dans l'huile et reste dans le tourteau après le pressage. Portez toujours des gants lors de la manipulation des graines de ricin brutes et du tourteau.
+  - question: "Quelles sont les principales utilisations de l'huile de ricin ?"
+    answer: "L'huile de ricin a des applications diverses : produits pharmaceutiques (laxatifs, onguents), cosmétiques (soins capillaires, soins de la peau), lubrifiants industriels, biodiesel, production de polyuréthane et produits chimiques de spécialité. La teneur en acide ricinoléique la rend irremplaçable dans de nombreuses applications."
+  - question: "Puis-je produire à la fois de l'huile de ricin médicinale et industrielle ?"
+    answer: "Oui. L'huile de ricin pressée à froid répond aux normes pharmaceutiques et cosmétiques. L'huile de ricin pressée à chaud convient aux applications industrielles. Notre équipement gère les deux méthodes avec des paramètres de pressage ajustables."
+
 faqAr:
   - question: ما هو محتوى الزيت في بذور الخروع؟
     answer: تحتوي بذور الخروع على 45-55% زيت، وهي من أعلى النسب بين البذور الزيتية.
@@ -85,6 +95,11 @@ faqAr:
     answer: احصلوا على تسعيرة حسب احتياجات إنتاجكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: هل زيت الخروع آمن للتعامل أثناء العصر؟
     answer: تحتوي بذور الخروع على الريسين وهو بروتين سام. لكن الريسين لا يذوب في الزيت ويبقى في كعكة البذور بعد العصر. يجب دائماً ارتداء القفازات عند التعامل مع بذور الخروع الخام والكعكة.
+  - question: "ما هي الاستخدامات الرئيسية لزيت الخروع؟"
+    answer: "لزيت الخروع تطبيقات متنوعة: مستحضرات صيدلانية (ملينات، مراهم)، مستحضرات تجميل (عناية بالشعر، عناية بالبشرة)، مواد تشحيم صناعية، وقود حيوي، إنتاج بولي يوريثان، ومواد كيميائية متخصصة. محتوى حمض الريسينوليك يجعله لا يمكن الاستغناء عنه في كثير من التطبيقات."
+  - question: "هل يمكنني إنتاج زيت خروع طبي وصناعي معاً؟"
+    answer: "نعم. زيت الخروع المعصور على البارد يلبي معايير المستحضرات الصيدلانية والتجميل. زيت الخروع المعصور على الساخن مناسب للتطبيقات الصناعية. معداتنا تتعامل مع كلتا الطريقتين مع إعدادات عصر قابلة للتعديل."
+
 faqId:
   - question: Berapa kandungan minyak biji jarak?
     answer: Biji jarak mengandung 45-55% minyak, salah satu yang tertinggi di antara biji-bijian berminyak.
@@ -96,6 +111,11 @@ faqId:
     answer: Hubungi kami untuk harga sesuai kebutuhan produksi Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Apakah minyak jarak aman ditangani selama penekanan?
     answer: Biji jarak mengandung risin, protein beracun. Namun, risin tidak larut dalam minyak dan tetap di ampas setelah penekanan. Selalu kenakan sarung tangan saat menangani biji jarak mentah dan ampasnya.
+  - question: "Apa saja kegunaan utama minyak jarak?"
+    answer: "Minyak jarak memiliki beragam aplikasi: farmasi (laksatif, salep), kosmetik (perawatan rambut, perawatan kulit), pelumas industri, biodiesel, produksi poliuretan, dan bahan kimia khusus. Kandungan asam risinoleat membuatnya tidak dapat digantikan dalam banyak aplikasi."
+  - question: "Bisakah saya memproduksi minyak jarak obat dan industri?"
+    answer: "Ya. Minyak jarak press dingin memenuhi standar farmasi dan kosmetik. Minyak jarak press panas cocok untuk aplikasi industri. Peralatan kami menangani kedua metode dengan parameter penekanan yang dapat disesuaikan."
+
 seoKeywords:
   - castor oil press machine
   - castor oil extraction machine
@@ -143,23 +163,6 @@ This solution supports both cold pressing (for medicinal and cosmetic-grade cast
 - **Thermal Oil Roasting Pan** — Precise temperature control for roasting castor seeds. Essential for hot-pressed industrial-grade oil production.
 - **Pneumatic Oil Filter Press** — Produces clean castor oil suitable for both industrial and medicinal applications.
 
-## Frequently Asked Questions
-
-**How much does a castor oil press machine cost?**
-Our castor oil press machines are available in various configurations from heavy-duty to ultra-high-pressure models. We offer factory-direct pricing with no middleman markup. WhatsApp us for current pricing.
-
-**Is castor oil pressing a profitable business?**
-Yes. Global castor oil demand is growing at 4-6% annually, driven by biodiesel, lubricant, and pharmaceutical industries. India produces over 80% of the world's castor seeds, and value-added processing (pressing oil instead of exporting raw seeds) significantly increases revenue.
-
-**Is castor oil safe to produce?**
-Yes, with proper precautions. Ricin, the toxic protein in castor seeds, is not oil-soluble — it remains in the seed cake after pressing. The pressed oil is safe. However, always wear gloves when handling raw seeds and seed cake, and ensure proper disposal of castor seed cake.
-
-**What are the main uses of castor oil?**
-Castor oil has diverse applications: pharmaceuticals (laxatives, ointments), cosmetics (hair care, skin care), industrial lubricants, biodiesel, polyurethane production, and specialty chemicals. The ricinoleic acid content makes it irreplaceable in many applications.
-
-**Can I produce both medicinal and industrial castor oil?**
-Yes. Cold-pressed castor oil meets pharmaceutical and cosmetic standards. Hot-pressed castor oil is suitable for industrial applications. Our equipment handles both methods with adjustable pressing parameters.
-
 ## Why Choose Haonuo
 
 - **High-pressure specialists** — Castor seeds require sustained high pressure for thorough extraction. Our hydraulic presses deliver 40-55 MPa, achieving residual oil rates below 5%.
@@ -167,3 +170,16 @@ Yes. Cold-pressed castor oil meets pharmaceutical and cosmetic standards. Hot-pr
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
 - **Safety-focused design** — Our equipment is designed with proper containment for castor seed processing, minimizing operator exposure to ricin-containing materials.
 - **Proven in India and Brazil** — Our castor oil press machines operate successfully in the world's two largest castor-producing nations.
+
+<!-- yield-block -->
+### What you get from 100 kg of castor seeds
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 40-48 kg (≈43-52 L) | 35-42 kg (≈38-46 L) |
+| Oil cake | ≈47-58 kg | ≈53-63 kg |
+
+*Typical figures for well-prepared castor seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

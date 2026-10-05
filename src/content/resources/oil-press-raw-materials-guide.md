@@ -45,7 +45,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 - Oil Content: 45-50%
 - Optimal Moisture: 5-7% hot press
 - Dehulling: 95%+ removal recommended
-- Roasting: 165-185°C for 30-35 minutes
+- Roasting/conditioning: 120-150°C (typically around 130°C) for 20-30 minutes
 - Yield: Hot 45-50%, Cold 38-42%
 - Recommended Models: HN325, HN355, HN480
 
@@ -110,7 +110,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 
 ### Roasting (Hot Pressing Only)
 - Sesame: 160-180°C, 25-30 min
-- Peanut: 165-185°C, 30-35 min
+- Peanut: 120-150°C (around 130°C), 20-30 min
 - Rapeseed: 150-170°C, 20-25 min
 
 ### Crushing

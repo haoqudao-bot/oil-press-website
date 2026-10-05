@@ -92,7 +92,7 @@ These molds thrive under warm, humid conditions, making tropical and subtropical
 - Implement optical color sorting for mold detection
 
 **5. Temperature Control**
-- Maintain roasting temperature at 160-180°C for peanuts
+- Condition/roast peanuts at 120-150°C (typically around 130°C for 20-30 minutes) for standard hot pressing; where aflatoxin reduction is the primary goal, use a sustained higher temperature (≥160°C) and confirm results with lab testing
 - Ensure uniform heat distribution
 - Monitor temperatures throughout processing
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Sesame Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Sésame
@@ -12,6 +12,7 @@ description:
   ar: آلة عصر زيت السمسم عالية العائد بتقنية هيدروليكية. استخرج زيت سمسم متميز بمعدل متبقي منخفض.
   id: Mesin press minyak wijen hasil tinggi dengan teknologi hidrolik. Ekstrak minyak wijen premium dengan sisa rendah.
 recommendedProducts:
+  - standard-hydraulic-oil-press
   - sesame-oil-hydraulic-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
@@ -62,6 +63,11 @@ faq:
     answer: Request a quote for your preferred model. We offer factory-direct pricing with no middleman markup.
   - question: How long is each pressing cycle?
     answer: A complete pressing cycle for sesame takes approximately 30-40 minutes (hot press) or approximately 2 hours (cold press), allowing for efficient batch production throughout the day.
+  - question: "What is the difference between white and black sesame oil?"
+    answer: "White sesame oil is the standard cooking oil popular in Indian and Southeast Asian cuisine. Black sesame oil has a stronger, more earthy flavor and is prized in Chinese and Korean cooking for both culinary and medicinal uses. Both can be produced on our equipment."
+  - question: "How should sesame oil be stored?"
+    answer: "Store sesame oil in a cool, dark place in sealed containers. Cold-pressed sesame oil has a shelf life of approximately 12-18 months. Roasted sesame oil lasts 6-12 months due to its more reactive compounds. Refrigeration extends shelf life for both types."
+
 faqFr:
   - question: Quel est le rendement en huile pour le pressage du sésame ?
     answer: Notre presse hydraulique pour sésame atteint un rendement en huile de 45 à 50 % selon la qualité des graines et les paramètres de pressage.
@@ -73,6 +79,11 @@ faqFr:
     answer: Demandez un devis pour votre modèle préféré. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien de temps dure chaque cycle de pressage ?
     answer: Un cycle de pressage complet pour le sésame dure environ 8 à 10 minutes, permettant une production par lots efficace tout au long de la journée.
+  - question: "Quelle est la différence entre l'huile de sésame blanche et noire ?"
+    answer: "L'huile de sésame blanche est l'huile de cuisson standard populaire dans la cuisine indienne et d'Asie du Sud-Est. L'huile de sésame noire a une saveur plus forte et plus terreuse, prisée dans la cuisine chinoise et coréenne tant pour des usages culinaires que médicinaux. Les deux peuvent être produites sur notre équipement."
+  - question: "Comment faut-il stocker l'huile de sésame ?"
+    answer: "Stockez l'huile de sésame dans un endroit frais et sombre dans des conteneurs scellés. L'huile de sésame pressée à froid a une durée de conservation d'environ 12-18 mois. L'huile de sésame torréfiée se conserve 6-12 mois en raison de ses composés plus réactifs. La réfrigération prolonge la durée de conservation pour les deux types."
+
 faqAr:
   - question: ما هو عائد الزيت من عصر السمسم؟
     answer: يحقق مضغوطنا الهيدروليكي للسمسم عائد زيت يتراوح بين 45-50% حسب جودة البذور ومعلمات العصر.
@@ -84,6 +95,11 @@ faqAr:
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم تستغرق كل دورة عصر؟
     answer: تستغرق دورة العصر الكاملة للسمسم حوالي 8-10 دقائق، مما يسمح بإنتاج دفعات فعال طوال اليوم.
+  - question: "ما الفرق بين زيت السمسم الأبيض والأسود؟"
+    answer: "زيت السمسم الأبيض هو زيت الطبخ القياسي الشائع في المطبخ الهندي وجنوب شرق آسيا. زيت السمسم الأسود له نكهة أقوى وأكثر ترابية، يُقدر في المطبخ الصيني والكوري للاستخدامات الطهوية والطبية على حد سواء. كلاهما يمكن إنتاجه على معداتنا."
+  - question: "كيف يجب تخزين زيت السمسم؟"
+    answer: "خزن زيت السمسم في مكان بارد ومظلم في حاويات مختومة. زيت السمسم المعصور على البارد له مدة صلاحية حوالي 12-18 شهراً. زيت السمسم المحمص يدوم 6-12 شهراً بسبب مركباته الأكثر تفاعلاً. التبريد يطيل مدة الصلاحية لكلا النوعين."
+
 faqId:
   - question: Berapa hasil minyak dari penekanan wijen?
     answer: Press hidrolik kami untuk wijen menghasilkan minyak sebesar 45-50% tergantung pada kualitas biji dan parameter penekanan.
@@ -95,6 +111,11 @@ faqId:
     answer: Hubungi kami untuk harga model pilihan Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa lama setiap siklus penekanan?
     answer: Satu siklus penekanan lengkap untuk wijen membutuhkan waktu sekitar 8-10 menit, memungkinkan produksi batch yang efisien sepanjang hari.
+  - question: "Apa perbedaan antara minyak wijen putih dan hitam?"
+    answer: "Minyak wijen putih adalah minyak goreng standar yang populer dalam masakan India dan Asia Tenggara. Minyak wijen hitam memiliki rasa yang lebih kuat dan lebih beraroma tanah dan dihargai dalam masakan China dan Korea untuk penggunaan kuliner dan obat. Keduanya dapat diproduksi pada peralatan kami."
+  - question: "Bagaimana minyak wijen harus disimpan?"
+    answer: "Simpan minyak wijen di tempat sejuk dan gelap dalam wadah tertutup rapat. Minyak wijen press dingin memiliki masa simpan sekitar 12-18 bulan. Minyak wijen panggang bertahan 6-12 bulan karena senyawanya lebih reaktif. Pendinginan memperpanjang masa simpan untuk kedua jenis."
+
 seoKeywords:
   - sesame oil press machine
   - sesame oil extraction machine
@@ -137,23 +158,9 @@ This solution supports both cold pressing (for premium, nutrient-rich sesame oil
 
 ## Recommended Equipment
 
-- **Sesame Oil Hydraulic Press** — Engineered specifically for sesame with optimized barrel design and pressure curve. Achieves residual oil rates typically below 5% in our internal testing (results vary by seed quality and pressing conditions).
+- **Sesame Oil Hydraulic Press** — Engineered specifically for sesame with optimized barrel design and pressure curve. Achieves residual oil rates typically below 5% in Haonuo factory tests with graded sesame and peanut at 6-8% moisture (results vary with seed variety and preparation).
 - **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting. Essential for producing aromatic toasted sesame oil with premium flavor.
 - **Pneumatic Oil Filter Press** — Delivers crystal-clear sesame oil with automated filtration. Reduces labor and ensures consistent quality.
-
-## Frequently Asked Questions
-
-**How much does a sesame oil press machine cost?**
-Our sesame oil hydraulic press machines are available in various models, barrel sizes, and single or double-barrel configurations. We offer factory-direct pricing with no middleman markup.
-
-**Can I produce both cold-pressed and roasted sesame oil?**
-Yes. Our sesame oil hydraulic press handles both cold-pressed and hot-pressed sesame oil production. Simply skip the roasting step for cold-pressed oil, or roast the seeds first for aromatic toasted sesame oil. The pressing parameters can be adjusted for each method.
-
-**What is the difference between white and black sesame oil?**
-White sesame oil is the standard cooking oil popular in Indian and Southeast Asian cuisine. Black sesame oil has a stronger, more earthy flavor and is prized in Chinese and Korean cooking for both culinary and medicinal uses. Both can be produced on our equipment.
-
-**How should sesame oil be stored?**
-Store sesame oil in a cool, dark place in sealed containers. Cold-pressed sesame oil has a shelf life of approximately 12-18 months. Roasted sesame oil lasts 6-12 months due to its more reactive compounds. Refrigeration extends shelf life for both types.
 
 ## Why Choose Haonuo
 
@@ -162,3 +169,16 @@ Store sesame oil in a cool, dark place in sealed containers. Cold-pressed sesame
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
 - **Dual cold/hot press capability** — One machine serves both market segments, maximizing your return on investment.
 - **Proven across Asia** — Our sesame oil press machines are operating successfully in India, China, Myanmar, and the Middle East — the world's largest sesame oil markets.
+
+<!-- yield-block -->
+### What you get from 100 kg of sesame seeds
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 42-50 kg (≈46-54 L) | 38-45 kg (≈41-49 L) |
+| Oil cake | ≈45-56 kg | ≈50-60 kg |
+
+*Typical figures for well-prepared sesame seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

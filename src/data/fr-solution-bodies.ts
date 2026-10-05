@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frSolutionBodies: Record<string, string> = {
+export const frSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Aperçu
 
 L'huile d'amande est l'une des huiles de spécialité les plus précieuses au monde, se vendant à des prix premium sur les marchés des cosmétiques et des aliments de santé. Une **machine de pressage d'huile d'amande** de qualité est essentielle pour les producteurs qui souhaitent extraire cette huile de grande valeur tout en préservant les vitamines, les acides gras et le délicat arôme naturel qui justifient les prix premium.
@@ -35,23 +35,6 @@ Avec des amandes contenant 50-55 % d'huile — l'une des plus fortes teneurs par
 
 - **Presse Hydraulique à Froid (HN426)** — Conçue spécifiquement pour le pressage à froid avec contrôle de température en dessous de 60°C. Essentielle pour produire une huile d'amande premium conservant une valeur nutritionnelle maximale.
 - **Presse Filtrante Pneumatique** — Produit une huile d'amande cristalline convenant aux applications alimentaires et cosmétiques. La filtration fine est critique pour les marchés premium.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile d'amande ?**
-Nos machines de pressage d'huile d'amande sont disponibles dans diverses configurations, du modèle à froid aux modèles haute capacité. Nous offrons des prix directs d'usine sans majoration d'intermédiaire. Obtenez un tarif adapté à vos besoins de production.
-
-**Puis-je presser des amandes avec leurs coques ?**
-Non. Les coques d'amande sont extrêmement dures et endommageront votre équipement. Utilisez toujours des amandes décortiquées pour le pressage d'huile. Les coques contiennent également des tanins qui peuvent affecter la saveur et la qualité de l'huile.
-
-**L'huile d'amande pressée à froid est-elle vraiment meilleure ?**
-Oui, de manière significative. L'huile d'amande pressée à froid conserve généralement plus de vitamine E que l'huile pressée à chaud, ainsi que plus de phytostérols et d'antioxydants naturels. Cela peut se traduire par une valeur marchande plus élevée — l'huile d'amande pressée à froid se vend généralement 30 à 50 % plus cher que l'huile d'amande raffinée, bien que les résultats réels puissent varier.
-
-**Quelle est la différence entre l'huile d'amande douce et l'huile d'amande amère ?**
-L'huile d'amande douce (de Prunus dulcis) est l'huile alimentaire et cosmétique courante. L'huile d'amande amère contient de l'amygdaline, qui se décompose en acide cyanhydrique toxique. L'huile d'amande amère n'est utilisée qu'en très petites quantités comme agent aromatisant après un traitement approprié. Notre équipement est conçu pour la production d'huile d'amande douce.
-
-**Quels sont les principaux marchés de l'huile d'amande ?**
-L'huile d'amande a deux marchés principaux : les cosmétiques (hydratants, soins capillaires, huile de massage) et l'alimentaire (huile de cuisson, vinaigrette, complément alimentaire). Le marché des cosmétiques représente environ 60 % de la demande mondiale d'huile d'amande et offre les marges les plus élevées.
 
 ## Pourquoi Choisir Haonuo
 
@@ -101,20 +84,6 @@ Cette solution est conçue pour le marché croissant de l'huile d'avocat au Mexi
 - **Broyeur de Graines à Haute Vitesse** — Écrase efficacement la pulpe d'avocat en pâte uniforme pour des résultats de pressage réguliers.
 - **Presse Filtrante Pneumatique** — Élimine les particules fines et les sédiments pour une huile d'avocat cristalline. Plusieurs passages de filtration garantissent la plus haute qualité.
 
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile d'avocat ?**
-Nos machines de pressage d'huile d'avocat sont disponibles dans diverses configurations, du modèle à froid aux modèles haute capacité. Nous offrons des prix directs d'usine qui permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient). Contactez-nous pour une solution adaptée.
-
-**Puis-je presser l'huile d'avocat à partir d'avocats frais (non séchés) ?**
-Oui, mais avec un rendement inférieur. La pulpe d'avocat fraîche contient environ 70 % d'eau, ce qui crée des émulsions et réduit le rendement en huile. Le séchage de la pulpe avant le pressage peut doubler votre rendement effectif. Pour la production à petite échelle, le pressage à frais est réalisable ; pour les opérations commerciales, le séchage est fortement recommandé.
-
-**Pourquoi l'huile d'avocat est-elle si chère ?**
-L'huile d'avocat se vend à des prix premium en raison de la teneur en huile relativement faible des avocats frais (15-25 %), de la préparation laborieuse requise et de la demande mondiale croissante pour cette huile santé. L'huile d'avocat pressée à froid se vend à une prime significative sur les marchés de détail.
-
-**Puis-je presser les noyaux d'avocat pour obtenir de l'huile ?**
-Oui, les noyaux d'avocat contiennent 3-5 % d'huile et peuvent être pressés à l'aide de notre équipement. Cependant, le rendement est très faible et l'huile a des propriétés différentes de celle de la pulpe. La plupart des producteurs se concentrent sur l'huile de pulpe pour le marché premium.
-
 ## Pourquoi Choisir Haonuo
 
 - **Spécialistes du pressage à froid** — Notre modèle HN426 est conçu spécifiquement pour le pressage à froid, maintenant les températures en dessous de 60°C pour préserver la qualité premium et la couleur verte de l'huile d'avocat.
@@ -162,23 +131,6 @@ Cette solution prend en charge à la fois le pressage à froid (pour l'huile de 
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour la torréfaction des graines de ricin. Essentielle pour la production d'huile industrielle pressée à chaud.
 - **Presse Filtrante Pneumatique** — Produit une huile de ricin propre convenant aux applications industrielles et médicinales.
 
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile de ricin ?**
-Nos machines de pressage d'huile de ricin sont disponibles dans diverses configurations, des modèles lourds aux modèles ultra haute pression. Nous offrons des prix directs d'usine sans majoration d'intermédiaire. Contactez-nous par WhatsApp pour les prix actuels.
-
-**Le pressage d'huile de ricin est-il une activité rentable ?**
-Oui. La demande mondiale d'huile de ricin croît de 4 à 6 % par an, portée par les industries du biodiesel, des lubrifiants et des produits pharmaceutiques. L'Inde produit plus de 80 % des graines de ricin du monde, et la transformation à valeur ajoutée (presser l'huile au lieu d'exporter les graines brutes) augmente considérablement les revenus.
-
-**L'huile de ricin est-elle sûre à produire ?**
-Oui, avec les précautions appropriées. La ricine, la protéine toxique des graines de ricin, n'est pas soluble dans l'huile — elle reste dans le tourteau après le pressage. L'huile pressée est sûre. Cependant, portez toujours des gants lors de la manipulation des graines brutes et du tourteau, et assurez une élimination appropriée du tourteau de ricin.
-
-**Quelles sont les principales utilisations de l'huile de ricin ?**
-L'huile de ricin a des applications diverses : produits pharmaceutiques (laxatifs, onguents), cosmétiques (soins capillaires, soins de la peau), lubrifiants industriels, biodiesel, production de polyuréthane et produits chimiques de spécialité. La teneur en acide ricinoléique la rend irremplaçable dans de nombreuses applications.
-
-**Puis-je produire à la fois de l'huile de ricin médicinale et industrielle ?**
-Oui. L'huile de ricin pressée à froid répond aux normes pharmaceutiques et cosmétiques. L'huile de ricin pressée à chaud convient aux applications industrielles. Notre équipement gère les deux méthodes avec des paramètres de pressage ajustables.
-
 ## Pourquoi Choisir Haonuo
 
 - **Spécialistes haute pression** — Les graines de ricin nécessitent une pression élevée soutenue pour une extraction approfondie. Nos presses hydrauliques délivrent 40-55 MPa, atteignant des taux d'huile résiduelle inférieurs à 5 %.
@@ -193,7 +145,7 @@ L'huile de coco reste l'une des huiles végétales les plus recherchées au mond
 
 La solution de pressage d'huile de coco de Haonuo est construite autour de notre technologie de presse hydraulique spécialisée, qui excelle tant pour le pressage à froid pour la VCO que pour le pressage à chaud pour une production à rendement plus élevé. Notre presse hydraulique à huile de coco applique une pression élevée uniforme sans dégrader la qualité de l'huile, préservant la teneur naturelle en acide laurique et le délicat arôme de coco que les consommateurs apprécient.
 
-Cette solution complète couvre chaque étape, de la préparation de la noix de coco brute à la filtration et au raffinage optionnel, vous offrant une ligne de production clé en main adaptable de 500 kg à plus de 2 000 kg de coco par jour.
+Cette solution couvre chaque étape, de la préparation de la noix de coco brute à la filtration, le raffinage optionnel étant assuré par un équipement approvisionné séparément, vous offrant une ligne de production adaptable de 500 kg à plus de 2 000 kg de coco par jour.
 
 ## Rendements Attendus en Huile
 
@@ -218,34 +170,20 @@ Comprendre les rendements attendus est essentiel pour la planification commercia
 3. **Pressage à froid (Parcours VCO)** — Introduisez la coco préparée dans la presse hydraulique à huile de coco. Chaque cycle dure 35-45 minutes à pression contrôlée. Le liquide pressé se sépare en huile de coco et eau de coco.
 4. **Pressage à chaud (Parcours Coprah)** — Pour un rendement plus élevé, torréfiez légèrement le coprah concassé à 80-100°C avant le pressage. Cela réduit la viscosité et améliore l'écoulement de l'huile.
 5. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour éliminer les particules fines et les sédiments. Cela produit une huile claire, prête pour le marché.
-6. **Raffinage (Optionnel)** — Pour l'huile de coco RBD, utilisez le système de raffinage d'huile alimentaire pour dégommer, neutraliser, blanchir et désodoriser l'huile.
+6. **Raffinage (Optionnel)** — L'huile de coco RBD nécessite dégommage, neutralisation, blanchiment et désodorisation sur une ligne de raffinage séparée, approvisionnée indépendamment.
 7. **Conditionnement** — Remplissez l'huile filtrée ou raffinée dans des conteneurs appropriés. La VCO doit être stockée dans du verre ambré pour préserver la qualité.
 
 ## Équipement Recommandé
 
 - **Presse Hydraulique pour Huile de Coco / VCO** — Conçue spécifiquement pour le pressage de la coco avec une double fonction pour l'extraction du lait de coco et de l'huile. Le fût de 600 mm traite 180 kg par lot.
 - **Presse Filtrante Pneumatique** — Essentielle pour produire une huile de coco claire et sans sédiment. Le fonctionnement pneumatique assure une pression de filtration constante.
-- **Système de Raffinage d'Huile Alimentaire** — Requis pour la production d'huile de coco RBD. Disponible en capacités de 1 à 100 tonnes/jour pour correspondre à votre échelle.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile de coco ?**
-Les prix varient selon le modèle, la capacité et la configuration. Contactez Haonuo pour un devis personnalisé basé sur vos besoins de production.
-
-**Quelle est la capacité de production quotidienne ?**
-Avec notre presse hydraulique standard fonctionnant 8 heures, vous pouvez traiter 500-800 kg de coprah par jour. Le modèle lourd avec configuration double fût peut gérer 1 500-2 000 kg par jour.
-
-**Puis-je produire à la fois de la VCO et de l'huile de coco ordinaire ?**
-Oui. Notre presse hydraulique à huile de coco est conçue pour un fonctionnement double usage. Pour la VCO, utilisez la chair de coco fraîche avec un pressage à froid. Pour l'huile de coco ordinaire, utilisez du coprah avec un pressage à chaud. La même machine gère les deux processus.
-
-**Quelle est la durée de conservation de l'huile de coco pressée à froid ?**
-L'huile de coco vierge correctement filtrée a une durée de conservation de 2 à 3 ans lorsqu'elle est stockée dans un endroit frais et sec à l'abri de la lumière directe du soleil. La forte teneur en acide laurique offre des propriétés antimicrobiennes naturelles.
+- **Ligne de raffinage (approvisionnée séparément)** — La production RBD nécessite une ligne de raffinage indépendante ; nous pouvons vous conseiller sur les spécifications et l'implantation.
 
 ## Pourquoi Choisir Haonuo
 
 - **Plus de 15 ans de fabrication de presses hydrauliques** — Nous nous spécialisons dans la technologie de presse hydraulique à huile. Cette concentration signifie une expertise plus approfondie et de meilleures machines pour vos besoins spécifiques.
 - **Prix directs d'usine** — Pas d'intermédiaires. Vous obtenez des prix compétitifs directement du fabricant, économisant par rapport aux prix des sociétés de négoce (les économies réelles varient).
-- **Fournisseur de solutions complètes** — De la préparation des graines à l'huile embouteillée, nous fournissons chaque pièce d'équipement dont vous avez besoin, garantissant une intégration transparente dans votre ligne de production.
+- **Fournisseur de solution centrale** — De la préparation des graines à l'huile filtrée, nous fournissons l'équipement de pressage essentiel et vous aidons à coordonner le raffinage approvisionné séparément.
 - **Support d'installation mondial** — Nos ingénieurs assurent l'installation et la formation sur site dans le monde entier, garantissant que votre machine de pressage d'huile de coco fonctionne à son efficacité maximale dès le premier jour.
 - **Prouvé dans les marchés tropicaux** — Notre équipement de pressage d'huile de coco fonctionne déjà avec succès aux Philippines, en Indonésie, au Sri Lanka et en Inde — les principales régions productrices de coco du monde.`,
 
@@ -290,23 +228,6 @@ Que vous dirigiez une installation de production d'huile dédiée, une usine de 
 - **Broyeur-Chargeur-Torpéfacteur Intégré** — Unité de préparation de graines tout-en-un qui automatise le nettoyage, le broyage et la torréfaction. Réduit la main-d'œuvre et assure une préparation constante pour un débit commercial.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante de divers types de graines. Essentielle pour la production d'huile pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration à haut volume correspondant au débit de la presse commerciale. Produit une huile claire, prête pour le marché.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile commerciale ?**
-Nos machines de pressage d'huile commerciale sont disponibles dans diverses configurations, du modèle simple fût au modèle double fût avec accessoires complets. Nous offrons des prix directs d'usine qui permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient). Décrivez-nous votre configuration de production et nous préparerons un devis commercial personnalisé.
-
-**Quelle est la meilleure presse à huile pour un usage commercial ?**
-Pour la plupart des opérations commerciales, nous recommandons la Lourde (HN365) avec configuration double fût. Elle offre le meilleur équilibre entre force de pressage, débit et polyvalence. Si votre marché exige une huile pressée à froid premium, la Presse à Froid (HN426) est le meilleur choix.
-
-**Combien d'huile une presse commerciale peut-elle produire par jour ?**
-Avec une configuration double fût fonctionnant 8-10 heures, nos modèles commerciaux traitent 2 000-5 000 kg de graines par jour. La production réelle d'huile dépend du type de graine : environ 900-2 500 litres d'huile de sésame, 800-2 000 litres d'huile d'arachide, ou 1 100-3 100 litres d'huile de tournesol par jour.
-
-**Proposez-vous des lignes de production commerciales complètes ?**
-Oui. Nous fournissons des lignes de production clé en main complètes incluant le traitement des graines, la torréfaction, le pressage, la filtration et le raffinage optionnel. Nos ingénieurs peuvent concevoir une disposition optimisée pour votre installation et vos exigences de production.
-
-**Quelle est la différence entre simple et double fût ?**
-Une configuration double fût dispose de deux chambres de pressage indépendantes qui fonctionnent simultanément, doublant effectivement votre débit. Les deux fûts peuvent traiter le même type de graine ou des types différents en même temps. L'augmentation de l'encombrement est minime par rapport au gain de production.
 
 ## Comparaison Simple vs Double Fût
 
@@ -376,12 +297,12 @@ La solution de pressage d'huile de coton de Haonuo Machinery est conçue pour le
 |----------|-------|---------|
 | Presse Hydraulique Lourde | HN365 (365T) | Pressage primaire des graines de coton |
 | Presse Filtrante Pneumatique | HN-10SL | Filtration de l'huile brute |
-| Système de Raffinage d'Huile Alimentaire | Sur Mesure | Élimination du gossypol et raffinage |
+| Ligne de raffinage (approvisionnée séparément) | Sur Mesure | Élimination du gossypol et raffinage ; équipement indépendant |
 
 ## Pourquoi Choisir Haonuo pour la Production d'Huile de Coton
 
 - **Construction robuste** — Notre HN365 est construite pour la nature abrasive et riche en fibres du traitement des graines de coton
-- **Ligne de production complète** — De l'écabossage au raffinage, nous fournissons la chaîne d'équipement complète
+- **Ligne de production centrale** — De l'écabossage à la filtration, nous fournissons la chaîne de pressage complète et aidons à coordonner le raffinage approvisionné séparément pour l'élimination du gossypol
 - **Prouvé dans les marchés africains** — Nos machines sont utilisées avec succès au Nigeria, au Ghana et en Tanzanie
 - **Prix abordables** — Les prix directs d'usine rendent la production professionnelle d'huile de coton accessible
 - **Réseau de support local** — Pièces de rechange disponibles en stock, support technique via WhatsApp en temps réel`,
@@ -429,9 +350,9 @@ Contactez Haonuo pour une installation de production d'huile de lin personnalis�
 
 La production d'huile à l'échelle industrielle exige un équipement qui offre un débit maximal, une huile résiduelle minimale et une qualité constante à travers des milliers de tonnes de production par an. Une **machine de pressage d'huile industrielle** doit être suffisamment robuste pour un fonctionnement 24h/24 tout en maintenant la précision nécessaire pour une efficacité d'extraction optimale.
 
-La solution de pressage d'huile industrielle de Haonuo est construite autour de nos presses hydrauliques Ultra Haute Pression (HN500) et Haute Pression (HN480) — les machines les plus puissantes de notre gamme. Ces systèmes de **presse hydraulique industrielle** délivrent des forces de pressage soutenues jusqu'à 60 MPa, atteignant des taux d'huile résiduelle inférieurs à 5 % même sur les graines oléagineuses les plus difficiles. Combinées à notre système de raffinage d'huile alimentaire, nous fournissons des lignes de production complètes de 1 à 100 tonnes par jour.
+La solution de pressage d'huile industrielle de Haonuo est construite autour de nos presses hydrauliques Ultra Haute Pression (HN500) et Haute Pression (HN480) — les machines les plus puissantes de notre gamme. Ces systèmes de **presse hydraulique industrielle** délivrent des forces de pressage soutenues jusqu'à 60 MPa, atteignant des taux d'huile résiduelle inférieurs à 5 % même sur les graines oléagineuses les plus difficiles. Nous fournissons la ligne centrale de pressage et de filtration de 1 à 100 tonnes par jour, et vous aidons à intégrer un équipement de raffinage approvisionné indépendamment lorsque l'huile finie RBD est requise.
 
-Cette solution est conçue pour les installations de production d'huile à grande échelle, les raffineries et les opérations agro-industrielles qui nécessitent un débit de qualité industrielle, une fiabilité et une qualité d'huile finie.
+Cette solution est conçue pour les installations de production d'huile à grande échelle, les opérations qui ajoutent une capacité de pressage et les groupes agro-industriels nécessitant un débit et une fiabilité de qualité industrielle.
 
 ## Rendements Attendus en Huile
 
@@ -449,7 +370,7 @@ Cette solution est conçue pour les installations de production d'huile à grand
 - **Ultra haute pression** : Jusqu'à 60 MPa pour une efficacité d'extraction maximale
 - **Huile résiduelle inférieure à 4 %** : Taux d'extraction compétitifs sur la plupart des matériaux
 - **Option double fût** : Traitez plus de 5 000 kg de graines par jour
-- **Raffinage complet** : Systèmes de raffinage 1-100 T/J pour l'huile finie RBD
+- **Coordination du raffinage** : l'huile finie RBD utilise une ligne de raffinage séparée, approvisionnée indépendamment ; nous conseillons sur les spécifications et l'implantation
 - **Capacité 24h/24** : Construction robuste pour un fonctionnement industriel continu
 
 ## Processus Recommandé
@@ -459,7 +380,7 @@ Cette solution est conçue pour les installations de production d'huile à grand
 3. **Conditionnement** — Ajustez l'humidité et la température des graines pour un pressage optimal. Les opérations industrielles utilisent généralement des systèmes de conditionnement continus.
 4. **Pressage Haute Pression** — Introduisez les graines préparées dans la presse hydraulique Ultra Haute Pression (HN500) ou Haute Pression (HN480). La configuration double fût permet un fonctionnement quasi continu à plus de 5 000 kg/jour.
 5. **Filtration Industrielle** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour une filtration de qualité industrielle. Les modèles à haut volume correspondent au débit de la presse.
-6. **Raffinage** — Traitez l'huile filtrée à travers le système de raffinage d'huile alimentaire pour le dégommage, la neutralisation, le blanchiment et la désodorisation. Disponible en capacités de 1-100 T/J.
+6. **Raffinage (approvisionné séparément)** — Pour l'huile finie RBD, l'huile filtrée passe par dégommage, neutralisation, blanchiment et désodorisation sur une ligne de raffinage indépendante (1-100 T/J), que nous aidons à spécifier et intégrer.
 7. **Contrôle Qualité** — Mettez en œuvre un contrôle qualité complet avec des tests en laboratoire pour l'acidité, la valeur de peroxyde, la couleur et d'autres paramètres requis pour les normes d'huile commerciale.
 8. **Conditionnement et Distribution** — Conditionnez l'huile finie dans des conteneurs en vrac, des bouteilles ou des fûts pour la distribution en gros et au détail.
 
@@ -469,24 +390,7 @@ Cette solution est conçue pour les installations de production d'huile à grand
 - **Presse Hydraulique Haute Pression (HN480)** — Deuxième modèle le plus puissant, adapté à la plupart des applications de pressage industriel. Excellent équilibre entre force et débit.
 - **Broyeur Industriel de Graines (Type 370)** — Machine de traitement de graines robuste conçue pour un débit à l'échelle industrielle. Gère le nettoyage, le broyage et le décorticage.
 - **Presse Filtrante Pneumatique** — Filtration de qualité industrielle pour la clarification d'huile à haut volume. Correspond au débit de la presse pour une intégration transparente.
-- **Système de Raffinage d'Huile Alimentaire (1-100 T/J)** — Ligne de raffinage complète pour produire de l'huile finie RBD (Raffinée, Blanchie, Désodorisée). Disponible en capacités de 1 à 100 tonnes par jour.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile industrielle ?**
-Nos systèmes de presse à huile industrielle sont disponibles dans diverses configurations, des presses simple fût aux lignes de production complètes avec broyeur industriel, filtration et systèmes de raffinage. Nous fournissons des devis de projet détaillés basés sur vos exigences spécifiques. Envoyez-nous les détails de votre projet pour une proposition personnalisée.
-
-**Quelle est la capacité maximale de votre système industriel ?**
-Notre modèle Ultra Haute Pression (HN500) avec configuration double fût traite plus de 5 000 kg de graines par jour. Combiné à notre système de raffinage d'huile alimentaire, nous fournissons des lignes de production complètes de 1 à 100 tonnes par jour d'huile finie.
-
-**Fournissez-vous l'installation et la formation ?**
-Oui. Pour l'équipement à l'échelle industrielle, nous fournissons des services complets d'installation sur site, de mise en service et de formation des opérateurs. Nos ingénieurs se rendent dans votre installation partout dans le monde pour garantir que votre ligne de production fonctionne à son efficacité maximale dès le premier jour.
-
-**Pouvez-vous fournir une ligne de production d'huile clé en main complète ?**
-Oui. Nous fournissons des solutions clé en main complètes de la réception des graines à l'huile conditionnée, y compris le traitement des graines, le pressage, la filtration, le raffinage et le conditionnement. Notre équipe d'ingénierie conçoit la disposition et intègre tout l'équipement pour un fonctionnement transparent.
-
-**Quel est le taux d'huile résiduel pour le pressage industriel ?**
-Notre modèle Ultra Haute Pression atteint des taux d'huile résiduelle inférieurs à 4 % pour la plupart des matériaux, et inférieurs à 5 % pour même les graines oléagineuses les plus difficiles.
+- **Ligne de raffinage (approvisionnée séparément)** — L'huile finie RBD nécessite une ligne de raffinage indépendante de 1-100 T/J ; nous fournissons les spécifications, la coordination de l'implantation et le support d'intégration.
 
 ## Ligne de Production Complète
 
@@ -504,27 +408,27 @@ Une ligne de production d'huile industrielle intègre plusieurs étapes de trait
 **Étape 4 — Filtration**
 → Presse Filtrante Pneumatique → Huile clarifiée
 
-**Étape 5 — Raffinage (pour huile RBD)**
-→ Dégommage → Neutralisation → Blanchiment → Désodorisation → Huile finie RBD
+**Étape 5 — Raffinage (pour huile RBD, approvisionné séparément)**
+→ Ligne de raffinage indépendante : Dégommage → Neutralisation → Blanchiment → Désodorisation → Huile finie RBD
 
 **Étape 6 — Contrôle Qualité et Conditionnement**
 → Tests en laboratoire (acidité, valeur de peroxyde, couleur) → Mise en bouteille/remplissage de fûts → Stockage → Distribution
 
-Une ligne clé en main complète de Haonuo inclut tout l'équipement, la tuyauterie, les commandes électriques et la conception de disposition d'ingénierie. Nos ingénieurs assurent l'installation, la mise en service et la formation des opérateurs dans votre installation.
+Notre périmètre clé en main couvre la ligne de pressage centrale — tout l'équipement de la ligne de pressage, la tuyauterie, les commandes électriques et la conception d'implantation — et nos ingénieurs assurent l'installation, la mise en service et la formation des opérateurs. Lorsque votre projet inclut le raffinage, l'équipement de raffinage est fourni par un fabricant spécialisé et coordonné dans la même implantation.
 
 ## Scénarios d'Application Industrielle
 
 ### Grande Usine d'Huile
-Traitement de 10 à 100 tonnes de graines oléagineuses par jour pour les marchés de gros et de détail. Notre système HN500 double fût avec ligne de raffinage délivre une huile de qualité RBD constante qui répond aux normes nationales et internationales. Prouvé dans des installations en Inde, en Indonésie et en Égypte.
+Traitement de 10 à 100 tonnes de graines oléagineuses par jour pour les marchés de gros et de détail. Notre ligne de pressage HN500 double fût délivre une huile brute de qualité constante, et une ligne de raffinage approvisionnée séparément complète le parcours vers l'huile RBD répondant aux normes nationales et internationales. Prouvé dans des installations en Inde, en Indonésie et en Égypte.
 
 ### Raffinerie d'Huile
 Ajout de capacité de pressage à une raffinerie existante. Nos presses hydrauliques alimentent l'huile brute directement dans votre système de raffinage. L'ultra haute pression assure un rendement maximal en huile brute avant le raffinage, améliorant l'efficacité globale de l'usine.
 
 ### Groupe Agro-industriel et Plantation
-Opérations verticalement intégrées contrôlant l'ensemble de la chaîne d'approvisionnement, de la plantation à l'huile conditionnée. Nos lignes de production complètes traitent le palmiste, la coco, le sésame et d'autres cultures de plantation à l'échelle industrielle. Nous avons équipé des groupes agro-industriels en Afrique de l'Ouest et en Asie du Sud-Est.
+Opérations verticalement intégrées contrôlant l'ensemble de la chaîne d'approvisionnement, de la plantation à l'huile conditionnée. Nos lignes de pressage centrales traitent le palmiste, la coco, le sésame et d'autres cultures de plantation à l'échelle industrielle, en s'intégrant à un équipement de raffinage approvisionné indépendamment. Nous avons équipé des groupes agro-industriels en Afrique de l'Ouest et en Asie du Sud-Est.
 
 ### Producteur Orienté Export
-Production d'huile pour les marchés internationaux exigeant des normes de qualité strictes (ISO, FSSAI, matériaux en contact alimentaire conformes FDA). Note : Nos machines n'ont pas été séparément certifiées ou approuvées par la FDA. Nos systèmes industriels avec capacité de raffinage produisent de l'huile RBD de qualité export. Nous fournissons toute la documentation nécessaire et le support de certification pour les expéditions internationales.
+Production d'huile pour les marchés internationaux exigeant des normes de qualité strictes (ISO, FSSAI, matériaux en contact alimentaire conformes FDA). Note : Nos machines n'ont pas été séparément certifiées ou approuvées par la FDA. Associées à une ligne de raffinage approvisionnée séparément, nos systèmes de pressage produisent une huile brute adaptée à une production RBD de qualité export. Nous fournissons toute la documentation nécessaire et le support de certification pour les expéditions internationales.
 
 ## Fonctionnement Continu 24h/24
 
@@ -540,7 +444,7 @@ Nos presses hydrauliques industrielles à huile sont conçues pour des programme
 ## Pourquoi Choisir Haonuo
 
 - **Efficacité d'extraction maximale** — Nos presses hydrauliques ultra haute pression atteignent des taux d'huile résiduelle inférieurs à 4 %, extrayant plus d'huile de chaque tonne de matière première et améliorant directement votre rentabilité.
-- **Solutions clé en main complètes** — De la réception des graines à l'huile conditionnée, nous concevons, fournissons et installons des lignes de production complètes. Un seul fournisseur, un seul interlocuteur, intégration transparente.
+- **Solutions clé en main centrales** — De la réception des graines à l'huile brute filtrée, nous concevons, fournissons et installons la ligne de pressage complète avec un seul interlocuteur, et coordonnons le raffinage approvisionné indépendamment si nécessaire.
 - **Support d'installation mondial** — Nos ingénieurs assurent l'installation et la formation sur site dans le monde entier, garantissant que votre système industriel fonctionne à son efficacité maximale dès la mise en service.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient). Pas de majorations de sociétés de négoce sur des investissements à six chiffres.
 - **Prouvé à l'échelle industrielle** — Nos systèmes de presse à huile industrielle fonctionnent dans de grandes installations en Inde, en Indonésie, au Nigeria, en Égypte et au Brésil — traitant des milliers de tonnes de graines oléagineuses annuellement.`,
@@ -584,20 +488,6 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 - **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes nécessitant un débit quotidien plus élevé.
 - **Cuiseur à Vapeur Électrique de Graines** — Conçu spécifiquement pour la cuisson à la vapeur des graines de moutarde avec un contrôle précis de la température. Essentiel pour la production d'huile de moutarde pressée à chaud.
 - **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de moutarde propre et prête pour le marché avec un minimum de main-d'œuvre.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile de moutarde ?**
-Nos machines de pressage d'huile de moutarde sont disponibles dans divers modèles, tailles de fût et configurations. Nous offrons des prix directs d'usine qui permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient). Demandez un devis personnalisé pour votre configuration.
-
-**Qu'est-ce que l'huile de moutarde Kachi Ghani ?**
-Kachi Ghani est le terme indien traditionnel pour l'huile de moutarde pressée à froid, extraite sans chaleur ni produits chimiques. Elle conserve la saveur piquante naturelle, l'arôme et les propriétés nutritionnelles des graines de moutarde. L'huile Kachi Ghani se vend à un prix premium sur le marché indien.
-
-**Le pressage d'huile de moutarde est-il une activité rentable ?**
-Oui, cela peut l'être. L'huile de moutarde est consommée quotidiennement par des centaines de millions de personnes en Asie du Sud. L'Inde seule produit plus de 8 millions de tonnes d'huile de moutarde par an. La demande constante et le coût relativement bas des matières premières rendent le pressage d'huile de moutarde potentiellement rentable, bien que les rendements réels dépendent des conditions locales du marché, des coûts des matières premières et de l'efficacité de production.
-
-**Puis-je utiliser la même machine pour la moutarde et d'autres graines ?**
-Oui. Nos presses hydrauliques à huile peuvent traiter les graines de moutarde, le sésame, les arachides, les graines de tournesol et bien d'autres matières oléagineuses. Il suffit d'ajuster les paramètres de pressage pour chaque type de graine.
 
 ## Pourquoi Choisir Haonuo
 
@@ -645,23 +535,6 @@ Cette solution est conçue pour les producteurs d'huile d'olive méditerranéens
 - **Presse Hydraulique à Froid (HN426)** — Conçue spécifiquement pour le pressage à froid avec contrôle de température en dessous de 60°C. Essentielle pour produire une véritable huile d'olive extra vierge répondant aux normes de qualité internationales.
 - **Presse Filtrante Pneumatique** — Fournit une filtration contrôlable pour l'huile d'olive. Peut être ajustée pour une filtration minimale (conservant plus de saveur) ou une filtration fine (clarté maximale).
 
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile d'olive ?**
-Nos machines de pressage d'huile d'olive sont disponibles dans diverses configurations, du modèle à froid aux modèles haute capacité. Nous offrons des prix directs d'usine sans majoration d'intermédiaire. Décrivez-nous vos objectifs de production pour un devis adapté.
-
-**Comment le pressage hydraulique se compare-t-il à l'extraction traditionnelle d'huile d'olive ?**
-L'extraction traditionnelle d'huile d'olive utilise des broyeurs à marteaux pour écraser les olives en pâte, puis des centrifugeuses pour séparer l'huile. Notre presse hydraulique est plus simple, plus abordable et adaptée pour les petits et moyens producteurs. Elle produit une véritable huile d'olive extra vierge pressée à froid sans la complexité et le coût des systèmes à centrifugeuse.
-
-**Qu'est-ce qui différencie l'huile d'olive extra vierge de l'huile d'olive ordinaire ?**
-L'huile d'olive extra vierge (EVOO) est le grade le plus élevé, produite par pressage à froid sans aucun traitement chimique ni raffinage. Elle doit avoir une acidité inférieure à 0,8 % et réussir une évaluation sensorielle pour le fruité, l'amertume et le piquant. Notre presse hydraulique à froid est spécifiquement conçue pour produire une huile répondant aux normes EVOO.
-
-**Combien de temps après la récolte les olives doivent-elles être pressées ?**
-Idéalement dans les 24 heures. Les olives commencent à s'oxyder immédiatement après la récolte, et les dépassements au-delà de 48 heures dégradent significativement la qualité de l'huile. Si le pressage immédiat n'est pas possible, stockez les olives dans des conteneurs ventilés à des températures fraîches.
-
-**Puis-je presser ensemble des olives de différentes variétés ?**
-Oui, l'assemblage de variétés est courant et peut produire une excellente huile. Beaucoup d'huiles d'olive premium sont des assemblages de variétés complémentaires. Cependant, si vous souhaitez produire des huiles mono-variétales pour le marché premium, pressez chaque variété séparément.
-
 ## Pourquoi Choisir Haonuo
 
 - **Spécialistes du pressage à froid** — Notre modèle HN426 maintient les températures en dessous de 60°C, produisant une véritable huile d'olive extra vierge pressée à froid qui répond aux normes de qualité internationales.
@@ -676,7 +549,7 @@ L'huile de palmiste est une huile très polyvalente dérivée de l'amande (grain
 
 La solution de pressage d'huile de palmiste de Haonuo est construite autour de notre technologie de presse hydraulique haute pression, particulièrement bien adaptée aux amandes de palmiste dures et riches en graisses. Notre **machine d'extraction d'huile de palmiste** applique une pression élevée soutenue qui extrait minutieusement l'huile des amandes broyées, atteignant des taux d'huile résiduelle inférieurs à 5 %.
 
-Cette solution couvre le processus complet, de la séparation des amandes au pressage, à la filtration et au raffinage optionnel, vous permettant de produire de l'huile de palmiste de qualité alimentaire et industrielle.
+Cette solution couvre le processus, de la séparation des amandes au pressage et à la filtration, le raffinage optionnel étant assuré par un équipement approvisionné séparément, vous permettant de produire de l'huile de palmiste de qualité alimentaire et industrielle.
 
 ## Rendements Attendus en Huile
 
@@ -700,7 +573,7 @@ Cette solution couvre le processus complet, de la séparation des amandes au pre
 4. **Broyage** — Broyez les amandes de palmiste séchées en petits morceaux (2-4 mm) à l'aide du broyeur de graines. Cette étape est critique pour une extraction efficace de l'huile.
 5. **Pressage hydraulique** — Introduisez les amandes broyées dans la presse hydraulique lourde ou ultra haute pression. Appliquez une pression élevée soutenue pendant 35-45 minutes par lot.
 6. **Filtration** — Faites passer l'huile de palmiste brute à travers la presse filtrante pneumatique pour obtenir une huile claire et propre.
-7. **Raffinage (Optionnel)** — Pour l'huile de palmiste de qualité alimentaire, utilisez le système de raffinage d'huile alimentaire pour produire de l'huile de palmiste RBD.
+7. **Raffinage (Optionnel)** — L'huile de palmiste de qualité alimentaire RBD nécessite une ligne de raffinage séparée, approvisionnée indépendamment.
 8. **Conditionnement** — Conditionnez l'huile finie dans des conteneurs appropriés. L'huile de palmiste se solidifie à des températures inférieures à 25°C.
 
 ## Équipement Recommandé
@@ -708,90 +581,106 @@ Cette solution couvre le processus complet, de la séparation des amandes au pre
 - **Presse Hydraulique Lourde (HN365)** — Fournit la pression élevée nécessaire pour l'extraction d'huile de palmiste. Recommandée pour les opérations de petite à moyenne envergure.
 - **Presse Hydraulique Ultra Haute Pression (HN500)** — Délivre une pression maximale pour des taux d'huile résiduelle compétitifs. Adaptée pour les opérations plus importantes recherchant un rendement maximal.
 - **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de palmiste propre avec un minimum de sédiments.
-- **Système de Raffinage d'Huile Alimentaire** — Requis pour produire de l'huile de palmiste RBD de qualité alimentaire. Disponible en capacités de 1 à 100 tonnes/jour.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile de palmiste ?**
-Nos machines de pressage d'huile de palmiste sont disponibles dans diverses configurations, des modèles lourds aux modèles ultra haute pression. Le prix dépend de la taille du fût, de la force de pressage et de la nécessité d'équipement de filtration et de raffinage. Contactez-nous pour une solution adaptée.
-
-**Quelle est la différence entre l'huile de palme et l'huile de palmiste ?**
-L'huile de palme provient du fruit charnu (mésocarpe) et est de couleur orange-rouge, riche en bêta-carotène. L'huile de palmiste provient de la graine (amande) à l'intérieur du fruit et va du blanc au jaunâtre, avec un profil d'acides gras différent. L'huile de palmiste ressemble davantage à l'huile de coco et est utilisée dans la confiserie, les cosmétiques et la fabrication de détergents.
-
-**Puis-je presser à la fois le fruit du palmier et les amandes de palmiste sur la même machine ?**
-Notre presse hydraulique peut traiter les deux, mais le fruit du palmier et les amandes de palmiste nécessitent des méthodes de préparation et des paramètres de pressage différents. Le fruit du palmier nécessite un prétraitement différent (stérilisation et trituration) comparé aux amandes de palmiste (cassage, séparation et broyage).
-
-**Le pressage d'huile de palmiste est-il rentable ?**
-Oui. L'huile de palmiste se vend à un prix premium par rapport à l'huile de palme brute en raison de sa teneur en acide laurique et de ses applications diverses dans l'alimentation, les cosmétiques et les oléochimiques. Le traitement local des amandes plutôt que leur exportation brute augmente considérablement les revenus.
+- **Ligne de raffinage (approvisionnée séparément)** — L'huile de palmiste RBD de qualité alimentaire nécessite une ligne de raffinage indépendante ; nous pouvons vous conseiller sur les spécifications et l'implantation.
 
 ## Pourquoi Choisir Haonuo
 
 - **Spécialistes haute pression** — Les amandes de palmiste nécessitent une pression de pressage plus élevée que la plupart des graines oléagineuses. Nos presses hydrauliques délivrent une pression soutenue de 40-55 MPa pour une extraction approfondie.
 - **Huile résiduelle inférieure à 5 %** — Notre modèle ultra haute pression atteint des taux d'huile résiduelle compétitifs, ce qui signifie plus d'huile dans votre réservoir et moins laissée dans le tourteau.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
-- **Lignes de traitement complètes** — De la séparation des amandes à l'huile raffinée, nous fournissons chaque composant pour une opération de production d'huile de palmiste entièrement intégrée.
+- **Lignes de traitement intégrées** — De la séparation des amandes à l'huile filtrée, nous fournissons l'équipement de pressage central et aidons à coordonner le raffinage approvisionné séparément pour une opération entièrement intégrée.
 - **Prouvé en Asie du Sud-Est** — Nos machines de pressage d'huile de palmiste sont utilisées avec succès en Indonésie, en Malaisie et au Nigeria — les plus grandes nations productrices d'huile de palme du monde.`,
 
   'peanut-oil-pressing': `## Aperçu
 
-L'huile d'arachide (aussi appelée huile de cacahuète) est l'une des huiles de cuisson les plus consommées au monde, en particulier en Chine, en Inde et en Asie du Sud-Est. Investir dans une **machine de pressage d'huile d'arachide** de qualité est la première étape pour bâtir une entreprise rentable d'extraction d'huile d'arachide, que vous serviez les marchés locaux ou exportiez une huile d'arachide pressée à froid premium.
+L'huile d'arachide (aussi appelée huile de cacahuète) est l'huile de cuisson quotidienne d'Afrique de l'Ouest — le Nigeria est l'un des plus grands producteurs mondiaux d'arachides — et la demande est tout aussi forte en Inde, en Chine et en Asie du Sud-Est. Une **machine de pressage d'huile d'arachide** hydraulique permet aux petites et moyennes huileries de presser une huile chaude aromatique ou une huile premium pressée à froid directement à partir d'amandes décortiquées, pour les marchés locaux ou l'exportation.
 
-La solution de pressage d'huile d'arachide de Haonuo est conçue autour de la technologie de presse hydraulique qui délivre un rendement en huille exceptionnel à partir des arachides. Notre **machine d'extraction d'huile d'arachide** hydraulique applique une pression élevée contrôlée qui préserve la saveur naturelle d'arachide et la valeur nutritionnelle tout en atteignant des taux d'huile résiduelle inférieurs à 5 %.
+La solution de pressage d'arachide de Haonuo repose sur la technologie de presse hydraulique. Contrairement aux expelleurs à vis, qui génèrent une chaleur de friction susceptible de brûler l'huile, notre **machine d'extraction d'huile d'arachide** applique une pression statique maîtrisée. L'huile reste en dessous de la température de brûlure, la saveur naturelle d'arachide est préservée, et l'huile résiduelle dans le tourteau se situe généralement à **6-8 %** (tests usine Haonuo sur arachide et sésame calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation), contre environ 10-12 % pour une presse conventionnelle à fût percé.
 
-Cette solution prend en charge à la fois le pressage à froid (pour une huile d'arachide premium riche en nutriments) et le pressage à chaud avec torréfaction (pour une huile de cuisson aromatique au rendement plus élevé), vous offrant la flexibilité de cibler différents segments de marché et niveaux de prix.
+Chaque presse hydraulique Haonuo assure **les deux procédés sur une seule machine** : pressage à froid pour une huile premium riche en nutriments, et pressage à chaud après torréfaction pour un arôme plus fort et 3-5 % d'huile en plus par lot. La différence tient entièrement à la préparation des graines — c'est précisément pourquoi le processus en sept étapes ci-dessous compte.
 
 ## Rendements Attendus en Huile
 
-| Matière Première | Teneur en Huile | Rendement de Pressage Attendu | Taux d'Huile Résiduel |
+| Matière | Teneur en huile | Rendement attendu | Huile résiduelle dans le tourteau |
 |---|---|---|---|
-| Arachides Décortiquées (Crues) | 45-55 % | 40-48 % | ≤ 5 % |
-| Arachides Décortiquées (Torréfiées) | 45-55 % | 43-50 % | ≤ 4 % |
-| Arachides Non Décortiquées | 25-35 % | 20-30 % | ≤ 6 % |
+| Amandes décortiquées, torréfiées (pressage à chaud) | 45-55 % | 40-48 % | 6-8 % |
+| Amandes décortiquées, crues (pressage à froid) | 45-55 % | 38-44 % | 7-9 % |
+| Arachides non décortiquées (déconseillé) | 25-35 %* | 20-30 % | 8-10 %+ |
 
-**Facteurs clés affectant le rendement :**
-- **Décorticage** : Décortiquez toujours les arachides avant le pressage — les coques absorbent l'huile et réduisent significativement le rendement
-- **Variété** : Les variétés d'arachide riches en huile (par ex. Virginia, Spanish) produisent plus d'huile que les types runner
-- **Teneur en humidité** : L'humidité optimale de pressage est de 6-8 %
-- **Torréfaction** : La pré-torréfaction à 130-160°C augmente le rendement de 3-5 % et développe la saveur
+\*La teneur en huile des arachides non décortiquées est diluée par la masse des coques ; les coques absorbent aussi l'huile pendant le pressage, d'où le caractère obligatoire du décorticage.
 
-## Processus Recommandé
+**Principaux facteurs affectant le rendement :**
 
-1. **Nettoyage et Décorticage** — Éliminez les pierres, la terre et les coques des arachides. Le décorticage est critique — les coques absorbent l'huile et réduisent à la fois le rendement et la qualité. Notre broyeur de graines peut aider au décorticage.
-2. **Broyage (Optionnel)** — Broyez légèrement les arachides décortiquées pour augmenter la surface pour un pressage plus efficace.
-3. **Torréfaction (Pour pressage à chaud)** — Torréfiez les arachides à 130-160°C pendant 20-30 minutes à l'aide de la poêle de torréfaction thermique. Cela développe l'arôme caractéristique d'arachide et augmente le rendement en huile. À ignorer pour l'huile pressée à froid.
-4. **Pressage hydraulique** — Introduisez les arachides préparées dans la presse hydraulique standard ou lourde. Le fût de 390 mm de diamètre intérieur traite 100 kg par lot avec un cycle de 35-45 minutes.
-5. **Filtration** — Faites passer l'huile d'arachide brute à travers la presse filtrante pneumatique pour éliminer les sédiments et les particules fines.
-6. **Décantation** — Laissez l'huile filtrée reposer pendant 12-24 heures. La décantation naturelle produit une huile plus claire.
-7. **Conditionnement** — Mettez l'huile d'arachide finie en bouteilles. L'huile pressée à froid doit être stockée dans des bouteilles en verre sombre pour préserver la qualité.
+- **Décorticage** — presser des arachides non décortiquées réduit le rendement de 15-25 % et assombrit l'huile.
+- **Variété** — les variétés riches en huile (Virginia, Spanish) surpassent les types runner.
+- **Humidité** — les amandes entrant dans le fût doivent être à 4-6 % pour le pressage à chaud, 6-7 % pour le pressage à froid.
+- **Torréfaction** — un conditionnement vers 130 °C (120-150 °C) développe l'arôme de noisette et augmente le rendement de 3-5 %.
+- **Conception du fût** — le fût à fentes de type barre draine l'huile sur une surface bien plus grande qu'un fût percé, extrayant typiquement 2-3 % d'huile en plus par lot.
+
+## Le Processus de Production d'Huile d'Arachide en 7 Étapes
+
+Le processus est identique pour toute ligne hydraulique ; seule l'étape de torréfaction est activée ou non selon que vous produisez une huile pressée à chaud ou à froid.
+
+### Étape 1 — Nettoyage
+
+Passez les gousses récoltées dans un tamis de nettoyage ou un vanneur pour éliminer pierres, mottes de terre, poussière et gousses immatures. Les pierres rayent le fût et réduisent sa durée de vie ; poussière et débris végétaux finissent en sédiments dans l'huile. Deux minutes de nettoyage économisent des heures de filtration.
+
+### Étape 2 — Décorticage
+
+Passez les gousses dans une **décortiqueuse d'arachides** dédiée et triez les amandes brisées. Les coques sont dures et poreuses — elles absorbent l'huile dès l'application de la pression : presser en coque fait perdre 15-25 % de l'huile et donne au tourteau comme à l'huile une note boisée âpre. Gardez les pellicules rouges sauf si votre acheteur exige des amandes blanchies ; les pellicules fines traversent le pressage sans problème.
+
+### Étape 3 — Broyage / Floconnage
+
+Broyez les amandes décortiquées en granulés de 4-6 mm, ou passez-les dans un floconnoir pour obtenir de fins flocons. Rompre les parois cellulaires avant le pressage raccourcit le chemin de l'huile : elle s'écoule plus vite, les lots finissent plus tôt et l'huile résiduelle du tourteau baisse. Pour les petits ateliers, un broyage grossier suffit ; les huileries visant le rendement maximal floconnent.
+
+### Étape 4 — Conditionnement et Torréfaction (pressage à chaud uniquement)
+
+Pour une huile chaude aromatique, torréfiez ou conditionnez à la vapeur les amandes à **environ 130 °C (plage 120-150 °C) pendant 20-30 minutes** dans la poêle de torréfaction à huile thermique. La double paroi à huile thermique chauffe uniformément, sans points brûlés qui assombriraient l'huile. La torréfaction rompt les cellules oléifères, réduit la viscosité de l'huile et construit l'arôme caractéristique d'arachide grillée. Arrêtez dès que les amandes deviennent doré clair et dégagent leur parfum de noisette. **Ignorez complètement cette étape pour l'huile pressée à froid.**
+
+### Étape 5 — Réglage de l'humidité
+
+Contrôlez l'humidité avant chaque lot. Les amandes pour pressage à chaud doivent entrer dans le fût à **4-6 %** ; pour le pressage à froid à **6-7 %**, car l'huile froide s'écoule mal depuis des graines trop sèches. Des amandes trop humides donnent une huile trouble et émulsifiée qui mousse à la cuisson et se conserve mal ; des amandes trop sèches génèrent de la poussière, obstruent les fentes du fût et libèrent leur huile lentement. Corrigez par quelques minutes de torréfaction supplémentaires (trop humide) ou par une légère vaporisation d'eau suivie d'un repos (trop sèches).
+
+### Étape 6 — Pressage hydraulique
+
+Chargez 100 kg d'amandes préparées dans le fût de 390 mm de la presse standard **HN325**, ou la **HN365** pour un travail à double station alternée, puis lancez le cycle. La pression monte à 60 MPa (HN325) sur le gâteau ; le fût à fentes draine l'huile en continu pendant que le gâteau se compacte. Les arachides torréfiées terminent un lot en **30-60 minutes** ; les lots à froid durent plus longtemps à plus basse température. Évacuez le gâteau en galette compacte, rechargez et répétez.
+
+### Étape 7 — Filtration, décantation et conditionnement
+
+L'huile brute va directement de la presse au **filtre-presse pneumatique**, qui élimine les fines particules de tourteau avec un minimum de main-d'œuvre. Laissez l'huile filtrée décanter naturellement **12-24 heures**, puis soutirez la couche supérieure claire au-dessus des sédiments. Mettez en bouteilles sombres et fermées — verre sombre pour l'huile premium pressée à froid — et stockez dans un endroit frais. Une huile d'arachide bien traitée se conserve 18-24 mois.
+
+**En un clin d'œil :** Nettoyage → Décorticage → Broyage/Floconnage → Conditionnement (pressage à chaud uniquement) → Humidité à 4-6 % → Pressage → Filtration et Décantation.
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique Standard (HN325)** — Adaptée pour la production d'huile d'arachide de petite à moyenne envergure. Le fût de 390 mm de diamètre intérieur traite 100 kg par lot avec un excellent rendement.
-- **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes. Force de pressage plus élevée et option double fût pour un débit accru.
-- **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante des arachides, essentielle pour l'huile d'arachide aromatique pressée à chaud.
-- **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile d'arachide claire et prête pour le marché avec un minimum de main-d'œuvre.
+| Étape | Équipement | Remarques |
+|---|---|---|
+| Pressage (cœur) | **Presse à Huile Hydraulique Standard HN325** | 325 t de force, 60 MPa, 100 kg/lot dans le fût de 390 mm ; la machine de départ standard des huileries d'arachide |
+| Pressage (montée en gamme) | **Presse à Huile Hydraulique HN365** | 365 t de force, doubles stations alternées ; pour les lots toute la journée et un débit quotidien plus élevé |
+| Torréfaction | **Poêle de Torréfaction à Huile Thermique** | Chaleur thermique uniforme à 120-150 °C ; requise pour l'huile pressée à chaud, omise pour le pressage à froid |
+| Filtration | **Filtre-Presse Pneumatique** | Élimine les fines automatiquement ; huile claire prête pour la décantation et la mise en bouteille |
+| Préparation | Décortiqueuse d'arachides + broyeur/floconnoir | Nous conseillons des modèles compatibles adaptés à votre tonnage |
 
-## Foire aux questions
+Au-delà de 2,5 t/jour, les configurations à double fût HN325/HN365 et les presses plus grandes de classe HN400 raccourcissent la journée de travail ; indiquez-nous votre objectif en tonnes par jour et nous dimensionnerons la ligne.
 
-**Combien coûte une machine de pressage d'huile d'arachide ?**
-Nos machines de pressage d'huile d'arachide sont disponibles dans diverses configurations, des modèles standard aux modèles lourds. Le prix dépend de la taille du fût, de la force de pressage et de la nécessité d'une ligne de production complète avec équipement de torréfaction et de filtration.
+<!-- yield-block -->
+### Ce que vous obtenez de 100 kg d'arachides décortiquées
 
-**Puis-je presser des arachides avec leurs coques ?**
-Nous recommandons fortement de décortiquer les arachides avant le pressage. Les coques d'arachide absorbent l'huile pendant le pressage, réduisant votre rendement de 15-25 % et affectant la qualité de l'huile. Notre broyeur de graines peut aider au processus de décorticage.
+| Production | Pressage à chaud (torréfié) | Pressage à froid |
+|---|---|---|
+| Huile brute | 40-48 kg (≈43-52 L) | 38-44 kg (≈41-48 L) |
+| Tourteau | ≈48-56 kg | ≈50-58 kg |
 
-**Quelle est la différence entre l'huile d'arachide pressée à froid et pressée à chaud ?**
-L'huile d'arachide pressée à froid conserve plus de vitamine E, de phytostérols et de saveur naturelle d'arachide. Elle se vend à un prix premium sur les marchés d'aliments de santé. L'huile d'arachide pressée à chaud a un arôme de torréfaction plus prononcé, préféré dans la cuisine chinoise et indienne, et donne 3-5 % plus d'huile par lot.
-
-**Combien de temps se conserve l'huile d'arachide ?**
-L'huile d'arachide correctement filtrée et stockée a une durée de conservation de 18-24 mois. L'huile d'arachide pressée à froid doit être stockée dans un endroit frais et sombre. L'huile d'arachide raffinée se conserve plus longtemps grâce à l'élimination des composés réactifs.
+*Chiffres typiques pour des arachides bien décortiquées et correctement conditionnées aux réglages machine standard ; d'après les tests usine Haonuo sur arachide calibrée à 6-8 % d'humidité, les résultats réels varient selon la variété, l'humidité et les réglages de cycle. Les litres supposent une densité d'huile d'environ 0,92 kg/L.*
+<!-- /yield-block -->
 
 ## Pourquoi Choisir Haonuo
 
-- **Expertise prouvée en huile d'arachide** — Nos presses hydrauliques sont spécifiquement optimisées pour le pressage des arachides, atteignant des taux d'huile résiduelle inférieurs à 5 %.
-- **Flexibilité double pression à froid/à chaud** — Une seule machine dessert les marchés de l'huile d'arachide pressée à froid premium et pressée à chaud aromatique.
-- **Prix directs d'usine** — Achetez directement au fabricant. Pas de majorations de sociétés de négoce, ce qui signifie des économies par rapport aux prix des sociétés de négoce (les économies réelles varient).
-- **Ligne de production complète** — Du nettoyage et de la torréfaction au pressage, à la filtration et au conditionnement, nous fournissons chaque composant pour une opération transparente.
-- **Confiance dans les marchés majeurs** — Nos machines de pressage d'huile d'arachide sont utilisées avec succès en Chine, en Inde, au Nigeria et au Sénégal — les plus grands pays producteurs d'arachides du monde.`,
+- **Hydraulique, pas à vis** — la pression statique maintient l'huile sous la température de brûlure ; pas de goût de brûlé, et 6-8 % d'huile résiduelle au lieu de 10-12 %.
+- **Une machine, deux produits** — passez de l'huile d'arachide premium pressée à froid à l'huile aromatique pressée à chaud en changeant uniquement la préparation.
+- **Ligne complète chez un seul fournisseur** — conseils sur le décorticage et la préparation, torréfactrice, presse et filtre accordés en une ligne équilibrée.
+- **Direct usine, construit pour votre site** — prix FOB Qingdao, conditions de paiement confirmées sur la facture pro forma, personnalisation gratuite de la tension (415 V/50 Hz, 380 V/60 Hz ou votre standard local), modèles standards prêts en 15-25 jours ouvrés.
+- **Testée avant expédition** — chaque presse tourne à pleine pression de service et est contrôlée pour les fuites avant emballage, avec manuel en anglais, assistance vidéo en ligne et pièces de rechange en stock.`,
 
   'sesame-oil-pressing': `## Aperçu
 
@@ -826,23 +715,9 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 
 ## Équipement Recommandé
 
-- **Presse Hydraulique pour Huile de Sésame** — Conçue spécifiquement pour le sésame avec un design de fût optimisé et une courbe de pression. Atteint des taux d'huile résiduelle typiquement inférieurs à 5 % lors de nos tests internes (les résultats varient selon la qualité des graines et les conditions de pressage).
+- **Presse Hydraulique pour Huile de Sésame** — Conçue spécifiquement pour le sésame avec un design de fût optimisé et une courbe de pression. Atteint des taux d'huile résiduelle typiquement inférieurs à 5 % lors des tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité (les résultats varient selon la graine et la préparation).
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante. Essentielle pour produire une huile de sésame torréfiée aromatique avec une saveur premium.
 - **Presse Filtrante Pneumatique** — Délivre une huile de sésame cristalline avec une filtration automatisée. Réduit la main-d'œuvre et assure une qualité constante.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile de sésame ?**
-Nos presses hydrauliques pour huile de sésame sont disponibles dans divers modèles, tailles de fût et configurations simple ou double fût. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
-
-**Puis-je produire à la fois de l'huile de sésame pressée à froid et torréfiée ?**
-Oui. Notre presse hydraulique pour huile de sésame gère à la fois la production d'huile de sésame pressée à froid et à chaud. Il suffit d'ignorer l'étape de torréfaction pour l'huile pressée à froid, ou de torréfier les graines d'abord pour une huile de sésame grillée aromatique. Les paramètres de pressage peuvent être ajustés pour chaque méthode.
-
-**Quelle est la différence entre l'huile de sésame blanche et noire ?**
-L'huile de sésame blanche est l'huile de cuisson standard populaire dans la cuisine indienne et d'Asie du Sud-Est. L'huile de sésame noire a une saveur plus forte et plus terreuse, prisée dans la cuisine chinoise et coréenne tant pour des usages culinaires que médicinaux. Les deux peuvent être produites sur notre équipement.
-
-**Comment faut-il stocker l'huile de sésame ?**
-Stockez l'huile de sésame dans un endroit frais et sombre dans des conteneurs scellés. L'huile de sésame pressée à froid a une durée de conservation d'environ 12-18 mois. L'huile de sésame torréfiée se conserve 6-12 mois en raison de ses composés plus réactifs. La réfrigération prolonge la durée de conservation pour les deux types.
 
 ## Pourquoi Choisir Haonuo
 
@@ -892,20 +767,6 @@ Cette solution est conçue spécifiquement pour les conditions de fonctionnement
 - **Poêle de Torréfaction Thermique** — Le contrôle précis de la température de torréfaction est critique pour le traitement des noix de karité. Notre poêle de torréfaction assure des résultats constants.
 - **Presse Filtrante Pneumatique** — Produit un beurre de karité propre et pur, exempt de particules de noix et de sédiments.
 
-## Foire aux questions
-
-**Combien coûte une machine de pressage de beurre de karité ?**
-Nos machines de pressage de beurre de karité sont disponibles dans diverses configurations, des modèles lourds aux modèles ultra haute pression avec double fût. Nous offrons des prix directs d'usine et pouvons personnaliser un forfait en fonction de vos besoins de production.
-
-**La presse hydraulique peut-elle remplacer l'extraction traditionnelle du beurre de karité ?**
-Oui, et avec des avantages significatifs. Notre presse hydraulique extrait 15-25 % plus de beurre que les méthodes traditionnelles de pétrissage manuel, tout en nécessitant bien moins de travail et d'eau. La qualité est également plus constante, répondant aux normes internationales de qualité cosmétique et alimentaire.
-
-**Quelle est la différence entre le beurre de karité non raffiné et raffiné ?**
-Le beurre de karité non raffiné (brut) conserve sa couleur ivoire naturelle, son arôme de noix et toutes ses vitamines et nutriments. Il se vend au prix le plus élevé sur le marché des cosmétiques. Le beurre de karité raffiné est traité pour éliminer la couleur et l'odeur, le rendant adapté aux applications de l'industrie alimentaire et aux formulations cosmétiques blanches.
-
-**Le pressage du beurre de karité est-il une bonne activité en Afrique de l'Ouest ?**
-Oui. La demande mondiale de beurre de karité croît de 6 à 8 % par an, portée par les industries cosmétique et de confiserie. L'Afrique de l'Ouest produit plus de 600 000 tonnes de noix de karité par an, et la transformation à valeur ajoutée (presser le beurre au lieu d'exporter les noix brutes) augmente considérablement les revenus des producteurs locaux.
-
 ## Pourquoi Choisir Haonuo
 
 - **Pensé pour le beurre de karité** — Nos presses hydrauliques haute pression délivrent la pression soutenue de 40-60 MPa que l'extraction du beurre de karité exige, atteignant des taux de matières grasses résiduelles inférieurs à 5 %.
@@ -953,23 +814,6 @@ Cette solution est adaptée pour la production au niveau du village, les opérat
 - **Broyeur de Graines à Haute Vitesse** — Pré-broye les graines pour un pressage plus efficace. Particulièrement utile pour les arachides, les graines de tournesol et autres graines dures.
 - **Presse Filtrante Pneumatique** — Produit une huile claire et prête pour le marché. Essentielle pour vendre l'huile à des prix premium.
 
-## Foire aux questions
-
-**Combien coûte une petite machine de pressage d'huile ?**
-Notre presse hydraulique standard (HN325) offre l'une des machines de pressage d'huile de qualité professionnelle les plus abordables du marché. Une configuration complète incluant le broyeur de graines et la presse filtrante est également disponible. Obtenez votre tarif personnalisé aujourd'hui.
-
-**Quelle est la capacité quotidienne d'une petite presse à huile ?**
-La HN325 peut traiter 500-1 500 kg de graines par jour selon le type de graine et les heures de fonctionnement (8-12 heures). Cela se traduit par environ 200-700 litres d'huile par jour, selon le type de graine.
-
-**Est-elle facile à utiliser pour les débutants ?**
-Oui. Nos presses hydrauliques à huile sont conçues pour un fonctionnement simple. Une seule personne peut gérer l'ensemble du processus de pressage avec une formation minimale. Nous fournissons des manuels d'utilisation détaillés et une formation vidéo avec chaque machine. La plupart des opérateurs deviennent compétents en 1 à 2 jours.
-
-**Quelles graines puis-je presser sur une petite machine ?**
-Notre HN325 traite le sésame, les arachides, le tournesol, la moutarde, la coco (coprah), les amandes, le lin et bien d'autres graines oléagineuses. Vous pouvez passer d'un type de graine à un autre en nettoyant simplement le fût et en ajustant les paramètres de pressage.
-
-**De combien d'espace ai-je besoin ?**
-La HN325 nécessite environ 2-3 mètres carrés d'espace au sol. Une configuration complète avec broyeur et presse filtrante nécessite environ 6-8 mètres carrés. Cela la rend adaptée aux ateliers domestiques, aux petites boutiques et aux étals de marché.
-
 ## Pourquoi Choisir Haonuo
 
 - **Coût d'entrée compétitif** — Notre modèle HN325 offre le chemin le plus abordable vers le pressage d'huile de qualité professionnelle, avec des prix directs d'usine qui vous permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient).
@@ -984,7 +828,7 @@ Le soja est l'une des cultures oléagineuses les plus importantes au monde, repr
 
 ### Pourquoi Choisir Haonuo pour la Production d'Huile de Soja
 
-**Lignes de Production Complètes** — Du nettoyage des graines à l'huile raffinée, nous fournissons chaque pièce d'équipement dont vous avez besoin pour une installation complète de production d'huile de soja.
+**Lignes de Production Centrales** — Du nettoyage des graines à l'huile brute filtrée, nous fournissons l'équipement de pressage essentiel et vous aidons à coordonner le raffinage approvisionné séparément pour une installation complète de production d'huile de soja.
 
 **Technologie Prouvée** — Nos systèmes de presse hydraulique ont été testés avec le soja dans plus de 50 pays, délivrant des résultats constants.
 
@@ -1041,7 +885,7 @@ Cette solution gère à la fois les variétés de graines de tournesol riches en
 3. **Torréfaction** — Torréfiez les amandes décortiquées à 120-150°C pendant 15-25 minutes à l'aide de la poêle de torréfaction thermique. Cela améliore l'écoulement de l'huile et le rendement. Pour l'huile pressée à froid, ignorez la torréfaction.
 4. **Pressage hydraulique** — Introduisez les graines de tournesol préparées dans la presse hydraulique standard ou lourde. Le fût de 390 mm traite 100 kg par lot avec un cycle de 35-45 minutes.
 5. **Filtration** — Faites passer l'huile de tournesol brute à travers la presse filtrante pneumatique pour obtenir une huile claire et prête pour le marché.
-6. **Raffinage (Optionnel)** — Pour l'huile de tournesol raffinée, utilisez le système de raffinage d'huile alimentaire pour produire une huile de cuisson de couleur claire et de saveur neutre.
+6. **Raffinage (Optionnel)** — L'huile de tournesol raffinée nécessite dégommage, blanchiment et désodorisation sur une ligne de raffinage séparée, approvisionnée indépendamment, pour produire une huile de cuisson claire et neutre.
 7. **Conditionnement** — Mettez l'huile finie en bouteilles. L'huile de tournesol pressée à froid doit être stockée dans des conteneurs sombres pour prévenir l'oxydation.
 
 ## Équipement Recommandé
@@ -1050,20 +894,6 @@ Cette solution gère à la fois les variétés de graines de tournesol riches en
 - **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes avec option double fût pour un débit plus élevé.
 - **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante. Essentielle pour maximiser le rendement des graines de tournesol.
 - **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile de tournesol claire et premium.
-
-## Foire aux questions
-
-**Combien coûte une machine de pressage d'huile de tournesol ?**
-Nos machines de pressage d'huile de tournesol sont disponibles dans diverses configurations, des modèles standard aux modèles lourds avec double fût. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
-
-**Dois-je décortiquer les graines de tournesol avant le pressage ?**
-Le décorticage est fortement recommandé. Les coques de tournesol absorbent 10-15 % de l'huile pendant le pressage, réduisant considérablement votre rendement. Notre broyeur de graines peut gérer le décorticage efficacement. Cependant, si vous ne disposez pas d'équipement de décorticage, vous pouvez presser les graines entières avec un rendement inférieur.
-
-**Quelle est la différence entre l'huile de tournesol pressée à froid et raffinée ?**
-L'huile de tournesol pressée à froid conserve plus de vitamine E, de phytostérols et de saveur naturelle. Elle a une couleur dorée et un goût de noix, se vendant à des prix premium sur les marchés d'aliments santé. L'huile de tournesol raffinée est plus claire, a un goût neutre et un point de fumée plus élevé, la rendant plus polyvalente pour la cuisson.
-
-**Quelle variété de graines de tournesol est la meilleure pour le pressage d'huile ?**
-Les variétés riches en huile avec 45-50 % de teneur en huile sont particulièrement adaptées. Les variétés de pressage populaires incluent Peredovik, VNIIMK et HAOL 414. Les variétés à graines noires ont généralement une teneur en huile plus élevée que les types de confiserie rayés.
 
 ## Pourquoi Choisir Haonuo
 

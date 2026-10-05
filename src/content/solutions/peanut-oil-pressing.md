@@ -7,95 +7,135 @@ title:
 seedName: peanut
 icon: peanut
 description:
-  en: Reliable peanut oil press machine for cold and hot pressed groundnut oil extraction. High yield hydraulic press from Haonuo. Competitive factory pricing.
-  fr: Machine fiable de pressage d'huile d'arachide pour extraction d'huile pressée à froid et à chaud. Pression hydraulique à haut rendement de Haonuo.
-  ar: آلة عصر زيت الفول السوداني الموثوقة لاستخراج زيت الفول السوداني المضغوط على البارد والساخن. ضغط هيدروليكي عالي العائد.
-  id: Mesin press minyak kacang yang andal untuk ekstraksi minyak kacang dingin dan panas. Press hidrolik hasil tinggi dari Haonuo.
+  en: Complete 7-step peanut (groundnut) oil production with hydraulic press — cleaning, shelling, crushing, conditioning, moisture control to 4-6%, pressing and filtration. HN325/HN365.
+  fr: Production d'huile d'arachide (cacahuète) en 7 étapes avec presse hydraulique — nettoyage, décorticage, broyage, conditionnement, humidité réglée à 4-6 %, pressage et filtration. HN325/HN365.
+  ar: إنتاج زيت الفول السوداني بسبع خطوات بمعصرة هيدروليكية — التنظيف والتقشير والسحق والتكييف وضبط الرطوبة 4-6% والعصر والترشيح. طرازا HN325/HN365.
+  id: Produksi minyak kacang tanah 7 langkah lengkap dengan press hidrolik — pembersihan, pengupasan, penghancuran, pengondisian, kelembapan 4-6%, pengepresan dan filtrasi. HN325/HN365.
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - heavy-duty-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
 processSteps:
-  - step: Seed Preparation
-    description: Clean, shell, and optionally crush peanuts for optimal pressing
-  - step: Roasting (For Hot Press)
-    description: Roast peanuts using the Thermal Oil Roasting Pan for aromatic oil
-  - step: Hydraulic Pressing
-    description: Press using Standard or Heavy Duty Hydraulic Oil Press
-  - step: Filtration
-    description: Filter the pressed oil for clear, premium peanut oil
+  - step: 1. Cleaning
+    description: Remove stones, dust and impurities from the pods. Clean seed protects the barrel and keeps oil flavor clean.
+  - step: 2. Shelling
+    description: Shell with a dedicated groundnut sheller. Shells absorb oil; pressing unshelled peanuts cuts yield by 15-25%.
+  - step: 3. Crushing / Flaking
+    description: Crush or lightly flake the shelled kernels to break the cell structure, so oil releases faster and more completely.
+  - step: 4. Conditioning & Roasting (Hot Press)
+    description: For hot-pressed oil, condition or roast at around 130°C (120-150°C) for 20-30 minutes in the thermal oil roasting pan. Skip this step for cold press.
+  - step: 5. Moisture Adjustment
+    description: Adjust kernel moisture to 4-6% for hot press (6-7% for cold press). Too wet causes emulsification; too dry gives poor oil flow.
+  - step: 6. Hydraulic Pressing
+    description: Press in the HN325 or HN365 at 100 kg per batch. Roasted peanuts finish a batch in 30-60 minutes; cold press takes longer.
+  - step: 7. Filtration & Settling
+    description: Run crude oil through the pneumatic filter press to remove fines, then settle 12-24 hours before bottling.
 processStepsFr:
-  - step: Préparation des graines
-    description: Nettoyer, décortiquer et éventuellement broyer les arachides pour un pressage optimal
-  - step: Torréfaction (Pour pressage à chaud)
-    description: Torréfier les arachides à l'aide de la poêle de torréfaction thermique pour une huile aromatique
-  - step: Pressage hydraulique
-    description: Presser à l'aide de la presse hydraulique standard ou lourde
-  - step: Filtration
-    description: Filtrer l'huile pressée pour obtenir une huile d'arachide claire et premium
+  - step: 1. Nettoyage
+    description: Retirez les pierres, la poussière et les impuretés des gousses. Des graines propres protègent le fût et gardent une huile au goût net.
+  - step: 2. Décorticage
+    description: Décortiquez avec une décortiqueuse d'arachides dédiée. Les coques absorbent l'huile ; presser des arachides non décortiquées réduit le rendement de 15 à 25 %.
+  - step: 3. Broyage / Floconnage
+    description: Broyez ou floconnez légèrement les amandes décortiquées pour rompre la structure cellulaire, afin que l'huile sorte plus vite et plus complètement.
+  - step: 4. Conditionnement et Torréfaction (Pressage à Chaud)
+    description: Pour l'huile pressée à chaud, conditionnez ou torréfiez vers 130 °C (120-150 °C) pendant 20-30 minutes dans la poêle de torréfaction à huile thermique. À ignorer pour le pressage à froid.
+  - step: 5. Réglage de l'Humidité
+    description: Réglez l'humidité des amandes à 4-6 % pour le pressage à chaud (6-7 % pour le pressage à froid). Trop humide provoque l'émulsification ; trop sec gêne l'écoulement de l'huile.
+  - step: 6. Pressage Hydraulique
+    description: Pressez dans la HN325 ou la HN365 à raison de 100 kg par lot. Les arachides torréfiées terminent un lot en 30-60 minutes ; le pressage à froid prend plus de temps.
+  - step: 7. Filtration et Décantation
+    description: Faites passer l'huile brute à travers le filtre-presse pneumatique pour éliminer les fines, puis laissez décanter 12-24 heures avant la mise en bouteille.
 processStepsAr:
-  - step: تحضير البذور
-    description: تنظيف الفول السوداني وتقشيره وسحقه اختيارياً للعصر الأمثل
-  - step: التحميص (للضغط الساخن)
-    description: تحميص الفول السوداني باستخدام مقلاة التحميص الحرارية للحصول على زيت عطري
-  - step: الضغط الهيدروليكي
-    description: العصر باستخدام المضغوط الهيدروليكي القياسي أو الثقيل
-  - step: الترشيح
-    description: ترشيح الزيت المعصور للحصول على زيت فول سوداني صافٍ ممتاز
+  - step: 1. التنظيف
+    description: أزل الحجارة والغبار والشوائب من القرون. البذور النظيفة تحمي البرميل وتحافظ على نكهة زيت نقية.
+  - step: 2. التقشير
+    description: قشّر باستخدام مقشرة فول سوداني مخصصة. القشور تمتص الزيت؛ عصر الفول غير المقشر يخفض الإنتاج بنسبة 15-25%.
+  - step: 3. السحق / الترقيق
+    description: اسحق أو رقّق الحبوب المقشرة رقّاً خفيفاً لكسر البنية الخلوية، فيخرج الزيت أسرع وأكثر اكتمالاً.
+  - step: 4. التكييف والتحميص (العصر الساخن)
+    description: للزيت المعصور ساخناً، كيّف أو حمّص عند حوالي 130°م (120-150°م) لمدة 20-30 دقيقة في مقلاة التحميص بالزيت الحراري. تُتخطى هذه الخطوة في العصر على البارد.
+  - step: 5. ضبط الرطوبة
+    description: اضبط رطوبة الحبوب على 4-6% للعصر الساخن (6-7% للعصر على البارد). الرطوبة الزائدة تسبب الاستحلاب؛ والجفاف الزائد يعيق جريان الزيت.
+  - step: 6. العصر الهيدروليكي
+    description: اعصر في HN325 أو HN365 بمعدل 100 كجم لكل دفعة. الفول المحمص ينهي الدفعة خلال 30-60 دقيقة؛ والعصر على البارد يستغرق وقتاً أطول.
+  - step: 7. الترشيح والترقيد
+    description: مرر الزيت الخام عبر مكبس الترشيح الهوائي لإزالة الشوائب الدقيقة، ثم اتركه يرقُد 12-24 ساعة قبل التعبئة.
 processStepsId:
-  - step: Persiapan Biji
-    description: Bersihkan, kupas, dan secara opsional hancurkan kacang untuk press optimal
-  - step: Pengovenan (Untuk Press Panas)
-    description: Panggang kacang menggunakan Thermal Oil Roasting Pan untuk minyak yang aromatik
-  - step: Press Hidrolik
-    description: Press menggunakan Standard atau Heavy Duty Hydraulic Oil Press
-  - step: Filtrasi
-    description: Saring minyak yang ditekan untuk minyak kacang yang jernih dan berkualitas
+  - step: 1. Pembersihan
+    description: Buang batu, debu dan kotoran dari polong. Biji bersih melindungi barrel dan menjaga rasa minyak tetap bersih.
+  - step: 2. Pengupasan
+    description: Kupas dengan mesin pengupas kacang khusus. Kulit menyerap minyak; menekan kacang berkulit menurunkan hasil 15-25%.
+  - step: 3. Penghancuran / Pembelahan
+    description: Hancurkan atau belah tipis biji kupasan untuk memecah struktur sel agar minyak keluar lebih cepat dan tuntas.
+  - step: 4. Pengondisian & Pengovenan (Press Panas)
+    description: Untuk minyak press panas, kondisikan atau oven sekitar 130°C (120-150°C) selama 20-30 menit di wajan pemanggang minyak termal. Lewati langkah ini untuk cold press.
+  - step: 5. Penyesuaian Kelembapan
+    description: Atur kelembapan biji ke 4-6% untuk press panas (6-7% untuk cold press). Terlalu basah menyebabkan emulsifikasi; terlalu kering menghambat aliran minyak.
+  - step: 6. Pengepresan Hidrolik
+    description: Press di HN325 atau HN365 dengan 100 kg per batch. Kacang oven menyelesaikan satu batch dalam 30-60 menit; cold press lebih lama.
+  - step: 7. Filtrasi & Pengendapan
+    description: Alirkan minyak mentah melalui filter press pneumatik untuk membuang partikel halus, lalu endapkan 12-24 jam sebelum pembotolan.
 faq:
-  - question: What is the oil content of peanuts?
-    answer: Peanuts typically contain 45-55% oil. Our hydraulic press leaves just 6-8% residual oil in the cake (based on internal testing; results vary by seed and moisture).
-  - question: Can I press peanuts with shells?
-    answer: It's recommended to shell peanuts before pressing for better oil quality. Shells can be removed using our seed crusher.
-  - question: Cold press vs hot press peanut oil?
-    answer: Cold pressed peanut oil retains more nutrients and natural flavor. Hot pressed peanut oil has higher yield and more aromatic flavor. Both are popular in different markets.
+  - question: What is the oil content of peanuts, and how much oil is left in the cake?
+    answer: Shelled peanuts contain 45-55% oil. A Haonuo hydraulic press typically leaves 6-8% residual oil in the cake (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), compared with 10-12% for a traditional drilled-barrel press.
+  - question: What moisture level should peanuts be before pressing?
+    answer: For hot pressing, adjust shelled kernels to 4-6% moisture after roasting or conditioning. For cold pressing, aim slightly higher at 6-7% — kernels that are too dry release oil poorly without heat. Kernels that are too wet emulsify the oil, lower yield and shorten shelf life. Check moisture with a simple moisture meter and adjust by roasting or steaming.
+  - question: Can I press peanuts with the shells on?
+    answer: We strongly recommend shelling first. Shells absorb oil during pressing, cutting yield by 15-25%, and they add dark sediment and a harsh note to the oil. Use a dedicated groundnut sheller; the seed crusher is used after shelling, not for removing shells.
+  - question: What is the difference between cold-pressed and hot-pressed peanut oil?
+    answer: Cold-pressed peanut oil is pressed without roasting, so it keeps more vitamin E and natural peanut flavor and sells at a premium in health-food markets. Hot-pressed oil is made after roasting at around 130°C, gives 3-5% more oil per batch and has the strong roasted aroma preferred in Chinese and West African cooking. Every Haonuo hydraulic press does both — only the preparation changes.
+  - question: How many kilograms of peanuts can I press per day?
+    answer: An HN325 single barrel holds 100 kg per batch. With roasted peanuts at 30-60 minutes per batch and an 8-10 hour working day, realistic throughput is about 800-1,200 kg/day; cold pressing runs at roughly half that. A double-barrel machine or the HN365 with alternating stations reaches about 1,500-2,500 kg/day. Actual output depends on cycle time, moisture, loading speed and operator practice.
   - question: What is the price of a peanut oil press machine?
-    answer: Get pricing for your production needs. We offer factory-direct pricing with no middleman markup.
-  - question: How many peanuts can I press per day?
-    answer: Our standard model processes 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (single barrel), while the heavy-duty model handles 600-1,200 kg/day (hot press) or 300-400 kg/day (cold press) (single barrel) or 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) (double barrel) depending on configuration and operation hours.
+    answer: Price depends on the model (HN325 or HN365), single or double barrel, and whether you add a roaster and filter. We trade FOB Qingdao and confirm payment terms on the proforma invoice. Send us your seed, target kg per day and local voltage, and we will return a detailed quotation within 24 hours.
+  - question: How long does pressed peanut oil last?
+    answer: Properly filtered and settled peanut oil keeps for 18-24 months in sealed, dark containers stored in a cool place. Cold-pressed oil is more sensitive to light and heat, so dark glass or opaque containers are recommended.
 faqFr:
-  - question: Quelle est la teneur en huile des arachides ?
-    answer: Les arachides contiennent généralement 45 à 55 % d'huile. Notre presse hydraulique ne laisse que 6 à 8 % d'huile résiduelle dans le tourteau (basé sur des tests internes ; les résultats varient selon la graine et l'humidité).
-  - question: Puis-je presser des arachides avec leurs coques ?
-    answer: Il est recommandé de décortiquer les arachides avant le pressage pour une meilleure qualité d'huile. Les coques peuvent être retirées à l'aide de notre broyeur de graines.
-  - question: Pressage à froid ou à chaud pour l'huile d'arachide ?
-    answer: L'huile d'arachide pressée à froid conserve plus de nutriments et de saveur naturelle. L'huile d'arachide pressée à chaud a un rendement plus élevé et une saveur plus aromatique. Les deux sont populaires sur différents marchés.
+  - question: Quelle est la teneur en huile des arachides et combien d'huile reste-t-il dans le tourteau ?
+    answer: Les arachides décortiquées contiennent 45-55 % d'huile. Une presse hydraulique Haonuo laisse généralement 6 à 8 % d'huile résiduelle dans le tourteau (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation), contre 10-12 % avec une presse traditionnelle à fût percé.
+  - question: Quel taux d'humidité les arachides doivent-elles avoir avant le pressage ?
+    answer: Pour le pressage à chaud, réglez les amandes décortiquées à 4-6 % d'humidité après torréfaction ou conditionnement. Pour le pressage à froid, visez légèrement plus haut, 6-7 % — des amandes trop sèches libèrent mal l'huile sans chaleur. Des amandes trop humides émulsifient l'huile, réduisent le rendement et raccourcissent la conservation. Vérifiez l'humidité avec un humidimètre simple et ajustez par torréfaction ou étuvage.
+  - question: Peut-on presser les arachides avec leurs coques ?
+    answer: Nous recommandons vivement de décortiquer d'abord. Les coques absorbent l'huile pendant le pressage, réduisant le rendement de 15 à 25 %, et ajoutent des sédiments sombres et une note âpre à l'huile. Utilisez une décortiqueuse dédiée ; le broyeur de graines s'utilise après décorticage, pas pour retirer les coques.
+  - question: Quelle différence entre l'huile d'arachide pressée à froid et pressée à chaud ?
+    answer: L'huile d'arachide pressée à froid est pressée sans torréfaction — elle conserve davantage de vitamine E et la saveur naturelle d'arachide, et se vend plus cher sur les marchés d'aliments santé. L'huile pressée à chaud est obtenue après torréfaction vers 130 °C, donne 3-5 % d'huile en plus par lot et présente l'arôme grillé prononcé prisé dans la cuisine chinoise et ouest-africaine. Chaque presse hydraulique Haonuo fait les deux — seule la préparation change.
+  - question: Combien de kilos d'arachides puis-je presser par jour ?
+    answer: Une HN325 à simple fût contient 100 kg par lot. Avec des arachides torréfiées à 30-60 minutes par lot et une journée de 8-10 heures, le débit réaliste est d'environ 800-1 200 kg/jour ; le pressage à froid tourne à environ la moitié. Une machine à double fût ou la HN365 à stations alternées atteint environ 1 500-2 500 kg/jour. Le débit réel dépend du temps de cycle, de l'humidité, de la vitesse de chargement et de l'opérateur.
   - question: Quel est le prix d'une machine de pressage d'huile d'arachide ?
-    answer: Obtenez un prix selon vos besoins de production. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
-  - question: Combien d'arachides puis-je presser par jour ?
-    answer: Notre modèle standard traite 500 à 1 500 kg/jour, tandis que le modèle lourd traite 1 500 à 3 000 kg/jour selon les heures de fonctionnement.
+    answer: Le prix dépend du modèle (HN325 ou HN365), du fût simple ou double, et de l'ajout éventuel d'une torréfactrice et d'un filtre. Nous traitons FOB Qingdao et les conditions de paiement sont confirmées sur la facture pro forma. Envoyez-nous votre graine, votre objectif en kg/jour et votre tension locale, nous renvoyons un devis détaillé sous 24 heures.
+  - question: Combien de temps se conserve l'huile d'arachide pressée ?
+    answer: Correctement filtrée et décantée, l'huile d'arachide se conserve 18-24 mois en récipients sombres et fermés, dans un endroit frais. L'huile pressée à froid est plus sensible à la lumière et à la chaleur ; le verre sombre ou les récipients opaques sont recommandés.
 faqAr:
-  - question: ما هو محتوى الزيت في الفول السوداني؟
-    answer: يحتوي الفول السوداني عادةً على 45-55% زيت. يترك مكبسنا الهيدروليكي 6-8% فقط من الزيت المتبقي في الكعكة (بناءً على اختبارات داخلية؛ تختلف النتائج حسب البذور والرطوبة).
-  - question: هل يمكنني عصر الفول السوداني بالقشر؟
-    answer: يُنصح بتقشير الفول السوداني قبل العصر للحصول على جودة زيت أفضل. يمكن إزالة القشور باستخدام محطم البذور لدينا.
-  - question: ضغط بارد أم ساخن لزيت الفول السوداني؟
-    answer: يحتفظ زيت الفول السوداني المضغوط على البارد بالمزيد من المغذيات والنكهة الطبيعية. زيت الفول السوداني المضغوط ساخناً له عائد أعلى ونكهة أكثر عطرية. كلاهما شائع في أسواق مختلفة.
-  - question: ما هو سعر آلة عصر زيت الفول السوداني؟
-    answer: احصلوا على تسعيرة حسب احتياجات إنتاجكم. نقدم أسعار المصنع المباشر بدون وسيط.
-  - question: كم فول سوداني يمكنني عصره يومياً؟
-    answer: يعالج طرازنا القياسي 500-1500 كجم/يوم، بينما يعالج الطراز الثقيل 1500-3000 كجم/يوم حسب ساعات التشغيل.
+  - question: ما نسبة الزيت في الفول السوداني وكم يتبقى من الزيت في الكعكة؟
+    answer: يحتوي الفول السوداني المقشر على 45-55% زيت. تترك معصرة هاونو الهيدروليكية عادةً 6-8% زيت متبقٍ في الكعكة (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير)، مقابل 10-12% في المعاصر التقليدية ذات البرميل المثقوب.
+  - question: ما نسبة الرطوبة المناسبة للفول السوداني قبل العصر؟
+    answer: للعصر الساخن، اضبط رطوبة الحبوب المقشرة على 4-6% بعد التحميص أو التكييف. وللعصر على البارد استهدف نسبة أعلى قليلاً 6-7% — فالحبوب الجافة جداً تطلق الزيت بصعوبة بدون حرارة. أما الحبوب شديدة الرطوبة فتسبب استحلاب الزيت وتخفض الإنتاج وتقصر الصلاحية. افحص الرطوبة بمقياس رطوبة بسيط واضبطها بالتحميص أو التبخير.
+  - question: هل يمكن عصر الفول السوداني بقشره؟
+    answer: ننصح بشدة بالتقشير أولاً. القشور تمتص الزيت أثناء العصر فتخفض الإنتاج بنسبة 15-25%، وتضيف رواسب داكنة وطعماً قاسياً للزيت. استخدم مقشرة فول سوداني مخصصة؛ أما محطم البذور فيُستخدم بعد التقشير وليس لإزالة القشور.
+  - question: ما الفرق بين زيت الفول السوداني المعصور على البارد والمعصور ساخناً؟
+    answer: زيت الفول المعصور على البارد يُعصر بدون تحميص، فيحتفظ بمزيد من فيتامين E ونكهة الفول الطبيعية ويُباع بسعر أعلى في أسواق الأغذية الصحية. والزيت المعصور ساخناً يُنتج بعد التحميص عند حوالي 130°م، ويعطي 3-5% زيتاً أكثر لكل دفعة وله رائحة التحميص القوية المفضلة في المطبخ الصيني وغرب أفريقيا. كل معصرة هاونو الهيدروليكية تؤدي النوعين — ويتغير التحضير فقط.
+  - question: كم كيلوغراماً من الفول السوداني يمكن عصرها يومياً؟
+    answer: تتسع HN325 أحادية البرميل لـ100 كجم لكل دفعة. مع الفول المحمص بدورة 30-60 دقيقة ويوم عمل 8-10 ساعات، يكون الإنتاج الواقعي حوالي 800-1200 كجم/يوم؛ والعصر على البارد بنحو النصف تقريباً. أما الآلة ثنائية البرميل أو HN365 ذات المحطتين المتبادلتين فتصل إلى حوالي 1500-2500 كجم/يوم. الإنتاج الفعلي يتوقف على زمن الدورة والرطوبة وسرعة التحميل ومهارة المشغل.
+  - question: ما سعر آلة عصر زيت الفول السوداني؟
+    answer: يعتمد السعر على الطراز (HN325 أو HN365) وكون البرميل مفرداً أو مزدوجاً، وما إذا كنت ستضيف محمصة ومرشحاً. نتعامل FOB كينغداو وتُؤكد شروط الدفع في الفاتورة الأولية. أرسل لنا نوع البذور وهدفك بالكجم/يوم والكهرباء المحلية، وسنرسل عرض سعر مفصلاً خلال 24 ساعة.
+  - question: كم مدة صلاحية زيت الفول السوداني المعصور؟
+    answer: الزيت المُرشَّح والمُرقَد جيداً يحتفظ بجودته 18-24 شهراً في عبوات مظلمة محكمة بمكان بارد. زيت العصر على البارد أكثر حساسية للضوء والحرارة، لذا يُنصح بالزجاج الداكن أو العبوات غير الشفافة.
 faqId:
-  - question: Berapa kandungan minyak kacang?
-    answer: Kacang biasanya mengandung 45-55% minyak. Press hidrolik kami menyisakan hanya 6-8% sisa minyak dalam bungkil (berdasarkan pengujian internal; hasil bervariasi menurut biji dan kadar air).
-  - question: Apakah saya bisa menekan kacang dengan kulitnya?
-    answer: Disarankan untuk mengupas kacang sebelum ditekan untuk kualitas minyak yang lebih baik. Kulit dapat dihilangkan menggunakan seed crusher kami.
-  - question: Press dingin vs press panas untuk minyak kacang?
-    answer: Minyak kacang press dingin mempertahankan lebih banyak nutrisi dan rasa alami. Minyak kacang press panas memiliki hasil lebih tinggi dan rasa yang lebih aromatik. Keduanya populer di pasar yang berbeda.
+  - question: Berapa kandungan minyak kacang dan berapa sisa minyak di bungkil?
+    answer: Kacang kupasan mengandung 45-55% minyak. Press hidrolik Haonuo biasanya menyisakan 6-8% sisa minyak dalam bungkil (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan 10-12% pada press barrel berlubang tradisional.
+  - question: Berapa kelembapan ideal kacang sebelum ditekan?
+    answer: Untuk press panas, atur biji kupasan ke kelembapan 4-6% setelah pengovenan atau pengondisian. Untuk cold press, bidik sedikit lebih tinggi yaitu 6-7% — biji terlalu kering sulit melepas minyak tanpa panas. Biji terlalu basah mengemulsikan minyak, menurunkan hasil dan memperpendek umur simpan. Periksa kelembapan dengan moisture meter sederhana dan atur melalui pengovenan atau pengukusan.
+  - question: Bisakah kacang ditekan bersama kulitnya?
+    answer: Kami sangat menyarankan pengupasan terlebih dahulu. Kulit menyerap minyak saat pengepresan, menurunkan hasil 15-25%, serta menambah endapan gelap dan rasa kasar pada minyak. Gunakan mesin pengupas kacang khusus; seed crusher digunakan setelah pengupasan, bukan untuk membuang kulit.
+  - question: Apa bedanya minyak kacang cold press dan press panas?
+    answer: Minyak kacang cold press ditekan tanpa pengovenan, sehingga mempertahankan lebih banyak vitamin E dan rasa kacang alami, serta dijual premium di pasar makanan sehat. Minyak press panas dibuat setelah pengovenan sekitar 130°C, memberi hasil 3-5% lebih banyak per batch dan aroma panggang kuat yang disukai masakan Tiongkok dan Afrika Barat. Semua press hidrolik Haonuo bisa keduanya — hanya persiapannya yang berbeda.
+  - question: Berapa kg kacang yang bisa ditekan per hari?
+    answer: HN325 barrel tunggal menampung 100 kg per batch. Dengan kacang oven 30-60 menit per batch dan hari kerja 8-10 jam, kapasitas riil sekitar 800-1.200 kg/hari; cold press berjalan sekitar setengahnya. Mesin barrel ganda atau HN365 dengan stasiun selang-seling mencapai sekitar 1.500-2.500 kg/hari. Output aktual tergantung waktu siklus, kelembapan, kecepatan pengisian dan keterampilan operator.
   - question: Berapa harga mesin press minyak kacang?
-    answer: Hubungi kami untuk harga sesuai kebutuhan produksi Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
-  - question: Berapa banyak kacang yang dapat saya tekan per hari?
-    answer: Model standar kami memproses 500-1.500 kg/hari, sementara model heavy-duty menangani 1.500-3.000 kg/hari tergantung jam operasi.
+    answer: Harga tergantung model (HN325 atau HN365), barrel tunggal atau ganda, serta apakah menambah pemanggang dan filter. Kami berdagang FOB Qingdao dan syarat pembayaran dikonfirmasi pada faktur proforma. Kirimkan jenis biji, target kg/hari dan tegangan lokal Anda, kami kirim penawaran rinci dalam 24 jam.
+  - question: Berapa lama minyak kacang press dapat bertahan?
+    answer: Minyak kacang yang terfilter dan terendap dengan baik tahan 18-24 bulan dalam wadah gelap tertutup di tempat sejuk. Minyak cold press lebih sensitif terhadap cahaya dan panas, jadi disarankan botol kaca gelap atau wadah buram.
 seoKeywords:
   - peanut oil machine
   - peanut oil press machine
@@ -108,61 +148,91 @@ order: 3
 
 ## Overview
 
-Peanut oil (also known as groundnut oil) is one of the most widely consumed cooking oils globally, particularly across China, India, and Southeast Asia. Investing in a quality **peanut oil press machine** is the first step toward building a profitable groundnut oil extraction business, whether you serve local markets or export premium cold-pressed peanut oil.
+Groundnut (peanut) oil is the everyday cooking oil of West Africa — Nigeria is one of the world's largest groundnut producers — and demand is equally strong in India, China and Southeast Asia. A hydraulic **peanut oil press machine** lets small and mid-sized mills press aromatic hot-pressed oil or premium cold-pressed oil directly from shelled kernels, for local markets or export buyers.
 
-Haonuo's peanut oil pressing solution is designed around hydraulic press technology that delivers exceptional oil yield from peanuts. Unlike screw expellers that can overheat the oil and degrade quality, our hydraulic **groundnut oil extraction machine** applies controlled high pressure that preserves the natural peanut flavor and nutritional value while achieving residual oil rates below 5%.
+Haonuo's peanut pressing solution is built around hydraulic press technology. Unlike screw expellers, which generate friction heat that can scorch the oil, a hydraulic **groundnut oil extraction machine** applies static, controlled pressure. The oil stays below scorching temperature, the natural peanut flavor is preserved, and residual oil in the cake typically lands at **6-8%** (Haonuo factory tests with graded peanut and sesame at 6-8% moisture; results vary with seed variety and preparation) — against roughly 10-12% for a conventional drilled-barrel press.
 
-This solution supports both cold pressing (for premium, nutrient-rich peanut oil) and hot pressing with roasting (for aromatic cooking oil with higher yield), giving you the flexibility to target different market segments and price points.
+Every Haonuo hydraulic press handles **both routes on one machine**: cold pressing for premium, nutrient-rich oil, and hot pressing after roasting for a stronger aroma and 3-5% more oil per batch. The difference is entirely in seed preparation, which is exactly why the seven-step process below matters.
 
 ## Oil Yield Expectations
 
-| Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
+| Feed material | Oil content | Expected oil yield | Residual oil in cake |
 |---|---|---|---|
-| Shelled Peanuts (Raw) | 45-55% | 40-48% | ≤ 5% |
-| Shelled Peanuts (Roasted) | 45-55% | 43-50% | ≤ 4% |
-| Unshelled Peanuts | 25-35% | 20-30% | ≤ 6% |
+| Shelled kernels, roasted (hot press) | 45-55% | 40-48% | 6-8% |
+| Shelled kernels, raw (cold press) | 45-55% | 38-44% | 7-9% |
+| Unshelled peanuts (not recommended) | 25-35%* | 20-30% | 8-10%+ |
+
+\*The oil-content figure for unshelled peanuts is diluted by the shell mass; shells also absorb oil during pressing, which is why shelling is mandatory.
 
 **Key factors affecting yield:**
-- **Shelling**: Always shell peanuts before pressing — shells absorb oil and reduce yield significantly
-- **Variety**: High-oil peanut varieties (e.g., Virginia, Spanish) yield more oil than runner types
-- **Moisture content**: Optimal pressing moisture is 6-8%
-- **Roasting**: Pre-roasting at 130-160°C increases yield by 3-5% and develops flavor
 
-## Recommended Process
+- **Shelling** — pressing unshelled peanuts cuts oil yield by 15-25% and darkens the oil.
+- **Variety** — high-oil varieties (Virginia, Spanish) outperform runner types.
+- **Moisture** — kernels entering the barrel should be at 4-6% for hot press, 6-7% for cold press.
+- **Roasting** — conditioning at around 130°C (120-150°C) develops the nutty aroma and lifts yield by 3-5%.
+- **Barrel design** — the bar-type slotted barrel drains oil over a far larger area than a drilled barrel, typically extracting 2-3% more oil per batch.
 
-1. **Cleaning & Shelling** — Remove stones, dirt, and shells from peanuts. Shelling is critical — shells absorb oil and reduce both yield and quality. Our seed crusher can assist with shelling.
-2. **Crushing (Optional)** — Lightly crush shelled peanuts to increase surface area for more efficient pressing.
-3. **Roasting (For Hot Press)** — Roast peanuts at 130-160°C for 20-30 minutes using the Thermal Oil Roasting Pan. This develops the characteristic peanut aroma and increases oil yield. Skip for cold-pressed oil.
-4. **Hydraulic Pressing** — Feed prepared peanuts into the Standard or Heavy Duty Hydraulic Oil Press. The 390mm inner diameter barrel handles 100 kg per batch with a 40-90 minute cycle (varies by seed type).
-5. **Filtration** — Pass crude peanut oil through the Pneumatic Oil Filter Press to remove sediment and fine particles.
-6. **Settling** — Allow filtered oil to settle for 12-24 hours. Natural settling produces clearer oil.
-7. **Packaging** — Bottle the finished peanut oil. Cold-pressed oil should be stored in dark glass bottles to preserve quality.
+## The 7-Step Peanut Oil Production Process
+
+The process is the same for every hydraulic line; only the roasting step is switched on or off depending on whether you make hot-pressed or cold-pressed oil.
+
+### Step 1 — Cleaning
+
+Run harvested pods through a cleaning sieve or winnower to remove stones, soil clods, dust and immature pods. Stones score the barrel and shorten its life; dust and plant debris end up as sediment in the oil. Two minutes of cleaning saves hours of filtration.
+
+### Step 2 — Shelling
+
+Pass the pods through a dedicated **groundnut sheller** and sort out broken kernels. Shells are hard and porous — they absorb oil the moment pressure is applied, so pressing in-shell loses 15-25% of the oil and gives the cake and oil a harsh, woody note. Keep the red skins on unless your buyer requires blanched kernels; thin red skins pass through pressing without problems.
+
+### Step 3 — Crushing / Flaking
+
+Crush the shelled kernels into 4-6 mm grit, or pass them through a flaking roller into thin flakes. Breaking the cell walls before pressing shortens the oil's escape path: oil flows out faster, batches finish sooner, and residual oil in the cake drops. For small shops a coarse crush is enough; mills targeting maximum yield flake.
+
+### Step 4 — Conditioning & Roasting (hot press only)
+
+For aromatic hot-pressed oil, roast or steam-condition the kernels at **around 130°C (range 120-150°C) for 20-30 minutes** in the thermal oil roasting pan. The pan's thermal-oil jacket heats evenly, so there are no burnt spots that would darken the oil. Roasting ruptures oil cells, lowers oil viscosity and builds the characteristic roasted-peanut aroma. Stop as soon as kernels turn light golden and give off their nutty smell. **Skip this step completely for cold-pressed oil.**
+
+### Step 5 — Moisture adjustment
+
+Check moisture before every batch. Hot-press kernels should enter the barrel at **4-6%**; cold-press kernels at **6-7%**, since cold oil flows poorly from over-dry seed. Kernels that are too wet produce cloudy, emulsified oil that foams in the pan and keeps badly; kernels that are too dry generate dust, choke the barrel slots and give up their oil slowly. Correct with a few minutes more roasting (too wet) or a light steaming/spray of water and a rest (too dry).
+
+### Step 6 — Hydraulic pressing
+
+Load 100 kg of prepared kernels into the 390 mm barrel of the **HN325** standard press, or the **HN365** for alternating double-station work, and start the cycle. Pressure builds to 60 MPa (HN325) on the cake; the slotted barrel drains oil continuously while the cake compacts. Roasted peanuts finish in **30-60 minutes per batch**; cold-pressed batches run longer at lower temperature. Discharge the cake as a compact disc, reload, and repeat.
+
+### Step 7 — Filtration, settling & packaging
+
+Crude oil goes straight from the press into the **pneumatic filter press**, which removes fine cake particles with minimal labor. Let the filtered oil settle naturally for **12-24 hours**, then rack the clear top layer off the bottom sediment. Bottle in sealed, dark containers — dark glass for premium cold-pressed oil — and store in a cool place. Properly processed peanut oil keeps 18-24 months.
+
+**At a glance:** Cleaning → Shelling → Crushing/Flaking → Conditioning (hot press only) → Moisture to 4-6% → Pressing → Filtration & Settling.
 
 ## Recommended Equipment
 
-- **Standard Hydraulic Oil Press (HN325)** — Well-suited for small to medium peanut oil production. The 390mm inner diameter barrel processes 100 kg per batch with excellent yield.
-- **Heavy Duty Hydraulic Oil Press (HN355)** — Recommended for larger operations. Higher pressing force and double-barrel option for increased throughput.
-- **Thermal Oil Roasting Pan** — Precise temperature control for consistent peanut roasting, essential for aromatic hot-pressed peanut oil.
-- **Pneumatic Oil Filter Press** — Automated filtration for clear, market-ready peanut oil with minimal labor.
+| Stage | Equipment | Notes |
+|---|---|---|
+| Pressing (core) | **HN325 Standard Hydraulic Oil Press** | 325 t force, 60 MPa, 100 kg/batch in the 390 mm barrel; the standard starting machine for peanut mills |
+| Pressing (upgrade) | **HN365 Hydraulic Oil Press** | 365 t force, alternating double stations; for all-day batches and higher daily throughput |
+| Roasting | **Thermal Oil Roasting Pan** | Even thermal-oil heat at 120-150°C; required for hot-pressed oil, omitted for cold press |
+| Filtration | **Pneumatic Oil Filter Press** | Removes fines automatically; clear oil ready for settling and bottling |
+| Preparation | Groundnut sheller + crusher/flaker | We advise on compatible models matched to your tonnage |
 
-## Frequently Asked Questions
+For shops above 2.5 t/day, double-barrel HN325/HN365 configurations and the larger HN400-class presses shorten the working day; tell us your target tons per day and we will size the line.
 
-**How much does a peanut oil press machine cost?**
-Our peanut oil press machines are available in various configurations from standard to heavy-duty models. Pricing depends on barrel size, pressing force, and whether you need a complete production line with roasting and filtration equipment.
+<!-- yield-block -->
+### What you get from 100 kg of shelled peanuts
 
-**Can I press peanuts with the shells on?**
-We strongly recommend shelling peanuts before pressing. Peanut shells absorb oil during pressing, reducing your yield by 15-25% and affecting oil quality. Our seed crusher can help with the shelling process.
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 40-48 kg (≈43-52 L) | 38-44 kg (≈41-48 L) |
+| Oil cake | ≈48-56 kg | ≈50-58 kg |
 
-**What is the difference between cold-pressed and hot-pressed peanut oil?**
-Cold-pressed peanut oil retains more vitamin E, phytosterols, and natural peanut flavor. It commands a premium price in health food markets. Hot-pressed peanut oil has a stronger roasted aroma preferred in Chinese and Indian cooking, and yields 3-5% more oil per batch.
-
-**How long does peanut oil last?**
-Properly filtered and stored peanut oil has a shelf life of 18-24 months. Cold-pressed peanut oil should be stored in a cool, dark place. Refined peanut oil lasts longer due to the removal of reactive compounds.
+*Typical figures for well-shelled, properly conditioned peanuts at standard machine settings; based on Haonuo factory tests with graded peanut at 6-8% moisture, actual results vary with variety, moisture and cycle settings. Liters assume oil density of about 0.92 kg/L.*
+<!-- /yield-block -->
 
 ## Why Choose Haonuo
 
-- **Proven peanut oil expertise** — Our hydraulic presses are specifically optimized for peanut pressing, achieving residual oil rates below 5% — significantly better than screw expellers.
-- **Dual cold/hot press flexibility** — One machine serves both premium cold-pressed and aromatic hot-pressed peanut oil markets.
-- **Factory-direct pricing** — Buy directly from the manufacturer. No trading company markups means you save compared to trading company prices (actual savings vary).
-- **Complete production line** — From cleaning and roasting to pressing, filtration, and packaging, we supply every component for a smooth operation.
-- **Trusted in major markets** — Our peanut oil press machines are running successfully in China, India, Nigeria, and Senegal — the world's largest peanut-producing countries.
+- **Hydraulic, not screw** — static pressure keeps the oil below scorching temperature; no burnt taste, and 6-8% residual oil instead of 10-12%.
+- **One machine, two products** — switch between premium cold-pressed and aromatic hot-pressed peanut oil by changing preparation only.
+- **Complete line from one supplier** — shelling and preparation advice, roaster, press and filter matched as one balanced line.
+- **Factory-direct, built for your site** — FOB Qingdao pricing, payment terms confirmed on the proforma invoice, free voltage customization (415 V/50 Hz, 380 V/60 Hz or your local standard), standard models ready in 15-25 working days.
+- **Tested before it ships** — every press runs under full working pressure and is checked for leaks before packing, with English manual, online video guidance and stocked spare parts.

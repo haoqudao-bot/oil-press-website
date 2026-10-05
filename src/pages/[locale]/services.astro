@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -36,9 +36,9 @@ const services = [
     subtitle: currentLocale === 'fr' ? 'Modèles Prêts à Expédier' :
               currentLocale === 'ar' ? 'نماذج جاهزة للشحن' :
               'Model Siap Kirim',
-    description: currentLocale === 'fr' ? 'Choisissez parmi notre gamme complète de presses à huile hydrauliques — du mini HN300 à l\'ultra-haute pression HN500. Chaque machine est testée en usine et prête à être expédiée dans les 20-30 jours ouvrables.' :
-                 currentLocale === 'ar' ? 'اختر من مجموعتنا الكاملة لمكائن الضغط الهيدروليكي — من ميني HN300 إلى HN500 عالية الضغط. كل ماكينة اختبار في المصنع وجاهزة للشحن في 20-30 يوم عمل.' :
-                 'Pilih dari rangkaian mesin press minyak hidrolik kami — dari HN300 mini hingga HN500 ultra-tinggi tekanan. Setiap mesin diuji pabrik dan siap dikirim dalam 20-30 hari kerja.',
+    description: currentLocale === 'fr' ? 'Choisissez parmi notre gamme complète de presses à huile hydrauliques — du mini HN300 à l\'ultra-haute pression HN500. Chaque machine est testée en usine et prête à être expédiée en 15 à 25 jours ouvrés (configurations personnalisées : 30 à 45 jours).' :
+                 currentLocale === 'ar' ? 'اختر من مجموعتنا الكاملة لمكائن الضغط الهيدروليكي — من ميني HN300 إلى HN500 عالية الضغط. كل ماكينة اختبار في المصنع وجاهزة للشحن في 15-25 يوم عمل (التكوينات المخصصة 30-45 يوم عمل).' :
+                 'Pilih dari rangkaian mesin press minyak hidrolik kami — dari HN300 mini hingga HN500 ultra-tinggi tekanan. Setiap mesin diuji pabrik dan siap dikirim dalam 15-25 hari kerja (konfigurasi khusus 30-45 hari kerja).',
     features: currentLocale === 'fr' ? [
       '8 modèles standards + 4 modèles spécialisés en stock',
       'Configurations simple ou double fût disponibles',
@@ -258,9 +258,9 @@ const process = [
     title: currentLocale === 'fr' ? 'Échantillon & Approbation' :
            currentLocale === 'ar' ? 'عينة وموافقة' :
            'Sampel & Persetujuan',
-    desc: currentLocale === 'fr' ? 'Pour les commandes OEM/ODM, nous fournissons des spécifications détaillées et des rendus 3D pour votre approbation avant le début de la production.' :
-          currentLocale === 'ar' ? 'للأوامر OEM/ODM، نحن نقدم مواصفات مفصلة وعروض 3D لموافقتك قبل بدء الإنتاج.' :
-          'Untuk pesanan OEM/ODM, kami memberikan spesifikasi detail dan render 3D untuk persetujuan Anda sebelum produksi dimulai.',
+    desc: currentLocale === 'fr' ? 'Pour les commandes OEM/ODM, nous fournissons des spécifications détaillées pour votre approbation avant le début de la production.' :
+          currentLocale === 'ar' ? 'للطلبات OEM/ODM، نقدم مواصفات مفصلة لموافقتك قبل بدء الإنتاج.' :
+          'Untuk pesanan OEM/ODM, kami memberikan spesifikasi detail untuk persetujuan Anda sebelum produksi dimulai.',
   },
   {
     step: 4,
@@ -479,10 +479,6 @@ const pageDesc = currentLocale === 'fr' ? 'Haonuo Machinery propose l\'achat de 
               <li class="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 {currentLocale === 'fr' ? 'Réponse dans les 24 heures' : currentLocale === 'ar' ? 'استجابة في 24 ساعة' : 'Respon dalam 24 Jam'}
-              </li>
-              <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                {currentLocale === 'fr' ? 'Rendus 3D personnalisés pour approbation' : currentLocale === 'ar' ? 'عروض 3D مخصصة للموافقة' : 'Render 3D Kustom untuk Persetujuan'}
               </li>
             </ul>
             <a href={localePath('/contact/')} class="block w-full text-center bg-amber-500 text-charcoal-900 font-semibold py-3 rounded-xl hover:bg-amber-400 transition-colors">

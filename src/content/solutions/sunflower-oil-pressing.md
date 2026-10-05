@@ -13,7 +13,7 @@ description:
   id: Mesin press minyak bunga matahari untuk ekstraksi minyak bunga matahari berkualitas tinggi. Press hidrolik hasil tinggi dan sisa rendah.
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - heavy-duty-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
 processSteps:
@@ -63,6 +63,11 @@ faq:
     answer: Send us your requirements for a model-specific quote. We offer factory-direct pricing with no middleman markup.
   - question: What is the daily output of a sunflower oil press?
     answer: Our standard model processes 500-1,500 kg of sunflower seeds per day, while the heavy-duty model handles up to 3,000 kg/day.
+  - question: "What is the difference between cold-pressed and refined sunflower oil?"
+    answer: "Cold-pressed sunflower oil retains more vitamin E, phytosterols, and natural flavor. It has a golden color and nutty taste, commanding premium prices in health food markets. Refined sunflower oil is lighter in color, has a neutral taste, and a higher smoke point, making it more versatile for cooking."
+  - question: "Which sunflower seed variety is best for oil pressing?"
+    answer: "High-oil varieties with 45-50% oil content are the preferred choice. Popular pressing varieties include Peredovik, VNIIMK, and HAOL 414. Black-seeded varieties typically have higher oil content than striped confectionery types."
+
 faqFr:
   - question: Quelle est la teneur en huile des graines de tournesol ?
     answer: Les graines de tournesol contiennent 40 à 50 % d'huile selon la variété. Les variétés riches en huile sont les meilleures pour le pressage.
@@ -74,6 +79,11 @@ faqFr:
     answer: Envoyez-nous vos besoins pour un devis spécifique au modèle. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Quelle est la production quotidienne d'une presse à huile de tournesol ?
     answer: Notre modèle standard traite 500 à 1 500 kg de graines de tournesol par jour, tandis que le modèle lourd traite jusqu'à 3 000 kg/jour.
+  - question: "Quelle est la différence entre l'huile de tournesol pressée à froid et raffinée ?"
+    answer: "L'huile de tournesol pressée à froid conserve plus de vitamine E, de phytostérols et de saveur naturelle. Elle a une couleur dorée et un goût de noix, se vendant à des prix premium sur les marchés d'aliments santé. L'huile de tournesol raffinée est plus claire, a un goût neutre et un point de fumée plus élevé, la rendant plus polyvalente pour la cuisson."
+  - question: "Quelle variété de graines de tournesol est la meilleure pour le pressage d'huile ?"
+    answer: "Les variétés riches en huile avec 45-50 % de teneur en huile sont particulièrement adaptées. Les variétés de pressage populaires incluent Peredovik, VNIIMK et HAOL 414. Les variétés à graines noires ont généralement une teneur en huile plus élevée que les types de confiserie rayés."
+
 faqAr:
   - question: ما هو محتوى الزيت في بذور عباد الشمس؟
     answer: تحتوي بذور عباد الشمس على 40-50% زيت حسب الصنف. أصناف الزيت العالي هي الأفضل للعصر.
@@ -85,6 +95,11 @@ faqAr:
     answer: أرسلوا لنا متطلباتكم للحصول على عرض أسعار محدد بالطراز. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: ما هي الإنتاجية اليومية لمعصرة زيت عباد الشمس؟
     answer: يعالج طرازنا القياسي 500-1500 كجم من بذور عباد الشمس يومياً، بينما يعالج الطراز الثقيل حتى 3000 كجم/يوم.
+  - question: "ما الفرق بين زيت عباد الشمس المعصور على البارد والمكرر؟"
+    answer: "زيت عباد الشمس المعصور على البارد يحتفظ بمزيد من فيتامين هـ والphytosterols والنكهة الطبيعية. له لون ذهبي وطعم جوزي، ويُباع بأسعار مميزة في أسواق الأغذية الصحية. زيت عباد الشمس المكرر أصفى وله طعم محايد ونقطة دخان أعلى، مما يجعله أكثر تنوعاً للطبخ."
+  - question: "ما صنف بذور عباد الشمس الملائم لعصر الزيت؟"
+    answer: "الأصناف الغنية بالزيت بمحتوى زيت 45-50% هي الأنسب. تشمل الأصناف الشائعة للعصر بيريدوفيك وVNIIMK وHAOL 414. الأصناف ذات البذور السوداء عادةً لها محتوى زيت أعلى من الأنواع الحلوة المخططة."
+
 faqId:
   - question: Berapa kandungan minyak biji bunga matahari?
     answer: Biji bunga matahari mengandung 40-50% minyak tergantung varietasnya. Varietas berminyak tinggi paling cocok untuk penekanan.
@@ -96,6 +111,11 @@ faqId:
     answer: Hubungi kami untuk penawaran harga spesifik model. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa output harian mesin press minyak bunga matahari?
     answer: Model standar kami memproses 500-1.500 kg biji bunga matahari per hari, sementara model berat menangani hingga 3.000 kg/hari.
+  - question: "Apa perbedaan antara minyak bunga matahari press dingin dan yang dimurnikan?"
+    answer: "Minyak bunga matahari press dingin mempertahankan lebih banyak vitamin E, fitosterol, dan rasa alami. Ini memiliki warna keemasan dan rasa kacang, dijual dengan harga premium di pasar makanan kesehatan. Minyak bunga matahari yang dimurnikan lebih terang warnanya, memiliki rasa netral, dan titik asap lebih tinggi, membuatnya lebih serbaguna untuk memasak."
+  - question: "Varietas biji bunga matahari mana yang terbaik untuk penekanan minyak?"
+    answer: "Varietas berminyak tinggi dengan kandungan minyak 45-50% adalah yang paling cocok. Varietas penekanan populer termasuk Peredovik, VNIIMK, dan HAOL 414. Varietas berbiji hitam biasanya memiliki kandungan minyak lebih tinggi daripada tipe konfeksi bergaris."
+
 seoKeywords:
   - sunflower oil machine
   - sunflower oil press machine
@@ -134,29 +154,15 @@ This solution handles both high-oil and confectionery sunflower seed varieties, 
 3. **Roasting** — Roast dehulled kernels at 120-150°C for 15-25 minutes using the Thermal Oil Roasting Pan. This improves oil flow and yield. For cold-pressed oil, skip roasting.
 4. **Hydraulic Pressing** — Feed prepared sunflower seeds into the Standard or Heavy Duty Hydraulic Oil Press. The 390mm barrel processes 100 kg per batch with a 40-90 minute cycle (varies by seed type).
 5. **Filtration** — Pass crude sunflower oil through the Pneumatic Oil Filter Press for clear, market-ready oil.
-6. **Refining (Optional)** — For refined sunflower oil, use the Edible Oil Refining System to produce light-colored, neutral-flavored cooking oil.
+6. **Refining (Optional)** — Refined sunflower oil requires degumming, bleaching and deodorization on a separate refining line, sourced independently, to produce light-colored, neutral-flavored cooking oil.
 7. **Packaging** — Bottle the finished oil. Cold-pressed sunflower oil should be stored in dark containers to prevent oxidation.
 
 ## Recommended Equipment
 
 - **Standard Hydraulic Oil Press (HN325)** — Well-suited for small to medium sunflower oil production. Handles both whole seeds and dehulled kernels effectively.
-- **Heavy Duty Hydraulic Oil Press (HN355)** — Recommended for larger operations with double-barrel option for higher throughput.
+- **Heavy Duty Hydraulic Oil Press (HN365)** — Recommended for larger operations with double-barrel option for higher throughput.
 - **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting. Essential for maximizing yield from sunflower seeds.
 - **Pneumatic Oil Filter Press** — Automated filtration for clear, premium sunflower oil.
-
-## Frequently Asked Questions
-
-**How much does a sunflower oil press machine cost?**
-Our sunflower oil press machines are available in various configurations from standard to heavy-duty models with double barrels. We offer factory-direct pricing with no middleman markup.
-
-**Do I need to dehull sunflower seeds before pressing?**
-Dehulling is strongly recommended. Sunflower seed hulls absorb 10-15% of the oil during pressing, significantly reducing your yield. Our seed crusher can handle dehulling efficiently. However, if dehulling equipment is not available, you can press whole seeds with a lower yield.
-
-**What is the difference between cold-pressed and refined sunflower oil?**
-Cold-pressed sunflower oil retains more vitamin E, phytosterols, and natural flavor. It has a golden color and nutty taste, commanding premium prices in health food markets. Refined sunflower oil is lighter in color, has a neutral taste, and a higher smoke point, making it more versatile for cooking.
-
-**Which sunflower seed variety is best for oil pressing?**
-High-oil varieties with 45-50% oil content are the preferred choice. Popular pressing varieties include Peredovik, VNIIMK, and HAOL 414. Black-seeded varieties typically have higher oil content than striped confectionery types.
 
 ## Why Choose Haonuo
 
@@ -165,3 +171,16 @@ High-oil varieties with 45-50% oil content are the preferred choice. Popular pre
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
 - **Complete production lines** — From seed cleaning to bottled oil, we provide every component for a smooth sunflower oil production operation.
 - **Proven in Eastern Europe and Africa** — Our sunflower oil press machines operate successfully in Ukraine, Russia, Turkey, Tanzania, and Mozambique — key sunflower oil producing regions.
+
+<!-- yield-block -->
+### What you get from 100 kg of sunflower seeds
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 40-48 kg (≈43-52 L) | 36-42 kg (≈39-46 L) |
+| Oil cake | ≈47-58 kg | ≈53-62 kg |
+
+*Typical figures for well-prepared sunflower seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

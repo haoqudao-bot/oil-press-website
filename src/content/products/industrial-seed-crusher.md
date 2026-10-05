@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Industrial Oil Cake Crusher
   fr: Broyeur de Tourteaux Industriel
@@ -50,7 +50,7 @@ faq:
   - question: Can this equipment be customized?
     answer: Yes, we can customize specifications such as capacity, power supply, and material contact parts to meet your specific production requirements.
   - question: How is the equipment shipped?
-    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to 20-30 working days production time (shipping time additional).
+    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional).
   - question: Do you provide installation support?
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician for on-site installation. For the industrial oil cake crusher, ensure your installation floor can support the machine's operating weight and has adequate power supply for the industrial motor.
   - question: What certifications does the equipment have?
@@ -89,7 +89,7 @@ faqFr:
   - question: Cet équipement peut-il être personnalisé ?
     answer: Oui, nous pouvons personnaliser les spécifications telles que la capacité, l'alimentation électrique et les pièces en contact avec le matériau pour répondre à vos exigences de production spécifiques.
   - question: Comment l'équipement est-il expédié ?
-    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours. Ceci s'ajoute aux 20-30 jours ouvrables de temps de production.
+    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours. Ceci s'ajoute aux 15 à 25 jours ouvrés de production pour les modèles standard et 30 à 45 jours pour les configurations personnalisées.
   - question: Fournissez-vous un support d'installation ?
     answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien pour l'installation sur site. Pour le broyeur de tourteaux industriel, assurez-vous que votre sol peut supporter le poids de fonctionnement de la machine et dispose d'une alimentation électrique adéquate pour le moteur industriel.
   - question: Quelles certifications l'équipement possède-t-il ?
@@ -146,7 +146,7 @@ faqAr:
   - question: "هل يمكن تخصيص هذه المعدة؟"
     answer: "نعم، يمكننا تخصيص المواصفات مثل القدرة ومصدر الطاقة وقطع التلامس مع المادة لتلبية متطلبات الإنتاج الخاصة بك."
   - question: "كيف تُشحن المعدة؟"
-    answer: "تُشحن المعدة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا. هذا بالإضافة إلى 20-30 يوم عمل كمدة إنتاج (مدة الشحن إضافية)."
+    answer: "تُشحن المعدة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا. هذا بالإضافة إلى 15-25 يوم عمل كمدة إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (مدة الشحن إضافية)."
   - question: "هل تقدمون دعم التركيب؟"
     answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني للتركيب في الموقع. للكسارة الصناعية، تأكد من أن الأرضية تتحمل وزن تشغيل الآلة وتتوفر مصادر طاقة كافية للمحرك الصناعي."
   - question: "ما الشهادات التي تمتلكها المعدة؟"
@@ -167,7 +167,7 @@ faqId:
   - question: Apakah peralatan ini dapat disesuaikan?
     answer: Ya, kami dapat menyesuaikan spesifikasi seperti kapasitas, pasokan daya, dan bagian kontak bahan sesuai kebutuhan produksi Anda.
   - question: Bagaimana peralatan dikirim?
-    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini ditambah 20-30 hari kerja waktu produksi (waktu pengiriman tambahan).
+    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini ditambah 15-25 hari kerja produksi untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus (waktu pengiriman tambahan).
   - question: Apakah Anda menyediakan dukungan instalasi?
     answer: Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi untuk instalasi di tempat. Untuk penghancur industri, pastikan lantai instalasi Anda dapat menahan berat operasi mesin dan memiliki pasokan daya yang memadai untuk motor industri.
   - question: Sertifikasi apa yang dimiliki peralatan?

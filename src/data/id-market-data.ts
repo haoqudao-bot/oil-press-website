@@ -349,7 +349,7 @@ export const idMarketData: Record<string, MarketData> = {
     faqTitle: 'Pertanyaan Umum',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Inggris?', answer: 'Hubungi kami untuk penawaran harga khusus. Kami menawarkan harga kompetitif langsung dari pabrik dan dapat menyiapkan penawaran dalam Pound Sterling (GBP).' },
-      { question: 'Apakah mesin press minyak memiliki sertifikasi CE?', answer: 'Mesin kami memiliki sertifikasi CE. Untuk pasar Inggris, tanda UKCA diperlukan di Inggris, Skotlandia, dan Wales, sementara tanda CE masih diterima di Irlandia Utara. Hubungi kami untuk mengonfirmasi status sertifikasi terkini.' },
+      { question: 'Apakah mesin press minyak memiliki sertifikasi CE?', answer: 'Mesin kami dilengkapi dokumen ekspor standar (sertifikat asal, faktur komersial, packing list). Persyaratan penandaan CE/UKCA tergantung negara tujuan dan konfigurasi mesin — hubungi kami untuk mengonfirmasi dokumen yang tersedia untuk pesanan Anda.' },
       { question: 'Berapa tegangan listrik yang digunakan di Inggris?', answer: 'Inggris menggunakan 240V/50Hz. Mesin kami dapat disesuaikan untuk arus ini tanpa biaya tambahan.' },
       { question: 'Berapa lama pengiriman ke Felixstowe?', answer: 'Pengiriman laut dari Qingdao, Tiongkok ke Felixstowe memakan waktu 28-35 hari. Kami menangani semua dokumentasi ekspor.' },
       { question: 'Apa regulasi impor di Inggris?', answer: 'Mesin yang diimpor ke Inggris tunduk pada PPN 20%. Mesin press minyak diklasifikasikan di bawah pos tarif 8479.82 dengan tarif bea 0%. Kami menyediakan semua dokumentasi yang diperlukan untuk penghapusan bea cukai.' },

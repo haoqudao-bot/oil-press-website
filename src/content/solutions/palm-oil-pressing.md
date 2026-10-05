@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Palm Kernel Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Palmiste
@@ -12,10 +12,9 @@ description:
   ar: آلة عصر زيت نواة النخيل لاستخراج زيت نواة النخيل بكفاءة. ضغط هيدروليكي عالي الضغط لأسواق جنوب شرق آسيا وأفريقيا.
   id: Mesin press minyak inti sawit untuk ekstraksi minyak inti sawit yang efisien. Press hidrolik tekanan tinggi untuk pasar Asia Tenggara dan Afrika.
 recommendedProducts:
-  - heavy-duty-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
   - pneumatic-oil-filter-press
-  - edible-oil-refining-system
 processSteps:
   - step: Kernel Preparation
     description: Crack palm nuts and separate kernels from shells
@@ -63,6 +62,11 @@ faq:
     answer: Ask us about current model pricing. We offer factory-direct pricing with no middleman markup.
   - question: How much palm kernel oil can I produce per day?
     answer: Our heavy-duty model processes 600-1,200 kg of palm kernels per day (single barrel), while the ultra-high-pressure model handles 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) (double barrel).
+  - question: "Can I press both palm fruit and palm kernels on the same machine?"
+    answer: "Our hydraulic press can process both, but palm fruit and palm kernels require different preparation methods and pressing parameters. Palm fruit requires a different pre-treatment (sterilization and digestion) compared to palm kernels (cracking, separation, and crushing)."
+  - question: "Is palm kernel oil pressing profitable?"
+    answer: "Yes. Palm kernel oil commands a premium price over crude palm oil due to its lauric acid content and diverse applications in food, cosmetics, and oleochemicals. Processing kernels locally rather than exporting them raw significantly increases revenue."
+
 faqFr:
   - question: Quelle est la différence entre l'huile de palme et l'huile de palmiste ?
     answer: L'huile de palme est extraite de la chair (mésocarpe) du fruit du palmier, tandis que l'huile de palmiste provient de l'amande (graine) à l'intérieur du fruit. Elles ont des propriétés et des utilisations différentes.
@@ -74,6 +78,11 @@ faqFr:
     answer: Demandez-nous les prix actuels des modèles. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien d'huile de palmiste puis-je produire par jour ?
     answer: Notre modèle lourd traite 800 à 2 000 kg d'amandes de palmiste par jour, tandis que le modèle ultra haute pression traite jusqu'à 3 000 kg/jour.
+  - question: "Puis-je presser à la fois le fruit du palmier et les amandes de palmiste sur la même machine ?"
+    answer: "Notre presse hydraulique peut traiter les deux, mais le fruit du palmier et les amandes de palmiste nécessitent des méthodes de préparation et des paramètres de pressage différents. Le fruit du palmier nécessite un prétraitement différent (stérilisation et trituration) comparé aux amandes de palmiste (cassage, séparation et broyage)."
+  - question: "Le pressage d'huile de palmiste est-il rentable ?"
+    answer: "Oui. L'huile de palmiste se vend à un prix premium par rapport à l'huile de palme brute en raison de sa teneur en acide laurique et de ses applications diverses dans l'alimentation, les cosmétiques et les oléochimiques. Le traitement local des amandes plutôt que leur exportation brute augmente considérablement les revenus."
+
 faqAr:
   - question: ما الفرق بين زيت النخيل وزيت نواة النخيل؟
     answer: يُستخرج زيت النخيل من لُب ثمرة النخيل (الميسوكارب)، بينما يأتي زيت نواة النخيل من النواة (البذرة) داخل الثمرة. لهما خصائص واستخدامات مختلفة.
@@ -85,6 +94,11 @@ faqAr:
     answer: اسألونا عن أسعار الطرازات الحالية. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم زيت نواة نخيل يمكنني إنتاجه يومياً؟
     answer: يعالج طرازنا الثقيل 800-2000 كجم من أنوية النخيل يومياً، بينما يعالج الطراز فائق الضغط العالي حتى 3000 كجم/يوم.
+  - question: "هل يمكنني عصر ثمرة النخيل ولوز نواة النخيل على نفس الآلة؟"
+    answer: "صحافتنا الهيدروليكية يمكنها معالجة كليهما، لكن ثمرة النخيل ولوز نواة النخيل يتطلبان طرق تحضير ومعلمات عصر مختلفة. ثمرة النخيل تتطلب معالجة مسبقة مختلفة (تعقيم وسحق) مقارنة بلوز نواة النخيل (كسر، فصل، طحن)."
+  - question: "هل عصر زيت نواة النخيل مربح؟"
+    answer: "نعم. يُباع زيت نواة النخيل بسعر مميز مقارنة بزيت النخيل الخام بسبب محتواه من حمض اللوريك وتطبيقاته المتنوعة في الأغذية ومستحضرات التجميل والكيماويات الزيتية. المعالجة المحلية للوز بدلاً من تصديره خام تزيد الإيرادات بشكل كبير."
+
 faqId:
   - question: Apa perbedaan antara minyak sawit dan minyak inti sawit?
     answer: Minyak sawit diekstrak dari daging buah (mesokarp) buah sawit, sedangkan minyak inti sawit berasal dari inti (biji) di dalam buah. Keduanya memiliki sifat dan kegunaan yang berbeda.
@@ -96,6 +110,11 @@ faqId:
     answer: Hubungi kami untuk harga model terbaru. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa banyak minyak inti sawit yang dapat saya produksi per hari?
     answer: Model heavy-duty kami memproses 800-2.000 kg inti sawit per hari, sementara model ultra-high-pressure menangani hingga 3.000 kg/hari.
+  - question: "Bisakah saya menekan buah sawit dan inti sawit pada mesin yang sama?"
+    answer: "Press hidrolik kami dapat memproses keduanya, tetapi buah sawit dan inti sawit membutuhkan metode persiapan dan parameter penekanan yang berbeda. Buah sawit membutuhkan pre-perlakuan yang berbeda (sterilisasi dan pencernaan) dibandingkan inti sawit (pemecahan, pemisahan, dan penghancuran)."
+  - question: "Apakah press minyak inti sawit menguntungkan?"
+    answer: "Ya. Minyak inti sawit dijual dengan harga premium di atas minyak sawit mentah karena kandungan asam laurat dan aplikasi beragamnya dalam makanan, kosmetik, dan oleokimia. Memproses inti secara lokal daripada mengekspornya mentah secara signifikan meningkatkan pendapatan."
+
 seoKeywords:
   - palm kernel oil press
   - palm oil press machine
@@ -111,7 +130,7 @@ Palm kernel oil is a highly versatile oil derived from the kernel (seed) of the 
 
 Haonuo's palm kernel oil pressing solution is built around our high-pressure hydraulic press technology, which is particularly well-suited for the hard, high-fat palm kernels that challenge conventional screw expellers. Our **palm kernel oil extraction machine** applies sustained high pressure that thoroughly extracts oil from crushed kernels, achieving residual oil rates below 5% — significantly better than screw presses that typically leave 6-8% residual oil.
 
-This solution covers the complete process from kernel separation through pressing, filtration, and optional refining, enabling you to produce both food-grade and industrial-grade palm kernel oil.
+This solution covers the process from kernel separation through pressing and filtration, with optional refining handled by separately sourced equipment, enabling you to produce both food-grade and industrial-grade palm kernel oil.
 
 ## Oil Yield Expectations
 
@@ -135,34 +154,33 @@ This solution covers the complete process from kernel separation through pressin
 4. **Crushing** — Crush dried palm kernels into small pieces (2-4 mm) using the seed crusher. This step is critical for efficient oil extraction.
 5. **Hydraulic Pressing** — Feed crushed kernels into the Heavy Duty or Ultra High Pressure Hydraulic Oil Press. Apply sustained high pressure for 30-40 minutes (hot press) or approximately 2 hours (cold press) per batch.
 6. **Filtration** — Pass crude palm kernel oil through the Pneumatic Oil Filter Press for clear, clean oil.
-7. **Refining (Optional)** — For edible-grade palm kernel oil, use the Edible Oil Refining System to produce RBD palm kernel oil.
+7. **Refining (Optional)** — Edible-grade RBD palm kernel oil requires a separate refining line, sourced independently.
 8. **Packaging** — Package finished oil in appropriate containers. Palm kernel oil solidifies at temperatures below 25°C.
 
 ## Recommended Equipment
 
-- **Heavy Duty Hydraulic Oil Press (HN355)** — Provides the high pressure needed for palm kernel oil extraction. Recommended for small to medium operations.
+- **Heavy Duty Hydraulic Oil Press (HN365)** — Provides the high pressure needed for palm kernel oil extraction. Recommended for small to medium operations.
 - **Ultra High Pressure Hydraulic Oil Press (HN500)** — Delivers maximum pressure for competitive residual oil rates. Well-suited for larger operations seeking maximum yield.
 - **Pneumatic Oil Filter Press** — Efficient filtration for clean palm kernel oil with minimal sediment.
-- **Edible Oil Refining System** — Required for producing food-grade RBD palm kernel oil. Available in 1-100 ton/day capacities.
-
-## Frequently Asked Questions
-
-**How much does a palm kernel oil press machine cost?**
-Our palm kernel oil press machines are available in various configurations from heavy-duty to ultra-high-pressure models. Pricing depends on barrel size, pressing force, and whether you need filtration and refining equipment. Reach out for a tailored solution.
-
-**What is the difference between palm oil and palm kernel oil?**
-Palm oil comes from the fleshy fruit (mesocarp) and is reddish-orange, rich in beta-carotene. Palm kernel oil comes from the seed (kernel) inside the fruit and is white to yellowish, with a different fatty acid profile. Palm kernel oil is more similar to coconut oil and is used in confectionery, cosmetics, and detergent manufacturing.
-
-**Can I press both palm fruit and palm kernels on the same machine?**
-Our hydraulic press can process both, but palm fruit and palm kernels require different preparation methods and pressing parameters. Palm fruit requires a different pre-treatment (sterilization and digestion) compared to palm kernels (cracking, separation, and crushing).
-
-**Is palm kernel oil pressing profitable?**
-Yes. Palm kernel oil commands a premium price over crude palm oil due to its lauric acid content and diverse applications in food, cosmetics, and oleochemicals. Processing kernels locally rather than exporting them raw significantly increases revenue.
+- **Refining line (sourced separately)** — Food-grade RBD palm kernel oil requires an independent refining line; we can advise on specifications and layout.
 
 ## Why Choose Haonuo
 
 - **High-pressure specialists** — Palm kernels require higher pressing pressure than most oilseeds. Our hydraulic presses deliver 40-55 MPa sustained pressure for thorough extraction.
 - **Residual oil below 5%** — Our ultra-high-pressure model achieves competitive residual oil rates, meaning more oil in your tank and less left in the cake.
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
-- **Complete processing lines** — From kernel separation to refined oil, we supply every component for a fully integrated palm kernel oil production operation.
+- **Integrated processing lines** — From kernel separation to filtered oil, we supply the core pressing equipment and help you coordinate separately sourced refining for a fully integrated operation.
 - **Proven in Southeast Asia** — Our palm kernel oil press machines operate successfully in Indonesia, Malaysia, and Nigeria — the world's largest palm oil producing nations.
+
+<!-- yield-block -->
+### What you get from 100 kg of palm kernels
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 40-45 kg (≈43-49 L) | 35-40 kg (≈38-43 L) |
+| Oil cake | ≈50-58 kg | ≈55-63 kg |
+
+*Typical figures for well-prepared palm kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

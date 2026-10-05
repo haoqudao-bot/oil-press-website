@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: "Flaxseed Oil Pressing Solution"
   fr: "Solution de Pressage d'Huile de Lin"
@@ -13,8 +13,8 @@ description:
   id: "Solusi minyak biji rami press dingin premium. Kaya akan asam lemak omega-3."
 recommendedProducts:
   - cold-press-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - pneumatic-oil-filter-press
-  - stainless-steel-hydraulic-oil-press
 processSteps:
   - step: "Seed Selection & Cleaning"
     description: "Select high-quality flaxseeds with oil content above 35%. Clean thoroughly to remove chaff and debris."
@@ -135,3 +135,16 @@ For flaxseed oil production, we recommend:
 3. **Temperature control system** — Ensures pressing stays below 50°C
 
 Contact Haonuo for a customized flaxseed oil production setup with stainless steel food-grade equipment.
+
+<!-- yield-block -->
+### What you get from 100 kg of flaxseeds
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 35-42 kg (≈38-46 L) | 32-38 kg (≈35-41 L) |
+| Oil cake | ≈53-63 kg | ≈57-66 kg |
+
+*Typical figures for well-prepared flaxseeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

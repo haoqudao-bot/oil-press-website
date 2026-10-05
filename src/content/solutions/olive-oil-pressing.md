@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Olive Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Olive
@@ -61,6 +61,11 @@ faq:
     answer: Request a quote for your preferred model. We offer factory-direct pricing with no middleman markup.
   - question: How much olive oil can I produce per day?
     answer: Our cold press model processes 300-1,000 kg of olives per day, producing approximately 50-250 liters of olive oil depending on variety.
+  - question: "What makes extra virgin olive oil different from regular olive oil?"
+    answer: "Extra virgin olive oil (EVOO) is the highest grade, produced by cold pressing without any chemical processing or refining. It must have acidity below 0.8% and pass sensory evaluation for fruitiness, bitterness, and pungency. Our hydraulic cold press is specifically designed to produce oil that meets EVOO standards."
+  - question: "How quickly should olives be pressed after harvest?"
+    answer: "Ideally within 24 hours. Olives begin to oxidize immediately after harvest, and delays beyond 48 hours significantly degrade oil quality. If immediate pressing is not possible, store olives in ventilated containers at cool temperatures."
+
 faqFr:
   - question: La presse hydraulique peut-elle extraire l'huile d'olive ?
     answer: Oui, notre presse hydraulique à froid est excellente pour l'extraction de l'huile d'olive. La méthode de pressage à froid préserve la saveur, l'arôme et les nutriments naturels des olives.
@@ -72,6 +77,11 @@ faqFr:
     answer: Demandez un devis pour votre modèle préféré. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien d'huile d'olive puis-je produire par jour ?
     answer: Notre modèle de pressage à froid traite 300 à 1 000 kg d'olives par jour, produisant environ 50 à 250 litres d'huile d'olive selon la variété.
+  - question: "Qu'est-ce qui différencie l'huile d'olive extra vierge de l'huile d'olive ordinaire ?"
+    answer: "L'huile d'olive extra vierge (EVOO) est le grade le plus élevé, produite par pressage à froid sans aucun traitement chimique ni raffinage. Elle doit avoir une acidité inférieure à 0,8 % et réussir une évaluation sensorielle pour le fruité, l'amertume et le piquant. Notre presse hydraulique à froid est spécifiquement conçue pour produire une huile répondant aux normes EVOO."
+  - question: "Combien de temps après la récolte les olives doivent-elles être pressées ?"
+    answer: "Idéalement dans les 24 heures. Les olives commencent à s'oxyder immédiatement après la récolte, et les dépassements au-delà de 48 heures dégradent significativement la qualité de l'huile. Si le pressage immédiat n'est pas possible, stockez les olives dans des conteneurs ventilés à des températures fraîches."
+
 faqAr:
   - question: هل يمكن للمضغوط الهيدروليكي استخراج زيت الزيتون؟
     answer: نعم، مضغوطنا الهيدروليكي على البارد ممتاز لاستخراج زيت الزيتون. تحافظ طريقة الضغط على البارد على النكهة الطبيعية والرائحة ومغذيات الزيتون.
@@ -83,6 +93,11 @@ faqAr:
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم زيت زيتون يمكنني إنتاجه يومياً؟
     answer: يعالج طراز الضغط على البارد لدينا 300-1000 كجم من الزيتون يومياً، وينتج حوالي 50-250 لتراً من زيت الزيتون حسب الصنف.
+  - question: "ما الذي يميز زيت الزيتون البكر الممتاز عن زيت الزيتون العادي؟"
+    answer: "زيت الزيتون البكر الممتاز (EVOO) هو أعلى درجة، يُنتج بالعصر على البارد دون أي معالجة كيميائية أو تكرير. يجب أن تكون حموضته أقل من 0.8% وأن يجتاز تقييماً حسياً للفاكهة والمرارة واللاذوعة. صحافتنا الهيدروليكية بالضغط البارد مصممة خصيصاً لإنتاج زيت يلبي معايير EVOO."
+  - question: "كم من الوقت بعد الحصاد يجب عصر الزيتون؟"
+    answer: "يُفضل خلال 24 ساعة. يبدأ الزيتون بالأكسدة فوراً بعد الحصاد، وتجاوز 48 ساعة يدهور جودة الزيت بشكل ملحوظ. إذا لم يكن العصر الفوري ممكناً، خزن الزيتون في حاويات مهواة عند درجات حرارة باردة."
+
 faqId:
   - question: Apakah press hidrolik dapat mengekstrak minyak zaitun?
     answer: Ya, Cold Press Hydraulic Oil Press kami sangat baik untuk ekstraksi minyak zaitun. Metode press dingin menjaga rasa, aroma, dan nutrisi alami zaitun.
@@ -94,6 +109,11 @@ faqId:
     answer: Hubungi kami untuk harga model pilihan Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa banyak minyak zaitun yang dapat saya produksi per hari?
     answer: Model press dingin kami memproses 300-1.000 kg zaitun per hari, menghasilkan sekitar 50-250 liter minyak zaitun tergantung varietasnya.
+  - question: "Apa yang membuat minyak zaitun extra virgin berbeda dari minyak zaitun biasa?"
+    answer: "Minyak zaitun extra virgin (EVOO) adalah kelas tertinggi, diproduksi dengan press dingin tanpa pemrosesan atau pemurnian kimia. Harus memiliki keasaman di bawah 0,8% dan lulus evaluasi sensorik untuk kesegaran buah, kepahitan, dan kepedasan. Press hidrolik dingin kami secara khusus dirancang untuk memproduksi minyak yang memenuhi standar EVOO."
+  - question: "Seberapa cepat zaitun harus ditekan setelah panen?"
+    answer: "Idealnya dalam 24 jam. Zaitun mulai teroksidasi segera setelah panen, dan keterlambatan lebih dari 48 jam secara signifikan menurunkan kualitas minyak. Jika penekanan segera tidak memungkinkan, simpan zaitun dalam wadah berventilasi pada suhu dingin."
+
 seoKeywords:
   - olive oil press machine
   - olive oil extraction machine
@@ -141,23 +161,6 @@ This solution is designed for Mediterranean, Middle Eastern, and New World olive
 - **Cold Press Hydraulic Oil Press (HN426)** — Purpose-built for cold pressing with temperature control below 60°C. Essential for producing genuine extra virgin olive oil that meets international quality standards.
 - **Pneumatic Oil Filter Press** — Provides controllable filtration for olive oil. Can be adjusted for minimal filtration (retaining more flavor) or fine filtration (maximum clarity).
 
-## Frequently Asked Questions
-
-**How much does an olive oil press machine cost?**
-Our olive oil press machines are available in various configurations from cold press to high-capacity models. We offer factory-direct pricing with no middleman markup. Tell us about your production goals for a tailored quote.
-
-**How does hydraulic pressing compare to traditional olive oil extraction?**
-Traditional olive oil extraction uses hammer mills to crush olives into paste, then centrifuges to separate oil. Our hydraulic press is simpler, more affordable, and well-suited for small to medium producers. It produces genuine cold-pressed extra virgin olive oil without the complexity and cost of centrifuge systems.
-
-**What makes extra virgin olive oil different from regular olive oil?**
-Extra virgin olive oil (EVOO) is the highest grade, produced by cold pressing without any chemical processing or refining. It must have acidity below 0.8% and pass sensory evaluation for fruitiness, bitterness, and pungency. Our hydraulic cold press is specifically designed to produce oil that meets EVOO standards.
-
-**How quickly should olives be pressed after harvest?**
-Ideally within 24 hours. Olives begin to oxidize immediately after harvest, and delays beyond 48 hours significantly degrade oil quality. If immediate pressing is not possible, store olives in ventilated containers at cool temperatures.
-
-**Can I press olives from different varieties together?**
-Yes, blending varieties is common and can produce excellent oil. Many premium olive oils are blends of complementary varieties. However, if you want to produce single-variety oils for the premium market, press each variety separately.
-
 ## Why Choose Haonuo
 
 - **Cold press specialists** — Our HN426 model maintains temperatures below 60°C, producing genuine cold-pressed extra virgin olive oil that meets international quality standards.
@@ -165,3 +168,16 @@ Yes, blending varieties is common and can produce excellent oil. Many premium ol
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary). Our olive oil press is typically priced significantly lower than centrifuge systems.
 - **Simple operation** — Unlike complex centrifuge systems that require trained operators, our hydraulic press can be managed by one person with minimal training.
 - **Proven in Mediterranean regions** — Our olive oil press machines operate successfully in Greece, Spain, Morocco, Tunisia, and Palestine — regions with centuries of olive oil tradition.
+
+<!-- yield-block -->
+### What you get from 100 kg of olives
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 20-25 kg (≈22-27 L) | 18-25 kg (≈20-27 L) |
+| Oil cake | ≈70-78 kg | ≈70-80 kg |
+
+*Typical figures for well-prepared olives at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

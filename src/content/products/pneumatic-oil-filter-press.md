@@ -16,7 +16,7 @@ images:
   - /images/products/pneumatic-oil-filter-press.webp
 specifications:
   - name: Rated Working Pressure
-    value: 0.2-0.3 Mpa
+    value: 0.2-0.3 MPa
   - name: Material
     value: 304L Stainless Steel
   - name: Filtration Area
@@ -69,7 +69,7 @@ faq:
   - question: Can this equipment be customized?
     answer: Yes, we can customize specifications such as capacity, power supply, and material contact parts to meet your specific production requirements.
   - question: How is the equipment shipped?
-    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to 20-30 working days production time. Air freight is available for urgent orders.
+    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations. Air freight is available for urgent orders.
   - question: Do you provide installation support?
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician for on-site installation. For the pneumatic filter press, ensure your installation has a compressed air supply (if required for pneumatic operation) and proper drainage for filtered oil.
   - question: What certifications does the equipment have?
@@ -90,9 +90,9 @@ faqFr:
   - question: Cet équipement peut-il être personnalisé ?
     answer: Oui, nous pouvons personnaliser les spécifications telles que la capacité, l'alimentation électrique et les pièces en contact avec le produit pour répondre à vos exigences de production spécifiques.
   - question: Comment l'équipement est-il expédié ?
-    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15-20 jours, vers les ports africains 25-35 jours. Ce délai s'ajoute aux 20-30 jours ouvrés de temps de production. Le fret aérien est disponible pour les commandes urgentes.
+    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15-20 jours, vers les ports africains 25-35 jours. Ce délai s'ajoute aux 15 à 25 jours ouvrés de production pour les modèles standard (30 à 45 jours pour les configurations personnalisées). Le fret aérien est disponible pour les commandes urgentes.
   - question: Fournissez-vous un support d'installation ?
-    answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien pour l'installation sur site. Pour le filtre-presse pneumatique, assurez-vous qu'une alimentation en air comprimé (minimum 0,6 Mpa) est disponible et que la machine est positionnée sur une surface de niveau pour un drainage approprié du filtrat.
+    answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien pour l'installation sur site. Pour le filtre-presse pneumatique, assurez-vous qu'une alimentation en air comprimé (minimum 0,6 MPa) est disponible et que la machine est positionnée sur une surface de niveau pour un drainage approprié du filtrat.
   - question: Quelles certifications l'équipement possède-t-il ?
     answer: Tout l'équipement subit des tests à pleine charge avant l'expédition. Pour le filtre-presse pneumatique, le test vérifie la tenue de la pression pneumatique et l'intégrité de l'étanchéité des plaques filtrantes.
   - question: Comment cet équipement s'intègre-t-il à une presse à huile hydraulique ?
@@ -149,7 +149,7 @@ faqAr:
   - question: "هل يمكن تخصيص هذه المعدات؟"
     answer: "نعم، يمكننا تخصيص المواصفات مثل القدرة ومصدر الطاقة وقطع التلامس مع المنتج لتلبية متطلبات إنتاجك المحددة."
   - question: "كيف يتم شحن المعدات؟"
-    answer: "تُشحن المعدات في صندوق خشبي عبر الشحن البحري. يستغرق التوصيل إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً. هذا بالإضافة إلى 20-30 يوم عمل كوقت إنتاج. الشحن الجوي متاح للطلبات العاجلة."
+    answer: "تُشحن المعدات في صندوق خشبي عبر الشحن البحري. يستغرق التوصيل إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً. هذا بالإضافة إلى 15-25 يوم عمل إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة. الشحن الجوي متاح للطلبات العاجلة."
   - question: "هل تقدمون دعم التركيب؟"
     answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني للتركيب في الموقع. بالنسبة لمكبس الترشيح الهوائي، تأكد من توفر إمداد هواء مضغوط (لا يقل عن 0.6 ميجاباسكال) وأن الآلة مثبتة على سطح مستوٍ لتصريف مناسب للراشح."
   - question: "ما الشهادات التي تمتلكها المعدات؟"
@@ -170,7 +170,7 @@ faqId:
   - question: Apakah peralatan ini dapat disesuaikan?
     answer: Ya, kami dapat menyesuaikan spesifikasi seperti kapasitas, pasokan daya, dan bagian kontak material agar memenuhi kebutuhan produksi spesifik Anda.
   - question: Bagaimana peralatan ini dikirim?
-    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini selain waktu produksi 20-30 hari kerja. Pengiriman udara tersedia untuk pesanan mendesak.
+    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini selain waktu produksi 15-25 hari kerja untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus. Pengiriman udara tersedia untuk pesanan mendesak.
   - question: Apakah Anda menyediakan dukungan pemasangan?
     answer: Ya, kami menyediakan manual pemasangan terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi untuk pemasangan di lokasi. Untuk saringan pneumatik, pastikan pemasangan Anda memiliki pasokan udara terkompresi (jika diperlukan untuk pengoperasian pneumatik) dan saluran pembuangan yang tepat untuk minyak tersaring.
   - question: Sertifikasi apa yang dimiliki peralatan ini?
@@ -194,20 +194,21 @@ updatedAt: 2025-11-01
 
 ## Overview
 
-The HN-10SL pneumatic oil filter press filters crude oil through 20 filter-paper plate layers with 10 m² of filtration area at 0.2–0.3 Mpa working pressure, running 24-hour automatic constant-pressure operation for oil mills that need continuous clarification. Built from 304L food-grade stainless steel and drawing 1.1–2.2 kW, it handles oil at 15–170 °C and is covered by a 1-year warranty.
+The HN-10SL pneumatic oil filter press filters crude oil through 20 filter-paper plate layers with 10 m² of filtration area at 0.2–0.3 MPa working pressure, running 24-hour automatic constant-pressure operation for oil mills that need continuous clarification. Built from 304L food-grade stainless steel and drawing 1.1–2.2 kW, it handles oil at 15–170 °C and is covered by a 1-year warranty.
 
-The HN-10SL Pneumatic Oil Filter Press is a fully automatic, electrically controlled filtration system built entirely from 304L food-grade stainless steel for superior acid and alkali resistance. Featuring 20 filter plate layers with 10 m² of total filtration area, this filter press delivers excellent filtration quality with minimal liquid loss and it's capable of 24-hour automatic constant-pressure continuous operation.
+The HN-10SL is a fully automatic, electronically controlled filtration system built entirely from 304L food-grade stainless steel for superior acid and alkali resistance. Featuring 20 filter plate layers with 10 m² of total filtration area, it delivers excellent filtration clarity with minimal liquid loss and supports 24-hour automatic constant-pressure continuous operation.
 
-Designed for plug-and-play simplicity: connect the power and suction hose, turn on the suction switch, and the system automatically draws in oil, filters it through the filter paper media, and stops when the oil chamber is full. The clean oil outlet then opens to release filtered product. This fully automated cycle eliminates the need for constant operator attention, making it well-suited for continuous production environments.
+Operation is a one-switch routine: connect the power and suction hose, turn on the suction switch, and the system automatically draws oil in, filters it through the filter paper media, and stops on its own when the set pressure is reached. Open the oil outlet and the filtered clean oil flows directly into clean oil barrels or finished product barrels — no transfer pump needed. This fully automated cycle removes the need for constant operator attention and is well-suited to continuous production. With 10 m² of filtration area and 0.3 MPa working pressure, it is sized to keep pace with the HN325/365/426/500 hydraulic presses.
 
 ## Key Advantages
 
 - **304L food-grade stainless steel throughout** — excellent corrosion resistance for edible oil and chemical applications; 316L upgrade available for extreme environments
 - **20-layer filter plate design** — 10 m² filtration area ensures thorough filtration with low liquid loss
-- **Fully automatic operation** — auto suction, auto filtration, auto stop when full, auto discharge of clean oil
+- **Fully automatic one-switch operation** — auto suction, auto filtration, pressure-controlled auto stop, then direct discharge of clean oil
 - **24-hour continuous duty** — constant-pressure operation supports round-the-clock production
-- **Wide temperature range** — filters at 15–70 degrees Celsius, accommodating hot-pressed and cold-pressed oils alike
+- **Wide temperature range** — filters at 15–170 °C, accommodating both hot-pressed and cold-pressed oils
 - **Pressure-controlled safety** — automatic shutdown at pressure limits protects equipment and product quality
+- **Sized for the main press line** — matched to keep pace with the HN325 / HN365 / HN426 / HN500 hydraulic presses
 - **Simple installation** — 3-phase + neutral power connection, suction pipe, oil outlet, and drain port included
 
 ## Applications and Suitable Materials

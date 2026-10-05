@@ -72,7 +72,7 @@ Yield (%) = (Weight of Oil Extracted / Weight of Raw Material) x 100
 
 ### Pressure Optimization
 - Cold press requires higher pressure to break cell walls
-- Use 42+ Mpa/cm2 cake surface pressure
+- Use 42+ MPa cake surface pressure
 - Extended cycle: ~2 hours per batch
 
 ## Post-Pressing Techniques

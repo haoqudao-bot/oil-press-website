@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -45,11 +45,34 @@ const sortPriority: Record<string, number> = {
   'animal-fat-hydraulic-press': 13,
 };
 
+// Custom display order for non-hydraulic categories
+const seedProcessingOrder: Record<string, number> = {
+  'integrated-feeder-crusher-roaster': 1,
+  'high-speed-seed-crusher': 2,
+  'hn-cg60-oilseed-pre-press': 3,
+  'vertical-screw-conveyor': 4,
+  'industrial-seed-crusher': 5,
+};
+const roastingOrder: Record<string, number> = {
+  'automatic-drum-roaster': 1,
+  'thermal-oil-roasting-pan': 2,
+  'electric-seed-steamer': 3,
+  'wood-fired-seed-steamer': 4,
+};
+
 const filteredProducts = allProducts.filter(p => p.data.category === category.slug)
   .sort((a, b) => {
     if (category.slug === 'hydraulic-oil-press') {
       const orderA = sortPriority[a.slug] ?? 99;
       const orderB = sortPriority[b.slug] ?? 99;
+      if (orderA !== orderB) return orderA - orderB;
+    } else if (category.slug === 'seed-processing-equipment') {
+      const orderA = seedProcessingOrder[a.slug] ?? 99;
+      const orderB = seedProcessingOrder[b.slug] ?? 99;
+      if (orderA !== orderB) return orderA - orderB;
+    } else if (category.slug === 'roasting-steaming-equipment') {
+      const orderA = roastingOrder[a.slug] ?? 99;
+      const orderB = roastingOrder[b.slug] ?? 99;
       if (orderA !== orderB) return orderA - orderB;
     }
     const numA = parseInt(a.data.model.replace(/\D/g, '')) || 0;
@@ -65,6 +88,42 @@ const categoryLabels: Record<string, string> = {
 };
 
 const categoryLabel = categoryLabels[category.slug] || category.data.name[currentLocale] || category.data.name.en;
+
+// Hydraulic category is split into the four flagship core models and specialized/custom machines
+const loc3 = (fr: string, ar: string, id: string): string =>
+  currentLocale === 'fr' ? fr : currentLocale === 'ar' ? ar : id;
+const hydraulicCoreSlugs = [
+  'standard-hydraulic-oil-press',
+  'hn365-hydraulic-oil-press',
+  'cold-press-hydraulic-oil-press',
+  'ultra-high-pressure-hydraulic-oil-press',
+];
+const isHydraulicCategory = category.slug === 'hydraulic-oil-press';
+const hydraulicCoreProducts = isHydraulicCategory
+  ? hydraulicCoreSlugs.flatMap(slug => {
+      const p = filteredProducts.find(pr => pr.slug === slug);
+      return p ? [p] : [];
+    })
+  : [];
+const hydraulicSpecializedProducts = isHydraulicCategory
+  ? filteredProducts.filter(p => !hydraulicCoreSlugs.includes(p.slug))
+  : [];
+const productGroups = isHydraulicCategory
+  ? [
+      {
+        badge: loc3('GAMME PRINCIPALE', 'التشكيلة الأساسية', 'LINI INTI'),
+        title: loc3('Presses à huile hydrauliques principales', 'معاصر الزيت الهيدروليكية الأساسية', 'Mesin press minyak hidrolik inti'),
+        subtitle: loc3('Les quatre modèles phares choisis par la plupart des acheteurs — HN325 · HN365 · HN426 · HN500.', 'الطرازات الرائدة الأربعة التي يختارها معظم المشترين — HN325 · HN365 · HN426 · HN500.', 'Empat model andalan yang dipilih sebagian besar pembeli — HN325 · HN365 · HN426 · HN500.'),
+        products: hydraulicCoreProducts,
+      },
+      {
+        badge: loc3('SPÉCIALISÉ & SUR MESURE', 'متخصص ومخصص', 'SPESIALIS & KHUSUS'),
+        title: loc3('Presses hydrauliques spécialisées & sur mesure', 'معاصر هيدروليكية متخصصة ومخصصة', 'Mesin press hidrolik spesialis & khusus'),
+        subtitle: loc3('Presses de démarrage compactes, générations précédentes et machines dédiées à une application, fabriquées sur commande.', 'معاصر مدمجة للمبتدئين وأجيال سابقة وماكينات مخصصة لتطبيقات معينة، تُصنع عند الطلب.', 'Mesin pemula ringkas, generasi sebelumnya, dan mesin khusus aplikasi, dibuat sesuai pesanan.'),
+        products: hydraulicSpecializedProducts,
+      },
+    ]
+  : [{ badge: '', title: '', subtitle: '', products: filteredProducts }];
 
 // Pages that only exist in English (no [locale] version)
 // Map to locale fallback pages so French users stay on French pages
@@ -197,13 +256,6 @@ if (catFaqLd) allLd.push(catFaqLd);
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                   <span>{t.common.coldPressOilMachine}</span>
                 </a>
-                <a
-                  href={localePath('/manual-oil-press-machine/')}
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
-                  <span>{t.common.manualOilPressMachine}</span>
-                </a>
               </nav>
             </div>
 
@@ -235,7 +287,18 @@ if (catFaqLd) allLd.push(catFaqLd);
         <!-- Product Grid -->
         <div class="flex-1 space-y-12">
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-            {filteredProducts.map((product) => (
+            {productGroups.map((group) => (
+              <Fragment>
+                {group.title && (
+                  <div class="col-span-full pt-2">
+                    <div class="border-t border-steel-200 pt-6">
+                      <div class="inline-block text-xs font-bold tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full mb-2">{group.badge}</div>
+                      <h2 class="font-display text-2xl text-charcoal-900 font-bold">{group.title}</h2>
+                      <p class="text-steel-500 text-sm mt-1">{group.subtitle}</p>
+                    </div>
+                  </div>
+                )}
+                {group.products.map((product) => (
               <a
                 href={localePath(`/products/${product.slug}`)}
                 class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -267,6 +330,8 @@ if (catFaqLd) allLd.push(catFaqLd);
                   </div>
                 </div>
               </a>
+                ))}
+              </Fragment>
             ))}
           </div>
 

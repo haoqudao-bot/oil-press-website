@@ -13,7 +13,7 @@ description:
   id: Mesin press minyak sawi untuk ekstraksi minyak sawi dingin hasil tinggi. Teknologi press hidrolik cocok untuk pasar Asia Selatan.
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - heavy-duty-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - electric-seed-steamer
   - pneumatic-oil-filter-press
 processSteps:
@@ -63,6 +63,11 @@ faq:
     answer: Get pricing for your production needs. We offer competitive factory-direct pricing.
   - question: Is steaming necessary before pressing mustard seeds?
     answer: Steaming is recommended for hot-pressed mustard oil as it increases yield by 3-5% and reduces pungency. For cold-pressed (Kachi Ghani) oil, skip steaming to preserve the natural sharp flavor.
+  - question: "What is Kachi Ghani mustard oil?"
+    answer: "Kachi Ghani is the traditional Indian term for cold-pressed mustard oil, extracted without heat or chemicals. It retains the natural pungent flavor, aroma, and nutritional properties of mustard seeds. Kachi Ghani oil commands a premium price in the Indian market."
+  - question: "Can I use the same machine for mustard and other seeds?"
+    answer: "Yes. Our hydraulic oil presses can process mustard seeds, sesame, peanuts, sunflower seeds, and many other oil-bearing materials. Simply adjust the pressing parameters for each seed type."
+
 faqFr:
   - question: Le pressage d'huile de moutarde est-il rentable ?
     answer: Oui, l'huile de moutarde est une huile de cuisson de base en Asie du Sud avec une demande constamment élevée. Le faible KD (6) pour « machine à huile de moutarde » indique un fort intérêt commercial.
@@ -74,6 +79,11 @@ faqFr:
     answer: Obtenez un prix selon vos besoins de production. Nous offrons des prix compétitifs directs d'usine.
   - question: La cuisson à la vapeur est-elle nécessaire avant de presser les graines de moutarde ?
     answer: La cuisson à la vapeur est recommandée pour l'huile de moutarde pressée à chaud car elle augmente le rendement de 3 à 5 % et réduit le piquant. Pour l'huile pressée à froid (Kachi Ghani), sautez la vapeur pour préserver la saveur piquante naturelle.
+  - question: "Qu'est-ce que l'huile de moutarde Kachi Ghani ?"
+    answer: "Kachi Ghani est le terme indien traditionnel pour l'huile de moutarde pressée à froid, extraite sans chaleur ni produits chimiques. Elle conserve la saveur piquante naturelle, l'arôme et les propriétés nutritionnelles des graines de moutarde. L'huile Kachi Ghani se vend à un prix premium sur le marché indien."
+  - question: "Puis-je utiliser la même machine pour la moutarde et d'autres graines ?"
+    answer: "Oui. Nos presses hydrauliques à huile peuvent traiter les graines de moutarde, le sésame, les arachides, les graines de tournesol et bien d'autres matières oléagineuses. Il suffit d'ajuster les paramètres de pressage pour chaque type de graine."
+
 faqAr:
   - question: هل عصر زيت الخردل مربح؟
     answer: نعم، زيت الخردل زيت طهي أساسي في جنوب آسيا وله طلب مرتفع باستمرار. يشير انخفاض مؤشر KD (6) لعبارة "آلة زيت الخردل" إلى اهتمام تجاري قوي.
@@ -85,6 +95,11 @@ faqAr:
     answer: احصلوا على تسعيرة حسب احتياجات إنتاجكم. نقدم أسعاراً تنافسية مباشرة من المصنع.
   - question: هل التبخير ضروري قبل عصر بذور الخردل؟
     answer: يُنصح بالتبخير لزيت الخردل المضغوط ساخناً لأنه يزيد العائد بنسبة 3-5% ويقلل الحدة. لزيت الخردل المضغوط على البارد (كاتشي غاني)، تخطى التبخير للحفاظ على النكهة الحادة الطبيعية.
+  - question: "ما هو زيت الخردل كاتشي غاني؟"
+    answer: "كاتشي غاني هو المصطلح الهندي التقليدي لزيت الخردل المعصور على البارد، المستخرج بدون حرارة أو مواد كيميائية. يحتفظ بالنكهة اللاذعة الطبيعية والرائحة والخصائص الغذائية لبذور الخردل. يُباع زيت كاتشي غاني بسعر مميز في السوق الهندي."
+  - question: "هل يمكنني استخدام نفس الآلة للخردل وبذور أخرى؟"
+    answer: "نعم. صحائفنا الهيدروليكية للزيت يمكنها معالجة بذور الخردل والسمسم والفول السوداني وبذور عباد الشمس وغيرها كثير من المواد الزيتية. يكفي ضبط معلمات العصر لكل نوع بذور."
+
 faqId:
   - question: Apakah press minyak sawi menguntungkan?
     answer: Ya, minyak sawi adalah minyak goreng pokok di Asia Selatan dengan permintaan yang tinggi secara konsisten. KD rendah (6) untuk "mesin minyak sawi" menunjukkan minat komersial yang kuat.
@@ -96,6 +111,11 @@ faqId:
     answer: Hubungi kami untuk harga sesuai kebutuhan produksi Anda. Kami menawarkan harga langsung pabrik yang kompetitif.
   - question: Apakah pengukusan diperlukan sebelum menekan biji sawi?
     answer: Pengukusan disarankan untuk minyak sawi press panas karena meningkatkan hasil sebesar 3-5% dan mengurangi rasa pedas. Untuk minyak press dingin (Kachi Ghani), lewati pengukusan untuk menjaga rasa tajam alami.
+  - question: "Apa itu minyak sawi Kachi Ghani?"
+    answer: "Kachi Ghani adalah istilah India tradisional untuk minyak sawi press dingin, diekstrak tanpa panas atau bahan kimia. Ini mempertahankan rasa pedas alami, aroma, dan sifat nutrisi biji sawi. Minyak Kachi Ghani dijual dengan harga premium di pasar India."
+  - question: "Bisakah saya menggunakan mesin yang sama untuk sawi dan biji lain?"
+    answer: "Ya. Press hidrolik kami dapat memproses biji sawi, wijen, kacang tanah, biji bunga matahari, dan banyak bahan pembawa minyak lainnya. Cukup sesuaikan parameter penekanan untuk setiap jenis biji."
+
 seoKeywords:
   - mustard oil machine
   - mustard oil press machine
@@ -143,23 +163,9 @@ The solution supports both cold pressing (for premium Kachi Ghani mustard oil) a
 ## Recommended Equipment
 
 - **Standard Hydraulic Oil Press (HN325)** — Excellent for small to medium mustard oil production. Well-suited for Kachi Ghani cold-pressed mustard oil.
-- **Heavy Duty Hydraulic Oil Press (HN355)** — Recommended for larger operations with higher daily throughput requirements.
+- **Heavy Duty Hydraulic Oil Press (HN365)** — Recommended for larger operations with higher daily throughput requirements.
 - **Electric Seed Steamer** — Purpose-built for mustard seed steaming with precise temperature control. Essential for hot-pressed mustard oil production.
 - **Pneumatic Oil Filter Press** — Efficient filtration for clean, market-ready mustard oil with minimal labor.
-
-## Frequently Asked Questions
-
-**How much does a mustard oil press machine cost?**
-Our mustard oil press machines are available in various models, barrel sizes, and configurations. We offer factory-direct pricing that saves compared to trading company prices (actual savings vary). Request a customized quote for your setup.
-
-**What is Kachi Ghani mustard oil?**
-Kachi Ghani is the traditional Indian term for cold-pressed mustard oil, extracted without heat or chemicals. It retains the natural pungent flavor, aroma, and nutritional properties of mustard seeds. Kachi Ghani oil commands a premium price in the Indian market.
-
-**Is mustard oil pressing a profitable business?**
-Yes, it can be. Mustard oil is consumed daily by hundreds of millions of people in South Asia. India alone produces over 8 million tons of mustard oil annually. The consistent demand and relatively low raw material cost make mustard oil pressing a potentially profitable venture, though actual returns depend on local market conditions, raw material costs, and production efficiency.
-
-**Can I use the same machine for mustard and other seeds?**
-Yes. Our hydraulic oil presses can process mustard seeds, sesame, peanuts, sunflower seeds, and many other oil-bearing materials. Simply adjust the pressing parameters for each seed type.
 
 ## Why Choose Haonuo
 
@@ -168,3 +174,16 @@ Yes. Our hydraulic oil presses can process mustard seeds, sesame, peanuts, sunfl
 - **Factory-direct pricing** — No middlemen. Competitive pricing directly from the manufacturer saves you compared to trading company prices (actual savings vary).
 - **Kachi Ghani capability** — Our cold press model produces authentic Kachi Ghani mustard oil that meets traditional quality standards.
 - **Proven in India** — Our mustard oil press machines are operating successfully across India, from Rajasthan to West Bengal, serving both small village producers and commercial-scale operations.
+
+<!-- yield-block -->
+### What you get from 100 kg of mustard seeds
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 30-38 kg (≈33-41 L) | 28-34 kg (≈30-37 L) |
+| Oil cake | ≈57-68 kg | ≈61-70 kg |
+
+*Typical figures for well-prepared mustard seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

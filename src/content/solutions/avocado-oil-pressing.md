@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Avocado Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Avocat
@@ -62,6 +62,11 @@ faq:
     answer: Ask us about current model pricing. We offer factory-direct pricing with no middleman markup.
   - question: How much avocado oil can I produce per day?
     answer: With our cold press model, you can process 300-1,000 kg of avocado pulp per day depending on operation hours.
+  - question: "Can I press avocado oil from fresh (undried) avocado?"
+    answer: "Yes, but with lower yield. Fresh avocado pulp contains about 70% water, which creates emulsions and reduces oil yield. Drying the pulp before pressing can double your effective yield. For small-scale production, fresh pressing is feasible; for commercial operations, drying is strongly recommended."
+  - question: "What makes avocado oil so expensive?"
+    answer: "Avocado oil commands premium prices because of the relatively low oil content of fresh avocados (15-25%), the labor-intensive preparation required, and the growing global demand for this health-conscious oil. Cold-pressed avocado oil sells at a significant premium in retail markets."
+
 faqFr:
   - question: Puis-je presser à froid l'huile d'avocat ?
     answer: Oui, notre presse hydraulique à froid (HN426) est adaptée pour le pressage à froid de l'huile d'avocat, préservant les nutriments et la couleur verte naturelle.
@@ -73,6 +78,11 @@ faqFr:
     answer: Demandez-nous les prix actuels des modèles. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien d'huile d'avocat puis-je produire par jour ?
     answer: Avec notre modèle de pressage à froid, vous pouvez traiter 300 à 1 000 kg de pulpe d'avocat par jour selon les heures de fonctionnement.
+  - question: "Puis-je presser l'huile d'avocat à partir d'avocats frais (non séchés) ?"
+    answer: "Oui, mais avec un rendement inférieur. La pulpe d'avocat fraîche contient environ 70 % d'eau, ce qui crée des émulsions et réduit le rendement en huile. Le séchage de la pulpe avant le pressage peut doubler votre rendement effectif. Pour la production à petite échelle, le pressage à frais est réalisable ; pour les opérations commerciales, le séchage est fortement recommandé."
+  - question: "Pourquoi l'huile d'avocat est-elle si chère ?"
+    answer: "L'huile d'avocat se vend à des prix premium en raison de la teneur en huile relativement faible des avocats frais (15-25 %), de la préparation laborieuse requise et de la demande mondiale croissante pour cette huile santé. L'huile d'avocat pressée à froid se vend à une prime significative sur les marchés de détail."
+
 faqAr:
   - question: هل يمكنني عصر زيت الأفوكادو على البارد؟
     answer: نعم، مضغوطنا الهيدروليكي على البارد (HN426) مناسب لعصر زيت الأفوكادو على البارد، مع الحفاظ على المغذيات واللون الأخضر الطبيعي.
@@ -84,6 +94,11 @@ faqAr:
     answer: اسألونا عن أسعار الطرازات الحالية. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم زيت أفوكادو يمكنني إنتاجه يومياً؟
     answer: مع طراز الضغط على البارد لدينا، يمكن معالجة 300-1000 كجم من لب الأفوكادو يومياً حسب ساعات التشغيل.
+  - question: "هل يمكنني عصر زيت الأفوكادو من أفوكادو طازج (غير مجفف)؟"
+    answer: "نعم، لكن بعائد أقل. يحتوي لب الأفوكادو الطازج على حوالي 70% ماء، مما يخلق مستحلبات ويقلل عائد الزيت. تجفيف اللب قبل العصر يمكن أن يضاعف عائدك الفعلي. للإنتاج على نطاق صغير، العصر من الطازج ممكن؛ للعمليات التجارية، التجفيف موصى به بشدة."
+  - question: "لماذا زيت الأفوكادو بهذا الغلاء؟"
+    answer: "يُباع زيت الأفوكادو بأسعار مميزة بسبب محتوى الزيت المنخفض نسبياً في الأفوكادو الطازج (15-25%)، والتحضير الذي يتطلب جهداً، والطلب العالمي المتنامي على هذا الزيت الصحي. يُباع زيت الأفوكادو المعصور على البارد بعلاوة كبيرة في أسواق التجزئة."
+
 faqId:
   - question: Bisakah saya menekan dingin minyak alpukat?
     answer: Ya, Cold Press Hydraulic Oil Press (HN426) kami cocok untuk penekanan dingin minyak alpukat, menjaga nutrisi dan warna hijau alami.
@@ -95,6 +110,11 @@ faqId:
     answer: Hubungi kami untuk harga model terkini. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa banyak minyak alpukat yang bisa saya produksi per hari?
     answer: Dengan model press dingin kami, Anda dapat memproses 300-1.000 kg daging alpukat per hari tergantung jam operasi.
+  - question: "Bisakah saya menekan minyak alpukat dari alpukat segar (tanpa dikeringkan)?"
+    answer: "Ya, tetapi dengan hasil lebih rendah. Daging alpukat segar mengandung sekitar 70% air, yang menciptakan emulsi dan mengurangi hasil minyak. Mengeringkan daging sebelum ditekan dapat menggandakan hasil efektif Anda. Untuk produksi skala kecil, penekanan segar memungkinkan; untuk operasi komersial, pengeringan sangat direkomendasikan."
+  - question: "Apa yang membuat minyak alpukat begitu mahal?"
+    answer: "Minyak alpukat dijual dengan harga premium karena kandungan minyak alpukat segar yang relatif rendah (15-25%), persiapan yang membutuhkan banyak tenaga kerja, dan permintaan global yang terus berkembang untuk minyak yang sadar kesehatan ini. Minyak alpukat press dingin dijual dengan premium yang signifikan di pasar ritel."
+
 seoKeywords:
   - avocado oil press machine
   - avocado oil extraction machine
@@ -143,20 +163,6 @@ This solution is designed for the growing avocado oil market in Mexico, Kenya, N
 - **High Speed Seed Crusher** — Efficiently mashes avocado pulp into uniform paste for consistent pressing results.
 - **Pneumatic Oil Filter Press** — Removes fine particles and sediment for crystal-clear avocado oil. Multiple filtration passes ensure the highest quality.
 
-## Frequently Asked Questions
-
-**How much does an avocado oil press machine cost?**
-Our avocado oil press machines are available in various configurations from cold press to high-capacity models. We offer factory-direct pricing that saves compared to trading company prices (actual savings vary). Reach out for a tailored solution.
-
-**Can I press avocado oil from fresh (undried) avocado?**
-Yes, but with lower yield. Fresh avocado pulp contains about 70% water, which creates emulsions and reduces oil yield. Drying the pulp before pressing can double your effective yield. For small-scale production, fresh pressing is feasible; for commercial operations, drying is strongly recommended.
-
-**What makes avocado oil so expensive?**
-Avocado oil commands premium prices because of the relatively low oil content of fresh avocados (15-25%), the labor-intensive preparation required, and the growing global demand for this health-conscious oil. Cold-pressed avocado oil sells at a significant premium in retail markets.
-
-**Can I press avocado seeds for oil?**
-Yes, avocado seeds contain 3-5% oil and can be pressed using our equipment. However, the yield is very low and the oil has different properties than pulp oil. Most producers focus on pulp oil for the premium market.
-
 ## Why Choose Haonuo
 
 - **Cold press specialists** — Our HN426 model is purpose-built for cold pressing, maintaining temperatures below 60°C to preserve avocado oil's premium quality and green color.
@@ -164,3 +170,16 @@ Yes, avocado seeds contain 3-5% oil and can be pressed using our equipment. Howe
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
 - **Complete solution** — From pulp preparation to filtered, bottled oil, we supply every component you need.
 - **Proven in avocado regions** — Our avocado oil press machines operate successfully in Mexico, Kenya, New Zealand, and South Africa — the world's key avocado producing regions.
+
+<!-- yield-block -->
+### What you get from 100 kg of avocado flesh
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 18-22 kg (≈20-24 L) | 15-20 kg (≈16-22 L) |
+| Oil cake | ≈73-80 kg | ≈75-83 kg |
+
+*Typical figures for well-prepared avocado flesh at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

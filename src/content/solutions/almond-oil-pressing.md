@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Almond Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Amande
@@ -13,6 +13,7 @@ description:
   id: Mesin press minyak almond untuk minyak almond dingin premium. Press hidrolik dingin menjaga vitamin dan aroma.
 recommendedProducts:
   - cold-press-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - pneumatic-oil-filter-press
 processSteps:
   - step: Almond Preparation
@@ -53,6 +54,11 @@ faq:
     answer: Request a quote for your preferred model. We offer factory-direct pricing with no middleman markup.
   - question: How much almond oil can I produce per day?
     answer: Our cold press model processes 300-1,000 kg of almonds per day, producing approximately 150-500 liters of almond oil.
+  - question: "What is the difference between sweet and bitter almond oil?"
+    answer: "Sweet almond oil (from Prunus dulcis) is the common edible and cosmetic oil. Bitter almond oil contains amygdalin, which breaks down into toxic hydrocyanic acid. Bitter almond oil is used only in very small quantities as a flavoring agent after proper processing. Our equipment is designed for sweet almond oil production."
+  - question: "What are the main markets for almond oil?"
+    answer: "Almond oil has two primary markets: cosmetics (moisturizers, hair care, massage oil) and food (cooking oil, salad dressing, nutritional supplement). The cosmetics market accounts for approximately 60% of global almond oil demand and offers the highest margins."
+
 faqFr:
   - question: Quelle est la teneur en huile des amandes ?
     answer: Les amandes contiennent environ 50 à 55 % d'huile, ce qui les rend excellentes pour le pressage d'huile.
@@ -64,6 +70,11 @@ faqFr:
     answer: Demandez un devis pour votre modèle préféré. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien d'huile d'amande puis-je produire par jour ?
     answer: Notre modèle de pressage à froid traite 300 à 1 000 kg d'amandes par jour, produisant environ 150 à 500 litres d'huile d'amande.
+  - question: "Quelle est la différence entre l'huile d'amande douce et l'huile d'amande amère ?"
+    answer: "L'huile d'amande douce (de Prunus dulcis) est l'huile alimentaire et cosmétique courante. L'huile d'amande amère contient de l'amygdaline, qui se décompose en acide cyanhydrique toxique. L'huile d'amande amère n'est utilisée qu'en très petites quantités comme agent aromatisant après un traitement approprié. Notre équipement est conçu pour la production d'huile d'amande douce."
+  - question: "Quels sont les principaux marchés de l'huile d'amande ?"
+    answer: "L'huile d'amande a deux marchés principaux : les cosmétiques (hydratants, soins capillaires, huile de massage) et l'alimentaire (huile de cuisson, vinaigrette, complément alimentaire). Le marché des cosmétiques représente environ 60 % de la demande mondiale d'huile d'amande et offre les marges les plus élevées."
+
 faqAr:
   - question: ما هو محتوى الزيت في اللوز؟
     answer: يحتوي اللوز على حوالي 50-55% زيت، مما يجعله ممتازاً لعصر الزيت.
@@ -75,6 +86,11 @@ faqAr:
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم زيت لوز يمكنني إنتاجه يومياً؟
     answer: يعالج طراز الضغط على البارد لدينا 300-1000 كجم من اللوز يومياً، وينتج حوالي 150-500 لتر من زيت اللوز.
+  - question: "ما الفرق بين زيت اللوز الحلو وزيت اللوز المر؟"
+    answer: "زيت اللوز الحلو (من Prunus dulcis) هو الزيت الغذائي ومستحضرات التجميل الشائع. يحتوي زيت اللوز المر على الأميغدالين، الذي يتفكك إلى حمض سيانيدريك سام. يُستخدم زيت اللوز المر بكميات صغيرة جداً فقط كمنكه بعد معالجة مناسبة. معداتنا مصممة لإنتاج زيت اللوز الحلو."
+  - question: "ما هي الأسواق الرئيسية لزيت اللوز؟"
+    answer: "لزيت اللوز سوقان رئيسيان: مستحضرات التجميل (مرطبات، عناية بالشعر، زيت تدليك) والغذائي (زيت طبخ، تتبيل، مكمل غذائي). يمثل سوق مستحضرات التجميل حوالي 60% من الطلب العالمي على زيت اللوز ويوفر أعلى الهوامش."
+
 faqId:
   - question: Berapa kandungan minyak almond?
     answer: Almond mengandung sekitar 50-55% minyak, menjadikannya sangat baik untuk penekanan minyak.
@@ -86,6 +102,11 @@ faqId:
     answer: Hubungi kami untuk harga sesuai model pilihan Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa banyak minyak almond yang bisa saya produksi per hari?
     answer: Model press dingin kami memproses 300-1.000 kg almond per hari, menghasilkan sekitar 150-500 liter minyak almond.
+  - question: "Apa perbedaan antara minyak almond manis dan pahit?"
+    answer: "Minyak almond manis (dari Prunus dulcis) adalah minyak konsumsi dan kosmetik yang umum. Minyak almond pahit mengandung amigdalin, yang terurai menjadi asam hidrosianida beracun. Minyak almond pahit hanya digunakan dalam jumlah sangat kecil sebagai penyedap setelah pengolahan yang tepat. Peralatan kami dirancang untuk produksi minyak almond manis."
+  - question: "Apa saja pasar utama untuk minyak almond?"
+    answer: "Minyak almond memiliki dua pasar utama: kosmetik (pelembab, perawatan rambut, minyak pijat) dan makanan (minyak memasak, dressing salad, suplemen gizi). Pasar kosmetik menyumbang sekitar 60% dari permintaan minyak almond global dan menawarkan margin tertinggi."
+
 seoKeywords:
   - almond oil making machine
   - almond oil press machine
@@ -132,23 +153,6 @@ With almonds containing 50-55% oil — among the highest of all oilseeds — alm
 - **Cold Press Hydraulic Oil Press (HN426)** — Purpose-built for cold pressing with temperature control below 60°C. Essential for producing premium almond oil that retains maximum nutritional value.
 - **Pneumatic Oil Filter Press** — Produces crystal-clear almond oil suitable for both food and cosmetic applications. Fine filtration is critical for premium markets.
 
-## Frequently Asked Questions
-
-**How much does an almond oil press machine cost?**
-Our almond oil press machines are available in various configurations from cold press to high-capacity models. We offer factory-direct pricing with no middleman markup. Get pricing for your production needs.
-
-**Can I press almonds with the shells on?**
-No. Almond shells are extremely hard and will damage your equipment. Always use shelled almonds for oil pressing. The shells also contain tannins that can affect oil flavor and quality.
-
-**Is cold-pressed almond oil really better?**
-Yes, significantly. Cold-pressed almond oil generally retains more vitamin E than hot-pressed oil, along with more phytosterols and natural antioxidants. This can translate to higher market value — cold-pressed almond oil typically sells for 30-50% more than refined almond oil, though actual results vary.
-
-**What is the difference between sweet and bitter almond oil?**
-Sweet almond oil (from Prunus dulcis) is the common edible and cosmetic oil. Bitter almond oil contains amygdalin, which breaks down into toxic hydrocyanic acid. Bitter almond oil is used only in very small quantities as a flavoring agent after proper processing. Our equipment is designed for sweet almond oil production.
-
-**What are the main markets for almond oil?**
-Almond oil has two primary markets: cosmetics (moisturizers, hair care, massage oil) and food (cooking oil, salad dressing, nutritional supplement). The cosmetics market accounts for approximately 60% of global almond oil demand and offers the highest margins.
-
 ## Why Choose Haonuo
 
 - **Cold press expertise** — Our HN426 model is specifically designed for cold pressing, maintaining temperatures below 60°C to preserve almond oil's premium nutritional profile.
@@ -156,3 +160,16 @@ Almond oil has two primary markets: cosmetics (moisturizers, hair care, massage 
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
 - **Cosmetic-grade quality** — Our filtration system produces almond oil clear enough for premium cosmetic applications.
 - **Proven globally** — Our almond oil press machines operate successfully in California, Spain, Australia, and the Middle East — the world's key almond producing regions.
+
+<!-- yield-block -->
+### What you get from 100 kg of almond kernels
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 45-55 kg (≈49-60 L) | 42-50 kg (≈46-54 L) |
+| Oil cake | ≈40-53 kg | ≈45-56 kg |
+
+*Typical figures for well-prepared almond kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

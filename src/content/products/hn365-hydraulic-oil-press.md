@@ -20,7 +20,7 @@ specifications:
   - name: Rated Pressing Force
     value: 365 Tonnes
   - name: Cake Surface Pressure
-    value: 30 MPa/cm²
+    value: 30 MPa
   - name: Frame
     value: 3 cm high-strength steel plate
   - name: Structure
@@ -55,7 +55,7 @@ applicableSeeds:
   - almond
 faq:
   - question: What is the HN365, and how does it differ from the HN355?
-    answer: The HN365 is the upgraded successor to the HN355. It keeps the same machine class but moves to a reinforced vertical frame built from 3 cm high-strength steel plate, a double-station alternating barrel layout and an integrated cartridge-valve hydraulic pack. The rated pressing force is 365 tons with 30 MPa/cm² cake surface pressure, so it finishes hard seeds more completely than the HN325 while supporting continuous all-day batches.
+    answer: The HN365 is the upgraded successor to the HN355. It keeps the same machine class but moves to a reinforced vertical frame built from 3 cm high-strength steel plate, a double-station alternating barrel layout and an integrated cartridge-valve hydraulic pack. The rated pressing force is 365 tons with 30 MPa cake surface pressure, so it finishes hard seeds more completely than the HN325 while supporting continuous all-day batches.
   - question: Which oilseeds is the HN365 designed for?
     answer: It handles both soft and hard oilseeds — peanut, sesame, rapeseed, camellia (tea) seed, walnut, flaxseed, sunflower seed, soybean and almond. Buyers upgrading from a 325-class machine usually move to the HN365 when they press more hard seeds or need higher daily throughput.
   - question: Does the HN365 support both hot and cold pressing?
@@ -63,13 +63,13 @@ faq:
   - question: What is the advantage of the double-station barrel?
     answer: With two alternating stations, the operator loads and empties one barrel while the other is pressing. The press is never idle waiting for loading, which lifts daily output substantially compared with a single-barrel machine without doubling floor space, thanks to the compact vertical layout.
   - question: What pressure does the HN365 reach?
-    answer: Rated pressing force is 365 tons and maximum cake surface pressure is 30 MPa/cm². The hydraulic cylinder is machined from 27SiMn alloy steel (GB/T 3077), quenched and tempered for repeated high-pressure cycling. Material test certificates (MTC) are available on request.
+    answer: Rated pressing force is 365 tons and maximum cake surface pressure is 30 MPa. The hydraulic cylinder is machined from 27SiMn alloy steel (GB/T 3077), quenched and tempered for repeated high-pressure cycling. Material test certificates (MTC) are available on request.
   - question: Are the oil-contact surfaces food-grade?
     answer: The barrel interior and oil outlet are nickel-plated for food-grade contact, so carbon steel never touches the pressed oil. The slotted strip barrel also drains oil faster than a conventional drilled barrel.
   - question: What voltage can the machine be built for?
     answer: The electrical system is customized to your local supply at no extra charge — for example 415 V 50 Hz in Kenya, 380 V 60 Hz in Saudi Arabia, or other three-phase standards. The motor uses star-delta reduced-voltage starting to soften starting current.
   - question: What are your payment and trade terms?
-    answer: Production starts with a 30% T/T deposit and the 70% balance is paid before shipment. We trade FOB Qingdao only; your forwarder handles ocean freight and destination charges. Standard models are normally ready within 15–25 working days after deposit, confirmed on the proforma invoice.
+    answer: We trade FOB Qingdao; your forwarder handles ocean freight and destination charges. Payment terms are confirmed on the proforma invoice. Standard models are normally ready within 15–25 working days after order confirmation; custom or special configurations take 30–45 days.
   - question: Do you provide installation and training?
     answer: An English manual and video-call guidance are included, and most single-machine buyers install without a site visit. For larger lines a Haonuo engineer can travel for installation and operator training; the buyer covers flights, visa, accommodation and a daily service fee.
 seoKeywords:
@@ -86,16 +86,16 @@ updatedAt: 2026-10-01
 
 ## Overview
 
-The HN365 vertical hydraulic oil press is rated at 365 tons of pressing force with 30 Mpa/cm² cake surface pressure, built for medium and large oil mills that have outgrown 325-class machines. Its vertical double-station layout alternates two barrels so one can be loaded while the other presses, supporting hot and cold pressing of peanut, sesame, walnut and other oilseeds in 40–90 minute batches depending on the material. Residual oil in the cake typically stays at 6–8% (internal testing, results vary).
+The HN365 vertical hydraulic oil press is rated at 365 tons of pressing force with 30 MPa cake surface pressure, built for medium and large oil mills that have outgrown 325-class machines. Its vertical double-station layout alternates two barrels so one can be loaded while the other presses, supporting hot and cold pressing of peanut, sesame, walnut and other oilseeds in 40–90 minute batches depending on the material. Residual oil in the cake typically stays at 6–8% (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation).
 
-The HN365 is our upgraded high-pressure vertical hydraulic oil press, developed for medium and large oil mills that have outgrown a 325-class machine. It is rated at **365 tons of pressing force** with **30 MPa/cm² cake surface pressure**, built on a frame made from **3 cm high-strength steel plate**. The extra force shows up where it matters: hard oilseeds such as walnut and camellia finish more completely, with lower residual oil left in the cake.
+The HN365 is our upgraded high-pressure vertical hydraulic oil press, developed for medium and large oil mills that have outgrown a 325-class machine. It is rated at **365 tons of pressing force** with **30 MPa cake surface pressure**, built on a frame made from **3 cm high-strength steel plate**. The extra force shows up where it matters: hard oilseeds such as walnut and camellia finish more completely, with lower residual oil left in the cake.
 
 The vertical structure saves floor space and sends cylinder force straight down, so pressure is even, cakes form neatly and the frame holds its precision over long high-pressure runs. A large **double-station barrel** lets one station press while the other is loaded, keeping the machine working through the whole shift.
 
 ## Key Advantages
 
 - **Upgraded from the HN355** — Reinforced vertical frame, 365-ton force and modern cartridge hydraulics in the same machine class.
-- **365 Tons on Hard Seeds** — 30 MPa/cm² cake pressure finishes peanut, walnut, camellia and flaxseed more completely than a 325-class press.
+- **365 Tons on Hard Seeds** — 30 MPa cake pressure finishes peanut, walnut, camellia and flaxseed more completely than a 325-class press.
 - **3 cm High-Strength Steel Frame** — Thickened plate with a higher load rating; vertical pressure travels with almost no loss and the frame does not deform under repeated cycling.
 - **Double-Station Productivity** — Alternating barrels remove idle loading time and lift daily output without a larger footprint.
 - **Hot and Cold Pressing** — Pressure, stroke and holding time are adjustable; switch between manual and semi-automatic modes with one button.
@@ -121,6 +121,6 @@ The HN365 covers a wide range of soft and hard oil-bearing crops:
 
 - Every press is **run under full working pressure and checked for leaks** before packing.
 - Standard models are normally ready within **15–25 working days** after deposit; your loading week is confirmed on the proforma invoice.
-- Trade term: **FOB Qingdao** — 30% T/T deposit, 70% balance before shipment.
+- Trade term: **FOB Qingdao** — payment terms are confirmed on the proforma invoice.
 - English manual, online video guidance and stocked spare parts are included; overseas engineer installation is available with the buyer covering travel costs.
 - Material test certificates (**MTC**) for 27SiMn and Q690 components are available on request.

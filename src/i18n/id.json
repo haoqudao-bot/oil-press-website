@@ -133,7 +133,7 @@
     "highReturnsTitle": "Maximalkan Profitabilitas Anda",
     "highReturnsDesc": "Teknologi mesin press minyak hidrolik canggih memberikan ROI yang luar biasa untuk bisnis ekstraksi minyak Anda.",
     "returns1_title": "Tingkat Ekstraksi Tinggi",
-    "returns1_desc": "Sisa minyak dalam bungkil tetap serendah 6-8% untuk sebagian besar bahan (berdasarkan pengujian internal; hasil bervariasi menurut jenis biji dan kadar air). Tabung beralur tipe batang mengekstrak lebih banyak minyak dari setiap batch.",
+    "returns1_desc": "Sisa minyak dalam bungkil tetap serendah 6-8% untuk sebagian besar bahan (uji pabrik Haonuo: wijen dan kacang tanah berkadar air 6-8%). Tabung beralur tipe batang mengekstrak lebih banyak minyak dari setiap batch.",
     "returns1_label": "tingkat ekstraksi",
     "returns2_title": "Hemat Energi",
     "returns2_desc": "Motor 6-kutub 2,2 kW menggerakkan seluruh siklus press — tanpa boiler dan tanpa sambungan listrik industri berdaya tinggi. Biaya operasional lebih rendah, margin keuntungan lebih tinggi.",
@@ -171,7 +171,7 @@
     "factoryStrengthItem1": "Pusat mesin CNC maju untuk manufaktur bagian presisi",
     "factoryStrengthItem2": "Jalur perakitan lengkap dengan pengujian kualitas di setiap tahap",
     "factoryStrengthItem3": "Sistem kontrol kualitas ketat memastikan standar produk konsisten",
-    "factoryStrengthItem4": "Kapasitas produksi efisien dengan waktu produksi 20-30 hari kerja",
+    "factoryStrengthItem4": "Kapasitas produksi efisien — model standar siap dalam 15-25 hari kerja, konfigurasi khusus 30-45 hari kerja",
     "factoryStrengthStat1": "Fasilitas Produksi",
     "factoryStrengthStat2": "Pekerja Terampil",
     "factoryStrengthStat3": "Hari Kerja Produksi",
@@ -192,7 +192,7 @@
     "statsYears": "Tahun Keunggulan Manufaktur",
     "statsCountries": "Negara yang Dilayani di Seluruh Dunia",
     "statsEmployees": "Pekerja & Insinyur Terampil",
-    "statsArea": "m² Fasilitas Produksi",
+    "statsArea": "Pekerja & insinyur terampil",
     "statsMachines": "Pembeli Dilayani",
     "statsHighlight1": "Sejak 2010",
     "statsHighlight2": "6 Benua",
@@ -222,7 +222,7 @@
     "step5Title": "Dukungan Purna Jual",
     "step5Desc": "Dukungan teknik seumur hidup, panduan instalasi video, dan jaminan suku cadang untuk keandalan jangka panjang.",
     "learnMore": "Pelajari Lebih Lanjut",
-    "premiumMaterialsDetail1": "Silinder Hidrolik: baja 27SiMn, 900MPa/cm²",
+    "premiumMaterialsDetail1": "Silinder Hidrolik: baja 27SiMn, 900 MPa",
     "premiumMaterialsDetail2": "Batang Piston: dilapisi krom, 5 lapisan seal",
     "premiumMaterialsDetail3": "Bakar Press: batang kunci 2cm + cincin baja 5cm",
     "premiumMaterialsDetail4": "Rangka Dasar: baja Q355B, kekuatan 355MPa",
@@ -236,7 +236,7 @@
     "easyOperationDetail4": "Pemeliharaan Rendah: 5 MIN/hari",
     "browseDetails": "Lihat Detail",
     "statsHomeEstablished": "Didirikan",
-    "statsHomeWorkshop": "Karyawan Terampil",
+    "statsHomeWorkshop": "Pekerja & Insinyur Terampil",
     "statsHomeCountries": "Negara Ekspor",
     "statsHomeBuyers": "Pembeli Terlayani di Seluruh Dunia",
     "marqueeAriaLabel": "Biji minyak yang kami press",
@@ -297,11 +297,9 @@
     "section02Sub": "Semua yang Anda butuhkan untuk mengekstrak minyak, dari satu press hingga lini produksi penuh.",
     "lineItems": [
       "Mesin Press Minyak Hidrolik",
-      "Penggiling Biji Minyak",
-      "Mesin Sangrai Biji",
-      "Pengukus Biji Minyak",
-      "Elevator Ulir",
-      "Mesin Penyaring Minyak"
+      "Pengolahan Biji",
+      "Pengovenan & Pengukusan",
+      "Filtrasi & Pemurnian"
     ],
     "lineCtaBannerPre": "Merencanakan lini? Beri tahu kami ",
     "lineCtaBannerStrong": "biji, target ton per hari, dan tegangan listrik Anda",
@@ -490,10 +488,10 @@
     "storyP2": "Pendiri kami, dengan lebih dari 20 tahun pengalaman dalam sistem hidrolik, menyadari bahwa banyak produsen minyak kesulitan dengan press efisiensi rendah dan pemasok tidak handal. Mulai dari bengkel kecil dengan hanya 10 pekerja, kami fokus tanpa henti pada kualitas produk dan kepuasan pelanggan.",
     "storyP3": "Hari ini, dedikasi itu telah menjadikan kami produsen mesin press minyak hidrolik yang mapan di Tiongkok, dipercaya oleh ribuan pelanggan di 50+ negara — dari India dan Nigeria hingga Filipina dan Timur Tengah. Cerita kami terus berlanjut, dan kami selalu mengembangkan produk kami.",
     "overviewTitle": "Produsen Mesin Press Minyak Hidrolik Profesional",
-    "overviewP2": "Terletak di Qingzhou, Weifang, Provinsi Shandong — pusat pembuatan mesin terkenal di Tiongkok — pabrik kami seluas 2.000m² dilengkapi dengan pusat mesin CNC canggih, jalur perakitan profesional, dan sistem kontrol kualitas ketat. Dengan lebih dari 200 karyawan terampil, kami memberikan peralatan press minyak yang handal kepada pelanggan di seluruh dunia.",
+    "overviewP2": "Terletak di Qingzhou, Weifang, Provinsi Shandong — pusat pembuatan mesin terkenal di Tiongkok — pabrik kami dilengkapi dengan pusat mesin CNC canggih, jalur perakitan profesional, dan sistem kontrol kualitas ketat. Dengan lebih dari 200 pekerja dan insinyur terampil, kami memberikan peralatan press minyak yang handal kepada pelanggan di seluruh dunia.",
     "overviewP3": "Sebagai produsen mesin press minyak Tiongkok langsung, kami memberikan harga langsung dari pabrik, dukungan teknis komprehensif, dan layanan after-sales seumur hidup kepada setiap pelanggan.",
     "manufacturingTitle": "Kemampuan Manufaktur",
-    "manufacturingDesc": "Pabrik kami seluas 2.000m² di Qingzhou dilengkapi dengan mesin canggih dan staf oleh 200+ profesional terampil yang berdedikasi untuk memproduksi mesin press minyak hidrolik berkualitas tinggi.",
+    "manufacturingDesc": "Pabrik kami di Qingzhou dilengkapi dengan mesin canggih dan didukung oleh 200+ pekerja dan insinyur terampil yang berdedikasi untuk memproduksi mesin press minyak hidrolik berkualitas tinggi.",
     "capCncTitle": "Pusat Mesin CNC",
     "capCncDesc": "Mesin bubut dan frais CNC canggih memastikan bagian presisi dengan toleransi dalam ±0.01mm",
     "capAssemblyTitle": "Jalur Perakitan Profesional",
@@ -505,7 +503,7 @@
     "capPaintTitle": "Perawatan Permukaan",
     "capPaintDesc": "Sandblasting profesional dan lapisan anti-korosi untuk daya tahan mesin yang tahan lama",
     "capWarehouseTitle": "Inventaris Besar",
-    "capWarehouseDesc": "Stok bahan baku dan suku cadang yang cukup untuk produksi dalam 20-30 hari kerja (waktu pengiriman tambahan)",
+    "capWarehouseDesc": "Stok bahan baku dan suku cadang yang cukup — model standar siap dalam 15-25 hari kerja, konfigurasi khusus 30-45 hari kerja (waktu pengiriman tambahan)",
     "qualityTitle": "Jaminan Kualitas",
     "qualityDesc": "Setiap mesin press minyak hidrolik menjalani pemeriksaan kualitas ketat sebelum meninggalkan pabrik kami, memastikan kinerja handal dan umur panjang.",
     "qualityIsoTitle": "Manajemen Kualitas",
@@ -528,7 +526,7 @@
     "why4Title": "Pengalaman Ekspor Global",
     "why4Desc": "Ekspor berhasil ke 50+ negara dengan dukungan dokumentasi lengkap termasuk CO, Form A/E, dan legalisasi kedutaan.",
     "why5Title": "Pengiriman & Respons Cepat",
-    "why5Desc": "Waktu produksi 20-30 hari kerja; pertanyaan dijawab dalam 24 jam dengan konsultasi teknis profesional.",
+    "why5Desc": "Model standar siap dalam 15-25 hari kerja dan konfigurasi khusus 30-45 hari kerja; pertanyaan dijawab dalam 24 jam dengan konsultasi teknis profesional.",
     "why6Title": "Dukungan Teknis Seumur Hidup",
     "why6Desc": "Panduan instalasi gratis, pelatihan operasi, dan dukungan teknis seumur hidup melalui panggilan video, WhatsApp, atau layanan on-site.",
     "factoryDesc": "Lakukan tur virtual fasilitas manufaktur kami. Kunjungan pabrik juga diterima — hubungi kami untuk menjadwalkan tur.",
@@ -551,7 +549,7 @@
     "milestone2013": "Menyelesaikan pesanan ekspor pertama ke Asia Tenggara, menandai dimulainya bisnis internasional",
     "milestone2016": "Berkembang ke 50+ negara ekspor di Timur Tengah dan Afrika; mengembangkan seri press hidrolik tekanan ultra tinggi",
     "milestone2020": "Mengekspor ke 40+ negara di seluruh dunia; mendirikan jaringan layanan purna jual khusus di Afrika dan Asia Selatan",
-    "milestone2025": "Mencapai 50+ negara ekspor dengan 200+ karyawan; pabrik modern 2.000m² baru dengan kapasitas produksi berlipat tiga",
+    "milestone2025": "Mencapai 50+ negara ekspor dengan 200+ karyawan; pabrik modern dengan kapasitas produksi berlipat tiga",
     "overviewImgAlt": "Pintu masuk pabrik Haonuo Machinery dan gedung kantor di Qingzhou, Shandong",
     "servicesTitle": "Layanan Kami",
     "servicesDesc": "Di luar manufaktur — kami menyediakan dukungan bisnis komprehensif, dari kustomisasi OEM hingga bantuan teknis seumur hidup.",
@@ -581,7 +579,7 @@
     "matA_sub": "Baja 27SiMn (Pemadaman & Pendinginan Khusus)",
     "matA_desc": "Silinder kami menggunakan baja 27SiMn premium dengan perlakuan pemadaman dan pendinginan khusus. Setiap silinder berharga lebih dari $1,400 USD dan mampu menahan tekanan 900 MPa per sentimeter persegi dengan perlakuan panas permukaan untuk ketahanan aus yang luar biasa.",
     "matA_tag1": "Baja 27SiMn",
-    "matA_tag2": "900 MPa/cm²",
+    "matA_tag2": "900 MPa",
     "matA_tag3": "$1,400+/silinder",
     "matB_title": "Batang Piston + Seal",
     "matB_sub": "Pelapisan Krom & Perlakuan Panas",
@@ -604,7 +602,7 @@
     "highReturnsTitle": "Maximalkan Profitabilitas Anda",
     "highReturnsDesc": "Teknologi mesin press minyak hidrolik canggih memberikan ROI yang luar biasa untuk bisnis ekstraksi minyak Anda.",
     "returns1_title": "Tingkat Ekstraksi Tinggi",
-    "returns1_desc": "Sisa minyak dalam bungkil tetap serendah 6-8% untuk sebagian besar bahan (berdasarkan pengujian internal; hasil bervariasi menurut jenis biji dan kadar air). Tabung beralur tipe batang mengekstrak lebih banyak minyak dari setiap batch.",
+    "returns1_desc": "Sisa minyak dalam bungkil tetap serendah 6-8% untuk sebagian besar bahan (uji pabrik Haonuo: wijen dan kacang tanah berkadar air 6-8%). Tabung beralur tipe batang mengekstrak lebih banyak minyak dari setiap batch.",
     "returns1_label": "tingkat ekstraksi",
     "returns2_title": "Efisiensi Energi",
     "returns2_desc": "Motor 6-kutub 2,2 kW menggerakkan seluruh siklus press — tanpa boiler dan tanpa sambungan listrik industri berdaya tinggi. Biaya operasional lebih rendah, margin keuntungan lebih tinggi.",
@@ -631,7 +629,7 @@
     "op4_highlight": "5 MIN/Hari Pemeliharaan",
     "v3": {
       "heroH1": "Membeli mesin pres minyak dimulai dengan memilih pabrik yang dapat Anda percayai",
-      "heroSub": "Haonuo Machinery telah menjawab pertanyaan ini bagi pembeli di 50+ negara sejak 2010 — 200+ karyawan terampil, tonase nama yang dapat diverifikasi, dan uji 48 jam sebelum setiap pengiriman.",
+      "heroSub": "Haonuo Machinery telah menjawab pertanyaan ini bagi pembeli di 50+ negara sejak 2010 — 200+ pekerja dan insinyur terampil, tonase nama yang dapat diverifikasi, dan uji 48 jam sebelum setiap pengiriman.",
       "heroCta1": "Dapatkan Harga Pabrik",
       "heroCta2": "Tur Pabrik",
       "heroChip1L": "Berdiri",
@@ -643,7 +641,7 @@
       "ovP1": "Saat membeli dari Haonuo, Anda membeli dengan harga pabrik langsung — harga yang sama yang dibayar distributor jangka panjang kami. Tidak ada perantara antara Anda dan orang yang mengelas, memesin, dan menguji mesin Anda.",
       "ovP2": "Sejak 2010 kami telah memasang pres ke pabrik minyak wijen di Nigeria, pabrik kacang tanah di India, dan bengkel VCO kelapa di Filipina. Sebagian besar pesanan baru kami datang dari pembeli yang kembali untuk mesin kedua atau ketiga — bukti paling jelas bahwa mesin menjalankan tugasnya.",
       "ovStat1L": "Didirikan · Qingzhou",
-      "ovStat2L": "Bengkel Milik Sendiri",
+      "ovStat2L": "Pekerja & Insinyur Terampil",
       "ovStat3L": "Negara Ekspor",
       "ovStat4L": "Rentang Gaya Tekan",
       "histKicker": "Perjalanan Kami",
@@ -682,7 +680,7 @@
       "retKicker": "APA YANG DIUBAH OLEH MESIN KAMI",
       "retH2": "Angka yang akan dirasakan bisnis Anda",
       "ret1H": "Sisa Minyak dalam Bungkil",
-      "ret1D": "Tabung beralur tipe batang menyisakan hanya 6-8% sisa minyak dalam bungkil — lebih banyak minyak di drum Anda dari setiap ton (pengujian internal, hasil bervariasi).",
+      "ret1D": "Tabung beralur tipe batang menyisakan hanya 6-8% sisa minyak dalam bungkil — lebih banyak minyak di drum Anda dari setiap ton (uji pabrik Haonuo: wijen dan kacang tanah berkadar air 6-8%).",
       "ret2H": "Motor Hemat Daya",
       "ret2D": "Motor tembaga murni 2,2 kW menjalankan seluruh siklus — tanpa boiler, tanpa jalur listrik industri.",
       "ret3H": "Penekanan Dingin Nyata",
@@ -819,7 +817,7 @@
     "expect2Title": "Solusi Kustom",
     "expect2Desc": "Kami merancang konfigurasi mesin optimal berdasarkan jenis biji, kapasitas, dan anggaran Anda.",
     "expect3Title": "Produksi Pabrik",
-    "expect3Desc": "Mesin Anda diproduksi dan diuji di pabrik kami dalam 20-30 hari kerja (waktu pengiriman tambahan).",
+    "expect3Desc": "Mesin Anda diproduksi dan diuji di pabrik kami dalam 15-25 hari kerja untuk model standar (konfigurasi khusus 30-45 hari kerja; waktu pengiriman tambahan).",
     "expect4Title": "Pengiriman Global",
     "expect4Desc": "Kemasan aman dan pengiriman andal ke pelabuhan terdekat dengan dokumentasi ekspor lengkap.",
     "ourLocation": "Lokasi Kami",
@@ -926,11 +924,9 @@
     "services": "Layanan",
     "hydraulicOilPressMachine": "Mesin Press Minyak Hidrolik",
     "coldPressOilMachine": "Mesin Press Minyak Dingin",
-    "manualOilPressMachine": "Mesin Press Minyak Manual",
     "compareAllModels": "Bandingkan semua model",
     "browseCatalog": "Jelajahi katalog",
     "sheaButter": "Mentega Shea",
-    "manual": "Manual",
     "slide": "Slide",
     "previous": "Sebelumnya",
     "next": "Berikutnya",
@@ -959,7 +955,7 @@
     "standardPurchase": {
       "title": "Pembelian Mesin Standar",
       "subtitle": "Model Siap Kirim",
-      "description": "Pilih dari seluruh rangkaian mesin press minyak hidrolik kami — dari HN300 mini hingga HN500 tekanan ultra tinggi. Setiap mesin diuji pabrik dan siap dikirim dalam 20-30 hari kerja.",
+      "description": "Pilih dari seluruh rangkaian mesin press minyak hidrolik kami — dari HN300 mini hingga HN500 tekanan ultra tinggi. Setiap mesin diuji pabrik; model standar dikirim dalam 15-25 hari kerja, konfigurasi khusus dalam 30-45 hari kerja.",
       "features": [
         "8 model standar + 4 model khusus dalam stok",
         "Konfigurasi barel tunggal atau ganda tersedia",
@@ -1063,8 +1059,7 @@
         "subtitle": "Apakah Anda membutuhkan branding OEM, teknik ODM kustom, atau desain jalur produksi penuh, tim kami siap membantu. Hubungi kami hari ini untuk konsultasi gratis.",
         "benefits": [
           "Konsultasi teknis gratis",
-          "Waktu respons 24 jam",
-          "Render 3D kustom untuk persetujuan"
+          "Waktu respons 24 jam"
         ],
         "cta": "Minta Kutipan OEM/ODM"
       }
@@ -1082,7 +1077,7 @@
       },
       "step3": {
         "title": "Sampel & Persetujuan",
-        "desc": "Untuk pesanan OEM/ODM, kami menyediakan spesifikasi terperinci dan render 3D untuk persetujuan Anda sebelum produksi dimulai."
+        "desc": "Untuk pesanan OEM/ODM, kami menyediakan spesifikasi terperinci untuk persetujuan Anda sebelum produksi dimulai."
       },
       "step4": {
         "title": "Produksi & QC",
@@ -1232,7 +1227,7 @@
       },
       {
         "question": "What is the yield of cold press oil machine?",
-        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on internal testing, results vary), minimizing the yield gap between cold and hot pressing methods."
+        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
       },
       {
         "question": "How much does a cold press oil machine cost?",
@@ -1343,7 +1338,7 @@
       },
       {
         "question": "How does a hydraulic oil press work?",
-        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 Mpa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
+        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 MPa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
       },
       {
         "question": "What seeds can a hydraulic oil press process?",
@@ -1351,7 +1346,7 @@
       },
       {
         "question": "What is the oil yield of a hydraulic oil press?",
-        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on internal testing, results vary), with residual oil in cake as low as 6-8%."
+        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), with residual oil in cake as low as 6-8%."
       },
       {
         "question": "How much does a hydraulic oil press machine cost?",
@@ -1372,97 +1367,6 @@
     ],
     "ctaTitle": "Siap Menemukan Mesin Press Minyak Hidrolik yang Tepat?",
     "ctaDesc": "Dapatkan penawaran gratis, estimasi pengiriman, dan rekomendasi peralatan profesional biasanya dalam 24 jam kerja.",
-    "whatsappUs": "Chat WhatsApp"
-  },
-  "manual": {
-    "title": "Mesin Press Minyak Hidrolik Komersial — Produksi Kelas Industri | Haonuo",
-    "description": "Mesin press minyak hidrolik kelas industri untuk produksi minyak komersial. Kapasitas 100 kg per batch, rendemen profesional, dan operasi andal. Harga langsung pabrik Haonuo.",
-    "breadcrumbHome": "Beranda",
-    "breadcrumbProducts": "Produk",
-    "breadcrumbCurrent": "Mesin Press Minyak Hidrolik Komersial",
-    "heroTitle": "Mesin Press Minyak Hidrolik Komersial — Produksi Kelas Industri",
-    "heroDesc": "Mesin press minyak hidrolik profesional untuk produksi minyak komersial. Kapasitas 100 kg per batch, tekanan sistem 60-75 MPa, dan minyak sisa di bawah 5%. Harga langsung pabrik Haonuo.",
-    "getPricing": "Dapatkan Harga Komersial",
-    "viewModels": "Lihat Semua Model",
-    "whyChoose": "Mengapa Memilih Press Hidrolik untuk Produksi Komersial",
-    "industrialCapacity": {
-      "title": "Kapasitas Industri",
-      "desc": "Kapasitas 100 kg per batch. Output per jam bervariasi tergantung jenis biji dan durasi siklus press. HN325 mengolah 100 kg per batch dalam 40-90 menit, memenuhi target produksi komersial."
-    },
-    "professionalYield": {
-      "title": "Rendemen Profesional",
-      "desc": "Minyak sisa di bawah 5% — efisiensi ekstraksi 2-3 kali lebih tinggi dari mesin press ulir. Maksimalkan laba dari setiap kilogram biji."
-    },
-    "lowPower": {
-      "title": "Kebutuhan Daya Rendah",
-      "desc": "Hanya butuh 2,2 KW. Kompatibel dengan listrik satu fase 220V standar atau generator kecil 5 KVA — cocok untuk semua wilayah."
-    },
-    "costEffective": {
-      "title": "Efisien Biaya",
-      "desc": "Harga langsung pabrik dengan umur pakai 15-20 tahun. Rendemen tinggi dan keandalan memberikan ROI excelan untuk operasi komersial."
-    },
-    "hydraulicAdvantageTitle": "Mesin Hidrolik Haonuo — Pilihan Profesional untuk Operasi Komersial",
-    "hydraulicAdvantageDesc": "Haonuo berspesialisasi dalam mesin press minyak hidrolik komersial yang memberikan kinerja kelas industri dengan kebutuhan daya minimal. Bahkan di daerah dengan listrik terbatas, mesin hidrolik kami mengungguli semua alternatif karena memberikan:",
-    "hydraulicAdvantage1": "Kapasitas 100 kg per batch — produksi skala komersial",
-    "hydraulicAdvantage2": "Minyak sisa di bawah 5% — efisiensi ekstraksi maksimal",
-    "hydraulicAdvantage3": "Operasi satu tombol — tanpa tenaga fisik",
-    "hydraulicAdvantage4": "2,2 KW — kompatibel dengan generator 5 KVA",
-    "exploreHydraulic": "Jelajahi Mesin Hidrolik Haonuo",
-    "productModelsTitle": "Model Mesin Hidrolik Komersial — Kelas Dasar",
-    "applicationsTitle": "Aplikasi Produksi Minyak Komersial",
-    "sesameOilApp": {
-      "title": "Minyak Wijen",
-      "tag": "Spesialisasi Bernilai Tinggi",
-      "desc": "Minyak wijen press dingin premium untuk aplikasi kuliner dan kosmetik. Mesin hidrolik mencapai efisiensi ekstraksi 42-50% dengan minyak sisa di bawah 5%.",
-      "yield": "Rendemen hidrolik: 42-50%"
-    },
-    "peanutOilApp": {
-      "title": "Minyak Kacang Tanah",
-      "tag": "Minyak Masak Komersial",
-      "desc": "Minyak masak yang dikonsumsi luas dengan permintaan tinggi di Afrika dan Asia. Press hidrolik industri menjamin kualitas konsisten dan rendemen maksimal.",
-      "yield": "Rendemen hidrolik: 38-45%"
-    },
-    "palmKernelOilApp": {
-      "title": "Minyak Inti Sawit",
-      "tag": "Pengolahan Industri",
-      "desc": "Minyak industri bervolume besar untuk masakan dan produksi sabun. Mesin hidrolik mengolah inti sawit yang keras dengan efisiensi excelan.",
-      "yield": "Rendemen hidrolik: 45-55%"
-    },
-    "coconutOilApp": {
-      "title": "Minyak Kelapa",
-      "tag": "Pasaran Premium",
-      "desc": "Minyak kelapa murni press dingin untuk pasar makanan kesehatan dan kosmetik. Membutuhkan peralatan ekstraksi bermutu tinggi.",
-      "yield": "Rendemen hidrolik: 55-62%"
-    },
-    "faqTitle": "Pertanyaan yang Sering Diajukan",
-    "faqs": [
-      {
-        "question": "What is a commercial hydraulic oil press?",
-        "answer": "A commercial hydraulic oil press is an industrial-grade machine that extracts oil from seeds using hydraulic pressure. It operates at 60-75 MPa system pressure, achieving residual oil rates below 5% — significantly more efficient than manual or screw presses. Haonuo hydraulic presses are designed for commercial production with 100 kg per batch capacity (hourly output varies by seed type)."
-      },
-      {
-        "question": "How much oil can a hydraulic press produce?",
-        "answer": "Haonuo hydraulic presses process 100 kg per batch. Hourly output varies by seed type and pressing cycle time (40-90 minutes per batch). This is 10-20x more productive than manual presses and 2-3x more efficient than screw presses."
-      },
-      {
-        "question": "Is a hydraulic press better than manual or screw presses?",
-        "answer": "Tentu saja. Press hidrolik menyisakan hanya 6-8% sisa minyak dalam bungkil untuk sebagian besar bahan (berdasarkan pengujian internal; hasil bervariasi), menghasilkan minyak cold-pressed premium, dan membutuhkan tenaga fisik minimal. Bahkan dengan generator kecil 5 KVA, press hidrolik adalah pilihan yang direkomendasikan untuk produksi komersial di wilayah mana pun."
-      },
-      {
-        "question": "What seeds work best with hydraulic presses?",
-        "answer": "Hydraulic presses excel with all oil seeds: sesame, peanut, walnut, almond, sunflower, coconut, flaxseed, and 50+ more. The high pressure (60-75 MPa) ensures efficient extraction even from hard-shell nuts that manual presses cannot handle effectively."
-      },
-      {
-        "question": "What is the power requirement for hydraulic presses?",
-        "answer": "Haonuo hydraulic presses require only 2.2 KW — compatible with standard 220V single-phase power or a small 5 KVA generator. This makes them suitable for areas with limited or unreliable electricity infrastructure."
-      },
-      {
-        "question": "What is the total cost of ownership?",
-        "answer": "Haonuo provides factory-direct pricing without middleman markups. Total cost includes the press, optional roaster and filter, shipping, and installation. With proper maintenance, hydraulic presses deliver 15-20 years of reliable service, making them a cost-effective investment for commercial oil production."
-      }
-    ],
-    "ctaTitle": "Temukan Mesin Press Minyak Komersial yang Tepat",
-    "ctaDesc": "Mesin hidrolik Haonuo memberikan kapasitas industri 100 kg per batch dengan minyak sisa di bawah 5%. Output per jam bervariasi tergantung jenis biji. Dapatkan solusi komersial personal Anda hari ini.",
     "whatsappUs": "Chat WhatsApp"
   },
   "roi": {

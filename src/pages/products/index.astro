@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -45,6 +45,41 @@ const sortedProducts = allProducts.sort((a, b) => {
   const numB = parseInt(b.data.model.replace(/\D/g, '')) || 0;
   return numA - numB;
 });
+
+const coreSlugs = [
+  'standard-hydraulic-oil-press',
+  'hn365-hydraulic-oil-press',
+  'cold-press-hydraulic-oil-press',
+  'ultra-high-pressure-hydraulic-oil-press',
+];
+const hydraulicProducts = sortedProducts.filter(p => p.data.category === 'hydraulic-oil-press');
+const coreProducts = coreSlugs.flatMap(slug => {
+  const p = hydraulicProducts.find(pr => pr.slug === slug);
+  return p ? [p] : [];
+});
+const specializedProducts = hydraulicProducts.filter(p => !coreSlugs.includes(p.slug));
+const auxiliaryProducts = sortedProducts.filter(p => p.data.category !== 'hydraulic-oil-press');
+
+const productGroups = [
+  {
+    badge: 'CORE RANGE',
+    title: 'Core hydraulic oil presses',
+    subtitle: 'The four flagship models most buyers choose — HN325 · HN365 · HN426 · HN500.',
+    products: coreProducts,
+  },
+  {
+    badge: 'SPECIALIZED & CUSTOM',
+    title: 'Specialized & custom hydraulic presses',
+    subtitle: 'Compact starters, previous generations and application-specific machines, made to order.',
+    products: specializedProducts,
+  },
+  {
+    badge: 'AUXILIARY EQUIPMENT',
+    title: 'Seed processing, roasting & filtration',
+    subtitle: 'Auxiliary equipment for complete oil production lines.',
+    products: auxiliaryProducts,
+  },
+];
 const allCategories = await getCollection('categories');
 const sortedCategories = allCategories.sort((a, b) => a.data.order - b.data.order);
 
@@ -142,13 +177,6 @@ const productKeywords = [
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                   <span>{t.common.coldPressOilMachine}</span>
                 </a>
-                <a
-                  href="/manual-oil-press-machine/"
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7.07-3.93l4.24-4.24m5.66-5.66l4.24-4.24M1 12h6m6 0h6m-3.93 7.07l-4.24-4.24m-5.66-5.66L4.93 4.93"/></svg>
-                  <span>{t.common.manualOilPressMachine}</span>
-                </a>
               </nav>
             </div>
 
@@ -180,40 +208,51 @@ const productKeywords = [
         <!-- Product Grid -->
         <div class="flex-1">
           <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-            {sortedProducts.map((product) => (
-              <a
-                href={`/products/${product.slug}`}
-                class="product-card card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
-              >
-                <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
-                  <img
-                    src={product.data.images[0]}
-                    alt={product.data.title.en}
-                    width="400"
-                    height="300"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20hydraulic%20oil%20press%20machine%20product%20photo%20on%20white%20background%2C%20professional%20product%20photography&image_size=landscape_4_3'"
-                  />
-                  <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
-                    <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {t.products.viewDetails}
-                    </span>
+            {productGroups.map(group => (
+              <>
+                <div class="product-group-heading col-span-full pt-2">
+                  <div class="border-t border-steel-200 pt-6">
+                    <div class="inline-block text-xs font-bold tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full mb-2">{group.badge}</div>
+                    <h2 class="font-display text-2xl text-charcoal-900 font-bold">{group.title}</h2>
+                    <p class="text-steel-500 text-sm mt-1">{group.subtitle}</p>
                   </div>
                 </div>
-                <div class="p-5">
-                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
-                  <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
-                  <p class="text-sm text-steel-500 mb-3 line-clamp-2">{product.data.description?.en}</p>
-                  <div class="flex flex-wrap gap-2 items-center">
-                    {product.data.applicableSeeds.slice(0, 3).map(seed => (
-                      <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">
-                        {seed}
-                      </span>
-                    ))}
-                    <span class="text-xs text-steel-400">+ more</span>
-                  </div>
-                </div>
-              </a>
+                {group.products.map(product => (
+                  <a
+                    href={`/products/${product.slug}`}
+                    class="product-card card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+                  >
+                    <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+                      <img
+                        src={product.data.images[0]}
+                        alt={product.data.title.en}
+                        width="400"
+                        height="300"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20hydraulic%20oil%20press%20machine%20product%20photo%20on%20white%20background%2C%20professional%20product%20photography&image_size=landscape_4_3'"
+                      />
+                      <div class="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/20 transition-colors duration-300 flex items-center justify-center">
+                        <span class="bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {t.products.viewDetails}
+                        </span>
+                      </div>
+                    </div>
+                    <div class="p-5">
+                      <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                      <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                      <p class="text-sm text-steel-500 mb-3 line-clamp-2">{product.data.description?.en}</p>
+                      <div class="flex flex-wrap gap-2 items-center">
+                        {product.data.applicableSeeds.slice(0, 3).map(seed => (
+                          <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">
+                            {seed}
+                          </span>
+                        ))}
+                        <span class="text-xs text-steel-400">+ more</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </>
             ))}
           </div>
           <div id="load-more-wrap" class="mt-8 text-center hidden">
@@ -298,11 +337,24 @@ const productKeywords = [
       var grid = document.getElementById('product-grid');
       if (!grid) return;
       var cards = grid.querySelectorAll('.product-card');
+      var headings = grid.querySelectorAll('.product-group-heading');
+      function updateHeadings() {
+        headings.forEach(function (h) {
+          var visible = false;
+          var el = h.nextElementSibling;
+          while (el && !el.classList.contains('product-group-heading')) {
+            if (el.classList.contains('product-card') && el.style.display !== 'none') { visible = true; break; }
+            el = el.nextElementSibling;
+          }
+          h.style.display = visible ? '' : 'none';
+        });
+      }
       var isMobile = !window.matchMedia('(min-width: 1280px)').matches;
       var initial = isMobile ? 12 : cards.length;
       var step = isMobile ? 9 : cards.length;
       var shown = initial;
       cards.forEach(function (c, i) { if (i >= initial) c.style.display = 'none'; });
+      updateHeadings();
       var wrap = document.getElementById('load-more-wrap');
       var btn = document.getElementById('load-more-btn');
       function update() {
@@ -313,6 +365,7 @@ const productKeywords = [
         var next = Math.min(shown + step, cards.length);
         for (var i = shown; i < next; i++) cards[i].style.display = '';
         shown = next;
+        updateHeadings();
         update();
       });
       update();

@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frResourceBodies: Record<string, string> = {
+export const frResourceBodies: Record<string, string> = {
   'hydraulic-oil-press-maintenance-guide': `Un **entretien approprié de la presse à huile** est le facteur le plus important pour déterminer la durée de vie de votre presse à huile hydraulique et la constance de la qualité d'huile qu'elle produit. Une machine bien entretenue peut fonctionner efficacement pendant 15-20 ans, tandis qu'une machine négligée peut commencer à montrer des problèmes dès la première année.
 
 Ce guide couvre tout ce que vous devez savoir sur **l'entretien de la presse à huile hydraulique** — des routines de nettoyage quotidiennes aux révisions annuelles, des calendriers de lubrification au dépannage des problèmes courants.
@@ -322,7 +322,7 @@ Le pressage à froid extrait l'huile à basse température (généralement en de
 5. Filtrage fin : Filtrage à plusieurs étages pour une huile cristalline
 
 ### Exigences en équipement pour le pressage à froid
-- Pression de surface de gâteau plus élevée (42 Mpa/cm2 ou plus)
+- Pression de surface de gâteau plus élevée (42 MPa ou plus)
 - Design de baril spécialisé pour l'extraction à basse température
 - Système de surveillance de la température
 - Modèles adaptés : HN426, HN480, HN500
@@ -340,7 +340,7 @@ Le pressage à chaud consiste à torréfier préalablement les graines avant le 
 6. Pressage : Application de pression pendant 30-40 minutes par lot
 
 ### Exigences en équipement pour le pressage à chaud
-- Force de pressage standard (27.78 Mpa/cm2 ou plus)
+- Force de pressage standard (27.78 MPa ou plus)
 - Équipement de torréfaction
 - Modèles adaptés : HN325, HN365, HN480, HN500
 
@@ -904,7 +904,7 @@ Le choix de la bonne méthode d'extraction de l'huile est une décision critique
 - Adaptée aux marchés organiques
 
 ### Contrôle de la pression
-- Extraction à haute pression : jusqu'à 75 Mpa de pression système
+- Extraction à haute pression : jusqu'à 75 MPa de pression système
 - Contrôle précis pour une extraction optimale
 
 ## Conclusion
@@ -943,8 +943,8 @@ Le HN325 est notre cheval de bataille d'entrée de gamme, adapté pour les opér
 
 **Spécifications clés :**
 - Force de pressage : 325 tonnes
-- Pression système : 60 Mpa
-- Pression de surface du gâteau : 27,78 Mpa/cm2
+- Pression système : 60 MPa
+- Pression de surface du gâteau : 27,78 MPa
 - Capacité par lot : 100 kg
 - Puissance moteur : 2,2 KW
 
@@ -958,8 +958,8 @@ Le HN365 est notre modèle commercial le plus populaire, offrant 10% de force de
 
 **Spécifications clés :**
 - Force de pressage : 365 tonnes
-- Pression système : 63 Mpa
-- Pression de surface du gâteau : 30,15 Mpa/cm2
+- Pression système : 63 MPa
+- Pression de surface du gâteau : 30,15 MPa
 - Capacité par lot : 100 kg
 
 ### HN426 Presse hydraulique à froid
@@ -972,8 +972,8 @@ Le HN426 est notre spécialiste dédié au pressage à froid, conçu pour les ma
 
 **Spécifications clés :**
 - Force de pressage : 500 tonnes
-- Pression système : 70 Mpa
-- Pression de surface du gâteau : 42 Mpa/cm2
+- Pression système : 70 MPa
+- Pression de surface du gâteau : 42 MPa
 - Capacité par lot : 100 kg
 
 ### HN480 Presse hydraulique haute pression
@@ -986,8 +986,8 @@ Le HN480 fait le pont entre le HN426 et le HN500, offrant des performances équi
 
 **Spécifications clés :**
 - Force de pressage : 560 tonnes
-- Pression système : 72 Mpa
-- Pression de surface du gâteau : 48 Mpa/cm2
+- Pression système : 72 MPa
+- Pression de surface du gâteau : 48 MPa
 - Capacité par lot : 100 kg
 
 ### HN500 Presse hydraulique ultra haute pression
@@ -1000,8 +1000,8 @@ Le HN500 est notre modèle phare, conçu pour les applications industrielles les
 
 **Spécifications clés :**
 - Force de pressage : 620 tonnes
-- Pression système : 75 Mpa
-- Pression de surface du gâteau : 52 Mpa/cm2
+- Pression système : 75 MPa
+- Pression de surface du gâteau : 52 MPa
 - Capacité par lot : 100 kg
 
 ## Arbre de décision de sélection

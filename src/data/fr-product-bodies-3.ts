@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿export const frProductBodies3: Record<string, string> = {
+export const frProductBodies3: Record<string, string> = {
   'integrated-feeder-crusher-roaster': `## Aperçu
 
 Le groupe intégré alimentateur-broyeur-torréfacteur All-in-One combine l'alimentation automatique, le broyage et la torréfaction dans un seul ensemble de machines, permettant aux petites et moyennes huileries de passer de la graine brute à un produit prêt à presser sans équipement de transfert entre les étapes. Il réduit la main-d'œuvre et les pertes de manutention sur les lignes de prétraitement alimentant les presses à huile hydrauliques.
@@ -153,20 +153,21 @@ Cette poêle de torréfaction est conçue pour le conditionnement des graines av
 
   'pneumatic-oil-filter-press': `## Aperçu
 
-Le filtre-presse pneumatique à huile HN-10SL filtre l'huile brute à travers 20 couches de plaques à papier filtre totalisant 10 m² de surface de filtration à une pression de service de 0,2 à 0,3 Mpa, fonctionnant 24 heures sur 24 en régulation automatique de pression constante pour les huileries qui exigent une clarification continue. Construit en acier inoxydable 304L de qualité alimentaire et consommant 1,1 à 2,2 kW, il traite l'huile de 15 à 170 °C et est garanti un an.
+Le filtre-presse pneumatique à huile HN-10SL filtre l'huile brute à travers 20 couches de plaques à papier filtre totalisant 10 m² de surface de filtration à une pression de service de 0,2 à 0,3 MPa, fonctionnant 24 heures sur 24 en régulation automatique de pression constante pour les huileries qui exigent une clarification continue. Construit en acier inoxydable 304L de qualité alimentaire et consommant 1,1 à 2,2 kW, il traite l'huile de 15 à 170 °C et est garanti un an.
 
 Le Filtre-Presse Pneumatique à Huile HN-10SL est un système de filtration entièrement automatique et contrôlé électriquement, construit entièrement en acier inoxydable 304L de qualité alimentaire pour une résistance supérieure aux acides et aux alcalis. Doté de 20 couches de plaques filtrantes avec 10 m² de surface de filtration totale, ce filtre-presse offre une excellente qualité de filtration avec une perte de liquide minimale — et il est capable de fonctionner en continu 24h/24 à pression constante automatique.
 
-Conçu pour une simplicité plug-and-play : branchez l'alimentation et le tuyau d'aspiration, activez l'interrupteur d'aspiration, et le système aspire automatiquement l'huile, la filtre à travers le média en papier filtre, et s'arrête lorsque la chambre à huile est pleine. La sortie d'huile propre s'ouvre ensuite pour libérer le produit filtré. Ce cycle entièrement automatisé élimine le besoin d'une surveillance constante par l'opérateur, ce qui le rend bien adapté aux environnements de production continue.
+Le fonctionnement tient en un interrupteur : branchez l'alimentation et le tuyau d'aspiration, activez l'interrupteur d'aspiration, et le système aspire automatiquement l'huile, la filtre à travers le média en papier filtre, et s'arrête de lui-même lorsque la pression de consigne est atteinte. Ouvrez la sortie d'huile et l'huile propre filtrée s'écoule directement dans les fûts d'huile propre ou les fûts de produit fini — aucune pompe de transfert nécessaire. Ce cycle entièrement automatisé supprime la surveillance constante par l'opérateur et convient à la production continue. Avec 10 m² de surface de filtration et 0,3 MPa de pression de service, il est dimensionné pour suivre les presses hydrauliques HN325/365/426/500.
 
 ## Avantages Clés
 
 - **Acier inoxydable 304L de qualité alimentaire partout** — excellente résistance à la corrosion pour les applications d'huile comestible et chimique ; mise à niveau 316L disponible pour les environnements extrêmes
 - **Conception de plaques filtrantes à 20 couches** — 10 m² de surface de filtration assure une filtration minutieuse avec une faible perte de liquide
-- **Fonctionnement entièrement automatique** — aspiration automatique, filtration automatique, arrêt automatique lorsque plein, décharge automatique de l'huile propre
+- **Fonctionnement entièrement automatique à un interrupteur** — aspiration automatique, filtration automatique, arrêt contrôlé par pression, puis décharge directe de l'huile propre
 - **Service continu 24h/24** — le fonctionnement à pression constante prend en charge la production round-the-clock
-- **Large plage de température** — filtre à 15–170°C, accommodant les huiles pressées à chaud et à froid
+- **Large plage de température** — filtre à 15–170 °C, accommodant les huiles pressées à chaud et à froid
 - **Sécurité contrôlée par pression** — arrêt automatique aux limites de pression protège l'équipement et la qualité du produit
+- **Dimensionné pour la ligne de pressage** — conçu pour suivre les presses hydrauliques HN325 / HN365 / HN426 / HN500
 - **Installation simple** — connexion électrique triphasée + neutre, tuyau d'aspiration, sortie d'huile et orifice de drainage inclus
 
 ## Applications & Matériaux Adaptés
@@ -293,5 +294,104 @@ Principes physiques et chimiques combinés pour l'élimination ciblée des impur
 - **Solutions évolutives** — commencez petit et développez-vous au fur et à mesure que votre marché croît ; la conception modulaire supporte les augmentations futures de capacité
 - **Support technique continu** — optimisation des procédés, dépannage et fourniture de pièces de rechange pour la durée de vie de votre usine`,
 
+  'hn-cg60-oilseed-pre-press': `## Aperçu
+
+La pré-presse oléagineuse HN-CG60 est une expulseuse à vis installée en tête de ligne, avant la torréfaction et le pressage hydraulique. Elle écrase la graine et la roule en flocons ou en gâteau grossier, rompant les cellules huileuses et élargissant la surface chauffée. Environ 35 à 40 % de l'huile est libérée dès ce premier passage, puis le matériau pré-pressé passe à la torréfaction et à la presse hydraulique principale. Les huileries qui ajoutent cette étape voient généralement leur rendement global en huile augmenter de 3 à 5 %.
+
+Cette configuration en deux étapes — pré-presse à vis puis finition hydraulique — est l'installation standard pour la moutarde, le colza et l'arachide en Inde, en Asie du Sud-Est et en Afrique. La machine est livrée entièrement assemblée, ne nécessite aucune installation spécialisée et un seul ouvrier la commande.
+
+## Avantages Clés
+
+- **Rendement global plus élevé** — retire 35 à 40 % de l'huile avant la presse principale, augmentant la production de l'usine de 3 à 5 %
+- **Deux options de débit** — 7,5 kW pour environ 500 kg/h, ou 11 kW pour environ 750 kg/h
+- **Encombrement réduit** — châssis de 1030 × 1000 × 750 mm, environ 1 m² et 174 kg, s'intègre à une ligne existante
+- **Épaisseur de flocons réglable** — le cône de sortie règle l'espacement, la sortie correspond donc à votre recette de pressage
+- **Faible consommation et usure** — entraînement mécanique direct avec pièces d'usure trempées, fonctionnement silencieux et longue durée
+- **Prête à l'emploi** — livrée assemblée et testée ; il suffit de brancher l'alimentation pour qu'elle démarre
+
+## Structure & Construction
+
+Les graines entrent dans la trémie et sont poussées par la vis à travers la chambre de pressage, où elles sont écrasées, frottées et pressées en flocons. Un cône de sortie règle l'espacement, donnant le contrôle sur l'épaisseur des flocons et la fermeté du pré-pressage. L'ensemble — moteur, chambre et trémie — repose sur un châssis compact, et l'entraînement passe par courroies et poulies pour amortir les chocs et réduire les frais d'entretien.
+
+## Applications & Matières Adaptées
+
+La HN-CG60 traite de nombreuses graines oléagineuses en ajustant l'espacement du cône :
+
+- **Colza et moutarde** — les lignes classiques en deux étapes d'Inde, d'Asie du Sud-Est et d'Afrique
+- **Arachide** — grain à forte teneur en huile où le premier passage capture la majeure partie de l'huile libre
+- **Soja, lin, sésame, noix, tournesol, coton** — tous traités par ajustement de l'espacement
+
+## Pourquoi Choisir Haonuo
+
+- **Prix direct usine** — équipement de pré-pressage compétitif directement du fabricant
+- **Conception deux étapes éprouvée** — largement utilisée pour les lignes moutarde, colza et arachide
+- **Délai rapide** — les modèles standards quittent l'usine sous 7 à 15 jours
+- **Support complet** — manuel en anglais, guidage vidéo, pièces de rechange et installation à l'étranger en option`,
+
+  'vertical-screw-conveyor': `## Aperçu
+
+Le convoyeur à vis vertical Haonuo est entièrement construit en acier inoxydable et déplace les graines oléagineuses — arachide, colza, soja, sésame, tournesol et autres matériaux granulés — depuis une trémie au sol jusqu'à la trémie d'une presse, d'un torréfacteur ou d'un filtre à huile. Avec 2 mètres de levage et un moteur à engrenages de 1,1 kW, il assure une alimentation régulière et uniforme qui évite aux machines en aval d'être sous-alimentées ou surchargées, et remplace l'ouvrier qui autrement pelleterait les graines toute la journée.
+
+La trémie de 600×600×600 mm contient assez de matériau pour une tournée sans surveillance, et le tube à vis fermé retient poussière et débordements à l'intérieur du convoyeur plutôt que sur le sol de l'atelier. Il se boulonne directement sur nos presses hydrauliques, filtres à huile et torréfacteurs, de sorte qu'un seul opérateur peut gérer l'alimentation, le pressage et la filtration en même temps.
+
+## Avantages Clés
+
+- **Alimentation automatique régulière** — vitesse de vis constante donne un débit uniforme, la cohérence de torréfaction et de pressage reste élevée
+- **Convoi fermé, sans poussière** — le matériau circule dans un tube fermé, l'atelier reste propre et sûr
+- **Construction intégralement inox** — qualité alimentaire, résistant à la corrosion, adapté aux ateliers huileux et humides
+- **Trémie 600×600×600 mm** — contient assez pour une tournée sans surveillance ; un opérateur gère l'alimentation, le pressage et la filtration
+- **Connexion directe** — se boulonne sur presses, filtres et torréfacteurs sans convoyeur de transfert supplémentaire
+- **Faible consommation, longue durée** — entraînement à engrenages de 1,1 kW peu gourmand ; pièces d'usure standards réduisent l'entretien
+
+## Structure & Construction
+
+La vis, le tube, la trémie et le cadre sont tous en acier inoxydable — propres, résistants à la corrosion et de qualité alimentaire. Un moteur à engrenages de 1,1 kW entraîne la vis à vitesse constante, soulevant le matériau de 2 mètres depuis la trémie au sol jusqu'à la trémie supérieure. La configuration verticale occupe peu de place au sol par rapport à un convoyeur incliné de même levage, et la machine est facile à installer et à repositionner.
+
+## Applications & Matières Adaptées
+
+- **Alimentation automatique de presse** — élève les graines dans la trémie de la presse hydraulique au débit optimal
+- **Alimentation de torréfacteur et de filtre** — s'associe aux torréfacteurs à tambour ou à plateau et aux filtres à huile
+- **Graines oléagineuses granulées** — arachide, colza, soja, sésame, tournesol et matériaux libres similaires
+- **Convoi général de grains et d'aliments** — adapté aux lignes agroalimentaires où l'hygiène compte
+
+## Pourquoi Choisir Haonuo
+
+- **Automatisation économisant la main-d'œuvre** — supprime la tâche manuelle la plus pénible d'une petite huilerie
+- **Construction inox de qualité alimentaire** — s'adapte aux ateliers d'huile comestible
+- **Prix direct usine** — équipement auxiliaire compétitif directement du fabricant
+- **Support complet** — manuel en anglais, guidage vidéo, pièces de rechange et installation à l'étranger en option`,
+
+  'automatic-drum-roaster': `## Aperçu
+
+Ce torréfacteur à tambour sert à torréfier les graines oléagineuses avant le pressage à chaud, étape qui développe l'arôme et réduit l'humidité pour un meilleur rendement. Il se compose d'un châssis, d'une trémie d'alimentation, d'un tambour rotatif et d'une hotte sans flamme. Le moteur entraîne le tambour par courroie trapézoïdale et pignon, retournant les graines en continu, tandis que le chauffage électromagnétique fournit une chaleur sans flamme réglable. Le contrôle automatique par bouton simplifie la routine quotidienne.
+
+Trois tailles standard sont disponibles — le 100#, le 130# et un 130# renforcé — couvrant des lots d'environ 160 kg à 450 kg. D'autres tailles peuvent être fabriquées sur commande pour correspondre au débit de votre presse.
+
+## Avantages Clés
+
+- **Torréfaction uniforme, sans brûlure** — rotation du tambour et chauffage sans flamme donnent un torréfaction homogène et préservent la saveur et la couleur de l'huile
+- **Trois capacités standard** — 160–220 kg (100#), 200–350 kg (130#) ou 360–450 kg (130# renforcé) par lot
+- **Fonctionnement automatique à un bouton** — réglez température et temps, la machine torréfie et s'arrête toute seule
+- **Sans flamme et sûr** — le chauffage électromagnétique supprime le risque d'incendie des torréfacteurs à gaz ou à charbon et garde l'atelier plus propre
+- **Tambour étanche** — chauffe rapidement et retient la chaleur pour l'efficacité énergétique
+- **Tailles personnalisables** — dimensions du tambour et puissance de chauffe ajustées à votre ligne
+
+## Structure & Construction
+
+Le tambour fermé chauffe rapidement et retient la chaleur, et le retournement continu fait que chaque graine est chauffée uniformément — pas de couche inférieure brûlée ni de couche supérieure à moitié torréfiée, ce qui est exactement ce qu'une bonne huile pressée exige. La puissance de chauffe et la température de torréfaction se règlent séparément et sont maintenues automatiquement, avec arrêt au point de consigne.
+
+## Applications & Matières Adaptées
+
+- **Lignes d'huile pressée à chaud** — l'étape standard de torréfaction pré-pressage pour sésame, arachide, colza, tournesol, lin et camélia
+- **Huiles aromatiques** — lorsque l'arôme de torréfaction est un argument de vente clé
+- **Noix, céréales et denrées alimentaires** — torréfaction polyvalente au-delà des graines oléagineuses
+
+## Pourquoi Choisir Haonuo
+
+- **Cohérence lot après lot** — le tambour électromagnétique étanche donne des résultats reproductibles sans opérateur qualifié
+- **Économie d'énergie** — le chauffage électromagnétique sans flamme est efficace et propre
+- **Prix direct usine** — équipement de torréfaction compétitif directement du fabricant
+- **Support complet** — manuel en anglais, guidage vidéo, pièces de rechange et installation à l'étranger en option`,
 };
+
 export default frProductBodies3;

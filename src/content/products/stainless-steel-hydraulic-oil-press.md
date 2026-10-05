@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Stainless Steel Coconut Milk Press
   fr: Presse à Lait de Coco en Acier Inoxydable
@@ -18,7 +18,7 @@ specifications:
   - name: Model (Single/Double)
     value: HN325S Simple / HN325S Double
   - name: System Pressure
-    value: 60 Mpa
+    value: 60 MPa
   - name: Pressing Force
     value: 325 Tonnes
   - name: Motor Power
@@ -38,13 +38,13 @@ specifications:
   - name: Overall Dimensions (Single/Double)
     value: 1200×1200×2450 / 2100×1200×2450 mm
   - name: Cake Surface Pressure
-    value: 27.78 Mpa/cm²
+    value: 27.78 MPa
   - name: Contact Surface Material
     value: Acier inoxydable de qualité alimentaire (fût et toutes les surfaces en contact avec l'huile)
 featured: false
 related:
+  - coconut-oil-hydraulic-press
   - standard-hydraulic-oil-press
-  - cold-press-hydraulic-oil-press
 applicableSeeds:
   - coconut milk
 faq:
@@ -63,7 +63,7 @@ faq:
   - question: What warranty do you provide?
     answer: We provide a 1-year warranty covering all manufacturing defects, plus lifetime technical support. For the stainless steel model, this includes specific coverage for the food-grade SS304 barrel and sanitary hydraulic components. Spare parts are available from stock.
   - question: How is the machine shipped and how long does delivery take?
-    answer: The machine is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to 20-30 working days production time (shipping time additional). Air freight is available for urgent orders.
+    answer: The machine is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional). Air freight is available for urgent orders.
   - question: Do you provide installation and training?
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For the stainless steel model, installation should follow food facility sanitary requirements including adequate washdown space around the machine. For large orders, we can send a technician to your facility for on-site installation and training at cost.
   - question: What certifications does the machine have?
@@ -71,12 +71,12 @@ faq:
   - question: Can the barrel size be customized?
     answer: Yes, barrel inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger barrels for bulk materials and food-grade stainless steel barrels for edible oil production.
   - question: What is the residual oil rate in the cake?
-    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on internal testing, results vary) from every batch.
+    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
 specificationsFr:
   - name: Modèle (Simple/Double)
     value: HN325S Simple / HN325S Double
   - name: Pression du système
-    value: 60 Mpa
+    value: 60 MPa
   - name: Force de pressage
     value: 325 Tonnes
   - name: Puissance du moteur
@@ -96,7 +96,7 @@ specificationsFr:
   - name: Dimensions globales (Simple/Double)
     value: 1200×1200×2450 / 2100×1200×2450 mm
   - name: Pression superficielle du gâteau
-    value: 27.78 Mpa/cm²
+    value: 27.78 MPa
   - name: Matériau de surface de contact
     value: Acier inoxydable de qualité alimentaire (fût et toutes les surfaces en contact avec l'huile)
 applicableSeedsFr:
@@ -117,7 +117,7 @@ faqFr:
   - question: Quelle garantie fournissez-vous ?
     answer: Nous fournissons une garantie de 1 an couvrant tous les défauts de fabrication, ainsi qu'un support technique à vie. Pour le modèle en acier inoxydable, cela inclut une couverture spécifique du fût en SS304 de qualité alimentaire et des composants hydrauliques sanitaires. Les pièces de rechange sont disponibles en stock .
   - question: Comment la machine est-elle expédiée et combien de temps dure la livraison ?
-    answer: La machine est expédiée dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 20-30 jours ouvrables de temps de production (délai d'expédition en supplément). Le fret aérien est disponible pour les commandes urgentes.
+    answer: La machine est expédiée dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 15 à 25 jours ouvrés de production pour les modèles standard et 30 à 45 jours pour les configurations personnalisées (délai d'expédition en supplément). Le fret aérien est disponible pour les commandes urgentes.
   - question: Fournissez-vous l'installation et la formation ?
     answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour le modèle en acier inoxydable, l'installation doit suivre les exigences sanitaires des installations alimentaires, y compris un espace de nettoyage adéquat autour de la machine. Pour les grosses commandes, nous pouvons envoyer un technicien dans vos installations pour une installation et une formation sur site à coût.
   - question: Quelles certifications la machine possède-t-elle ?
@@ -125,7 +125,7 @@ faqFr:
   - question: La taille du fût peut-elle être personnalisée ?
     answer: Oui, le diamètre intérieur et la hauteur du fût peuvent être personnalisés pour correspondre à vos exigences spécifiques en matière de matière et de taille de lot. Les personnalisations courantes incluent des fûts plus grands pour les matières en vrac et des fûts en acier inoxydable de qualité alimentaire pour la production d'huile comestible.
   - question: Quel est le taux d'huile résiduelle dans le gâteau ?
-    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matières avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile supplémentaire (sur la base de tests internes, les résultats peuvent varier) de chaque lot.
+    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matières avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile supplémentaire (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
 specificationsAr:
   - name: "الطراز (مفرد/مزدوج)"
     value: "HN325S مفرد / HN325S مزدوج"
@@ -157,7 +157,7 @@ specificationsId:
   - name: "Model (Tunggal/Ganda)"
     value: "HN325S Tunggal / HN325S Ganda"
   - name: "Tekanan Sistem"
-    value: "60 Mpa"
+    value: "60 MPa"
   - name: "Gaya Press"
     value: "325 Ton"
   - name: "Daya Motor"
@@ -177,7 +177,7 @@ specificationsId:
   - name: "Dimensi Keseluruhan (Tunggal/Ganda)"
     value: "1200×1200×2450 / 2100×1200×2450 mm"
   - name: "Tekanan Permukaan Kue Press"
-    value: "27.78 Mpa/cm²"
+    value: "27.78 MPa"
   - name: "Material Permukaan Kontak"
     value: "Baja tahan karat food-grade (barrel dan semua permukaan kontak minyak)"
 applicableSeedsAr:
@@ -200,7 +200,7 @@ faqAr:
   - question: "ما الضمان الذي تقدمونه؟"
     answer: "نقدم ضماناً لمدة عام واحد يغطي جميع عيوب التصنيع، بالإضافة إلى دعم فني مدى الحياة. بالنسبة لطراز الفولاذ المقاوم للصدأ، يشمل ذلك تغطية محددة للبرميل SS304 بدرجة غذائية والمكونات الهيدروليكية الصحية. قطع الغيار متاحة من المخزون."
   - question: "كيف تُشحن الآلة وكم تستغرق عملية التسليم؟"
-    answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً، وإلى الموانئ بأمريكا الجنوبية 30-40 يوماً. يُضاف إلى ذلك 20-30 يوم عمل كوقت إنتاج. الشحن الجوي متاح للطلبات العاجلة."
+    answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يوماً، وإلى الموانئ الأفريقية 25-35 يوماً، وإلى الموانئ بأمريكا الجنوبية 30-40 يوماً. يُضاف إلى ذلك 15-25 يوم عمل إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة. الشحن الجوي متاح للطلبات العاجلة."
   - question: "هل توفرون التركيب والتدريب؟"
     answer: "نعم، نوفر أدلة تركيب مفصلة ودروساً مصورة وإرشادات فنية عن بُعد. بالنسبة لطراز الفولاذ المقاوم للصدأ، يجب أن يتبع التركيب متطلبات النظافة للمنشآت الغذائية بما في ذلك مساحة كافية للغسل حول الآلة. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة."
   - question: "ما الشهادات التي تمتلكها الآلة؟"
@@ -225,7 +225,7 @@ faqId:
   - question: "Garansi apa yang Anda berikan?"
     answer: "Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk model baja tahan karat, ini mencakup cakupan khusus untuk barrel SS304 food-grade dan komponen hidrolik sanitasi. Suku cadang tersedia dari stok."
   - question: "Bagaimana mesin dikirim dan berapa lama pengiriman membutuhkan waktu?"
-    answer: "Mesin dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini selain 20-30 hari kerja waktu produksi. Pengiriman udara tersedia untuk pesanan mendesak."
+    answer: "Mesin dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini selain 15-25 hari kerja produksi untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus. Pengiriman udara tersedia untuk pesanan mendesak."
   - question: "Apakah Anda menyediakan instalasi dan pelatihan?"
     answer: "Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk model baja tahan karat, instalasi harus mengikuti persyaratan sanitasi fasilitas makanan termasuk ruang pencucian yang memadai di sekitar mesin. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya."
   - question: "Sertifikasi apa yang dimiliki mesin?"
@@ -249,11 +249,11 @@ updatedAt: 2025-11-01
 
 ## Overview
 
-The HN325S stainless steel hydraulic oil press delivers 325 tons of pressing force at 60 Mpa system pressure with food-grade stainless steel on all contact surfaces, built for commercial coconut milk and coconut cream production. It suits food processors who need hygienic, corrosion-resistant pressing of fresh coconut meat, runs on a 2.2 kW motor, and is covered by a 1-year warranty.
+The HN325S stainless steel hydraulic oil press delivers 325 tons of pressing force at 60 MPa system pressure with food-grade stainless steel on all contact surfaces, built for commercial coconut milk and coconut cream production. It suits food processors who need hygienic, corrosion-resistant pressing of fresh coconut meat, runs on a 2.2 kW motor, and is covered by a 1-year warranty.
 
 The HN325S Stainless Steel Coconut Milk Press is specifically designed for extracting high-quality coconut milk and coconut cream from fresh coconut meat. Featuring food-grade stainless steel construction for all contact surfaces, this machine ensures maximum hygiene and product purity for coconut milk production.
 
-With 325 tons of pressing force and 60 Mpa system pressure, the HN325S efficiently extracts coconut milk while maintaining the natural flavor and nutrients. The stainless steel barrel prevents contamination, making this machine a well-proven choice for commercial coconut milk production requiring the highest hygiene standards.
+With 325 tons of pressing force and 60 MPa system pressure, the HN325S efficiently extracts coconut milk while maintaining the natural flavor and nutrients. The stainless steel barrel prevents contamination, making this machine a well-proven choice for commercial coconut milk production requiring the highest hygiene standards.
 
 ## Key Advantages
 
@@ -267,7 +267,7 @@ With 325 tons of pressing force and 60 Mpa system pressure, the HN325S efficient
 ## Core Technology
 
 - **Bar-Type Slotted Barrel** — Maximizes coconut milk extraction efficiency with larger surface area, now in food-grade stainless steel.
-- **German Hydraulic System** — Ultra-high pressure combined pump delivers working pressure up to 60 Mpa for consistent, powerful coconut milk extraction.
+- **German Hydraulic System** — Ultra-high pressure combined pump delivers working pressure up to 60 MPa for consistent, powerful coconut milk extraction.
 - **4-Hook Cake Removal** — Easy, reliable discharge system for coconut press cake, reducing downtime between pressing cycles.
 - **High Carbon Steel Frame** — Long-lasting service under continuous operation. Actual service life depends on operating conditions and maintenance.
 - **Microcomputer Control** — Automated pressing cycle with one-button operation. Basic training recommended; we provide video tutorials and remote guidance.

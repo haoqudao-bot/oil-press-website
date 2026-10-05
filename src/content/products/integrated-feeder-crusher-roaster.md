@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Integrated Feeder Crusher Roaster
   fr: Unité Intégrée d'Alimentation, de Broyage et de Torréfaction
@@ -43,7 +43,7 @@ faq:
   - question: Can this equipment be customized?
     answer: Yes, we can customize specifications such as capacity, power supply, and material contact parts to meet your specific production requirements. Custom configurations are available to match your specific seed types and throughput requirements.
   - question: How is the equipment shipped?
-    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to 20-30 working days production time (shipping time additional). Air freight is available for urgent orders.
+    answer: The equipment is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional). Air freight is available for urgent orders.
   - question: Do you provide installation support?
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician for on-site installation. For the integrated processing unit, ensure your installation has adequate ventilation for the roasting stage and power supply for the combined motor requirements.
   - question: What certifications does the equipment have?
@@ -74,7 +74,7 @@ faqFr:
   - question: Cet équipement peut-il être personnalisé?
     answer: Oui, nous pouvons personnaliser les spécifications telles que la capacité, l'alimentation électrique et les pièces en contact avec le matériau pour répondre à vos exigences de production spécifiques. Des configurations personnalisées sont disponibles pour correspondre à vos types de graines spécifiques et à vos besoins de débit.
   - question: Comment l'équipement est-il expédié?
-    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15-20 jours, vers les ports africains 25-35 jours. Ceci s'ajoute à un délai de production de 20-30 jours ouvrés (délai d'expédition en supplément). Le fret aérien est disponible pour les commandes urgentes.
+    answer: L'équipement est expédié dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15-20 jours, vers les ports africains 25-35 jours. Ceci s'ajoute à un délai de production de 15 à 25 jours ouvrés pour les modèles standard et de 30 à 45 jours pour les configurations personnalisées (délai d'expédition en supplément). Le fret aérien est disponible pour les commandes urgentes.
   - question: Fournissez-vous un support d'installation?
     answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien pour l'installation sur site. Pour l'unité de traitement intégrée, assurez-vous que votre installation dispose d'une alimentation électrique adéquate pour tous les systèmes et d'une ventilation pour les émissions de torréfaction.
   - question: Quelles certifications l'équipement possède-t-il?
@@ -115,7 +115,7 @@ faqAr:
   - question: "هل يمكن تخصيص هذه المعدة؟"
     answer: "نعم، يمكننا تخصيص المواصفات مثل القدرة ومصدر الطاقة وقطع التلامس مع المادة لتلبية متطلبات الإنتاج الخاصة بك. تتوفر تكوينات مخصصة لتتناسب مع أنواع بذورك واحتياجات الإنتاجية الخاصة بك."
   - question: "كيف تُشحن المعدة؟"
-    answer: "تُشحن المعدة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا. هذا بالإضافة إلى 20-30 يوم عمل كمدة إنتاج (مدة الشحن إضافية). الشحن الجوي متاح للطلبات المستعجلة."
+    answer: "تُشحن المعدة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا. هذا بالإضافة إلى 15-25 يوم عمل كمدة إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (مدة الشحن إضافية). الشحن الجوي متاح للطلبات المستعجلة."
   - question: "هل تقدمون دعم التركيب؟"
     answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني للتركيب في الموقع. لوحدة المعالجة المتكاملة، تأكد من توفر تهوية كافية لمرحلة التحميص ومصدر طاقة كافٍ لمتطلبات المحركات المجمعة."
   - question: "ما الشهادات التي تمتلكها المعدة؟"
@@ -136,7 +136,7 @@ faqId:
   - question: Apakah peralatan ini dapat disesuaikan?
     answer: Ya, kami dapat menyesuaikan spesifikasi seperti kapasitas, pasokan daya, dan bagian kontak material agar memenuhi kebutuhan produksi spesifik Anda. Konfigurasi khusus tersedia agar sesuai dengan jenis biji dan kebutuhan throughput spesifik Anda.
   - question: Bagaimana peralatan ini dikirim?
-    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini selain waktu produksi 20-30 hari kerja (waktu pengiriman tambahan). Pengiriman udara tersedia untuk pesanan mendesak.
+    answer: Peralatan dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari. Ini selain waktu produksi 15-25 hari kerja untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus (waktu pengiriman tambahan). Pengiriman udara tersedia untuk pesanan mendesak.
   - question: Apakah Anda menyediakan dukungan pemasangan?
     answer: Ya, kami menyediakan manual pemasangan terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi untuk pemasangan di lokasi. Untuk unit pemrosesan terintegrasi, pastikan pemasangan Anda memiliki ventilasi yang memadai untuk tahap penyangraian dan pasokan daya untuk kebutuhan motor gabungan.
   - question: Sertifikasi apa yang dimiliki peralatan ini?

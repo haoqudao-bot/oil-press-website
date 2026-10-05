@@ -133,7 +133,7 @@
     "highReturnsTitle": "قم بتحقيق أقصى استعاراتك",
     "highReturnsDesc": "تقدم تقنية المكبس الهيدروليكي المتقدمة استعارات استثمارية استثنائية لشركتك في إنتاج الزيت.",
     "returns1_title": "معدل استخراج عالٍ للزيت",
-    "returns1_desc": "يبقى الزيت المتبقي في الكعكة منخفضًا يصل إلى 6-8% لمعظم المواد (بناءً على اختبارات داخلية؛ تختلف النتائج حسب نوع البذور والرطوبة). البرميل المشقوق من نوع القضبان يستخرج المزيد من الزيت من كل دفعة.",
+    "returns1_desc": "يبقى الزيت المتبقي في الكعكة منخفضًا يصل إلى 6-8% لمعظم المواد (اختبار مصنع هاونو: سمسم وفول سوداني مدرجان برطوبة 6-8%). البرميل المشقوق من نوع القضبان يستخرج المزيد من الزيت من كل دفعة.",
     "returns1_label": "معدل الاستخراج",
     "returns2_title": "كفاءة الطاقة",
     "returns2_desc": "محرك سداسي الأقطاب بقدرة 2.2 كيلوواط يشغّل دورة العصر كاملة — لا حاجة إلى غلاية ولا إلى توصيلة كهربائية صناعية عالية القدرة. تكاليف تشغيل أقل، هوامش ربح أعلى.",
@@ -171,7 +171,7 @@
     "factoryStrengthItem1": "مركز تصنيع CNC متقدم لتصنيع الأجزاء الدقيقة",
     "factoryStrengthItem2": "خط تجميع كامل مع اختبارات الجودة في كل مرحلة",
     "factoryStrengthItem3": "نظام مراقبة جودة صارم يضمن معايير منتجات مستمرة",
-    "factoryStrengthItem4": "قدرة إنتاج فعالة مع 20-30 يوم عمل كفترة توصيل",
+    "factoryStrengthItem4": "قدرة إنتاج فعالة — الموديلات القياسية جاهزة في 15-25 يوم عمل والتكوينات المخصصة في 30-45 يوم عمل",
     "factoryStrengthStat1": "مساحة الإنتاج",
     "factoryStrengthStat2": "عمال مختصون",
     "factoryStrengthStat3": "أيام الإنتاج",
@@ -192,7 +192,7 @@
     "statsYears": "سنوات من التميز في التصنيع",
     "statsCountries": "دول مخدومة حول العالم",
     "statsEmployees": "عمال ومهندسون مهرة",
-    "statsArea": "م² منشأة إنتاج",
+    "statsArea": "عمال ومهندسون مهرة",
     "statsMachines": "مشترين تم خدمتهم",
     "statsHighlight1": "منذ 2010",
     "statsHighlight2": "6 قارات",
@@ -236,7 +236,7 @@
     "easyOperationDetail4": "صيانة منخفضة: 5 دقائق/يوم",
     "browseDetails": "تصفح التفاصيل",
     "statsHomeEstablished": "سنة التأسيس",
-    "statsHomeWorkshop": "موظفون مهرة",
+    "statsHomeWorkshop": "عمال ومهندسون مهرة",
     "statsHomeCountries": "دول التصدير",
     "statsHomeBuyers": "عملاء مخدومون حول العالم",
     "marqueeAriaLabel": "البذور الزيتية التي نعصرها",
@@ -296,12 +296,10 @@
     "section02Title": "مجموعة منتجاتنا",
     "section02Sub": "كل ما تحتاجه لاستخلاص الزيت، من مكبس واحد إلى خط إنتاج كامل.",
     "lineItems": [
-      "مكبس الزيت الهيدروليكي",
-      "مطحنة البذور الزيتية",
-      "آلة تحميص البذور",
-      "جهاز تبخير البذور الزيتية",
-      "ناقل لولبي",
-      "آلة ترشيح الزيت"
+      "معصرة الزيت الهيدروليكية",
+      "معالجة البذور",
+      "التحميص والتبخير",
+      "الترشيح والتكرير"
     ],
     "lineCtaBannerPre": "تخطط لخط إنتاج؟ أخبرنا بـ",
     "lineCtaBannerStrong": "نوع البذور والطن المستهدف يوميًا والجهد الكهربائي",
@@ -490,7 +488,7 @@
     "storyP2": "مؤسسنا، الذي يمتلك أكثر من 20 سنة من الخبرة في الأنظمة الهيدروليكية، لاحظ أن العديد من منتجي الزيت كانوا يواجهون صعوبات مع المضخات منخفضة الكفاءة والموردين غير الموثوقين. بدأنا من ورشة صغيرة مع 10 عمال فقط، ركزنا بلا هوادة على جودة المنتج ورضا العميل.",
     "storyP3": "اليوم، جعل هذا الالتزامنا مصنعًا مؤسسيًا لآلة ضغط الزيت الهيدروليكي في الصين، موثوقًا من قبل آلاف العملاء في أكثر من 50 دولة - من الهند والنيجيريا إلى الفلبين والشرق الأوسط. قصتنا لا تزال مستمرة، ونعملدائمًا على تطوير منتجاتنا.",
     "overviewTitle": "مصنع آلة الضغط الهيدروليكي للزيت المحترف",
-    "overviewP2": "موجود في تشينغتشو، ويفانغ، مقاطعة شاندونغ - مركز التصنيع الميكانيكي الشهير في الصين - مصنعنا مجهز بمراكز التصنيع الحاسوبية المتقدمة، وخطوط التجميع المهنية، وأنظمة مراقبة الجودة الصارمة. مع أكثر من 200 موظف مؤهل، نوفر معدات ضغط الزيت الموثوقة للعملاء في جميع أنحاء العالم.",
+    "overviewP2": "موجود في تشينغتشو، ويفانغ، مقاطعة شاندونغ - مركز التصنيع الميكانيكي الشهير في الصين - مصنعنا مجهز بمراكز التصنيع الحاسوبية المتقدمة، وخطوط التجميع المهنية، وأنظمة مراقبة الجودة الصارمة. مع أكثر من 200 عامل ومهندس ماهر، نوفر معدات ضغط الزيت الموثوقة للعملاء في جميع أنحاء العالم.",
     "overviewP3": "كمصنع صيني مباشر لآلة ضغط الزيت، نقدم أسعار مباشرة من المصنع، ودعم فني شامل، وخدمة ما بعد البيع مدى الحياة لكل عميل.",
     "manufacturingTitle": "قدرات التصنيع",
     "manufacturingDesc": "مصنعنا في تشينغتشو مجهز بالمعدات الحديثة ويضم أكثر من 200 متخصص مؤهل مكرس لإنتاج آلات ضغط الزيت الهيدروليكي عالية الجودة.",
@@ -505,7 +503,7 @@
     "capPaintTitle": "معالجة السطح",
     "capPaintDesc": "الصقل المهني والطلاء المضاد للتآكل لتحمل الأجهزة لفترة طويلة",
     "capWarehouseTitle": "مخزون كبير",
-    "capWarehouseDesc": "مخزون كافٍ من المواد الخام وقطع الغيار للإنتاج في غضون 20-30 يوم عمل (وقت الشحن إضافي)",
+    "capWarehouseDesc": "مخزون كافٍ من المواد الخام وقطع الغيار — الإنتاج في 15-25 يوم عمل للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (وقت الشحن إضافي)",
     "qualityTitle": "ضمان الجودة",
     "qualityDesc": "كل آلة ضغط زيت هيدروليكي تخضع لفحوصات جودة صارمة قبل مغادرة مصنعنا، مما يضمن أداء موثوق ومدة خدمة طويلة.",
     "qualityIsoTitle": "إدارة الجودة",
@@ -528,7 +526,7 @@
     "why4Title": "خبرة التصدير العالمية",
     "why4Desc": "تصدير ناجح إلى أكثر من 50 دولة مع دعم وثائق كاملة بما في ذلك CO، Form A/E، والتصديق السفاري.",
     "why5Title": "التسليم السريع والاستجابة",
-    "why5Desc": "مدة الإنتاج 20-30 يوم عمل؛ الاستفسارات مجابة في غضون 24 ساعة مع استشارة فنية محترفة.",
+    "why5Desc": "الموديلات القياسية جاهزة في 15-25 يوم عمل والتكوينات المخصصة في 30-45 يوم عمل؛ الاستفسارات مجابة في غضون 24 ساعة مع استشارة فنية محترفة.",
     "why6Title": "الدعم الفني مدى الحياة",
     "why6Desc": "إرشاد التثبيت المجاني، تدريب التشغيل، ودعم فني مدى الحياة عبر مكالمة فيديو، WhatsApp، أو خدمة على الموقع.",
     "factoryDesc": "قم بجولة افتراضية في منشأة التصنيع لدينا. زيارات المصنع مرحب بها أيضاً — اتصل بنا لتحديد موعد.",
@@ -604,7 +602,7 @@
     "highReturnsTitle": "قم بتحقيق أقصى استعاراتك",
     "highReturnsDesc": "تقدم تقنية المكبس الهيدروليكي المتقدمة استعارات استثمارية استثنائية لشركتك في إنتاج الزيت.",
     "returns1_title": "معدل الاستخراج العالي",
-    "returns1_desc": "يبقى الزيت المتبقي في الكعكة منخفضًا يصل إلى 6-8% لمعظم المواد (بناءً على اختبارات داخلية؛ تختلف النتائج حسب نوع البذور والرطوبة). البرميل المشقوق من نوع القضبان يستخرج المزيد من الزيت من كل دفعة.",
+    "returns1_desc": "يبقى الزيت المتبقي في الكعكة منخفضًا يصل إلى 6-8% لمعظم المواد (اختبار مصنع هاونو: سمسم وفول سوداني مدرجان برطوبة 6-8%). البرميل المشقوق من نوع القضبان يستخرج المزيد من الزيت من كل دفعة.",
     "returns1_label": "معدل الاستخراج",
     "returns2_title": "كفاءة الطاقة",
     "returns2_desc": "محرك سداسي الأقطاب بقدرة 2.2 كيلوواط يشغّل دورة العصر كاملة — لا حاجة إلى غلاية ولا إلى توصيلة كهربائية صناعية عالية القدرة. تكاليف تشغيل أقل، هوامش ربح أعلى.",
@@ -631,7 +629,7 @@
     "op4_highlight": "5 دقائق/يوم صيانة",
     "v3": {
       "heroH1": "شراء مكبس زيت يبدأ باختيار مصنع يمكنك الوثوق به",
-      "heroSub": "أجابت Haonuo Machinery على هذا السؤال لمشترين في أكثر من 50 دولة منذ عام 2010 — أكثر من 200 موظف ماهر، وقوة ضغط اسمية يمكنك التحقق منها، واختبار لمدة 48 ساعة قبل كل شحنة.",
+      "heroSub": "أجابت Haonuo Machinery على هذا السؤال لمشترين في أكثر من 50 دولة منذ عام 2010 — أكثر من 200 عامل ومهندس ماهر، وقوة ضغط اسمية يمكنك التحقق منها، واختبار لمدة 48 ساعة قبل كل شحنة.",
       "heroCta1": "احصل على سعر المصنع",
       "heroCta2": "جولة في المصنع",
       "heroChip1L": "تأسيس",
@@ -643,7 +641,7 @@
       "ovP1": "عندما تشتري من Haonuo، فأنت تشتري بسعر المصنع المباشر — نفس السعر الذي يدفعه موزعونا الدائمون. لا يوجد وسيط بينك وبين من يقوم باللحام والتصنيع واختبار آلتك.",
       "ovP2": "منذ عام 2010، قمنا بتوريد مكابس لطواحن سمسم في نيجيريا، ومصانع فول سوداني في الهند، وورش زيت جوز هند VCO في الفلبين. تأتي معظم طلباتنا الجديدة من مشترين يعودون لشراء آلة ثانية أو ثالثة — هذا هو الأدق دليلاً على أن الآلة تؤدي وظيفتها.",
       "ovStat1L": "تأسست · Qingzhou",
-      "ovStat2L": "ورشة مملوكة",
+      "ovStat2L": "عمال ومهندسون مهرة",
       "ovStat3L": "دول التصدير",
       "ovStat4L": "نطاق قوة الضغط",
       "histKicker": "رحلتنا",
@@ -682,7 +680,7 @@
       "retKicker": "ما تغيره آلاتنا",
       "retH2": "الأرقام التي ستشعر بها شركتك",
       "ret1H": "الزيت المتبقي في الكعكة",
-      "ret1D": "البرميل المشقوق من نوع القضبان يترك 6-8% فقط من الزيت المتبقي في الكعكة — المزيد من الزيت في برميلك من كل طن (اختبارات داخلية، النتائج تختلف).",
+      "ret1D": "البرميل المشقوق من نوع القضبان يترك 6-8% فقط من الزيت المتبقي في الكعكة — المزيد من الزيت في برميلك من كل طن (اختبار مصنع هاونو: سمسم وفول سوداني مدرجان برطوبة 6-8%).",
       "ret2H": "محرك منخفض القدرة",
       "ret2D": "محرك نحاسي نقي بقدرة 2.2 كيلوواط يشغّل الدورة كاملة — لا غلاية، ولا خط كهرباء صناعي.",
       "ret3H": "ضغط بارد حقيقي",
@@ -819,7 +817,7 @@
     "expect2Title": "حل مخصص",
     "expect2Desc": "نصمم التكوين الأمثل للآلة بناءً على نوع بذورك وسعتك ومتطلبات ميزانيتك.",
     "expect3Title": "الإنتاج في المصنع",
-    "expect3Desc": "يتم تصنيع واختبار آلتك في مصنعنا خلال 20-30 يوم عمل (وقت الشحن إضافي).",
+    "expect3Desc": "يتم تصنيع واختبار آلتك في مصنعنا خلال 15-25 يوم عمل للموديلات القياسية (التكوينات المخصصة 30-45 يوم عمل؛ وقت الشحن إضافي).",
     "expect4Title": "التسليم العالمي",
     "expect4Desc": "تغليف آمن وشحن موثوق إلى أقرب ميناء إليك مع وثائق تصدير كاملة.",
     "ourLocation": "موقعنا",
@@ -926,11 +924,9 @@
     "services": "الخدمات",
     "hydraulicOilPressMachine": "ماكينة عصر الزيت الهيدروليكية",
     "coldPressOilMachine": "ماكينة عصر الزيت البارد",
-    "manualOilPressMachine": "ماكينة عصر الزيت اليدوية",
     "compareAllModels": "مقارنة جميع الموديلات",
     "browseCatalog": "تصفح الكتالوج",
     "sheaButter": "زبدة الشيا",
-    "manual": "يدوية",
     "slide": "شريحة",
     "previous": "السابق",
     "next": "التالي",
@@ -959,7 +955,7 @@
     "standardPurchase": {
       "title": "شراء آلة قياسية",
       "subtitle": "أصناف جاهزة للإرسال",
-      "description": "اختر من مجموعتنا الكاملة من آلات ضغط الزيت الهيدروليكي — من HN300 الصغيرة إلى HN500 عالية الضغط. يتم اختبار كل آلة في المصنع وجاهزة للإرسال في غضون 20-30 يوم عمل.",
+      "description": "اختر من مجموعتنا الكاملة من آلات ضغط الزيت الهيدروليكي — من HN300 الصغيرة إلى HN500 عالية الضغط. يتم اختبار كل آلة في المصنع؛ الموديلات القياسية تُشحن في 15-25 يوم عمل والتكوينات المخصصة في 30-45 يوم عمل.",
       "features": [
         "8 نماذج قياسية + 4 نماذج متخصصة في المخزن",
         "تكوينات برميل واحد أو مزدوج متاحة",
@@ -1063,8 +1059,7 @@
         "subtitle": "سواء كنت بحاجة إلى علامة تجارية OEM، هندسة ODM مخصصة، أو تصميم خط إنتاج كامل، فريقنا جاهز لمساعدتك. اتصل بنا اليوم للحصول على استشارة مجانية.",
         "benefits": [
           "استشارة هندسية مجانية",
-          "استجابة في 24 ساعة",
-          "مخططات 3D مخصصة للموافقة"
+          "استجابة في 24 ساعة"
         ],
         "cta": "طلب عرض أسعار OEM/ODM"
       }
@@ -1082,7 +1077,7 @@
       },
       "step3": {
         "title": "عينة وموافقة",
-        "desc": "للطلبات OEM/ODM، نقدم مواصفات مفصلة ومخططات 3D للموافقة قبل بدء الإنتاج."
+        "desc": "للطلبات OEM/ODM، نقدم مواصفات مفصلة لموافقتك قبل بدء الإنتاج."
       },
       "step4": {
         "title": "الإنتاج والمراقبة الجودة",
@@ -1232,7 +1227,7 @@
       },
       {
         "question": "What is the yield of cold press oil machine?",
-        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on internal testing, results vary), minimizing the yield gap between cold and hot pressing methods."
+        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
       },
       {
         "question": "How much does a cold press oil machine cost?",
@@ -1343,7 +1338,7 @@
       },
       {
         "question": "How does a hydraulic oil press work?",
-        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 Mpa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
+        "answer": "The machine uses a hydraulic pump to generate high pressure (up to 75 MPa) which drives a piston into a barrel filled with prepared oil seeds. The pressure squeezes oil out through a slotted barrel while the compressed seed cake remains inside. A typical pressing cycle takes 40-90 minutes. The microcomputer control system automates the entire process from pressing to cake discharge."
       },
       {
         "question": "What seeds can a hydraulic oil press process?",
@@ -1351,7 +1346,7 @@
       },
       {
         "question": "What is the oil yield of a hydraulic oil press?",
-        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on internal testing, results vary), with residual oil in cake as low as 6-8%."
+        "answer": "Oil yield varies by seed type: sesame 42-50%, peanut 38-45%, coconut 55-65%, walnut 50-60%, rapeseed 35-45%, sunflower 40-48%. Haonuo hydraulic presses use a proprietary bar-type slotted barrel design that achieves approximately 2-3% higher yield than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), with residual oil in cake as low as 6-8%."
       },
       {
         "question": "How much does a hydraulic oil press machine cost?",
@@ -1372,97 +1367,6 @@
     ],
     "ctaTitle": "هل أنت مستعد للعثور على مكبس الزيت الهيدروليكي المناسب؟",
     "ctaDesc": "احصل على عرض سعر مجاني وتقدير للشحن وتوصية احترافية بالمعدات عادةً خلال 24 ساعة عمل.",
-    "whatsappUs": "راسلنا عبر واتساب"
-  },
-  "manual": {
-    "title": "مكبس زيت هيدروليكي تجاري — إنتاج بجودة صناعية | Haonuo",
-    "description": "مكابس زيت هيدروليكية بجودة صناعية لإنتاج الزيت التجاري. سعة 100 كجم لكل دفعة، مردود احترافي، وتشغيل موثوق. أسعار مباشرة من مصنع هاونو.",
-    "breadcrumbHome": "الرئيسية",
-    "breadcrumbProducts": "المنتجات",
-    "breadcrumbCurrent": "مكبس الزيت الهيدروليكي التجاري",
-    "heroTitle": "مكبس زيت هيدروليكي تجاري — إنتاج بجودة صناعية",
-    "heroDesc": "مكابس زيت هيدروليكية احترافية لإنتاج الزيت التجاري. سعة 100 كجم لكل دفعة، ضغط نظام 60-75 ميجا باسكال، وزيت متبقٍ أقل من 5%. أسعار مباشرة من مصنع هاونو.",
-    "getPricing": "احصل على الأسعار التجارية",
-    "viewModels": "عرض جميع الموديلات",
-    "whyChoose": "لماذا تختار العصر الهيدروليكي للإنتاج التجاري",
-    "industrialCapacity": {
-      "title": "طاقة إنتاجية صناعية",
-      "desc": "سعة 100 كجم لكل دفعة. يختلف الإنتاج الساعي حسب نوع البذور ومدة دورة العصر. تعالج HN325 دفعة 100 كجم في 40-90 دقيقة، محققة أهداف الإنتاج التجاري."
-    },
-    "professionalYield": {
-      "title": "مردود احترافي",
-      "desc": "زيت متبقٍ أقل من 5% — كفاءة استخلاص أعلى بمرتين إلى ثلاث مرات من المكابس اللولبية. حقق أقصى ربح من كل كيلوجرام من البذور."
-    },
-    "lowPower": {
-      "title": "متطلبات طاقة منخفضة",
-      "desc": "لا يحتاج سوى 2.2 كيلوواط. متوافق مع الكهرباء أحادية الطور القياسية 220 فولت أو مولد صغير 5 KVA — مناسب لكل المناطق."
-    },
-    "costEffective": {
-      "title": "فعّال من حيث التكلفة",
-      "desc": "أسعار مباشرة من المصنع مع عمر تشغيلي 15-20 عامًا. مردود مرتفع وموثوقية توفران عائدًا ممتازًا على الاستثمار للعمليات التجارية."
-    },
-    "hydraulicAdvantageTitle": "مكابس هاونو الهيدروليكية — الخيار الاحترافي للعمليات التجارية",
-    "hydraulicAdvantageDesc": "تتخصص هاونو في مكابس الزيت الهيدروليكية التجارية التي توفر أداءً بجودة صناعية مع احتياجات طاقة دنيا. حتى في المناطق محدودة الكهرباء، تتفوق مكابسنا الهيدروليكية على جميع البدائل لأنها توفر:",
-    "hydraulicAdvantage1": "سعة 100 كجم لكل دفعة — إنتاج ب نطاق تجاري",
-    "hydraulicAdvantage2": "زيت متبقٍ أقل من 5% — كفاءة استخلاص قصوى",
-    "hydraulicAdvantage3": "تشغيل بزر واحد — لا حاجة لجهد بدني",
-    "hydraulicAdvantage4": "2.2 كيلوواط — متوافق مع مولد 5 KVA",
-    "exploreHydraulic": "استكشف المكابس الهيدروليكية من هاونو",
-    "productModelsTitle": "موديلات المكابس الهيدروليكية التجارية — الفئة الأساسية",
-    "applicationsTitle": "تطبيقات إنتاج الزيت التجاري",
-    "sesameOilApp": {
-      "title": "زيت السمسم",
-      "tag": "منتج متخصص عالي القيمة",
-      "desc": "زيت سمسم معصور على البارد مميز للاستخدامات الطهي والتجميل. تحقق المكابس الهيدروليكية كفاءة استخلاص 42-50% مع زيت متبقٍ أقل من 5%.",
-      "yield": "المردود الهيدروليكي: 42-50%"
-    },
-    "peanutOilApp": {
-      "title": "زيت الفول السوداني",
-      "tag": "زيت طهي تجاري",
-      "desc": "زيت طهي واسع الاستهلاك وذو طلب مرتفع في أفريقيا وآسيا. يضمن العصر الهيدروليكي الصناعي جودة ثابتة وأقصى مردود.",
-      "yield": "المردود الهيدروليكي: 38-45%"
-    },
-    "palmKernelOilApp": {
-      "title": "زيت نواة النخيل",
-      "tag": "معالجة صناعية",
-      "desc": "زيت صناعي بكميات كبيرة للطبخ وصناعة الصابون. تعالج المكابس الهيدروليكية نوى النخيل الصلبة بكفاءة ممتازة.",
-      "yield": "المردود الهيدروليكي: 45-55%"
-    },
-    "coconutOilApp": {
-      "title": "زيت جوز الهند",
-      "tag": "سوق مميز",
-      "desc": "زيت جوز هند بكر معصور على البارد لأسواق الأغذية الصحية ومستحضرات التجميل. يتطلب معدات استخلاص عالية الجودة.",
-      "yield": "المردود الهيدروليكي: 55-62%"
-    },
-    "faqTitle": "الأسئلة الشائعة",
-    "faqs": [
-      {
-        "question": "What is a commercial hydraulic oil press?",
-        "answer": "A commercial hydraulic oil press is an industrial-grade machine that extracts oil from seeds using hydraulic pressure. It operates at 60-75 MPa system pressure, achieving residual oil rates below 5% — significantly more efficient than manual or screw presses. Haonuo hydraulic presses are designed for commercial production with 100 kg per batch capacity (hourly output varies by seed type)."
-      },
-      {
-        "question": "How much oil can a hydraulic press produce?",
-        "answer": "Haonuo hydraulic presses process 100 kg per batch. Hourly output varies by seed type and pressing cycle time (40-90 minutes per batch). This is 10-20x more productive than manual presses and 2-3x more efficient than screw presses."
-      },
-      {
-        "question": "Is a hydraulic press better than manual or screw presses?",
-        "answer": "بالتأكيد. تترك المكابس الهيدروليكية نسبة زيت متبقية في الكعكة تبلغ 6-8% فقط لمعظم المواد (بناءً على اختبارات داخلية؛ تختلف النتائج)، وتنتج زيتًا فاخرًا معصورًا على البارد، وتتطلب الحد الأدنى من الجهد البدني. حتى مع مولد صغير بقدرة 5 كيلوفولت أمبير، تُعد المكابس الهيدروليكية الخيار الموصى به للإنتاج التجاري في أي منطقة."
-      },
-      {
-        "question": "What seeds work best with hydraulic presses?",
-        "answer": "Hydraulic presses excel with all oil seeds: sesame, peanut, walnut, almond, sunflower, coconut, flaxseed, and 50+ more. The high pressure (60-75 MPa) ensures efficient extraction even from hard-shell nuts that manual presses cannot handle effectively."
-      },
-      {
-        "question": "What is the power requirement for hydraulic presses?",
-        "answer": "Haonuo hydraulic presses require only 2.2 KW — compatible with standard 220V single-phase power or a small 5 KVA generator. This makes them suitable for areas with limited or unreliable electricity infrastructure."
-      },
-      {
-        "question": "What is the total cost of ownership?",
-        "answer": "Haonuo provides factory-direct pricing without middleman markups. Total cost includes the press, optional roaster and filter, shipping, and installation. With proper maintenance, hydraulic presses deliver 15-20 years of reliable service, making them a cost-effective investment for commercial oil production."
-      }
-    ],
-    "ctaTitle": "اعثر على مكبس الزيت التجاري المناسب",
-    "ctaDesc": "تقدم مكابس هاونو الهيدروليكية سعة صناعية 100 كجم لكل دفعة مع زيت متبقٍ أقل من 5%. يختلف الإنتاج الساعي حسب نوع البذور. احصل على حلّك التجاري المخصص اليوم.",
     "whatsappUs": "راسلنا عبر واتساب"
   },
   "roi": {

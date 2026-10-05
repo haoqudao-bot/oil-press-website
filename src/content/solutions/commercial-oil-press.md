@@ -12,7 +12,7 @@ description:
   ar: آلة عصر زيت تجارية لإنتاج الزيت بمقياس متوسط إلى كبير. ضغط هيدروليكي مزدوج البرميل بإنتاجية عالية.
   id: Mesin press minyak komersial untuk produksi minyak skala menengah hingga besar. Press hidrolik barel ganda dengan throughput tinggi.
 recommendedProducts:
-  - heavy-duty-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
   - integrated-feeder-crusher-roaster
   - thermal-oil-roasting-pan
@@ -59,7 +59,7 @@ faq:
   - question: How much oil can a commercial press produce per day?
     answer: With double-barrel configuration and 8-10 hours of operation, our commercial models can process 2,000-5,000 kg of seeds per day.
   - question: Do you offer complete production lines?
-    answer: Yes, we offer complete oil pressing production lines including seed processing, roasting, pressing, filtration, and refining equipment.
+    answer: Yes, we offer complete oil pressing production lines including seed processing, roasting, pressing and filtration. Refining equipment for RBD oil is sourced independently and we can help integrate it.
   - question: What is the price of a commercial oil press machine?
     answer: Request a quote for your preferred model. We offer factory-direct pricing with no middleman markup.
   - question: Can I get a double-barrel configuration?
@@ -70,7 +70,7 @@ faqFr:
   - question: Combien d'huile une presse commerciale peut-elle produire par jour ?
     answer: Avec une configuration double fût et 8 à 10 heures de fonctionnement, nos modèles commerciaux peuvent traiter 2 000 à 5 000 kg de graines par jour.
   - question: Proposez-vous des lignes de production complètes ?
-    answer: Oui, nous proposons des lignes de production complètes de pressage d'huile, y compris le traitement des graines, la torréfaction, le pressage, la filtration et le raffinage.
+    answer: Oui, nous proposons des lignes complètes de pressage d'huile, y compris le traitement des graines, la torréfaction, le pressage et la filtration. Les équipements de raffinage pour l'huile RBD sont approvisionnés indépendamment et nous pouvons aider à les intégrer.
   - question: Quel est le prix d'une machine de pressage d'huile commerciale ?
     answer: Demandez un devis pour votre modèle préféré. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Puis-je obtenir une configuration double fût ?
@@ -81,7 +81,7 @@ faqAr:
   - question: كم زيت يمكن لمعصرة تجارية إنتاجه يومياً؟
     answer: مع تكوين البرميل المزدوج و8-10 ساعات تشغيل، يمكن لطرازاتنا التجارية معالجة 2000-5000 كجم من البذور يومياً.
   - question: هل تقدمون خطوط إنتاج كاملة؟
-    answer: نعم، نقدم خطوط إنتاج عصر زيت كاملة بما في ذلك معالجة البذور والتحميص والعصر والترشيح والتكرير.
+    answer: نعم، نقدم خطوط عصر زيت كاملة بما في ذلك معالجة البذور والتحميص والعصر والترشيح. أما معدات التكرير لزيت RBD فتُشترى بشكل مستقل ويمكننا المساعدة في دمجها.
   - question: ما هو سعر آلة العصر التجاري؟
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: هل يمكنني الحصول على تكوين برميل مزدوج؟
@@ -92,7 +92,7 @@ faqId:
   - question: Berapa banyak minyak yang bisa dihasilkan press komersial per hari?
     answer: Dengan konfigurasi barel ganda dan 8-10 jam operasi, model komersial kami dapat memproses 2.000-5.000 kg biji per hari.
   - question: Apakah Anda menawarkan lini produksi lengkap?
-    answer: Ya, kami menawarkan lini produksi penekanan minyak lengkap termasuk pengolahan biji, pengovenan, penekanan, filtrasi, dan pemurnian.
+    answer: Ya, kami menawarkan lini produksi penekanan minyak lengkap termasuk pengolahan biji, pengovenan, penekanan, dan filtrasi. Peralatan pemurnian untuk minyak RBD dibeli terpisah dan kami dapat membantu mengintegrasikannya.
   - question: Berapa harga mesin press minyak komersial?
     answer: Hubungi kami untuk harga sesuai model pilihan Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Bisakah saya mendapatkan konfigurasi barel ganda?
@@ -150,23 +150,6 @@ Whether you are running a dedicated oil production facility, a food processing p
 - **Integrated Feeder Crusher Roaster** — All-in-one seed preparation unit that automates cleaning, crushing, and roasting. Reduces labor and ensures consistent preparation for commercial throughput.
 - **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting of various seed types. Essential for hot-pressed oil production.
 - **Pneumatic Oil Filter Press** — High-volume filtration matching commercial press throughput. Produces clear, market-ready oil.
-
-## Frequently Asked Questions
-
-**How much does a commercial oil press machine cost?**
-Our commercial oil press machines are available in various configurations from single-barrel to double-barrel with complete accessories. We offer factory-direct pricing that saves compared to trading company prices (actual savings vary). Tell us about your production setup and we'll prepare a commercial package quote.
-
-**What is the best oil press for commercial use?**
-For most commercial operations, we recommend the Heavy Duty (HN365) with double-barrel configuration. It offers the best balance of pressing force, throughput, and versatility. If your market demands premium cold-pressed oil, the Cold Press (HN426) is the better choice.
-
-**How much oil can a commercial press produce per day?**
-With double-barrel configuration operating 8-10 hours, our commercial models process 2,000-5,000 kg of seeds per day. Actual oil output depends on seed type: approximately 900-2,500 liters of sesame oil, 800-2,000 liters of peanut oil, or 1,100-3,100 liters of sunflower oil per day.
-
-**Do you offer complete commercial production lines?**
-Yes. We provide complete turnkey production lines including seed processing, roasting, pressing, filtration, and optional refining. Our engineers can design a layout optimized for your facility and production requirements.
-
-**What is the difference between single and double barrel?**
-A double-barrel configuration has two independent pressing chambers that operate simultaneously, effectively doubling your throughput. Both barrels can process the same seed type or different types at the same time. The footprint increase is minimal compared to the production gain.
 
 ## Single vs. Double Barrel Comparison
 

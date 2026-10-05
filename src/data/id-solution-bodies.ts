@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿// Indonesian solution body content for [locale]/solutions/[slug].astro
+// Indonesian solution body content for [locale]/solutions/[slug].astro
 export const idSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `## Ringkasan
 
@@ -36,23 +36,6 @@ Dengan kandungan minyak almond 50-55% — termasuk yang tertinggi di antara semu
 
 - **Press Hidrolik Dingin (HN426)** — Dirancang khusus untuk press dingin dengan kontrol suhu di bawah 60°C. Sangat penting untuk memproduksi minyak almond premium yang mempertahankan nilai gizi maksimal.
 - **Press Filter Minyak Pneumatik** — Menghasilkan minyak almond jernih seperti kristal yang cocok untuk aplikasi makanan dan kosmetik. Filtrasi halus sangat krusial untuk pasar premium.
-
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak almond?**
-Mesin press minyak almond kami tersedia dalam berbagai konfigurasi dari model press dingin hingga model berkapasitas tinggi. Kami menawarkan harga langsung pabrik tanpa markup perantara. Dapatkan harga sesuai kebutuhan produksi Anda.
-
-**Bisakah saya menekan almond dengan cangkangnya?**
-Tidak. Cangkang almond sangat keras dan akan merusak peralatan Anda. Selalu gunakan almond tanpa cangkang untuk penekanan minyak. Cangkang juga mengandung tanin yang dapat mempengaruhi rasa dan kualitas minyak.
-
-**Apakah minyak almond press dingin benar-benar lebih baik?**
-Ya, secara signifikan. Minyak almond press dingin umumnya mempertahankan lebih banyak vitamin E dibandingkan minyak press panas, serta lebih banyak fitosterol dan antioksidan alami. Ini dapat diterjemahkan menjadi nilai pasar yang lebih tinggi — minyak almond press dingin biasanya dijual 30-50% lebih mahal dari minyak almond yang dimurnikan, meskipun hasil aktual dapat bervariasi.
-
-**Apa perbedaan antara minyak almond manis dan pahit?**
-Minyak almond manis (dari Prunus dulcis) adalah minyak konsumsi dan kosmetik yang umum. Minyak almond pahit mengandung amigdalin, yang terurai menjadi asam hidrosianida beracun. Minyak almond pahit hanya digunakan dalam jumlah sangat kecil sebagai penyedap setelah pengolahan yang tepat. Peralatan kami dirancang untuk produksi minyak almond manis.
-
-**Apa saja pasar utama untuk minyak almond?**
-Minyak almond memiliki dua pasar utama: kosmetik (pelembab, perawatan rambut, minyak pijat) dan makanan (minyak memasak, dressing salad, suplemen gizi). Pasar kosmetik menyumbang sekitar 60% dari permintaan minyak almond global dan menawarkan margin tertinggi.
 
 ## Mengapa Memilih Haonuo
 
@@ -102,20 +85,6 @@ Solusi ini dirancang untuk pasar minyak alpukat yang berkembang di Meksiko, Keny
 - **Penghancur Biji Kecepatan Tinggi** — Menghancurkan daging alpukat secara efisien menjadi pasta seragam untuk hasil penekanan yang konsisten.
 - **Press Filter Minyak Pneumatik** — Menghilangkan partikel halus dan endapan untuk minyak alpukat jernih seperti kristal. Beberapa kali filtrasi memastikan kualitas tertinggi.
 
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak alpukat?**
-Mesin press minyak alpukat kami tersedia dalam berbagai konfigurasi dari model press dingin hingga model berkapasitas tinggi. Kami menawarkan harga langsung pabrik yang menghemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Hubungi kami untuk solusi yang disesuaikan.
-
-**Bisakah saya menekan minyak alpukat dari alpukat segar (tanpa dikeringkan)?**
-Ya, tetapi dengan hasil lebih rendah. Daging alpukat segar mengandung sekitar 70% air, yang menciptakan emulsi dan mengurangi hasil minyak. Mengeringkan daging sebelum ditekan dapat menggandakan hasil efektif Anda. Untuk produksi skala kecil, penekanan segar memungkinkan; untuk operasi komersial, pengeringan sangat direkomendasikan.
-
-**Apa yang membuat minyak alpukat begitu mahal?**
-Minyak alpukat dijual dengan harga premium karena kandungan minyak alpukat segar yang relatif rendah (15-25%), persiapan yang membutuhkan banyak tenaga kerja, dan permintaan global yang terus berkembang untuk minyak yang sadar kesehatan ini. Minyak alpukat press dingin dijual dengan premium yang signifikan di pasar ritel.
-
-**Bisakah saya menekan biji alpukat untuk minyak?**
-Ya, biji alpukat mengandung 3-5% minyak dan dapat ditekan menggunakan peralatan kami. Namun, hasilnya sangat rendah dan minyaknya memiliki sifat berbeda dari minyak daging. Sebagian besar produsen fokus pada minyak daging untuk pasar premium.
-
 ## Mengapa Memilih Haonuo
 
 - **Spesialis press dingin** — Model HN426 kami dirancang khusus untuk press dingin, mempertahankan suhu di bawah 60°C untuk menjaga kualitas premium dan warna hijau minyak alpukat.
@@ -163,23 +132,6 @@ Solusi ini mendukung press dingin (untuk minyak jarak kelas obat dan kosmetik) d
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan biji jarak. Sangat penting untuk produksi minyak kelas industri press panas.
 - **Press Filter Minyak Pneumatik** — Menghasilkan minyak jarak bersih yang cocok untuk aplikasi industri maupun obat.
 
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak jarak?**
-Mesin press minyak jarak kami tersedia dalam berbagai konfigurasi dari model heavy duty hingga ultra-high-pressure. Kami menawarkan harga langsung pabrik tanpa markup perantara. Hubungi kami via WhatsApp untuk harga terkini.
-
-**Apakah bisnis press minyak jarak menguntungkan?**
-Ya. Permintaan minyak jarak global tumbuh 4-6% per tahun, didorong oleh industri biodiesel, pelumas, dan farmasi. India memproduksi lebih dari 80% biji jarak dunia, dan pengolahan nilai tambah (menekan minyak alih-alih mengekspor biji mentah) secara signifikan meningkatkan pendapatan.
-
-**Apakah minyak jarak aman untuk diproduksi?**
-Ya, dengan tindakan pencegahan yang tepat. Risin, protein beracun dalam biji jarak, tidak larut dalam minyak — tetap dalam ampas biji setelah penekanan. Minyak yang ditekan aman. Namun, selalu pakai sarung tangan saat menangani biji mentah dan ampas, dan pastikan pembuangan ampas biji jarak yang tepat.
-
-**Apa saja kegunaan utama minyak jarak?**
-Minyak jarak memiliki beragam aplikasi: farmasi (laksatif, salep), kosmetik (perawatan rambut, perawatan kulit), pelumas industri, biodiesel, produksi poliuretan, dan bahan kimia khusus. Kandungan asam risinoleat membuatnya tidak dapat digantikan dalam banyak aplikasi.
-
-**Bisakah saya memproduksi minyak jarak obat dan industri?**
-Ya. Minyak jarak press dingin memenuhi standar farmasi dan kosmetik. Minyak jarak press panas cocok untuk aplikasi industri. Peralatan kami menangani kedua metode dengan parameter penekanan yang dapat disesuaikan.
-
 ## Mengapa Memilih Haonuo
 
 - **Spesialis tekanan tinggi** — Biji jarak membutuhkan tekanan tinggi berkelanjutan untuk ekstraksi menyeluruh. Press hidrolik kami menghasilkan 40-55 MPa, mencapai tingkat minyak sisa di bawah 5%.
@@ -194,7 +146,7 @@ Minyak kelapa tetap menjadi salah satu minyak nabati yang paling dicari di selur
 
 Solusi penekanan minyak kelapa Haonuo dibangun di sekitar teknologi press hidrolik khusus kami, yang unggul dalam press dingin untuk VCO maupun press panas untuk produksi hasil lebih tinggi. Berbeda dengan mesin sekrup yang menghasilkan panas dan gesekan berlebihan, mesin press hidrolik kelapa kami menerapkan tekanan tinggi seragam tanpa menurunkan kualitas minyak, menjaga kandungan asam laurat alami dan aroma kelapa yang lembut yang dihargai konsumen.
 
-Solusi lengkap ini mencakup setiap tahap dari persiapan kelapa mentah melalui filtrasi dan pemurnian opsional, memberikan Anda lini produksi siap pakai yang dapat diskalakan dari 500 kg hingga lebih dari 2.000 kg kelapa per hari.
+Solusi ini mencakup setiap tahap dari persiapan kelapa mentah hingga filtrasi, dengan pemurnian opsional ditangani peralatan yang dibeli terpisah, memberikan Anda lini produksi yang dapat diskalakan dari 500 kg hingga lebih dari 2.000 kg kelapa per hari.
 
 ## Hasil Minyak yang Diharapkan
 
@@ -217,34 +169,20 @@ Solusi lengkap ini mencakup setiap tahap dari persiapan kelapa mentah melalui fi
 3. **Press Dingin (Rute VCO)** — Masukkan kelapa yang sudah disiapkan ke dalam Press Hidrolik Minyak Kelapa. Setiap siklus membutuhkan 8-12 menit pada tekanan terkontrol. Cairan yang ditekan terpisah menjadi minyak kelapa dan air kelapa.
 4. **Press Panas (Rute Kopra)** — Untuk hasil lebih tinggi, panggang ringan kopra yang dihancurkan pada 80-100°C sebelum ditekan. Ini mengurangi viskositas dan meningkatkan aliran minyak.
 5. **Filtrasi** — Lewatkan minyak mentah melalui Press Filter Minyak Pneumatik untuk menghilangkan partikel halus dan endapan. Ini menghasilkan minyak yang jernih dan siap pasar.
-6. **Pemurnian (Opsional)** — Untuk minyak kelapa RBD, gunakan Sistem Pemurnian Minyak Nabati untuk degumming, netralisasi, pemutihan, dan deodorisasi.
+6. **Pemurnian (Opsional)** — Minyak kelapa RBD memerlukan degumming, netralisasi, pemutihan, dan deodorisasi pada lini pemurnian terpisah yang dibeli terpisah.
 7. **Pengemasan** — Isi minyak yang difiltrasi atau dimurnikan ke dalam wadah yang sesuai. VCO harus disimpan dalam kaca ambar untuk menjaga kualitas.
 
 ## Peralatan yang Direkomendasikan
 
 - **Press Hidrolik Minyak Kelapa / VCO** — Dirancang khusus untuk penekanan kelapa dengan kemampuan dual-fungsi untuk ekstraksi susu kelapa dan minyak. Barel 600mm menangani 180 kg per batch.
 - **Press Filter Minyak Pneumatik** — Sangat penting untuk memproduksi minyak kelapa yang jernih dan bebas endapan. Operasi pneumatik memastikan tekanan filtrasi yang konsisten.
-- **Sistem Pemurnian Minyak Nabati** — Diperlukan untuk produksi minyak kelapa RBD. Tersedia dalam kapasitas 1-100 ton/hari sesuai skala Anda.
-
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak kelapa?**
-Harga bervariasi berdasarkan model, kapasitas, dan konfigurasi. Hubungi Haonuo untuk penawaran yang disesuaikan berdasarkan kebutuhan produksi Anda.
-
-**Berapa kapasitas produksi harian?**
-Dengan press hidrolik standar kami beroperasi 8 jam, Anda dapat memproses 500-800 kg kopra per hari. Model heavy duty dengan konfigurasi barel ganda dapat menangani 1.500-2.000 kg per hari.
-
-**Bisakah saya memproduksi VCO dan minyak kelapa biasa?**
-Ya. Press Hidrolik Minyak Kelapa kami dirancang untuk operasi dual-guna. Untuk VCO, gunakan daging kelapa segar dengan press dingin. Untuk minyak kelapa biasa, gunakan kopra dengan press panas. Mesin yang sama menangani kedua proses.
-
-**Berapa masa simpan minyak kelapa press dingin?**
-Minyak kelapa perawan yang difiltrasi dengan benar memiliki masa simpan 2-3 tahun saat disimpan di tempat sejuk dan kering jauh dari sinar matahari langsung. Kandungan asam laurat tinggi memberikan sifat antimikroba alami.
+- **Lini pemurnian (dibeli terpisah)** — Produksi RBD memerlukan lini pemurnian independen; kami dapat memberi saran mengenai spesifikasi dan tata letak.
 
 ## Mengapa Memilih Haonuo
 
 - **15+ tahun manufaktur press hidrolik** — Kami mengkhususkan diri pada teknologi press minyak hidrolik, bukan mesin sekrup. Fokus ini berarti keahlian yang lebih dalam dan mesin yang lebih baik untuk kebutuhan spesifik Anda.
 - **Harga langsung pabrik** — Tanpa perantara. Anda mendapatkan harga kompetitif langsung dari produsen, menghemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
-- **Penyedia solusi lengkap** — Dari persiapan biji hingga minyak yang dibotolkan, kami menyediakan setiap peralatan yang Anda butuhkan, memastikan integrasi yang mulus di seluruh lini produksi Anda.
+- **Penyedia solusi inti** — Dari persiapan biji hingga minyak yang difiltrasi, kami menyediakan peralatan press inti dan membantu mengoordinasikan pemurnian yang dibeli terpisah.
 - **Dukungan instalasi global** — Insinyur kami menyediakan instalasi dan pelatihan di lokasi di seluruh dunia, memastikan mesin press minyak kelapa Anda beroperasi pada efisiensi puncak dari hari pertama.
 - **Terbukti di pasar tropis** — Peralatan penekanan minyak kelapa kami sudah berjalan dengan sukses di Filipina, Indonesia, Sri Lanka, dan India — wilayah penghasil kelapa teratas dunia.`,
 
@@ -290,23 +228,6 @@ Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makana
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan konsisten berbagai jenis biji. Sangat penting untuk produksi minyak press panas.
 - **Press Filter Minyak Pneumatik** — Filtrasi volume tinggi yang sesuai dengan throughput press komersial. Menghasilkan minyak yang jernih dan siap pasar.
 
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak komersial?**
-Mesin press minyak komersial kami tersedia dalam berbagai konfigurasi dari barel tunggal hingga barel ganda dengan aksesoris lengkap. Kami menawarkan harga langsung pabrik yang menghemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Ceritakan tentang setup produksi Anda dan kami akan menyiapkan penawaran paket komersial.
-
-**Apa press minyak terbaik untuk penggunaan komersial?**
-Untuk sebagian besar operasi komersial, kami merekomendasikan Heavy Duty (HN365) dengan konfigurasi barel ganda. Ini menawarkan keseimbangan yang baik antara gaya press, throughput, dan keserbagunaan. Jika pasar Anda menuntut minyak press dingin premium, Cold Press (HN426) adalah pilihan yang lebih baik.
-
-**Berapa banyak minyak yang dapat dihasilkan press komersial per hari?**
-Dengan konfigurasi barel ganda beroperasi 8-10 jam, model komersial kami memproses 2.000-5.000 kg biji per hari. Output minyak aktual tergantung pada jenis biji: sekitar 900-2.500 liter minyak wijen, 800-2.000 liter minyak kacang tanah, atau 1.100-3.100 liter minyak bunga matahari per hari.
-
-**Apakah Anda menawarkan lini produksi komersial lengkap?**
-Ya. Kami menyediakan lini produksi siap pakai lengkap termasuk pemrosesan biji, pemanggangan, penekanan, filtrasi, dan pemurnian opsional. Insinyur kami dapat merancang tata letak yang dioptimalkan untuk fasilitas dan persyaratan produksi Anda.
-
-**Apa perbedaan antara barel tunggal dan ganda?**
-Konfigurasi barel ganda memiliki dua ruang penekanan independen yang beroperasi secara bersamaan, secara efektif menggandakan throughput Anda. Kedua barel dapat memproses jenis biji yang sama atau berbeda pada saat yang sama. Peningkatan jejak minimal dibandingkan dengan peningkatan produksi.
-
 ## Mengapa Memilih Haonuo
 
 - **Throughput kelas komersial** — Konfigurasi barel ganda menghasilkan kapasitas pemrosesan 2.000-5.000 kg/hari, memenuhi permintaan operasi komersial yang mapan.
@@ -343,14 +264,13 @@ Solusi penekanan minyak biji kapas Haonuo Machinery dirancang untuk tantangan un
 | Peralatan | Model | Tujuan |
 |---|---|---|
 | Press Hidrolik Heavy Duty | HN365 (365T) | Penekanan utama biji kapas |
-| Screw Pre-Press Expeller | HN-CG60 | Pra-penekanan untuk operasi skala besar |
 | Press Filter Minyak Pneumatik | HN-10SL | Filtrasi minyak mentah |
-| Sistem Pemurnian Minyak Nabati | Kustom | Penghilangan gossypol dan pemurnian |
+| Lini pemurnian (dibeli terpisah) | Kustom | Penghilangan gossypol dan pemurnian; peralatan independen |
 
 ## Mengapa Memilih Haonuo untuk Produksi Minyak Biji Kapas
 
 - **Konstruksi heavy duty** — HN365 kami dibangun untuk sifat berserat dan abrasif dari pemrosesan biji kapas
-- **Lini produksi lengkap** — Dari penghilangan serat hingga pemurnian, kami menyediakan rantai peralatan penuh
+- **Lini produksi inti** — Dari penghilangan serat hingga filtrasi, kami menyediakan rantai penekanan penuh dan membantu mengoordinasikan pemurnian yang dibeli terpisah untuk penghilangan gossypol
 - **Terbukti di pasar Afrika** — Mesin kami beroperasi dengan sukses di Nigeria, Ghana, dan Tanzania
 - **Harga terjangkau** — Harga langsung pabrik membuat produksi minyak biji kapas profesional dapat diakses
 - **Jaringan dukungan lokal** — Suku cadang tersedia dari stok, dukungan teknis melalui WhatsApp secara real-time`,
@@ -398,9 +318,9 @@ Hubungi Haonuo untuk setup produksi minyak biji rami yang disesuaikan dengan per
 
 Produksi minyak skala industri menuntut peralatan yang menghasilkan throughput maksimum, minyak sisa minimum, dan kualitas konsisten di ribuan ton produksi per tahun. **Mesin press minyak industri** harus cukup tangguh untuk operasi 24/7 sambil mempertahankan presisi yang diperlukan untuk efisiensi ekstraksi optimal.
 
-Solusi press minyak industri Haonuo dibangun di sekitar Press Hidrolik Ultra High Pressure (HN500) dan High Pressure (HN480) kami — mesin paling bertenaga dalam lini kami. Sistem **press hidrolik industri** ini menghasilkan gaya press berkelanjutan hingga 60 MPa, mencapai tingkat minyak sisa di bawah 5% bahkan pada biji minyak paling menantang. Dikombinasikan dengan Sistem Pemurnian Minyak Nabati kami, kami menghasilkan lini produksi lengkap dari 1 hingga 100 ton per hari.
+Solusi press minyak industri Haonuo dibangun di sekitar Press Hidrolik Ultra High Pressure (HN500) dan High Pressure (HN480) kami — mesin paling bertenaga dalam lini kami. Sistem **press hidrolik industri** ini menghasilkan gaya press berkelanjutan hingga 60 MPa, mencapai tingkat minyak sisa di bawah 5% bahkan pada biji minyak paling menantang. Kami menyediakan lini inti penekanan dan filtrasi dari 1 hingga 100 ton per hari, dan membantu mengintegrasikan peralatan pemurnian yang dibeli terpisah saat minyak jadi RBD diperlukan.
 
-Solusi ini dirancang untuk fasilitas produksi minyak skala besar, kilang minyak, dan operasi agribisnis yang membutuhkan throughput kelas industri, keandalan, dan kualitas minyak jadi.
+Solusi ini dirancang untuk fasilitas produksi minyak skala besar, operasi yang menambah kapasitas penekanan, dan grup agribisnis yang membutuhkan throughput serta keandalan kelas industri.
 
 ## Hasil Minyak yang Diharapkan
 
@@ -418,7 +338,7 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, kilang minyak,
 - **Tekanan ultra-tinggi**: Hingga 60 MPa untuk efisiensi ekstraksi maksimal
 - **Minyak sisa di bawah 4%**: Tingkat ekstraksi kompetitif pada sebagian besar bahan
 - **Opsi barel ganda**: Proses 5.000+ kg biji per hari
-- **Pemurnian lengkap**: Sistem pemurnian 1-100 T/D untuk minyak jadi RBD
+- **Koordinasi pemurnian**: minyak jadi RBD menggunakan lini pemurnian terpisah yang dibeli terpisah; kami memberi saran mengenai spesifikasi dan tata letak
 - **Mampu 24/7**: Konstruksi heavy duty untuk operasi industri kontinu
 
 ## Proses yang Direkomendasikan
@@ -428,7 +348,7 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, kilang minyak,
 3. **Kondisioning** — Sesuaikan kelembapan dan suhu biji untuk penekanan optimal. Operasi industri biasanya menggunakan sistem kondisioning kontinu.
 4. **Press Tekanan Tinggi** — Masukkan biji yang sudah disiapkan ke dalam Press Hidrolik Ultra High Pressure (HN500) atau High Pressure (HN480). Konfigurasi barel ganda memungkinkan operasi hampir kontinu pada 5.000+ kg/hari.
 5. **Filtrasi Industri** — Lewatkan minyak mentah melalui Press Filter Minyak Pneumatik untuk filtrasi kelas industri.
-6. **Pemurnian** — Proses minyak yang difiltrasi melalui Sistem Pemurnian Minyak Nabati untuk degumming, netralisasi, pemutihan, dan deodorisasi. Tersedia dalam kapasitas 1-100 T/D.
+6. **Pemurnian (dibeli terpisah)** — Untuk minyak jadi RBD, minyak yang difiltrasi melalui degumming, netralisasi, pemutihan, dan deodorisasi pada lini pemurnian independen (1-100 T/D), yang kami bantu spesifikasikan dan integrasikan.
 7. **Kontrol Kualitas** — Terapkan QC komprehensif dengan pengujian laboratorium untuk keasaman, nilai peroksida, warna, dan parameter lain yang diperlukan untuk standar minyak komersial.
 8. **Pengemasan & Distribusi** — Kemas minyak jadi dalam wadah curah, botol, atau drum untuk distribusi grosir dan ritel.
 
@@ -438,29 +358,12 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, kilang minyak,
 - **Press Hidrolik High Pressure (HN480)** — Model terkuat kedua, cocok untuk sebagian besar aplikasi penekanan industri. Keseimbangan gaya dan throughput yang sangat baik.
 - **Penghancur Biji Industri (Tipe 370)** — Mesin pemrosesan biji heavy duty yang dirancang untuk throughput skala industri.
 - **Press Filter Minyak Pneumatik** — Filtrasi kelas industri untuk klarifikasi minyak volume tinggi.
-- **Sistem Pemurnian Minyak Nabati (1-100 T/D)** — Lini pemurnian lengkap untuk memproduksi minyak jadi RBD. Tersedia dalam kapasitas 1 hingga 100 ton per hari.
-
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak industri?**
-Sistem press minyak industri kami tersedia dalam berbagai konfigurasi dari press barel tunggal hingga lini produksi lengkap dengan penghancur industri, filtrasi, dan sistem pemurnian. Kami menyediakan penawaran proyek terperinci berdasarkan persyaratan spesifik Anda. Kirimkan detail proyek Anda untuk proposal yang disesuaikan.
-
-**Berapa kapasitas maksimum sistem industri Anda?**
-Model Ultra High Pressure kami (HN500) dengan konfigurasi barel ganda memproses 5.000+ kg biji per hari. Dikombinasikan dengan Sistem Pemurnian Minyak Nabati kami, kami menghasilkan lini produksi lengkap dari 1 hingga 100 ton per hari minyak jadi.
-
-**Apakah Anda menyediakan instalasi dan pelatihan?**
-Ya. Untuk peralatan skala industri, kami menyediakan layanan instalasi, commissioning, dan pelatihan operator di lokasi secara lengkap. Insinyur kami bepergian ke fasilitas Anda di seluruh dunia untuk memastikan lini produksi Anda beroperasi pada efisiensi puncak dari hari pertama.
-
-**Bisakah Anda menyediakan lini produksi minyak siap pakai lengkap?**
-Ya. Kami menyediakan solusi siap pakai lengkap dari penerimaan biji hingga minyak yang dikemas, termasuk pemrosesan biji, penekanan, filtrasi, pemurnian, dan pengemasan. Tim teknik kami merancang tata letak dan mengintegrasikan semua peralatan untuk operasi yang mulus.
-
-**Berapa tingkat minyak sisa untuk penekanan industri?**
-Model Ultra High Pressure kami mencapai tingkat minyak sisa di bawah 4% untuk sebagian besar bahan, dan di bawah 5% untuk biji minyak paling menantang sekalipun. Ini jauh lebih baik daripada sistem mesin sekrup yang biasanya meninggalkan 6-10% minyak sisa.
+- **Lini pemurnian (dibeli terpisah)** — Minyak jadi RBD memerlukan lini pemurnian independen 1-100 T/D; kami menyediakan spesifikasi, koordinasi tata letak, dan dukungan integrasi.
 
 ## Mengapa Memilih Haonuo
 
 - **Efisiensi ekstraksi maksimal** — Press hidrolik ultra-tinggi kami mencapai tingkat minyak sisa di bawah 4%, mengekstrak lebih banyak minyak dari setiap ton bahan baku dan langsung meningkatkan keuntungan Anda.
-- **Solusi siap pakai lengkap** — Dari penerimaan biji hingga minyak yang dikemas, kami merancang, menyediakan, dan menginstal lini produksi lengkap. Satu pemasok, satu kontak, integrasi yang mulus.
+- **Solusi siap pakai inti** — Dari penerimaan biji hingga minyak mentah yang difiltrasi, kami merancang, menyediakan, dan menginstal lini penekanan lengkap dengan satu kontak, serta mengoordinasikan pemurnian yang dibeli terpisah bila diperlukan.
 - **Dukungan instalasi global** — Insinyur kami menyediakan instalasi dan pelatihan di lokasi di seluruh dunia, memastikan sistem industri Anda beroperasi pada efisiensi puncak dari commissioning.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Tanpa markup perusahaan perdagangan pada investasi enam digit.
 - **Terbukti pada skala industri** — Sistem press minyak industri kami beroperasi di fasilitas skala besar di India, Indonesia, Nigeria, Mesir, dan Brasil — memproses ribuan ton biji minyak setiap tahun.`,
@@ -504,20 +407,6 @@ Solusi ini mendukung press dingin (untuk minyak sawi Kachi Ghani premium) dan pr
 - **Press Hidrolik Heavy Duty (HN365)** — Direkomendasikan untuk operasi yang lebih besar dengan persyaratan throughput harian yang lebih tinggi.
 - **Pengukus Biji Listrik** — Dirancang khusus untuk pengukusan biji sawi dengan kontrol suhu presisi. Sangat penting untuk produksi minyak sawi press panas.
 - **Press Filter Minyak Pneumatik** — Filtrasi efisien untuk minyak sawi yang bersih dan siap pasar dengan tenaga kerja minimal.
-
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak sawi?**
-Mesin press minyak sawi kami tersedia dalam berbagai model, ukuran barel, dan konfigurasi. Kami menawarkan harga langsung pabrik yang menghemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Minta penawaran yang disesuaikan untuk setup Anda.
-
-**Apa itu minyak sawi Kachi Ghani?**
-Kachi Ghani adalah istilah India tradisional untuk minyak sawi press dingin, diekstrak tanpa panas atau bahan kimia. Ini mempertahankan rasa pedas alami, aroma, dan sifat nutrisi biji sawi. Minyak Kachi Ghani dijual dengan harga premium di pasar India.
-
-**Apakah bisnis press minyak sawi menguntungkan?**
-Ya, bisa. Minyak sawi dikonsumsi setiap hari oleh ratusan juta orang di Asia Selatan. India sendiri memproduksi lebih dari 8 juta ton minyak sawi setiap tahun. Permintaan yang konsisten dan biaya bahan baku yang relatif rendah menjadikan press minyak sawi sebagai usaha yang berpotensi menguntungkan, meskipun pengembalian aktual tergantung pada kondisi pasar lokal, biaya bahan baku, dan efisiensi produksi.
-
-**Bisakah saya menggunakan mesin yang sama untuk sawi dan biji lain?**
-Ya. Press hidrolik kami dapat memproses biji sawi, wijen, kacang tanah, biji bunga matahari, dan banyak bahan pembawa minyak lainnya. Cukup sesuaikan parameter penekanan untuk setiap jenis biji.
 
 ## Mengapa Memilih Haonuo
 
@@ -565,23 +454,6 @@ Solusi ini dirancang untuk produsen minyak zaitun Mediterania, Timur Tengah, dan
 - **Press Hidrolik Dingin (HN426)** — Dirancang khusus untuk press dingin dengan kontrol suhu di bawah 60°C. Sangat penting untuk memproduksi minyak zaitun extra virgin asli yang memenuhi standar kualitas internasional.
 - **Press Filter Minyak Pneumatik** — Menyediakan filtrasi yang dapat dikontrol untuk minyak zaitun. Dapat disesuaikan untuk filtrasi minimal (mempertahankan lebih banyak rasa) atau filtrasi halus (kejernihan maksimal).
 
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak zaitun?**
-Mesin press minyak zaitun kami tersedia dalam berbagai konfigurasi dari model press dingin hingga model berkapasitas tinggi. Kami menawarkan harga langsung pabrik tanpa markup perantara. Ceritakan tujuan produksi Anda untuk penawaran yang disesuaikan.
-
-**Bagaimana press hidrolik dibandingkan dengan ekstraksi minyak zaitun tradisional?**
-Ekstraksi minyak zaitun tradisional menggunakan hammer mill untuk menghancurkan zaitun menjadi pasta, lalu sentrifuge untuk memisahkan minyak. Press hidrolik kami lebih sederhana, lebih terjangkau, dan cocok untuk produsen kecil hingga menengah. Ini memproduksi minyak zaitun extra virgin press dingin asli tanpa kompleksitas dan biaya sistem sentrifuge.
-
-**Apa yang membuat minyak zaitun extra virgin berbeda dari minyak zaitun biasa?**
-Minyak zaitun extra virgin (EVOO) adalah kelas tertinggi, diproduksi dengan press dingin tanpa pemrosesan atau pemurnian kimia. Harus memiliki keasaman di bawah 0,8% dan lulus evaluasi sensorik untuk kesegaran buah, kepahitan, dan kepedasan. Press hidrolik dingin kami secara khusus dirancang untuk memproduksi minyak yang memenuhi standar EVOO.
-
-**Seberapa cepat zaitun harus ditekan setelah panen?**
-Idealnya dalam 24 jam. Zaitun mulai teroksidasi segera setelah panen, dan keterlambatan lebih dari 48 jam secara signifikan menurunkan kualitas minyak. Jika penekanan segera tidak memungkinkan, simpan zaitun dalam wadah berventilasi pada suhu dingin.
-
-**Bisakah saya menekan zaitun dari varietas berbeda bersamaan?**
-Ya, mencampur varietas umum dilakukan dan dapat menghasilkan minyak yang sangat baik. Banyak minyak zaitun premium adalah campuran varietas yang saling melengkapi. Namun, jika Anda ingin memproduksi minyak varietas tunggal untuk pasar premium, tekan setiap varietas secara terpisah.
-
 ## Mengapa Memilih Haonuo
 
 - **Spesialis press dingin** — Model HN426 kami mempertahankan suhu di bawah 60°C, memproduksi minyak zaitun extra virgin press dingin asli yang memenuhi standar kualitas internasional.
@@ -596,7 +468,7 @@ Minyak inti sawit adalah minyak yang sangat serbaguna yang berasal dari inti (bi
 
 Solusi penekanan minyak inti sawit Haonuo dibangun di sekitar teknologi press hidrolik tekanan tinggi kami, yang sangat cocok untuk inti sawit yang keras dan berlemak tinggi yang menantang mesin sekrup konvensional. **Mesin ekstraksi minyak inti sawit** kami menerapkan tekanan tinggi berkelanjutan yang mengekstrak minyak secara menyeluruh dari inti yang dihancurkan, mencapai tingkat minyak sisa di bawah 5% — jauh lebih baik daripada mesin sekrup yang biasanya meninggalkan 6-8% minyak sisa.
 
-Solusi ini mencakup proses lengkap dari pemisahan inti melalui penekanan, filtrasi, dan pemurnian opsional, memungkinkan Anda memproduksi minyak inti sawit kelas makanan dan kelas industri.
+Solusi ini mencakup proses dari pemisahan inti melalui penekanan dan filtrasi, dengan pemurnian opsional ditangani peralatan yang dibeli terpisah, memungkinkan Anda memproduksi minyak inti sawit kelas makanan dan kelas industri.
 
 ## Hasil Minyak yang Diharapkan
 
@@ -620,7 +492,7 @@ Solusi ini mencakup proses lengkap dari pemisahan inti melalui penekanan, filtra
 4. **Penghancuran** — Hancurkan inti sawit kering menjadi potongan kecil (2-4 mm) menggunakan penghancur biji. Langkah ini kritis untuk ekstraksi minyak yang efisien.
 5. **Press Hidrolik** — Masukkan inti yang dihancurkan ke dalam Press Hidrolik Heavy Duty atau Ultra High Pressure. Terapkan tekanan tinggi berkelanjutan selama 10-15 menit per batch.
 6. **Filtrasi** — Lewatkan minyak inti sawit mentah melalui Press Filter Minyak Pneumatik untuk minyak yang jernih dan bersih.
-7. **Pemurnian (Opsional)** — Untuk minyak inti sawit kelas makanan, gunakan Sistem Pemurnian Minyak Nabati untuk memproduksi minyak inti sawit RBD.
+7. **Pemurnian (Opsional)** — Minyak inti sawit kelas makanan RBD memerlukan lini pemurnian terpisah yang dibeli terpisah.
 8. **Pengemasan** — Kemas minyak jadi dalam wadah yang sesuai. Minyak inti sawit memadat pada suhu di bawah 25°C.
 
 ## Peralatan yang Direkomendasikan
@@ -628,90 +500,106 @@ Solusi ini mencakup proses lengkap dari pemisahan inti melalui penekanan, filtra
 - **Press Hidrolik Heavy Duty (HN365)** — Menyediakan tekanan tinggi yang diperlukan untuk ekstraksi minyak inti sawit. Direkomendasikan untuk operasi kecil hingga menengah.
 - **Press Hidrolik Ultra High Pressure (HN500)** — Menghasilkan tekanan maksimal untuk tingkat minyak sisa kompetitif. Cocok untuk operasi yang lebih besar yang mencari hasil maksimal.
 - **Press Filter Minyak Pneumatik** — Filtrasi efisien untuk minyak inti sawit yang bersih dengan endapan minimal.
-- **Sistem Pemurnian Minyak Nabati** — Diperlukan untuk memproduksi minyak inti sawit RBD kelas makanan. Tersedia dalam kapasitas 1-100 ton/hari.
-
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak inti sawit?**
-Mesin press minyak inti sawit kami tersedia dalam berbagai konfigurasi dari model heavy duty hingga ultra-high-pressure. Harga tergantung pada ukuran barel, gaya press, dan apakah Anda membutuhkan peralatan filtrasi dan pemurnian. Hubungi kami untuk solusi yang disesuaikan.
-
-**Apa perbedaan antara minyak sawit dan minyak inti sawit?**
-Minyak sawit berasal dari daging buah (mesokarp) dan berwarna oranye-kemerahan, kaya beta-karoten. Minyak inti sawit berasal dari biji (inti) di dalam buah dan berwarna putih kekuningan, dengan profil asam lemak yang berbeda. Minyak inti sawit lebih mirip minyak kelapa dan digunakan dalam konfeksi, kosmetik, dan pembuatan deterjen.
-
-**Bisakah saya menekan buah sawit dan inti sawit pada mesin yang sama?**
-Press hidrolik kami dapat memproses keduanya, tetapi buah sawit dan inti sawit membutuhkan metode persiapan dan parameter penekanan yang berbeda. Buah sawit membutuhkan pre-perlakuan yang berbeda (sterilisasi dan pencernaan) dibandingkan inti sawit (pemecahan, pemisahan, dan penghancuran).
-
-**Apakah press minyak inti sawit menguntungkan?**
-Ya. Minyak inti sawit dijual dengan harga premium di atas minyak sawit mentah karena kandungan asam laurat dan aplikasi beragamnya dalam makanan, kosmetik, dan oleokimia. Memproses inti secara lokal daripada mengekspornya mentah secara signifikan meningkatkan pendapatan.
+- **Lini pemurnian (dibeli terpisah)** — Minyak inti sawit RBD kelas makanan memerlukan lini pemurnian independen; kami dapat memberi saran mengenai spesifikasi dan tata letak.
 
 ## Mengapa Memilih Haonuo
 
 - **Spesialis tekanan tinggi** — Inti sawit membutuhkan tekanan penekanan lebih tinggi daripada kebanyakan biji minyak. Press hidrolik kami menghasilkan 40-55 MPa tekanan berkelanjutan untuk ekstraksi menyeluruh.
 - **Minyak sisa di bawah 5%** — Model ultra-high-pressure kami mencapai tingkat minyak sisa kompetitif, artinya lebih banyak minyak di tangki Anda dan lebih sedikit yang tersisa di ampas.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
-- **Lini pemrosesan lengkap** — Dari pemisahan inti hingga minyak yang dimurnikan, kami menyediakan setiap komponen untuk operasi produksi minyak inti sawit yang terintegrasi penuh.
+- **Lini pemrosesan terintegrasi** — Dari pemisahan inti hingga minyak yang difiltrasi, kami menyediakan peralatan penekanan inti dan membantu mengoordinasikan pemurnian yang dibeli terpisah untuk operasi yang terintegrasi penuh.
 - **Terbukti di Asia Tenggara** — Mesin press minyak inti sawit kami beroperasi dengan sukses di Indonesia, Malaysia, dan Nigeria — negara penghasil minyak sawit terbesar di dunia.`,
 
   'peanut-oil-pressing': `## Ringkasan
 
-Minyak kacang tanah (juga dikenal sebagai minyak kacang tanah/groundnut) adalah salah satu minyak goreng yang paling banyak dikonsumsi secara global, khususnya di seluruh China, India, dan Asia Tenggara. Berinvestasi pada **mesin press minyak kacang tanah** berkualitas adalah langkah pertama menuju bisnis ekstraksi minyak kacang tanah yang menguntungkan, baik Anda melayani pasar lokal maupun mengekspor minyak kacang tanah press dingin premium.
+Minyak kacang tanah adalah minyak goreng sehari-hari di Afrika Barat — Nigeria salah satu produsen kacang tanah terbesar di dunia — dan permintaannya sama kuatnya di India, Tiongkok, serta Asia Tenggara. **Mesin press minyak kacang** hidrolik memungkinkan pabrik minyak kecil dan menengah memeras minyak panas yang aromatik atau minyak cold press premium langsung dari biji kupasan, baik untuk pasar lokal maupun pembeli ekspor.
 
-Solusi penekanan minyak kacang tanah Haonuo dirancang di sekitar teknologi press hidrolik yang menghasilkan minyak dengan hasil luar biasa dari kacang tanah. Berbeda dengan mesin sekrup yang dapat memanasakan minyak secara berlebihan dan menurunkan kualitas, **mesin ekstraksi minyak kacang tanah** hidrolik kami menerapkan tekanan tinggi terkontrol yang menjaga rasa kacang alami dan nilai gizi sambil mencapai tingkat minyak sisa di bawah 5%.
+Solusi pengepresan kacang Haonuo dibangun di atas teknologi press hidrolik. Berbeda dengan expeller ulir yang menimbulkan panas gesek dan dapat menghanguskan minyak, **mesin ekstraksi minyak kacang tanah** kami menerapkan tekanan statis terkendali. Minyak tetap di bawah suhu hangus, rasa kacang alami terjaga, dan sisa minyak di bungkil biasanya berada di kisaran **6-8%** (pengujian pabrik Haonuo pada kacang tanah dan wijen berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan sekitar 10-12% pada press barrel berlubang konvensional.
 
-Solusi ini mendukung press dingin (untuk minyak kacang tanah kaya nutrisi premium) dan press panas dengan pemanggangan (untuk minyak goreng aromatik dengan hasil lebih tinggi), memberikan fleksibilitas untuk menargetkan segmen pasar dan titik harga yang berbeda.
+Setiap press hidrolik Haonuo menangani **dua rute di satu mesin yang sama**: cold press untuk minyak premium kaya nutrisi, dan press panas setelah pengovenan untuk aroma lebih kuat dan 3-5% lebih banyak minyak per batch. Perbedaannya sepenuhnya pada persiapan biji — itulah sebabnya proses tujuh langkah di bawah ini penting.
 
-## Hasil Minyak yang Diharapkan
+## Perkiraan Hasil Minyak
 
-| Bahan Baku | Kandungan Minyak | Hasil Press yang Diharapkan | Tingkat Minyak Sisa |
+| Bahan baku | Kandungan minyak | Perkiraan hasil | Sisa minyak di bungkil |
 |---|---|---|---|
-| Kacang Tanah Tanpa Kulit (Mentah) | 45-55% | 40-48% | ≤ 5% |
-| Kacang Tanah Tanpa Kulit (Panggang) | 45-55% | 43-50% | ≤ 4% |
-| Kacang Tanah Dengan Kulit | 25-35% | 20-30% | ≤ 6% |
+| Biji kupasan, dioven (press panas) | 45-55% | 40-48% | 6-8% |
+| Biji kupasan, mentah (cold press) | 45-55% | 38-44% | 7-9% |
+| Kacang berkulit (tidak disarankan) | 25-35%* | 20-30% | 8-10%+ |
 
-**Faktor utama yang mempengaruhi hasil:**
-- **Pengupasan**: Selalu kupas kacang tanah sebelum ditekan — kulit menyerap minyak dan mengurangi hasil secara signifikan
-- **Varietas**: Varietas kacang tanah berminyak tinggi (misalnya Virginia, Spanish) menghasilkan lebih banyak minyak daripada tipe runner
-- **Kandungan kelembapan**: Kelembapan penekanan optimal adalah 6-8%
-- **Pemanggangan**: Pra-pemanggangan pada 130-160°C meningkatkan hasil 3-5% dan mengembangkan rasa
+\*Angka kandungan minyak kacang berkulit tergerus oleh massa kulit; kulit juga menyerap minyak saat pengepresan, itulah sebabnya pengupasan wajib.
 
-## Proses yang Direkomendasikan
+**Faktor kunci yang memengaruhi hasil:**
 
-1. **Pembersihan & Pengupasan** — Hilangkan batu, kotoran, dan kulit dari kacang tanah. Pengupasan sangat kritis — kulit menyerap minyak dan mengurangi hasil dan kualitas. Penghancur biji kami dapat membantu dengan pengupasan.
-2. **Penghancuran (Opsional)** — Hancurkan ringan kacang tanah yang sudah dikupas untuk meningkatkan luas permukaan untuk penekanan yang lebih efisien.
-3. **Pemanggangan (Untuk Press Panas)** — Panggang kacang tanah pada 130-160°C selama 20-30 menit menggunakan Panci Pemanggangan Minyak Termal. Ini mengembangkan aroma kacang khas dan meningkatkan hasil minyak. Lewati untuk minyak press dingin.
-4. **Press Hidrolik** — Masukkan kacang tanah yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Barel berdiameter dalam 390mm menangani 100 kg per batch dengan siklus 35-45 menit.
-5. **Filtrasi** — Lewatkan minyak kacang tanah mentah melalui Press Filter Minyak Pneumatik untuk menghilangkan endapan dan partikel halus.
-6. **Pengendapan** — Biarkan minyak yang difiltrasi mengendap selama 12-24 jam. Pengendapan alami menghasilkan minyak yang lebih jernih.
-7. **Pengemasan** — Botolkan minyak kacang tanah yang sudah jadi. Minyak press dingin harus disimpan dalam botol kaca gelap untuk menjaga kualitas.
+- **Pengupasan** — menekan kacang berkulit memangkas hasil 15-25% dan menggelapkan minyak.
+- **Varietas** — varietas tinggi minyak (Virginia, Spanish) mengungguli tipe runner.
+- **Kelembapan** — biji yang masuk barrel sebaiknya 4-6% untuk press panas, 6-7% untuk cold press.
+- **Pengovenan** — pengondisian sekitar 130°C (120-150°C) membangun aroma kacang dan menaikkan hasil 3-5%.
+- **Desain barrel** — barrel beralur tipe batang mengalirkan minyak lewat area jauh lebih besar daripada barrel berlubang, biasanya mengekstraksi 2-3% lebih banyak minyak per batch.
+
+## Proses Produksi Minyak Kacang 7 Langkah
+
+Prosesnya sama untuk setiap lini hidrolik; hanya langkah pengovenan yang dinyalakan atau dimatikan tergantung Anda membuat minyak press panas atau cold press.
+
+### Langkah 1 — Pembersihan
+
+Alirkan polong panen melalui ayakan pembersih atau penampi untuk membuang batu, gumpalan tanah, debu, dan polong muda. Batu menggores barrel dan memperpendek umurnya; debu dan sisa tanaman berakhir menjadi endapan dalam minyak. Dua menit membersihkan menghemat berjam-jam filtrasi.
+
+### Langkah 2 — Pengupasan
+
+Alirkan polong melalui **mesin pengupas kacang** khusus dan pilah biji yang pecah. Kulit keras dan berpori — menyerap minyak begitu tekanan diterapkan, jadi menekan berkulit kehilangan 15-25% minyak dan memberi rasa kayu yang kasar pada bungkil maupun minyak. Biarkan selaput merah menempel kecuali pembeli meminta biji blansir; selaput tipis merah lolos pengepresan tanpa masalah.
+
+### Langkah 3 — Penghancuran / Pembelahan
+
+Hancurkan biji kupasan menjadi butiran 4-6 mm, atau alirkan melalui roller pembelah menjadi serpihan tipis. Memecah dinding sel sebelum ditekan memperpendek jalur keluar minyak: minyak mengalir lebih cepat, batch selesai lebih awal, dan sisa minyak di bungkil turun. Untuk bengkel kecil, penghancuran kasar sudah cukup; pabrik yang mengincar hasil maksimal membelah (flaking).
+
+### Langkah 4 — Pengondisian & Pengovenan (khusus press panas)
+
+Untuk minyak panas yang aromatik, oven atau kondisikan dengan uap biji pada **sekitar 130°C (rentang 120-150°C) selama 20-30 menit** di wajan pemanggang minyak termal. Jaket minyak termal memanaskan secara merata, sehingga tidak ada titik gosong yang menggelapkan minyak. Pengovenan memecah sel minyak, menurunkan viskositas, dan membentuk aroma kacang panggang khas. Hentikan segera setelah biji berwarna emas muda dan mengeluarkan aroma kacang. **Lewati langkah ini sepenuhnya untuk minyak cold press.**
+
+### Langkah 5 — Penyesuaian kelembapan
+
+Periksa kelembapan sebelum setiap batch. Biji press panas harus masuk barrel pada **4-6%**; biji cold press pada **6-7%**, karena minyak dingin sulit mengalir dari biji yang terlalu kering. Biji terlalu basah menghasilkan minyak keruh dan teremulsi yang berbusa saat digoreng dan daya simpannya buruk; biji terlalu kering menimbulkan debu, menyumbat alur barrel, dan melepas minyak secara lambat. Koreksi dengan beberapa menit pengovenan tambahan (terlalu basah) atau pengukusan/semprotan air ringan lalu didiamkan (terlalu kering).
+
+### Langkah 6 — Pengepresan hidrolik
+
+Muat 100 kg biji siap olah ke barrel 390 mm pada press standar **HN325**, atau **HN365** untuk kerja stasiun ganda selang-seling, lalu mulai siklus. Tekanan naik hingga 60 MPa (HN325) pada kue press; barrel beralur mengalirkan minyak terus-menerus selagi kue memadat. Kacang oven menyelesaikan satu batch dalam **30-60 menit**; batch cold press berjalan lebih lama pada suhu lebih rendah. Keluarkan bungkil yang sudah padat, muat ulang, dan ulangi.
+
+### Langkah 7 — Filtrasi, pengendapan, dan pembotolan
+
+Minyak mentah langsung dialirkan dari press ke **filter press pneumatik**, yang membuang partikel halus bungkil dengan tenaga kerja minimal. Diamkan minyak terfilter mengendap alami selama **12-24 jam**, lalu pisahkan lapisan atas yang jernih dari endapan dasar. Botolkan dalam wadah gelap tertutup — kaca gelap untuk minyak cold press premium — dan simpan di tempat sejuk. Minyak kacang yang diolah dengan benar tahan 18-24 bulan.
+
+**Sekilas:** Pembersihan → Pengupasan → Penghancuran/Pembelahan → Pengondisian (hanya press panas) → Kelembapan 4-6% → Pengepresan → Filtrasi & Pengendapan.
 
 ## Peralatan yang Direkomendasikan
 
-- **Press Hidrolik Standar (HN325)** — Cocok untuk produksi minyak kacang tanah kecil hingga menengah. Barel berdiameter dalam 390mm memproses 100 kg per batch dengan hasil yang sangat baik.
-- **Press Hidrolik Heavy Duty (HN365)** — Direkomendasikan untuk operasi yang lebih besar. Gaya press lebih tinggi dan opsi barel ganda untuk throughput yang meningkat.
-- **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan kacang konsisten, sangat penting untuk minyak kacang tanah press panas aromatik.
-- **Press Filter Minyak Pneumatik** — Filtrasi otomatis untuk minyak kacang tanah yang jernih dan siap pasar dengan tenaga kerja minimal.
+| Tahap | Peralatan | Catatan |
+|---|---|---|
+| Pengepresan (inti) | **Mesin Press Minyak Hidrolik Standar HN325** | Gaya 325 ton, 60 MPa, 100 kg/batch di barrel 390 mm; mesin awal standar pabrik minyak kacang |
+| Pengepresan (peningkatan) | **Mesin Press Minyak Hidrolik HN365** | Gaya 365 ton, stasiun ganda selang-seling; untuk batch sepanjang hari dan kapasitas harian lebih tinggi |
+| Pengovenan | **Wajan Pemanggang Minyak Termal** | Panas termal merata di 120-150°C; wajib untuk minyak press panas, dilewati untuk cold press |
+| Filtrasi | **Filter Press Pneumatik** | Membuang partikel halus otomatis; minyak jernih siap diendapkan dan dibotolkan |
+| Persiapan | Mesin pengupas kacang + penghancur/pembelah | Kami memberi saran model kompatibel yang cocok dengan tonase Anda |
 
-## Pertanyaan yang Sering Diajukan
+Untuk bengkel di atas 2,5 ton/hari, konfigurasi barrel ganda HN325/HN365 dan press kelas HN400 yang lebih besar memperpendek hari kerja; beri tahu kami target ton per hari dan kami akan menentukan ukuran lini.
 
-**Berapa harga mesin press minyak kacang tanah?**
-Mesin press minyak kacang tanah kami tersedia dalam berbagai konfigurasi dari model standar hingga model heavy duty. Harga tergantung pada ukuran barel, gaya press, dan apakah Anda membutuhkan lini produksi lengkap dengan pemanggangan dan filtrasi.
+<!-- yield-block -->
+### Hasil dari 100 kg kacang kupasan
 
-**Bisakah saya menekan kacang tanah dengan kulitnya?**
-Kami sangat menyarankan untuk mengupas kacang tanah sebelum ditekan. Kulit kacang tanah menyerap minyak selama penekanan, mengurangi hasil Anda 15-25% dan mempengaruhi kualitas minyak. Penghancur biji kami dapat membantu proses pengupasan.
+| Output | Press panas (oven) | Cold press |
+|---|---|---|
+| Minyak mentah | 40-48 kg (≈43-52 L) | 38-44 kg (≈41-48 L) |
+| Bungkil | ≈48-56 kg | ≈50-58 kg |
 
-**Apa perbedaan antara minyak kacang tanah press dingin dan press panas?**
-Minyak kacang tanah press dingin mempertahankan lebih banyak vitamin E, fitosterol, dan rasa kacang alami. Ini dijual dengan harga premium di pasar makanan kesehatan. Minyak kacang tanah press panas memiliki aroma panggang yang lebih kuat yang disukai dalam masakan China dan India, dan menghasilkan 3-5% lebih banyak minyak per batch.
-
-**Berapa lama minyak kacang tanah bertahan?**
-Minyak kacang tanah yang difiltrasi dan disimpan dengan benar memiliki masa simpan 18-24 bulan. Minyak kacang tanah press dingin harus disimpan di tempat sejuk dan gelap. Minyak kacang tanah yang dimurnikan bertahan lebih lama karena penghilangan senyawa reaktif.
+*Angka khas untuk kacang terkupas baik dan terkondisi benar pada setelan mesin standar; berdasarkan pengujian pabrik Haonuo pada kacang tanah berkadar air 6-8%, hasil aktual bervariasi menurut varietas, kelembapan, dan setelan siklus. Liter mengasumsikan densitas minyak sekitar 0,92 kg/L.*
+<!-- /yield-block -->
 
 ## Mengapa Memilih Haonuo
 
-- **Keahlian minyak kacang tanah yang terbukti** — Press hidrolik kami secara khusus dioptimalkan untuk penekanan kacang tanah, mencapai tingkat minyak sisa di bawah 5% — jauh lebih baik daripada mesin sekrup.
-- **Fleksibilitas press dingin/panas ganda** — Satu mesin melayani pasar minyak kacang tanah press dingin premium dan press panas aromatik.
-- **Harga langsung pabrik** — Beli langsung dari produsen. Tanpa markup perusahaan perdagangan berarti Anda hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
-- **Lini produksi lengkap** — Dari pembersihan dan pemanggangan hingga penekanan, filtrasi, dan pengemasan, kami menyediakan setiap komponen untuk operasi yang mulus.
-- **Dipercaya di pasar utama** — Mesin press minyak kacang tanah kami berjalan dengan sukses di China, India, Nigeria, dan Senegal — negara penghasil kacang tanah terbesar di dunia.`,
+- **Hidrolik, bukan ulir** — tekanan statis menjaga minyak di bawah suhu hangus; tanpa rasa gosong, dan sisa minyak 6-8% alih-alih 10-12%.
+- **Satu mesin, dua produk** — beralih antara minyak kacang cold press premium dan press panas aromatik hanya dengan mengubah persiapan.
+- **Lini lengkap dari satu pemasok** — saran pengupasan dan persiapan, pemanggang, press, dan filter yang serasi sebagai satu lini seimbang.
+- **Langsung pabrik, dibangun untuk lokasi Anda** — harga FOB Qingdao, syarat pembayaran dikonfirmasi di faktur proforma, kustomisasi tegangan gratis (415 V/50 Hz, 380 V/60 Hz atau standar lokal Anda), model standar siap dalam 15-25 hari kerja.
+- **Diuji sebelum dikirim** — setiap press dijalankan pada tekanan kerja penuh dan diperiksa dari kebocoran sebelum dikemas, dengan manual bahasa Inggris, panduan video daring, dan suku cadang tersedia.`,
 
   'sesame-oil-pressing': `## Ringkasan
 
@@ -746,23 +634,9 @@ Solusi ini mendukung press dingin (untuk minyak wijen kaya nutrisi premium) dan 
 
 ## Peralatan yang Direkomendasikan
 
-- **Press Hidrolik Minyak Wijen** — Dirancang khusus untuk wijen dengan desain barel dan kurva tekanan yang dioptimalkan. Mencapai tingkat minyak sisa biasanya di bawah 5% dalam pengujian internal kami (hasil bervariasi berdasarkan kualitas biji dan kondisi penekanan).
+- **Press Hidrolik Minyak Wijen** — Dirancang khusus untuk wijen dengan desain barel dan kurva tekanan yang dioptimalkan. Mencapai tingkat minyak sisa biasanya di bawah 5% dalam pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8% (hasil bervariasi menurut jenis biji dan persiapan).
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan konsisten. Sangat penting untuk memproduksi minyak wijen panggang aromatik dengan rasa premium.
 - **Press Filter Minyak Pneumatik** — Menghasilkan minyak wijen jernih seperti kristal dengan filtrasi otomatis. Mengurangi tenaga kerja dan memastikan kualitas konsisten.
-
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak wijen?**
-Mesin press hidrolik minyak wijen kami tersedia dalam berbagai model, ukuran barel, dan konfigurasi barel tunggal atau ganda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
-
-**Bisakah saya memproduksi minyak wijen press dingin dan panggang?**
-Ya. Press hidrolik minyak wijen kami menangani produksi minyak wijen press dingin dan press panas. Cukup lewati langkah pemanggangan untuk minyak press dingin, atau panggang biji terlebih dahulu untuk minyak wijen panggang aromatik. Parameter penekanan dapat disesuaikan untuk setiap metode.
-
-**Apa perbedaan antara minyak wijen putih dan hitam?**
-Minyak wijen putih adalah minyak goreng standar yang populer dalam masakan India dan Asia Tenggara. Minyak wijen hitam memiliki rasa yang lebih kuat dan lebih beraroma tanah dan dihargai dalam masakan China dan Korea untuk penggunaan kuliner dan obat. Keduanya dapat diproduksi pada peralatan kami.
-
-**Bagaimana minyak wijen harus disimpan?**
-Simpan minyak wijen di tempat sejuk dan gelap dalam wadah tertutup rapat. Minyak wijen press dingin memiliki masa simpan sekitar 12-18 bulan. Minyak wijen panggang bertahan 6-12 bulan karena senyawanya lebih reaktif. Pendinginan memperpanjang masa simpan untuk kedua jenis.
 
 ## Mengapa Memilih Haonuo
 
@@ -812,20 +686,6 @@ Solusi ini secara khusus dirancang untuk kondisi operasi Afrika Barat, dengan ko
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu pemanggangan presisi sangat kritis untuk pemrosesan kacang shea. Panci pemanggangan kami memastikan hasil yang konsisten.
 - **Press Filter Minyak Pneumatik** — Menghasilkan mentega shea bersih dan murni tanpa partikel kacang dan endapan.
 
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press mentega shea?**
-Mesin press mentega shea kami tersedia dalam berbagai konfigurasi dari model heavy duty hingga ultra-high-pressure dengan barel ganda. Kami menawarkan harga langsung pabrik dan dapat menyesuaikan paket berdasarkan kebutuhan produksi Anda.
-
-**Bisakah press hidrolik menggantikan ekstraksi mentega shea tradisional?**
-Ya, dan dengan keuntungan signifikan. Press hidrolik kami mengekstrak 15-25% lebih banyak mentega daripada metode penguleni tangan tradisional, sambil membutuhkan jauh lebih sedikit tenaga kerja dan air. Kualitasnya juga lebih konsisten, memenuhi standar kelas kosmetik dan makanan internasional.
-
-**Apa perbedaan antara mentega shea yang tidak dimurnikan dan dimurnikan?**
-Mentega shea yang tidak dimurnikan (mentah) mempertahankan warni gading alami, aroma kacang, dan semua vitamin dan nutrisi. Ini dijual dengan harga tertinggi di pasar kosmetik. Mentega shea yang dimurnikan diproses untuk menghilangkan warna dan bau, membuatnya cocok untuk aplikasi industri makanan dan formulasi kosmetik putih.
-
-**Apakah press mentega shea bisnis yang baik di Afrika Barat?**
-Ya. Permintaan mentega shea global tumbuh 6-8% per tahun, didorong oleh industri kosmetik dan konfeksi. Afrika Barat memproduksi lebih dari 600.000 ton kacang shea setiap tahun, dan pengolahan nilai tambah (menekan mentega alih-alih mengekspor kacang mentah) secara signifikan meningkatkan pendapatan produsen lokal.
-
 ## Mengapa Memilih Haonuo
 
 - **Dibangun untuk mentega shea** — Press hidrolik tekanan tinggi kami menghasilkan tekanan berkelanjutan 40-60 MPa yang dibutuhkan ekstraksi mentega shea, mencapai tingkat lemak sisa di bawah 5%.
@@ -873,23 +733,6 @@ Solusi ini cocok untuk produksi tingkat desa, operasi kios pasar, toko kecil, da
 - **Penghancur Biji Kecepatan Tinggi** — Pra-menghancurkan biji untuk penekanan lebih efisien. Sangat berguna untuk kacang tanah, biji bunga matahari, dan biji keras lainnya.
 - **Press Filter Minyak Pneumatik** — Menghasilkan minyak yang jernih dan siap pasar. Sangat penting untuk menjual minyak dengan harga premium.
 
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak kecil?**
-Press Hidrolik Standar kami (HN325) menawarkan salah satu mesin press minyak kelas profesional paling terjangkau di pasar. Setup lengkap termasuk penghancur biji dan press filter juga tersedia. Dapatkan harga personal Anda hari ini.
-
-**Berapa kapasitas harian press minyak kecil?**
-HN325 dapat memproses 500-1.500 kg biji per hari tergantung jenis biji dan jam operasi (8-12 jam). Ini setara dengan sekitar 200-700 liter minyak per hari, tergantung jenis biji.
-
-**Apakah mudah dioperasikan untuk pemula?**
-Ya. Press hidrolik kami dirancang untuk operasi sederhana. Satu orang dapat mengelola seluruh proses penekanan dengan pelatihan minimal. Kami menyediakan manual operasi terperinci dan pelatihan video dengan setiap mesin. Sebagian besar operator menjadi mahir dalam 1-2 hari.
-
-**Biji apa saja yang bisa saya tekan pada mesin kecil?**
-HN325 kami menangani wijen, kacang tanah, bunga matahari, sawi, kelapa (kopra), almond, biji rami, dan banyak biji pembawa minyak lainnya. Anda dapat beralih antar jenis biji hanya dengan membersihkan barel dan menyesuaikan parameter penekanan.
-
-**Berapa banyak ruang yang saya butuhkan?**
-HN325 membutuhkan sekitar 2-3 meter persegi ruang lantai. Setup lengkap dengan penghancur dan press filter butuh sekitar 6-8 meter persegi. Ini membuatnya cocok untuk bengkel rumah, toko kecil, dan kios pasar.
-
 ## Mengapa Memilih Haonuo
 
 - **Biaya masuk kompetitif** — Model HN325 kami menawarkan jalur paling terjangkau menuju penekanan minyak kelas profesional, dengan harga langsung pabrik yang menghemat Anda dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
@@ -904,9 +747,9 @@ Kedelai adalah salah satu tanaman minyak terpenting di dunia, menyumbang lebih d
 
 ### Mengapa Memilih Haonuo untuk Produksi Minyak Kedelai
 
-**Lini Produksi Lengkap** — Dari pembersihan biji hingga minyak yang dimurnikan, kami menyediakan setiap peralatan yang Anda butuhkan untuk fasilitas produksi minyak kedelai lengkap.
+**Lini Produksi Inti** — Dari pembersihan biji hingga minyak mentah yang difiltrasi, kami menyediakan peralatan penekanan inti dan membantu mengoordinasikan pemurnian yang dibeli terpisah untuk fasilitas produksi minyak kedelai yang lengkap.
 
-**Teknologi Terbukti** — Sistem press hidrolik kami dengan pre-press expeller opsional telah diuji dengan kedelai di lebih dari 50 negara, menghasilkan hasil yang konsisten.
+**Teknologi Terbukti** — Sistem press hidrolik kami telah diuji dengan kedelai di lebih dari 50 negara, menghasilkan hasil yang konsisten.
 
 **Skala Fleksibel** — Baik Anda memproses 100kg atau 10 ton per hari, kami memiliki konfigurasi peralatan yang tepat untuk volume produksi Anda.
 
@@ -961,7 +804,7 @@ Solusi ini menangani baik varietas bunga matahari berminyak tinggi maupun konfek
 3. **Pemanggangan** — Panggang inti tanpa kulit pada 120-150°C selama 15-25 menit menggunakan Panci Pemanggangan Minyak Termal. Ini meningkatkan aliran dan hasil minyak. Untuk minyak press dingin, lewati pemanggangan.
 4. **Press Hidrolik** — Masukkan biji bunga matahari yang sudah disiapkan ke dalam Press Hidrolik Standar atau Heavy Duty. Barel 390mm memproses 100 kg per batch dengan siklus 35-45 menit.
 5. **Filtrasi** — Lewatkan minyak bunga matahari mentah melalui Press Filter Minyak Pneumatik untuk minyak yang jernih dan siap pasar.
-6. **Pemurnian (Opsional)** — Untuk minyak bunga matahari yang dimurnikan, gunakan Sistem Pemurnian Minyak Nabati untuk memproduksi minyak goreng berwarna terang dan bercita rasa netral.
+6. **Pemurnian (Opsional)** — Minyak bunga matahari yang dimurnikan memerlukan degumming, pemutihan, dan deodorisasi pada lini pemurnian terpisah yang dibeli terpisah, untuk memproduksi minyak goreng berwarna terang dan bercita rasa netral.
 7. **Pengemasan** — Botolkan minyak yang sudah jadi. Minyak bunga matahari press dingin harus disimpan dalam wadah gelap untuk mencegah oksidasi.
 
 ## Peralatan yang Direkomendasikan
@@ -970,20 +813,6 @@ Solusi ini menangani baik varietas bunga matahari berminyak tinggi maupun konfek
 - **Press Hidrolik Heavy Duty (HN365)** — Direkomendasikan untuk operasi yang lebih besar dengan opsi barel ganda untuk throughput lebih tinggi.
 - **Panci Pemanggangan Minyak Termal** — Kontrol suhu presisi untuk pemanggangan konsisten. Sangat penting untuk memaksimalkan hasil dari biji bunga matahari.
 - **Press Filter Minyak Pneumatik** — Filtrasi otomatis untuk minyak bunga matahari yang jernih dan premium.
-
-## Pertanyaan yang Sering Diajukan
-
-**Berapa harga mesin press minyak bunga matahari?**
-Mesin press minyak bunga matahari kami tersedia dalam berbagai konfigurasi dari model standar hingga model heavy duty dengan barel ganda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
-
-**Apakah saya perlu menghilangkan kulit biji bunga matahari sebelum ditekan?**
-Penghilangan kulit sangat direkomendasikan. Kulit biji bunga matahari menyerap 10-15% minyak selama penekanan, secara signifikan mengurangi hasil Anda. Penghancur biji kami dapat menangani penghilangan kulit secara efisien. Namun, jika peralatan penghilangan kulit tidak tersedia, Anda dapat menekan biji utuh dengan hasil lebih rendah.
-
-**Apa perbedaan antara minyak bunga matahari press dingin dan yang dimurnikan?**
-Minyak bunga matahari press dingin mempertahankan lebih banyak vitamin E, fitosterol, dan rasa alami. Ini memiliki warna keemasan dan rasa kacang, dijual dengan harga premium di pasar makanan kesehatan. Minyak bunga matahari yang dimurnikan lebih terang warnanya, memiliki rasa netral, dan titik asap lebih tinggi, membuatnya lebih serbaguna untuk memasak.
-
-**Varietas biji bunga matahari mana yang terbaik untuk penekanan minyak?**
-Varietas berminyak tinggi dengan kandungan minyak 45-50% adalah yang paling cocok. Varietas penekanan populer termasuk Peredovik, VNIIMK, dan HAOL 414. Varietas berbiji hitam biasanya memiliki kandungan minyak lebih tinggi daripada tipe konfeksi bergaris.
 
 ## Mengapa Memilih Haonuo
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Coconut Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Coco
@@ -12,9 +12,8 @@ description:
   ar: آلة عصر زيت جوز الهند الاحترافية لاستخراج زيت جوز الهند البكر. تقنية الضغط الهيدروليكي على البارد مع عائد عالي.
   id: Mesin press minyak kelapa profesional untuk ekstraksi minyak kelapa perawan. Teknologi press hidrolik dingin dengan hasil tinggi.
 recommendedProducts:
-  - coconut-oil-hydraulic-press
+  - cold-press-hydraulic-oil-press
   - pneumatic-oil-filter-press
-  - edible-oil-refining-system
 processSteps:
   - step: Coconut Preparation
     description: De-shell and grate fresh coconuts, or use copra (dried coconut meat)
@@ -23,7 +22,7 @@ processSteps:
   - step: Filtration
     description: Filter the pressed oil using the Pneumatic Oil Filter Press for clear, pure oil
   - step: Refining (Optional)
-    description: For RBD coconut oil, use the Edible Oil Refining System
+    description: For RBD coconut oil, refining is done on a separate refining line sourced independently
 processStepsFr:
   - step: Préparation de la noix de coco
     description: Décoquer et râper les noix de coco fraîches, ou utiliser le coprah (chair de coco séchée)
@@ -32,7 +31,7 @@ processStepsFr:
   - step: Filtration
     description: Filtrer l'huile pressée à l'aide de la presse filtrante pneumatique pour obtenir une huile claire et pure
   - step: Raffinage (Optionnel)
-    description: Pour l'huile de coco RBD, utiliser le système de raffinage d'huile alimentaire
+    description: Pour l'huile de coco RBD, le raffinage se fait sur une ligne de raffinage séparée, approvisionnée indépendamment
 processStepsAr:
   - step: تحضير جوز الهند
     description: نزع القشرة وبشر جوز الهند الطازج، أو استخدام جوز الهند المجفف (الكوبرا)
@@ -41,7 +40,7 @@ processStepsAr:
   - step: الترشيح
     description: ترشيح الزيت المعصور باستخدام المضغوط الترشيحي الهوائي للحصول على زيت صافٍ نقي
   - step: التكرير (اختياري)
-    description: لزيت جوز الهند RBD، استخدام نظام تكرير الزيت الغذائي
+    description: لزيت جوز الهند RBD، يتم التكرير على خط تكرير منفصل يُشترى بشكل مستقل
 processStepsId:
   - step: Persiapan Kelapa
     description: Kupas dan parut kelapa segar, atau gunakan kopra (daging kelapa kering)
@@ -50,7 +49,7 @@ processStepsId:
   - step: Filtrasi
     description: Saring minyak yang ditekan menggunakan Pneumatic Oil Filter Press untuk minyak yang jernih dan murni
   - step: Pemurnian (Opsional)
-    description: Untuk minyak kelapa RBD, gunakan Edible Oil Refining System
+    description: Untuk minyak kelapa RBD, pemurnian dilakukan pada lini pemurnian terpisah yang dibeli terpisah
 faq:
   - question: What is the difference between VCO and RBD coconut oil?
     answer: VCO (Virgin Coconut Oil) is cold-pressed without chemical processing, retaining natural coconut aroma and nutrients. RBD (Refined, Bleached, Deodorized) coconut oil undergoes refining for neutral taste and higher smoke point.
@@ -62,6 +61,9 @@ faq:
     answer: Contact us for current pricing based on your model and capacity requirements. Send us your specifications for a detailed quote.
   - question: How long does it take to press one batch of coconut?
     answer: Each pressing cycle takes approximately 30-40 minutes (hot press) or approximately 2 hours (cold press) depending on the material and pressure settings, allowing for efficient batch production.
+  - question: "What is the shelf life of cold-pressed coconut oil?"
+    answer: "Properly filtered virgin coconut oil has a shelf life of 2-3 years when stored in a cool, dry place away from direct sunlight. The high lauric acid content provides natural antimicrobial properties."
+
 faqFr:
   - question: Quelle est la différence entre l'huile de coco VCO et RBD ?
     answer: L'huile VCO (Vierge de Coco) est pressée à froid sans traitement chimique, conservant l'arôme naturel et les nutriments de la coco. L'huile RBD (Raffinée, Blanchie, Désodorisée) subit un raffinage pour un goût neutre et un point de fumée plus élevé.
@@ -73,6 +75,9 @@ faqFr:
     answer: Contactez-nous pour obtenir les prix actuels en fonction de votre modèle et de vos besoins en capacité. Envoyez-nous vos spécifications pour un devis détaillé.
   - question: Combien de temps faut-il pour presser un lot de coco ?
     answer: Chaque cycle de pressage prend environ 8 à 12 minutes selon le matériau et les réglages de pression, permettant une production par lots efficace.
+  - question: "Quelle est la durée de conservation de l'huile de coco pressée à froid ?"
+    answer: "L'huile de coco vierge correctement filtrée a une durée de conservation de 2 à 3 ans lorsqu'elle est stockée dans un endroit frais et sec à l'abri de la lumière directe du soleil. La forte teneur en acide laurique offre des propriétés antimicrobiennes naturelles."
+
 faqAr:
   - question: ما الفرق بين زيت جوز الهند VCO و RBD؟
     answer: زيت جوز الهند البكر (VCO) مضغوط على البارد بدون معالجة كيميائية، يحتفظ برائحة جوز الهند الطبيعية ومغذياته. زيت جوز الهند المكرر والمبيض ومنزوع الرائحة (RBD) يخضع للتكرير للحصول على طعم محايد ونقطة دخان أعلى.
@@ -84,6 +89,9 @@ faqAr:
     answer: تواصلوا معنا للحصول على الأسعار الحالية بناءً على طرازكم ومتطلبات السعة. أرسلوا لنا مواصفاتكم للحصول على عرض أسعار مفصل.
   - question: كم يستغرق عصر دفعة واحدة من جوز الهند؟
     answer: تستغرق كل دورة عصر حوالي 8-12 دقيقة حسب المادة وإعدادات الضغط، مما يسمح بإنتاج دفعات فعال.
+  - question: "ما هي مدة صلاحية زيت جوز الهند المعصور على البارد؟"
+    answer: "زيت جوز الهند البكر المرشح بشكل صحيح له مدة صلاحية من 2 إلى 3 سنوات عند تخزينه في مكان بارد وجاف بعيداً عن أشعة الشمس المباشرة. المحتوى العالي من حمض اللوريك يوفر خصائص مضادة للميكروبات طبيعية."
+
 faqId:
   - question: Apa perbedaan antara minyak kelapa VCO dan RBD?
     answer: VCO (Virgin Coconut Oil) di-press dingin tanpa proses kimia, mempertahankan aroma kelapa alami dan nutrisi. RBD (Refined, Bleached, Deodorized) menjalani pemurnian untuk rasa netral dan titik asap yang lebih tinggi.
@@ -95,6 +103,9 @@ faqId:
     answer: Hubungi kami untuk harga terkini berdasarkan model dan kebutuhan kapasitas Anda. Kirimkan spesifikasi Anda untuk penawaran harga rinci.
   - question: Berapa lama waktu yang dibutuhkan untuk menekan satu batch kelapa?
     answer: Setiap siklus penekanan membutuhkan waktu sekitar 8-12 menit tergantung bahan dan pengaturan tekanan, memungkinkan produksi batch yang efisien.
+  - question: "Berapa masa simpan minyak kelapa press dingin?"
+    answer: "Minyak kelapa perawan yang difiltrasi dengan benar memiliki masa simpan 2-3 tahun saat disimpan di tempat sejuk dan kering jauh dari sinar matahari langsung. Kandungan asam laurat tinggi memberikan sifat antimikroba alami."
+
 seoKeywords:
   - coconut oil press machine
   - coconut oil machine
@@ -112,7 +123,7 @@ Coconut oil remains one of the most sought-after vegetable oils worldwide, drive
 
 Haonuo's coconut oil pressing solution is built around our specialized hydraulic press technology, which excels at both cold pressing for VCO and hot pressing for higher-yield production. Unlike screw presses that generate excessive heat and friction, our hydraulic coconut oil press machine applies uniform high pressure without degrading oil quality, preserving the natural lauric acid content and delicate coconut aroma that consumers value.
 
-This complete solution covers every stage from raw coconut preparation through filtration and optional refining, giving you a turnkey production line that can be scaled from 500 kg to over 2,000 kg of coconut per day.
+This solution covers every stage from raw coconut preparation through filtration, with optional refining handled by separately sourced equipment, giving you a production line that can be scaled from 500 kg to over 2,000 kg of coconut per day.
 
 ## Oil Yield Expectations
 
@@ -137,33 +148,31 @@ Understanding expected yields is critical for business planning. Below are typic
 3. **Cold Pressing (VCO Route)** — Feed prepared coconut into the Coconut Oil Hydraulic Press. Each cycle takes 30-40 minutes (hot press) or approximately 2 hours (cold press) at controlled pressure. The pressed liquid separates into coconut oil and coconut water.
 4. **Hot Pressing (Copra Route)** — For higher yield, lightly roast crushed copra at 80-100°C before pressing. This reduces viscosity and improves oil flow.
 5. **Filtration** — Pass the crude oil through the Pneumatic Oil Filter Press to remove fine particles and sediment. This produces clear, market-ready oil.
-6. **Refining (Optional)** — For RBD coconut oil, use the Edible Oil Refining System to degum, neutralize, bleach, and deodorize the oil.
+6. **Refining (Optional)** — RBD coconut oil requires degumming, neutralizing, bleaching and deodorizing in a separate refining line, sourced independently.
 7. **Packaging** — Fill filtered or refined oil into appropriate containers. VCO should be stored in amber glass to preserve quality.
 
 ## Recommended Equipment
 
 - **Coconut Oil / VCO Hydraulic Press** — Purpose-built for coconut pressing with dual-function capability for both coconut milk and oil extraction. The 390mm barrel handles 100 kg per batch.
 - **Pneumatic Oil Filter Press** — Essential for producing clear, sediment-free coconut oil. Pneumatic operation ensures consistent filtration pressure.
-- **Edible Oil Refining System** — Required for RBD coconut oil production. Available in 1-100 ton/day capacities to match your scale.
-
-## Frequently Asked Questions
-
-**How much does a coconut oil press machine cost?**
-Prices vary by model, capacity, and configuration. Contact Haonuo for a customized quote based on your production needs.
-
-**What is the daily production capacity?**
-With our standard hydraulic press operating 8 hours, you can process 500-800 kg of copra per day. The heavy-duty model with double-barrel configuration can handle 1,500-2,000 kg per day.
-
-**Can I produce both VCO and regular coconut oil?**
-Yes. Our Coconut Oil Hydraulic Press is designed for dual-purpose operation. For VCO, use fresh coconut meat with cold pressing. For regular coconut oil, use copra with hot pressing. The same machine handles both processes.
-
-**What is the shelf life of cold-pressed coconut oil?**
-Properly filtered virgin coconut oil has a shelf life of 2-3 years when stored in a cool, dry place away from direct sunlight. The high lauric acid content provides natural antimicrobial properties.
+- **Refining line (sourced separately)** — RBD production requires an independent refining line; we can advise on specifications and layout.
 
 ## Why Choose Haonuo
 
 - **15+ years of hydraulic press manufacturing** — We specialize in hydraulic oil press technology, not screw presses. This focus means deeper expertise and better machines for your specific needs.
 - **Factory-direct pricing** — No middlemen. You get competitive pricing directly from the manufacturer, saving compared to trading company prices (actual savings vary).
-- **Complete solution provider** — From seed preparation to bottled oil, we supply every piece of equipment you need, ensuring smooth integration across your production line.
+- **Core solution provider** — From seed preparation to filtered oil, we supply the core pressing equipment you need and help you coordinate separately sourced refining equipment.
 - **Global installation support** — Our engineers provide on-site installation and training worldwide, ensuring your coconut oil press machine operates at peak efficiency from day one.
 - **Proven in tropical markets** — Our coconut oil pressing equipment is already running successfully in the Philippines, Indonesia, Sri Lanka, and India — the world's top coconut-producing regions.
+
+<!-- yield-block -->
+### What you get from 100 kg of coconut
+
+| Output | Hot press | Cold press (VCO) |
+|---|---|---|
+| Oil | 60-65 kg (≈65-71 L) from dried copra | ≈32-38 kg |
+| Cake/residue | ≈30-35 kg (≈33-38 L) from fresh coconut meat (VCO) | ≈≈62-68 kg |
+
+*Typical figures at standard machine settings; actual results vary with variety, maturity, moisture and cycle settings. Liters assume an oil density of approximately 0.92 kg/L. Hot-press figures are for dried copra; cold-press VCO figures are for fresh grated meat.*
+<!-- /yield-block -->
+

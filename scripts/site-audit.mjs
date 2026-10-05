@@ -228,7 +228,7 @@ for (const rel of rootAstros) {
 // 这里采用更简单、今天 404 漏页的同款检测：是否 [locale]/404 存在？是否每个关键路由在 [locale] 或静态目录中至少有一个
 const criticalRoutes = [
   '404.astro','index.astro','about.astro','contact.astro','faq.astro','catalog.astro',
-  'cold-press-oil-machine.astro','hydraulic-oil-press-machine.astro','manual-oil-press-machine.astro',
+  'cold-press-oil-machine.astro','hydraulic-oil-press-machine.astro',
   'cookie-policy.astro','privacy-policy.astro','terms-of-service.astro','services.astro','roi-calculator.astro',
   join('products','index.astro'), join('products','model-comparison.astro'),
   join('markets','index.astro'), join('solutions','index.astro'), join('resources','index.astro'),

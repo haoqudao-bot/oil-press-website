@@ -143,3 +143,16 @@ Haonuo Machinery's walnut oil pressing solution is specifically designed for pro
 - **Food-grade stainless steel option** — Available for customers requiring the highest hygiene standards
 - **Proven in Middle East markets** — Our machines are operating successfully in Saudi Arabia, UAE, and Iran
 - **1-year warranty + lifetime support** — Full coverage with spare parts shipped promptly
+
+<!-- yield-block -->
+### What you get from 100 kg of walnut kernels
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 50-60 kg (≈54-65 L) | 45-55 kg (≈49-60 L) |
+| Oil cake | ≈35-48 kg | ≈40-53 kg |
+
+*Typical figures for well-prepared walnut kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
+<!-- /yield-block -->
+
+

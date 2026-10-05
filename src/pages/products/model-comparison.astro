@@ -4,87 +4,87 @@ import { getTranslations } from '../../i18n';
 
 const t = getTranslations('en');
 
-// ===== Standard models =====
+// ===== Core range: four flagship models =====
 const models = [
   {
-    model: 'HN300', name: 'Mini', pressingForce: '300 Tons', systemPressure: '60 Mpa',
-    cakePressure: '25 Mpa/cm²', barrelDiameter: '390 mm', barrelHeight: '800 mm',
-    motorPower: '2.2 KW', weight: '1.2 / 1.5 T', dimensions: '1100×1100×2350 mm',
-    bestFor: 'Small business, startup',
-    seeds: ['Sesame', 'Peanut', 'Rapeseed', 'Tea Seed'],
-    slug: 'mini-hydraulic-oil-press', highlight: false,
-  },
-  {
-    model: 'HN325', name: 'Standard', pressingForce: '325 Tons', systemPressure: '60 Mpa',
-    cakePressure: '27.78 Mpa/cm²', barrelDiameter: '390 mm', barrelHeight: '800 mm',
-    motorPower: '2.2 KW', weight: '1.42 / 1.72 T', dimensions: '1200×1200×2450 mm',
-    bestFor: 'Most popular, versatile',
-    seeds: ['Tea Seed', 'Rapeseed', 'Peanut', 'Soybean', 'Flaxseed'],
+    model: 'HN325', name: 'Standard', pressingForce: '325 Tons', systemPressure: '60 MPa',
+    cakePressure: '27.78 MPa', barrelDiameter: '390 mm', barrelHeight: '800 mm',
+    motorPower: '2.2 KW', weight: '1.42 / 1.72 T', dimensions: '1200×1200×2450 / 2100×1200×2450 mm',
+    bestFor: 'Best seller · soft & medium seeds',
+    seeds: ['Peanut', 'Sesame', 'Rapeseed', 'Tea Seed', 'Soybean'],
     slug: 'standard-hydraulic-oil-press', highlight: true,
   },
   {
-    model: 'HN365', name: 'Heavy Duty (New)', pressingForce: '365 Tons', systemPressure: 'On request',
-    cakePressure: '30 MPa/cm²', barrelDiameter: 'On request', barrelHeight: '',
-    motorPower: 'On request', weight: 'On request', dimensions: 'On request',
-    bestFor: 'Hard seeds, commercial',
-    seeds: ['Walnut', 'Camellia', 'Peanut', 'Rapeseed', 'Flaxseed'],
+    model: 'HN365', name: 'Upgraded Heavy Duty', pressingForce: '365 Tons', systemPressure: '63 MPa',
+    cakePressure: '30 MPa', barrelDiameter: '390 mm', barrelHeight: '800 mm',
+    motorPower: '2.2 KW', weight: '2.1 / 2.5 T', dimensions: '1200×1200×2650 / 2100×1200×2650 mm',
+    bestFor: 'Hard seeds · all-day double station',
+    seeds: ['Walnut', 'Camellia', 'Peanut', 'Sesame', 'Almond'],
     slug: 'hn365-hydraulic-oil-press', highlight: true,
   },
   {
-    model: 'HN400', name: 'Medium', pressingForce: '500 Tons', systemPressure: '63 Mpa',
-    cakePressure: '38 Mpa/cm²', barrelDiameter: '390 mm', barrelHeight: '800 mm',
-    motorPower: '2.2 KW', weight: '2.0 / 2.3 T', dimensions: '1200×1200×2600 mm',
-    bestFor: 'Walnut, high oil content',
-    seeds: ['Tea Seed', 'Rapeseed', 'Peanut', 'Walnut', 'Flaxseed'],
-    slug: 'medium-hydraulic-oil-press', highlight: false,
-  },
-  {
-    model: 'HN426', name: 'Cold Press', pressingForce: '500 Tons', systemPressure: '70 Mpa',
-    cakePressure: '42 Mpa/cm²', barrelDiameter: '390 mm', barrelHeight: '800 mm',
-    motorPower: '2.2 KW', weight: '2.4 / 2.7 T', dimensions: '1200×1200×2750 mm',
-    bestFor: 'Cold press, premium quality',
-    seeds: ['Walnut', 'Almond', 'Apricot', 'Tiger Nut', 'Yellowhorn'],
+    model: 'HN426', name: 'Cold Press', pressingForce: '500 Tons', systemPressure: '70 MPa',
+    cakePressure: '42 MPa', barrelDiameter: '390 mm', barrelHeight: '800 mm',
+    motorPower: '2.2 KW', weight: '2.4 / 2.7 T', dimensions: '1200×1200×2750 / 2100×1200×2750 mm',
+    bestFor: 'Cold-press flagship · premium oil',
+    seeds: ['Walnut', 'Almond', 'Apricot', 'Camellia', 'Flaxseed'],
     slug: 'cold-press-hydraulic-oil-press', highlight: true,
   },
   {
-    model: 'HN480', name: 'Cold Press', pressingForce: '600 Tons', systemPressure: '72 Mpa',
-    cakePressure: '48 Mpa/cm²', barrelDiameter: '390 mm', barrelHeight: '800 mm',
-    motorPower: '2.2 KW', weight: '2.8 / 3.1 T', dimensions: '1300×1300×2800 mm',
-    bestFor: 'Hard seeds, max yield',
-    seeds: ['Walnut', 'Pine Nut', 'Almond', 'Sesame', 'Apricot'],
-    slug: 'ultra-high-pressure-cold-press', highlight: false,
-  },
-  {
-    model: 'HN500', name: 'Ultra High Pressure', pressingForce: '620 Tons', systemPressure: '75 Mpa',
-    cakePressure: '52 Mpa/cm²', barrelDiameter: '390 mm', barrelHeight: '800 mm',
-    motorPower: '2.2 KW', weight: '3.5 / 3.88 T', dimensions: '1200×1200×2750 mm',
-    bestFor: 'Industrial, max capacity',
-    seeds: ['All seeds', 'In-shell Walnut', 'Yellowhorn', 'Tiger Nut'],
-    slug: 'ultra-high-pressure-hydraulic-oil-press', highlight: false,
+    model: 'HN500', name: 'Ultra High Pressure', pressingForce: '620 Tons', systemPressure: '75 MPa',
+    cakePressure: '52 MPa', barrelDiameter: '390 mm', barrelHeight: '800 mm',
+    motorPower: '2.2 KW', weight: '3.5 / 3.88 T', dimensions: '1200×1200×2750 / 2100×1200×2750 mm',
+    bestFor: 'Flagship · hardest seeds, max force',
+    seeds: ['All seeds', 'In-shell Walnut', 'Copra', 'Yellowhorn', 'Tiger Nut'],
+    slug: 'ultra-high-pressure-hydraulic-oil-press', highlight: true,
   },
 ];
 
-// ===== Specialty models =====
-const specialtyModels = [
+// ===== Specialized & custom models (compact list) =====
+const customModels = [
   {
-    model: 'HN325/365 Sesame', name: 'Sesame Special', pressingForce: '325 / 365 T',
-    barrelDiameter: '300 mm', cakePressure: '47 / — MPa/cm²',
-    bestFor: 'Sesame oil specialist',
-    seeds: ['Sesame', 'In-shell Walnut', 'Tea Seed', 'Rapeseed'],
+    model: 'HN300', name: 'Mini', pressingForce: '300 Tons', cakePressure: '25 MPa',
+    note: 'Compact starter press for small workshops',
+    slug: 'mini-hydraulic-oil-press',
+  },
+  {
+    model: 'HN355', name: 'Medium (previous gen)', pressingForce: '360 Tons', cakePressure: '30.15 MPa',
+    note: 'Previous generation — succeeded by the upgraded HN365',
+    slug: 'medium-hydraulic-oil-press',
+  },
+  {
+    model: 'HN400', name: 'Medium', pressingForce: '500 Tons', cakePressure: '38 MPa',
+    note: 'High-throughput medium press for soft & medium seeds',
+    slug: 'heavy-duty-hydraulic-oil-press',
+  },
+  {
+    model: 'HN480', name: 'High Pressure', pressingForce: '560 Tons', cakePressure: 'On request',
+    note: '560 t high-pressure step-up between HN426 and HN500',
+    slug: 'high-pressure-hydraulic-oil-press',
+  },
+  {
+    model: 'HN480B', name: 'Ultra-High-Pressure Cold Press', pressingForce: '600 Tons', cakePressure: '48 MPa',
+    note: 'Custom 600 t cold-press variant of the HN426, made to order',
+    slug: 'ultra-high-pressure-cold-press',
+  },
+  {
+    model: 'HN325/365 Sesame', name: 'Sesame Special', pressingForce: '325 / 365 T', cakePressure: '47 / 30 MPa',
+    note: '300 mm small barrel, fast cycles, sesame specialist',
     slug: 'sesame-oil-hydraulic-press',
   },
   {
-    model: '300 Type Coconut', name: 'Coconut Milk', pressingForce: '300 Tons',
-    barrelDiameter: '600 mm', cakePressure: '10.83 Mpa/cm²',
-    bestFor: 'Coconut milk extraction',
-    seeds: ['Coconut Milk'],
+    model: '300 Type Coconut', name: 'Coconut Milk', pressingForce: '300 Tons', cakePressure: '10.83 MPa',
+    note: '600 mm barrel, full 304 stainless, coconut milk extraction',
     slug: 'coconut-oil-hydraulic-press',
   },
   {
-    model: 'HN325LB', name: 'Large Barrel', pressingForce: '325 Tons',
-    barrelDiameter: '630 mm', cakePressure: '10.64 Mpa/cm²',
-    bestFor: 'Oil residue, dehydration',
-    seeds: ['Oil Residue', 'Sludge', 'Dehydration'],
+    model: 'HN325S', name: 'Stainless Coconut Milk', pressingForce: '325 Tons', cakePressure: '27.78 MPa',
+    note: '304 stainless coconut milk press, food-grade wet pressing',
+    slug: 'stainless-steel-hydraulic-oil-press',
+  },
+  {
+    model: 'HN325LB', name: 'Large Barrel', pressingForce: '325 Tons', cakePressure: '10.64 MPa',
+    note: '630×1000 mm barrel (~312 L), oil residue & dehydration',
     slug: 'large-barrel-hydraulic-oil-press',
   },
 ];
@@ -103,8 +103,8 @@ const seedCards = [
     badge: 'Cold Press', badgeColor: 'blue',
     seeds: ['Tea Seed', 'Walnut', 'Flaxseed'],
     seedHint: 'Multi-seed workshop',
-    model: 'HN365 / 400', modelColor: 'steel',
-    desc: '365–410 real tons. Entry to mid cold-press for most medium seeds — bottled-oil grade.',
+    model: 'HN365', modelColor: 'steel',
+    desc: '365 tons, 30 MPa cake pressure on a vertical double-station frame — the upgrade pick for medium seeds and all-day batches.',
     href: '/products/hn365-hydraulic-oil-press/',
   },
   {
@@ -112,15 +112,15 @@ const seedCards = [
     seeds: ['Flaxseed', 'Perilla', 'Pumpkin Seed'],
     seedHint: 'Med-hard seeds',
     model: 'HN426', modelColor: 'green',
-    desc: 'Real 500 tons, 42 MPa/cm² cake pressure. Sweet spot for all medium-hard premium seeds.',
+    desc: 'Real 500 tons, 42 MPa cake pressure. Sweet spot for all medium-hard premium seeds.',
     href: '/products/cold-press-hydraulic-oil-press/',
   },
   {
     badge: 'Heavy Duty', badgeColor: 'steel',
     seeds: ['Copra', 'Hemp', 'Pine Nut'],
     seedHint: 'Hard seeds',
-    model: 'HN480 / 500', modelColor: 'steel',
-    desc: '600–630 real ton flagship. Only reliable choice for super-hard seeds. High volume → double-barrel.',
+    model: 'HN500', modelColor: 'steel',
+    desc: '620-ton flagship, 52 MPa cake pressure — the highest force in the range. First choice for super-hard seeds; double-barrel for high volume.',
     href: '/products/ultra-high-pressure-hydraulic-oil-press/',
   },
   {
@@ -128,7 +128,7 @@ const seedCards = [
     seeds: ['Sesame'],
     seedHint: 'Specialty',
     model: 'HN325/365 Sesame', modelColor: 'purple',
-    desc: '300 mm small barrel concentrates pressure at 47 MPa/cm². Fast cycle preserves aroma, max yield.',
+    desc: '300 mm small barrel concentrates pressure at 47 MPa. Fast cycle preserves aroma, max yield.',
     href: '/products/sesame-oil-hydraulic-press/',
   },
   {
@@ -169,8 +169,8 @@ const scenarioCards = [
   {
     badge: 'Cold Press', badgeColor: 'blue',
     subtitle: 'Mid workshop · variable premium seeds',
-    model: 'HN365 / 400', modelColor: 'blue',
-    desc: '365–410 real tons. Entry to mid cold-press for tea seed, walnut, flax — bottled-oil grade.',
+    model: 'HN365', modelColor: 'blue',
+    desc: '365 tons with a reinforced vertical double-station frame. The upgrade from the HN325 for tea seed, walnut and flax — bottled-oil grade.',
     href: '/products/hn365-hydraulic-oil-press/',
   },
   {
@@ -183,8 +183,8 @@ const scenarioCards = [
   {
     badge: 'Large Scale', badgeColor: 'steel',
     subtitle: 'Factory · bulk exporter',
-    model: 'HN480 / 500', modelColor: 'steel',
-    desc: '600–630 real ton flagship. Only reliable choice for super-hard seeds. Double-barrel = max cycles.',
+    model: 'HN500', modelColor: 'steel',
+    desc: '620-ton flagship with 52 MPa cake pressure. The reliable choice for super-hard seeds; double-barrel for maximum daily cycles.',
     href: '/products/ultra-high-pressure-hydraulic-oil-press/',
   },
   {
@@ -239,22 +239,22 @@ const faqLd = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
   mainEntity: [
     { '@type': 'Question', name: 'How do I choose the right Haonuo oil press model?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Pick by seed type or scenario above. Every standard model presses most oil seeds — the difference is pressing force (harder seeds need larger tonnage) and barrel config (single for startup, double for commercial). For sesame use the Sesame Special, for coconut milk use the 300 Type Coconut.' } },
+      acceptedAnswer: { '@type': 'Answer', text: 'Most buyers choose one of the four core models by seed hardness: HN325 for everyday soft seeds, HN365 for hard seeds and all-day double-station work, HN426 for premium cold pressing, and HN500 for the hardest seeds at maximum force. Specialized models cover sesame, coconut milk and oil-residue dehydration.' } },
     { '@type': 'Question', name: 'Does a higher model number mean more kg per batch?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. The model number indicates pressing force (real tonnage), not batch capacity. Every standard model from HN300 to HN500 uses the same 390 mm barrel holding up to 100 kg per batch. To press more batches per shift, add a double barrel rather than a bigger model number.' } },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. The model number indicates pressing force (real tonnage), not batch capacity. The HN325, HN426 and HN500 share the same 390 mm barrel holding up to 100 kg per batch; the HN365 is a vertical double-station frame configured to order. To run more batches per shift, choose double-barrel configuration rather than a bigger model number.' } },
     { '@type': 'Question', name: 'What is the difference between cold press and standard models?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Cold press models (HN426, HN480) run at 70+ MPa system pressure, extracting oil without pre-heating seeds. This preserves nutrients, flavor, and color for premium-grade oil. Standard models (HN325, HN365) use lower pressure and typically pre-roast seeds for faster yield at standard market prices.' } },
+      acceptedAnswer: { '@type': 'Answer', text: 'Every Haonuo hydraulic press can cold press — cold and hot pressing differ in seed preparation, not the machine. The HN426 (500 t, 42 MPa cake pressure) is the cold-press flagship for premium oil; the HN480B is a made-to-order 600 t variant for the hardest cold-press materials. The HN325 and HN365 are the usual choices when most production is hot-pressed.' } },
     { '@type': 'Question', name: 'Should I choose single or double barrel?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Single barrel is well-suited for startups testing the market. Double barrel is recommended for commercial continuous operation: one barrel presses while the other loads/unloads, eliminating idle time between batches on the same hydraulic system. The double barrel does not press two batches simultaneously.' } },
+      acceptedAnswer: { '@type': 'Answer', text: 'Single barrel is well-suited for startups testing the market. Double barrel is recommended for commercial continuous operation: one barrel presses while the other loads/unloads, eliminating idle time between batches on the same hydraulic system. The double barrel does not press two batches simultaneously. The HN365 takes this further with an alternating vertical double-station layout.' } },
     { '@type': 'Question', name: 'Can I upgrade from single to double barrel later?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. The hydraulic system is the same — you can start with a single barrel HN325 and add a second barrel later when your order volume grows. This is why many startups begin with HN300 or HN325 single barrel and upgrade to double barrel within 6-12 months.' } },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. The hydraulic system is the same — you can start with a single barrel HN325 and add a second barrel later when your order volume grows. Many startups begin with the HN300 or HN325 single barrel and upgrade to double barrel within 6-12 months.' } },
   ],
 };
 
 const allLd = [breadcrumbLd, faqLd];
 ---
 
-<BaseLayout title="Hydraulic Oil Press Model Comparison" description="Compare all Haonuo hydraulic oil press models side by side. Pick by seed type or scenario — find your model instantly. HN300 to HN500 plus sesame, coconut, sludge specialists." keywords={['oil press model comparison','hydraulic oil press comparison','HN325 vs HN426','oil press by seed type','cold press model guide','coconut oil press machine']} jsonLd={allLd}>
+<BaseLayout title="Hydraulic Oil Press Model Comparison" description="Compare the four Haonuo core-range hydraulic oil presses — HN325, HN365, HN426, HN500 — side by side by pressing force, cake pressure and seeds, plus specialized and custom models." keywords={['oil press model comparison','hydraulic oil press comparison','HN325 vs HN426','oil press by seed type','cold press model guide','coconut oil press machine']} jsonLd={allLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-3 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,8 +285,8 @@ const allLd = [breadcrumbLd, faqLd];
           <div class="text-xs text-steel-300 mt-1">Established</div>
         </div>
         <div class="text-center">
-          <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">2,000 m²</div>
-          <div class="text-xs text-steel-300 mt-1">Owned workshop</div>
+          <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">200+</div>
+          <div class="text-xs text-steel-300 mt-1">Skilled Workers &amp; Engineers</div>
         </div>
         <div class="text-center">
           <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">50+</div>
@@ -419,7 +419,7 @@ const allLd = [breadcrumbLd, faqLd];
           <span class="shrink-0 text-xl">🪣</span>
           <div>
             <h3 class="text-sm font-bold text-amber-700 mb-1">Model = Force, NOT Capacity</h3>
-            <p class="text-xs text-steel-700 leading-relaxed">Same barrel → same weight per batch. 390 mm: ≤ 100 kg/batch (HN300–HN500 all same). 300 mm small barrel: ≤ 60 kg/batch.</p>
+            <p class="text-xs text-steel-700 leading-relaxed">Same barrel → same weight per batch. Standard 390 mm models: ≤ 100 kg/batch (HN300, HN325, HN400, HN426, HN500); the HN365 double-station frame is configured to order. 300 mm sesame barrel: ≤ 60 kg/batch.</p>
           </div>
         </div>
         <div class="bg-white border border-blue-200 rounded-xl p-4 flex items-start gap-3 shadow-sm">
@@ -440,14 +440,19 @@ const allLd = [breadcrumbLd, faqLd];
     </div>
   </section>
 
-  <!-- ===== FULL SPEC TABLE (collapsible) ===== -->
+  <!-- ===== CORE RANGE SPEC TABLE ===== -->
   <section id="full-specs" class="py-10 md:py-14 scroll-mt-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <details class="bg-white rounded-2xl border border-steel-100 shadow-sm group">
+      <div class="text-center mb-8">
+        <div class="inline-block text-xs font-bold tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full mb-3">CORE RANGE — 4 FLAGSHIP MODELS</div>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">HN325 · HN365 · HN426 · HN500</h2>
+        <p class="text-steel-500 text-sm mt-2 max-w-2xl mx-auto">Ninety percent of oil mills choose from these four. Pick by pressing force and cake pressure — every one of them does both hot and cold pressing.</p>
+      </div>
+      <details open class="bg-white rounded-2xl border border-steel-100 shadow-sm group">
         <summary class="flex items-center justify-between cursor-pointer list-none p-6 md:p-8">
           <div>
-            <h2 class="font-display text-xl md:text-2xl text-charcoal-900 font-bold">Full spec comparison table</h2>
-            <p class="text-steel-500 text-sm mt-1">Tap to expand the complete model side-by-side comparison with real parameter values.</p>
+            <h2 class="font-display text-xl md:text-2xl text-charcoal-900 font-bold">Core range spec comparison</h2>
+            <p class="text-steel-500 text-sm mt-1">Complete side-by-side parameters for the four core models.</p>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
@@ -523,10 +528,61 @@ const allLd = [breadcrumbLd, faqLd];
           </table>
         </div>
       </details>
+      <p class="text-xs text-steel-500 mt-4 leading-relaxed">
+        * The HN365 is the upgraded successor to the HN355 on the vertical double-station frame (3 cm high-strength steel plate, cartridge valve block, 365 t force, 30 MPa cake pressure). Barrel, motor, weight and footprint carry over from the HN355 platform; the vertical double-station configuration and other options are confirmed on the quotation data sheet. The HN325, HN426 and HN500 share the standard 390 × 800 mm barrel at up to 100 kg per batch.
+      </p>
+
+      <!-- Specialized & custom models -->
+      <div class="mt-12">
+        <div class="text-center mb-8">
+          <div class="inline-block text-xs font-bold tracking-widest text-steel-500 bg-steel-100 px-3 py-1 rounded-full mb-3">SPECIALIZED &amp; CUSTOM</div>
+          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">Specialized &amp; made-to-order models</h2>
+          <p class="text-steel-500 text-sm mt-2 max-w-2xl mx-auto">Compact starters, previous generations and application-specific machines. Tell us your seed and target output — we will confirm whether a core model fits better.</p>
+        </div>
+        <details class="bg-white rounded-2xl border border-steel-100 shadow-sm group">
+          <summary class="flex items-center justify-between cursor-pointer list-none p-6 md:px-8 md:py-6">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-steel-100 text-charcoal-900 font-bold text-sm shrink-0">9</span>
+              <h2 class="font-display text-lg md:text-xl text-charcoal-900 font-bold">View the full specialized &amp; custom model table</h2>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-4 md:px-8 pb-8 overflow-x-auto">
+          <table class="w-full min-w-[760px] border-collapse bg-white text-sm">
+            <thead>
+              <tr class="bg-steel-900 text-white">
+                <th class="px-4 py-3 text-left font-semibold">Model</th>
+                <th class="px-4 py-3 text-center font-semibold">Pressing force</th>
+                <th class="px-4 py-3 text-center font-semibold">Cake pressure</th>
+                <th class="px-4 py-3 text-left font-semibold">Positioning</th>
+                <th class="px-3 py-3 text-center font-semibold">Page</th>
+              </tr>
+            </thead>
+            <tbody>
+              {customModels.map((m, i) => (
+                <tr class={i % 2 === 0 ? 'border-b border-steel-100 bg-steel-50/40' : 'border-b border-steel-100'}>
+                  <td class="px-4 py-3 whitespace-nowrap">
+                    <div class="font-bold text-charcoal-900">{m.model}</div>
+                    <div class="text-xs text-steel-500">{m.name}</div>
+                  </td>
+                  <td class="px-3 py-3 text-center text-steel-700 font-semibold">{m.pressingForce}</td>
+                  <td class="px-3 py-3 text-center text-steel-700">{m.cakePressure}</td>
+                  <td class="px-3 py-3 text-steel-600">{m.note}</td>
+                  <td class="px-3 py-3 text-center">
+                    <a href={`/products/${m.slug}`} class="inline-flex items-center text-xs font-semibold text-amber-600 hover:text-amber-700 whitespace-nowrap">
+                      View
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
-
-  <!-- ===== FAQ ===== -->
   <section class="py-10 md:py-14">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-8">
@@ -539,28 +595,28 @@ const allLd = [breadcrumbLd, faqLd];
             <h3 class="font-bold text-charcoal-900 text-base">How do I choose the right model?</h3>
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
-          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Pick by seed type or scenario above. Every standard model presses most oil seeds — the difference is pressing force (harder seeds need larger tonnage) and barrel config (single for startup, double for commercial). For sesame use the Sesame Special, for coconut milk use the 300 Type Coconut.</p>
+          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Most buyers choose one of the four core models by seed hardness: <b>HN325</b> for everyday soft seeds, <b>HN365</b> for hard seeds and all-day double-station work, <b>HN426</b> for premium cold pressing, and <b>HN500</b> for the hardest seeds at maximum force. Specialized models cover sesame, coconut milk and oil-residue dehydration.</p>
         </details>
         <details class="bg-white rounded-xl border border-steel-100 p-5 group shadow-sm">
           <summary class="flex items-center justify-between cursor-pointer list-none">
             <h3 class="font-bold text-charcoal-900 text-base">Does a higher model number mean more kg per batch?</h3>
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
-          <p class="mt-3 text-steel-600 text-sm leading-relaxed"><b>No.</b> Every standard model holds the same 100 kg per batch (390 mm barrel). Higher model number = more pressing force for harder seeds. To press more batches per shift, add a double barrel — not a bigger model number.</p>
+          <p class="mt-3 text-steel-600 text-sm leading-relaxed"><b>No.</b> The model number indicates pressing force, not batch capacity. The HN325, HN426 and HN500 share the same 390 mm barrel at up to 100 kg per batch; the HN365 is a vertical double-station frame configured to order. To run more batches per shift, choose double-barrel configuration — not a bigger model number.</p>
         </details>
         <details class="bg-white rounded-xl border border-steel-100 p-5 group shadow-sm">
           <summary class="flex items-center justify-between cursor-pointer list-none">
             <h3 class="font-bold text-charcoal-900 text-base">Single or double barrel?</h3>
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
-          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn't press 2 batches at once — it shares one hydraulic system between two barrels.</p>
+          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn't press 2 batches at once — it shares one hydraulic system between two barrels. The HN365 extends this with an alternating vertical double-station layout.</p>
         </details>
         <details class="bg-white rounded-xl border border-steel-100 p-5 group shadow-sm">
           <summary class="flex items-center justify-between cursor-pointer list-none">
             <h3 class="font-bold text-charcoal-900 text-base">What's the difference between cold press and hot press?</h3>
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
-          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Cold press (HN426+) extracts oil <b>without heating seeds</b> — preserves nutrients, flavor, color for premium-grade oil. Hot press roasts seeds first for faster yield at standard prices. Cold press can also do hot press; hot press cannot do cold press.</p>
+          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Every Haonuo hydraulic press can cold press — cold and hot pressing differ in <b>seed preparation, not the machine</b>. The HN426 (500 t, 42 MPa cake pressure) is the cold-press flagship for premium oil; the HN480B is a made-to-order 600 t variant for the hardest cold-press materials. The HN325 and HN365 are the usual choices when most production is hot-pressed.</p>
         </details>
         <details class="bg-white rounded-xl border border-steel-100 p-5 group shadow-sm">
           <summary class="flex items-center justify-between cursor-pointer list-none">

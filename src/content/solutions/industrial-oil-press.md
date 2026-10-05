@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Industrial Oil Press Solution
   fr: Solution de Pressage d'Huile Industrielle
@@ -7,16 +7,15 @@ title:
 seedName: industrial
 icon: industrial
 description:
-  en: Industrial oil press machine with ultra-high pressure and complete refining for large-scale oil production facilities. Industrial hydraulic oil press and oil extraction machine for high-volume oil production lines. Haonuo factory-direct price.
-  fr: Machine de pressage d'huile industrielle avec ultra-haute pression et raffinage complet. Pression hydraulique à grande échelle pour installations de production.
-  ar: آلة عصر زيت صناعية بضغط فائق العالي وتكرير كامل. ضغط هيدروليكي واسع النطاق لمنشآت الإنتاج.
-  id: Mesin press minyak industri dengan tekanan ultra tinggi dan pemurnian lengkap. Press hidrolik skala besar untuk fasilitas produksi minyak.
+  en: Industrial hydraulic oil press machine with ultra-high pressure for large-scale oil production facilities. Industrial oil press and oil extraction machine for high-volume pressing lines. Haonuo factory-direct price.
+  fr: Machine de pressage d'huile industrielle à ultra-haute pression pour les installations de production à grande échelle. Presse hydraulique industrielle pour lignes de pressage à haut volume.
+  ar: آلة عصر زيت صناعية هيدروليكية بضغط فائق لمنشآت إنتاج الزيت واسعة النطاق. معصرة زيت صناعية لخطوط العصر عالية الإنتاجية.
+  id: Mesin press minyak hidrolik industri bertekanan ultra tinggi untuk fasilitas produksi berskala besar. Mesin press minyak industri untuk lini penekanan volume tinggi.
 recommendedProducts:
   - ultra-high-pressure-hydraulic-oil-press
-  - high-pressure-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - industrial-seed-crusher
   - pneumatic-oil-filter-press
-  - edible-oil-refining-system
 processSteps:
   - step: Industrial Seed Processing
     description: Use the Industrial Seed Crusher (370 Type) for high-volume seed preparation
@@ -25,7 +24,7 @@ processSteps:
   - step: Filtration
     description: Filter using the Pneumatic Oil Filter Press for industrial-grade oil
   - step: Refining
-    description: Refine using the Edible Oil Refining System (1-100 T/D) for RBD finished oil
+    description: RBD finished oil is produced on a separate refining line, sourced independently
 processStepsFr:
   - step: Traitement industriel des graines
     description: Utiliser le broyeur industriel de graines (type 370) pour la préparation des graines à haut volume
@@ -34,7 +33,7 @@ processStepsFr:
   - step: Filtration
     description: Filtrer à l'aide de la presse filtrante pneumatique pour une huile de qualité industrielle
   - step: Raffinage
-    description: Raffiner à l'aide du système de raffinage d'huile alimentaire (1-100 T/J) pour une huile finie RBD
+    description: L'huile finie RBD est produite sur une ligne de raffinage séparée, approvisionnée indépendamment
 processStepsAr:
   - step: المعالجة الصناعية للبذور
     description: استخدام المحطم الصناعي للبذور (الطراز 370) لتحضير البذور بكميات كبيرة
@@ -43,7 +42,7 @@ processStepsAr:
   - step: الترشيح
     description: الترشيح باستخدام المضغوط الترشيحي الهوائي لزيت بجودة صناعية
   - step: التكرير
-    description: التكرير باستخدام نظام تكرير الزيت الغذائي (1-100 طن/يوم) لزيت منتهى RBD
+    description: يُنتج الزيت المنتهي RBD على خط تكرير منفصل يُشترى بشكل مستقل
 processStepsId:
   - step: Pengolahan Biji Industri
     description: Gunakan Industrial Seed Crusher (Tipe 370) untuk persiapan biji dalam jumlah besar
@@ -52,10 +51,10 @@ processStepsId:
   - step: Filtrasi
     description: Saring menggunakan Pneumatic Oil Filter Press untuk minyak kelas industri
   - step: Pemurnian
-    description: Murnikan menggunakan Edible Oil Refining System (1-100 T/D) untuk minyak jadi RBD
+    description: Minyak jadi RBD diproduksi pada lini pemurnian terpisah yang dibeli terpisah
 faq:
   - question: What is the maximum capacity of your industrial oil press?
-    answer: Our Ultra High Pressure model (HN500) with double-barrel configuration can process 1,200-2,400 kg of seeds per day per unit. Multiple units can achieve 5,000+ kg/day. Combined with our refining system, we can deliver complete 1-100 ton/day production lines.
+    answer: Our Ultra High Pressure model (HN500) with double-barrel configuration can process 1,200-2,400 kg of seeds per day per unit. Multiple units can achieve 5,000+ kg/day. We supply the core pressing and filtration line; refining equipment for RBD oil is sourced separately and we help coordinate it into 1-100 ton/day layouts.
   - question: Do you provide installation and training?
     answer: Yes, we provide complete installation, commissioning, and operator training services for industrial-scale equipment. Our engineers can travel to your facility worldwide.
   - question: What is the residual oil rate for industrial pressing?
@@ -63,10 +62,10 @@ faq:
   - question: What is the price of an industrial oil press machine?
     answer: Ask us about current model pricing. We provide detailed project quotations based on your specific requirements.
   - question: Can you supply a complete oil production line?
-    answer: Yes, we supply complete turnkey oil production lines from 1 to 100 tons per day, including seed processing, pressing, filtration, refining, and packaging equipment.
+    answer: Yes, we supply turnkey pressing lines from 1 to 100 tons per day, including seed processing, pressing, filtration, and packaging equipment. Refining equipment is sourced independently and our engineers can help integrate it into your layout.
 faqFr:
   - question: Quelle est la capacité maximale de votre presse à huile industrielle ?
-    answer: Notre modèle ultra haute pression (HN500) avec configuration double fût peut traiter plus de 5 000 kg de graines par jour. Combiné à notre système de raffinage, nous pouvons fournir des lignes de production complètes de 1 à 100 tonnes/jour.
+    answer: Notre modèle ultra haute pression (HN500) en configuration double fût peut traiter plus de 5 000 kg de graines par jour. Nous fournissons la ligne centrale de pressage et de filtration ; les équipements de raffinage pour l'huile RBD sont approvisionnés indépendamment et nous aidons à les intégrer dans des configurations de 1 à 100 tonnes/jour.
   - question: Fournissez-vous l'installation et la formation ?
     answer: Oui, nous fournissons des services complets d'installation, de mise en service et de formation des opérateurs pour les équipements à échelle industrielle. Nos ingénieurs peuvent se rendre dans votre installation partout dans le monde.
   - question: Quel est le taux d'huile résiduel pour le pressage industriel ?
@@ -74,10 +73,10 @@ faqFr:
   - question: Quel est le prix d'une machine de pressage d'huile industrielle ?
     answer: Demandez-nous les prix actuels des modèles. Nous fournissons des devis de projet détaillés basés sur vos exigences spécifiques.
   - question: Pouvez-vous fournir une ligne de production d'huile complète ?
-    answer: Oui, nous fournissons des lignes de production d'huile clé en main complètes de 1 à 100 tonnes par jour, y compris le traitement des graines, le pressage, la filtration, le raffinage et l'équipement de conditionnement.
+    answer: Oui, nous fournissons des lignes de pressage clé en main de 1 à 100 tonnes par jour, y compris le traitement des graines, le pressage, la filtration et l'équipement de conditionnement. Les équipements de raffinage sont approvisionnés indépendamment et nos ingénieurs peuvent aider à les intégrer à votre implantation.
 faqAr:
   - question: ما هي السعة القصوى لمعصرتكم الصناعية؟
-    answer: يمكن لطرازنا فائق الضغط العالي (HN500) بتكوين البرميل المزدوج معالجة أكثر من 5000 كجم من البذور يومياً. مع نظام التكرير لدينا، يمكننا تقديم خطوط إنتاج كاملة من 1 إلى 100 طن/يوم.
+    answer: يمكن لطرازنا فائق الضغط العالي (HN500) بتكوين البرميل المزدوج معالجة أكثر من 5000 كجم من البذور يومياً. نوفر خط العصر والترشيح الأساسي؛ أما معدات تكرير زيت RBD فتُشترى بشكل مستقل ونساعد في دمجها في تخطيطات من 1 إلى 100 طن/يوم.
   - question: هل توفرون التركيب والتدريب؟
     answer: نعم، نقدم خدمات تركيب وتشغيل وتدريب المشغلين الكاملة للمعدات الصناعية. يمكن لمهندسينا السفر إلى منشأتكم في أي مكان بالعالم.
   - question: ما هو معدل الزيت المتبقي للعصر الصناعي؟
@@ -85,10 +84,10 @@ faqAr:
   - question: ما هو سعر آلة العصر الصناعي؟
     answer: اسألونا عن أسعار الطرازات الحالية. نقدم عروض أسعار مشاريع مفصلة بناءً على متطلباتكم المحددة.
   - question: هل يمكنكم توفير خط إنتاج زيت كامل؟
-    answer: نعم، نوفر خطوط إنتاج زيت جاهزة بالكامل من 1 إلى 100 طن يومياً، بما في ذلك معالجة البذور والعصر والترشيح والتكرير ومعدات التعبئة.
+    answer: نعم، نوفر خطوط عصر جاهزة من 1 إلى 100 طن يومياً، بما في ذلك معالجة البذور والعصر والترشيح ومعدات التعبئة. أما معدات التكرير فتُشترى بشكل مستقل ويستطيع مهندسونا المساعدة في دمجها في مخطط منشأتكم.
 faqId:
   - question: Berapa kapasitas maksimum press minyak industri Anda?
-    answer: Model Ultra High Pressure kami (HN500) dengan konfigurasi barel ganda dapat memproses 5.000+ kg biji per hari. Dikombinasikan dengan sistem pemurnian kami, kami dapat menyediakan lini produksi lengkap 1-100 ton/hari.
+    answer: Model Ultra High Pressure kami (HN500) dengan konfigurasi barel ganda dapat memproses 5.000+ kg biji per hari. Kami menyediakan lini inti penekanan dan filtrasi; peralatan pemurnian untuk minyak RBD dibeli terpisah dan kami bantu mengintegrasikannya dalam tata letak 1-100 ton/hari.
   - question: Apakah Anda menyediakan instalasi dan pelatihan?
     answer: Ya, kami menyediakan layanan instalasi, commissioning, dan pelatihan operator lengkap untuk peralatan skala industri. Insinyur kami dapat datang ke fasilitas Anda di seluruh dunia.
   - question: Berapa tingkat minyak sisa untuk press industri?
@@ -96,7 +95,7 @@ faqId:
   - question: Berapa harga mesin press minyak industri?
     answer: Hubungi kami untuk harga model terbaru. Kami menyediakan penawaran proyek terperinci berdasarkan kebutuhan spesifik Anda.
   - question: Apakah Anda dapat menyediakan lini produksi minyak lengkap?
-    answer: Ya, kami menyediakan lini produksi minyak turnkey lengkap dari 1 hingga 100 ton per hari, termasuk pengolahan biji, penekanan, filtrasi, pemurnian, dan peralatan pengemasan.
+    answer: Ya, kami menyediakan lini penekanan turnkey dari 1 hingga 100 ton per hari, termasuk pengolahan biji, penekanan, filtrasi, dan peralatan pengemasan. Peralatan pemurnian dibeli terpisah dan insinyur kami dapat membantu mengintegrasikannya ke dalam tata letak Anda.
 seoKeywords:
   - industrial oil press machine
   - industrial oil extraction machine
@@ -113,9 +112,9 @@ order: 14
 
 Industrial-scale oil production demands equipment that delivers maximum throughput, minimum residual oil, and consistent quality across thousands of tons of production per year. An **industrial oil press machine** must be robust enough for 24/7 operation while maintaining the precision needed for optimal extraction efficiency.
 
-Haonuo's industrial oil press solution is built around our Ultra High Pressure (HN500) and High Pressure (HN480) hydraulic oil presses — the most powerful machines in our lineup. These **industrial hydraulic oil press** systems deliver sustained pressing forces up to 60 MPa, achieving residual oil rates below 5% even on the most challenging oilseeds. Combined with our Edible Oil Refining System, we deliver complete production lines from 1 to 100 tons per day.
+Haonuo's industrial oil press solution is built around our Ultra High Pressure (HN500) and High Pressure (HN480) hydraulic oil presses — the most powerful machines in our lineup. These **industrial hydraulic oil press** systems deliver sustained pressing forces up to 60 MPa, achieving residual oil rates below 5% even on the most challenging oilseeds. We supply the core pressing and filtration line from 1 to 100 tons per day, and help you integrate independently sourced refining equipment when RBD finished oil is required.
 
-This solution is designed for large-scale oil production facilities, oil refineries, and agribusiness operations that require industrial-grade throughput, reliability, and finished oil quality.
+This solution is designed for large-scale oil production facilities, operations adding pressing capacity, and agribusiness groups that require industrial-grade throughput and reliability.
 
 ## Oil Yield Expectations
 
@@ -133,7 +132,7 @@ This solution is designed for large-scale oil production facilities, oil refiner
 - **Ultra-high pressure**: Up to 60 MPa for maximum extraction efficiency
 - **Residual oil below 4%**: Competitive extraction rates on most materials
 - **Double-barrel option**: Process 5,000+ kg of seeds per day
-- **Complete refining**: 1-100 T/D refining systems for RBD finished oil
+- **Refining coordination**: RBD finished oil uses a separate refining line sourced independently; we advise on specifications and layout
 - **24/7 capable**: Heavy-duty construction for continuous industrial operation
 
 ## Recommended Process
@@ -143,7 +142,7 @@ This solution is designed for large-scale oil production facilities, oil refiner
 3. **Conditioning** — Adjust seed moisture and temperature for optimal pressing. Industrial operations typically use continuous conditioning systems.
 4. **High-Pressure Pressing** — Feed prepared seeds into the Ultra High Pressure (HN500) or High Pressure (HN480) hydraulic oil press. Double-barrel configuration enables near-continuous operation at 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) per unit. Multiple units can achieve 5,000+ kg/day.
 5. **Industrial Filtration** — Pass crude oil through the Pneumatic Oil Filter Press for industrial-grade filtration. High-volume models match press throughput.
-6. **Refining** — Process filtered oil through the Edible Oil Refining System for degumming, neutralization, bleaching, and deodorization. Available in 1-100 T/D capacities.
+6. **Refining (separately sourced)** — For RBD finished oil, the filtered oil goes through degumming, neutralization, bleaching and deodorization on an independent refining line (1-100 T/D), which we help you specify and integrate.
 7. **Quality Control** — Implement comprehensive QC with laboratory testing for acidity, peroxide value, color, and other parameters required for commercial oil standards.
 8. **Packaging & Distribution** — Package finished oil in bulk containers, bottles, or drums for wholesale and retail distribution.
 
@@ -153,24 +152,7 @@ This solution is designed for large-scale oil production facilities, oil refiner
 - **High Pressure Hydraulic Oil Press (HN480)** — Second most powerful model, suitable for most industrial pressing applications. Excellent balance of force and throughput.
 - **Industrial Seed Crusher (370 Type)** — Heavy-duty seed processing machine designed for industrial-scale throughput. Handles cleaning, crushing, and dehulling.
 - **Pneumatic Oil Filter Press** — Industrial-grade filtration for high-volume oil clarification. Matches press throughput for smooth integration.
-- **Edible Oil Refining System (1-100 T/D)** — Complete refining line for producing RBD (Refined, Bleached, Deodorized) finished oil. Available in capacities from 1 to 100 tons per day.
-
-## Frequently Asked Questions
-
-**How much does an industrial oil press machine cost?**
-Our industrial oil press systems are available in various configurations from single-barrel presses to complete production lines with industrial crusher, filtration, and refining systems. We provide detailed project quotations based on your specific requirements. Send us your project details for a customized proposal.
-
-**What is the maximum capacity of your industrial system?**
-Our Ultra High Pressure model (HN500) with double-barrel configuration processes 5,000+ kg of seeds per day. Combined with our Edible Oil Refining System, we deliver complete production lines from 1 to 100 tons per day of finished oil.
-
-**Do you provide installation and training?**
-Yes. For industrial-scale equipment, we provide complete on-site installation, commissioning, and operator training services. Our engineers travel to your facility worldwide to ensure your production line operates at peak efficiency from day one.
-
-**Can you supply a complete turnkey oil production line?**
-Yes. We supply complete turnkey solutions from seed receiving to packaged oil, including seed processing, pressing, filtration, refining, and packaging. Our engineering team designs the layout and integrates all equipment for smooth operation.
-
-**What is the residual oil rate for industrial pressing?**
-Our Ultra High Pressure model achieves residual oil rates below 4% for most materials, and below 5% for even the most challenging oilseeds. This is significantly better than screw press systems that typically leave 6-10% residual oil.
+- **Refining line (sourced separately)** — RBD finished oil requires an independent 1-100 T/D refining line; we provide specifications, layout coordination and integration support.
 
 ## Complete Production Line
 
@@ -188,27 +170,27 @@ An industrial oil production line integrates multiple processing stages into a s
 **Stage 4 — Filtration**
 → Pneumatic Oil Filter Press → Clarified oil
 
-**Stage 5 — Refining (for RBD oil)**
-→ Degumming → Neutralization → Bleaching → Deodorization → RBD finished oil
+**Stage 5 — Refining (for RBD oil, separately sourced)**
+→ Independent refining line: Degumming → Neutralization → Bleaching → Deodorization → RBD finished oil
 
 **Stage 6 — Quality Control & Packaging**
 → Lab testing (acidity, peroxide value, color) → Bottling/drum filling → Storage → Distribution
 
-A complete turnkey line from Haonuo includes all equipment, piping, electrical controls, and engineering layout design. Our engineers handle installation, commissioning, and operator training at your facility.
+Our turnkey scope covers the core pressing line — all press-line equipment, piping, electrical controls, and engineering layout design — and our engineers handle installation, commissioning, and operator training at your facility. When your project includes refining, the refining equipment is supplied by a dedicated refining manufacturer and coordinated into the same layout.
 
 ## Industrial Application Scenarios
 
 ### Large-Scale Oil Factory
-Processing 10-100 tons of oilseeds per day for wholesale and retail markets. Our HN500 double-barrel system with refining line delivers consistent RBD-grade oil that meets national and international standards. Proven in facilities across India, Indonesia, and Egypt.
+Processing 10-100 tons of oilseeds per day for wholesale and retail markets. Our HN500 double-barrel pressing line delivers consistent high-quality crude oil, and a separately sourced refining line completes the route to RBD-grade oil meeting national and international standards. Proven in facilities across India, Indonesia, and Egypt.
 
 ### Oil Refinery
 Adding pressing capacity to an existing refinery. Our hydraulic presses feed crude oil directly into your refining system. The ultra-high pressure ensures maximum crude oil yield before refining, improving overall plant efficiency by 15-20% compared to screw press feeds.
 
 ### Agribusiness & Plantation Group
-Vertically integrated operations that control the entire supply chain from plantation to packaged oil. Our complete production lines process palm kernel, coconut, sesame, and other plantation crops at industrial scale. We've equipped agribusiness groups in West Africa and Southeast Asia.
+Vertically integrated operations that control the entire supply chain from plantation to packaged oil. Our core pressing lines process palm kernel, coconut, sesame, and other plantation crops at industrial scale, integrating with independently sourced refining equipment. We've equipped agribusiness groups in West Africa and Southeast Asia.
 
 ### Export-Oriented Producer
-Producing oil for international markets that require strict quality standards (ISO, FSSAI, FDA-compliant food contact materials). Note: Our machines have not been separately certified or approved by the FDA. Our industrial systems with refining capability produce export-grade RBD oil. We provide all necessary documentation and certification support for international shipments.
+Producing oil for international markets that require strict quality standards (ISO, FSSAI, FDA-compliant food contact materials). Note: Our machines have not been separately certified or approved by the FDA. Paired with a separately sourced refining line, our pressing systems produce crude oil suitable for export-grade RBD production. We provide all necessary documentation and certification support for international shipments.
 
 ## 24/7 Continuous Operation
 
@@ -224,7 +206,7 @@ Our industrial hydraulic oil presses are engineered for demanding continuous ope
 ## Why Choose Haonuo
 
 - **Maximum extraction efficiency** — Our ultra-high-pressure hydraulic presses achieve residual oil rates below 4%, extracting more oil from every ton of raw material and directly improving your bottom line.
-- **Complete turnkey solutions** — From seed receiving to packaged oil, we design, supply, and install complete production lines. One supplier, one point of contact, smooth integration.
+- **Core turnkey solutions** — From seed receiving to filtered crude oil, we design, supply, and install the complete pressing line with one point of contact, and coordinate independently sourced refining equipment when required.
 - **Global installation support** — Our engineers provide on-site installation and training worldwide, ensuring your industrial system operates at peak efficiency from commissioning.
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary). No trading company markups on six-figure investments.
 - **Proven at industrial scale** — Our industrial oil press systems are operating in large-scale facilities across India, Indonesia, Nigeria, Egypt, and Brazil — processing thousands of tons of oilseeds annually.

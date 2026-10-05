@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿---
+---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations, type Locale } from '../../i18n';
 
@@ -50,12 +50,12 @@ const galImages = [
 
 <BaseLayout locale={currentLocale} title={t.about.title} description={
   currentLocale === 'fr'
-    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — fabricant professionnel de presses à huile hydrauliques depuis 2010. 200+ employés qualifiés, exportant vers plus de 50 pays. Presses réelles de 300 à 620 tonnes testées 48 heures avant expédition.'
+    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — fabricant professionnel de presses à huile hydrauliques depuis 2010. 200+ ouvriers et ingénieurs qualifiés, exportant vers plus de 50 pays. Presses réelles de 300 à 620 tonnes testées 48 heures avant expédition.'
     : currentLocale === 'ar'
-    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — مصنع محترف لمكابس الزيت الهيدروليكية منذ 2010. أكثر من 200 موظف ماهر، يصدّر إلى أكثر من 50 دولة. مكابس حقيقية بقدرة 300–620 طن تُختبر 48 ساعة قبل الشحن.'
+    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — مصنع محترف لمكابس الزيت الهيدروليكية منذ 2010. أكثر من 200 عامل ومهندس ماهر، يصدّر إلى أكثر من 50 دولة. مكابس حقيقية بقدرة 300–620 طن تُختبر 48 ساعة قبل الشحن.'
     : currentLocale === 'id'
-    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — produsen profesional mesin press minyak hidrolik sejak 2010. 200+ karyawan terampil, mengekspor ke lebih dari 50 negara. Press asli 300–620 ton diuji 48 jam sebelum pengiriman.'
-    : 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. 200+ skilled employees, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment.'
+    ? 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — produsen profesional mesin press minyak hidrolik sejak 2010. 200+ pekerja dan insinyur terampil, mengekspor ke lebih dari 50 negara. Press asli 300–620 ton diuji 48 jam sebelum pengiriman.'
+    : 'Shandong Haonuo Machinery Equipment Group Co., Ltd. — professional hydraulic oil press machine manufacturer since 2010. 200+ skilled workers and engineers, exporting to 50+ countries. Real 300–620 ton presses tested 48 hours before shipment.'
 } jsonLd={breadcrumbLd} overlayHeader>
   <style is:global>
     :root{

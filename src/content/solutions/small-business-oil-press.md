@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Small Business Oil Press Solution
   fr: Solution de Pressage d'Huile pour Petite Entreprise
@@ -137,23 +137,6 @@ This solution is well-suited for commercial oil mills, cooperative operations, a
 - **Standard Hydraulic Oil Press (HN325)** — Professional-grade hydraulic press with 390mm barrel. Processes 100 kg per batch, with hourly output varying by seed type. Entry-level commercial model for professional oil pressing.
 - **High Speed Seed Crusher** — Pre-crushes seeds for more efficient pressing. Essential for commercial throughput with hard seeds like peanuts and sunflower seeds.
 - **Pneumatic Oil Filter Press** — Produces clear, market-ready oil. Essential for selling oil at premium prices in commercial markets.
-
-## Frequently Asked Questions
-
-**How much does a commercial oil press machine cost?**
-Our Standard Hydraulic Oil Press (HN325) offers competitive pricing for professional-grade commercial oil pressing equipment. A complete setup including seed crusher and filter press is also available. Get your personalized pricing today.
-
-**What is the daily capacity of a commercial oil press?**
-The HN325 can process 500-1,500 kg of seeds per day depending on the seed type and operating hours (8-12 hours). This translates to 133-171 kg/hour (hot press) or approximately 50 kg/hour (cold press) (hot press) or approximately 50 kg/hour (cold press) throughput, meeting commercial production targets.
-
-**Is it easy to operate for commercial operations?**
-Yes. Our hydraulic oil presses are designed for efficient commercial operation. One operator can manage the entire pressing process with minimal training. We provide detailed operation manuals and video training with every machine. Most operators become proficient within 1-2 days.
-
-**What seeds can I press on a commercial machine?**
-Our HN325 handles sesame, peanut, sunflower, mustard, coconut (copra), almond, flaxseed, and many other oil-bearing seeds. You can switch between seed types by simply cleaning the barrel and adjusting the pressing parameters.
-
-**How much space do I need?**
-The HN325 requires approximately 2-3 square meters of floor space. A complete commercial setup with crusher and filter press needs about 6-8 square meters. This makes it suitable for commercial oil mills, cooperative facilities, and regional production centers.
 
 ## Why Choose Haonuo
 

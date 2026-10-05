@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Shea Butter Pressing Solution
   fr: Solution de Pressage du Beurre de Karité
@@ -12,7 +12,7 @@ description:
   ar: آلة عصر زبدة الشيا لاستخراج زبدة الشيا بكفاءة من جوز الشيا. ضغط هيدروليكي عالي الضغط لأسواق غرب أفريقيا.
   id: Mesin press mentega shea untuk ekstraksi mentega shea yang efisien. Press hidrolik tekanan tinggi untuk pasar Afrika Barat.
 recommendedProducts:
-  - heavy-duty-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
@@ -56,46 +56,58 @@ faq:
   - question: What is shea butter made from?
     answer: Shea butter is extracted from the nuts of the shea tree (Vitellaria paradoxa), native to West Africa. The nuts contain 45-55% fat.
   - question: Can hydraulic press extract shea butter?
-    answer: Yes, our hydraulic press is highly effective for shea butter extraction. The high-pressure models (HN355/HN500) are recommended for optimal yield.
+    answer: Yes, our hydraulic press is highly effective for shea butter extraction. The high-pressure models (HN365/HN500) are recommended for optimal yield.
   - question: Is shea butter pressing profitable in West Africa?
     answer: Yes, shea butter is a major export commodity for West African countries. The global demand for shea butter in cosmetics and food industries continues to grow.
   - question: What is the price of a shea butter press machine?
     answer: Ask us about current model pricing. We offer factory-direct pricing with no middleman markup.
   - question: How much shea butter can I produce per day?
     answer: With our heavy-duty model, you can process 600-1,200 kg of shea nuts per day (single barrel). The ultra-high-pressure model handles 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) (double barrel).
+  - question: "What is the difference between unrefined and refined shea butter?"
+    answer: "Unrefined (raw) shea butter retains its natural ivory color, nutty aroma, and all vitamins and nutrients. It commands the highest price in the cosmetics market. Refined shea butter is processed to remove color and odor, making it suitable for food industry applications and white cosmetic formulations."
+
 faqFr:
   - question: De quoi est fait le beurre de karité ?
     answer: Le beurre de karité est extrait des noix de l'arbre à karité (Vitellaria paradoxa), originaire d'Afrique de l'Ouest. Les noix contiennent 45 à 55 % de matières grasses.
   - question: La presse hydraulique peut-elle extraire le beurre de karité ?
-    answer: Oui, notre presse hydraulique est très efficace pour l'extraction du beurre de karité. Les modèles haute pression (HN355/HN500) sont recommandés pour un rendement optimal.
+    answer: Oui, notre presse hydraulique est très efficace pour l'extraction du beurre de karité. Les modèles haute pression (HN365/HN500) sont recommandés pour un rendement optimal.
   - question: Le pressage du beurre de karité est-il rentable en Afrique de l'Ouest ?
     answer: Oui, le beurre de karité est une marchandise d'exportation majeure pour les pays d'Afrique de l'Ouest. La demande mondiale de beurre de karité dans les industries cosmétique et alimentaire continue de croître.
   - question: Quel est le prix d'une machine de pressage de beurre de karité ?
     answer: Demandez-nous les prix actuels des modèles. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien de beurre de karité puis-je produire par jour ?
     answer: Avec notre modèle lourd, vous pouvez traiter 800 à 2 000 kg de noix de karité par jour. Le modèle ultra haute pression traite jusqu'à 3 000 kg/jour.
+  - question: "Quelle est la différence entre le beurre de karité non raffiné et raffiné ?"
+    answer: "Le beurre de karité non raffiné (brut) conserve sa couleur ivoire naturelle, son arôme de noix et toutes ses vitamines et nutriments. Il se vend au prix le plus élevé sur le marché des cosmétiques. Le beurre de karité raffiné est traité pour éliminer la couleur et l'odeur, le rendant adapté aux applications de l'industrie alimentaire et aux formulations cosmétiques blanches."
+
 faqAr:
   - question: مما تُصنع زبدة الشيا؟
     answer: تُستخرج زبدة الشيا من جوز شجرة الشيا (Vitellaria paradoxa) الأصلية في غرب أفريقيا. يحتوي الجوز على 45-55% دهون.
   - question: هل يمكن للمضغوط الهيدروليكي استخراج زبدة الشيا؟
-    answer: نعم، مضغوطنا الهيدروليكي فعال جداً لاستخراج زبدة الشيا. يُنصح بالطرازات عالية الضغط (HN355/HN500) لعائد أمثل.
+    answer: نعم، مضغوطنا الهيدروليكي فعال جداً لاستخراج زبدة الشيا. يُنصح بالطرازات عالية الضغط (HN365/HN500) لعائد أمثل.
   - question: هل عصر زبدة الشيا مربح في غرب أفريقيا؟
     answer: نعم، زبدة الشيا سلعة تصدير رئيسية لدول غرب أفريقيا. يستمر الطلب العالمي على زبدة الشيا في صناعات مستحضرات التجميل والأغذية بالنمو.
   - question: ما هو سعر آلة عصر زبدة الشيا؟
     answer: اسألونا عن أسعار الطرازات الحالية. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم زبدة شيا يمكنني إنتاجها يومياً؟
     answer: مع طرازنا الثقيل، يمكن معالجة 800-2000 كجم من جوز الشيا يومياً. يعالج الطراز فائق الضغط العالي حتى 3000 كجم/يوم.
+  - question: "ما الفرق بين زبدة الشيه غير المكررة والمكررة؟"
+    answer: "زبدة الشيه غير المكررة (الخام) تحتفظ بلونها العاجي الطبيعي ورائحة الجوز وجميع الفيتامينات والمغذيات. تُباع بأعلى سعر في سوق مستحضرات التجميل. زبدة الشيه المكررة معالجة لإزالة اللون والرائحة، مما يجعلها ملائمة لتطبيقات الصناعة الغذائية وتركيبات مستحضرات التجميل البيضاء."
+
 faqId:
   - question: Dari apa mentega shea dibuat?
     answer: Mentega shea diekstrak dari kacang pohon shea (Vitellaria paradoxa), yang berasal dari Afrika Barat. Kacang tersebut mengandung 45-55% lemak.
   - question: Apakah press hidrolik dapat mengekstrak mentega shea?
-    answer: Ya, press hidrolik kami sangat efektif untuk ekstraksi mentega shea. Model tekanan tinggi (HN355/HN500) direkomendasikan untuk hasil yang optimal.
+    answer: Ya, press hidrolik kami sangat efektif untuk ekstraksi mentega shea. Model tekanan tinggi (HN365/HN500) direkomendasikan untuk hasil yang optimal.
   - question: Apakah penekanan mentega shea menguntungkan di Afrika Barat?
     answer: Ya, mentega shea adalah komoditas ekspor utama bagi negara-negara Afrika Barat. Permintaan global untuk mentega shea di industri kosmetik dan pangan terus berkembang.
   - question: Berapa harga mesin press mentega shea?
     answer: Hubungi kami untuk harga model terkini. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa banyak mentega shea yang dapat saya produksi per hari?
     answer: Dengan model berat kami, Anda dapat memproses 800-2.000 kg kacang shea per hari. Model ultra tekanan tinggi menangani hingga 3.000 kg/hari.
+  - question: "Apa perbedaan antara mentega shea yang tidak dimurnikan dan dimurnikan?"
+    answer: "Mentega shea yang tidak dimurnikan (mentah) mempertahankan warni gading alami, aroma kacang, dan semua vitamin dan nutrisi. Ini dijual dengan harga tertinggi di pasar kosmetik. Mentega shea yang dimurnikan diproses untuk menghilangkan warna dan bau, membuatnya cocok untuk aplikasi industri makanan dan formulasi kosmetik putih."
+
 seoKeywords:
   - shea butter press machine
   - shea butter extraction machine
@@ -140,24 +152,10 @@ This solution is designed specifically for West African operating conditions, wi
 
 ## Recommended Equipment
 
-- **Heavy Duty Hydraulic Oil Press (HN355)** — The minimum recommended model for shea butter pressing. Provides the sustained high pressure needed for thorough extraction.
+- **Heavy Duty Hydraulic Oil Press (HN365)** — The minimum recommended model for shea butter pressing. Provides the sustained high pressure needed for thorough extraction.
 - **Ultra High Pressure Hydraulic Oil Press (HN500)** — Recommended for maximum yield from shea nuts. Achieves competitive residual fat rates.
 - **Thermal Oil Roasting Pan** — Precise roasting temperature control is critical for shea nut processing. Our roasting pan ensures consistent results.
 - **Pneumatic Oil Filter Press** — Produces clean, pure shea butter free of nut particles and sediment.
-
-## Frequently Asked Questions
-
-**How much does a shea butter press machine cost?**
-Our shea butter press machines are available in various configurations from heavy-duty to ultra-high-pressure models with double barrels. We offer factory-direct pricing and can customize a package based on your production needs.
-
-**Can hydraulic press replace traditional shea butter extraction?**
-Yes, and with significant advantages. Our hydraulic press extracts 15-25% more butter than traditional hand-kneading methods, while requiring far less labor and water. The quality is also more consistent, meeting international cosmetic and food-grade standards.
-
-**What is the difference between unrefined and refined shea butter?**
-Unrefined (raw) shea butter retains its natural ivory color, nutty aroma, and all vitamins and nutrients. It commands the highest price in the cosmetics market. Refined shea butter is processed to remove color and odor, making it suitable for food industry applications and white cosmetic formulations.
-
-**Is shea butter pressing a good business in West Africa?**
-Yes. Global shea butter demand is growing at 6-8% annually, driven by the cosmetics and confectionery industries. West Africa produces over 600,000 tons of shea nuts annually, and value-added processing (pressing butter instead of exporting raw nuts) significantly increases income for local producers.
 
 ## Why Choose Haonuo
 
@@ -166,3 +164,16 @@ Yes. Global shea butter demand is growing at 6-8% annually, driven by the cosmet
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
 - **Value-added processing** — Our equipment enables you to produce finished shea butter locally, capturing the full value chain instead of exporting raw nuts at low prices.
 - **Proven across West Africa** — Our shea butter press machines operate successfully in Ghana, Burkina Faso, Nigeria, and Mali — the heart of shea production.
+
+<!-- yield-block -->
+### What you get from 100 kg of dry shea kernels
+
+| Output | Hot press (roasted) | Cold press |
+|---|---|---|
+| Crude oil | 35-45 kg (≈38-49 L) | 30-40 kg (≈33-43 L) |
+| Oil cake | ≈50-63 kg | ≈55-68 kg |
+
+*Typical figures for well-prepared dry shea kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L. Output is shea butter rather than liquid oil.*
+<!-- /yield-block -->
+
+

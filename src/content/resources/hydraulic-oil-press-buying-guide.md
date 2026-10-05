@@ -49,8 +49,8 @@ The HN325 is our entry-level workhorse, well-suited for small-to-medium operatio
 
 **Key Specifications:**
 - 325-ton pressing force
-- 60 Mpa system pressure
-- 27.78 Mpa/cm2 cake surface pressure
+- 60 MPa system pressure
+- 27.78 MPa cake surface pressure
 - 100 kg batch capacity
 - 2.2 KW motor power
 
@@ -64,8 +64,8 @@ The HN365 is our most popular commercial model, offering 10% more pressing force
 
 **Key Specifications:**
 - 365-ton pressing force
-- 63 Mpa system pressure
-- 30.15 Mpa/cm2 cake surface pressure
+- 63 MPa system pressure
+- 30.15 MPa cake surface pressure
 - 100 kg batch capacity
 
 ### HN426 Cold Press Hydraulic Oil Press
@@ -78,8 +78,8 @@ The HN426 is our dedicated cold-press specialist, engineered for hard-shell mate
 
 **Key Specifications:**
 - 500-ton pressing force
-- 70 Mpa system pressure
-- 42 Mpa/cm2 cake surface pressure
+- 70 MPa system pressure
+- 42 MPa cake surface pressure
 - 100 kg batch capacity
 
 ### HN480 High Pressure Hydraulic Oil Press
@@ -92,8 +92,8 @@ The HN480 bridges the gap between the HN426 and HN500, offering balanced perform
 
 **Key Specifications:**
 - 560-ton pressing force
-- 72 Mpa system pressure
-- 48 Mpa/cm2 cake surface pressure
+- 72 MPa system pressure
+- 48 MPa cake surface pressure
 - 100 kg batch capacity
 
 ### HN500 Ultra High Pressure Hydraulic Oil Press
@@ -106,8 +106,8 @@ The HN500 is our flagship model, designed for the most demanding industrial appl
 
 **Key Specifications:**
 - 620-ton pressing force
-- 75 Mpa system pressure
-- 52 Mpa/cm2 cake surface pressure
+- 75 MPa system pressure
+- 52 MPa cake surface pressure
 - 100 kg batch capacity
 
 ## Selection Decision Tree

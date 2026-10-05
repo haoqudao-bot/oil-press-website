@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Coconut Milk Hydraulic Press
   fr: Presse Hydraulique à Lait de Coco
@@ -29,9 +29,9 @@ specifications:
   - name: Pressing Force
     value: 300 Tonnes
   - name: System Pressure
-    value: 60 Mpa
+    value: 60 MPa
   - name: Cake Surface Pressure
-    value: 10.83 Mpa/cm²
+    value: 10.83 MPa
   - name: Barrel Inner Diameter
     value: 600 mm
   - name: Barrel Height
@@ -42,7 +42,7 @@ specifications:
     value: 2100×1260×2200 mm
 featured: true
 related:
-  - standard-hydraulic-oil-press
+  - stainless-steel-hydraulic-oil-press
   - large-barrel-hydraulic-oil-press
 applicableSeeds:
   - coconut milk
@@ -62,7 +62,7 @@ faq:
   - question: What warranty do you provide?
     answer: We provide a 1-year warranty covering all manufacturing defects, plus lifetime technical support. For the Coconut Milk Press, this includes specific coverage for the 304 stainless steel barrel and corrosion-resistant contact surfaces. Spare parts are available from stock.
   - question: How is the machine shipped and how long does delivery take?
-    answer: The machine is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to 20-30 working days production time (shipping time additional).
+    answer: The machine is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional).
   - question: Do you provide installation and training?
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician to your facility for on-site installation and training at cost. For the Coconut Milk Press, ensure adequate drainage is available for coconut milk byproduct and position the machine near your coconut preparation area.
   - question: What certifications does the machine have?
@@ -70,13 +70,13 @@ faq:
   - question: Can the barrel size be customized?
     answer: Yes, barrel inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger barrels for bulk materials and food-grade stainless steel barrels for edible oil production.
   - question: What is the residual oil rate in the cake?
-    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on internal testing, results vary) from every batch.
+    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
   - question: Can the machine operate on generator power?
     answer: Yes, our machines are fully compatible with generator power. For the Coconut Milk Press, we recommend a minimum 5kVA generator. The machine starts easily and runs stably on generator power, making it suitable for areas with unreliable electricity supply such as rural Nigeria, Kenya, and other African regions.
   - question: Do you provide voltage customization for different countries?
     answer: Yes, we customize the electrical system to match your local power supply at no extra charge. Common configurations include 220V/50Hz (Southeast Asia, Africa, Middle East), 110V/60Hz (Philippines, parts of South America), and 380V/50Hz (industrial three-phase). Simply specify your local voltage when ordering.
   - question: How quickly can I get spare parts in Africa or the Middle East?
-    answer: We maintain stock of all common spare parts (seals, filter cloth, hydraulic oil, control panel components). Standard parts ship promptly via DHL/FedEx, arriving in 5-7 days to most African and Middle Eastern countries. For Nigeria, we also work with local agents in Lagos who carry commonly needed parts.
+    answer: We maintain stock of all common spare parts (seals, filter cloth, hydraulic oil, control panel components). Standard parts ship promptly via DHL/FedEx, arriving in 5-7 days to most African and Middle Eastern countries.
 specificationsFr:
   - name: Modèle
     value: 300 Type Coco
@@ -91,9 +91,9 @@ specificationsFr:
   - name: Force de pressage
     value: 300 Tonnes
   - name: Pression du système
-    value: 60 Mpa
+    value: 60 MPa
   - name: Pression superficielle du gâteau
-    value: 10.83 Mpa/cm²
+    value: 10.83 MPa
   - name: Diamètre intérieur du fût
     value: 600 mm
   - name: Hauteur du fût
@@ -106,7 +106,7 @@ applicableSeedsFr:
   - lait de coco
 faqFr:
   - question: Quel est le rendement en huile de la Presse Hydraulique à Lait de Coco ?
-    answer: Le rendement en huile de coco varie en fonction de la matière première et du procédé de traitement. La presse 300 Type Coconut avec son large fût de 600 mm et sa force de pressage de 300 tonnes est optimisée pour le pressage du jus de coco et la production de VCO, atteignant une extraction efficace avec un rendement environ 2 à 3 % plus élevé (selon des tests internes, les résultats peuvent varier) que les presses traditionnelles à fût percé.
+    answer: Le rendement en huile de coco varie en fonction de la matière première et du procédé de traitement. La presse 300 Type Coconut avec son large fût de 600 mm et sa force de pressage de 300 tonnes est optimisée pour le pressage du jus de coco et la production de VCO, atteignant une extraction efficace avec un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) que les presses traditionnelles à fût percé.
   - question: Quelles matières premières la Presse Hydraulique à Lait de Coco peut-elle presser ?
     answer: La Presse Hydraulique à Lait de Coco est conçue spécifiquement pour le pressage du jus de coco et l'extraction d'huile de coco vierge (VCO). Elle permet également l'extraction de jus de fruits, la déshydratation de fruits et légumes, et le pressage de boues d'hydrocarbures — une véritable machine polyvalente.
   - question: Combien de temps dure un cycle de pressage ?
@@ -120,7 +120,7 @@ faqFr:
   - question: Quelle garantie fournissez-vous ?
     answer: Nous fournissons une garantie de 1 an couvrant tous les défauts de fabrication, ainsi qu'un support technique à vie. Pour la presse à lait de coco, cela inclut une couverture spécifique du fût en acier inoxydable 304 et des surfaces de contact résistantes à la corrosion. Les pièces de rechange sont disponibles en stock.
   - question: Comment la machine est-elle expédiée et combien de temps dure la livraison ?
-    answer: La machine est expédiée dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 20-30 jours ouvrables de temps de production.
+    answer: La machine est expédiée dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 15 à 25 jours ouvrés de production pour les modèles standard et 30 à 45 jours pour les configurations personnalisées.
   - question: Fournissez-vous l'installation et la formation ?
     answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien dans vos locaux pour l'installation et la formation sur site à nos frais. Pour la presse à lait de coco, assurez-vous qu'un drainage adéquat est disponible pour le sous-produit de lait de coco et positionnez la machine près de votre zone de préparation de coco.
   - question: Quelles certifications la machine possède-t-elle ?
@@ -128,13 +128,13 @@ faqFr:
   - question: La taille du fût peut-elle être personnalisée ?
     answer: Oui, le diamètre intérieur et la hauteur du fût peuvent être personnalisés pour répondre à vos besoins spécifiques en matière de matière première et de taille de lot. Les personnalisations courantes incluent des fûts plus grands pour les matériaux en vrac et des fûts en acier inoxydable de qualité alimentaire pour la production d'huile comestible.
   - question: Quel est le taux d'huile résiduelle dans le gâteau ?
-    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matériaux avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile en plus (selon des tests internes, les résultats peuvent varier) de chaque lot.
+    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matériaux avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile en plus (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
   - question: La machine peut-elle fonctionner sur groupe électrogène ?
     answer: Oui, nos machines sont entièrement compatibles avec l'alimentation par groupe électrogène. Pour la presse à lait de coco, nous recommandons un groupe électrogène d'une puissance minimale de 5 kVA. La machine démarre facilement et fonctionne de manière stable sur groupe électrogène, ce qui la rend adaptée aux zones avec une alimentation électrique peu fiable telles que le Nigeria rural, le Kenya et d'autres régions africaines.
   - question: Fournissez-vous une personnalisation de la tension pour différents pays ?
     answer: Oui, nous personnalisons le système électrique selon votre alimentation locale sans frais supplémentaires. Les configurations courantes incluent 220V/50Hz (Asie du Sud-Est, Afrique, Moyen-Orient), 110V/60Hz (Philippines, certaines parties de l'Amérique du Sud) et 380V/50Hz (triphasé industriel). Il suffit de préciser votre tension locale lors de la commande.
   - question: Combien de temps faut-il pour obtenir des pièces de rechange en Afrique ou au Moyen-Orient ?
-    answer: Nous maintenons un stock de toutes les pièces de rechange courantes (joints, tissu filtrant, huile hydraulique, composants du panneau de commande). Les pièces standard sont expédiées rapidement via DHL/FedEx, arrivant en 5 à 7 jours dans la plupart des pays africains et du Moyen-Orient. Pour le Nigeria, nous travaillons également avec des agents locaux à Lagos qui disposent des pièces couramment nécessaires.
+    answer: Nous maintenons un stock de toutes les pièces de rechange courantes (joints, tissu filtrant, huile hydraulique, composants du panneau de commande). Les pièces standard sont expédiées rapidement via DHL/FedEx, arrivant en 5 à 7 jours dans la plupart des pays africains et du Moyen-Orient.
 specificationsAr:
   - name: "الطراز"
     value: "300 Type Coconut"
@@ -174,9 +174,9 @@ specificationsId:
   - name: Gaya Press
     value: 300 Ton
   - name: Tekanan Sistem
-    value: 60 Mpa
+    value: 60 MPa
   - name: Tekanan Permukaan Kue Press
-    value: 10.83 Mpa/cm²
+    value: 10.83 MPa
   - name: Diameter Dalam Barel
     value: 600 mm
   - name: Tinggi Barel
@@ -191,7 +191,7 @@ applicableSeedsId:
   - santan kelapa
 faqAr:
   - question: "ما هو عائد الزيت من معصرة حليب جوز الهند الهيدروليكية؟"
-    answer: "يتفاوت عائد زيت جوز الهند حسب المادة الخام وطريقة المعالجة. معصرة 300 Type Coconut ببرميلها العريض بقطر 600 مم وقوة عصر 300 طن محسّنة لعصر عصير جوز الهند وإنتاج زيت جوز الهند البكر (VCO)، محققةً استخلاصًا فعالًا بعائد أعلى بنحو 2-3% (بناءً على اختبارات داخلية، النتائج الفعلية قد تختلف) مقارنة بمعاصر البرميل المثقب التقليدية."
+    answer: "يتفاوت عائد زيت جوز الهند حسب المادة الخام وطريقة المعالجة. معصرة 300 Type Coconut ببرميلها العريض بقطر 600 مم وقوة عصر 300 طن محسّنة لعصر عصير جوز الهند وإنتاج زيت جوز الهند البكر (VCO)، محققةً استخلاصًا فعالًا بعائد أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بمعاصر البرميل المثقب التقليدية."
   - question: "ما المواد الخام التي يمكن لمعصرة حليب جوز الهند الهيدروليكية عصرها؟"
     answer: "معصرة حليب جوز الهند الهيدروليكية مصممة خصيصًا لعصر عصير جوز الهند واستخلاص زيت جوز الهند البكر (VCO). كما أنها تتعامل مع استخلاص عصير الفواكه وتجفيف الفواكه والخضروات وعصر الحمأة الزيتية — آلة متعددة الاستخدامات حقًا."
   - question: "كم يستغرق دور العصر الواحد؟"
@@ -205,7 +205,7 @@ faqAr:
   - question: "ما الضمان الذي تقدمونه؟"
     answer: "نقدم ضمانًا لمدة عام واحد يغطي جميع عيوب التصنيع، بالإضافة إلى دعم فني مدى الحياة. لمعصرة حليب جوز الهند، يشمل ذلك تغطية خاصة للبرميل من الفولاذ المقاوم للصدأ 304 والأسطح الملامسة المقاومة للتآكل. قطع الغيار متوفرة من المخزون."
   - question: "كيف تُشحن الآلة وكم يستغرق التسليم؟"
-    answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا، وإلى الموانئ في أمريكا الجنوبية 30-40 يومًا. هذا بالإضافة إلى 20-30 يوم عمل كمدة إنتاج (مدة الشحن إضافية)."
+    answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا، وإلى الموانئ في أمريكا الجنوبية 30-40 يومًا. هذا بالإضافة إلى 15-25 يوم عمل كمدة إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (مدة الشحن إضافية)."
   - question: "هل تقدمون خدمات التركيب والتدريب؟"
     answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة. لمعصرة حليب جوز الهند، تأكد من توفر تصريف مناسب لمنتج حليب جوز الهند الثانوي وضع الآلة بالقرب من منطقة تحضير جوز الهند."
   - question: "ما الشهادات التي تمتلكها الآلة؟"
@@ -213,16 +213,16 @@ faqAr:
   - question: "هل يمكن تخصيص حجم البرميل؟"
     answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع للبرميل ليتوافق مع متطلبات المادة الخام وحجم الدفعة الخاصة بك. تشمل التخصيصات الشائعة براميل أكبر للمواد السائبة وبراميل من الفولاذ المقاوم للصدأ من الدرجة الغذائية لإنتاج الزيت الصالح للأكل."
   - question: "ما نسبة الزيت المتبقية في الكعكة؟"
-    answer: "نسبة الزيت المتبقية في الكعكة عادةً 6-8% لمعظم المواد مع تصميم البرميل ذو الشقوق الشريطية، مقارنةً بـ 10-12% مع معاصر البرميل المثقب التقليدية. هذا يعني أنك تستخلص نحو 2-3% زيت إضافي (بناءً على اختبارات داخلية، النتائج الفعلية قد تختلف) من كل دفعة."
+    answer: "نسبة الزيت المتبقية في الكعكة عادةً 6-8% لمعظم المواد مع تصميم البرميل ذو الشقوق الشريطية، مقارنةً بـ 10-12% مع معاصر البرميل المثقب التقليدية. هذا يعني أنك تستخلص نحو 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
   - question: "هل يمكن تشغيل الآلة بمولد كهربائي؟"
     answer: "نعم، آلاتنا متوافقة بالكامل مع طاقة المولد الكهربائي. لمعصرة حليب جوز الهند، نوصي بمولد بقدرة لا تقل عن 5 كيلو فولت أمبير. تعمل الآلة بسهولة واستقرار على طاقة المولد، مما يجعلها مناسبة للمناطق ذات إمداد كهربائي غير موثوق مثل ريف نيجيريا وكينيا وغيرها من المناطق الأفريقية."
   - question: "هل تقدمون تخصيص الجهد الكهربائي لدول مختلفة؟"
     answer: "نعم، نخصص النظام الكهربائي ليتوافق مع مصدر الطاقة المحلي لديك دون رسوم إضافية. تشمل التكوينات الشائعة 220 فولت/50 هرتز (جنوب شرق آسيا وأفريقيا والشرق الأوسط) و110 فولت/60 هرتز (الفلبين وأجزاء من أمريكا الجنوبية) و380 فولت/50 هرتز (ثلاثي الطور الصناعي). يكفي تحديد جهدك المحلي عند الطلب."
   - question: "كم يستغرق الحصول على قطع الغيار في أفريقيا أو الشرق الأوسط؟"
-    answer: "نحتفظ بمخزون من جميع قطع الغيار الشائعة (حلقات مانعة للتسرب وقماش فلتر وزيت هيدروليكي ومكونات لوحة التحكم). تُشحن القطع القياسية بسرعة عبر DHL/FedEx وتصل خلال 5-7 أيام إلى معظم الدول الأفريقية ودول الشرق الأوسط. بالنسبة لنيجيريا، نتعاون أيضًا مع وكلاء محليين في لاغوس يتوفرون على القطع الشائعة الحاجة."
+    answer: "نحتفظ بمخزون من جميع قطع الغيار الشائعة (حلقات مانعة للتسرب وقماش فلتر وزيت هيدروليكي ومكونات لوحة التحكم). تُشحن القطع القياسية بسرعة عبر DHL/FedEx وتصل خلال 5-7 أيام إلى معظم الدول الأفريقية ودول الشرق الأوسط."
 faqId:
   - question: Berapa rendemen minyak dari Mesin Press Santan Kelapa Hidrolik?
-    answer: Rendemen minyak kelapa bervariasi tergantung pada bahan baku dan metode pengolahan. Mesin press 300 Type Kelapa dengan barel lebarnya berdiameter 600 mm dan gaya press 300 ton dioptimalkan untuk press jus kelapa dan produksi VCO, menghasilkan ekstraksi efisien dengan rendemen sekitar 2-3% lebih tinggi (berdasarkan pengujian internal, hasil dapat bervariasi) dibandingkan mesin press barel berlubang tradisional.
+    answer: Rendemen minyak kelapa bervariasi tergantung pada bahan baku dan metode pengolahan. Mesin press 300 Type Kelapa dengan barel lebarnya berdiameter 600 mm dan gaya press 300 ton dioptimalkan untuk press jus kelapa dan produksi VCO, menghasilkan ekstraksi efisien dengan rendemen sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press barel berlubang tradisional.
   - question: Bahan baku apa saja yang dapat dipress oleh Mesin Press Santan Kelapa Hidrolik?
     answer: Mesin Press Santan Kelapa Hidrolik dirancang khusus untuk press jus kelapa dan ekstraksi minyak kelapa perawan (VCO). Mesin ini juga menangani ekstraksi jus buah, dehidrasi buah sayur, dan press lumpur minyak — mesin yang benar-benar multi-fungsi.
   - question: Berapa lama satu siklus press membutuhkan waktu?
@@ -236,7 +236,7 @@ faqId:
   - question: Garansi apa yang Anda berikan?
     answer: Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk mesin press kelapa, ini mencakup cakupan khusus untuk barel baja tahan karat 304 dan permukaan kontak tahan korosi. Suku cadang tersedia dari stok.
   - question: Bagaimana mesin dikirim dan berapa lama waktu pengiriman?
-    answer: Mesin dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini ditambah 20-30 hari kerja waktu produksi (waktu pengiriman tambahan).
+    answer: Mesin dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini ditambah 15-25 hari kerja produksi untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus (waktu pengiriman tambahan).
   - question: Apakah Anda menyediakan instalasi dan pelatihan?
     answer: Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya. Untuk mesin press kelapa, pastikan drainase yang memadai tersedia untuk produk sampingan susu kelapa dan posisikan mesin di dekat area persiapan kelapa Anda.
   - question: Sertifikasi apa yang dimiliki mesin?
@@ -244,13 +244,13 @@ faqId:
   - question: Apakah ukuran barel dapat disesuaikan?
     answer: Ya, diameter dalam dan tinggi barel dapat disesuaikan sesuai kebutuhan bahan dan ukuran batch Anda. Penyesuaian umum termasuk barel lebih besar untuk bahan curukan dan barel baja tahan karat food-grade untuk produksi minyak nabati.
   - question: Berapa tingkat minyak sisa dalam kue press?
-    answer: Tingkat minyak sisa dalam kue press biasanya 6-8% untuk sebagian besar bahan dengan desain barel ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press barel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian internal, hasil dapat bervariasi) dari setiap batch.
+    answer: Tingkat minyak sisa dalam kue press biasanya 6-8% untuk sebagian besar bahan dengan desain barel ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press barel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
   - question: Apakah mesin dapat beroperasi dengan daya generator?
     answer: Ya, mesin kami sepenuhnya kompatibel dengan daya generator. Untuk mesin press kelapa, kami merekomendasikan generator minimum 5 kVA. Mesin mudah menyala dan beroperasi stabil dengan daya generator, menjadikannya cocok untuk daerah dengan pasokan listrik yang tidak stabil seperti Nigeria pedesaan, Kenya, dan wilayah Afrika lainnya.
   - question: Apakah Anda menyediakan penyesuaian tegangan untuk negara yang berbeda?
     answer: Ya, kami menyesuaikan sistem kelistrikan sesuai pasokan daya lokal Anda tanpa biaya tambahan. Konfigurasi umum termasuk 220V/50Hz (Asia Tenggara, Afrika, Timur Tengah), 110V/60Hz (Filipina, sebagian Amerika Selatan), dan 380V/50Hz (tiga fasa industri). Cukup tentukan tegangan lokal Anda saat memesan.
   - question: Seberapa cepat saya bisa mendapatkan suku cadang di Afrika atau Timur Tengah?
-    answer: Kami menyimpan stok semua suku cadang umum (seal, kain filter, minyak hidrolik, komponen panel kontrol). Suku cadang standar dikirim dengan cepat melalui DHL/FedEx, tiba dalam 5-7 hari ke sebagian besar negara Afrika dan Timur Tengah. Untuk Nigeria, kami juga bekerja sama dengan agen lokal di Lagos yang menyediakan suku cadang yang umum dibutuhkan.
+    answer: Kami menyimpan stok semua suku cadang umum (seal, kain filter, minyak hidrolik, komponen panel kontrol). Suku cadang standar dikirim dengan cepat melalui DHL/FedEx, tiba dalam 5-7 hari ke sebagian besar negara Afrika dan Timur Tengah.
 videoUrl: ''
 seoKeywords:
   - coconut milk press machine
@@ -281,8 +281,8 @@ This machine is the preferred choice for coconut juice pressing and Virgin Cocon
 
 ## Core Technology
 
-- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on internal testing, results vary). No clogging, no cleaning between batches.
-- **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 60 Mpa with rapid cylinder return.
+- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). No clogging, no cleaning between batches.
+- **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 60 MPa with rapid cylinder return.
 - **4-Hook Cake Removal** — Innovative 4-hook mechanism ensures easy, reliable cake discharge — even after overnight pressing of coconut fiber and meat.
 - **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service. Actual service life depends on operating conditions and maintenance under 300-ton pressing force.
 - **Microcomputer Control** — Automated pressing cycle from loading to finished oil in minutes.
