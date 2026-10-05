@@ -13,7 +13,7 @@ category: filtration-refining-equipment
 model: HN-10SL
 modelId: ''
 images:
-  - /images/products/pneumatic-oil-filter-press.webp
+  - /images/products/pneumatic-oil-filter-press-v2.webp
 specifications:
   - name: Rated Working Pressure
     value: 0.2-0.3 MPa
