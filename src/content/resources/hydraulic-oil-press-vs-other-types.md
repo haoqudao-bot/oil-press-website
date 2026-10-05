@@ -57,7 +57,7 @@ Choosing the right oil extraction method is a critical decision that affects you
 
 | Aspect | Hydraulic Press | Screw Press | Solvent Extraction |
 |--------|----------------|-------------|-------------------|
-| Temperature | 60-100掳C | 120-150掳C | Ambient |
+| Temperature | 60-100°C | 120-150°C | Ambient |
 | Nutrient Retention | Excellent | Moderate | Good |
 | Solvent Residue | None | None | Possible |
 | Flavor | Natural | Heated | Neutral |
@@ -85,7 +85,7 @@ Choosing the right oil extraction method is a critical decision that affects you
 - Multiple pressing methods: hot pressing, cold pressing
 
 ### Oil Quality
-- Cold pressing capability: maintain temperature below 60掳C
+- Cold pressing capability: maintain temperature below 60°C
 - Preserve natural flavor and nutrients
 - No solvent contamination
 - Suitable for organic markets

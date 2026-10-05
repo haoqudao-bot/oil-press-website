@@ -23,7 +23,7 @@ The choice between cold pressing and hot pressing is fundamental to your oil pro
 
 ## What is Cold Pressing?
 
-Cold pressing extracts oil at low temperatures (typically below 60掳C / 140掳F) without applying external heat. The oil is extracted purely through mechanical pressure, preserving the natural characteristics of the raw material.
+Cold pressing extracts oil at low temperatures (typically below 60°C / 140°F) without applying external heat. The oil is extracted purely through mechanical pressure, preserving the natural characteristics of the raw material.
 
 ### Cold Pressing Process
 1. Seed Cleaning: Thorough removal of impurities
@@ -46,7 +46,7 @@ Hot pressing involves pre-roasting the seeds before pressing to increase oil yie
 1. Seed Cleaning: Remove stones, metal, and other impurities
 2. Dehulling: Remove shells for materials like peanuts (95%+ removal rate)
 3. Moisture Conditioning: Adjust to 5-8% moisture content
-4. Roasting: Heat at 160-180掳C for 25-35 minutes
+4. Roasting: Heat at 160-180°C for 25-35 minutes
 5. Crushing: Break seeds into smaller particles
 6. Pressing: Apply pressure at 30-40 minutes per batch
 
@@ -61,7 +61,7 @@ Hot pressing involves pre-roasting the seeds before pressing to increase oil yie
 
 | Aspect | Cold Pressing | Hot Pressing |
 |--------|--------------|--------------|
-| Temperature | < 60掳C (140掳F) | 160-180掳C (320-356掳F) |
+| Temperature | < 60°C (140°F) | 160-180°C (320-356°F) |
 | Nutrient Retention | Excellent | Moderate |
 | Flavor | Natural, mild | Rich, robust |
 | Color | Lighter | Darker |

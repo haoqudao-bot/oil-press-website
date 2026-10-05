@@ -54,7 +54,7 @@ Yield (%) = (Weight of Oil Extracted / Weight of Raw Material) x 100
 ## Hot Pressing Optimization
 
 ### Roasting Process
-- Temperature: 160-180掳C
+- Temperature: 160-180°C
 - Time: 25-35 minutes
 - Output moisture: 3-5%
 
@@ -66,7 +66,7 @@ Yield (%) = (Weight of Oil Extracted / Weight of Raw Material) x 100
 ## Cold Pressing Optimization
 
 ### Temperature Control
-- Maintain pressing temperature below 60掳C
+- Maintain pressing temperature below 60°C
 - Use specialized cold press equipment
 - Recommended models: HN426, HN480, HN500
 

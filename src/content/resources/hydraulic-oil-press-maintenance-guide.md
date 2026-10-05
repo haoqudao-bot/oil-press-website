@@ -51,7 +51,7 @@ Proper maintenance is essential for ensuring the long-term performance and relia
 
 ### Hydraulic Oil Management
 - Use ISO VG 46 hydraulic oil
-- Maintain proper temperature (30-50掳C)
+- Maintain proper temperature (30-50°C)
 - Replace oil every 2,000 operating hours
 - Capacity: HN325/HN355: 30-40 liters, HN500: 50-60 liters
 

@@ -37,7 +37,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 - Oil Content: 45-55%
 - Optimal Moisture: 5-6% hot press, 7-8% cold press
 - Dehulling: 98%+ removal recommended
-- Roasting: 160-180掳C for 25-30 minutes
+- Roasting: 160-180°C for 25-30 minutes
 - Yield: Hot 48-54%, Cold 42-48%
 - Recommended Models: HN325, HN355, HN426
 
@@ -45,7 +45,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 - Oil Content: 45-50%
 - Optimal Moisture: 5-7% hot press
 - Dehulling: 95%+ removal recommended
-- Roasting: 165-185掳C for 30-35 minutes
+- Roasting: 165-185°C for 30-35 minutes
 - Yield: Hot 45-50%, Cold 38-42%
 - Recommended Models: HN325, HN355, HN480
 
@@ -53,7 +53,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 - Oil Content: 40-45%
 - Optimal Moisture: 6-8% hot press
 - Dehulling: 85-90% removal
-- Roasting: 150-170掳C for 20-25 minutes
+- Roasting: 150-170°C for 20-25 minutes
 - Yield: Hot 38-42%, Cold 32-36%
 - Recommended Models: HN325, HN355, HN500
 
@@ -85,7 +85,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 - Oil Content: 18-22%
 - Optimal Moisture: 7-9% hot press
 - Dehulling: 90%+ removal
-- Roasting: 140-160掳C for 25-30 minutes
+- Roasting: 140-160°C for 25-30 minutes
 - Yield: Hot 18-22%, Cold 15-18%
 - Recommended Models: HN480, HN500
 
@@ -93,7 +93,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 - Oil Content: 30-40%
 - Optimal Moisture: 5-7% hot press
 - Dehulling: Remove shells
-- Roasting: 150-170掳C for 25-30 minutes
+- Roasting: 150-170°C for 25-30 minutes
 - Yield: Hot 28-35%
 - Recommended Models: HN325, HN355, HN426
 
@@ -109,9 +109,9 @@ Selecting the right raw materials is critical for successful oil production. Dif
 - Too wet: Dry with hot air dryer or sun drying
 
 ### Roasting (Hot Pressing Only)
-- Sesame: 160-180掳C, 25-30 min
-- Peanut: 165-185掳C, 30-35 min
-- Rapeseed: 150-170掳C, 20-25 min
+- Sesame: 160-180°C, 25-30 min
+- Peanut: 165-185°C, 30-35 min
+- Rapeseed: 150-170°C, 20-25 min
 
 ### Crushing
 - Optimal particle size: 2-4 mm for most materials
@@ -120,7 +120,7 @@ Selecting the right raw materials is critical for successful oil production. Dif
 ## Storage and Handling
 
 ### Storage Conditions
-- Temperature: 15-25掳C
+- Temperature: 15-25°C
 - Humidity: < 65% relative humidity
 - Duration: < 6 months for best quality
 

@@ -42,7 +42,7 @@ Designing a complete oil production line requires careful planning and integrati
 ### 4. Roasting System (Hot Pressing Only)
 - Drum roaster
 - Flat bed roaster
-- Temperature: 160-180掳C, Time: 25-35 minutes
+- Temperature: 160-180°C, Time: 25-35 minutes
 
 ### 5. Seed Crushing System
 - Roller crusher
@@ -63,7 +63,7 @@ Designing a complete oil production line requires careful planning and integrati
 ### 8. Oil Storage System
 - Stainless steel tanks
 - Mild steel tanks (with coating)
-- Cold-pressed oil: Store at < 25掳C, protected from light
+- Cold-pressed oil: Store at < 25°C, protected from light
 
 ### 9. Cake Handling System
 - Cake conveyor
