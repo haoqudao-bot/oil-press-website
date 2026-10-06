@@ -148,11 +148,11 @@ const seedCards = [
     href: '/products/large-barrel-hydraulic-oil-press/',
   },
   {
-    badge: 'Add-On', badgeColor: 'amber-light',
-    seeds: ['Any seed + double barrel'],
-    seedHint: 'Add-on',
-    model: 'Any Model + Double-Barrel', modelColor: 'amber',
-    desc: 'Pick model by seed type first, then add double-barrel. One presses while the other loads — eliminates idle time. +30–50% more daily batches.',
+    badge: 'Build Option', badgeColor: 'amber-light',
+    seeds: ['Any seed — double-barrel build'],
+    seedHint: 'Config',
+    model: 'Double-Barrel Configuration', modelColor: 'amber',
+    desc: 'Choose your model by seed type, then select the double-barrel build at order time. The frame is built for two stations from the start — a single-barrel machine cannot be retrofitted later. One presses while the other loads — eliminates idle time. +30–50% more daily batches.',
     href: '/contact/',
   },
 ];
@@ -245,9 +245,7 @@ const faqLd = {
     { '@type': 'Question', name: 'What is the difference between cold press and standard models?',
       acceptedAnswer: { '@type': 'Answer', text: 'Every Haonuo hydraulic press can cold press — cold and hot pressing differ in seed preparation, not the machine. The HN426 (500 t, 42 MPa cake pressure) is the cold-press flagship for premium oil; the HN480B is a made-to-order 600 t variant for the hardest cold-press materials. The HN325 and HN365 are the usual choices when most production is hot-pressed.' } },
     { '@type': 'Question', name: 'Should I choose single or double barrel?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Single barrel is well-suited for startups testing the market. Double barrel is recommended for commercial continuous operation: one barrel presses while the other loads/unloads, eliminating idle time between batches on the same hydraulic system. The double barrel does not press two batches simultaneously. The HN365 takes this further with an alternating vertical double-station layout.' } },
-    { '@type': 'Question', name: 'Can I upgrade from single to double barrel later?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. The hydraulic system is the same — you can start with a single barrel HN325 and add a second barrel later when your order volume grows. Many startups begin with the HN300 or HN325 single barrel and upgrade to double barrel within 6-12 months.' } },
+      acceptedAnswer: { '@type': 'Answer', text: 'Single barrel is well-suited for startups testing the market. Double barrel is recommended for commercial continuous operation: one barrel presses while the other loads/unloads, eliminating idle time between batches on the same hydraulic system. The double barrel does not press two batches simultaneously. The HN365 takes this further with an alternating vertical double-station layout. The barrel configuration must be selected when ordering — a single-barrel frame cannot be retrofitted into a double-barrel machine later.' } },
   ],
 };
 
@@ -609,7 +607,7 @@ const allLd = [breadcrumbLd, faqLd];
             <h3 class="font-bold text-charcoal-900 text-base">Single or double barrel?</h3>
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
-          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn't press 2 batches at once — it shares one hydraulic system between two barrels. The HN365 extends this with an alternating vertical double-station layout.</p>
+          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn't press 2 batches at once — it shares one hydraulic system between two barrels. The HN365 extends this with an alternating vertical double-station layout. <b>The configuration must be chosen when ordering — a single-barrel frame cannot be converted to double barrel later.</b></p>
         </details>
         <details class="bg-white rounded-xl border border-steel-100 p-5 group shadow-sm">
           <summary class="flex items-center justify-between cursor-pointer list-none">
@@ -617,13 +615,6 @@ const allLd = [breadcrumbLd, faqLd];
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <p class="mt-3 text-steel-600 text-sm leading-relaxed">Every Haonuo hydraulic press can cold press — cold and hot pressing differ in <b>seed preparation, not the machine</b>. The HN426 (500 t, 42 MPa cake pressure) is the cold-press flagship for premium oil; the HN480B is a made-to-order 600 t variant for the hardest cold-press materials. The HN325 and HN365 are the usual choices when most production is hot-pressed.</p>
-        </details>
-        <details class="bg-white rounded-xl border border-steel-100 p-5 group shadow-sm">
-          <summary class="flex items-center justify-between cursor-pointer list-none">
-            <h3 class="font-bold text-charcoal-900 text-base">Can I upgrade from single to double barrel later?</h3>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <p class="mt-3 text-steel-600 text-sm leading-relaxed">Yes. The hydraulic system is the same — you can start with a single barrel HN325 and add a second barrel later when your order volume grows. This is why many startups begin with HN300 or HN325 single barrel and upgrade to double barrel within 6-12 months.</p>
         </details>
       </div>
     </div>

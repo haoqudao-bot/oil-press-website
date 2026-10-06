@@ -72,7 +72,7 @@ const seedNames: Record<string, Record<string, string>> = {
   FruitDehydration: { en: 'Fruit/Veg Dehydration', fr: 'Déshydratation Fruits/Légumes', ar: 'تجفيف الفواكه/الخضروات', id: 'Dehidrasi Buah/Sayur' },
   InShellWalnut: { en: 'In-shell Walnut', fr: 'Noix en Coquille', ar: 'جوز بقشره', id: 'Walnut dengan Cangkang' },
   AllSeeds: { en: 'All seeds', fr: 'Toutes les graines', ar: 'كل البذور', id: 'Semua biji' },
-  AnySeedDoubleBarrel: { en: 'Any seed + double barrel', fr: 'Toute graine + double-fût', ar: 'أي بذور + برميل مزدوج', id: 'Biji apa pun + double-barrel' },
+  AnySeedDoubleBarrel: { en: 'Any seed — double-barrel build', fr: 'Toute graine — version double-fût', ar: 'أي بذور — نسخة برميل مزدوج', id: 'Biji apa pun — versi double-barrel' },
 };
 
 // ===== Core range: four flagship models =====
@@ -314,17 +314,17 @@ const seedCards = [
     href: '/products/large-barrel-hydraulic-oil-press/',
   },
   {
-    badge: { en: 'Add-On', fr: 'En option', ar: 'إضافة', id: 'Tambahan' },
+    badge: { en: 'Build Option', fr: 'Configuration', ar: 'خيار التصنيع', id: 'Opsi Konfigurasi' },
     badgeColor: 'amber-light',
     seeds: ['AnySeedDoubleBarrel'],
-    seedHint: { en: 'Add-on', fr: 'Module additionnel', ar: 'إضافة', id: 'Add-on' },
-    model: 'Any Model + Double-Barrel',
+    seedHint: { en: 'Config', fr: 'Configuration', ar: 'تكوين', id: 'Konfigurasi' },
+    model: { en: 'Double-Barrel Configuration', fr: 'Configuration double-fût', ar: 'تكوين البرميل المزدوج', id: 'Konfigurasi Double-Barrel' },
     modelColor: 'amber',
     desc: {
-      en: 'Pick model by seed type first, then add double-barrel. One presses while the other loads — eliminates idle time. +30–50% more daily batches.',
-      fr: 'Choisissez d\'abord le modèle par type de graine, puis ajoutez le double-fût. L\'un presse pendant que l\'autre se charge — élimine le temps mort. +30–50% de lots quotidiens supplémentaires.',
-      ar: 'اختر النموذج حسب نوع البذور أولاً، ثم أضف البرميل المزدوج. واحد يضغط بينما الآخر يُحمَّل — يلغي وقت الخمول. +30–50% دفعات يومية إضافية.',
-      id: 'Pilih model berdasarkan jenis biji dulu, lalu tambahkan double-barrel. Satu menekan sementara yang lain dimuat — menghilangkan waktu menganggur. +30–50% lebih banyak batch harian.',
+      en: 'Choose your model by seed type, then select the double-barrel build at order time. The frame is built for two stations from the start — a single-barrel machine cannot be retrofitted later. One presses while the other loads — eliminates idle time. +30–50% more daily batches.',
+      fr: 'Choisissez votre modèle par type de graine, puis optez pour la version double-fût à la commande. Le bâti est construit pour deux postes dès l\'origine — une machine simple fût ne peut pas être transformée ultérieurement. L\'un presse pendant que l\'autre se charge — élimine le temps mort. +30–50% de lots quotidiens supplémentaires.',
+      ar: 'اختر الطراز حسب نوع البذور، ثم اختر نسخة البرميل المزدوج عند الطلب. يُصنع الهيكل لمحطتين منذ البداية — لا يمكن تحويل ماكينة البرميل المفرد لاحقًا. واحد يضغط بينما الآخر يُحمَّل — يلغي وقت الخمول. +30–50% دفعات يومية إضافية.',
+      id: 'Pilih model berdasarkan jenis biji, lalu pilih versi double-barrel saat memesan. Rangka dibuat untuk dua stasiun sejak awal — mesin barel tunggal tidak bisa diubah kemudian. Satu menekan sementara yang lain dimuat — menghilangkan waktu menganggur. +30–50% lebih banyak batch harian.',
     },
     href: '/contact/',
   },
@@ -588,10 +588,10 @@ const faqs = [
       id: 'Barel tunggal atau ganda?',
     },
     answer: {
-      en: 'Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn\'t press 2 batches at once — it shares one hydraulic system between two barrels. The HN365 extends this with an alternating vertical double-station layout.',
-      fr: 'Démarrage / test du marché → fût simple (coût réduit, compact). Commercial / opération continue → double-fût (l\'un presse, l\'autre charge, élimine le temps mort entre les lots). Le double-fût ne presse pas 2 lots à la fois — il partage un système hydraulique entre deux fûts. Le HN365 prolonge cette configuration avec une disposition verticale à double station alternée.',
-      ar: 'بدء / اختبار السوق → برميل مفرد (تكلفة أقل، مدمج). تجاري / تشغيل مستمر → برميل مزدوج (واحد يضغط، والآخر يُحمَّل، يلغي وقت الخمول بين الدفعات). البرميل المزدوج لا يضغط دفعتين في وقت واحد — بل يشترك في نظام هيدروليكي واحد بين برميلين. يوسع HN365 هذا التكوين بتصميم رأسي مزدوج المحطات بالتناوب.',
-      id: 'Startup / uji pasar → barel tunggal (biaya lebih rendah, ringkas). Komersial / operasi kontinu → barel ganda (satu menekan, yang lain dimuat, menghilangkan waktu menganggur antar batch). Barel ganda tidak menekan 2 batch sekaligus — ia berbagi satu sistem hidrolik antara dua barel. HN365 memperluas konfigurasi ini dengan tata letak stasiun ganda vertikal yang bergantian.',
+      en: 'Startup / testing market → single barrel (lower cost, compact). Commercial / continuous operation → double barrel (one presses, other loads, eliminates idle time between batches). Double barrel doesn\'t press 2 batches at once — it shares one hydraulic system between two barrels. The HN365 extends this with an alternating vertical double-station layout. The configuration must be chosen when ordering — a single-barrel frame cannot be converted to double barrel later.',
+      fr: 'Démarrage / test du marché → fût simple (coût réduit, compact). Commercial / opération continue → double-fût (l\'un presse, l\'autre charge, élimine le temps mort entre les lots). Le double-fût ne presse pas 2 lots à la fois — il partage un système hydraulique entre deux fûts. Le HN365 prolonge cette configuration avec une disposition verticale à double station alternée. La configuration doit être choisie à la commande — un bâti simple fût ne peut pas être converti en double-fût ultérieurement.',
+      ar: 'بدء / اختبار السوق → برميل مفرد (تكلفة أقل، مدمج). تجاري / تشغيل مستمر → برميل مزدوج (واحد يضغط، والآخر يُحمَّل، يلغي وقت الخمول بين الدفعات). البرميل المزدوج لا يضغط دفعتين في وقت واحد — بل يشترك في نظام هيدروليكي واحد بين برميلين. يوسع HN365 هذا التكوين بتصميم رأسي مزدوج المحطات بالتناوب. يجب اختيار التكوين عند الطلب — لا يمكن تحويل هيكل البرميل المفرد إلى مزدوج لاحقًا.',
+      id: 'Startup / uji pasar → barel tunggal (biaya lebih rendah, ringkas). Komersial / operasi kontinu → barel ganda (satu menekan, yang lain dimuat, menghilangkan waktu menganggur antar batch). Barel ganda tidak menekan 2 batch sekaligus — ia berbagi satu sistem hidrolik antara dua barel. HN365 memperluas konfigurasi ini dengan tata letak stasiun ganda vertikal yang bergantian. Konfigurasi harus dipilih saat memesan — rangka barel tunggal tidak bisa diubah menjadi ganda kemudian.',
     },
   },
   {
@@ -606,20 +606,6 @@ const faqs = [
       fr: 'Chaque presse hydraulique Haonuo peut presser à froid — le pressage à froid et à chaud diffère par la préparation des graines, pas par la machine. Le HN426 (500 t, pression de gâteau de 42 MPa) est le fleuron du pressage à froid pour l\'huile premium ; le HN480B est une variante 600 t sur commande pour les matières de pressage à froid les plus dures. Les HN325 et HN365 sont les choix habituels lorsque la production est majoritairement pressée à chaud.',
       ar: 'كل معصرة هيدروليكية من Haonuo يمكنها العصر البارد — يختلف العصر البارد والساخن في تحضير البذور، وليس في الماكينة. HN426 (500 طن، ضغط كعكة 42 ميجاباسكال) هو رائد العصر البارد للزيوت الممتازة؛ وHN480B نسخة بقوة 600 طن تُصنع عند الطلب لأصلب مواد العصر البارد. وHN325 وHN365 هما الخياران المعتادان عندما يكون معظم الإنتاج بالعصر الساخن.',
       id: 'Setiap penekan hidrolik Haonuo bisa cold press — cold dan hot press berbeda pada penyiapan biji, bukan mesinnya. HN426 (500 t, tekanan cake 42 MPa) adalah andalan cold press untuk minyak premium; HN480B adalah varian 600 t sesuai pesanan untuk bahan cold press terkeras. HN325 dan HN365 adalah pilihan umum ketika sebagian besar produksi menggunakan hot press.',
-    },
-  },
-  {
-    question: {
-      en: 'Can I upgrade from single to double barrel later?',
-      fr: 'Puis-je passer d\'un fût simple à un double-fût plus tard ?',
-      ar: 'هل يمكنني الترقية من برميل مفرد إلى مزدوج لاحقًا؟',
-      id: 'Bisakah saya upgrade dari barel tunggal ke ganda nanti?',
-    },
-    answer: {
-      en: 'Yes. The hydraulic system is the same — you can start with a single barrel HN325 and add a second barrel later when your order volume grows. This is why many startups begin with HN300 or HN325 single barrel and upgrade to double barrel within 6-12 months.',
-      fr: 'Oui. Le système hydraulique est le même — vous pouvez commencer avec un fût simple HN325 et ajouter un second fût plus tard lorsque votre volume de commandes augmente. C\'est pourquoi de nombreuses startups commencent avec un fût simple HN300 ou HN325 et passent au double-fût en 6 à 12 mois.',
-      ar: 'نعم. النظام الهيدروليكي هو نفسه — يمكنك البدء ببرميل مفرد HN325 وإضافة برميل ثانٍ لاحقًا عندما ينمو حجم طلباتك. لهذا السبب تبدأ العديد من الشركات الناشئة ببرميل مفرد HN300 أو HN325 وتترقى إلى برميل مزدوج خلال 6-12 شهرًا.',
-      id: 'Ya. Sistem hidrolik sama — Anda bisa mulai dengan barel tunggal HN325 dan menambahkan barel kedua nanti ketika volume pesanan Anda tumbuh. Inilah sebabnya banyak startup mulai dengan barel tunggal HN300 atau HN325 dan upgrade ke barel ganda dalam 6-12 bulan.',
     },
   },
 ];
@@ -759,7 +745,7 @@ function tr(obj: Record<string, string>): string {
               <!-- Model as secondary info -->
               <div class="flex items-center gap-2 mb-3 pb-3 border-b border-steel-100">
                 <span class="text-xs text-steel-400">{tr(ui.modelLabel)}</span>
-                <span class={`font-bold text-base ${modelAccentColors[card.modelColor]}`}>{card.model}</span>
+                <span class={`font-bold text-base ${modelAccentColors[card.modelColor]}`}>{typeof card.model === 'string' ? card.model : tr(card.model)}</span>
                 <span class="text-xs text-steel-400 ml-auto">{tr(card.seedHint)}</span>
               </div>
               <p class="text-sm text-steel-600 leading-relaxed flex-1">{tr(card.desc)}</p>
