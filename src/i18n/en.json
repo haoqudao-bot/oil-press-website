@@ -315,38 +315,38 @@
     "parts": [
       {
         "no": "01",
-        "title": "Hydraulic cylinder",
-        "body": "<strong class=\"text-amber-400 font-semibold\">27SiMn alloy steel (GB/T 3077)</strong>, quenched and tempered for hardness and toughness under repeated 60–75 MPa cycling."
+        "title": "Hydraulic Cylinder",
+        "body": "<strong class=\"text-amber-400 font-semibold\">27SiMn alloy steel (GB/T 3077)</strong>, rated for 60–75 MPa system pressure and 300–620 tonnes of pressing force."
       },
       {
         "no": "02",
-        "title": "Pressure plate",
-        "body": "Spreads cylinder force evenly across the cake, keeping pressure uniform edge to edge."
+        "title": "Oil Pressure Plate",
+        "body": "Transfers the cylinder’s force evenly over the whole seed cake, so pressure reaches every seed uniformly instead of concentrating in the centre."
       },
       {
         "no": "03",
-        "title": "Slotted barrel",
-        "body": "<strong class=\"text-amber-400 font-semibold\">Q690 high-strength steel</strong>, welded and plated; strip slots drain oil faster than drilled barrels."
+        "title": "Material Bucket",
+        "body": "<strong class=\"text-amber-400 font-semibold\">Q690 high-strength steel</strong>, welded and <strong class=\"text-amber-400 font-semibold\">nickel-plated inside and out</strong>. Strip-slotted walls release oil faster than a conventional drilled barrel, with no bare metal touching the seed."
       },
       {
         "no": "04",
-        "title": "Food-contact surfaces",
-        "body": "Barrel interior and outlet are <strong class=\"text-amber-400 font-semibold\">nickel-plated, food-grade</strong> — carbon steel never touches the oil."
+        "title": "Oil Outlet",
+        "body": "Pressed oil collects here after draining through the bucket walls and runs straight into the tray below; the outlet is nickel-plated for food-grade contact."
       },
       {
         "no": "05",
-        "title": "Control panel",
-        "body": "Pressure gauges, adjustable cycle timer and safety interlocks on one button-controlled panel."
+        "title": "Control Panel",
+        "body": "Pressure gauges, adjustable cycle timer and safety interlocks grouped on one button-controlled panel."
       },
       {
         "no": "06",
-        "title": "Directional valve",
-        "body": "Plated valve block with enlarged ports for fast, low-shock cycle switching."
+        "title": "Directional Control Valve",
+        "body": "Electroplated valve block with enlarged ports for fast, smooth cycle switching."
       },
       {
         "no": "07",
-        "title": "Hydraulic oil tank",
-        "body": "Integrated reservoir, filter and cooling keep system oil clean and temperature stable."
+        "title": "Hydraulic Oil Tank",
+        "body": "Built-in oil tank with filter and cooling keeps system oil clean and at a stable temperature."
       }
     ],
     "section05Kicker": "05 — FACTORY DIRECT",

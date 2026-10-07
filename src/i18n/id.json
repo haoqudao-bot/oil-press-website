@@ -316,37 +316,37 @@
       {
         "no": "01",
         "title": "Silinder hidrolik",
-        "body": "<strong class=\"text-amber-400 font-semibold\">Baja paduan 27SiMn (GB/T 3077)</strong>, dikeraskan dan di-temper untuk kekerasan dan ketangguhan pada siklus 60–75 MPa berulang."
+        "body": "<strong class=\"text-amber-400 font-semibold\">Baja paduan 27SiMn (GB/T 3077)</strong>, mampu menahan tekanan sistem 60–75 MPa dan gaya tekan 300–620 ton."
       },
       {
         "no": "02",
-        "title": "Pelat penekan",
-        "body": "Menyebarkan gaya silinder secara merata ke seluruh bungkil, menjaga tekanan seragam dari tepi ke tepi."
+        "title": "Pelat tekan oli",
+        "body": "Meneruskan gaya silinder secara merata ke seluruh bungkil biji, sehingga tekanan mencapai setiap biji secara seragam, bukan terkonsentrasi di tengah."
       },
       {
         "no": "03",
-        "title": "Barrel berlubang bilah",
-        "body": "<strong class=\"text-amber-400 font-semibold\">Baja kekuatan tinggi Q690</strong>, dilas dan dilapisi; alur bilah mengalirkan minyak lebih cepat daripada barrel bor."
+        "title": "Keranjang bahan",
+        "body": "<strong class=\"text-amber-400 font-semibold\">Baja kekuatan tinggi Q690</strong>, dilas dan <strong class=\"text-amber-400 font-semibold\">berlapis nikel di dalam dan luar</strong>. Dinding beralur bilah melepaskan minyak lebih cepat dibanding barrel berlubang konvensional, tanpa logam telanjang yang menyentuh biji."
       },
       {
         "no": "04",
-        "title": "Permukaan kontak pangan",
-        "body": "Interior barrel dan saluran keluar <strong class=\"text-amber-400 font-semibold\">dilapisi nikel, food-grade</strong> — baja karbon tidak pernah menyentuh minyak."
+        "title": "Saluran keluar oli",
+        "body": "Minyak yang diperas terkumpul di sini setelah melewati dinding keranjang dan langsung mengalir ke nampan di bawahnya; saluran keluar berlapis nikel untuk kontak food-grade."
       },
       {
         "no": "05",
         "title": "Panel kontrol",
-        "body": "Pengukur tekanan, timer siklus yang dapat diatur, dan interlock pengaman dalam satu panel tombol."
+        "body": "Pengukur tekanan, timer siklus yang dapat diatur, dan interlock pengaman tergabung dalam satu panel tombol."
       },
       {
         "no": "06",
-        "title": "Katup arah",
-        "body": "Blok katup berlapis dengan port yang diperbesar untuk pergantian siklus cepat dan minim hentakan."
+        "title": "Katup kontrol arah",
+        "body": "Blok katup berlapis listrik dengan port diperlebar untuk pergantian siklus yang cepat dan halus."
       },
       {
         "no": "07",
         "title": "Tangki oli hidrolik",
-        "body": "Reservoir, filter, dan pendingin terintegrasi menjaga oli sistem tetap bersih dan suhu stabil."
+        "body": "Tangki oli terintegrasi dengan filter dan pendingin menjaga oli sistem tetap bersih dan bersuhu stabil."
       }
     ],
     "section05Kicker": "05 — LANGSUNG DARI PABRIK",

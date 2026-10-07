@@ -316,37 +316,37 @@
       {
         "no": "01",
         "title": "Vérin hydraulique",
-        "body": "<strong class=\"text-amber-400 font-semibold\">Acier allié 27SiMn (GB/T 3077)</strong>, trempé et revenu pour la dureté et la ténacité sous des cycles répétés de 60 à 75 MPa."
+        "body": "<strong class=\"text-amber-400 font-semibold\">Acier allié 27SiMn (GB/T 3077)</strong>, conçu pour une pression système de 60–75 MPa et une force de pressage de 300–620 tonnes."
       },
       {
         "no": "02",
-        "title": "Plaque de pression",
-        "body": "Répartit uniformément la force du vérin sur la tourte, pour une pression homogène d'un bord à l'autre."
+        "title": "Plateau de pression d’huile",
+        "body": "Transmet la force du vérin uniformément sur toute la galette, afin que chaque graine subisse la même pression plutôt que l’effort ne se concentre au centre."
       },
       {
         "no": "03",
-        "title": "Fût à fentes",
-        "body": "<strong class=\"text-amber-400 font-semibold\">Acier haute résistance Q690</strong>, soudé et plaqué ; les fentes drainent l'huile plus vite que les fûts percés."
+        "title": "Panier à matière",
+        "body": "<strong class=\"text-amber-400 font-semibold\">Acier haute résistance Q690</strong>, soudé et <strong class=\"text-amber-400 font-semibold\">nickelé intérieur et extérieur</strong>. Les parois à fentes longitudinales libèrent l’huile plus vite qu’un fût percé classique, sans qu’aucun métal nu ne touche la graine."
       },
       {
         "no": "04",
-        "title": "Surfaces en contact alimentaire",
-        "body": "L'intérieur du fût et la sortie sont <strong class=\"text-amber-400 font-semibold\">nickelés, de qualité alimentaire</strong> — l'acier au carbone ne touche jamais l'huile."
+        "title": "Sortie d’huile",
+        "body": "L’huile pressée s’y rassemble après avoir traversé les parois du panier et s’écoule directement dans le bac en dessous ; la sortie est nickelée pour un contact de qualité alimentaire."
       },
       {
         "no": "05",
         "title": "Panneau de commande",
-        "body": "Manomètres, minuterie de cycle réglable et sécurités verrouillées sur un panneau à boutons."
+        "body": "Manomètres, minuterie de cycle réglable et sécurités regroupés sur un seul panneau commandé par boutons."
       },
       {
         "no": "06",
-        "title": "Distributeur",
-        "body": "Bloc distributeur plaqué avec orifices élargis pour des cycles rapides et sans à-coups."
+        "title": "Distributeur directionnel",
+        "body": "Bloc distributeur électroplaqué à orifices élargis pour des commutations de cycle rapides et douces."
       },
       {
         "no": "07",
-        "title": "Réservoir d'huile hydraulique",
-        "body": "Réservoir, filtre et refroidissement intégrés gardent l'huile propre et à température stable."
+        "title": "Réservoir d’huile hydraulique",
+        "body": "Réservoir d’huile intégral avec filtre et refroidissement : l’huile système reste propre et à température stable."
       }
     ],
     "section05Kicker": "05 — DIRECT USINE",
