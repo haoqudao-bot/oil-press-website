@@ -220,7 +220,7 @@ Press dingin mengekstrak minyak pada suhu rendah (umumnya di bawah 60°C / 140°
 ### Persyaratan Peralatan untuk Press Dingin
 - Tekanan permukaan cake tinggi (42 MPa atau lebih)
 - Desain barrel khusus untuk ekstraksi suhu rendah
-- Sistem pengawasan suhu
+- Tanpa pemanasan eksternal — tekanan hidrolik statis menjaga suhu minyak tetap rendah secara alami
 - Model yang sesuai: HN426, HN480, HN500
 
 ## Apa itu Press Panas?

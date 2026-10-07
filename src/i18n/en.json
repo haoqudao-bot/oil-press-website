@@ -925,8 +925,8 @@
     "roiCalculator": "ROI Calculator",
     "aboutUs": "About Us",
     "services": "Services",
-    "hydraulicOilPressMachine": "Hydraulic Oil Press Machine",
-    "coldPressOilMachine": "Cold Press Oil Machine",
+    "hydraulicOilPressMachine": "Hydraulic Press Buyer Guide",
+    "coldPressOilMachine": "Cold Press Buyer Guide",
     "compareAllModels": "Compare all models",
     "browseCatalog": "Browse catalog",
     "sheaButter": "Shea Butter",
@@ -1098,13 +1098,13 @@
     "bestForLabel": "Best For"
   },
   "coldPress": {
-    "title": "Cold Press Oil Machine — Help Preserve Natural Quality | Haonuo",
-    "description": "Professional cold press oil machine for premium oil extraction below 60°C. Can help retain more nutrients and flavor compared to hot pressing. Factory-direct from Haonuo. 1-year warranty.",
+    "title": "Cold Press Oil Machine — Cold & Hot Press on One Machine | Haonuo",
+    "description": "Cold press oil machine for premium oil below 60°C. The same Haonuo hydraulic press runs cold AND hot pressing. Factory-direct, 1-year warranty, 48-hour load test.",
     "breadcrumbHome": "Home",
     "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Cold Press Oil Machine",
-    "heroTitle": "Cold Press Oil Machine — Help Preserve Natural Quality",
-    "heroDesc": "Professional cold press oil machines that extract premium oil below 60°C. Can help retain more nutrients, flavor, and aroma compared to hot pressing. Well-suited for coconut, sesame, walnut, and premium oils. Factory-direct from Haonuo.",
+    "breadcrumbCurrent": "Cold Press Buyer Guide",
+    "heroTitle": "Cold Press Oil Machine — Premium Cold Press, Also Runs Hot",
+    "heroDesc": "Professional cold press oil machines for premium oil below 60°C — coconut VCO, sesame, walnut and more. The same machine also runs hot pressing. Factory-direct from Haonuo, 1-year warranty.",
     "requestQuote": "Request a Quote",
     "learnHow": "Learn How Cold Press Works",
     "whyColdPress": "Why Cold Press Matters",
@@ -1170,14 +1170,14 @@
       "title": "Avocado Oil",
       "region": "Global demand",
       "desc": "Cosmetic & premium cooking",
-      "yield": "Yield: 15-25%",
+      "yield": "Yield: 30-40%",
       "tag": "Fast Growing"
     },
     "oliveOil": {
       "title": "Cold-Pressed Olive Oil",
       "region": "Mediterranean",
       "desc": "Premium food market",
-      "yield": "Yield: 15-25%",
+      "yield": "Yield: 35-45%",
       "tag": "Established Market"
     },
     "walnutOil": {
@@ -1191,7 +1191,7 @@
       "title": "Cold-Pressed Sunflower Oil",
       "region": "Eastern Europe / Africa",
       "desc": "Health-conscious market",
-      "yield": "Yield: 35-45%",
+      "yield": "Yield: 40-48%",
       "tag": "High Volume"
     },
     "howWorksTitle": "How Cold Press Extraction Works",
@@ -1227,7 +1227,7 @@
       },
       {
         "question": "What is the yield of cold press oil machine?",
-        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
+        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 40-48%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
       },
       {
         "question": "How much does a cold press oil machine cost?",
@@ -1239,13 +1239,13 @@
     "whatsappUs": "WhatsApp Us"
   },
   "hydraulic": {
-    "title": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "description": "Professional hydraulic oil press machine for cold pressing sesame, peanut, coconut & 50+ oil seeds. Factory-direct pricing, 1-year warranty.",
+    "title": "Hydraulic Oil Press Machines for Sale — HN300–HN500, Factory Direct | Haonuo",
+    "description": "Hydraulic oil press machines from 300 to 620 tons. Cold and hot pressing on one machine. Factory-direct pricing, 1-year warranty, 48-hour load test. Compare models and get a quote.",
     "breadcrumbHome": "Home",
     "breadcrumbProducts": "Products",
-    "breadcrumbCurrent": "Hydraulic Oil Press Machine",
-    "heroTitle": "Hydraulic Oil Press Machine — Factory Direct from Haonuo",
-    "heroDesc": "Professional hydraulic oil press machines for cold pressing sesame, peanut, coconut, and 50+ oil seeds. 15+ years manufacturer. 50+ countries. 1-year warranty.",
+    "breadcrumbCurrent": "Hydraulic Oil Press Buyer Guide",
+    "heroTitle": "Hydraulic Oil Press Machine — Buyer's Guide & Model Range",
+    "heroDesc": "Hydraulic oil presses from 300 to 620 tons for sesame, peanut, coconut, and 50+ oil seeds. Cold and hot pressing on the same machine. Compare models, see factory specs, and request a quote.",
     "requestQuote": "Request a Quote",
     "compareModels": "Compare Models",
     "whyChoose": "Why Choose a Hydraulic Oil Press",
@@ -1283,7 +1283,7 @@
     "howWorksTitle": "How a Hydraulic Oil Press Works",
     "howWorksStep1": {
       "title": "Load Seeds",
-      "desc": "Fill the press barrel with prepared oil seeds. No pre-processing needed for most seed types — just load and press."
+      "desc": "Fill the press barrel with prepared oil seeds. Most seeds benefit from cleaning and drying; hot-pressed seeds are usually roasted or steamed first, while cold-pressed seeds are loaded raw."
     },
     "howWorksStep2": {
       "title": "Apply Pressure",

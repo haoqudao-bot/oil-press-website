@@ -922,8 +922,8 @@
     "roiCalculator": "حاسبة العائد على الاستثمار",
     "aboutUs": "من نحن",
     "services": "الخدمات",
-    "hydraulicOilPressMachine": "ماكينة عصر الزيت الهيدروليكية",
-    "coldPressOilMachine": "ماكينة عصر الزيت البارد",
+    "hydraulicOilPressMachine": "دليل شراء المكابس الهيدروليكية",
+    "coldPressOilMachine": "دليل شراء مكبس البارد",
     "compareAllModels": "مقارنة جميع الموديلات",
     "browseCatalog": "تصفح الكتالوج",
     "sheaButter": "زبدة الشيا",
@@ -1098,13 +1098,13 @@
     "bestForLabel": "الأفضل لـ"
   },
   "coldPress": {
-    "title": "مكبس عصر الزيت البارد — يساعد على الحفاظ على الجودة الطبيعية | Haonuo",
-    "description": "مكبس عصر زيت بارد احترافي لاستخلاص زيت مميز بدرجة حرارة أقل من 60°C. قد يساعد على الاحتفاظ بمزيد من العناصر الغذائية والنكهة مقارنة بالعصر الساخن. بيع مباشر من مصنع هاونو. ضمان لمدة سنة.",
+    "title": "مكبس عصر الزيت البارد — عصر بارد وساخن على نفس الماكينة | هاونو",
+    "description": "مكبس عصر زيت بارد لزيت ممتاز بدرجة حرارة أقل من 60°مك. نفس المكبس الهيدروليكي من هاونو يعمل للعصر البارد والساخن. بيع مباشر من المصنع، ضمان سنة، اختبار حمل 48 ساعة.",
     "breadcrumbHome": "الرئيسية",
     "breadcrumbProducts": "المنتجات",
-    "breadcrumbCurrent": "مكبس عصر الزيت البارد",
-    "heroTitle": "مكبس عصر الزيت البارد — يساعد على الحفاظ على الجودة الطبيعية",
-    "heroDesc": "مكابس عصر زيت بارد احترافية تستخلص زيتًا مميزًا بدرجة حرارة أقل من 60°C. قد تساعد على الاحتفاظ بمزيد من العناصر الغذائية والنكهة والرائحة مقارنة بالعصر الساخن. مناسبة لجوز الهند والسمسم والجوز والزيوت المميزة. بيع مباشر من مصنع هاونو.",
+    "breadcrumbCurrent": "دليل شراء مكبس البارد",
+    "heroTitle": "مكبس عصر الزيت البارد — زيت ممتاز بالبارد، وأيضاً بالساخن",
+    "heroDesc": "مكابس عصر زيت بارد احترافية لزيت ممتاز بدرجة أقل من 60°مك — زيت جوز الهند البكر والسمسم والجوز وغيرها. نفس الماكينة تعمل أيضاً للعصر الساخن. بيع مباشر من مصنع هاونو، ضمان سنة.",
     "requestQuote": "اطلب عرض سعر",
     "learnHow": "تعرّف على كيفية عمل العصر البارد",
     "whyColdPress": "لماذا يُعد العصر البارد مهمًا",
@@ -1170,14 +1170,14 @@
       "title": "زيت الأفوكادو",
       "region": "طلب عالمي",
       "desc": "التجميل والطهي المميز",
-      "yield": "المردود: 15-25%",
+      "yield": "المردود: 30-40%",
       "tag": "نمو سريع"
     },
     "oliveOil": {
       "title": "زيت الزيتون المعصور على البارد",
       "region": "البحر المتوسط",
       "desc": "سوق الأغذية المميزة",
-      "yield": "المردود: 15-25%",
+      "yield": "المردود: 35-45%",
       "tag": "سوق راسخ"
     },
     "walnutOil": {
@@ -1191,7 +1191,7 @@
       "title": "زيت عباد الشمس المعصور على البارد",
       "region": "شرق أوروبا / أفريقيا",
       "desc": "سوق المهتمين بالصحة",
-      "yield": "المردود: 35-45%",
+      "yield": "المردود: 40-48%",
       "tag": "كميات كبيرة"
     },
     "howWorksTitle": "كيف يعمل الاستخلاص بالعصر البارد",
@@ -1227,7 +1227,7 @@
       },
       {
         "question": "What is the yield of cold press oil machine?",
-        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
+        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 40-48%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
       },
       {
         "question": "How much does a cold press oil machine cost?",
@@ -1239,13 +1239,13 @@
     "whatsappUs": "راسلنا عبر واتساب"
   },
   "hydraulic": {
-    "title": "مكبس الزيت الهيدروليكي — بيع مباشر من مصنع هاونو",
-    "description": "مكبس زيت هيدروليكي احترافي للعصر البارد للسمسم والفول السوداني وجوز الهند وأكثر من 50 نوعًا من البذور الزيتية. مصنع بخبرة تتجاوز 15 عامًا. أسعار مباشرة من المصنع. ضمان لمدة سنة.",
+    "title": "مكابس الزيت الهيدروليكية للبيع — HN300–HN500، بيع مباشر من المصنع | هاونو",
+    "description": "مكابس زيت هيدروليكية من 300 إلى 620 طن. عصر بارد وساخن على نفس الماكينة. أسعار مباشرة من المصنع، ضمان سنة، اختبار حمل 48 ساعة. قارن الموديلات واطلب عرض سعر.",
     "breadcrumbHome": "الرئيسية",
     "breadcrumbProducts": "المنتجات",
-    "breadcrumbCurrent": "مكبس الزيت الهيدروليكي",
-    "heroTitle": "مكبس الزيت الهيدروليكي — بيع مباشر من مصنع هاونو",
-    "heroDesc": "مكابس زيت هيدروليكية احترافية للعصر البارد للسمسم والفول السوداني وجوز الهند وأكثر من 50 نوعًا من البذور الزيتية. مصنع بخبرة تتجاوز 15 عامًا. صادرات لأكثر من 50 دولة. ضمان لمدة سنة.",
+    "breadcrumbCurrent": "دليل شراء المكابس الهيدروليكية",
+    "heroTitle": "مكبس الزيت الهيدروليكي — دليل الشراء وسلسلة الموديلات",
+    "heroDesc": "مكابس زيت هيدروليكية من 300 إلى 620 طن للسمسم والفول السوداني وجوز الهند وأكثر من 50 نوع بذور. عصر بارد وساخن على نفس الماكينة. قارن الموديلات، اطلع على مواصفات المصنع واطلب عرض سعر.",
     "requestQuote": "اطلب عرض سعر",
     "compareModels": "مقارنة الموديلات",
     "whyChoose": "لماذا تختار مكبس الزيت الهيدروليكي",
@@ -1283,7 +1283,7 @@
     "howWorksTitle": "كيف يعمل مكبس الزيت الهيدروليكي",
     "howWorksStep1": {
       "title": "تحميل البذور",
-      "desc": "املأ أسطوانة العصر بالبذور الزيتية المحضرة. لا حاجة لأي معالجة مسبقة لمعظم أنواع البذور — فقط حمّل واعصر."
+      "desc": "املأ أسطوانة العصر بالبذور الزيتية المحضرة. تستفيد أغلب البذور من التنظيف والتجفيف؛ أما للعصر الساخن فتُحمَّص أو تُبخَر البذور عادةً أولاً، أما للعصر البارد فتُحمَّل نيئة."
     },
     "howWorksStep2": {
       "title": "تطبيق الضغط",

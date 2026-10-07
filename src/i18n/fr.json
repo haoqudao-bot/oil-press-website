@@ -922,8 +922,8 @@
     "roiCalculator": "Calculateur ROI",
     "aboutUs": "À propos",
     "services": "Services",
-    "hydraulicOilPressMachine": "Presse à Huile Hydraulique",
-    "coldPressOilMachine": "Presse à Huile à Froid",
+    "hydraulicOilPressMachine": "Guide d'achat presse hydraulique",
+    "coldPressOilMachine": "Guide d'achat presse à froid",
     "compareAllModels": "Comparer tous les modèles",
     "browseCatalog": "Parcourir le catalogue",
     "sheaButter": "Beurre de Karité",
@@ -1098,13 +1098,13 @@
     "bestForLabel": "Meilleur Pour"
   },
   "coldPress": {
-    "title": "Presse à huile à froid — Aide à préserver la qualité naturelle | Haonuo",
-    "description": "Presse à huile à froid professionnelle pour une extraction premium en dessous de 60°C. Peut aider à préserver plus de nutriments et de saveur que le pressage à chaud. Vente directe usine Haonuo. Garantie 1 an.",
+    "title": "Presse à huile à froid — Pressage à froid ET à chaud sur la même machine | Haonuo",
+    "description": "Presse à huile à froid pour une huile premium en dessous de 60°C. La même presse hydraulique Haonuo fait le pressage à froid ET à chaud. Vente directe usine, garantie 1 an, test de charge 48h.",
     "breadcrumbHome": "Accueil",
     "breadcrumbProducts": "Produits",
-    "breadcrumbCurrent": "Presse à huile à froid",
-    "heroTitle": "Presse à huile à froid — Aide à préserver la qualité naturelle",
-    "heroDesc": "Presses à huile à froid professionnelles qui extraient une huile premium en dessous de 60°C. Peuvent aider à préserver davantage de nutriments, de saveur et d'arôme que le pressage à chaud. Adaptées au coco, sésame, noix et huiles premium. Vente directe usine Haonuo.",
+    "breadcrumbCurrent": "Guide d'achat presse à froid",
+    "heroTitle": "Presse à huile à froid — Premium à froid, aussi à chaud",
+    "heroDesc": "Presses à huile à froid professionnelles pour une huile premium en dessous de 60°C — coco VCO, sésame, noix et plus. La même machine fait aussi le pressage à chaud. Vente directe usine Haonuo, garantie 1 an.",
     "requestQuote": "Demander un devis",
     "learnHow": "Découvrir le fonctionnement du pressage à froid",
     "whyColdPress": "Pourquoi le pressage à froid est important",
@@ -1170,14 +1170,14 @@
       "title": "Huile d'avocat",
       "region": "Demande mondiale",
       "desc": "Cosmétique et cuisine premium",
-      "yield": "Rendement : 15-25 %",
+      "yield": "Rendement : 30-40 %",
       "tag": "En forte croissance"
     },
     "oliveOil": {
       "title": "Huile d'olive pressée à froid",
       "region": "Méditerranée",
       "desc": "Marché alimentaire premium",
-      "yield": "Rendement : 15-25 %",
+      "yield": "Rendement : 35-45 %",
       "tag": "Marché établi"
     },
     "walnutOil": {
@@ -1191,7 +1191,7 @@
       "title": "Huile de tournesol pressée à froid",
       "region": "Europe de l'Est / Afrique",
       "desc": "Marché soucieux de la santé",
-      "yield": "Rendement : 35-45 %",
+      "yield": "Rendement : 40-48 %",
       "tag": "Grand volume"
     },
     "howWorksTitle": "Comment fonctionne l'extraction par pressage à froid",
@@ -1227,7 +1227,7 @@
       },
       {
         "question": "What is the yield of cold press oil machine?",
-        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 35-45%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
+        "answer": "Yield varies by seed type: coconut 55-65%, sesame 42-50%, peanut 38-45%, walnut 50-60%, sunflower 40-48%, flaxseed 30-38%, rapeseed 35-42%. Haonuo's hydraulic cold press machines with bar-type slotted barrel design achieve approximately 2-3% higher yields than traditional drilled barrel presses (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), minimizing the yield gap between cold and hot pressing methods."
       },
       {
         "question": "How much does a cold press oil machine cost?",
@@ -1239,13 +1239,13 @@
     "whatsappUs": "Écrivez-nous sur WhatsApp"
   },
   "hydraulic": {
-    "title": "Presse à huile hydraulique — Vente directe usine Haonuo",
-    "description": "Presse à huile hydraulique professionnelle pour le pressage à froid du sésame, de l'arachide, du coco et plus de 50 graines oléagineuses. Fabricant depuis plus de 15 ans. Prix direct usine. Garantie 1 an.",
+    "title": "Presses à huile hydrauliques à vendre — HN300–HN500, vente directe usine | Haonuo",
+    "description": "Presses à huile hydrauliques de 300 à 620 tonnes. Pressage à froid et à chaud sur la même machine. Prix direct usine, garantie 1 an, test de charge 48h. Comparez les modèles et demandez un devis.",
     "breadcrumbHome": "Accueil",
     "breadcrumbProducts": "Produits",
-    "breadcrumbCurrent": "Presse à huile hydraulique",
-    "heroTitle": "Presse à huile hydraulique — Vente directe usine Haonuo",
-    "heroDesc": "Presses à huile hydrauliques professionnelles pour le pressage à froid du sésame, de l'arachide, du coco et plus de 50 graines oléagineuses. Fabricant depuis plus de 15 ans. Plus de 50 pays. Garantie 1 an.",
+    "breadcrumbCurrent": "Guide d'achat presse hydraulique",
+    "heroTitle": "Presse à huile hydraulique — Guide d'achat et gamme de modèles",
+    "heroDesc": "Presses à huile hydrauliques de 300 à 620 tonnes pour sésame, arachide, coco et plus de 50 graines. Pressage à froid et à chaud sur la même machine. Comparez les modèles, voir les specs usine et demandez un devis.",
     "requestQuote": "Demander un devis",
     "compareModels": "Comparer les modèles",
     "whyChoose": "Pourquoi choisir une presse à huile hydraulique",
@@ -1283,7 +1283,7 @@
     "howWorksTitle": "Comment fonctionne une presse à huile hydraulique",
     "howWorksStep1": {
       "title": "Charger les graines",
-      "desc": "Remplissez le cylindre de pressage avec les graines oléagineuses préparées. Aucun prétraitement nécessaire pour la plupart des graines — chargez et pressez simplement."
+      "desc": "Remplissez le cylindre de pressage avec les graines oléagineuses préparées. La plupart des graines bénéficient d'un nettoyage et d'un séchage ; pour le pressage à chaud, les graines sont généralement torréfiées ou étuvées au préalable, tandis que pour le pressage à froid elles sont chargées crues."
     },
     "howWorksStep2": {
       "title": "Appliquer la pression",

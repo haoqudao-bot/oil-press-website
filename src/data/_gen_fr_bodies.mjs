@@ -106,7 +106,7 @@ Le HN325 est idéal pour presser une grande variété de graines oléagineuses c
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** Conçu pour les conditions difficiles — la conception mécanique simple du HN325 signifie moins de pannes et des réparations plus faciles. Fonctionne sur alimentation monophasée 220V standard ou groupe électrogène portable (5 kVA minimum). Pièces de rechange disponibles en stock avec expédition en 3 jours vers Lagos ou Mombasa.
 
-**Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Disponible avec fût en acier inoxydable de qualité alimentaire pour la production d'huile de sésame certifiée halal. Le système de contrôle de température assure une qualité de pressage à froid inférieure à 60°C pour les huiles de qualité premium.`;
+**Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Disponible avec fût en acier inoxydable de qualité alimentaire pour la production d'huile de sésame certifiée halal. Le pressage hydraulique statique n'ajoute aucune chaleur de friction : presser des graines crues et sèches maintient naturellement une température basse, inférieure à 60°C, pour les huiles de qualité premium.`;
 
 // 2. heavy-duty-hydraulic-oil-press
 frBodies['heavy-duty-hydraulic-oil-press'] = `## Aperçu

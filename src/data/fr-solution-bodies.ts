@@ -342,7 +342,7 @@ L'huile de lin est l'une des sources végétales les plus riches en acides gras 
 Pour la production d'huile de lin, nous recommandons :
 1. **Presse hydraulique en acier inoxydable** — Prévient la contamination de l'huile, facile à nettoyer
 2. **Presse filtrante pneumatique** — Filtration naturelle sans produits chimiques
-3. **Système de contrôle de température** — Garantit que le pressage reste en dessous de 50°C
+3. **Pressage à froid de graines crues** — Des graines sèches non torréfiées et la pression hydraulique statique maintiennent le processus en dessous de 50°C sans aucun élément chauffant
 
 Contactez Haonuo pour une installation de production d'huile de lin personnalisée avec un équipement en acier inoxydable de qualité alimentaire.`,
 
@@ -938,7 +938,7 @@ La solution de pressage d'huile de noix de Haonuo Machinery est spécifiquement 
 ## Pourquoi Choisir Haonuo pour la Production d'Huile de Noix
 
 - **Technologie ultra haute pression** — Notre HN500 délivre 620 tonnes de force de pressage, extrayant le maximum d'huile des noix à coque dure
-- **Système de contrôle de température** — Surveillance intégrée de la température garantissant que le pressage reste en dessous de 60°C pour préserver les oméga-3
+- **Pressage statique à basse chaleur** — Pas de friction de vis ni d'élément chauffant ; presser les graines crues en dessous de 60°C aide à préserver les oméga-3
 - **Option acier inoxydable de qualité alimentaire** — Disponible pour les clients exigeant les normes d'hygiène les plus élevées
 - **Prouvé dans les marchés du Moyen-Orient** — Nos machines sont utilisées avec succès en Arabie Saoudite, aux Émirats Arabes Unis et en Iran
 - **Garantie de 1 an + support à vie** — Couverture complète avec pièces de rechange expédiées sous 48 heures`

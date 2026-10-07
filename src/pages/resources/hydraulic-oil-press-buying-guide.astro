@@ -63,14 +63,6 @@ const buyingChecklist = [
   ]},
 ];
 
-const modelSelection = [
-  { model: 'HN325', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '60 MPa', materials: 'Sesame, peanut, rapeseed', highlight: 'Best for home business' },
-  { model: 'HN365', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '63 MPa', materials: 'Most oil seeds', highlight: 'Best for small workshop' },
-  { model: 'HN426', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '70 MPa', materials: 'Walnut, almond, coconut', highlight: 'Premium cold pressing' },
-  { model: 'HN480', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '72 MPa', materials: 'Various high-oil seeds', highlight: 'Medium production' },
-  { model: 'HN500', capacity: '100 kg/batch', cycle: '40-90 min/batch', pressure: '75 MPa', materials: 'Commercial scale', highlight: 'Commercial production' },
-];
-
 const questionsToAsk = [
   'What is your daily production target?',
   'Which seeds/nuts will you process?',
@@ -169,35 +161,20 @@ const redFlags = [
       </section>
 
       <section id="models" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Model Selection Guide</h2>
-        <p class="text-steel-600 mb-6">All models process <strong>100 kg per batch</strong>. Cycle time varies by material — softer seeds like sesame take about 40 minutes per batch, while hard materials like walnut can take up to 1.5 hours.</p>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Model</th>
-                <th class="px-4 py-3 text-left font-semibold">Capacity</th>
-                <th class="px-4 py-3 text-left font-semibold">Cycle Time</th>
-                <th class="px-4 py-3 text-left font-semibold">Pressure</th>
-                <th class="px-4 py-3 text-left font-semibold">Best For</th>
-              </tr>
-            </thead>
-            <tbody>
-              {modelSelection.map((item, index) => (
-                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
-                  <td class="px-4 py-3 font-bold text-amber-600">{item.model}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.capacity}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.cycle}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.pressure}</td>
-                  <td class="px-4 py-3">
-                    <p class="text-steel-700 text-sm">{item.highlight}</p>
-                    <p class="text-steel-500 text-xs">{item.materials}</p>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Choosing Your Model</h2>
+        <p class="text-steel-600 mb-6">
+          The right model depends on your <strong>main seed type</strong> (softer seeds need less pressure;
+          hard nuts and in-shell coconut need higher force), your <strong>target daily output</strong>,
+          and whether you plan to do mostly <strong>cold or hot pressing</strong>.
+        </p>
+        <p class="text-steel-600 mb-6">
+          This guide covers the questions you should ask <em>any</em> supplier. For a side-by-side
+          comparison of the full Haonuo model range (HN300 through HN500) with real specs and
+          seed-based recommendations, see the dedicated
+          <a href="/products/model-comparison/" class="text-amber-600 hover:underline font-semibold">Model Comparison</a>
+          page. For an overview of the whole hydraulic range at a glance, visit the
+          <a href="/hydraulic-oil-press-machine/" class="text-amber-600 hover:underline font-semibold">Hydraulic Oil Press Buyer Guide</a>.
+        </p>
       </section>
 
       <section id="questions" class="mb-12">

@@ -50,7 +50,7 @@ HN325 cocok untuk menekan berbagai biji minyak konvensional:
 
 **Afrika (Nigeria, Kenya, Ghana, Tanzania):** Dibangun untuk kondisi keras — desain mekanis sederhana HN325 berarti lebih sedikit kerusakan dan perbaikan yang lebih mudah. Beroperasi pada catu daya fase tunggal 220V standar atau generator portabel (minimum 5kVA). Suku cadang tersedia dari stok dengan pengiriman 3 hari ke Lagos atau Mombasa.
 
-**Timur Tengah (Arab Saudi, UEA, Mesir):** Tersedia dengan barel baja tahan karat kelas pangan untuk produksi minyak wijen bersertifikat halal. Sistem kontrol suhu memastikan kualitas press dingin di bawah 60°C untuk minyak kelas premium.`,
+**Timur Tengah (Arab Saudi, UEA, Mesir):** Tersedia dengan barel baja tahan karat kelas pangan untuk produksi minyak wijen bersertifikat halal. Press hidrolik statis tidak menambah panas gesekan: mempress biji mentah kering menjaga suhu tetap rendah secara alami di bawah 60°C untuk minyak kelas premium.`,
 
   'heavy-duty-hydraulic-oil-press': `## Ringkasan
 
@@ -379,7 +379,7 @@ HN500 memberikan tingkat minyak sisa yang kompetitif di semua jenis bahan, menja
 
 **Afrika (Nigeria, Kenya, Ghana, Tanzania):** HN500 dibangun untuk pemrosesan kacang tanah dan mentega shea skala industri. Rangka kokoh dan sistem hidrolik beratnya menahan operasi 12 jam per hari yang umum di fasilitas produksi Afrika.
 
-**Timur Tengah (Arab Saudi, UEA, Mesir):** HN500 adalah rekomendasi teratas kami untuk produksi minyak walnut dan minyak kacang bernilai tinggi. Tekanan ultra tinggi mengekstraksi minyak maksimum dari kacak bercangkang keras sementara sistem kontrol suhu menjaga asam lemak omega-3 yang sensitif.`,
+**Timur Tengah (Arab Saudi, UEA, Mesir):** HN500 adalah rekomendasi teratas kami untuk produksi minyak walnut dan minyak kacang bernilai tinggi. Tekanan ultra tinggi mengekstraksi minyak maksimum dari kacak bercangkang keras sementara press statis tanpa gesekan sekrup menjaga suhu tetap rendah untuk membantu melindungi asam lemak omega-3 yang sensitif.`,
 
   'hn365-hydraulic-oil-press': `## Ringkasan
 

@@ -324,7 +324,7 @@ Le pressage à froid extrait l'huile à basse température (généralement en de
 ### Exigences en équipement pour le pressage à froid
 - Pression de surface de gâteau plus élevée (42 MPa ou plus)
 - Design de baril spécialisé pour l'extraction à basse température
-- Système de surveillance de la température
+- Aucun chauffage externe — la pression hydraulique statique maintient naturellement la température de l'huile à un niveau bas
 - Modèles adaptés : HN426, HN480, HN500
 
 ## Qu'est-ce que le pressage à chaud ?

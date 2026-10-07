@@ -1,24 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
 import { getTranslations } from '../i18n';
 
 const t = getTranslations('en');
-const allProducts = await getCollection('products');
-const coldPressProducts = allProducts.filter(p =>
-  p.data.category === 'hydraulic-oil-press' && (
-    p.data.title?.en?.toLowerCase().includes('cold press') ||
-    p.data.title?.en?.toLowerCase().includes('ultra-high-pressure') ||
-    p.data.applicableSeeds?.some(s =>
-      s.toLowerCase().includes('coconut') ||
-      s.toLowerCase().includes('walnut') ||
-      s.toLowerCase().includes('almond') ||
-      s.toLowerCase().includes('avocado') ||
-      s.toLowerCase().includes('flaxseed') ||
-      s.toLowerCase().includes('olive')
-    )
-  )
-).slice(0, 6);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -39,12 +23,69 @@ const faqLd = {
     acceptedAnswer: { '@type': 'Answer', text: faq.answer },
   })),
 };
+
+// Same HN hydraulic range — every model can cold press
+const rangeModels = [
+  { model: 'HN300', force: '300 t', href: '/products/mini-hydraulic-oil-press/' },
+  { model: 'HN325', force: '325 t', href: '/products/standard-hydraulic-oil-press/' },
+  { model: 'HN365', force: '365 t', href: '/products/hn365-hydraulic-oil-press/' },
+  { model: 'HN426', force: '500 t', href: '/products/cold-press-hydraulic-oil-press/' },
+  { model: 'HN480', force: '560 t', href: '/products/high-pressure-hydraulic-oil-press/' },
+  { model: 'HN480B', force: '600 t', href: '/products/ultra-high-pressure-cold-press/' },
+  { model: 'HN500', force: '620 t', href: '/products/ultra-high-pressure-hydraulic-oil-press/' },
+];
+
+// Choose by material hardness — the real deciding factor for cold press
+const materialCards = [
+  {
+    tag: 'Soft seeds',
+    title: 'Soft oil seeds',
+    seeds: 'Sesame · peanut · sunflower · rapeseed · soybean',
+    pressure: '325–365 tons · standard cake pressure',
+    desc: 'Cold-pressed sesame and peanut oil sell strongly in Middle Eastern and Asian markets. The HN325 is the entry best seller; the HN365 adds a double station for all-day batches.',
+    models: [
+      { name: 'HN325', href: '/products/standard-hydraulic-oil-press/', note: 'best seller' },
+      { name: 'HN365', href: '/products/hn365-hydraulic-oil-press/', note: 'double station' },
+    ],
+  },
+  {
+    tag: 'Premium nuts',
+    title: 'Medium-hard seeds & tree nuts',
+    seeds: 'Walnut · almond · camellia / tea seed · flaxseed · perilla · apricot kernel · pumpkin seed',
+    pressure: '500–600 tons · 42–48 MPa cake pressure',
+    desc: 'This is where cold press earns its margin — delicate, high-value oils. 42 MPa+ cake pressure breaks hard cells without heat, keeping omega-3 and flavor intact.',
+    models: [
+      { name: 'HN426', href: '/products/cold-press-hydraulic-oil-press/', note: 'cold-press flagship' },
+      { name: 'HN480B', href: '/products/ultra-high-pressure-cold-press/', note: '600 t, made to order' },
+    ],
+  },
+  {
+    tag: 'Hard / in-shell',
+    title: 'Hard, in-shell & fibrous materials',
+    seeds: 'Copra for VCO · in-shell walnut · tiger nut · shea · yellowhorn · hemp',
+    pressure: '560–620 tons · up to 75 MPa',
+    desc: 'The hardest materials need the highest force in the range. HN480 and HN500 extract maximum oil in fewer passes — including nuts pressed in shell.',
+    models: [
+      { name: 'HN480', href: '/products/high-pressure-hydraulic-oil-press/', note: '560 t' },
+      { name: 'HN500', href: '/products/ultra-high-pressure-hydraulic-oil-press/', note: '620 t flagship' },
+    ],
+  },
+];
+
+const coldFacts = [
+  { label: 'Oil temperature', value: 'below 60°C' },
+  { label: 'Seed condition', value: 'raw & dried, unroasted' },
+  { label: 'Batch capacity', value: 'up to 100 kg / barrel' },
+  { label: 'Cold cycle', value: 'up to ~2 h per batch' },
+  { label: 'Method', value: 'mechanical only, no chemicals' },
+  { label: 'Result', value: 'unrefined, ready to filter' },
+];
 ---
 
 <BaseLayout
   title={t.coldPress.title}
   description={t.coldPress.description}
-  keywords={['cold press oil machine', 'cold press oil expeller', 'cold press oil machine price', 'cold pressed oil machine', 'cold press oil extraction machine', 'cold press machine for home']}
+  keywords={['cold press oil machine', 'cold press oil expeller', 'cold press oil machine price', 'cold pressed oil machine', 'cold press oil extraction machine', 'hydraulic cold press oil machine']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
   <section class="bg-steel-50 py-4 border-b border-steel-100">
@@ -54,7 +95,7 @@ const faqLd = {
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <a href="/products/" class="hover:text-amber-500 transition-colors">{t.coldPress.breadcrumbProducts}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <span class="text-charcoal-900">{t.coldPress.breadcrumbCurrent}</span>
+        <span class="text-charcoal-900 font-semibold">{t.coldPress.breadcrumbCurrent}</span>
       </nav>
     </div>
   </section>
@@ -62,7 +103,7 @@ const faqLd = {
   <section class="bg-steel-900 py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.coldPress.heroTitle}</h1>
-	      <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.coldPress.heroDesc}</p>
+      <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.coldPress.heroDesc}</p>
       <div class="flex flex-wrap gap-4">
         <a href="/contact/" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
           {t.coldPress.requestQuote}
@@ -75,133 +116,223 @@ const faqLd = {
     </div>
   </section>
 
+  <!-- What is cold pressing -->
   <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.coldPress.whyColdPress}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#127793;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.nutrientPreservation.title}</h3>
-          <p class="text-steel-600 leading-relaxed">{t.coldPress.nutrientPreservation.desc}</p>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">WHAT IT IS</span>
+          <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">What is cold press oil extraction?</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Cold pressing extracts oil from <b class="text-charcoal-900">raw, dried, unroasted seeds using mechanical pressure alone</b> — no external heat
+            and no chemical solvents. On a hydraulic press, static pressure pushes the oil temperature to roughly <b class="text-charcoal-900">below 60°C</b>,
+            because there is no screw friction heating the material.
+          </p>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            The oil keeps its natural vitamins, antioxidants, color and fresh-seed flavor, and is sold <b class="text-charcoal-900">unrefined</b> after simple
+            filtration — VCO, cold-pressed sesame, walnut, flaxseed and avocado oil are typical products.
+          </p>
+          <p class="text-steel-600 leading-relaxed">
+            Trade-off, stated honestly: cold pressing usually yields a few percent less oil than roasting first, takes a longer cycle, and only pays back when
+            your market pays the premium. Each barrel still processes a full <b class="text-charcoal-900">up to 100 kg of seed per batch</b> — this is
+            commercial production, not a household appliance.
+          </p>
         </div>
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#128067;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.naturalFlavor.title}</h3>
-          <p class="text-steel-600 leading-relaxed">{t.coldPress.naturalFlavor.desc}</p>
+        <div class="bg-steel-50 rounded-2xl border border-steel-100 overflow-hidden">
+          <div class="bg-steel-900 px-6 py-4">
+            <h3 class="font-display text-lg text-white">Cold pressing — quick facts</h3>
+          </div>
+          <dl class="divide-y divide-steel-100">
+            {coldFacts.map(f => (
+              <div class="flex items-center justify-between px-6 py-3.5">
+                <dt class="text-steel-500 text-sm">{f.label}</dt>
+                <dd class="text-charcoal-900 font-semibold text-sm text-right">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <div class="px-6 py-4 bg-amber-50">
+            <p class="text-xs text-amber-800">Temperature and cycle vary by seed, moisture and cake settings. Hot pressing on the same machine runs 30–40 min with pre-roasted seed.</p>
+          </div>
         </div>
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#128142;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.higherMarketValue.title}</h3>
-          <p class="text-steel-600 leading-relaxed">{t.coldPress.higherMarketValue.desc}</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-2xl mb-3">&#127807;</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Nutrients &amp; natural flavor kept</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">Below 60°C, sensitive fatty acids, antioxidants and the seed's original aroma largely survive — the basis of the premium grade.</p>
         </div>
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#127981;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.versatileApplications.title}</h3>
-          <p class="text-steel-600 leading-relaxed">{t.coldPress.versatileApplications.desc}</p>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-2xl mb-3">&#128176;</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Premium market price</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">Cold-pressed, unrefined oils typically command roughly 30–80% more than refined oils in markets that recognize the grade (varies strongly by country).</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="text-2xl mb-3">&#129514;</div>
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">No chemical refining</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">Mechanical extraction plus natural filtration — no hexane, no neutralization line, simpler compliance for food and cosmetic buyers.</p>
         </div>
       </div>
     </div>
   </section>
 
-  {coldPressProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">{t.coldPress.productsTitle}</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {coldPressProducts.map(product => (
-            <a
-              href={`/products/${product.slug}`}
-              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
-            >
-              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-                <img
-                  src={product.data.images[0]}
-                  alt={product.data.title.en}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20cold%20press%20oil%20machine%20product%20photo&image_size=landscape_4_3'"
-                />
-              </div>
-              <div class="p-5">
-                <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
-                <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
-                <div class="flex flex-wrap gap-2">
-                  {product.data.specifications.slice(0, 2).map(spec => (
-                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
-                      {spec.name}: {spec.value}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </a>
-          ))}
+  <!-- One Machine, Cold AND Hot Pressing -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-steel-900 to-charcoal-900 rounded-3xl p-8 md:p-12 text-center">
+        <div class="text-4xl mb-4">&#9889;</div>
+        <h2 class="font-display text-3xl md:text-4xl text-white mb-4">One machine, cold AND hot pressing</h2>
+        <p class="text-steel-300 text-lg max-w-3xl mx-auto mb-6">
+          A Haonuo hydraulic press is not locked into cold pressing only. The same machine runs
+          <b class="text-white">cold press</b> (raw seed, below 60°C) for premium oil and
+          <b class="text-white">hot press</b> (roasted/steamed seed) for higher yield — you switch by how
+          you prepare the seed, not by buying another machine.
+        </p>
+        <p class="text-steel-400 text-sm max-w-2xl mx-auto">
+          This is the key advantage of static hydraulic pressure: there is no friction heating from a screw,
+          so oil temperature is governed by your seed preparation. Produce premium cold-pressed oil
+          today and bulk hot-pressed oil tomorrow on the same equipment. For hot pressing, pair the press
+          with a separate roaster or steamer — the press itself has no built-in heater.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Is Cold Pressing More Profitable? -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 text-center mb-3">Is cold pressing more profitable?</h2>
+      <p class="text-center text-steel-600 max-w-3xl mx-auto mb-6">
+        Cold pressing usually gives <b>5–8% lower oil yield</b> than hot pressing, but the oil sells at a
+        <b>premium</b>. Whether it pays off depends on your market, oil type and the price gap you can actually achieve.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm">
+        <span class="bg-steel-50 border border-steel-100 text-steel-600 px-4 py-2 rounded-full">Up to 100 kg seed per barrel per cycle — commercial batch size</span>
+        <span class="bg-steel-50 border border-steel-100 text-steel-600 px-4 py-2 rounded-full">Cold cycle up to ~2 h vs 30–40 min hot</span>
+        <span class="bg-steel-50 border border-steel-100 text-steel-600 px-4 py-2 rounded-full">Typical premium 30–80% — verify in your local market</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">When cold press wins</h3>
+          <ul class="text-steel-600 text-sm space-y-2 leading-relaxed">
+            <li>Premium / organic / cosmetic markets (VCO, walnut, argan, sesame).</li>
+            <li>Where cold-pressed oil commands a clear, bankable price premium over refined oil.</li>
+            <li>When the premium per liter exceeds the value of the extra hot-press yield — that margin gap, not batch size, is the deciding factor.</li>
+          </ul>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">When hot press makes sense</h3>
+          <ul class="text-steel-600 text-sm space-y-2 leading-relaxed">
+            <li>Bulk cooking oil where volume and low cost matter most.</li>
+            <li>High-volume continuous supply to distributors or refineries.</li>
+            <li>Seeds where pre-roasting materially increases yield and your market does not pay a cold-press premium.</li>
+          </ul>
         </div>
       </div>
-    </section>
-  )}
-
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.coldPress.comparisonTitle}</h2>
-      <div class="overflow-x-auto">
-        <table class="w-full border-collapse">
-          <thead>
-            <tr class="bg-steel-900 text-white">
-              <th class="text-left px-6 py-4 font-display text-lg rounded-tl-xl">{t.coldPress.comparisonFeature}</th>
-              <th class="text-center px-6 py-4 font-display text-lg">{t.coldPress.comparisonColdPress}</th>
-              <th class="text-center px-6 py-4 font-display text-lg rounded-tr-xl">{t.coldPress.comparisonHotPress}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-steel-100">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonTemp}</td>
-              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonTempCold}</td>
-              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonTempHot}</td>
-            </tr>
-            <tr class="border-b border-steel-100 bg-steel-50">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonNutrient}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">{t.coldPress.comparisonNutrientCold}</span></td>
-              <td class="px-6 py-4 text-center"><span class="text-steel-600">{t.coldPress.comparisonNutrientHot}</span></td>
-            </tr>
-            <tr class="border-b border-steel-100">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonYield}</td>
-              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonYieldCold}</td>
-              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonYieldHot}</td>
-            </tr>
-            <tr class="border-b border-steel-100 bg-steel-50">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonQuality}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">{t.coldPress.comparisonQualityCold}</span></td>
-              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonQualityHot}</td>
-            </tr>
-            <tr class="border-b border-steel-100">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonFlavor}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">{t.coldPress.comparisonFlavorCold}</span></td>
-              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonFlavorHot}</td>
-            </tr>
-            <tr class="border-b border-steel-100 bg-steel-50">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{t.coldPress.comparisonPrice}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">{t.coldPress.comparisonPriceCold}</span></td>
-              <td class="px-6 py-4 text-center text-steel-600">{t.coldPress.comparisonPriceHot}</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-medium text-charcoal-900 rounded-bl-xl">{t.coldPress.comparisonBestFor}</td>
-              <td class="px-6 py-4 text-center text-amber-500 font-semibold">{t.coldPress.comparisonBestForCold}</td>
-              <td class="px-6 py-4 text-center text-steel-600 rounded-br-xl">{t.coldPress.comparisonBestForHot}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="text-center mt-8">
-        <a href="/resources/cold-press-vs-hot-press-oil/" class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
-          {t.coldPress.readFullComparison}
+      <p class="text-center mt-8">
+        <a href="/roi-calculator/" class="inline-flex items-center gap-2 text-amber-600 font-semibold hover:underline">
+          Estimate your return with the ROI calculator
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Which machine for your seed — material gateway + range bar -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">CHOOSE BY YOUR MATERIAL</span>
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-3">Which cold press machine for your seed?</h2>
+      <p class="text-steel-600 max-w-3xl mb-10">
+        In cold pressing, <b>material hardness decides the machine</b>: the harder the seed or nut, the higher the cake pressure needed.
+        Every Haonuo hydraulic press cold-presses — pick the pressure class that matches your material.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {materialCards.map(c => (
+          <div class="flex flex-col bg-white rounded-2xl p-7 border border-steel-100 hover:border-amber-300 transition-colors">
+            <span class="self-start text-xs font-semibold uppercase tracking-wide bg-steel-900 text-white px-3 py-1 rounded-full mb-4">{c.tag}</span>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">{c.title}</h3>
+            <p class="text-amber-700 text-sm font-medium mb-1">{c.seeds}</p>
+            <p class="text-steel-500 text-sm mb-3">{c.pressure}</p>
+            <p class="text-steel-600 text-sm leading-relaxed mb-5">{c.desc}</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              {c.models.map(m => (
+                <a href={m.href} class="inline-flex items-center gap-1.5 bg-steel-50 border border-steel-200 hover:border-amber-400 hover:text-amber-600 text-charcoal-900 text-sm font-semibold px-3.5 py-2 rounded-lg transition-colors">
+                  {m.name}
+                  <span class="text-xs font-normal text-steel-400">{m.note}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-white border border-dashed border-amber-300 rounded-2xl px-6 py-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <p class="text-steel-600 text-sm">
+          <b class="text-charcoal-900">Wet pressing coconut milk, or need full food-grade stainless for export?</b><br/>
+          See the 304 stainless <a href="/products/coconut-oil-hydraulic-press/" class="text-amber-600 font-semibold hover:underline">300 Type Coconut</a> and
+          <a href="/products/stainless-steel-hydraulic-oil-press/" class="text-amber-600 font-semibold hover:underline">HN325S</a>.
+        </p>
+      </div>
+
+      <!-- Range bar -->
+      <div class="bg-steel-900 rounded-2xl p-7 md:p-9 mt-8">
+        <h3 class="font-display text-xl text-white mb-1">The HN300–HN500 force range</h3>
+        <p class="text-steel-400 text-sm mb-8">Harder seed or in-shell material → higher cake pressure required. Tap a model for its page.</p>
+        <div class="relative">
+          <div class="hidden md:block absolute top-[42px] left-6 right-6 h-1 bg-gradient-to-r from-amber-300 via-amber-500 to-amber-600 rounded"></div>
+          <div class="grid grid-cols-2 md:grid-cols-7 gap-6 md:gap-2 relative">
+            {rangeModels.map(m => (
+              <a href={m.href} class="flex md:flex-col items-center gap-3 md:gap-0 group">
+                <div class="w-4 h-4 rounded-full bg-amber-500 ring-4 ring-steel-900 shrink-0 md:mb-4 group-hover:scale-125 transition-transform"></div>
+                <div class="text-left md:text-center">
+                  <div class="text-white font-display font-semibold group-hover:text-amber-400 transition-colors">{m.model}</div>
+                  <div class="text-steel-400 text-xs">{m.force}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="/products/model-comparison/" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-7 py-3.5 rounded-lg hover:bg-amber-400 transition-colors">
+            Compare all models — full spec matrix
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-12 md:py-16 bg-steel-50">
+  <!-- How cold press extraction works -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-12">{t.coldPress.howWorksTitle}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">1</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep1.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep1.desc}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">2</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep2.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep2.desc}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">3</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep3.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep3.desc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular cold-pressed oils -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.coldPress.popularOilsTitle}</h2>
+      <h2 class="section-title text-center mb-3">{t.coldPress.popularOilsTitle}</h2>
+      <p class="text-center text-steel-500 text-sm max-w-2xl mx-auto mb-12">Typical yields on graded seed at 6–8% moisture. Actual yields vary with seed variety, preparation and cycle settings.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 border border-steel-100">
           <div class="text-3xl mb-4">&#129381;</div>
@@ -267,35 +398,58 @@ const faqLd = {
     </div>
   </section>
 
+  <!-- Cold vs Hot quick comparison -->
   <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.coldPress.howWorksTitle}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">1</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep1.title}</h3>
-          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep1.desc}</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">2</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep2.title}</h3>
-          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep2.desc}</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">3</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep3.title}</h3>
-          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep3.desc}</p>
-        </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-8">Cold vs hot press — quick comparison</h2>
+      <div class="overflow-x-auto text-left">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-steel-900 text-white">
+              <th class="text-left px-6 py-3 font-display">{t.coldPress.comparisonFeature}</th>
+              <th class="text-center px-6 py-3 font-display">{t.coldPress.comparisonColdPress}</th>
+              <th class="text-center px-6 py-3 font-display">{t.coldPress.comparisonHotPress}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonTemp}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonTempCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonTempHot}</td>
+            </tr>
+            <tr class="border-b border-steel-100 bg-steel-50">
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonYield}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonYieldCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonYieldHot}</td>
+            </tr>
+            <tr class="border-b border-steel-100">
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonQuality}</td>
+              <td class="px-6 py-3 text-center text-amber-500 font-semibold">{t.coldPress.comparisonQualityCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonQualityHot}</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonBestFor}</td>
+              <td class="px-6 py-3 text-center text-amber-500 font-semibold">{t.coldPress.comparisonBestForCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonBestForHot}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-8">
+        <a href="/resources/cold-press-vs-hot-press-oil/" class="inline-flex items-center gap-2 text-amber-600 font-semibold hover:underline">
+          {t.coldPress.readFullComparison}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="py-12 md:py-16 bg-steel-50">
+  <section class="py-12 md:py-16 bg-steel-50 border-t border-steel-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title text-center mb-8">{t.coldPress.faqTitle}</h2>
       <div class="space-y-4">
         {t.coldPress.faqs.map((item, i) => (
-          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+          <details class="reveal group bg-white rounded-xl overflow-hidden border border-steel-100" style={`animation-delay: ${i * 80}ms`}>
             <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
               <span class="font-display text-lg text-charcoal-900">{item.question}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>

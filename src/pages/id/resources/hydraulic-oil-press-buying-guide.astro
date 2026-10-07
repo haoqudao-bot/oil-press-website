@@ -63,14 +63,6 @@ const buyingChecklist = [
   ]},
 ];
 
-const modelSelection = [
-  { model: 'HN325', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '60 MPa', materials: 'Wijen, kacang tanah, kanola', highlight: 'Terbaik untuk usaha rumahan' },
-  { model: 'HN365', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '63 MPa', materials: 'Sebagian besar biji minyak', highlight: 'Terbaik untuk bengkel kecil' },
-  { model: 'HN426', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '70 MPa', materials: 'Kenari, almond, kelapa', highlight: 'Pengepresan dingin premium' },
-  { model: 'HN480', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '72 MPa', materials: 'Berbagai biji minyak tinggi', highlight: 'Produksi menengah' },
-  { model: 'HN500', capacity: '100 kg/batch', cycle: '40-90 menit/batch', pressure: '75 MPa', materials: 'Skala komersial', highlight: 'Produksi komersial' },
-];
-
 const questionsToAsk = [
   'Berapa target produksi harian Anda?',
   'Biji/kacang apa yang akan Anda proses?',
@@ -170,35 +162,9 @@ const redFlags = [
       </section>
 
       <section id="models" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Panduan Pemilihan Model</h2>
-        <p class="text-steel-600 mb-6">Semua model memproses <strong>100 kg per batch</strong>. Waktu siklus bervariasi menurut bahan — biji lunak seperti wijen memakan waktu sekitar 40 menit per batch, sementara bahan keras seperti kenari bisa memakan waktu hingga 1,5 jam.</p>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Model</th>
-                <th class="px-4 py-3 text-left font-semibold">Kapasitas</th>
-                <th class="px-4 py-3 text-left font-semibold">Waktu Siklus</th>
-                <th class="px-4 py-3 text-left font-semibold">Tekanan</th>
-                <th class="px-4 py-3 text-left font-semibold">Cocok Untuk</th>
-              </tr>
-            </thead>
-            <tbody>
-              {modelSelection.map((item, index) => (
-                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
-                  <td class="px-4 py-3 font-bold text-amber-600">{item.model}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.capacity}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.cycle}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.pressure}</td>
-                  <td class="px-4 py-3">
-                    <p class="text-steel-700 text-sm">{item.highlight}</p>
-                    <p class="text-steel-500 text-xs">{item.materials}</p>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Memilih Model yang Tepat</h2>
+        <p class="text-steel-600 mb-6">Model yang tepat bergantung pada <strong>jenis biji utama</strong> (biji lunak butuh tekanan lebih rendah; kacang keras dan kelapa dengan tempurung butuh gaya lebih tinggi), <strong>target produksi harian</strong>, dan apakah produksi didominasi <strong>press dingin atau panas</strong>.</p>
+        <p class="text-steel-600 mb-6">Panduan ini berisi pertanyaan yang harus diajukan ke <em>setiap</em> pemasok. Untuk perbandingan berdampingan seluruh lini Haonuo (HN300 hingga HN500) dengan spesifikasi asli dan rekomendasi per jenis biji, lihat halaman <a href="/id/products/model-comparison/" class="text-amber-600 hover:underline font-semibold">Perbandingan Model</a>. Untuk gambaran cepat seluruh mesin hidrolik, kunjungi <a href="/id/hydraulic-oil-press-machine/" class="text-amber-600 hover:underline font-semibold">Panduan Mesin Press Hidrolik</a>.</p>
       </section>
 
       <section id="questions" class="mb-12">

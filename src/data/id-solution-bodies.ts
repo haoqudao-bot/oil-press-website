@@ -310,7 +310,7 @@ Minyak biji rami (linseed) adalah salah satu sumber nabati terkaya asam lemak om
 Untuk produksi minyak biji rami, kami merekomendasikan:
 1. **Press hidrolik baja tahan karat** — Mencegah kontaminasi minyak, mudah dibersihkan
 2. **Press filter pneumatik** — Filtrasi alami tanpa bahan kimia
-3. **Sistem kontrol suhu** — Memastikan penekanan tetap di bawah 50°C
+3. **Cold press biji mentah** — Biji kering yang tidak disangrai dan tekanan hidrolik statis menjaga proses di bawah 50°C tanpa elemen pemanas
 
 Hubungi Haonuo untuk setup produksi minyak biji rami yang disesuaikan dengan peralatan kelas makanan baja tahan karat.`,
 
@@ -857,7 +857,7 @@ Solusi penekanan minyak kenari Haonuo Machinery secara khusus dirancang untuk pr
 ## Mengapa Memilih Haonuo untuk Produksi Minyak Kenari
 
 - **Teknologi ultra-tinggi tekanan** — HN500 kami menghasilkan 620 ton gaya press, mengekstrak minyak maksimal dari kacang bercangkang keras
-- **Sistem kontrol suhu** — Pemantauan suhu bawaan memastikan penekanan tetap di bawah 60°C untuk menjaga omega-3
+- **Press statis panas rendah** — Tanpa gesekan sekrup dan tanpa elemen pemanas; biji mentah yang dipress di bawah 60°C membantu menjaga omega-3
 - **Opsi baja tahan karat kelas makanan** — Tersedia untuk pelanggan yang membutuhkan standar higiene tertinggi
 - **Terbukti di pasar Timur Tengah** — Mesin kami beroperasi dengan sukses di Arab Saudi, UEA, dan Iran
 - **Garansi 1 tahun + dukungan seumur hidup** — Cakupan lengkap dengan suku cadang dikirim dalam 48 jam`,

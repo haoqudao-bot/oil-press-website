@@ -43,14 +43,6 @@ const buyingChecklist = [
   { category: 'اعتبارات التشغيل', items: ['سعة الإنتاج اليومية المستهدفة', 'تكاليف التركيب والتدريب', 'قطع الغيار والصيانة', 'تكاليف التشغيل (الطاقة، العمالة)'] },
 ];
 
-const modelSelection = [
-  { model: 'HN325', capacity: '100 كجم/دفعة', cycle: '40-90 دقيقة/دفعة', pressure: '60 MPa', materials: 'السمسم، الفول السوداني، بذور اللفت', price: 'للتواصل', highlight: 'الأفضل للأعمال المنزلية' },
-  { model: 'HN365', capacity: '100 كجم/دفعة', cycle: '40-90 دقيقة/دفعة', pressure: '63 MPa', materials: 'معظم بذور الزيت', price: 'للتواصل', highlight: 'الأفضل للورشة الصغيرة' },
-  { model: 'HN426', capacity: '100 كجم/دفعة', cycle: '40-90 دقيقة/دفعة', pressure: '70 MPa', materials: 'الجوز، اللوز، جوز الهند', price: 'للتواصل', highlight: 'الضغط البارد الممتاز' },
-  { model: 'HN480', capacity: '100 كجم/دفعة', cycle: '40-90 دقيقة/دفعة', pressure: '72 MPa', materials: 'بذور زيت متنوعة', price: 'للتواصل', highlight: 'الإنتاج المتوسط' },
-  { model: 'HN500', capacity: '100 كجم/دفعة', cycle: '40-90 دقيقة/دفعة', pressure: '75 MPa', materials: 'المقياس التجاري', price: 'للتواصل', highlight: 'الإنتاج التجاري' },
-];
-
 const questionsToAsk = [
   'ما هو هدفك الإنتاجي اليومي؟',
   'ما هي البذور/المكسرات التي ستعالجها؟',
@@ -153,35 +145,9 @@ function localePath(path: string): string {
       </section>
 
       <section id="models" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">دليل اختيار الموديل</h2>
-        <p class="text-steel-600 mb-6">تتم معالجة جميع الموديلات بسعة <strong>100 كجم لكل دفعة</strong>. يختلف وقت الدورة حسب المادة — تستغرق البذور اللينة مثل السمسم حوالي 40 دقيقة لكل دفعة، بينما يمكن للمواد الصلبة مثل الجوز أن تستغرق حتى 1.5 ساعة.</p>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
-              <tr>
-                <th class="px-4 py-3 text-right font-semibold">الموديل</th>
-                <th class="px-4 py-3 text-right font-semibold">السعة</th>
-                <th class="px-4 py-3 text-right font-semibold">وقت الدورة</th>
-                <th class="px-4 py-3 text-right font-semibold">الضغط</th>
-                <th class="px-4 py-3 text-right font-semibold">الأفضل لـ</th>
-              </tr>
-            </thead>
-            <tbody>
-              {modelSelection.map((item, index) => (
-                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
-                  <td class="px-4 py-3 font-bold text-amber-600">{item.model}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.capacity}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.cycle}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.pressure}</td>
-                  <td class="px-4 py-3">
-                    <p class="text-steel-700 text-sm">{item.highlight}</p>
-                    <p class="text-steel-500 text-xs">{item.materials}</p>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">اختيار الموديل المناسب</h2>
+        <p class="text-steel-600 mb-6">يعتمد الموديل المناسب على <strong>نوع البذور الرئيسي</strong> (البذور اللينة تحتاج ضغطاً أقل؛ الجوز الصلب وجوز الهند بقشرته يحتاجان قوة أعلى)، و<strong>هدف الإنتاج اليومي</strong>، وما إذا كان الإنتاج غالباً <strong>بارداً أم ساخناً</strong>.</p>
+        <p class="text-steel-600 mb-6">يغطي هذا الدليل الأسئلة التي يجب طرحها على <em>أي</em> مورد. للحصول على مقارنة مباشرة لكامل سلسلة هاونو (من HN300 إلى HN500) مع المواصفات الفعلية والتوصيات حسب نوع البذور، راجع صفحة <a href="/ar/products/model-comparison/" class="text-amber-600 hover:underline font-semibold">مقارنة الموديلات</a>. وللاطلاع السريع على كامل الماكينات الهيدروليكية، تفضل بزيارة <a href="/ar/hydraulic-oil-press-machine/" class="text-amber-600 hover:underline font-semibold">دليل شراء المكابس الهيدروليكية</a>.</p>
       </section>
 
       <section id="questions" class="mb-12">

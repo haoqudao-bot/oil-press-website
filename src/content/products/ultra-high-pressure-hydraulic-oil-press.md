@@ -359,4 +359,4 @@ The HN500 delivers competitive residual oil rates across all material types, mak
 
 **Africa (Nigeria, Kenya, Ghana, Tanzania):** The HN500 is built for industrial-scale groundnut and shea butter processing. Its robust frame and heavy-duty hydraulic system withstand continuous 12-hour daily operation common in African production facilities.
 
-**Middle East (Saudi Arabia, UAE, Egypt):** The HN500 is our top recommendation for walnut oil (زيت الجوز) and high-value nut oil production. The ultra-high pressure extracts maximum oil from hard-shelled nuts while the temperature control system preserves delicate omega-3 fatty acids.
+**Middle East (Saudi Arabia, UAE, Egypt):** The HN500 is our top recommendation for walnut oil (زيت الجوز) and high-value nut oil production. The ultra-high pressure extracts maximum oil from hard-shelled nuts, while static pressing without screw friction keeps temperatures low to help preserve delicate omega-3 fatty acids.

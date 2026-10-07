@@ -99,9 +99,8 @@ Cold pressing preserves the natural flavor and nutritional properties of peanut 
 
 **Cold Press Line:**
 1. HN365, HN426, HN480, or HN500 Hydraulic Oil Press
-2. Precision Temperature Control System
-3. Pneumatic Multi-layer Filter Press
-4. Temperature-Controlled Storage Tanks
+2. Pneumatic Multi-layer Filter Press
+3. Stainless steel settling and storage tanks
 
 ### Production Parameters
 

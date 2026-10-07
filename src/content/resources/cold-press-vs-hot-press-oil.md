@@ -35,7 +35,7 @@ Cold pressing extracts oil at low temperatures (typically below 60°C / 140°F) 
 ### Cold Pressing Equipment Requirements
 - Higher cake surface pressure (42 MPa or more)
 - Specialized barrel design for low-temperature extraction
-- Temperature monitoring system
+- No external heating — static hydraulic pressure keeps oil temperature naturally low
 - Suitable models: HN426, HN480, HN500
 
 ## What is Hot Pressing?

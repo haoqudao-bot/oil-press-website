@@ -132,7 +132,7 @@ Flaxseed (linseed) oil is one of the richest plant-based sources of omega-3 fatt
 For flaxseed oil production, we recommend:
 1. **Stainless steel hydraulic press** — Prevents oil contamination, easy to clean
 2. **Pneumatic filter press** — Natural filtration without chemicals
-3. **Temperature control system** — Ensures pressing stays below 50°C
+3. **Raw-seed cold pressing** — Dry, unroasted seed and static hydraulic pressure keep the process below 50°C without any heating element
 
 Contact Haonuo for a customized flaxseed oil production setup with stainless steel food-grade equipment.
 

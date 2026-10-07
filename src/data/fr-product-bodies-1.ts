@@ -49,7 +49,7 @@ La HN325 est adaptée pour le pressage d'une grande variété de graines oléagi
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** Conçue pour des conditions difficiles — la conception mécanique simple de la HN325 signifie moins de pannes et des réparations plus faciles. Fonctionne sur l'alimentation monophasée standard 220V ou un groupe électrogène portable (minimum 5 kVA). Pièces de rechange disponibles en stock avec expédition en 3 jours vers Lagos ou Mombasa.
 
-**Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Disponible avec fût en acier inoxydable de qualité alimentaire pour la production d'huile de sésame certifiée halal. Le système de contrôle de température garantit une qualité de pressage à froid en dessous de 60°C pour les huiles de grade premium.`,
+**Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Disponible avec fût en acier inoxydable de qualité alimentaire pour la production d'huile de sésame certifiée halal. Le pressage hydraulique statique n'ajoute aucune chaleur de friction : presser des graines crues et sèches maintient naturellement une température basse, en dessous de 60°C, pour les huiles de grade premium.`,
 
   'heavy-duty-hydraulic-oil-press': `## Aperçu
 
@@ -378,7 +378,7 @@ La HN500 délivre des taux d'huile résiduelle compétitifs sur tous les types d
 
 **Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** La HN500 est conçue pour le traitement industriel d'arachide et de beurre de karité. Son cadre robuste et son système hydraulique lourds résistent au fonctionnement continu de 12 heures quotidien courant dans les installations de production africaines.
 
-**Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** La HN500 est notre meilleure recommandation pour la production d'huile de noix et d'huile de noix de haute valeur. La pression ultra-haute extrait un maximum d'huile des noix à coque dure tandis que le système de contrôle de température préserve les délicats acides gras oméga-3.`,
+**Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** La HN500 est notre meilleure recommandation pour la production d'huile de noix et d'huile de noix de haute valeur. La pression ultra-haute extrait un maximum d'huile des noix à coque dure tandis que le pressage statique, sans friction de vis, maintient une température basse qui aide à préserver les délicats acides gras oméga-3.`,
 
   'hn365-hydraulic-oil-press': `## Aperçu
 

@@ -139,7 +139,7 @@ Haonuo Machinery's walnut oil pressing solution is specifically designed for pro
 ## Why Choose Haonuo for Walnut Oil Production
 
 - **Ultra-high pressure technology** — Our HN500 delivers 620 tons of pressing force, extracting maximum oil from hard-shelled nuts
-- **Temperature control system** — Built-in temperature monitoring ensures pressing stays below 60°C to preserve omega-3
+- **Low-heat static pressing** — No screw friction and no heating element; pressing raw seed below 60°C helps preserve omega-3
 - **Food-grade stainless steel option** — Available for customers requiring the highest hygiene standards
 - **Proven in Middle East markets** — Our machines are operating successfully in Saudi Arabia, UAE, and Iran
 - **1-year warranty + lifetime support** — Full coverage with spare parts shipped promptly

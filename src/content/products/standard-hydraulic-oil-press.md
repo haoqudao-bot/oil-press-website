@@ -388,4 +388,4 @@ The HN325 is well-suited for pressing a wide variety of conventional oil seeds:
 
 **Africa (Nigeria, Kenya, Ghana, Tanzania):** Built for tough conditions — the HN325's simple mechanical design means fewer breakdowns and easier repairs. Runs on standard 220V single-phase power or portable generator (5kVA minimum). Spare parts available from stock with 3-day shipping to Lagos or Mombasa.
 
-**Middle East (Saudi Arabia, UAE, Egypt):** Available with food-grade stainless steel barrel for halal-certified sesame oil production. Temperature control system ensures cold press quality below 60 degrees Celsius for premium grade oils.
+**Middle East (Saudi Arabia, UAE, Egypt):** Available with food-grade stainless steel barrel for halal-certified sesame oil production. Static hydraulic pressing adds no friction heat, so pressing raw, dried seed keeps temperatures naturally low for premium-grade cold-pressed oil.

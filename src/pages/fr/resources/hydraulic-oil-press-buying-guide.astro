@@ -63,14 +63,6 @@ const buyingChecklist = [
   ]},
 ];
 
-const modelSelection = [
-  { model: 'HN325', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '60 MPa', materials: 'Sésame, arachide, colza', highlight: 'Adapté pour les entreprises domestiques' },
-  { model: 'HN365', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '63 MPa', materials: 'La plupart des graines oléagineuses', highlight: 'Adapté pour les petits ateliers' },
-  { model: 'HN426', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '70 MPa', materials: 'Noyer, amande, coco', highlight: 'Pressage à froid premium' },
-  { model: 'HN480', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '72 MPa', materials: 'Diverses graines à haute teneur en huile', highlight: 'Production moyenne' },
-  { model: 'HN500', capacity: '100 kg/charge', cycle: '40-90 min/charge', pressure: '75 MPa', materials: 'Échelle commerciale', highlight: 'Production commerciale' },
-];
-
 const questionsToAsk = [
   'Quel est votre objectif de production journalière ?',
   'Quelles graines/noix allez-vous transformer ?',
@@ -170,35 +162,9 @@ const redFlags = [
       </section>
 
       <section id="models" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Guide de Sélection des Modèles</h2>
-        <p class="text-steel-600 mb-6">Tous les modèles traitent <strong>100 kg par charge</strong>. Le temps de cycle varie selon le matériau — les graines molles comme le sésame prennent environ 40 minutes par charge, tandis que les matériaux durs comme le noyer peuvent prendre jusqu'à 1,5 heure.</p>
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
-            <thead class="bg-gradient-to-r from-charcoal-800 to-charcoal-900 text-white">
-              <tr>
-                <th class="px-4 py-3 text-left font-semibold">Modèle</th>
-                <th class="px-4 py-3 text-left font-semibold">Capacité</th>
-                <th class="px-4 py-3 text-left font-semibold">Temps de Cycle</th>
-                <th class="px-4 py-3 text-left font-semibold">Pression</th>
-                <th class="px-4 py-3 text-left font-semibold">Adapté Pour</th>
-              </tr>
-            </thead>
-            <tbody>
-              {modelSelection.map((item, index) => (
-                <tr key={index} class={index % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
-                  <td class="px-4 py-3 font-bold text-amber-600">{item.model}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.capacity}</td>
-                  <td class="px-4 py-3 text-steel-600">{item.cycle}</td>
-                  <td class="px-4 py-3 text-charcoal-900">{item.pressure}</td>
-                  <td class="px-4 py-3">
-                    <p class="text-steel-700 text-sm">{item.highlight}</p>
-                    <p class="text-steel-500 text-xs">{item.materials}</p>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Choisir son modèle</h2>
+        <p class="text-steel-600 mb-6">Le bon modèle dépend de votre <strong>type de graine principal</strong> (les graines molles demandent moins de pression ; les noix dures et la noix de coco avec coque demandent plus de force), de votre <strong>objectif de production journalier</strong> et de la part de <strong>pressage à froid ou à chaud</strong> envisagée.</p>
+        <p class="text-steel-600 mb-6">Ce guide liste les questions à poser à <em>n'importe quel</em> fournisseur. Pour une comparaison côte à côte de toute la gamme Haonuo (HN300 à HN500) avec les vraies spécifications et des recommandations par graine, consultez la page dédiée <a href="/fr/products/model-comparison/" class="text-amber-600 hover:underline font-semibold">Comparaison des Modèles</a>. Pour un aperçu rapide de toute la gamme hydraulique, visitez le <a href="/fr/hydraulic-oil-press-machine/" class="text-amber-600 hover:underline font-semibold">Guide d'achat des presses hydrauliques</a>.</p>
       </section>
 
       <section id="questions" class="mb-12">

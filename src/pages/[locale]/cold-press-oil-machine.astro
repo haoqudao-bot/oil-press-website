@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
 import { getTranslations, type Locale } from '../../i18n';
 
 export function getStaticPaths() {
@@ -15,33 +14,325 @@ const { locale } = Astro.params;
 const currentLocale = locale as Locale;
 const t = getTranslations(currentLocale);
 
-const allProducts = await getCollection('products');
-const coldPressProducts = allProducts.filter(p =>
-  p.data.category === 'hydraulic-oil-press' && (
-    p.data.title?.en?.toLowerCase().includes('cold press') ||
-    p.data.title?.en?.toLowerCase().includes('ultra-high-pressure') ||
-    p.data.applicableSeeds?.some(s =>
-      s.toLowerCase().includes('coconut') ||
-      s.toLowerCase().includes('walnut') ||
-      s.toLowerCase().includes('almond') ||
-      s.toLowerCase().includes('avocado') ||
-      s.toLowerCase().includes('flaxseed') ||
-      s.toLowerCase().includes('olive')
-    )
-  )
-).slice(0, 6);
-
 function localePath(path: string): string {
   return `/${currentLocale}${path}`;
 }
 
-const pageTitle = currentLocale === 'fr' ? 'Presse à Huile à Froid — Préserver la Qualité Naturelle' :
-                  currentLocale === 'ar' ? 'مكينة الضغط البارد — الحفاظ على الجودة الطبيعية' :
-                  'Mesin Press Minyak Dingin — Pelihara Kualitas Alami';
+const pageTitle = currentLocale === 'fr' ? 'Presse à Huile à Froid — Pressage à Froid et à Chaud sur la Même Machine | Haonuo' :
+                  currentLocale === 'ar' ? 'مكبس عصر الزيت البارد — عصر بارد وساخن على نفس الماكينة | هاونو' :
+                  'Mesin Press Minyak Dingin — Press Dingin & Panas di Satu Mesin | Haonuo';
 
-const pageDesc = currentLocale === 'fr' ? 'Presse à huile à froid professionnelle pour extraction d\'huile premium en dessous de 60°C. Peut aider à préserver plus de nutriments et de saveurs que le pressage à chaud. Directe d\'usine chez Haonuo. Garantie 1 an.' :
-                 currentLocale === 'ar' ? 'مكينة ضغط زيت باردة محترفة لاستخراج زيت فاخر تحت 60 درجة مئوية. يمكن أن تساعد في الحفاظ على المزيد من العناصر الغذائية والنكهات مقارنة بالضغط الساخن. مباشرة من المصنع. ضمان سنة واحدة.' :
-                 'Mesin press minyak dingin profesional untuk ekstraksi minyak premium di bawah 60°C. Dapat membantu melestarikan lebih banyak nutrisi dan rasa dibanding press panas. Langsung dari pabrik. Garansi 1 tahun.';
+const pageDesc = currentLocale === 'fr' ? 'Presse à huile à froid pour une huile premium en dessous de 60°C. La même presse hydraulique Haonuo fait du pressage à froid et à chaud. Directe d\'usine, garantie 1 an, test de charge 48 h.' :
+                 currentLocale === 'ar' ? 'مكبس عصر زيت بارد لزيت ممتاز بدرجة حرارة أقل من 60°م. نفس المكبس الهيدروليكي من هاونو يعمل للعصر البارد والساخن. بيع مباشر من المصنع، ضمان سنة، اختبار حمل 48 ساعة.' :
+                 'Mesin press minyak dingin untuk minyak premium di bawah 60°C. Mesin hidrolik Haonuo yang sama bisa press dingin DAN panas. Langsung pabrik, garansi 1 tahun, uji beban 48 jam.';
+
+type Ui = {
+  badge: string;
+  coldTitle: string;
+  p1: string; p2: string; p3: string;
+  factsTitle: string;
+  facts: { label: string; value: string }[];
+  factsNote: string;
+  cards: { title: string; desc: string }[];
+  dualTitle: string; dualP1: string; dualP2: string;
+  profitTitle: string; profitIntro: string;
+  chips: string[];
+  winsTitle: string; wins: string[];
+  hotTitle: string; hot: string[];
+  roiLink: string;
+  matBadge: string; matTitle: string; matIntro: string;
+  materials: {
+    tag: string; title: string; seeds: string; pressure: string; desc: string;
+    models: { name: string; href: string; note: string }[];
+  }[];
+  ssBold: string; ssSee: string; ssAnd: string;
+  rangeTitle: string; rangeSub: string; compareAll: string;
+  oilsSub: string;
+  vsTitle: string;
+};
+
+const ui: Record<Locale, Ui> = {
+  fr: {
+    badge: "CE QUE C'EST",
+    coldTitle: "Qu'est-ce que l'extraction d'huile par pression à froid ?",
+    p1: "Le pressage à froid extrait l'huile de **graines crues, séchées et non torréfiées par la seule pression mécanique** — sans chaleur externe ni solvant chimique. Sur une presse hydraulique, la pression statique maintient la température de l'huile **sous 60°C environ**, car aucune friction de vis ne chauffe la matière.",
+    p2: "L'huile conserve ses vitamines naturelles, ses antioxydants, sa couleur et son goût de graine fraîche, et est vendue **non raffinée** après une simple filtration — VCO, sésame pressé à froid, huile de noix, de lin et d'avocat sont des produits typiques.",
+    p3: "Le compromis, dit honnêtement : le pressage à froid donne généralement quelques pourcents d'huile en moins qu'avec torréfaction préalable, demande un cycle plus long et n'est rentable que si votre marché paie la prime. Chaque fût traite néanmoins **jusqu'à 100 kg de graines par lot** — c'est une production commerciale, pas un appareil domestique.",
+    factsTitle: "Le pressage à froid — chiffres clés",
+    facts: [
+      { label: "Température de l'huile", value: "sous 60°C" },
+      { label: "État des graines", value: "crues et séchées, non torréfiées" },
+      { label: "Capacité par lot", value: "jusqu'à 100 kg / fût" },
+      { label: "Cycle à froid", value: "jusqu'à ~2 h par lot" },
+      { label: "Méthode", value: "mécanique uniquement, sans produits chimiques" },
+      { label: "Résultat", value: "non raffiné, prêt à filtrer" },
+    ],
+    factsNote: "La température et le cycle varient selon la graine, l'humidité et les réglages du tourteau. Le pressage à chaud sur la même machine dure 30–40 min avec des graines pré-torréfiées.",
+    cards: [
+      { title: "Nutriments et goût naturel préservés", desc: "Sous 60°C, les acides gras sensibles, les antioxydants et l'arôme d'origine de la graine survivent largement — la base de la qualité premium." },
+      { title: "Prix de marché premium", desc: "Les huiles non raffinées pressées à froid se vendent généralement environ 30–80 % plus cher que les huiles raffinées sur les marchés qui reconnaissent cette qualité (très variable selon les pays)." },
+      { title: "Aucun raffinage chimique", desc: "Extraction mécanique et filtration naturelle — pas d'hexane, pas de ligne de neutralisation, conformité plus simple pour les acheteurs alimentaires et cosmétiques." },
+    ],
+    dualTitle: "Une seule machine, pressage à froid ET à chaud",
+    dualP1: "Une presse hydraulique Haonuo n'est pas réservée au seul pressage à froid. La même machine fait le **pressage à froid** (graines crues, sous 60°C) pour l'huile premium et le **pressage à chaud** (graines torréfiées/étuvées) pour un meilleur rendement — vous changez selon la préparation des graines, sans acheter une autre machine.",
+    dualP2: "C'est l'avantage clé de la pression hydraulique statique : aucune chaleur de friction d'une vis, la température de l'huile dépend donc de votre préparation des graines. Produisez aujourd'hui de l'huile premium à froid et demain de l'huile de masse à chaud sur le même équipement. Pour le pressage à chaud, associez la presse à un torréfacteur ou un étuveur séparé — la presse elle-même n'a aucun chauffage intégré.",
+    profitTitle: "Le pressage à froid est-il plus rentable ?",
+    profitIntro: "Le pressage à froid donne généralement **5–8 % d'huile en moins** que le pressage à chaud, mais l'huile se vend à **prime**. La rentabilité dépend de votre marché, du type d'huile et de l'écart de prix réellement atteignable.",
+    chips: [
+      "Jusqu'à 100 kg de graines par fût et par cycle — taille de lot commerciale",
+      "Cycle à froid jusqu'à ~2 h contre 30–40 min à chaud",
+      "Prime type 30–80 % — à vérifier sur votre marché local",
+    ],
+    winsTitle: "Quand le pressage à froid gagne",
+    wins: [
+      "Marchés premium / bio / cosmétique (VCO, noix, argan, sésame).",
+      "Lorsque l'huile pressée à froid commande une prime de prix nette et bancable sur l'huile raffinée.",
+      "Quand la prime par litre dépasse la valeur du rendement supplémentaire en pressage à chaud — cet écart de marge, pas la taille du lot, est le facteur décisif.",
+    ],
+    hotTitle: "Quand le pressage à chaud a du sens",
+    hot: [
+      "Huile de cuisson en vrac où le volume et le faible coût comptent avant tout.",
+      "Approvisionnement continu à gros volume pour les distributeurs ou raffineries.",
+      "Graines où la torréfaction préalable augmente sensiblement le rendement et où votre marché ne paie pas de prime au pressage à froid.",
+    ],
+    roiLink: "Estimez votre retour avec le calculateur de ROI",
+    matBadge: "CHOISIR SELON VOTRE MATIÈRE",
+    matTitle: "Quelle machine à froid pour votre graine ?",
+    matIntro: "En pressage à froid, **la dureté de la matière détermine la machine** : plus la graine ou la noix est dure, plus la pression sur le tourteau doit être élevée. Chaque presse hydraulique Haonuo presse à froid — choisissez la classe de pression correspondant à votre matière.",
+    materials: [
+      {
+        tag: "Graines tendres",
+        title: "Graines oléagineuses tendres",
+        seeds: "Sésame · arachide · tournesol · colza · soja",
+        pressure: "325–365 tonnes · pression de tourteau standard",
+        desc: "L'huile de sésame et d'arachide pressée à froid se vend fortement sur les marchés du Moyen-Orient et d'Asie. La HN325 est la meilleure vente d'entrée de gamme ; la HN365 ajoute un double poste pour des lots toute la journée.",
+        models: [
+          { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "meilleure vente" },
+          { name: "HN365", href: "/products/hn365-hydraulic-oil-press/", note: "double poste" },
+        ],
+      },
+      {
+        tag: "Noix premium",
+        title: "Graines mi-dures et noix d'arbres",
+        seeds: "Noix · amande · camélia / graine de thé · lin · pérille · amande d'abricot · graine de courge",
+        pressure: "500–600 tonnes · pression de tourteau 42–48 MPa",
+        desc: "C'est là que le pressage à froid gagne sa marge — des huiles délicates à haute valeur. Une pression de 42 MPa+ rompt les cellules dures sans chaleur, en préservant oméga-3 et saveur.",
+        models: [
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "vedette du pressage à froid" },
+          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 t, fabrication sur commande" },
+        ],
+      },
+      {
+        tag: "Dur / en coque",
+        title: "Matières dures, en coque et fibreuses",
+        seeds: "Coprah pour VCO · noix en coque · souchet · karité · yellowhorn · chanvre",
+        pressure: "560–620 tonnes · jusqu'à 75 MPa",
+        desc: "Les matières les plus dures exigent la force maximale de la gamme. HN480 et HN500 extraient un maximum d'huile en moins de passages — y compris les noix pressées en coque.",
+        models: [
+          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 t" },
+          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, modèle phare" },
+        ],
+      },
+    ],
+    ssBold: "Pressage humide du lait de coco, ou besoin d'un inox entièrement alimentaire pour l'export ?",
+    ssSee: "Voir les modèles inox 304",
+    ssAnd: "et",
+    rangeTitle: "La gamme de force HN300–HN500",
+    rangeSub: "Graine plus dure ou matière en coque → pression de tourteau plus élevée requise. Cliquez sur un modèle pour ouvrir sa page.",
+    compareAll: "Comparer tous les modèles — matrice complète",
+    oilsSub: "Rendements types sur graines calibrées à 6–8 % d'humidité. Les rendements réels varient selon la variété, la préparation et les réglages du cycle.",
+    vsTitle: "Pressage à froid vs à chaud — comparaison rapide",
+  },
+
+  ar: {
+    badge: "ما هي",
+    coldTitle: "ما هو استخلاص الزيت على البارد؟",
+    p1: "العصر البارد يستخرج الزيت من **بذور خام مجففة غير محمّصة باستخدام الضغط الميكانيكي وحده** — دون حرارة خارجية أو مذيبات كيميائية. في المكبس الهيدروليكي، يُبقي الضغط الساكن حرارة الزيت **تحت 60°م تقريبًا**، لأنه لا توجد لولبة تحتك فتسخّن المادة.",
+    p2: "يحتفظ الزيت بفيتاميناته الطبيعية ومضادات الأكسدة ولونه ونكهة البذرة الطازجة، ويُباع **غير مكرر** بعد ترشيح بسيط — زيت VCO والسمسم والجوز والكتان والأفوكادو المعصورة على البارد منتجات نموذجية.",
+    p3: "المقايضة بصراحة: العصر البارد يعطي عادة نسبة زيت أقل ببضعة في المئة من التحميص المسبق، ويستغرق دورة أطول، ولا يرد تكلفته إلا حين يدفع سوقك علاوة السعر. ومع ذلك يعالج كل برميل **حتى 100 كجم من البذور لكل دفعة** — إنه إنتاج تجاري، لا جهاز منزلي.",
+    factsTitle: "العصر البارد — حقائق سريعة",
+    facts: [
+      { label: "حرارة الزيت", value: "تحت 60°م" },
+      { label: "حالة البذور", value: "خام ومجففة، غير محمّصة" },
+      { label: "سعة الدفعة", value: "حتى 100 كجم / برميل" },
+      { label: "الدورة الباردة", value: "حتى ~2 ساعة للدفعة" },
+      { label: "الطريقة", value: "ميكانيكي فقط، بلا مواد كيميائية" },
+      { label: "النتيجة", value: "غير مكرر، جاهز للترشيح" },
+    ],
+    factsNote: "تختلف الحرارة والدورة حسب البذرة والرطوبة وإعدادات الكعكة. العصر الساخن على نفس الماكينة يستغرق 30–40 دقيقة ببذور محمّصة مسبقًا.",
+    cards: [
+      { title: "العناصر الغذائية والنكهة الطبيعية محفوظة", desc: "تحت 60°م، تبقى الأحماض الدهنية الحساسة ومضادات الأكسدة ورائحة البذرة الأصلية إلى حد كبير — أساس الدرجة الفاخرة." },
+      { title: "سعر سوق مميز", desc: "تباع الزيوت غير المكررة المعصورة على البارد عادة بأعلى من الزيوت المكررة بنحو 30–80% في الأسواق التي تعترف بهذه الدرجة (يختلف كثيرًا حسب البلد)." },
+      { title: "بلا تكرير كيميائي", desc: "استخلاص ميكانيكي وترشيح طبيعي — بلا هكسان وبلا خط معادلة، وامتثال أسهل لمشتري الأغذية ومستحضرات التجميل." },
+    ],
+    dualTitle: "ماكينة واحدة، عصر بارد وساخن",
+    dualP1: "مكبس هاونو الهيدروليكي ليس مقصورًا على العصر البارد فقط. نفس الماكينة تُجري **العصر البارد** (بذور خام، تحت 60°م) لزيت فاخر و**العصر الساخن** (بذور محمّصة/مبخّرة) لإنتاجية أعلى — تتحول بتغيير تحضير البذرة، لا بشراء ماكينة أخرى.",
+    dualP2: "هذه الميزة الأساسية للضغط الهيدروليكي الساكن: لا حرارة احتكاك من لولب، لذا تحكم حرارة الزيت هو تحضيرك للبذرة. أنتج اليوم زيتًا باردًا فاخرًا وغدًا زيتًا ساخنًا بكميات كبيرة على نفس المعدة. للعصر الساخن، اقرن المكبس بمحمّصة أو قدر تبخير منفصل — المكبس نفسه لا يحتوي على سخّان مدمج.",
+    profitTitle: "هل العصر البارد أكثر ربحية؟",
+    profitIntro: "يعطي العصر البارد عادة **إنتاجية زيت أقل بنسبة 5–8%** عن العصر الساخن، لكن الزيت يُباع **بعلاوة سعرية**. يعتمد نجاحه على سوقك ونوع الزيت وفجوة السعر التي يمكنك تحقيقها فعلًا.",
+    chips: [
+      "حتى 100 كجم بذور لكل برميل لكل دورة — حجم دفعة تجاري",
+      "دورة باردة حتى ~2 ساعة مقابل 30–40 دقيقة ساخنة",
+      "علاوة نموذجية 30–80% — تحقق منها في سوقك المحلي",
+    ],
+    winsTitle: "متى يربح العصر البارد",
+    wins: [
+      "الأسواق الفاخرة / العضوية / التجميلية (VCO، جوز، أرغان، سمسم).",
+      "حين يحقق زيت العصر البارد علاوة سعرية واضحة ومضمونة على الزيت المكرر.",
+      "حين تتجاوز العلاوة لكل لتر قيمة الإنتاجية الإضافية للعصر الساخن — فجوة الهامش هذه، لا حجم الدفعة، هي العامل الحاسم.",
+    ],
+    hotTitle: "متى يكون العصر الساخن منطقيًا",
+    hot: [
+      "زيت طبخ سائب حيث الحجم والتكلفة المنخفضة أهم ما يهم.",
+      "توريد مستمر بكميات كبيرة للموزعين أو المصافي.",
+      "بذور تزيد فيها التحميصة المسبقة الإنتاجية بشكل ملموس بينما لا يدفع سوقك علاوة العصر البارد.",
+    ],
+    roiLink: "قدّر عائدك مع حاسبة العائد على الاستثمار",
+    matBadge: "اختر حسب مادتك",
+    matTitle: "أي ماكينة عصر بارد لبذرتك؟",
+    matIntro: "في العصر البارد، **صلابة المادة هي التي تحدد الماكينة**: كلما كانت البذرة أو الجوزة أصلب، زاد ضغط الكعكة المطلوب. كل مكبس هاونو الهيدروليكي يعصر على البارد — اختر فئة الضغط المطابقة لمادتك.",
+    materials: [
+      {
+        tag: "بذور طرية",
+        title: "البذور الزيتية الطرية",
+        seeds: "سمسم · فول سوداني · عباد الشمس · لفت · فول صويا",
+        pressure: "325–365 طنًا · ضغط كعكة قياسي",
+        desc: "يزداد بيع زيت السمسم والفول السوداني المعصور على البارد في أسواق الشرق الأوسط وآسيا. HN325 هي الأكثر مبيعًا للمبتدئين؛ وتضيف HN365 محطة مزدوجة لدفعات طوال اليوم.",
+        models: [
+          { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "الأكثر مبيعًا" },
+          { name: "HN365", href: "/products/hn365-hydraulic-oil-press/", note: "محطة مزدوجة" },
+        ],
+      },
+      {
+        tag: "مكسرات فاخرة",
+        title: "بذور متوسطة الصلابة ومكسرات شجرية",
+        seeds: "جوز · لوز · كاميليا / بذرة الشاي · كتان · بريلا · نواة المشمش · بذرة اليقطين",
+        pressure: "500–600 طن · ضغط كعكة 42–48 ميجاباسكال",
+        desc: "هنا يكسب العصر البارد هامشه — زيوت رفيعة عالية القيمة. ضغط 42 ميجاباسكال+ يكسر الخلايا الصلبة دون حرارة، ويحافظ على أوميغا-3 والنكهة.",
+        models: [
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "الرائد في العصر البارد" },
+          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 طن، حسب الطلب" },
+        ],
+      },
+      {
+        tag: "صلب / بقشره",
+        title: "مواد صلبة بقشرها وليفية",
+        seeds: "كوبرا لـVCO · جوز بقشره · حب العزيز · شيا · الزانثوسيراس · قنب",
+        pressure: "560–620 طنًا · حتى 75 ميجاباسكال",
+        desc: "أصلب المواد تتطلب أعلى قوة في المجموعة. HN480 وHN500 تستخلصان أقصى زيت في عدد مرات أقل — بما في ذلك الجوز المعصور بقشره.",
+        models: [
+          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 طن" },
+          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 طن، الطراز الأعلى" },
+        ],
+      },
+    ],
+    ssBold: "عصر رطب لحليب جوز الهند، أو تحتاج ستانلس كامل بدرجة غذائية للتصدير؟",
+    ssSee: "راجع طرازي ستانلس 304",
+    ssAnd: "و",
+    rangeTitle: "نطاق قوة HN300–HN500",
+    rangeSub: "بذرة أصلب أو مادة بقشرها → حاجة لضغط كعكة أعلى. انقر على طراز لفتح صفحته.",
+    compareAll: "قارن كل الطرازات — المصفوفة الكاملة",
+    oilsSub: "نسب إنتاج نموذجية على بذور مدرّجة برطوبة 6–8%. تختلف النسب الفعلية حسب الصنف والتحضير وإعدادات الدورة.",
+    vsTitle: "العصر البارد مقابل الساخن — مقارنة سريعة",
+  },
+
+  id: {
+    badge: "APA ITU",
+    coldTitle: "Apa itu ekstraksi minyak press dingin?",
+    p1: "Press dingin mengekstraksi minyak dari **biji mentah kering yang tidak disangrai hanya dengan tekanan mekanis** — tanpa panas eksternal dan tanpa pelarut kimia. Pada press hidrolik, tekanan statis menjaga suhu minyak sekitar **di bawah 60°C**, karena tidak ada gesekan sekrup yang memanaskan bahan.",
+    p2: "Minyak mempertahankan vitamin alami, antioksidan, warna, dan rasa biji segar, dan dijual **tidak dimurnikan** setelah filtrasi sederhana — VCO, wijen, kenari, biji rami, dan alpukat cold-press adalah produk khasnya.",
+    p3: "Trade-off secara jujur: press dingin biasanya menghasilkan beberapa persen minyak lebih sedikit dibanding menyangrai lebih dulu, siklusnya lebih lama, dan hanya menguntungkan jika pasar Anda membayar harga premium. Setiap barrel tetap memproses **hingga 100 kg biji per batch** — ini produksi komersial, bukan peralatan rumah tangga.",
+    factsTitle: "Press dingin — fakta singkat",
+    facts: [
+      { label: "Suhu minyak", value: "di bawah 60°C" },
+      { label: "Kondisi biji", value: "mentah & kering, tidak disangrai" },
+      { label: "Kapasitas batch", value: "hingga 100 kg / barrel" },
+      { label: "Siklus dingin", value: "hingga ~2 jam per batch" },
+      { label: "Metode", value: "hanya mekanis, tanpa kimia" },
+      { label: "Hasil", value: "tidak dimurnikan, siap difiltrasi" },
+    ],
+    factsNote: "Suhu dan siklus bervariasi menurut biji, kadar air, dan pengaturan cake. Press panas pada mesin yang sama berjalan 30–40 menit dengan biji yang telah disangrai.",
+    cards: [
+      { title: "Nutrisi & rasa alami terjaga", desc: "Di bawah 60°C, asam lemak sensitif, antioksidan, dan aroma asli biji sebagian besar bertahan — dasar kualitas premium." },
+      { title: "Harga pasar premium", desc: "Minyak cold-press tidak dimurnikan biasanya terjual sekitar 30–80% lebih mahal dari minyak refined di pasar yang mengenal kualitas ini (sangat bervariasi per negara)." },
+      { title: "Tanpa pemurnian kimia", desc: "Ekstraksi mekanis plus filtrasi alami — tanpa heksana, tanpa lini netralisasi, kepatuhan lebih sederhana bagi pembeli pangan dan kosmetik." },
+    ],
+    dualTitle: "Satu mesin, press dingin DAN panas",
+    dualP1: "Press hidrolik Haonuo tidak terkunci hanya untuk press dingin. Mesin yang sama menjalankan **press dingin** (biji mentah, di bawah 60°C) untuk minyak premium dan **press panas** (biji sangrai/kukus) untuk hasil lebih tinggi — Anda beralih lewat cara menyiapkan biji, bukan membeli mesin lain.",
+    dualP2: "Inilah keunggulan utama tekanan hidrolik statis: tidak ada panas gesekan dari sekrup, sehingga suhu minyak ditentukan oleh persiapan biji Anda. Produksi minyak cold-press premium hari ini dan minyak panas curah besok pada peralatan yang sama. Untuk press panas, pasangkan press dengan roaster atau steamer terpisah — press itu sendiri tidak memiliki pemanas bawaan.",
+    profitTitle: "Apakah press dingin lebih menguntungkan?",
+    profitIntro: "Press dingin biasanya memberi **hasil minyak 5–8% lebih rendah** dibanding press panas, tetapi minyaknya terjual dengan **harga premium**. Apakah menguntungkan tergantung pasar, jenis minyak, dan kesenjangan harga yang benar-benar bisa Anda capai.",
+    chips: [
+      "Hingga 100 kg biji per barrel per siklus — ukuran batch komersial",
+      "Siklus dingin hingga ~2 jam vs 30–40 menit panas",
+      "Premium khas 30–80% — verifikasi di pasar lokal Anda",
+    ],
+    winsTitle: "Kapan press dingin menang",
+    wins: [
+      "Pasar premium / organik / kosmetik (VCO, kenari, argan, wijen).",
+      "Jika minyak cold-press mendapat premium harga yang jelas dan pasti di atas minyak refined.",
+      "Jika premium per liter melebihi nilai hasil tambahan press panas — kesenjangan margin ini, bukan ukuran batch, yang jadi faktor penentu.",
+    ],
+    hotTitle: "Kapan press panas masuk akal",
+    hot: [
+      "Minyak goreng curah di mana volume dan biaya rendah paling penting.",
+      "Pasokan kontinu volume tinggi ke distributor atau refinery.",
+      "Biji di mana penyangraian awal meningkatkan hasil secara nyata dan pasar Anda tidak membayar premium cold-press.",
+    ],
+    roiLink: "Hitung estimasi keuntungan Anda dengan kalkulator ROI",
+    matBadge: "PILIH BERDASARKAN BAHAN",
+    matTitle: "Mesin press dingin mana untuk biji Anda?",
+    matIntro: "Dalam press dingin, **kekerasan bahan menentukan mesinnya**: semakin keras biji atau kacang, semakin tinggi tekanan cake yang dibutuhkan. Setiap press hidrolik Haonuo bisa press dingin — pilih kelas tekanan yang cocok dengan bahan Anda.",
+    materials: [
+      {
+        tag: "Biji lunak",
+        title: "Biji minyak lunak",
+        seeds: "Wijen · kacang tanah · bunga matahari · kanola · kedelai",
+        pressure: "325–365 ton · tekanan cake standar",
+        desc: "Minyak wijen dan kacang tanah cold-press laku kuat di pasar Timur Tengah dan Asia. HN325 adalah terlaris level pemula; HN365 menambah stasiun ganda untuk batch sepanjang hari.",
+        models: [
+          { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "terlaris" },
+          { name: "HN365", href: "/products/hn365-hydraulic-oil-press/", note: "stasiun ganda" },
+        ],
+      },
+      {
+        tag: "Kacang premium",
+        title: "Biji setengah keras & kacang pohon",
+        seeds: "Kenari · almond · kamelia / biji teh · biji rami · perilla · biji aprikot · biji labu",
+        pressure: "500–600 ton · tekanan cake 42–48 MPa",
+        desc: "Di sinilah press dingin mendapatkan marginnya — minyak bernilai tinggi yang sensitif. Tekanan cake 42 MPa+ memecah sel keras tanpa panas, menjaga omega-3 dan rasa.",
+        models: [
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "unggulan press dingin" },
+          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 t, dibuat sesuai pesanan" },
+        ],
+      },
+      {
+        tag: "Keras / bercangkang",
+        title: "Bahan keras, bercangkang & berserat",
+        seeds: "Kopra untuk VCO · kenari bercangkang · rumput teki · shea · yellowhorn · rami",
+        pressure: "560–620 ton · hingga 75 MPa",
+        desc: "Bahan terkeras membutuhkan gaya tertinggi dalam rentang. HN480 dan HN500 mengekstraksi minyak maksimum dalam lebih sedikit lintasan — termasuk kacang yang dipress bercangkang.",
+        models: [
+          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 t" },
+          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, flagship" },
+        ],
+      },
+    ],
+    ssBold: "Press basah santan, atau butuh baja nirkarat food-grade penuh untuk ekspor?",
+    ssSee: "Lihat model baja nirkarat 304",
+    ssAnd: "dan",
+    rangeTitle: "Rentang gaya HN300–HN500",
+    rangeSub: "Biji lebih keras atau bercangkang → butuh tekanan cake lebih tinggi. Klik model untuk membuka halamannya.",
+    compareAll: "Bandingkan semua model — matriks lengkap",
+    oilsSub: "Hasil khas pada biji bergradasi kadar air 6–8%. Hasil aktual bervariasi menurut varietas, persiapan, dan pengaturan siklus.",
+    vsTitle: "Cold press vs hot press — perbandingan cepat",
+  },
+};
+
+const L = ui[currentLocale];
+
+const richHtml = (s: string, cls = 'text-charcoal-900') =>
+  s.replace(/\*\*(.+?)\*\*/g, `<b class="${cls}">$1</b>`);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -53,64 +344,34 @@ const breadcrumbLd = {
   ],
 };
 
-const faqs = [
-  { question: currentLocale === 'fr' ? 'Qu\'est-ce qu\'une presse à huile à froid ?' :
-              currentLocale === 'ar' ? 'ما هو ماكينة الضغط البارد؟' :
-              'Apa itu mesin press minyak dingin?',
-    answer: currentLocale === 'fr' ? 'Une presse à huile à froid extrait l\'huile des graines à des températures en dessous de 60°C, aidant à préserver les nutriments naturels, la saveur et l\'arôme de l\'huile. Contrairement aux méthodes de pressage à chaud qui chauffent les graines à 120-180°C, le pressage à froid utilise uniquement la pression hydraulique pour extraire l\'huile, ce qui le rend bien adapté à la production d\'huiles premium non raffinées comme l\'huile de coco vierge, l\'huile de sésame à froid et l\'huile de noix. Les presses à huile à froid Haonuo offrent une extraction de qualité professionnelle. Les rendements du pressage à froid sont généralement légèrement inférieurs à ceux du pressage à chaud mais produisent des huiles de qualité supérieure, vendues à des prix plus élevés.' :
-            currentLocale === 'ar' ? 'مكينة الضغط البارد تستخرج الزيت من البذور عند درجات حرارة تحت 60 درجة مئوية، مما يساعد على الحفاظ على العناصر الغذائية الطبيعية والنكهة والرائحة للزيت. على عكس أساليب الضغط الساخن التي تسخن البذور إلى 120-180 درجة مئوية، يستخدم الضغط البارد الضغط الهيدروليكي فقط لاستخراج الزيت، مما يجعله مناسبًا لإنتاج الأزياء الفاخرة غير المرصّحة مثل الجوز الهنديadi البري والسمسم البارد والجوز. مكائن الضغط البارد Haonuo توفر استخراجًا احترافيًا. عائد الضغط البارد عادة ما يكون أقل قليلاً من الضغط الساخن ولكن ينتج أزياء عالية الجودة التي تُباع بأسعار أعلى.' :
-            'Mesin press minyak dingin mengekstraksi minyak dari biji pada suhu di bawah 60°C, membantu melestarikan nutrisi alami, rasa, dan aroma minyak. Tidak seperti metode press panas yang memanaskan biji hingga 120-180°C, press dingin hanya menggunakan tekanan hidrolik untuk mengekstraksi minyak, membuatnya cocok untuk produksi minyak premium tidak dimurnikan seperti minyak kelapa virgin, wijen press dingin, dan minyak walnut. Mesin press minyak dingin Haonuo memberikan ekstraksi kualitas profesional. Hasil press dingin biasanya sedikit lebih rendah daripada press panas tetapi menghasilkan minyak berkualitas tinggi yang dijual dengan harga lebih tinggi.' },
-  { question: currentLocale === 'fr' ? 'Quelle est la différence entre pressage à froid et pressage à chaud ?' :
-              currentLocale === 'ar' ? 'ما هو الفرق بين الضغط البارد والضغط الساخن؟' :
-              'Apa perbedaan antara press dingin dan press panas?',
-    answer: currentLocale === 'fr' ? 'Le pressage à froid fonctionne en dessous de 60°C en aidant à préserver les nutriments, la saveur naturelle et l\'arôme, tandis que le pressage à chaud chauffe les graines à 120-180°C ce qui augmente le rendement mais peut réduire la qualité de l\'huile. Les huiles à froid sont des produits premium non raffinés qui commandent généralement des prix de marché plus élevés que les huiles raffinées, bien que les primes réelles varient considérablement selon le marché, la région et le type d\'huile. Les huiles à chaud nécessitent un raffinage chimique et conviennent à la production d\'huile de cuisson en vrac. Pour les marchés d\'huile premium et bio, le pressage à froid est souvent préféré.' :
-            currentLocale === 'ar' ? 'الضغط البارد يعمل تحت 60 درجة مئوية مع مساعدة في الحفاظ على العناصر الغذائية والنكهة الطبيعية والرائحة، بينما يسخن الضغط الساخن البذور إلى 120-180 درجة مئوية مما يزيد العائد ولكن قد يقلل من جودة الزيت. الأزياء الباردة هي منتجات فاخرة غير مرصّحة التي تُطلب عادةً أسعار سوق أعلى من الأزياء المرصّحة، على الرغم من أن البروتينات الفعلية تختلف بشكل كبير حسب السوق والمنطقة ونوع الزيت. الأزياء الساخنة تحتاج إلى مرصّح كيميائي وتناسب إنتاج زيت الطهي بالجملة. للأسواق الفاخرة والعضوية، غالبًا ما يُفضل الضغط البارد.' :
-            'Press dingin beroperasi di bawah 60°C membantu melestarikan nutrisi, rasa alami, dan aroma, sedangkan press panas memanaskan biji hingga 120-180°C yang meningkatkan hasil tetapi dapat mengurangi kualitas minyak. Minyak press dingin adalah produk premium tidak dimurnikan yang biasanya memiliki harga pasar lebih tinggi daripada minyak dimurnikan, meskipun premium aktual dapat bervariasi signifikan sesuai pasar, wilayah, dan jenis minyak. Minyak press panas membutuhkan pemurnian kimia dan cocok untuk produksi minyak goreng massal. Untuk pasar minyak premium dan organik, press dingin seringkali lebih disukai.' },
-  { question: currentLocale === 'fr' ? 'Quelles graines peuvent être pressées à froid ?' :
-              currentLocale === 'ar' ? 'أي بذور يمكن ضغطها بارداً؟' :
-              'Biji apa saja yang dapat dipress dingin?',
-    answer: currentLocale === 'fr' ? 'La plupart des graines oléagineuses peuvent être pressées à froid dont le sésame, l\'arachide, le coco, la noix, l\'amande, le tournesol, le lin, la moutarde, le colza, la graine de thé, la noisette et bien plus. Les matériaux à coque dure comme la noix et la noisette bénéficient particulièrement du pressage à froid avec des presses hydrauliques haute pression. Le coco pour le VCO (Virgin Coconut Oil) et le sésame pour l\'huile de cuisson premium sont les huiles à froid les plus populaires dans le monde.' :
-            currentLocale === 'ar' ? 'معظم البذور الزيتية يمكن ضغطها بارداً بما في ذلك السمسم والفول السوداني والجوز الهنديadi والجوز واللوز والذرة الصفراء والخس والخردل والكركديهadi وجوز الهند واللوز الصنوبريadi وغيرها. المواد الصلبة مثل الجوز واللوز الصنوبريadi تستفيد بشكل خاص من الضغط البارد مع المكائن الهيدروليكية عالية الضغط. الجوز الهنديadi لجوز الهند البري (VCO) والسمسم لزيت الطهي الفاخر هي الأزياء الباردة الأكثر شيوعًا في العالم.' :
-            'Sebagian besar biji minyak dapat dipress dingin termasuk wijen, kacang tanah, kelapa, walnut, almond, bunga matahari, biji rami, sawi, rapeseed, biji teh, apricot kernel, dan banyak lagi. Bahan keras seperti walnut dan apricot kernel terutama mendapat manfaat dari press dingin dengan mesin press hidrolik bertekanan tinggi. Kelapa untuk VCO (Virgin Coconut Oil) dan wijen untuk minyak goreng premium adalah minyak press dingin paling populer di dunia.' },
-  { question: currentLocale === 'fr' ? 'L\'huile pressée à froid est-elle meilleure ?' :
-              currentLocale === 'ar' ? 'هل الزيت المضغوط بارداً أفضل؟' :
-              'Apakah minyak press dingin lebih baik?',
-    answer: currentLocale === 'fr' ? 'L\'huile pressée à froid conserve généralement davantage de certains nutriments, de la saveur naturelle et de l\'arôme par rapport aux huiles pressées à chaud ou raffinées. Certains vitamines et antioxydants peuvent être réduits lors du traitement à haute température, bien que le degré varie selon le type d\'huile et la méthode de traitement. Les huiles pressées à froid ne sont pas traitées avec des agents de raffinage chimiques. Cependant, le profil chimique de toute huile dépend de la qualité et de la manipulation de la matière première. Bien que le rendement puisse être légèrement inférieur, la valeur marchande généralement plus élevée des huiles pressées à froid rend le pressage à froid potentiellement plus rentable pour les producteurs ciblant les marchés premium et biologiques, bien que les primes de prix réelles varient considérablement.' :
-            currentLocale === 'ar' ? 'زيت الضغط البارد يحتفظ عموماً بمزيد من العناصر الغذائية والنكهة الطبيعية والرائحة مقارنة بالأزياء المضغوطة ساخناً أو المرصّحة. بعض الفيتامينات ومضادات الأكسدة قد تنخفض أثناء المعالجة في درجة حرارة عالية، رغم أن الدرجة تختلف حسب نوع الزيت وطريقة المعالجة. الأزياء المضغوطة بارداً لا تُعالج بعوامل مرصّحة كيميائية. لكن التركيب الكيميائي لأي زيت يعتمد على جودة المواد الخام وطريقة التعامل معها. بينما قد يكون العائد أقل قليلاً، القيمة السوقية الأعلى عادةً للأزياء المضغوطة بارداً تجعل الضغط البارد أكثر ربحية محتملة للمنتجين الذين يستهدفون الأسواق الفاخرة والعضوية، رغم أن العلاوات السعرية الفعلية تختلف بشكل كبير.' :
-            'Minyak press dingin umumnya mempertahankan lebih banyak nutrisi tertentu, rasa alami, dan aroma dibandingkan minyak press panas atau dimurnikan. Beberapa vitamin dan antioksidan mungkin berkurang selama pemrosesan suhu tinggi, meskipun tingkatannya bervariasi tergantung jenis minyak dan metode pemrosesan. Minyak press dingin tidak diproses dengan agen pemurnian kimia. Namun, profil kimia minyak apa pun tergantung pada kualitas dan penanganan bahan baku. Meskipun hasilnya mungkin sedikit lebih rendah, nilai pasar yang biasanya lebih tinggi dari minyak press dingin membuat press dingin berpotensi lebih menguntungkan bagi produsen yang menargetkan pasar premium dan organik, meskipun premium harga aktual bervariasi signifikan.' },
-  { question: currentLocale === 'fr' ? 'Quel est le rendement d\'une presse à huile à froid ?' :
-              currentLocale === 'ar' ? 'ما هو عائد ماكينة الضغط البارد؟' :
-              'Berapa hasil mesin press minyak dingin?',
-    answer: currentLocale === 'fr' ? 'Le rendement varie selon le type de graine : coco 55-65%, sésame 42-50%, arachide 38-45%, noix 50-60%, tournesol 35-45%, lin 30-38%, colza 35-42%. Les presses hydrauliques à froid Haonuo avec conception de fût rainuré de type barre atteignent environ 2-3% de rendement supérieur aux presses traditionnelles à fût percé (d\'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d\'humidité ; les résultats varient selon la graine et la préparation), minimisant l\'écart de rendement entre les méthodes de pressage à froid et à chaud.' :
-            currentLocale === 'ar' ? 'يختلف العائد حسب نوع البذرة: جوز هندادى 55-65%، سمسم 42-50%، فول سوداني 38-45%، جوز 50-60%، دوار الشمس 35-45%، كتان 30-38%، كرنب 35-42%. مكائن الضغط البارد الهيدروليكية Haonuo بتصميم البرميل المقطر من نوع القضبان تحقق حوالي 2-3% عائد أعلى من المكائن الضاغطة التقليدية بالبرميل المثقوب (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير)، مما يقلل الفجوة في العائد بين طريقتي الضغط البارد والساخن.' :
-            'Hasil bervariasi tergantung jenis biji: kelapa 55-65%, wijen 42-50%, kacang tanah 38-45%, walnut 50-60%, bunga matahari 35-45%, biji rami 30-38%, rapeseed 35-42%. Mesin press dingin hidrolik Haonuo dengan desain barrel beralur tipe batang mencapai hasil sekitar 2-3% lebih tinggi daripada press konvensional dengan barrel bolong (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), meminimalkan kesenjangan hasil antara metode press dingin dan press panas.' },
-  { question: currentLocale === 'fr' ? 'Combien coûte une presse à huile à froid ?' :
-              currentLocale === 'ar' ? 'كم تكلفة ماكينة الضغط البارد؟' :
-              'Berapa harga mesin press minyak dingin?',
-    answer: currentLocale === 'fr' ? 'Contactez Haonuo pour un prix d\'usine direct. Nos presses à huile à froid hydrauliques sont disponibles en plusieurs modèles (HN325, HN365, HN426, HN500) avec des capacités de 50 à 125 kg/h. En tant que fabricant direct, nous proposons des tarifs compétitifs sans majoration d\'intermédiaire. Toutes les machines incluent une garantie de 1 an, un support technique à vie et une personnalisation gratuite de la tension pour votre alimentation locale.' :
-            currentLocale === 'ar' ? 'اتصل بـ Haonuo للحصول على أسعار مصنع مباشرة. مكائن الضغط البارد الهيدروليكية متوفرة في عدة موديلات (HN325, HN365, HN426, HN500) بقدرات من 50 إلى 125 كجم/ساعة. كمصنع مباشر، نقدم أسعاراً تنافسية بدون ربح وسيط. جميع الماكينات تتضمن ضمان سنة واحدة، دعم فني مدى الحياة، وتخصيص مجاني للجهد حسب مصدر الطاقة المحلي.' :
-            'Hubungi Haonuo untuk harga pabrik langsung. Mesin press dingin hidrolik kami tersedia dalam beberapa model (HN325, HN365, HN426, HN500) dengan kapasitas 50 hingga 125 kg/jam. Sebagai pabrik langsung, kami menawarkan harga kompetitif tanpa markup perantara. Semua mesin termasuk garansi 1 tahun, dukungan teknis seumur hidup, dan penyesuaian tegangan gratis untuk pasokan daya lokal Anda.' },
-];
-
 const faqLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map(faq => ({
+  mainEntity: t.coldPress.faqs.map(faq => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: { '@type': 'Answer', text: faq.answer },
   })),
 };
+
+const rangeModels = [
+  { model: 'HN300', force: '300 t', href: '/products/mini-hydraulic-oil-press/' },
+  { model: 'HN325', force: '325 t', href: '/products/standard-hydraulic-oil-press/' },
+  { model: 'HN365', force: '365 t', href: '/products/hn365-hydraulic-oil-press/' },
+  { model: 'HN426', force: '500 t', href: '/products/cold-press-hydraulic-oil-press/' },
+  { model: 'HN480', force: '560 t', href: '/products/high-pressure-hydraulic-oil-press/' },
+  { model: 'HN480B', force: '600 t', href: '/products/ultra-high-pressure-cold-press/' },
+  { model: 'HN500', force: '620 t', href: '/products/ultra-high-pressure-hydraulic-oil-press/' },
+];
 ---
 
 <BaseLayout
   locale={currentLocale}
   title={pageTitle}
   description={pageDesc}
-  keywords={currentLocale === 'fr' ? ['presse à huile à froid', 'machine pressage à froid', 'prix presse à huile à froid', 'machine huile pressée à froid'] : currentLocale === 'ar' ? ['مكينة ضغط زيت بارد', 'مكينة ضغط بارد', 'سعر مكينة الضغط البارد', 'مكينة زيت مضغوط بارد'] : ['mesin press minyak dingin', 'mesin press dingin', 'harga mesin press minyak dingin', 'mesin minyak press dingin']}
+  keywords={currentLocale === 'fr' ? ['presse à huile à froid', 'machine presse à froid', 'pression à froid huile', 'extraction huile à froid', 'machine huile presse à froid'] : currentLocale === 'ar' ? ['مكينة عصر الزيت على البارد', 'مكينة ضغط بارد', 'عصر الزيت البارد', 'استخراج الزيت بالضغط البارد', 'مكينة زيت ضغط بارد'] : ['mesin press minyak dingin', 'cold press', 'press dingin minyak', 'mesin ekstraksi minyak dingin', 'mesin minyak cold press']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
-  <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
@@ -118,255 +379,323 @@ const faqLd = {
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         <a href={localePath('/products/')} class="hover:text-amber-500 transition-colors">{t.nav.products}</a>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        <span class="text-charcoal-900">{t.common.coldPressOilMachine}</span>
+        <span class="text-charcoal-900 font-semibold">{t.common.coldPressOilMachine}</span>
       </nav>
     </div>
   </section>
 
-  <!-- Hero -->
   <section class="bg-steel-900 py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{pageTitle}</h1>
-      <p class="text-steel-300 text-lg max-w-3xl mb-8">{pageDesc}</p>
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.coldPress.heroTitle}</h1>
+      <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.coldPress.heroDesc}</p>
       <div class="flex flex-wrap gap-4">
         <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
-          {currentLocale === 'fr' ? 'Demander un devis' : currentLocale === 'ar' ? 'طلب عرض أسعار' : 'Minta Penawaran'}
+          {t.coldPress.requestQuote}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a href={localePath('/resources/cold-press-vs-hot-press-oil/')} class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
-          {currentLocale === 'fr' ? 'Apprendre comment fonctionne le pressage à froid' : currentLocale === 'ar' ? 'تعلم كيف يعمل الضغط البارد' : 'Pelajari Cara Kerja Press Dingin'}
+          {t.coldPress.learnHow}
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Why Cold Press Matters -->
+  <!-- What is cold pressing -->
   <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Pourquoi le Pressage à Froid Est Important' : currentLocale === 'ar' ? 'لماذا الضغط البارد مهم' : 'Mengapa Press Dingin Penting'}</h2>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">{L.badge}</span>
+          <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{L.coldTitle}</h2>
+          <p class="text-steel-600 leading-relaxed mb-4" set:html={richHtml(L.p1)}></p>
+          <p class="text-steel-600 leading-relaxed mb-4" set:html={richHtml(L.p2)}></p>
+          <p class="text-steel-600 leading-relaxed" set:html={richHtml(L.p3)}></p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl border border-steel-100 overflow-hidden">
+          <div class="bg-steel-900 px-6 py-4">
+            <h3 class="font-display text-lg text-white">{L.factsTitle}</h3>
+          </div>
+          <dl class="divide-y divide-steel-100">
+            {L.facts.map(f => (
+              <div class="flex items-center justify-between px-6 py-3.5">
+                <dt class="text-steel-500 text-sm">{f.label}</dt>
+                <dd class="text-charcoal-900 font-semibold text-sm text-right">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <div class="px-6 py-4 bg-amber-50">
+            <p class="text-xs text-amber-800">{L.factsNote}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        {L.cards.map((card, i) => (
+          <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+            <div class="text-2xl mb-3">{i === 0 ? '\u{1F33E}' : i === 1 ? '\u{1F4B0}' : '\u{1F9EA}'}</div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">{card.title}</h3>
+            <p class="text-steel-600 text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- One machine, cold AND hot -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-steel-900 to-charcoal-900 rounded-3xl p-8 md:p-12 text-center">
+        <div class="text-4xl mb-4">&#9889;</div>
+        <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{L.dualTitle}</h2>
+        <p class="text-steel-300 text-lg max-w-3xl mx-auto mb-6" set:html={richHtml(L.dualP1, 'text-white')}></p>
+        <p class="text-steel-400 text-sm max-w-2xl mx-auto">{L.dualP2}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profitability -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 text-center mb-3">{L.profitTitle}</h2>
+      <p class="text-center text-steel-600 max-w-3xl mx-auto mb-6" set:html={richHtml(L.profitIntro)}></p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm">
+        {L.chips.map(chip => (
+          <span class="bg-steel-50 border border-steel-100 text-steel-600 px-4 py-2 rounded-full">{chip}</span>
+        ))}
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#127793;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Conservation des Nutriments' : currentLocale === 'ar' ? 'حفظ العناصر الغذائية' : 'Pelestarian Nutrisi'}</h3>
-          <p class="text-steel-600 leading-relaxed">{currentLocale === 'fr' ? 'Le pressage à froid en dessous de 60°C aide à conserver les vitamines, antioxydants et acides gras essentiels qui peuvent être perdus lors du pressage à chaud. Vos clients obtiennent de l\'huile à froid de qualité premium.' : currentLocale === 'ar' ? 'الضغط البارد تحت 60 درجة مئوية يساعد على الحفاظ على الفيتامينات ومضادات الأكسدة والأحماض الدهنية الأساسية التي قد تضيع أثناء الضغط الساخن. عملاؤكم يحصلون على زيت بارد عالي الجودة.' : 'Press dingin di bawah 60°C membantu melestarikan vitamin, antioksidan, dan asam lemak esensial yang mungkin hilang selama press panas. Pelanggan Anda mendapatkan minyak press dingin berkualitas premium.'}</p>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{L.winsTitle}</h3>
+          <ul class="text-steel-600 text-sm space-y-2 leading-relaxed">
+            {L.wins.map(line => <li>{line}</li>)}
+          </ul>
         </div>
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#128067;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Saveur & Aroma Naturels' : currentLocale === 'ar' ? 'نكهة و رائحة طبيعية' : 'Rasa & Aroma Alami'}</h3>
-          <p class="text-steel-600 leading-relaxed">{currentLocale === 'fr' ? 'Pas de chauffage signifie que l\'huile conserve son goût original — essentiel pour les marchés premium et bio. Le sésame reste noisette, le coco reste parfumé, la noix reste riche.' : currentLocale === 'ar' ? 'لا توجد حرارة تعني أن الزيت يحتفظ بنكهته الأصلية — أساسي للسوق الفاخر والعضوية. السمسم يبقى حامض، الجوز الهنديadi يبقى عطراً، الجوز يبقى غنياً.' : 'Tidak ada pemanasan berarti minyak tetap mempertahankan rasa aslinya — penting untuk pasar premium dan organik. Wijen tetap beraroma kacang, kelapa tetap harum, walnut tetap kaya.'}</p>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{L.hotTitle}</h3>
+          <ul class="text-steel-600 text-sm space-y-2 leading-relaxed">
+            {L.hot.map(line => <li>{line}</li>)}
+          </ul>
         </div>
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#128142;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Valeur Marchande Plus Élevée' : currentLocale === 'ar' ? 'قيمة سوق أعلى' : 'Nilai Pasar Lebih Tinggi'}</h3>
-          <p class="text-steel-600 leading-relaxed">{currentLocale === 'fr' ? 'Les huiles à froid commandent 30-80% de prime sur les huiles raffinées/à chaud. Une qualité supérieure se traduit directement par des marges bénéficiaires plus élevées pour votre entreprise.' : currentLocale === 'ar' ? 'الأزياء الباردة تُطلب 30-80% من البروتين على الأزياء المرصّحة/الساخنة. جودة أعلى تنعكس مباشرة على روافع الأرباح الأعلى لعملك.' : 'Minyak press dingin memiliki premium 30-80% dibanding minyak dimurnikan/press panas. Kualitas lebih tinggi secara langsung meningkatkan margin keuntungan untuk bisnis Anda.'}</p>
+      </div>
+      <p class="text-center mt-8">
+        <a href={localePath('/roi-calculator/')} class="inline-flex items-center gap-2 text-amber-600 font-semibold hover:underline">
+          {L.roiLink}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Material gateway + range bar -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">{L.matBadge}</span>
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-3">{L.matTitle}</h2>
+      <p class="text-steel-600 max-w-3xl mb-10" set:html={richHtml(L.matIntro)}></p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {L.materials.map(c => (
+          <div class="flex flex-col bg-white rounded-2xl p-7 border border-steel-100 hover:border-amber-300 transition-colors">
+            <span class="self-start text-xs font-semibold uppercase tracking-wide bg-steel-900 text-white px-3 py-1 rounded-full mb-4">{c.tag}</span>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">{c.title}</h3>
+            <p class="text-amber-700 text-sm font-medium mb-1">{c.seeds}</p>
+            <p class="text-steel-500 text-sm mb-3">{c.pressure}</p>
+            <p class="text-steel-600 text-sm leading-relaxed mb-5">{c.desc}</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              {c.models.map(m => (
+                <a href={localePath(m.href)} class="inline-flex items-center gap-1.5 bg-steel-50 border border-steel-200 hover:border-amber-400 hover:text-amber-600 text-charcoal-900 text-sm font-semibold px-3.5 py-2 rounded-lg transition-colors">
+                  {m.name}
+                  <span class="text-xs font-normal text-steel-400">{m.note}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-white border border-dashed border-amber-300 rounded-2xl px-6 py-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <p class="text-steel-600 text-sm">
+          <b class="text-charcoal-900">{L.ssBold}</b><br/>
+          {L.ssSee}{' '}
+          <a href={localePath('/products/coconut-oil-hydraulic-press/')} class="text-amber-600 font-semibold hover:underline">300 Type Coconut</a>
+          {' '}{L.ssAnd}{' '}
+          <a href={localePath('/products/stainless-steel-hydraulic-oil-press/')} class="text-amber-600 font-semibold hover:underline">HN325S</a>.
+        </p>
+      </div>
+
+      <div class="bg-steel-900 rounded-2xl p-7 md:p-9 mt-8">
+        <h3 class="font-display text-xl text-white mb-1">{L.rangeTitle}</h3>
+        <p class="text-steel-400 text-sm mb-8">{L.rangeSub}</p>
+        <div class="relative">
+          <div class="hidden md:block absolute top-[42px] left-6 right-6 h-1 bg-gradient-to-r from-amber-300 via-amber-500 to-amber-600 rounded"></div>
+          <div class="grid grid-cols-2 md:grid-cols-7 gap-6 md:gap-2 relative">
+            {rangeModels.map(m => (
+              <a href={localePath(m.href)} class="flex md:flex-col items-center gap-3 md:gap-0 group">
+                <div class="w-4 h-4 rounded-full bg-amber-500 ring-4 ring-steel-900 shrink-0 md:mb-4 group-hover:scale-125 transition-transform"></div>
+                <div class="text-left md:text-center">
+                  <div class="text-white font-display font-semibold group-hover:text-amber-400 transition-colors">{m.model}</div>
+                  <div class="text-steel-400 text-xs">{m.force}</div>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
-        <div class="bg-steel-50 rounded-2xl p-8 border border-steel-100">
-          <div class="text-3xl mb-4">&#127981;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Applications Polyvalentes' : currentLocale === 'ar' ? 'تطبيقات متعددة' : 'Aplikasi Serbaguna'}</h3>
-          <p class="text-steel-600 leading-relaxed">{currentLocale === 'fr' ? 'Du VCO (Virgin Coconut Oil) à l\'huile de sésame à froid pour les industries pharmaceutique et cosmétique. Une seule machine ouvre la porte à plusieurs marchés premium.' : currentLocale === 'ar' ? 'من جوز الهند البري (VCO) إلى السمسم البارد للصناعات الصيدلانية والكاسметиكية. ماكينة واحدة تفتح الباب إلى عدة أسواق فاخرة.' : 'Dari VCO (Virgin Coconut Oil) hingga wijen press dingin untuk industri farmasi dan kosmetik. Satu mesin membuka pintu ke beberapa pasar premium.'}</p>
+        <div class="mt-8 text-center">
+          <a href={localePath('/products/model-comparison/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-7 py-3.5 rounded-lg hover:bg-amber-400 transition-colors">
+            {L.compareAll}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cold Press Products -->
-  {coldPressProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">{currentLocale === 'fr' ? 'Notre Série de Presses à Huile à Froid' : currentLocale === 'ar' ? 'سلسلة مكائن الضغط البارد' : 'Seri Mesin Press Minyak Dingin Kami'}</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {coldPressProducts.map(product => (
-            <a
-              href={localePath(`/products/${product.slug}`)}
-              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
-            >
-              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-                <img
-                  src={product.data.images[0]}
-                  alt={product.data.title[currentLocale] || product.data.title.en}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20cold%20press%20oil%20machine%20product%20photo&image_size=landscape_4_3'"
-                />
-              </div>
-              <div class="p-5">
-                <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
-                <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
-                <div class="flex flex-wrap gap-2">
-                  {(currentLocale === 'id' && product.data.specificationsId?.length > 0 ? product.data.specificationsId : currentLocale === 'ar' && product.data.specificationsAr?.length > 0 ? product.data.specificationsAr : currentLocale === 'fr' && product.data.specificationsFr?.length > 0 ? product.data.specificationsFr : product.data.specifications).slice(0, 2).map(spec => (
-                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
-                      {spec.name}: {spec.value}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Cold Press vs Hot Press Comparison -->
+  <!-- How cold press works -->
   <section class="py-12 md:py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Comparaison Pressage à Froid vs Pressage à Chaud' : currentLocale === 'ar' ? 'مقارنة الضغط البارد مقابل الضغط الساخن' : 'Perbandingan Press Dingin vs Press Panas'}</h2>
-      <div class="overflow-x-auto">
+      <h2 class="section-title text-center mb-12">{t.coldPress.howWorksTitle}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">1</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep1.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep1.desc}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">2</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep2.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep2.desc}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">3</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-3">{t.coldPress.howWorksStep3.title}</h3>
+          <p class="text-steel-600 leading-relaxed">{t.coldPress.howWorksStep3.desc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular oils -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-3">{t.coldPress.popularOilsTitle}</h2>
+      <p class="text-center text-steel-500 text-sm max-w-2xl mx-auto mb-12">{L.oilsSub}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129381;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.vco.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.vco.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.vco.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.vco.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.vco.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127807;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.sesameOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.sesameOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.sesameOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.sesameOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.sesameOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129361;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.avocadoOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.avocadoOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.avocadoOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.avocadoOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.avocadoOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129722;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.oliveOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.oliveOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.oliveOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.oliveOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.oliveOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#129728;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.walnutOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.walnutOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.walnutOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.walnutOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.walnutOil.tag}</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl mb-4">&#127803;</div>
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.coldPress.sunflowerOil.title}</h3>
+          <p class="text-sm text-amber-500 font-medium mb-2">{t.coldPress.sunflowerOil.region}</p>
+          <p class="text-steel-600 text-sm mb-3">{t.coldPress.sunflowerOil.desc}</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">{t.coldPress.sunflowerOil.yield}</span>
+            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{t.coldPress.sunflowerOil.tag}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cold vs hot quick comparison -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-8">{L.vsTitle}</h2>
+      <div class="overflow-x-auto text-left">
         <table class="w-full border-collapse">
           <thead>
             <tr class="bg-steel-900 text-white">
-              <th class="text-left px-6 py-4 font-display text-lg rounded-tl-xl">{currentLocale === 'fr' ? 'Critère' : currentLocale === 'ar' ? 'المعيار' : 'Kriteria'}</th>
-              <th class="text-center px-6 py-4 font-display text-lg">{currentLocale === 'fr' ? 'Pressage à Froid' : currentLocale === 'ar' ? 'الضغط البارد' : 'Press Dingin'}</th>
-              <th class="text-center px-6 py-4 font-display text-lg rounded-tr-xl">{currentLocale === 'fr' ? 'Pressage à Chaud' : currentLocale === 'ar' ? 'الضغط الساخن' : 'Press Panas'}</th>
+              <th class="text-left px-6 py-3 font-display">{t.coldPress.comparisonFeature}</th>
+              <th class="text-center px-6 py-3 font-display">{t.coldPress.comparisonColdPress}</th>
+              <th class="text-center px-6 py-3 font-display">{t.coldPress.comparisonHotPress}</th>
             </tr>
           </thead>
           <tbody>
             <tr class="border-b border-steel-100">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Température' : currentLocale === 'ar' ? 'درجة الحرارة' : 'Suhu'}</td>
-              <td class="px-6 py-4 text-center text-steel-600">{currentLocale === 'fr' ? 'En dessous de 60°C' : currentLocale === 'ar' ? 'تحت 60 درجة مئوية' : 'Di bawah 60°C'}</td>
-              <td class="px-6 py-4 text-center text-steel-600">120-180°C</td>
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonTemp}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonTempCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonTempHot}</td>
             </tr>
             <tr class="border-b border-steel-100 bg-steel-50">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Rétention des Nutriments' : currentLocale === 'ar' ? 'حفظ العناصر الغذائية' : 'Retensi Nutrisi'}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">{currentLocale === 'fr' ? 'Généralement élevée (varie selon le type de graine)' : currentLocale === 'ar' ? 'عادة مرتفع (يختلف حسب نوع البذرة)' : 'Umumnya tinggi (bervariasi sesuai jenis biji)'}</span></td>
-              <td class="px-6 py-4 text-center"><span class="text-steel-600">{currentLocale === 'fr' ? 'Faible (40-60%)' : currentLocale === 'ar' ? 'منخفض (40-60%)' : 'Rendah (40-60%)'}</span></td>
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonYield}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonYieldCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonYieldHot}</td>
             </tr>
             <tr class="border-b border-steel-100">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Rendement en Huile' : currentLocale === 'ar' ? 'عائد الزيت' : 'Hasil Minyak'}</td>
-              <td class="px-6 py-4 text-center text-steel-600">{currentLocale === 'fr' ? 'Standard' : currentLocale === 'ar' ? 'قياسي' : 'Standar'}</td>
-              <td class="px-6 py-4 text-center text-steel-600">{currentLocale === 'fr' ? 'Plus élevé' : currentLocale === 'ar' ? 'أعلى' : 'Lebih tinggi'}</td>
-            </tr>
-            <tr class="border-b border-steel-100 bg-steel-50">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Qualité de l\'Huile' : currentLocale === 'ar' ? 'جودة الزيت' : 'Kualitas Minyak'}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">{currentLocale === 'fr' ? 'Premium, non raffinée' : currentLocale === 'ar' ? 'فاخر، غير مكرر' : 'Premium, tidak dimurnikan'}</span></td>
-              <td class="px-6 py-4 text-center text-steel-600">{currentLocale === 'fr' ? 'Nécessite un raffinage' : currentLocale === 'ar' ? 'يتطلب تكرير' : 'Membutuhkan pemurnian'}</td>
-            </tr>
-            <tr class="border-b border-steel-100">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Saveur / Arôme' : currentLocale === 'ar' ? 'النكهة / الرائحة' : 'Rasa / Aroma'}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-amber-500 font-semibold">{currentLocale === 'fr' ? 'Naturel, riche' : currentLocale === 'ar' ? 'طبيعي، غني' : 'Alami, kaya'}</span></td>
-              <td class="px-6 py-4 text-center text-steel-600">{currentLocale === 'fr' ? 'Neutre' : currentLocale === 'ar' ? 'محايد' : 'Netral'}</td>
-            </tr>
-            <tr class="border-b border-steel-100 bg-steel-50">
-              <td class="px-6 py-4 font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Prix du Marché' : currentLocale === 'ar' ? 'سعر السوق' : 'Harga Pasar'}</td>
-              <td class="px-6 py-4 text-center"><span class="inline-flex items-center gap-1 text-green-600 font-semibold">{currentLocale === 'fr' ? 'Typiquement premium (varie considérablement selon le marché et le type d\'huile)' : currentLocale === 'ar' ? 'عادة فاخر (يختلف بشكل كبير حسب السوق ونوع الزيت)' : 'Biasanya premium (bervariasi signifikan sesuai pasar dan jenis minyak)'}</span></td>
-              <td class="px-6 py-4 text-center text-steel-600">{currentLocale === 'fr' ? 'Standard' : currentLocale === 'ar' ? 'قياسي' : 'Standar'}</td>
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonQuality}</td>
+              <td class="px-6 py-3 text-center text-amber-500 font-semibold">{t.coldPress.comparisonQualityCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonQualityHot}</td>
             </tr>
             <tr>
-              <td class="px-6 py-4 font-medium text-charcoal-900 rounded-bl-xl">{currentLocale === 'fr' ? 'Meilleur Pour' : currentLocale === 'ar' ? 'الأفضل لـ' : 'Terbaik Untuk'}</td>
-              <td class="px-6 py-4 text-center text-amber-500 font-semibold">{currentLocale === 'fr' ? 'Huiles premium / bio' : currentLocale === 'ar' ? 'زيوت فاخرة / عضوية' : 'Minyak premium / organik'}</td>
-              <td class="px-6 py-4 text-center text-steel-600 rounded-br-xl">{currentLocale === 'fr' ? 'Huile de cuisson en vrac' : currentLocale === 'ar' ? 'زيت طبخ بالجملة' : 'Minyak goreng massal'}</td>
+              <td class="px-6 py-3 font-medium text-charcoal-900">{t.coldPress.comparisonBestFor}</td>
+              <td class="px-6 py-3 text-center text-amber-500 font-semibold">{t.coldPress.comparisonBestForCold}</td>
+              <td class="px-6 py-3 text-center text-steel-600">{t.coldPress.comparisonBestForHot}</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="text-center mt-8">
-        <a href={localePath('/resources/cold-press-vs-hot-press-oil/')} class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-600 transition-colors">
-          {currentLocale === 'fr' ? 'Lire la comparaison complète Pressage à Froid vs Pressage à Chaud' : currentLocale === 'ar' ? 'اقرأ المقارنة الكاملة للضغط البارد مقابل الضغط الساخن' : 'Baca perbandingan lengkap Press Dingin vs Press Panas'}
+      <div class="mt-8">
+        <a href={localePath('/resources/cold-press-vs-hot-press-oil/')} class="inline-flex items-center gap-2 text-amber-600 font-semibold hover:underline">
+          {t.coldPress.readFullComparison}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Popular Cold-Pressed Oils -->
-  <section class="py-12 md:py-16 bg-steel-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Huiles à Froid Populaires' : currentLocale === 'ar' ? 'زيوت الضغط البارد الشائعة' : 'Minyak Press Dingin Populer'}</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="text-3xl mb-4">&#129381;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Coco Vierge (VCO)' : currentLocale === 'ar' ? 'زيت جوز الهند البارد (VCO)' : 'Minyak Kelapa Virgin (VCO)'}</h3>
-          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Philippines / Indonésie' : currentLocale === 'ar' ? 'الفلبين / إندونيسيا' : 'Filipina / Indonesia'}</p>
-          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Cuisine premium & applications cosmétiques' : currentLocale === 'ar' ? 'الطبخ الفاخر والتطبيقات التجميلية' : 'Memasak premium & aplikasi kosmetik'}</p>
-          <div class="flex items-center gap-2">
-            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 55-65%</span>
-            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Forte Demande' : currentLocale === 'ar' ? 'طلب مرتفع' : 'Permintaan Tinggi'}</span>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="text-3xl mb-4">&#127807;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Sésame à Froid' : currentLocale === 'ar' ? 'زيت سمسم الضغط البارد' : 'Minyak Wijen Press Dingin'}</h3>
-          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Moyen-Orient / Asie' : currentLocale === 'ar' ? 'الشرق الأوسط / آسيا' : 'Timur Tengah / Asia'}</p>
-          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Cuisine traditionnelle & compléments santé' : currentLocale === 'ar' ? 'الطبخ التقليدي والمكملات الصحية' : 'Memasak tradisional & suplemen kesehatan'}</p>
-          <div class="flex items-center gap-2">
-            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 42-50%</span>
-            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Prix Premium' : currentLocale === 'ar' ? 'سعر فاخر' : 'Harga Premium'}</span>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="text-3xl mb-4">&#129361;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile d\'Avocat' : currentLocale === 'ar' ? 'زيت الأفوكادو' : 'Minyak Alpukat'}</h3>
-          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Demande mondiale' : currentLocale === 'ar' ? 'طلب عالمي' : 'Permintaan global'}</p>
-          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Cosmétique & cuisine premium' : currentLocale === 'ar' ? 'التجميل والطبخ الفاخر' : 'Kosmetik & memasak premium'}</p>
-          <div class="flex items-center gap-2">
-            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 30-40%</span>
-            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Croissance Rapide' : currentLocale === 'ar' ? 'نمو سريع' : 'Pertumbuhan Cepat'}</span>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="text-3xl mb-4">&#129722;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile d\'Olive à Froid' : currentLocale === 'ar' ? 'زيت زيتون الضغط البارد' : 'Minyak Zaitun Press Dingin'}</h3>
-          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Méditerranée' : currentLocale === 'ar' ? 'البحر الأبيض المتوسط' : 'Mediterania'}</p>
-          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Marché alimentaire premium' : currentLocale === 'ar' ? 'سوق الأغذية الفاخرة' : 'Pasar makanan premium'}</p>
-          <div class="flex items-center gap-2">
-            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 35-45%</span>
-            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Marché Établi' : currentLocale === 'ar' ? 'سوق راسخ' : 'Pasar Mapan'}</span>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="text-3xl mb-4">&#129728;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Noix' : currentLocale === 'ar' ? 'زيت الجوز' : 'Minyak Walnut'}</h3>
-          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Europe / Asie' : currentLocale === 'ar' ? 'أوروبا / آسيا' : 'Eropa / Asia'}</p>
-          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Cuisine gastronomique & compléments' : currentLocale === 'ar' ? 'الطبخ الفاخر والمكملات' : 'Memasak gourmet & suplemen'}</p>
-          <div class="flex items-center gap-2">
-            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 50-60%</span>
-            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Ultra Premium' : currentLocale === 'ar' ? 'فائق الفخامة' : 'Ultra Premium'}</span>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="text-3xl mb-4">&#127803;</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Huile de Tournesol à Froid' : currentLocale === 'ar' ? 'زيت دوار الشمس البارد' : 'Minyak Bunga Matahari Press Dingin'}</h3>
-          <p class="text-sm text-amber-500 font-medium mb-2">{currentLocale === 'fr' ? 'Europe de l\'Est / Afrique' : currentLocale === 'ar' ? 'أوروبا الشرقية / أفريقيا' : 'Eropa Timur / Afrika'}</p>
-          <p class="text-steel-600 text-sm mb-3">{currentLocale === 'fr' ? 'Marché soucieux de la santé' : currentLocale === 'ar' ? 'سوق مهتم بالصحة' : 'Pasar sadar kesehatan'}</p>
-          <div class="flex items-center gap-2">
-            <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">Yield: 40-48%</span>
-            <span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">{currentLocale === 'fr' ? 'Volume Élevé' : currentLocale === 'ar' ? 'حجم مرتفع' : 'Volume Tinggi'}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How Cold Press Extraction Works -->
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{currentLocale === 'fr' ? 'Comment Fonctionne l\'Extraction à Froid' : currentLocale === 'ar' ? 'كيف يعمل استخراج الضغط البارد' : 'Cara Kerja Ekstraksi Press Dingin'}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">1</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Préparer les Graines' : currentLocale === 'ar' ? 'تحضير البذور' : 'Mempersiapkan Biji'}</h3>
-          <p class="text-steel-600 leading-relaxed">{currentLocale === 'fr' ? 'Nettoyez, séchez et épluchez éventuellement les graines oléagineuses. Une bonne préparation garantit un rendement maximal en huile et une production d\'huile propre et sans sédiment.' : currentLocale === 'ar' ? 'نظف وجفف وأزل القشرة اختيارياً من البذور الزيتية. التحضير المناسب يضمن أقصى عائد من الزيت وإنتاج زيت نظيف خالي من الرواسب.' : 'Bersihkan, keringkan, dan kupas opsional biji minyak. Persiapan yang tepat memastikan hasil minyak maksimal dan output minyak bersih tanpa sedimen.'}</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">2</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Pressage à Froid à Basse Température' : currentLocale === 'ar' ? 'ضغط بارد في درجة حرارة منخفضة' : 'Press Dingin pada Suhu Rendah'}</h3>
-          <p class="text-steel-600 leading-relaxed">{currentLocale === 'fr' ? 'La pression hydraulique extrait l\'huile en dessous de 60°C. La pression mécanique intense fait le travail — aucun chauffage ni produit chimique nécessaire. Les nutriments et la saveur restent intacts.' : currentLocale === 'ar' ? 'الضغط الهيدروليكي يستخرج الزيت تحت 60 درجة مئوية. الضغط الميكانيكي الشديد يقوم بالعمل — لا حاجة لتسخين أو مواد كيميائية. العناصر الغذائية والنكهة تبقى سليمة.' : 'Tekanan hidrolik mengekstraksi minyak di bawah 60°C. Tekanan mekanis intensif melakukan pekerjaan — tidak perlu pemanasan atau bahan kimia. Nutrisi dan rasa tetap utuh.'}</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-display mx-auto mb-6">3</div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-3">{currentLocale === 'fr' ? 'Filtrer et Emballer' : currentLocale === 'ar' ? 'ترشيح وتعبئة' : 'Saring dan Kemas'}</h3>
-          <p class="text-steel-600 leading-relaxed">{currentLocale === 'fr' ? 'Filtration par sédimentation naturelle, aucun traitement chimique nécessaire. Le résultat est une huile à froid pure et premium prête pour l\'embouteillage et la vente.' : currentLocale === 'ar' ? 'ترشيح بالترسيب الطبيعي، لا حاجة لمعالجة كيميائية. النتيجة زيت بارد نقي وفاخر جاهز للتعبئة والتسويق.' : 'Filtrasi sedimen alami, tidak perlu pengolahan kimia. Hasilnya minyak press dingin murni dan premium siap untuk botolan dan pemasaran.'}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-12 md:py-16 bg-steel-50">
+  <section class="py-12 md:py-16 bg-steel-50 border-t border-steel-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-8">{currentLocale === 'fr' ? 'Foire aux questions' : currentLocale === 'ar' ? 'أسئلة شائعة' : 'Pertanyaan yang Sering Diajukan'}</h2>
+      <h2 class="section-title text-center mb-8">{t.coldPress.faqTitle}</h2>
       <div class="space-y-4">
-        {faqs.map((item, i) => (
-          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+        {t.coldPress.faqs.map((item, i) => (
+          <details class="reveal group bg-white rounded-xl overflow-hidden border border-steel-100" style={`animation-delay: ${i * 80}ms`}>
             <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
               <span class="font-display text-lg text-charcoal-900">{item.question}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -378,18 +707,17 @@ const faqLd = {
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="py-16 md:py-20 bg-steel-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'fr' ? 'Commencer à Produire de l\'Huile à Froid Premium' : currentLocale === 'ar' ? 'البدء بإنتاج زيت بارد فاخر' : 'Mulai Produksi Minyak Dingin Premium'}</h2>
-      <p class="text-steel-300 text-lg mb-8">{currentLocale === 'fr' ? 'Contactez Haonuo pour un prix d\'usine, des recommandations de modèle et une conception de ligne de production gratuite.' : currentLocale === 'ar' ? 'اتصل بـ Haonuo للحصول على أسعار مصنع، توصيات النماذج، وتصميم خط الإنتاج المجاني.' : 'Hubungi Haonuo untuk harga pabrik, rekomendasi model, dan desain jalur produksi gratis.'}</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{t.coldPress.ctaTitle}</h2>
+      <p class="text-steel-300 text-lg mb-8">{t.coldPress.ctaDesc}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
-          {currentLocale === 'fr' ? 'Demander un devis' : currentLocale === 'ar' ? 'طلب عرض أسعار' : 'Minta Penawaran'}
+          {t.coldPress.requestQuote}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="https://wa.me/8618957149128" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
-          {currentLocale === 'fr' ? 'Discuter sur WhatsApp' : currentLocale === 'ar' ? 'واتساب' : 'WhatsApp Kami'}
+        <a href="https://wa.me/8618957149128" target="_blank" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+          {t.coldPress.whatsappUs}
         </a>
       </div>
     </div>

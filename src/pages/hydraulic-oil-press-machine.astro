@@ -1,11 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
 import { getTranslations } from '../i18n';
 
 const t = getTranslations('en');
-const allProducts = await getCollection('products');
-const hydraulicProducts = allProducts.filter(p => p.data.category === 'hydraulic-oil-press');
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -27,15 +24,73 @@ const faqLd = {
   })),
 };
 
-const techComparison = [
-  { model: 'HN300', force: '300 Tons', motor: '2.2 KW', bestFor: 'Sesame, small seeds, entry-level' },
-  { model: 'HN325', force: '325 Tons', motor: '2.2 KW', bestFor: 'Popular, versatile, peanut & rapeseed' },
-  { model: 'HN325S', force: '330 Tons', motor: '2.2 KW', bestFor: 'Stainless steel, food-grade, export markets' },
-  { model: 'HN365', force: '365 Tons', motor: 'On request', bestFor: 'Heavy-duty, tea seed & medium seeds' },
-  { model: 'HN400', force: '400 Tons', motor: '2.2 KW', bestFor: 'Commercial-scale, high-volume production' },
-  { model: 'HN426', force: '500 Tons', motor: '2.2 KW', bestFor: 'Cold press, walnut, coconut & premium oils' },
-  { model: 'HN480B', force: '560 Tons', motor: '2.2 KW', bestFor: 'Heavy cold press, coconut VCO, industrial' },
-  { model: 'HN500', force: '620 Tons', motor: '2.2 KW', bestFor: 'Ultra-high pressure, industrial-scale, all seeds' },
+// Range bar — one tick per model, force in tons
+const rangeModels = [
+  { model: 'HN300', force: '300 t', href: '/products/mini-hydraulic-oil-press/' },
+  { model: 'HN325', force: '325 t', href: '/products/standard-hydraulic-oil-press/' },
+  { model: 'HN365', force: '365 t', href: '/products/hn365-hydraulic-oil-press/' },
+  { model: 'HN426', force: '500 t', href: '/products/cold-press-hydraulic-oil-press/' },
+  { model: 'HN480', force: '560 t', href: '/products/high-pressure-hydraulic-oil-press/' },
+  { model: 'HN480B', force: '600 t', href: '/products/ultra-high-pressure-cold-press/' },
+  { model: 'HN500', force: '620 t', href: '/products/ultra-high-pressure-hydraulic-oil-press/' },
+];
+
+// Scenario gateway — buy by seed & scale, not by memorizing model numbers
+const scenarios = [
+  {
+    tag: 'Entry level',
+    title: 'Soft & medium seeds, small-to-medium workshops',
+    seeds: 'Sesame · peanut · rapeseed · sunflower · soybean · tea seed',
+    force: '300–365 tons pressing force',
+    desc: 'The best-selling daily-oil machines. One-button cycle, 2.2 kW motor (runs on a 5–7 kVA generator), single- or double-barrel stations.',
+    models: [
+      { name: 'HN300', href: '/products/mini-hydraulic-oil-press/', note: 'compact starter' },
+      { name: 'HN325', href: '/products/standard-hydraulic-oil-press/', note: 'best seller' },
+      { name: 'HN365', href: '/products/hn365-hydraulic-oil-press/', note: 'double station, all-day' },
+    ],
+  },
+  {
+    tag: 'Food grade',
+    title: 'Coconut milk, VCO & export-grade food production',
+    seeds: 'Coconut milk · VCO · halal / food-certified sesame',
+    force: '300–325 tons · 304 stainless steel',
+    desc: 'Full food-contact 304 stainless barrels and frames for wet pressing and audited export facilities.',
+    models: [
+      { name: '300 Type Coconut', href: '/products/coconut-oil-hydraulic-press/', note: '600 mm barrel' },
+      { name: 'HN325S', href: '/products/stainless-steel-hydraulic-oil-press/', note: 'stainless HN325' },
+    ],
+  },
+  {
+    tag: 'Cold press',
+    title: 'Premium oils from medium-hard seeds & nuts',
+    seeds: 'Walnut · almond · camellia / tea seed · flaxseed · apricot kernel',
+    force: '500–600 tons · 42–48 MPa cake pressure',
+    desc: 'High cake-surface pressure is what cold pressing needs. Static pressure adds no friction heat, so raw dried seed presses below 60°C.',
+    models: [
+      { name: 'HN426', href: '/products/cold-press-hydraulic-oil-press/', note: 'cold-press flagship' },
+      { name: 'HN480B', href: '/products/ultra-high-pressure-cold-press/', note: '600 t, made to order' },
+    ],
+  },
+  {
+    tag: 'Industrial',
+    title: 'Hard / in-shell materials & high-volume mills',
+    seeds: 'Copra · in-shell walnut · tiger nut · shea · yellowhorn · hemp',
+    force: '560–620 tons · up to 75 MPa system pressure',
+    desc: 'The highest force in the range for the hardest materials; double-barrel configurations for continuous high throughput.',
+    models: [
+      { name: 'HN480', href: '/products/high-pressure-hydraulic-oil-press/', note: '560 t step-up' },
+      { name: 'HN500', href: '/products/ultra-high-pressure-hydraulic-oil-press/', note: '620 t flagship' },
+    ],
+  },
+];
+
+const quickFacts = [
+  { label: 'Pressing force', value: '300–620 tons' },
+  { label: 'System pressure', value: '60–75 MPa' },
+  { label: 'Batch capacity', value: 'up to 100 kg / barrel' },
+  { label: 'Cycle time', value: '30–90 min typical' },
+  { label: 'Motor', value: '2.2 kW (5–7 kVA generator)' },
+  { label: 'Residual oil in cake', value: 'typically 6–8%' },
 ];
 ---
 
@@ -73,98 +128,66 @@ const techComparison = [
     </div>
   </section>
 
+  <!-- What is a hydraulic oil press — definition + key facts -->
   <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.hydraulic.whyChoose}</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.hydraulic.highYield.title}</h3>
-          <p class="text-sm text-steel-600 mb-3">{t.hydraulic.highYield.desc}</p>
-          <div class="text-amber-500 font-semibold text-sm">{t.hydraulic.highYield.stat}</div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">WHAT IT IS</span>
+          <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">What is a hydraulic oil press machine?</h2>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            A hydraulic oil press is a <b class="text-charcoal-900">batch-type oil extraction machine</b> that packs prepared oil seeds into a
+            perforated barrel and crushes them with a hydraulically driven piston — <b class="text-charcoal-900">300 to 620 tons of static force</b>,
+            at system pressures of 60–75 MPa. Oil flows out through the barrel slots while the seed cake stays inside.
+          </p>
+          <p class="text-steel-600 leading-relaxed mb-4">
+            Unlike a screw (expeller) press, there is <b class="text-charcoal-900">no rotating screw and no friction heat</b>. The same machine runs
+            <b class="text-charcoal-900">cold pressing</b> (raw, dried seed — oil stays below 60°C) and <b class="text-charcoal-900">hot pressing</b>
+            (pre-roasted or steamed seed for a few extra yield points); you only change how the seed is prepared.
+          </p>
+          <p class="text-steel-600 leading-relaxed">
+            Typical capacity is <b class="text-charcoal-900">up to 100 kg of seed per barrel per cycle</b>, served by one or two workers and a single
+            2.2 kW motor — a practical fit for small-to-medium oil mills, premium-oil producers and full production lines alike.
+          </p>
         </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <div class="bg-steel-50 rounded-2xl border border-steel-100 overflow-hidden">
+          <div class="bg-steel-900 px-6 py-4">
+            <h3 class="font-display text-lg text-white">Hydraulic oil press — quick facts</h3>
           </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.hydraulic.lowPower.title}</h3>
-          <p class="text-sm text-steel-600 mb-3">{t.hydraulic.lowPower.desc}</p>
-          <div class="text-amber-500 font-semibold text-sm">{t.hydraulic.lowPower.stat}</div>
-        </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.hydraulic.versatile.title}</h3>
-          <p class="text-sm text-steel-600 mb-3">{t.hydraulic.versatile.desc}</p>
-          <div class="text-amber-500 font-semibold text-sm">{t.hydraulic.versatile.stat}</div>
-        </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.hydraulic.durable.title}</h3>
-          <p class="text-sm text-steel-600 mb-3">{t.hydraulic.durable.desc}</p>
-          <div class="text-amber-500 font-semibold text-sm">{t.hydraulic.durable.stat}</div>
-        </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.hydraulic.easyOperation.title}</h3>
-          <p class="text-sm text-steel-600 mb-3">{t.hydraulic.easyOperation.desc}</p>
-          <div class="text-amber-500 font-semibold text-sm">{t.hydraulic.easyOperation.stat}</div>
-        </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.hydraulic.factoryDirect.title}</h3>
-          <p class="text-sm text-steel-600 mb-3">{t.hydraulic.factoryDirect.desc}</p>
-          <div class="text-amber-500 font-semibold text-sm">{t.hydraulic.factoryDirect.stat}</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-12 md:py-16 bg-steel-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.hydraulic.productSeriesTitle}</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {hydraulicProducts.map(product => (
-          <a
-            href={`/products/${product.slug}`}
-            class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
-          >
-            <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-              <img
-                src={product.data.images[0]}
-                alt={product.data.title.en}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20hydraulic%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
-              />
-            </div>
-            <div class="p-5">
-              <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
-              <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
-              <div class="flex flex-wrap gap-2">
-                {product.data.specifications.slice(0, 2).map(spec => (
-                  <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
-                    {spec.name}: {spec.value}
-                  </span>
-                ))}
+          <dl class="divide-y divide-steel-100">
+            {quickFacts.map(f => (
+              <div class="flex items-center justify-between px-6 py-3.5">
+                <dt class="text-steel-500 text-sm">{f.label}</dt>
+                <dd class="text-charcoal-900 font-semibold text-sm text-right">{f.value}</dd>
               </div>
-            </div>
-          </a>
-        ))}
+            ))}
+          </dl>
+          <div class="px-6 py-4 bg-amber-50">
+            <p class="text-xs text-amber-800">Figures vary by model, seed variety and moisture content (typical factory test range 6–8%). We confirm exact specs for your material before order.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Naturally cold-press capable</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">Static pressure means no friction heat — no heating element is needed to keep cold-pressed oil below 60°C.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Runs almost anywhere</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">A 2.2 kW motor works on standard single-phase supply or a 5–7 kVA generator — proven in rural off-grid areas.</p>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-lg text-charcoal-900 mb-2">Bar-slotted barrel, +2–3% yield</h3>
+          <p class="text-steel-600 text-sm leading-relaxed">The bar-type slotted barrel extracts roughly 2–3% more oil than conventional drilled barrels (factory test, sesame &amp; peanut).</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- How it works -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title text-center mb-12">{t.hydraulic.howWorksTitle}</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center">
@@ -186,9 +209,69 @@ const techComparison = [
     </div>
   </section>
 
-  <section class="py-12 md:py-16 bg-steel-50">
+  <!-- Which model do you need — scenario gateway + range bar -->
+  <section class="py-12 md:py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.hydraulic.applicationsTitle}</h2>
+      <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">CHOOSE BY YOUR SEED</span>
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-3">Which hydraulic press do you need?</h2>
+      <p class="text-steel-600 max-w-3xl mb-10">
+        You do not need to memorize model numbers — start from your seed and your daily volume. Each path below links to the exact model page
+        with full specs. The full parameter matrix lives in one place: the model comparison page.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        {scenarios.map(s => (
+          <div class="flex flex-col bg-steel-50 rounded-2xl p-7 border border-steel-100 hover:border-amber-300 transition-colors">
+            <span class="self-start text-xs font-semibold uppercase tracking-wide bg-steel-900 text-white px-3 py-1 rounded-full mb-4">{s.tag}</span>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">{s.title}</h3>
+            <p class="text-amber-700 text-sm font-medium mb-1">{s.seeds}</p>
+            <p class="text-steel-500 text-sm mb-3">{s.force}</p>
+            <p class="text-steel-600 text-sm leading-relaxed mb-5">{s.desc}</p>
+            <div class="mt-auto flex flex-wrap gap-2">
+              {s.models.map(m => (
+                <a href={m.href} class="inline-flex items-center gap-1.5 bg-white border border-steel-200 hover:border-amber-400 hover:text-amber-600 text-charcoal-900 text-sm font-semibold px-3.5 py-2 rounded-lg transition-colors">
+                  {m.name}
+                  <span class="text-xs font-normal text-steel-400">{m.note}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Range bar -->
+      <div class="bg-steel-900 rounded-2xl p-7 md:p-9">
+        <h3 class="font-display text-xl text-white mb-1">The HN300–HN500 force range</h3>
+        <p class="text-steel-400 text-sm mb-8">Harder seed or in-shell material → higher cake pressure required. Tap a model for its page.</p>
+        <div class="relative">
+          <div class="hidden md:block absolute top-[42px] left-6 right-6 h-1 bg-gradient-to-r from-amber-300 via-amber-500 to-amber-600 rounded"></div>
+          <div class="grid grid-cols-2 md:grid-cols-7 gap-6 md:gap-2 relative">
+            {rangeModels.map(m => (
+              <a href={m.href} class="flex md:flex-col items-center md:items-center gap-3 md:gap-0 group">
+                <div class="w-4 h-4 rounded-full bg-amber-500 ring-4 ring-steel-900 shrink-0 md:mb-4 group-hover:scale-125 transition-transform"></div>
+                <div class="text-left md:text-center">
+                  <div class="text-white font-display font-semibold group-hover:text-amber-400 transition-colors">{m.model}</div>
+                  <div class="text-steel-400 text-xs">{m.force}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="/products/model-comparison/" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-7 py-3.5 rounded-lg hover:bg-amber-400 transition-colors">
+            Compare all models — full spec matrix
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seeds & typical yields -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-3">{t.hydraulic.applicationsTitle}</h2>
+      <p class="text-center text-steel-500 text-sm max-w-2xl mx-auto mb-12">Typical cold-press yields on graded seed at 6–8% moisture. Actual yields vary with seed variety, preparation and cycle settings.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 border border-steel-100">
           <div class="text-3xl mb-3">&#127807;</div>
@@ -230,44 +313,112 @@ const techComparison = [
     </div>
   </section>
 
+  <!-- Hydraulic vs other types -->
   <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-12">{t.hydraulic.comparisonTitle}</h2>
-      <div class="overflow-x-auto">
-        <table class="w-full border-collapse">
-          <thead>
-            <tr class="bg-steel-900 text-white">
-              <th class="px-4 py-3 text-left font-display text-sm rounded-tl-lg">{t.hydraulic.comparisonModel}</th>
-              <th class="px-4 py-3 text-left font-display text-sm">{t.hydraulic.comparisonForce}</th>
-              <th class="px-4 py-3 text-left font-display text-sm">{t.hydraulic.comparisonMotor}</th>
-              <th class="px-4 py-3 text-left font-display text-sm rounded-tr-lg">{t.hydraulic.comparisonBestFor}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {techComparison.map((item, index) => (
-              <tr key={item.model} class={index % 2 === 0 ? 'border-b border-steel-100' : 'border-b border-steel-100 bg-steel-50'}>
-                <td class="px-4 py-3 font-semibold text-charcoal-900">{item.model}</td>
-                <td class="px-4 py-3 text-steel-600">{item.force}</td>
-                <td class="px-4 py-3 text-steel-600">{item.motor}</td>
-                <td class="px-4 py-3 text-steel-600">{item.bestFor}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 text-center mb-3">Is a hydraulic press right for your business?</h2>
+      <p class="text-center text-steel-600 max-w-3xl mx-auto mb-8">
+        Hydraulic presses give high pressure, low temperature and batch pressing — ideal for premium cold-pressed oils and for mills that switch
+        between seeds and methods. Continuous screw lines or solvent extraction can fit very high-volume refining operations better. Before you buy,
+        compare the trade-offs honestly.
+      </p>
+      <div class="text-center">
+        <a href="/resources/hydraulic-oil-press-vs-other-types/" class="inline-flex items-center gap-2 text-amber-600 font-semibold hover:underline">
+          Read the full comparison: Hydraulic vs Screw vs Solvent
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
-      <p class="text-center text-sm text-steel-500 mt-4">
-        All models available in single and double barrel configurations. Barrel size customizable.
-        <a href="/products/model-comparison/" class="text-amber-500 hover:underline"> {t.hydraulic.compareAllModels} &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Why Buyers Trust Haonuo -->
+  <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 text-center mb-3">Why buyers trust Haonuo</h2>
+      <p class="text-center text-steel-600 max-w-3xl mx-auto mb-10">Factory data, not slogans. Every press is built and load-tested in our own Shandong workshop.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl font-display font-bold text-amber-600 mb-2">15+ Years</div>
+          <p class="text-steel-600 text-sm leading-relaxed">Manufacturing hydraulic oil presses since 2010. 200+ skilled workers and engineers in our Shandong factory.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl font-display font-bold text-amber-600 mb-2">50+ Countries</div>
+          <p class="text-steel-600 text-sm leading-relaxed">Machines exported across Africa, Southeast Asia, the Middle East, Europe and the Americas. Full export documentation handled.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl font-display font-bold text-amber-600 mb-2">48h Load Test</div>
+          <p class="text-steel-600 text-sm leading-relaxed">Every press runs a continuous 48-hour full-load test before shipment, with video records available on request.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl font-display font-bold text-amber-600 mb-2">27SiMn Cylinder</div>
+          <p class="text-steel-600 text-sm leading-relaxed">High-pressure alloy steel hydraulic cylinder, designed for long service life under repeated high-force cycles.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl font-display font-bold text-amber-600 mb-2">+2-3% Yield</div>
+          <p class="text-steel-600 text-sm leading-relaxed">Bar-type slotted barrel design gives roughly 2-3% higher oil yield than conventional drilled barrels (factory test, sesame &amp; peanut).</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <div class="text-3xl font-display font-bold text-amber-600 mb-2">1-Year Warranty</div>
+          <p class="text-steel-600 text-sm leading-relaxed">1-year factory warranty plus lifetime technical support. Spare parts shipped worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buying & Logistics -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 text-center mb-3">Buying &amp; logistics</h2>
+      <p class="text-center text-steel-600 max-w-3xl mx-auto mb-10">What to expect when you order from the factory.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Order &amp; lead time</h3>
+          <ul class="text-steel-600 text-sm space-y-2 leading-relaxed">
+            <li><b>MOQ:</b> 1 unit for standard models; from 5 units for OEM branding.</li>
+            <li><b>Lead time:</b> 15–25 working days for standard models; 30–45 days for custom configurations.</li>
+            <li><b>Payment:</b> typically 30% T/T deposit, 70% before shipment; L/C available for larger orders.</li>
+          </ul>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Shipping &amp; compliance</h3>
+          <ul class="text-steel-600 text-sm space-y-2 leading-relaxed">
+            <li><b>Terms:</b> FOB Qingdao, CIF, or DDU — your choice.</li>
+            <li><b>Voltage:</b> 220V / 380V, 50 or 60 Hz — customized to your local grid at no extra cost.</li>
+            <li><b>Docs:</b> Commercial invoice, packing list, bill of lading, certificate of origin and Form A/E as needed.</li>
+          </ul>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Installation &amp; support</h3>
+          <ul class="text-steel-600 text-sm space-y-2 leading-relaxed">
+            <li>Video installation guide and operator manual included.</li>
+            <li>Remote troubleshooting via WhatsApp / video call.</li>
+            <li>On-site installation and training available on request (selected regions).</li>
+          </ul>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-display text-xl text-charcoal-900 mb-2">Before you inquire</h3>
+          <p class="text-steel-600 text-sm leading-relaxed mb-3">To get an accurate quote faster, tell us:</p>
+          <ol class="text-steel-600 text-sm space-y-1 leading-relaxed list-decimal list-inside">
+            <li>Your main oil seed or nut.</li>
+            <li>Target daily output (kg/day).</li>
+            <li>Local voltage (e.g. 380V 3-phase 50Hz).</li>
+            <li>Whether you need mostly cold or hot pressing.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="text-center text-steel-500 text-sm mt-8">
+        Final price depends on model, barrel size, single/double barrel and accessories.
+        <a href="/contact/" class="text-amber-600 font-semibold hover:underline">Request a factory quote &rarr;</a>
       </p>
     </div>
   </section>
 
-  <section class="py-12 md:py-16 bg-white">
+  <section class="py-12 md:py-16 bg-steel-50 border-t border-steel-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title text-center mb-8">{t.hydraulic.faqTitle}</h2>
       <div class="space-y-4">
         {t.hydraulic.faqs.map((item, i) => (
-          <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
+          <details class="reveal group bg-white rounded-xl overflow-hidden border border-steel-100" style={`animation-delay: ${i * 80}ms`}>
             <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
               <span class="font-display text-lg text-charcoal-900">{item.question}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
