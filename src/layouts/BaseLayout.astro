@@ -26,8 +26,8 @@ const t = getTranslations(currentLocale);
 const rtl = isRtl(currentLocale);
 
 // Title: max 60 chars, truncate if needed
-// Brand name "Haonuo Machinery" is a registered company name — kept consistent across locales per international branding conventions
-const brandSuffix = ' | Haonuo Machinery';
+// Brand suffix kept short ("Haonuo") to leave more room for keywords
+const brandSuffix = ' | Haonuo';
 const maxTitleLen = 60;
 let pageTitle: string;
 if (title) {

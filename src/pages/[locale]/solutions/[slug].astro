@@ -96,7 +96,7 @@ if (faqLd) allLd.push(faqLd);
 const seoKeywords = solution.data.seoKeywords;
 ---
 
-<BaseLayout locale={currentLocale} title={solution.data.title[currentLocale] || solution.data.title.en} description={solution.data.description[currentLocale] || solution.data.description.en} keywords={seoKeywords} jsonLd={allLd}>
+<BaseLayout locale={currentLocale} title={solution.data.seoTitle?.[currentLocale] || solution.data.title[currentLocale] || solution.data.title.en} description={solution.data.description[currentLocale] || solution.data.description.en} keywords={seoKeywords} jsonLd={allLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,7 +113,7 @@ const seoKeywords = solution.data.seoKeywords;
   <!-- Hero -->
   <section class="bg-steel-900 py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{solution.data.title[currentLocale] || solution.data.title.en}</h1>
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{solution.data.seoTitle?.[currentLocale] || solution.data.title[currentLocale] || solution.data.title.en}</h1>
       <p class="text-steel-300 text-lg max-w-3xl">{solution.data.description[currentLocale] || solution.data.description.en}</p>
     </div>
   </section>

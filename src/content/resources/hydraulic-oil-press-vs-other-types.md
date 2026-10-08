@@ -1,14 +1,14 @@
 ---
 title:
-  en: Hydraulic vs Other Oil Press Types
-  fr: Hydraulique vs Autres Types de Presse
-  ar: المكبس الهيدروليكي مقابل أنواع المكابس الأخرى
-  id: Hidrolik vs Jenis Press Minyak Lain
+  en: Oil Expeller vs Hydraulic Oil Press
+  fr: Presse à Vis vs Presse Hydraulique
+  ar: المكبس اللولبي مقابل المكبس الهيدروليكي
+  id: Oil Expeller vs Press Hidrolik
 description:
-  en: Hydraulic oil press vs screw press vs solvent extraction comparison covering oil quality, residual oil rate, equipment cost, operating cost, and applicable scenarios
-  fr: Comparaison presse hydraulique vs presse à vis vs extraction par solvant couvrant la qualité d'huile, le taux d'huile résiduelle, le coût des équipements et les scénarios applicables
-  ar: مقارنة المكبس الهيدروليكي مقابل المكبس اللولبي مقابل الاستخلاص بالمذيبات تغطي جودة الزيت ومعدل الزيت المتبقي وتكلفة المعدات وسيناريوهات التطبيق
-  id: Perbandingan press hidrolik vs screw press vs solvent extraction mencakup kualitas minyak, sisa minyak, biaya peralatan, biaya operasional, dan skenario aplikasi
+  en: Oil expeller (screw press) vs hydraulic oil press vs solvent extraction comparison covering oil quality, residual oil rate, equipment cost, operating cost, and applicable scenarios
+  fr: Comparaison presse à vis (expeller) vs presse hydraulique vs extraction par solvant couvrant la qualité d'huile, le taux d'huile résiduelle, le coût des équipements et les scénarios applicables
+  ar: مقارنة المكبس اللولبي مقابل المكبس الهيدروليكي مقابل الاستخلاص بالمذيبات تغطي جودة الزيت ومعدل الزيت المتبقي وتكلفة المعدات وسيناريوهات التطبيق
+  id: Perbandingan oil expeller (screw press) vs press hidrolik vs solvent extraction mencakup kualitas minyak, sisa minyak, biaya peralatan, biaya operasional, dan skenario aplikasi
 type: comparison
 publishedAt: 2026-07-13
 seoKeywords:

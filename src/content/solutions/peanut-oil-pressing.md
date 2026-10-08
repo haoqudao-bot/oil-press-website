@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile d'Arachide
   ar: حل عصر زيت الفول السوداني
   id: Solusi Penekanan Minyak Kacang
+seoTitle:
+  en: Groundnut (Peanut) Oil Machine
+  fr: Machine à Huile d'Arachide (Cacahuète)
+  ar: آلة زيت الفول السوداني
+  id: Mesin Minyak Kacang Tanah
 seedName: peanut
 icon: peanut
 description:

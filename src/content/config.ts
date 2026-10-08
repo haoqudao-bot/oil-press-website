@@ -93,6 +93,12 @@ const solutions = defineCollection({
       ar: z.string(),
       id: z.string(),
     }),
+    seoTitle: z.object({
+      en: z.string(),
+      fr: z.string(),
+      ar: z.string(),
+      id: z.string(),
+    }).optional(),
     seedName: z.string(),
     icon: z.string(),
     description: z.object({

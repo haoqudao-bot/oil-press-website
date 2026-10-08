@@ -4,13 +4,18 @@ title:
   fr: Solution de Pressage d'Huile pour Petite Entreprise
   ar: حل عصر الزيت للمشاريع الصغيرة
   id: Solusi Press Minyak untuk Usaha Kecil
+seoTitle:
+  en: Home & Mini Oil Press Machine
+  fr: Machine de Pressage d'Huile Domestique & Mini
+  ar: آلة عصر الزيت المنزلية والصغيرة
+  id: Mesin Press Minyak Rumahan & Mini
 seedName: small-business
 icon: small-business
 description:
-  en: Small business hydraulic oil press solution for small to medium oil pressing businesses. High-capacity hydraulic press with professional-grade yield, efficient operation, and scalable production. Haonuo factory-direct price.
-  fr: Solution de pressage d'huile hydraulique pour les entreprises de pressage d'huile petites et moyennes. Presse hydraulique à haute capacité.
-  ar: حل عصر الزيت الهيدروليكي للشركات الصغيرة والمتوسطة لمعالجة الزيت. ضغط هيدروليكي عالي السعة.
-  id: Solusi press minyak hidrolik untuk usaha press minyak kecil hingga menengah. Press hidrolik kapasitas tinggi.
+  en: Home oil press machine and mini oil press machine for small to medium oil pressing businesses. High-capacity hydraulic press with professional-grade yield, efficient operation, and scalable production. Haonuo factory-direct price.
+  fr: Machine de pressage d'huile domestique et mini machine de pressage d'huile pour les entreprises de pressage d'huile petites et moyennes. Presse hydraulique à haute capacité.
+  ar: آلة عصر الزيت المنزلية وآلة عصر الزيت الصغيرة للشركات الصغيرة والمتوسطة لمعالجة الزيت. ضغط هيدروليكي عالي السعة.
+  id: Mesin press minyak rumahan dan mesin press minyak mini untuk usaha press minyak kecil hingga menengah. Press hidrolik kapasitas tinggi.
 recommendedProducts:
   - standard-hydraulic-oil-press
   - high-speed-seed-crusher

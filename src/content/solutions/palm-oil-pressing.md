@@ -4,13 +4,18 @@ title:
   fr: Solution de Pressage d'Huile de Palmiste
   ar: حل عصر زيت نواة النخيل
   id: Solusi Penekanan Minyak Inti Sawit
+seoTitle:
+  en: Palm & Palm Kernel Oil Machine
+  fr: Machine à Huile de Palme & Palmiste
+  ar: آلة زيت النخيل ونواة النخيل
+  id: Mesin Minyak Sawit & Inti Sawit
 seedName: palm
 icon: palm
 description:
-  en: Palm kernel oil press machine for efficient palm kernel oil extraction. High-pressure hydraulic press for Southeast Asian and African markets. Haonuo price.
-  fr: Machine de pressage d'huile de palmiste pour extraction efficace. Pression hydraulique haute pression pour les marchés d'Asie du Sud-Est et d'Afrique.
-  ar: آلة عصر زيت نواة النخيل لاستخراج زيت نواة النخيل بكفاءة. ضغط هيدروليكي عالي الضغط لأسواق جنوب شرق آسيا وأفريقيا.
-  id: Mesin press minyak inti sawit untuk ekstraksi minyak inti sawit yang efisien. Press hidrolik tekanan tinggi untuk pasar Asia Tenggara dan Afrika.
+  en: Palm oil machine and palm kernel oil press machine for efficient palm and palm kernel oil extraction. High-pressure hydraulic press for Southeast Asian and African markets. Haonuo factory price.
+  fr: Machine à huile de palme et machine de pressage d'huile de palmiste pour une extraction efficace. Pression hydraulique haute pression pour les marchés d'Asie du Sud-Est et d'Afrique.
+  ar: آلة زيت النخيل وآلة عصر زيت نواة النخيل لاستخراج زيت النخيل ونواة النخيل بكفاءة. ضغط هيدروليكي عالي الضغط لأسواق جنوب شرق آسيا وأفريقيا.
+  id: Mesin minyak sawit dan mesin press minyak inti sawit untuk ekstraksi minyak sawit dan inti sawit yang efisien. Press hidrolik tekanan tinggi untuk pasar Asia Tenggara dan Afrika.
 recommendedProducts:
   - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press

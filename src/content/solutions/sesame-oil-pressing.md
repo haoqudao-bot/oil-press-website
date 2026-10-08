@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile de Sésame
   ar: حل عصر زيت السمسم
   id: Solusi Penekanan Minyak Wijen
+seoTitle:
+  en: Sesame Oil Machine, Cold Press
+  fr: Machine à Huile de Sésame, Pressage à Froid
+  ar: آلة زيت السمسم، عصر بارد
+  id: Mesin Minyak Wijen, Press Dingin
 seedName: sesame
 icon: sesame
 description:
