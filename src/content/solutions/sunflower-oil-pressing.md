@@ -147,23 +147,6 @@ This solution handles both high-oil and confectionery sunflower seed varieties, 
 - **Roasting**: Pre-roasting at 120-150°C increases yield by 3-5%
 - **Moisture content**: Optimal pressing moisture is 6-8%
 
-## Recommended Process
-
-1. **Seed Cleaning** — Remove field debris, stones, and damaged seeds. Clean seeds produce better oil and protect your equipment.
-2. **Dehulling (Recommended)** — Remove sunflower seed hulls using our seed crusher. Dehulling increases yield by 10-15% and produces lighter-colored oil. For whole-seed pressing, skip this step.
-3. **Roasting** — Roast dehulled kernels at 120-150°C for 15-25 minutes using the Thermal Oil Roasting Pan. This improves oil flow and yield. For cold-pressed oil, skip roasting.
-4. **Hydraulic Pressing** — Feed prepared sunflower seeds into the Standard or Heavy Duty Hydraulic Oil Press. The 390mm barrel processes 100 kg per batch with a 40-90 minute cycle (varies by seed type).
-5. **Filtration** — Pass crude sunflower oil through the Pneumatic Oil Filter Press for clear, market-ready oil.
-6. **Refining (Optional)** — Refined sunflower oil requires degumming, bleaching and deodorization on a separate refining line, sourced independently, to produce light-colored, neutral-flavored cooking oil.
-7. **Packaging** — Bottle the finished oil. Cold-pressed sunflower oil should be stored in dark containers to prevent oxidation.
-
-## Recommended Equipment
-
-- **Standard Hydraulic Oil Press (HN325)** — Well-suited for small to medium sunflower oil production. Handles both whole seeds and dehulled kernels effectively.
-- **Heavy Duty Hydraulic Oil Press (HN365)** — Recommended for larger operations with double-barrel option for higher throughput.
-- **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting. Essential for maximizing yield from sunflower seeds.
-- **Pneumatic Oil Filter Press** — Automated filtration for clear, premium sunflower oil.
-
 ## Why Choose Haonuo
 
 - **Optimized for sunflower pressing** — Our hydraulic presses are calibrated for sunflower seed characteristics, achieving residual oil rates below 5% for maximum profitability.

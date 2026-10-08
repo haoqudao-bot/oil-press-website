@@ -139,23 +139,6 @@ Whether you are running a dedicated oil production facility, a food processing p
 - **Low residual oil**: Below 5% means maximum oil recovery and profitability
 - **Multi-seed capability**: Switch between seed types to serve diverse market demands
 
-## Recommended Process
-
-1. **Seed Receiving & Storage** — Set up proper storage for bulk seed deliveries. Maintain seed quality with dry, ventilated storage conditions.
-2. **Automated Seed Processing** — Use the Integrated Feeder Crusher Roaster for automated cleaning, crushing, and roasting in a single pass. This reduces labor and ensures consistent preparation.
-3. **Hydraulic Pressing** — Feed prepared seeds into the Heavy Duty (HN365) or Cold Press (HN426) with double-barrel configuration. Each barrel processes independently, enabling near-continuous operation.
-4. **Filtration** — Pass crude oil through the Pneumatic Oil Filter Press for commercial-grade clarity. High-volume filtration matches press throughput.
-5. **Quality Control** — Test oil for acidity, clarity, and sensory characteristics. Implement batch tracking for commercial traceability.
-6. **Packaging** — Package finished oil in bottles, jerry cans, or drums for wholesale and retail distribution. Commercial operations typically use semi-automated filling equipment.
-
-## Recommended Equipment
-
-- **Heavy Duty Hydraulic Oil Press (HN365)** — The workhorse of commercial oil production. Available in double-barrel configuration for 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) throughput. Handles both cold and hot pressing.
-- **Cold Press Hydraulic Oil Press (HN426)** — Specialized for premium cold-pressed oil production. Double-barrel option available. Well-suited for serving health food and organic markets.
-- **Integrated Feeder Crusher Roaster** — All-in-one seed preparation unit that automates cleaning, crushing, and roasting. Reduces labor and ensures consistent preparation for commercial throughput.
-- **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting of various seed types. Essential for hot-pressed oil production.
-- **Pneumatic Oil Filter Press** — High-volume filtration matching commercial press throughput. Produces clear, market-ready oil.
-
 ## Single vs. Double Barrel Comparison
 
 | Feature | Single Barrel | Double Barrel |

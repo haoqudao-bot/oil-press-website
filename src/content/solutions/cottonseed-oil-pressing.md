@@ -108,23 +108,6 @@ Haonuo Machinery's cottonseed oil pressing solution is designed for the unique c
 | Whole cottonseed | 18-22% | 15-18% | 6-8% |
 | Cottonseed kernels (decorticated) | 30-38% | 28-34% | 5-7% |
 
-## Recommended Process
-
-1. **Delinting** — Remove cotton lint using a delinting machine. This step is critical — lint absorbs 3-5% of your oil yield.
-2. **Decortication** — Separate hulls from kernels. Hulls contain only 1-2% oil and reduce overall yield.
-3. **Flaking** — Roll the kernels into thin flakes (0.3-0.5mm) to rupture cell walls and improve oil release.
-4. **Hydraulic Pressing** — Load flakes into the HN365 Heavy Duty Hydraulic Press. Apply 63 MPa pressure for 30-40 minutes (hot press) or approximately 2 hours (cold press) per batch.
-5. **Filtration** — Pass crude oil through the pneumatic filter press.
-6. **Refining** — Critical step: degumming, neutralization, bleaching, and deodorization to remove gossypol and free fatty acids.
-
-## Recommended Equipment
-
-| Equipment | Model | Purpose |
-|----------|-------|---------|
-| Heavy Duty Hydraulic Press | HN365 (365T) | Primary pressing of cottonseed |
-| Pneumatic Oil Filter Press | HN-10SL | Crude oil filtration |
-| Refining line (sourced separately) | Custom | Gossypol removal and refining; independent equipment |
-
 ## Why Choose Haonuo for Cottonseed Oil Production
 
 - **Heavy-duty construction** — Our HN365 is built for the high-fiber, abrasive nature of cottonseed processing

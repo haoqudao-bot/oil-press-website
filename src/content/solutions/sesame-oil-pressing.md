@@ -152,21 +152,6 @@ This solution supports both cold pressing (for premium, nutrient-rich sesame oil
 - **Roasting**: Pre-roasting at 160-180°C increases yield by 3-5% and enhances aroma
 - **Pressing pressure**: Our hydraulic press delivers up to 50 MPa for thorough extraction
 
-## Recommended Process
-
-1. **Seed Cleaning** — Remove stones, dust, and other impurities using a seed cleaner. Clean seeds produce higher-quality oil and protect your equipment.
-2. **Roasting (For Hot Press)** — Roast sesame seeds at 160-180°C for 15-20 minutes using the Thermal Oil Roasting Pan. This develops the characteristic nutty aroma and increases oil yield. For cold-pressed oil, skip this step.
-3. **Cooling** — Allow roasted seeds to cool to 60-80°C before pressing. Overheated seeds can degrade oil quality.
-4. **Hydraulic Pressing** — Feed sesame seeds into the Sesame Oil Hydraulic Press. The 300mm barrel processes 32.5-50 kg per batch with an 8-10 minute cycle time.
-5. **Filtration** — Pass crude sesame oil through the Pneumatic Oil Filter Press to remove sediment and fine particles, producing clear, market-ready oil.
-6. **Settling & Bottling** — Allow filtered oil to settle for 24 hours for any remaining particles to deposit, then bottle for distribution.
-
-## Recommended Equipment
-
-- **Sesame Oil Hydraulic Press** — Engineered specifically for sesame with optimized barrel design and pressure curve. Achieves residual oil rates typically below 5% in Haonuo factory tests with graded sesame and peanut at 6-8% moisture (results vary with seed variety and preparation).
-- **Thermal Oil Roasting Pan** — Precise temperature control for consistent roasting. Essential for producing aromatic toasted sesame oil with premium flavor.
-- **Pneumatic Oil Filter Press** — Delivers crystal-clear sesame oil with automated filtration. Reduces labor and ensures consistent quality.
-
 ## Why Choose Haonuo
 
 - **Specialized sesame pressing expertise** — Our sesame oil hydraulic press is purpose-built for sesame, not a generic machine adapted for the purpose. This means better yield, lower residual oil, and more consistent quality.

@@ -128,21 +128,6 @@ This solution is well-suited for commercial oil mills, cooperative operations, a
 - **Versatile**: Process multiple seed types on the same machine
 - **High yield**: Residual oil below 5% maximizes profit from every kilogram
 
-## Recommended Process
-
-1. **Seed Sourcing** — Purchase quality seeds from local farmers or wholesale markets. Start with seeds that are readily available and in demand in your area.
-2. **Seed Cleaning** — Remove stones, dust, and impurities. Even basic cleaning significantly improves oil quality and protects your machine.
-3. **Seed Crushing (Optional)** — Use the High Speed Seed Crusher to pre-crush hard seeds like peanuts and sunflower seeds. This improves pressing efficiency.
-4. **Hydraulic Pressing** — Feed seeds into the Standard Hydraulic Oil Press (HN325). Each batch of 100 kg processes in 30-40 minutes (hot press) or approximately 2 hours (cold press), achieving 133-171 kg/hour (hot press) or approximately 50 kg/hour (cold press) throughput depending on seed type.
-5. **Filtration** — Pass crude oil through the Pneumatic Oil Filter Press for clear, market-ready oil.
-6. **Packaging & Sales** — Package oil in containers appropriate for your commercial market. Sell to retailers, restaurants, or distributors.
-
-## Recommended Equipment
-
-- **Standard Hydraulic Oil Press (HN325)** — Professional-grade hydraulic press with 390mm barrel. Processes 100 kg per batch, with hourly output varying by seed type. Entry-level commercial model for professional oil pressing.
-- **High Speed Seed Crusher** — Pre-crushes seeds for more efficient pressing. Essential for commercial throughput with hard seeds like peanuts and sunflower seeds.
-- **Pneumatic Oil Filter Press** — Produces clear, market-ready oil. Essential for selling oil at premium prices in commercial markets.
-
 ## Why Choose Haonuo
 
 - **Commercial-grade equipment** — Our HN325 model delivers professional-grade oil pressing performance with 133-171 kg/hour (hot press) or approximately 50 kg/hour (cold press) capacity, meeting commercial production requirements.

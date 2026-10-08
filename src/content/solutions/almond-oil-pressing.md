@@ -138,21 +138,6 @@ With almonds containing 50-55% oil — among the highest of all oilseeds — alm
 - **Moisture content**: Optimal pressing moisture is 4-6%
 - **Cold vs. hot press**: Cold pressing yields slightly less but produces premium-quality oil
 
-## Recommended Process
-
-1. **Almond Selection** — Use high-quality, shelled sweet almonds. Discard any rancid, moldy, or damaged nuts. Bitter almonds should never be used for edible oil due to amygdalin content.
-2. **Cleaning** — Remove dust, shell fragments, and other impurities. Clean almonds produce better-tasting, clearer oil.
-3. **Blanching (Optional)** — Briefly immerse almonds in hot water to loosen skins, then remove skins by rubbing. Blanching produces lighter-colored oil preferred in cosmetics.
-4. **Cold Pressing** — Feed prepared almonds into the Cold Press Hydraulic Oil Press (HN426). The low-temperature pressing preserves vitamin E and natural aroma. Each batch of 25-40 kg processes in 30-40 minutes (hot press) or approximately 2 hours (cold press).
-5. **Filtration** — Pass crude almond oil through the Pneumatic Oil Filter Press for clear, premium oil. Fine filtration is important for cosmetic-grade almond oil.
-6. **Settling** — Allow filtered oil to settle for 24-48 hours in a cool, dark place.
-7. **Packaging** — Bottle almond oil in dark glass bottles. Almond oil is sensitive to light and heat, so proper packaging extends shelf life.
-
-## Recommended Equipment
-
-- **Cold Press Hydraulic Oil Press (HN426)** — Purpose-built for cold pressing with temperature control below 60°C. Essential for producing premium almond oil that retains maximum nutritional value.
-- **Pneumatic Oil Filter Press** — Produces crystal-clear almond oil suitable for both food and cosmetic applications. Fine filtration is critical for premium markets.
-
 ## Why Choose Haonuo
 
 - **Cold press expertise** — Our HN426 model is specifically designed for cold pressing, maintaining temperatures below 60°C to preserve almond oil's premium nutritional profile.

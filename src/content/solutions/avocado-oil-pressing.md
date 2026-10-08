@@ -146,23 +146,6 @@ This solution is designed for the growing avocado oil market in Mexico, Kenya, N
 - **Drying**: Dehydrating avocado pulp before pressing can double the yield percentage
 - **Pressing method**: Cold pressing preserves quality but yields slightly less than hot pressing
 
-## Recommended Process
-
-1. **Fruit Selection** — Use fully ripe avocados with no bruising or rot. Hass variety is preferred for its high oil content. Overripe fruit can still be pressed but may produce darker oil.
-2. **Pitting & Peeling** — Remove pits and skins. Only the flesh (pulp) is used for premium avocado oil production.
-3. **Mashing** — Mash avocado flesh into a smooth paste using the High Speed Seed Crusher. Uniform paste ensures consistent pressing.
-4. **Drying (Recommended)** — Dehydrate avocado paste to reduce moisture content from approximately 70% to below 15%. This dramatically improves oil yield and reduces emulsion issues.
-5. **Cold Pressing** — Feed dried avocado paste into the Cold Press Hydraulic Oil Press (HN426). The low-temperature pressing preserves chlorophyll and nutrients. Each batch takes 30-40 minutes (hot press) or approximately 2 hours (cold press).
-6. **Filtration** — Pass crude avocado oil through the Pneumatic Oil Filter Press for clear, premium oil. Multiple filtration passes may be needed for the clearest result.
-7. **Settling** — Allow filtered oil to settle for 48-72 hours. Any remaining water will separate from the oil during this period.
-8. **Packaging** — Bottle avocado oil in dark glass bottles to protect from light oxidation. Premium avocado oil should be stored at cool temperatures.
-
-## Recommended Equipment
-
-- **Cold Press Hydraulic Oil Press (HN426)** — Specifically designed for cold pressing with temperature control below 60°C. Essential for preserving avocado oil's premium quality and green color.
-- **High Speed Seed Crusher** — Efficiently mashes avocado pulp into uniform paste for consistent pressing results.
-- **Pneumatic Oil Filter Press** — Removes fine particles and sediment for crystal-clear avocado oil. Multiple filtration passes ensure the highest quality.
-
 ## Why Choose Haonuo
 
 - **Cold press specialists** — Our HN426 model is purpose-built for cold pressing, maintaining temperatures below 60°C to preserve avocado oil's premium quality and green color.

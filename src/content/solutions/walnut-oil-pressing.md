@@ -119,23 +119,6 @@ Haonuo Machinery's walnut oil pressing solution is specifically designed for pro
 | Hazelnut kernels | 50-60% | 42-55% | 6-8% |
 | Pistachio kernels | 45-55% | 38-48% | 7-10% |
 
-## Recommended Process
-
-1. **Kernel Preparation** — Remove all shells and sort kernels. Discard any moldy or rancid kernels as they will affect oil quality.
-2. **Light Crushing** — Gently crush kernels to 3-5mm pieces to increase surface area. Do not grind into paste as this can generate heat.
-3. **Cold Pressing** — Load crushed kernels into the hydraulic press barrel. Set temperature control below 60°C. Apply pressure gradually to 70-75 MPa.
-4. **Filtration** — Pass the crude oil through the pneumatic filter press to remove fine particles and sediment.
-5. **Quality Check** — Test for acidity (should be below 0.8% for extra virgin grade), peroxide value, and sensory evaluation.
-6. **Bottling** — Fill into dark glass bottles under nitrogen atmosphere to prevent oxidation.
-
-## Recommended Equipment
-
-| Equipment | Model | Purpose |
-|----------|-------|---------|
-| Ultra High Pressure Hydraulic Press | HN500 (620T) | Primary cold pressing at controlled temperature |
-| Cold Press Hydraulic Press | HN426 (500T) | Alternative for smaller batches |
-| Pneumatic Oil Filter Press | HN-10SL | Fine filtration for crystal-clear oil |
-
 ## Why Choose Haonuo for Walnut Oil Production
 
 - **Ultra-high pressure technology** — Our HN500 delivers 620 tons of pressing force, extracting maximum oil from hard-shelled nuts

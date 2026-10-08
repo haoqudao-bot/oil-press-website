@@ -151,24 +151,6 @@ This solution covers the process from kernel separation through pressing and fil
 - **Pressing pressure**: Palm kernels require higher pressure (40-55 MPa) due to their hard structure
 - **Kernel quality**: Fresh, undamaged kernels yield more oil than old or moldy ones
 
-## Recommended Process
-
-1. **Palm Nut Cracking** — Crack palm nuts to separate kernels from shells. A palm nut cracker or manual cracking can be used depending on your scale.
-2. **Kernel Separation** — Separate kernels from shells using winnowing or water flotation. Remove any shell fragments, as they absorb oil during pressing.
-3. **Kernel Drying** — Dry separated kernels to moisture content below 7%. Sun drying or mechanical drying both work.
-4. **Crushing** — Crush dried palm kernels into small pieces (2-4 mm) using the seed crusher. This step is critical for efficient oil extraction.
-5. **Hydraulic Pressing** — Feed crushed kernels into the Heavy Duty or Ultra High Pressure Hydraulic Oil Press. Apply sustained high pressure for 30-40 minutes (hot press) or approximately 2 hours (cold press) per batch.
-6. **Filtration** — Pass crude palm kernel oil through the Pneumatic Oil Filter Press for clear, clean oil.
-7. **Refining (Optional)** — Edible-grade RBD palm kernel oil requires a separate refining line, sourced independently.
-8. **Packaging** — Package finished oil in appropriate containers. Palm kernel oil solidifies at temperatures below 25°C.
-
-## Recommended Equipment
-
-- **Heavy Duty Hydraulic Oil Press (HN365)** — Provides the high pressure needed for palm kernel oil extraction. Recommended for small to medium operations.
-- **Ultra High Pressure Hydraulic Oil Press (HN500)** — Delivers maximum pressure for competitive residual oil rates. Well-suited for larger operations seeking maximum yield.
-- **Pneumatic Oil Filter Press** — Efficient filtration for clean palm kernel oil with minimal sediment.
-- **Refining line (sourced separately)** — Food-grade RBD palm kernel oil requires an independent refining line; we can advise on specifications and layout.
-
 ## Why Choose Haonuo
 
 - **High-pressure specialists** — Palm kernels require higher pressing pressure than most oilseeds. Our hydraulic presses deliver 40-55 MPa sustained pressure for thorough extraction.

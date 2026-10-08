@@ -146,23 +146,6 @@ This solution supports both cold pressing (for medicinal and cosmetic-grade cast
 - **Pressing pressure**: Castor seeds require higher pressure (40-55 MPa) due to their hard structure
 - **Seed moisture**: Optimal pressing moisture is 5-7%
 
-## Recommended Process
-
-1. **Seed Cleaning** — Remove field debris, stones, and damaged seeds. Clean seeds produce better oil and protect equipment.
-2. **Dehulling** — Remove castor seed hulls using a dehuller or our seed crusher. Dehulling increases yield and produces cleaner oil. **Important**: Wear gloves when handling raw castor seeds — the hulls contain ricin.
-3. **Roasting (For Hot Press)** — Roast dehulled seeds at 80-100°C for 15-20 minutes using the Thermal Oil Roasting Pan. This softens the seeds and improves oil flow. Skip for cold-pressed medicinal oil.
-4. **Hydraulic Pressing** — Feed prepared seeds into the Heavy Duty or Ultra High Pressure Hydraulic Oil Press. Apply sustained high pressure for 30-40 minutes (hot press) or approximately 2 hours (cold press) per batch.
-5. **Filtration** — Pass crude castor oil through the Pneumatic Oil Filter Press. Fine filtration is especially important for medicinal-grade castor oil.
-6. **Quality Testing** — Test filtered oil for ricin content (should be undetectable in properly pressed oil), acid value, and clarity.
-7. **Packaging** — Package castor oil in appropriate containers. Industrial-grade oil in drums; medicinal-grade in sealed bottles.
-
-## Recommended Equipment
-
-- **Heavy Duty Hydraulic Oil Press (HN365)** — Provides the sustained high pressure needed for thorough castor seed extraction. Suitable for both cold and hot pressing.
-- **Ultra High Pressure Hydraulic Oil Press (HN500)** — Recommended for maximum yield from castor seeds. Achieves competitive residual oil rates.
-- **Thermal Oil Roasting Pan** — Precise temperature control for roasting castor seeds. Essential for hot-pressed industrial-grade oil production.
-- **Pneumatic Oil Filter Press** — Produces clean castor oil suitable for both industrial and medicinal applications.
-
 ## Why Choose Haonuo
 
 - **High-pressure specialists** — Castor seeds require sustained high pressure for thorough extraction. Our hydraulic presses deliver 40-55 MPa, achieving residual oil rates below 5%.

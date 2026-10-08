@@ -139,24 +139,6 @@ This solution is designed specifically for West African operating conditions, wi
 - **Grinding**: Fine grinding into paste before pressing dramatically improves extraction efficiency
 - **Pressing pressure**: Shea butter requires higher pressure (40-60 MPa) than most other oils for complete extraction
 
-## Recommended Process
-
-1. **Nut Collection & Sorting** — Collect mature shea nuts and sort to remove damaged, moldy, or immature nuts. Quality nuts are essential for premium shea butter.
-2. **De-shelling** — Crack shea nut shells to extract the kernels. This can be done manually or with our seed crusher for higher throughput.
-3. **Washing & Drying** — Wash kernels to remove shell fragments, then sun-dry or oven-dry to moisture content below 7%.
-4. **Roasting** — Roast dried kernels at 140-160°C for 20-30 minutes using the Thermal Oil Roasting Pan. This develops the characteristic shea butter aroma and increases yield.
-5. **Grinding** — Grind roasted kernels into a smooth paste using the seed crusher. Fine paste is critical for efficient pressing.
-6. **Hydraulic Pressing** — Feed shea paste into the Heavy Duty or Ultra High Pressure Hydraulic Oil Press. Apply sustained high pressure for 40-50 minutes per batch.
-7. **Filtration** — Pass crude shea butter through the Pneumatic Oil Filter Press for pure, unrefined shea butter.
-8. **Cooling & Packaging** — Allow filtered shea butter to cool and solidify naturally. Package in blocks or containers for distribution.
-
-## Recommended Equipment
-
-- **Heavy Duty Hydraulic Oil Press (HN365)** — The minimum recommended model for shea butter pressing. Provides the sustained high pressure needed for thorough extraction.
-- **Ultra High Pressure Hydraulic Oil Press (HN500)** — Recommended for maximum yield from shea nuts. Achieves competitive residual fat rates.
-- **Thermal Oil Roasting Pan** — Precise roasting temperature control is critical for shea nut processing. Our roasting pan ensures consistent results.
-- **Pneumatic Oil Filter Press** — Produces clean, pure shea butter free of nut particles and sediment.
-
 ## Why Choose Haonuo
 
 - **Built for shea butter** — Our high-pressure hydraulic presses deliver the sustained 40-60 MPa pressure that shea butter extraction demands, achieving residual fat rates below 5%.

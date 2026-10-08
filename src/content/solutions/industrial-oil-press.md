@@ -135,25 +135,6 @@ This solution is designed for large-scale oil production facilities, operations 
 - **Refining coordination**: RBD finished oil uses a separate refining line sourced independently; we advise on specifications and layout
 - **24/7 capable**: Heavy-duty construction for continuous industrial operation
 
-## Recommended Process
-
-1. **Bulk Seed Receiving** — Receive and store bulk seed deliveries in dedicated silos or warehouses. Implement quality inspection for incoming raw materials.
-2. **Industrial Seed Processing** — Use the Industrial Seed Crusher (370 Type) for high-volume seed cleaning, dehulling, and crushing. This heavy-duty machine handles the throughput demands of industrial operations.
-3. **Conditioning** — Adjust seed moisture and temperature for optimal pressing. Industrial operations typically use continuous conditioning systems.
-4. **High-Pressure Pressing** — Feed prepared seeds into the Ultra High Pressure (HN500) or High Pressure (HN480) hydraulic oil press. Double-barrel configuration enables near-continuous operation at 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) per unit. Multiple units can achieve 5,000+ kg/day.
-5. **Industrial Filtration** — Pass crude oil through the Pneumatic Oil Filter Press for industrial-grade filtration. High-volume models match press throughput.
-6. **Refining (separately sourced)** — For RBD finished oil, the filtered oil goes through degumming, neutralization, bleaching and deodorization on an independent refining line (1-100 T/D), which we help you specify and integrate.
-7. **Quality Control** — Implement comprehensive QC with laboratory testing for acidity, peroxide value, color, and other parameters required for commercial oil standards.
-8. **Packaging & Distribution** — Package finished oil in bulk containers, bottles, or drums for wholesale and retail distribution.
-
-## Recommended Equipment
-
-- **Ultra High Pressure Hydraulic Oil Press (HN500)** — Our most powerful model, delivering up to 60 MPa pressing force. Achieves competitive residual oil rates. Double-barrel configuration available for maximum throughput.
-- **High Pressure Hydraulic Oil Press (HN480)** — Second most powerful model, suitable for most industrial pressing applications. Excellent balance of force and throughput.
-- **Industrial Seed Crusher (370 Type)** — Heavy-duty seed processing machine designed for industrial-scale throughput. Handles cleaning, crushing, and dehulling.
-- **Pneumatic Oil Filter Press** — Industrial-grade filtration for high-volume oil clarification. Matches press throughput for smooth integration.
-- **Refining line (sourced separately)** — RBD finished oil requires an independent 1-100 T/D refining line; we provide specifications, layout coordination and integration support.
-
 ## Complete Production Line
 
 An industrial oil production line integrates multiple processing stages into a smooth, continuous operation. Here is the typical layout for a 10-50 T/D (tons per day) production line:

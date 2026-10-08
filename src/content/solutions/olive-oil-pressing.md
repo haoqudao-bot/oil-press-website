@@ -146,21 +146,6 @@ This solution is designed for Mediterranean, Middle Eastern, and New World olive
 - **Harvest timing**: Olives should be pressed within 24 hours of harvest for best quality
 - **Pressing temperature**: Cold pressing below 60°C preserves quality; temperatures above 27°C disqualify oil from "cold-pressed" designation
 
-## Recommended Process
-
-1. **Harvesting** — Pick olives at the optimal ripeness for your target oil style. Early harvest (green olives) produces robust, peppery oil. Late harvest (black olives) produces milder, buttery oil.
-2. **Cleaning & Defoliating** — Remove leaves, twigs, and debris from harvested olives. Leaves impart bitter flavors to the oil. Wash olives to remove dust and pesticide residue.
-3. **Cold Pressing** — Feed cleaned olives directly into the Cold Press Hydraulic Oil Press (HN426). The hydraulic press applies uniform pressure without generating excessive heat, preserving polyphenol content. Each batch processes in 30-40 minutes (hot press) or approximately 2 hours (cold press).
-4. **Filtration** — Pass crude olive oil through the Pneumatic Oil Filter Press. Some premium producers prefer minimal filtration to retain more flavor, while others filter for clarity.
-5. **Settling** — Allow filtered oil to settle for 2-4 weeks in stainless steel tanks. Natural settling lets remaining sediment and micro-particles deposit.
-6. **Quality Testing** — Test for acidity (extra virgin must be below 0.8%), peroxide value, and sensory characteristics.
-7. **Bottling** — Bottle olive oil in dark glass bottles or tin containers. Protect from light and heat to preserve quality.
-
-## Recommended Equipment
-
-- **Cold Press Hydraulic Oil Press (HN426)** — Purpose-built for cold pressing with temperature control below 60°C. Essential for producing genuine extra virgin olive oil that meets international quality standards.
-- **Pneumatic Oil Filter Press** — Provides controllable filtration for olive oil. Can be adjusted for minimal filtration (retaining more flavor) or fine filtration (maximum clarity).
-
 ## Why Choose Haonuo
 
 - **Cold press specialists** — Our HN426 model maintains temperatures below 60°C, producing genuine cold-pressed extra virgin olive oil that meets international quality standards.

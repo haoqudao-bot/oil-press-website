@@ -146,22 +146,6 @@ Understanding expected yields is critical for business planning. Below are typic
 - **Pre-treatment**: Proper grating or crushing increases surface area for better oil release
 - **Pressing temperature**: Cold pressing (below 60°C) yields slightly less but produces premium VCO
 
-## Recommended Process
-
-1. **Raw Material Selection** — Choose between fresh coconuts (for VCO) or copra (for higher yield). Fresh coconuts should be mature (12-13 months old) for optimal oil content.
-2. **Preparation** — De-shell and grate fresh coconut meat, or crush copra into small pieces (3-5 mm). Remove any moldy or discolored material.
-3. **Cold Pressing (VCO Route)** — Feed prepared coconut into the Coconut Oil Hydraulic Press. Each cycle takes 30-40 minutes (hot press) or approximately 2 hours (cold press) at controlled pressure. The pressed liquid separates into coconut oil and coconut water.
-4. **Hot Pressing (Copra Route)** — For higher yield, lightly roast crushed copra at 80-100°C before pressing. This reduces viscosity and improves oil flow.
-5. **Filtration** — Pass the crude oil through the Pneumatic Oil Filter Press to remove fine particles and sediment. This produces clear, market-ready oil.
-6. **Refining (Optional)** — RBD coconut oil requires degumming, neutralizing, bleaching and deodorizing in a separate refining line, sourced independently.
-7. **Packaging** — Fill filtered or refined oil into appropriate containers. VCO should be stored in amber glass to preserve quality.
-
-## Recommended Equipment
-
-- **Coconut Oil / VCO Hydraulic Press** — Purpose-built for coconut pressing with dual-function capability for both coconut milk and oil extraction. The 390mm barrel handles 100 kg per batch.
-- **Pneumatic Oil Filter Press** — Essential for producing clear, sediment-free coconut oil. Pneumatic operation ensures consistent filtration pressure.
-- **Refining line (sourced separately)** — RBD production requires an independent refining line; we can advise on specifications and layout.
-
 ## Why Choose Haonuo
 
 - **15+ years of hydraulic press manufacturing** — We specialize in hydraulic oil press technology, not screw presses. This focus means deeper expertise and better machines for your specific needs.

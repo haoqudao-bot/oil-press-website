@@ -155,23 +155,6 @@ The solution supports both cold pressing (for premium Kachi Ghani mustard oil) a
 - **Moisture content**: Optimal pressing moisture is 5-7%
 - **Pressing method**: Cold pressing (Kachi Ghani) yields slightly less but produces premium oil
 
-## Recommended Process
-
-1. **Seed Cleaning** — Remove dust, stones, and other impurities from mustard seeds. Clean seeds produce better-tasting oil and protect your equipment from damage.
-2. **Steaming (For Hot Press)** — Steam mustard seeds at 90-100°C for 15-20 minutes using the Electric Seed Steamer. This softens the seeds, increases oil yield, and reduces the sharp pungency. Skip for Kachi Ghani cold-pressed oil.
-3. **Cooling** — Allow steamed seeds to cool to 50-70°C before pressing. Proper temperature ensures optimal oil flow without degrading quality.
-4. **Hydraulic Pressing** — Feed prepared mustard seeds into the Standard or Heavy Duty Hydraulic Oil Press. Each batch of 100 kg processes in 35-45 minutes (hot press) or approximately 2 hours (cold press).
-5. **Filtration** — Pass crude mustard oil through the Pneumatic Oil Filter Press to remove seed particles and sediment.
-6. **Settling** — Allow filtered oil to settle for 24-48 hours. Mustard oil benefits from extended settling to develop its characteristic flavor.
-7. **Packaging** — Bottle the finished mustard oil. Traditional tin containers or PET bottles are common in South Asian markets.
-
-## Recommended Equipment
-
-- **Standard Hydraulic Oil Press (HN325)** — Excellent for small to medium mustard oil production. Well-suited for Kachi Ghani cold-pressed mustard oil.
-- **Heavy Duty Hydraulic Oil Press (HN365)** — Recommended for larger operations with higher daily throughput requirements.
-- **Electric Seed Steamer** — Purpose-built for mustard seed steaming with precise temperature control. Essential for hot-pressed mustard oil production.
-- **Pneumatic Oil Filter Press** — Efficient filtration for clean, market-ready mustard oil with minimal labor.
-
 ## Why Choose Haonuo
 
 - **Designed for South Asian markets** — Our mustard oil pressing solution is built to meet the specific requirements of Indian, Bangladeshi, and Nepali producers, including Kachi Ghani production capability.
