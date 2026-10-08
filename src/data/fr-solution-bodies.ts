@@ -21,21 +21,6 @@ Avec des amandes contenant 50-55 % d'huile — l'une des plus fortes teneurs par
 - **Teneur en humidité** : L'humidité optimale de pressage est de 4-6 %
 - **Pressage à froid vs à chaud** : Le pressage à froid donne légèrement moins mais produit une huile de qualité premium
 
-## Processus Recommandé
-
-1. **Sélection des amandes** — Utilisez des amandes douces décortiquées de haute qualité. Écartez toute amande rance, moisie ou endommagée. Les amandes amères ne doivent jamais être utilisées pour l'huile alimentaire en raison de leur teneur en amygdaline.
-2. **Nettoyage** — Éliminez la poussière, les fragments de coque et autres impuretés. Des amandes propres produisent une huile de meilleur goût et plus claire.
-3. **Blanchiment (Optionnel)** — Plongez brièvement les amandes dans l'eau chaude pour détacher les peaux, puis retirez-les en les frottant. Le blanchiment produit une huile de couleur plus claire préférée en cosmétique.
-4. **Pressage à froid** — Introduisez les amandes préparées dans la presse hydraulique à froid (HN426). Le pressage à basse température préserve la vitamine E et l'arôme naturel. Chaque lot de 25-40 kg est traité en 35-45 minutes.
-5. **Filtration** — Faites passer l'huile d'amande brute à travers la presse filtrante pneumatique pour obtenir une huile claire et premium. La filtration fine est importante pour l'huile d'amande de qualité cosmétique.
-6. **Décantation** — Laissez l'huile filtrée reposer pendant 24-48 heures dans un endroit frais et sombre.
-7. **Conditionnement** — Mettez l'huile d'amande en bouteilles en verre sombre. L'huile d'amande est sensible à la lumière et à la chaleur, un conditionnement approprié prolonge donc la durée de conservation.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique à Froid (HN426)** — Conçue spécifiquement pour le pressage à froid avec contrôle de température en dessous de 60°C. Essentielle pour produire une huile d'amande premium conservant une valeur nutritionnelle maximale.
-- **Presse Filtrante Pneumatique** — Produit une huile d'amande cristalline convenant aux applications alimentaires et cosmétiques. La filtration fine est critique pour les marchés premium.
-
 ## Pourquoi Choisir Haonuo
 
 - **Expertise en pressage à froid** — Notre modèle HN426 est spécialement conçu pour le pressage à froid, maintenant les températures en dessous de 60°C pour préserver le profil nutritionnel premium de l'huile d'amande.
@@ -67,23 +52,6 @@ Cette solution est conçue pour le marché croissant de l'huile d'avocat au Mexi
 - **Séchage** : La déshydratation de la pulpe d'avocat avant le pressage peut doubler le pourcentage de rendement
 - **Méthode de pressage** : Le pressage à froid préserve la qualité mais donne légèrement moins que le pressage à chaud
 
-## Processus Recommandé
-
-1. **Sélection des fruits** — Utilisez des avocats pleinement mûrs sans meurtrissures ni pourriture. La variété Hass est préférée pour sa forte teneur en huile. Les fruits trop mûrs peuvent encore être pressés mais peuvent produire une huile plus sombre.
-2. **Dénoyautage et Épluchage** — Retirez les noyaux et les peaux. Seule la chair (pulpe) est utilisée pour la production d'huile d'avocat premium.
-3. **Écrasement** — Écrasez la chair d'avocat en une pâte lisse à l'aide du broyeur de graines à haute vitesse. Une pâte uniforme assure un pressage régulier.
-4. **Séchage (Recommandé)** — Déshydratez la pâte d'avocat pour réduire la teneur en humidité d'environ 70 % à moins de 15 %. Cela améliore considérablement le rendement en huile et réduit les problèmes d'émulsion.
-5. **Pressage à froid** — Introduisez la pâte d'avocat séchée dans la presse hydraulique à froid (HN426). Le pressage à basse température préserve la chlorophylle et les nutriments. Chaque lot prend 35-45 minutes.
-6. **Filtration** — Faites passer l'huile d'avocat brute à travers la presse filtrante pneumatique pour obtenir une huile claire et premium. Plusieurs passages de filtration peuvent être nécessaires pour le résultat le plus limpide.
-7. **Décantation** — Laissez l'huile filtrée reposer pendant 48-72 heures. L'eau restante se séparera de l'huile pendant cette période.
-8. **Conditionnement** — Mettez l'huile d'avocat en bouteilles en verre sombre pour la protéger de l'oxydation lumineuse. L'huile d'avocat premium doit être stockée à des températures fraîches.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique à Froid (HN426)** — Spécifiquement conçue pour le pressage à froid avec contrôle de température en dessous de 60°C. Essentielle pour préserver la qualité premium et la couleur verte de l'huile d'avocat.
-- **Broyeur de Graines à Haute Vitesse** — Écrase efficacement la pulpe d'avocat en pâte uniforme pour des résultats de pressage réguliers.
-- **Presse Filtrante Pneumatique** — Élimine les particules fines et les sédiments pour une huile d'avocat cristalline. Plusieurs passages de filtration garantissent la plus haute qualité.
-
 ## Pourquoi Choisir Haonuo
 
 - **Spécialistes du pressage à froid** — Notre modèle HN426 est conçu spécifiquement pour le pressage à froid, maintenant les températures en dessous de 60°C pour préserver la qualité premium et la couleur verte de l'huile d'avocat.
@@ -113,23 +81,6 @@ Cette solution prend en charge à la fois le pressage à froid (pour l'huile de 
 - **Torréfaction** : La pré-torréfaction à 80-100°C augmente le rendement de 3-5 %
 - **Pression de pressage** : Les graines de ricin nécessitent une pression plus élevée (40-55 MPa) en raison de leur structure dure
 - **Humidité des graines** : L'humidité optimale de pressage est de 5-7 %
-
-## Processus Recommandé
-
-1. **Nettoyage des graines** — Éliminez les débris de champ, les pierres et les graines endommagées. Des graines propres produisent une meilleure huile et protègent l'équipement.
-2. **Décorticage** — Retirez les coques des graines de ricin à l'aide d'un décortiqueur ou de notre broyeur de graines. Le décorticage augmente le rendement et produit une huile plus propre. **Important** : Portez des gants lors de la manipulation des graines de ricin brutes — les coques contiennent de la ricine.
-3. **Torréfaction (Pour pressage à chaud)** — Torréfiez les graines décortiquées à 80-100°C pendant 15-20 minutes à l'aide de la poêle de torréfaction thermique. Cela ramollit les graines et améliore l'écoulement de l'huile. À ignorer pour l'huile de ricin médicinale pressée à froid.
-4. **Pressage hydraulique** — Introduisez les graines préparées dans la presse hydraulique lourde ou ultra haute pression. Appliquez une pression élevée soutenue pendant 35-45 minutes par lot.
-5. **Filtration** — Faites passer l'huile de ricin brute à travers la presse filtrante pneumatique. La filtration fine est particulièrement importante pour l'huile de ricin de qualité médicinale.
-6. **Contrôle qualité** — Testez l'huile filtrée pour la teneur en ricine (devrait être indétectable dans l'huile correctement pressée), la valeur acide et la clarté.
-7. **Conditionnement** — Conditionnez l'huile de ricin dans des conteneurs appropriés. L'huile industrielle en fûts ; l'huile médicinale en bouteilles scellées.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Lourde (HN365)** — Fournit la pression élevée soutenue nécessaire pour une extraction approfondie des graines de ricin. Adaptée au pressage à froid et à chaud.
-- **Presse Hydraulique Ultra Haute Pression (HN500)** — Recommandée pour un rendement maximal des graines de ricin. Atteint des taux d'huile résiduelle compétitifs.
-- **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour la torréfaction des graines de ricin. Essentielle pour la production d'huile industrielle pressée à chaud.
-- **Presse Filtrante Pneumatique** — Produit une huile de ricin propre convenant aux applications industrielles et médicinales.
 
 ## Pourquoi Choisir Haonuo
 
@@ -163,22 +114,6 @@ Comprendre les rendements attendus est essentiel pour la planification commercia
 - **Prétraitement** : Un râpage ou un broyage approprié augmente la surface pour une meilleure libération de l'huile
 - **Température de pressage** : Le pressage à froid (en dessous de 60°C) donne légèrement moins mais produit une VCO premium
 
-## Processus Recommandé
-
-1. **Sélection de la matière première** — Choisissez entre des noix de coco fraîches (pour la VCO) ou du coprah (pour un rendement plus élevé). Les noix de coco fraîches doivent être mûres (12-13 mois) pour une teneur optimale en huile.
-2. **Préparation** — Décoquez et râpez la chair de coco fraîche, ou concassez le coprah en petits morceaux (3-5 mm). Éliminez tout matériau moisie ou décoloré.
-3. **Pressage à froid (Parcours VCO)** — Introduisez la coco préparée dans la presse hydraulique à huile de coco. Chaque cycle dure 35-45 minutes à pression contrôlée. Le liquide pressé se sépare en huile de coco et eau de coco.
-4. **Pressage à chaud (Parcours Coprah)** — Pour un rendement plus élevé, torréfiez légèrement le coprah concassé à 80-100°C avant le pressage. Cela réduit la viscosité et améliore l'écoulement de l'huile.
-5. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour éliminer les particules fines et les sédiments. Cela produit une huile claire, prête pour le marché.
-6. **Raffinage (Optionnel)** — L'huile de coco RBD nécessite dégommage, neutralisation, blanchiment et désodorisation sur une ligne de raffinage séparée, approvisionnée indépendamment.
-7. **Conditionnement** — Remplissez l'huile filtrée ou raffinée dans des conteneurs appropriés. La VCO doit être stockée dans du verre ambré pour préserver la qualité.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique pour Huile de Coco / VCO** — Conçue spécifiquement pour le pressage de la coco avec une double fonction pour l'extraction du lait de coco et de l'huile. Le fût de 600 mm traite 180 kg par lot.
-- **Presse Filtrante Pneumatique** — Essentielle pour produire une huile de coco claire et sans sédiment. Le fonctionnement pneumatique assure une pression de filtration constante.
-- **Ligne de raffinage (approvisionnée séparément)** — La production RBD nécessite une ligne de raffinage indépendante ; nous pouvons vous conseiller sur les spécifications et l'implantation.
-
 ## Pourquoi Choisir Haonuo
 
 - **Plus de 15 ans de fabrication de presses hydrauliques** — Nous nous spécialisons dans la technologie de presse hydraulique à huile. Cette concentration signifie une expertise plus approfondie et de meilleures machines pour vos besoins spécifiques.
@@ -211,23 +146,6 @@ Que vous dirigiez une installation de production d'huile dédiée, une usine de 
 - **Qualité constante** : La pression hydraulique assure une extraction uniforme à chaque lot
 - **Faible huile résiduelle** : En dessous de 5 % signifie une récupération d'huile maximale et une rentabilité accrue
 - **Capacité multi-graines** : Alternez entre les types de graines pour répondre à diverses demandes du marché
-
-## Processus Recommandé
-
-1. **Réception et Stockage des Graines** — Configurez un stockage approprié pour les livraisons de graines en vrac. Maintenez la qualité des graines avec des conditions de stockage sèches et ventilées.
-2. **Traitement Automatisé des Graines** — Utilisez le broyeur-chargeur-torpéfacteur intégré pour un nettoyage, un broyage et une torréfaction automatisés en un seul passage. Cela réduit la main-d'œuvre et assure une préparation constante.
-3. **Pressage hydraulique** — Introduisez les graines préparées dans la presse Lourde (HN365) ou à Froid (HN426) avec configuration double fût. Chaque fût fonctionne indépendamment, permettant un fonctionnement quasi continu.
-4. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour une clarté de qualité commerciale. La filtration à haut volume correspond au débit de la presse.
-5. **Contrôle Qualité** — Testez l'huile pour l'acidité, la clarté et les caractéristiques sensorielles. Implémentez le suivi des lots pour la traçabilité commerciale.
-6. **Conditionnement** — Conditionnez l'huile finie dans des bouteilles, des bidons ou des fûts pour la distribution en gros et au détail. Les opérations commerciales utilisent généralement un équipement de remplissage semi-automatisé.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Lourde (HN365)** — La machine de travail de la production d'huile commerciale. Disponible en configuration double fût pour un débit de 2 000-5 000 kg/jour. Gère le pressage à froid et à chaud.
-- **Presse Hydraulique à Froid (HN426)** — Spécialisée pour la production d'huile pressée à froid premium. Option double fût disponible. Adaptée pour servir les marchés des aliments de santé et biologiques.
-- **Broyeur-Chargeur-Torpéfacteur Intégré** — Unité de préparation de graines tout-en-un qui automatise le nettoyage, le broyage et la torréfaction. Réduit la main-d'œuvre et assure une préparation constante pour un débit commercial.
-- **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante de divers types de graines. Essentielle pour la production d'huile pressée à chaud.
-- **Presse Filtrante Pneumatique** — Filtration à haut volume correspondant au débit de la presse commerciale. Produit une huile claire, prête pour le marché.
 
 ## Comparaison Simple vs Double Fût
 
@@ -281,23 +199,6 @@ La solution de pressage d'huile de coton de Haonuo Machinery est conçue pour le
 | Graines de coton entières | 18-22 % | 15-18 % | 6-8 % |
 | Amandes de graines de coton (décortiquées) | 30-38 % | 28-34 % | 5-7 % |
 | Tourteau pré-pressé | 10-15 % | 8-12 % | 5-7 % |
-
-## Processus Recommandé
-
-1. **Écabossage** — Retirez la fibre de coton à l'aide d'une machine d'écabossage. Cette étape est critique — la fibre absorbe 3-5 % de votre rendement en huile.
-2. **Décorticage** — Séparez les coques des amandes. Les coques ne contiennent que 1-2 % d'huile et réduisent le rendement global.
-3. **Aplatissement** — Roulez les amandes en flocons fins (0,3-0,5 mm) pour rompre les parois cellulaires et améliorer la libération de l'huile.
-4. **Pressage hydraulique** — Chargez les flocons dans la presse hydraulique lourde HN365. Appliquez une pression de 63 MPa pendant 35-45 minutes par lot.
-5. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique.
-6. **Raffinage** — Étape critique : dégommage, neutralisation, blanchiment et désodorisation pour éliminer le gossypol et les acides gras libres.
-
-## Équipement Recommandé
-
-| Équipement | Modèle | Objectif |
-|----------|-------|---------|
-| Presse Hydraulique Lourde | HN365 (365T) | Pressage primaire des graines de coton |
-| Presse Filtrante Pneumatique | HN-10SL | Filtration de l'huile brute |
-| Ligne de raffinage (approvisionnée séparément) | Sur Mesure | Élimination du gossypol et raffinage ; équipement indépendant |
 
 ## Pourquoi Choisir Haonuo pour la Production d'Huile de Coton
 
@@ -372,25 +273,6 @@ Cette solution est conçue pour les installations de production d'huile à grand
 - **Option double fût** : Traitez plus de 5 000 kg de graines par jour
 - **Coordination du raffinage** : l'huile finie RBD utilise une ligne de raffinage séparée, approvisionnée indépendamment ; nous conseillons sur les spécifications et l'implantation
 - **Capacité 24h/24** : Construction robuste pour un fonctionnement industriel continu
-
-## Processus Recommandé
-
-1. **Réception de Graines en Vrac** — Recevez et stockez les livraisons de graines en vrac dans des silos ou entrepôts dédiés. Mettez en œuvre une inspection qualité pour les matières premières entrantes.
-2. **Traitement Industriel des Graines** — Utilisez le broyeur industriel de graines (type 370) pour le nettoyage, le décorticage et le broyage à haut volume. Cette machine robuste répond aux exigences de débit des opérations industrielles.
-3. **Conditionnement** — Ajustez l'humidité et la température des graines pour un pressage optimal. Les opérations industrielles utilisent généralement des systèmes de conditionnement continus.
-4. **Pressage Haute Pression** — Introduisez les graines préparées dans la presse hydraulique Ultra Haute Pression (HN500) ou Haute Pression (HN480). La configuration double fût permet un fonctionnement quasi continu à plus de 5 000 kg/jour.
-5. **Filtration Industrielle** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour une filtration de qualité industrielle. Les modèles à haut volume correspondent au débit de la presse.
-6. **Raffinage (approvisionné séparément)** — Pour l'huile finie RBD, l'huile filtrée passe par dégommage, neutralisation, blanchiment et désodorisation sur une ligne de raffinage indépendante (1-100 T/J), que nous aidons à spécifier et intégrer.
-7. **Contrôle Qualité** — Mettez en œuvre un contrôle qualité complet avec des tests en laboratoire pour l'acidité, la valeur de peroxyde, la couleur et d'autres paramètres requis pour les normes d'huile commerciale.
-8. **Conditionnement et Distribution** — Conditionnez l'huile finie dans des conteneurs en vrac, des bouteilles ou des fûts pour la distribution en gros et au détail.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Ultra Haute Pression (HN500)** — Notre modèle le plus puissant, délivrant jusqu'à 60 MPa de force de pressage. Atteint des taux d'huile résiduelle compétitifs. Configuration double fût disponible pour un débit maximal.
-- **Presse Hydraulique Haute Pression (HN480)** — Deuxième modèle le plus puissant, adapté à la plupart des applications de pressage industriel. Excellent équilibre entre force et débit.
-- **Broyeur Industriel de Graines (Type 370)** — Machine de traitement de graines robuste conçue pour un débit à l'échelle industrielle. Gère le nettoyage, le broyage et le décorticage.
-- **Presse Filtrante Pneumatique** — Filtration de qualité industrielle pour la clarification d'huile à haut volume. Correspond au débit de la presse pour une intégration transparente.
-- **Ligne de raffinage (approvisionnée séparément)** — L'huile finie RBD nécessite une ligne de raffinage indépendante de 1-100 T/J ; nous fournissons les spécifications, la coordination de l'implantation et le support d'intégration.
 
 ## Ligne de Production Complète
 
@@ -472,23 +354,6 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 - **Teneur en humidité** : L'humidité optimale de pressage est de 5-7 %
 - **Méthode de pressage** : Le pressage à froid (Kachi Ghani) donne légèrement moins mais produit une huile premium
 
-## Processus Recommandé
-
-1. **Nettoyage des graines** — Éliminez la poussière, les pierres et autres impuretés des graines de moutarde. Des graines propres produisent une huile de meilleur goût et protègent votre équipement contre les dommages.
-2. **Cuisson à la vapeur (Pour pressage à chaud)** — Faites cuire à la vapeur les graines de moutarde à 90-100°C pendant 15-20 minutes à l'aide du cuiseur à vapeur électrique de graines. Cela ramollit les graines, augmente le rendement en huile et réduit le piquant. À ignorer pour l'huile Kachi Ghani pressée à froid.
-3. **Refroidissement** — Laissez les graines cuites à la vapeur refroidir à 50-70°C avant le pressage. Une température appropriée assure un écoulement optimal de l'huile sans dégrader la qualité.
-4. **Pressage hydraulique** — Introduisez les graines de moutarde préparées dans la presse hydraulique standard ou lourde. Chaque lot de 100 kg est traité en 35-45 minutes.
-5. **Filtration** — Faites passer l'huile de moutarde brute à travers la presse filtrante pneumatique pour éliminer les particules de graines et les sédiments.
-6. **Décantation** — Laissez l'huile filtrée reposer pendant 24-48 heures. L'huile de moutarde bénéficie d'une décantation prolongée pour développer sa saveur caractéristique.
-7. **Conditionnement** — Mettez l'huile de moutarde finie en bouteilles. Les conteneurs traditionnels en fer blanc ou les bouteilles PET sont courants sur les marchés sud-asiatiques.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Standard (HN325)** — Excellente pour la production d'huile de moutarde de petite à moyenne envergure. Adaptée pour l'huile de moutarde Kachi Ghani pressée à froid.
-- **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes nécessitant un débit quotidien plus élevé.
-- **Cuiseur à Vapeur Électrique de Graines** — Conçu spécifiquement pour la cuisson à la vapeur des graines de moutarde avec un contrôle précis de la température. Essentiel pour la production d'huile de moutarde pressée à chaud.
-- **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de moutarde propre et prête pour le marché avec un minimum de main-d'œuvre.
-
 ## Pourquoi Choisir Haonuo
 
 - **Destiné aux marchés sud-asiatiques** — Notre solution de pressage d'huile de moutarde est construite pour répondre aux exigences spécifiques des producteurs indiens, bangladais et népalais, y compris la capacité de production Kachi Ghani.
@@ -520,21 +385,6 @@ Cette solution est conçue pour les producteurs d'huile d'olive méditerranéens
 - **Moment de la récolte** : Les olives doivent être pressées dans les 24 heures suivant la récolte pour une qualité optimale
 - **Température de pressage** : Le pressage à froid en dessous de 60°C préserve la qualité ; les températures supérieures à 27°C disqualifient l'huile de l'appellation « pressée à froid »
 
-## Processus Recommandé
-
-1. **Récolte** — Cueillez les olives à la maturité optimale pour votre style d'huile cible. La récolte précoce (olives vertes) produit une huile robuste et piquante. La récolte tardive (olives noires) produit une huile plus douce et beurrée.
-2. **Nettoyage et Défeuillage** — Retirez les feuilles, les brindilles et les débris des olives récoltées. Les feuilles confèrent des saveurs amères à l'huile. Lavez les olives pour éliminer la poussière et les résidus de pesticides.
-3. **Pressage à froid** — Introduisez les olives nettoyées directement dans la presse hydraulique à froid (HN426). La presse hydraulique applique une pression uniforme sans générer de chaleur excessive, préservant la teneur en polyphénols. Chaque lot est traité en 35-45 minutes.
-4. **Filtration** — Faites passer l'huile d'olive brute à travers la presse filtrante pneumatique. Certains producteurs premium préfèrent une filtration minimale pour conserver plus de saveur, tandis que d'autres filtrent pour la clarté.
-5. **Décantation** — Laissez l'huile filtrée reposer pendant 2 à 4 semaines dans des cuves en acier inoxydable. La décantation naturelle permet aux sédiments et micro-particules restants de se déposer.
-6. **Test de Qualité** — Testez l'acidité (l'extra vierge doit être inférieure à 0,8 %), la valeur de peroxyde et les caractéristiques sensorielles.
-7. **Mise en Bouteille** — Mettez l'huile d'olive en bouteilles en verre sombre ou en conteneurs en fer blanc. Protégez de la lumière et de la chaleur pour préserver la qualité.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique à Froid (HN426)** — Conçue spécifiquement pour le pressage à froid avec contrôle de température en dessous de 60°C. Essentielle pour produire une véritable huile d'olive extra vierge répondant aux normes de qualité internationales.
-- **Presse Filtrante Pneumatique** — Fournit une filtration contrôlable pour l'huile d'olive. Peut être ajustée pour une filtration minimale (conservant plus de saveur) ou une filtration fine (clarté maximale).
-
 ## Pourquoi Choisir Haonuo
 
 - **Spécialistes du pressage à froid** — Notre modèle HN426 maintient les températures en dessous de 60°C, produisant une véritable huile d'olive extra vierge pressée à froid qui répond aux normes de qualité internationales.
@@ -564,24 +414,6 @@ Cette solution couvre le processus, de la séparation des amandes au pressage et
 - **Broyage** : Le pré-broyage des amandes en morceaux de 2-4 mm augmente la surface pour une meilleure extraction
 - **Pression de pressage** : Les amandes de palmiste nécessitent une pression plus élevée (40-55 MPa) en raison de leur structure dure
 - **Qualité des amandes** : Les amandes fraîches et non endommagées produisent plus d'huile que les amandes anciennes ou moisies
-
-## Processus Recommandé
-
-1. **Cassage des Noix de Palme** — Cassez les noix de palme pour séparer les amandes des coques. Un casse-noix de palme ou un cassage manuel peut être utilisé selon votre échelle.
-2. **Séparation des Amandes** — Séparez les amandes des coques par vannage ou flottaison dans l'eau. Éliminez tout fragment de coque, car ils absorbent l'huile pendant le pressage.
-3. **Séchage des Amandes** — Séchez les amandes séparées à une teneur en humidité inférieure à 7 %. Le séchage au soleil ou mécanique conviennent tous les deux.
-4. **Broyage** — Broyez les amandes de palmiste séchées en petits morceaux (2-4 mm) à l'aide du broyeur de graines. Cette étape est critique pour une extraction efficace de l'huile.
-5. **Pressage hydraulique** — Introduisez les amandes broyées dans la presse hydraulique lourde ou ultra haute pression. Appliquez une pression élevée soutenue pendant 35-45 minutes par lot.
-6. **Filtration** — Faites passer l'huile de palmiste brute à travers la presse filtrante pneumatique pour obtenir une huile claire et propre.
-7. **Raffinage (Optionnel)** — L'huile de palmiste de qualité alimentaire RBD nécessite une ligne de raffinage séparée, approvisionnée indépendamment.
-8. **Conditionnement** — Conditionnez l'huile finie dans des conteneurs appropriés. L'huile de palmiste se solidifie à des températures inférieures à 25°C.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Lourde (HN365)** — Fournit la pression élevée nécessaire pour l'extraction d'huile de palmiste. Recommandée pour les opérations de petite à moyenne envergure.
-- **Presse Hydraulique Ultra Haute Pression (HN500)** — Délivre une pression maximale pour des taux d'huile résiduelle compétitifs. Adaptée pour les opérations plus importantes recherchant un rendement maximal.
-- **Presse Filtrante Pneumatique** — Filtration efficace pour une huile de palmiste propre avec un minimum de sédiments.
-- **Ligne de raffinage (approvisionnée séparément)** — L'huile de palmiste RBD de qualité alimentaire nécessite une ligne de raffinage indépendante ; nous pouvons vous conseiller sur les spécifications et l'implantation.
 
 ## Pourquoi Choisir Haonuo
 
@@ -617,63 +449,6 @@ Chaque presse hydraulique Haonuo assure **les deux procédés sur une seule mach
 - **Torréfaction** — un conditionnement vers 130 °C (120-150 °C) développe l'arôme de noisette et augmente le rendement de 3-5 %.
 - **Conception du fût** — le fût à fentes de type barre draine l'huile sur une surface bien plus grande qu'un fût percé, extrayant typiquement 2-3 % d'huile en plus par lot.
 
-## Le Processus de Production d'Huile d'Arachide en 7 Étapes
-
-Le processus est identique pour toute ligne hydraulique ; seule l'étape de torréfaction est activée ou non selon que vous produisez une huile pressée à chaud ou à froid.
-
-### Étape 1 — Nettoyage
-
-Passez les gousses récoltées dans un tamis de nettoyage ou un vanneur pour éliminer pierres, mottes de terre, poussière et gousses immatures. Les pierres rayent le fût et réduisent sa durée de vie ; poussière et débris végétaux finissent en sédiments dans l'huile. Deux minutes de nettoyage économisent des heures de filtration.
-
-### Étape 2 — Décorticage
-
-Passez les gousses dans une **décortiqueuse d'arachides** dédiée et triez les amandes brisées. Les coques sont dures et poreuses — elles absorbent l'huile dès l'application de la pression : presser en coque fait perdre 15-25 % de l'huile et donne au tourteau comme à l'huile une note boisée âpre. Gardez les pellicules rouges sauf si votre acheteur exige des amandes blanchies ; les pellicules fines traversent le pressage sans problème.
-
-### Étape 3 — Broyage / Floconnage
-
-Broyez les amandes décortiquées en granulés de 4-6 mm, ou passez-les dans un floconnoir pour obtenir de fins flocons. Rompre les parois cellulaires avant le pressage raccourcit le chemin de l'huile : elle s'écoule plus vite, les lots finissent plus tôt et l'huile résiduelle du tourteau baisse. Pour les petits ateliers, un broyage grossier suffit ; les huileries visant le rendement maximal floconnent.
-
-### Étape 4 — Conditionnement et Torréfaction (pressage à chaud uniquement)
-
-Pour une huile chaude aromatique, torréfiez ou conditionnez à la vapeur les amandes à **environ 130 °C (plage 120-150 °C) pendant 20-30 minutes** dans la poêle de torréfaction à huile thermique. La double paroi à huile thermique chauffe uniformément, sans points brûlés qui assombriraient l'huile. La torréfaction rompt les cellules oléifères, réduit la viscosité de l'huile et construit l'arôme caractéristique d'arachide grillée. Arrêtez dès que les amandes deviennent doré clair et dégagent leur parfum de noisette. **Ignorez complètement cette étape pour l'huile pressée à froid.**
-
-### Étape 5 — Réglage de l'humidité
-
-Contrôlez l'humidité avant chaque lot. Les amandes pour pressage à chaud doivent entrer dans le fût à **4-6 %** ; pour le pressage à froid à **6-7 %**, car l'huile froide s'écoule mal depuis des graines trop sèches. Des amandes trop humides donnent une huile trouble et émulsifiée qui mousse à la cuisson et se conserve mal ; des amandes trop sèches génèrent de la poussière, obstruent les fentes du fût et libèrent leur huile lentement. Corrigez par quelques minutes de torréfaction supplémentaires (trop humide) ou par une légère vaporisation d'eau suivie d'un repos (trop sèches).
-
-### Étape 6 — Pressage hydraulique
-
-Chargez 100 kg d'amandes préparées dans le fût de 390 mm de la presse standard **HN325**, ou la **HN365** pour un travail à double station alternée, puis lancez le cycle. La pression monte à 60 MPa (HN325) sur le gâteau ; le fût à fentes draine l'huile en continu pendant que le gâteau se compacte. Les arachides torréfiées terminent un lot en **30-60 minutes** ; les lots à froid durent plus longtemps à plus basse température. Évacuez le gâteau en galette compacte, rechargez et répétez.
-
-### Étape 7 — Filtration, décantation et conditionnement
-
-L'huile brute va directement de la presse au **filtre-presse pneumatique**, qui élimine les fines particules de tourteau avec un minimum de main-d'œuvre. Laissez l'huile filtrée décanter naturellement **12-24 heures**, puis soutirez la couche supérieure claire au-dessus des sédiments. Mettez en bouteilles sombres et fermées — verre sombre pour l'huile premium pressée à froid — et stockez dans un endroit frais. Une huile d'arachide bien traitée se conserve 18-24 mois.
-
-**En un clin d'œil :** Nettoyage → Décorticage → Broyage/Floconnage → Conditionnement (pressage à chaud uniquement) → Humidité à 4-6 % → Pressage → Filtration et Décantation.
-
-## Équipement Recommandé
-
-| Étape | Équipement | Remarques |
-|---|---|---|
-| Pressage (cœur) | **Presse à Huile Hydraulique Standard HN325** | 325 t de force, 60 MPa, 100 kg/lot dans le fût de 390 mm ; la machine de départ standard des huileries d'arachide |
-| Pressage (montée en gamme) | **Presse à Huile Hydraulique HN365** | 365 t de force, doubles stations alternées ; pour les lots toute la journée et un débit quotidien plus élevé |
-| Torréfaction | **Poêle de Torréfaction à Huile Thermique** | Chaleur thermique uniforme à 120-150 °C ; requise pour l'huile pressée à chaud, omise pour le pressage à froid |
-| Filtration | **Filtre-Presse Pneumatique** | Élimine les fines automatiquement ; huile claire prête pour la décantation et la mise en bouteille |
-| Préparation | Décortiqueuse d'arachides + broyeur/floconnoir | Nous conseillons des modèles compatibles adaptés à votre tonnage |
-
-Au-delà de 2,5 t/jour, les configurations à double fût HN325/HN365 et les presses plus grandes de classe HN400 raccourcissent la journée de travail ; indiquez-nous votre objectif en tonnes par jour et nous dimensionnerons la ligne.
-
-<!-- yield-block -->
-### Ce que vous obtenez de 100 kg d'arachides décortiquées
-
-| Production | Pressage à chaud (torréfié) | Pressage à froid |
-|---|---|---|
-| Huile brute | 40-48 kg (≈43-52 L) | 38-44 kg (≈41-48 L) |
-| Tourteau | ≈48-56 kg | ≈50-58 kg |
-
-*Chiffres typiques pour des arachides bien décortiquées et correctement conditionnées aux réglages machine standard ; d'après les tests usine Haonuo sur arachide calibrée à 6-8 % d'humidité, les résultats réels varient selon la variété, l'humidité et les réglages de cycle. Les litres supposent une densité d'huile d'environ 0,92 kg/L.*
-<!-- /yield-block -->
-
 ## Pourquoi Choisir Haonuo
 
 - **Hydraulique, pas à vis** — la pression statique maintient l'huile sous la température de brûlure ; pas de goût de brûlé, et 6-8 % d'huile résiduelle au lieu de 10-12 %.
@@ -704,21 +479,6 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 - **Torréfaction** : La pré-torréfaction à 160-180°C augmente le rendement de 3-5 % et renforce l'arôme
 - **Pression de pressage** : Notre presse hydraulique délivre jusqu'à 50 MPa pour une extraction approfondie
 
-## Processus Recommandé
-
-1. **Nettoyage des graines** — Éliminez les pierres, la poussière et autres impuretés à l'aide d'un nettoyeur de graines. Des graines propres produisent une huile de meilleure qualité et protègent votre équipement.
-2. **Torréfaction (Pour pressage à chaud)** — Torréfiez les graines de sésame à 160-180°C pendant 15-20 minutes à l'aide de la poêle de torréfaction thermique. Cela développe l'arôme caractéristique de noix et augmente le rendement en huile. Pour l'huile pressée à froid, ignorez cette étape.
-3. **Refroidissement** — Laissez les graines torréfiées refroidir à 60-80°C avant le pressage. Des graines surchauffées peuvent dégrader la qualité de l'huile.
-4. **Pressage hydraulique** — Introduisez les graines de sésame dans la presse hydraulique pour huile de sésame. Le fût de 300 mm traite 32,5-50 kg par lot avec un temps de cycle de 8-10 minutes.
-5. **Filtration** — Faites passer l'huile de sésame brute à travers la presse filtrante pneumatique pour éliminer les sédiments et les particules fines, produisant une huile claire et prête pour le marché.
-6. **Décantation et Embouteillage** — Laissez l'huile filtrée reposer pendant 24 heures pour que les particules restantes se déposent, puis embouteillez pour la distribution.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique pour Huile de Sésame** — Conçue spécifiquement pour le sésame avec un design de fût optimisé et une courbe de pression. Atteint des taux d'huile résiduelle typiquement inférieurs à 5 % lors des tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité (les résultats varient selon la graine et la préparation).
-- **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante. Essentielle pour produire une huile de sésame torréfiée aromatique avec une saveur premium.
-- **Presse Filtrante Pneumatique** — Délivre une huile de sésame cristalline avec une filtration automatisée. Réduit la main-d'œuvre et assure une qualité constante.
-
 ## Pourquoi Choisir Haonuo
 
 - **Expertise spécialisée en pressage de sésame** — Notre presse hydraulique pour huile de sésame est conçue spécifiquement pour le sésame, et non une machine générique adaptée pour l'usage. Cela signifie un meilleur rendement, une huile résiduelle plus faible et une qualité plus constante.
@@ -748,24 +508,6 @@ Cette solution est conçue spécifiquement pour les conditions de fonctionnement
 - **Torréfaction** : Une torréfaction appropriée à 140-160°C décompose les parois cellulaires et augmente le rendement de 5-8 %
 - **Broyage** : Un broyage fin en pâte avant le pressage améliore considérablement l'efficacité d'extraction
 - **Pression de pressage** : Le beurre de karité nécessite une pression plus élevée (40-60 MPa) que la plupart des autres huiles pour une extraction complète
-
-## Processus Recommandé
-
-1. **Collecte et Tri des Noix** — Collectez les noix de karité mûres et triez pour éliminer les noix endommagées, moisies ou immatures. Des noix de qualité sont essentielles pour un beurre de karité premium.
-2. **Décorticage** — Cassez les coques de noix de karité pour extraire les amandes. Cela peut être fait manuellement ou avec notre broyeur de graines pour un débit plus élevé.
-3. **Lavage et Séchage** — Lavez les amandes pour éliminer les fragments de coque, puis séchez au soleil ou au four jusqu'à une teneur en humidité inférieure à 7 %.
-4. **Torréfaction** — Torréfiez les amandes séchées à 140-160°C pendant 20-30 minutes à l'aide de la poêle de torréfaction thermique. Cela développe l'arôme caractéristique du beurre de karité et augmente le rendement.
-5. **Broyage** — Broyez les amandes torréfiées en une pâte lisse à l'aide du broyeur de graines. Une pâte fine est critique pour un pressage efficace.
-6. **Pressage hydraulique** — Introduisez la pâte de karité dans la presse hydraulique lourde ou ultra haute pression. Appliquez une pression élevée soutenue pendant 40-50 minutes par lot.
-7. **Filtration** — Faites passer le beurre de karité brut à travers la presse filtrante pneumatique pour obtenir un beurre de karité pur et non raffiné.
-8. **Refroidissement et Conditionnement** — Laissez le beurre de karité filtré refroidir et se solidifier naturellement. Conditionnez en blocs ou en conteneurs pour la distribution.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Lourde (HN365)** — Le modèle minimum recommandé pour le pressage du beurre de karité. Fournit la pression élevée soutenue nécessaire pour une extraction approfondie.
-- **Presse Hydraulique Ultra Haute Pression (HN500)** — Recommandée pour un rendement maximal des noix de karité. Atteint des taux de matières grasses résiduelles compétitifs.
-- **Poêle de Torréfaction Thermique** — Le contrôle précis de la température de torréfaction est critique pour le traitement des noix de karité. Notre poêle de torréfaction assure des résultats constants.
-- **Presse Filtrante Pneumatique** — Produit un beurre de karité propre et pur, exempt de particules de noix et de sédiments.
 
 ## Pourquoi Choisir Haonuo
 
@@ -798,21 +540,6 @@ Cette solution est adaptée pour la production au niveau du village, les opérat
 - **Temps de cycle rapide** : 35-45 minutes par lot signifie un roulement rapide
 - **Polyvalente** : Traitez plusieurs types de graines sur la même machine
 - **Haut rendement** : Huile résiduelle inférieure à 5 % maximise le profit de chaque kilogramme
-
-## Processus Recommandé
-
-1. **Approvisionnement en Graines** — Achetez des graines de qualité auprès d'agriculteurs locaux ou de marchés de gros. Commencez par des graines facilement disponibles et demandées dans votre région.
-2. **Nettoyage des Graines** — Éliminez les pierres, la poussière et les impuretés. Même un nettoyage basique améliore significativement la qualité de l'huile et protège votre machine.
-3. **Broyage des Graines (Optionnel)** — Utilisez le broyeur de graines à haute vitesse pour pré-broyer les graines dures comme les arachides et les graines de tournesol. Cela améliore l'efficacité du pressage.
-4. **Pressage hydraulique** — Introduisez les graines dans la presse hydraulique standard (HN325). Chaque lot de 100 kg est traité en 35-45 minutes. Une seule personne peut gérer l'ensemble du processus.
-5. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour obtenir une huile claire et prête pour le marché.
-6. **Conditionnement et Ventes** — Conditionnez l'huile dans des bouteilles ou des conteneurs appropriés pour votre marché local. Vendez directement aux consommateurs, aux restaurants ou aux détaillants locaux.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Standard (HN325)** — Notre modèle d'entrée de gamme avec fût de 390 mm. Traite 100 kg par lot, 500-1 500 kg par jour. Le chemin le plus abordable vers le pressage d'huile professionnel.
-- **Broyeur de Graines à Haute Vitesse** — Pré-broye les graines pour un pressage plus efficace. Particulièrement utile pour les arachides, les graines de tournesol et autres graines dures.
-- **Presse Filtrante Pneumatique** — Produit une huile claire et prête pour le marché. Essentielle pour vendre l'huile à des prix premium.
 
 ## Pourquoi Choisir Haonuo
 
@@ -878,23 +605,6 @@ Cette solution gère à la fois les variétés de graines de tournesol riches en
 - **Torréfaction** : La pré-torréfaction à 120-150°C augmente le rendement de 3-5 %
 - **Teneur en humidité** : L'humidité optimale de pressage est de 6-8 %
 
-## Processus Recommandé
-
-1. **Nettoyage des graines** — Éliminez les débris de champ, les pierres et les graines endommagées. Des graines propres produisent une meilleure huile et protègent votre équipement.
-2. **Décorticage (Recommandé)** — Retirez les coques des graines de tournesol à l'aide de notre broyeur de graines. Le décorticage augmente le rendement de 10-15 % et produit une huile de couleur plus claire. Pour le pressage de graines entières, ignorez cette étape.
-3. **Torréfaction** — Torréfiez les amandes décortiquées à 120-150°C pendant 15-25 minutes à l'aide de la poêle de torréfaction thermique. Cela améliore l'écoulement de l'huile et le rendement. Pour l'huile pressée à froid, ignorez la torréfaction.
-4. **Pressage hydraulique** — Introduisez les graines de tournesol préparées dans la presse hydraulique standard ou lourde. Le fût de 390 mm traite 100 kg par lot avec un cycle de 35-45 minutes.
-5. **Filtration** — Faites passer l'huile de tournesol brute à travers la presse filtrante pneumatique pour obtenir une huile claire et prête pour le marché.
-6. **Raffinage (Optionnel)** — L'huile de tournesol raffinée nécessite dégommage, blanchiment et désodorisation sur une ligne de raffinage séparée, approvisionnée indépendamment, pour produire une huile de cuisson claire et neutre.
-7. **Conditionnement** — Mettez l'huile finie en bouteilles. L'huile de tournesol pressée à froid doit être stockée dans des conteneurs sombres pour prévenir l'oxydation.
-
-## Équipement Recommandé
-
-- **Presse Hydraulique Standard (HN325)** — Adaptée pour la production d'huile de tournesol de petite à moyenne envergure. Gère efficacement les graines entières et les amandes décortiquées.
-- **Presse Hydraulique Lourde (HN365)** — Recommandée pour les opérations plus importantes avec option double fût pour un débit plus élevé.
-- **Poêle de Torréfaction Thermique** — Contrôle précis de la température pour une torréfaction constante. Essentielle pour maximiser le rendement des graines de tournesol.
-- **Presse Filtrante Pneumatique** — Filtration automatisée pour une huile de tournesol claire et premium.
-
 ## Pourquoi Choisir Haonuo
 
 - **Optimisée pour le pressage du tournesol** — Nos presses hydrauliques sont calibrées pour les caractéristiques des graines de tournesol, atteignant des taux d'huile résiduelle inférieurs à 5 % pour une rentabilité maximale.
@@ -917,23 +627,6 @@ La solution de pressage d'huile de noix de Haonuo Machinery est spécifiquement 
 | Amandes | 45-55 % | 38-48 % | 6-9 % |
 | Noisettes | 50-60 % | 42-55 % | 6-8 % |
 | Pistaches | 45-55 % | 38-48 % | 7-10 % |
-
-## Processus Recommandé
-
-1. **Préparation des cerneaux** — Retirez toutes les coques et trieze les cerneaux. Écartez tout cerneau moisi ou rance car il affectera la qualité de l'huile.
-2. **Broyage léger** — Broyez délicatement les cerneaux en morceaux de 3-5 mm pour augmenter la surface. Ne réduisez pas en pâte car cela peut générer de la chaleur.
-3. **Pressage à froid** — Chargez les cerneaux broyés dans le fût de la presse hydraulique. Réglez le contrôle de température en dessous de 60°C. Appliquez la pression progressivement jusqu'à 70-75 MPa.
-4. **Filtration** — Faites passer l'huile brute à travers la presse filtrante pneumatique pour éliminer les particules fines et les sédiments.
-5. **Contrôle qualité** — Testez l'acidité (devrait être inférieure à 0,8 % pour le grade extra vierge), la valeur de peroxyde et l'évaluation sensorielle.
-6. **Mise en bouteille** — Remplissez dans des bouteilles en verre sombre sous atmosphère d'azote pour prévenir l'oxydation.
-
-## Équipement Recommandé
-
-| Équipement | Modèle | Objectif |
-|----------|-------|---------|
-| Presse Hydraulique Ultra Haute Pression | HN500 (620T) | Pressage à froid primaire à température contrôlée |
-| Presse Hydraulique à Froid | HN426 (500T) | Alternative pour des lots plus petits |
-| Presse Filtrante Pneumatique | HN-10SL | Filtration fine pour une huile cristalline |
 
 ## Pourquoi Choisir Haonuo pour la Production d'Huile de Noix
 
