@@ -282,6 +282,9 @@ if (catFaqLd) allLd.push(catFaqLd);
                       <img
                         src={product.data.images[0]}
                         alt={product.data.title.en}
+                        width="400"
+                        height="300"
+                        loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20hydraulic%20oil%20press%20machine%20product%20photo%20on%20white%20background%2C%20professional%20product%20photography&image_size=landscape_4_3'"
                       />

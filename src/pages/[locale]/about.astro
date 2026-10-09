@@ -284,7 +284,7 @@ const galImages = [
 
   <!-- 01 HERO -->
   <header class="hero">
-    <img class="bg" src="/images/factory/workshop-cranes.webp" alt="Haonuo workshop with overhead cranes and hydraulic oil presses">
+    <img class="bg" src="/images/factory/workshop-cranes.webp" alt="Haonuo workshop with overhead cranes and hydraulic oil presses" fetchpriority="high">
     <div class="veil"></div>
     <div class="wrap">
       <div class="crumb"><a href={localePath('/')}>{t.nav.home}</a><span>/</span><b>{t.nav.about}</b></div>
@@ -308,7 +308,7 @@ const galImages = [
   <section class="sec">
     <div class="wrap ov">
       <div class="ov-media reveal">
-        <div class="main"><img src="/images/factory/factory-building-yellow.webp" alt="Haonuo Machinery factory entrance and office building in Qingzhou, Shandong"></div>
+        <div class="main"><img src="/images/factory/factory-building-yellow.webp" alt="Haonuo Machinery factory entrance and office building in Qingzhou, Shandong" loading="lazy"></div>
       </div>
       <div class="ov-copy reveal">
         <div class="kicker">{v.ovKicker}</div>
@@ -437,7 +437,7 @@ const galImages = [
       <div class="gal reveal">
         {galImages.map((src, i) => (
           <div class={`gi${i < 2 ? ' big' : ''}`}>
-            <img src={`/images/factory/${src}`} alt={galCaptions[i]}>
+            <img src={`/images/factory/${src}`} alt={galCaptions[i]} loading="lazy">
             <div class="cap">{galCaptions[i]}</div>
           </div>
         ))}
@@ -513,7 +513,7 @@ const galImages = [
 
   <!-- 12 FINAL CTA -->
   <section class="fcta" id="quote">
-    <img class="bg" src="/images/factory/finished-presses.webp" alt="">
+    <img class="bg" src="/images/factory/finished-presses.webp" alt="" loading="lazy">
     <div class="wrap">
       <div class="kicker center" style="justify-content:center;color:var(--amber-400)">{v.fctaKicker}</div>
       <h2>{v.fctaH2}</h2>

@@ -80,7 +80,7 @@ const breadcrumbLd = {
 };
 ---
 
-<BaseLayout title="كتالوج المنتجات القابل للطباعة | Haonuo Machinery" description="كتالوج منتجات قابل للطباعة لمكابس الزيت الهيدروليكية ومعدات معالجة الزيت من Haonuo Machinery. يمكنك التنزيل والطباعة أو الإرسال إلى العملاء." locale="ar">
+<BaseLayout title="كتالوج معاصر الزيت الهيدروليكية وقائمة الأسعار | Haonuo" description="كتالوج منتجات قابل للطباعة لمكابس الزيت الهيدروليكية ومعدات معالجة الزيت من Haonuo. يمكنك التنزيل والطباعة أو الإرسال إلى العملاء." locale="ar">
   <section class="bg-amber-500 py-8 md:py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-amber-100 text-sm mb-4">
@@ -114,9 +114,12 @@ const breadcrumbLd = {
               return (
                 <div key={product.slug} class="border border-steel-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow break-inside-avoid">
                   <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-                    <img 
-                      src={product.data.images?.[0] || '/images/products/default-product.webp'} 
+                    <img
+                      src={product.data.images?.[0] || '/images/products/default-product.webp'}
                       alt={product.data.title.ar || product.data.title.en}
+                      width="400"
+                      height="300"
+                      loading="lazy"
                       class="w-full h-full object-cover"
                     />
                   </div>

@@ -51,12 +51,15 @@ const breadcrumbLd = {
   ],
 };
 
-const pageTitle = currentLocale === 'fr' ? 'Contactez-nous pour Tarifs et Support' :
-                  currentLocale === 'ar' ? 'اتصل بنا للأسعار والدعم' :
-                  'Hubungi Kami untuk Harga & Dukungan';
+const pageTitle = currentLocale === 'fr' ? 'Contactez Haonuo pour Tarifs Presse à Huile et Support' :
+                  currentLocale === 'ar' ? 'اتصل بهاونو لأسعار معاصر الزيت والدعم الفني' :
+                  'Hubungi Haonuo untuk Harga Mesin Press Minyak & Dukungan';
+const pageDescription = currentLocale === 'fr' ? 'Contactez Haonuo pour les prix des presses à huile hydrauliques, les spécifications techniques, les devis de transport et le support après-vente. Réponse sous 24 heures.' :
+                        currentLocale === 'ar' ? 'اتصل بهاونو للحصول على أسعار معاصر الزيت الهيدروليكية والمواصفات الفنية وعروض الشحن ودعم ما بعد البيع. نرد خلال 24 ساعة.' :
+                        'Hubungi Haonuo untuk harga mesin press minyak hidrolik, spesifikasi teknis, penawaran pengiriman, dan dukungan purna jual. Kami membalas dalam 24 jam.';
 ---
 
-<BaseLayout locale={currentLocale} title={pageTitle} description={t.contact.subtitle} jsonLd={breadcrumbLd}>
+<BaseLayout locale={currentLocale} title={pageTitle} description={pageDescription} jsonLd={breadcrumbLd}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
