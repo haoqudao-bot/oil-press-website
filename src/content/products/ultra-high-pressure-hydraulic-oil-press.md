@@ -4,11 +4,16 @@ title:
   fr: Presse à Huile Hydraulique Ultra Haute Pression
   ar: معصرة زيت هيدروليكية فائقة الضغط
   id: Mesin Press Minyak Hidrolik Tekanan Ultra Tinggi
+seoTitle:
+  en: Industrial Hydraulic Oil Press Machine — 620 Ton / 75 MPa
+  fr: Presse à Huile Hydraulique Industrielle — 620 Tonnes / 75 MPa
+  ar: معصرة زيت هيدروليكية صناعية — 620 طن / 75 ميجاباسكال
+  id: Mesin Press Minyak Hidrolik Industri — 620 Ton / 75 MPa
 description:
-  en: "620-ton ultra-high pressure hydraulic oil press with 75 MPa system. Industrial-grade pressing for maximum yield on all oil seeds with 100kg capacity per batch."
-  fr: "Presse à huile hydraulique 620 tonnes, 75 MPa. Industriel, toutes graines, 100kg par lot."
-  ar: "معصرة زيت هيدروليكية فائقة الضغط 620 طن بنظام 75 ميجاباسكال. عصر صناعي لأقصى عائد من جميع البذور الزيتية بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik tekanan ultra-tinggi 620 ton dengan sistem 75 MPa. Press tingkat industri untuk hasil maksimum semua biji minyak dengan kapasitas 100kg per batch."
+  en: "Industrial hydraulic oil press with 620-ton force and 75 MPa system pressure. Heavy-duty pressing for the hardest in-shell materials — walnut in shell, apricot kernel and more. Single or double barrel, factory-direct."
+  fr: "Presse à huile hydraulique industrielle 620 tonnes, pression système 75 MPa. Pressage renforcé pour les matières en coque les plus dures — noix en coque, noyau d’abricot et plus. Fût simple ou double, vente directe usine."
+  ar: "معصرة زيت هيدروليكية صناعية بقوة 620 طناً وضغط نظام 75 ميجاباسكال. عصر ثقيل لأقسى المواد بقشورها — الجوز بقشره ولوز المشمش وغيرها. برميل مفرد أو مزدوج، بيع مباشر من المصنع."
+  id: "Mesin press minyak hidrolik industri 620 ton dengan tekanan sistem 75 MPa. Press heavy-duty untuk bahan bercangkang paling keras — kenari bercangkang, biji aprikot, dan lainnya. Barel tunggal atau ganda, langsung dari pabrik."
 category: hydraulic-oil-press
 model: HN500
 modelId: ''
@@ -41,8 +46,9 @@ specifications:
     value: 52 MPa
 featured: true
 related:
+  - standard-hydraulic-oil-press
+  - hn365-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
-  - high-pressure-hydraulic-oil-press
 applicableSeeds:
   - tea seed
   - rapeseed
@@ -67,7 +73,7 @@ faq:
   - question: What is the difference between single and double barrel configurations?
     answer: A single barrel press processes one batch at a time. A double barrel press has two barrels on sliding rails — while one barrel is pressing, you can load the other, nearly doubling your throughput. We recommend the double barrel for commercial and industrial operations.
   - question: What power supply does the HN500 require?
-    answer: The HN500 requires 2.2 KW motor power, compatible with both 220V/50Hz and 380V/60Hz power supplies. We can customize the electrical system to match your local power standards at no extra charge.
+    answer: The HN500 requires 2.2 KW motor power and runs on a standard 380V/50Hz supply. The electrical system can be customized to match your local power standards — simply specify your voltage when ordering.
   - question: How many workers are needed to operate the machine?
     answer: Only 1-2 workers are needed. The microcomputer control system automates the pressing cycle, and the 4-hook cake removal mechanism makes unloading easy even after overnight pressing.
   - question: What warranty do you provide?
@@ -85,7 +91,7 @@ faq:
   - question: Can the machine operate on generator power?
     answer: Yes, our machines are fully compatible with generator power. For the HN500, we recommend a minimum 7kVA generator. The machine starts easily and runs stably on generator power, making it suitable for areas with unreliable electricity supply such as rural Nigeria, Kenya, and other African regions.
   - question: Do you provide voltage customization for different countries?
-    answer: Yes, we customize the electrical system to match your local power supply at no extra charge. Common configurations include 220V/50Hz (Southeast Asia, Africa, Middle East), 110V/60Hz (Philippines, parts of South America), and 380V/50Hz (industrial three-phase). Simply specify your local voltage when ordering.
+    answer: Yes, the electrical system can be customized to match your local power supply. Simply specify your local voltage when ordering.
   - question: How quickly can I get spare parts in Africa or the Middle East?
     answer: We maintain stock of all common spare parts (seals, filter cloth, hydraulic oil, control panel components). Standard parts ship promptly via DHL/FedEx, arriving in 5-7 days to most African and Middle Eastern countries.
 specificationsFr:
@@ -131,11 +137,11 @@ faqFr:
   - question: Quelles matières premières la HN500 peut-il presser ?
     answer: Le HN500 peut presser le sésame, l'arachide, le colza, les graines de tournesol, le lin, les graines de thé, le soja, les graines de coton et plus encore. Il excelle dans le pressage à froid des matières les plus dures, y compris les noix en coque, les amandes d'abricot et le xanthocère.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du gâteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau.
+    answer: Le pressage à chaud (après torréfaction) prend 30 à 40 minutes par lot. Le pressage à froid demande environ 2 heures pour conserver une huile de qualité à basse température. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau.
   - question: Quelle est la différence entre les configurations à un et à deux fûts ?
     answer: Une presse à un seul fût traite un lot à la fois. Une presse à double fût dispose de deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, doublant presque votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
   - question: Quelle alimentation électrique la HN500 nécessite-t-il ?
-    answer: Le HN500 nécessite une puissance motrice de 2,2 KW, compatible avec les alimentations 220 V/50 Hz et 380 V/60 Hz. Nous pouvons personnaliser le système électrique pour correspondre à vos normes d'alimentation locales sans frais supplémentaires.
+    answer: Le HN500 nécessite une puissance motrice de 2,2 KW et fonctionne sur une alimentation standard 380 V/50 Hz. Le système électrique peut être personnalisé selon vos normes locales — indiquez simplement votre tension lors de la commande.
   - question: Combien de travailleurs sont nécessaires pour faire fonctionner la machine ?
     answer: Seulement 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du gâteau à 4 crochets facilite le déchargement même après un pressage de nuit.
   - question: Quelle garantie fournissez-vous ?
@@ -153,7 +159,7 @@ faqFr:
   - question: La machine peut-elle fonctionner sur alimentation de groupe électrogène ?
     answer: Oui, nos machines sont entièrement compatibles avec l'alimentation par groupe électrogène. Pour la HN500, nous recommandons un groupe électrogène d'au moins 7 kVA. La machine démarre facilement et fonctionne de manière stable sur groupe électrogène, ce qui la rend adaptée aux zones avec une alimentation électrique peu fiable telles que les régions rurales du Nigeria, du Kenya et d'autres régions africaines.
   - question: Fournissez-vous la personnalisation de la tension pour différents pays ?
-    answer: Oui, nous personnalisons le système électrique pour correspondre à votre alimentation locale sans frais supplémentaires. Les configurations courantes incluent 220 V/50 Hz (Asie du Sud-Est, Afrique, Moyen-Orient), 110 V/60 Hz (Philippines, certaines parties de l'Amérique du Sud) et 380 V/50 Hz (triphasé industriel). Indiquez simplement votre tension locale lors de la commande.
+    answer: Oui, le système électrique peut être personnalisé selon votre alimentation locale. Indiquez simplement votre tension locale lors de la commande.
   - question: Comment puis-je obtenir rapidement des pièces de rechange en Afrique ou au Moyen-Orient ?
     answer: Nous maintenons un stock de toutes les pièces de rechange courantes (joints, tissu filtrant, huile hydraulique, composants de panneau de commande). Les pièces standard sont expédiées dans les 48 heures via DHL/FedEx, arrivant en 5 à 7 jours dans la plupart des pays africains et du Moyen-Orient.
 specificationsAr:
@@ -236,11 +242,11 @@ faqAr:
   - question: "ما المواد الخام التي يمكن لـ HN500 عصرها؟"
     answer: "يمكن لـ HN500 عصر السمسم والفول السوداني وبذور اللفت وبذور عباد الشمس وبذور الكتان وبذور الشاي وفول الصويا وبذور القطن والمزيد. يتميز بالعصر البارد لأصلب المواد بما في ذلك الجوز بقشره ولوز المشمش وشجرة الزانثوسيرا."
   - question: "كم تستغرق دورة العصر الواحدة؟"
-    answer: "تستغرق دورة العصر النموذجية 35-45 دقيقة حسب المادة ودرجة جفاف الكيكة المطلوبة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
+    answer: "يستغرق العصر الساخن (بعد التحميص) 30-40 دقيقة لكل دفعة، بينما يستغرق العصر البارد نحو ساعتين للحفاظ على جودة الزيت في درجات الحرارة المنخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
   - question: "ما الفرق بين تكوينات البرميل المفرد والمزدوج؟"
     answer: "تعالج معصرة البرميل المفرد دفعة واحدة في كل مرة. تحتوي معصرة البرميل المزدوج على برميلين على قضبان انزلاقية — أثناء عصر أحد البرميلين، يمكنك تحميل الآخر، مما يضاعف الإنتاج تقريباً. نوصي بالبرميل المزدوج للعمليات التجارية والصناعية."
   - question: "ما مصدر الطاقة الذي يتطلبه HN500؟"
-    answer: "يتطلب HN500 قدرة محرك 2.2 كيلوواط، متوافق مع مصادر الطاقة 220 فولت/50 هرتز و380 فولت/60 هرتز. يمكننا تخصيص النظام الكهربائي ليتوافق مع معايير الطاقة المحلية لديك بدون رسوم إضافية."
+    answer: "يتطلب HN500 قدرة محرك 2.2 كيلوواط ويعمل على كهرباء قياسية 380 فولت/50 هرتز. يمكن تخصيص النظام الكهربائي ليتوافق مع معايير الطاقة المحلية لديك — يُرجى فقط تحديد الجهد المطلوب عند الطلب."
   - question: "كم عدد العمال المطلوبين لتشغيل الآلة؟"
     answer: "يلزم 1-2 عامل فقط. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة دورة العصر، وتجعل آلية إزالة الكيكة ذات الأربعة خطاطيف عملية التفريغ سهلة حتى بعد العصر طوال الليل."
   - question: "ما الضمان الذي تقدمونه؟"
@@ -258,7 +264,7 @@ faqAr:
   - question: "هل يمكن تشغيل الآلة بالطاقة من المولد الكهربائي؟"
     answer: "نعم، آلاتنا متوافقة تماماً مع الطاقة من المولد الكهربائي. بالنسبة لـ HN500، نوصي بمولد كهربائي بحد أدنى 7 كيلو فولت أمبير. تبدأ الآلة بسهولة وتعمل باستقرار على الطاقة من المولد، مما يجعلها مناسبة للمناطق ذات الإمداد الكهربائي غير الموثوق مثل المناطق الريفية في نيجيريا وكينيا وغيرها من المناطق الأفريقية."
   - question: "هل توفرون تخصيص الجهد لدول مختلفة؟"
-    answer: "نعم، نقوم بتخصيص النظام الكهربائي ليتوافق مع مصدر الطاقة المحلي لديك بدون رسوم إضافية. تشمل التكوينات الشائعة 220 فولت/50 هرتز (جنوب شرق آسيا، أفريقيا، الشرق الأوسط)، و110 فولت/60 هرتز (الفلبين، أجزاء من أمريكا الجنوبية)، و380 فولت/50 هرتز (ثلاثي الأطوار الصناعي). ما عليك سوى تحديد جهدك المحلي عند الطلب."
+    answer: "نعم، يمكن تخصيص النظام الكهربائي ليتوافق مع مصدر الطاقة المحلي لديك. ما عليك سوى تحديد جهدك المحلي عند الطلب."
   - question: "ما سرعة الحصول على قطع الغيار في أفريقيا أو الشرق الأوسط؟"
     answer: "نحتفظ بمخزون من جميع قطع الغيار الشائعة (حلقات مانعة للتسرب، قماش فلتر، زيت هيدروليكي، مكونات لوحة التحكم). تُشحن القطع القياسية في غضون 48 ساعة عبر DHL/FedEx، وتصل في 5-7 أيام إلى معظم الدول الأفريقية ودول الشرق الأوسط."
 faqId:
@@ -267,11 +273,11 @@ faqId:
   - question: "Bahan baku apa saja yang dapat ditekan oleh HN500?"
     answer: "HN500 dapat menekan wijen, kacang tanah, rapeseed, biji bunga matahari, biji rami, biji teh, kedelai, biji kapas, dan lainnya. Ini unggul dalam press dingin bahan terkeras termasuk kenari dengan cangkang, inti aprikot, dan yellowhorn."
   - question: "Berapa lama satu siklus press membutuhkan waktu?"
-    answer: "Siklus press tipikal membutuhkan 35-45 menit tergantung pada bahan dan tingkat kekeringan kue yang diinginkan. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran kue."
+    answer: "Press panas (setelah penyangraian) membutuhkan 30-40 menit per batch, sedangkan press dingin membutuhkan sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran kue."
   - question: "Apa perbedaan antara konfigurasi barrel tunggal dan ganda?"
     answer: "Mesin press barrel tunggal memproses satu batch pada satu waktu. Mesin press barrel ganda memiliki dua barrel pada rel geser — saat satu barrel sedang menekan, Anda dapat memuat yang lain, hampir menggandakan kapasitas produksi Anda. Kami merekomendasikan barrel ganda untuk operasi komersial dan industri."
   - question: "Pasokan daya apa yang dibutuhkan HN500?"
-    answer: "HN500 membutuhkan daya motor 2.2 KW, kompatibel dengan pasokan daya 220V/50Hz dan 380V/60Hz. Kami dapat menyesuaikan sistem kelistrikan agar sesuai dengan standar daya lokal Anda tanpa biaya tambahan."
+    answer: "HN500 membutuhkan daya motor 2.2 KW dan bekerja pada pasokan standar 380V/50Hz. Sistem kelistrikan dapat disesuaikan agar sesuai dengan standar daya lokal Anda — cukup tentukan tegangan Anda saat memesan."
   - question: "Berapa banyak pekerja yang dibutuhkan untuk mengoperasikan mesin?"
     answer: "Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme penghapusan kue 4-kait membuat pembongkaran mudah bahkan setelah press semalaman."
   - question: "Garansi apa yang Anda berikan?"
@@ -289,22 +295,22 @@ faqId:
   - question: "Apakah mesin dapat beroperasi dengan daya generator?"
     answer: "Ya, mesin kami sepenuhnya kompatibel dengan daya generator. Untuk HN500, kami merekomendasikan generator minimum 7kVA. Mesin mudah menyala dan berjalan stabil dengan daya generator, cocok untuk daerah dengan pasokan listrik tidak andal seperti daerah pedesaan Nigeria, Kenya, dan wilayah Afrika lainnya."
   - question: "Apakah Anda menyediakan penyesuaian tegangan untuk berbagai negara?"
-    answer: "Ya, kami menyesuaikan sistem kelistrikan agar sesuai dengan pasokan daya lokal Anda tanpa biaya tambahan. Konfigurasi umum termasuk 220V/50Hz (Asia Tenggara, Afrika, Timur Tengah), 110V/60Hz (Filipina, sebagian Amerika Selatan), dan 380V/50Hz (tiga fasa industri). Cukup tentukan tegangan lokal Anda saat memesan."
+    answer: "Ya, sistem kelistrikan dapat disesuaikan agar sesuai dengan pasokan daya lokal Anda. Cukup tentukan tegangan lokal Anda saat memesan."
   - question: "Seberapa cepat saya bisa mendapatkan suku cadang di Afrika atau Timur Tengah?"
     answer: "Kami menyimpan stok semua suku cadang umum (segel, kain filter, minyak hidrolik, komponen panel kontrol). Suku cadang standar dikirim dalam 48 jam melalui DHL/FedEx, tiba dalam 5-7 hari ke sebagian besar negara Afrika dan Timur Tengah."
 videoUrl: ''
 seoKeywords:
-  - ultra high pressure oil press
   - industrial hydraulic oil press
-  - hydraulic oil press machine
-  - HN500 oil press
-  - 620 ton oil press
   - industrial oil press machine
-  - maximum yield oil press
-  - heavy industrial oil press
-  - ultra high pressure extraction
+  - ultra high pressure hydraulic oil press
+  - high pressure oil press machine
+  - heavy duty oil press machine
+  - oil press for large oil mill
+  - large scale oil press machine
+  - automatic hydraulic oil press machine
   - industrial cold press
-updatedAt: 2025-11-01
+  - 620 ton hydraulic oil press
+updatedAt: 2026-10-10
 ---
 
 ## Overview

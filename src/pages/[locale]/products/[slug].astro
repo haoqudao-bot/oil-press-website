@@ -1,7 +1,11 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import HN325Page from '../../../components/products/HN325Page.astro';
+import FunnelPage from '../../../components/products/FunnelPage.astro';
 import { hn325Content } from '../../../data/hn325-page';
+import { hn365Content, hn365WaLink } from '../../../data/hn365-page';
+import { hn426Content, hn426WaLink } from '../../../data/hn426-page';
+import { hn500Content, hn500WaLink } from '../../../data/hn500-page';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
 import { marked } from 'marked';
@@ -24,6 +28,9 @@ const { locale, slug } = Astro.params;
 const currentLocale = locale as Locale;
 const { product } = Astro.props;
 const isHN325 = product.slug === 'standard-hydraulic-oil-press';
+const isHN365 = product.slug === 'hn365-hydraulic-oil-press';
+const isHN426 = product.slug === 'cold-press-hydraulic-oil-press';
+const isHN500 = product.slug === 'ultra-high-pressure-hydraulic-oil-press';
 const { Content } = await product.render();
 const t = getTranslations(currentLocale);
 
@@ -133,7 +140,7 @@ allLd.push(productLd);
 if (faqLd) allLd.push(faqLd);
 ---
 
-{isHN325 ? <HN325Page product={product} locale={currentLocale} strings={hn325Content[currentLocale]} /> : <BaseLayout locale={currentLocale} title={pageTitle} description={product.data.description?.[currentLocale] || product.data.description?.en || ''} keywords={seoKeywords} jsonLd={allLd} ogImage={product.data.images[0]}>
+{isHN426 ? <FunnelPage product={product} locale={currentLocale} strings={hn426Content[currentLocale]} waLink={hn426WaLink} /> : isHN500 ? <FunnelPage product={product} locale={currentLocale} strings={hn500Content[currentLocale]} waLink={hn500WaLink} /> : isHN365 ? <FunnelPage product={product} locale={currentLocale} strings={hn365Content[currentLocale]} waLink={hn365WaLink} /> : isHN325 ? <HN325Page product={product} locale={currentLocale} strings={hn325Content[currentLocale]} /> : <BaseLayout locale={currentLocale} title={pageTitle} description={product.data.description?.[currentLocale] || product.data.description?.en || ''} keywords={seoKeywords} jsonLd={allLd} ogImage={product.data.images[0]}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -9,10 +9,11 @@ export interface HN325Strings {
   h2Specs: string; specsH3: string;
   matH3: string; matHeaders: [string, string]; matRows: string[][]; matNote: string;
   h2Cap: string; capH3: string;
-  capHeaders: [string, string, string]; capRows: string[][];
+  capHeaders?: [string, string, string]; capRows: string[][];
   cycH3: string; cycRows: string[][]; capNote: string;
   powerH3: string; powerP: string;
   h2Fit: string; fitHeaders: string[]; fitRows: string[][]; fitNote: string;
+  fitHighlight?: number;
   stripT: string; stripS: string; stripBtn: string;
   h2Oil: string; oilIntro: string;
   yieldH3: string; yieldHeaders: [string, string, string]; yieldRows: string[][]; yieldNote: string;
