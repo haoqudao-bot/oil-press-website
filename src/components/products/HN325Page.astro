@@ -59,7 +59,7 @@ const productLd = {
 const allLd = [breadcrumbLd, productLd];
 if (faqLd) allLd.push(faqLd);
 ---
-<BaseLayout title={pageTitle} description={pageDesc} keywords={product.data.seoKeywords} jsonLd={allLd} ogImage={`https://www.hydoilpress.com${img}`}>
+<BaseLayout locale={locale} title={pageTitle} description={pageDesc} keywords={product.data.seoKeywords} jsonLd={allLd} ogImage={`https://www.hydoilpress.com${img}`}>
 <div class="hn325">
   <div class="page">
     <div class="crumb"><div class="crumb-in">
