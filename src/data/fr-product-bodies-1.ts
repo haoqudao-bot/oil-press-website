@@ -1,55 +1,94 @@
 export const frProductBodies1: Record<string, string> = {
-  'standard-hydraulic-oil-press': `## Aperçu
+  'standard-hydraulic-oil-press': `**Notre modèle le plus vendu — le meilleur rapport qualité-prix de la gamme Haonuo.** La HN325 est une presse à huile hydraulique commerciale conçue pour les petites et moyennes huileries : 325 tonnes de force de pressage, 20–100 kg par lot, pressage à chaud et à froid dans une seule machine, vente directe usine avec garantie 1 an.
 
-La presse à huile hydraulique standard HN325 traite jusqu'à 100 kg de graines oléagineuses par lot de 40 à 90 minutes selon la matière, ce qui convient aux petites et moyennes huileries pressant environ une tonne de graines par jour. Sa force de pressage de 325 tonnes et sa pression système de 60 MPa laissent 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines conventionnelles (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Le moteur de 2,2 kW fonctionne sur une alimentation standard 220V/380V, et un à deux opérateurs suffisent.
+Elle presse la plupart des graines oléagineuses conventionnelles — sésame, arachide, noix, graine de camellia (thé), lin, colza, tournesol et soja, entre autres. Si votre objectif est d'environ une tonne de graines pressées à chaud par jour, c'est la machine par laquelle commencer.
 
-La HN325 Presse à Huile Hydraulique Standard est notre presse à huile hydraulique la plus populaire, adoptée par les producteurs d'huile du monde entier pour son excellent rapport qualité-prix et ses performances fiables. En tant que modèle standard à course allongée de notre gamme, elle dispose d'une course de cylindre de 850 mm qui presse jusqu'au fond, traitant facilement des lots de 5 à 100 kg. Que vous soyez un producteur à petite échelle ou que vous dirigiez une opération de taille moyenne, la HN325 offre des résultats d'extraction d'huile constants sur une large gamme de matières.
+[**Demandez le prix usine →**](/contact/) · [Comparez tous les modèles →](/products/model-comparison/)
 
-Le cylindre HN325 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 27,78 MPa, permettant à la plupart des graines oléagineuses conventionnelles d'être entièrement pressées en un seul cycle. Cela peut contribuer à un rendement en huile plus élevé et à un taux d'huile résiduelle plus faible dans le gâteau. Le retour sur investissement réel dépend de nombreux facteurs, notamment les conditions du marché et l'efficacité de fonctionnement.
+## Combien peut-elle presser par jour ?
 
-## Avantages Clés
+| Configuration | Pressage à chaud / 8 h | Pressage à froid / 8 h |
+|---|---|---|
+| Fût simple | ~900–1 000 kg | ~300–400 kg |
+| Double fût | ~1 200–1 400 kg | ~600–700 kg |
 
-- **Rapport Qualité-Prix Populaire** — L'un de nos modèles les plus commandés, offrant un rapport prix-performance compétitif pour le pressage d'huile généraliste.
-- **Pressage à Course Complète** — La course de cylindre de 850 mm presse jusqu'au fond, garantissant une extraction complète de l'huile de chaque lot.
-- **Capacité Polyvalente** — Traite de 5 à 100 kg par lot, adapté aux productions petites et moyennes.
-- **Efficacité à Cycle Unique** — La pression de gâteau de 27,78 MPa est suffisante pour que la plupart des matières conventionnelles soient entièrement pressées en un cycle.
-- **Productivité à Double Fût** — La configuration à double fût avec doubles rails coulissants permet de charger un fût pendant que l'autre est en cours de pressage, doublant presque votre débit.
-- **Fût Personnalisable** — Le diamètre et la hauteur du fût peuvent être adaptés à vos exigences spécifiques en matière de matière.
+| Étape | Durée par lot |
+|---|---|
+| Pressage à chaud | 30–40 min de pressage + 10–15 min de chargement et déchargement du gâteau |
+| Pressage à froid | ~2 h de pressage + chargement et déchargement du gâteau |
 
-## Technologie Principale
+Estimations établies à partir des temps de cycle avec des lots complets de 100 kg — ce n'est pas une capacité garantie ; la production réelle dépend de la graine, du rythme de l'équipe et de la préparation. Les matières légères et floconneuses remplissent le fût en dessous de 100 kg : prévoyez proportionnellement moins. En configuration double fût, un fût presse pendant que l'autre est déchargé et rechargé — la production est presque doublée.
 
-- **Fût à Fentes de Type Barre** — La conception propriétaire de fût à fentes de Haonuo offre une surface d'extraction d'huile nettement supérieure aux fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Pas de colmatage, pas de nettoyage entre les lots.
-- **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec pompe double haute-basse. Pression de fonctionnement jusqu'à 60 MPa avec retour rapide du cylindre.
-- **Déchargement du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets garantit un déchargement du gâteau facile et fiable — même après un pressage de nuit.
-- **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour une longue durée de service sous une force de pressage de 325 tonnes. La durée de vie réelle dépend des conditions de fonctionnement et de l'entretien.
-- **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement à l'huile finie en quelques minutes.
-- **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
-- **Économe en Main-d'œuvre** — Seulement 1 à 2 opérateurs nécessaires, réduisant les besoins en main-d'œuvre par rapport aux méthodes de pressage manuelles.
+La presse fonctionne sur une alimentation standard 380 V / 50 Hz ; une version 415 V est disponible sur demande pour les marchés comme le Nigeria et les autres réseaux d'Afrique de l'Ouest. Aucune fondation spéciale n'est nécessaire — un sol plan supportant 2 tonnes et une hauteur sous plafond de 2,5 m suffisent. Les spécifications complètes figurent ci-dessus.
 
-## Applications et Matières Adaptées
+## Quel modèle convient à votre huilerie ?
 
-La HN325 est adaptée pour le pressage d'une grande variété de graines oléagineuses conventionnelles :
+| Modèle | Force | Pression sur gâteau | Ø fût (standard) | Configuration | Idéal pour |
+|---|---|---|---|---|---|
+| [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Fût simple / double | Lots plus petits (~60 kg), budget le plus serré |
+| **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (personnalisable)** | **Fût simple / double** | **Petites et moyennes huileries, usage polyvalent** |
+| [HN365](/products/hn365-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (personnalisable) | Fût simple / double | Volume journalier supérieur, moins d'attente |
+| [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (personnalisable) | Fût simple / double | Activité de pressage à froid : coco, noix |
+| [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (personnalisable) | Fût simple / double | Matières les plus dures en coque |
 
-- **Graines Oléagineuses** : Graine de thé, colza, arachide, soja, graine de laque, lin
-- **Autres Matières** : Graine de tournesol, graine de coton et matières de pressage conventionnelles similaires
+La pression sur gâteau correspond à la force de pressage divisée par la surface du fût — un fût plus petit presse plus fort.
 
-> **Remarque** : Pour les matières à coque dure ou de pressage à froid telles que les noix ou les amandes d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press) ou [modèle HN500 Ultra Haute Pression](/products/ultra-high-pressure-hydraulic-oil-press).
+**HN325 ou HN365 ?** Jusqu'à environ une tonne de graines pressées à chaud par jour, la HN325 double fût suffit — deux fûts sur rails coulissants partagent une station hydraulique : vous chargez l'un pendant que l'autre presse. La HN365 (365 t) réduit encore le temps d'attente pour de plus gros volumes ; envoyez-nous votre graine et votre objectif journalier pour un calcul de débit.
 
-## Pourquoi Choisir Haonuo
+**Budget plus serré ?** La [HN300](/products/mini-hydraulic-oil-press/) reste en production et reprend la conception hydraulique et les pièces d'usure courantes de la HN325. Son fût Ø300 plus petit contient environ 55–60 kg par lot et presse à environ 42 MPa de pression sur gâteau — une machine d'entrée solide pour de plus petits volumes quotidiens.
 
-- **Prix Direct Usine** — Achetez directement au fabricant et éliminez les marges des intermédiaires. La HN325 offre un coût compétitif par tonne d'huile extraite par rapport aux machines similaires de sa catégorie.
-- **Fiabilité Éprouvée** — En tant que modèle populaire, la HN325 a été testée sur le terrain sur des milliers d'installations avec un historique de performances fiables.
-- **Assurance Qualité** — Chaque machine subit des tests rigoureux avant l'expédition, y compris des tests de pression hydraulique en pleine charge et la vérification des cycles de fonctionnement.
-- **Support Après-Vente** — Support technique complet, disponibilité des pièces de rechange et assistance de dépannage à distance pour garder votre opération en marche sans problème.
-- **Options de Personnalisation** — Les dimensions du fût, la longueur de course et d'autres paramètres peuvent être personnalisés pour correspondre à vos exigences spécifiques en matière de matière et de production.
+**L'huile pressée à froid comme produit principal ?** La [HN426](/products/cold-press-hydraulic-oil-press/) (500 t) apporte la force supérieure que valorisent les huiles de coco et de noix pressées à froid.
 
-## Avantages Régionaux
+Dimensions et spécifications complètes de chaque modèle : [tableau comparatif des modèles](/products/model-comparison/).
 
-**Asie du Sud-Est (Indonésie, Malaisie, Thaïlande, Vietnam) :** La HN325 est adaptée pour la production d'huile de coco et d'arachide de petite à moyenne taille. Compatible avec l'alimentation standard 220V/50Hz de la région. Option de fût en acier inoxydable disponible pour la production d'huile de coco de qualité alimentaire.
+## Guide des graines : rendement et ligne de production
 
-**Afrique (Nigeria, Kenya, Ghana, Tanzanie) :** Conçue pour des conditions difficiles — la conception mécanique simple de la HN325 signifie moins de pannes et des réparations plus faciles. Fonctionne sur l'alimentation monophasée standard 220V ou un groupe électrogène portable (minimum 5 kVA). Pièces de rechange disponibles en stock avec expédition en 3 jours vers Lagos ou Mombasa.
+Les graines oléagineuses courantes adaptées à la HN325 incluent le **sésame, l'arachide, la noix, la graine de camellia (thé), le lin, le colza, le tournesol et le soja** — couvrant la plupart des oléagineux. Rendements de référence :
 
-**Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Disponible avec fût en acier inoxydable de qualité alimentaire pour la production d'huile de sésame certifiée halal. Le pressage hydraulique statique n'ajoute aucune chaleur de friction : presser des graines crues et sèches maintient naturellement une température basse, en dessous de 60°C, pour les huiles de grade premium.`,
+| Graine | Rendement | Remarques |
+|---|---|---|
+| Arachide | 42–52 % | Arôme riche, huile dorée |
+| Sésame | 42–52 % | Torréfaction puis pressage direct |
+| Tournesol | 40–50 % | Nettoyage, concassage, torréfaction |
+| Lin | 35–40 % | À chaud ou à froid |
+| Colza | 30–40 % | Rendement élevé, parfumé |
+| Graine de thé | 15–35 % | Couleur claire, arôme pur |
+| Soja | 12–18 % | À chaud ou à froid |
+| Noix | 55–65 % (à froid) | Concassage à cru, pressage à froid |
+| Graine de ricin | 40–60 % | Pressage à chaud |
+| Fruits de palme | 20–25 % (régime frais) | Pressage à chaud en petites quantités — confirmez votre procédé avec nous |
+| Coco | 30–40 % (à froid) | Option fût en inox |
+
+Les chiffres sont des rendements bruts en huile pour 100 kg de matière première préparée (nettoyée, concassée/torréfiée avant pressage), issus des tests usine et des enregistrements de production. Le rendement réel varie selon la variété, l'humidité, la température et la préparation. Votre matière n'apparaît pas dans la liste ou vous avez un doute ? [Demandez-nous un test de matière — envoyez-nous un échantillon.](/contact/)
+
+**Chaque graine demande sa propre ligne :**
+
+| Graine | Ligne typique |
+|---|---|
+| Sésame | Torréfacteur tambour → HN325, pressage direct |
+| Arachide | Concasseur → torréfacteur → HN325 |
+| Soja (à chaud) | Pré-presse → cuiseur vapeur → HN325 |
+| Noix (à froid) | Concasseur → HN325, sans torréfaction |
+
+Dites-nous votre graine et votre objectif journalier : nous listerons les équipements exacts. Lignes complètes par graine : [solutions de transformation des oléagineux](/solutions/). Vous misez sur le sésame ? Voir la [configuration HN325 Sésame](/products/sesame-oil-hydraulic-press/). Huile de coco pressée à froid comme activité ? Voir la [presse hydraulique à huile de coco](/products/coconut-oil-hydraulic-press/) avec fût en inox de qualité alimentaire.
+
+## Installation complète pour votre huilerie
+
+Une ligne HN325 typique : nettoyeur de graines → torréfacteur → concasseur (si nécessaire) → **presse à huile hydraulique HN325** → filtre-presse pour une huile claire. Parcourez la [gamme complète d'équipements de transformation](/products/), ou envoyez-nous votre matière première et votre objectif journalier : nous listerons les modèles exacts.
+
+## Livraison, garantie et support
+
+| Élément | Détail |
+|---|---|
+| Délai de fabrication standard | 15–25 jours ouvrés + fret maritime |
+| Fabrication sur mesure (ex. fût inox) | 30–45 jours + fret maritime |
+| Test avant expédition | Test continu à pleine charge de 48 heures avant chaque expédition |
+| Garantie | 1 an + support technique à vie — installation et utilisation guidées par appel vidéo / WhatsApp |
+| Pièces de rechange | Pièces courantes en stock, expédiées en express dans le monde entier |
+
+Conditions de paiement : 30 % d'acompte à la commande, 70 % du solde avant expédition. Les devis sont FOB par défaut (CIF vers votre port sur demande). Après la fabrication, le transit maritime ajoute généralement environ 4 à 6 semaines vers les ports d'Afrique de l'Ouest selon la destination et le planning ; les documents d'expédition complets sont fournis avec chaque envoi.
+
+[Demandez le prix usine de la HN325](/contact/) ou comparez tous les modèles dans le [tableau comparatif](/products/model-comparison/).`,
 
   'heavy-duty-hydraulic-oil-press': `## Aperçu
 

@@ -1,56 +1,95 @@
 // Indonesian product body content - Part 1 (products 1-8)
 export const idProductBodies1: Record<string, string> = {
-  'standard-hydraulic-oil-press': `## Ringkasan
+  'standard-hydraulic-oil-press': `**Model terlaris kami — nilai terbaik di lini Haonuo.** HN325 adalah mesin press minyak hidrolik komersial untuk pabrik minyak kecil dan menengah: gaya press 325 ton, batch 20–100 kg, press panas & dingin dalam satu mesin, langsung dari pabrik dengan garansi 1 tahun.
 
-Mesin press minyak hidrolik standar HN325 menangani hingga 100 kg biji minyak per batch selama 40–90 menit tergantung bahan, cocok untuk pabrik minyak skala kecil dan menengah yang memeras sekitar satu ton biji per hari. Gaya press 325 ton dan tekanan sistem 60 MPa meninggalkan 6–8% minyak sisa dalam kue press untuk sebagian besar biji konvensional (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan). Motor 2,2 kW berjalan pada listrik standar 220V/380V, dan cukup dijalankan 1–2 operator.
+Mesin ini memeras sebagian besar biji minyak konvensional — wijen, kacang tanah, kenari, biji teh (camellia), biji rami, biji rapeseed, biji bunga matahari, dan kedelai, antara lain. Jika target Anda sekitar satu ton biji press panas per hari, inilah mesin untuk memulai.
 
-Mesin Press Minyak Hidrolik Standar HN325 adalah mesin press minyak hidrolik kami yang paling populer, dipercaya oleh produsen minyak di seluruh dunia karena nilai yang luar biasa dan performa yang andal. Sebagai model standar dengan langkah silinder yang diperpanjang dalam lini produk kami, mesin ini memiliki langkah silinder 850 mm yang menekan hingga dasar, menangani ukuran batch dari 5 hingga 100 kg dengan mudah. Baik Anda seorang produsen skala kecil atau menjalankan operasi skala menengah, HN325 memberikan hasil ekstraksi minyak yang konsisten di berbagai jenis bahan.
+[**Minta harga pabrik →**](/contact/) · [Bandingkan semua model →](/products/model-comparison/)
 
-Silinder HN325 dipasangkan dengan barel berdiameter dalam 390 mm mencapai tekanan permukaan kue press sebesar 27,78 MPa, memungkinkan sebagian besar biji minyak konvensional untuk ditekan secara penuh dalam satu siklus. Hal ini dapat berkontribusi pada hasil minyak yang lebih tinggi dan minyak sisa yang lebih rendah dalam kue press. Pengembalian investasi aktual bergantung pada banyak faktor termasuk kondisi pasar dan efisiensi operasional.
+## Berapa Banyak yang Bisa Ditekan per Hari?
 
-## Keunggulan Utama
+| Konfigurasi | Press panas / 8 jam | Press dingin / 8 jam |
+|---|---|---|
+| Barel tunggal | ~900–1.000 kg | ~300–400 kg |
+| Barel ganda | ~1.200–1.400 kg | ~600–700 kg |
 
-- **Nilai Populer** — Salah satu model yang paling banyak dipesan, menawarkan rasio harga-terhadap-performa yang kompetitif untuk penekanan minyak umum.
-- **Penekanan Langkah Penuh** — Langkah silinder 850 mm menekan hingga dasar, memastikan ekstraksi minyak yang sempurna dari setiap batch.
-- **Kapasitas Serbaguna** — Menangani 100 kg per batch, cocok untuk produksi skala kecil dan menengah.
-- **Efisiensi Satu Siklus** — Tekanan kue press 27,78 MPa cukup untuk sebagian besar bahan konvensional ditekan secara penuh dalam satu siklus.
-- **Produktivitas Barel Ganda** — Konfigurasi barel ganda dengan rel geser ganda memungkinkan Anda memuat satu barel sementara yang lain sedang ditekan, hampir menggandakan throughput Anda.
-- **Barel Dapat Disesuaikan** — Diameter dan tinggi barel dapat disesuaikan dengan kebutuhan bahan spesifik Anda.
+| Tahap | Waktu per batch |
+|---|---|
+| Press panas | 30–40 menit press + 10–15 menit pemuatan & pembuangan kue |
+| Press dingin | ~2 jam press + pemuatan & pembuangan kue |
 
-## Teknologi Inti
+Estimasi dari waktu siklus pada batch penuh 100 kg — bukan kapasitas yang dijamin; output aktual bergantung pada biji, ritme staf, dan persiapan. Bahan ringan/berbulu mengisi barel di bawah 100 kg, jadi rencanakan lebih rendah secara proporsional. Pada konfigurasi barel ganda, satu barel menekan sementara yang lain dikosongkan dan diisi ulang — output hampir dua kali lipat.
 
-- **Barel Alur Tipe Batang** — Desain barel alur eksklusif Haonuo menyediakan area ekstraksi minyak yang jauh lebih besar dibandingkan barel berlubang tradisional. Minyak mengalir lebih cepat dan lebih jernih, dengan hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan). Tidak ada penyumbatan, tidak perlu pembersihan antar batch.
-- **Sistem Hidrolik Jerman** — Stasiun pompa hidrolik gabungan tekanan ultra-tinggi dengan pompa ganda tinggi-rendah. Tekanan kerja hingga 60 MPa dengan pengembalian silinder cepat.
-- **Pengeluaran Kue Press 4 Kait** — Mekanisme 4 kait inovatif memastikan pengeluaran kue press yang mudah dan andal — bahkan setelah penekanan semalam.
-- **Rangka Baja Karbon Tinggi** — Baja yang diperkeras frekuensi tinggi dan perlakuan panas untuk layanan tahan lama di bawah gaya press 325 ton. Umur layanan aktual bergantung pada kondisi operasional dan perawatan.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dari pemuatan hingga minyak jadi dalam hitungan menit.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi daya dibandingkan mesin press generasi sebelumnya (penghematan aktual bervariasi tergantung kondisi operasional).
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
+Mesin bekerja pada pasokan standar 380V / 50Hz; versi 415V tersedia atas permintaan untuk pasar seperti Nigeria dan jaringan Afrika Barat lainnya. Tidak perlu pondasi khusus — lantai rata yang mampu menahan 2 ton dan ruang atas 2,5 m sudah cukup. Spesifikasi lengkap tercantum di atas.
 
-## Aplikasi & Bahan yang Sesuai
+## Model Mana yang Cocok untuk Pabrik Anda?
 
-HN325 cocok untuk menekan berbagai biji minyak konvensional:
+| Model | Gaya | Tekanan kue | Diameter barel (standar) | Konfigurasi | Terbaik untuk |
+|---|---|---|---|---|---|
+| [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Barel tunggal / ganda | Batch lebih kecil (~60 kg), anggaran paling ketat |
+| **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (dapat dikustom)** | **Barel tunggal / ganda** | **Pabrik kecil & menengah, serbaguna** |
+| [HN365](/products/hn365-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (dapat dikustom) | Barel tunggal / ganda | Volume harian lebih besar, waktu tunggu lebih singkat |
+| [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (dapat dikustom) | Barel tunggal / ganda | Bisnis press dingin: kelapa, kenari |
+| [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (dapat dikustom) | Barel tunggal / ganda | Bahan bercangkang paling keras |
 
-- **Biji Minyak**: Biji teh, biji rapeseed, kacang tanah, kedelai, biji lak, biji rami
-- **Bahan Lain**: Biji bunga matahari, biji kapas, dan bahan penekanan konvensional serupa
+Tekanan kue = gaya press ÷ luas barel, jadi barel lebih kecil menekan lebih kuat.
 
-> **Catatan**: Untuk bahan bercangkang keras atau press dingin seperti walnut atau biji aprikot, pertimbangkan [model HN426 Press Dingin](/products/cold-press-hydraulic-oil-press) atau [model HN500 Tekanan Ultra Tinggi](/products/ultra-high-pressure-hydraulic-oil-press).
+**HN325 atau HN365?** Untuk hingga sekitar satu ton biji press panas per hari, HN325 barel ganda sudah cukup — dua barel di rel geser berbagi satu stasiun hidrolik, Anda mengisi satu sementara yang lain menekan. HN365 (365 t) memangkas waktu tunggu lebih jauh untuk volume lebih besar; kirimkan jenis biji dan target harian Anda untuk perhitungan throughput.
 
-## Mengapa Memilih Haonuo
+**Anggaran lebih ketat?** [HN300](/products/mini-hydraulic-oil-press/) masih diproduksi dan berbagi desain hidrolik serta suku cadang umum dengan HN325. Barel Ø300-nya yang lebih kecil menampung sekitar 55–60 kg per batch dan menekan pada tekanan kue sekitar 42 MPa — mesin awal yang solid untuk batch harian lebih kecil.
 
-- **Harga Langsung Pabrik** — Beli langsung dari produsen dan hilangkan markup perantara. HN325 menawarkan biaya kompetitif per ton minyak yang diekstraksi dibandingkan mesin serupa di kelasnya.
-- **Keandalan Terbukti** — Sebagai model populer kami, HN325 telah diuji di lapangan di ribuan instalasi dengan rekam jejak performa yang andal.
-- **Jaminan Kualitas** — Setiap mesin menjalani pengujian ketat sebelum pengiriman, termasuk uji tekanan hidrolik beban penuh dan verifikasi siklus operasional.
-- **Dukungan Purna Jual** — Dukungan teknis komprehensif, ketersediaan suku cadang, dan bantuan pemecahan masalah jarak jauh untuk menjaga operasi Anda berjalan lancar.
-- **Opsi Penyesuaian** — Dimensi barel, panjang langkah, dan parameter lain dapat disesuaikan dengan kebutuhan bahan dan produksi spesifik Anda.
+**Minyak press dingin sebagai produk utama?** [HN426](/products/cold-press-hydraulic-oil-press/) (500 t) memberikan gaya lebih besar yang dibutuhkan minyak kelapa dan kenari press dingin.
 
-## Keunggulan Regional
+Dimensi dan spesifikasi lengkap setiap model: [tabel perbandingan model](/products/model-comparison/).
 
-**Asia Tenggara (Indonesia, Malaysia, Thailand, Vietnam):** HN325 cocok untuk produksi minyak kelapa dan kacang tanah skala kecil hingga menengah. Kompatibel dengan catu daya standar 220V/50Hz di wilayah ini. Opsi barel baja tahan karat tersedia untuk produksi minyak kelapa kelas pangan.
+## Panduan Biji Minyak: Rendemen & Lini
 
-**Afrika (Nigeria, Kenya, Ghana, Tanzania):** Dibangun untuk kondisi keras — desain mekanis sederhana HN325 berarti lebih sedikit kerusakan dan perbaikan yang lebih mudah. Beroperasi pada catu daya fase tunggal 220V standar atau generator portabel (minimum 5kVA). Suku cadang tersedia dari stok dengan pengiriman 3 hari ke Lagos atau Mombasa.
+Biji minyak umum yang cocok untuk HN325 meliputi **wijen, kacang tanah, kenari, biji teh (camellia), biji rami, biji rapeseed, biji bunga matahari, dan kedelai** — mencakup sebagian besar tanaman penghasil minyak. Rendemen referensi:
 
-**Timur Tengah (Arab Saudi, UEA, Mesir):** Tersedia dengan barel baja tahan karat kelas pangan untuk produksi minyak wijen bersertifikat halal. Press hidrolik statis tidak menambah panas gesekan: mempress biji mentah kering menjaga suhu tetap rendah secara alami di bawah 60°C untuk minyak kelas premium.`,
+| Biji | Rendemen | Catatan |
+|---|---|---|
+| Kacang tanah | 42–52% | Aroma kaya, minyak keemasan |
+| Wijen | 42–52% | Sangrai & press langsung |
+| Bunga matahari | 40–50% | Bersihkan, hancurkan, sangrai |
+| Biji rami | 35–40% | Panas atau dingin |
+| Rapeseed | 30–40% | Hasil tinggi, harum |
+| Biji teh | 15–35% | Warna jernih, aroma murni |
+| Kedelai | 12–18% | Panas atau dingin |
+| Kenari | 55–65% (dingin) | Hancurkan mentah, press dingin |
+| Biji jarak | 40–60% | Press panas |
+| Buah kelapa sawit | 20–25% (tandan segar) | Press panas skala kecil — konfirmasi proses Anda dengan kami |
+| Kelapa | 30–40% (dingin) | Opsi barel stainless |
+
+Angka adalah rendemen minyak kotor per 100 kg bahan baku siap press (dibersihkan, dihancurkan/disangrai sebelum press), dari uji pabrik dan catatan produksi. Rendemen aktual bervariasi menurut varietas, kadar air, suhu, dan persiapan. Bahan Anda tidak ada di daftar atau masih ragu? [Minta uji bahan kepada kami — kirimkan sampel.](/contact/)
+
+**Setiap biji butuh lini berbeda:**
+
+| Biji | Lini khas |
+|---|---|
+| Wijen | Penyangrai drum → HN325, press langsung |
+| Kacang tanah | Penghancur → penyangrai → HN325 |
+| Kedelai (panas) | Mesin pre-press → pengukus uap → HN325 |
+| Kenari (dingin) | Penghancur → HN325, tanpa sangrai |
+
+Beri tahu kami biji dan target harian Anda, kami akan menyebutkan peralatan pastinya. Lini lengkap per biji: [solusi pengolahan biji minyak](/solutions/). Fokus wijen? Lihat [konfigurasi HN325 Wijen](/products/sesame-oil-hydraulic-press/). Minyak kelapa press dingin sebagai bisnis? Lihat [mesin press hidrolik minyak kelapa](/products/coconut-oil-hydraulic-press/) dengan barel stainless kelas pangan.
+
+## Peralatan Lengkap untuk Pabrik Anda
+
+Lini HN325 tipikal: pembersih biji → penyangrai → penghancur (bila perlu) → **mesin press minyak hidrolik HN325** → filter press untuk minyak jernih. Jelajahi [seluruh peralatan pengolahan minyak](/products/), atau kirimkan bahan baku dan target harian Anda dan kami akan menyebutkan model pastinya.
+
+## Pengiriman, Garansi & Dukungan
+
+| Item | Detail |
+|---|---|
+| Waktu produksi standar | 15–25 hari kerja + pengiriman laut |
+| Produksi kustom (mis. barel stainless) | 30–45 hari + pengiriman laut |
+| Uji pra-pengiriman | Uji beban penuh kontinu 48 jam sebelum setiap pengiriman |
+| Garansi | 1 tahun + dukungan teknis seumur hidup — instalasi dan operasi dipandu via video call / WhatsApp |
+| Suku cadang | Suku cadang umum ready stock, dikirim ekspres ke seluruh dunia |
+
+Syarat pembayaran: 30% deposit saat pemesanan, 70% pelunasan sebelum pengiriman. Penawaran default FOB (CIF ke pelabuhan Anda atas permintaan). Setelah masa produksi, transit laut biasanya menambah sekitar 4–6 minggu ke pelabuhan Afrika Barat tergantung tujuan dan jadwal; dokumen pengiriman lengkap disertakan dalam setiap pengiriman.
+
+[Minta harga pabrik HN325](/contact/) atau bandingkan semua model di [tabel perbandingan](/products/model-comparison/).`,
 
   'heavy-duty-hydraulic-oil-press': `## Ringkasan
 

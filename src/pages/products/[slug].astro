@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HN325Page from '../../components/products/HN325Page.astro';
+import { hn325Content } from '../../data/hn325-page';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
 
@@ -12,8 +14,11 @@ export async function getStaticPaths() {
 }
 
 const { product } = Astro.props;
+const isHN325 = product.slug === 'standard-hydraulic-oil-press';
 const { Content } = await product.render();
 const t = getTranslations('en');
+
+const pageTitle = product.data.seoTitle?.en || product.data.title.en;
 
 const allProducts = await getCollection('products');
 const relatedProducts = product.data.related
@@ -66,7 +71,7 @@ allLd.push(productLd);
 if (faqLd) allLd.push(faqLd);
 ---
 
-<BaseLayout title={product.data.title.en} description={product.data.description?.en || `Professional ${product.data.title.en.toLowerCase()} by Haonuo Machinery.`} keywords={product.data.seoKeywords} jsonLd={allLd} ogImage={product.data.images[0] ? `https://www.hydoilpress.com${product.data.images[0]}` : undefined}>
+{isHN325 ? <HN325Page product={product} locale="en" strings={hn325Content.en} /> : <BaseLayout title={pageTitle} description={product.data.description?.en || `Professional ${product.data.title.en.toLowerCase()} by Haonuo Machinery.`} keywords={product.data.seoKeywords} jsonLd={allLd} ogImage={product.data.images[0] ? `https://www.hydoilpress.com${product.data.images[0]}` : undefined}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,7 +148,7 @@ if (faqLd) allLd.push(faqLd);
             </span>
           )}
           <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-2">
-            {product.data.title.en}
+            {pageTitle}
           </h1>
           <p class="text-steel-500 text-sm mb-6">Model: {product.data.model}</p>
 
@@ -272,6 +277,7 @@ if (faqLd) allLd.push(faqLd);
     </div>
   </section>
 </BaseLayout>
+}
 
 <script>
   // Thumbnail image switching

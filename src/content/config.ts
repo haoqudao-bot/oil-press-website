@@ -9,6 +9,12 @@ const products = defineCollection({
       ar: z.string(),
       id: z.string(),
     }),
+    seoTitle: z.object({
+      en: z.string(),
+      fr: z.string(),
+      ar: z.string(),
+      id: z.string(),
+    }).optional(),
     description: z.object({
       en: z.string(),
       fr: z.string(),

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HN325Page from '../../../components/products/HN325Page.astro';
+import { hn325Content } from '../../../data/hn325-page';
 import { getTranslations, type Locale } from '../../../i18n';
 import { getCollection } from 'astro:content';
 import { marked } from 'marked';
@@ -21,6 +23,7 @@ export async function getStaticPaths() {
 const { locale, slug } = Astro.params;
 const currentLocale = locale as Locale;
 const { product } = Astro.props;
+const isHN325 = product.slug === 'standard-hydraulic-oil-press';
 const { Content } = await product.render();
 const t = getTranslations(currentLocale);
 
@@ -111,6 +114,8 @@ const breadcrumbLd = {
 // Use localized keywords for all locales (fall back to English if no specific keywords)
 const seoKeywords = product.data.seoKeywords;
 
+const pageTitle = product.data.seoTitle?.[currentLocale] || product.data.seoTitle?.en || product.data.title[currentLocale] || product.data.title.en;
+
 const allLd = [breadcrumbLd];
 
 const productLd = {
@@ -128,7 +133,7 @@ allLd.push(productLd);
 if (faqLd) allLd.push(faqLd);
 ---
 
-<BaseLayout locale={currentLocale} title={product.data.title[currentLocale] || product.data.title.en} description={product.data.description?.[currentLocale] || product.data.description?.en || ''} keywords={seoKeywords} jsonLd={allLd} ogImage={product.data.images[0]}>
+{isHN325 ? <HN325Page product={product} locale={currentLocale} strings={hn325Content[currentLocale]} /> : <BaseLayout locale={currentLocale} title={pageTitle} description={product.data.description?.[currentLocale] || product.data.description?.en || ''} keywords={seoKeywords} jsonLd={allLd} ogImage={product.data.images[0]}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,7 +210,7 @@ if (faqLd) allLd.push(faqLd);
             </span>
           )}
           <h1 class="font-display text-4xl md:text-5xl text-charcoal-900 mb-2">
-            {product.data.title[currentLocale] || product.data.title.en}
+            {pageTitle}
           </h1>
           <p class="text-steel-500 text-sm mb-6">{t.products.model} {product.data.model}</p>
 
@@ -342,6 +347,7 @@ if (faqLd) allLd.push(faqLd);
     </div>
   </section>
 </BaseLayout>
+}
 
 <script>
   // Thumbnail image switching

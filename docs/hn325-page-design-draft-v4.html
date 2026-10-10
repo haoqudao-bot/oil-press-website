@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HN325 页面设计稿 V4.2 — 采购落地信息补全</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel-50:#f0f4f8; --steel-100:#d9e2ec; --steel-200:#bcccdc; --steel-500:#627d98; --steel-600:#486581; --steel-900:#1B3A5C;
+    --amber-400:#F0B429; --amber-500:#E8A838; --amber-600:#D69E2E;
+    --charcoal-900:#1A1A2E; --charcoal-700:#3D3D56;
+    --green:#059669; --green-soft:#ecfdf5; --green-line:#a7f3d0;
+    --ink-2:#486581; --line:#bcccdc;
+    --note-bg:#fffbeb; --note-line:#D69E2E; --note-ink:#92400e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',"Microsoft YaHei",sans-serif;background:#e6edf3;color:var(--charcoal-900);line-height:1.6;padding-bottom:60px}
+  .display{font-family:'Bebas Neue',sans-serif;letter-spacing:.5px}
+
+  .draft-banner{background:#102a43;color:#d9e2ec;padding:13px 20px;font-size:13px}
+  .draft-banner b{color:var(--amber-400)}
+
+  .note-card{max-width:1180px;margin:20px auto;background:var(--note-bg);border:1px dashed var(--note-line);border-radius:10px;padding:16px 22px;font-size:13px;color:var(--note-ink)}
+  .note-card h2{font-size:15px;margin-bottom:8px}
+  .note-card code{background:#fef3c7;padding:1px 6px;border-radius:4px;font-size:12px;color:#78350f;word-break:break-all}
+  .note-card ul{margin:6px 0 0 18px}
+  .note-card li{margin:3px 0}
+
+  .zone-label{background:var(--note-bg);border-left:4px solid var(--note-line);padding:7px 14px;font-size:12.5px;color:var(--note-ink);border-radius:0 8px 8px 0;margin:24px 0 8px}
+
+  .page{max-width:1180px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .section{padding:28px 36px;border-bottom:1px solid var(--steel-100)}
+  .section:last-child{border-bottom:none}
+
+  .crumb{font-size:12px;color:var(--steel-500);padding:12px 36px;background:var(--steel-50);border-bottom:1px solid var(--steel-100)}
+  .crumb a{color:var(--steel-500);text-decoration:none}
+
+  .hero{background:var(--steel-50)}
+  .hero-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .hero-img{background:repeating-linear-gradient(45deg,var(--steel-100),var(--steel-100) 12px,var(--steel-50) 12px,var(--steel-50) 24px);border:1px solid var(--line);border-radius:10px;height:400px;display:flex;align-items:center;justify-content:center;color:var(--steel-500);font-size:13px;text-align:center;line-height:1.9}
+  .cat-chip{display:inline-block;background:var(--amber-400);color:var(--charcoal-900);font-size:13px;font-weight:600;padding:4px 14px;border-radius:999px;margin-bottom:10px}
+  .hero h1{font-size:36px;line-height:1.1;color:var(--charcoal-900)}
+  .model-line{font-size:15px;color:var(--steel-500);margin:6px 0 8px}
+  .best-line{display:inline-block;background:linear-gradient(90deg,#fdf3dd,#f8e7bd);border:1px solid var(--amber-400);color:#8a6116;font-size:13.5px;font-weight:700;border-radius:8px;padding:6px 14px;margin-bottom:12px}
+  .hero .sub{font-size:15px;color:var(--ink-2);margin-bottom:12px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+  .badge{background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:12.5px;color:var(--charcoal-700)}
+  .badge b{color:var(--steel-600)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 12px}
+  .btn{display:inline-block;padding:12px 26px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;transition:all .3s}
+  .btn-amber{background:var(--amber-500);color:var(--charcoal-900)}
+  .btn-amber:hover{background:var(--amber-600)}
+  .btn-outline{border:2px solid var(--steel-600);color:var(--steel-600);padding:10px 24px;background:#fff}
+  .trust-bar{display:flex;align-items:center;gap:8px;background:var(--green-soft);border:1px solid var(--green-line);color:var(--green);border-radius:8px;padding:10px 16px;font-size:13.5px;font-weight:600;flex-wrap:wrap}
+
+  .section h2{font-size:25px;margin-bottom:12px}
+  .section h3{font-size:16px;margin:0 0 6px}
+  .section p{font-size:14.5px;color:var(--ink-2);margin-bottom:10px}
+  .section a{color:var(--steel-600);font-weight:600}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+  @media(max-width:860px){.two-col{grid-template-columns:1fr}}
+  .col-module{background:var(--steel-50);border:1px solid var(--steel-100);border-radius:10px;padding:18px 20px}
+  .col-module h3{margin-bottom:8px}
+
+  table{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0;background:#fff}
+  th{background:var(--steel-50);text-align:left;padding:8px 10px;border:1px solid var(--steel-200);font-size:11.5px;color:var(--steel-600)}
+  td{padding:8px 10px;border:1px solid var(--steel-200)}
+  tr.hl td{background:#fdf3dd;font-weight:700}
+  .small-note{font-size:11.5px;color:var(--steel-500)}
+
+  .cta-strip{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--steel-50);border:1px solid var(--steel-200);border-radius:10px;padding:16px 22px;flex-wrap:wrap;margin-top:18px}
+  .cta-strip .t{font-size:16px;font-weight:700}
+  .cta-strip .s{font-size:13px;color:var(--ink-2)}
+
+  .flow-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:700px){.flow-cols{grid-template-columns:1fr}}
+  .flow-card{background:var(--steel-50);border-radius:10px;padding:16px}
+  .flow-card h3{margin-top:0}
+  .flow-card ol{margin-left:18px;font-size:13.5px;color:var(--ink-2)}
+  .flow-card li{margin:5px 0}
+
+  details{border:1px solid var(--steel-200);border-radius:8px;margin-bottom:10px;background:#fff}
+  summary{padding:12px 16px;font-size:14.5px;font-weight:600;cursor:pointer;list-style:none}
+  summary:before{content:"+";float:left;margin-right:10px;color:var(--steel-600);font-weight:700}
+  details[open] summary:before{content:"–"}
+  details p{padding:0 16px 14px 36px;font-size:14px;color:var(--ink-2)}
+
+  .cta-final{background:var(--charcoal-900);color:#d9e2ec;text-align:center}
+  .cta-final h2{color:#fff}
+  .cta-final p{color:#9fb3c8;max-width:560px;margin:0 auto 18px}
+  .cta-final .btn-outline{border-color:#9fb3c8;color:#fff;background:transparent}
+  .cta-final .trust-mini{font-size:12.5px;color:#9fb3c8;margin-top:16px}
+  .cta-final .trust-mini b{color:#4ade80}
+</style>
+</head>
+<body>
+
+<div class="draft-banner">
+  <b>V4.4 设计稿</b> — 饼面压力修正（HN300=42/Ø300、HN325≈27/Ø390，按 吨位÷桶面积 核算）；批容量改 20–100 kg；油料句改列举式；产能标注"估算非保证"+双桶并行机制；出油率注明统计口径+棕榈行工艺待确认；415V/付款30-70/FOB/海运/售后已入 FAQ。
+</div>
+
+<div class="note-card">
+  <h2>SEO 头部方案（代码层）</h2>
+  <ul>
+    <li><b>title</b>：<code>Hydraulic Oil Press Machine for Small Business — 325 Ton | Haonuo</code></li>
+    <li><b>H1</b>：<code>COMMERCIAL HYDRAULIC OIL PRESS MACHINE FOR SMALL BUSINESS</code> + <code>Model: HN325</code>（原站同构）</li>
+    <li><b>meta description</b>：<code>Commercial hydraulic oil press machine for small business and oil mills. 325-ton force, 20–100 kg batches, hot &amp; cold pressing. Factory-direct, 1-year warranty.</code></li>
+    <li><b>schema</b>：Product + FAQPage；油料表同步考虑 FAQ/ItemList schema</li>
+  </ul>
+</div>
+
+<div class="page">
+
+  <div class="crumb"><a href="#">Home</a> › <a href="#">Products</a> › <a href="#">Hydraulic Oil Press</a> › HN325 Standard</div>
+
+  <!-- Hero -->
+  <div class="zone-label">① 首屏 — 金字条“系列内最畅销”；徽章写全 hot/cold pressing；价格钩子已删</div>
+  <section class="section hero">
+    <div class="hero-grid">
+      <div class="hero-img">
+        <div>【素材占位】<br>主图：全机 45° 实拍<br>角标小图：出油特写<br>★ 建议加 30 秒压榨视频</div>
+      </div>
+      <div>
+        <span class="cat-chip">Hydraulic Oil Press</span>
+        <h1 class="display">COMMERCIAL HYDRAULIC OIL PRESS MACHINE FOR SMALL BUSINESS</h1>
+        <div class="model-line">Model: HN325 — Standard Hydraulic Oil Press</div>
+        <div class="best-line">★ Best-selling model — best value in our lineup</div>
+        <p class="sub">A 325-ton hydraulic press built for small and mid-size oil mills. 20–100 kg per batch, hot and cold pressing in one machine, factory-direct from the manufacturer.</p>
+        <div class="badges">
+          <span class="badge"><b>325 ton</b> force</span>
+          <span class="badge"><b>≈27 MPa</b> cake pressure</span>
+          <span class="badge"><b>60 MPa</b> system pressure</span>
+          <span class="badge"><b>20–100 kg</b> per batch</span>
+          <span class="badge"><b>30–40 min</b> hot pressing · <b>~2 h</b> cold pressing</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-amber" href="#">Request Factory Price</a>
+          <a class="btn btn-outline" href="#">Get Quote on WhatsApp</a>
+        </div>
+        <div class="trust-bar">🛡 1-Year Warranty&nbsp;•&nbsp;Lifetime Technical Support&nbsp;•&nbsp;48-h Full-Load Test</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 规格 + 产能 -->
+  <div class="zone-label">② 规格 + 产能 两栏 — 桶径/桶高拆行可定制；Operators 已删；380V/50Hz；产能含每批周期；整机重量尺寸补入</div>
+  <section class="section">
+    <h2>Specifications &amp; Daily Output</h2>
+    <div class="two-col">
+      <div class="col-module">
+        <h3>HN325 Specifications</h3>
+        <table>
+          <tr><td>Pressing force</td><td><b>325 tons</b></td></tr>
+          <tr><td>Cake surface pressure</td><td><b>≈27 MPa</b> (Ø390 barrel)</td></tr>
+          <tr><td>Hydraulic system pressure</td><td>60 MPa</td></tr>
+          <tr><td>Barrel diameter</td><td>Ø390 mm standard · 300/480/560/630 mm optional</td></tr>
+          <tr><td>Barrel height</td><td>800 mm standard (custom heights available)</td></tr>
+          <tr><td>Piston stroke</td><td>850 mm (presses to barrel bottom)</td></tr>
+          <tr><td>Batch capacity</td><td>About 20–100 kg per batch (Ø390 barrel; 100 kg max, crushed seed)</td></tr>
+          <tr><td>Power</td><td>380V / 50Hz</td></tr>
+          <tr><td>Machine weight</td><td>1.3–1.4 t (single barrel)</td></tr>
+          <tr><td>Dimensions</td><td>800 × 1100 × 2450 mm</td></tr>
+          <tr><td>Residual oil in cake</td><td>6–8% typical (the pressed cake sells as animal feed)</td></tr>
+        </table>
+      </div>
+      <div class="col-module">
+        <h3>How Much Per Day? (8-h shift)</h3>
+        <table>
+          <tr><th>Setup</th><th>Hot press</th><th>Cold press</th></tr>
+          <tr><td>Single barrel</td><td>~900–1,000 kg</td><td>~300–400 kg</td></tr>
+          <tr><td>Double barrel</td><td>~1,200–1,400 kg</td><td>~600–700 kg</td></tr>
+        </table>
+        <h3 style="margin-top:12px">Batch Cycle Time</h3>
+        <table>
+          <tr><td>Hot pressing</td><td>30–40 min press + 10–15 min loading &amp; cake removal</td></tr>
+          <tr><td>Cold pressing</td><td>~2 h press + loading &amp; cake removal</td></tr>
+        </table>
+        <p class="small-note">Estimated from cycle times at full 100 kg batches — <b>not a guaranteed capacity</b>; actual output depends on seed, staff rhythm and preparation. Fluffy materials fill the barrel below 100 kg, so plan proportionally lower. In the double-barrel setup, one barrel presses while the other is unloaded and refilled — output nearly doubles.</p>
+        <h3 style="margin-top:12px">Power &amp; Installation</h3>
+        <p style="font-size:13.5px">Runs on a standard <b>380V / 50Hz</b> supply. <b>415V custom builds available on request</b> — for example for Nigeria and other West African grids; tell us your local standard when requesting a quote. No special foundation needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 对比表 -->
+  <div class="zone-label">③ 对比表 6 列 — 饼面压力为工厂确认数；HN300 饼面压力待补（留 —）；配置统一</div>
+  <section class="section">
+    <h2>Which Model Fits Your Mill?</h2>
+    <table>
+      <tr><th>Model</th><th>Force</th><th>Cake pressure</th><th>Barrel Ø (standard)</th><th>Configuration</th><th>Best for</th></tr>
+      <tr><td><a href="#">HN300</a></td><td>300 t</td><td>42 MPa</td><td>Ø300 mm</td><td>Single / double barrel</td><td>Smaller batches (~60 kg), tightest budget</td></tr>
+      <tr class="hl"><td>HN325</td><td>325 t</td><td>27 MPa</td><td>Ø390 mm (customizable)</td><td>Single / double barrel</td><td>Small &amp; mid-size mills, all-purpose</td></tr>
+      <tr><td><a href="#">HN365</a></td><td>365 t</td><td>30 MPa</td><td>Ø390 mm (customizable)</td><td>Single / double barrel</td><td>Higher daily volume, less waiting</td></tr>
+      <tr><td><a href="#">HN426</a></td><td>500 t</td><td>42 MPa</td><td>Ø390 mm (customizable)</td><td>Single / double barrel</td><td>Cold press business: coconut, walnut</td></tr>
+      <tr><td><a href="#">HN500</a></td><td>620 t</td><td>52 MPa</td><td>Ø390 mm (customizable)</td><td>Single / double barrel</td><td>Hardest in-shell materials</td></tr>
+    </table>
+    <p class="small-note">HN325 or HN365? Up to ~1 ton of hot-pressed seed per day, the double-barrel HN325 covers it. Beyond that, the HN365's independent stations cut waiting time — send us your seed and daily target for a throughput calculation.</p>
+    <div class="cta-strip">
+      <div><div class="t">Not sure which one? Tell us your seed and daily target.</div><div class="s">Our engineers reply with the right model and a factory quote — within one business day.</div></div>
+      <a class="btn btn-amber" href="#">Get My Recommendation</a>
+    </div>
+  </section>
+
+  <!-- 油料指南 + 桶径选择 -->
+  <div class="zone-label">④ 油料指南 + 整线配置并排 — 参考站参数表口径；出油率带限定语；桶径表已删（降级到规格行+FAQ）；整线配置承接图1内容</div>
+  <section class="section">
+    <h2>Oilseed Guide: Yield &amp; Lineup</h2>
+    <p>Common oilseeds suited to the HN325 include <b>sesame, peanut, walnut, camellia (tea) seed, flaxseed, rapeseed, sunflower seed and soybean</b> — covering most oil-bearing crops. Reference yields:</p>
+    <div class="two-col">
+      <div class="col-module">
+        <h3>Yield by Seed (hot pressing unless noted)</h3>
+        <table>
+          <tr><th>Seed</th><th>Yield</th><th>Notes</th></tr>
+          <tr><td>Peanut</td><td>42–52%</td><td>Rich aroma, golden oil</td></tr>
+          <tr><td>Sesame</td><td>42–52%</td><td>Roast &amp; press direct</td></tr>
+          <tr><td>Sunflower seed</td><td>40–50%</td><td>Clean, crush, roast</td></tr>
+          <tr><td>Flaxseed</td><td>35–40%</td><td>Hot or cold</td></tr>
+          <tr><td>Rapeseed</td><td>30–40%</td><td>High-yield, fragrant</td></tr>
+          <tr><td>Tea seed</td><td>15–35%</td><td>Clear color, pure aroma</td></tr>
+          <tr><td>Soybean</td><td>12–18%</td><td>Hot or cold</td></tr>
+          <tr><td>Walnut</td><td>55–65% <i>cold</i></td><td>Crush raw, press cold</td></tr>
+          <tr><td>Castor seed</td><td>40–60%</td><td>Hot pressing</td></tr>
+          <tr><td>Palm fruit</td><td>20–25% <i>(fresh fruit bunch)</i></td><td>Small-batch hot pressing — confirm your process with us</td></tr>
+          <tr><td>Coconut</td><td>30–40% <i>cold</i></td><td>Stainless barrel option</td></tr>
+        </table>
+        <p class="small-note">Figures are gross oil yield per 100 kg of prepared raw material (cleaned, crushed/roasted before pressing), from factory tests and production records. Actual yield varies with variety, moisture, temperature and preparation. Not on the list, or unsure about your material? <b>Ask us for a material test — send us a sample.</b></p>
+      </div>
+      <div class="col-module">
+        <h3>Every Seed Needs a Different Line</h3>
+        <table>
+          <tr><th>Seed</th><th>Typical line</th></tr>
+          <tr><td>Sesame</td><td>Drum roaster → HN325, press direct</td></tr>
+          <tr><td>Peanut</td><td>Crusher → roaster → HN325</td></tr>
+          <tr><td>Soybean (hot)</td><td>Pre-press machine → steam cooker → HN325</td></tr>
+          <tr><td>Walnut (cold)</td><td>Crusher → HN325, no roasting</td></tr>
+        </table>
+        <p style="font-size:13.5px;margin-top:10px">Tell us your seed and daily target — we will list the exact equipment. Full lineups per seed: <a href="#">oilseed processing solutions</a>. Detailed hot &amp; cold workflows: <a href="#">process guide</a>.</p>
+        <p style="font-size:13.5px">Walnut and apricot kernel press well on the HN325 in cold process; for a dedicated hard-shell cold-press business, the <a href="#">HN426</a> adds force and pressure. Need a sesame-specific or stainless barrel? See the <a href="#">HN325 Sesame configuration</a> or the <a href="#">coconut-oil hydraulic press</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 配套+交期 -->
+  <section class="section">
+    <h2>Complete Setup for Your Mill</h2>
+    <p>A typical line around the HN325: seed cleaner &amp; sorter → roaster (sets the aroma) → crusher &amp; steamer (where needed) → <b>the HN325</b> → oil filter press (filters solids out of the crude oil for clear, sellable oil). <a href="#">Browse the full equipment range</a> or send us your raw material — we will list the exact models.</p>
+    <h2 style="margin-top:20px">Delivery, Warranty &amp; Support</h2>
+    <table>
+      <tr><td style="width:38%">Standard build lead time</td><td>15–25 working days + sea freight</td></tr>
+      <tr><td>Custom build (e.g. stainless barrel)</td><td>30–45 days + sea freight</td></tr>
+      <tr><td>Pre-shipment test</td><td>48-hour continuous full-load test before every shipment</td></tr>
+      <tr><td>Warranty</td><td>1 year + lifetime technical support — installation and operation guided by video call / WhatsApp</td></tr>
+      <tr><td>Spare parts</td><td>Common parts in stock, express shipped worldwide</td></tr>
+    </table>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <details open><summary>How does a hydraulic oil press machine work?</summary><p>The HN325 uses a hydraulic cylinder to press seed inside an enclosed barrel. Cleaned, conditioned (and usually roasted) seed is loaded in batches of up to 100 kg; the 325-ton ram applies static pressure for 30–40 minutes (hot) or about 2 hours (cold), squeezing oil through the barrel's slot walls. Static pressing adds no friction heat, so raw dried seed stays naturally below 60°C.</p></details>
+    <details><summary>How much oil can I press per day?</summary><p>With hot pressing and full 100 kg batches: roughly 900–1,000 kg per 8-hour shift with a single barrel, or 1,200–1,400 kg with the double-barrel setup (one barrel presses while the other is unloaded and refilled). Cold pressing runs slower: about 300–400 kg (single) or 600–700 kg (double). These are estimates from cycle times, not guarantees. Smaller 20–50 kg batches work the same way — handy for testing or niche seeds.</p></details>
+    <details><summary>What seeds can it press?</summary><p>Common oilseeds include sesame, peanut, walnut, camellia (tea) seed, flaxseed, rapeseed, sunflower seed and soybean, among most other oil-bearing crops. Walnut and apricot kernel press well in cold process; for a dedicated hard-shell cold-press business, see the higher-force <a href="#">HN426</a>. The yield table above shows reference ranges.</p></details>
+    <details><summary>HN325 or HN365 — which should I choose?</summary><p>Up to about a ton of hot-pressed seed per day, the double-barrel HN325 is enough. The HN365 (365 t, higher cake pressure) adds force and cuts waiting time between cycles for larger volumes. Send us your seed type and daily target for a throughput calculation.</p></details>
+    <details><summary>My budget is tight — is the older HN300 enough?</summary><p>The HN300 remains in production and shares the hydraulic design and common wear parts with the HN325. Two differences: 300 t force (vs 325 t) and a smaller Ø300 mm barrel (same 800 mm height), which raises cake pressure to about 42 MPa but holds a smaller batch — about 55–60 kg of crushed seed. Smaller daily batches on a tight budget: HN300. Full 100 kg batches: HN325.</p></details>
+    <details><summary>What power supply does it need?</summary><p>The HN325 is wired for 380V / 50Hz as standard. If your country runs on 415V (common in Nigeria and other West African grids), order the 415V version — tell us your local standard when requesting a quote.</p></details>
+    <details><summary>What are the payment and shipping terms?</summary><p>Payment: 30% deposit with your order, 70% balance before shipment. Shipping: quoted FOB by default (CIF to your port on request), by sea. After the 15–25 working day build time, ocean transit typically adds about 4–6 weeks to West African ports depending on destination and schedule. Full shipping documents are provided with every shipment.</p></details>
+    <details><summary>Can I get a stainless steel or custom barrel?</summary><p>Yes — barrel diameter (300–630 mm), height and food-grade stainless steel are available as custom options. Custom configurations take 30–45 days to build; standard ones 15–25 working days.</p></details>
+  </section>
+
+  <!-- 底部 CTA -->
+  <section class="section cta-final">
+    <h2 class="display" style="font-size:30px">GET YOUR HN325 FACTORY PRICE</h2>
+    <p>Tell us your seed type and daily target — our engineers will recommend the right model, confirm the lead time, and quote within one business day.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-amber" href="#">Request a Quote</a>
+      <a class="btn btn-outline" href="#">Chat on WhatsApp</a>
+    </div>
+    <div class="trust-mini"><b>✓</b> 48-h tested &nbsp;·&nbsp; <b>✓</b> 1-yr warranty &nbsp;·&nbsp; <b>✓</b> Factory-direct, MOQ 1 set &nbsp;·&nbsp; <b>✓</b> 380V/50Hz</div>
+  </section>
+</div>
+
+<div class="note-card">
+  <h2>📎 待你确认/提供</h2>
+  <ul>
+    <li><b>V4.2 已更新</b>：415V 定制版口径（删发电机）、付款 30/70 + FOB 默认、海运 4–6 周弹性话术、售后视频指导、Palm fruit 行、"其他油料问我们"出口句、饼渣卖饲料白话化、FAQ 去数字重复；桶径表已删（降级到规格行 + FAQ）</li>
+    <li><b>"同机可换桶"</b>：设计稿推断表述已从正文/FAQ 删除，改为"下单时确定桶型"；如实际支持事后换桶可再加回</li>
+    <li><b>向工厂要数据（另一 AI 的 P0 评审，落线前确认）</b>：① 单桶/双桶实测产能 + 测试油料 + 装卸料是否计入周期；② 出油率的统计口径（毛出油率 vs 实收油量）与测试条件（品种/水分/温度）；③ 棕榈果 HN325 工艺是否适用；④ HN426 饼面 42 / HN500 饼面 52 MPa 的核算依据。拿到实测数据后替换页面估算值</li>
+    <li><b>HN300 口径修正（重要）</b>：与 HN325 的差别 = 吨位 300t + 桶径 Ø300（桶高/行程不变）→ 每批约 55–60kg（56.5L 桶，几何推算待工厂确认）、饼面 42 MPa、<b>桶不通用</b>；旧记忆"HN300/HN325 共用桶"和"短行程"说法作废；旧全站口径"HN300 写 100kg/批"为错误简化，批量阶段修正 HN300 产品页四语</li>
+    <li><b>V4.4 已更新</b>：饼面压力修正（HN300=42、HN325≈27）、批容量 20–100 kg、油料句列举式、产能"估算非保证"+双桶机制说明、出油率统计口径+棕榈工艺确认、meta 同步 20–100 kg</li>
+    <li><b>V4.3 已更新</b>：出油率保守化修正（葵花 40–50%、核桃冷榨 55–65%、棕榈 20–25% 鲜果串口径），FAQ 同步</li>
+    <li><b>素材</b>：实拍图 2–3 张 + 30 秒压榨视频 + 客户足迹（如有）+ <b>油料整线图组</b>（每油料一组设备实拍，供方案页用，形式参考另一站）</li>
+    <li><b>方案页承接</b>：hot &amp; cold pressing process guide / oilseed processing solutions 两个链接为占位，对应内容后续在方案页/博客落地</li>
+  </ul>
+</div>
+
+</body>
+</html>
