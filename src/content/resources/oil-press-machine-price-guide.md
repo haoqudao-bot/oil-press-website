@@ -1,9 +1,9 @@
 ---
 title:
-  en: "Oil Press Machine Price Guide 2025: What Affects Your Quote"
-  fr: "Guide des prix des presses à huile 2025 : ce qui influence votre devis"
-  ar: "دليل أسعار مكابس الزيت الهيدروليكية 2025: ما الذي يؤثر على عرض السعر"
-  id: "Panduan Harga Mesin Press Minyak 2025: Apa yang Mempengaruhi Penawaran"
+  en: "Oil Press Machine Price Guide 2026: What Affects Your Quote"
+  fr: "Guide des prix des presses à huile 2026 : ce qui influence votre devis"
+  ar: "دليل أسعار مكابس الزيت الهيدروليكية 2026: ما الذي يؤثر على عرض السعر"
+  id: "Panduan Harga Mesin Press Minyak 2026: Apa yang Mempengaruhi Penawaran"
 description:
   en: "Oil press machine price guide: what shapes the quote (capacity, pressure, configuration, shipping terms, materials), the total landed cost breakdown, and how to plan your budget without published price lists."
   fr: "Guide des prix des presses à huile : ce qui forme le devis (capacité, pression, configuration, conditions d'expédition, matériaux), le détail du coût de débarquement total, et comment budgétiser sans grille tarifaire publique."
@@ -63,11 +63,19 @@ Each tier's equipment list is fixed; the price follows from it. Telling us your 
 
 ## Why Same-Tonnage Presses Are Not the Same Price
 
-A 325-ton press from two suppliers is not interchangeable. Three build-quality differences explain price gaps:
+A 325-ton press from two suppliers is not interchangeable. Four build-quality differences explain the price gap:
 
-- **Cylinder steel.** A 27SiMn alloy-steel cylinder, heat-treated and pressure-tested, costs more than one machined from ordinary carbon steel. The difference shows up after a year of daily 50 MPa cycles.
-- **Hydraulic pump and valve block.** Industrial-rated pumps with pressure relief and reliable seal life cost more than hobby-grade components, and they fail less often under continuous use.
-- **Barrel surface.** Nickel-plated barrels (inside and out) prevent bare carbon steel from contacting the oil. Uncoated barrels leak iron into the oil and rust faster.
+**A. Hydraulic cylinder — 27SiMn alloy steel.**
+Built with 27SiMn alloy steel, the cylinder holds its strength and toughness under 60–75 MPa (2,200 psi+). Bore ranges from 325 mm (HN325) to 500 mm (HN500); every cylinder is machined, heat-treated, and pressure-tested before assembly. A cylinder machined from ordinary carbon steel costs less but will not survive years of daily high-pressure cycling.
+
+**B. Press barrel — Q690 high-strength steel.**
+Welded from Q690 steel with seamless flange rings, ground and electroplated to prevent rust. Slotted drainage delivers roughly 15× the oil flow of drilled barrels — faster oil flow, higher yield. Cheaper barrels use drilled drainage and thinner steel; the difference shows up in both output rate and barrel life.
+
+**C. Base frame — Q355B structural steel.**
+A 30 mm plate on the HN426 and 50 mm on the HN500. Thick Q355B steel means the frame will not deform under years of ultra-high-pressure cycling (tested beyond 500 tons). A lighter frame flexes under load, misaligns the cylinder and barrel, and accelerates seal wear.
+
+**D. Motors & valves — pure copper · solenoid.**
+A 6-pole pure-copper 2.2 kW motor runs quietly and stays cool under continuous use. Rust-proof electroplated valves with enlarged oil ports give faster flow, fewer leaks, and smooth shock-free cycling. Motors wound with aluminium or thin copper, and valves with small ports, cut the invoice price but raise operating temperature and failure rate.
 
 A lower upfront price that swaps these components is not a discount; it is a different, lower-duty machine.
 
