@@ -93,54 +93,31 @@ Syarat pembayaran: 30% deposit saat pemesanan, 70% pelunasan sebelum pengiriman.
 
   'heavy-duty-hydraulic-oil-press': `## Ringkasan
 
-Mesin press minyak hidrolik tugas berat HN355 memproses hingga 100 kg biji minyak per batch selama 40–90 menit, ditujukan untuk pabrik minyak yang membutuhkan gaya press lebih besar dari HN325 standar. Mesin ini menghasilkan gaya press 360 ton pada tekanan sistem 60 MPa di atas rangka pelat baja 3 cm, meninggalkan 6–8% minyak sisa dalam kue press untuk sebagian besar biji (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan). Motor 2,2 kW dan kru satu hingga dua orang menjaga biaya operasional tetap rendah.
+> **Mencari model terbaru?** Sebagian besar pembeli memilih [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press/) (500 ton, 42 MPa) atau [HN500 Tekanan Ultra Tinggi](/products/ultra-high-pressure-hydraulic-oil-press/) (620 ton) saat ini. HN400 tetap diproduksi.
 
-Mesin Press Minyak Hidrolik Berat HN355 dibangun untuk operator yang menuntut daya press lebih besar dan daya tahan lebih tinggi. Menampilkan rangka pelat baja tebal 3 cm yang kokoh, model ini memberikan gaya press 360 ton dengan tekanan permukaan kue press 30,15 MPa — peningkatan berarti dari HN325 standar. Biji minyak konvensional ditekan secara penuh dalam satu siklus, memaksimalkan hasil minyak dan meminimalkan pemborosan.
+HN400 adalah mesin press minyak hidrolik 500 ton dengan silinder 400 mm dan barel 390 mm, memberikan 38 MPa tekanan permukaan kue. Mendukung press panas dan dingin, memproses sekitar 100 kg per batch. Motor 2,2 kW berjalan pada listrik standar.
 
-Rangka baja yang diperkuat tidak hanya menahan tekanan operasional yang lebih tinggi tetapi juga memastikan stabilitas struktural jangka panjang di bawah penggunaan berat yang terus-menerus. Jika tuntutan produksi Anda melampaui apa yang dapat diberikan model standar, HN355 menyediakan margin daya tambahan yang Anda butuhkan tanpa beralih ke spesialis press dingin.
+Halaman ini menjadi referensi bagi pembeli yang mencari HN400 secara spesifik.
 
-## Keunggulan Utama
+## HN400 vs Model Terbaru
 
-- **Rangka Baja Berat** — Konstruksi pelat baja tebal 3 cm memberikan kekakuan unggul dan masa pakai lebih panjang dalam kondisi yang menuntut.
-- **Tekanan Kue Press Lebih Tinggi** — Tekanan permukaan kue press 30,15 MPa memastikan bahan konvensional ditekan secara penuh dalam satu siklus, menyisakan lebih sedikit minyak sisa dalam kue press.
-- **Gaya Press 360 Ton** — 10% lebih banyak gaya daripada HN325, memberi Anda ruang untuk menangani bahan yang lebih keras dengan percaya diri.
-- **Produktivitas Barel Ganda** — Konfigurasi barel ganda dengan rel geser ganda memungkinkan Anda memuat satu barel sementara yang lain sedang ditekan, secara signifikan meningkatkan output harian.
-- **Ekstraksi Satu Siklus** — Sebagian besar bahan konvensional mencapai ekstraksi minyak lengkap dalam satu siklus penekanan, mengurangi waktu pemrosesan dan biaya energi.
+| Parameter | HN400 (Generasi Sebelumnya) | HN426 (Dingin) | HN500 (Ultra) |
+|-----------|-----------------------------|----------------|---------------|
+| Gaya Press | 500 ton | 500 ton | 620 ton |
+| Tekanan Kue | 38 MPa | 42 MPa | 52 MPa |
+| Barel | 390 mm | 390 mm | 390 mm |
 
-## Teknologi Inti
+[Bandingkan HN400 dengan semua model →](/products/model-comparison/)
 
-- **Barel Alur Tipe Batang** — Desain barel alur eksklusif Haonuo menyediakan area ekstraksi minyak yang jauh lebih besar dibandingkan barel berlubang tradisional. Minyak mengalir lebih cepat dan lebih jernih, dengan hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan). Tidak ada penyumbatan, tidak perlu pembersihan antar batch.
-- **Sistem Hidrolik Jerman** — Stasiun pompa hidrolik gabungan tekanan ultra-tinggi dengan pompa ganda tinggi-rendah. Tekanan kerja hingga 60 MPa dengan pengembalian silinder cepat.
-- **Pengeluaran Kue Press 4 Kait** — Mekanisme 4 kait inovatif memastikan pengeluaran kue press yang mudah dan andal — bahkan setelah penekanan semalam.
-- **Rangka Baja Karbon Tinggi** — Baja yang diperkeras frekuensi tinggi dan perlakuan panas untuk layanan tahan lama. Umur layanan aktual bergantung pada kondisi operasional dan perawatan di bawah gaya press 360 ton.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dari pemuatan hingga minyak jadi dalam hitungan menit.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi daya dibandingkan mesin press generasi sebelumnya (penghematan aktual bervariasi tergantung kondisi operasional).
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
+## Aplikasi yang Sesuai
 
-## Aplikasi & Bahan yang Sesuai
+Press panas dan dingin: biji teh, rapeseed, kacang tanah, kedelai, inti walnut, biji rami. Untuk biji yang lebih keras, lihat [HN500](/products/ultra-high-pressure-hydraulic-oil-press/).
 
-HN355 unggul dengan biji minyak konvensional dan bahan yang mendapat manfaat dari gaya press lebih tinggi:
+## Masih Diproduksi
 
-- **Biji Minyak**: Biji teh, biji rapeseed, kacang tanah, kedelai, biji rami, biji lak
-- **Bahan Lebih Keras**: Biji yang sedikit lebih keras dan bahan yang mungkin tidak diekstraksi sepenuhnya oleh HN325 dalam satu kali proses
+Waktu produksi: 15–25 hari kerja.
 
-> **Catatan**: Untuk aplikasi press dingin yang melibatkan bahan bercangkang keras seperti walnut dan biji aprikot, pertimbangkan [model HN426 Press Dingin](/products/cold-press-hydraulic-oil-press).
-
-## Mengapa Memilih Haonuo
-
-- **Harga Langsung Pabrik** — Beli langsung dari produsen dan dapatkan peralatan kelas industri dengan harga kompetitif, tanpa markup distributor.
-- **Dibuat Tahan Lama** — Rangka pelat baja tebal 3 cm direkayasa untuk bertahun-tahun layanan yang andal, bahkan di bawah operasi berat yang terus-menerus.
-- **Jaminan Kualitas** — Setiap mesin diuji beban penuh dan diperiksa sebelum meninggalkan pabrik, memastikan memenuhi standar performa ketat kami.
-- **Dukungan Purna Jual** — Dari panduan instalasi hingga suku cadang dan pemecahan masalah, tim teknis kami siap membantu Anda memaksimalkan waktu operasi.
-- **Opsi Penyesuaian** — Dimensi barel dan panjang langkah dapat disesuaikan dengan kebutuhan bahan dan produksi spesifik Anda.
-
-## Keunggulan Regional
-
-**Asia Tenggara (Indonesia, Malaysia, Thailand, Vietnam):** Gaya press 360 ton HN355 sangat cocok untuk ekstraksi minyak inti sawit. Kapasitas lebih tinggi dari HN325 membuatnya cocok untuk operasi minyak sawit yang berkembang di seluruh wilayah.
-
-**Afrika (Nigeria, Kenya, Ghana, Tanzania):** HN355 adalah model kami yang paling populer di Afrika. Konstruksi beratnya menangani sifat abrasif biji kapas dan inti sawit tanpa keausan berlebihan. Operasi sederhana — hanya dibutuhkan 1-2 pekerja. Kompatibel dengan generator minimum 5,5kVA.
-
-**Timur Tengah (Arab Saudi, UEA, Mesir):** Sangat baik untuk produksi minyak wijen dan walnut dengan kemampuan press dingin. Opsi barel ganda menggandakan throughput untuk operasi komersial.`,
+[Minta penawaran HN400](/contact/) atau [bandingkan model →](/products/model-comparison/)`,
 
   'cold-press-hydraulic-oil-press': `## Ringkasan
 
@@ -198,173 +175,91 @@ HN426 menangani semua bahan di atas dengan hasil minyak yang sangat baik. Untuk 
 
   'high-pressure-hydraulic-oil-press': `## Ringkasan
 
-Mesin press minyak hidrolik tekanan tinggi HN480 menghasilkan gaya press diperkirakan 560 ton pada tekanan sistem 72 MPa, berada di antara model cold press HN426 dan andalan HN500 untuk pabrik minyak skala menengah hingga besar. Mesin ini menangani ekstraksi minyak konvensional maupun cold press dalam batch 40–90 menit tergantung bahan, meninggalkan 6–8% minyak sisa dalam kue press (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan).
+> **Mencari model terbaru?** [HN500 Tekanan Ultra Tinggi](/products/ultra-high-pressure-hydraulic-oil-press/) (620 ton, 75 MPa) atau [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press/) (500 ton) adalah pilihan saat ini. HN480 tetap diproduksi.
 
-Mesin Press Minyak Hidrolik Tekanan Tinggi HN480 menjembatani kesenjangan antara spesialis press dingin HN426 dan andalan HN500 tekanan ultra tinggi. Dengan diameter silinder 480 mm dan gaya press estimasi 560 ton pada tekanan sistem 72 MPa, mesin ini memberikan daya substansial untuk ekstraksi minyak konvensional maupun press dingin — keseimbangan optimal antara performa dan nilai untuk operasi skala menengah hingga besar.
+HN480 adalah mesin press minyak hidrolik tekanan tinggi 560 ton dengan silinder 480 mm dan barel 390 mm, pada 72 MPa tekanan sistem. Terletak antara HN426 dan HN500.
 
-## Keunggulan Utama
+## HN480 vs Model Terbaru
 
-- **Performa Seimbang** — Diposisikan antara HN426 dan HN500, menawarkan gaya press yang kuat tanpa premium model andalan.
-- **Mampu Press Dingin** — Tekanan kue press yang cukup untuk press dingin inti walnut, biji aprikot, dan bahan serupa.
-- **Aplikasi Serbaguna** — Menangani biji minyak konvensional dan bahan press dingin dengan hasil minyak yang andal.
-- **Hemat Energi** — Motor 2,2 KW menjaga biaya operasional rendah sambil memberikan gaya press kelas industri.
+| Parameter | HN480 (Generasi Sebelumnya) | HN426 (Dingin) | HN500 (Ultra) |
+|-----------|-----------------------------|----------------|---------------|
+| Gaya Press | 560 ton | 500 ton | 620 ton |
+| Tekanan Sistem | 72 MPa | 70 MPa | 75 MPa |
+| Barel | 390 mm | 390 mm | 390 mm |
 
-## Teknologi Inti
+[Bandingkan HN480 dengan semua model →](/products/model-comparison/)
 
-- **Barel Alur Tipe Batang** — Desain barel alur eksklusif Haonuo menyediakan area ekstraksi minyak yang jauh lebih besar dibandingkan barel berlubang tradisional. Minyak mengalir lebih cepat dan lebih jernih, dengan hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan). Tidak ada penyumbatan, tidak perlu pembersihan antar batch.
-- **Sistem Hidrolik Jerman** — Stasiun pompa hidrolik gabungan tekanan ultra-tinggi dengan pompa ganda tinggi-rendah. Tekanan kerja hingga 72 MPa dengan pengembalian silinder cepat.
-- **Pengeluaran Kue Press 4 Kait** — Mekanisme 4 kait inovatif memastikan pengeluaran kue press yang mudah dan andal — bahkan setelah penekanan semalam.
-- **Rangka Baja Karbon Tinggi** — Baja yang diperkeras frekuensi tinggi dan perlakuan panas untuk layanan tahan lama. Umur layanan aktual bergantung pada kondisi operasional dan perawatan di bawah gaya press 560 ton.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dari pemuatan hingga minyak jadi dalam hitungan menit.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi daya dibandingkan mesin press generasi sebelumnya (penghematan aktual bervariasi tergantung kondisi operasional).
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
+## Aplikasi yang Sesuai
 
-## Aplikasi & Bahan yang Sesuai
+Biji teh, rapeseed, kacang tanah, inti walnut, biji aprikot. Untuk biji yang lebih keras, lihat [HN500](/products/ultra-high-pressure-hydraulic-oil-press/).
 
-- **Biji Minyak**: Biji teh, biji rapeseed, kacang tanah
-- **Bahan Press Dingin**: Inti walnut, biji aprikot
+## Masih Diproduksi
 
-## Mengapa Memilih Haonuo
+Waktu produksi: 15–25 hari kerja.
 
-- **Harga Langsung Pabrik** — Dapatkan performa tekanan tinggi dengan harga langsung produsen tanpa markup perantara.
-- **Jaminan Kualitas** — Setiap mesin diuji di pabrik di bawah beban penuh sebelum pengiriman.
-- **Dukungan Purna Jual** — Dukungan teknis komprehensif dan ketersediaan suku cadang.
-- **Opsi Penyesuaian** — Dimensi barel dan parameter penekanan dapat disesuaikan dengan kebutuhan Anda.`,
+[Minta penawaran HN480](/contact/) atau [bandingkan model →](/products/model-comparison/)`,
 
   'mini-hydraulic-oil-press': `## Ringkasan
 
-Mesin press minyak hidrolik mini HN300 adalah mesin ringkas 300 ton dengan tekanan sistem 60 MPa, dibangun untuk produksi minyak wijen dan biji kecil di bengkel desa dan pabrik minyak kecil dengan ruang terbatas. Batch berjalan 40–90 menit tergantung bahan pada tekanan permukaan kue press 25 MPa, meninggalkan 6–8% minyak sisa (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan). Motor 2,2 kW menjaga kebutuhan listrik tetap rendah.
+> **Mencari model terbaru?** [HN325](/products/standard-hydraulic-oil-press/) adalah penerus yang ditingkatkan dari HN300 — 325 ton gaya press, 35,5 MPa tekanan kue. Sebagian besar pembeli memilih HN325 saat ini. HN300 tetap diproduksi untuk yang mengganti HN300 lama atau mencocokkan penawaran sebelumnya.
 
-Mesin Press Minyak Hidrolik Mini HN300 adalah mesin press minyak hidrolik paling kompak dan terjangkau kami, dirancang khusus sebagai mesin press minyak wijen khusus. Juga dikenal sebagai penggilingan minyak wijen kecil atau mesin press minyak wijen gaya tradisional, mesin ini ringan, mudah dioperasikan, dan sangat cocok untuk produksi minyak wijen dan biji kecil. Dengan gaya press 300 ton dan tekanan sistem 63 MPa, HN300 memberikan ekstraksi minyak yang andal dalam jejak yang hemat ruang.
+HN300 adalah mesin press minyak hidrolik ringkas 300 ton dengan silinder 300 mm dan barel 390 mm, memberikan 25 MPa tekanan permukaan kue. Motor 2,2 kW menjaga biaya tetap rendah, dan mesin berjalan pada listrik standar 220V/380V.
 
-Silinder HN300 dipasangkan dengan barel berdiameter dalam 390 mm mencapai tekanan permukaan kue press sebesar 25 MPa, memberikan tekanan yang cukup untuk wijen, kacang tanah, biji rapeseed, dan biji teh ditekan secara penuh dalam satu siklus. Dimensi keseluruhan 1100×1100×2350 mm yang kompat membuatnya cocok untuk bengkel dengan ruang terbatas, sementara konfigurasi barel tunggal seberat 1,2 ton memungkinkan instalasi dan relokasi yang mudah.
+Halaman ini menjadi referensi bagi pembeli yang mencari HN300 secara spesifik berdasarkan nomor model — untuk mengganti mesin lama atau membandingkan spesifikasi penawaran sebelumnya.
 
-## Keunggulan Utama
+## HN300 vs HN325 — Mana yang Harus Dipilih?
 
-- **Model Tingkat Masuk Utama** — Mesin press minyak hidrolik paling terjangkau dalam lini produk kami, menawarkan nilai yang sangat baik untuk produsen skala kecil dan usaha rintisan yang memasuki pasar minyak premium.
-- **Spesialis Minyak Wijen** — Dirancang dan dioptimalkan secara khusus untuk penekanan minyak wijen, menghasilkan minyak wijen autentik dari penggilingan kecil dengan aroma dan rasa yang kaya.
-- **Kompak & Ringan** — Hanya 1,2 ton (barel tunggal) dan 1100×1100×2350 mm, mudah masuk ke bengkel kecil dan membutuhkan ruang lantai minimal.
-- **Operasi Mudah** — Desain ringan dan mudah digunakan memungkinkan operator dari tingkat keterampilan apa pun memproduksi minyak berkualitas tinggi dengan pelatihan minimal.
-- **Efisiensi Satu Siklus** — Tekanan kue press 25 MPa cukup untuk wijen dan biji kecil ditekan secara penuh dalam satu siklus.
-- **Opsi Barel Ganda** — Konfigurasi barel ganda tersedia untuk operator yang ingin meningkatkan throughput tanpa jejak yang lebih besar.
+| Parameter | HN300 (Generasi Sebelumnya) | HN325 (Model Terbaru) |
+|-----------|-----------------------------|------------------------|
+| Gaya Press | 300 ton | 325 ton |
+| Tekanan Kue | 25 MPa | 35,5 MPa |
+| Barel | 390 mm | 390 mm |
+| Kapasitas/Batch | ~100 kg | ~100 kg |
 
-## Teknologi Inti
+**Pilih HN300 jika:** Anda mengganti HN300 lama, atau mencocokkan penawaran yang menentukan HN300.
 
-- **Barel Alur Tipe Batang** — Area ekstraksi minyak yang jauh lebih besar dibandingkan barel berlubang, mencapai hasil minyak sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) per batch.
-- **Sistem Hidrolik Jerman** — Pompa gabungan tekanan ultra-tinggi memberikan tekanan kerja hingga 63 MPa untuk ekstraksi yang konsisten dan bertenaga.
-- **Pengeluaran Kue Press 4 Kait** — Sistem pengeluaran kue press yang mudah dan andal yang mengurangi waktu henti antar siklus penekanan.
-- **Rangka Baja Karbon Tinggi** — Layanan tahan lama di bawah operasi kontinu. Umur layanan aktual bergantung pada kondisi operasional dan perawatan.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dengan operasi satu tombol. Pelatihan dasar disarankan; kami menyediakan tutorial video dan panduan jarak jauh.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi daya dibandingkan mesin press generasi sebelumnya (penghematan aktual bervariasi tergantung kondisi operasional).
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
+**Pilih HN325 jika:** Anda menginginkan model terbaru dengan gaya dan tekanan kue lebih tinggi.
 
-## Aplikasi & Bahan yang Sesuai
+[Bandingkan HN300 dengan semua model →](/products/model-comparison/)
 
-HN300 cocok untuk menekan wijen dan biji minyak kecil lainnya:
+## Aplikasi yang Sesuai
 
-- **Paling Cocok**: Wijen (aplikasi utama), menghasilkan minyak wijen aromatik autentik
-- **Juga Sesuai**: Kacang tanah, biji rapeseed, biji teh
-- **Bahan Lain**: Biji kecil serupa dan bahan penekanan konvensional
+Biji minyak kecil: wijen, kacang tanah, rapeseed, biji teh. Untuk bahan bercangkang keras, lihat [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press/).
 
-> **Catatan**: Untuk bahan bercangkang keras atau press dingin seperti walnut atau biji aprikot, pertimbangkan [model HN426 Press Dingin](/products/cold-press-hydraulic-oil-press) atau [model HN500 Tekanan Ultra Tinggi](/products/ultra-high-pressure-hydraulic-oil-press).
+## Masih Diproduksi
 
-## Mengapa Memilih Haonuo
+HN300 masih dibuat dan menerima pesanan. Waktu produksi: 15–25 hari kerja.
 
-- **Harga Langsung Pabrik** — Beli langsung dari produsen dan hilangkan markup perantara. HN300 menawarkan biaya masuk yang kompetitif untuk penekanan minyak hidrolik kelas profesional.
-- **Keahlian Minyak Wijen** — Kami memahami persyaratan unik produksi minyak wijen dan telah mengoptimalkan HN300 secara khusus untuk aplikasi ini.
-- **Jaminan Kualitas** — Setiap mesin menjalani pengujian ketat sebelum pengiriman, termasuk uji tekanan hidrolik beban penuh dan verifikasi siklus operasional.
-- **Dukungan Purna Jual** — Dukungan teknis komprehensif, ketersediaan suku cadang, dan bantuan pemecahan masalah jarak jauh untuk menjaga operasi Anda berjalan lancar.
-- **Opsi Penyesuaian** — Dimensi barel, panjang langkah, dan parameter lain dapat disesuaikan dengan kebutuhan bahan dan produksi spesifik Anda.`,
+[Minta penawaran HN300](/contact/) atau [lihat HN325 yang ditingkatkan →](/products/standard-hydraulic-oil-press/)`,
 
   'medium-hydraulic-oil-press': `## Ringkasan
 
-> **Mencari model inti terbaru?** HN365 adalah versi penerus yang ditingkatkan dari lini ini — gaya tekan 365 t, tekanan cake 30 MPa, rangka stasiun ganda vertikal pelat baja 3 cm, dan katup kartrid. Lihat [mesin press hidrolik HN365](/id/products/hn365-hydraulic-oil-press/).
+> **Mencari model terbaru?** [HN365](/products/hn365-hydraulic-oil-press/) adalah penerus yang ditingkatkan dari HN355 — 365 ton gaya press, 30 MPa tekanan kue, rangka stasiun ganda vertikal. Sebagian besar pembeli memilih HN365 saat ini. HN355 tetap diproduksi.
 
-Mesin press minyak hidrolik menengah HN400 menyediakan gaya press 500 ton dengan tekanan permukaan kue press 38 MPa, mencakup penekanan panas konvensional dan cold press bagi produsen yang menginginkan satu mesin untuk keduanya. Batch berjalan 40–90 menit tergantung bahan, dengan 6–8% minyak sisa dalam kue press (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dan motor 2,2 kW berjalan pada listrik standar 220V/380V.
+HN355 adalah mesin press minyak hidrolik menengah 360 ton dengan silinder 355 mm dan barel 390 mm, memberikan 30,15 MPa tekanan permukaan kue. Memproses sekitar 100 kg per batch. Motor 2,2 kW menjaga biaya tetap rendah.
 
-Mesin Press Minyak Hidrolik Medium HN400 menjembatani kesenjangan antara model standar dan model press dingin kami, menawarkan 500 ton gaya press dengan tekanan permukaan kue press 38 MPa. Mesin serbaguna ini cocok untuk press dingin dan bekerja secara efektif di semua musim tanpa dibatasi oleh kondisi iklim. Baik Anda memproses biji minyak konvensional atau terjun ke produksi press dingin, HN400 memberikan daya dan fleksibilitas yang Anda butuhkan.
+Halaman ini menjadi referensi bagi pembeli yang mencari HN355 — untuk mengganti mesin lama atau membandingkan penawaran sebelumnya. HN355 berbagi barel dan suku cadang dengan HN365.
 
-Silinder HN400 dipasangkan dengan barel berdiameter dalam 390 mm mencapai tekanan permukaan kue press 38 MPa, memungkinkan sebagian besar bahan konvensional dan semi-keras ditekan secara penuh dalam satu siklus. Kemampuan press dinginnya berarti Anda dapat memproduksi minyak press dingin premium dari biji teh, inti walnut, dan biji rami sambil menjaga rasa alami dan nilai gizi produk Anda.
+## HN355 vs HN365
 
-## Keunggulan Utama
+| Parameter | HN355 (Generasi Sebelumnya) | HN365 (Ditingkatkan) |
+|-----------|-----------------------------|----------------------|
+| Gaya Press | 360 ton | 365 ton |
+| Tekanan Kue | 30,15 MPa | 30 MPa |
+| Barel | 390 mm | 390 mm |
+| Kapasitas/Batch | ~100 kg | ~100 kg |
 
-- **Kemampuan Press Dingin Serbaguna** — Cocok untuk press dingin, bekerja di semua musim tanpa batasan iklim, menjaga kualitas minyak premium sepanjang tahun.
-- **Gaya Press 500 Ton** — Daya substansial yang menjembatani kesenjangan antara model standar dan model press dingin khusus, menangani berbagai bahan dengan mudah.
-- **Tekanan Kue Press 38 MPa** — Cukup untuk sebagian besar bahan konvensional dan semi-keras ditekan secara penuh dalam satu siklus, dengan tingkat minyak sisa lebih rendah daripada model standar.
-- **Operasi Semua Musim** — Direkayasa untuk performa andal terlepas dari suhu lingkungan, memastikan output produksi yang konsisten sepanjang tahun.
-- **Produktivitas Barel Ganda** — Konfigurasi barel ganda dengan rel geser ganda memungkinkan operasi kontinu — muat satu barel sementara yang lain ditekan.
-- **Barel Dapat Disesuaikan** — Diameter dan tinggi barel dapat disesuaikan dengan kebutuhan bahan spesifik Anda.
+[Bandingkan HN355 dengan semua model →](/products/model-comparison/)
 
-## Teknologi Inti
+## Aplikasi yang Sesuai
 
-- **Barel Alur Tipe Batang** — Area ekstraksi minyak yang jauh lebih besar dibandingkan barel berlubang, mencapai hasil minyak sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) per batch.
-- **Sistem Hidrolik Jerman** — Pompa gabungan tekanan ultra-tinggi memberikan tekanan kerja hingga 63 MPa untuk ekstraksi yang konsisten dan bertenaga.
-- **Pengeluaran Kue Press 4 Kait** — Sistem pengeluaran kue press yang mudah dan andal yang mengurangi waktu henti antar siklus penekanan.
-- **Rangka Baja Karbon Tinggi** — Layanan tahan lama di bawah operasi kontinu. Umur layanan aktual bergantung pada kondisi operasional dan perawatan.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dengan operasi satu tombol. Pelatihan dasar disarankan; kami menyediakan tutorial video dan panduan jarak jauh.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi daya dibandingkan mesin press generasi sebelumnya (penghematan aktual bervariasi tergantung kondisi operasional).
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
+Biji minyak konvensional: biji teh, rapeseed, kacang tanah, kedelai. Untuk bahan bercangkang keras, lihat [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press/).
 
-## Aplikasi & Bahan yang Sesuai
+## Masih Diproduksi
 
-HN400 cocok untuk menekan berbagai biji minyak konvensional dan semi-keras:
+Waktu produksi: 15–25 hari kerja.
 
-- **Bahan Press Dingin**: Biji teh, inti walnut, biji rami
-- **Bahan Konvensional**: Biji rapeseed, kacang tanah, kedelai
-- **Bahan Lain**: Bahan semi-keras serupa dan bahan penekanan konvensional
-
-> **Catatan**: Untuk bahan press dingin paling menuntut seperti walnut dengan cangkang dan biji aprikot, pertimbangkan [model HN426 Press Dingin](/products/cold-press-hydraulic-oil-press) atau [model HN500 Tekanan Ultra Tinggi](/products/ultra-high-pressure-hydraulic-oil-press).
-
-## Mengapa Memilih Haonuo
-
-- **Harga Langsung Pabrik** — Beli langsung dari produsen dan hilangkan markup perantara. HN400 menawarkan nilai yang sangat baik sebagai mesin press minyak hidrolik kelas menengah yang serbaguna.
-- **Serbaguna Press Dingin** — Kami memahami tuntutan produksi konvensional dan press dingin dan telah merekayasa HN400 untuk unggul di keduanya.
-- **Jaminan Kualitas** — Setiap mesin menjalani pengujian ketat sebelum pengiriman, termasuk uji tekanan hidrolik beban penuh dan verifikasi siklus operasional.
-- **Dukungan Purna Jual** — Dukungan teknis komprehensif, ketersediaan suku cadang, dan bantuan pemecahan masalah jarak jauh untuk menjaga operasi Anda berjalan lancar.
-- **Opsi Penyesuaian** — Dimensi barel, panjang langkah, dan parameter lain dapat disesuaikan dengan kebutuhan bahan dan produksi spesifik Anda.`,
-
-  'stainless-steel-hydraulic-oil-press': `## Ringkasan
-
-Mesin press minyak hidrolik stainless steel HN325S menghasilkan gaya press 325 ton pada tekanan sistem 60 MPa dengan baja tahan karat food-grade di semua permukaan kontak, dibangun untuk produksi komersial santan dan krim kelapa. Cocok untuk pengolah makanan yang membutuhkan penekanan higienis dan tahan korosi pada daging kelapa segar, berjalan dengan motor 2,2 kW, dan dilindungi garansi 1 tahun.
-
-Mesin Press Santan Kelapa Baja Tahan Karat HN325S dirancang khusus untuk mengekstraksi santan kelapa dan krim kelapa berkualitas tinggi dari daging kelapa segar. Dengan konstruksi baja tahan karat food-grade untuk semua permukaan kontak, mesin ini memastikan kebersihan maksimal dan kemurnian produk untuk produksi santan kelapa.
-
-Dengan gaya press 325 ton dan tekanan sistem 60 MPa, HN325S mengekstraksi santan kelapa secara efisien sambil mempertahankan rasa alami dan nutrisi. Barel baja tahan karat mencegah kontaminasi, menjadikan mesin ini pilihan cocok untuk produksi santan kelapa komersial yang membutuhkan standar kebersihan tertinggi.
-
-## Keunggulan Utama
-
-- **Baja Tahan Karat Food-Grade** — Barel dan semua permukaan kontak dibangun dari baja tahan karat food-grade, mencegah kontaminasi dan memastikan kualitas santan kelapa paling murni.
-- **Desain Higenis** — Permukaan yang halus dan konstruksi yang mudah dibersihkan memenuhi standar keamanan pangan paling ketat untuk produksi susu dan minuman.
-- **Tahan Korosi** — Konstruksi baja tahan karat menghilangkan masalah karat dan korosi, memperpanjang masa pakai dan mengurangi persyaratan perawatan.
-- **Ekstraksi Tekanan Tinggi** — Gaya press 325 ton memastikan efisiensi ekstraksi santan kelapa maksimal.
-- **Output Kualitas Premium** — Desain higenis mempertahankan rasa alami dan nutrisi santan kelapa, cocok untuk pasar premium.
-- **Produktivitas Barel Ganda** — Konfigurasi barel ganda memungkinkan operasi kontinu — muat satu barel sementara yang lain ditekan.
-
-## Teknologi Inti
-
-- **Barel Alur Tipe Batang** — Maksimalkan efisiensi ekstraksi santan kelapa dengan area permukaan yang lebih besar, kini dalam baja tahan karat food-grade.
-- **Sistem Hidrolik Jerman** — Pompa gabungan tekanan ultra-tinggi memberikan tekanan kerja hingga 60 MPa untuk ekstraksi santan kelapa yang konsisten dan bertenaga.
-- **Pengeluaran Kue Press 4 Kait** — Sistem pengeluaran kue kelapa yang mudah dan andal, mengurangi waktu henti antar siklus penekanan.
-- **Rangka Baja Karbon Tinggi** — Layanan tahan lama di bawah operasi kontinu. Umur layanan aktual bergantung pada kondisi operasional dan perawatan.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dengan operasi satu tombol. Pelatihan dasar disarankan; kami menyediakan tutorial video dan panduan jarak jauh.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi daya dibandingkan metode ekstraksi santan kelapa tradisional.
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
-
-## Aplikasi & Bahan yang Sesuai
-
-HN325S dirancang khusus untuk produksi santan kelapa:
-
-- **Daging Kelapa Segar** — Bahan baku utama untuk ekstraksi santan kelapa
-- **Produksi Krim Kelapa** — Cocok untuk memproduksi krim kelapa kental untuk pasar premium
-- **Pengolahan Santan Kelapa Komersial** — Cocok untuk fasilitas produksi santan kelapa skala kecil hingga menengah
-
-## Mengapa Memilih Haonuo
-
-- **Harga Langsung Pabrik** — Beli langsung dari produsen dan hilangkan markup perantara. HN325S menawarkan kepatuhan food-grade dengan harga kompetitif.
-- **Keahlian Pasar Ekspor** — Kami memahami persyaratan regulasi pasar internasional dan telah mendesain HN325S untuk memenuhi standar keamanan pangan paling ketat.
-- **Jaminan Kualitas** — Setiap mesin menjalani pengujian ketat sebelum pengiriman, termasuk uji tekanan hidrolik beban penuh, verifikasi siklus operasional, dan inspeksi permukaan baja tahan karat.
-- **Dukungan Purna Jual** — Dukungan teknis komprehensif, ketersediaan suku cadang, dan bantuan pemecahan masalah jarak jauh untuk menjaga operasi Anda berjalan lancar.
-- **Opsi Penyesuaian** — Dimensi barel, panjang langkah, dan parameter lain dapat disesuaikan dengan kebutuhan spesifik Anda untuk produksi kelapa.`,
+[Minta penawaran HN355](/contact/) atau [lihat HN365 →](/products/hn365-hydraulic-oil-press/)`,
 
   'ultra-high-pressure-hydraulic-oil-press': `## Ringkasan
 

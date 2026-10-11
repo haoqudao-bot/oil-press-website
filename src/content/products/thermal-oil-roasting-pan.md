@@ -15,6 +15,11 @@ modelFr: Type Huile Thermique
 modelId: Tipe Minyak Termal
 images:
   - /images/products/thermal-oil-roasting-pan.webp
+imageAlt:
+  en: "Thermal oil heated roasting pan for oilseed pretreatment"
+  fr: "Poêle de torréfaction chauffée à l’huile thermique pour prétraitement des graines"
+  ar: "مقلاة تحميص بالتسخين بالزيت الحراري للمعالجة المسبقة للبذور"
+  id: "Wajan sangrai pemanas oli termal untuk pra-pengolahan biji minyak"
 specifications:
   - name: Model
     value: 325 Large Barrel Single

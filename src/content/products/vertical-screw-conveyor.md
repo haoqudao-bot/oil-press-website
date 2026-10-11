@@ -14,6 +14,11 @@ model: HN-SC
 modelId: ''
 images:
   - /images/products/vertical-screw-conveyor.webp
+imageAlt:
+  en: "Vertical screw conveyor feeder for oil press production lines"
+  fr: "Convoyeur à vis vertical pour lignes de production d’huile"
+  ar: "ناقل لولبي رأسي للتغذية في خطوط إنتاج الزيت"
+  id: "Konveyor sekrup vertikal untuk lini produksi pengepresan minyak"
 specifications:
   - name: Model
     value: HN-SC Stainless Steel Vertical Screw Conveyor

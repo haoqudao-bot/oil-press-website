@@ -26,6 +26,12 @@ const products = defineCollection({
     modelFr: z.string().default(''),
     modelId: z.string().default(''),
     images: z.array(z.string()),
+    imageAlt: z.object({
+      en: z.string(),
+      fr: z.string(),
+      ar: z.string(),
+      id: z.string(),
+    }).optional(),
     specifications: z.array(z.object({
       name: z.string(),
       value: z.string(),

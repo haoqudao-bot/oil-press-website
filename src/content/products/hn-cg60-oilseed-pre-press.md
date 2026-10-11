@@ -14,6 +14,11 @@ model: HN-CG60
 modelId: ''
 images:
   - /images/products/hn-cg60-oilseed-pre-press.webp
+imageAlt:
+  en: "HN-CG60 oilseed screw pre-press machine before solvent extraction"
+  fr: "Pré-presse à vis HN-CG60 pour graines oléagineuses avant extraction"
+  ar: "مكبس أولي حلزوني للبذور الزيتية HN-CG60 قبل الاستخلاص بالمذيبات"
+  id: "Mesin pre-press sekrup biji minyak HN-CG60 sebelum ekstraksi pelarut"
 specifications:
   - name: Model
     value: HN-CG60 Oilseed Expeller / Pre-Press (YZJ-7.5/11)

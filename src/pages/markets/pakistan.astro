@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const pakistanSeeds = ['sesame', 'mustard', 'peanut', 'cottonseed', 'sunflower'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => pakistanSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, pakistanSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in Pakistan "
-  description="Professional oil press machine for Pakistan. Hydraulic cold press for sunflower, mustard, sesame, cottonseed oil. Factory-direct pricing. Shipping to Karachi 20-25 days. 1-year warranty."
+  title="Oil Press Machine in Pakistan"
+  description="Oil press machine in Pakistan for sunflower, mustard and sesame. WeBOC clearance documentation and inspection support, 220-240V builds, shipping to Karachi. Request a quote."
   keywords={['oil press machine in Pakistan', 'oil press machine price in Pakistan', 'sunflower oil press machine Pakistan', 'mustard oil press Pakistan', 'hydraulic oil press Pakistan', 'oil extraction machine Pakistan price']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -119,13 +118,98 @@ const faqs = [
     </div>
   </section>
 
+  <!-- Customs Clearance -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">Importing Into Pakistan: WeBOC, Inspection &amp; Karachi Ports</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">Machinery consignments clear through Pakistan Customs' <strong>WeBOC</strong> electronic system, supported by complete manufacturer documentation and — depending on category and tariff regime — pre-shipment inspection. Prepared paperwork keeps container demurrage at Karachi terminals to zero.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h3 class="font-display font-bold text-xl mb-5 text-charcoal-900">Clearance sequence</h3>
+          <div class="space-y-4">
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">Goods Declaration.</span> Your clearing agent files the GD in WeBOC against the correct heading (presses of this type commonly fall near HS 8479.82), attaching invoice, packing list and bill of lading.</p>
+            </div>
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">Pre-shipment inspection.</span> Where applicable, an inspection certificate from an accredited company is required; coverage varies, so confirm current PSI requirements with your agent before shipment.</p>
+            </div>
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">Compliance file.</span> Manufacturer test report, motor and electrical specification, nameplate, and CE certificates where held. PSQCA is the national standards body your agent may consult on category questions.</p>
+            </div>
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">Assessment and delivery.</span> After duty assessment and release at Karachi Port (KICT/PICT) or Port Qasim, inland trucking reaches Lahore, Faisalabad, Multan, Hyderabad or Peshawar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-white rounded-2xl p-6 border border-steel-100">
+            <h3 class="font-semibold text-lg mb-3 text-charcoal-900">Documentation we supply</h3>
+            <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5">
+              <li>Signed commercial invoice and detailed packing list</li>
+              <li>Original / telex bill of lading</li>
+              <li>Factory test report and pressure documentation</li>
+              <li>Electrical nameplate, motor data and wiring information</li>
+              <li>CE and inspection certificates where the route requires them</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+            <p class="text-charcoal-900 text-sm font-medium mb-2">Power &amp; parts support</p>
+            <p class="text-steel-700 text-sm">Pakistani industrial supply is 220–240V, 50Hz three-phase, matching our standard build. Seal kits and filter cloths ship as air parcels to Karachi or Lahore within days, so planned spares rarely mean long stops.</p>
+          </div>
+          <p class="text-xs text-steel-500">Tariff and PSI coverage changes with each finance measure — confirm the current position with a WeBOC-registered clearing agent before ordering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations in Pakistan</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Faisalabad</span>
+            <span class="text-steel-500 text-xs">Mustard (Sarsoon) Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Mustard Oil Mill — Punjab</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 traditional cold pressing for pungent sarsoon ka tel, the staple cooking oil across Punjab's household and wholesale markets.</p>
+          <div class="text-xs text-amber-600 font-medium">Output: ~500 kg/day</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Sindh</span>
+            <span class="text-steel-500 text-xs">Sesame Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sesame Oil Producer — Sindh</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 producing cold-pressed til oil for domestic buyers and regional export traders in Karachi.</p>
+          <div class="text-xs text-amber-600 font-medium">Yield: 45-49%</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Bahawalpur</span>
+            <span class="text-steel-500 text-xs">Cottonseed Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Cottonseed Oil Processor — South Punjab</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 pressing cottonseed from the southern Punjab cotton belt; the pressed cake is sold as livestock feed.</p>
+          <div class="text-xs text-amber-600 font-medium">Cake: feed grade</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for Pakistan</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for Pakistan</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -151,10 +235,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

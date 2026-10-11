@@ -15,6 +15,11 @@ modelFr: 27KW Électrique
 modelId: 27KW Listrik
 images:
   - /images/products/electric-seed-steamer.webp
+imageAlt:
+  en: "Electric seed steamer cooker for oil press pretreatment"
+  fr: "Cuiseur-étuveur électrique de graines pour prétraitement avant pressage"
+  ar: "جهاز بخار وطبخ كهربائي للبذور للمعالجة المسبقة قبل العصر"
+  id: "Mesin pengukus benih listrik untuk pra-pengolahan sebelum pengepresan"
 specifications:
   - name: Equipment Name
     value: New Electric Seed Steamer

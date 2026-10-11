@@ -14,6 +14,11 @@ model: HN-10SL
 modelId: ''
 images:
   - /images/products/pneumatic-oil-filter-press-v2.webp
+imageAlt:
+  en: "Pneumatic oil filter press for crude edible oil filtration"
+  fr: "Filtre-presse pneumatique pour filtration d’huile alimentaire brute"
+  ar: "مكبس ترشيح زيت هوائي لتنقية الزيت النباتي الخام"
+  id: "Mesin filter press minyak pneumatik untuk filtrasi minyak nabati mentah"
 specifications:
   - name: Rated Working Pressure
     value: 0.2-0.3 MPa

@@ -4,17 +4,27 @@ title:
   fr: Presse Hydraulique à Huile de Sésame
   ar: معصرة زيت سمسم هيدروليكية
   id: Mesin Press Minyak Wijen Hidrolik
+seoTitle:
+  en: Hydraulic Sesame Oil Press Machine — Custom Configuration
+  fr: Presse hydraulique à huile de sésame — Configuration sur mesure
+  ar: معصرة زيت سمسم هيدروليكية — تخصيص حسب الطلب
+  id: Mesin press minyak wijen hidrolik — konfigurasi kustom
 description:
-  en: "Specialized hydraulic oil press optimized for sesame oil production. Preserves natural aroma and nutrients with cold pressing technology for premium sesame oil."
-  fr: "Presse à huile hydraulique pour sésame. Pressage à froid, arôme et nutriments préservés."
-  ar: "معصرة زيت هيدروليكية متخصصة لإنتاج زيت السمسم. تحافظ على النكهة الطبيعية والعناصر الغذائية بتقنية العصر البارد لزيت سمسم ممتاز."
-  id: "Mesin press minyak hidrolik khusus untuk produksi minyak wijen. Mempertahankan aroma alami dan nutrisi dengan teknologi press dingin untuk minyak wijen premium."
+  en: "Custom-configured hydraulic sesame oil press machine based on HN325/HN355. 47-51 MPa cake pressure, 300mm narrow barrel for maximum sesame yield. Made to order in 30-45 working days."
+  fr: "Presse hydraulique à huile de sésame sur mesure basée sur HN325/HN355. 47-51 MPa, fût étroit 300mm. Fabrication sur commande en 30-45 jours ouvrés."
+  ar: "معصرة زيت سمسم هيدروليكية مخصصة بناءً على HN325/HN355. 47-51 ميجاباسكال، برميل ضيق 300 مم. تصنيع حسب الطلب خلال 30-45 يوم عمل."
+  id: "Mesin press minyak wijen hidrolik kustom berbasis HN325/HN355. 47-51 MPa, barel sempit 300mm. Buat pesanan dalam 30-45 hari kerja."
 category: hydraulic-oil-press
 model: HN325/355 Sesame
 modelFr: HN325/355 Sésame
 modelId: HN325/355 Wijen
 images:
   - /images/products/sesame-oil-hydraulic-press.webp
+imageAlt:
+  en: "Hydraulic sesame oil press machine, custom configuration for sesame seeds"
+  fr: "Presse hydraulique pour huile de sésame, configuration sur mesure pour graines de sésame"
+  ar: "معصرة زيت السمسم الهيدروليكية، تكوين مخصص لبذور السمسم"
+  id: "Mesin press minyak wijen hidrolik, konfigurasi khusus untuk biji wijen"
 specifications:
   - name: Model (325/355)
     value: HN325 Sesame / HN355 Sesame
@@ -251,20 +261,20 @@ faqId:
     answer: Tingkat minyak sisa dalam kue press biasanya 6-8% untuk sebagian besar bahan dengan desain barel ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press barel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
 videoUrl: ''
 seoKeywords:
+  - hydraulic sesame oil press
+  - sesame oil extraction machine
+  - cold pressed sesame oil machine
   - sesame oil press machine
   - sesame oil hydraulic press
-  - hydraulic oil press for sesame
-  - sesame oil extraction machine
-  - cold press sesame oil
-  - sesame oil expeller
+  - custom sesame oil press
   - HN325 sesame press
   - tahini oil press machine
-  - sesame seed oil press
-  - commercial sesame oil press
-updatedAt: 2025-11-01
+updatedAt: 2026-10-10
 ---
 
 ## Overview
+
+> **Custom Configuration** — This is a made-to-order hydraulic sesame oil press built on the HN325 or HN355 base with a narrower 300 mm barrel optimized for sesame. Production lead time is 30–45 working days. [Request a custom quote →](/contact/)
 
 The HN325/355 Sesame hydraulic oil press holds 32.5 kg of sesame per batch (up to 50 kg with pre-compression) and finishes a hot pressing cycle in about 30–40 minutes, suiting sesame oil mills and tahini producers running small-to-medium daily batches. Its narrower 300 mm barrel concentrates force to 47–51 MPa cake surface pressure, leaving 6–8% residual oil in the cake (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). The 2.2 kW motor runs on standard 220V/380V power.
 

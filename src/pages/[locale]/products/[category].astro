@@ -30,19 +30,32 @@ const allCategories = await getCollection('categories');
 const sortedCategories = allCategories.sort((a, b) => a.data.order - b.data.order);
 
 const sortPriority: Record<string, number> = {
-  'mini-hydraulic-oil-press': 1,
-  'standard-hydraulic-oil-press': 2,
-  'stainless-steel-hydraulic-oil-press': 3,
-  'heavy-duty-hydraulic-oil-press': 4,
-  'medium-hydraulic-oil-press': 5,
-  'cold-press-hydraulic-oil-press': 6,
-  'high-pressure-hydraulic-oil-press': 7,
+  'standard-hydraulic-oil-press': 1,
+  'hn365-hydraulic-oil-press': 2,
+  'cold-press-hydraulic-oil-press': 3,
+  'ultra-high-pressure-hydraulic-oil-press': 4,
+  'sesame-oil-hydraulic-press': 5,
+  'coconut-oil-hydraulic-press': 6,
+  'large-barrel-hydraulic-oil-press': 7,
   'ultra-high-pressure-cold-press': 8,
-  'ultra-high-pressure-hydraulic-oil-press': 9,
-  'sesame-oil-hydraulic-press': 10,
-  'coconut-oil-hydraulic-press': 11,
-  'large-barrel-hydraulic-oil-press': 12,
-  'animal-fat-hydraulic-press': 13,
+  'animal-fat-hydraulic-press': 9,
+};
+
+/* Old/previous-generation models shown in a collapsed archive section */
+const archivedSlugs = [
+  'mini-hydraulic-oil-press',
+  'medium-hydraulic-oil-press',
+  'heavy-duty-hydraulic-oil-press',
+  'high-pressure-hydraulic-oil-press',
+];
+const hiddenOldSlugs = new Set(archivedSlugs);
+
+/* Successor model shown on archive cards */
+const successorLabel: Record<string, string> = {
+  'mini-hydraulic-oil-press': 'HN325',
+  'medium-hydraulic-oil-press': 'HN365',
+  'heavy-duty-hydraulic-oil-press': 'HN426 / HN500',
+  'high-pressure-hydraulic-oil-press': 'HN426 / HN500',
 };
 
 // Custom display order for non-hydraulic categories
@@ -60,7 +73,7 @@ const roastingOrder: Record<string, number> = {
   'wood-fired-seed-steamer': 4,
 };
 
-const filteredProducts = allProducts.filter(p => p.data.category === category.slug)
+const filteredProducts = allProducts.filter(p => p.data.category === category.slug && !hiddenOldSlugs.has(p.slug))
   .sort((a, b) => {
     if (category.slug === 'hydraulic-oil-press') {
       const orderA = sortPriority[a.slug] ?? 99;
@@ -124,6 +137,14 @@ const productGroups = isHydraulicCategory
       },
     ]
   : [{ badge: '', title: '', subtitle: '', products: filteredProducts }];
+
+/* Previous-generation models for the hydraulic category archive section */
+const previousProducts = isHydraulicCategory
+  ? archivedSlugs.flatMap(slug => {
+      const p = allProducts.find(pr => pr.slug === slug);
+      return p ? [p] : [];
+    })
+  : [];
 
 // Pages that only exist in English (no [locale] version)
 // Map to locale fallback pages so French users stay on French pages
@@ -338,6 +359,64 @@ if (catFaqLd) allLd.push(catFaqLd);
             ))}
           </div>
 
+          {isHydraulicCategory && previousProducts.length > 0 && (
+            <details class="archive-details border border-steel-200 rounded-2xl bg-steel-50/70">
+              <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5">
+                <div>
+                  <div class="inline-block text-xs font-bold tracking-widest text-steel-500 bg-white border border-steel-200 px-3 py-1 rounded-full mb-2">{loc3('MODÈLES PRÉCÉDENTS', 'طرازات سابقة', 'MODEL LAMA')}</div>
+                  <h2 class="font-display text-2xl text-charcoal-900 font-bold">{loc3('Modèles des générations précédentes (archive)', 'طرازات الأجيال السابقة (أرشيف)', 'Model generasi sebelumnya (arsip)')}</h2>
+                  <p class="text-steel-500 text-sm mt-1">{loc3('HN300 · HN355 · HN400 · HN480 — remplacés par la gamme actuelle HN325 · HN365 · HN426 · HN500, mais toujours fabriqués et supportés.', 'HN300 · HN355 · HN400 · HN480 — حل محلها خط HN325 · HN365 · HN426 · HN500 الحالي، لكنها لا تزال تُصنع وتُدعم.', 'HN300 · HN355 · HN400 · HN480 — digantikan lini terbaru HN325 · HN365 · HN426 · HN500, tetapi masih diproduksi dan didukung.')}</p>
+                </div>
+                <span class="shrink-0 hidden sm:inline-flex items-center gap-2 text-sm font-medium text-amber-600">
+                  <span class="archive-label-closed">{loc3('Afficher les modèles précédents', 'عرض الطرازات السابقة', 'Tampilkan model lama')}</span>
+                  <span class="archive-label-open hidden">{loc3('Masquer', 'إخفاء', 'Sembunyikan')}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform archive-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-steel-400 sm:hidden archive-chevron shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="px-6 pb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {previousProducts.map((product) => (
+                    <a
+                      href={localePath(`/products/${product.slug}`)}
+                      class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-200 group"
+                    >
+                      <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+                        <img
+                          src={product.data.images[0]}
+                          alt={product.data.title[currentLocale] || product.data.title.en}
+                          width="400"
+                          height="300"
+                          loading="lazy"
+                          class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+                          onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20hydraulic%20oil%20press%20machine%20product%20photo%20on%20white%20background%2C%20professional%20product%20photography&image_size=landscape_4_3'"
+                        />
+                        <span class="absolute top-3 left-3 bg-steel-700/90 text-white text-[11px] font-bold tracking-wide px-2.5 py-1 rounded-full">{loc3('GÉN. PRÉCÉDENTE', 'جيل سابق', 'GEN. LAMA')}</span>
+                      </div>
+                      <div class="p-5">
+                        <div class="text-xs text-steel-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
+                        <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+                        <p class="text-xs text-amber-700 mb-2">
+                          {loc3('Modèle actuel : ', 'الطراز الحالي: ', 'Model terbaru: ')}
+                          <span class="font-semibold">{successorLabel[product.slug]}</span>
+                        </p>
+                        <p class="text-sm text-steel-500 mb-3 line-clamp-2">{product.data.description[currentLocale] || product.data.description.en}</p>
+                        <div class="flex flex-wrap gap-2 items-center">
+                          {(currentLocale === 'id' && product.data.applicableSeedsId?.length > 0 ? product.data.applicableSeedsId : currentLocale === 'ar' && product.data.applicableSeedsAr?.length > 0 ? product.data.applicableSeedsAr : currentLocale === 'fr' && product.data.applicableSeedsFr?.length > 0 ? product.data.applicableSeedsFr : product.data.applicableSeeds).slice(0, 3).map(seed => (
+                            <span class="text-xs bg-steel-100 text-steel-600 px-2 py-0.5 rounded-full whitespace-nowrap">
+                              {seed}
+                            </span>
+                          ))}
+                          <span class="text-xs text-steel-400">+ more</span>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </details>
+          )}
+
           {filteredProducts.length === 0 && (
             <div class="text-center py-20">
               <p class="text-steel-400 text-lg">{t.products.noProducts}</p>
@@ -441,3 +520,18 @@ if (catFaqLd) allLd.push(catFaqLd);
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .archive-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .archive-details[open] .archive-chevron {
+    transform: rotate(180deg);
+  }
+  .archive-details[open] .archive-label-closed {
+    display: none;
+  }
+  .archive-details:not([open]) .archive-label-open {
+    display: none;
+  }
+</style>

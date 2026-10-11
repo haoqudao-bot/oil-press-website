@@ -15,22 +15,41 @@ const categoryOrder: Record<string, number> = {
 };
 
 const hydraulicOrder: Record<string, number> = {
-  'mini-hydraulic-oil-press': 1,
-  'standard-hydraulic-oil-press': 2,
-  'stainless-steel-hydraulic-oil-press': 3,
-  'heavy-duty-hydraulic-oil-press': 4,
-  'medium-hydraulic-oil-press': 5,
-  'cold-press-hydraulic-oil-press': 6,
-  'high-pressure-hydraulic-oil-press': 7,
+  'standard-hydraulic-oil-press': 1,
+  'hn365-hydraulic-oil-press': 2,
+  'cold-press-hydraulic-oil-press': 3,
+  'ultra-high-pressure-hydraulic-oil-press': 4,
+  'sesame-oil-hydraulic-press': 5,
+  'coconut-oil-hydraulic-press': 6,
+  'large-barrel-hydraulic-oil-press': 7,
   'ultra-high-pressure-cold-press': 8,
-  'ultra-high-pressure-hydraulic-oil-press': 9,
-  'sesame-oil-hydraulic-press': 10,
-  'coconut-oil-hydraulic-press': 11,
-  'large-barrel-hydraulic-oil-press': 12,
-  'animal-fat-hydraulic-press': 13,
+  'animal-fat-hydraulic-press': 9,
 };
 
-const sortedProducts = allProducts.sort((a, b) => {
+/* Old/previous-generation models shown in a collapsed archive section (not mixed with current models) */
+const archivedSlugs = [
+  'mini-hydraulic-oil-press',
+  'medium-hydraulic-oil-press',
+  'heavy-duty-hydraulic-oil-press',
+  'high-pressure-hydraulic-oil-press',
+];
+const hiddenOldSlugs = new Set(archivedSlugs);
+
+/* Successor model shown on archive cards */
+const successorLabel: Record<string, string> = {
+  'mini-hydraulic-oil-press': 'HN325',
+  'medium-hydraulic-oil-press': 'HN365',
+  'heavy-duty-hydraulic-oil-press': 'HN426 / HN500',
+  'high-pressure-hydraulic-oil-press': 'HN426 / HN500',
+};
+
+const previousProducts = archivedSlugs
+  .map(slug => allProducts.find(p => p.slug === slug))
+  .filter(Boolean);
+
+const visibleProducts = allProducts.filter(p => !hiddenOldSlugs.has(p.slug));
+
+const sortedProducts = visibleProducts.sort((a, b) => {
   const catA = categoryOrder[a.data.category] ?? 99;
   const catB = categoryOrder[b.data.category] ?? 99;
   if (catA !== catB) return catA - catB;
@@ -255,6 +274,63 @@ const productKeywords = [
                 ))}
               </>
             ))}
+
+            <!-- Previous-generation models archive (collapsed by default) -->
+            {previousProducts.length > 0 && (
+              <div class="col-span-full pt-4 archive-section">
+                <details class="archive-details border border-steel-200 rounded-2xl bg-steel-50/70">
+                  <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5">
+                    <div>
+                      <div class="inline-block text-xs font-bold tracking-widest text-steel-500 bg-white border border-steel-200 px-3 py-1 rounded-full mb-2">PREVIOUS MODELS</div>
+                      <h2 class="font-display text-2xl text-charcoal-900 font-bold">Previous-generation models (archive)</h2>
+                      <p class="text-steel-500 text-sm mt-1">HN300 · HN355 · HN400 · HN480 — superseded by the current HN325 · HN365 · HN426 · HN500 line, but still manufactured and supported.</p>
+                    </div>
+                    <span class="shrink-0 hidden sm:inline-flex items-center gap-2 text-sm font-medium text-amber-600">
+                      <span class="archive-label-closed">Show previous models</span>
+                      <span class="archive-label-open hidden">Hide</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform archive-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-steel-400 sm:hidden archive-chevron shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                  </summary>
+                  <div class="px-6 pb-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                      {previousProducts.map(product => (
+                        <a
+                          href={`/products/${product.slug}`}
+                          class="archive-card card-hover bg-white rounded-2xl overflow-hidden border border-steel-200 group"
+                        >
+                          <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
+                            <img
+                              src={product.data.images[0]}
+                              alt={product.data.title.en}
+                              width="400"
+                              height="300"
+                              loading="lazy"
+                              class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <span class="absolute top-3 left-3 bg-steel-700/90 text-white text-[11px] font-bold tracking-wide px-2.5 py-1 rounded-full">PREVIOUS GEN</span>
+                          </div>
+                          <div class="p-5">
+                            <div class="text-xs text-steel-500 font-medium mb-1">{product.data.model}</div>
+                            <h3 class="font-display text-xl text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                            <p class="text-xs text-amber-700 mb-2">Current model: <span class="font-semibold">{successorLabel[product.slug]}</span></p>
+                            <p class="text-sm text-steel-500 mb-3 line-clamp-2">{product.data.description?.en}</p>
+                            <div class="flex flex-wrap gap-2 items-center">
+                              {product.data.applicableSeeds.slice(0, 3).map(seed => (
+                                <span class="text-xs bg-steel-100 text-steel-600 px-2 py-0.5 rounded-full">
+                                  {seed}
+                                </span>
+                              ))}
+                              <span class="text-xs text-steel-400">+ more</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </details>
+              </div>
+            )}
           </div>
           <div id="load-more-wrap" class="mt-8 text-center hidden">
             <button id="load-more-btn" class="bg-amber-500 hover:bg-amber-400 text-charcoal-900 font-semibold px-8 py-3 rounded-lg transition-colors">
@@ -373,3 +449,18 @@ const productKeywords = [
     })();
   </script>
 </BaseLayout>
+
+<style>
+  .archive-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .archive-details[open] .archive-chevron {
+    transform: rotate(180deg);
+  }
+  .archive-details[open] .archive-label-closed {
+    display: none;
+  }
+  .archive-details:not([open]) .archive-label-open {
+    display: none;
+  }
+</style>

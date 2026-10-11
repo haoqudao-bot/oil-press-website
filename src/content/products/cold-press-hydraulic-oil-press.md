@@ -19,6 +19,11 @@ model: HN426
 modelId: ''
 images:
   - /images/products/cold-press-hydraulic-oil-press.webp
+imageAlt:
+  en: "HN426 cold press hydraulic oil press machine, 500-ton force at 70 MPa"
+  fr: "Presse à huile hydraulique à froid HN426, 500 tonnes à 70 MPa"
+  ar: "معصرة زيت هيدروليكية بالعصر البارد HN426، قوة 500 طن بضغط 70 ميجاباسكال"
+  id: "Mesin press minyak hidrolik cold press HN426, gaya 500 ton pada 70 MPa"
 specifications:
   - name: Model (Single/Double)
     value: HN426 Simple / HN426 Double

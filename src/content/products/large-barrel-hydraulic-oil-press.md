@@ -4,17 +4,27 @@ title:
   fr: Presse à Huile Hydraulique à Grand Fût
   ar: معصرة زيت هيدروليكية ببرميل كبير
   id: Mesin Press Minyak Hidrolik Barel Besar
+seoTitle:
+  en: Hydraulic Sludge Dewatering Press — Large Barrel Residue
+  fr: Presse de déshydratation de boues hydraulique — grand fût
+  ar: مكبث نضح الحمأة الهيدروليكي — برميل كبير
+  id: Mesin dewatering lumpur hidrolik — barel besar
 description:
-  en: "325-ton hydraulic oil press with oversized 500mm barrel. High-volume pressing for coconut, shea nut, and bulk oil seeds with 20-35kg capacity."
-  fr: "Presse à huile hydraulique 325t, fût 500mm. Grand volume coco, karité, 20-35kg par lot."
-  ar: "معصرة زيت هيدروليكية 325 طن ببرميل كبير 500 مم. عصر بكميات كبيرة لجوز الهند والكاريتا والبذور الزيتية بقدرة 20-35 كجم."
-  id: "Mesin press minyak hidrolik 325 ton dengan barel besar 500mm. Press volume tinggi untuk kelapa, shea nut, dan biji minyak curukan dengan kapasitas 20-35kg."
+  en: "Hydraulic sludge dewatering press with 630mm large barrel. For oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable dehydration. 325 ton, custom configuration."
+  fr: "Presse de déshydratation de boues hydraulique avec grand fût 630mm. Pour boues d'huile, résidus animaux/végétaux, boues textiles, déshydratation fruits/légumes. 325 tonnes, sur mesure."
+  ar: "مكبث نضح الحمأة الهيدروليكي ببرميل كبير 630 مم. لحمأة الزيت، مخلفات الزيت الحيواني/النباتي، حمأة النسيج، نضح الفواكه/الخضروات. 325 طن، حسب الطلب."
+  id: "Mesin dewatering lumpur hidrolik dengan barel besar 630mm. Untuk lumpur minyak, residu minyak hewan/tumbuhan, lumpur tekstil, dewatering buah/sayur. 325 ton, kustom."
 category: hydraulic-oil-press
 model: HN325 Large Barrel
 modelFr: HN325 Grand Fût
 modelId: HN325 Barel Besar
 images:
   - /images/products/large-barrel-hydraulic-oil-press.webp
+imageAlt:
+  en: "Large barrel hydraulic press for oil residue and sludge dewatering"
+  fr: "Presse hydraulique à grand fût pour résidus d’huile et déshydratation des boues"
+  ar: "مكبس هيدروليكي ببرميل كبير لمخلفات الزيت وتجفيف الحمأة"
+  id: "Mesin press hidrolik barel besar untuk ampas minyak dan pengeringan lumpur"
 specifications:
   - name: Model (Single/Double)
     value: HN325LB Simple / HN325LB Double
@@ -243,61 +253,59 @@ faqId:
     answer: Tingkat minyak sisa dalam kue press biasanya 6-8% untuk sebagian besar bahan dengan desain barel ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press barel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
 videoUrl: ''
 seoKeywords:
-  - large barrel hydraulic oil press
-  - oil sludge press machine
-  - top cake hydraulic press
-  - large capacity oil press
-  - big barrel oil press
-  - industrial barrel press
-  - waste oil press machine
+  - hydraulic sludge dewatering press
+  - oil sludge press
   - oil residue press
-  - high volume oil press
-  - large scale hydraulic press
-updatedAt: 2025-11-01
+  - hydraulic dewatering filter press
+  - textile sludge dewatering
+  - animal oil residue press
+  - plant oil residue press
+  - fruit vegetable dehydration press
+updatedAt: 2026-10-10
 ---
 
 ## Overview
 
-The HN325 Large Barrel hydraulic oil press uses a 630 mm inner diameter, 1000 mm high barrel with two independent hydraulic systems, so one barrel presses while the other is unloaded and reloaded — built for oil mills that prioritize single-batch volume over peak pressing force. Batch time runs 40–90 minutes depending on the material, with 6–8% residual oil in the cake for most oilseeds (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation).
+> **Custom Configuration** — This is a made-to-order hydraulic sludge dewatering press with a 630 mm large barrel, optimized for oil sludge, oil residue, and industrial sludge dewatering. Production lead time is 30–45 working days. [Request a custom quote →](/contact/)
 
-The Large Barrel Hydraulic Oil Press is an enlarged-capacity version of the HN325 cylinder model, designed for applications that demand high single-batch processing volume rather than extreme pressing force. Equipped with two independent hydraulic systems, each barrel operates autonomously — the main cylinder presses one barrel while the top-cake cylinder on the other barrel allows simultaneous unloading and reloading. This dual-system design eliminates idle time and maximizes your daily throughput.
+The HN325 Large Barrel is a hydraulic dewatering press with a 630 mm inner diameter, 1000 mm high barrel and two independent hydraulic systems, so one barrel presses while the other is unloaded and reloaded. It is built for processors that prioritize single-batch volume for sludge and residue dewatering rather than peak pressing force.
 
-The 630 mm inner diameter, 1000 mm high barrel provides substantial capacity for bulk materials. With a cake surface pressure of 10.64 MPa, this model is well-suited for materials that do not require high pressing force but benefit from large batch sizes, such as oil sludge, textile sludge, fruit and vegetable dehydration, and oil field waste.
+The dual-system design eliminates idle time: the main cylinder presses one barrel while the top-cake cylinder on the other barrel allows simultaneous unloading and reloading. With a cake surface pressure of 10.64 MPa, this model is suited for materials that do not require high pressing force but benefit from large batch sizes — such as oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable dehydration.
 
 ## Key Advantages
 
-- **Massive Barrel Capacity** — 630 mm inner diameter × 1000 mm height barrel handles large volumes per batch, reducing the number of cycles needed to process bulk materials.
+- **Massive Barrel Capacity** — 630 mm inner diameter × 1000 mm height barrel handles large volumes per batch, reducing the number of cycles needed to process bulk sludge and residue.
 - **Dual Independent Hydraulic Systems** — Each barrel operates independently with its own hydraulic circuit, so pressing on one side never blocks loading or unloading on the other.
-- **Top-Cake Design** — The top-cake cylinder (60 Tons / 30 MPa) pushes the cake out from the top, making unloading fast and convenient even with large-volume materials.
-- **High Throughput** — Combined large barrel capacity and dual-system operation deliver the highest daily processing volume in our product line for low-pressure materials.
-- **Versatile Application** — From oil residue dewatering to fruit juice extraction and industrial sludge processing, one machine serves multiple processing needs.
+- **Top-Cake Design** — The top-cake cylinder (60 tons / 30 MPa) pushes the cake out from the top, making unloading fast and convenient even with large-volume materials.
+- **High Throughput** — Combined large barrel capacity and dual-system operation deliver the highest daily processing volume for low-pressure dewatering applications.
+- **Versatile Dewatering** — From oil residue dewatering to fruit juice extraction and industrial sludge processing, one machine serves multiple processing needs.
 
 ## Core Technology
 
-- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). No clogging, no cleaning between batches — especially beneficial for high-volume sludge and residue processing.
+- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more drainage area than traditional drilled barrels. Liquid flows faster and clearer. No clogging, no cleaning between batches — especially beneficial for high-volume sludge and residue processing.
 - **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 60 MPa with rapid cylinder return.
 - **4-Hook Cake Removal** — Innovative 4-hook mechanism ensures easy, reliable cake discharge — even after overnight pressing of bulky materials.
-- **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service. Actual service life depends on operating conditions and maintenance under 325-ton pressing force.
-- **Microcomputer Control** — Automated pressing cycle from loading to finished product in minutes.
-- **Energy Efficient** — Designed to reduce power consumption compared to previous-generation presses (actual savings vary by operating conditions).
-- **Labor Efficient** — Only 1-2 operators needed, reducing labor requirements compared to manual pressing methods.
+- **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service. Actual service life depends on operating conditions and maintenance.
+- **Microcomputer Control** — Automated pressing cycle from loading to finished cake discharge.
+- **Energy Efficient** — 2.2 kW motor keeps operating costs low while delivering 325-ton pressing force.
+- **Labor Efficient** — Only 1-2 operators needed.
 
 ## Applications & Suitable Materials
 
-### Oil & Fat Processing
+### Oil & Fat Residue Dewatering
 - Animal oil residue, plant oil residue, oil sludge
 
-### Industrial & Environmental
+### Industrial & Environmental Dewatering
 - Textile sludge, oil field sludge and waste
 
-### Food Processing
+### Food Processing Dehydration
 - Fruit and vegetable dehydration, fruit juice extraction
 
-> **Note**: This model is optimized for high-volume, low-pressure applications. For oil seeds requiring high pressing force, consider our [HN325 Standard model](/products/standard-hydraulic-oil-press) or [HN426 Cold Press model](/products/cold-press-hydraulic-oil-press).
+> **Note**: This model is optimized for high-volume, low-pressure dewatering. For oilseed pressing requiring high pressing force, see the [HN325 Standard model](/products/standard-hydraulic-oil-press) or [HN426 Cold Press model](/products/cold-press-hydraulic-oil-press).
 
 ## Why Choose Haonuo
 
-- **Factory-Direct Pricing** — Get large-capacity processing power at manufacturer-direct prices, with the best value per kilogram of material processed.
+- **Factory-Direct Pricing** — Get large-capacity dewatering power at manufacturer-direct prices, with the best value per kilogram of material processed.
 - **Dual-System Engineering** — Our independent hydraulic system design is a proven solution for maximizing throughput, trusted by industrial processors across multiple sectors.
 - **Quality Assurance** — Every machine is tested under full-load conditions, including dual-system simultaneous operation verification, before shipment.
 - **After-Sales Support** — From installation and commissioning to process optimization for your specific material, our technical team provides comprehensive support.

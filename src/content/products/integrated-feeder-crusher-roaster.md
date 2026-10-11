@@ -15,6 +15,11 @@ modelFr: Tout-en-Un
 modelId: Serba-Satu
 images:
   - /images/products/integrated-feeder-crusher-roaster.webp
+imageAlt:
+  en: "Integrated feeder crusher roaster for automatic oil production lines"
+  fr: "Ensemble intégré alimentateur-concasseur-torréfacteur pour lignes d’huile automatiques"
+  ar: "وحدة تغذية وتكسير وتحميص متكاملة لخطوط إنتاج الزيت الأوتوماتيكية"
+  id: "Unit feeder crusher roaster terintegrasi untuk lini produksi minyak otomatis"
 specifications:
   - name: Processing Capacity
     value: 500-1000 kg/h (selon la configuration)

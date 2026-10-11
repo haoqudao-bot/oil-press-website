@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const indiaSeeds = ['mustard', 'sesame', 'peanut', 'coconut', 'sunflower'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => indiaSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, indiaSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in India "
-  description="Professional oil press machine for India. Hydraulic cold press for mustard, sesame, peanut, coconut oil. Factory-direct pricing in INR. Shipping to Mumbai 18-22 days. 1-year warranty."
+  title="Oil Press Machine in India"
+  description="Oil press machine in India for mustard, groundnut and sesame. A modern hydraulic alternative to kachi ghani machines; 415V/50Hz, shipping to Mundra/JNPT. Request a quote."
   keywords={['oil press machine in India', 'oil press machine price in India', 'mustard oil press machine India', 'kachi ghani oil machine', 'groundnut oil machine India', 'sesame oil press machine India', 'hydraulic oil press India price']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -143,30 +142,39 @@ const faqs = [
     </div>
   </section>
 
-  <!-- INR Price Range -->
+  <!-- Kachi Ghani vs Hydraulic -->
   <section class="py-12 md:py-16 bg-steel-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title text-center mb-4">Indicative Price Range (INR)</h2>
-      <p class="text-center text-steel-600 mb-8">Factory-direct prices in Indian Rupees. Final quotation depends on configuration, accessories, and shipping terms.</p>
-      <div class="overflow-x-auto bg-white rounded-2xl border border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">Kachi Ghani vs Hydraulic Press: Why Indian Oil Mills Upgrade</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">The traditional <strong>kachi ghani</strong> (wooden ghani / kolhu) remains trusted across Rajasthan, Uttar Pradesh and Gujarat for cold-pressed mustard and groundnut oil. Modern hydraulic presses are increasingly chosen beside it — or to replace ageing units — because they keep true cold-press quality while removing the ghani's limits on throughput, labour and oil left in the cake. Buyers searching for a <em>kachi ghani oil machine</em> or <em>oil ghani machine</em> usually arrive at this comparison.</p>
+      <div class="overflow-x-auto bg-white rounded-2xl border border-steel-100 mb-8">
         <table class="w-full text-sm">
           <thead class="bg-steel-100">
             <tr>
-              <th class="px-4 py-3 text-left font-semibold text-charcoal-900">Model</th>
-              <th class="px-4 py-3 text-left font-semibold text-charcoal-900">Capacity</th>
-              <th class="px-4 py-3 text-left font-semibold text-charcoal-900">Indicative Price (INR)</th>
+              <th class="px-4 py-3 text-left font-semibold text-charcoal-900">Feature</th>
+              <th class="px-4 py-3 text-left font-semibold text-charcoal-900">Traditional kachi ghani / kolhu</th>
+              <th class="px-4 py-3 text-left font-semibold text-charcoal-900">HN-series hydraulic press</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-steel-100">
-            <tr><td class="px-4 py-3">HN325 (Mini)</td><td class="px-4 py-3">~40 kg/batch</td><td class="px-4 py-3">₹3.5L – ₹5L</td></tr>
-            <tr><td class="px-4 py-3">HN355 (Medium)</td><td class="px-4 py-3">~100 kg/batch</td><td class="px-4 py-3">₹6L – ₹8.5L</td></tr>
-            <tr><td class="px-4 py-3">HN400 (Heavy Duty)</td><td class="px-4 py-3">~100 kg/batch</td><td class="px-4 py-3">₹7L – ₹10L</td></tr>
-            <tr><td class="px-4 py-3">HN426 (High Pressure)</td><td class="px-4 py-3">~100 kg/batch</td><td class="px-4 py-3">₹8L – ₹12L</td></tr>
-            <tr><td class="px-4 py-3">HN500 (Ultra)</td><td class="px-4 py-3">~100 kg/batch</td><td class="px-4 py-3">₹10L – ₹15L</td></tr>
+            <tr><td class="px-4 py-3 font-medium text-charcoal-900">Batch size</td><td class="px-4 py-3 text-steel-700">Small charge, paced by animal or operator</td><td class="px-4 py-3 text-steel-700">20–100 kg per batch with repeatable timed cycles</td></tr>
+            <tr><td class="px-4 py-3 font-medium text-charcoal-900">Oil left in cake</td><td class="px-4 py-3 text-steel-700">Higher residual — meaningful oil stays in the cake</td><td class="px-4 py-3 text-steel-700">Lower residual; slotted cold-press barrels reach 6–8%</td></tr>
+            <tr><td class="px-4 py-3 font-medium text-charcoal-900">Labour</td><td class="px-4 py-3 text-steel-700">Continuous physical effort, skilled operator required</td><td class="px-4 py-3 text-steel-700">1–2 workers; automated pressure ramp and holding cycle</td></tr>
+            <tr><td class="px-4 py-3 font-medium text-charcoal-900">Seed range</td><td class="px-4 py-3 text-steel-700">Mainly mustard and groundnut in one setup</td><td class="px-4 py-3 text-steel-700">Mustard, groundnut, sesame, sunflower, soybean and more</td></tr>
+            <tr><td class="px-4 py-3 font-medium text-charcoal-900">Cold-press claim</td><td class="px-4 py-3 text-steel-700">Yes — genuine ambient-temperature extraction</td><td class="px-4 py-3 text-steel-700">Yes — true cold pressing, with food-grade barrel option</td></tr>
+            <tr><td class="px-4 py-3 font-medium text-charcoal-900">Cleanliness</td><td class="px-4 py-3 text-steel-700">Wood and fibre contact parts are harder to clean</td><td class="px-4 py-3 text-steel-700">Stainless contact parts, washable barrel, batch records</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="text-xs text-steel-500 mt-3 text-center">* Prices are indicative and exclude GST, import duties, and shipping. Contact for a formal CIF quotation to your port.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <p class="text-steel-700 text-sm">The key point for buyers replacing a kachi ghani: hydraulic cold pressing preserves the same low-temperature product story — the pungent mustard aroma and unrefined groundnut flavour — while lifting daily output and reducing dependence on one skilled operator. Many Indian bottlers run a hydraulic line for branded cold-press oil and keep traditional ghanis for farm-gate retail or demonstration. See our dedicated <a href="/products/cold-press-hydraulic-oil-press/" class="text-amber-600 hover:underline">cold-press model</a> and the <a href="/resources/cold-press-vs-hot-press-oil/" class="text-amber-600 hover:underline">cold vs hot pressing guide</a>.</p>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <p class="text-charcoal-900 text-sm font-medium mb-2">Power and entry</p>
+          <p class="text-steel-700 text-sm">Indian industrial three-phase supply is <strong>415V, 50Hz</strong> — specify this when ordering. Consignments commonly enter via Mundra, Nhava Sheva (JNPT), Chennai or Kolkata under HS heading 8479.82; ask your customs broker to confirm the current BIS and import-documentation checklist for the exact model.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -207,12 +215,12 @@ const faqs = [
   </section>
 
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for India</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for India</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -238,10 +246,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

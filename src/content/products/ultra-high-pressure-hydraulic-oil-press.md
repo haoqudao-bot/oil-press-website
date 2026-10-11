@@ -19,6 +19,11 @@ model: HN500
 modelId: ''
 images:
   - /images/products/ultra-high-pressure-hydraulic-oil-press.webp
+imageAlt:
+  en: "620-ton ultra high pressure hydraulic oil press machine at 75 MPa"
+  fr: "Presse à huile hydraulique ultra-haute pression 620 tonnes à 75 MPa"
+  ar: "معصرة زيت هيدروليكية فائقة الضغط بقدرة 620 طن وضغط 75 ميجاباسكال"
+  id: "Mesin press minyak hidrolik tekanan ultra tinggi 620 ton pada 75 MPa"
 specifications:
   - name: Model (Single/Double)
     value: HN500 Simple / HN500 Double

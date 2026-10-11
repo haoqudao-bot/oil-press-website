@@ -14,6 +14,11 @@ model: 370 Type
 modelId: ''
 images:
   - /images/products/industrial-seed-crusher.webp
+imageAlt:
+  en: "Industrial oil cake and oilseed crusher machine"
+  fr: "Concasseur industriel pour tourteaux et graines oléagineuses"
+  ar: "كسارة صناعية لكعكة الزيت والبذور الزيتية"
+  id: "Mesin crusher industri untuk bungkil minyak dan biji minyak"
 specifications:
   - name: Model
     value: Broyeur de graines industriel Type 370

@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const philippinesSeeds = ['coconut', 'peanut', 'sesame', 'sunflower'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => philippinesSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, philippinesSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in Philippines "
-  description="Professional oil press machine for Philippines. Hydraulic cold press for VCO coconut oil, peanut, moringa oil. Factory-direct pricing. Shipping to Manila 12-16 days. 1-year warranty."
+  title="Oil Press Machine in the Philippines"
+  description="Oil press machine in the Philippines for VCO coconut, peanut and moringa. Built for 230V/60Hz supply; delivery to Manila, Cebu or Davao. Request a quote."
   keywords={['oil press machine Philippines', 'coconut oil press machine Philippines', 'VCO machine Philippines', 'virgin coconut oil machine price Philippines', 'oil press machine Manila', 'hydraulic oil press Philippines']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -81,7 +80,7 @@ const faqs = [
   <!-- Hero -->
   <section class="bg-steel-900 py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Oil Press Machine in Philippines — Factory Direct</h1>
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Oil Press Machine in the Philippines — Factory Direct</h1>
       <p class="text-steel-300 text-lg max-w-3xl">Hydraulic oil press machines for coconut VCO, peanut, moringa, and sunflower oil production. Factory-direct pricing, shipping to Manila in 12-16 days, 1-year warranty.</p>
     </div>
   </section>
@@ -119,13 +118,81 @@ const faqs = [
     </div>
   </section>
 
+  <!-- Power Readiness & Multi-Island Delivery -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">Power Readiness &amp; Multi-Island Delivery in the Philippines</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">For Philippine buyers the two practical questions are never paperwork-heavy: <strong>will the machine match our 60Hz supply?</strong> and <strong>how does it reach our province?</strong> Both are settled before the machine leaves our works.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white rounded-2xl p-7 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-4 text-charcoal-900">Electrical: 230V / 60Hz is different</h3>
+          <p class="text-steel-700 text-sm mb-3">Philippine industrial supply runs at <strong>230V, 60Hz</strong> (460V three-phase in larger factories) — a different frequency from China's 380V/50Hz grid. Motors, heaters and controls are specified to match your confirmed site supply at order stage, rather than adapted later with unreliable frequency converters.</p>
+          <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5 mb-3">
+            <li>Many provincial shops run the machine from generator power — generator sizing is confirmed at ordering.</li>
+            <li>Single-phase locations should discuss the HN325-class machine and roaster power before building the line.</li>
+            <li>Breaker, cable and earthing specifications are included with the shipment documentation.</li>
+          </ul>
+          <p class="text-steel-700 text-sm">Full details in our <a href="/resources/oil-press-electrical-requirements-guide/" class="text-amber-600 hover:underline">electrical requirements guide</a>.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-4 text-charcoal-900">Logistics: beyond Manila</h3>
+          <p class="text-steel-700 text-sm mb-3">Ocean containers arrive at Manila (South Harbor / Manila International Container Port). Machines bound for the Visayas or Mindanao continue by domestic feeder vessel or coastal truck-ferry routing:</p>
+          <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5 mb-3">
+            <li><strong>Cebu</strong> — main transshipment hub for the Visayas.</li>
+            <li><strong>Cagayan de Oro &amp; Davao</strong> — entry points for Mindanao mills.</li>
+            <li><strong>General Santos</strong> — common for tuna-side and coconut processing regions.</li>
+          </ul>
+          <p class="text-steel-700 text-sm">Allow extra days for inter-island transfer and use a broker experienced in provincial delivery; scheduling around monsoon and typhoon months avoids avoidable demurrage. Customs release through the Bureau of Customs requires invoice, packing list and bill of lading, plus import permits where your business registration requires them.</p>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 text-center">Philippine electrical and customs procedures are revised periodically — confirm current BOC and local utility requirements with your broker and electrician before delivery.</p>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations in the Philippines</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Quezon</span>
+            <span class="text-steel-500 text-xs">Coconut / VCO</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">VCO Producer — Quezon Province</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 food-grade 600mm coconut press producing virgin coconut oil and fresh coconut milk for Luzon's VCO exporters.</p>
+          <div class="text-xs text-amber-600 font-medium">Food-grade 600mm barrel</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Pangasinan</span>
+            <span class="text-steel-500 text-xs">Peanut Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Peanut Oil Mill — Luzon</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 small-batch peanut press supplying local public markets and pasalubong retailers in the Ilocos region.</p>
+          <div class="text-xs text-amber-600 font-medium">Capacity: ~40 kg/batch</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Davao</span>
+            <span class="text-steel-500 text-xs">Coconut &amp; Sesame</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Coconut Oil Processor — Mindanao</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 running coconut and occasional sesame campaigns for export-grade VCO packed in Davao.</p>
+          <div class="text-xs text-amber-600 font-medium">Export-grade VCO</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for Philippines</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for Philippines</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -151,10 +218,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

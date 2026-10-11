@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const ukSeeds = ['rapeseed', 'canola', 'sunflower', 'hemp', 'flaxseed', 'flax'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => ukSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, ukSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in UK "
-  description="Professional oil press machine for the UK. Hydraulic cold press for rapeseed, sunflower, hemp, flaxseed oil. Factory-direct pricing in GBP. Shipping to Felixstowe 28-35 days. 1-year warranty."
+  title="Oil Press Machine in UK"
+  description="Oil press machine in the UK for rapeseed, sunflower and hemp. CE/UKCA documentation, 400V builds and import VAT guidance; shipping to Felixstowe. Request a quote."
   keywords={['oil press machine UK', 'oil press machine price UK', 'rapeseed oil press UK', 'cold press oil machine UK']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -119,13 +118,80 @@ const faqs = [
     </div>
   </section>
 
+  <!-- UK Compliance -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">UK Compliance: CE/UKCA Marking, Import VAT &amp; Port Arrival</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">Machinery imports into the United Kingdom follow a stable, well-documented route. The three points buyers ask about — marking rules after Brexit, import VAT recovery, and workplace installation — are settled here.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">CE and UKCA marking</h3>
+          <p class="text-steel-700 text-sm mb-3">CE-marked machinery continues to be accepted for placing on the <strong>Great Britain</strong> market; UKCA marking remains available for most product groups. Northern Ireland follows the CE / UKNI arrangement.</p>
+          <p class="text-steel-700 text-sm">Shipments include the declaration of conformity, technical file and guarding documentation consistent with the UK Supply of Machinery (Safety) Regulations.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">Duty and import VAT</h3>
+          <p class="text-steel-700 text-sm mb-3">Duty is assessed under the UK Tariff (this machinery type commonly sits near <strong>commodity code 8479.82</strong>) and import VAT at 20% is charged at entry.</p>
+          <p class="text-steel-700 text-sm">VAT-registered businesses normally reclaim the import VAT, and <strong>Postponed VAT Accounting</strong> removes the cash-flow hit entirely — ask your forwarder to set it up before arrival.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">Installation at work</h3>
+          <p class="text-steel-700 text-sm mb-3">UK industrial supply is 230V, 50Hz (400V three-phase), matching our standard build. Employers are expected to meet <strong>PUWER</strong>-type obligations for guarding, emergency stops and operator training, all of which are covered in our commissioning guidance.</p>
+          <p class="text-steel-700 text-sm">See the <a href="/resources/oil-press-electrical-requirements-guide/" class="text-amber-600 hover:underline">electrical guide</a> for the site checklist.</p>
+        </div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-charcoal-900 text-sm font-medium mb-2">Ports and delivery</p>
+        <p class="text-steel-700 text-sm">Container arrivals most commonly use Felixstowe, London Gateway or Southampton, with inland trucking to England, Scotland and Wales arranged by your forwarder. Ask us before shipment for the technical documentation pack your broker or health-and-safety adviser will request.</p>
+      </div>
+      <p class="text-xs text-steel-500 mt-4 text-center">Tariff codes and marking rules are reviewed periodically — confirm the current commodity code and VAT treatment with your UK customs agent.</p>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations in the UK</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">East Anglia</span>
+            <span class="text-steel-500 text-xs">Rapeseed Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Artisan Rapeseed Oil Farm — Norfolk</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 cold-pressing home-grown rapeseed into single-estate cooking oil for farm shops, delis, and online grocery buyers.</p>
+          <div class="text-xs text-amber-600 font-medium">Cold-press configuration</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">South West</span>
+            <span class="text-steel-500 text-xs">Hemp Seed Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Hemp Oil Processor — Devon</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 pressing licensed hemp seed at low temperature for CBD-food and wellness products, keeping temperatures below 40°C.</p>
+          <div class="text-xs text-amber-600 font-medium">Low-temperature press</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Yorkshire</span>
+            <span class="text-steel-500 text-xs">Sunflower Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sunflower Oil Producer — Yorkshire</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 batch-pressing British-grown sunflower seed for refill stores and zero-waste shops across northern England.</p>
+          <div class="text-xs text-amber-600 font-medium">Output: ~450 kg/day</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for UK</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for UK</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -151,10 +217,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

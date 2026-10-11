@@ -19,6 +19,11 @@ model: HN365
 modelId: ''
 images:
   - /images/products/hn365-hydraulic-oil-press.webp
+imageAlt:
+  en: "HN365 commercial hydraulic oil press machine, 365-ton upgraded model"
+  fr: "Presse à huile hydraulique commerciale HN365, modèle amélioré 365 tonnes"
+  ar: "معصرة زيت هيدروليكية تجارية HN365، موديل مطور بقدرة 365 طن"
+  id: "Mesin press minyak hidrolik komersial HN365, model peningkatan 365 ton"
 specifications:
   - name: Model
     value: HN365 Vertical Hydraulic Oil Press

@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const southAfricaSeeds = ['sunflower', 'peanut', 'soybean', 'canola', 'rapeseed'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => southAfricaSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, southAfricaSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine South Africa "
-  description="Professional oil press machine for South Africa. Hydraulic cold press for sunflower, peanut, soybean, canola oil. Factory-direct pricing in ZAR. Shipping to Durban 22-26 days. 1-year warranty."
+  title="Oil Press Machine South Africa"
+  description="Oil press machine in South Africa for sunflower, soybean and canola. NRCS LOA technical file supplied, 400V/50Hz builds, shipping to Durban. Request a quote."
   keywords={['oil press machine South Africa', 'oil press machine price South Africa', 'sunflower oil press machine South Africa', 'hydraulic oil press South Africa']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -119,13 +118,85 @@ const faqs = [
     </div>
   </section>
 
+  <!-- Electrical Compliance: NRCS LOA -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">Electrical Compliance &amp; Port Entry: NRCS Letter of Authority</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">Electrical machinery imported into South Africa can require a <strong>Letter of Authority (LOA)</strong> from the National Regulator for Compulsory Specifications (NRCS) under the applicable SANS standard <em>before customs release</em>. Buyers who discover this at Durban harbour pay storage while the application catches up.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">1 · Confirm LOA scope early</h3>
+          <p class="text-steel-700 text-sm">Ask the NRCS or your import broker whether the press and its electrical controls fall under the relevant compulsory specification. If they do, the importer — or a registered manufacturer — submits the LOA application, ideally before the machine ships.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">2 · Build the technical file</h3>
+          <p class="text-steel-700 text-sm mb-3">LOA applications are supported by nameplate data, a wiring diagram, test report and a description of safety guarding. We compile this file in the format compliance agents expect.</p>
+          <p class="text-steel-700 text-sm">Apply once for repeated imports of the same model where the scheme allows.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">3 · Specify the correct voltage</h3>
+          <p class="text-steel-700 text-sm mb-3">South African industrial three-phase supply is <strong>400V, 50Hz</strong> — close to, but not the same as, nominal 380V grids. Motors and controls are built to order against your confirmed supply.</p>
+          <p class="text-steel-700 text-sm">See the <a href="/resources/oil-press-electrical-requirements-guide/" class="text-amber-600 hover:underline">electrical requirements guide</a> for site preparation.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <p class="text-charcoal-900 text-sm font-medium mb-2">Ports and duty</p>
+          <p class="text-steel-700 text-sm">Machinery most often enters through Durban, with Cape Town and Gqeberha (Port Elizabeth) as alternatives. SARS assesses duty and 15% VAT on the SAD501 entry; registered importers can normally reclaim input VAT.</p>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <p class="text-charcoal-900 text-sm font-medium mb-2">Installation note</p>
+          <p class="text-steel-700 text-sm">South African insurers and factories may expect a site Certificate of Compliance for the installed wiring from a registered electrician — brief your contractor before the machine arrives.</p>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-4 text-center">NRCS scope changes as standards are updated — confirm whether an LOA applies to the exact model with your importer before placing the order.</p>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations in South Africa</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Free State</span>
+            <span class="text-steel-500 text-xs">Sunflower Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sunflower Oil Producer — Free State</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 processing the Free State sunflower harvest for artisanal cooking-oil brands sold at farm stalls and delis.</p>
+          <div class="text-xs text-amber-600 font-medium">Output: ~500 kg/day</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Limpopo</span>
+            <span class="text-steel-500 text-xs">Groundnut Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Groundnut Oil Mill — Limpopo</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 cold-pressing groundnuts for farmers-market and health-shop channels in Polokwane and surrounding towns.</p>
+          <div class="text-xs text-amber-600 font-medium">Cold-press configuration</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Western Cape</span>
+            <span class="text-steel-500 text-xs">Olive Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Olive Oil Processor — Western Cape</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 cold-press unit for boutique olive oil and olive-pomace extraction at small wineland and Karoo estates.</p>
+          <div class="text-xs text-amber-600 font-medium">Boutique cold press</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for South Africa</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for South Africa</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -151,10 +222,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

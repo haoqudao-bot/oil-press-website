@@ -19,123 +19,147 @@ seoKeywords:
 
 ## Introduction
 
-Understanding the electrical requirements of your hydraulic oil press is crucial for safe and efficient operation.
+A hydraulic oil press is a forgiving machine electrically — a single 2.2 kW motor drives the hydraulic pack — but "forgiving" is not "indifferent." Voltage configured for the wrong phase, an undersized generator, long thin cables, or a missing earth can stall the pump, burn the motor, or create a shock hazard in a room that also contains water and oil. Most electrical problems reported by new mills trace back to three avoidable mistakes: treating starting current as if it were running current, ignoring cable voltage drop over distance, and earthing the frame poorly.
+
+This guide gives the actual numbers per model class, explains how to size a generator or breaker, sets out wiring by distance, and covers the safety and backup-power questions buyers ask before installation.
 
 ## Basic Electrical Requirements
 
-### Voltage Specifications
-- 220V Single Phase (common in many countries)
-- 380V Three Phase (industrial standard)
-- 415V Three Phase (some regions)
-- Frequency: 50Hz or 60Hz
-- Voltage can be customized at no extra charge
+### Voltage and Frequency
+
+Haonuo presses are built to order against the destination grid at no extra charge:
+
+- 220–240 V single phase, 50 or 60 Hz
+- 380–415 V three phase, 50 or 60 Hz (380 V China, 400 V EU, 415 V common in Africa and South Asia)
+
+Confirm the label with your electrician before the machine ships. Three phase is strongly recommended for commercial sites: starting current is far lower per phase, the motor runs cooler, and supporting equipment (roaster, crusher, filters) will usually need three phase anyway.
 
 ### Power Consumption
-- Motor Power: All Haonuo models: 2.2 KW
-- Idle: 0.5-1.0 KW
-- Pressing: 1.5-2.2 KW
-- Peak: Up to 3.0 KW (during pressure build-up)
 
-### Current Requirements
-- Single Phase (220V): Running 10-15 A, Starting 20-30 A
-- Three Phase (380V): Running 5-8 A, Starting 10-15 A
-- Recommended Circuit Breaker: Single phase 30 A, Three phase 16 A per phase
+The main motor is **2.2 kW on all current models**. Consumption follows the press cycle:
 
-## Generator Requirements
+| Phase | Draw |
+|-------|------|
+| Idle / pumping up | 0.5–1.0 kW |
+| Sustained pressing | 1.5–2.2 kW |
+| Peak during pressure build-up | up to ~3.0 kW for short intervals |
 
-### Generator Capacity
+A typical eight-hour pressing day uses roughly 12–18 kWh at the press itself; budget separately for roaster, crusher, cleaner, and filters when calculating the site bill.
 
-| Model | Single Phase | Three Phase |
-|-------|-------------|-------------|
-| HN325 | 5 kVA | 5 kVA |
-| HN355 | 5.5 kVA | 5.5 kVA |
-| HN426 | 5.5 kVA | 5.5 kVA |
-| HN480 | 5.5 kVA | 5.5 kVA |
-| HN500 | 7 kVA | 7 kVA |
+### Current and Protection
 
-### Safety Margin
-- Add 20-30% for starting current
-- Consider other equipment on the same circuit
-- Account for voltage drops
+| Supply | Running Current | Starting Current | Recommended Breaker |
+|--------|----------------|------------------|----------------------|
+| 220–240 V single phase | 10–15 A | 20–30 A | 30 A, C-curve (motor-rated) |
+| 380–415 V three phase | 5–8 A per phase | 10–15 A per phase | 16 A per phase, C-curve |
 
-### Recommended Generator Size
-- HN325/HN355: 6-7 kVA
-- HN426/HN480: 7-8 kVA
-- HN500: 8-10 kVA
+Use a motor-rated (C- or D-curve) circuit breaker or a motor-protection circuit breaker rather than a lighting-type B-curve breaker, which trips nuisance-style on motor start. Larger frames such as the HN365 use star-delta (Y-Δ) reduced-voltage starting to cut the inrush.
 
-### Generator Selection Criteria
-1. Type: Diesel (most common), Gasoline, Solar
-2. Quality: Reputable brands, inverter-type recommended
-3. Features: Voltage regulation, overload protection, automatic start/stop
+## Generator Sizing
 
-## Power Supply Configuration
+Many mills run where the grid is weak, metered for limited hours, or absent entirely. Generator kVA must cover peak draw plus starting inrush, not just running power.
 
-### Grid Connection
+| Model Class | Minimum Generator | Recommended Generator |
+|-------------|-------------------|------------------------|
+| HN325 | 5 kVA | 6–7 kVA |
+| HN365 | 5.5 kVA | 7–8 kVA |
+| HN426 | 5.5 kVA | 7–8 kVA |
+| HN500 | 7 kVA | 9–10 kVA |
 
-**Single Phase Connection:**
-L1 -> Circuit Breaker -> Motor
-N -> Motor
-PE -> Equipment Frame
+These ratings cover the press only. If the roaster, crusher, and lighting share the generator, add their nameplate power and keep the total sustained load below 70–80% of generator capacity — lightly loaded diesel generators last longer and regulate voltage better.
 
-**Three Phase Connection:**
-L1, L2, L3 -> Circuit Breaker -> Motor
-N -> Control Panel
-PE -> Equipment Frame
+### Generator Selection Rules
 
-### Wiring Requirements
+1. Add a **20–30% safety margin** above running load for starting current.
+2. Account for other equipment on the same set and for cable voltage drop.
+3. Prefer a reputable diesel set with an automatic voltage regulator (AVR); cheap unregulated generators can deliver frequency and voltage swings that overheat motors.
+4. For single-phase sites above 5 kW, consider a three-phase machine plus a three-phase generator — the total investment is often comparable and far more stable.
+5. Inverter-type generators are quiet and clean but usually too small for a full line; they suit mobile demonstrations rather than daily production.
 
-| Distance | Single Phase (220V) | Three Phase (380V) |
-|----------|---------------------|---------------------|
-| 10m | 2.5 mm2 | 2.5 mm2 |
-| 20m | 4 mm2 | 2.5 mm2 |
-| 30m | 6 mm2 | 4 mm2 |
-| 50m | 10 mm2 | 6 mm2 |
+## Wiring and Connection
 
-### Control Panel Components
-- Main switch
-- Circuit breakers
-- Motor starter
-- Control buttons
-- Emergency stop
-- Indicator lights
+### Connection Layout
+
+**Single phase:** L (phase) → motor-rated breaker → contactor/starter → motor; N straight to motor; PE bonded to the machine frame and to the earth electrode.
+
+**Three phase:** L1/L2/L3 → breaker → starter (star-delta where fitted) → motor; N to the control circuit; PE bonded to frame and earth electrode.
+
+Never use the neutral as an earth (TN-C-style improvised bonding) in a wet production room; fit a proper protective earth with measured resistance below 4 Ω.
+
+### Cable Size by Distance
+
+Voltage drop should stay under 5% from the supply point to the motor. For copper cables at the press's current, conservative minimums are:
+
+| Distance | 220–240 V Single Phase | 380–415 V Three Phase |
+|----------|------------------------|------------------------|
+| Up to 10 m | 2.5 mm² | 2.5 mm² |
+| Up to 20 m | 4 mm² | 2.5 mm² |
+| Up to 30 m | 6 mm² | 4 mm² |
+| Up to 50 m | 10 mm² | 6 mm² |
+
+These are planning figures for the press alone; a qualified electrician must size the final installation for local regulations, ambient temperature, bundling, and total site load. Long runs on single phase are the classic cause of "the motor sounds weak" complaints — voltage is being lost in the cable, not in the machine.
+
+### Control Panel
+
+Factory panels include main isolator, motor protection, starter, run/stop controls, pressure gauge, and an emergency stop. Install the panel within the operator's line of sight of the barrel but outside the splash zone, leave clearance for heat dissipation, and do not bypass the e-stop or door interlocks to save time.
 
 ## Safety Considerations
 
-### Electrical Safety
-- Wear insulated gloves
-- Use insulated tools
-- Follow lockout/tagout procedures
+### Working Practices
 
-### Voltage Fluctuations
-- Low voltage: Motor overheating, reduced performance
-- High voltage: Motor damage, component failure
-- Solutions: Voltage stabilizer, surge protector
+- Only qualified electricians open the panel or motor terminal box.
+- Lockout/tagout before electrical work: isolate, lock the switch, test with a known-good meter, then work.
+- Keep water, oil, and washdown hoses away from the panel; use IP-rated covers where the environment demands.
+- Insulated gloves and mats are cheap insurance during maintenance.
 
-### Lightning Protection
-- Lightning rod installation
-- Surge protection devices
-- Grounding system
+### Voltage Problems
 
-## Backup Power Solutions
+| Problem | Cause | Effect | Remedy |
+|---------|-------|--------|--------|
+| Chronic low voltage | Long thin cable, weak grid/gen set | Slow pump build-up, motor overheating | Larger cable, AVR generator, voltage stabiliser |
+| Voltage spikes/surges | Lightning, load switching, gen set faults | Control and motor insulation damage | Surge protective device, proper earthing |
+| Phase loss (three phase) | Broken fuse/connection | Single-phasing burns motors quickly | Phase-loss protection relay |
+| Reversed rotation | Two phases swapped at install | Pump runs backwards, no pressure | Swap any two phases; test before first run |
 
-### UPS (Uninterruptible Power Supply)
-- Applications: Control panel backup, emergency shutdown
-- Sizing: 500-1000 VA typically sufficient
+### Earthing and Lightning
 
-### Solar Power Systems
-- Applications: Off-grid locations, sustainable operations
-- Considerations: Solar panel sizing, battery storage, backup generator recommended
+- Dedicated earth electrode, tested after installation and annually; under 4 Ω.
+- Equipotential bonding between press frame, tanks, and steel building structure.
+- In lightning-prone areas: surge protection devices at the panel and a lightning protection system on the building; these protect the control electronics far more reliably than unplugging after the fact.
 
-## Energy Efficiency Tips
+## Backup and Off-Grid Power
 
-### Power Management
-- Run during off-peak hours if possible
-- Batch processing to reduce startup cycles
+### UPS for the Control Circuit
 
-### Cost Calculation
-- Energy Cost per Day = (Power Consumption x Hours x Rate) / 1000
-- Example: 2.0 KW x 8 hours x local rate/KWh
+A small 500–1,000 VA UPS on the control circuit is inexpensive insurance: it keeps the pressure controller and e-stop logic alive through flicker and brief outages so a cycle stops in a controlled state instead of mid-stroke. It does not power the motor.
+
+### Solar-Hybrid Systems
+
+Solar makes sense for daytime pressing in high-tariff or off-grid locations, but the motor's starting current and the cloudy-day question mean practical systems are hybrid: solar array and inverter sized for the *average* load plus a battery bank, with a diesel generator for starts and overcast stretches. Size the system on measured daily kWh — press plus all ancillary equipment — not on the motor plate alone.
+
+## Energy Cost and Efficiency
+
+Daily energy cost is straightforward to estimate:
+
+**Cost/day ≈ power (kW) × running hours × local tariff (per kWh)**
+
+Example: a 2.2 kW press drawing ~1.8 kW on average for 8 hours consumes about 14.4 kWh; at a tariff of 0.15 per kWh that is roughly 2.16 currency units of energy cost per day at the press. Practical savings come from operating habits rather than exotic equipment:
+
+- Batch back-to-back loads to reduce the number of motor starts and warm-up losses.
+- Keep hydraulic oil at 30–50°C — cold oil thickens, the pump works longer per cycle, and kWh per litre rises.
+- Schedule the electric roaster (a much larger load than the press) to avoid simultaneous peaks where the grid or generator is marginal.
+- In time-of-use tariff markets, shift pressing and roasting into off-peak windows.
+
+## Pre-Installation Checklist
+
+- [ ] Voltage, phase, and frequency confirmed to the factory before shipping
+- [ ] Motor-rated breaker and proper PE earth installed, resistance measured
+- [ ] Cable cross-section checked against run length
+- [ ] Generator (if used) sized with 20–30% margin and AVR
+- [ ] Rotation direction tested at commissioning
+- [ ] E-stop, phase-loss protection, and surge protection verified
+- [ ] Ancillary loads (roaster, crusher, filters) added to the site power budget
 
 ## Conclusion
 
-Proper electrical configuration is essential for safe and efficient operation of hydraulic oil presses. For personalized electrical configuration advice, contact Haonuo's technical support team.
+The electrical side of a hydraulic oil press is not complex, but it rewards doing once and doing correctly: the right voltage and phase at order time, a generator or breaker sized for starting current rather than nameplate running current, cables that do not waste voltage over distance, and a proper protective earth. Get those four things right and electrical faults essentially disappear as a source of downtime. Send Haonuo your local voltage, available supply (grid or generator), and distances from the panel to the supply point; our engineers will confirm the configuration and cable plan before the machine ships.

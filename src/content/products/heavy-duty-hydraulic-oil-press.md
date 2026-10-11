@@ -4,16 +4,26 @@ title:
   fr: Presse à Huile Hydraulique Lourde
   ar: معصرة زيت هيدروليكية ثقيلة
   id: Mesin Press Minyak Hidrolik Berat
+seoTitle:
+  en: HN400 Hydraulic Oil Press — 500 Ton Hot & Cold Press
+  fr: Presse à huile hydraulique HN400 — 500 tonnes, chaud et froid
+  ar: معصرة زيت هيدروليكية HN400 — 500 طن، عصر ساخن وبارد
+  id: Mesin press minyak hidrolik HN400 — 500 ton, panas dan dingin
 description:
-  en: "500-ton heavy-duty hydraulic oil press with 63 MPa pressure. Versatile cold press for walnut, tea seed, and multi-seed operations with 100kg capacity per batch."
-  fr: "Presse à huile hydraulique 500 tonnes, 63 MPa. Pressage à froid noix et multi-graines, 100kg par lot."
-  ar: "معصرة زيت هيدروليكية ثقيلة 500 طن بضغط 63 ميجاباسكال. عصر بارد متعدد الاستخدامات للجوز والشاي والعمليات متعددة البذور بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik berat 500 ton dengan tekanan 63 MPa. Press dingin serbaguna untuk walnut, biji teh, dan operasi multi-biji dengan kapasitas 100kg per batch."
+  en: "HN400 hydraulic oil press — 500 ton model with 38 MPa cake pressure. Hot and cold press for tea seed, walnut, rapeseed. 390mm barrel, ~100kg per batch. Still in production."
+  fr: "Presse à huile hydraulique HN400 — 500 tonnes, 38 MPa. Pressage chaud et froid pour graine de thé, noix, colza. Fût 390mm, ~100kg par lot. Toujours en production."
+  ar: "معصرة زيت هيدروليكية HN400 — 500 طن، 38 ميجاباسكال. عصر ساخن وبارد لبذور الشاي والجوز واللفت. برميل 390 مم، ~100 كجم لكل دفعة. لا تزال في الإنتاج."
+  id: "Mesin press minyak hidrolik HN400 — 500 ton, 38 MPa. Press panas dan dingin untuk biji teh, walnut, rapeseed. Barel 390mm, ~100kg per batch. Masih dalam produksi."
 category: hydraulic-oil-press
 model: HN400
 modelId: ''
 images:
-  - /images/products/medium-hydraulic-oil-press.webp
+  - /images/products/heavy-duty-hydraulic-oil-press.webp
+imageAlt:
+  en: "HN400 heavy duty hydraulic oil press, 500-ton hot and cold pressing"
+  fr: "Presse à huile hydraulique renforcée HN400, pressage à chaud et à froid 500 tonnes"
+  ar: "معصرة زيت هيدروليكية شديدة التحمل HN400، عصر ساخن وبارد بقدرة 500 طن"
+  id: "Mesin press minyak hidrolik heavy duty HN400, pengepresan panas dan dingin 500 ton"
 specifications:
   - name: Model (Single/Double)
     value: HN400 Simple / HN400 Double
@@ -64,7 +74,7 @@ faq:
   - question: What power supply does the HN400 require?
     answer: The HN400 requires 2.2 KW motor power, compatible with both 220V/50Hz and 380V/60Hz power supplies. We can customize the electrical system to match your local power standards at no extra charge.
   - question: How many workers are needed to operate the machine?
-    answer: Only 1-2 workers are needed. The microcomputer control system automates the pressing cycle, and the 4-hook cake removal mechanism makes unloading easy even after overnight pressing.
+    answer: Only 1-2 workers are needed. This automatic oil press machine uses a microcomputer control system that automates the pressing cycle, and the 4-hook cake removal mechanism makes unloading easy even after overnight pressing.
   - question: What warranty do you provide?
     answer: We provide a 1-year warranty covering all manufacturing defects, plus lifetime technical support. For the HN400, this includes specific coverage for the dual-barrel sliding rail system and high-capacity hydraulic pump. Spare parts are available from stock.
   - question: How is the machine shipped and how long does delivery take?
@@ -250,60 +260,61 @@ faqId:
     answer: "Tingkat minyak sisa dalam kue biasanya 6-8% untuk sebagian besar bahan dengan desain barrel beralur tipe bar kami, dibandingkan dengan 10-12% dengan mesin press barrel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% lebih banyak minyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch."
 videoUrl: ''
 seoKeywords:
-  - medium hydraulic oil press
-  - hydraulic oil press machine
+  - HN400 hydraulic oil press
+  - 500 ton hydraulic press
+  - hot and cold oil press machine
   - HN400 oil press
-  - 400 ton oil press
-  - medium capacity oil press
-  - commercial oil press
-  - versatile oil press machine
-  - cold press hydraulic press
-  - medium scale oil extraction
-  - oil press machine price
-updatedAt: 2025-11-01
+  - 500 ton hydraulic oil press
+  - automatic oil press machine
+  - heavy duty oil press machine
+  - walnut oil press machine
+  - tea seed oil press
+  - cold press oil machine
+updatedAt: 2026-10-10
 ---
 
 ## Overview
 
-The HN400 medium hydraulic oil press provides 500 tons of pressing force with 38 MPa cake surface pressure, covering both conventional hot pressing and cold pressing for producers who want one machine for both. Batches run 40–90 minutes depending on the material, with 6–8% residual oil in the cake (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), and the 2.2 kW motor runs on standard 220V/380V supply.
+> **Looking for a current model?** Most buyers today choose the [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) (500 t, 42 MPa cake pressure) for premium cold-pressed oil, or the [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) (620 t) for the hardest seeds. The HN400 remains in production for buyers replacing an existing HN400 or matching a previous quotation.
 
-The HN400 Medium Hydraulic Oil Press bridges the gap between our standard and cold-press models, offering 500 tons of pressing force with 38 MPa cake surface pressure. This versatile machine is suitable for cold pressing and works effectively in all seasons without being constrained by climate conditions. Whether you are processing conventional oil seeds or venturing into cold-press production, the HN400 provides the power and flexibility you need.
+The HN400 is a heavy duty oil press machine built around a 500-ton hydraulic system with a 400 mm cylinder and 390 mm barrel, delivering 38 MPa cake surface pressure. It supports both hot and cold pressing, processing up to approximately 100 kg of raw material per batch. The 2.2 kW motor keeps operating costs modest, and the machine runs on standard 220V/380V power.
 
-The HN400 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 38 MPa, enabling most conventional and semi-hard materials to be fully pressed in a single cycle. Its cold-press capability means you can produce premium cold-pressed oils from tea seed, walnut kernel, and flaxseed while maintaining the natural flavor and nutritional value of your product.
+This page serves as a reference for buyers searching specifically for the HN400 by model number — for example, to match an existing machine or compare specs against a previous quotation.
 
-## Key Advantages
+## HN400 vs Current Models
 
-- **Versatile Cold-Press Capability** — Suitable for cold pressing, works in all seasons without climate constraints, preserving premium oil quality year-round.
-- **500-Ton Pressing Force** — Substantial power that bridges the gap between standard and dedicated cold-press models, handling a wide range of materials with ease.
-- **38 MPa Cake Pressure** — Sufficient for most conventional and semi-hard materials to be fully pressed in one cycle, with lower residual oil rates than standard models.
-- **All-Season Operation** — Engineered for reliable performance regardless of ambient temperature, ensuring consistent production output throughout the year.
-- **Dual-Barrel Productivity** — Double-barrel configuration with dual sliding rails enables continuous operation — load one barrel while the other presses.
-- **Customizable Barrel** — Barrel diameter and height can be tailored to your specific material requirements.
+| Parameter | HN400 (Previous Gen) | HN426 (Cold Press) | HN500 (Ultra High) |
+|-----------|----------------------|--------------------|--------------------|
+| Pressing force | 500 tons | 500 tons | 620 tons |
+| Cake surface pressure | 38 MPa | 42 MPa | 52 MPa |
+| Best for | Hot & cold, mid-range | Premium cold press | Hardest seeds |
+| Barrel inner diameter | 390 mm | 390 mm | 390 mm |
+| Batch capacity | ~100 kg | ~100 kg | ~100 kg |
 
-## Core Technology
+**Choose the HN400 if:**
+- You are replacing an existing HN400 and want a direct match
+- You are matching a previous quotation that specifies the HN400
+- You need one machine for both hot and cold pressing at mid-range force
 
-- **Bar-Type Slotted Barrel** — significantly more oil extraction area than drilled barrels, achieving approximately 2-3% higher oil yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) per batch.
-- **German Hydraulic System** — Ultra-high pressure combined pump delivers working pressure up to 63 MPa for consistent, powerful extraction.
-- **4-Hook Cake Removal** — Easy, reliable cake discharge system that reduces downtime between pressing cycles.
-- **High Carbon Steel Frame** — Long-lasting service under continuous operation. Actual service life depends on operating conditions and maintenance.
-- **Microcomputer Control** — Automated pressing cycle with one-button operation. Basic training recommended; we provide video tutorials and remote guidance.
-- **Energy Efficient** — Designed to reduce power consumption compared to previous-generation presses (actual savings vary by operating conditions).
-- **Labor Efficient** — Only 1-2 operators needed, reducing labor requirements compared to manual pressing methods.
+**Choose the HN426 if:**
+- Cold pressing is your primary business and you want 42 MPa cake pressure for premium oil
+- You need the current cold-press flagship model
 
-## Applications & Suitable Materials
+**Choose the HN500 if:**
+- You press the hardest seeds (in-shell walnut, copra, tiger nut) and need maximum force
 
-The HN400 is well-suited for pressing a wide variety of conventional and semi-hard oil seeds:
+[Compare HN400 with all models →](/products/model-comparison/)
 
-- **Cold-Press Materials**: Tea seed, walnut kernel, flaxseed
-- **Conventional Materials**: Rapeseed, peanut, soybean
-- **Other Materials**: Similar semi-hard and conventional pressing materials
+## Suitable Applications
 
-> **Note**: For the most demanding cold-press materials such as in-shell walnuts and apricot kernels, consider our [HN426 Cold Press model](/products/cold-press-hydraulic-oil-press) or [HN500 Ultra High Pressure model](/products/ultra-high-pressure-hydraulic-oil-press).
+The HN400 handles both conventional hot pressing and cold pressing:
 
-## Why Choose Haonuo
+- **Cold-press materials**: Tea seed, walnut kernel, flaxseed
+- **Conventional materials**: Rapeseed, peanut, soybean
+- **Not recommended**: In-shell walnuts, apricot kernels, and other very hard cold-press materials — see the [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) or [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) instead
 
-- **Factory-Direct Pricing** — Buy directly from the manufacturer and eliminate middleman markups. The HN400 offers excellent value as a versatile mid-range hydraulic oil press.
-- **Cold-Press Versatility** — We understand the demands of both conventional and cold-press production and have engineered the HN400 to excel at both.
-- **Quality Assurance** — Every machine undergoes rigorous testing before shipment, including full-load hydraulic pressure tests and operational cycle verification.
-- **After-Sales Support** — Comprehensive technical support, spare parts availability, and remote troubleshooting assistance to keep your operation running smoothly.
-- **Customization Options** — Barrel dimensions, stroke length, and other parameters can be customized to match your specific material and production requirements.
+## Still in Production
+
+The HN400 is still manufactured and accepts orders. Production lead time is 15–25 working days for standard configurations.
+
+[Request an HN400 quote](/contact/) or [compare current models →](/products/model-comparison/)

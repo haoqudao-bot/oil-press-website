@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const egyptSeeds = ['sesame', 'olive', 'peanut', 'sunflower'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => egyptSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, egyptSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in Egypt "
-  description="Professional oil press machine for Egypt. Hydraulic cold press for sesame, olive, peanut, sunflower oil. Factory-direct pricing in EGP. Shipping to Alexandria 20-24 days. 1-year warranty."
+  title="Oil Press Machine in Egypt"
+  description="Oil press machine in Egypt for sesame, olive and sunflower. ACID/GOEIC documentation and pre-shipment inspection support, shipping to Alexandria. Request a quote."
   keywords={['oil press machine Egypt', 'sesame oil press machine Egypt', 'olive oil press Egypt', 'hydraulic oil press Egypt price']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -119,13 +118,86 @@ const faqs = [
     </div>
   </section>
 
+  <!-- Import Requirements: ACID, GOEIC -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">Importing Into Egypt: ACID, GOEIC &amp; Pre-Shipment Inspection</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">Egypt runs one of the region's most document-heavy import regimes. Three things must be in place <em>before the vessel sails</em>; arranging them after arrival means weeks of port storage and demurrage at Alexandria or Sokhna.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">1 · ACID declaration</h3>
+          <p class="text-steel-700 text-sm mb-3">The Egyptian importer registers the shipment on the Nafeza customs platform and receives an <strong>ACID number</strong>, which must appear on the commercial invoice, packing list and bill of lading.</p>
+          <p class="text-steel-700 text-sm">Exporters complete the cargo-data side through the authorised blockchain platform. Shipments without a valid ACID cannot be loaded at origin.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">2 · GOEIC registration</h3>
+          <p class="text-steel-700 text-sm mb-3">Importers of industrial equipment must be registered with the <strong>General Organization for Export and Import Control</strong>, and foreign factory/manufacturer registration rules may apply depending on product category.</p>
+          <p class="text-steel-700 text-sm">Your importer of record should verify status well before ordering — this is the check most often left too late.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">3 · Inspection &amp; attested documents</h3>
+          <p class="text-steel-700 text-sm mb-3">A pre-shipment inspection certificate from an accredited inspection body, plus commercial documents (invoice, certificate of origin, packing list) attested through the prescribed consular or electronic channels.</p>
+          <p class="text-steel-700 text-sm">We provide the manufacturer test report, nameplate and technical file that inspection bodies routinely request.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <p class="text-charcoal-900 text-sm font-medium mb-2">Ports and timing</p>
+          <p class="text-steel-700 text-sm">Most machinery enters via Alexandria or Port Said; Ain Sokhna serves Red Sea routings. Build the ACID and inspection window into your production schedule — both are completed while the machine is still at our works.</p>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <p class="text-charcoal-900 text-sm font-medium mb-2">Power specification</p>
+          <p class="text-steel-700 text-sm">Egyptian industrial supply is 220/380V, 50Hz three-phase, matching our standard build. Confirm your site supply and breaker capacity before delivery using our <a href="/resources/oil-press-electrical-requirements-guide/" class="text-amber-700 underline">electrical requirements guide</a>.</p>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-4 text-center">ACID and GOEIC procedures are revised frequently — always confirm the current checklist with your Egyptian importer or customs agent before placing the order.</p>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations in Egypt</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Beheira</span>
+            <span class="text-steel-500 text-xs">Sesame &amp; Tahini</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sesame Oil &amp; Tahini Producer — Nile Delta</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 pressing carefully roasted sesame to supply the tahini and halawa industry in Beheira, Egypt's sesame-processing heartland.</p>
+          <div class="text-xs text-amber-600 font-medium">Yield: 46-50%</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Fayoum</span>
+            <span class="text-steel-500 text-xs">Sunflower Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sunflower Oil Mill — Fayoum</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 processing locally grown sunflower seed for bulk cooking oil distributed through Cairo and Upper Egypt markets.</p>
+          <div class="text-xs text-amber-600 font-medium">Output: ~500 kg/day</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Ismailia</span>
+            <span class="text-steel-500 text-xs">Olive &amp; Cold Press</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Olive Oil Processor — Ismailia</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 cold-press model handling small-batch desert olives and second-press olive pomace for blended oils.</p>
+          <div class="text-xs text-amber-600 font-medium">Cold-press configuration</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for Egypt</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for Egypt</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -151,10 +223,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

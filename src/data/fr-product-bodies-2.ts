@@ -1,5 +1,7 @@
 export const frProductBodies2: Record<string, string> = {
-  'ultra-high-pressure-cold-press': `## Aperçu
+  'ultra-high-pressure-cold-press': `> **Configuration personnalisée** — La HN480B est construite sur commande. Délai typique : 30 à 45 jours ouvrés. Contactez-nous pour un devis adapté à votre matière.
+
+## Aperçu
 
 La presse à froid ultra haute pression HN480B applique 600 tonnes de force de pressage à 65 MPa de pression système et 48 MPa de pression superficielle du gâteau — la force de pressage à froid la plus élevée de la gamme Haonuo — pour les producteurs de noix, d'amandes d'abricot et de yellowhorn. Les lots durent 40 à 90 minutes selon la matière avec 6 à 8 % d'huile résiduelle dans le gâteau (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation), le tout couvert par une garantie d'un an.
 
@@ -45,7 +47,9 @@ La HN480B offre le rendement en huile le plus élevé pour les matériaux de pre
 - **Support Après-Vente** — De la mise en service et la formation des opérateurs à l'entretien continu et aux pièces de rechange, notre équipe veille à ce que votre HN480B offre des performances optimales tout au long de sa durée de vie.
 - **Options de Personnalisation** — Les dimensions du fût, la longueur de course et d'autres spécifications peuvent être personnalisées pour correspondre exactement à vos exigences de production et aux caractéristiques de vos matériaux.`,
 
-  'sesame-oil-hydraulic-press': `## Aperçu
+  'sesame-oil-hydraulic-press': `> **Configuration personnalisée** — Modèle sésame dédié, construit sur commande. Délai typique : 30 à 45 jours ouvrés. Contactez-nous pour un devis adapté à votre sésame et capacité souhaitée.
+
+## Aperçu
 
 La presse à huile hydraulique pour sésame HN325/355 contient 32,5 kg de sésame par lot (jusqu'à 50 kg avec pré-compression) et termine un cycle de pressage à chaud en 30 à 40 minutes environ, convenant aux huileries de sésame et aux producteurs de tahini travaillant par lots quotidiens petits à moyens. Son fût plus étroit de 300 mm concentre la force à 47–51 MPa de pression superficielle du gâteau, laissant 6 à 8 % d'huile résiduelle (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Le moteur de 2,2 kW fonctionne sur alimentation standard 220V/380V.
 
@@ -88,13 +92,26 @@ Le fût de 300 mm de diamètre intérieur et 800 mm de haut contient 32,5 kg de 
 - **Support Après-Vente** — Notre équipe fournit des conseils sur les paramètres de pressage, des astuces d'optimisation des recettes et un support technique complet pour vous aider à obtenir les meilleurs résultats d'extraction d'huile de sésame.
 - **Options de Personnalisation** — Les dimensions du fût et les paramètres de pressage peuvent être ajustés pour correspondre à votre variété spécifique de sésame et au rendement en huile souhaité.`,
 
-  'coconut-oil-hydraulic-press': `## Aperçu
+  'coconut-oil-hydraulic-press': `> **Configuration personnalisée** — Presse à lait de coco sur commande avec fût 600 mm en acier inoxydable 304 de qualité alimentaire. Chaque unité est construite selon votre taille de fût et votre spécification d'acier inoxydable. Délai : 30 à 45 jours ouvrés. [Demander un devis personnalisé →](/contact/)
+
+## Aperçu
 
 La presse hydraulique 300 Type Coconut applique 300 tonnes de force de pressage à travers un fût de 600 mm de diamètre revêtu d'acier inoxydable 304 de qualité alimentaire, conçue pour le pressage du lait de coco et la production d'huile de coco vierge là où la résistance à la corrosion compte. Elle sert les transformateurs de coco des régions tropicales ; le moteur de 2,2 kW maintient une demande électrique modeste et la machine est garantie un an.
 
 La Presse Hydraulique à Huile de Coco / VCO est un modèle de type 300 spécialement personnalisé pour le traitement de la coco et d'autres applications sensibles à la corrosion. Le fût, le bac à huile et l'ensemble de l'extérieur de la machine — y compris la tête de pressage — sont gainés d'acier inoxydable 304 de qualité alimentaire, offrant une protection complète contre les effets corrosifs du jus de coco et de liquides similaires.
 
 Cette machine est le choix de prédilection pour le pressage du jus de coco et la production d'huile de coco vierge (VCO), avec une forte demande de la part des clients à Hainan et en Asie du Sud-Est. Sa construction en acier inoxydable de qualité alimentaire et sa capacité de pressage polyvalente la rendent également adaptée à l'extraction de jus de fruits, à la déshydratation de fruits et légumes, et au pressage de boues d'hydrocarbures — un véritable ajout polyvalent à toute installation de traitement.
+
+## Construction en Acier Inoxydable de Qualité Alimentaire
+
+Toutes les surfaces en contact avec le produit sont construites en **acier inoxydable 304 de qualité alimentaire** pour répondre aux exigences de sécurité alimentaire pour la production d'huile comestible et de lait de coco :
+
+- **Fût** — Revêtement en acier inoxydable 304 sur la paroi intérieure du fût, résistant à la corrosion pour le jus de coco acide et le VCO
+- **Bac à huile & canal de collecte** — Acier inoxydable 304 pour un nettoyage facile et aucune contamination par la rouille
+- **Tête de pressage & extérieur** — Gainage complet en acier inoxydable 304 sur le corps de la machine et la tête de pressage
+- **Conformité sécurité alimentaire** — Les surfaces de contact satisfont aux normes de qualité alimentaire ; aucune pièce peinte ou en acier carbone ne touche le produit
+
+Cette construction était auparavant proposée comme variante séparée « presse à huile hydraulique en acier inoxydable ». Elle est désormais incluse comme fonctionnalité standard de la presse à lait de coco et peut également être spécifiée sur tout modèle sur mesure.
 
 ## Avantages Clés
 
@@ -137,7 +154,9 @@ Cette machine est le choix de prédilection pour le pressage du jus de coco et l
 
 **Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** Disponible avec fût en acier inoxydable de qualité alimentaire pour la production d'huile de coco premium répondant aux normes de sécurité alimentaire du CCG.`,
 
-  'large-barrel-hydraulic-oil-press': `## Aperçu
+  'large-barrel-hydraulic-oil-press': `> **Configuration personnalisée** — Presse de déshydratation de boues sur commande avec grand fût de 630 mm, optimisée pour la déshydratation de boues d'hydrocarbures, de résidus d'huile et de boues industrielles. Délai : 30 à 45 jours ouvrés. [Demander un devis personnalisé →](/contact/)
+
+## Aperçu
 
 La presse à huile hydraulique HN325 Large Barrel utilise un fût de 630 mm de diamètre intérieur et 1000 mm de hauteur avec deux systèmes hydrauliques indépendants, de sorte qu'un fût presse pendant que l'autre est déchargé et rechargé — conçue pour les huileries qui privilégient le volume par lot à la force de pressage maximale. Le temps de lot est de 40 à 90 minutes selon la matière, avec 6 à 8 % d'huile résiduelle dans le gâteau pour la plupart des graines (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation).
 

@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const kenyaSeeds = ['sunflower', 'peanut', 'sesame', 'cottonseed'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => kenyaSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, kenyaSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in Kenya "
-  description="Professional oil press machine for Kenya. Hydraulic cold press for sunflower, peanut, sesame, cottonseed oil. Factory-direct pricing in KES. Shipping to Mombasa 25-30 days. 1-year warranty."
+  title="Oil Press Machine in Kenya"
+  description="Oil press machine in Kenya for sunflower, sesame and peanut. KEBS PVoC certificate arranged before shipment; 415V/50Hz builds, shipping to Mombasa. Request a quote."
   keywords={['oil press machine Kenya', 'oil press machine price Kenya', 'sunflower oil press Kenya', 'hydraulic oil press Kenya']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -119,13 +118,92 @@ const faqs = [
     </div>
   </section>
 
+  <!-- PVoC Compliance -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">PVoC Compliance: The Certificate That Travels With the Machine</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">Regulated imports into Kenya need a Certificate of Conformity under the <strong>KEBS Pre-Export Verification of Conformity (PVoC)</strong> programme. The critical word is <em>pre-export</em>: inspection happens at our works before the container is sealed — not at Mombasa.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h3 class="font-display font-bold text-xl mb-5 text-charcoal-900">How the process works</h3>
+          <div class="space-y-4">
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">Request inspection early.</span> Once the machine is built and before loading, your importer books PVoC inspection with an authorised KEBS agent (Intertek, SGS, Bureau Veritas or QIMA).</p>
+            </div>
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">Factory verification.</span> The agent checks the machine against applicable standards and reviews the technical file: test report, motor and electrical specification, nameplate, and CE documentation where held.</p>
+            </div>
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">CoC issued.</span> The Certificate of Conformity is issued electronically and the original accompanies the invoice, packing list and bill of lading.</p>
+            </div>
+            <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+              <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+              <p class="text-steel-700 text-sm pt-1"><span class="font-semibold text-charcoal-900">Clearance.</span> KRA assesses duty and 16% VAT at Mombasa port; containers can then move to the ICD in Nairobi or Naivasha, or directly to your site.</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-red-50 border border-red-200 rounded-2xl p-6">
+            <p class="text-charcoal-900 text-sm font-medium mb-2">Why the timing matters</p>
+            <p class="text-steel-700 text-sm">Goods arriving without a valid CoC face penalties, costly destination inspection, or return to origin — the most expensive mistake first-time Kenyan importers make. We coordinate the inspector's visit to our works so the certificate is issued before shipment.</p>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+            <p class="text-charcoal-900 text-sm font-medium mb-2">Kenyan power specification</p>
+            <p class="text-steel-700 text-sm">Industrial three-phase supply in Kenya is 415V, 50Hz. Motor and control specifications are confirmed at order stage, and the machines operate from generator power when needed — see the <a href="/resources/oil-press-electrical-requirements-guide/" class="text-amber-700 underline">electrical requirements guide</a>.</p>
+          </div>
+          <p class="text-xs text-steel-500">PVoC scope and routes are revised by KEBS from time to time — confirm the current category requirements with your clearing agent before ordering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations in Kenya</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Nakuru</span>
+            <span class="text-steel-500 text-xs">Sunflower Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sunflower Oil Producer — Rift Valley</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 serving smallholder sunflower cooperatives around Nakuru, pressing in short campaigns during the harvest season.</p>
+          <div class="text-xs text-amber-600 font-medium">Capacity: ~40 kg/batch</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Kakamega</span>
+            <span class="text-steel-500 text-xs">Groundnut Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Groundnut Oil Mill — Western Kenya</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 producing roasted-groundnut oil for open-air markets and supermarket shelves in Kakamega and Kisumu.</p>
+          <div class="text-xs text-amber-600 font-medium">Output: ~450 kg/day</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Meru</span>
+            <span class="text-steel-500 text-xs">Sesame Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sesame Oil Processor — Eastern Kenya</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 cold-pressing golden sesame from the Meru/Tharaka region for health-food buyers in Nairobi.</p>
+          <div class="text-xs text-amber-600 font-medium">Yield: 44-48%</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for Kenya</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for Kenya</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -151,10 +229,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

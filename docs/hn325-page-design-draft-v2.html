@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HN325 页面设计稿 V2 — 站点配色 · 结构修正版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* 站点真实 token（tailwind.config.mjs）*/
+    --steel-50:#f0f4f8; --steel-100:#d9e2ec; --steel-200:#bcccdc; --steel-500:#627d98; --steel-600:#486581; --steel-900:#1B3A5C;
+    --amber-400:#F0B429; --amber-500:#E8A838; --amber-600:#D69E2E;
+    --charcoal-900:#1A1A2E; --charcoal-700:#3D3D56;
+    --green:#059669; --green-soft:#ecfdf5; --green-line:#a7f3d0;
+    --ink-2:#486581; --line:#bcccdc;
+    --note-bg:#fffbeb; --note-line:#D69E2E; --note-ink:#92400e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',"Microsoft YaHei",sans-serif;background:#e6edf3;color:var(--charcoal-900);line-height:1.6;padding-bottom:60px}
+  .display{font-family:'Bebas Neue',sans-serif;letter-spacing:.5px}
+
+  .draft-banner{background:#102a43;color:#d9e2ec;padding:13px 20px;font-size:13px}
+  .draft-banner b{color:var(--amber-400)}
+
+  .note-card{max-width:1180px;margin:20px auto;background:var(--note-bg);border:1px dashed var(--note-line);border-radius:10px;padding:16px 22px;font-size:13px;color:var(--note-ink)}
+  .note-card h2{font-size:15px;margin-bottom:8px}
+  .note-card code{background:#fef3c7;padding:1px 6px;border-radius:4px;font-size:12px;color:#78350f;word-break:break-all}
+  .note-card ul{margin:6px 0 0 18px}
+  .note-card li{margin:3px 0}
+
+  .zone-label{background:var(--note-bg);border-left:4px solid var(--note-line);padding:7px 14px;font-size:12.5px;color:var(--note-ink);border-radius:0 8px 8px 0;margin:24px 0 8px}
+
+  /* ===== 页面本体（模拟站点容器）===== */
+  .page{max-width:1180px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .section{padding:30px 36px;border-bottom:1px solid var(--steel-100)}
+  .section:last-child{border-bottom:none}
+
+  .crumb{font-size:12px;color:var(--steel-500);padding:12px 36px;background:var(--steel-50);border-bottom:1px solid var(--steel-100)}
+  .crumb a{color:var(--steel-500);text-decoration:none}
+
+  /* Hero —— 原站结构 */
+  .hero{background:var(--steel-50)}
+  .cat-chip{display:inline-block;background:var(--amber-400);color:var(--charcoal-900);font-size:13px;font-weight:600;padding:4px 14px;border-radius:999px;margin-bottom:12px}
+  .hero h1{font-size:44px;line-height:1.08;color:var(--charcoal-900)}
+  .model-line{font-size:15px;color:var(--steel-500);margin:8px 0 14px}
+  .hero .sub{font-size:15.5px;color:var(--ink-2);max-width:680px}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+  .badge{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px;color:var(--charcoal-700)}
+  .badge b{color:var(--steel-600)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 14px}
+  .btn{display:inline-block;padding:12px 26px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;transition:all .3s}
+  .btn-amber{background:var(--amber-500);color:var(--charcoal-900)}
+  .btn-amber:hover{background:var(--amber-600)}
+  .btn-outline{border:2px solid var(--steel-600);color:var(--steel-600);padding:10px 24px}
+  .price-hook{display:inline-block;background:#fff;border:1px dashed var(--steel-500);border-radius:8px;padding:8px 16px;font-size:13.5px;color:var(--ink-2);margin-bottom:14px}
+  .price-hook b{color:var(--charcoal-900)}
+  .trust-bar{display:flex;align-items:center;gap:10px;background:var(--green-soft);border:1px solid var(--green-line);color:var(--green);border-radius:8px;padding:10px 16px;font-size:14px;font-weight:600;max-width:560px}
+  .hero-img{background:repeating-linear-gradient(45deg,var(--steel-100),var(--steel-100) 12px,var(--steel-50) 12px,var(--steel-50) 24px);border:1px solid var(--line);border-radius:10px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--steel-500);font-size:13px;margin-top:18px;text-align:center;line-height:1.9}
+
+  .section h2{font-size:26px;margin-bottom:12px}
+  .section h3{font-size:16px;margin:14px 0 6px}
+  .section p{font-size:14.5px;color:var(--ink-2);margin-bottom:10px}
+  .section a{color:var(--steel-600);font-weight:600}
+
+  .fit-list{list-style:none;margin:8px 0}
+  .fit-list li{padding:8px 0 8px 28px;position:relative;border-bottom:1px dashed var(--steel-100);font-size:14.5px}
+  .fit-list li:before{content:"✓";position:absolute;left:2px;top:8px;width:19px;height:19px;background:var(--green-soft);color:var(--green);border-radius:50%;text-align:center;font-size:12px;line-height:19px;font-weight:700}
+  .fit-note{background:var(--steel-50);border-radius:8px;padding:12px 16px;font-size:13.5px;color:var(--ink-2)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+  th{background:var(--steel-50);text-align:left;padding:9px 12px;border:1px solid var(--steel-200);font-size:12.5px;color:var(--steel-600)}
+  td{padding:9px 12px;border:1px solid var(--steel-200)}
+  tr.hl td{background:#fdf3dd;font-weight:700}
+  .small-note{font-size:12px;color:var(--steel-500)}
+
+  .cta-strip{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--steel-50);border:1px solid var(--steel-200);border-radius:10px;padding:16px 22px;flex-wrap:wrap}
+  .cta-strip .t{font-size:16px;font-weight:700}
+  .cta-strip .s{font-size:13px;color:var(--ink-2)}
+
+  .flow-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:700px){.flow-cols{grid-template-columns:1fr}}
+  .flow-card{background:var(--steel-50);border-radius:10px;padding:16px}
+  .flow-card h3{margin-top:0}
+  .flow-card ol{margin-left:18px;font-size:13.5px;color:var(--ink-2)}
+  .flow-card li{margin:5px 0}
+
+  details{border:1px solid var(--steel-200);border-radius:8px;margin-bottom:10px;background:#fff}
+  summary{padding:12px 16px;font-size:14.5px;font-weight:600;cursor:pointer;list-style:none}
+  summary:before{content:"+";float:left;margin-right:10px;color:var(--steel-600);font-weight:700}
+  details[open] summary:before{content:"–"}
+  details p{padding:0 16px 14px 36px;font-size:14px;color:var(--ink-2)}
+
+  .cta-final{background:var(--charcoal-900);color:#d9e2ec;text-align:center}
+  .cta-final h2{color:#fff}
+  .cta-final p{color:#9fb3c8;max-width:560px;margin:0 auto 18px}
+  .cta-final .btn-outline{border-color:#9fb3c8;color:#fff}
+  .cta-final .trust-mini{font-size:12.5px;color:#9fb3c8;margin-top:16px}
+  .cta-final .trust-mini b{color:#4ade80}
+
+  .logic{max-width:1180px;margin:30px auto 0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px 28px;font-size:14px}
+  .logic h2{font-size:17px;margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<div class="draft-banner">
+  <b>V2 设计稿</b> — 已套用站点真实配色（charcoal/steel/amber/Bebas Neue）；H1 改原站结构（型号独立行）；徽章改饼面压力；产能重算（分单双桶/冷热榨）；去 sticky 卡改中段 CTA 横条；HN365/对照句修正。黄色标注 = 待你提供素材或决策的点。
+</div>
+
+<div class="note-card">
+  <h2>SEO 头部方案（代码层）</h2>
+  <ul>
+    <li><b>title</b>：<code>Hydraulic Oil Press Machine for Small Business — 325 Ton | Haonuo</code>（主词置前，型号不占 title）</li>
+    <li><b>H1（改回原站结构）</b>：大标题 = <code>COMMERCIAL HYDRAULIC OIL PRESS MACHINE FOR SMALL BUSINESS</code>（display 全大写）+ 下方 <code>Model: HN325 — Standard Hydraulic Oil Press</code> 独立行 —— 型号标注方式与你原站图1完全一致</li>
+    <li><b>meta description</b>：<code>Commercial hydraulic oil press machine for small business and oil mills. 325-ton force, 27.78 MPa cake pressure, 100 kg per batch. Factory-direct, 1-year warranty.</code></li>
+    <li><b>FAQPage + Product schema</b> 照常输出；Product name 用 HN325 与 Model 行一致</li>
+  </ul>
+</div>
+
+<div class="page">
+
+  <div class="crumb"><a href="#">Home</a> › <a href="#">Products</a> › <a href="#">Hydraulic Oil Press</a> › HN325 Standard</div>
+
+  <!-- Hero -->
+  <div class="zone-label">① 首屏 — 原站结构：分类徽章 + display 大标题 + Model 独立行；徽章第2个改为饼面压力，第4个改为周期参数（原“~1吨/天”误导已移除）；新增价格锚点占位待你决策</div>
+  <section class="section hero">
+    <span class="cat-chip">Hydraulic Oil Press</span>
+    <h1 class="display">COMMERCIAL HYDRAULIC OIL PRESS MACHINE FOR SMALL BUSINESS</h1>
+    <div class="model-line">Model: HN325 — Standard Hydraulic Oil Press</div>
+    <p class="sub">A 325-ton commercial hydraulic press built for small and mid-size oil mills. 100 kg per batch, hot and cold pressing in one machine, factory-direct from the manufacturer.</p>
+    <div class="badges">
+      <span class="badge"><b>325 ton</b> pressing force</span>
+      <span class="badge"><b>27.78 MPa</b> cake pressure</span>
+      <span class="badge"><b>100 kg</b> per batch</span>
+      <span class="badge"><b>30–40 min</b> hot cycle</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-amber" href="#">Request Factory Price</a>
+      <a class="btn btn-outline" href="#">Get Quote on WhatsApp</a>
+    </div>
+    <div class="price-hook">💰 <b>Typical price: <i>[US$X,XXX – XX,XXX FOB — 占位]</i></b> · Exact quote depends on configuration &amp; destination port</div>
+    <div class="trust-bar">🛡 1-Year Warranty&nbsp;•&nbsp;Lifetime Technical Support&nbsp;•&nbsp;48-h Full-Load Test</div>
+    <div class="hero-img">
+      <div>【素材占位】2–3 张实拍：全机 45° 角 + 压榨出油特写<br>★ 强烈建议加一段 30 秒压榨过程视频（此类设备最强信任器）</div>
+    </div>
+  </section>
+
+  <!-- 自筛 -->
+  <div class="zone-label">② 自筛区 — HN300 分流改为定性表述（短行程/小批量），删除原“800 kg 分界”</div>
+  <section class="section">
+    <h2>Is This the Right Machine for You?</h2>
+    <ul class="fit-list">
+      <li>You run a <b>small or mid-size oil mill</b>, pressing <b>sesame, peanut, rapeseed, sunflower</b> or similar conventional seeds</li>
+      <li>You want <b>one machine</b> that handles both hot and cold pressing</li>
+      <li>You need <b>full 100 kg barrels pressed through</b> — the 850 mm long stroke reaches the barrel bottom</li>
+      <li>You want the <b>lowest entry cost</b> among the four current models</li>
+    </ul>
+    <div class="fit-note">
+      Not a perfect fit? The older <a href="#">HN300 (300 t)</a> remains in production — same barrels and wear parts, shorter stroke, smaller effective batch — a solid choice for tighter budgets and smaller batches. Cold-pressed coconut or walnut oil as your main business? See the <a href="#">HN426</a>. Full specs side by side: <a href="#">model comparison chart</a>.
+    </div>
+  </section>
+
+  <!-- 规格 -->
+  <div class="zone-label">③ 规格表 — 系统压力与饼面压力并列，并给出换算逻辑（325 t ÷ Ø390 桶 = 27.78 MPa），数字自洽</div>
+  <section class="section">
+    <h2>HN325 Specifications</h2>
+    <table>
+      <tr><th style="width:38%">Item</th><th>HN325</th></tr>
+      <tr><td>Pressing force</td><td>325 tons</td></tr>
+      <tr><td>Cake surface pressure</td><td><b>27.78 MPa</b> (325 t on a Ø390 mm barrel — the pressure that actually works the seed)</td></tr>
+      <tr><td>Hydraulic system pressure</td><td>60 MPa</td></tr>
+      <tr><td>Barrel (inner)</td><td>Ø390 × 800 mm</td></tr>
+      <tr><td>Piston stroke</td><td>850 mm (presses to barrel bottom)</td></tr>
+      <tr><td>Batch capacity</td><td>Up to 100 kg (fluffy materials fill lower)</td></tr>
+      <tr><td>Cycle time</td><td>30–40 min hot · ~2 h cold (pressing only, excluding loading/unloading)</td></tr>
+      <tr><td>Power</td><td>2.2 kW · 220V/380V (customized free)</td></tr>
+      <tr><td>Operators</td><td>1–2</td></tr>
+      <tr><td>Residual oil in cake</td><td>6–8% typical (varies by seed &amp; prep)</td></tr>
+      <tr><td>Footprint</td><td>1200 × 1200 mm · ceiling ≥ 2.5 m</td></tr>
+    </table>
+  </section>
+
+  <!-- 对比 -->
+  <div class="zone-label">④ 选型对比（压缩篇幅）— HN365 行改 single/double station；本模块批量阶段将复制到其余 3 个新款页（各自高亮）</div>
+  <section class="section">
+    <h2>Which Model Fits Your Mill?</h2>
+    <table>
+      <tr><th>Model</th><th>Force</th><th>Configuration</th><th>Best for</th></tr>
+      <tr><td><a href="#">HN300</a></td><td>300 t</td><td>Single / double barrel</td><td>Smaller batches, tightest budget</td></tr>
+      <tr class="hl"><td>HN325</td><td>325 t</td><td>Single / double barrel on rails</td><td>Small &amp; mid-size mills, all-purpose</td></tr>
+      <tr><td><a href="#">HN365</a></td><td>365 t</td><td>Vertical, single / double station</td><td>Higher daily volume, less waiting</td></tr>
+      <tr><td><a href="#">HN426</a></td><td>500 t</td><td>Single / double barrel</td><td>Cold press business: coconut, walnut</td></tr>
+      <tr><td><a href="#">HN500</a></td><td>620 t</td><td>Single / double barrel</td><td>Hardest in-shell materials</td></tr>
+    </table>
+    <p class="small-note">HN325 or HN365? Up to ~1 ton of hot-pressed seed per day, the double-barrel HN325 covers it. For larger volumes, the HN365's independent stations cut waiting time between cycles — send us your seed and daily target for a throughput calculation.</p>
+    <!-- 中段 CTA 横条（替代 sticky 卡） -->
+    <div class="cta-strip" style="margin-top:16px">
+      <div><div class="t">Not sure which one? Tell us your seed and daily target.</div><div class="s">Our engineers reply with the right model and a factory quote — within one business day.</div></div>
+      <a class="btn btn-amber" href="#">Get My Recommendation</a>
+    </div>
+  </section>
+
+  <!-- 物料出油率 -->
+  <section class="section">
+    <h2>What You Can Press — and Expected Yield</h2>
+    <p>Routine materials: tea seed, rapeseed, peanut, soybean, flaxseed, sunflower seed, cottonseed. A food-grade stainless steel barrel is available for hygiene requirements (custom build, see delivery). Hard-shell materials like walnut and apricot kernel: step up to the <a href="#">HN426</a> or <a href="#">HN500</a>. Sesame-focused? See the <a href="#">HN325 Sesame configuration</a>.</p>
+    <table>
+      <tr><th>Seed</th><th>Typical hot-press yield</th></tr>
+      <tr><td>Sesame</td><td>42–54%</td></tr>
+      <tr><td>Peanut</td><td>40–50%</td></tr>
+      <tr><td>Rapeseed</td><td>35–45%</td></tr>
+    </table>
+    <p class="small-note">Based on Haonuo factory tests with graded seeds at 6–8% moisture. Actual yield varies with variety, moisture, roasting and preparation.</p>
+  </section>
+
+  <!-- 产能 -->
+  <div class="zone-label">⑤ 产能表（新增）— 回答“一天到底能压多少”：分单/双桶 × 冷/热榨，附推算依据，不再给模糊的“1吨/天”</div>
+  <section class="section">
+    <h2>How Much Can You Press Per Day?</h2>
+    <table>
+      <tr><th>Setup</th><th>Hot pressing (8-h shift)</th><th>Cold pressing (~2 h/cycle)</th></tr>
+      <tr><td>Single barrel</td><td>~900–1,000 kg</td><td>~300–400 kg</td></tr>
+      <tr><td>Double barrel (load one while the other presses)</td><td>~1,200–1,400 kg</td><td>~600–700 kg</td></tr>
+    </table>
+    <p class="small-note">Estimated from 30–40 min hot / ~2 h cold cycle times plus loading and cake removal, assuming full 100 kg batches and an 8-hour shift. Fluffy materials (e.g. sunflower with hulls) fill the barrel below 100 kg; plan proportionally lower.</p>
+  </section>
+
+  <!-- 流程 -->
+  <div class="zone-label">⑥ 工作流程 — 承接 working principle 搜索意图</div>
+  <section class="section">
+    <h2>How the HN325 Works: Hot &amp; Cold Pressing Workflows</h2>
+    <p>Every Haonuo hydraulic press handles both methods — oil temperature is set by whether you roast the seed first, not by the machine.</p>
+    <div class="flow-cols">
+      <div class="flow-card">
+        <h3>Hot pressing (max yield)</h3>
+        <ol>
+          <li>Clean &amp; sort; dehull if needed</li>
+          <li>Condition to 5–8% moisture</li>
+          <li>Roast at 160–180°C, 25–35 min</li>
+          <li>Crush, then press 100 kg @ full force, 30–40 min</li>
+          <li>Filter 200–300 mesh; settle &amp; store</li>
+        </ol>
+      </div>
+      <div class="flow-card">
+        <h3>Cold pressing (premium oil)</h3>
+        <ol>
+          <li>Clean &amp; color-sort</li>
+          <li>Condition to 7–9% moisture</li>
+          <li>Gentle crushing below 60°C</li>
+          <li>Press ~2 hours</li>
+          <li>Multi-stage fine filtration; store cool &amp; dark</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 配套+交期 -->
+  <section class="section">
+    <h2>Complete Setup for Your Mill</h2>
+    <p>Seed cleaner &amp; sorter → roaster → crusher &amp; steamer (where needed) → the HN325 → filter press → screw conveyor between stages. <a href="#">Browse the full equipment range</a> or send us your raw material and daily target — we will list the matching models.</p>
+    <h2 style="margin-top:20px">Delivery, Warranty &amp; Support</h2>
+    <table>
+      <tr><td>Standard build lead time</td><td>15–25 working days + sea freight</td></tr>
+      <tr><td>Custom build (e.g. stainless barrel)</td><td>30–45 days + sea freight</td></tr>
+      <tr><td>Pre-shipment test</td><td>48-hour continuous full-load test before every shipment</td></tr>
+      <tr><td>Warranty</td><td>1 year + lifetime technical support</td></tr>
+      <tr><td>Spare parts</td><td>Common parts kept in stock, express shipped worldwide</td></tr>
+    </table>
+  </section>
+
+  <!-- FAQ -->
+  <div class="zone-label">⑦ FAQ — 8 条，第 1 条承接 working principle；HN365/HN300 答案与正文同口径</div>
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <details open><summary>How does a hydraulic oil press machine work?</summary><p>The HN325 uses a hydraulic cylinder to press seed inside an enclosed barrel. Cleaned, conditioned (and usually roasted) seed is loaded in batches of up to 100 kg; the 325-ton ram applies static pressure — 27.78 MPa on the cake — for 30–40 minutes (hot) or about 2 hours (cold), squeezing oil through the barrel's slot walls. Static pressing adds no friction heat, so raw dried seed stays naturally below 60°C.</p></details>
+    <details><summary>How much oil can I press per day?</summary><p>With hot pressing and full 100 kg batches: roughly 900–1,000 kg per 8-hour shift with a single barrel, or 1,200–1,400 kg with the double-barrel setup. Cold pressing runs slower: about 300–400 kg (single) or 600–700 kg (double). Fluffy materials fill the barrel below 100 kg, so plan proportionally.</p></details>
+    <details><summary>HN325 or HN365 — which should I choose?</summary><p>Up to about a ton of hot-pressed seed per day, the double-barrel HN325 is enough. The HN365 (365 t, vertical, available in single or double station) adds force and cuts waiting time between cycles for larger volumes. Send us your seed type and daily target for a throughput calculation.</p></details>
+    <details><summary>My budget is tight — is the older HN300 enough?</summary><p>The HN300 remains in production and shares barrels and common wear parts with the HN325. Its shorter stroke suits smaller effective batches; if you want full 100 kg barrels pressed through, the HN325's 850 mm long stroke is built for it.</p></details>
+    <details><summary>What oil yield can I expect?</summary><p>Factory-test ranges in hot pressing: sesame 42–54%, peanut 40–50%, rapeseed 35–45%. Cold pressing yields somewhat less but produces a lighter-tasting oil that sells at a premium. Results vary with seed variety, moisture and preparation.</p></details>
+    <details><summary>Can it press coconut, walnut or other hard materials?</summary><p>The HN325 is built for conventional oilseeds. For hard-shell or cold-press-focused production (coconut, walnut, apricot kernel), the higher-pressure <a href="#">HN426</a> (500 t, 70 MPa) is the right machine.</p></details>
+    <details><summary>What power supply does it need?</summary><p>A 2.2 kW motor on ordinary 220V or 380V supply; it also runs on a 5 kVA generator where the grid is unreliable. We customize voltage to your local standard at no extra charge.</p></details>
+    <details><summary>Can I get a stainless steel or custom barrel?</summary><p>Yes — barrel diameter, height and food-grade stainless steel are available as custom options. Custom configurations take 30–45 days to build; standard ones 15–25 working days.</p></details>
+  </section>
+
+  <!-- 底部 CTA -->
+  <section class="section cta-final">
+    <h2 class="display" style="font-size:30px">GET YOUR HN325 FACTORY PRICE</h2>
+    <p>Tell us your seed type and daily target — our engineers will recommend the right model, confirm the lead time, and quote within one business day.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-amber" href="#">Request a Quote</a>
+      <a class="btn btn-outline" href="#">Chat on WhatsApp</a>
+    </div>
+    <div class="trust-mini"><b>✓</b> 48-h tested &nbsp;·&nbsp; <b>✓</b> 1-yr warranty &nbsp;·&nbsp; <b>✓</b> Factory-direct, MOQ 1 set &nbsp;·&nbsp; <b>✓</b> Free voltage customization</div>
+  </section>
+</div>
+
+<!-- 素材清单 -->
+<div class="note-card">
+  <h2>📎 需要你提供的素材（决定最终转化力的三件事，文案替代不了）</h2>
+  <ul>
+    <li><b>价格锚点</b>：HN325 标准/双桶配置的 FOB 报价区间（页面上那行占位要不要放、写多少，你定；不放就删 price-hook 那行）</li>
+    <li><b>实拍图 + 视频</b>：全机 45° 角、出油特写、30 秒压榨过程视频各 1 组</li>
+    <li><b>客户足迹</b>（如有）：出口国家数 / 装机数 / 代表性市场，可加在 Hero 信任条下</li>
+  </ul>
+</div>
+
+<div class="logic">
+  <h2>V2 改动对照</h2>
+  <table>
+    <tr><th style="width:24%">项</th><th>V1 → V2</th></tr>
+    <tr><td>配色/字体</td><td>自拟蓝紫 → 站点真实 token：charcoal-900 标题（Bebas Neue）、amber-500 CTA、steel 系边框底色、绿色信任条</td></tr>
+    <tr><td>H1/型号</td><td>"HN325 Hydraulic Oil Press Machine for Small Business" → 原站结构：display 大标题纯主词 + "Model: HN325" 独立灰字行</td></tr>
+    <tr><td>徽章</td><td>60 MPa system → <b>27.78 MPa cake pressure</b>；~1 ton/day → <b>30–40 min hot cycle</b></td></tr>
+    <tr><td>产能</td><td>模糊"~1 t/day" → 产能表（单/双桶 × 冷/热榨）+ 推算依据注；HN300"800 kg 分界"→ 定性（短行程/小批量）</td></tr>
+    <tr><td>侧栏 sticky 卡</td><td>删除（与右下角聊天浮窗重复）→ 对比表后内联 CTA 横条，全页 CTA 三触点：首屏 / 中段 / 底部</td></tr>
+    <tr><td>HN365</td><td>"Vertical double station"→"Vertical, single / double station"，对比句不默认双桶</td></tr>
+    <tr><td>对比模块</td><td>保留（承接比较搜索+蚕食分流），标题改 "Which Model Fits Your Mill?"，篇幅压缩</td></tr>
+    <tr><td>新增</td><td>价格锚点占位行、素材清单卡、产能表、FAQ 第 2 条（每天能压多少）</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

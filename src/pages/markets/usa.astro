@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const usaSeeds = ['sunflower', 'peanut', 'hemp', 'almond'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => usaSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, usaSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -60,8 +59,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Oil Press Machine in USA "
-  description="Professional oil press machine for the USA. Hydraulic cold press for sunflower, peanut, hemp, almond oil. Factory-direct pricing in USD. Shipping to LA/NY 30-40 days. 1-year warranty."
+  title="Oil Press Machine in USA"
+  description="Oil press machine in the USA built for 480V/60Hz supply, with UL-component and FDA-aligned food-contact options. Shipping to LA or NY. Request a quote."
   keywords={['oil press machine USA', 'oil press machine price USA', 'cold press oil machine USA', 'hydraulic oil press USA']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -119,13 +118,78 @@ const faqs = [
     </div>
   </section>
 
+  <!-- US Installation Readiness -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">US Installation Readiness: Voltage, Controls, Food Contact &amp; Entry</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">The machine clears US customs without difficulty — the surprises are almost always electrical specification and site readiness. These four points are confirmed at order stage, not after delivery.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white rounded-2xl p-7 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">1 · Voltage and frequency</h3>
+          <p class="text-steel-700 text-sm">US industrial three-phase runs at <strong>208/230/460/480V, 60Hz</strong> — not China's 380V/50Hz. Motors, heating elements and control gear must be specified for American supply at the factory; a machine built for 380V/50Hz cannot simply be plugged in at a US plant. Tell us the service nameplate voltage before manufacture.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">2 · Control panel expectations</h3>
+          <p class="text-steel-700 text-sm">US insurers, food plants and leased commercial premises often require <strong>UL-recognised components</strong> or a panel built to UL 508A practice. It is not mandatory for every workshop, but specifying it at quotation is far cheaper than rebuilding a panel on site. See our <a href="/resources/oil-press-electrical-requirements-guide/" class="text-amber-600 hover:underline">electrical requirements guide</a>.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">3 · Food-contact specification</h3>
+          <p class="text-steel-700 text-sm">Bottled edible-oil buyers expect food-grade contact parts — <strong>304/316 stainless barrels and food-grade seals</strong> aligned with FDA food-material expectations. If the oil carries any premium or grocery-listing claim, specify stainless contact parts before production rather than retrofitting later.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">4 · Customs and the workplace</h3>
+          <p class="text-steel-700 text-sm mb-3">Entry is filed under HTSUS heading around <strong>8479.82</strong>; duty rates, including any additional tariff treatment, change and should be confirmed by your customs broker. Common ports: Los Angeles/Long Beach, New York/New Jersey and Savannah.</p>
+          <p class="text-steel-700 text-sm">Installation should follow OSHA machine-guarding and lockout/tagout expectations, which our guarding and emergency-stop design supports.</p>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 text-center">Confirm voltage, panel requirements, tariff treatment and local code with your electrician and customs broker before placing the order — we build to the confirmed specification.</p>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations in the United States</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">North Dakota</span>
+            <span class="text-steel-500 text-xs">Sunflower Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sunflower Oil Producer — Northern Plains</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 cold-pressing high-oleic sunflower seed for premium cooking-oil brands sold through natural-food channels and co-ops.</p>
+          <div class="text-xs text-amber-600 font-medium">High-oleic batches</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Oregon</span>
+            <span class="text-steel-500 text-xs">Hemp Seed Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Hemp Seed Processor — Pacific Northwest</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 pressing licensed hemp seed at controlled low temperature for body-care, culinary, and nutritional products.</p>
+          <div class="text-xs text-amber-600 font-medium">Low-temperature press</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">California</span>
+            <span class="text-steel-500 text-xs">Almond Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Small-Batch Almond Oil Mill — California</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 producing roasted and cold-pressed almond oil for gourmet retailers and farm-direct subscription customers.</p>
+          <div class="text-xs text-amber-600 font-medium">Gourmet small batch</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for USA</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for USA</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -151,10 +215,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

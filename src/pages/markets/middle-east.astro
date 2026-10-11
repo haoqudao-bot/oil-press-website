@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
 
 const allProducts = await getCollection('products');
 const middleEastSeeds = ['sesame', 'walnut', 'olive'];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => middleEastSeeds.some(ns => s.toLowerCase().includes(ns)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, middleEastSeeds);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -47,6 +46,11 @@ const faqLd = {
       name: 'What voltage is required for Middle East countries?',
       acceptedAnswer: { '@type': 'Answer', text: 'Most Middle East countries use 220V/50Hz (UAE, Iran, Iraq) or 220V/60Hz (Saudi Arabia). Haonuo customizes the electrical system for your specific country at no extra charge. Simply specify your location when ordering.' },
     },
+    {
+      '@type': 'Question',
+      name: 'What is the price of an oil press machine in Saudi Arabia and the UAE?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Every quotation is prepared for the specific configuration — model, slotted or drilled barrel, roaster and filter options — and the destination port, whether Jeddah, Dammam or Jebel Ali. Send us your seed type and daily production target, and we will reply with a formal CIF quotation for your country.' },
+    },
   ],
 };
 
@@ -56,12 +60,13 @@ const faqs = [
   { question: 'How long does shipping take to Saudi Arabia and UAE?', answer: 'Sea freight from Qingdao, China to Jeddah Islamic Port (Saudi Arabia) or Jebel Ali Port (Dubai, UAE) takes 20-25 days. We handle all export documentation including certificate of origin. Contact us for current shipping rates.' },
   { question: 'Can the machine press olives for extra virgin olive oil?', answer: 'Yes, our cold press hydraulic press can be used for the final pressing step in olive oil production. The HN426 model maintains temperatures below 27°C, which is required for extra virgin olive oil (EVOO) classification. Additional equipment for olive crushing and malaxation is also available.' },
   { question: 'What voltage is required for Middle East countries?', answer: 'Most Middle East countries use 220V/50Hz (UAE, Iran, Iraq) or 220V/60Hz (Saudi Arabia). Haonuo customizes the electrical system for your specific country at no extra charge. Simply specify your location when ordering.' },
+  { question: 'What is the price of an oil press machine in Saudi Arabia and the UAE?', answer: 'Every quotation is prepared for the specific configuration — model, slotted or drilled barrel, roaster and filter options — and the destination port, whether Jeddah, Dammam or Jebel Ali. Send us your seed type and daily production target, and we will reply with a formal CIF quotation for your country.' },
 ];
 ---
 
 <BaseLayout
-  title="Hydraulic Oil Press Middle East "
-  description="Professional hydraulic oil press machine for Middle East markets. Cold press technology for sesame, walnut, and olive oil. Factory-direct pricing. Shipping to Jeddah/Dubai 20-25 days. 1-year warranty."
+  title="Oil Press Machine in the Middle East"
+  description="Oil press machine in the Middle East for sesame, olive and walnut. SABER, G-Mark and ECAS certification support for Saudi Arabia and UAE. Request a quote."
   keywords={['oil press machine Middle East', 'sesame oil press machine', 'walnut oil press machine', 'olive oil press machine', 'cold press oil machine Saudi Arabia', 'hydraulic oil press UAE']}
   jsonLd={[breadcrumbLd, faqLd]}
 >
@@ -81,8 +86,8 @@ const faqs = [
   <!-- Hero -->
   <section class="bg-steel-900 py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Hydraulic Oil Press Middle East — Factory Direct</h1>
-      <p class="text-steel-300 text-lg max-w-3xl">Cold press hydraulic oil machines for sesame, walnut, and olive oil production. Factory-direct pricing, shipping to Jeddah and Dubai in 20-25 days, 1-year warranty.</p>
+      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">Oil Press Machine in the Middle East — Factory Direct</h1>
+      <p class="text-steel-300 text-lg max-w-3xl">Hydraulic oil press machines for sesame, walnut, and olive oil production across Saudi Arabia, the UAE and wider Gulf markets. Factory-direct supply, shipping to Jeddah and Dubai in 20-25 days, 1-year warranty.</p>
     </div>
   </section>
 
@@ -113,13 +118,79 @@ const faqs = [
     </div>
   </section>
 
+  <!-- Gulf Certification -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title text-center mb-4">Gulf Certification &amp; Port Entry: SABER, G-Mark and ECAS</h2>
+      <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">Gulf markets are well organised but certification-driven: Saudi Arabia and the UAE each operate conformity schemes that must be completed <em>before the goods arrive</em>, while Jebel Ali also serves buyers who re-export across the region.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">Saudi Arabia — SABER</h3>
+          <p class="text-steel-700 text-sm mb-3">Regulated products are registered on the <strong>SABER</strong> platform with a Product Certificate, followed by a Shipment (Conformity) Certificate for each consignment, issued by an approved certification body.</p>
+          <p class="text-steel-700 text-sm">Electrical components may fall under Gulf low-voltage technical regulations carrying the <strong>G-Mark</strong>; the applicable route depends on the machine's exact configuration and is confirmed before production.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">UAE — ECAS / EQM</h3>
+          <p class="text-steel-700 text-sm mb-3">Products in regulated categories require conformity registration through the approved UAE route (ECAS/EQM). <strong>Jebel Ali Port</strong> and JAFZA are the common landing points.</p>
+          <p class="text-steel-700 text-sm">The free-zone route is widely used for onward re-export to Oman, Qatar, Kuwait and Bahrain.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-steel-100">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">Wider Gulf &amp; Red Sea</h3>
+          <p class="text-steel-700 text-sm mb-3">Direct Saudi calls serve <strong>King Abdullah/Dammam</strong> and Jeddah Islamic Port; Hamad Port serves Qatar. Each destination applies its own conformity expectations even where transiting a neighbour's port.</p>
+          <p class="text-steel-700 text-sm">Industrial supply across the Gulf is 220–240V, 50Hz (380/400V three-phase), which we specify to order.</p>
+        </div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <p class="text-charcoal-900 text-sm font-medium mb-2">How we support certification</p>
+        <p class="text-steel-700 text-sm">Whether you are installing an oil press machine in Saudi Arabia, the UAE, or wider Middle East markets, tell us the destination country at quotation stage so the correct certificate route is planned before manufacture. We supply the manufacturer technical file — test reports, nameplate data, wiring information and declarations — that approved certification bodies request. Confirm the current scope for the exact model with your importer, as Gulf technical regulations are updated periodically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Cases -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-12">Typical Installations Across the Middle East</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Saudi Arabia</span>
+            <span class="text-steel-500 text-xs">Sesame / Tahini</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Sesame &amp; Tahini Producer — Western Region</p>
+          <p class="text-sm text-steel-600 mb-3">HN325 pressing premium roasted sesame for tahini and halawa production supplied to Jeddah and Riyadh food manufacturers.</p>
+          <div class="text-xs text-amber-600 font-medium">Yield: 46-50%</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">UAE</span>
+            <span class="text-steel-500 text-xs">Walnut &amp; Almond Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Premium Nut Oil Processor — Dubai</p>
+          <p class="text-sm text-steel-600 mb-3">HN426 cold-pressing walnut and almond at controlled temperature for gourmet retail and hotel supply in the Gulf.</p>
+          <div class="text-xs text-amber-600 font-medium">Cold-press configuration</div>
+        </div>
+        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">Levant</span>
+            <span class="text-steel-500 text-xs">Olive Oil</span>
+          </div>
+          <p class="text-charcoal-900 font-medium mb-2">Olive Oil Mill — Levant Region</p>
+          <p class="text-sm text-steel-600 mb-3">HN365 batch press handling smallholder olives and olive pomace for extra-virgin and blended olive oil sold in regional markets.</p>
+          <div class="text-xs text-amber-600 font-medium">Olive / pomace batches</div>
+        </div>
+      </div>
+      <p class="text-xs text-steel-500 mt-6 text-center">Representative regional installations; actual configurations and outputs vary by seed preparation and buyer requirements.</p>
+    </div>
+  </section>
+
   <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
-    <section class="py-12 md:py-16 bg-steel-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">Recommended Machines for the Middle East</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">Recommended Machines for the Middle East</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Core Hydraulic Presses</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
             <a
               href={`/products/${product.slug}`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
@@ -145,10 +216,42 @@ const faqs = [
               </div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
-  )}
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">Matching Equipment</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={`/products/${product.slug}`}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img loading="lazy"
+                    src={product.data.images[0]}
+                    alt={product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {product.data.specifications.slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

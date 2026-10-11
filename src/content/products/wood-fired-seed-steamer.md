@@ -15,6 +15,11 @@ modelFr: 60 Type à Bois
 modelId: 60 Type Kayu
 images:
   - /images/products/wood-fired-seed-steamer.webp
+imageAlt:
+  en: "Wood fired seed steamer cooking pan for small oil mills"
+  fr: "Cuiseur de graines au feu de bois pour petites huileries"
+  ar: "قدر طبخ بالبخار للبذور يعمل بالحطب لمعاصر الزيوت الصغيرة"
+  id: "Mesin pengukus benih berbahan bakar kayu untuk pabrik minyak kecil"
 specifications:
   - name: Model
     value: 60 Type Wood-Fired Steamer

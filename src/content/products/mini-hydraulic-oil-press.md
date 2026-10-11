@@ -4,16 +4,26 @@ title:
   fr: Mini Presse à Huile Hydraulique
   ar: معصرة زيت هيدروليكية مصغرة
   id: Mesin Press Minyak Hidrolik Mini
+seoTitle:
+  en: HN300 Hydraulic Oil Press — 300 Ton Entry Model, Specs
+  fr: Presse à huile hydraulique HN300 — 300 tonnes, modèle d'entrée
+  ar: معصرة زيت هيدروليكية HN300 — 300 طن، موديل دخول
+  id: Mesin press minyak hidrolik HN300 — 300 ton, model entry
 description:
-  en: "300-ton compact hydraulic oil press with 60 MPa pressure. Entry-level model well-suited for sesame and small seed pressing with 100kg capacity per batch."
-  fr: "Presse à huile hydraulique 300 tonnes, 60 MPa. Sésame et petites graines, 100kg par lot."
-  ar: "معصرة زيت هيدروليكية مدمجة 300 طن بضغط 60 ميجاباسكال. موديل ابتدائي مناسب للسمسم والبذور الصغيرة بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik kompak 300 ton dengan tekanan 60 MPa. Model entry-level cocok untuk wijen dan biji kecil dengan kapasitas 100kg per batch."
+  en: "HN300 hydraulic oil press — 300 ton entry-level model with 25 MPa cake pressure. Compact 390mm barrel for sesame, peanut, rapeseed. ~55-60kg per batch. Still in production."
+  fr: "Presse à huile hydraulique HN300 — 300 tonnes, modèle d'entrée, 25 MPa. Fût 390mm pour sésame, arachide, colza. ~55-60kg par lot. Toujours en production."
+  ar: "معصرة زيت هيدروليكية HN300 — 300 طن، موديل دخول، 25 ميجاباسكال. برميل 390 مم للسمسم والفول السوداني واللفت. ~55-60 كجم لكل دفعة. لا تزال في الإنتاج."
+  id: "Mesin press minyak hidrolik HN300 — 300 ton model entry, 25 MPa. Barel 390mm untuk wijen, kacang tanah, rapeseed. ~55-60kg per batch. Masih dalam produksi."
 category: hydraulic-oil-press
 model: HN300
 modelId: ''
 images:
   - /images/products/mini-hydraulic-oil-press.webp
+imageAlt:
+  en: "HN300 mini hydraulic oil press machine, 300-ton entry-level model"
+  fr: "Mini presse à huile hydraulique HN300, modèle d’entrée 300 tonnes"
+  ar: "معصرة زيت هيدروليكية مصغرة HN300، موديل دخول بقدرة 300 طن"
+  id: "Mesin press minyak hidrolik mini HN300, model entry 300 ton"
 specifications:
   - name: Model (Single/Double)
     value: HN300 Simple / HN300 Double
@@ -242,60 +252,57 @@ faqId:
     answer: "Tingkat minyak sisa dalam kue biasanya 6-8% untuk sebagian besar bahan dengan desain barrel beralur tipe bar kami, dibandingkan dengan 10-12% dengan mesin press barrel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% lebih banyak minyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch."
 videoUrl: ''
 seoKeywords:
-  - mini hydraulic oil press
-  - small oil press machine
-  - compact oil press
   - HN300 oil press
+  - 300 ton hydraulic oil press
+  - compact hydraulic oil press
+  - entry-level hydraulic oil press
+  - smallest hydraulic oil press
+  - HN300 hydraulic oil press
   - 300 ton oil press
-  - entry level oil press
-  - small scale oil press machine
-  - sesame oil press
-  - home oil press machine
-  - mini oil expeller
-updatedAt: 2025-11-01
+  - sesame oil press machine
+updatedAt: 2026-10-10
 ---
 
 ## Overview
 
-The HN300 mini hydraulic oil press is a compact 300-ton machine with 60 MPa system pressure, built for sesame and small-seed oil production in village workshops and small oil mills with limited floor space. Batches run 40–90 minutes depending on the material at 25 MPa cake surface pressure, leaving 6–8% residual oil in the cake (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). The 2.2 kW motor keeps power demand modest.
+> **Looking for our current main model?** Most buyers today choose the upgraded [HN325 Hydraulic Oil Press](/products/standard-hydraulic-oil-press/) — 325 tons, improved barrel design, and shared wear parts with the HN300. The HN300 remains in production for buyers on a tight budget or replacing an existing HN300.
 
-The HN300 Mini Hydraulic Oil Press is our most compact and accessible hydraulic oil press, specifically designed as a dedicated sesame oil press machine. Also known as a small sesame oil mill or traditional-style sesame oil press, it is lightweight, easy to operate, and perfectly suited for sesame and small seed oil production. With 300 tons of pressing force and a 60 MPa system pressure, the HN300 delivers reliable oil extraction in a space-saving footprint.
+The HN300 is our 300-ton entry-level hydraulic oil press. Its 300 mm cylinder paired with a 390 mm barrel delivers 25 MPa cake surface pressure, processing approximately 55–60 kg of raw material per batch. The 2.2 kW motor keeps operating costs modest, and the machine runs on standard 220V/380V power. At 1.2 tons (single barrel) and 1100×1100×2350 mm footprint, it fits into small workshops with limited floor space.
 
-The HN300 cylinder paired with a 390 mm inner diameter barrel achieves a cake surface pressure of 25 MPa, providing sufficient pressure for sesame, peanut, rapeseed, and tea seed to be fully pressed in a single cycle. Its compact 1100×1100×2350 mm overall dimensions make it well-suited for workshops with limited space, while the lightweight 1.2-ton single-barrel configuration allows for easy installation and relocation.
+This page exists as a reference for buyers searching specifically for the HN300 by model number — for example, to match an existing machine in their workshop or to compare specs against a previous quotation. The HN300 shares its barrel and common wear parts with the HN325, so spare parts remain readily available.
 
-## Key Advantages
+## HN300 vs HN325 — Which Should You Choose?
 
-- **Best Entry-Level Model** — The most affordable hydraulic oil press in our lineup, offering excellent value for small-scale producers and startups entering the premium oil market.
-- **Sesame Oil Specialist** — Specifically designed and optimized for sesame oil pressing, producing authentic small-mill sesame oil with rich aroma and flavor.
-- **Compact & Lightweight** — At only 1.2 tons (single barrel) and 1100×1100×2350 mm, it fits easily into small workshops and requires minimal floor space.
-- **Easy Operation** — Lightweight and user-friendly design allows operators of any skill level to produce high-quality oil with minimal training.
-- **Single-Cycle Efficiency** — 25 MPa cake pressure is sufficient for sesame and small seeds to be fully pressed in one cycle.
-- **Dual-Barrel Option** — Double-barrel configuration available for operators who want to increase throughput without a larger footprint.
+| Parameter | HN300 (Entry Model) | HN325 (Upgraded) |
+|-----------|---------------------|------------------|
+| Pressing force | 300 tons | 325 tons |
+| Cake surface pressure | 25 MPa | 27.78 MPa |
+| Barrel inner diameter | 390 mm | 390 mm |
+| Batch capacity | ~55–60 kg | ~80–100 kg |
+| Positioning | Entry-level, tight budget | Best seller, most buyers |
 
-## Core Technology
+**Choose the HN300 if:**
+- Your daily output is under approximately 800 kg of raw material
+- You are replacing an existing HN300 and want spare-part compatibility
+- Budget is the primary constraint and you do not need the higher cake pressure of the HN325
 
-- **Bar-Type Slotted Barrel** — significantly more oil extraction area than drilled barrels, achieving approximately 2-3% higher oil yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) per batch.
-- **German Hydraulic System** — Ultra-high pressure combined pump delivers working pressure up to 60 MPa for consistent, powerful extraction.
-- **4-Hook Cake Removal** — Easy, reliable cake discharge system that reduces downtime between pressing cycles.
-- **High Carbon Steel Frame** — Long-lasting service under continuous operation. Actual service life depends on operating conditions and maintenance.
-- **Microcomputer Control** — Automated pressing cycle with one-button operation. Basic training recommended; we provide video tutorials and remote guidance.
-- **Energy Efficient** — Designed to reduce power consumption compared to previous-generation presses (actual savings vary by operating conditions).
-- **Labor Efficient** — Only 1-2 operators needed, reducing labor requirements compared to manual pressing methods.
+**Choose the HN325 if:**
+- You want higher cake pressure (27.78 MPa) for approximately 2–3% better oil yield (based on Haonuo factory tests with graded sesame and peanut at 6–8% moisture; results vary with seed variety and preparation)
+- You need around 80–100 kg per batch
+- You want the current main model with ongoing design improvements
 
-## Applications & Suitable Materials
+[Compare HN300 vs HN325 and all models →](/products/model-comparison/)
 
-The HN300 is well-suited for pressing sesame and other small oil seeds:
+## Suitable Applications
 
-- **Best For**: Sesame (the primary application), producing authentic aromatic sesame oil
-- **Also Suitable**: Peanut, rapeseed, tea seed
-- **Other Materials**: Similar small seeds and conventional pressing materials
+The HN300 is optimized for small-seed oil production:
 
-> **Note**: For hard-shell or cold-press materials such as walnuts or apricot kernels, consider our [HN426 Cold Press model](/products/cold-press-hydraulic-oil-press) or [HN500 Ultra High Pressure model](/products/ultra-high-pressure-hydraulic-oil-press).
+- **Primary use**: Sesame oil pressing — the HN300 is well-suited as a dedicated sesame oil press machine
+- **Also suitable**: Peanut, rapeseed, tea seed
+- **Not recommended**: Walnut, almond, and other hard-shell or cold-press materials — see the [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) or [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) instead
 
-## Why Choose Haonuo
+## Still in Production
 
-- **Factory-Direct Pricing** — Buy directly from the manufacturer and eliminate middleman markups. The HN300 offers competitive entry cost for professional-grade hydraulic oil pressing.
-- **Sesame Oil Expertise** — We understand the unique requirements of sesame oil production and have optimized the HN300 specifically for this application.
-- **Quality Assurance** — Every machine undergoes rigorous testing before shipment, including full-load hydraulic pressure tests and operational cycle verification.
-- **After-Sales Support** — Comprehensive technical support, spare parts availability, and remote troubleshooting assistance to keep your operation running smoothly.
-- **Customization Options** — Barrel dimensions, stroke length, and other parameters can be customized to match your specific material and production requirements.
+The HN300 is still manufactured and accepts orders. It shares the same barrel and common wear parts as the HN325, so spare parts remain available from stock. Production lead time is 15–25 working days for standard configurations.
+
+[Request an HN300 quote](/contact/) or [ask about the upgraded HN325 →](/products/standard-hydraulic-oil-press/)

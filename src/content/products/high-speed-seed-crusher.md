@@ -14,6 +14,11 @@ model: 220 Type
 modelId: ''
 images:
   - /images/products/high-speed-seed-crusher.webp
+imageAlt:
+  en: "High speed seed crusher for oilseed pretreatment lines"
+  fr: "Concasseur de graines à grande vitesse pour lignes de prétraitement"
+  ar: "كسارة بذور عالية السرعة لخطوط المعالجة المسبقة للبذور الزيتية"
+  id: "Mesin crusher biji kecepatan tinggi untuk lini pra-pengolahan biji minyak"
 specifications:
   - name: Model
     value: High Speed Seed Crusher Type 220

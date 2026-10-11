@@ -4,16 +4,26 @@ title:
   fr: Presse à Huile Hydraulique Moyenne
   ar: معصرة زيت هيدروليكية متوسطة
   id: Mesin Press Minyak Hidrolik Sedang
+seoTitle:
+  en: "HN355 Hydraulic Oil Press — 360 Ton (Upgraded: HN365)"
+  fr: "Presse à huile hydraulique HN355 — 360 tonnes (successeur : HN365)"
+  ar: "معصرة زيت هيدروليكية HN355 — 360 طن (الإصدار المحدث: HN365)"
+  id: "Mesin press minyak hidrolik HN355 — 360 ton (penerus: HN365)"
 description:
-  en: "360-ton medium hydraulic oil press with 63 MPa system. Versatile pressing for tea seed, rapeseed, and medium-hardness seeds with 100kg capacity per batch."
-  fr: "Presse à huile hydraulique 360 tonnes, 63 MPa. Graines de thé, colza, 100kg par lot."
-  ar: "معصرة زيت هيدروليكية متوسطة 360 طن بنظام 63 ميجاباسكال. عصر متعدد الاستخدامات لبذور الشاي واللفت والبذور متوسطة الصلابة بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik sedang 360 ton dengan sistem 63 MPa. Press serbaguna untuk biji teh, rapeseed, dan biji kekerasan sedang dengan kapasitas 100kg per batch."
+  en: "HN355 hydraulic oil press — 360 ton medium model with 30.15 MPa cake pressure. Previous generation, succeeded by the upgraded HN365. 390mm barrel, ~100kg per batch. Still in production."
+  fr: "Presse à huile hydraulique HN355 — 360 tonnes, génération précédente, succédée par la HN365 améliorée. Fût 390mm, ~100kg par lot. Toujours en production."
+  ar: "معصرة زيت هيدروليكية HN355 — 360 طن، الجيل السابق، تم استبدالها بـ HN365 المحدثة. برميل 390 مم، ~100 كجم لكل دفعة. لا تزال في الإنتاج."
+  id: "Mesin press minyak hidrolik HN355 — 360 ton, generasi sebelumnya, diteruskan oleh HN365 yang ditingkatkan. Barel 390mm, ~100kg per batch. Masih dalam produksi."
 category: hydraulic-oil-press
 model: HN355
 modelId: ''
 images:
-  - /images/products/heavy-duty-hydraulic-oil-press.webp
+  - /images/products/medium-hydraulic-oil-press.webp
+imageAlt:
+  en: "HN355 medium hydraulic oil press machine for small oil mills"
+  fr: "Presse à huile hydraulique moyenne HN355 pour petites huileries"
+  ar: "معصرة زيت هيدروليكية متوسطة HN355 لمعاصر الزيوت الصغيرة"
+  id: "Mesin press minyak hidrolik menengah HN355 untuk pabrik minyak kecil"
 specifications:
   - name: Model (Single/Double)
     value: HN355 Simple / HN355 Double
@@ -277,68 +287,58 @@ faqId:
     answer: "Kami menyimpan stok semua suku cadang umum (segel, kain filter, minyak hidrolik, komponen panel kontrol). Suku cadang standar dikirim dalam 48 jam melalui DHL/FedEx, tiba dalam 5-7 hari ke sebagian besar negara Afrika dan Timur Tengah."
 videoUrl: ''
 seoKeywords:
-  - heavy duty hydraulic oil press
-  - hydraulic oil press machine
-  - HN355 oil press
+  - HN355 hydraulic oil press
   - 360 ton oil press
-  - heavy duty oil press
-  - industrial oil press machine
-  - high capacity oil press
+  - medium hydraulic oil press
+  - HN355 oil press
+  - 360 ton hydraulic oil press
+  - previous generation oil press
+  - tea seed oil press
   - rapeseed oil press
-  - cottonseed oil press
-  - heavy duty oil extraction
-updatedAt: 2025-11-01
+updatedAt: 2026-10-10
 ---
 
 ## Overview
 
-> **Looking for the current model?** The HN365 is the upgraded successor to the HN355 — 365 t pressing force and 30 MPa cake pressure on a new vertical double-station frame with 3 cm steel plate and cartridge valves. See the [HN365 Upgraded Heavy Duty Hydraulic Oil Press](/products/hn365-hydraulic-oil-press/).
+> **Looking for the current model?** The [HN365](/products/hn365-hydraulic-oil-press/) is the upgraded successor to the HN355 — 365 t pressing force, 30 MPa cake pressure, and a new vertical double-station frame with 3 cm steel plate and cartridge valves. Most buyers today choose the HN365. The HN355 remains in production for buyers replacing an existing HN355 or matching a previous quotation.
 
-The HN355 heavy-duty hydraulic oil press processes up to 100 kg of oilseeds per 40–90 minute batch, aimed at oil mills that need more pressing force than the standard HN325. It delivers 360 tons of pressing force at 60 MPa system pressure on a 3 cm steel-plate frame, leaving 6–8% residual oil in the cake for most oilseeds (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). A 2.2 kW motor and a one-to-two-person crew keep running costs low for small and medium oil mills.
+The HN355 is a 360-ton medium hydraulic oil press with a 355 mm cylinder and 390 mm barrel, delivering 30.15 MPa cake surface pressure. It processes up to approximately 100 kg of raw material per batch. The 2.2 kW motor keeps operating costs modest, and the machine runs on standard 220V/380V power.
 
-The HN355 Heavy Duty Hydraulic Oil Press is built for operators who demand more pressing power and greater durability. Featuring a robust 3 cm thick steel plate frame, this model delivers a 360-ton pressing force with a cake surface pressure of 30.15 MPa — a meaningful step up from the standard HN325. Conventional oil seeds are fully pressed in a single cycle, maximizing oil yield and minimizing waste.
+This page serves as a reference for buyers searching specifically for the HN355 by model number — for example, to match an existing machine or compare specs against a previous quotation. The HN355 shares its barrel and common wear parts with the HN365, so spare parts remain available.
 
-The reinforced steel frame not only withstands higher operating pressures but also ensures long-term structural stability under continuous heavy-duty use. If your production demands exceed what the standard model can deliver, the HN355 provides the extra margin of power you need without stepping up to a cold-press specialist.
+## HN355 vs HN365 — Which Should You Choose?
 
-## Key Advantages
+| Parameter | HN355 (Previous Gen) | HN365 (Upgraded) |
+|-----------|----------------------|------------------|
+| Pressing force | 360 tons | 365 tons |
+| Cake surface pressure | 30.15 MPa | 30 MPa |
+| Frame | 3 cm steel plate | 3 cm steel plate, vertical double-station |
+| Barrel inner diameter | 390 mm | 390 mm |
+| Batch capacity | ~100 kg | ~100 kg |
+| Configuration | Single / double barrel | Single barrel default, double barrel optional |
 
-- **Heavy-Duty Steel Frame** — 3 cm thick steel plate construction provides superior rigidity and extended service life under demanding conditions.
-- **Higher Cake Pressure** — 30.15 MPa cake surface pressure ensures conventional materials are fully pressed in a single cycle, leaving less residual oil in the cake.
-- **360-Ton Pressing Force** — 10% more force than the HN325, giving you the headroom to handle tougher materials with confidence.
-- **Dual-Barrel Productivity** — Double-barrel configuration with dual sliding rails lets you load one barrel while the other is pressing, significantly boosting daily output.
-- **Single-Cycle Extraction** — Most conventional materials achieve complete oil extraction in one pressing cycle, reducing processing time and energy costs.
+**Choose the HN355 if:**
+- You are replacing an existing HN355 and want spare-part compatibility
+- You are matching a previous quotation that specifies the HN355
+- You prefer the classic single/double barrel layout
 
-## Core Technology
+**Choose the HN365 if:**
+- You want the current upgraded model with the vertical double-station frame
+- You need cartridge valves for better hydraulic control
+- You want the model most buyers choose today
 
-- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). No clogging, no cleaning between batches.
-- **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 63 MPa with rapid cylinder return.
-- **4-Hook Cake Removal** — Innovative 4-hook mechanism ensures easy, reliable cake discharge — even after overnight pressing.
-- **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service. Actual service life depends on operating conditions and maintenance under 360-ton pressing force.
-- **Microcomputer Control** — Automated pressing cycle from loading to finished oil in minutes.
-- **Energy Efficient** — Designed to reduce power consumption compared to previous-generation presses (actual savings vary by operating conditions).
-- **Labor Efficient** — Only 1-2 operators needed, reducing labor requirements compared to manual pressing methods.
+[Compare HN355 vs HN365 and all models →](/products/model-comparison/)
 
-## Applications & Suitable Materials
+## Suitable Applications
 
-The HN355 excels with conventional oil seeds and materials that benefit from higher pressing force:
+The HN355 handles conventional oilseeds that benefit from medium pressing force:
 
-- **Oil Seeds**: Tea seed, rapeseed, peanut, soybean, flaxseed, lacquer oil seed
-- **Tougher Materials**: Slightly harder seeds and materials that the HN325 may not fully extract in one pass
+- **Best for**: Tea seed, rapeseed, peanut, soybean
+- **Also suitable**: Flaxseed, lacquer oil seed, cottonseed
+- **Not recommended**: Walnut, almond, and other hard-shell cold-press materials — see the [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) or [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) instead
 
-> **Note**: For cold-press applications involving hard-shell materials like walnuts and apricot kernels, consider our [HN426 Cold Press model](/products/cold-press-hydraulic-oil-press).
+## Still in Production
 
-## Why Choose Haonuo
+The HN355 is still manufactured and accepts orders. It shares the same barrel and common wear parts as the HN365, so spare parts remain available from stock. Production lead time is 15–25 working days for standard configurations.
 
-- **Factory-Direct Pricing** — Purchase directly from the manufacturer and get industrial-grade equipment at competitive prices, with no distributor markup.
-- **Built to Last** — The 3 cm thick steel plate frame is engineered for years of reliable service, even under continuous heavy-duty operation.
-- **Quality Assurance** — Each machine is fully load-tested and inspected before leaving the factory, ensuring it meets our strict performance standards.
-- **After-Sales Support** — From installation guidance to spare parts and troubleshooting, our technical team is ready to help you maximize uptime.
-- **Customization Options** — Barrel dimensions and stroke length can be adjusted to suit your specific material and production needs.
-
-## Regional Advantages
-
-**Southeast Asia (Indonesia, Malaysia, Thailand, Vietnam):** The HN355's 360-ton pressing force is well-suited for palm kernel oil extraction. Higher capacity than the HN325 makes it suitable for growing palm oil operations across the region.
-
-**Africa (Nigeria, Kenya, Ghana, Tanzania):** The HN355 is our most popular model in Africa. Its heavy-duty construction handles the abrasive nature of cottonseed and palm kernel without excessive wear. Simple operation — only 1-2 workers needed. Generator-compatible with 5.5kVA minimum.
-
-**Middle East (Saudi Arabia, UAE, Egypt):** Excellent for sesame and walnut oil production with cold press capability. The double barrel option doubles throughput for commercial operations.
+[Request an HN355 quote](/contact/) or [ask about the upgraded HN365 →](/products/hn365-hydraulic-oil-press/)

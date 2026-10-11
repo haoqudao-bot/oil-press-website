@@ -19,100 +19,109 @@ seoKeywords:
 
 ## Introduction
 
-Choosing the right oil extraction method is a critical decision that affects your production efficiency, product quality, and overall profitability.
+Almost every new oil mill owner begins with the same question: screw expeller, hydraulic press, or — at larger scale — solvent extraction? The three methods are not simply "good, better, best." They extract oil on different physical principles, run at different temperatures and scales, and land at very different price points. Choosing the wrong one is expensive in both directions: a small artisanal brand does not need a solvent plant, and a 10-tonne-per-day refinery cannot be fed by batch presses.
 
-## Oil Extraction Methods Overview
+This guide compares the three methods on the dimensions that actually decide profitability — oil quality, yield, throughput, capital and operating cost, labour, and the materials each handles well — and ends with a scenario-based selection map.
 
-### 1. Hydraulic Oil Press
-- Uses hydraulic pressure to extract oil
-- Batch processing
-- High pressure extraction
-- Suitable for various materials
-- Good oil quality
+## How Each Method Works
 
-### 2. Screw Oil Press
-- Uses rotating screw to compress and extract oil
-- Continuous operation
-- Lower pressure
-- Higher throughput
-- Lower initial cost
+### Hydraulic Oil Press
 
-### 3. Solvent Extraction
-- Uses chemical solvents to dissolve oil
-- Highest yield
-- Industrial scale
-- Complex process
+Seed is loaded into a slotted barrel in batches; a hydraulic ram applies static pressure of 325–620 tonnes and oil drains through the barrel walls. Nothing rotates against the seed, so the process generates essentially no friction heat. A cycle takes 30–40 minutes for hot pressing and about 2 hours for cold pressing; double-barrel machines overlap loading with pressing.
 
-## Detailed Comparison
+### Screw Oil Press (Expeller)
 
-### Production Efficiency
+A rotating screw inside a perforated cage continuously compresses seed, generating both pressure and substantial friction heat — material often exits at 110–140°C. The machine runs continuously, accepts metered feed, and is built for throughput.
+
+### Solvent Extraction
+
+Flaked seed is washed (usually with food-grade hexane) to dissolve the oil, which is then separated from the solvent by evaporation. It is a continuous, chemical-industrial process almost always paired with a full refinery, and it typically follows pre-pressing rather than replacing it outright.
+
+## Throughput and Operating Mode
 
 | Aspect | Hydraulic Press | Screw Press | Solvent Extraction |
 |--------|----------------|-------------|-------------------|
 | Operation | Batch | Continuous | Continuous |
-| Cycle Time | 30-120 min | 2-5 min/kg | Continuous |
-| Daily Output | 800-2,000 kg | 1,500-5,000 kg | 10,000+ kg |
+| Typical cycle/residence | 30–120 min per batch | Seconds-to-minutes plug flow | Continuous plant |
+| Practical per-line output | 0.3–3 t/day per press | 1.5–5+ t/day | 10–1,000+ t/day |
+| Startup/shutdown | Minutes | Minutes | Hours, with solvent management |
+| Flexibility between seeds | Excellent; clean between lots | Good; residue carry-over | Poor; dedicated campaigns |
 
-### Oil Quality
+Hydraulic lines scale by adding presses or double barrels; screw and solvent lines scale in larger single jumps, which suits committed, single-product factories.
 
-| Aspect | Hydraulic Press | Screw Press | Solvent Extraction |
-|--------|----------------|-------------|-------------------|
-| Temperature | 60-100°C | 120-150°C | Ambient |
-| Nutrient Retention | Excellent | Moderate | Good |
-| Solvent Residue | None | None | Possible |
-| Flavor | Natural | Heated | Neutral |
+## Oil Quality Compared
 
-### Oil Yield
-
-| Material | Hydraulic Press | Screw Press | Solvent Extraction |
-|----------|----------------|-------------|-------------------|
-| Sesame | 48-54% | 45-50% | 54-58% |
-| Peanut | 45-50% | 42-47% | 48-52% |
-| Walnut | 45-50% | Not suitable | Not suitable |
-
-### Equipment Costs
+This is where the methods diverge most sharply, and where premium pricing is won or lost.
 
 | Aspect | Hydraulic Press | Screw Press | Solvent Extraction |
 |--------|----------------|-------------|-------------------|
-| Initial Cost | Medium-High | Low-Medium | Very High |
-| Maintenance | Moderate | High | Very High |
-| Energy Consumption | Low-Medium | Medium | High |
+| Typical oil temperature | < 60°C cold / 60–100°C hot | 110–140°C at discharge | Ambient extraction, then high heat in desolventizing |
+| Nutrient retention | Excellent for cold press | Moderate; heat-sensitive compounds degrade | Requires refining/restoration |
+| Flavour | Fresh, seed-true; or traditionally roasted | Cooked, often darker | Neutral after refining |
+| Solvent residue | None | None | Controlled residual levels, regulated |
+| Suitable for "cold-pressed" claims | Yes | Generally no | No |
 
-## Advantages of Hydraulic Oil Press
+Cold-pressed hydraulic oil can be sold unrefined at a significant price premium in health-food, gourmet, and export channels. Screw expeller oil is usually filtered and often refined; solvent oil is always refined before sale.
 
-### Versatility
-- Wide material range: sesame, peanut, rapeseed, soybean, walnut, almond, coconut
-- Multiple pressing methods: hot pressing, cold pressing
+## Yield and Residual Oil
 
-### Oil Quality
-- Cold pressing capability: maintain temperature below 60°C
-- Preserve natural flavor and nutrients
-- No solvent contamination
-- Suitable for organic markets
+| Material | Hydraulic (typical) | Screw Expeller (typical) | Solvent |
+|----------|--------------------|---------------------------|---------|
+| Sesame | 42–54% (cold–hot) | 45–50% | 54–58% combined with prepress |
+| Peanut | 38–50% (cold–hot) | 42–47% | 48–52% |
+| Rapeseed | 32–42% | 36–42% | ~42–44% |
+| Walnut | 45–50% cold | Poor — kernel shears and heats | Not economic at small scale |
 
-### Pressure Control
-- High pressure extraction: up to 75 MPa system pressure
-- Precision control for optimal extraction
+Modern bar-type slotted hydraulic barrels leave 6–8% residual oil in cake; screw expellers leave 5–8% depending on choke setting (pushed harder, they generate more heat and fines); solvent extraction takes cake residual oil below 1%. Solvent therefore wins the last drops of oil — but only at volumes large enough to carry the plant, refinery, safety systems, and compliance overhead.
 
-## When to Choose Hydraulic Oil Press
+## Capital and Operating Cost
 
-1. Premium Oil Markets: Cold-pressed oils, organic products
-2. Multiple Material Types: Process various seeds and nuts
-3. Small-to-Medium Scale: Startups, small production facilities
-4. Quality-Oriented Production: Brand differentiation
+| Aspect | Hydraulic Press | Screw Press | Solvent Extraction |
+|--------|----------------|-------------|-------------------|
+| Machine investment (entry) | Low–medium | Low–medium | Very high |
+| Plant and infrastructure | Simple workshop | Simple workshop | Flameproof plant, solvent storage, effluent treatment |
+| Wear parts | Seals, barrel (slow wear, static load) | Worm, cage bars, choke — fast wear under abrasion and heat | Extensive rotating equipment |
+| Energy per tonne | Low–medium; 2.2 kW motor | Medium–high | High (evaporation, recovery) |
+| Operator skill | Trainable in days | Trainable in days | Chemical-plant operators and lab |
+| Maintenance | Moderate | Moderate–high | High, specialised |
 
-## When to Choose Screw Press
+A hydraulic press is the only one of the three that fits a 50–150 m² workshop with ordinary three-phase power and two or three staff. Screw presses sit in a similar footprint but impose higher wear-part budgets; solvent plants require industrial zoning, explosion protection, solvent recovery, and trained personnel.
 
-1. High-Volume Production: Large daily output, continuous operation
-2. Conventional Oil Seeds: Sesame, peanut, rapeseed
-3. Cost-Conscious Buyers: Lower upfront investment
+## Material Versatility
 
-## When to Choose Solvent Extraction
+Hydraulic presses accept an unusually wide range — sesame, peanut, rapeseed, sunflower, soybean, tea seed, coconut (with a 600 mm food-grade barrel), plus hard, high-value nuts that screw machines handle badly:
 
-1. Industrial-Scale Operations: 10,000+ kg/day capacity
-2. Maximum Yield Requirements: Extract every drop of oil
-3. Refined Oil Production: Large refining facilities
+- **Walnut and almond** — soft, oil-rich kernels shear into paste inside a screw and lose quality to heat; high-pressure cold hydraulic pressing (42–52 MPa cake pressure on [HN426](/products/cold-press-hydraulic-oil-press/) / HN500 machines) is the established solution.
+- **Coconut and VCO** — batch pressing in stainless barrels supports virgin coconut oil without solvent contact.
+- **Small-lot and multi-seed businesses** — the barrel is cleaned between batches, so a morning of sesame and an afternoon of walnut is practical.
+
+Screw expellers favour continuous runs of conventional seeds (rapeseed, sunflower, soybean, peanut). Solvent extraction suits high-volume oilseeds and pre-pressed cake.
+
+## When to Choose Which
+
+**Choose a hydraulic press when:**
+1. You sell or plan to sell cold-pressed, organic, virgin, or artisanal oil at a premium.
+2. You process multiple seeds or nuts, including walnut, almond, or coconut.
+3. Your volume is 0.3–3 tonnes/day per line and may grow by adding machines.
+4. You want simple installation, ordinary power, and minimal compliance burden.
+5. Batch traceability matters (lot records, smallholder cooperatives, certified supply chains).
+
+**Choose a screw expeller when:**
+1. You run one conventional seed continuously at 1.5–5+ tonnes/day.
+2. Your market accepts hot-pressed oil heading for filtration or refining.
+3. Upfront cost per daily tonne must be minimised and wear-part replacement is routine.
+
+**Choose solvent extraction when:**
+1. Daily input is measured in tens of tonnes and product is refined, neutral bottled or bulk oil.
+2. Recovering the last percent of oil from pre-pressed cake justifies a full chemical plant.
+3. You have industrial zoning, capital, operating staff, and regulatory capacity.
+
+**Common hybrid:** large plants pre-press on screw machines to remove most oil mechanically, then solvent-extract the cake. Small and medium premium producers instead combine hydraulic pressing with good filtration — a much lower-risk entry point.
+
+## Total-Cost Perspective
+
+Buyers sometimes over-weight the machine sticker price. At small and medium scale, the deciding numbers are usually elsewhere: the premium cold-pressed oil commands over refined commodity oil, the value of cake sold as animal feed, and losses from heat-damaged or rejected batches. A hydraulic line's combination of low temperature, broad material range, and batch flexibility is exactly why it dominates the small-to-medium, quality-oriented segment even though the screw expeller is older and cheaper per daily tonne.
 
 ## Conclusion
 
-Choosing the right oil extraction method depends on your specific business requirements. Haonuo hydraulic oil presses offer the best balance of quality, efficiency, and versatility for most oil production operations.
+There is no universally superior extraction method — there is the method that matches your volume, seed, market, and budget. Solvent extraction maximises yield at industrial scale, screw expellers maximise continuous throughput for conventional seeds, and hydraulic presses maximise quality, versatility, and cold-press capability at the scale most buyers actually start at. If your plan is premium oil, multiple seeds or hard-shell nuts, and a workshop-sized investment, the hydraulic press is the correct anchor; Haonuo's line runs from the 325-tonne [HN325](/products/standard-hydraulic-oil-press/) through the 620-tonne HN500 to match that growth.

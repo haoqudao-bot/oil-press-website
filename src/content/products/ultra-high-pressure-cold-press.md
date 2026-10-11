@@ -4,16 +4,26 @@ title:
   fr: Presse à Froid Ultra Haute Pression
   ar: معصرة على البارد فائقة الضغط
   id: Mesin Press Dingin Tekanan Ultra Tinggi
+seoTitle:
+  en: HN480B Ultra High Pressure Cold Press — 600 Ton, Custom
+  fr: Presse à froid ultra haute pression HN480B — 600 tonnes, sur mesure
+  ar: معصرة باردة فائقة الضغط HN480B — 600 طن، حسب الطلب
+  id: Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, kustom
 description:
-  en: "600-ton ultra-high pressure cold press with 65 MPa system. Specifically optimized for walnut pressing with complete walnut oil production solution, 100kg capacity per batch."
-  fr: "Presse à huile hydraulique à froid 600t, 65 MPa. Optimisée noix, 100kg par lot."
-  ar: "معصرة باردة فائقة الضغط 600 طن بنظام 65 ميجاباسكال. محسنة خصيصاً لعصر الجوز مع حل إنتاج كامل لزيت الجوز بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press dingin ultra-tekanan tinggi 600 ton dengan sistem 65 MPa. Dioptimalkan khusus untuk penekanan walnut dengan solusi produksi minyak walnut lengkap, kapasitas 100kg per batch."
+  en: "HN480B ultra high pressure cold press — 600 ton, 65 MPa system, 48 MPa cake pressure. Custom-configured for walnut, almond, and hard seeds. Made to order in 30-45 working days."
+  fr: "Presse à froid ultra haute pression HN480B — 600 tonnes, 65 MPa, 48 MPa sur gâteau. Sur mesure pour noix, amandes, graines dures. 30-45 jours ouvrés."
+  ar: "معصرة باردة فائقة الضغط HN480B — 600 طن، 65 ميجاباسكال، 48 ميجاباسكال على الكعكة. مخصصة للجوز واللوز والبذور الصلبة. 30-45 يوم عمل."
+  id: "Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, 65 MPa, 48 MPa pada kue. Kustom untuk walnut, almond, biji keras. 30-45 hari kerja."
 category: hydraulic-oil-press
 model: HN480B
 modelId: ''
 images:
   - /images/products/ultra-high-pressure-cold-press.webp
+imageAlt:
+  en: "HN480B ultra high pressure cold press oil machine, 600-ton custom build"
+  fr: "Presse à huile à froid ultra-haute pression HN480B, 600 tonnes sur mesure"
+  ar: "معصرة زيت بارد فائقة الضغط HN480B، قدرة 600 طن تصنيع مخصص"
+  id: "Mesin cold press minyak tekanan ultra tinggi HN480B, 600 ton pesanan khusus"
 specifications:
   - name: Model (Single/Double)
     value: HN480B Simple / HN480B Double
@@ -264,28 +274,24 @@ faqId:
     answer: Tingkat minyak sisa dalam kue press biasanya 6-8% untuk sebagian besar bahan dengan desain barel ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press barel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
 videoUrl: ''
 seoKeywords:
+  - 600 ton cold press
+  - walnut oil cold press machine
+  - custom cold press
+  - HN480B
   - ultra high pressure cold press
   - 600 ton hydraulic press
   - walnut oil press machine
-  - cold press oil machine
-  - HN480B cold press
-  - ultra high pressure oil press
-  - walnut oil extraction
-  - cold press walnut oil
-  - high pressure cold press
-  - premium cold press machine
-updatedAt: 2025-11-01
+  - almond cold press machine
+updatedAt: 2026-10-10
 ---
 
 ## Overview
 
-> The HN480B is a custom-order 600-tonne variant built for the hardest in-shell cold-press materials such as in-shell walnuts and apricot kernels. All Haonuo hydraulic presses can cold press; for most cold-press buyers we recommend the standard [HN426 Cold Press Hydraulic Oil Press](/products/cold-press-hydraulic-oil-press/) — shorter lead time and lower investment.
+> **Custom Configuration** — The HN480B is a made-to-order 600-ton ultra-high-pressure cold press for the hardest in-shell cold-press materials (in-shell walnut, apricot kernel). Production lead time is 30–45 working days. For most cold-press buyers we recommend the standard [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) — shorter lead time and lower investment. [Request a custom quote →](/contact/)
 
-The HN480B ultra high pressure cold press applies 600 tons of pressing force at 65 MPa system pressure and 48 MPa cake surface pressure — the highest cold-press force in Haonuo's lineup — for walnut, apricot kernel and yellowhorn producers. Batches run 40–90 minutes depending on the material with 6–8% residual oil in the cake (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation), backed by a 1-year warranty.
+The HN480B ultra high pressure cold press applies 600 tons of pressing force at 65 MPa system pressure and 48 MPa cake surface pressure — the highest cold-press force in Haonuo's lineup — for walnut, apricot kernel and yellowhorn producers. The 2.2 kW motor runs on standard 220V/380V power, and the machine carries a 1-year warranty.
 
-The HN480B Ultra High Pressure Cold Press is our most advanced cold-press hydraulic oil press, delivering a massive 600-ton pressing force with 65 MPa system pressure and 48 MPa cake surface pressure. Specifically optimized for walnut pressing with a complete walnut pressing solution, it dramatically shortens pressing time while maximizing oil yield. This is the highest cold-press force in our lineup, purpose-built for producers who demand the ultimate in cold-press performance.
-
-The HN480B features a 480 mm cylinder outer diameter with a 360 mm piston inner diameter, generating the extreme pressure needed to cold press walnuts, almonds, pine nuts, and other hard-shell materials in a single cycle. Our proprietary walnut pressing solution ensures that both walnut kernels and in-shell walnuts are efficiently processed, reducing pressing time and increasing oil yield compared to conventional cold-press methods.
+The HN480B is specifically optimized for walnut pressing with a complete walnut pressing solution. It features a 480 mm cylinder outer diameter with a 360 mm piston inner diameter, generating the extreme pressure needed to cold press walnuts, almonds, pine nuts, and other hard-shell materials in a single cycle. Our proprietary walnut pressing solution ensures that both walnut kernels and in-shell walnuts are efficiently processed.
 
 ## Key Advantages
 

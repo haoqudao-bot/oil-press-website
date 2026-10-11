@@ -14,6 +14,11 @@ model: 100# / 130#
 modelId: ''
 images:
   - /images/products/automatic-drum-roaster.webp
+imageAlt:
+  en: "Automatic electromagnetic drum roaster for oil seed roasting"
+  fr: "Torréfacteur à tambour électromagnétique automatique pour graines oléagineuses"
+  ar: "محمصة أسطوانية كهرومغناطيسية أوتوماتيكية لتحميص البذور الزيتية"
+  id: "Mesin sangrai drum elektromagnetik otomatis untuk penyangraian biji minyak"
 specifications:
   - name: Models
     value: 100# / 130# / Thickened 130#

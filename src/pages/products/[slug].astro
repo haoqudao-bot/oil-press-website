@@ -101,7 +101,7 @@ if (faqLd) allLd.push(faqLd);
             <img
               id="main-image"
               src={product.data.images[0]}
-              alt={product.data.title.en}
+              alt={product.data.imageAlt?.en || product.data.title.en}
               width="800"
               height="600"
               class="w-full h-full object-cover"

@@ -19,6 +19,11 @@ model: HN325
 modelId: ''
 images:
   - /images/products/standard-hydraulic-oil-press.webp
+imageAlt:
+  en: "HN325 standard hydraulic oil press machine for small business, 325 ton"
+  fr: "Presse à huile hydraulique standard HN325 pour petites entreprises, 325 tonnes"
+  ar: "معصرة زيت هيدروليكية قياسية HN325 للمشروعات الصغيرة، 325 طن"
+  id: "Mesin press minyak hidrolik standar HN325 untuk usaha kecil, 325 ton"
 specifications:
   - name: Model (Single/Double)
     value: HN325 Simple / HN325 Double

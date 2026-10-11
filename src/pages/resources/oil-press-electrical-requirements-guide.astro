@@ -324,6 +324,43 @@ const costCalculation = ['Energy Cost per Day = (Energy Consumption x Hours x Ra
         </div>
       </section>
 
+      <section id="site-survey" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">The Pre-Delivery Site Survey</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Most electrical problems are decided before the machine arrives. A single photograph of the distribution board and five minutes with a clamp meter prevent the commonest commissioning delays: missing neutral, an undersized service, or phase imbalance that trips the breaker mid-cycle. Walk the site with this checklist before the press ships.</p>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100 my-4">
+          <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5">
+            <li><strong>Service capacity:</strong> confirmed kVA at the meter, not the transformer nameplate down the street.</li>
+            <li><strong>Phase balance:</strong> measured current on each phase at peak load; under 10% imbalance.</li>
+            <li><strong>Voltage stability:</strong> note the swing between midday and evening; brownouts damage motors and contactors.</li>
+            <li><strong>Earth path:</strong> a true grounding electrode with measured resistance below 4 ohms.</li>
+            <li><strong>Panel space:</strong> room for the press breaker plus roaster, cleaner, crusher, and filter circuits.</li>
+            <li><strong>Cable route:</strong> protected from forklift traffic, water wash-down, and hot roaster surfaces.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="full-line-distribution" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Distributing Power Across the Whole Line</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">The press motor is only 2.2 kW, but a complete line draws 20–40 kVA, and the roaster dominates the total. Put each major machine on its own breaker sized to 1.25× its full-load current, sequence startup so the roaster does not start on top of the press motor, and interlock the crusher and conveyor so a stopped machine does not keep getting fed.</p>
+        <p class="text-steel-700 leading-relaxed mb-4">Power quality matters as much as quantity. Long cable runs with undersized conductors create voltage sag at the very moment the pump starts against load; the motor then draws excess current, heats, and trips — a failure that is frequently misdiagnosed as a machine fault. Size cable for voltage drop under 3% over the actual run length, not just for ampacity. If generator power is planned, follow the sizing and grounding rules in our generator section above rather than renting a unit matched only to the press nameplate.</p>
+      </section>
+
+      <section id="commissioning-verification" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Commissioning and Acceptance Checks</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Before accepting installation, verify the electrical installation under load, not at idle. Run a full pressing cycle and record phase currents, voltage at the motor terminals during pump startup, and the temperature of breakers and main cable lugs after an hour of operation. Hot lugs indicate loose connections and are the leading cause of later panel fires.</p>
+        <ul class="space-y-2 text-steel-700 list-disc pl-5 mb-4">
+          <li>Confirm motor rotation with the pump decoupled, then check pump flow under pressure.</li>
+          <li>Test every emergency stop and the pressure-limit switch independently — do not assume they work because the lamp lights.</li>
+          <li>Verify the earth-bond reading between the press frame and the panel earth bar.</li>
+          <li>Label every circuit and leave the updated single-line diagram with the owner; the next fault is fixed in minutes with labels and by the hour without them.</li>
+        </ul>
+        <p class="text-steel-700 leading-relaxed">These checks take a competent electrician about half a day and are the cheapest insurance a mill can buy. For the complete facility picture — power, water, drainage, and floor load — see the <a href="/resources/complete-oil-production-line-guide/" class="text-amber-600 hover:underline">complete production line guide</a>.</p>
+        <h3 class="font-semibold text-lg mt-6 mb-3 text-charcoal-900">Diagnosing recurring breaker trips</h3>
+        <p class="text-steel-700 leading-relaxed mb-4">A breaker that trips only at peak pressure, or only in the afternoon, is giving diagnostic information rather than merely failing. Trips under load with a warm cable point to undersized conductors or a loose connection adding resistance; trips that track the time of day point to grid voltage sag as neighbouring loads come online; random trips with cool equipment point to a weak breaker or earth leakage. Resist the common instinct to fit a larger breaker — that removes the warning while leaving the fault, and converts a nuisance trip into a burnt motor or a panel fire. Measure first: clamp current at the trip moment, read voltage at the motor terminals, and tighten lugs to torque before changing any protective device.</p>
+        <p class="text-steel-700 leading-relaxed">Document every recurring event with time, machine state, and weather; patterns that look random across a week usually line up against roast-cycle timing or generator handover, and the log lets an electrician fix the cause in one visit instead of three.</p>
+        <p class="text-steel-700 leading-relaxed mt-4">Two final habits prevent most of the faults described here: keep water and oil away from the panel and conduit during wash-down — damp panels fail weeks later, not on the day they get wet — and never bypass an earth-leakage device "to keep production running". Residual-current protection exists because a press floor combines water, oil, conductive steelwork, and human operators; its nuisance trips are themselves a signal that insulation or earthing needs attention, and the correct response is to find the leakage, never to disable the guard.</p>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Conclusion</h2>
         <p class="text-steel-700 leading-relaxed">Proper electrical configuration is crucial for safe and efficient operation of hydraulic oil presses. For personalized electrical configuration advice, contact Haonuo's technical support team.</p>

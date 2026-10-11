@@ -21,6 +21,8 @@ seoKeywords:
 
 The filtration and clarification process is critical to producing high-quality edible oils. After pressing, crude oil contains various impurities that must be removed to meet market standards for clarity, flavor, and shelf life.
 
+Filtration is also where pressed oil becomes a branded product. Wholesale buyers judge a delivery first by appearance in a clear bottle or glass jar: visible sediment means rejection or a discount, repeated sediment means a lost customer. Cloudy oil also foams and smokes in the pan, spoils faster as seed solids oxidise inside the bottle, and cannot support any premium or export claim. For hydraulic-press mills — whose selling proposition against refined commodity oil is natural clarity and fresh flavour — the filter is not a peripheral accessory; it is part of what the customer pays for.
+
 ## Understanding Crude Oil Impurities
 
 ### Types of Impurities
@@ -117,6 +119,16 @@ This is the most commonly used filtration method for hydraulic oil press operati
 - Higher energy consumption
 - Less effective for very fine particles
 
+## Operating Variables That Decide Filtration Quality
+
+The same filter press can produce brilliantly clear oil or repeatedly clogged paper, depending on how it is operated.
+
+- **Temperature:** oil viscosity falls sharply as it warms. Filtering most crude oils at 30–50°C (warm from the press or gently reheated) roughly doubles flow rate compared with a cold morning tank. Above roughly 70°C you risk oxidation, burns, and damage to paper media — never push temperature to chase speed.
+- **Pressure:** begin at low feed pressure and let the first layer of solids form its own filter cake; this cake does much of the fine trapping. Raise pressure gradually as resistance builds. Starting at full pressure forces fines through or blind the paper instantly.
+- **Filter aids:** a thin precoat of food-grade diatomaceous earth or perlite protects the paper from gelatinous gums (especially sesame and peanut) and extends cycles. Dose lightly — over-use adds oil loss and disposal cost.
+- **Batch cleanliness:** a quick coarse screen before the filter catches the largest particles and protects the expensive fine media; never let the collection tank double as an unrestrained settling tank feeding the pump.
+- **Change timing:** change paper or clean plates when pressure differential rises or flow slows, not on a fixed clock — seed lot and roast moisture change the solids load every day.
+
 ## Oil Settling Process
 
 ### Natural Settling
@@ -198,6 +210,23 @@ This is the most commonly used filtration method for hydraulic oil press operati
 - Use appropriate pump size for flow rate
 - Include pressure relief valves
 - Install clean-in-place system
+
+## Oil Loss and Sludge Recovery
+
+Filtration always traps some oil together with the solids; in poorly run mills this "filter loss" can quietly reach 2–4% of production.
+
+- Spent filter paper and plate cake contain substantial oil. Collect them in a drum, warm gently, and drain or repress in a small cloth-lined batch; the recovered oil goes back through the fine filter as a lower grade rather than being discarded.
+- Settling-tank bottoms (foot sludge) are handled the same way: settle again, decant the top oil, and only discard the final dry residue.
+- Keep recovery oil in a clearly labelled separate tank — it is perfectly usable for blended or bulk products but should not be mixed silently into a premium cold-press lot.
+- Track the ratio of recovered oil to pressed oil over time; a rising figure usually signals a damaged screen, over-crushed meal, or a filter that is being bypassed.
+
+## Filtration vs Refining: Where the Boundary Sits
+
+Producers sometimes expect filtration to do what only refining can. Filtration removes *particles* — seed solids, fines, and with activated carbon some colour and aflatoxin load — but it does not remove dissolved substances: phospholipids (gums), free fatty acids, waxes, and odour compounds remain.
+
+- Filtered crude and cold-pressed oil is the natural product for local, artisanal, and premium markets; its flavour and colour are selling points.
+- If the market demands neutral taste, light colour, long shelf life at room temperature, or bulk commodity standards, the line needs degumming, neutralization, bleaching, and deodorization — a refining investment that is realistic from roughly 5 tonnes/day upward.
+- Between the two sits a pragmatic middle path for small mills: good filtration plus settling, moisture control below 0.1%, and dark cool storage. It produces stable, saleable oil for most local and regional markets without a refinery.
 
 ## Equipment Selection Guide
 

@@ -21,6 +21,17 @@ seoKeywords:
 
 Aflatoxin contamination is a serious food safety concern in oilseed processing, particularly for peanuts, corn, cottonseed, and tree nuts. These toxic compounds, produced by molds of the Aspergillus genus, pose significant health risks and can result in product rejection, legal penalties, and damage to brand reputation.
 
+For small and medium oil mills, aflatoxin is also a commercial survival issue. A single failed export test can mean a returned container, a destroyed buyer relationship, and in regulated markets liability that no small business can absorb. Unlike colour or flavour defects, contamination is invisible, odourless, and cannot be sorted out by the customer in the kitchen — so control has to be designed into sourcing, storage, and processing rather than checked only at the end.
+
+## Where Contamination Begins
+
+Aspergillus infects oilseed at two distinct stages, and the controls differ for each:
+
+- **In the field (pre-harvest):** drought stress, delayed harvest, and insect damage let the mould colonise developing kernels. Hot, dry growing seasons followed by humid harvest weather are the classic high-risk pattern for groundnuts.
+- **During storage and transport (post-harvest):** mould grows whenever seed is stored above roughly 12% moisture in warm conditions, or is rewetted by rain, leaking roofs, or damp floors. This is the stage a mill can actually control.
+
+A useful mental model: field contamination arrives inside individual kernels and must be detected and rejected; storage contamination spreads from a few wet kernels through an entire lot and is almost always preventable with moisture discipline and ventilation.
+
 ## Understanding Aflatoxins
 
 ### What are Aflatoxins?
@@ -45,6 +56,16 @@ These molds thrive under warm, humid conditions, making tropical and subtropical
 1. **Acute Toxicity**: Severe liver damage, vomiting, abdominal pain
 2. **Chronic Toxicity**: Liver cancer, immune suppression, growth retardation
 3. **Carcinogenicity**: Classified as Group 1 carcinogen by WHO/IARC
+
+## Aflatoxin Partitioning: Oil vs Cake
+
+Aflatoxins are lipid-soluble, which has an important consequence for oil mills: pressing does not leave all the toxin in one stream. The toxin partitions between the crude oil and the pressed cake, and both products may fall under food or feed safety rules.
+
+- Contaminated seed can produce crude oil carrying aflatoxin even though the oil looks and tastes normal.
+- The cake — often sold as animal feed — carries its own load and is subject to feed limits; contaminated cake fed to dairy animals can carry aflatoxin metabolites (aflatoxin M1) into milk, which is heavily regulated.
+- Filtration removes contaminated *particles* but does not by itself remove dissolved aflatoxin; activated carbon adsorption and refining steps (alkali treatment, bleaching) reduce dissolved levels substantially, which is why large buyers of crude-for-refining still demand low starting levels — refining is not a licence to press bad seed.
+
+Practical rule for small mills: if the incoming seed or finished oil fails testing, assume the cake is also affected and quarantine both streams until laboratory results say otherwise.
 
 ## Regulatory Standards
 
@@ -138,6 +159,18 @@ These molds thrive under warm, humid conditions, making tropical and subtropical
    - Highest sensitivity
    - Multi-analyte detection
    - Regulatory compliance
+
+## Cold-Press Operations Have Less Margin
+
+Hot roasting provides a processing step that can reduce aflatoxin levels when held at sufficiently high temperature, and it is part of a documented control system when combined with testing. Cold-press operations deliberately avoid that heat to preserve flavour and nutrients — so for cold-pressed peanut, nut, and seed oils there is no thermal reduction step to fall back on.
+
+That has three concrete implications:
+
+1. Incoming-seed acceptance limits must be tighter for cold-press lines; supplier test reports and lot segregation are not optional paperwork.
+2. Visual and optical sorting carries more weight — visibly moulded kernels are removed before they reach a process that will not thermally treat the meal.
+3. Finished-oil testing frequency should be higher for cold-press lots, and activated-carbon filtration is worth considering as an additional barrier rather than relying on heat that the process does not apply.
+
+A premium "raw" or cold-pressed claim is a promise to the customer that raw-material discipline is doing all the work; the documentation should prove it.
 
 ## Implementation Checklist
 

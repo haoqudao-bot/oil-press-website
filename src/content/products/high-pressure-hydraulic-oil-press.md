@@ -4,16 +4,26 @@ title:
   fr: Presse à Huile Hydraulique Haute Pression
   ar: معصرة زيت هيدروليكية عالية الضغط
   id: Mesin Press Minyak Hidrolik Tekanan Tinggi
+seoTitle:
+  en: HN480 Hydraulic Oil Press — 560 Ton, 72 MPa
+  fr: Presse à huile hydraulique HN480 — 560 tonnes, 72 MPa
+  ar: معصرة زيت هيدروليكية HN480 — 560 طن، 72 ميجاباسكال
+  id: Mesin press minyak hidrolik HN480 — 560 ton, 72 MPa
 description:
-  en: "560-ton high-pressure hydraulic oil press with 72 MPa system. Maximum oil yield for walnut, almond, and hard-to-press seeds with 100kg capacity per batch."
-  fr: "Presse à huile hydraulique 560 tonnes, 72 MPa. Noix, amandes, graines dures, 100kg par lot."
-  ar: "معصرة زيت هيدروليكية عالية الضغط 560 طن بنظام 72 ميجاباسكال. أقصى عائد زيت للجوز واللوز والبذور الصعبة بقدرة 100 كجم لكل دفعة."
-  id: "Mesin press minyak hidrolik tekanan tinggi 560 ton dengan sistem 72 MPa. Hasil minyak maksimum untuk walnut, almond, dan biji sulit ditekan dengan kapasitas 100kg per batch."
+  en: "HN480 hydraulic oil press — 560 ton high-pressure model with 72 MPa system pressure. For walnut, almond, and hard-to-press seeds. 390mm barrel. Previous generation, still in production."
+  fr: "Presse à huile hydraulique HN480 — 560 tonnes, 72 MPa. Pour noix, amandes et graines dures. Fût 390mm. Génération précédente, toujours en production."
+  ar: "معصرة زيت هيدروليكية HN480 — 560 طن، 72 ميجاباسكال. للجوز واللوز والبذور الصعبة العصر. برميل 390 مم. الجيل السابق، لا يزال في الإنتاج."
+  id: "Mesin press minyak hidrolik HN480 — 560 ton, 72 MPa. Untuk walnut, almond, dan biji sulit ditekan. Barel 390mm. Generasi sebelumnya, masih dalam produksi."
 category: hydraulic-oil-press
 model: HN480
 modelId: ''
 images:
   - /images/products/high-pressure-hydraulic-oil-press.webp
+imageAlt:
+  en: "HN480 high pressure hydraulic oil press, 560-ton force at 72 MPa"
+  fr: "Presse à huile hydraulique haute pression HN480, 560 tonnes à 72 MPa"
+  ar: "معصرة زيت هيدروليكية عالية الضغط HN480، قوة 560 طن بضغط 72 ميجاباسكال"
+  id: "Mesin press minyak hidrolik tekanan tinggi HN480, gaya 560 ton pada 72 MPa"
 specifications:
   - name: System Pressure
     value: 72 MPa
@@ -208,50 +218,59 @@ faqId:
     answer: "Tingkat minyak sisa dalam kue biasanya 6-8% untuk sebagian besar bahan dengan desain barrel beralur tipe bar kami, dibandingkan dengan 10-12% dengan mesin press barrel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% lebih banyak minyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch."
 videoUrl: ''
 seoKeywords:
-  - high pressure hydraulic oil press
-  - hydraulic oil press machine
+  - HN480 hydraulic oil press
+  - 560 ton hydraulic oil press
+  - 72 MPa oil press
   - HN480 oil press
-  - high pressure oil press
-  - industrial hydraulic press
+  - 560 ton oil press
+  - high pressure hydraulic oil press
+  - walnut oil press machine
   - almond oil press machine
-  - castor oil press
-  - high pressure cold press
-  - premium oil extraction
-  - industrial oil press
-updatedAt: 2025-11-01
+updatedAt: 2026-10-10
 ---
 
 ## Overview
 
-The HN480 high pressure hydraulic oil press delivers an estimated 560 tons of pressing force at 72 MPa system pressure, positioned between the HN426 cold-press model and the HN500 flagship for medium-to-large oil mills. It handles both conventional and cold-press oil extraction in 40–90 minute batches depending on the material, leaving 6–8% residual oil in the cake (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation).
+> **Looking for a current model?** Most buyers today choose the [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) (620 t, 75 MPa) for maximum pressing force, or the [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) (500 t, 70 MPa) for premium cold-pressed oil. The HN480 remains in production for buyers replacing an existing HN480 or matching a previous quotation.
 
-The HN480 High Pressure Hydraulic Oil Press bridges the gap between our HN426 cold-press specialist and the HN500 ultra-high-pressure flagship. With a 480 mm cylinder diameter and an estimated 560-ton pressing force at 72 MPa system pressure, it delivers substantial power for both conventional and cold-press oil extraction — an optimal balance of performance and value for medium-to-large-scale operations.
+The HN480 is a 560-ton high-pressure hydraulic oil press with a 480 mm cylinder and 390 mm barrel, running at 72 MPa system pressure. It sits between the HN426 cold-press model and the HN500 ultra-high-pressure flagship, handling both conventional and cold-press oil extraction. The 2.2 kW motor keeps operating costs modest.
 
-## Key Advantages
+This page serves as a reference for buyers searching specifically for the HN480 by model number — for example, to match an existing machine or compare specs against a previous quotation.
 
-- **Balanced Performance** — Positioned between the HN426 and HN500, offering strong pressing force without the premium of the flagship model.
-- **Cold-Press Capable** — Sufficient cake pressure for cold pressing walnut kernels, apricot kernels, and similar materials.
-- **Versatile Application** — Handles both conventional oil seeds and cold-press materials with reliable oil yield.
-- **Energy Efficient** — 2.2 KW motor keeps operating costs low while delivering industrial-grade pressing force.
+## HN480 vs Current Models
 
-## Core Technology
+| Parameter | HN480 (Previous Gen) | HN426 (Cold Press) | HN500 (Ultra High) |
+|-----------|----------------------|--------------------|--------------------|
+| Pressing force | 560 tons | 500 tons | 620 tons |
+| System pressure | 72 MPa | 70 MPa | 75 MPa |
+| Best for | Mid-range high pressure | Premium cold press | Maximum force & pressure |
+| Barrel inner diameter | 390 mm | 390 mm | 390 mm |
+| Batch capacity | ~100 kg | ~100 kg | ~100 kg |
 
-- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). No clogging, no cleaning between batches.
-- **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 72 MPa with rapid cylinder return.
-- **4-Hook Cake Removal** — Innovative 4-hook mechanism ensures easy, reliable cake discharge — even after overnight pressing.
-- **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service. Actual service life depends on operating conditions and maintenance under 560-ton pressing force.
-- **Microcomputer Control** — Automated pressing cycle from loading to finished oil in minutes.
-- **Energy Efficient** — Designed to reduce power consumption compared to previous-generation presses (actual savings vary by operating conditions).
-- **Labor Efficient** — Only 1-2 operators needed, reducing labor requirements compared to manual pressing methods.
+**Choose the HN480 if:**
+- You are replacing an existing HN480 and want a direct match
+- You are matching a previous quotation that specifies the HN480
+- You want a mid-range high-pressure model between the HN426 and HN500
 
-## Applications & Suitable Materials
+**Choose the HN426 if:**
+- Cold pressing is your primary business and you want a dedicated cold-press machine
 
-- **Oil Seeds**: Tea seed, rapeseed, peanut
-- **Cold-Press Materials**: Walnut kernel, apricot kernel
+**Choose the HN500 if:**
+- You need maximum force (620 t) and pressure (75 MPa) for the hardest seeds
+- You want the current flagship ultra-high-pressure model
 
-## Why Choose Haonuo
+[Compare HN480 with all models →](/products/model-comparison/)
 
-- **Factory-Direct Pricing** — Get high-pressure performance at manufacturer-direct prices with no middleman markup.
-- **Quality Assurance** — Every machine is factory-tested under full load before shipment.
-- **After-Sales Support** — Comprehensive technical support and spare parts availability.
-- **Customization Options** — Barrel dimensions and pressing parameters can be tailored to your needs.
+## Suitable Applications
+
+The HN480 handles both conventional and cold-press materials at high pressure:
+
+- **Conventional oilseeds**: Tea seed, rapeseed, peanut
+- **Cold-press materials**: Walnut kernel, apricot kernel
+- **For the hardest seeds** (in-shell walnut, copra, tiger nut), see the [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) instead
+
+## Still in Production
+
+The HN480 is still manufactured and accepts orders. Production lead time is 15–25 working days for standard configurations.
+
+[Request an HN480 quote](/contact/) or [compare current models →](/products/model-comparison/)

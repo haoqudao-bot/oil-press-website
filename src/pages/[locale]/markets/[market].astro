@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 import { frMarketData } from '../../../data/fr-market-data';
 import { arMarketData } from '../../../data/ar-market-data';
 import { idMarketData } from '../../../data/id-market-data';
+import { getMarketProducts } from '../../../data/market-products';
 
 // Seed keywords for product filtering per market
 const marketSeedKeywords: Record<string, string[]> = {
@@ -53,9 +54,7 @@ const t = getTranslations(currentLocale);
 
 const allProducts = await getCollection('products');
 const seedKeywords = marketSeedKeywords[market] || [];
-const seedProducts = allProducts.filter(p =>
-  p.data.applicableSeeds.some(s => seedKeywords.some(kw => s.toLowerCase().includes(kw)))
-).slice(0, 4);
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, seedKeywords);
 
 // Get localized market data - id > ar > fr fallback chain
 const marketData = currentLocale === 'id' && idMarketData[market] ? idMarketData[market]
@@ -83,6 +82,14 @@ const shippingLabels: Record<string, { port: string; transit: string; cost: stri
   id: { port: 'Pelabuhan', transit: 'Waktu Transit', cost: 'Biaya Pengiriman' },
 };
 const shippingLabel = shippingLabels[currentLocale] || shippingLabels.fr;
+
+// Localized recommended-products subsection labels
+const productGroupLabels: Record<string, { core: string; matching: string }> = {
+  fr: { core: 'Presses Hydrauliques Principales', matching: 'Équipements Complémentaires' },
+  ar: { core: 'المكابس الهيدروليكية الأساسية', matching: 'المعدات الملحقة' },
+  id: { core: 'Mesin Press Hidrolik Utama', matching: 'Peralatan Pendukung' },
+};
+const productGroupLabel = productGroupLabels[currentLocale] || productGroupLabels.fr;
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -149,42 +156,133 @@ const faqLd = {
     </div>
   </section>
 
-  <!-- Recommended Products -->
-  {seedProducts.length > 0 && (
+  <!-- Import & Customs Clearance -->
+  {marketData.clearance && (
     <section class="py-12 md:py-16 bg-steel-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">{marketData.productsTitle}</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {seedProducts.map(product => (
-            <a
-              href={localePath(`/products/${product.slug}`)}
-              class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
-            >
-              <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
-                <img
-                  src={product.data.images[0]}
-                  alt={product.data.title[currentLocale] || product.data.title.en}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
-                />
-              </div>
-              <div class="p-5">
-                <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
-                <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
-                <div class="flex flex-wrap gap-2">
-                  {(currentLocale === 'id' && product.data.specificationsId?.length > 0 ? product.data.specificationsId : currentLocale === 'ar' && product.data.specificationsAr?.length > 0 ? product.data.specificationsAr : currentLocale === 'fr' && product.data.specificationsFr?.length > 0 ? product.data.specificationsFr : product.data.specifications).slice(0, 2).map(spec => (
-                    <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
-                      {spec.name}: {spec.value}
-                    </span>
-                  ))}
+        <h2 class="section-title text-center mb-4">{marketData.clearance.heading}</h2>
+        <p class="text-center text-steel-600 mb-12 max-w-3xl mx-auto">{marketData.clearance.intro}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <h3 class="font-display font-bold text-xl mb-5 text-charcoal-900">{marketData.clearance.stepsTitle}</h3>
+            <div class="space-y-4">
+              {marketData.clearance.steps.map((step, i) => (
+                <div class="flex gap-4 items-start bg-white rounded-xl p-5 border border-steel-100">
+                  <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">{i + 1}</div>
+                  <div><p class="font-semibold text-charcoal-900 text-sm">{step.title}</p><p class="text-steel-600 text-sm mt-1">{step.description}</p></div>
                 </div>
-              </div>
-            </a>
-          ))}
+              ))}
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="bg-white rounded-2xl p-6 border border-steel-100">
+              <h3 class="font-semibold text-lg mb-3 text-charcoal-900">{marketData.clearance.docsTitle}</h3>
+              <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5">
+                {marketData.clearance.docs.map(doc => <li>{doc}</li>)}
+              </ul>
+            </div>
+            <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+              <p class="text-charcoal-900 text-sm font-medium mb-2">{marketData.clearance.powerNoteTitle}</p>
+              <p class="text-steel-700 text-sm">{marketData.clearance.powerNote} <a href={localePath('/resources/oil-press-electrical-requirements-guide/')} class="text-amber-700 underline">{marketData.clearance.powerNoteLink}</a></p>
+            </div>
+            <p class="text-xs text-steel-500">{marketData.clearance.disclaimer}</p>
+          </div>
         </div>
       </div>
     </section>
   )}
+
+  <!-- Customer Cases -->
+  {marketData.cases && (
+    <section class="py-12 md:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title mb-12">{marketData.cases.heading}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {marketData.cases.cases.map(item => (
+            <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="bg-amber-100 text-amber-700 text-xs font-medium px-2 py-1 rounded-full">{item.tag}</span>
+                <span class="text-steel-500 text-xs">{item.tagLabel}</span>
+              </div>
+              <p class="text-charcoal-900 font-medium mb-2">{item.name}</p>
+              <p class="text-sm text-steel-600 mb-3">{item.description}</p>
+              <div class="text-xs text-amber-600 font-medium">{item.stat}</div>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs text-steel-500 mt-6 text-center">{marketData.cases.footnote}</p>
+      </div>
+    </section>
+  )}
+
+  <!-- Recommended Products -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title mb-10">{marketData.productsTitle}</h2>
+      <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">{productGroupLabel.core}</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {mainProducts.map(product => (
+          <a
+            href={localePath(`/products/${product.slug}`)}
+            class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+          >
+            <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+              <img
+                src={product.data.images[0]}
+                alt={product.data.title[currentLocale] || product.data.title.en}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+              />
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
+              <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+              <div class="flex flex-wrap gap-2">
+                {(currentLocale === 'id' && product.data.specificationsId?.length > 0 ? product.data.specificationsId : currentLocale === 'ar' && product.data.specificationsAr?.length > 0 ? product.data.specificationsAr : currentLocale === 'fr' && product.data.specificationsFr?.length > 0 ? product.data.specificationsFr : product.data.specifications).slice(0, 2).map(spec => (
+                  <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                    {spec.name}: {spec.value}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+      {auxProducts.length > 0 && (
+        <>
+          <h3 class="font-display font-bold text-xl text-charcoal-900 mb-6">{productGroupLabel.matching}</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {auxProducts.map(product => (
+              <a
+                href={localePath(`/products/${product.slug}`)}
+                class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
+              >
+                <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+                  <img
+                    src={product.data.images[0]}
+                    alt={product.data.title[currentLocale] || product.data.title.en}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
+                  />
+                </div>
+                <div class="p-5">
+                  <div class="text-xs text-amber-500 font-medium mb-1">{currentLocale === 'id' && product.data.modelId ? product.data.modelId : currentLocale === 'fr' && product.data.modelFr ? product.data.modelFr : product.data.model}</div>
+                  <h3 class="font-display text-lg text-charcoal-900 mb-2">{product.data.title[currentLocale] || product.data.title.en}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {(currentLocale === 'id' && product.data.specificationsId?.length > 0 ? product.data.specificationsId : currentLocale === 'ar' && product.data.specificationsAr?.length > 0 ? product.data.specificationsAr : currentLocale === 'fr' && product.data.specificationsFr?.length > 0 ? product.data.specificationsFr : product.data.specifications).slice(0, 2).map(spec => (
+                      <span class="text-xs bg-steel-50 text-steel-600 px-2 py-1 rounded">
+                        {spec.name}: {spec.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 
   <!-- Get a Customized Quote -->
   <section class="py-12 md:py-16 bg-white">

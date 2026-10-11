@@ -15,6 +15,11 @@ modelFr: Personnalisé (1-100 T/J)
 modelId: Kustom (1-100 T/H)
 images:
   - /images/products/edible-oil-refining-system.webp
+imageAlt:
+  en: "Edible oil refining system for crude oil degumming and deodorization"
+  fr: "Système de raffinage d’huile alimentaire pour démucilagination et désodorisation"
+  ar: "نظام تكرير الزيت النباتي لإزالة الصمغ والرائحة من الزيت الخام"
+  id: "Sistem refining minyak nabati untuk degumming dan deodorisasi minyak mentah"
 specifications:
   - name: Capacity
     value: 1-100 tons/day (fully customizable)

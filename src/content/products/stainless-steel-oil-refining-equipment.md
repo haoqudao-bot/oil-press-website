@@ -15,6 +15,11 @@ modelFr: Personnalisé (1-50 T/J)
 modelId: Kustom (1-50 T/H)
 images:
   - /images/products/stainless-steel-oil-refining-equipment.webp
+imageAlt:
+  en: "Stainless steel edible oil refining equipment for food grade oil"
+  fr: "Équipement de raffinage d’huile en acier inoxydable qualité alimentaire"
+  ar: "معدات تكرير الزيت النباتي من الفولاذ المقاوم للصدأ بدرجة غذائية"
+  id: "Peralatan refining minyak nabati stainless steel untuk minyak food grade"
 specifications:
   - name: Capacity
     value: 1-50 tons/day (fully customizable)
