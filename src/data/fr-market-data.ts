@@ -695,7 +695,7 @@ export const frMarketData: Record<string, MarketData> = {
 
   usa: {
     title: 'Presse à Huile aux États-Unis',
-    description: 'Presse à huile aux États-Unis conçue pour une alimentation 480V/60Hz, avec options de composants UL et de contact alimentaire aligné FDA. Expédition vers LA ou NY. Demandez un devis.',
+    description: 'Presse à huile aux États-Unis : 480V/60Hz, options de composants UL et contact alimentaire aligné FDA. Expédition vers LA ou NY.',
     heroTitle: 'Presse à Huile aux États-Unis — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de tournesol, d\'arachide, de chanvre et d\'amande. Prix direct usine, expédition vers LA/NY en 30-40 jours, garantie 1 an.',
     seedsTitle: 'Graines Oléagineuses Populaires aux États-Unis',

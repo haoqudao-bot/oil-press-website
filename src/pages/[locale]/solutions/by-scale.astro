@@ -21,9 +21,9 @@ function localePath(path: string): string {
   return `/${currentLocale}${path}`;
 }
 
-const pageTitle = currentLocale === 'fr' ? 'Presse à Huile par Échelle de Production — Petite, Commerciale, Industrielle' :
+const pageTitle = currentLocale === 'fr' ? 'Presse à Huile par Échelle de Production — Petite à Industrielle' :
                   currentLocale === 'ar' ? 'مكينة ضغط الزيت حسب حجم الإنتاج — صغيرة، تجارية، صناعية' :
-                  'Mesin Press Minyak berdasarkan Skala Produksi — Kecil, Komersial, Industri';
+                  'Mesin Press Minyak berdasarkan Skala — Kecil, Komersial, Industri';
 
 const pageDesc = currentLocale === 'fr' ? 'Choisissez la bonne presse à huile hydraulique pour votre échelle de production. De l\'usage domestique (50-500 kg/jour) à l\'industriel (5+ tonnes/jour), trouvez la solution parfaite pour votre entreprise.' :
                  currentLocale === 'ar' ? 'اختر مكينة الضغط الهيدروليكي المناسبة لحجم إنتاجك. من الاستخدام المنزلي (50-500 كجم/يوم) إلى الصناعي (5+ طن/يوم)، ابحث عن الحل المناسب لمشروعك.' :

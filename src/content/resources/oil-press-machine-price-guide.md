@@ -5,7 +5,7 @@ title:
   ar: "دليل أسعار مكابس الزيت الهيدروليكية 2026: ما الذي يؤثر على عرض السعر"
   id: "Panduan Harga Mesin Press Minyak 2026: Apa yang Mempengaruhi Penawaran"
 description:
-  en: "Oil press machine price guide: what shapes the quote (capacity, pressure, configuration, shipping terms, materials), the total landed cost breakdown, and how to plan your budget without published price lists."
+  en: "Oil press machine price guide: what shapes the quote (capacity, pressure, configuration, shipping, materials), landed cost breakdown, and budget planning."
   fr: "Guide des prix des presses à huile : ce qui forme le devis (capacité, pression, configuration, conditions d'expédition, matériaux), le détail du coût de débarquement total, et comment budgétiser sans grille tarifaire publique."
   ar: "دليل أسعار مكابس الزيت الهيدروليكية: ما الذي يشكل عرض السعر (السعة، الضغط، التكوين، شروط الشحن، المواد)، وتفصيل التكلفة الإجمالية الواقعة، وكيفية التخطيط للميزانية بدون أسعار منشورة."
   id: "Panduan harga mesin press minyak: apa yang membentuk penawaran (kapasitas, tekanan, konfigurasi, syarat pengiriman, bahan), rincian total biaya landed, dan cara menyusun anggaran tanpa daftar harga publik."

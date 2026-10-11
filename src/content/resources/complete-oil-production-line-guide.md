@@ -1,9 +1,9 @@
 ---
 title:
-  en: "Oil Mill Plant Guide: Complete Production Line Equipment, Layout & Cost"
-  fr: "Guide d'huilerie : équipements complets de ligne de production, agencement et coût"
+  en: "Oil Mill Plant Guide: Production Line Equipment, Layout & Cost"
+  fr: "Guide d'huilerie : équipements de ligne de production et coût"
   ar: "دليل مصنع معصرة الزيت: معدات خط الإنتاج الكامل والتخطيط والتكلفة"
-  id: "Panduan Pabrik Minyak: Peralatan Lini Produksi Lengkap, Tata Letak & Biaya"
+  id: "Panduan Pabrik Minyak: Peralatan Lini Produksi & Biaya"
 description:
   en: Complete oil mill plant design guide from raw material cleaning, pressing, filtering to refining — oil mill machinery selection, layout planning, and cost estimation
   fr: Guide complet de conception d'huilerie du nettoyage des matières premières au pressage, filtrage et raffinage — choix des machines, planification de l'agencement et estimation des coûts

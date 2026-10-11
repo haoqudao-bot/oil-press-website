@@ -18,9 +18,9 @@ function localePath(path: string): string {
   return `/${currentLocale}${path}`;
 }
 
-const pageTitle = currentLocale === 'fr' ? 'Presse à Huile à Froid — Pressage à Froid et à Chaud sur la Même Machine | Haonuo' :
-                  currentLocale === 'ar' ? 'مكبس عصر الزيت البارد — عصر بارد وساخن على نفس الماكينة | هاونو' :
-                  'Mesin Press Minyak Dingin — Press Dingin & Panas di Satu Mesin | Haonuo';
+const pageTitle = currentLocale === 'fr' ? 'Presse à Huile à Froid — Pressage Froid et Chaud en Une Machine' :
+                  currentLocale === 'ar' ? 'مكبس عصر الزيت البارد — عصر بارد وساخن على نفس الماكينة' :
+                  'Mesin Press Minyak Dingin — Press Dingin & Panas di Satu Mesin';
 
 const pageDesc = currentLocale === 'fr' ? 'Presse à huile à froid pour une huile premium en dessous de 60°C. La même presse hydraulique Haonuo fait du pressage à froid et à chaud. Directe d\'usine, garantie 1 an, test de charge 48 h.' :
                  currentLocale === 'ar' ? 'مكبس عصر زيت بارد لزيت ممتاز بدرجة حرارة أقل من 60°م. نفس المكبس الهيدروليكي من هاونو يعمل للعصر البارد والساخن. بيع مباشر من المصنع، ضمان سنة، اختبار حمل 48 ساعة.' :

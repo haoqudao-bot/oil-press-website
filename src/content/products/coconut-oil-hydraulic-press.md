@@ -6,7 +6,7 @@ title:
   id: Mesin Press Santan Kelapa Hidrolik
 seoTitle:
   en: Coconut Milk Hydraulic Press — 600mm, Food Grade (Custom)
-  fr: Presse hydraulique à lait de coco — 600mm, qualité alimentaire (sur mesure)
+  fr: Presse hydraulique à lait de coco — 600mm, qualité alimentaire
   ar: معصرة حليب جوز الهند الهيدروليكية — 600 مم، جودة غذائية (حسب الطلب)
   id: Mesin press santan kelapa hidrolik — 600mm, food grade (kustom)
 description:

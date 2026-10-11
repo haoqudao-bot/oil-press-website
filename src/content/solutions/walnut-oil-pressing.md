@@ -12,7 +12,7 @@ seoTitle:
 seedName: walnut
 icon: walnut
 description:
-  en: Walnut oil press machine for premium cold-pressed extraction. Ultra-high pressure hydraulic press preserves omega-3 nutrients. Contact Haonuo for factory-direct pricing.
+  en: Walnut oil press machine for premium cold-pressed extraction. Ultra-high pressure hydraulic press preserves omega-3. Contact Haonuo for pricing.
   fr: Machine de pressage d'huile de noix pour extraction d'huile de noix vierge par pression à froid. Préserve les nutriments oméga-3. Prix direct d'usine Haonuo.
   ar: آلة عصر زيت الجوز لاستخراج زيت الجوز البكر الممتاز بالضغط على البارد. تحافظ على مغذيات أوميغا-3. سعر المصنع المباشر من هاونو.
   id: Mesin press minyak kenari untuk ekstraksi minyak kenari perawan premium dengan tekanan dingin. Mempertahankan nutrisi omega-3. Harga langsung pabrik Haonuo.
