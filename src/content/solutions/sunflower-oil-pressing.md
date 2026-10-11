@@ -157,7 +157,7 @@ This solution handles both high-oil and confectionery sunflower seed varieties, 
 - **Roasting**: Pre-roasting at 120-150°C increases yield by 3-5%
 - **Moisture content**: Optimal pressing moisture is 6-8%
 
-## Why Choose Haonuo
+## Why Choose Our Sunflower Oil Press
 
 - **Optimized for sunflower pressing** — Our hydraulic presses are calibrated for sunflower seed characteristics, achieving residual oil rates below 5% for maximum profitability.
 - **Dehulling-compatible design** — Our equipment handles both whole seeds and dehulled kernels, giving you flexibility in your production process.

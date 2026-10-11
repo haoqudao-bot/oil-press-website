@@ -222,7 +222,7 @@ The screw, tube, feed bin and frame are all stainless steel — clean, corrosion
 - **Granular oilseeds** — peanut, rapeseed, soybean, sesame, sunflower seed and similar free-flowing materials
 - **General grain and food conveying** — suited to food-processing lines where hygiene matters
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Labor-saving automation** — removes the hardest manual job in a small mill (shovelling seed all day)
 - **Food-grade stainless build** — handles edible oil workshops cleanly

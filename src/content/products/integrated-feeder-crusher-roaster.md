@@ -195,7 +195,7 @@ This integrated system is well-suited for oil seed processing lines where space 
 
 Best suited for small-to-medium oil pressing workshops, cooperative processing facilities, and operations looking to simplify their preprocessing workflow.
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — integrated system at a competitive price without middleman costs
 - **Turnkey solution** — one purchase covers feeding, crushing, and roasting — simplified procurement and installation

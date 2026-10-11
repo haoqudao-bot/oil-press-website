@@ -147,7 +147,7 @@ With almonds containing 50-55% oil — among the highest of all oilseeds — alm
 - **Moisture content**: Optimal pressing moisture is 4-6%
 - **Cold vs. hot press**: Cold pressing yields slightly less but produces premium-quality oil
 
-## Why Choose Haonuo
+## Why Choose Our Almond Oil Press
 
 - **Cold press expertise** — Our HN426 model is specifically designed for cold pressing, maintaining temperatures below 60°C to preserve almond oil's premium nutritional profile.
 - **Maximum vitamin E retention** — Hydraulic pressing avoids the heat degradation of screw presses, preserving the vitamin E content that makes almond oil so valuable.

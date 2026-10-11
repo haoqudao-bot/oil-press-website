@@ -265,7 +265,7 @@ This electric steamer is designed for pre-press seed steaming and conditioning:
 
 Well-suited for small-to-medium oil pressing workshops, especially those with reliable electrical supply seeking automated, hands-off steaming operation.
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — professional steaming equipment at competitive manufacturer rates
 - **Safety-first design** — electrical-water separation, emergency stop, and pressure-safe tank construction

@@ -159,7 +159,7 @@ The solution supports both cold pressing (for premium Kachi Ghani mustard oil) a
 - **Moisture content**: Optimal pressing moisture is 5-7%
 - **Pressing method**: Cold pressing (Kachi Ghani) yields slightly less but produces premium oil
 
-## Why Choose Haonuo
+## Why Choose Our Mustard Oil Press
 
 - **Designed for South Asian markets** — Our mustard oil pressing solution is built to meet the specific requirements of Indian, Bangladeshi, and Nepali producers, including Kachi Ghani production capability.
 - **Superior yield vs. traditional ghani** — Our hydraulic press extracts 15-25% more oil than traditional animal-driven ghani presses, significantly improving your profitability.

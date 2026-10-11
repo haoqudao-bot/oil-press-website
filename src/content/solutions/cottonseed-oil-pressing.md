@@ -117,7 +117,7 @@ Haonuo Machinery's cottonseed oil pressing solution is designed for the unique c
 | Whole cottonseed | 18-22% | 15-18% | 6-8% |
 | Cottonseed kernels (decorticated) | 30-38% | 28-34% | 5-7% |
 
-## Why Choose Haonuo for Cottonseed Oil Production
+## Why Choose Our Cottonseed Oil Press
 
 - **Heavy-duty construction** — Our HN365 is built for the high-fiber, abrasive nature of cottonseed processing
 - **Core production line** — From delinting to filtration, we supply the full pressing chain and help coordinate separately sourced refining for gossypol removal

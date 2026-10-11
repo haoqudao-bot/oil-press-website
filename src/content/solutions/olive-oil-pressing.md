@@ -155,7 +155,7 @@ This solution is designed for Mediterranean, Middle Eastern, and New World olive
 - **Harvest timing**: Olives should be pressed within 24 hours of harvest for best quality
 - **Pressing temperature**: Cold pressing below 60°C preserves quality; temperatures above 27°C disqualify oil from "cold-pressed" designation
 
-## Why Choose Haonuo
+## Why Choose Our Olive Oil Press
 
 - **Cold press specialists** — Our HN426 model maintains temperatures below 60°C, producing genuine cold-pressed extra virgin olive oil that meets international quality standards.
 - **Preserves polyphenols** — Hydraulic pressing avoids the heat and shear forces of screw presses and centrifuges, preserving the polyphenol content that gives olive oil its health benefits and shelf stability.

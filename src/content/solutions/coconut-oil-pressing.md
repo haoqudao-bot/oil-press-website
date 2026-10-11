@@ -150,7 +150,7 @@ Understanding expected yields is critical for business planning. Below are typic
 - **Pre-treatment**: Proper grating or crushing increases surface area for better oil release
 - **Pressing temperature**: Cold pressing (below 60°C) yields slightly less but produces premium VCO
 
-## Why Choose Haonuo
+## Why Choose Our Coconut Oil Press
 
 - **15+ years of hydraulic press manufacturing** — We specialize in hydraulic oil press technology, not screw presses. This focus means deeper expertise and better machines for your specific needs.
 - **Factory-direct pricing** — No middlemen. You get competitive pricing directly from the manufacturer, saving compared to trading company prices (actual savings vary).

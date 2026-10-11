@@ -170,7 +170,7 @@ Pool resources with neighboring farms to purchase a commercial oil press. Proces
 ### OEM / Private Label Production
 Press oil for other brands under contract. Our commercial-grade machines deliver the consistent quality and volume that OEM contracts demand. We can customize machine specifications and labeling for your OEM clients.
 
-## Why Choose Haonuo
+## Why Choose Our Commercial Oil Press
 
 - **Commercial-grade throughput** — Double-barrel configurations deliver 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) processing capacity, meeting the demands of established commercial operations.
 - **Proven reliability** — Our commercial machines are built for continuous daily operation with minimal maintenance. Heavy-duty construction ensures years of dependable service.

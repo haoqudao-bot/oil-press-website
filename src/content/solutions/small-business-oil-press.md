@@ -128,7 +128,7 @@ This solution is well-suited for commercial oil mills, cooperative operations, a
 - **Versatile**: Process multiple seed types on the same machine
 - **High yield**: Residual oil below 5% maximizes profit from every kilogram
 
-## Why Choose Haonuo
+## Why Choose Our Small Business Oil Press
 
 - **Commercial-grade equipment** — Our HN325 model delivers professional-grade oil pressing performance with 133-171 kg/hour (hot press) or approximately 50 kg/hour (cold press) capacity, meeting commercial production requirements.
 - **Professional results at scale** — Don't compromise on quality. Our commercial machines deliver low residual oil rates (below 5%) maximizing profit from every kilogram.

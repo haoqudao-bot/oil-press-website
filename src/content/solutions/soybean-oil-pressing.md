@@ -118,7 +118,7 @@ Yes — the Haonuo hydraulic oil press is built for soybean, with one caveat: so
 
 Soybean is one of the world's most important oil crops, accounting for over 50% of global vegetable oil production. Whether you're producing cooking oil for local markets or premium cold-pressed soybean oil for health-conscious consumers, Haonuo provides the complete solution.
 
-### Why Choose Haonuo for Soybean Oil Production
+### Why Choose Our Soybean Oil Press
 
 **Core Production Lines** — From seed cleaning to filtered crude oil, we supply the core pressing equipment you need, and help you coordinate separately sourced refining for a complete soybean oil production facility.
 

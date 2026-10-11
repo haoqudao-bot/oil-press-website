@@ -321,7 +321,7 @@ This construction was previously offered as a separate "stainless steel hydrauli
 - **Dehydration**: Fruit and vegetable dehydration
 - **Industrial**: Oil sludge pressing, similar low-pressure high-volume applications
 
-## Why Choose Haonuo
+## Why Choose Our Hydraulic Oil Press
 
 - **Factory-Direct Pricing** — Get a food-grade stainless steel coconut press at manufacturer-direct prices, with no middleman markup.
 - **Food Safety Expertise** — We understand the hygiene and material requirements for food-contact equipment, and build every coconut model to meet those standards.

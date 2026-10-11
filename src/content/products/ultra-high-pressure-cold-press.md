@@ -325,7 +325,7 @@ The HN480B is well-suited for pressing the most challenging cold-press materials
 
 The HN480B delivers the highest oil yield from cold-press materials, making it a well-proven choice for producers of premium walnut oil, almond oil, and other high-value cold-pressed oils.
 
-## Why Choose Haonuo
+## Why Choose Our Hydraulic Oil Press
 
 - **Factory-Direct Pricing** — Get the highest cold-press performance at manufacturer-direct prices. The HN480B offers the best cost per liter of cold-pressed oil in its class.
 - **Walnut Pressing Expertise** — Our proprietary walnut pressing solution is the result of years of research and field testing, ensuring you get maximum yield from every batch.

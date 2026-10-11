@@ -247,7 +247,7 @@ The HN-CG60 works across many oilseeds by adjusting the cone gap:
 - **Groundnut** — high-oil kernel where the first pass captures most of the free oil
 - **Soybean, flaxseed, sesame, walnut, sunflower, cotton seed** — all handled by gap adjustment
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — competitive pre-press equipment straight from the manufacturer
 - **Proven two-stage design** — widely used for mustard, rapeseed and groundnut lines

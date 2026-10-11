@@ -128,7 +128,7 @@ Haonuo Machinery's walnut oil pressing solution is specifically designed for pro
 | Hazelnut kernels | 50-60% | 42-55% | 6-8% |
 | Pistachio kernels | 45-55% | 38-48% | 7-10% |
 
-## Why Choose Haonuo for Walnut Oil Production
+## Why Choose Our Walnut Oil Press
 
 - **Ultra-high pressure technology** — Our HN500 delivers 620 tons of pressing force, extracting maximum oil from hard-shelled nuts
 - **Low-heat static pressing** — No screw friction and no heating element; pressing raw seed below 60°C helps preserve omega-3

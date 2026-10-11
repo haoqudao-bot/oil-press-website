@@ -156,7 +156,7 @@ This solution covers the process from kernel separation through pressing and fil
 - **Pressing pressure**: Palm kernels require higher pressure (40-55 MPa) due to their hard structure
 - **Kernel quality**: Fresh, undamaged kernels yield more oil than old or moldy ones
 
-## Why Choose Haonuo
+## Why Choose Our Palm Oil Press
 
 - **High-pressure specialists** — Palm kernels require higher pressing pressure than most oilseeds. Our hydraulic presses deliver 40-55 MPa sustained pressure for thorough extraction.
 - **Residual oil below 5%** — Our ultra-high-pressure model achieves competitive residual oil rates, meaning more oil in your tank and less left in the cake.

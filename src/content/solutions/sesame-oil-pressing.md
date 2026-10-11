@@ -156,7 +156,7 @@ This solution supports both cold pressing (for premium, nutrient-rich sesame oil
 - **Roasting**: Pre-roasting at 160-180°C increases yield by 3-5% and enhances aroma
 - **Pressing pressure**: Our hydraulic press delivers up to 50 MPa for thorough extraction
 
-## Why Choose Haonuo
+## Why Choose Our Sesame Oil Press
 
 - **Specialized sesame pressing expertise** — Our sesame oil hydraulic press is purpose-built for sesame, not a generic machine adapted for the purpose. This means better yield, lower residual oil, and more consistent quality.
 - **Residual oil rate below 5%** — Our hydraulic technology extracts more oil per kilogram of sesame than screw presses, directly improving your profitability.

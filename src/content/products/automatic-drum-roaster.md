@@ -221,7 +221,7 @@ The enclosed drum heats quickly and keeps heat inside, and the constant turning 
 - **Aromatic oils** — where roast aroma is a key selling point
 - **Nuts, grains and food materials** — versatile roasting beyond oilseeds
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Consistent batch after batch** — sealed electromagnetic drum gives repeatable results without a skilled operator
 - **Energy saving** — flameless electromagnetic heating is efficient and clean

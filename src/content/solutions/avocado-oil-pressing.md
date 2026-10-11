@@ -155,7 +155,7 @@ This solution is designed for the growing avocado oil market in Mexico, Kenya, N
 - **Drying**: Dehydrating avocado pulp before pressing can double the yield percentage
 - **Pressing method**: Cold pressing preserves quality but yields slightly less than hot pressing
 
-## Why Choose Haonuo
+## Why Choose Our Avocado Oil Press
 
 - **Cold press specialists** — Our HN426 model is purpose-built for cold pressing, maintaining temperatures below 60°C to preserve avocado oil's premium quality and green color.
 - **Maximum nutrient retention** — Hydraulic pressing avoids the friction heat of screw presses, preserving oleic acid, vitamin E, and lutein content.

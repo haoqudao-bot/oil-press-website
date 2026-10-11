@@ -193,7 +193,7 @@ Every Haonuo hydraulic press handles **both routes on one machine**: cold pressi
 *Typical figures for well-shelled, properly conditioned peanuts at standard machine settings; based on Haonuo factory tests with graded peanut at 6-8% moisture, actual results vary with variety, moisture and cycle settings. Liters assume oil density of about 0.92 kg/L.*
 <!-- /yield-block -->
 
-## Why Choose Haonuo
+## Why Choose Our Peanut Oil Press
 
 - **Hydraulic, not screw** — static pressure keeps the oil below scorching temperature; no burnt taste, and 6-8% residual oil instead of 10-12%.
 - **One machine, two products** — switch between premium cold-pressed and aromatic hot-pressed peanut oil by changing preparation only.

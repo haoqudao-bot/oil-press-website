@@ -251,7 +251,7 @@ This wood-fired steamer is designed for pre-press seed steaming in any location:
 
 Especially suited for rural oil pressing workshops, mobile processing units, and operations in areas without reliable electrical infrastructure.
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — no middlemen, competitive pricing from the manufacturer
 - **Off-grid capable** — designed for locations where electricity is unreliable or unavailable

@@ -206,7 +206,7 @@ The Stainless Steel Oil Refining Equipment is suitable for refining all types of
 
 This system is a well-proven choice for producers who need to deliver the highest quality refined oil while meeting the strictest food safety and hygiene standards.
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-Direct Engineering** — Custom-designed and manufactured without distributor markup, saving you significant capital investment.
 - **Food Safety Expertise** — We understand international food safety regulations and have designed this system to meet the strictest compliance requirements.

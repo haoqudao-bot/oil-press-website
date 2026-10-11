@@ -358,7 +358,7 @@ Whether you are cold pressing walnut kernels, in-shell walnuts, apricot kernels,
 
 The HN500 delivers competitive residual oil rates across all material types, making it a well-proven choice for producers who prioritize maximum oil yield and product quality.
 
-## Why Choose Haonuo
+## Why Choose Our Hydraulic Oil Press
 
 - **Factory-Direct Pricing** — Get flagship-level performance at manufacturer-direct prices. The HN500 offers competitive cost per liter of oil extracted when processing high-value cold-press materials.
 - **Uncompromising Build Quality** — The 5 cm thick steel plate frame is the strongest in our lineup, engineered to withstand years of ultra-high-pressure operation without fatigue.

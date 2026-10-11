@@ -216,7 +216,7 @@ Combined physical and chemical principles for targeted impurity removal:
 
 1. **Crude Oil** → 2. **Degumming** → 3. **Neutralization (Deacidification)** → 4. **Washing** → 5. **Drying** → 6. **Bleaching** → 7. **Deodorization** → 8. **RBD Finished Oil**
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct engineering** — custom-designed and manufactured without distributor markup
 - **Decades of refining expertise** — proven process designs for all major crude oil types

@@ -148,7 +148,7 @@ This solution is designed specifically for West African operating conditions, wi
 - **Grinding**: Fine grinding into paste before pressing dramatically improves extraction efficiency
 - **Pressing pressure**: Shea butter requires higher pressure (40-60 MPa) than most other oils for complete extraction
 
-## Why Choose Haonuo
+## Why Choose Our Shea Butter Press
 
 - **Built for shea butter** — Our high-pressure hydraulic presses deliver the sustained 40-60 MPa pressure that shea butter extraction demands, achieving residual fat rates below 5%.
 - **Designed for West African conditions** — Robust construction, simple maintenance, and reliable operation in hot, dusty environments with limited technical infrastructure.

@@ -239,7 +239,7 @@ The 220 Type is specifically designed for hard-shell oil seeds that are difficul
 
 This crusher is a well-proven preprocessing solution before hydraulic pressing of hard-shell seeds, significantly improving oil extraction efficiency.
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — no middlemen, competitive pricing straight from the manufacturer
 - **Proven quality** — every machine is tested before shipment to ensure reliable performance

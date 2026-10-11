@@ -155,7 +155,7 @@ This solution supports both cold pressing (for medicinal and cosmetic-grade cast
 - **Pressing pressure**: Castor seeds require higher pressure (40-55 MPa) due to their hard structure
 - **Seed moisture**: Optimal pressing moisture is 5-7%
 
-## Why Choose Haonuo
+## Why Choose Our Castor Oil Press
 
 - **High-pressure specialists** — Castor seeds require sustained high pressure for thorough extraction. Our hydraulic presses deliver 40-55 MPa, achieving residual oil rates below 5%.
 - **Dual cold/hot press capability** — One machine serves both premium medicinal and industrial castor oil markets.

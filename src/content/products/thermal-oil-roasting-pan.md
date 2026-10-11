@@ -277,7 +277,7 @@ This roasting pan is designed for pre-press seed conditioning across a wide rang
 - **Sesame** — gentle, even heating preserves oil quality
 - **Sunflower seeds** — thorough roasting for dehulled or whole seed pressing
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — professional roasting equipment at manufacturer-direct rates
 - **Energy-saving design** — thermal oil heating + rock wool insulation = lower operating costs

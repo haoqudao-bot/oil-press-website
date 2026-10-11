@@ -151,7 +151,7 @@ The solution supports both cold pressing (for premium cold-pressed rice bran oil
 - **Moisture content**: Optimal pressing moisture is 6-9%
 - **Pressing method**: Cold pressing yields slightly less but produces premium oil for health-food markets
 
-## Why Choose Haonuo
+## Why Choose Our Rice Bran Oil Press
 
 - **Honest engineering advice** — We tell you upfront: rice bran oil success depends on bran logistics, not just the machine. We help you plan stabilization and collection so your oil grade is protected.
 - **Designed for the rice belt** — Our rice bran oil pressing solution is built for rice millers in India, Bangladesh, Vietnam, Thailand and Indonesia who sit on a daily supply of fresh bran.

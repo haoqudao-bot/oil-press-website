@@ -189,7 +189,7 @@ Our industrial hydraulic oil presses are engineered for demanding continuous ope
 - **Redundancy option** — Double-barrel configuration allows you to service one barrel while the other continues pressing, eliminating production downtime during maintenance
 - **Typical operation schedule** — 20 hours pressing + 2 hours cleaning + 2 hours maintenance = 24-hour cycle. Many of our clients achieve 300+ operating days per year
 
-## Why Choose Haonuo
+## Why Choose Our Industrial Oil Press
 
 - **Maximum extraction efficiency** — Our ultra-high-pressure hydraulic presses achieve residual oil rates below 4%, extracting more oil from every ton of raw material and directly improving your bottom line.
 - **Core turnkey solutions** — From seed receiving to filtered crude oil, we design, supply, and install the complete pressing line with one point of contact, and coordinate independently sourced refining equipment when required.

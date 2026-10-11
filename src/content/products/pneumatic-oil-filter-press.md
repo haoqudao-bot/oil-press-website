@@ -228,7 +228,7 @@ The HN-10SL handles solid-liquid separation across diverse industries:
 - **Biopharmaceutical processing** — sterile-grade liquid clarification
 - **Chemical solvent filtration** — acid, alkali, and organic solvent separation
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — professional filtration equipment at manufacturer-direct rates
 - **Food-grade certified materials** — 304L stainless steel standard, 316L available for demanding applications

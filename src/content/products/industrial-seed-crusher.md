@@ -224,7 +224,7 @@ The 370 Type specializes in processing pressed oil cake residues:
 
 Well-suited for oil pressing plants, feed mills, and any operation requiring efficient oil cake recycling.
 
-## Why Choose Haonuo
+## Why Choose Our Oil Press Equipment
 
 - **Factory-direct pricing** — competitive industrial equipment pricing without distributor markups
 - **Quality assurance** — every unit undergoes rigorous testing before delivery

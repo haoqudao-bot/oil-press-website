@@ -311,7 +311,7 @@ The 300 mm inner diameter, 800 mm high barrel holds 32.5 kg of sesame per batch.
 - In-shell walnut (except iron walnut) — approximately 30 minutes per batch
 - Tea seed, rapeseed, peanut, soybean, lacquer oil seed, flaxseed — with even lower residual oil rates than standard models
 
-## Why Choose Haonuo
+## Why Choose Our Hydraulic Oil Press
 
 - **Factory-Direct Pricing** — Get a dedicated sesame oil press at manufacturer-direct prices, with significantly better value than Korean-style sesame oil machines.
 - **Sesame Pressing Expertise** — We designed this model specifically for sesame, understanding the critical relationship between temperature, speed, and oil yield.
