@@ -66,7 +66,7 @@ Each tier's equipment list is fixed; the price follows from it. Telling us your 
 A 325-ton press from two suppliers is not interchangeable. Four build-quality differences explain the price gap:
 
 **A. Hydraulic cylinder — 27SiMn alloy steel.**
-Built with 27SiMn alloy steel, the cylinder holds its strength and toughness under 60–75 MPa (2,200 psi+). Bore ranges from 325 mm (HN325) to 500 mm (HN500); every cylinder is machined, heat-treated, and pressure-tested before assembly. A cylinder machined from ordinary carbon steel costs less but will not survive years of daily high-pressure cycling.
+Built with 27SiMn alloy steel, the cylinder holds its strength and toughness under 60–75 MPa (2,200 psi+). Every cylinder is machined, heat-treated, and pressure-tested before assembly. A cylinder machined from ordinary carbon steel costs less but will not survive years of daily high-pressure cycling.
 
 **B. Press barrel — Q690 high-strength steel.**
 Welded from Q690 steel with seamless flange rings, ground and electroplated to prevent rust. Slotted drainage delivers roughly 15× the oil flow of drilled barrels — faster oil flow, higher yield. Cheaper barrels use drilled drainage and thinner steel; the difference shows up in both output rate and barrel life.

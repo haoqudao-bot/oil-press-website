@@ -1131,4 +1131,87 @@ Ces moisissures prospèrent dans des conditions chaudes et humides, rendant les 
 
 Un contrôle efficace des aflatoxines nécessite une approche globale qui aborde chaque étape de la production, de l'approvisionnement en matières premières au test du produit fini. En mettant en œuvre des stratégies de prévention robustes, une surveillance régulière et une conformité stricte aux normes réglementaires, les producteurs d'huile peuvent assurer la sécurité et la qualité de leurs produits tout en protégeant leur entreprise contre les risques potentiels.`,
 
+  'oil-press-machine-price-guide': `## Pourquoi ce guide n'inclut pas de grille tarifaire
+
+Si vous avez cherché « prix machine à presser l'huile », vous avez probablement remarqué que les fabricants ne publient presque jamais de tableau de prix fixe. La raison est simple : aucune presse ne quitte l'usine avec le même coût final. Un acheteur qui presse du sésame en Inde et un acheteur qui presse de la noix de coco aux Philippines peuvent commander le même modèle, mais le barillet, la tension du moteur, les accessoires inclus et la destination d'expédition modifient tous ce qu'ils paient. Une grille tarifaire publique serait fausse pour l'un d'eux — ou pour les deux.
+
+Ce guide explique exactement ce qui détermine le prix d'une presse à huile hydraulique, afin que vous puissiez comprendre le devis d'un fournisseur, comparer les offres à égalité et planifier votre budget autour de variables réelles plutôt que de suppositions. À la fin, nous listons les informations à envoyer pour recevoir un devis précis et comparable.
+
+## Ce qui détermine le prix d'une machine à presser l'huile
+
+Cinq facteurs expliquent quasiment toutes les différences entre les devis.
+
+**1. Capacité et configuration du barillet.** Une machine à barillet simple et une machine à double barillet du même modèle n'ont pas le même prix, car le second barillet double le débit pendant que l'opérateur décharge et recharge l'un des côtés. Les barillets plus grands (diamètre et hauteur) contiennent plus de graines par lot et coûtent plus cher à usiner et à renforcer.
+
+**2. Classe de pression de pressage.** Les presses standard fonctionnent à environ 27-30 MPa de pression surfacique du tourteau. Les applications à coque dure et à pressage à froid nécessitent 42 MPa ou plus, ce qui implique des barillets plus épais, des cylindres en acier allié plus résistants et des pompes hydrauliques de puissance supérieure. L'acier supplémentaire et le traitement thermique sont des coûts réels, pas un argument marketing.
+
+**3. Équipement inclus et configuration.** La presse seule a un prix ; une ligne complète (nettoyeur de graines, torréfacteur ou étuve, filtre-presse, réservoir d'huile, manutention du tourteau) en a un autre. Les acheteurs qui ne chiffrent que la presse découvrent souvent plus tard qu'un torréfacteur ou un filtre non budgété est indispensable pour atteindre le débit annoncé.
+
+**4. Électrique et personnalisation.** Les moteurs sont bobinés selon la norme de votre réseau local (par exemple 415 V/50 Hz, 380 V/50 Hz, 220 V monophasé) et c'est généralement gratuit sur un modèle standard. Des tailles de barillet personnalisées, des surfaces de contact en acier inoxydable alimentaire pour la noix de coco / VCO, des châssis à double barillet et des plates-formes opérateur ajoutent un coût.
+
+**5. Conditions d'expédition et de livraison.** Le FOB Qingdao couvre la livraison au port d'embarquement. Les conditions CIF ou DAP ajoutent le fret maritime, l'assurance maritime et parfois les droits d'importation et le transport intérieur. La même machine cotée FOB et CIF vers des ports différents affichera un net visiblement différent.
+
+## L'équation du coût de débarquement total
+
+Le prix de la machine n'est qu'une partie du budget. Un budget de coût de débarquement réaliste comporte cinq composantes :
+
+1. **Coût de l'équipement** — la presse et tout équipement auxiliaire inclus dans votre commande.
+2. **Fret maritime et assurance** — dépend du type de conteneur (un 20 pieds ou un 40 pieds HQ) et du port de destination.
+3. **Droits d'importation et taxes** — varie selon le code SH et le pays de destination ; confirmez votre classification douanière locale.
+4. **Frais portuaires et de dédouanement** — manutention portuaire, déclaration en douane, inspection et transport intérieur du port au site.
+5. **Installation et première mise en route** — dans la plupart des cas, un ingénieur Haonuo guide l'installation et la mise en service par appel vidéo sans frais supplémentaires ; des visites de technicien sur site sont disponibles sur demande.
+
+Un fournisseur qui ne cite que le prix FOB de la machine ne cite pas votre coût total. Demandez toujours le détail complet du coût de débarquement.
+
+## Cadrage budgétaire par taille de projet
+
+Plutôt que de demander « combien coûte une presse », cadrez la question autour de ce que vous prévoyez de produire chaque jour.
+
+- **Démarrage / petite huilerie (500–1 500 kg de graines par jour) :** une presse à barillet simple, un nettoyeur de graines, un torréfacteur ou une étuve et un filtre-presse. C'est la configuration qui correspond à la gamme HN325.
+- **Commercial moyen (1 500–3 000 kg par jour) :** une presse à double barillet de force supérieure (classe HN365 ou HN426) afin qu'un barillet presse pendant que l'autre est rechargé, plus un torréfacteur et une filtration adaptés.
+- **Industriel / multi-produits (3 000 kg+ par jour) :** une ou plusieurs presses à double barillet de classe HN500, une alimentation et une manutention du tourteau automatisées, et souvent une petite ligne de raffinage pour huile de détail conditionnée.
+
+La liste d'équipements de chaque palier est fixe ; le prix en découle. Nous indiquer votre objectif quotidien de graines nous permet de dimensionner la ligne en une seule étape.
+
+## Pourquoi des presses de même tonnage n'ont pas le même prix
+
+Une presse de 325 tonnes de deux fournisseurs n'est pas interchangeable. Quatre différences de qualité de fabrication expliquent l'écart de prix :
+
+**A. Vérin hydraulique — acier allié 27SiMn.**
+Conçu en acier allié 27SiMn, le vérin conserve sa résistance et sa ténacité sous 60–75 MPa (2 200 psi+). Chaque vérin est usiné, traité thermiquement et testé en pression avant assemblage. Un vérin usiné dans de l'acier au carbone ordinaire coûte moins cher mais ne survivra pas à des années de cycles quotidiens à haute pression.
+
+**B. Barillet de pressage — acier haute résistance Q690.**
+Soudé à partir d'acier Q690 avec des anneaux de bride sans soudure, rectifié et électroplaqué pour empêcher la rouille. Le drainage à fentes offre environ 15 fois le débit d'huile des barillets percés — un écoulement d'huile plus rapide, un rendement plus élevé. Les barillets bon marché utilisent un drainage percé et un acier plus fin ; la différence se manifeste à la fois dans le débit et la durée de vie du barillet.
+
+**C. Châssis de base — acier de construction Q355B.**
+Une plaque de 30 mm sur le HN426 et de 50 mm sur le HN500. L'acier Q355B épais signifie que le châssis ne se déformera pas après des années de cycles à très haute pression (testé au-delà de 500 tonnes). Un châssis plus léger fléchit sous la charge, désaxe le vérin et le barillet, et accélère l'usure des joints.
+
+**D. Moteurs et vannes — cuivre pur · électrovanne.**
+Un moteur de 2,2 kW à 6 pôles en cuivre pur fonctionne silencieusement et reste frais en usage continu. Des vannes électroplaquées antirouille avec des orifices d'huile élargis offrent un débit plus rapide, moins de fuites et des cycles sans à-coups. Les moteurs bobinés avec de l'aluminium ou du cuivre mince, et les vannes avec de petits orifices, réduisent le prix de la facture mais augmentent la température de fonctionnement et le taux de panne.
+
+Un prix d'achat plus bas qui remplace ces composants n'est pas une remise ; c'est une machine différente, de service inférieur.
+
+## Raisonner en termes de rendement, pas seulement de prix
+
+Le prix de la machine compte moins que le prix de l'huile qu'elle produit. Chacune de nos <a href="/fr/solutions/">pages de solution par graine</a> inclut un exemple chiffré de ce que 100 kg de matière première rapportent en huile et en tourteau, afin que vous puissiez estimer le revenu quotidien par rapport à votre prix de vente local. Un acheteur qui connaît son coût de graine et son prix de l'huile peut calculer le retour sur investissement en quelques minutes — et c'est ce chiffre qui décide si une presse donnée est bon marché ou chère.
+
+Si vous avez le coût de la graine, le prix de vente de l'huile et un objectif de débit quotidien, envoyez-les avec votre demande et nous vous renverrons la marge quotidienne et le retour sur investissement estimé, avec le devis.
+
+## Ce qu'il faut inclure dans votre demande de devis (RFQ)
+
+Pour recevoir un devis précis et comparable, incluez :
+
+- **Type(s) de graine(s)** et répartition prévue pressage à chaud / à froid
+- **Objectif quotidien de graines** en kilogrammes
+- **Tension et phase préférées** (par ex. 415 V / 50 Hz / 3 phases)
+- **Pays de destination et port le plus proche** (pour les estimations de fret et de droits)
+- **Si vous n'avez besoin que de la presse ou d'une ligne complète** (nettoyage, torréfaction, filtration, raffinage)
+- **Toute exigence particulière** (acier inoxydable alimentaire, VCO à froid, ligne halal, configuration mobile)
+
+Une demande de devis complète renvoie un devis précis et une implémentation de ligne en un seul échange, évitant les allers-retours qui retardent la plupart des premières commandes.
+
+## Obtenez votre devis
+
+Envoyez votre type de graine et votre objectif de débit quotidien via notre <a href="/fr/contact/">page de contact</a>. Nous répondons sous 24 heures avec une recommandation de modèle, une liste d'équipements complète et un devis avec des postes transparents — sans supplément caché.`,
+
 };

@@ -1023,4 +1023,87 @@ Jamur ini berkembang pesat dalam kondisi hangat dan lembap, membuat wilayah trop
 
 Pengendalian aflatoksin yang efektif membutuhkan pendekatan holistik yang mencakup setiap tahap produksi, dari pengiriman bahan baku hingga pengujian produk akhir. Dengan melaksanakan strategi pencegahan yang kuat, pemantauan rutin, dan kepatuhan ketat terhadap standar regulatoris, produsen minyak dapat memastikan keamanan dan kualitas produk mereka sambil melindungi bisnis mereka dari risiko potensial.`,
 
+  'oil-press-machine-price-guide': `## Mengapa Panduan Ini Tidak Memiliki Daftar Harga
+
+Jika Anda pernah mencari "harga mesin press minyak", Anda mungkin menyadari bahwa produsen hampir tidak pernah menerbitkan tabel harga tetap. Alasannya sederhana: tidak ada dua mesin press yang keluar dari pabrik dengan biaya akhir yang sama. Pembeli yang memeras wijen di India dan pembeli yang memeras kelapa di Filipina mungkin memesan model yang sama, tetapi silinder, tegangan motor, aksesori yang disertakan, dan tujuan pengiriman semuanya mengubah apa yang mereka bayar. Daftar harga publik akan salah untuk salah satu dari mereka — atau untuk keduanya.
+
+Panduan ini menjelaskan persis apa yang menentukan harga mesin press minyak hidrolik, sehingga Anda dapat memahami penawaran pemasok, membandingkan penawaran secara setara, dan merencanakan anggaran Anda berdasarkan variabel nyata daripada tebakan. Di akhir kami mencantumkan informasi apa yang harus dikirim agar Anda menerima penawaran yang akurat dan sebanding.
+
+## Apa yang Menentukan Harga Mesin Press Minyak
+
+Lima faktor menjelaskan hampir semua perbedaan antar penawaran.
+
+**1. Kapasitas dan konfigurasi silinder.** Mesin satu silinder dan mesin dua silinder dari model yang sama berbeda harganya, karena silinder kedua menggandakan keluaran sementara operator membongkar dan mengisi ulang satu sisi. Silinder yang lebih besar (diameter dan tinggi) menampung lebih banyak biji per batch dan lebih mahal untuk dikerjakan dan diperkuat.
+
+**2. Kelas tekanan pengepresan.** Mesin press standar bekerja pada tekanan permukaan bungkil sekitar 27-30 MPa. Aplikasi cangkang keras dan pengepresan dingin memerlukan 42 MPa atau lebih, yang berarti silinder yang lebih tebal, silinder baja paduan yang lebih kuat, dan pompa hidrolik berperingkat lebih tinggi. Baja tambahan dan perlakuan panas adalah biaya nyata, bukan label pemasaran.
+
+**3. Peralatan yang disertakan dan konfigurasi.** Mesin press saja satu harga; jalur lengkap (pembersih biji, sangrai atau pengukus, filter press, tangki minyak, penanganan bungkil) harga lain. Pembeli yang hanya memberi harga mesin press sering kali menemukan kemudian bahwa sangrai atau filter yang tidak mereka anggarkan sangat penting untuk mencapai keluaran yang dikutip.
+
+**4. Listrik dan kustomisasi.** Motor dililit sesuai standar jaringan lokal Anda (misalnya 415V/50Hz, 380V/50Hz, 220V satu fasa) dan ini biasanya gratis pada model standar. Ukuran silinder khusus, permukaan kontak baja tahan karat food-grade untuk kelapa/VCO, rangka silinder ganda, dan platform operator menambah biaya.
+
+**5. Syarat pengiriman dan pengantaran.** FOB Qingdao mencakup pengantaran ke pelabuhan pemuatan. Syarat CIF atau DAP menambahkan pengiriman laut, asuransi laut, dan terkadang bea masuk serta transportasi darat. Mesin yang sama yang dikutip FOB dan CIF ke pelabuhan yang berbeda akan menunjukkan total bersih yang berbeda secara nyata.
+
+## Persamaan Biaya Total yang Tiba (Landed Cost)
+
+Harga mesin hanyalah sebagian dari anggaran. Anggaran biaya landed yang realistis memiliki lima komponen:
+
+1. **Biaya peralatan** — mesin press dan peralatan bantu apa pun yang disertakan dalam pesanan Anda.
+2. **Pengiriman laut dan asuransi** — bergantung pada jenis kontainer (satu 20 kaki atau 40 kaki HQ) dan pelabuhan tujuan.
+3. **Bea masuk dan pajak** — bervariasi menurut kode HS dan negara tujuan; konfirmasikan klasifikasi bea cukai lokal Anda.
+4. **Biaya pelabuhan dan izin** — penanganan pelabuhan, deklarasi bea cukai, pemeriksaan, dan transportasi darat dari pelabuhan ke lokasi.
+5. **Pemasangan dan pengoperasian pertama** — dalam kebanyakan kasus, insinyur Haonuo membimbing pemasangan dan komisioning melalui panggilan video tanpa biaya tambahan; kunjungan teknisi di lokasi tersedia berdasarkan permintaan.
+
+Pemasok yang hanya mengutip harga mesin FOB tidak mengutip total biaya Anda. Selalu minta rincian biaya landed yang lengkap.
+
+## Pembingkaian Anggaran Berdasarkan Ukuran Proyek
+
+Daripada bertanya "berapa harga mesin press", ajukan pertanyaan seputar apa yang Anda rencanakan untuk diproduksi setiap hari.
+
+- **Pemula / pabrik kecil (500–1.500 kg biji per hari):** satu mesin press satu silinder, pembersih biji, sangrai atau pengukus, dan filter press. Ini adalah konfigurasi yang cocok dengan lini HN325.
+- **Komersial menengah (1.500–3.000 kg per hari):** mesin press dua silinder dengan gaya lebih tinggi (kelas HN365 atau HN426) sehingga satu silinder menekan sementara yang lain diisi ulang, ditambah sangrai dan filtrasi yang cocok.
+- **Industri / multi-produk (3.000 kg+ per hari):** satu atau lebih mesin press dua silinder kelas HN500, pengumpanan dan penanganan bungkil otomatis, dan seringkali jalur pemurnian kecil untuk minyak ritel yang dikemas.
+
+Daftar peralatan setiap tingkatan tetap; harganya mengikuti. Memberi tahu kami target biji harian Anda memungkinkan kami menentukan ukuran jalur dalam satu langkah.
+
+## Mengapa Mesin Press dengan Tonase yang Sama Tidak Memiliki Harga yang Sama
+
+Mesin press 325 ton dari dua pemasok tidak dapat saling menggantikan. Empat perbedaan kualitas pembangunan menjelaskan kesenjangan harga:
+
+**A. Silinder hidrolik — baja paduan 27SiMn.**
+Dibangun dengan baja paduan 27SiMn, silinder mempertahankan kekuatan dan ketangguhannya di bawah 60–75 MPa (2.200 psi+). Setiap silinder dikerjakan mesin, diperlakukan panas, dan diuji tekan sebelum perakitan. Silinder yang dikerjakan dari baja karbon biasa harganya lebih murah tetapi tidak akan bertahan selama bertahun-tahun siklus harian bertekanan tinggi.
+
+**B. Silinder press — baja kekuatan tinggi Q690.**
+Dilas dari baja Q690 dengan cincin flensa tanpa las, digerus dan dilapisi elektro untuk mencegah karat. Drainase beralur memberikan aliran minyak kira-kira 15 kali lipat dari silinder yang dibor — aliran minyak lebih cepat, hasil lebih tinggi. Silinder murah menggunakan drainase yang dibor dan baja yang lebih tipis; perbedaannya terlihat pada tingkat keluaran maupun umur silinder.
+
+**C. Rangka dasar — baja struktural Q355B.**
+Pelat 30 mm pada HN426 dan 50 mm pada HN500. Baja Q355B yang tebal berarti rangka tidak akan berubah bentuk setelah bertahun-tahun siklus bertekanan sangat tinggi (diuji di atas 500 ton). Rangka yang lebih ringan melentur di bawah beban, salah menyelaraskan silinder dan silinder press, dan mempercepat keausan segel.
+
+**D. Motor & katup — tembaga murni · solenoid.**
+Motor 2,2 kW 6 kutub tembaga murni berjalan senyap dan tetap dingin dalam penggunaan terus-menerus. Katup berlapis elektro anti karat dengan lubang minyak yang diperbesar memberikan aliran lebih cepat, kebocoran lebih sedikit, dan siklus mulus tanpa guncangan. Motor yang dililit dengan aluminium atau tembaga tipis, dan katup dengan lubang kecil, menurunkan harga faktur tetapi meningkatkan suhu pengoperasian dan tingkat kegagalan.
+
+Harga di muka yang lebih rendah yang menukar komponen-komponen ini bukan diskon; itu adalah mesin yang berbeda, dengan tugas yang lebih rendah.
+
+## Berpikir dalam Tingkat Pengembalian, Bukan Hanya Harga
+
+Harga mesin kurang penting daripada harga minyak yang dihasilkannya. Setiap <a href="/id/solutions/">halaman solusi biji</a> kami menyertakan contoh perhitungan tentang apa yang dihasilkan 100 kg bahan baku dalam minyak dan bungkil, sehingga Anda dapat memperkirakan pendapatan harian terhadap harga jual lokal Anda. Pembeli yang mengetahui biaya biji dan harga minyak dapat menghitung pengembalian modal dalam beberapa menit — dan angka itulah yang menentukan apakah mesin press tertentu murah atau mahal.
+
+Jika Anda memiliki biaya biji, harga jual minyak, dan target keluaran harian, kirimkan bersama pertanyaan Anda dan kami akan mengembalikan margin harian dan estimasi pengembalian modal bersama penawaran.
+
+## Apa yang Harus Disertakan dalam RFQ Anda
+
+Untuk menerima penawaran yang akurat dan dapat dibandingkan, sertakan:
+
+- **Jenis biji** dan rencana pembagian panas vs dingin
+- **Target biji harian** dalam kilogram
+- **Tegangan dan fasa yang disukai** (mis. 415V / 50Hz / 3 fasa)
+- **Negara tujuan dan pelabuhan terdekat** (untuk estimasi pengiriman dan bea)
+- **Apakah Anda hanya butuh mesin press atau jalur lengkap** (pembersihan, penyangraian, filtrasi, pemurnian)
+- **Persyaratan khusus apa pun** (baja tahan karat food-grade, VCO dingin, jalur halal, konfigurasi mobile)
+
+RFQ yang lengkap mengembalikan penawaran yang akurat dan tata letak jalur dalam satu pertukaran, menghindari bolak-balik yang menunda sebagian besar pesanan pertama.
+
+## Dapatkan Penawaran Anda
+
+Kirimkan jenis biji dan target keluaran harian Anda melalui <a href="/id/contact/">halaman kontak</a> kami. Kami membalas dalam 24 jam dengan rekomendasi model, daftar peralatan lengkap, dan penawaran dengan pos yang transparan — tanpa biaya tambahan tersembunyi.`,
+
 };
