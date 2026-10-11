@@ -1,6 +1,10 @@
 // Indonesian solution body content for [locale]/solutions/[slug].astro
 export const idSolutionBodies: Record<string, string> = {
-  'almond-oil-pressing': `## Ringkasan
+  'almond-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk almond. Harapkan **hasil 44-50% (press dingin)** dari almond manis tanpa kulit — hingga **47-52% dengan inti panggang** — dengan **sisa minyak di bungkil di bawah 5%**. Satu lini press dingin memproses **300-1.000 kg almond per hari**, menghasilkan sekitar **150-500 liter minyak**. Kupas almond sebelum ditekan (blanching untuk menghilangkan kulit meningkatkan hasil dan membuat minyak lebih terang), jaga kelembapan pada **4-6%**, dan pertahankan press **di bawah 60°C** untuk melindungi vitamin E yang menjadi alasan harga premium.
+
+## Ringkasan
 
 Minyak almond merupakan salah satu minyak spesialis paling berharga di dunia, dijual dengan harga premium di pasar kosmetik dan makanan kesehatan. **Mesin press minyak almond** berkualitas sangat penting bagi produsen yang ingin mengekstrak minyak bernilai tinggi ini sambil mempertahankan vitamin, asam lemak, dan aroma alami yang lembut yang menjadi alasan harga premium.
 
@@ -28,9 +32,31 @@ Dengan kandungan minyak almond 50-55% — termasuk yang tertinggi di antara semu
 - **Retensi vitamin E maksimal** — Penekanan hidrolik menghindari degradasi panas dari mesin sekrup, menjaga kandungan vitamin E yang membuat minyak almond begitu berharga.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Kualitas kelas kosmetik** — Sistem filtrasi kami menghasilkan minyak almond yang cukup jernih untuk aplikasi kosmetik premium.
-- **Terbukti secara global** — Mesin press minyak almond kami beroperasi dengan sukses di California, Spanyol, Australia, dan Timur Tengah — wilayah produksi almond utama dunia.`,
+- **Terbukti secara global** — Mesin press minyak almond kami beroperasi dengan sukses di California, Spanyol, Australia, dan Timur Tengah — wilayah produksi almond utama dunia.
 
-  'avocado-oil-pressing': `## Ringkasan
+## Berapa Nilai 100 kg Almond
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak almond mentah (press dingin) | 46-54 L | $276-810 (pada $6-15/L) |
+| Bungkil | 45-56 kg | $14-34 |
+| **Total per 100 kg** | | **$290-844** |
+
+Pada 300-1.000 kg/hari, satu lini press dingin mengubah almond menjadi sekitar **$870-8.400 produk per hari** — minyak kelas kosmetik berada di puncak kisaran tersebut. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya biji dan harga jual Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Minyak Almond Premium
+
+- Motor dililit untuk **380V/415V, 50Hz, 3 fase** — atau standar jaringan lokal Anda — kustomisasi tanpa biaya tambahan
+- Press dingin sejati di bawah 60°C menjaga vitamin E dan aroma lembut yang dibayar premium oleh pembeli kosmetik
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Jebel Ali, Dammam, atau pelabuhan besar terdekat Anda** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan almond Anda sendiri sebelum memesan`,
+
+  'avocado-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk alpukat. Dari daging alpukat Hass segar harapkan **hasil 14-20% (press dingin)**; mengeringkan daging terlebih dahulu menaikkan itu menjadi **30-44%**, dengan **sisa minyak di bungkil di bawah 5-6%**. Satu lini press dingin memproses **300-1.000 kg daging alpukat per hari**. Langkah persiapan penting: daging alpukat segar mengandung sekitar **70% air**, yang menciptakan emulsi dan memangkas hasil — keringkan daging sebelum ditekan dan Anda dapat menggandakan hasil efektif Anda, sambil menjaga suhu di bawah 60°C untuk mempertahankan warna zamrud yang dibayar pembeli.
+
+## Ringkasan
 
 Minyak alpukat telah melonjak popularitasnya sebagai minyak memasak dan kosmetik premium, dihargai karena titik asap tinggi, kandungan lemak tak jenuh tunggal yang kaya, dan rasa mentega yang khas. **Mesin press minyak alpukat** khusus sangat penting bagi produsen yang ingin mengekstrak minyak bernilai tinggi ini sambil mempertahankan nutrisi dan warna hijau alami yang menjadi alasan harga premium.
 
@@ -59,9 +85,31 @@ Solusi ini dirancang untuk pasar minyak alpukat yang berkembang di Meksiko, Keny
 - **Retensi nutrisi maksimal** — Penekanan hidrolik menghindari panas gesekan dari mesin sekrup, menjaga kandungan asam oleat, vitamin E, dan lutein.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Solusi lengkap** — Dari persiapan daging hingga minyak yang difiltrasi dan dibotolkan, kami menyediakan setiap komponen yang Anda butuhkan.
-- **Terbukti di wilayah alpukat** — Mesin press minyak alpukat kami beroperasi dengan sukses di Meksiko, Kenya, Selandia Baru, dan Afrika Selatan — wilayah produksi alpukat utama dunia.`,
+- **Terbukti di wilayah alpukat** — Mesin press minyak alpukat kami beroperasi dengan sukses di Meksiko, Kenya, Selandia Baru, dan Afrika Selatan — wilayah produksi alpukat utama dunia.
 
-  'castor-oil-pressing': `## Ringkasan
+## Berapa Nilai 100 kg Daging Alpukat
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak alpukat mentah (press dingin) | 16-22 L | $128-330 (pada $8-15/L) |
+| Bungkil / ampas | 75-83 kg | $8-17 |
+| **Total per 100 kg** | | **$136-347** |
+
+Pada 300-1.000 kg/hari, satu lini press dingin mengubah daging alpukat menjadi sekitar **$410-3.500 produk per hari** — daging kering mendorong Anda ke puncak kisaran tersebut. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya daging dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Minyak Alpukat Press Dingin
+
+- Motor dililit untuk jaringan Anda — **415V/50Hz untuk Afrika Timur, 220V/60Hz untuk Meksiko** — kustomisasi tanpa biaya tambahan
+- Press dingin sejati di bawah 60°C mempertahankan warna hijau klorofil dan kandungan lutein yang mendefinisikan minyak alpukat premium
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Mombasa, Durban, atau Manzanillo** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan daging alpukat Anda sendiri sebelum memesan`,
+
+  'castor-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk biji jarak. Harapkan **hasil 40-50% dari biji tanpa kulit**, meningkat menjadi **43-51% dengan pemanggangan**, dengan **sisa minyak di bungkil di bawah 5%** (≤4% panggang). Struktur biji jarak yang keras membutuhkan tekanan berkelanjutan — press kami menghasilkan **40-55 MPa**, itulah mengapa mereka mengungguli mesin sekrup dalam sisa minyak. Kupas sebelum ditekan (bernilai **+5-8% hasil**), panggang pada **80-100°C** untuk tambahan **3-5%**, dan jaga kelembapan biji pada **5-7%**.
+
+## Ringkasan
 
 Minyak jarak adalah minyak industri unik dengan aplikasi yang mencakup farmasi, pelumas, kosmetik, biodiesel, dan bahan kimia khusus. Berbeda dengan kebanyakan minyak nabati, minyak jarak mengandung asam risinoleat — asam lemak langka yang memberikan sifat luar biasa termasuk viskositas tinggi, pelumasan, dan biodegradabilitas. **Mesin press minyak jarak** yang andal sangat penting bagi produsen yang ingin memanfaatkan permintaan global yang terus berkembang untuk minyak serbaguna ini.
 
@@ -89,9 +137,31 @@ Solusi ini mendukung press dingin (untuk minyak jarak kelas obat dan kosmetik) d
 - **Kemampuan press dingin/panas ganda** — Satu mesin melayani pasar minyak jarak premium obat dan industri.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Desain berfokus keselamatan** — Peralatan kami dirancang dengan penahanan yang tepat untuk pemrosesan biji jarak, meminimalkan paparan operator terhadap bahan yang mengandung risin.
-- **Terbukti di India dan Brasil** — Mesin press minyak jarak kami beroperasi dengan sukses di dua negara penghasil jarak terbesar di dunia.`,
+- **Terbukti di India dan Brasil** — Mesin press minyak jarak kami beroperasi dengan sukses di dua negara penghasil jarak terbesar di dunia.
 
-  'coconut-oil-pressing': `## Ringkasan
+## Berapa Nilai 100 kg Biji Jarak
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak jarak mentah (press panas) | 43-52 L | $65-156 (pada $1,5-3/L) |
+| Bungkil (kelas pupuk)* | 47-58 kg | $5-12 |
+| **Total per 100 kg** | | **$70-168** |
+
+\* Bungkil jarak mengandung risin dan dijual sebagai pupuk, bukan pakan ternak. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya biji dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Jarak India
+
+- Motor dililit untuk **415V/50Hz, 3 fase** — pasokan industri standar India (220V/60Hz tersedia untuk Brasil) — kustomisasi tanpa biaya tambahan
+- Gaya press 40-55 MPa menangani struktur biji jarak yang keras tanpa tahap pra-tekan
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Mundra, Nhava Sheva, atau Santos** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan biji jarak Anda sendiri sebelum memesan`,
+
+  'coconut-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk kelapa. Dari kopra kering harapkan **hasil 55-62% (press panas)**; dari daging segar parut untuk VCO, **28-32%** — dengan **sisa minyak di bungkil 5-6% atau kurang**. Satu siklus penekanan berjalan sekitar **30-40 menit press panas (sekitar 2 jam press dingin)**, dan satu lini memproses **500-2.000 kg kelapa per hari**. Angka penting: press kopra pada **kelembapan di bawah 6%** — bahan yang dikeringkan dengan baik melepaskan minyak jauh lebih banyak daripada daging segar.
+
+## Ringkasan
 
 Minyak kelapa tetap menjadi salah satu minyak nabati yang paling dicari di seluruh dunia, didorong oleh permintaan yang terus berkembang di industri makanan, kosmetik, dan kesehatan. **Mesin press minyak kelapa** yang andal sangat penting bagi produsen yang ingin mengekstrak minyak berkualitas tinggi sambil memaksimalkan hasil dan meminimalkan limbah. Baik Anda memproduksi minyak kelapa perawan (VCO) untuk pasar kesehatan premium maupun minyak kelapa RBD untuk pengolahan makanan komersial, memiliki peralatan yang tepat membuat perbedaan besar.
 
@@ -119,7 +189,25 @@ Solusi ini mencakup setiap tahap dari persiapan kelapa mentah hingga filtrasi, d
 - **Harga langsung pabrik** — Tanpa perantara. Anda mendapatkan harga kompetitif langsung dari produsen, menghemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Penyedia solusi inti** — Dari persiapan biji hingga minyak yang difiltrasi, kami menyediakan peralatan press inti dan membantu mengoordinasikan pemurnian yang dibeli terpisah.
 - **Dukungan instalasi global** — Insinyur kami menyediakan instalasi dan pelatihan di lokasi di seluruh dunia, memastikan mesin press minyak kelapa Anda beroperasi pada efisiensi puncak dari hari pertama.
-- **Terbukti di pasar tropis** — Peralatan penekanan minyak kelapa kami sudah berjalan dengan sukses di Filipina, Indonesia, Sri Lanka, dan India — wilayah penghasil kelapa teratas dunia.`,
+- **Terbukti di pasar tropis** — Peralatan penekanan minyak kelapa kami sudah berjalan dengan sukses di Filipina, Indonesia, Sri Lanka, dan India — wilayah penghasil kelapa teratas dunia.
+
+## Berapa Nilai 100 kg Kopra
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak kelapa mentah (press panas) | 65-71 L | $78-142 (pada $1,2-2/L) |
+| Bungkil kopra (pakan ternak) | 30-35 kg | $6-12 |
+| **Total per 100 kg** | | **$84-154** |
+
+Pada 500-2.000 kg/hari, satu lini mengubah kopra menjadi sekitar **$420-3.100 produk per hari** — dan menekan daging segar menjadi VCO justru memberikan premium harga yang jelas per liter pada volume lebih rendah. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya kopra dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Kelapa Tropis
+
+- Motor dililit untuk **380-415V/50Hz, 3 fase** (60Hz tersedia untuk Filipina) — kustomisasi tanpa biaya tambahan
+- Satu press menangani ekstraksi minyak kopra maupun santan untuk produksi VCO
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Jakarta, Manila, atau Cochin** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan kopra Anda sendiri sebelum memesan`,
 
   'commercial-oil-press': `## Ringkasan
 
@@ -154,7 +242,11 @@ Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makana
 - **Lini produksi lengkap** — Dari penerimaan biji hingga minyak yang dikemas, kami menyediakan dan mengintegrasikan setiap komponen untuk operasi komersial yang mulus.
 - **Referensi komersial global** — Sistem press minyak komersial kami berjalan dengan sukses di India, Nigeria, Indonesia, Mesir, dan Brasil — melayani produsen komersial di setiap pasar minyak utama.`,
 
-  'cottonseed-oil-pressing': `## Ringkasan
+  'cottonseed-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk biji kapas. Biji kapas utuh menghasilkan **15-18%**; setelah penghilangan serat dan dekortikasi, inti menghasilkan **28-34%**, dengan **sisa minyak di bungkil 5-7%**. Biji kapas hampir selalu **dipress panas** — press dingin tidak umum untuk biji ini. Langkah persiapan penting: **hilangkan serat sebelum menekan** — serat kapas menyerap minyak dan memangkas hasil Anda **3-5%**. Dan ingat minyak biji kapas mentah harus dimurnikan untuk menghilangkan gossypol sebelum dapat dijual sebagai minyak makanan.
+
+## Ringkasan
 
 Minyak biji kapas adalah minyak nabati utama di Afrika Barat, khususnya Nigeria, yang merupakan produsen kapas terbesar di Afrika. Dengan permintaan yang terus berkembang untuk minyak goreng terjangkau di wilayah tersebut, produksi minyak biji kapas menyajikan peluang bisnis yang signifikan.
 
@@ -174,9 +266,31 @@ Solusi penekanan minyak biji kapas Haonuo Machinery dirancang untuk tantangan un
 - **Lini produksi inti** — Dari penghilangan serat hingga filtrasi, kami menyediakan rantai penekanan penuh dan membantu mengoordinasikan pemurnian yang dibeli terpisah untuk penghilangan gossypol
 - **Terbukti di pasar Afrika** — Mesin kami beroperasi dengan sukses di Nigeria, Ghana, dan Tanzania
 - **Harga terjangkau** — Harga langsung pabrik membuat produksi minyak biji kapas profesional dapat diakses
-- **Jaringan dukungan lokal** — Suku cadang tersedia dari stok, dukungan teknis melalui WhatsApp secara real-time`,
+- **Jaringan dukungan lokal** — Suku cadang tersedia dari stok, dukungan teknis melalui WhatsApp secara real-time
 
-  'flaxseed-oil-pressing': `## Solusi Penekanan Minyak Biji Rami
+## Berapa Nilai 100 kg Biji Kapas
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak biji kapas mentah | 16-22 L | $14-29 (pada $0,9-1,3/L) |
+| Bungkil (pakan ternak) | 75-83 kg | $11-21 |
+| **Total per 100 kg** | | **$25-50** |
+
+Minyak mentah harus dimurnikan untuk menghilangkan gossypol sebelum dijual sebagai minyak makanan — minyak biji kapas yang dimurnikan dijual jauh di atas kisaran minyak mentah ini. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya biji dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Biji Kapas Afrika Barat
+
+- Motor dililit untuk **415V/50Hz, 3 fase** — standar di kawasan industri Afrika Barat — kustomisasi tanpa biaya tambahan
+- Konstruksi heavy duty HN365 menangani biji kapas berserat tinggi dan abrasif hari demi hari
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Lagos atau Tema** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan biji kapas Anda sendiri sebelum memesan`,
+
+  'flaxseed-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk biji rami. Harapkan **hasil 28-35% press dingin** dari biji dengan kandungan minyak **33-43%**. Satu aturan yang tidak dapat ditawar: press **di bawah 50°C** — minyak biji rami mengandung **50-60% omega-3 ALA**, yang mulai terdegradasi di atas suhu itu, dan kandungan omega-3 itulah mengapa minyak biji rami press dingin dijual ritel **$15-30/L**. Saring secara alami, botolkan dalam kaca gelap di bawah nitrogen, dan simpan dingin: masa simpan **3-6 bulan di kulkas**.
+
+## Solusi Penekanan Minyak Biji Rami
 
 Minyak biji rami (linseed) adalah salah satu sumber nabati terkaya asam lemak omega-3, menjadikannya produk premium di pasar suplemen kesehatan dan memasak gourmet. Press dingin sangat penting untuk minyak biji rami untuk menjaga kandungan asam alfa-linolenat (ALA) yang sensitif.
 
@@ -213,7 +327,25 @@ Untuk produksi minyak biji rami, kami merekomendasikan:
 2. **Press filter pneumatik** — Filtrasi alami tanpa bahan kimia
 3. **Cold press biji mentah** — Biji kering yang tidak disangrai dan tekanan hidrolik statis menjaga proses di bawah 50°C tanpa elemen pemanas
 
-Hubungi Haonuo untuk setup produksi minyak biji rami yang disesuaikan dengan peralatan kelas makanan baja tahan karat.`,
+Hubungi Haonuo untuk setup produksi minyak biji rami yang disesuaikan dengan peralatan kelas makanan baja tahan karat.
+
+## Berapa Nilai 100 kg Biji Rami
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak biji rami mentah (press dingin) | 35-41 L | $525-1.230 (pada $15-30/L ritel) |
+| Bungkil | 57-66 kg | $11-26 |
+| **Total per 100 kg** | | **$536-1.256** |
+
+Harga ritel yang mendorong kisaran tersebut — grosir curah berada lebih rendah, jadi kemasan dan saluran penjualan Anda menentukan posisi Anda. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya biji dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Minyak Kesehatan Omega-3
+
+- Motor dililit untuk **380V/50Hz, 3 fase** — atau standar jaringan lokal Anda — kustomisasi tanpa biaya tambahan
+- Press dingin sejati di bawah 50°C melindungi omega-3 ALA yang sensitif panas yang menjadi dasar klaim label Anda
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke pelabuhan besar terdekat Anda dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan biji rami Anda sendiri sebelum memesan`,
 
   'industrial-oil-press': `## Ringkasan
 
@@ -303,7 +435,11 @@ Pada 800-1.200 kg/hari, satu HN325 mengubah biji sawi menjadi produk senilai sek
 - Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung suku cadang 1 tahun
 - Demo penekanan langsung via panggilan video dengan biji Anda sendiri sebelum memesan`,
 
-  'olive-oil-pressing': `## Ringkasan
+  'olive-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk zaitun. Harapkan **hasil 12-16% dari zaitun hijau** dan **16-25% dari zaitun hitam matang** (press dingin), dengan **sisa minyak di ampas di bawah 5-6%**. Satu lini press dingin memproses **300-1.000 kg zaitun per hari**, menghasilkan sekitar **50-250 liter minyak** tergantung varietas. Aturan penting: press **dalam 24 jam setelah panen** — zaitun cepat teroksidasi, dan penundaan lebih dari 48 jam secara signifikan menurunkan kualitas minyak.
+
+## Ringkasan
 
 Minyak zaitun adalah andalan masakan Mediterania dan salah satu minyak goreng paling berharga di dunia, dengan minyak zaitun extra virgin (EVOO) dijual dengan harga premium di pasar global. **Mesin press minyak zaitun** berkualitas sangat penting bagi petani zaitun dan produsen minyak yang ingin mengekstrak minyak berkualitas dari panen mereka sambil mempertahankan rasa, aroma, dan sifat nutrisi yang mendefinisikan minyak zaitun premium.
 
@@ -332,7 +468,25 @@ Solusi ini dirancang untuk produsen minyak zaitun Mediterania, Timur Tengah, dan
 - **Menjaga polifenol** — Penekanan hidrolik menghindari panas dan gaya geser dari mesin sekrup dan sentrifuge, menjaga kandungan polifenol yang memberikan minyak zaitun manfaat kesehatan dan stabilitas penyimpanan.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Press minyak zaitun kami biasanya dijual dengan harga jauh lebih rendah dari sistem sentrifuge.
 - **Operasi sederhana** — Berbeda dengan sistem sentrifuge kompleks yang membutuhkan operator terlatih, press hidrolik kami dapat dikelola oleh satu orang dengan pelatihan minimal.
-- **Terbukti di wilayah Mediterania** — Mesin press minyak zaitun kami beroperasi dengan sukses di Yunani, Spanyol, Maroko, Tunisia, dan Palestina — wilayah dengan tradisi minyak zaitun berabad-abad.`,
+- **Terbukti di wilayah Mediterania** — Mesin press minyak zaitun kami beroperasi dengan sukses di Yunani, Spanyol, Maroko, Tunisia, dan Palestina — wilayah dengan tradisi minyak zaitun berabad-abad.
+
+## Berapa Nilai 100 kg Zaitun
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak zaitun extra virgin (press dingin) | 20-27 L | $100-324 (pada $5-12/L) |
+| Ampas zaitun | 70-80 kg | $4-12 |
+| **Total per 100 kg** | | **$104-336** |
+
+Pada 300-1.000 kg/hari, satu lini press dingin mengubah zaitun menjadi sekitar **$310-3.400 produk per hari** — minyak panen awal kaya polifenol berada di puncak kisaran tersebut. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya zaitun dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Minyak Zaitun Mediterania
+
+- Motor dililit untuk **380-400V/50Hz, 3 fase** — pasokan standar Mediterania — kustomisasi tanpa biaya tambahan
+- Operasi satu orang — tidak perlu teknisi sentrifuge di puncak panen
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Valencia, Piraeus, atau Tanger Med** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan zaitun Anda sendiri sebelum memesan`,
 
   'palm-oil-pressing': `**Jawaban Cepat**
 
@@ -442,7 +596,11 @@ Pada 800-1.200 kg/hari, satu HN325 mengubah kacang kupas menjadi produk senilai 
 - Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung suku cadang 1 tahun
 - Demo penekanan langsung via panggilan video dengan inti Anda sendiri sebelum memesan`,
 
-  'sesame-oil-pressing': `## Ringkasan
+  'sesame-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk wijen. Harapkan **hasil 45-50% (press dingin)**, meningkat menjadi **47-52% dengan pemanggangan**, dengan **sisa minyak di bungkil 5% atau kurang** (≤4% panggang). Barrel 300 mm memuat **32,5 kg wijen per batch — hingga 50 kg dengan pra-kompresi** — dan siklus press panas berjalan sekitar **30-40 menit**. Panggang pada **160-180°C** untuk **+3-5% hasil** dan profil panggang aromatik, dan jaga kelembapan biji pada **5-7%**.
+
+## Ringkasan
 
 Minyak wijen adalah salah satu minyak goreng tertua dan paling berharga di dunia, dihargai karena rasa kacangnya yang khas dan profil nutrisi yang kaya. **Mesin press minyak wijen** berkinerja tinggi adalah landasan bisnis produksi minyak wijen yang menguntungkan, baik Anda menargetkan pasar minyak press dingin premium maupun segmen minyak wijen panggang volume tinggi yang populer di seluruh Asia dan Timur Tengah.
 
@@ -470,9 +628,31 @@ Solusi ini mendukung press dingin (untuk minyak wijen kaya nutrisi premium) dan 
 - **Tingkat minyak sisa di bawah 5%** — Teknologi hidrolik kami mengekstrak lebih banyak minyak per kilogram wijen daripada mesin sekrup, langsung meningkatkan profitabilitas Anda.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Kemampuan press dingin/panas ganda** — Satu mesin melayani kedua segmen pasar, memaksimalkan pengembalian investasi Anda.
-- **Terbukti di seluruh Asia** — Mesin press minyak wijen kami beroperasi dengan sukses di India, China, Myanmar, dan Timur Tengah — pasar minyak wijen terbesar di dunia.`,
+- **Terbukti di seluruh Asia** — Mesin press minyak wijen kami beroperasi dengan sukses di India, China, Myanmar, dan Timur Tengah — pasar minyak wijen terbesar di dunia.
 
-  'shea-butter-pressing': `## Ringkasan
+## Berapa Nilai 100 kg Biji Wijen
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak wijen mentah (press panas, panggang) | 46-54 L | $184-432 (pada $4-8/L) |
+| Bungkil wijen (pakan ternak) | 45-56 kg | $14-28 |
+| **Total per 100 kg** | | **$198-460** |
+
+Menjalankan siklus press panas 30-40 menit berturut-turut, satu press memproses sekitar 500-800 kg wijen dalam hari 8 jam — mengubahnya menjadi **$1.000-3.700 produk per hari**. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya biji dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Wijen Asia
+
+- Motor dililit untuk **415V/50Hz** (India), **400V/50Hz** (Myanmar) atau standar jaringan lokal Anda — kustomisasi tanpa biaya tambahan
+- Geometri barrel khusus wijen — bukan press generik yang disesuaikan
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Nhava Sheva, Yangon, atau Jebel Ali** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan wijen Anda sendiri sebelum memesan`,
+
+  'shea-butter-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk shea. Dari inti shea kering harapkan **hasil mentega 42-50%** menekan pasta panggang, dengan **sisa lemak di bungkil di bawah 5%**. Satu mesin heavy duty memproses **600-1.200 kg kacang shea per hari**; model tekanan ultra-tinggi mencapai **1.200-1.700 kg/hari**. Shea membutuhkan tekanan berkelanjutan — press kami menghasilkan **40-60 MPa**. Panggang pada **140-160°C** (**+5-8% hasil**) dan giling kacang menjadi pasta halus sebelum ditekan — pasta kasar meninggalkan mentega di dalam.
+
+## Ringkasan
 
 Mentega shea adalah komoditas vital bagi ekonomi Afrika Barat dan bahan yang sangat dihargai dalam industri kosmetik dan makanan global. **Mesin press mentega shea** yang tangguh sangat penting bagi produsen yang ingin melampaui metode ekstraksi tangan tradisional dan menskalakan operasi mereka untuk memenuhi permintaan internasional yang berkembang.
 
@@ -500,7 +680,25 @@ Solusi ini secara khusus dirancang untuk kondisi operasi Afrika Barat, dengan ko
 - **Dirancang untuk kondisi Afrika Barat** — Konstruksi tangguh, perawatan sederhana, dan operasi yang andal di lingkungan panas dan berdebu dengan infrastruktur teknis terbatas.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Pengolahan nilai tambah** — Peralatan kami memungkinkan Anda memproduksi mentega shea jadi secara lokal, menangkap rantai nilai penuh alih-alih mengekspor kacang mentah dengan harga rendah.
-- **Terbukti di seluruh Afrika Barat** — Mesin press mentega shea kami beroperasi dengan sukses di Ghana, Burkina Faso, Nigeria, dan Mali — jantung produksi shea.`,
+- **Terbukti di seluruh Afrika Barat** — Mesin press mentega shea kami beroperasi dengan sukses di Ghana, Burkina Faso, Nigeria, dan Mali — jantung produksi shea.
+
+## Berapa Nilai 100 kg Inti Shea
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Mentega shea tidak dimurnikan | 35-45 kg | $70-225 (pada $2-5/kg) |
+| Bungkil press | 50-63 kg | $3-9 |
+| **Total per 100 kg** | | **$73-234** |
+
+Pada 600-1.200 kg/hari, satu mesin heavy duty mengubah kacang shea menjadi sekitar **$440-2.800 produk per hari** — alih-alih mengekspor kacang mentah dengan harga hanya sebagian kecil dari nilai itu. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya kacang dan harga mentega Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Shea Afrika Barat
+
+- Motor dililit untuk **400-415V/50Hz, 3 fase** — standar untuk Ghana dan Nigeria — kustomisasi tanpa biaya tambahan
+- Dibangun untuk kondisi panas dan berdebu dengan perawatan sederhana dan tekanan berkelanjutan 40-60 MPa
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Tema, Lagos, atau Abidjan** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan kacang shea Anda sendiri sebelum memesan`,
 
   'small-business-oil-press': `## Ringkasan
 
@@ -534,7 +732,11 @@ Solusi ini cocok untuk produksi tingkat desa, operasi kios pasar, toko kecil, da
 - **Kompatibilitas biji serbaguna** — Satu mesin menangani lusinan jenis biji, memungkinkan Anda beradaptasi dengan permintaan pasar dan ketersediaan musiman.
 - **Terbukti oleh pemilik usaha kecil** — Mesin press minyak kecil kami berjalan dengan sukses di desa-desa, pasar, dan bengkel kecil di seluruh Afrika, India, dan Asia Tenggara.`,
 
-  'soybean-oil-pressing': `## Solusi Penekanan Minyak Kedelai
+  'soybean-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk kedelai, dengan satu catatan: kedelai hanya mengandung **18-22% minyak**, jadi harapkan **hasil 12-16% press dingin** atau **16-20% press panas** — dan ingat bungkil press sering menyumbang **60-70% dari total pendapatan** sebagai pakan ternak berprotein tinggi. Lini diskalakan dari **100 kg hingga 10 ton per hari**. Langkah persiapan penting: pipihkan kedelai hingga **0,3-0,5 mm** dan jaga kelembapan pada **10-11%** — dengan kandungan minyak serendah ini, penipisan yang tepat adalah yang membuat penekanan layak sama sekali.
+
+## Solusi Penekanan Minyak Kedelai
 
 Kedelai adalah salah satu tanaman minyak terpenting di dunia, menyumbang lebih dari 50% produksi minyak nabati global. Baik Anda memproduksi minyak goreng untuk pasar lokal atau minyak kedelai press dingin premium untuk konsumen yang sadar kesehatan, Haonuo menyediakan solusi lengkap.
 
@@ -565,9 +767,31 @@ Kedelai adalah salah satu tanaman minyak terpenting di dunia, menyumbang lebih d
 - **Aplikasi Industri**: Minyak kedelai digunakan dalam produksi biodiesel, tinta percetakan, dan pelumas industri.
 - **Ampas Kedelai**: Ampas press adalah bahan pakan ternak berprotein tinggi, sering bernilai 60-70% dari total pendapatan.
 
-Hubungi Haonuo hari ini untuk solusi produksi minyak kedelai yang disesuaikan dengan pasar dan volume produksi Anda.`,
+Hubungi Haonuo hari ini untuk solusi produksi minyak kedelai yang disesuaikan dengan pasar dan volume produksi Anda.
 
-  'sunflower-oil-pressing': `## Ringkasan
+## Berapa Nilai 100 kg Kedelai
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak kedelai mentah (press panas) | 17-22 L | $15-26 (pada $0,9-1,2/L) |
+| Bungkil kedelai (pakan ternak) | 75-82 kg | $26-41 |
+| **Total per 100 kg** | | **$41-67** |
+
+Pada 1-10 t/hari, satu lini Haonuo mengubah kedelai menjadi sekitar **$410-6.700 produk per hari** — perhatikan bungkil, bukan minyak, yang membawa sebagian besar nilai itu. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya kedelai dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Kedelai Komersial
+
+- Motor dililit untuk **380V/50Hz, 3 fase** — atau standar jaringan lokal Anda — kustomisasi tanpa biaya tambahan
+- Penghancur + mesin penipis + press + filter dikonfigurasi sebagai satu lini yang serasi, sehingga biji berminyak rendah tetap menguntungkan
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke pelabuhan besar terdekat Anda dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan kedelai Anda sendiri sebelum memesan`,
+
+  'sunflower-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk bunga matahari. Harapkan **hasil 38-44% dari biji berminyak tinggi** dan **48-58% dari inti tanpa kulit**, dengan **sisa minyak di bungkil di bawah 5%** (≤4% panggang). Lini standar memproses **500-1.500 kg biji per hari**; model heavy duty mencapai **3.000 kg/hari**. Langkah persiapan penting: **kupas sebelum ditekan** — kulit menyerap minyak, dan menghilangkannya menaikkan hasil efektif **10-15%**. Panggang pada **120-150°C** untuk tambahan **3-5%**.
+
+## Ringkasan
 
 Minyak bunga matahari adalah salah satu minyak goreng paling populer di dunia, mendominasi dapur di seluruh Eropa Timur, Rusia, Turki, dan semakin di Afrika dan Amerika Selatan. **Mesin press minyak bunga matahari** yang andal sangat penting bagi produsen yang ingin memanfaatkan permintaan global yang terus berkembang ini, baik untuk minyak bunga matahari press dingin premium maupun minyak goreng yang dimurnikan volume tinggi.
 
@@ -596,9 +820,31 @@ Solusi ini menangani baik varietas bunga matahari berminyak tinggi maupun konfek
 - **Desain kompatibel penghilangan kulit** — Peralatan kami menangani biji utuh dan inti tanpa kulit, memberikan fleksibilitas dalam proses produksi Anda.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Lini produksi lengkap** — Dari pembersihan biji hingga minyak yang dibotolkan, kami menyediakan setiap komponen untuk operasi produksi minyak bunga matahari yang mulus.
-- **Terbukti di Eropa Timur dan Afrika** — Mesin press minyak bunga matahari kami beroperasi dengan sukses di Ukraina, Rusia, Turki, Tanzania, dan Mozambik — wilayah produksi minyak bunga matahari utama.`,
+- **Terbukti di Eropa Timur dan Afrika** — Mesin press minyak bunga matahari kami beroperasi dengan sukses di Ukraina, Rusia, Turki, Tanzania, dan Mozambik — wilayah produksi minyak bunga matahari utama.
 
-  'walnut-oil-pressing': `## Ringkasan
+## Berapa Nilai 100 kg Biji Bunga Matahari
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak bunga matahari mentah (press panas) | 43-52 L | $39-68 (pada $0,9-1,3/L) |
+| Bungkil bunga matahari (pakan ternak) | 47-58 kg | $9-17 |
+| **Total per 100 kg** | | **$48-85** |
+
+Pada 500-1.500 kg/hari, satu lini standar mengubah biji bunga matahari menjadi sekitar **$240-1.275 produk per hari** — model heavy duty pada 3.000 kg/hari kurang lebih menggandakannya. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya biji dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Minyak Bunga Matahari
+
+- Motor dililit untuk **380-400V/50Hz, 3 fase** — atau standar jaringan lokal Anda — kustomisasi tanpa biaya tambahan
+- Menangani biji utuh atau inti tanpa kulit, sehingga Anda dapat menyesuaikan proses dengan pasokan biji Anda
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Dar es Salaam, Maputo, atau Mersin** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan biji bunga matahari Anda sendiri sebelum memesan`,
+
+  'walnut-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk kenari. Harapkan **hasil 50-62% dari inti kenari** press dingin di bawah 60°C, dengan **sisa minyak di bungkil 5-8%**. Press ultra tekanan tinggi HN500 memuat **100 kg per batch** pada **4-6 batch per jam**, menghasilkan sekitar **2.000-3.000 kg minyak kenari per hari 8 jam**. Aturan penting: jaga tetap dingin — press panas dapat menghancurkan **30-40% kandungan omega-3** yang membuat minyak kenari berharga premium.
+
+## Ringkasan
 
 Minyak kenari adalah salah satu minyak konsumsi paling premium di dunia, dihargai karena kandungan omega-3 yang kaya, rasa kacang yang lembut, dan banyak manfaat kesehatan. Timur Tengah dan Asia Tengah termasuk konsumen terbesar minyak kenari, di mana ia digunakan baik sebagai minyak goreng gourmet maupun dalam pengobatan tradisional.
 
@@ -619,5 +865,130 @@ Solusi penekanan minyak kenari Haonuo Machinery secara khusus dirancang untuk pr
 - **Press statis panas rendah** — Tanpa gesekan sekrup dan tanpa elemen pemanas; biji mentah yang dipress di bawah 60°C membantu menjaga omega-3
 - **Opsi baja tahan karat kelas makanan** — Tersedia untuk pelanggan yang membutuhkan standar higiene tertinggi
 - **Terbukti di pasar Timur Tengah** — Mesin kami beroperasi dengan sukses di Arab Saudi, UEA, dan Iran
-- **Garansi 1 tahun + dukungan seumur hidup** — Cakupan lengkap dengan suku cadang dikirim dalam 48 jam`,
+- **Garansi 1 tahun + dukungan seumur hidup** — Cakupan lengkap dengan suku cadang dikirim dalam 48 jam
+
+## Berapa Nilai 100 kg Inti Kenari
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak kenari mentah (press dingin) | 49-60 L | $392-900 (pada $8-15/L) |
+| Bungkil kenari | 40-53 kg | $20-53 |
+| **Total per 100 kg** | | **$412-953** |
+
+Pada 4-6 batch per jam, satu HN500 mempress 3,2-4,8 ton inti per hari 8 jam — sekitar **$13.000-46.000 produk per hari** pada harga indikatif. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya inti dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Minyak Kenari Timur Tengah
+
+- Motor dililit untuk **380-415V/50Hz, 3 fase** — pasokan industri standar Teluk — kustomisasi tanpa biaya tambahan
+- Opsi baja tahan karat kelas makanan untuk persyaratan higiene kelas ekspor
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Jebel Ali atau Dammam** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan inti kenari Anda sendiri sebelum memesan`,
+
+  'rice-bran-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo menangani bekatul padi, dengan satu syarat jujur: **press saat segar atau distabilkan**. Harapkan **hasil 9-13% (press dingin)** atau **11-15% (press panas)** dari dedak segar yang distabilkan dengan baik (kandungan minyak 15-23%), dengan hasil bervariasi sesuai kesegaran dedak. Satu tabung HN325 menangani **100 kg per batch (35-45 menit press panas)**, jadi satu mesin menjalankan sekitar **800-1.200 kg/hari** — model tabung ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Dedak yang tidak distabilkan lebih dari 24-48 jam menghasilkan minyak FFA tinggi, jadi rencanakan pengumpulan dedak sebelum Anda membeli mesin.
+
+## Ringkasan
+
+Minyak bekatul padi adalah salah satu minyak goreng tersehat di dunia — kaya gamma-oryzanol, vitamin E, dan antioksidan alami — dan minyak premium yang tumbuh cepat di India, Bangladesh, Jepang, dan Asia Tenggara. Bagi penggilingan padi, dedak adalah produk sampingan berbiaya rendah yang sering dijual murah atau dibuang; **mesin press minyak bekatul** yang andal mengubah produk sampingan itu menjadi bisnis minyak bernilai tinggi.
+
+Tantangan bekatul bukanlah penekanannya — melainkan waktunya. Dedak yang baru digiling mengandung enzim lipase aktif yang menaikkan asam lemak bebas dalam hitungan jam, merusak kualitas minyak. Solusi penekanan bekatul Haonuo dibangun berdasarkan kenyataan ini: stabilkan dedak dengan panas (roaster atau steamer kami) dalam hitungan jam setelah penggilingan, lalu press dengan **mesin ekstraksi minyak bekatul** hidrolik untuk minyak bersih dengan FFA rendah.
+
+Solusi ini mendukung press dingin (untuk minyak bekatul press dingin premium yang mempertahankan gamma-oryzanol) dan press panas dengan pengukusan (untuk hasil lebih tinggi), memberi Anda fleksibilitas melayani segmen makanan kesehatan dan pasar massal dengan satu lini produksi.
+
+## Hasil Minyak yang Diharapkan
+
+| Bahan Baku | Kandungan Minyak | Hasil Press yang Diharapkan | Tingkat Minyak Sisa |
+|---|---|---|---|
+| Bekatul segar distabilkan | 15-20% | 11-15% | ≤ 8% |
+| Bekatul kadar minyak tinggi | 18-23% | 12-16% | ≤ 8% |
+| Dedak distabilkan press dingin | 15-20% | 9-13% | ≤ 10% |
+| Dedak basi / tidak distabilkan | 15-20% | 8-12% (FFA tinggi) | ≤ 10% |
+
+**Faktor utama yang mempengaruhi hasil:**
+- **Kesegaran dedak**: Faktor terbesar. Press dalam 24-48 jam setelah penggilingan atau stabilkan dengan panas segera — asam lemak bebas naik dalam hitungan jam
+- **Stabilisasi**: Mengukus atau memanggang dedak menghentikan aktivitas lipase dan meningkatkan hasil press
+- **Kandungan kelembapan**: Kelembapan penekanan optimal adalah 6-9%
+- **Metode penekanan**: Press dingin menghasilkan sedikit lebih sedikit tetapi menghasilkan minyak premium untuk pasar makanan kesehatan
+
+## Mengapa Memilih Haonuo
+
+- **Saran teknik yang jujur** — Kami memberitahu Anda di awal: keberhasilan minyak bekatul tergantung pada logistik dedak, bukan hanya mesin. Kami membantu Anda merencanakan stabilisasi dan pengumpulan agar kualitas minyak Anda terlindungi.
+- **Dirancang untuk kawasan padi** — Solusi penekanan minyak bekatul kami dibangun untuk penggilingan padi di India, Bangladesh, Vietnam, Thailand, dan Indonesia yang memiliki pasokan dedak segar harian.
+- **Press dingin dan panas dalam satu lini** — Produksi minyak bekatul press dingin premium atau minyak press panas hasil lebih tinggi dengan peralatan yang sama dengan menyesuaikan tahap persiapan.
+- **Harga langsung pabrik** — Tanpa perantara. Harga kompetitif langsung dari produsen menghemat Anda dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
+- **Biaya operasional rendah** — Penekanan hidrolik tidak memiliki sekrup yang aus dan mengonsumsi lebih sedikit daya per kilogram minyak daripada expeller kontinu dengan kapasitas serupa.
+
+## Berapa Nilai 100 kg Bekatul Padi
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak bekatul mentah | 11-15 L | $11-23 (@ $1,00-1,50/L, mentah) |
+| Dedak terdefatkan (pakan sapi) | 82-88 kg | $10-18 |
+| **Total per 100 kg** | | **$21-41** |
+
+Pada 800-1.200 kg/hari, satu HN325 mengubah bekatul menjadi sekitar **$170-490 produk per hari** — dari produk sampingan yang banyak penggilingan jual beberapa sen per kilogram. Harga di atas adalah rentang indikatif yang hati-hati; harga minyak bekatul mentah sangat bervariasi dengan tingkat FFA dan permintaan pemurnian lokal. Konfirmasi tarif lokal saat ini, lalu beri tahu kami biaya dedak dan harga minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Padi Asia Selatan & Tenggara
+
+- Motor dililit untuk **380-415V / 50Hz, 3 fase** — pasokan industri standar di India, Bangladesh, dan Asia Tenggara, disesuaikan tanpa biaya tambahan
+- **Siap stabilisasi** — pasangkan press dengan roaster atau steamer kami agar dedak yang digiling pagi hari distabilkan dan dipress di hari yang sama
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Kolkata, Chennai, Chittagong, Ho Chi Minh City, atau Jakarta** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan dedak Anda sendiri sebelum memesan`,
+
+  'animal-fat-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo sangat cocok untuk lemak hewani, bekerja bersama ketel rendering Anda: lelehkan lemak giling pada suhu rendah, lalu press ampas panas untuk memulihkan lemak yang ditinggalkan pelelehan sederhana. Dari **100 kg potongan lemak bersih (75-90% lemak)** harapkan sekitar **70-85 kg lemak babi atau lemak sapi hasil rendering** ditambah **12-25 kg ampas yang dipress**, dengan hasil bervariasi sesuai kualitas dan kesegaran lemak. Satu tabung HN325 menangani **100 kg per batch (35-45 menit press panas)**, jadi satu mesin menjalankan sekitar **800-1.200 kg/hari** — model tabung ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Jika Anda melayani pasar Muslim, pisahkan sepenuhnya lini lemak sapi (halal) dan lemak babi.
+
+## Ringkasan
+
+Lemak babi dan lemak sapi termasuk lemak tertua yang diperdagangkan di dunia — dan permintaannya tumbuh lagi. Lemak babi dijual ke pasar roti, menggoreng, dan makanan tradisional di Meksiko, China, Spanyol, dan Eropa Tengah-Timur, sementara lemak sapi menyuplai industri sabun, pakan, oleokimia, dan biodiesel di Pakistan, India, Timur Tengah, dan Mesir. Bagi rumah potong hewan, pengolah daging, dan pabrik rendering, potongan lemak adalah produk sampingan berbiaya rendah; **mesin press lemak hewani** yang andal mengubah produk sampingan itu menjadi bisnis lemak yang dapat dijual.
+
+Peran press hidrolik spesifik dan jujur: rendering panas melelehkan sebagian besar lemak, tetapi ampas yang tersisa masih menyimpan lemak sisa yang berharga. Mempress ampas panas dengan **mesin press lemak babi dan lemak sapi** hidrolik memulihkan sisa itu, menaikkan total pemulihan Anda beberapa poin dan menghasilkan bungkil ampas press yang dijual sebagai bahan pakan atau bahan makanan hewan peliharaan.
+
+Rendering suhu rendah ditambah penekanan hidrolik juga melindungi kualitas: panas lembut menjaga lemak tetap terang warnanya dan lembut rasanya untuk lemak babi kelas makanan, sementara lemak sapi dan domba yang lebih keras dipress panas untuk pemulihan maksimal ke pasar industri dan makanan halal.
+
+## Hasil Lemak yang Diharapkan
+
+| Bahan Baku | Kandungan Lemak | Hasil Press yang Diharapkan | Lemak Sisa dalam Bungkil |
+|---|---|---|---|
+| Potongan lemak babi bersih | 80-90% | 75-85% | ≤ 8% |
+| Lemak sapi/domba bersih | 75-88% | 70-82% | ≤ 9% |
+| Lemak unggas | 70-85% | 65-78% | ≤ 10% |
+| Potongan campuran / kelas rendah | 60-75% | 55-68% | ≤ 10% |
+
+**Faktor utama yang mempengaruhi hasil:**
+- **Kualitas dan kesegaran lemak**: Lemak segar yang dipangkas baik dengan sedikit daging menempel memberikan hasil tertinggi dan warna paling terang
+- **Suhu rendering**: Rendering lembut suhu rendah melindungi kualitas kelas makanan; press ampas saat masih panas
+- **Ukuran gilingan**: Potongan kecil yang merata meleleh lebih cepat dan dipress lebih bersih
+- **Jenis bahan**: Ampas lemak babi mudah dipress; lemak sapi dan domba lebih keras dan membutuhkan press panas untuk pemulihan penuh
+
+## Mengapa Memilih Haonuo
+
+- **Saran teknik yang jujur** — Kami memberitahu Anda di awal: press bekerja bersama proses rendering Anda, bukan menggantikannya. Kami membantu Anda mengukur rendering, penekanan, dan filtrasi sebagai satu lini agar tidak ada hambatan.
+- **Dirancang untuk perdagangan rendering** — Solusi penekanan lemak hewani kami dibangun untuk rumah potong hewan dan pabrik rendering dari Meksiko dan Spanyol hingga Pakistan dan Mesir, dengan panduan memisahkan lini lemak halal dan lemak babi.
+- **Total pemulihan lebih tinggi** — Penekanan hidrolik ampas panas memulihkan lemak sisa yang ditinggalkan rendering sederhana, dan bungkil press dijual sebagai bahan pakan.
+- **Harga langsung pabrik** — Tanpa perantara. Harga kompetitif langsung dari produsen menghemat Anda dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
+- **Biaya operasional rendah** — Penekanan hidrolik tidak memiliki sekrup yang aus dan mengonsumsi lebih sedikit daya per kilogram lemak daripada expeller kontinu dengan kapasitas serupa.
+
+## Berapa Nilai 100 kg Potongan Lemak Hewani
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Lemak babi (kelas makanan) | 75-85 kg | $68-128 (@ $0,90-1,50/kg) |
+| Lemak sapi (kelas industri/pakan) | 70-82 kg | $49-90 (@ $0,70-1,10/kg) |
+| Ampas press (pakan) | 12-25 kg | $4-15 (@ $0,30-0,60/kg) |
+| **Total per 100 kg** | | **$55-140** |
+
+Pada 800-1.200 kg/hari, satu HN325 mengubah potongan lemak menjadi sekitar **$440-1.680 produk per hari** — dari produk sampingan yang banyak pengolah bayar untuk membuangnya. Harga di atas adalah rentang indikatif yang hati-hati; harga lemak babi dan lemak sapi sangat bervariasi dengan kelas, wilayah, dan musim. Konfirmasi tarif lokal saat ini, lalu beri tahu kami biaya potongan dan harga lemak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Rendering & Lemak Makanan
+
+- Motor dililit untuk **380-415V / 50Hz, 3 fase** — pasokan industri standar di Meksiko, Eropa, Afrika Utara, dan Asia Selatan, disesuaikan tanpa biaya tambahan
+- **Panduan lini halal** — kami memberi saran tentang tata letak dan pembersihan agar produksi lemak halal dan lemak babi tetap sepenuhnya terpisah bila pembeli Anda mensyaratkannya
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Karachi, Alexandria, Veracruz, Gdansk, atau Barcelona** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan potongan lemak Anda sendiri sebelum memesan`,
 };

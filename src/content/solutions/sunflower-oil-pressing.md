@@ -124,6 +124,10 @@ seoKeywords:
 order: 5
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for sunflower. Expect **38-44% yield from high-oil seed** and **48-58% from dehulled kernels**, with **residual oil in cake under 5%** (≤4% roasted). A standard line processes **500-1,500 kg of seed per day**; the heavy-duty model reaches **3,000 kg/day**. The critical preparation step: **dehull before pressing** — hulls absorb oil, and removing them lifts effective yield by **10-15%**. Roast at **120-150°C** for a further **3-5%**.
+
 ## Overview
 
 Sunflower oil is one of the most popular cooking oils in the world, dominating kitchens across Eastern Europe, Russia, Turkey, and increasingly in Africa and South America. A reliable **sunflower oil press machine** is essential for producers looking to capitalize on this growing global demand, whether for premium cold-pressed sunflower oil or high-volume refined cooking oil.
@@ -165,5 +169,23 @@ This solution handles both high-oil and confectionery sunflower seed varieties, 
 
 *Typical figures for well-prepared sunflower seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Sunflower Seeds Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude sunflower oil (hot press) | 43-52 L | $39-68 (@ $0.9-1.3/L) |
+| Sunflower cake (animal feed) | 47-58 kg | $9-17 |
+| **Total per 100 kg** | | **$48-85** |
+
+At 500-1,500 kg/day, one standard line turns sunflower seed into roughly **$240-1,275 of product per day** — the heavy-duty model at 3,000 kg/day roughly doubles that. Prices above are indicative ranges — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Sunflower Oil Trade
+
+- Motors wound for **380-400V/50Hz, 3-phase** — or your local grid — customized at no extra cost
+- Handles whole seed or dehulled kernels, so you can match the process to your seed supply
+- Shipped **FOB Qingdao**; we arrange sea freight to **Dar es Salaam, Maputo or Mersin** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own sunflower seed before you order
 
 

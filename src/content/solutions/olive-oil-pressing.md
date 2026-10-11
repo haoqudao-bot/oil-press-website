@@ -123,6 +123,10 @@ seoKeywords:
 order: 11
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for olives. Expect **12-16% yield from green olives** and **16-25% from ripe black olives** (cold press), with **residual oil in pomace under 5-6%**. One cold press line processes **300-1,000 kg of olives per day**, producing roughly **50-250 liters of oil** depending on variety. The critical rule: press **within 24 hours of harvest** — olives oxidize fast, and delays beyond 48 hours significantly degrade the oil.
+
 ## Overview
 
 Olive oil is the cornerstone of Mediterranean cuisine and one of the most valued cooking oils worldwide, with extra virgin olive oil (EVOO) commanding premium prices in global markets. A quality **olive oil press machine** is essential for olive growers and oil producers who want to extract the finest oil from their harvest while preserving the flavor, aroma, and nutritional properties that define premium olive oil.
@@ -164,5 +168,23 @@ This solution is designed for Mediterranean, Middle Eastern, and New World olive
 
 *Typical figures for well-prepared olives at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Olives Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Extra virgin olive oil (cold-pressed) | 20-27 L | $100-324 (@ $5-12/L) |
+| Olive pomace | 70-80 kg | $4-12 |
+| **Total per 100 kg** | | **$104-336** |
+
+At 300-1,000 kg/day, one cold press line turns olives into roughly **$310-3,400 of product per day** — early-harvest high-polyphenol oil sits at the top of that range. Prices above are indicative ranges — confirm current local rates, then tell us your olive cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Mediterranean Olive Oil Trade
+
+- Motors wound for **380-400V/50Hz, 3-phase** — the standard Mediterranean supply — customized at no extra cost
+- One-person operation — no centrifuge technician needed at harvest peak
+- Shipped **FOB Qingdao**; we arrange sea freight to **Valencia, Piraeus or Tanger Med** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own olives before you order
 
 

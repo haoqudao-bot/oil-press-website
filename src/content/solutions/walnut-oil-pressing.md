@@ -104,6 +104,10 @@ seoKeywords:
 order: 15
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for walnut. Expect **50-62% yield from walnut kernels** cold-pressed below 60°C, with **residual oil in cake at 5-8%**. The HN500 ultra-high-pressure press takes **100 kg per batch** at **4-6 batches per hour**, producing roughly **2,000-3,000 kg of walnut oil per 8-hour day**. The critical rule: keep it cold — hot pressing can destroy **30-40% of the omega-3 content** that makes walnut oil worth premium prices.
+
 ## Overview
 
 Walnut oil is one of the most premium edible oils in the world, prized for its rich omega-3 content, delicate nutty flavor, and numerous health benefits. The Middle East and Central Asia are among the largest consumers of walnut oil, where it is used both as a gourmet cooking oil and in traditional medicine.
@@ -137,5 +141,23 @@ Haonuo Machinery's walnut oil pressing solution is specifically designed for pro
 
 *Typical figures for well-prepared walnut kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Walnut Kernels Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude walnut oil (cold-pressed) | 49-60 L | $392-900 (@ $8-15/L) |
+| Walnut cake | 40-53 kg | $20-53 |
+| **Total per 100 kg** | | **$412-953** |
+
+At 4-6 batches per hour, one HN500 presses 3.2-4.8 tonnes of kernels per 8-hour day — roughly **$13,000-46,000 of product per day** at indicative prices. Prices above are indicative ranges — confirm current local rates, then tell us your kernel cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Middle Eastern Walnut Oil Trade
+
+- Motors wound for **380-415V/50Hz, 3-phase** — standard Gulf industrial supply — customized at no extra cost
+- Food-grade stainless steel option for export-grade hygiene requirements
+- Shipped **FOB Qingdao**; we arrange sea freight to **Jebel Ali or Dammam** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own walnut kernels before you order
 
 

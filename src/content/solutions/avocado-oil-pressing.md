@@ -123,6 +123,10 @@ seoKeywords:
 order: 8
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for avocado. From fresh Hass pulp expect **14-20% yield (cold press)**; drying the pulp first lifts that to **30-44%**, with **residual oil in cake under 5-6%**. One cold press line processes **300-1,000 kg of avocado pulp per day**. The critical preparation step: fresh avocado flesh is about **70% water**, which creates emulsions and slashes yield — dry the pulp before pressing and you can roughly **double your effective yield**, while staying below 60°C preserves the emerald color buyers pay for.
+
 ## Overview
 
 Avocado oil has surged in popularity as a premium cooking and cosmetic oil, prized for its high smoke point, rich monounsaturated fat content, and distinctive buttery flavor. A specialized **avocado oil press machine** is essential for producers who want to extract this high-value oil while preserving the nutrients and natural green color that justify premium pricing.
@@ -164,5 +168,23 @@ This solution is designed for the growing avocado oil market in Mexico, Kenya, N
 
 *Typical figures for well-prepared avocado flesh at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Avocado Pulp Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude avocado oil (cold-pressed) | 16-22 L | $128-330 (@ $8-15/L) |
+| Press cake / residue | 75-83 kg | $8-17 |
+| **Total per 100 kg** | | **$136-347** |
+
+At 300-1,000 kg/day, one cold press line turns avocado pulp into roughly **$410-3,500 of product per day** — dried pulp pushes you toward the top of that range. Prices above are indicative ranges — confirm current local rates, then tell us your pulp cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Cold-Pressed Avocado Oil Trade
+
+- Motors wound for your grid — **415V/50Hz for East Africa, 220V/60Hz for Mexico** — customized at no extra cost
+- True cold pressing below 60°C preserves the chlorophyll green color and lutein content that define premium avocado oil
+- Shipped **FOB Qingdao**; we arrange sea freight to **Mombasa, Durban or Manzanillo** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own avocado pulp before you order
 
 

@@ -104,6 +104,10 @@ seoKeywords:
 order: 17
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for soybean, with one caveat: soybeans carry only **18-22% oil**, so expect **12-16% yield cold-pressed** or **16-20% hot-pressed** — and remember the press cake often earns **60-70% of total revenue** as high-protein animal feed. Lines scale from **100 kg to 10 tons per day**. The critical preparation step: flake the beans to **0.3-0.5 mm** and hold moisture at **10-11%** — with oil content this low, proper flaking is what makes pressing viable at all.
+
 ## Soybean Oil Pressing Solution
 
 Soybean is one of the world's most important oil crops, accounting for over 50% of global vegetable oil production. Whether you're producing cooking oil for local markets or premium cold-pressed soybean oil for health-conscious consumers, Haonuo provides the complete solution.
@@ -147,5 +151,23 @@ Contact Haonuo today for a customized soybean oil production solution tailored t
 
 *Typical figures for well-prepared soybeans at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Soybeans Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude soybean oil (hot press) | 17-22 L | $15-26 (@ $0.9-1.2/L) |
+| Soybean meal (animal feed) | 75-82 kg | $26-41 |
+| **Total per 100 kg** | | **$41-67** |
+
+At 1-10 t/day, a Haonuo line turns soybeans into roughly **$410-6,700 of product per day** — note the meal, not the oil, carries most of that value. Prices above are indicative ranges — confirm current local rates, then tell us your bean cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Commercial Soybean Trade
+
+- Motors wound for **380V/50Hz, 3-phase** — or your local grid — customized at no extra cost
+- Crusher + flaking roller + press + filter configured as one matched line, so low-oil beans still pay
+- Shipped **FOB Qingdao**; we arrange sea freight to your nearest major port with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own soybeans before you order
 
 

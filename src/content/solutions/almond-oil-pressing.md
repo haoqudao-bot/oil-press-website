@@ -116,6 +116,10 @@ seoKeywords:
 order: 9
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for almonds. Expect **44-50% yield (cold press)** from shelled sweet almonds — up to **47-52% with roasted kernels** — with **residual oil in cake under 5%**. One cold press line processes **300-1,000 kg of almonds per day**, producing roughly **150-500 liters of oil**. Shell the almonds before pressing (blanching off the skins improves yield and lightens the oil), hold moisture at **4-6%**, and keep the press **below 60°C** to protect the vitamin E that justifies premium pricing.
+
 ## Overview
 
 Almond oil is one of the most valuable specialty oils in the world, commanding premium prices in both the cosmetics and health food markets. A quality **almond oil press machine** is essential for producers who want to extract this high-value oil while preserving the vitamins, fatty acids, and delicate natural aroma that justify premium pricing.
@@ -156,5 +160,23 @@ With almonds containing 50-55% oil — among the highest of all oilseeds — alm
 
 *Typical figures for well-prepared almond kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Almonds Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude almond oil (cold-pressed) | 46-54 L | $276-810 (@ $6-15/L) |
+| Oil cake | 45-56 kg | $14-34 |
+| **Total per 100 kg** | | **$290-844** |
+
+At 300-1,000 kg/day, one cold press line turns almonds into roughly **$870-8,400 of product per day** — cosmetic-grade oil sits at the top of that range. Prices above are indicative ranges — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Premium Almond Oil Trade
+
+- Motors wound for **380V/415V, 50Hz, 3-phase** — or your local grid — customized at no extra cost
+- True cold pressing below 60°C keeps the vitamin E and delicate aroma that cosmetic buyers pay a premium for
+- Shipped **FOB Qingdao**; we arrange sea freight to **Jebel Ali, Dammam or your nearest major port** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own almonds before you order
 
 

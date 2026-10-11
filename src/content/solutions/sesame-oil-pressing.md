@@ -130,6 +130,10 @@ seoKeywords:
 order: 2
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for sesame. Expect **45-50% yield (cold press)**, rising to **47-52% with roasting**, with **residual oil in cake at 5% or below** (≤4% roasted). The 300 mm barrel takes **32.5 kg of sesame per batch — up to 50 kg with pre-compression** — and a hot-press cycle runs about **30-40 minutes**. Roast at **160-180°C** for **+3-5% yield** and the aromatic toasted profile, and hold seed moisture at **5-7%**.
+
 ## Overview
 
 Sesame oil is one of the oldest and most valued cooking oils in the world, prized for its distinctive nutty flavor and rich nutritional profile. A high-performance **sesame oil press machine** is the cornerstone of any profitable sesame oil production business, whether you are targeting the premium cold-pressed market or the high-volume roasted sesame oil segment popular across Asia and the Middle East.
@@ -170,5 +174,23 @@ This solution supports both cold pressing (for premium, nutrient-rich sesame oil
 
 *Typical figures for well-prepared sesame seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Sesame Seeds Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude sesame oil (hot press, roasted) | 46-54 L | $184-432 (@ $4-8/L) |
+| Sesame cake (animal feed) | 45-56 kg | $14-28 |
+| **Total per 100 kg** | | **$198-460** |
+
+Running back-to-back 30-40 minute hot-press cycles, one press moves roughly 500-800 kg of sesame through an 8-hour day — turning it into **$1,000-3,700 of product per day**. Prices above are indicative ranges — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Asian Sesame Trade
+
+- Motors wound for **415V/50Hz** (India), **400V/50Hz** (Myanmar) or your local grid — customized at no extra cost
+- Purpose-built sesame barrel geometry — not a generic press adapted for the job
+- Shipped **FOB Qingdao**; we arrange sea freight to **Nhava Sheva, Yangon or Jebel Ali** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own sesame before you order
 
 

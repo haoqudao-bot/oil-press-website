@@ -95,6 +95,10 @@ seoKeywords:
 order: 16
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for cottonseed. Whole cottonseed yields **15-18%**; after delinting and decortication, kernels yield **28-34%**, with **residual oil in cake at 5-7%**. Cottonseed is almost always **hot-pressed** — cold pressing is not common for this seed. The critical preparation step: **delint before pressing** — cotton lint absorbs oil and costs you **3-5% of yield**. And remember crude cottonseed oil must be refined to remove gossypol before it can be sold as edible oil.
+
 ## Overview
 
 Cottonseed oil is a major vegetable oil in West Africa, particularly Nigeria, which is Africa's largest cotton producer. With growing demand for affordable cooking oil in the region, cottonseed oil production presents a significant business opportunity.
@@ -126,5 +130,23 @@ Haonuo Machinery's cottonseed oil pressing solution is designed for the unique c
 
 *Typical figures for well-prepared cottonseeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L. Cottonseed is typically hot-pressed; cold pressing is not common.*
 <!-- /yield-block -->
+
+## What 100 kg of Cottonseed Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude cottonseed oil | 16-22 L | $14-29 (@ $0.9-1.3/L) |
+| Oil cake (animal feed) | 75-83 kg | $11-21 |
+| **Total per 100 kg** | | **$25-50** |
+
+Crude oil must be refined to remove gossypol before edible sale — refined cottonseed oil sells well above these crude-oil ranges. Prices above are indicative ranges — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
+
+## Built for the West African Cottonseed Trade
+
+- Motors wound for **415V/50Hz, 3-phase** — standard across West African industrial estates — customized at no extra cost
+- Heavy-duty HN365 construction handles high-fiber, abrasive cottonseed day after day
+- Shipped **FOB Qingdao**; we arrange sea freight to **Lagos or Tema** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own cottonseed before you order
 
 

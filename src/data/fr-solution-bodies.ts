@@ -1,5 +1,9 @@
 export const frSolutionBodies: Record<string, string> = {
-  'almond-oil-pressing': `## Aperçu
+  'almond-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour l'amande. Comptez sur **44-50 % de rendement (pressage à froid)** à partir d'amandes douces décortiquées — jusqu'à **47-52 % avec des amandes torréfiées** — avec **moins de 5 % d'huile résiduelle dans le tourteau**. Une ligne de pressage à froid traite **300-1 000 kg d'amandes par jour**, produisant environ **150-500 litres d'huile**. Décortiquez les amandes avant le pressage (le blanchiment pour retirer les peaux améliore le rendement et éclaircit l'huile), maintenez l'humidité à **4-6 %**, et gardez la presse **sous 60 °C** pour protéger la vitamine E qui justifie les prix premium.
+
+## Aperçu
 
 L'huile d'amande est l'une des huiles de spécialité les plus précieuses au monde, se vendant à des prix premium sur les marchés des cosmétiques et des aliments de santé. Une **machine de pressage d'huile d'amande** de qualité est essentielle pour les producteurs qui souhaitent extraire cette huile de grande valeur tout en préservant les vitamines, les acides gras et le délicat arôme naturel qui justifient les prix premium.
 
@@ -27,9 +31,31 @@ Avec des amandes contenant 50-55 % d'huile — l'une des plus fortes teneurs par
 - **Rétention maximale de vitamine E** — Le pressage hydraulique fonctionne à basse température, préservant la teneur en vitamine E qui rend l'huile d'amande si précieuse.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Qualité de grade cosmétique** — Notre système de filtration produit une huile d'amande suffisamment claire pour les applications cosmétiques premium.
-- **Prouvé dans le monde entier** — Nos machines de pressage d'huile d'amande sont utilisées avec succès en Californie, en Espagne, en Australie et au Moyen-Orient — les principales régions productrices d'amandes du monde.`,
+- **Prouvé dans le monde entier** — Nos machines de pressage d'huile d'amande sont utilisées avec succès en Californie, en Espagne, en Australie et au Moyen-Orient — les principales régions productrices d'amandes du monde.
 
-  'avocado-oil-pressing': `## Aperçu
+## Que Valent 100 kg d'Amandes
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile d'amande brute (pressée à froid) | 46-54 L | 276-810 $ (à 6-15 $/L) |
+| Tourteau | 45-56 kg | 14-34 $ |
+| **Total par 100 kg** | | **290-844 $** |
+
+À 300-1 000 kg/jour, une ligne de pressage à froid transforme les amandes en environ **870-8 400 $ de produit par jour** — l'huile de qualité cosmétique se situe en haut de cette fourchette. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos amandes et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Premium de l'Huile d'Amande
+
+- Moteurs bobinés pour **380 V/415 V, 50 Hz, triphasé** — ou votre réseau local — personnalisés sans coût supplémentaire
+- Un véritable pressage à froid sous 60 °C préserve la vitamine E et l'arôme délicat pour lesquels les acheteurs de cosmétiques paient une prime
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Jebel Ali, Dammam ou le grand port le plus proche de chez vous** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres amandes avant de commander`,
+
+  'avocado-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour l'avocat. À partir de pulpe de Hass fraîche, comptez sur **14-20 % de rendement (pressage à froid)** ; sécher d'abord la pulpe porte ce rendement à **30-44 %**, avec **5-6 % ou moins d'huile résiduelle dans le tourteau**. Une ligne de pressage à froid traite **300-1 000 kg de pulpe d'avocat par jour**. L'étape de préparation critique : la chair d'avocat fraîche contient environ **70 % d'eau**, ce qui crée des émulsions et fait chuter le rendement — séchez la pulpe avant le pressage et vous pouvez quasiment **doubler votre rendement effectif**, tout en restant sous 60 °C pour préserver la couleur émeraude que les acheteurs paient.
+
+## Aperçu
 
 L'huile d'avocat a connu une popularité croissante en tant qu'huile de cuisson et cosmétique premium, prisée pour son point de fumée élevé, sa riche teneur en graisses monoinsaturées et sa saveur beurrée distinctive. Une **machine de pressage d'huile d'avocat** spécialisée est essentielle pour les producteurs qui souhaitent extraire cette huile de grande valeur tout en préservant les nutriments et la couleur verte naturelle qui justifient les prix premium.
 
@@ -58,9 +84,31 @@ Cette solution est conçue pour le marché croissant de l'huile d'avocat au Mexi
 - **Rétention maximale des nutriments** — Le pressage hydraulique fonctionne à basse température, préservant la teneur en acide oléique, vitamine E et lutéine.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Solution complète** — De la préparation de la pulpe à l'huile filtrée et embouteillée, nous fournissons chaque composant dont vous avez besoin.
-- **Prouvé dans les régions d'avocat** — Nos machines de pressage d'huile d'avocat sont utilisées avec succès au Mexique, au Kenya, en Nouvelle-Zélande et en Afrique du Sud — les principales régions productrices d'avocats du monde.`,
+- **Prouvé dans les régions d'avocat** — Nos machines de pressage d'huile d'avocat sont utilisées avec succès au Mexique, au Kenya, en Nouvelle-Zélande et en Afrique du Sud — les principales régions productrices d'avocats du monde.
 
-  'castor-oil-pressing': `## Aperçu
+## Que Vaut 100 kg de Pulpe d'Avocat
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile d'avocat brute (pressée à froid) | 16-22 L | 128-330 $ (à 8-15 $/L) |
+| Tourteau / résidu de pressage | 75-83 kg | 8-17 $ |
+| **Total par 100 kg** | | **136-347 $** |
+
+À 300-1 000 kg/jour, une ligne de pressage à froid transforme la pulpe d'avocat en environ **410-3 500 $ de produit par jour** — la pulpe séchée vous rapproche du haut de cette fourchette. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de votre pulpe et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce de l'Huile d'Avocat Pressée à Froid
+
+- Moteurs bobinés pour votre réseau — **415 V/50 Hz pour l'Afrique de l'Est, 220 V/60 Hz pour le Mexique** — personnalisés sans coût supplémentaire
+- Un véritable pressage à froid sous 60 °C préserve la couleur verte de la chlorophylle et la teneur en lutéine qui définissent l'huile d'avocat premium
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Mombasa, Durban ou Manzanillo** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec votre propre pulpe d'avocat avant de commander`,
+
+  'castor-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour le ricin. Comptez sur **40-50 % de rendement à partir de graines décortiquées**, montant à **43-51 % avec torréfaction**, avec **moins de 5 % d'huile résiduelle dans le tourteau** (≤ 4 % en torréfié). La structure dure de la graine de ricin exige une pression soutenue — nos presses délivrent **40-55 MPa**, c'est pourquoi elles surpassent les presses à vis sur l'huile résiduelle. Décortiquez avant le pressage (cela vaut **+5-8 % de rendement**), torréfiez à **80-100 °C** pour **3-5 %** supplémentaires, et maintenez l'humidité des graines à **5-7 %**.
+
+## Aperçu
 
 L'huile de ricin est une huile industrielle unique dont les applications couvrent les produits pharmaceutiques, les lubrifiants, les cosmétiques, le biodiesel et les produits chimiques de spécialité. Contrairement à la plupart des huiles végétales, l'huile de ricin contient de l'acide ricinoléique — un acide gras rare qui lui confère des propriétés exceptionnelles, notamment une viscosité élevée, une lubrification et une biodégradabilité. Une **machine de pressage d'huile de ricin** fiable est essentielle pour les producteurs cherchant à capitaliser sur la demande mondiale croissante pour cette huile polyvalente.
 
@@ -88,9 +136,31 @@ Cette solution prend en charge à la fois le pressage à froid (pour l'huile de 
 - **Capacité double pression à froid/à chaud** — Une seule machine dessert les marchés de l'huile de ricin médicinale premium et industrielle.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Conception axée sur la sécurité** — Notre équipement est conçu avec un confinement approprié pour le traitement des graines de ricin, minimisant l'exposition de l'opérateur aux matériaux contenant de la ricine.
-- **Prouvé en Inde et au Brésil** — Nos machines de pressage d'huile de ricin sont utilisées avec succès dans les deux plus grandes nations productrices de ricin du monde.`,
+- **Prouvé en Inde et au Brésil** — Nos machines de pressage d'huile de ricin sont utilisées avec succès dans les deux plus grandes nations productrices de ricin du monde.
 
-  'coconut-oil-pressing': `## Aperçu
+## Que Vaut 100 kg de Graines de Ricin
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de ricin brute (pressage à chaud) | 43-52 L | 65-156 $ (à 1,5-3 $/L) |
+| Tourteau (qualité engrais)* | 47-58 kg | 5-12 $ |
+| **Total par 100 kg** | | **70-168 $** |
+
+\*Le tourteau de ricin contient de la ricine et se vend comme engrais, pas comme alimentation animale. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos graines et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Indien du Ricin
+
+- Moteurs bobinés pour **415 V/50 Hz, triphasé** — l'alimentation industrielle indienne standard (220 V/60 Hz disponible pour le Brésil) — personnalisés sans coût supplémentaire
+- Une force de pressage de 40-55 MPa gère la structure dure de la graine de ricin sans passes de pré-pressage
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Mundra, Nhava Sheva ou Santos** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres graines de ricin avant de commander`,
+
+  'coconut-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour la noix de coco. À partir de coprah séché, comptez sur **55-62 % de rendement (pressage à chaud)** ; à partir de chair fraîche râpée pour la VCO, **28-32 %** — avec **5-6 % ou moins d'huile résiduelle dans le tourteau**. Un cycle de pressage dure environ **30-40 minutes à chaud (environ 2 heures à froid)**, et une ligne traite **500-2 000 kg de coco par jour**. Le chiffre critique : pressez le coprah à **moins de 6 % d'humidité** — une matière correctement séchée libère nettement plus d'huile que la chair fraîche.
+
+## Aperçu
 
 L'huile de coco reste l'une des huiles végétales les plus recherchées au monde, portée par la demande croissante dans les industries alimentaire, cosmétique et de la santé. Une **machine de pressage d'huile de coco** fiable est essentielle pour les producteurs qui souhaitent extraire une huile de haute qualité tout en maximisant le rendement et en minimisant les pertes. Que vous produisiez de l'huile de coco vierge (VCO) pour le marché premium de la santé ou de l'huile de coco RBD pour la transformation alimentaire commerciale, disposer du bon équipement fait toute la différence.
 
@@ -120,7 +190,25 @@ Comprendre les rendements attendus est essentiel pour la planification commercia
 - **Prix directs d'usine** — Pas d'intermédiaires. Vous obtenez des prix compétitifs directement du fabricant, économisant par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Fournisseur de solution centrale** — De la préparation des graines à l'huile filtrée, nous fournissons l'équipement de pressage essentiel et vous aidons à coordonner le raffinage approvisionné séparément.
 - **Support d'installation mondial** — Nos ingénieurs assurent l'installation et la formation sur site dans le monde entier, garantissant que votre machine de pressage d'huile de coco fonctionne à son efficacité maximale dès le premier jour.
-- **Prouvé dans les marchés tropicaux** — Notre équipement de pressage d'huile de coco fonctionne déjà avec succès aux Philippines, en Indonésie, au Sri Lanka et en Inde — les principales régions productrices de coco du monde.`,
+- **Prouvé dans les marchés tropicaux** — Notre équipement de pressage d'huile de coco fonctionne déjà avec succès aux Philippines, en Indonésie, au Sri Lanka et en Inde — les principales régions productrices de coco du monde.
+
+## Que Vaut 100 kg de Coprah
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de coco brute (pressage à chaud) | 65-71 L | 78-142 $ (à 1,2-2 $/L) |
+| Tourteau de coprah (alimentation animale) | 30-35 kg | 6-12 $ |
+| **Total par 100 kg** | | **84-154 $** |
+
+À 500-2 000 kg/jour, une ligne transforme le coprah en environ **420-3 100 $ de produit par jour** — et presser la chair fraîche en VCO commande à la place une prime de prix nette par litre sur un volume plus faible. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de votre coprah et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Tropical de la Noix de Coco
+
+- Moteurs bobinés pour **380-415 V/50 Hz, triphasé** (60 Hz disponible pour les Philippines) — personnalisés sans coût supplémentaire
+- Une seule presse gère à la fois l'huile de coprah et l'extraction du lait de coco pour la production de VCO
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Jakarta, Manille ou Cochin** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec votre propre coprah avant de commander`,
 
   'commercial-oil-press': `## Aperçu
 
@@ -186,7 +274,11 @@ Pressez de l'huile pour d'autres marques sous contrat. Nos machines de qualité 
 - **Lignes de production complètes** — De la réception des graines à l'huile conditionnée, nous fournissons et intégrons chaque composant pour une opération commerciale transparente.
 - **Références commerciales mondiales** — Nos systèmes de presse à huile commerciales sont utilisées avec succès en Inde, au Nigeria, en Indonésie, en Égypte et au Brésil — au service de producteurs commerciaux dans tous les principaux marchés huiliers.`,
 
-  'cottonseed-oil-pressing': `## Aperçu
+  'cottonseed-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour la graine de coton. La graine de coton entière donne **15-18 %** ; après délinatage et décorticage, les amandes donnent **28-34 %**, avec **5-7 % d'huile résiduelle dans le tourteau**. La graine de coton se presse presque toujours **à chaud** — le pressage à froid n'est pas courant pour cette graine. L'étape de préparation critique : **délinatez avant le pressage** — la fibre de coton absorbe l'huile et vous coûte **3-5 % de rendement**. Et rappelez-vous : l'huile de coton brute doit être raffinée pour éliminer le gossypol avant de pouvoir être vendue comme huile alimentaire.
+
+## Aperçu
 
 L'huile de coton est une huile végétale majeure en Afrique de l'Ouest, en particulier au Nigeria, qui est le plus grand producteur de coton d'Afrique. Avec la demande croissante d'huile de cuisson abordable dans la région, la production d'huile de coton représente une opportunité commerciale significative.
 
@@ -206,9 +298,31 @@ La solution de pressage d'huile de coton de Haonuo Machinery est conçue pour le
 - **Ligne de production centrale** — De l'écabossage à la filtration, nous fournissons la chaîne de pressage complète et aidons à coordonner le raffinage approvisionné séparément pour l'élimination du gossypol
 - **Prouvé dans les marchés africains** — Nos machines sont utilisées avec succès au Nigeria, au Ghana et en Tanzanie
 - **Prix abordables** — Les prix directs d'usine rendent la production professionnelle d'huile de coton accessible
-- **Réseau de support local** — Pièces de rechange disponibles en stock, support technique via WhatsApp en temps réel`,
+- **Réseau de support local** — Pièces de rechange disponibles en stock, support technique via WhatsApp en temps réel
 
-  'flaxseed-oil-pressing': `## Solution de Pressage d'Huile de Lin
+## Que Vaut 100 kg de Graines de Coton
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de coton brute | 16-22 L | 14-29 $ (à 0,9-1,3 $/L) |
+| Tourteau (alimentation animale) | 75-83 kg | 11-21 $ |
+| **Total par 100 kg** | | **25-50 $** |
+
+L'huile brute doit être raffinée pour éliminer le gossypol avant la vente alimentaire — l'huile de coton raffinée se vend nettement au-dessus de ces fourchettes d'huile brute. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos graines et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Ouest-Africain de la Graine de Coton
+
+- Moteurs bobinés pour **415 V/50 Hz, triphasé** — la norme dans les zones industrielles d'Afrique de l'Ouest — personnalisés sans coût supplémentaire
+- La construction robuste du HN365 gère jour après jour la graine de coton abrasive et riche en fibres
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Lagos ou Tema** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres graines de coton avant de commander`,
+
+  'flaxseed-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour la graine de lin. Comptez sur **28-35 % de rendement en pressage à froid** à partir de graines affichant **33-43 % de teneur en huile**. La seule règle non négociable : pressez **sous 50 °C** — l'huile de lin contient **50-60 % d'oméga-3 ALA**, qui commence à se dégrader au-dessus de cette température, et c'est précisément cette teneur en oméga-3 qui fait que l'huile de lin pressée à froid se vend au détail à **15-30 $/L**. Filtrez naturellement, embouteillez en verre foncé sous azote et stockez au frais : la durée de conservation est de **3-6 mois au réfrigérateur**.
+
+## Solution de Pressage d'Huile de Lin
 
 L'huile de lin est l'une des sources végétales les plus riches en acides gras oméga-3, ce qui en fait un produit premium sur les marchés des compléments alimentaires et de la cuisine gastronomique. Le pressage à froid est essentiel pour l'huile de lin afin de préserver sa délicate teneur en acide alpha-linolénique (ALA).
 
@@ -245,7 +359,25 @@ Pour la production d'huile de lin, nous recommandons :
 2. **Presse filtrante pneumatique** — Filtration naturelle sans produits chimiques
 3. **Pressage à froid de graines crues** — Des graines sèches non torréfiées et la pression hydraulique statique maintiennent le processus en dessous de 50°C sans aucun élément chauffant
 
-Contactez Haonuo pour une installation de production d'huile de lin personnalisée avec un équipement en acier inoxydable de qualité alimentaire.`,
+Contactez Haonuo pour une installation de production d'huile de lin personnalisée avec un équipement en acier inoxydable de qualité alimentaire.
+
+## Que Vaut 100 kg de Graines de Lin
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de lin brute (pressée à froid) | 35-41 L | 525-1 230 $ (à 15-30 $/L au détail) |
+| Tourteau | 57-66 kg | 11-26 $ |
+| **Total par 100 kg** | | **536-1 256 $** |
+
+C'est le prix de détail qui commande cette fourchette — le gros se situe plus bas, donc votre conditionnement et votre canal de vente décident de votre positionnement. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos graines et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce des Huiles Santé Oméga-3
+
+- Moteurs bobinés pour **380 V/50 Hz, triphasé** — ou votre réseau local — personnalisés sans coût supplémentaire
+- Un véritable pressage à froid sous 50 °C protège les oméga-3 ALA sensibles à la chaleur sur lesquels reposent les allégations de votre étiquette
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers le grand port le plus proche de chez vous avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres graines de lin avant de commander`,
 
   'industrial-oil-press': `## Aperçu
 
@@ -384,7 +516,11 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 - Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
 - Démonstration de pressage en direct par appel vidéo avec vos propres graines avant de commander`,
 
-  'olive-oil-pressing': `## Aperçu
+  'olive-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour l'olive. Comptez sur **12-16 % de rendement à partir d'olives vertes** et **16-25 % à partir d'olives noires mûres** (pressage à froid), avec **moins de 5-6 % d'huile résiduelle dans le grignon**. Une ligne de pressage à froid traite **300-1 000 kg d'olives par jour**, produisant environ **50-250 litres d'huile** selon la variété. La règle critique : pressez **dans les 24 heures suivant la récolte** — les olives s'oxydent vite, et des délais au-delà de 48 heures dégradent significativement l'huile.
+
+## Aperçu
 
 L'huile d'olive est la pierre angulaire de la cuisine méditerranéenne et l'une des huiles de cuisson les plus appréciées au monde, l'huile d'olive extra vierge (EVOO) se vendant à des prix premium sur les marchés mondiaux. Une **machine de pressage d'huile d'olive** de qualité est essentielle pour les oléiculteurs et les producteurs d'huile qui souhaitent extraire la meilleure huile de leur récolte tout en préservant la saveur, l'arôme et les propriétés nutritionnelles qui définissent l'huile d'olive premium.
 
@@ -413,7 +549,25 @@ Cette solution est conçue pour les producteurs d'huile d'olive méditerranéens
 - **Préserve les polyphénols** — Le pressage hydraulique fonctionne à basse température, préservant la teneur en polyphénols qui confère à l'huile d'olive ses bienfaits pour la santé et sa stabilité de conservation.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient). Notre presse à huile d'olive est généralement nettement moins chère que les systèmes à centrifugeuse.
 - **Fonctionnement simple** — Contrairement aux systèmes à centrifugeuse complexes nécessitant des opérateurs formés, notre presse hydraulique peut être gérée par une seule personne avec une formation minimale.
-- **Prouvé dans les régions méditerranéennes** — Nos machines de pressage d'huile d'olive sont utilisées avec succès en Grèce, en Espagne, au Maroc, en Tunisie et en Palestine — des régions comptant des siècles de tradition oléicole.`,
+- **Prouvé dans les régions méditerranéennes** — Nos machines de pressage d'huile d'olive sont utilisées avec succès en Grèce, en Espagne, au Maroc, en Tunisie et en Palestine — des régions comptant des siècles de tradition oléicole.
+
+## Que Valent 100 kg d'Olives
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile d'olive extra vierge (pressée à froid) | 20-27 L | 100-324 $ (à 5-12 $/L) |
+| Grignon d'olive | 70-80 kg | 4-12 $ |
+| **Total par 100 kg** | | **104-336 $** |
+
+À 300-1 000 kg/jour, une ligne de pressage à froid transforme les olives en environ **310-3 400 $ de produit par jour** — l'huile de récolte précoce riche en polyphénols se situe en haut de cette fourchette. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos olives et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Méditerranéen de l'Huile d'Olive
+
+- Moteurs bobinés pour **380-400 V/50 Hz, triphasé** — l'alimentation méditerranéenne standard — personnalisés sans coût supplémentaire
+- Fonctionnement par une seule personne — pas besoin de technicien centrifugeuse au pic de la récolte
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Valence, Le Pirée ou Tanger Med** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres olives avant de commander`,
 
   'palm-oil-pressing': `**Réponse Rapide**
 
@@ -523,7 +677,11 @@ Chaque presse hydraulique Haonuo assure **les deux procédés sur une seule mach
 - Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
 - Démonstration de pressage en direct par appel vidéo avec vos propres amandes avant de commander`,
 
-  'sesame-oil-pressing': `## Aperçu
+  'sesame-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour le sésame. Comptez sur **45-50 % de rendement (pressage à froid)**, montant à **47-52 % avec torréfaction**, avec **5 % ou moins d'huile résiduelle dans le tourteau** (≤ 4 % en torréfié). Le fût de 300 mm prend **32,5 kg de sésame par lot — jusqu'à 50 kg avec pré-compression** — et un cycle de pressage à chaud dure environ **30-40 minutes**. Torréfiez à **160-180 °C** pour **+3-5 % de rendement** et le profil aromatique toasté, et maintenez l'humidité des graines à **5-7 %**.
+
+## Aperçu
 
 L'huile de sésame est l'une des huiles de cuisson les plus anciennes et les plus appréciées au monde, prisée pour sa saveur de noix distinctive et son riche profil nutritionnel. Une **machine de pressage d'huile de sésame** haute performance est la pierre angulaire de toute entreprise rentable de production d'huile de sésame, que vous cibliez le marché premium de l'huile pressée à froid ou le segment à fort volume de l'huile de sésame torréfiée populaire en Asie et au Moyen-Orient.
 
@@ -551,9 +709,31 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 - **Taux d'huile résiduelle inférieur à 5 %** — Notre technologie hydraulique extrait plus d'huile par kilogramme de sésame, améliorant directement votre rentabilité.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Capacité double pression à froid/à chaud** — Une seule machine dessert les deux segments de marché, maximisant votre retour sur investissement.
-- **Prouvé à travers l'Asie** — Nos machines de pressage d'huile de sésame sont utilisées avec succès en Inde, en Chine, au Myanmar et au Moyen-Orient — les plus grands marchés d'huile de sésame du monde.`,
+- **Prouvé à travers l'Asie** — Nos machines de pressage d'huile de sésame sont utilisées avec succès en Inde, en Chine, au Myanmar et au Moyen-Orient — les plus grands marchés d'huile de sésame du monde.
 
-  'shea-butter-pressing': `## Aperçu
+## Que Vaut 100 kg de Graines de Sésame
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de sésame brute (pressage à chaud, torréfié) | 46-54 L | 184-432 $ (à 4-8 $/L) |
+| Tourteau de sésame (alimentation animale) | 45-56 kg | 14-28 $ |
+| **Total par 100 kg** | | **198-460 $** |
+
+Avec des cycles de pressage à chaud de 30-40 minutes enchaînés, une presse fait passer environ 500-800 kg de sésame sur une journée de 8 heures — les transformant en **1 000-3 700 $ de produit par jour**. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos graines et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Asiatique du Sésame
+
+- Moteurs bobinés pour **415 V/50 Hz** (Inde), **400 V/50 Hz** (Myanmar) ou votre réseau local — personnalisés sans coût supplémentaire
+- Géométrie de fût conçue spécifiquement pour le sésame — pas une presse générique adaptée pour l'usage
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Nhava Sheva, Yangon ou Jebel Ali** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec votre propre sésame avant de commander`,
+
+  'shea-butter-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour le karité. À partir d'amandes de karité sèches, comptez sur **42-50 % de rendement en beurre** en pressant la pâte torréfiée, avec **moins de 5 % de graisse résiduelle dans le tourteau**. Une machine lourde traite **600-1 200 kg de noix de karité par jour** ; le modèle ultra haute pression atteint **1 200-1 700 kg/jour**. Le karité exige une pression soutenue — nos presses délivrent **40-60 MPa**. Torréfiez à **140-160 °C** (**+5-8 % de rendement**) et broyez les noix en une pâte fine avant le pressage — une pâte grossière laisse du beurre derrière elle.
+
+## Aperçu
 
 Le beurre de karité est une marchandise vitale pour les économies ouest-africaines et un ingrédient hautement valorisé dans les industries cosmétiques et alimentaires mondiales. Une **machine de pressage de beurre de karité** robuste est essentielle pour les producteurs qui veulent dépasser les méthodes d'extraction manuelles traditionnelles et faire évoluer leurs opérations pour répondre à la demande internationale croissante.
 
@@ -581,7 +761,25 @@ Cette solution est conçue spécifiquement pour les conditions de fonctionnement
 - **Créé pour les conditions ouest-africaines** — Construction robuste, maintenance simple et fonctionnement fiable dans des environnements chauds et poussiéreux avec une infrastructure technique limitée.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Transformation à valeur ajoutée** — Notre équipement vous permet de produire du beurre de karité fini localement, capturant l'ensemble de la chaîne de valeur au lieu d'exporter des noix brutes à bas prix.
-- **Prouvé à travers l'Afrique de l'Ouest** — Nos machines de pressage de beurre de karité sont utilisées avec succès au Ghana, au Burkina Faso, au Nigeria et au Mali — au cœur de la production de karité.`,
+- **Prouvé à travers l'Afrique de l'Ouest** — Nos machines de pressage de beurre de karité sont utilisées avec succès au Ghana, au Burkina Faso, au Nigeria et au Mali — au cœur de la production de karité.
+
+## Que Valent 100 kg d'Amandes de Karité
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Beurre de karité brut | 35-45 kg | 70-225 $ (à 2-5 $/kg) |
+| Tourteau de pressage | 50-63 kg | 3-9 $ |
+| **Total par 100 kg** | | **73-234 $** |
+
+À 600-1 200 kg/jour, une machine lourde transforme les noix de karité en environ **440-2 800 $ de produit par jour** — au lieu d'exporter des noix brutes pour une fraction de cette valeur. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos noix et votre prix de vente du beurre et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Ouest-Africain du Karité
+
+- Moteurs bobinés pour **400-415 V/50 Hz, triphasé** — la norme pour le Ghana et le Nigeria — personnalisés sans coût supplémentaire
+- Conçue pour les conditions chaudes et poussiéreuses, avec une maintenance simple et une pression soutenue de 40-60 MPa
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Tema, Lagos ou Abidjan** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres noix de karité avant de commander`,
 
   'small-business-oil-press': `## Aperçu
 
@@ -615,7 +813,11 @@ Cette solution est adaptée pour la production au niveau du village, les opérat
 - **Compatibilité polyvalente des graines** — Une seule machine traite des dizaines de types de graines, vous permettant de vous adapter à la demande du marché et à la disponibilité saisonnière.
 - **Prouvé par des propriétaires de petites entreprises** — Nos petites machines de pressage d'huile sont utilisées avec succès dans des villages, des marchés et de petits ateliers à travers l'Afrique, l'Inde et l'Asie du Sud-Est.`,
 
-  'soybean-oil-pressing': `## Solution de Pressage d'Huile de Soja
+  'soybean-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour le soja, avec une réserve : le soja ne contient que **18-22 % d'huile**, donc comptez sur **12-16 % de rendement en pressage à froid** ou **16-20 % en pressage à chaud** — et rappelez-vous que le tourteau représente souvent **60-70 % du revenu total** comme alimentation animale riche en protéines. Les lignes vont de **100 kg à 10 tonnes par jour**. L'étape de préparation critique : floconnez les graines à **0,3-0,5 mm** et maintenez l'humidité à **10-11 %** — avec une teneur en huile aussi faible, c'est un floconnage correct qui rend le pressage viable.
+
+## Solution de Pressage d'Huile de Soja
 
 Le soja est l'une des cultures oléagineuses les plus importantes au monde, représentant plus de 50 % de la production mondiale d'huile végétale. Que vous produisiez de l'huile de cuisson pour les marchés locaux ou de l'huile de soja pressée à froid premium pour les consommateurs soucieux de leur santé, Haonuo fournit la solution complète.
 
@@ -646,9 +848,31 @@ Le soja est l'une des cultures oléagineuses les plus importantes au monde, repr
 - **Applications Industrielles** : L'huile de soja est utilisée dans la production de biodiesel, les encres d'imprimerie et les lubrifiants industriels.
 - **Tourteau de Soja** : Le tourteau de pressage est un ingrédient d'aliment pour animaux riche en protéines, représentant souvent 60-70 % du revenu total.
 
-Contactez Haonuo dès aujourd'hui pour une solution de production d'huile de soja personnalisée adaptée à votre marché et à votre volume de production.`,
+Contactez Haonuo dès aujourd'hui pour une solution de production d'huile de soja personnalisée adaptée à votre marché et à votre volume de production.
 
-  'sunflower-oil-pressing': `## Aperçu
+## Que Vaut 100 kg de Soja
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de soja brute (pressage à chaud) | 17-22 L | 15-26 $ (à 0,9-1,2 $/L) |
+| Tourteau de soja (alimentation animale) | 75-82 kg | 26-41 $ |
+| **Total par 100 kg** | | **41-67 $** |
+
+À 1-10 t/jour, une ligne Haonuo transforme le soja en environ **410-6 700 $ de produit par jour** — notez que c'est le tourteau, pas l'huile, qui porte la majeure partie de cette valeur. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos graines et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce du Soja à l'Échelle Commerciale
+
+- Moteurs bobinés pour **380 V/50 Hz, triphasé** — ou votre réseau local — personnalisés sans coût supplémentaire
+- Broyeur + laminoir floconneur + presse + filtre configurés en une seule ligne accordée, pour que des graines pauvres en huile restent rentables
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers le grand port le plus proche de chez vous avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec votre propre soja avant de commander`,
+
+  'sunflower-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour le tournesol. Comptez sur **38-44 % de rendement à partir de graines riches en huile** et **48-58 % à partir d'amandes décortiquées**, avec **moins de 5 % d'huile résiduelle dans le tourteau** (≤ 4 % en torréfié). Une ligne standard traite **500-1 500 kg de graines par jour** ; le modèle lourd atteint **3 000 kg/jour**. L'étape de préparation critique : **décortiquez avant le pressage** — les coques absorbent l'huile, et les retirer augmente le rendement effectif de **10-15 %**. Torréfiez à **120-150 °C** pour **3-5 %** supplémentaires.
+
+## Aperçu
 
 L'huile de tournesol est l'une des huiles de cuisson les plus populaires au monde, dominant les cuisines d'Europe de l'Est, de Russie, de Turquie et de plus en plus d'Afrique et d'Amérique du Sud. Une **machine de pressage d'huile de tournesol** fiable est essentielle pour les producteurs cherchant à capitaliser sur cette demande mondiale croissante, que ce soit pour l'huile de tournesol pressée à froid premium ou l'huile de cuisson raffinée à fort volume.
 
@@ -677,9 +901,31 @@ Cette solution gère à la fois les variétés de graines de tournesol riches en
 - **Conception compatible avec le décorticage** — Notre équipement gère à la fois les graines entières et les amandes décortiquées, vous offrant de la flexibilité dans votre processus de production.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Lignes de production complètes** — Du nettoyage des graines à l'huile embouteillée, nous fournissons chaque composant pour une opération de production d'huile de tournesol transparente.
-- **Prouvé en Europe de l'Est et en Afrique** — Nos machines de pressage d'huile de tournesol sont utilisées avec succès en Ukraine, en Russie, en Turquie, en Tanzanie et au Mozambique — des régions clés de production d'huile de tournesol.`,
+- **Prouvé en Europe de l'Est et en Afrique** — Nos machines de pressage d'huile de tournesol sont utilisées avec succès en Ukraine, en Russie, en Turquie, en Tanzanie et au Mozambique — des régions clés de production d'huile de tournesol.
 
-  'walnut-oil-pressing': `## Aperçu
+## Que Vaut 100 kg de Graines de Tournesol
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de tournesol brute (pressage à chaud) | 43-52 L | 39-68 $ (à 0,9-1,3 $/L) |
+| Tourteau de tournesol (alimentation animale) | 47-58 kg | 9-17 $ |
+| **Total par 100 kg** | | **48-85 $** |
+
+À 500-1 500 kg/jour, une ligne standard transforme les graines de tournesol en environ **240-1 275 $ de produit par jour** — le modèle lourd à 3 000 kg/jour double quasiment ce chiffre. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos graines et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce de l'Huile de Tournesol
+
+- Moteurs bobinés pour **380-400 V/50 Hz, triphasé** — ou votre réseau local — personnalisés sans coût supplémentaire
+- Gère graines entières ou amandes décortiquées, pour adapter le procédé à votre approvisionnement en graines
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Dar es Salaam, Maputo ou Mersin** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres graines de tournesol avant de commander`,
+
+  'walnut-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour la noix. Comptez sur **50-62 % de rendement à partir de cerneaux de noix** pressés à froid sous 60 °C, avec **5-8 % d'huile résiduelle dans le tourteau**. La presse ultra haute pression HN500 prend **100 kg par lot** à raison de **4-6 lots par heure**, produisant environ **2 000-3 000 kg d'huile de noix par journée de 8 heures**. La règle critique : restez à froid — le pressage à chaud peut détruire **30-40 % de la teneur en oméga-3** qui justifie les prix premium de l'huile de noix.
+
+## Aperçu
 
 L'huile de noix est l'une des huiles alimentaires les plus premium au monde, prisée pour sa riche teneur en oméga-3, sa délicate saveur de noix et ses nombreux bienfaits pour la santé. Le Moyen-Orient et l'Asie centrale figurent parmi les plus grands consommateurs d'huile de noix, où elle est utilisée à la fois comme huile de cuisson gastronomique et en médecine traditionnelle.
 
@@ -700,5 +946,130 @@ La solution de pressage d'huile de noix de Haonuo Machinery est spécifiquement 
 - **Pressage statique à basse chaleur** — Pas de friction de vis ni d'élément chauffant ; presser les graines crues en dessous de 60°C aide à préserver les oméga-3
 - **Option acier inoxydable de qualité alimentaire** — Disponible pour les clients exigeant les normes d'hygiène les plus élevées
 - **Prouvé dans les marchés du Moyen-Orient** — Nos machines sont utilisées avec succès en Arabie Saoudite, aux Émirats Arabes Unis et en Iran
-- **Garantie de 1 an + support à vie** — Couverture complète avec pièces de rechange expédiées sous 48 heures`
+- **Garantie de 1 an + support à vie** — Couverture complète avec pièces de rechange expédiées sous 48 heures
+
+## Que Valent 100 kg de Cerneaux de Noix
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de noix brute (pressée à froid) | 49-60 L | 392-900 $ (à 8-15 $/L) |
+| Tourteau de noix | 40-53 kg | 20-53 $ |
+| **Total par 100 kg** | | **412-953 $** |
+
+À 4-6 lots par heure, un HN500 presse 3,2-4,8 tonnes de cerneaux par journée de 8 heures — soit environ **13 000-46 000 $ de produit par jour** aux prix indicatifs. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos cerneaux et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Moyen-Oriental de l'Huile de Noix
+
+- Moteurs bobinés pour **380-415 V/50 Hz, triphasé** — l'alimentation industrielle standard du Golfe — personnalisés sans coût supplémentaire
+- Option acier inoxydable de qualité alimentaire pour les exigences d'hygiène de qualité export
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Jebel Ali ou Dammam** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres cerneaux de noix avant de commander`,
+
+  'rice-bran-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo traite le son de riz, à une condition honnête : **pressez-le frais ou stabilisé**. Comptez sur **9-13 % de rendement (pressage à froid)** ou **11-15 % (pressage à chaud)** à partir de son frais et bien stabilisé (15-23 % de teneur en huile), les résultats variant avec la fraîcheur du son. Un fût HN325 traite **100 kg par lot (35-45 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine — un modèle double fût ou HN365 atteint **1 500-2 500 kg/jour**. Le son non stabilisé depuis plus de 24-48 heures produit une huile riche en FFA ; planifiez donc la collecte du son avant d'acheter la machine.
+
+## Aperçu
+
+L'huile de son de riz est l'une des huiles de cuisson les plus saines au monde — riche en gamma-oryzanol, vitamine E et antioxydants naturels — et une huile premium en forte croissance en Inde, au Bangladesh, au Japon et en Asie du Sud-Est. Pour les riziculteurs, le son est un sous-produit à faible coût souvent vendu à bas prix ou jeté ; une **machine de pressage d'huile de son de riz** fiable transforme ce sous-produit en une activité huileuse à haute valeur.
+
+Le défi avec le son de riz n'est pas le pressage — c'est le temps. Le son fraîchement moulu contient des enzymes lipases actives qui augmentent les acides gras libres en quelques heures, ruinant la qualité de l'huile. La solution de pressage de son de riz Haonuo est construite autour de cette réalité : stabiliser le son à la chaleur (notre torréfacteur ou notre cuiseur vapeur) dans les heures suivant la mouture, puis presser avec une **machine d'extraction d'huile de son de riz** hydraulique pour une huile propre à faible FFA.
+
+La solution prend en charge à la fois le pressage à froid (pour une huile de son de riz pressée à froid premium qui conserve le gamma-oryzanol) et le pressage à chaud avec cuisson vapeur (pour un rendement plus élevé), vous offrant la polyvalence de servir les segments diététiques et de masse avec une seule ligne de production.
+
+## Rendements Attendus en Huile
+
+| Matière Première | Teneur en Huile | Rendement de Pressage Attendu | Taux d'Huile Résiduel |
+|---|---|---|---|
+| Son de riz frais stabilisé | 15-20 % | 11-15 % | ≤ 8 % |
+| Son de riz à haute teneur | 18-23 % | 12-16 % | ≤ 8 % |
+| Son stabilisé pressé à froid | 15-20 % | 9-13 % | ≤ 10 % |
+| Son rassis / non stabilisé | 15-20 % | 8-12 % (FFA élevé) | ≤ 10 % |
+
+**Facteurs clés affectant le rendement :**
+- **Fraîcheur du son** : Le facteur le plus important. Pressez sous 24-48 heures après la mouture ou stabilisez à la chaleur immédiatement — les acides gras libres augmentent en quelques heures
+- **Stabilisation** : La cuisson vapeur ou la torréfaction du son stoppe l'activité de la lipase et augmente le rendement de pressage
+- **Teneur en humidité** : L'humidité optimale de pressage est de 6-9 %
+- **Méthode de pressage** : Le pressage à froid donne légèrement moins mais produit une huile premium pour les marchés diététiques
+
+## Pourquoi Choisir Haonuo
+
+- **Conseils d'ingénierie honnêtes** — Nous vous le disons d'emblée : le succès de l'huile de son de riz dépend de la logistique du son, pas seulement de la machine. Nous vous aidons à planifier la stabilisation et la collecte pour protéger la qualité de votre huile.
+- **Conçu pour la ceinture rizicole** — Notre solution de pressage d'huile de son de riz est construite pour les riziculteurs d'Inde, du Bangladesh, du Vietnam, de Thaïlande et d'Indonésie qui disposent d'un approvisionnement quotidien en son frais.
+- **Pressage à froid et à chaud en une ligne** — Produisez une huile de son de riz pressée à froid premium ou une huile pressée à chaud à rendement plus élevé avec le même équipement en ajustant l'étape de préparation.
+- **Prix directs d'usine** — Pas d'intermédiaires. Des prix compétitifs directement du fabricant vous permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient).
+- **Faible coût d'exploitation** — Le pressage hydraulique n'a pas de vis d'usure et consomme moins d'énergie par kilogramme d'huile que les expellers continus de capacité similaire.
+
+## Que Vaut 100 kg de Son de Riz
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de son de riz brute | 11-15 L | 11-23 $ (à 1,00-1,50 $/L, brut) |
+| Son déshuilé (alimentation bovine) | 82-88 kg | 10-18 $ |
+| **Total par 100 kg** | | **21-41 $** |
+
+À 800-1 200 kg/jour, un HN325 transforme le son de riz en environ **170-490 $ de produit par jour** — à partir d'un sous-produit que beaucoup de rizeries vendent quelques centimes le kilogramme. Les prix ci-dessus sont des fourchettes indicatives prudentes ; les prix de l'huile de son de riz brute varient fortement selon le taux de FFA et la demande locale de raffinage. Confirmez les tarifs locaux actuels, puis communiquez-nous le coût de votre son et votre prix de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Rizicole d'Asie du Sud et du Sud-Est
+
+- Moteurs bobinés pour **380-415 V / 50 Hz, triphasé** — l'alimentation industrielle standard en Inde, au Bangladesh et en Asie du Sud-Est, personnalisée sans coût supplémentaire
+- **Configuration prête pour la stabilisation** — associez la presse à notre torréfacteur ou cuiseur vapeur pour que le son moulu le matin soit stabilisé et pressé le jour même
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Calcutta, Chennai, Chittagong, Hô Chi Minh-Ville ou Jakarta** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec votre propre son avant de commander`,
+
+  'animal-fat-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo convient parfaitement à la graisse animale, en complément de votre bouilloire de fonte : fondez la graisse broyée à basse température, puis pressez les crétons chauds pour récupérer la graisse que la simple fonte laisse derrière elle. À partir de **100 kg de parures de graisse propres (75-90 % de graisse)**, comptez environ **70-85 kg de saindoux ou de suif fondu** plus **12-25 kg de crétons pressés**, les résultats variant avec la qualité et la fraîcheur de la graisse. Un fût HN325 traite **100 kg par lot (35-45 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine — un modèle double fût ou HN365 atteint **1 500-2 500 kg/jour**. Si vous servez les marchés musulmans, gardez le suif (bœuf/mouton halal) et le saindoux (porc) sur des lignes totalement séparées.
+
+## Aperçu
+
+Le saindoux et le suif comptent parmi les graisses commercialisées les plus anciennes au monde — et la demande repart à la hausse. Le saindoux se vend sur les marchés de la boulangerie, de la friture et de l'alimentation traditionnelle au Mexique, en Chine, en Espagne et en Europe centrale et orientale, tandis que le suif alimente les industries du savon, de l'alimentation animale, de l'oléochimie et du biodiesel au Pakistan, en Inde, au Moyen-Orient et en Égypte. Pour les abattoirs, les transformateurs de viande et les ateliers de fonte, les parures de graisse sont un sous-produit à faible coût ; une **machine de pressage de graisse animale** fiable transforme ce sous-produit en une activité graissière vendable.
+
+Le rôle de la presse hydraulique est précis et honnête : la fonte à chaud extrait la majeure partie de la graisse, mais les crétons restants contiennent encore une graisse résiduelle précieuse. Presser les crétons chauds avec une **machine de pressage de saindoux et de suif** hydraulique récupère ce résidu, augmentant votre récupération totale de plusieurs points et produisant un tourteau de crétons pressés qui se vend comme ingrédient d'alimentation animale ou d'aliments pour animaux de compagnie.
+
+La fonte à basse température combinée au pressage hydraulique protège également la qualité : une chaleur douce garde la graisse claire de couleur et douce de saveur pour un saindoux de qualité alimentaire, tandis que le suif de bœuf et de mouton plus dur est pressé chaud pour une récupération maximale vers les marchés industriels et alimentaires halal.
+
+## Rendements Attendus en Graisse
+
+| Matière Première | Teneur en Graisse | Rendement de Pressage Attendu | Graisse Résiduelle dans le Tourteau |
+|---|---|---|---|
+| Parures de graisse de porc propres (saindoux) | 80-90 % | 75-85 % | ≤ 8 % |
+| Graisse de bœuf/mouton propre (suif) | 75-88 % | 70-82 % | ≤ 9 % |
+| Graisse de volaille | 70-85 % | 65-78 % | ≤ 10 % |
+| Parures mixtes / de qualité inférieure | 60-75 % | 55-68 % | ≤ 10 % |
+
+**Facteurs clés affectant le rendement :**
+- **Qualité et fraîcheur de la graisse** : Une graisse fraîche et bien parée avec peu de viande attachée donne le rendement le plus élevé et la couleur la plus claire
+- **Température de fonte** : Une fonte douce à basse température protège la qualité alimentaire ; pressez les crétons encore chauds
+- **Taille de broyage** : Des morceaux petits et réguliers fondent plus vite et se pressent plus proprement
+- **Type de matière** : Les crétons de saindoux se pressent facilement ; le suif de bœuf et de mouton est plus dur et nécessite un pressage à chaud pour une récupération complète
+
+## Pourquoi Choisir Haonuo
+
+- **Conseils d'ingénierie honnêtes** — Nous vous le disons d'emblée : la presse fonctionne avec votre processus de fonte, pas à sa place. Nous vous aidons à dimensionner la fonte, le pressage et la filtration comme une seule ligne pour éviter tout goulot d'étranglement.
+- **Conçu pour le commerce de la fonte** — Notre solution de pressage de graisse animale est construite pour les abattoirs et les ateliers de fonte, du Mexique et de l'Espagne au Pakistan et à l'Égypte, avec des conseils pour garder les lignes de suif halal et de saindoux séparées.
+- **Récupération totale plus élevée** — Le pressage hydraulique des crétons chauds récupère la graisse résiduelle que la simple fonte laisse derrière elle, et le tourteau pressé se vend comme ingrédient d'alimentation animale.
+- **Prix directs d'usine** — Pas d'intermédiaires. Des prix compétitifs directement du fabricant vous permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient).
+- **Faible coût d'exploitation** — Le pressage hydraulique n'a pas de vis d'usure et consomme moins d'énergie par kilogramme de graisse que les expellers continus de capacité similaire.
+
+## Que Valent 100 kg de Parures de Graisse Animale
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Saindoux (qualité alimentaire) | 75-85 kg | 68-128 $ (à 0,90-1,50 $/kg) |
+| Suif (qualité industrielle/alimentaire) | 70-82 kg | 49-90 $ (à 0,70-1,10 $/kg) |
+| Crétons pressés (alimentation animale) | 12-25 kg | 4-15 $ (à 0,30-0,60 $/kg) |
+| **Total par 100 kg** | | **55-140 $** |
+
+À 800-1 200 kg/jour, un HN325 transforme les parures de graisse en environ **440-1 680 $ de produit par jour** — à partir d'un sous-produit que beaucoup de transformateurs paient pour éliminer. Les prix ci-dessus sont des fourchettes indicatives prudentes ; les prix du saindoux et du suif varient fortement selon la qualité, la région et la saison. Confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos parures et votre prix de la graisse et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce de la Fonte et des Graisses Alimentaires
+
+- Moteurs bobinés pour **380-415 V / 50 Hz, triphasé** — l'alimentation industrielle standard au Mexique, en Europe, en Afrique du Nord et en Asie du Sud, personnalisée sans coût supplémentaire
+- **Conseils pour ligne halal** — nous conseillons sur l'agencement et le nettoyage pour que la production de suif halal et de saindoux reste totalement séparée lorsque vos acheteurs l'exigent
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Karachi, Alexandrie, Veracruz, Gdansk ou Barcelone** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres parures de graisse avant de commander`,
 };

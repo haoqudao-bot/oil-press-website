@@ -124,6 +124,10 @@ seoKeywords:
 order: 10
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for castor. Expect **40-50% yield from dehulled seeds**, rising to **43-51% with roasting**, with **residual oil in cake under 5%** (≤4% roasted). Castor's hard seed structure needs sustained pressure — our presses deliver **40-55 MPa**, which is why they beat screw presses on residual oil. Dehull before pressing (worth **+5-8% yield**), roast at **80-100°C** for a further **3-5%**, and hold seed moisture at **5-7%**.
+
 ## Overview
 
 Castor oil is a unique industrial oil with applications spanning pharmaceuticals, lubricants, cosmetics, biodiesel, and specialty chemicals. Unlike most vegetable oils, castor oil contains ricinoleic acid — a rare fatty acid that gives it exceptional properties including high viscosity, lubricity, and biodegradability. A reliable **castor oil press machine** is essential for producers looking to capitalize on the growing global demand for this versatile oil.
@@ -164,5 +168,23 @@ This solution supports both cold pressing (for medicinal and cosmetic-grade cast
 
 *Typical figures for well-prepared castor seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Castor Seeds Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude castor oil (hot press) | 43-52 L | $65-156 (@ $1.5-3/L) |
+| Oil cake (fertilizer grade)* | 47-58 kg | $5-12 |
+| **Total per 100 kg** | | **$70-168** |
+
+\* Castor cake contains ricin and is sold as fertilizer, not animal feed. Prices above are indicative ranges — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Indian Castor Trade
+
+- Motors wound for **415V/50Hz, 3-phase** — the standard Indian industrial supply (220V/60Hz available for Brazil) — customized at no extra cost
+- 40-55 MPa pressing force handles castor's hard seed structure without pre-press passes
+- Shipped **FOB Qingdao**; we arrange sea freight to **Mundra, Nhava Sheva or Santos** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own castor seed before you order
 
 

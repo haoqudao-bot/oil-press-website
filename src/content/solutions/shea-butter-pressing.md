@@ -117,6 +117,10 @@ seoKeywords:
 order: 6
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for shea. From dry shea kernels expect **42-50% butter yield** pressing roasted paste, with **residual fat in cake under 5%**. One heavy-duty machine processes **600-1,200 kg of shea nuts per day**; the ultra-high-pressure model reaches **1,200-1,700 kg/day**. Shea needs sustained pressure — our presses deliver **40-60 MPa**. Roast at **140-160°C** (**+5-8% yield**) and grind the nuts to a fine paste before pressing — coarse paste leaves butter behind.
+
 ## Overview
 
 Shea butter is a vital commodity for West African economies and a highly valued ingredient in the global cosmetics and food industries. A robust **shea butter press machine** is essential for producers who want to move beyond traditional hand-extraction methods and scale their operations to meet growing international demand.
@@ -157,5 +161,23 @@ This solution is designed specifically for West African operating conditions, wi
 
 *Typical figures for well-prepared dry shea kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L. Output is shea butter rather than liquid oil.*
 <!-- /yield-block -->
+
+## What 100 kg of Shea Kernels Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Unrefined shea butter | 35-45 kg | $70-225 (@ $2-5/kg) |
+| Press cake | 50-63 kg | $3-9 |
+| **Total per 100 kg** | | **$73-234** |
+
+At 600-1,200 kg/day, one heavy-duty machine turns shea nuts into roughly **$440-2,800 of product per day** — instead of exporting raw nuts at a fraction of that value. Prices above are indicative ranges — confirm current local rates, then tell us your nut cost and butter price and we will calculate your exact daily margin.
+
+## Built for the West African Shea Trade
+
+- Motors wound for **400-415V/50Hz, 3-phase** — standard for Ghana and Nigeria — customized at no extra cost
+- Built for hot, dusty conditions with simple maintenance and 40-60 MPa sustained pressure
+- Shipped **FOB Qingdao**; we arrange sea freight to **Tema, Lagos or Abidjan** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own shea nuts before you order
 
 

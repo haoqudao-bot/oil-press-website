@@ -11,6 +11,7 @@ const marketOrder: Record<string, number> = {
   soybean: 1, palm: 2, sunflower: 3, peanut: 4, cottonseed: 5,
   mustard: 6, sesame: 7, olive: 8, coconut: 9, shea: 10,
   castor: 11, almond: 12, avocado: 13, flaxseed: 14, walnut: 15,
+  'rice-bran': 16, 'animal-fat': 17,
 };
 
 const seedSolutions = allSolutions
@@ -22,6 +23,7 @@ const seedIcons: Record<string, string> = {
   sunflower: '🌻', shea: '🧈', palm: '🌴', avocado: '🥑',
   almond: '🌰', castor: '🌱', olive: '🫒', cottonseed: '🎯',
   soybean: '🫘', walnut: '🌰', flaxseed: '🌾',
+  'rice-bran': '🍚', 'animal-fat': '🐄',
 };
 
 const seedDetails: Record<string, {
@@ -119,6 +121,18 @@ const seedDetails: Record<string, {
     oilContent: '50-60%',
     bestFor: 'Small Business',
     typicalYield: '45-55%',
+  },
+  'rice-bran': {
+    description: 'Rice bran oil production from fresh or stabilized bran. Honest guidance on rancidity control for rice millers in South and Southeast Asia.',
+    oilContent: '15-23%',
+    bestFor: 'Rice Mills & Commercial',
+    typicalYield: '9-15%',
+  },
+  'animal-fat': {
+    description: 'Lard and tallow production from clean fat trimmings. Low-temperature rendering plus hydraulic pressing of hot cracklings for maximum fat recovery.',
+    oilContent: '75-90%',
+    bestFor: 'Rendering Plants & Commercial',
+    typicalYield: '70-85%',
   },
 };
 

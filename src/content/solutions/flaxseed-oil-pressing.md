@@ -97,6 +97,10 @@ seoKeywords:
 order: 18
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for flaxseed. Expect **28-35% cold press yield** from seed carrying **33-43% oil content**. The one non-negotiable rule: press **below 50°C** — flaxseed oil is **50-60% omega-3 ALA**, which starts degrading above that temperature, and that omega-3 content is exactly why cold-pressed flaxseed oil retails at **$15-30/L**. Filter naturally, bottle in dark glass under nitrogen, and store cool: shelf life is **3-6 months refrigerated**.
+
 ## Flaxseed Oil Pressing Solution
 
 Flaxseed (linseed) oil is one of the richest plant-based sources of omega-3 fatty acids, making it a premium product in the health supplement and gourmet cooking markets. Cold pressing is essential for flaxseed oil to preserve its delicate alpha-linolenic acid (ALA) content.
@@ -137,5 +141,23 @@ Flaxseed (linseed) oil is one of the richest plant-based sources of omega-3 fatt
 
 *Typical figures for well-prepared flaxseeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Flaxseed Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude flaxseed oil (cold-pressed) | 35-41 L | $525-1,230 (@ $15-30/L retail) |
+| Oil cake | 57-66 kg | $11-26 |
+| **Total per 100 kg** | | **$536-1,256** |
+
+Retail pricing drives that range — bulk wholesale sits lower, so your packaging and sales channel decide where you land. Prices above are indicative ranges — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Omega-3 Health Oil Trade
+
+- Motors wound for **380V/50Hz, 3-phase** — or your local grid — customized at no extra cost
+- True cold pressing below 50°C protects the heat-sensitive ALA omega-3 your label claims depend on
+- Shipped **FOB Qingdao**; we arrange sea freight to your nearest major port with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own flaxseed before you order
 
 

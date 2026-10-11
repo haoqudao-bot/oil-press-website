@@ -1,17 +1,19 @@
 ---
 title:
-  en: Complete Oil Production Line Guide
-  fr: Guide complet de ligne de production d'huile
-  ar: دليل خط إنتاج الزيت الكامل
-  id: Panduan Garis Produksi Minyak Lengkap
+  en: "Oil Mill Plant Guide: Complete Production Line Equipment, Layout & Cost"
+  fr: "Guide d'huilerie : équipements complets de ligne de production, agencement et coût"
+  ar: "دليل مصنع معصرة الزيت: معدات خط الإنتاج الكامل والتخطيط والتكلفة"
+  id: "Panduan Pabrik Minyak: Peralatan Lini Produksi Lengkap, Tata Letak & Biaya"
 description:
-  en: Complete oil production line design guide from raw material cleaning, pressing, filtering to refining, including equipment selection, layout planning, and cost estimation
-  fr: Guide complet de conception de ligne de production d'huile du nettoyage des matières premières au pressage, filtrage et raffinage, incluant la sélection d'équipements et la planification
-  ar: دليل تصميم خط إنتاج الزيت الكامل من تنظيف المواد الأولية إلى العصر والترشيح والتكرير، بما في ذلك اختيار المعدات وتخطيط المصنع وتقدير التكلفة
-  id: Panduan lengkap desain lini produksi minyak dari pembersihan bahan baku, pengepresan, penyaringan hingga pemurnian, termasuk pemilihan peralatan dan estimasi biaya
+  en: Complete oil mill plant design guide from raw material cleaning, pressing, filtering to refining — oil mill machinery selection, layout planning, and cost estimation
+  fr: Guide complet de conception d'huilerie du nettoyage des matières premières au pressage, filtrage et raffinage — choix des machines, planification de l'agencement et estimation des coûts
+  ar: دليل تصميم مصنع معصرة الزيت الكامل من تنظيف المواد الأولية إلى العصر والترشيح والتكرير — اختيار معدات المعصرة وتخطيط المصنع وتقدير التكلفة
+  id: Panduan lengkap desain pabrik minyak dari pembersihan bahan baku, pengepresan, penyaringan hingga pemurnian — pemilihan mesin pabrik minyak, perencanaan tata letak, dan estimasi biaya
 type: guide
 publishedAt: 2026-07-11
 seoKeywords:
+  - oil mill plant
+  - oil mill machinery
   - oil production line design
   - hydraulic oil press line
   - oil mill equipment
@@ -21,7 +23,7 @@ seoKeywords:
 
 A hydraulic oil press is the heart of an oil mill, but the machine alone does not determine output or quality. What buyers actually pay for is a **production line**: cleaning, dehulling, conditioning, roasting, crushing, pressing, filtering, storing, and cake handling, each sized so that no station waits on the next. A balanced line with one 100 kg press can outproduce a larger press starved by a slow roaster or a clogged filter.
 
-This guide walks through every station in a small-to-medium edible oil line, explains how to balance capacities, gives realistic space and utility figures, and ends with budget planning so you can talk to suppliers with numbers rather than guesses.
+This guide walks through every station in a small-to-medium oil mill plant, explains how to balance capacities, gives realistic space and utility figures, and ends with budget planning so you can talk to suppliers with numbers rather than guesses.
 
 ## Production Line Components
 

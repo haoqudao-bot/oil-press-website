@@ -122,6 +122,10 @@ seoKeywords:
 order: 1
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for coconut. From dried copra expect **55-62% yield (hot press)**; from fresh grated meat for VCO, **28-32%** — with **residual oil in cake at 5-6% or below**. A pressing cycle runs about **30-40 minutes hot (around 2 hours cold)**, and one line processes **500-2,000 kg of coconut per day**. The critical number: press copra at **below 6% moisture** — properly dried material releases dramatically more oil than fresh meat.
+
 ## Overview
 
 Coconut oil remains one of the most sought-after vegetable oils worldwide, driven by growing demand in food, cosmetics, and health industries. A reliable **coconut oil press machine** is essential for producers who want to extract high-quality oil while maximizing yield and minimizing waste. Whether you are producing virgin coconut oil (VCO) for the premium health market or RBD coconut oil for commercial food processing, having the right equipment makes all the difference.
@@ -164,4 +168,22 @@ Understanding expected yields is critical for business planning. Below are typic
 
 *Typical figures at standard machine settings; actual results vary with variety, maturity, moisture and cycle settings. Liters assume an oil density of approximately 0.92 kg/L. Hot-press figures are for dried copra; cold-press VCO figures are for fresh grated meat.*
 <!-- /yield-block -->
+
+## What 100 kg of Copra Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude coconut oil (hot press) | 65-71 L | $78-142 (@ $1.2-2/L) |
+| Copra cake (animal feed) | 30-35 kg | $6-12 |
+| **Total per 100 kg** | | **$84-154** |
+
+At 500-2,000 kg/day, one line turns copra into roughly **$420-3,100 of product per day** — and pressing fresh meat into VCO instead commands a clear price premium per liter on lower volume. Prices above are indicative ranges — confirm current local rates, then tell us your copra cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Tropical Coconut Trade
+
+- Motors wound for **380-415V/50Hz, 3-phase** (60Hz available for the Philippines) — customized at no extra cost
+- One press handles both copra oil and coconut milk extraction for VCO production
+- Shipped **FOB Qingdao**; we arrange sea freight to **Jakarta, Manila or Cochin** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own copra before you order
 
