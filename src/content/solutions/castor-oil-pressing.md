@@ -111,7 +111,7 @@ faqId:
   - question: Apakah penekanan minyak jarak menguntungkan?
     answer: Ya, minyak jarak memiliki permintaan industri yang tinggi untuk pelumas, farmasi, dan biodiesel. India dan Brazil adalah pasar terbesar.
   - question: Bisakah minyak jarak di-press dingin?
-    answer: Ya, minyak jarak press dingin lebih disukai untuk aplikasi obat dan kosmetik. Cold Press Hydraulic Oil Press kami cocok untuk tujuan ini.
+    answer: Ya, minyak jarak press dingin lebih disukai untuk aplikasi obat dan kosmetik. mesin press hidrolik dingin kami cocok untuk tujuan ini.
   - question: Berapa harga mesin press minyak jarak?
     answer: Hubungi kami untuk harga sesuai kebutuhan produksi Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Apakah minyak jarak aman ditangani selama penekanan?
@@ -133,7 +133,7 @@ order: 10
 
 Yes — the Haonuo hydraulic oil press is built for castor. Expect **40-50% yield from dehulled seeds**, rising to **43-51% with roasting**, with **residual oil in cake under 5%** (≤4% roasted). Castor's hard seed structure needs sustained pressure — our presses deliver **40-55 MPa**, which is why they beat screw presses on residual oil. Dehull before pressing (worth **+5-8% yield**), roast at **80-100°C** for a further **3-5%**, and hold seed moisture at **5-7%**.
 
-## Overview
+## Castor Oil Press Overview
 
 Castor oil is a unique industrial oil with applications spanning pharmaceuticals, lubricants, cosmetics, biodiesel, and specialty chemicals. Unlike most vegetable oils, castor oil contains ricinoleic acid — a rare fatty acid that gives it exceptional properties including high viscosity, lubricity, and biodegradability. A reliable **castor oil press machine** is essential for producers looking to capitalize on the growing global demand for this versatile oil.
 
@@ -141,7 +141,7 @@ Haonuo's castor oil pressing solution is built around our high-pressure hydrauli
 
 This solution supports both cold pressing (for medicinal and cosmetic-grade castor oil) and hot pressing (for industrial-grade oil with higher yield), giving you the flexibility to serve different market segments.
 
-## Oil Yield Expectations
+## Castor Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|

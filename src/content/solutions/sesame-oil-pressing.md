@@ -134,7 +134,7 @@ order: 2
 
 Yes — the Haonuo hydraulic oil press is built for sesame. Expect **45-50% yield (cold press)**, rising to **47-52% with roasting**, with **residual oil in cake at 5% or below** (≤4% roasted). The 300 mm barrel takes **32.5 kg of sesame per batch — up to 50 kg with pre-compression** — and a hot-press cycle runs about **30-40 minutes**. Roast at **160-180°C** for **+3-5% yield** and the aromatic toasted profile, and hold seed moisture at **5-7%**.
 
-## Overview
+## Sesame Oil Press Overview
 
 Sesame oil is one of the oldest and most valued cooking oils in the world, prized for its distinctive nutty flavor and rich nutritional profile. A high-performance **sesame oil press machine** is the cornerstone of any profitable sesame oil production business, whether you are targeting the premium cold-pressed market or the high-volume roasted sesame oil segment popular across Asia and the Middle East.
 
@@ -142,7 +142,7 @@ Haonuo's sesame oil pressing solution leverages our proprietary hydraulic press 
 
 This solution supports both cold pressing (for premium, nutrient-rich sesame oil) and hot pressing with roasting (for aromatic toasted sesame oil), giving you the flexibility to serve different market segments with a single production line.
 
-## Oil Yield Expectations
+## Sesame Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|

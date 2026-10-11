@@ -134,7 +134,7 @@ order: 7
 
 Yes — the Haonuo high-pressure hydraulic press is built for palm kernels, one of the hardest oilseeds to press. Expect **42-50% yield from dried, crushed kernels** with **residual oil in cake at 5% or less** (down to 4% at the full 40-55 MPa pressing range). The heavy-duty single-barrel model processes **600-1,200 kg/day**; the ultra-high-pressure double-barrel model reaches **1,200-1,700 kg/day** hot press. Preparation matters: crack the nuts, dry kernels below 7% moisture, and crush to 2-4 mm pieces before pressing.
 
-## Overview
+## Palm & Palm Kernel Oil Press Overview
 
 Palm kernel oil is a highly versatile oil derived from the kernel (seed) of the oil palm fruit, distinct from the more common palm oil extracted from the fruit's flesh. A dependable **palm kernel oil press machine** is essential for producers in Southeast Asia and Africa who want to maximize the value of their palm fruit harvest by processing both the flesh and the kernel.
 
@@ -142,7 +142,7 @@ Haonuo's palm kernel oil pressing solution is built around our high-pressure hyd
 
 This solution covers the process from kernel separation through pressing and filtration, with optional refining handled by separately sourced equipment, enabling you to produce both food-grade and industrial-grade palm kernel oil.
 
-## Oil Yield Expectations
+## Palm Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|

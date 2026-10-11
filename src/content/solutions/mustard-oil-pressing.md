@@ -111,7 +111,7 @@ faqId:
   - question: Berapa hasil minyak dari biji sawi?
     answer: Biji sawi biasanya mengandung 35-40% minyak. Press hidrolik kami dapat mengekstrak lebih dari 90% minyak yang tersedia.
   - question: Apakah saya bisa memproduksi minyak sawi press dingin?
-    answer: Ya, Cold Press Hydraulic Oil Press kami (HN426) sangat baik untuk produksi minyak sawi press dingin.
+    answer: Ya, mesin press hidrolik dingin kami (HN426) sangat baik untuk produksi minyak sawi press dingin.
   - question: Berapa harga mesin press minyak sawi?
     answer: Hubungi kami untuk harga sesuai kebutuhan produksi Anda. Kami menawarkan harga langsung pabrik yang kompetitif.
   - question: Apakah pengukusan diperlukan sebelum menekan biji sawi?
@@ -136,7 +136,7 @@ order: 4
 
 Yes — the Haonuo hydraulic oil press is built for mustard. Expect **30-38% yield (cold press)** or **33-41% (hot press)** from cleaned seeds, with **residual oil in cake under 5%**. One HN325 barrel takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. For traditional **Kachi Ghani** cold-pressed mustard oil, skip steaming and press below 60°C.
 
-## Overview
+## Mustard Oil Press Overview
 
 Mustard oil is a staple cooking oil across South Asia — India, Bangladesh, Nepal, and Pakistan — where it is deeply embedded in culinary traditions and cultural practices. A dependable **mustard oil press machine** is the foundation of any mustard oil production business, whether you produce traditional Kachi Ghani cold-pressed oil or refined mustard oil for the mass market.
 
@@ -144,7 +144,7 @@ Haonuo's mustard oil pressing solution is specifically designed for the high-dem
 
 The solution supports both cold pressing (for premium Kachi Ghani mustard oil) and hot pressing with steaming (for higher yield and milder flavor), giving you the versatility to serve diverse market segments with a single production line.
 
-## Oil Yield Expectations
+## Mustard Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|

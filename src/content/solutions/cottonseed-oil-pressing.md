@@ -104,13 +104,13 @@ order: 16
 
 Yes — the Haonuo hydraulic oil press is built for cottonseed. Whole cottonseed yields **15-18%**; after delinting and decortication, kernels yield **28-34%**, with **residual oil in cake at 5-7%**. Cottonseed is almost always **hot-pressed** — cold pressing is not common for this seed. The critical preparation step: **delint before pressing** — cotton lint absorbs oil and costs you **3-5% of yield**. And remember crude cottonseed oil must be refined to remove gossypol before it can be sold as edible oil.
 
-## Overview
+## Cottonseed Oil Press Overview
 
 Cottonseed oil is a major vegetable oil in West Africa, particularly Nigeria, which is Africa's largest cotton producer. With growing demand for affordable cooking oil in the region, cottonseed oil production presents a significant business opportunity.
 
 Haonuo Machinery's cottonseed oil pressing solution is designed for the unique challenges of processing cottonseed — its high fiber content, the need for delinting, and the critical requirement to remove gossypol during refining. Our heavy-duty hydraulic press handles cottonseed efficiently, delivering high oil yield and quality.
 
-## Oil Yield Expectations
+## Cottonseed Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Yield | Residual Oil in Cake |
 |-------------|------------|---------------|---------------------|

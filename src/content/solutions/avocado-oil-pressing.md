@@ -53,7 +53,7 @@ processStepsId:
   - step: Pengeringan (Opsional)
     description: Keringkan pasta alpukat untuk mengurangi kadar air demi ekstraksi minyak yang lebih baik
   - step: Press Dingin
-    description: Gunakan Cold Press Hydraulic Oil Press untuk minyak alpukat press dingin premium
+    description: Gunakan mesin press hidrolik dingin untuk minyak alpukat press dingin premium
   - step: Filtrasi
     description: Saring untuk mendapatkan minyak alpukat yang jernih dan premium
 faq:
@@ -106,7 +106,7 @@ faqAr:
 
 faqId:
   - question: Bisakah saya menekan dingin minyak alpukat?
-    answer: Ya, Cold Press Hydraulic Oil Press (HN426) kami cocok untuk penekanan dingin minyak alpukat, menjaga nutrisi dan warna hijau alami.
+    answer: Ya, mesin press hidrolik dingin (HN426) kami cocok untuk penekanan dingin minyak alpukat, menjaga nutrisi dan warna hijau alami.
   - question: Berapa kandungan minyak alpukat?
     answer: Alpukat mengandung 15-25% minyak tergantung varietas dan tingkat kematangan. Alpukat Hass biasanya memiliki kandungan minyak yang lebih tinggi.
   - question: Bisakah saya menekan biji alpukat?
@@ -132,7 +132,7 @@ order: 8
 
 Yes — the Haonuo hydraulic oil press is built for avocado. From fresh Hass pulp expect **14-20% yield (cold press)**; drying the pulp first lifts that to **30-44%**, with **residual oil in cake under 5-6%**. One cold press line processes **300-1,000 kg of avocado pulp per day**. The critical preparation step: fresh avocado flesh is about **70% water**, which creates emulsions and slashes yield — dry the pulp before pressing and you can roughly **double your effective yield**, while staying below 60°C preserves the emerald color buyers pay for.
 
-## Overview
+## Avocado Oil Press Overview
 
 Avocado oil has surged in popularity as a premium cooking and cosmetic oil, prized for its high smoke point, rich monounsaturated fat content, and distinctive buttery flavor. A specialized **avocado oil press machine** is essential for producers who want to extract this high-value oil while preserving the nutrients and natural green color that justify premium pricing.
 
@@ -140,7 +140,7 @@ Haonuo's avocado oil pressing solution is built around our cold press hydraulic 
 
 This solution is designed for the growing avocado oil market in Mexico, Kenya, New Zealand, South Africa, and the United States, where demand for premium cold-pressed avocado oil continues to outpace supply.
 
-## Oil Yield Expectations
+## Avocado Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|

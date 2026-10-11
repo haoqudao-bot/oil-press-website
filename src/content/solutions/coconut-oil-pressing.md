@@ -126,7 +126,7 @@ order: 1
 
 Yes — the Haonuo hydraulic oil press is built for coconut. From dried copra expect **55-62% yield (hot press)**; from fresh grated meat for VCO, **28-32%** — with **residual oil in cake at 5-6% or below**. A pressing cycle runs about **30-40 minutes hot (around 2 hours cold)**, and one line processes **500-2,000 kg of coconut per day**. The critical number: press copra at **below 6% moisture** — properly dried material releases dramatically more oil than fresh meat.
 
-## Overview
+## Coconut Oil Press Overview
 
 Coconut oil remains one of the most sought-after vegetable oils worldwide, driven by growing demand in food, cosmetics, and health industries. A reliable **coconut oil press machine** is essential for producers who want to extract high-quality oil while maximizing yield and minimizing waste. Whether you are producing virgin coconut oil (VCO) for the premium health market or RBD coconut oil for commercial food processing, having the right equipment makes all the difference.
 
@@ -134,7 +134,7 @@ Haonuo's coconut oil pressing solution is built around our specialized hydraulic
 
 This solution covers every stage from raw coconut preparation through filtration, with optional refining handled by separately sourced equipment, giving you a production line that can be scaled from 500 kg to over 2,000 kg of coconut per day.
 
-## Oil Yield Expectations
+## Coconut Oil Yield Expectations
 
 Understanding expected yields is critical for business planning. Below are typical oil yield rates for coconut pressing:
 

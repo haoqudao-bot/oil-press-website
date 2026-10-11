@@ -50,7 +50,7 @@ processStepsId:
   - step: Persiapan Zaitun
     description: Bersihkan dan pilah zaitun, hilangkan daun dan kotoran
   - step: Press Dingin
-    description: Gunakan Cold Press Hydraulic Oil Press untuk minyak zaitun press dingin premium
+    description: Gunakan mesin press hidrolik dingin untuk minyak zaitun press dingin premium
   - step: Filtrasi
     description: Saring minyak yang ditekan menggunakan Pneumatic Oil Filter Press untuk minyak zaitun yang jernih dan berkualitas
   - step: Pengisian Botol
@@ -105,7 +105,7 @@ faqAr:
 
 faqId:
   - question: Apakah press hidrolik dapat mengekstrak minyak zaitun?
-    answer: Ya, Cold Press Hydraulic Oil Press kami sangat baik untuk ekstraksi minyak zaitun. Metode press dingin menjaga rasa, aroma, dan nutrisi alami zaitun.
+    answer: Ya, mesin press hidrolik dingin kami sangat baik untuk ekstraksi minyak zaitun. Metode press dingin menjaga rasa, aroma, dan nutrisi alami zaitun.
   - question: Berapa kandungan minyak zaitun?
     answer: Zaitun biasanya mengandung 15-30% minyak tergantung varietas dan tingkat kematangan. Varietas Mediterania seperti Koroneiki dan Arbequina populer untuk press.
   - question: Press dingin vs ekstraksi minyak zaitun tradisional?
@@ -132,7 +132,7 @@ order: 11
 
 Yes — the Haonuo hydraulic oil press is built for olives. Expect **12-16% yield from green olives** and **16-25% from ripe black olives** (cold press), with **residual oil in pomace under 5-6%**. One cold press line processes **300-1,000 kg of olives per day**, producing roughly **50-250 liters of oil** depending on variety. The critical rule: press **within 24 hours of harvest** — olives oxidize fast, and delays beyond 48 hours significantly degrade the oil.
 
-## Overview
+## Olive Oil Press Overview
 
 Olive oil is the cornerstone of Mediterranean cuisine and one of the most valued cooking oils worldwide, with extra virgin olive oil (EVOO) commanding premium prices in global markets. A quality **olive oil press machine** is essential for olive growers and oil producers who want to extract the finest oil from their harvest while preserving the flavor, aroma, and nutritional properties that define premium olive oil.
 
@@ -140,7 +140,7 @@ Haonuo's olive oil pressing solution is built around our cold press hydraulic te
 
 This solution is designed for Mediterranean, Middle Eastern, and New World olive oil producers who demand the highest quality from their olive harvest.
 
-## Oil Yield Expectations
+## Olive Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|

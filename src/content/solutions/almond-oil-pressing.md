@@ -45,7 +45,7 @@ processStepsId:
   - step: Persiapan Almond
     description: Membersihkan dan menyortir almond, secara opsional blansir untuk menghilangkan kulit
   - step: Press Dingin
-    description: Gunakan Cold Press Hydraulic Oil Press untuk minyak almond press dingin premium
+    description: Gunakan mesin press hidrolik dingin untuk minyak almond press dingin premium
   - step: Filtrasi
     description: Saring untuk mendapatkan minyak almond yang jernih dan premium
 faq:
@@ -125,7 +125,7 @@ order: 9
 
 Yes — the Haonuo hydraulic oil press is built for almonds. Expect **44-50% yield (cold press)** from shelled sweet almonds — up to **47-52% with roasted kernels** — with **residual oil in cake under 5%**. One cold press line processes **300-1,000 kg of almonds per day**, producing roughly **150-500 liters of oil**. Shell the almonds before pressing (blanching off the skins improves yield and lightens the oil), hold moisture at **4-6%**, and keep the press **below 60°C** to protect the vitamin E that justifies premium pricing.
 
-## Overview
+## Almond Oil Press Overview
 
 Almond oil is one of the most valuable specialty oils in the world, commanding premium prices in both the cosmetics and health food markets. A quality **almond oil press machine** is essential for producers who want to extract this high-value oil while preserving the vitamins, fatty acids, and delicate natural aroma that justify premium pricing.
 
@@ -133,7 +133,7 @@ Haonuo's almond oil pressing solution is built around our cold press hydraulic t
 
 With almonds containing 50-55% oil — among the highest of all oilseeds — almond oil pressing offers excellent returns on investment, particularly for producers targeting the growing natural cosmetics and organic food markets.
 
-## Oil Yield Expectations
+## Almond Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|

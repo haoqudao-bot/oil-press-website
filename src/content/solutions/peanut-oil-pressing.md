@@ -156,7 +156,7 @@ order: 3
 
 Yes — the Haonuo hydraulic oil press is built for peanuts (groundnuts). Expect **40-48% yield (hot press, roasted kernels)** or **38-44% (cold press)** from shelled kernels, with **residual oil in cake at 6-8%** — against 10-12% for conventional drilled-barrel presses. One HN325 barrel takes **100 kg per batch (30-60 min hot press)**, so a single machine runs roughly **800-1,200 kg/day**; a double-barrel or HN365 reaches **1,500-2,500 kg/day**. Always shell first: pressing unshelled peanuts cuts yield by 15-25%.
 
-## Overview
+## Peanut Oil Press Overview
 
 Groundnut (peanut) oil is the everyday cooking oil of West Africa — Nigeria is one of the world's largest groundnut producers — and demand is equally strong in India, China and Southeast Asia. A hydraulic **peanut oil press machine** lets small and mid-sized mills press aromatic hot-pressed oil or premium cold-pressed oil directly from shelled kernels, for local markets or export buyers.
 
@@ -164,7 +164,7 @@ Haonuo's peanut pressing solution is built around hydraulic press technology. Un
 
 Every Haonuo hydraulic press handles **both routes on one machine**: cold pressing for premium, nutrient-rich oil, and hot pressing after roasting for a stronger aroma and 3-5% more oil per batch. The difference is entirely in seed preparation, which is exactly why the seven-step process below matters.
 
-## Oil Yield Expectations
+## Peanut Oil Yield Expectations
 
 | Feed material | Oil content | Expected oil yield | Residual oil in cake |
 |---|---|---|---|

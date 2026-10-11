@@ -113,13 +113,13 @@ order: 15
 
 Yes — the Haonuo hydraulic oil press is built for walnut. Expect **50-62% yield from walnut kernels** cold-pressed below 60°C, with **residual oil in cake at 5-8%**. The HN500 ultra-high-pressure press takes **100 kg per batch** at **4-6 batches per hour**, producing roughly **2,000-3,000 kg of walnut oil per 8-hour day**. The critical rule: keep it cold — hot pressing can destroy **30-40% of the omega-3 content** that makes walnut oil worth premium prices.
 
-## Overview
+## Walnut Oil Press Overview
 
 Walnut oil is one of the most premium edible oils in the world, prized for its rich omega-3 content, delicate nutty flavor, and numerous health benefits. The Middle East and Central Asia are among the largest consumers of walnut oil, where it is used both as a gourmet cooking oil and in traditional medicine.
 
 Haonuo Machinery's walnut oil pressing solution is specifically designed for producers who demand the highest quality cold-pressed walnut oil. Our ultra-high pressure hydraulic press technology ensures maximum oil extraction while preserving the heat-sensitive omega-3 fatty acids that make walnut oil so valuable.
 
-## Oil Yield Expectations
+## Walnut Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Yield | Residual Oil in Cake |
 |-------------|------------|---------------|---------------------|

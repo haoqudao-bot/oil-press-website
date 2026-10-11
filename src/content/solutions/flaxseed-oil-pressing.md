@@ -157,7 +157,7 @@ Flaxseed (linseed) oil is one of the richest plant-based sources of omega-3 fatt
 
 Retail pricing drives that range — bulk wholesale sits lower, so your packaging and sales channel decide where you land. Prices above are indicative ranges — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
 
-## Built for the Omega-3 Health Oil Trade
+## Built for the Omega-3 Flaxseed Oil Trade
 
 - Motors wound for **380V/50Hz, 3-phase** — or your local grid — customized at no extra cost
 - True cold pressing below 50°C protects the heat-sensitive ALA omega-3 your label claims depend on

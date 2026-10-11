@@ -126,7 +126,7 @@ order: 6
 
 Yes — the Haonuo hydraulic oil press is built for shea. From dry shea kernels expect **42-50% butter yield** pressing roasted paste, with **residual fat in cake under 5%**. One heavy-duty machine processes **600-1,200 kg of shea nuts per day**; the ultra-high-pressure model reaches **1,200-1,700 kg/day**. Shea needs sustained pressure — our presses deliver **40-60 MPa**. Roast at **140-160°C** (**+5-8% yield**) and grind the nuts to a fine paste before pressing — coarse paste leaves butter behind.
 
-## Overview
+## Shea Butter Press Overview
 
 Shea butter is a vital commodity for West African economies and a highly valued ingredient in the global cosmetics and food industries. A robust **shea butter press machine** is essential for producers who want to move beyond traditional hand-extraction methods and scale their operations to meet growing international demand.
 
@@ -134,7 +134,7 @@ Haonuo's shea butter pressing solution addresses the unique challenges of shea n
 
 This solution is designed specifically for West African operating conditions, with robust construction, simple maintenance requirements, and the ability to handle the full range of shea nut varieties found across the Sahel region.
 
-## Oil Yield Expectations
+## Shea Butter Yield Expectations
 
 | Raw Material | Fat Content | Expected Press Yield | Residual Fat Rate |
 |---|---|---|---|

@@ -229,7 +229,7 @@ if (faqLd) allLd.push(faqLd);
 
           <!-- Specifications -->
           <div class="mb-8">
-            <h2 class="font-display text-2xl text-charcoal-900 mb-4">{t.products.specifications}</h2>
+            <h2 class="font-display text-2xl text-charcoal-900 mb-4">{product.data.title[currentLocale] || product.data.title.en}: {t.products.specifications}</h2>
             <div class="rounded-xl overflow-hidden border border-steel-100">
               <table class="w-full text-sm">
                 <tbody class="divide-y divide-steel-100">
@@ -247,7 +247,7 @@ if (faqLd) allLd.push(faqLd);
           <!-- Applicable Seeds -->
           {seeds.length > 0 && (
             <div class="mb-8">
-              <h2 class="font-display text-2xl text-charcoal-900 mb-3">{t.products.applicableSeeds}</h2>
+              <h2 class="font-display text-2xl text-charcoal-900 mb-3">{product.data.title[currentLocale] || product.data.title.en}: {t.products.applicableSeeds}</h2>
               <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4 flex items-start gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                 <p class="text-sm text-blue-800" set:html={isCoconutProduct ? t.products.seedInfoCoconut : t.products.seedInfo} />
@@ -282,7 +282,7 @@ if (faqLd) allLd.push(faqLd);
 
       <!-- Description -->
       <div class="mt-12 md:mt-16">
-        <h2 class="font-display text-3xl text-charcoal-900 mb-6">{t.products.description}</h2>
+        <h2 class="font-display text-3xl text-charcoal-900 mb-6">{product.data.title[currentLocale] || product.data.title.en}: {t.products.description}</h2>
         {idBodyHtml ? (
           <div class="prose-product max-w-none text-steel-700 leading-relaxed" set:html={idBodyHtml} />
         ) : arBodyHtml ? (

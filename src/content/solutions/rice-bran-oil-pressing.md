@@ -128,7 +128,7 @@ order: 19
 
 Yes — the Haonuo hydraulic oil press handles rice bran, with one honest condition: **press it fresh or stabilized**. Expect **9-13% yield (cold press)** or **11-15% (hot press)** from fresh, well-stabilized bran (15-23% oil content), with results varying with bran freshness. One HN325 barrel takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. Bran left unstabilized for more than 24-48 hours produces high-FFA oil, so plan bran collection before you buy the machine.
 
-## Overview
+## Rice Bran Oil Press Overview
 
 Rice bran oil is one of the healthiest cooking oils in the world — rich in gamma-oryzanol, vitamin E and natural antioxidants — and a fast-growing premium oil in India, Bangladesh, Japan and Southeast Asia. For rice millers, bran is a low-cost byproduct that is often sold cheap or discarded; a dependable **rice bran oil press machine** turns that byproduct into a high-value oil business.
 
@@ -136,7 +136,7 @@ The challenge with rice bran is not the pressing — it is the clock. Freshly mi
 
 The solution supports both cold pressing (for premium cold-pressed rice bran oil that retains gamma-oryzanol) and hot pressing with steaming (for higher yield), giving you the versatility to serve health-food and mass-market segments with a single production line.
 
-## Oil Yield Expectations
+## Rice Bran Oil Yield Expectations
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|
