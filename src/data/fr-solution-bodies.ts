@@ -331,7 +331,11 @@ Nos presses hydrauliques industrielles à huile sont conçues pour des programme
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient). Pas de majorations de sociétés de négoce sur des investissements à six chiffres.
 - **Prouvé à l'échelle industrielle** — Nos systèmes de presse à huile industrielle fonctionnent dans de grandes installations en Inde, en Indonésie, au Nigeria, en Égypte et au Brésil — traitant des milliers de tonnes de graines oléagineuses annuellement.`,
 
-  'mustard-oil-pressing': `## Aperçu
+  'mustard-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour la moutarde. Comptez sur **30-38 % de rendement (pressage à froid)** ou **33-41 % (pressage à chaud)** à partir de graines nettoyées, avec **moins de 5 % d'huile résiduelle dans le tourteau**. Un fût HN325 traite **100 kg par lot (35-45 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine — un modèle double fût ou HN365 atteint **1 500-2 500 kg/jour**. Pour l'huile de moutarde **Kachi Ghani** traditionnelle pressée à froid, sautez la cuisson vapeur et pressez sous 60 °C.
+
+## Aperçu
 
 L'huile de moutarde est une huile de cuisson de base en Asie du Sud — Inde, Bangladesh, Népal et Pakistan — où elle est profondément ancrée dans les traditions culinaires et les pratiques culturelles. Une **machine de pressage d'huile de moutarde** fiable est le fondement de toute entreprise de production d'huile de moutarde, que vous produisiez l'huile Kachi Ghani traditionnelle pressée à froid ou de l'huile de moutarde raffinée pour le marché de masse.
 
@@ -360,7 +364,25 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 - **Rendement supérieur vs ghani traditionnel** — Notre presse hydraulique extrait 15-25 % plus d'huile que les presses ghani traditionnelles à traction animale, améliorant significativement votre rentabilité.
 - **Prix directs d'usine** — Pas d'intermédiaires. Des prix compétitifs directement du fabricant vous permettent d'économiser par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Capacité Kachi Ghani** — Notre modèle de pressage à froid produit une huile de moutarde Kachi Ghani authentique qui répond aux normes de qualité traditionnelles.
-- **Prouvé en Inde** — Nos machines de pressage d'huile de moutarde sont utilisées avec succès à travers l'Inde, du Rajasthan au Bengale occidental, au service des petits producteurs villageois et des opérations à l'échelle commerciale.`,
+- **Prouvé en Inde** — Nos machines de pressage d'huile de moutarde sont utilisées avec succès à travers l'Inde, du Rajasthan au Bengale occidental, au service des petits producteurs villageois et des opérations à l'échelle commerciale.
+
+## Que Vaut 100 kg de Graines de Moutarde
+
+| Production | Quantité | Valeur locale indicative (Inde) |
+|---|---|---|
+| Huile de moutarde brute | 33-38 L | ₹8 250-13 300 (à ₹250-350/L pour le pressé à froid) |
+| Tourteau (alimentation animale) | 57-68 kg | ₹1 400-2 000 |
+| **Total par 100 kg** | | **₹9 650-15 300** |
+
+À 800-1 200 kg/jour, un HN325 transforme les graines de moutarde en environ **₹77 000-183 000 de produit par jour**. Les prix ci-dessus sont des fourchettes indicatives observées dans les mandis et le commerce de détail indiens — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos graines et votre prix de vente de l'huile et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Indien de la Moutarde
+
+- Moteurs bobinés pour **415 V / 50 Hz, triphasé** — l'alimentation industrielle indienne standard, personnalisée sans coût supplémentaire
+- Prend en charge la tradition **Kachi Ghani** de pressage à froid (sans cuisson vapeur, sous 60 °C) pour une huile piquante premium qui se vend plus cher au détail
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Calcutta, Mundra ou Nhava Sheva** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres graines avant de commander`,
 
   'olive-oil-pressing': `## Aperçu
 
@@ -393,7 +415,11 @@ Cette solution est conçue pour les producteurs d'huile d'olive méditerranéens
 - **Fonctionnement simple** — Contrairement aux systèmes à centrifugeuse complexes nécessitant des opérateurs formés, notre presse hydraulique peut être gérée par une seule personne avec une formation minimale.
 - **Prouvé dans les régions méditerranéennes** — Nos machines de pressage d'huile d'olive sont utilisées avec succès en Grèce, en Espagne, au Maroc, en Tunisie et en Palestine — des régions comptant des siècles de tradition oléicole.`,
 
-  'palm-oil-pressing': `## Aperçu
+  'palm-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique haute pression Haonuo est conçue pour les amandes de palmiste, l'une des graines oléagineuses les plus dures à presser. Comptez sur **42-50 % de rendement à partir d'amandes séchées et broyées** avec **5 % ou moins d'huile résiduelle dans le tourteau** (jusqu'à 4 % sur la plage complète de 40-55 MPa). Le modèle lourd mono-fût traite **600-1 200 kg/jour** ; le modèle ultra haute pression double fût atteint **1 200-1 700 kg/jour** en pressage à chaud. La préparation compte : cassez les noix, séchez les amandes sous 7 % d'humidité et broyez en morceaux de 2-4 mm avant pressage.
+
+## Aperçu
 
 L'huile de palmiste est une huile très polyvalente dérivée de l'amande (graine) du fruit du palmier à huile, distincte de l'huile de palme plus courante extraite de la chair du fruit. Une **machine de pressage d'huile de palmiste** fiable est essentielle pour les producteurs d'Asie du Sud-Est et d'Afrique qui souhaitent maximiser la valeur de leur récolte de palmier à huile en traitant à la fois la chair et l'amande.
 
@@ -421,9 +447,31 @@ Cette solution couvre le processus, de la séparation des amandes au pressage et
 - **Huile résiduelle inférieure à 5 %** — Notre modèle ultra haute pression atteint des taux d'huile résiduelle compétitifs, ce qui signifie plus d'huile dans votre réservoir et moins laissée dans le tourteau.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Lignes de traitement intégrées** — De la séparation des amandes à l'huile filtrée, nous fournissons l'équipement de pressage central et aidons à coordonner le raffinage approvisionné séparément pour une opération entièrement intégrée.
-- **Prouvé en Asie du Sud-Est** — Nos machines de pressage d'huile de palmiste sont utilisées avec succès en Indonésie, en Malaisie et au Nigeria — les plus grandes nations productrices d'huile de palme du monde.`,
+- **Prouvé en Asie du Sud-Est** — Nos machines de pressage d'huile de palmiste sont utilisées avec succès en Indonésie, en Malaisie et au Nigeria — les plus grandes nations productrices d'huile de palme du monde.
 
-  'peanut-oil-pressing': `## Aperçu
+## Que Valent 100 kg d'Amandes de Palmiste
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile de palmiste brute | 42-50 L | $42-80 (à $1,0-1,6/L) |
+| Tourteau de palmiste (alimentation animale) | 48-56 kg | $5-11 |
+| **Total par 100 kg** | | **$47-91** |
+
+L'huile de palmiste brute s'est récemment négociée autour de **$900-1 400 la tonne** sur les marchés d'Asie du Sud-Est. À 1 200-1 700 kg/jour, une presse ultra haute pression double fût transforme les amandes de palmiste en environ **$560-1 550 de produit par jour**. Les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos amandes et votre prix de vente et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce du Palmier en Asie du Sud-Est
+
+- **Pression soutenue de 40-55 MPa** — conçue pour les amandes de palmiste dures qui bloquent les presses hydrauliques standard
+- Moteurs bobinés pour **380 V/50 Hz (Indonésie), 415 V/50 Hz (Malaisie, Nigeria)** ou votre norme de réseau locale sans coût supplémentaire
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Belawan (Medan), Tanjung Priok (Jakarta), Port Klang ou Lagos** avec documents d'exportation complets
+- S'associe aux casseurs de noix de palme et broyeurs de graines pour une ligne complète de l'amande à l'huile chez un seul fournisseur
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an — démonstration de pressage en direct par appel vidéo avec vos propres amandes avant de commander`,
+
+  'peanut-oil-pressing': `**Réponse Rapide**
+
+Oui — la presse hydraulique Haonuo est conçue pour l'arachide. Comptez sur **40-48 % de rendement (pressage à chaud, amandes torréfiées)** ou **38-44 % (pressage à froid)** à partir d'amandes décortiquées, avec **6-8 % d'huile résiduelle dans le tourteau** — contre 10-12 % pour les presses conventionnelles à fût percé. Un fût HN325 traite **100 kg par lot (30-60 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine ; un double fût ou HN365 atteint **1 500-2 500 kg/jour**. Décortiquez toujours d'abord : presser des arachides non décortiquées réduit le rendement de 15-25 %.
+
+## Aperçu
 
 L'huile d'arachide (aussi appelée huile de cacahuète) est l'huile de cuisson quotidienne d'Afrique de l'Ouest — le Nigeria est l'un des plus grands producteurs mondiaux d'arachides — et la demande est tout aussi forte en Inde, en Chine et en Asie du Sud-Est. Une **machine de pressage d'huile d'arachide** hydraulique permet aux petites et moyennes huileries de presser une huile chaude aromatique ou une huile premium pressée à froid directement à partir d'amandes décortiquées, pour les marchés locaux ou l'exportation.
 
@@ -455,7 +503,25 @@ Chaque presse hydraulique Haonuo assure **les deux procédés sur une seule mach
 - **Une machine, deux produits** — passez de l'huile d'arachide premium pressée à froid à l'huile aromatique pressée à chaud en changeant uniquement la préparation.
 - **Ligne complète chez un seul fournisseur** — conseils sur le décorticage et la préparation, torréfactrice, presse et filtre accordés en une ligne équilibrée.
 - **Direct usine, construit pour votre site** — prix FOB Qingdao, conditions de paiement confirmées sur la facture pro forma, personnalisation gratuite de la tension (415 V/50 Hz, 380 V/60 Hz ou votre standard local), modèles standards prêts en 15-25 jours ouvrés.
-- **Testée avant expédition** — chaque presse tourne à pleine pression de service et est contrôlée pour les fuites avant emballage, avec manuel en anglais, assistance vidéo en ligne et pièces de rechange en stock.`,
+- **Testée avant expédition** — chaque presse tourne à pleine pression de service et est contrôlée pour les fuites avant emballage, avec manuel en anglais, assistance vidéo en ligne et pièces de rechange en stock.
+
+## Que Valent 100 kg d'Arachides Décortiquées
+
+| Production | Quantité | Valeur indicative (USD) |
+|---|---|---|
+| Huile d'arachide brute (pressage à chaud) | 43-52 L | $65-130 (à $1,5-2,5/L) |
+| Tourteau (alimentation animale / farine) | 48-56 kg | $10-20 |
+| **Total par 100 kg** | | **$75-150** |
+
+À 800-1 200 kg/jour, un HN325 transforme les arachides décortiquées en environ **$600-1 800 de produit par jour**. Au Nigeria, l'huile d'arachide au détail s'est récemment négociée autour de **₦2 500-4 500 le litre** selon la région et la saison. Tous les prix ci-dessus sont des fourchettes indicatives — confirmez les tarifs locaux actuels, puis communiquez-nous le coût de vos amandes et votre prix de vente et nous calculerons votre marge journalière exacte.
+
+## Conçu pour le Commerce Ouest-Africain de l'Arachide
+
+- **Personnalisation gratuite de la tension** — moteurs bobinés pour 415 V/50 Hz, 380 V/60 Hz ou votre norme de réseau locale sans coût supplémentaire
+- Prend en charge la **tradition de pressage à chaud après torréfaction** derrière l'huile d'arachide aromatique préférée au Nigeria, au Ghana et au Sénégal — et le pressage à froid pour les acheteurs export premium
+- Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Lagos (Apapa / Tin Can Island), Onne ou Tema** avec documents d'exportation complets
+- Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
+- Démonstration de pressage en direct par appel vidéo avec vos propres amandes avant de commander`,
 
   'sesame-oil-pressing': `## Aperçu
 

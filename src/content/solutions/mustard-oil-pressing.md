@@ -132,6 +132,10 @@ seoKeywords:
 order: 4
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for mustard. Expect **30-38% yield (cold press)** or **33-41% (hot press)** from cleaned seeds, with **residual oil in cake under 5%**. One HN325 barrel takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. For traditional **Kachi Ghani** cold-pressed mustard oil, skip steaming and press below 60°C.
+
 ## Overview
 
 Mustard oil is a staple cooking oil across South Asia — India, Bangladesh, Nepal, and Pakistan — where it is deeply embedded in culinary traditions and cultural practices. A dependable **mustard oil press machine** is the foundation of any mustard oil production business, whether you produce traditional Kachi Ghani cold-pressed oil or refined mustard oil for the mass market.
@@ -173,5 +177,23 @@ The solution supports both cold pressing (for premium Kachi Ghani mustard oil) a
 
 *Typical figures for well-prepared mustard seeds at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Mustard Seed Is Worth
+
+| Output | Amount | Indicative local value (India) |
+|---|---|---|
+| Crude mustard oil | 33-38 L | ₹8,250-13,300 (@ ₹250-350/L for cold-pressed) |
+| Oil cake (animal feed) | 57-68 kg | ₹1,400-2,000 |
+| **Total per 100 kg** | | **₹9,650-15,300** |
+
+At 800-1,200 kg/day, one HN325 turns mustard seed into roughly **₹77,000-183,000 of product per day**. Prices above are indicative ranges observed in Indian mandis and retail — confirm current local rates, then tell us your seed cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Indian Mustard Trade
+
+- Motors wound for **415V / 50Hz, 3-phase** — the standard Indian industrial supply, customized at no extra cost
+- Handles the **Kachi Ghani** cold-press tradition (no steaming, below 60°C) for premium pungent oil that commands higher retail prices
+- Shipped **FOB Qingdao**; we arrange sea freight to **Kolkata, Mundra or Nhava Sheva** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own seed before you order
 
 

@@ -250,7 +250,11 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, operasi yang m
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Tanpa markup perusahaan perdagangan pada investasi enam digit.
 - **Terbukti pada skala industri** — Sistem press minyak industri kami beroperasi di fasilitas skala besar di India, Indonesia, Nigeria, Mesir, dan Brasil — memproses ribuan ton biji minyak setiap tahun.`,
 
-  'mustard-oil-pressing': `## Ringkasan
+  'mustard-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk sawi. Harapkan **hasil 30-38% (press dingin)** atau **33-41% (press panas)** dari biji bersih, dengan **sisa minyak di bungkil di bawah 5%**. Satu barrel HN325 memuat **100 kg per batch (35-45 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari** — model barrel ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Untuk minyak sawi **Kachi Ghani** press dingin tradisional, lewati pengukusan dan tekan di bawah 60°C.
+
+## Ringkasan
 
 Minyak sawi adalah minyak goreng pokok di seluruh Asia Selatan — India, Bangladesh, Nepal, dan Pakistan — di mana ia tertanam dalam tradisi kuliner dan praktik budaya. **Mesin press minyak sawi** yang andal adalah fondasi bisnis produksi minyak sawi, baik Anda memproduksi minyak Kachi Ghani press dingin tradisional maupun minyak sawi yang dimurnikan untuk pasar massal.
 
@@ -279,7 +283,25 @@ Solusi ini mendukung press dingin (untuk minyak sawi Kachi Ghani premium) dan pr
 - **Hasil unggul vs ghani tradisional** — Press hidrolik kami mengekstrak 15-25% lebih banyak minyak daripada ghani tradisional penggerak hewan, secara signifikan meningkatkan profitabilitas Anda.
 - **Harga langsung pabrik** — Tanpa perantara. Harga kompetitif langsung dari produsen menghemat uang Anda dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Kemampuan Kachi Ghani** — Model press dingin kami memproduksi minyak sawi Kachi Ghani autentik yang memenuhi standar kualitas tradisional.
-- **Terbukti di India** — Mesin press minyak sawi kami beroperasi dengan sukses di seluruh India, dari Rajasthan hingga Bengal Barat, melayani produsen desa kecil dan operasi skala komersial.`,
+- **Terbukti di India** — Mesin press minyak sawi kami beroperasi dengan sukses di seluruh India, dari Rajasthan hingga Bengal Barat, melayani produsen desa kecil dan operasi skala komersial.
+
+## Berapa Nilai 100 kg Biji Sawi
+
+| Hasil | Jumlah | Nilai lokal indikatif (India) |
+|---|---|---|
+| Minyak sawi mentah | 33-38 L | ₹8.250-13.300 (pada ₹250-350/L untuk press dingin) |
+| Bungkil (pakan ternak) | 57-68 kg | ₹1.400-2.000 |
+| **Total per 100 kg** | | **₹9.650-15.300** |
+
+Pada 800-1.200 kg/hari, satu HN325 mengubah biji sawi menjadi produk senilai sekitar **₹77.000-183.000 per hari**. Harga di atas adalah kisaran indikatif yang diamati di mandi dan ritel India — konfirmasi harga lokal terkini, lalu beri tahu kami biaya biji dan harga jual minyak Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Sawi India
+
+- Motor dililit untuk **415V / 50Hz, 3 fase** — pasokan industri standar India, kustomisasi tanpa biaya tambahan
+- Mendukung tradisi press dingin **Kachi Ghani** (tanpa pengukusan, di bawah 60°C) untuk minyak pedas premium yang dijual lebih mahal di ritel
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Kolkata, Mundra, atau Nhava Sheva** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan biji Anda sendiri sebelum memesan`,
 
   'olive-oil-pressing': `## Ringkasan
 
@@ -312,7 +334,11 @@ Solusi ini dirancang untuk produsen minyak zaitun Mediterania, Timur Tengah, dan
 - **Operasi sederhana** — Berbeda dengan sistem sentrifuge kompleks yang membutuhkan operator terlatih, press hidrolik kami dapat dikelola oleh satu orang dengan pelatihan minimal.
 - **Terbukti di wilayah Mediterania** — Mesin press minyak zaitun kami beroperasi dengan sukses di Yunani, Spanyol, Maroko, Tunisia, dan Palestina — wilayah dengan tradisi minyak zaitun berabad-abad.`,
 
-  'palm-oil-pressing': `## Ringkasan
+  'palm-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik tekanan tinggi Haonuo dirancang untuk inti sawit, salah satu biji minyak paling keras untuk ditekan. Harapkan **hasil 42-50% dari inti kering tergerus** dengan **sisa minyak di bungkil 5% atau kurang** (hingga 4% pada rentang tekanan penuh 40-55 MPa). Model heavy duty barrel tunggal memproses **600-1.200 kg/hari**; model tekanan ultra-tinggi barrel ganda mencapai **1.200-1.700 kg/hari** press panas. Persiapan penting: pecahkan kacang sawit, keringkan inti di bawah 7% kelembapan, dan gerus menjadi potongan 2-4 mm sebelum menekan.
+
+## Ringkasan
 
 Minyak inti sawit adalah minyak yang sangat serbaguna yang berasal dari inti (biji) buah kelapa sawit, berbeda dari minyak sawit yang lebih umum yang diekstrak dari daging buah. **Mesin press minyak inti sawit** yang andal sangat penting bagi produsen di Asia Tenggara dan Afrika yang ingin memaksimalkan nilai panen buah sawit mereka dengan memproses baik daging maupun inti.
 
@@ -340,9 +366,31 @@ Solusi ini mencakup proses dari pemisahan inti melalui penekanan dan filtrasi, d
 - **Minyak sisa di bawah 5%** — Model ultra-high-pressure kami mencapai tingkat minyak sisa kompetitif, artinya lebih banyak minyak di tangki Anda dan lebih sedikit yang tersisa di ampas.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Lini pemrosesan terintegrasi** — Dari pemisahan inti hingga minyak yang difiltrasi, kami menyediakan peralatan penekanan inti dan membantu mengoordinasikan pemurnian yang dibeli terpisah untuk operasi yang terintegrasi penuh.
-- **Terbukti di Asia Tenggara** — Mesin press minyak inti sawit kami beroperasi dengan sukses di Indonesia, Malaysia, dan Nigeria — negara penghasil minyak sawit terbesar di dunia.`,
+- **Terbukti di Asia Tenggara** — Mesin press minyak inti sawit kami beroperasi dengan sukses di Indonesia, Malaysia, dan Nigeria — negara penghasil minyak sawit terbesar di dunia.
 
-  'peanut-oil-pressing': `## Ringkasan
+## Berapa Nilai 100 kg Inti Sawit
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak inti sawit mentah | 42-50 L | $42-80 (pada $1,0-1,6/L) |
+| Bungkil inti sawit (pakan ternak) | 48-56 kg | $5-11 |
+| **Total per 100 kg** | | **$47-91** |
+
+Minyak inti sawit mentah baru-baru ini diperdagangkan sekitar **$900-1.400 per ton** di pasar Asia Tenggara. Pada 1.200-1.700 kg/hari, satu press tekanan ultra-tinggi barrel ganda mengubah inti sawit menjadi produk senilai sekitar **$560-1.550 per hari**. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya inti dan harga jual Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Sawit Asia Tenggara
+
+- **Tekanan berkelanjutan 40-55 MPa** — dirancang khusus untuk inti sawit keras yang menghentikan press hidrolik standar
+- Motor dililit untuk **380V/50Hz (Indonesia), 415V/50Hz (Malaysia, Nigeria)** atau standar jaringan lokal Anda tanpa biaya tambahan
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Belawan (Medan), Tanjung Priok (Jakarta), Port Klang, atau Lagos** dengan dokumen ekspor lengkap
+- Dipasangkan dengan pemecah kacang sawit dan seed crusher untuk lini lengkap dari inti hingga minyak dari satu pemasok
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung suku cadang 1 tahun — demo penekanan langsung via panggilan video dengan inti Anda sendiri sebelum memesan`,
+
+  'peanut-oil-pressing': `**Jawaban Cepat**
+
+Ya — press hidrolik Haonuo dirancang untuk kacang tanah. Harapkan **hasil 40-48% (press panas, inti terpanggang)** atau **38-44% (press dingin)** dari inti terkupas, dengan **sisa minyak di bungkil 6-8%** — dibandingkan 10-12% pada press barrel berlubang konvensional. Satu barrel HN325 memuat **100 kg per batch (30-60 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari**; model barrel ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Selalu kupas dulu: menekan kacang tanpa kupas memangkas hasil 15-25%.
+
+## Ringkasan
 
 Minyak kacang tanah adalah minyak goreng sehari-hari di Afrika Barat — Nigeria salah satu produsen kacang tanah terbesar di dunia — dan permintaannya sama kuatnya di India, Tiongkok, serta Asia Tenggara. **Mesin press minyak kacang** hidrolik memungkinkan pabrik minyak kecil dan menengah memeras minyak panas yang aromatik atau minyak cold press premium langsung dari biji kupasan, baik untuk pasar lokal maupun pembeli ekspor.
 
@@ -374,7 +422,25 @@ Setiap press hidrolik Haonuo menangani **dua rute di satu mesin yang sama**: col
 - **Satu mesin, dua produk** — beralih antara minyak kacang cold press premium dan press panas aromatik hanya dengan mengubah persiapan.
 - **Lini lengkap dari satu pemasok** — saran pengupasan dan persiapan, pemanggang, press, dan filter yang serasi sebagai satu lini seimbang.
 - **Langsung pabrik, dibangun untuk lokasi Anda** — harga FOB Qingdao, syarat pembayaran dikonfirmasi di faktur proforma, kustomisasi tegangan gratis (415 V/50 Hz, 380 V/60 Hz atau standar lokal Anda), model standar siap dalam 15-25 hari kerja.
-- **Diuji sebelum dikirim** — setiap press dijalankan pada tekanan kerja penuh dan diperiksa dari kebocoran sebelum dikemas, dengan manual bahasa Inggris, panduan video daring, dan suku cadang tersedia.`,
+- **Diuji sebelum dikirim** — setiap press dijalankan pada tekanan kerja penuh dan diperiksa dari kebocoran sebelum dikemas, dengan manual bahasa Inggris, panduan video daring, dan suku cadang tersedia.
+
+## Berapa Nilai 100 kg Kacang Tanah Kupas
+
+| Hasil | Jumlah | Nilai indikatif (USD) |
+|---|---|---|
+| Minyak kacang mentah (press panas) | 43-52 L | $65-130 (pada $1,5-2,5/L) |
+| Bungkil (pakan ternak / tepung) | 48-56 kg | $10-20 |
+| **Total per 100 kg** | | **$75-150** |
+
+Pada 800-1.200 kg/hari, satu HN325 mengubah kacang kupas menjadi produk senilai sekitar **$600-1.800 per hari**. Di Nigeria, minyak kacang ritel baru-baru ini diperdagangkan sekitar **₦2.500-4.500 per liter** tergantung wilayah dan musim. Semua harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya inti dan harga jual Anda dan kami akan menghitung margin harian Anda secara tepat.
+
+## Dibangun untuk Perdagangan Kacang Tanah Afrika Barat
+
+- **Kustomisasi tegangan gratis** — motor dililit untuk 415V/50Hz, 380V/60Hz atau standar jaringan lokal Anda tanpa biaya tambahan
+- Mendukung **tradisi press panas setelah pemanggangan** di balik minyak kacang aromatik yang disukai di Nigeria, Ghana, dan Senegal — serta press dingin untuk pembeli ekspor premium
+- Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Lagos (Apapa / Tin Can Island), Onne, atau Tema** dengan dokumen ekspor lengkap
+- Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung suku cadang 1 tahun
+- Demo penekanan langsung via panggilan video dengan inti Anda sendiri sebelum memesan`,
 
   'sesame-oil-pressing': `## Ringkasan
 

@@ -129,6 +129,10 @@ seoKeywords:
 order: 7
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo high-pressure hydraulic press is built for palm kernels, one of the hardest oilseeds to press. Expect **42-50% yield from dried, crushed kernels** with **residual oil in cake at 5% or less** (down to 4% at the full 40-55 MPa pressing range). The heavy-duty single-barrel model processes **600-1,200 kg/day**; the ultra-high-pressure double-barrel model reaches **1,200-1,700 kg/day** hot press. Preparation matters: crack the nuts, dry kernels below 7% moisture, and crush to 2-4 mm pieces before pressing.
+
 ## Overview
 
 Palm kernel oil is a highly versatile oil derived from the kernel (seed) of the oil palm fruit, distinct from the more common palm oil extracted from the fruit's flesh. A dependable **palm kernel oil press machine** is essential for producers in Southeast Asia and Africa who want to maximize the value of their palm fruit harvest by processing both the flesh and the kernel.
@@ -169,5 +173,23 @@ This solution covers the process from kernel separation through pressing and fil
 
 *Typical figures for well-prepared palm kernels at standard machine settings; actual results vary with seed variety, moisture content and cycle settings. Liters assume an oil density of approximately 0.92 kg/L.*
 <!-- /yield-block -->
+
+## What 100 kg of Palm Kernels Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude palm kernel oil | 42-50 L | $42-80 (@ $1.0-1.6/L) |
+| Palm kernel cake (animal feed) | 48-56 kg | $5-11 |
+| **Total per 100 kg** | | **$47-91** |
+
+Crude palm kernel oil has recently traded around **$900-1,400 per tonne** on Southeast Asian markets. At 1,200-1,700 kg/day, one ultra-high-pressure double-barrel press turns palm kernels into roughly **$560-1,550 of product per day**. Prices above are indicative ranges — confirm current local rates, then tell us your kernel cost and oil price and we will calculate your exact daily margin.
+
+## Built for the Southeast Asian Palm Trade
+
+- **40-55 MPa sustained pressure** — purpose-built for hard palm kernels that stall standard hydraulic presses
+- Motors wound for **380V/50Hz (Indonesia), 415V/50Hz (Malaysia, Nigeria)** or your local grid standard at no extra cost
+- Shipped **FOB Qingdao**; we arrange sea freight to **Belawan (Medan), Tanjung Priok (Jakarta), Port Klang or Lagos** with full export documentation
+- Pairs with palm nut crackers and seed crushers for a complete kernel-to-oil line from one supplier
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support — video-call a live pressing demo with your own kernels before you order
 
 

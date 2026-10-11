@@ -151,6 +151,10 @@ seoKeywords:
 order: 3
 ---
 
+**Quick Answer**
+
+Yes — the Haonuo hydraulic oil press is built for peanuts (groundnuts). Expect **40-48% yield (hot press, roasted kernels)** or **38-44% (cold press)** from shelled kernels, with **residual oil in cake at 6-8%** — against 10-12% for conventional drilled-barrel presses. One HN325 barrel takes **100 kg per batch (30-60 min hot press)**, so a single machine runs roughly **800-1,200 kg/day**; a double-barrel or HN365 reaches **1,500-2,500 kg/day**. Always shell first: pressing unshelled peanuts cuts yield by 15-25%.
+
 ## Overview
 
 Groundnut (peanut) oil is the everyday cooking oil of West Africa — Nigeria is one of the world's largest groundnut producers — and demand is equally strong in India, China and Southeast Asia. A hydraulic **peanut oil press machine** lets small and mid-sized mills press aromatic hot-pressed oil or premium cold-pressed oil directly from shelled kernels, for local markets or export buyers.
@@ -195,3 +199,21 @@ Every Haonuo hydraulic press handles **both routes on one machine**: cold pressi
 - **Complete line from one supplier** — shelling and preparation advice, roaster, press and filter matched as one balanced line.
 - **Factory-direct, built for your site** — FOB Qingdao pricing, payment terms confirmed on the proforma invoice, free voltage customization (415 V/50 Hz, 380 V/60 Hz or your local standard), standard models ready in 15-25 working days.
 - **Tested before it ships** — every press runs under full working pressure and is checked for leaks before packing, with English manual, online video guidance and stocked spare parts.
+
+## What 100 kg of Shelled Peanuts Is Worth
+
+| Output | Amount | Indicative value (USD) |
+|---|---|---|
+| Crude peanut oil (hot press) | 43-52 L | $65-130 (@ $1.5-2.5/L) |
+| Oil cake (animal feed / snack flour) | 48-56 kg | $10-20 |
+| **Total per 100 kg** | | **$75-150** |
+
+At 800-1,200 kg/day, one HN325 turns shelled peanuts into roughly **$600-1,800 of product per day**. In Nigeria, retail groundnut oil has recently traded around **₦2,500-4,500 per litre** depending on region and season. All prices above are indicative ranges — confirm current local rates, then tell us your kernel cost and oil price and we will calculate your exact daily margin.
+
+## Built for the West African Groundnut Trade
+
+- **Free voltage customization** — motors wound for 415V/50Hz, 380V/60Hz or your local grid standard at no extra cost
+- Supports the **hot-roast pressing tradition** behind the aromatic groundnut oil preferred across Nigeria, Ghana and Senegal — and cold pressing for premium export buyers
+- Shipped **FOB Qingdao**; we arrange sea freight to **Lagos (Apapa / Tin Can Island), Onne or Tema** with full export documentation
+- Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
+- Video-call a live pressing demo with your own kernels before you order
