@@ -9,15 +9,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Nigeria untuk kacang tanah, inti sawit, dan wijen. Dukungan kepabeanan SONCAP, mesin siap genset, pengiriman ke Lagos. Minta penawaran harga pabrik.',
     heroTitle: 'Mesin Press Minyak di Nigeria — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak kacang tanah, inti sawit, wijen, dan kapas. Harga langsung pabrik, pengiriman ke Lagos dalam 25-30 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Nigeria',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Nigeria',
     seeds: [
       { emoji: '🥜', name: 'Kacang tanah', description: 'Salah satu minyak goreng paling populer di Nigeria. Sekitar 40-50% kandungan minyak (tergantung varietas). Rasa kaya yang cocok untuk masakan Afrika Barat.', yield: 'Hasil: 38-45%' },
       { emoji: '🌴', name: 'Inti sawit', description: 'Produk sampingan melimpah dari perkebunan sawit. 48-52% kandungan minyak. Permintaan tinggi di pasar.', yield: 'Hasil: 44-48%' },
       { emoji: '🫘', name: 'Wijen', description: 'Peluang ekspor yang berkembang. Minyak wijen press dingin dijual dengan harga premium di Timur Tengah dan Eropa.', yield: 'Hasil: 42-50%' },
       { emoji: '☁️', name: 'Biji kapas', description: 'Nigeria adalah produsen kapas terbesar di Afrika. Minyak goreng ekonomis dengan titik asap tinggi.', yield: 'Hasil: 15-34%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Nigeria',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Nigeria',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Nigeria',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Nigeria',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Naira atau Dolar AS, termasuk pengiriman ke Lagos dan estimasi biaya bea cukai.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa margin perantara — hemat dibandingkan distributor lokal (penghematan aktual bervariasi)' },
@@ -25,9 +25,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Naira', description: 'Kami dapat menyiapkan penawaran harga dalam Naira dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Nigeria',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Nigeria',
     shipping: { port: 'Apapa / Tin Can, Lagos', transitTime: '25-30 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Nigeria',
     faqs: [
       { question: 'Berapa bea masuk untuk mesin press minyak di Nigeria?', answer: 'Mesin press minyak diklasifikasikan di bawah kode HS 8479.82. Tarif bea masuk bervariasi dan harus dikonfirmasi dengan agen kepabeanan berlisensi. Bekerja dengan agen kepabeanan berlisensi memastikan klasifikasi yang benar dan meminimalkan beban bea masuk Anda.' },
       { question: 'Apakah mesin press minyak dapat dijalankan dengan generator di Nigeria?', answer: 'Ya. Mesin press hidrolik Haonuo hanya memerlukan daya motor 2,2 kW, membuatnya sepenuhnya kompatibel dengan generator 5-7 KVA. Kami dapat menyesuaikan sistem kelistrikan ke 220V/50Hz sesuai standar Nigeria. Harap konfirmasi persyaratan tegangan saat memesan.' },
@@ -43,7 +43,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Nigeria',
     clearance: {
-      heading: 'Impor & Kepabeanan di Nigeria',
+      heading: 'Impor & Kepabeanan Mesin Press Minyak di Nigeria',
       intro: 'Meluluskan mesin press minyak melalui pelabuhan Lagos berjalan lancar bila dokumen disiapkan sebelum pengiriman — dan menjadi mahal bila tidak. Sebagian besar keterlambatan yang dialami pelanggan kami berasal dari dokumen SONCAP yang kurang, bukan dari peralatan itu sendiri.',
       stepsTitle: 'Urutan kepabeanan empat langkah',
       steps: [
@@ -66,7 +66,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Prosedur kepabeanan diperbarui secara berkala — selalu konfirmasikan daftar periksa SONCAP dan Form M terbaru dengan agen kepabeanan Nigeria berlisensi. Kami mengoordinasikan jadwal inspeksi dengan lembaga sertifikasi agar dokumen lengkap sebelum kapal berangkat.',
     },
     cases: {
-      heading: 'Instalasi Khas di Nigeria',
+      heading: 'Instalasi Mesin Press Minyak di Nigeria',
       cases: [
         { tag: 'Kano', tagLabel: 'Minyak Kacang Tanah', name: 'Produsen Minyak Kacang Tanah — Kano', description: 'HN365 cold-pressing kacang tanah untuk pasar Nigeria utara dengan kapasitas ~600 kg/hari, dijual sebagai minyak kacang tanah premium press dingin di pasar lokal.', stat: 'Output: ~600 kg/hari' },
         { tag: 'Ondo State', tagLabel: 'Minyak Inti Sawit', name: 'Pabrik Minyak Inti Sawit — Akure', description: 'Press tekanan tinggi HN426 mengekstraksi minyak inti sawit dari panen kelapa sawit yang melimpah; bungkil inti yang padat dijual kembali sebagai pakan ternak.', stat: 'Hasil: 45-47%' },
@@ -81,15 +81,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di India untuk sawi, kacang tanah, dan wijen. Alternatif hidrolik modern untuk mesin kachi ghani; 415V/50Hz, pengiriman ke Mundra/JNPT. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di India — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak sawi (kachi ghani), wijen, kacang tanah, dan kelapa. Harga langsung pabrik, pengiriman ke Mumbai dalam 18-22 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di India',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di India',
     seeds: [
       { emoji: '🟡', name: 'Sawi (mustard)', description: 'Kachi ghani (press dingin sawi) adalah tradisi kuliner India. Sekitar 33-40% kandungan minyak. Rasa pedas khas untuk masakan India Utara.', yield: 'Hasil: 30-38%' },
       { emoji: '🫘', name: 'Wijen', description: 'Minyak wijen diminati di India Selatan dan untuk ekspor. Press dingin mempertahankan rasa kaya dan manfaat kesehatannya.', yield: 'Hasil: 42-50%' },
       { emoji: '🥜', name: 'Kacang tanah', description: 'Minyak kacang tanah adalah kebutuhan pokok rumah tangga India. 40-50% kandungan minyak. Titik asap tinggi cocok untuk menggoreng.', yield: 'Hasil: 38-45%' },
       { emoji: '🥥', name: 'Kelapa', description: 'Minyak kelapa perawan memiliki permintaan tinggi untuk memasak, kosmetik, dan pengobatan Ayurveda. Press hidrolik dingin mempertahankan kualitas minyak kelapa perawan.', yield: 'Hasil: 55-65%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk India',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk India',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk India',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk India',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Rupee India atau Dolar AS, termasuk pengiriman ke Mumbai.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — Anda mendapatkan harga kompetitif langsung dari pabrikan' },
@@ -97,9 +97,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Rupee India', description: 'Kami dapat menyiapkan penawaran harga dalam Rupee India (INR) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke India',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke India',
     shipping: { port: 'Nhava Sheva (Mumbai) / Chennai / Mundra', transitTime: '18-22 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di India',
     faqs: [
       { question: 'Berapa harga mesin press minyak di India?', answer: 'Hubungi Haonuo untuk harga langsung pabrik untuk pasar India. Kami menawarkan tarif kompetitif termasuk pengiriman ke pelabuhan Mumbai, Chennai, atau Mundra. Harga tersedia dalam INR.' },
       { question: 'Apakah mesin dapat menekan biji sawi untuk minyak kachi ghani?', answer: 'Ya, mesin press minyak hidrolik Haonuo sangat cocok untuk produksi minyak kachi ghani tradisional (sawi press dingin). Teknologi press dingin membantu mempertahankan rasa pedas khas dan karakteristik tradisional yang disukai konsumen India.' },
@@ -115,7 +115,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'India',
     cases: {
-      heading: 'Kasus Pelanggan di India',
+      heading: 'Kasus Pelanggan Mesin Press Minyak di India',
       cases: [
         { tag: 'Gujarat', tagLabel: 'Minyak Kacang Tanah', name: 'Pabrik Minyak Kacang Tanah — Rajkot', description: 'HN400 terpasang untuk minyak kacang tanah press dingin. Memproses ~500 kg/hari, dijual lokal sebagai minyak premium gaya "kachi ghani".', stat: 'ROI: ~14 bulan' },
         { tag: 'Rajasthan', tagLabel: 'Minyak Sawi', name: 'Produsen Minyak Sawi — Jaipur', description: 'HN355 untuk press dingin sawi tradisional. Menghasilkan minyak kachi ghani pedas yang disukai konsumen lokal.', stat: 'Output: ~400 kg/hari' },
@@ -130,14 +130,14 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak hidrolik di Indonesia untuk kelapa, sawit, dan kacang tanah. Dokumen impor API/SNI, spesifikasi 380V/50Hz, pengiriman ke Jakarta. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Indonesia — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk kelapa (VCO), inti sawit, dan kacang tanah. Harga pabrik langsung, pengiriman ke Jakarta 15-20 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Indonesia',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Indonesia',
     seeds: [
       { emoji: '🥥', name: 'Kelapa (VCO)', description: 'Indonesia adalah produsen minyak kelapa terbesar di dunia. Minyak kelapa perawan (VCO) dijual dengan harga premium di pasar internasional. Press dingin di bawah 50°C.', yield: 'Hasil: 60-65%' },
       { emoji: '🌴', name: 'Inti sawit', description: 'Produk sampingan melimpah dari industri kelapa sawit. 48-52% kandungan minyak. Pasar lokal dan ekspor yang kuat.', yield: 'Hasil: 44-48%' },
       { emoji: '🥜', name: 'Kacang tanah', description: 'Minyak kacang tanah populer dalam masakan Indonesia. 40-50% kandungan minyak. Rasa kaya yang cocok untuk sambal dan menggoreng.', yield: 'Hasil: 38-45%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Indonesia',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Indonesia',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Indonesia',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Indonesia',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Rupiah atau Dolar AS, termasuk pengiriman ke Jakarta atau Surabaya.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -145,9 +145,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Rupiah', description: 'Kami dapat menyiapkan penawaran harga dalam Rupiah Indonesia (IDR) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Indonesia',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Indonesia',
     shipping: { port: 'Tanjung Priok (Jakarta) / Tanjung Perak (Surabaya)', transitTime: '15-20 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Indonesia',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Indonesia?', answer: 'Hubungi kami untuk penawaran harga mesin press minyak hidrolik Haonuo. Harga sudah termasuk kustomisasi tegangan 220V/50Hz untuk standar listrik Indonesia.' },
       { question: 'Berapa lama pengiriman ke Jakarta?', answer: 'Pengiriman laut dari Qingdao, China ke Pelabuhan Tanjung Priok, Jakarta membutuhkan waktu 15-20 hari. Kami menangani semua dokumen ekspor. Hubungi kami untuk biaya pengiriman terkini.' },
@@ -163,7 +163,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Indonesia',
     clearance: {
-      heading: 'Persyaratan Impor & Kesiapan Instalasi di Indonesia',
+      heading: 'Impor & Instalasi Mesin Press Minyak di Indonesia',
       intro: 'Mengimpor mesin berjalan lancar bila dokumen dan spesifikasi listrik disiapkan sebelum kapal berangkat. Tiga hal yang paling sering menimbulkan biaya tambahan adalah izin importir, dokumen kesesuaian (SNI), dan ketidaksesuaian tegangan.',
       stepsTitle: 'Tiga poin persiapan sebelum pengiriman',
       steps: [
@@ -184,7 +184,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Daftar produk SNI wajib diperbarui secara berkala — konfirmasikan selalu persyaratan terbaru dengan PPJK Anda sebelum memesan.',
     },
     cases: {
-      heading: 'Instalasi Khas di Indonesia',
+      heading: 'Instalasi Mesin Press Minyak di Indonesia',
       cases: [
         { tag: 'Jawa Tengah', tagLabel: 'VCO / Kelapa', name: 'Produsen VCO — Jawa Tengah', description: 'Mesin HN426 tabung food-grade 600mm memproses daging kelapa menjadi virgin coconut oil untuk ekspor dan pasar kosmetik lokal.', stat: 'Tabung food-grade 600mm' },
         { tag: 'Sumatera Utara', tagLabel: 'Inti Sawit', name: 'Pabrik Minyak Inti Sawit — Sumatera Utara', description: 'HN365 menekan inti sawit (palm kernel) untuk minyak nabati berkualitas tinggi; bungkil padat dijual sebagai pakan ternak.', stat: 'Bungkil untuk pakan ternak' },
@@ -199,15 +199,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Pakistan untuk bunga matahari, sawi, dan wijen. Dokumentasi kepabeanan WeBOC dan dukungan inspeksi, mesin 220-240V, pengiriman ke Karachi. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Pakistan — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, sawi, wijen, dan kapas. Harga langsung pabrik, pengiriman ke Karachi dalam 20-25 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Pakistan',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Pakistan',
     seeds: [
       { emoji: '🌻', name: 'Bunga matahari', description: 'Bunga matahari adalah tanaman minyak yang berkembang di Pakistan. 35-45% kandungan minyak. Minyak bunga matahari semakin diminati untuk memasak.', yield: 'Hasil: 35-45%' },
       { emoji: '🟡', name: 'Sawi (mustard)', description: 'Minyak sawi digunakan secara tradisional dalam masakan Pakistan. Press dingin mempertahankan rasa autentiknya.', yield: 'Hasil: 30-38%' },
       { emoji: '🫘', name: 'Wijen', description: 'Wijen ditanam di provinsi Sindh dan Punjab. Minyak wijen press dingin dijual dengan harga premium.', yield: 'Hasil: 42-50%' },
       { emoji: '☁️', name: 'Biji kapas', description: 'Pakistan adalah produsen kapas keempat terbesar di dunia. Minyak kapas adalah sumber minyak goreng ekonomis.', yield: 'Hasil: 15-34%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Pakistan',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Pakistan',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Pakistan',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Pakistan',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Rupee Pakistan atau Dolar AS, termasuk pengiriman ke Karachi.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -215,9 +215,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Rupee Pakistan', description: 'Kami dapat menyiapkan penawaran harga dalam Rupee Pakistan (PKR) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Pakistan',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Pakistan',
     shipping: { port: 'Pelabuhan Karachi / Pelabuhan Qasim', transitTime: '20-25 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Pakistan',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Pakistan?', answer: 'Hubungi Haonuo untuk harga langsung pabrik untuk pasar Pakistan. Kami menawarkan tarif kompetitif termasuk pengiriman ke Karachi. Harga tersedia dalam PKR.' },
       { question: 'Apakah mesin dapat mengekstraksi minyak bunga matahari dengan efisien?', answer: 'Ya, mesin press hidrolik Haonuo mencapai hasil minyak 35-45% dari biji bunga matahari. Metode press dingin mempertahankan rasa ringan yang disukai dalam masakan Pakistan.' },
@@ -233,7 +233,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Pakistan',
     clearance: {
-      heading: 'Mengimpor ke Pakistan: WeBOC, Inspeksi & Pelabuhan Karachi',
+      heading: 'Mengimpor Mesin Press Minyak ke Pakistan: WeBOC & Karachi',
       intro: 'Pengiriman mesin diluluskan melalui sistem elektronik WeBOC milik Bea Cukai Pakistan, didukung dokumentasi pabrikan yang lengkap dan — tergantung kategori dan rezim tarif — inspeksi pra-pengiriman. Dokumen yang siap menjaga biaya demurrage kontainer di terminal Karachi tetap nol.',
       stepsTitle: 'Urutan kepabeanan',
       steps: [
@@ -256,7 +256,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Cakupan tarif dan PSI berubah dengan setiap kebijakan anggaran — konfirmasikan posisi terkini dengan agen kepabeanan terdaftar WeBOC sebelum memesan.',
     },
     cases: {
-      heading: 'Instalasi Khas di Pakistan',
+      heading: 'Instalasi Mesin Press Minyak di Pakistan',
       cases: [
         { tag: 'Faisalabad', tagLabel: 'Minyak Sawi (Sarsoon)', name: 'Pabrik Minyak Sawi — Punjab', description: 'HN365 press dingin tradisional untuk sarsoon ka tel yang pedas, minyak goreng utama di pasar rumah tangga dan grosir Punjab.', stat: 'Output: ~500 kg/hari' },
         { tag: 'Sindh', tagLabel: 'Minyak Wijen', name: 'Produsen Minyak Wijen — Sindh', description: 'HN325 memproduksi minyak til press dingin untuk pembeli domestik dan pedagang ekspor regional di Karachi.', stat: 'Hasil: 45-49%' },
@@ -271,15 +271,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Filipina untuk VCO kelapa, kacang tanah, dan kelor. Dibuat untuk pasokan 230V/60Hz; pengiriman ke Manila, Cebu, atau Davao. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Filipina — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak VCO kelapa, kacang tanah, kelor, dan bunga matahari. Harga langsung pabrik, pengiriman ke Manila dalam 12-16 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Filipina',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Filipina',
     seeds: [
       { emoji: '🥥', name: 'Kelapa (VCO)', description: 'Filipina adalah salah satu pengekspor minyak kelapa terkemuka. Minyak kelapa perawan (VCO) adalah produk bernilai tinggi. Press dingin di bawah 50°C.', yield: 'Hasil: 55-65%' },
       { emoji: '🥜', name: 'Kacang tanah', description: 'Minyak kacang tanah populer dalam masakan Filipina. 40-50% kandungan minyak. Rasa kaya cocok untuk memasak dan menggoreng.', yield: 'Hasil: 38-45%' },
       { emoji: '🌻', name: 'Bunga matahari', description: 'Pasar yang berkembang untuk minyak bunga matahari di Filipina. Alternatif sehat dibandingkan minyak tradisional.', yield: 'Hasil: 35-45%' },
       { emoji: '🌿', name: 'Kelorg (Moringa/Malunggay)', description: 'Kelorg (malunggay) adalah superfood Filipina. Minyak kelorg diminati dalam kosmetik dan suplemen gizi.', yield: 'Hasil: 30-38%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Filipina',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Filipina',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Filipina',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Filipina',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Peso atau Dolar AS, termasuk pengiriman ke Manila.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -287,9 +287,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Peso', description: 'Kami dapat menyiapkan penawaran harga dalam Peso Filipina (PHP) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Filipina',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Filipina',
     shipping: { port: 'Manila (South Harbor) / Cebu', transitTime: '12-16 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Filipina',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Filipina?', answer: 'Hubungi Haonuo untuk harga langsung pabrik untuk pasar Filipina. Kami menawarkan tarif kompetitif termasuk pengiriman ke Manila. Harga tersedia dalam PHP.' },
       { question: 'Apakah mesin ini dapat memproduksi Virgin Coconut Oil (VCO)?', answer: 'Ya, mesin press dingin hidrolik Haonuo sangat cocok untuk produksi VCO. Ekstraksi suhu rendah (di bawah 60°C) mempertahankan kandungan asam laurat dan aroma alami kelapa yang disyaratkan Standar Nasional Filipina untuk VCO.' },
@@ -305,7 +305,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Filipina',
     clearance: {
-      heading: 'Kesiapan Listrik & Pengiriman Multi-Pulau di Filipina',
+      heading: 'Pengiriman Mesin Press Minyak Multi-Pulau & Listrik di Filipina',
       intro: 'Bagi pembeli Filipina, dua pertanyaan praktisnya tidak pernah rumit soal dokumen: apakah mesin cocok dengan pasokan 60Hz kami? dan bagaimana mesin sampai ke provinsi kami? Keduanya diselesaikan sebelum mesin meninggalkan pabrik kami.',
       stepsTitle: 'Dua hal yang diselesaikan sebelum pengiriman',
       steps: [
@@ -325,7 +325,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Prosedur kelistrikan dan kepabeanan Filipina direvisi secara berkala — konfirmasikan persyaratan BOC dan utilitas lokal terkini dengan broker dan teknisi listrik Anda sebelum pengiriman.',
     },
     cases: {
-      heading: 'Instalasi Khas di Filipina',
+      heading: 'Instalasi Mesin Press Minyak di Filipina',
       cases: [
         { tag: 'Quezon', tagLabel: 'Kelapa / VCO', name: 'Produsen VCO — Provinsi Quezon', description: 'Press kelapa HN426 tabung food-grade 600mm memproduksi virgin coconut oil dan santan segar untuk eksportir VCO di Luzon.', stat: 'Tabung food-grade 600mm' },
         { tag: 'Pangasinan', tagLabel: 'Minyak Kacang Tanah', name: 'Pabrik Minyak Kacang — Luzon', description: 'Press kacang tanah batch kecil HN325 memasok pasar tradisional lokal dan pengecer pasalubong di wilayah Ilocos.', stat: 'Kapasitas: ~40 kg/batch' },
@@ -340,15 +340,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Mesir untuk wijen, zaitun, dan bunga matahari. Dokumentasi ACID/GOEIC dan dukungan inspeksi pra-pengiriman, pengiriman ke Alexandria. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Mesir — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak wijen, zaitun, kacang tanah, dan bunga matahari. Harga langsung pabrik, pengiriman ke Alexandria dalam 20-24 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Mesir',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Mesir',
     seeds: [
       { emoji: '🫘', name: 'Wijen', description: 'Mesir memiliki tradisi panjang dalam produksi minyak wijen dan tahini. Wijen Mesir terkenal dengan kualitasnya. 50-55% kandungan minyak.', yield: 'Hasil: 42-50%' },
       { emoji: '🫒', name: 'Zaitun', description: 'Minyak zaitun diproduksi di wilayah Sinai Utara dan Gurun Barat. Mesir adalah salah satu produsen zaitun terbesar di Afrika.', yield: 'Hasil: 15-25%' },
       { emoji: '🥜', name: 'Kacang tanah', description: 'Minyak kacang tanah populer dalam masakan Mesir. 40-50% kandungan minyak. Rasa kaya yang cocok untuk memasak.', yield: 'Hasil: 38-45%' },
       { emoji: '🌻', name: 'Bunga matahari', description: 'Bunga matahari ditanam di Delta Nil. Minyak bunga matahari adalah alternatif ekonomis untuk minyak zaitun.', yield: 'Hasil: 35-45%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Mesir',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Mesir',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Mesir',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Mesir',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Pound Mesir atau Dolar AS, termasuk pengiriman ke Alexandria.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -356,9 +356,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Pound Mesir', description: 'Kami dapat menyiapkan penawaran harga dalam Pound Mesir (EGP) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Mesir',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Mesir',
     shipping: { port: 'Alexandria / Port Said', transitTime: '20-24 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Mesir',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Mesir?', answer: 'Hubungi kami untuk penawaran khusus rangkaian lengkap mesin press minyak Haonuo termasuk pengiriman ke Alexandria atau Port Said. Kami menawarkan harga kompetitif langsung pabrik dan dapat membuat penawaran dalam EGP (Pound Mesir) dengan kurs terkini.' },
       { question: 'Apakah mesin dapat menekan wijen untuk tahini dan minyak?', answer: 'Ya. Mesin press dingin hidrolik Haonuo sangat baik untuk produksi minyak wijen. Mesir adalah salah satu produsen wijen terbesar di dunia, dan mesin kami mencapai hasil minyak 42-50%, menghasilkan minyak wijen premium press dingin yang cocok untuk produksi tahini maupun pasar minyak goreng.' },
@@ -374,7 +374,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Mesir',
     clearance: {
-      heading: 'Mengimpor ke Mesir: ACID, GOEIC & Inspeksi Pra-Pengiriman',
+      heading: 'Mengimpor Mesin Press Minyak ke Mesir: ACID & GOEIC',
       intro: 'Mesir menjalankan salah satu rezim impor paling padat dokumen di kawasan. Tiga hal harus siap sebelum kapal berangkat; mengaturnya setelah tiba berarti berminggu-minggu biaya penyimpanan pelabuhan dan demurrage di Alexandria atau Sokhna.',
       stepsTitle: 'Tiga syarat sebelum kapal berangkat',
       steps: [
@@ -396,7 +396,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Prosedur ACID dan GOEIC sering direvisi — selalu konfirmasikan daftar periksa terkini dengan importir atau agen bea cukai Mesir Anda sebelum memesan.',
     },
     cases: {
-      heading: 'Instalasi Khas di Mesir',
+      heading: 'Instalasi Mesin Press Minyak di Mesir',
       cases: [
         { tag: 'Beheira', tagLabel: 'Wijen & Tahini', name: 'Produsen Minyak Wijen & Tahini — Delta Nil', description: 'HN325 menekan wijen sangrai pilihan untuk memasok industri tahini dan halawa di Beheira, pusat pengolahan wijen Mesir.', stat: 'Hasil: 46-50%' },
         { tag: 'Fayoum', tagLabel: 'Minyak Bunga Matahari', name: 'Pabrik Minyak Bunga Matahari — Fayoum', description: 'HN365 memproses biji bunga matahari lokal untuk minyak goreng curah yang didistribusikan ke pasar Kairo dan Mesir Hulu.', stat: 'Output: ~500 kg/hari' },
@@ -411,15 +411,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Afrika Selatan untuk bunga matahari, kedelai, dan kanola. Berkas teknis NRCS LOA disediakan, mesin 400V/50Hz, pengiriman ke Durban. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Afrika Selatan — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, kacang tanah, kedelai, dan kanola. Harga langsung pabrik, pengiriman ke Durban dalam 22-26 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Afrika Selatan',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Afrika Selatan',
     seeds: [
       { emoji: '🌻', name: 'Bunga matahari', description: 'Bunga matahari adalah tanaman minyak utama di Afrika Selatan. 35-45% kandungan minyak. Permintaan tinggi untuk minyak goreng.', yield: 'Hasil: 35-45%' },
       { emoji: '🥜', name: 'Kacang tanah', description: 'Kacang tanah ditanam di provinsi Limpopo dan Mpumalanga. 40-50% kandungan minyak.', yield: 'Hasil: 38-45%' },
       { emoji: '🫘', name: 'Kedelai', description: 'Kedelai adalah tanaman yang berkembang di Afrika Selatan. Digunakan untuk minyak goreng dan pakan ternak.', yield: 'Hasil: 15-20%' },
       { emoji: '🌿', name: 'Kanola (rapeseed)', description: 'Kanola ditanam di provinsi Western Cape. Minyak kanola press dingin semakin diminati.', yield: 'Hasil: 35-40%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Afrika Selatan',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Afrika Selatan',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Afrika Selatan',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Afrika Selatan',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Rand atau Dolar AS, termasuk pengiriman ke Durban.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -427,9 +427,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Rand', description: 'Kami dapat menyiapkan penawaran harga dalam Rand Afrika Selatan (ZAR) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Afrika Selatan',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Afrika Selatan',
     shipping: { port: 'Durban / Cape Town', transitTime: '22-26 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Afrika Selatan',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Afrika Selatan?', answer: 'Hubungi kami untuk penawaran khusus rangkaian lengkap mesin press minyak Haonuo termasuk pengiriman ke Durban atau Cape Town. Kami menawarkan harga kompetitif langsung pabrik dan dapat membuat penawaran dalam ZAR (Rand Afrika Selatan) dengan kurs terkini.' },
       { question: 'Berapa tegangan yang digunakan mesin press minyak di Afrika Selatan?', answer: 'Mesin press minyak Haonuo disesuaikan untuk standar listrik 220V/50Hz Afrika Selatan. Motor kami dikonfigurasi sesuai kebutuhan kelistrikan lokal, memastikan pengoperasian yang aman dan efisien.' },
@@ -445,7 +445,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Afrika Selatan',
     clearance: {
-      heading: 'Kepatuhan Kelistrikan & Masuk Pelabuhan: Letter of Authority NRCS',
+      heading: 'Mesin Press Minyak di Afrika Selatan: Kepatuhan NRCS & Pelabuhan',
       intro: 'Mesin listrik yang diimpor ke Afrika Selatan dapat mensyaratkan Letter of Authority (LOA) dari National Regulator for Compulsory Specifications (NRCS) berdasarkan standar SANS yang berlaku sebelum pelepasan bea cukai. Pembeli yang baru mengetahuinya di pelabuhan Durban membayar biaya penyimpanan selagi aplikasi diproses.',
       stepsTitle: 'Tiga langkah persiapan',
       steps: [
@@ -466,7 +466,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Cakupan NRCS berubah seiring pembaruan standar — konfirmasikan apakah LOA berlaku untuk model persisnya dengan importir Anda sebelum memesan.',
     },
     cases: {
-      heading: 'Instalasi Khas di Afrika Selatan',
+      heading: 'Instalasi Mesin Press Minyak di Afrika Selatan',
       cases: [
         { tag: 'Free State', tagLabel: 'Minyak Bunga Matahari', name: 'Produsen Minyak Bunga Matahari — Free State', description: 'HN365 memproses panen bunga matahari Free State untuk merek minyak goreng artisanal yang dijual di kios petani dan toko deli.', stat: 'Output: ~500 kg/hari' },
         { tag: 'Limpopo', tagLabel: 'Minyak Kacang Tanah', name: 'Pabrik Minyak Kacang Tanah — Limpopo', description: 'HN325 cold-pressing kacang tanah untuk saluran pasar petani dan toko makanan sehat di Polokwane dan kota sekitarnya.', stat: 'Konfigurasi press dingin' },
@@ -481,15 +481,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Kenya untuk bunga matahari, wijen, dan kacang tanah. Sertifikat KEBS PVoC diatur sebelum pengiriman; mesin 415V/50Hz, pengiriman ke Mombasa. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Kenya — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, kacang tanah, wijen, dan biji kapas. Harga langsung pabrik, pengiriman ke Mombasa dalam 25-30 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Kenya',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Kenya',
     seeds: [
       { emoji: '🌻', name: 'Bunga matahari', description: 'Bunga matahari adalah tanaman minyak yang tumbuh paling cepat di Kenya. 35-45% kandungan minyak. Permintaan tinggi untuk minyak goreng lokal.', yield: 'Hasil: 35-45%' },
       { emoji: '🥜', name: 'Kacang tanah', description: 'Kacang tanah ditanam di wilayah barat dan pesisir Kenya. 40-50% kandungan minyak.', yield: 'Hasil: 38-45%' },
       { emoji: '🫘', name: 'Wijen', description: 'Wijen ditanam di wilayah kering dan semi-kering Kenya. Peluang ekspor yang berkembang.', yield: 'Hasil: 42-50%' },
       { emoji: '☁️', name: 'Biji kapas', description: 'Kapas ditanam di wilayah pesisir dan timur Kenya. Minyak goreng ekonomis.', yield: 'Hasil: 15-34%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Kenya',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Kenya',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Kenya',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Kenya',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Shilling atau Dolar AS, termasuk pengiriman ke Mombasa.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -497,9 +497,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Shilling', description: 'Kami dapat menyiapkan penawaran harga dalam Shilling Kenya (KES) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Kenya',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Kenya',
     shipping: { port: 'Mombasa', transitTime: '25-30 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Kenya',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Kenya?', answer: 'Hubungi kami untuk penawaran khusus rangkaian lengkap mesin press minyak Haonuo termasuk pengiriman ke Mombasa. Kami menawarkan harga kompetitif langsung pabrik dan dapat membuat penawaran dalam KES (Shilling Kenya) dengan kurs terkini.' },
       { question: 'Berapa tegangan yang digunakan mesin press minyak di Kenya?', answer: 'Mesin press minyak Haonuo disesuaikan untuk standar listrik 240V/50Hz Kenya. Motor kami dikonfigurasi sesuai kebutuhan kelistrikan lokal, memastikan pengoperasian yang aman dan efisien baik dengan listrik jaringan maupun genset.' },
@@ -515,7 +515,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Kenya',
     clearance: {
-      heading: 'Kepatuhan PVoC: Sertifikat yang Menyertai Mesin',
+      heading: 'Kepatuhan PVoC: Sertifikat yang Menyertai Mesin Press Minyak',
       intro: 'Impor yang diregulasi ke Kenya memerlukan Certificate of Conformity berdasarkan program KEBS Pre-Export Verification of Conformity (PVoC). Kata kuncinya adalah pra-ekspor: inspeksi dilakukan di pabrik kami sebelum kontainer disegel — bukan di Mombasa.',
       stepsTitle: 'Cara kerja prosesnya',
       steps: [
@@ -538,7 +538,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Barang yang tiba tanpa CoC yang valid menghadapi denda, inspeksi tujuan yang mahal, atau pengembalian ke asal — kesalahan termahal importir pemula Kenya. Kami mengoordinasikan kunjungan inspektur ke pabrik kami agar sertifikat diterbitkan sebelum pengiriman. Cakupan dan rute PVoC direvisi oleh KEBS dari waktu ke waktu — konfirmasikan persyaratan kategori terkini dengan agen kepabeanan Anda sebelum memesan.',
     },
     cases: {
-      heading: 'Instalasi Khas di Kenya',
+      heading: 'Instalasi Mesin Press Minyak di Kenya',
       cases: [
         { tag: 'Nakuru', tagLabel: 'Minyak Bunga Matahari', name: 'Produsen Minyak Bunga Matahari — Rift Valley', description: 'HN325 melayani koperasi petani bunga matahari kecil di sekitar Nakuru, menekan dalam kampanye singkat selama musim panen.', stat: 'Kapasitas: ~40 kg/batch' },
         { tag: 'Kakamega', tagLabel: 'Minyak Kacang Tanah', name: 'Pabrik Minyak Kacang Tanah — Kenya Barat', description: 'HN365 memproduksi minyak kacang tanah sangrai untuk pasar terbuka dan rak supermarket di Kakamega dan Kisumu.', stat: 'Output: ~450 kg/hari' },
@@ -553,15 +553,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Inggris untuk rapeseed, bunga matahari, dan rami. Dokumentasi CE/UKCA, mesin 400V, dan panduan PPN impor; pengiriman ke Felixstowe. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Inggris — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak rapeseed, bunga matahari, rami, dan biji rami press dingin. Harga langsung pabrik, pengiriman ke Felixstowe dalam 28-35 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Inggris',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Inggris',
     seeds: [
       { emoji: '🌿', name: 'Kanola (rapeseed)', description: 'Kanola adalah tanaman minyak yang paling banyak ditanam di Inggris. Minyak kanola press dingin diminati karena rasa lembut dan kandungan omega-3 yang kaya.', yield: 'Hasil: 35-40%' },
       { emoji: '🌻', name: 'Bunga matahari', description: 'Minyak bunga matahari press dingin semakin diminati untuk pasar produk organik dan spesialis.', yield: 'Hasil: 35-45%' },
       { emoji: '🍃', name: 'Rami (hemp)', description: 'Rami industri sedang berkembang di Inggris. Minyak rami yang kaya CBD dan omega-3 dijual dengan harga premium.', yield: 'Hasil: 30-35%' },
       { emoji: '🌾', name: 'Biji rami (flaxseed)', description: 'Minyak biji rami press dingin diminati sebagai suplemen gizi kaya omega-3. Pasar yang berkembang di Inggris.', yield: 'Hasil: 30-38%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Inggris',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Inggris',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Inggris',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Inggris',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Pound Sterling atau Dolar AS, termasuk pengiriman ke Felixstowe.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -569,9 +569,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Pound Sterling', description: 'Kami dapat menyiapkan penawaran harga dalam Pound Sterling (GBP) dengan kurs saat ini' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Inggris',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Inggris',
     shipping: { port: 'Felixstowe / Southampton', transitTime: '28-35 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Inggris',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Inggris?', answer: 'Hubungi kami untuk penawaran khusus rangkaian lengkap mesin press minyak Haonuo termasuk pengiriman ke Felixstowe atau Southampton. Kami menawarkan harga kompetitif langsung pabrik dan dapat membuat penawaran dalam GBP (Pound Sterling Inggris) dengan kurs terkini.' },
       { question: 'Apakah mesin press minyak memiliki sertifikasi CE untuk pasar Inggris?', answer: 'Mesin press minyak Haonuo diproduksi sesuai standar internasional. Silakan hubungi kami untuk memverifikasi status sertifikasi terkini untuk model dan pasar tujuan spesifik Anda. Kami memastikan semua komponen kelistrikan memenuhi standar dan regulasi keselamatan yang berlaku.' },
@@ -587,7 +587,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Inggris',
     clearance: {
-      heading: 'Kepatuhan Inggris: Penandaan CE/UKCA, PPN Impor & Kedatangan Pelabuhan',
+      heading: 'Impor Mesin Press Minyak ke Inggris: CE/UKCA & PPN',
       intro: 'Impor mesin ke Inggris mengikuti jalur yang stabil dan terdokumentasi baik. Tiga hal yang paling sering ditanyakan pembeli — aturan penandaan pasca-Brexit, pemulihan PPN impor, dan instalasi di tempat kerja — dijelaskan di sini.',
       stepsTitle: 'Tiga poin kepatuhan utama',
       steps: [
@@ -608,7 +608,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Kode tarif dan aturan penandaan ditinjau secara berkala — konfirmasikan kode komoditas dan perlakuan PPN terkini dengan agen bea cukai Inggris Anda.',
     },
     cases: {
-      heading: 'Instalasi Khas di Inggris',
+      heading: 'Instalasi Mesin Press Minyak di Inggris',
       cases: [
         { tag: 'East Anglia', tagLabel: 'Minyak Rapeseed', name: 'Peternakan Minyak Rapeseed Artisanal — Norfolk', description: 'HN426 cold-pressing rapeseed hasil tanam sendiri menjadi minyak goreng single-estate untuk kios petani, toko deli, dan pembeli belanja online.', stat: 'Konfigurasi press dingin' },
         { tag: 'South West', tagLabel: 'Minyak Biji Rami', name: 'Pengolah Minyak Rami — Devon', description: 'HN325 menekan biji rami berlisensi pada suhu rendah untuk produk pangan CBD dan kesehatan, menjaga suhu di bawah 40°C.', stat: 'Press suhu rendah' },
@@ -623,15 +623,15 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Amerika Serikat yang dibuat untuk pasokan 480V/60Hz, dengan opsi komponen UL dan kontak pangan selaras FDA. Pengiriman ke LA atau NY. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Amerika Serikat — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, kacang tanah, rami, dan almond press dingin. Harga langsung pabrik, pengiriman ke LA/NY dalam 30-40 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Amerika Serikat',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Amerika Serikat',
     seeds: [
       { emoji: '🌻', name: 'Bunga matahari', description: 'Minyak bunga matahari press dingin diminati di pasar minyak spesialis dan organik AS. 35-45% kandungan minyak.', yield: 'Hasil: 35-45%' },
       { emoji: '🥜', name: 'Kacang tanah', description: 'Minyak kacang tanah gourmet adalah pasar spesialis yang berkembang. Rasa kaya dan titik asap tinggi dihargai oleh koki.', yield: 'Hasil: 38-45%' },
       { emoji: '🍃', name: 'Rami (hemp)', description: 'Minyak rami CBD adalah salah satu pasar yang tumbuh paling cepat di AS. Ekstraksi dingin mempertahankan kanabinoid dan terpena.', yield: 'Hasil: 30-35%' },
       { emoji: '🌰', name: 'Almond', description: 'California adalah produsen almond terbesar di dunia. Minyak almond press dingin diminati dalam kosmetik dan kuliner kelas atas.', yield: 'Hasil: 45-55%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Amerika Serikat',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Amerika Serikat',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Amerika Serikat',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Amerika Serikat',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Dolar AS, termasuk pengiriman ke Los Angeles atau New York.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -639,9 +639,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Dolar AS', description: 'Penawaran dalam Dolar AS (USD), dokumen resmi untuk impor AS' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Amerika Serikat',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Amerika Serikat',
     shipping: { port: 'Los Angeles / New York (New Jersey)', transitTime: '30-40 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Amerika Serikat',
     faqs: [
       { question: 'Berapa harga mesin press minyak di Amerika Serikat?', answer: 'Hubungi kami untuk penawaran khusus rangkaian lengkap mesin press minyak Haonuo termasuk pengiriman ke Los Angeles atau New York. Kami menawarkan harga kompetitif langsung pabrik dalam USD, hemat dibandingkan distributor domestik (penghematan aktual bervariasi).' },
       { question: 'Apakah mesin press minyak memenuhi kepatuhan FDA/USDA?', answer: 'Mesin press minyak Haonuo menggunakan baja tahan karat kelas pangan untuk permukaan yang bersentuhan dengan minyak dan biji, selaras dengan persyaratan material permukaan kontak pangan FDA. Mesin kami belum disertifikasi atau disetujui secara terpisah oleh FDA. Pembeli harus memverifikasi persyaratan kepatuhan dengan dinas kesehatan setempat. Untuk fasilitas produksi minyak, kami dapat menyediakan dokumentasi pendukung kepatuhan USDA. Semua permukaan mesin yang bersentuhan dengan minyak atau biji terbuat dari baja tahan karat kelas pangan.' },
@@ -657,7 +657,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Amerika Serikat',
     clearance: {
-      heading: 'Kesiapan Instalasi AS: Tegangan, Kontrol, Kontak Pangan & Masuk Pabean',
+      heading: 'Instalasi Mesin Press Minyak di AS: Tegangan & Kepatuhan',
       intro: 'Mesin melalui bea cukai AS tanpa kesulitan — kejutan hampir selalu soal spesifikasi kelistrikan dan kesiapan lokasi. Empat hal ini dikonfirmasi saat pemesanan, bukan setelah pengiriman.',
       stepsTitle: 'Empat poin yang dikonfirmasi saat pemesanan',
       steps: [
@@ -679,7 +679,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Konfirmasikan tegangan, persyaratan panel, perlakuan tarif, dan kode lokal dengan teknisi listrik dan broker bea cukai Anda sebelum memesan — kami membangun sesuai spesifikasi yang dikonfirmasi.',
     },
     cases: {
-      heading: 'Instalasi Khas di Amerika Serikat',
+      heading: 'Instalasi Mesin Press Minyak di Amerika Serikat',
       cases: [
         { tag: 'North Dakota', tagLabel: 'Minyak Bunga Matahari', name: 'Produsen Minyak Bunga Matahari — Northern Plains', description: 'HN365 cold-pressing biji bunga matahari high-oleic untuk merek minyak goreng premium yang dijual melalui saluran makanan alami dan koperasi.', stat: 'Batch high-oleic' },
         { tag: 'Oregon', tagLabel: 'Minyak Biji Rami', name: 'Pengolah Biji Rami — Pacific Northwest', description: 'HN426 menekan biji rami berlisensi pada suhu rendah terkontrol untuk produk perawatan tubuh, kuliner, dan nutrisi.', stat: 'Press suhu rendah' },
@@ -694,14 +694,14 @@ export const idMarketData: Record<string, MarketData> = {
     description: 'Mesin press minyak di Timur Tengah untuk wijen, zaitun, dan kenari. Dukungan sertifikasi SABER, G-Mark, dan ECAS untuk Arab Saudi dan UEA. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Timur Tengah — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak wijen, kenari, dan zaitun di seluruh Arab Saudi, UEA, dan pasar Teluk yang lebih luas. Pasokan langsung pabrik, pengiriman ke Jeddah dan Dubai dalam 20-25 hari, garansi 1 tahun.',
-    seedsTitle: 'Biji Minyak Populer di Timur Tengah',
+    seedsTitle: 'Biji Minyak Populer untuk Press Hidrolik di Timur Tengah',
     seeds: [
       { emoji: '🫘', name: 'Wijen', description: 'Wijen adalah bahan pokok dalam masakan Timur Tengah. Minyak wijen press dingin sangat penting untuk tahini dan hidangan tradisional. 50-55% kandungan minyak.', yield: 'Hasil: 42-54%' },
       { emoji: '🥜', name: 'Kenari', description: 'Minyak kenari press dingin diminati karena rasa kaya dan manfaat kesehatannya. Pasar yang berkembang di Timur Tengah.', yield: 'Hasil: 50-62%' },
       { emoji: '🫒', name: 'Zaitun', description: 'Minyak zaitun adalah pilar masakan Timur Tengah. Press dingin di bawah 27°C diperlukan untuk minyak zaitun extra virgin (EVOO).', yield: 'Hasil: 12-26%' },
     ],
-    productsTitle: 'Mesin yang Direkomendasikan untuk Timur Tengah',
-    quoteTitle: 'Dapatkan Penawaran Harga Khusus untuk Timur Tengah',
+    productsTitle: 'Mesin Press Minyak Hidrolik yang Direkomendasikan untuk Timur Tengah',
+    quoteTitle: 'Dapatkan Penawaran Mesin Press Minyak untuk Timur Tengah',
     quoteDesc: 'Kami menawarkan harga kompetitif langsung dari pabrik untuk semua mesin press minyak kami. Minta penawaran harga resmi dalam Riyal atau Dolar AS, termasuk pengiriman ke Jeddah atau Dubai.',
     quoteCards: [
       { emoji: '🏭', title: 'Harga Langsung Pabrik', description: 'Tanpa perantara — hemat dibandingkan distributor lokal' },
@@ -709,9 +709,9 @@ export const idMarketData: Record<string, MarketData> = {
       { emoji: '💬', title: 'Penawaran dalam Riyal/Dolar', description: 'Kami dapat menyiapkan penawaran harga dalam Riyal Saudi atau Dolar AS' },
     ],
     quoteCta: 'Dapatkan Harga Pabrik',
-    shippingTitle: 'Pengiriman ke Timur Tengah',
+    shippingTitle: 'Pengiriman Mesin Press Minyak ke Timur Tengah',
     shipping: { port: 'Pelabuhan Islam Jeddah / Jebel Ali (Dubai)', transitTime: '20-25 hari dari Tiongkok', cost: 'Hubungi kami untuk harga terkini' },
-    faqTitle: 'Pertanyaan Umum',
+    faqTitle: 'FAQ Mesin Press Minyak di Timur Tengah',
     faqs: [
       { question: 'Apakah mesin press minyak bersertifikasi halal?', answer: 'Mesin kami diproduksi dari material kelas pangan dan menghasilkan minyak 100% murni alami tanpa pemrosesan kimia. Metode press dingin pada dasarnya halal karena hanya melibatkan ekstraksi mekanis. Kami dapat menyediakan sertifikat material dan dokumentasi pabrik untuk mendukung sertifikasi halal produk minyak Anda.' },
       { question: 'Apakah mesin dapat memproduksi minyak wijen press dingin (minyak tahini)?', answer: 'Ya, model HN426 Cold Press kami dirancang khusus untuk press dingin wijen pada suhu di bawah 60°C. Ini mempertahankan rasa alami dan nilai gizi minyak wijen, yang sangat dihargai dalam masakan Timur Tengah dan pengobatan tradisional.' },
@@ -728,7 +728,7 @@ export const idMarketData: Record<string, MarketData> = {
     breadcrumbMarkets: 'Pasar',
     breadcrumbMarket: 'Timur Tengah',
     clearance: {
-      heading: 'Sertifikasi Teluk & Masuk Pelabuhan: SABER, G-Mark, dan ECAS',
+      heading: 'Mesin Press Minyak di Teluk: SABER, G-Mark & ECAS',
       intro: 'Pasar Teluk terorganisir dengan baik tetapi digerakkan oleh sertifikasi: Arab Saudi dan UEA masing-masing menjalankan skema kesesuaian yang harus diselesaikan sebelum barang tiba, sementara Jebel Ali juga melayani pembeli yang melakukan re-ekspor ke seluruh kawasan.',
       stepsTitle: 'Skema kesesuaian per negara tujuan',
       steps: [
@@ -749,7 +749,7 @@ export const idMarketData: Record<string, MarketData> = {
       disclaimer: 'Konfirmasikan cakupan terkini untuk model persisnya dengan importir Anda, karena regulasi teknis Teluk diperbarui secara berkala.',
     },
     cases: {
-      heading: 'Instalasi Khas di Seluruh Timur Tengah',
+      heading: 'Instalasi Mesin Press Minyak di Seluruh Timur Tengah',
       cases: [
         { tag: 'Arab Saudi', tagLabel: 'Wijen / Tahini', name: 'Produsen Wijen & Tahini — Wilayah Barat', description: 'HN325 menekan wijen sangrai premium untuk produksi tahini dan halawa yang dipasok ke produsen makanan di Jeddah dan Riyadh.', stat: 'Hasil: 46-50%' },
         { tag: 'UEA', tagLabel: 'Minyak Kenari & Almond', name: 'Pengolah Minyak Kacang Premium — Dubai', description: 'HN426 cold-pressing kenari dan almond pada suhu terkontrol untuk pasokan ritel gourmet dan hotel di Teluk.', stat: 'Konfigurasi press dingin' },
