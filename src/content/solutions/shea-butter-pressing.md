@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage du Beurre de Karité
   ar: حل عصر زبدة الشيا
   id: Solusi Penekanan Mentega Shea
+seoTitle:
+  en: Shea Butter Oil Press Machine for Oil Mills
+  fr: Machine à Beurre de Karité pour Moulins
+  ar: آلة زبدة الشيا للمعاصر
+  id: Mesin Minyak Shea untuk Pabrik
 seedName: shea
 icon: shea
 description:

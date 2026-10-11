@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile de Ricin
   ar: حل عصر زيت الخروع
   id: Solusi Penekanan Minyak Jarak
+seoTitle:
+  en: Castor Oil Press Machine for Cold & Hot Pressing
+  fr: Machine à Huile de Ricin, Pressage à Froid et à Chaud
+  ar: آلة عصر زيت الخروع، عصر بارد وساخن
+  id: Mesin Press Minyak Jarak, Press Dingin & Panas
 seedName: castor
 icon: castor
 description:

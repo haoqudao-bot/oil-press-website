@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile d'Avocat
   ar: حل عصر زيت الأفوكادو
   id: Solusi Penekanan Minyak Alpukat
+seoTitle:
+  en: Avocado Oil Press Machine for Cold-Pressed Oil
+  fr: Machine à Huile d'Avocat, Pressage à Froid
+  ar: آلة زيت الأفوكادو، عصر بارد
+  id: Mesin Minyak Alpukat, Press Dingin
 seedName: avocado
 icon: avocado
 description:

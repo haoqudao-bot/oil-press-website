@@ -4,6 +4,11 @@ title:
   fr: "Solution de Pressage d'Huile de Soja"
   ar: "حل عصر زيت الصويا"
   id: "Solusi Penekanan Minyak Kedelai"
+seoTitle:
+  en: Soybean Oil Press Machine for Oil Producers
+  fr: Machine à Huile de Soja pour Producteurs
+  ar: آلة عصر زيت الصويا للمنتجين
+  id: Mesin Press Minyak Kedelai untuk Produsen
 seedName: soybean
 icon: soybean
 description:

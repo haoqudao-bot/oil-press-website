@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile de Noix
   ar: حل عصر زيت الجوز
   id: Solusi Penekanan Minyak Kenari
+seoTitle:
+  en: Walnut Oil Press Machine for Cold-Pressed Oil
+  fr: Machine à Huile de Noix, Pressage à Froid
+  ar: آلة زيت الجوز، عصر بارد
+  id: Mesin Minyak Kenari, Press Dingin
 seedName: walnut
 icon: walnut
 description:

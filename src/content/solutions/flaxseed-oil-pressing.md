@@ -4,6 +4,11 @@ title:
   fr: "Solution de Pressage d'Huile de Lin"
   ar: "حل عصر زيت بذور الكتان"
   id: "Solusi Penekanan Minyak Biji Rami"
+seoTitle:
+  en: Flaxseed (Linseed) Oil Press Machine, Cold Press
+  fr: Machine à Huile de Lin, Pressage à Froid
+  ar: آلة زيت بذر الكتان، عصر بارد
+  id: Mesin Minyak Biji Rami, Press Dingin
 seedName: flaxseed
 icon: flaxseed
 description:

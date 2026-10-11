@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile Industrielle
   ar: حل عصر الزيت الصناعي
   id: Solusi Press Minyak Industri
+seoTitle:
+  en: Industrial Oil Press Machine 300–620 Ton
+  fr: Machine de Pressage Industrielle 300–620 Tonnes
+  ar: آلة عصر زيت صناعية 300–620 طن
+  id: Mesin Press Minyak Industri 300–620 Ton
 seedName: industrial
 icon: industrial
 description:

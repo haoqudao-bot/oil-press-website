@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile de Tournesol
   ar: حل عصر زيت عباد الشمس
   id: Solusi Penekanan Minyak Bunga Matahari
+seoTitle:
+  en: Sunflower Oil Press Machine for Cooking Oil Mills
+  fr: Machine à Huile de Tournesol pour Moulins
+  ar: آلة عصر زيت عباد الشمس للمطاحن
+  id: Mesin Press Minyak Bunga Matahari untuk Pabrik
 seedName: sunflower
 icon: sunflower
 description:

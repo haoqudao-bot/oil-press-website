@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile de Coton
   ar: حل عصر زيت بذرة القطن
   id: Solusi Penekanan Minyak Biji Kapas
+seoTitle:
+  en: Cottonseed Oil Press Machine for Oil Mills
+  fr: Machine à Huile de Graine de Coton pour Moulins
+  ar: آلة زيت بذور القطن للمطاحن
+  id: Mesin Minyak Biji Kapas untuk Pabrik
 seedName: cottonseed
 icon: cottonseed
 description:

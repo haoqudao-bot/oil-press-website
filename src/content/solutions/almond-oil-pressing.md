@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile d'Amande
   ar: حل عصر زيت اللوز
   id: Solusi Penekanan Minyak Almond
+seoTitle:
+  en: Almond Oil Press Machine for Cold-Pressed Oil
+  fr: Machine à Huile d'Amande, Pressage à Froid
+  ar: آلة زيت اللوز، عصر بارد
+  id: Mesin Minyak Almond, Press Dingin
 seedName: almond
 icon: almond
 description:

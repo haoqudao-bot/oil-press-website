@@ -4,6 +4,11 @@ title:
   fr: Solution de Pressage d'Huile d'Olive
   ar: حل عصر زيت الزيتون
   id: Solusi Penekanan Minyak Zaitun
+seoTitle:
+  en: Olive Oil Press Machine for Small Oil Mills
+  fr: Machine à Huile d'Olive pour Petits Moulins
+  ar: آلة عصر زيت الزيتون للمطاحن الصغيرة
+  id: Mesin Press Minyak Zaitun untuk Pabrik Kecil
 seedName: olive
 icon: olive
 description:
