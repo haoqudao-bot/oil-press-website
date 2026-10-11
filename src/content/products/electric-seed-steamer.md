@@ -41,6 +41,8 @@ specifications:
     value: Acier inoxydable 201
   - name: Equipment Dimensions
     value: 1100×700×1550 mm
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - thermal-oil-roasting-pan

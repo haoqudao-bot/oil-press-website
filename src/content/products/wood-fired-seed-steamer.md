@@ -39,6 +39,8 @@ specifications:
     value: 8.7 cm
   - name: Total Equipment Weight
     value: 78 kg
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - electric-seed-steamer

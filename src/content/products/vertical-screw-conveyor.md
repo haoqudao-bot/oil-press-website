@@ -34,6 +34,8 @@ specifications:
     value: Enclosed vertical screw, dust-free
   - name: Typical Pairing
     value: Hydraulic oil press, oil filter, drum/pan roaster
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - integrated-feeder-crusher-roaster

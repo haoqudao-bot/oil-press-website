@@ -48,6 +48,8 @@ specifications:
     value: ~1,4 / ~2,1 Tonnes
   - name: Equipment Dimensions
     value: 1200×1100×2600 mm
+  - name: MOQ
+    value: 1 Set
 featured: true
 related:
   - standard-hydraulic-oil-press

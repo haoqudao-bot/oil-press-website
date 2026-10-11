@@ -29,6 +29,8 @@ specifications:
     value: Cuve de neutralisation, Cuve de décoloration, Cuve de désodorisation, Four à huile thermique, Pompe à vide
   - name: Refining Methods
     value: Mécanique, Chimique, Physico-chimique
+  - name: MOQ
+    value: 1 Set
 featured: true
 related:
   - pneumatic-oil-filter-press

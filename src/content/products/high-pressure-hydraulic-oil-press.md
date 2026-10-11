@@ -39,6 +39,8 @@ specifications:
     value: 800 mm (customizable)
   - name: Cylinder Standard Stroke
     value: 850 mm (customizable)
+  - name: MOQ
+    value: 1 Set
 featured: true
 related:
   - cold-press-hydraulic-oil-press

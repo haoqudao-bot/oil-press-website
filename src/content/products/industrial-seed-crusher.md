@@ -32,6 +32,8 @@ specifications:
     value: 2000 kg/h
   - name: Weight
     value: 308 kg
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - high-speed-seed-crusher

@@ -38,6 +38,8 @@ specifications:
     value: 35–40% of seed oil
   - name: Typical Yield Increase
     value: 3–5% total oil yield with hydraulic finishing
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - high-speed-seed-crusher

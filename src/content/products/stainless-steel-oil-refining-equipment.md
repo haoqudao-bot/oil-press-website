@@ -31,6 +31,8 @@ specifications:
     value: Neutralization Tank, Bleaching Tank, Deodorization Tank, Thermal Oil Furnace, Vacuum Pump
   - name: Refining Methods
     value: Mécanique, Chimique, Physico-chimique
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - edible-oil-refining-system

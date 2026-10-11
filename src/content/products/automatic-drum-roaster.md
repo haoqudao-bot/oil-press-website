@@ -34,6 +34,8 @@ specifications:
     value: Electromagnetic, flameless, sealed drum
   - name: Control
     value: Independent temperature control with automatic shut-off
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - thermal-oil-roasting-pan

@@ -45,6 +45,8 @@ specifications:
     value: 28.1 KW (27 KW + 1.1 KW)
   - name: Equipment Dimensions
     value: 1550×1200 mm
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - electric-seed-steamer

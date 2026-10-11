@@ -48,6 +48,8 @@ specifications:
     value: 1400×2100×2900 / 2700×2100×2900 mm
   - name: Top Cake Cylinder (Single/Double)
     value: 60 Tonnes / 30 MPa / 60 Tonnes / 30 MPa
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - standard-hydraulic-oil-press

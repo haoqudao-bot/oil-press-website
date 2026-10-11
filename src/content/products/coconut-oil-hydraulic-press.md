@@ -50,6 +50,8 @@ specifications:
     value: ~1,3 Tonnes
   - name: Equipment Dimensions
     value: 2100×1260×2200 mm
+  - name: MOQ
+    value: 1 Set
 featured: true
 related:
   - large-barrel-hydraulic-oil-press

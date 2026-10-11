@@ -25,6 +25,8 @@ specifications:
     value: 500-1000 kg/h (selon la configuration)
   - name: Integrated Functions
     value: Alimentation automatique + Concassage + Torréfaction
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - high-speed-seed-crusher

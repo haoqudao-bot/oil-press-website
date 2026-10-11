@@ -51,6 +51,8 @@ specifications:
     value: 1200×1200×2450 / 2100×1200×2450 mm
   - name: Residual Oil in Cake
     value: 6–8% typical (cake sells as animal feed)
+  - name: MOQ
+    value: 1 Set
 featured: true
 related:
   - hn365-hydraulic-oil-press

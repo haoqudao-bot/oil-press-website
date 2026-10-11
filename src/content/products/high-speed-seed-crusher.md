@@ -36,6 +36,8 @@ specifications:
     value: 218 kg
   - name: Equipment Dimensions
     value: 1400×802×800 mm
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - industrial-seed-crusher

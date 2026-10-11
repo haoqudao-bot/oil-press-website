@@ -49,6 +49,8 @@ specifications:
     value: 1200×1200×2650 / 2100×1200×2650 mm
   - name: Cake Surface Pressure
     value: 30.15 MPa
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - hn365-hydraulic-oil-press

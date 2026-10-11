@@ -36,6 +36,8 @@ specifications:
     value: 1.1-2.2 KW
   - name: Working Voltage
     value: 220V / 380V
+  - name: MOQ
+    value: 1 Set
 featured: false
 related:
   - edible-oil-refining-system

@@ -47,6 +47,8 @@ specifications:
     value: Peanut, sesame, rapeseed, camellia (tea) seed, walnut, flaxseed, sunflower, soybean, almond
   - name: Trade Term
     value: FOB Qingdao
+  - name: MOQ
+    value: 1 Set
 featured: true
 related:
   - standard-hydraulic-oil-press
