@@ -191,7 +191,7 @@ const storageTips = [
                     <span class="text-steel-500 text-sm">Modèles recommandés:</span>
                     <div class="flex gap-2">
                       {material.models.map((model, idx) => (
-                        <a key={idx} href={`/fr/products/${modelToSlug[model] || model}`} class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded font-medium hover:bg-amber-200 transition-colors">{model}</a>
+                        <a key={idx} href={`/fr/products/${modelToSlug[model] || model}/`} class="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded font-medium hover:bg-amber-200 transition-colors">{model}</a>
                       ))}
                     </div>
                   </div>

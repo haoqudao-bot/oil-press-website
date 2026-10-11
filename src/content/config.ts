@@ -120,6 +120,7 @@ const solutions = defineCollection({
       id: z.string(),
     }),
     recommendedProducts: z.array(z.string()).default([]),
+    related: z.array(z.string()).default([]),
     processSteps: z.array(z.object({
       step: z.string(),
       description: z.string(),

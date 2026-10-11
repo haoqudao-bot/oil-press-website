@@ -244,6 +244,14 @@ if (faqLd) allLd.push(faqLd);
         </div>
       )}
 
+      <!-- Price Guide -->
+      <div class="mt-12 text-center">
+        <a href="/resources/oil-press-machine-price-guide/" class="inline-flex items-center gap-2 text-amber-600 hover:text-amber-500 font-medium transition-colors">
+          Planning your budget? Read our Oil Press Machine Price Guide
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
       <!-- Related Products -->
       {relatedProducts.length > 0 && (
         <div class="mt-12 md:mt-16">
@@ -251,7 +259,7 @@ if (faqLd) allLd.push(faqLd);
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedProducts.map(rp => rp && (
               <a
-                href={`/products/${rp.slug}`}
+                href={`/products/${rp.slug}/`}
                 class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
               >
                 <div class="aspect-[4/3] bg-steel-100 overflow-hidden">

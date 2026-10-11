@@ -171,7 +171,7 @@ const productKeywords = [
                 </a>
                 {sortedCategories.map(cat => (
                   <a
-                    href={`/products/${cat.slug}`}
+                    href={`/products/${cat.slug}/`}
                     class="block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                   >
                     {cat.data.name.en}
@@ -238,7 +238,7 @@ const productKeywords = [
                 </div>
                 {group.products.map(product => (
                   <a
-                    href={`/products/${product.slug}`}
+                    href={`/products/${product.slug}/`}
                     class="product-card card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
                   >
                     <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
@@ -296,7 +296,7 @@ const productKeywords = [
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                       {previousProducts.map(product => (
                         <a
-                          href={`/products/${product.slug}`}
+                          href={`/products/${product.slug}/`}
                           class="archive-card card-hover bg-white rounded-2xl overflow-hidden border border-steel-200 group"
                         >
                           <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">

@@ -16,6 +16,7 @@ description:
   fr: Production d'huile d'arachide (cacahuète) en 7 étapes avec presse hydraulique — nettoyage, décorticage, broyage, conditionnement, humidité réglée à 4-6 %, pressage et filtration. HN325/HN365.
   ar: إنتاج زيت الفول السوداني بسبع خطوات بمعصرة هيدروليكية — التنظيف والتقشير والسحق والتكييف وضبط الرطوبة 4-6% والعصر والترشيح. طرازا HN325/HN365.
   id: Produksi minyak kacang tanah 7 langkah lengkap dengan press hidrolik — pembersihan, pengupasan, penghancuran, pengondisian, kelembapan 4-6%, pengepresan dan filtrasi. HN325/HN365.
+related: ["rice-bran-oil-pressing", "animal-fat-oil-pressing", "soybean-oil-pressing"]
 recommendedProducts:
   - standard-hydraulic-oil-press
   - hn365-hydraulic-oil-press

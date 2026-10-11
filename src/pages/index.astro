@@ -494,7 +494,7 @@ const modelListLd = {
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {featuredSolutions.map((solution, i) => (
           <a
-            href={`/solutions/${solution.slug}`}
+            href={`/solutions/${solution.slug}/`}
             class="reveal group bg-steel-50 hover:bg-amber-50 border border-transparent hover:border-amber-200 rounded-xl p-5 text-center transition-colors"
             style={`transition-delay:${i * 40}ms`}
           >
@@ -508,7 +508,7 @@ const modelListLd = {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
         {scaleSolutions.map((solution, i) => (
           <a
-            href={`/solutions/${solution.slug}`}
+            href={`/solutions/${solution.slug}/`}
             class="reveal group flex items-center gap-4 bg-white border border-steel-100 hover:border-amber-300 rounded-xl p-5 transition-colors"
             style={`transition-delay:${i * 60}ms`}
           >

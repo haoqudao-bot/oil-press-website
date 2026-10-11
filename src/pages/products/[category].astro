@@ -224,7 +224,7 @@ if (catFaqLd) allLd.push(catFaqLd);
                 </a>
                 {sortedCategories.map(cat => (
                   <a
-                    href={`/products/${cat.slug}`}
+                    href={`/products/${cat.slug}/`}
                     class:list={[
                       'block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
                       category.slug === cat.slug ? 'bg-amber-500 text-charcoal-900' : 'text-steel-600 hover:bg-steel-50'
@@ -296,7 +296,7 @@ if (catFaqLd) allLd.push(catFaqLd);
                 )}
                 {group.products.map((product) => (
                   <a
-                    href={`/products/${product.slug}`}
+                    href={`/products/${product.slug}/`}
                     class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
                   >
                     <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">
@@ -353,7 +353,7 @@ if (catFaqLd) allLd.push(catFaqLd);
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                   {previousProducts.map(product => (
                     <a
-                      href={`/products/${product.slug}`}
+                      href={`/products/${product.slug}/`}
                       class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-200 group"
                     >
                       <div class="aspect-[4/3] bg-steel-100 overflow-hidden relative">

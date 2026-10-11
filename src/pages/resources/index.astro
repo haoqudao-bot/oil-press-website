@@ -122,7 +122,7 @@ const typeColors: Record<string, string> = {
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {newsItems.map((resource, i) => (
-          <a href={`/resources/${resource.slug}`} class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group" style={`animation-delay: ${i * 80}ms`}>
+          <a href={`/resources/${resource.slug}/`} class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group" style={`animation-delay: ${i * 80}ms`}>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
                 <span class={`text-xs font-medium px-2.5 py-1 rounded-full ${typeColors[resource.data.type] || 'bg-steel-100 text-steel-700'}`}>
@@ -160,7 +160,7 @@ const typeColors: Record<string, string> = {
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {guideItems.map((resource, i) => (
-          <a href={`/resources/${resource.slug}`} class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group" style={`animation-delay: ${i * 80}ms`}>
+          <a href={`/resources/${resource.slug}/`} class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group" style={`animation-delay: ${i * 80}ms`}>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
                 <span class={`text-xs font-medium px-2.5 py-1 rounded-full ${typeColors[resource.data.type] || 'bg-steel-100 text-steel-700'}`}>

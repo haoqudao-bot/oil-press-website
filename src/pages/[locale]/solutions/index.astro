@@ -232,7 +232,7 @@ const breadcrumbLd = {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {seedSolutions.map((solution) => (
           <a
-            href={localePath(`/solutions/${solution.slug}`)}
+            href={localePath(`/solutions/${solution.slug}/`)}
             class="group bg-white rounded-2xl p-6 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
           >
             <div class="flex items-start gap-4">
@@ -313,7 +313,7 @@ const breadcrumbLd = {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {scaleSolutions.map((solution) => (
           <a
-            href={localePath(`/solutions/${solution.slug}`)}
+            href={localePath(`/solutions/${solution.slug}/`)}
             class="group bg-white rounded-2xl p-8 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
           >
             <span class="text-5xl block mb-4">{scaleIcons[solution.data.seedName] || '⚙️'}</span>

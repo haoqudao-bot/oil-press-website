@@ -16,6 +16,7 @@ description:
   fr: Machine à huile de palme et machine de pressage d'huile de palmiste pour une extraction efficace. Pression hydraulique haute pression pour les marchés d'Asie du Sud-Est et d'Afrique.
   ar: آلة زيت النخيل وآلة عصر زيت نواة النخيل لاستخراج زيت النخيل ونواة النخيل بكفاءة. ضغط هيدروليكي عالي الضغط لأسواق جنوب شرق آسيا وأفريقيا.
   id: Mesin minyak sawit dan mesin press minyak inti sawit untuk ekstraksi minyak sawit dan inti sawit yang efisien. Press hidrolik tekanan tinggi untuk pasar Asia Tenggara dan Afrika.
+related: ["animal-fat-oil-pressing", "coconut-oil-pressing"]
 recommendedProducts:
   - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press

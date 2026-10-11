@@ -1,7 +1,7 @@
 ---
 title:
   en: Oil Press Electrical Requirements
-  fr: Exigences electriques de la presse
+  fr: Exigences électriques de la presse
   ar: المتطلبات الكهربائية للمكبس الزيتي
   id: Persyaratan Listrik Mesin Press
 description:

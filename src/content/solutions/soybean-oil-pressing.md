@@ -16,6 +16,7 @@ description:
   fr: "Solution complète de pressage d'huile de soja, de la préparation des graines jusqu'au pressage et à la filtration."
   ar: "حل شامل لعصر زيت الصويا، من تحضير البذور حتى العصر والترشيح."
   id: "Solusi lengkap penekanan minyak kedelai, dari persiapan biji hingga penekanan dan filtrasi."
+related: ["rice-bran-oil-pressing", "animal-fat-oil-pressing", "peanut-oil-pressing"]
 recommendedProducts:
   - standard-hydraulic-oil-press
   - high-speed-seed-crusher

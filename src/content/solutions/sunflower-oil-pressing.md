@@ -16,6 +16,7 @@ description:
   fr: Machine de pressage d'huile de tournesol pour extraction d'huile de tournesol de haute qualité. Pression hydraulique à haut rendement et faible taux résiduel.
   ar: آلة عصر زيت عباد الشمس لاستخراج زيت عباد الشمس عالي الجودة. ضغط هيدروليكي عالي العائد ومعدل متبقي منخفض.
   id: Mesin press minyak bunga matahari untuk ekstraksi minyak bunga matahari berkualitas tinggi. Press hidrolik hasil tinggi dan sisa rendah.
+related: ["soybean-oil-pressing", "rice-bran-oil-pressing", "peanut-oil-pressing"]
 recommendedProducts:
   - standard-hydraulic-oil-press
   - hn365-hydraulic-oil-press

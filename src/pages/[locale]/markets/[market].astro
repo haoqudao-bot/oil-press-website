@@ -223,7 +223,7 @@ const faqLd = {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {mainProducts.map(product => (
           <a
-            href={localePath(`/products/${product.slug}`)}
+            href={localePath(`/products/${product.slug}/`)}
             class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
           >
             <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
@@ -254,7 +254,7 @@ const faqLd = {
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {auxProducts.map(product => (
               <a
-                href={localePath(`/products/${product.slug}`)}
+                href={localePath(`/products/${product.slug}/`)}
                 class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
               >
                 <div class="aspect-[4/3] bg-steel-100 overflow-hidden">

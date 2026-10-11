@@ -47,10 +47,17 @@ const recommendedProducts = solution.data.recommendedProducts
   .filter(Boolean);
 
 const allSolutions = await getCollection('solutions');
-const otherSolutions = allSolutions
-  .filter(s => s.slug !== solution.slug)
-  .sort((a, b) => a.data.order - b.data.order)
-  .slice(0, 3);
+// 相关方案优先（related 字段），其余按 order 排序补足
+const relatedSlugs = solution.data.related || [];
+const relatedSolutions = relatedSlugs
+  .map(slug => allSolutions.find(s => s.slug === slug))
+  .filter(Boolean);
+const otherSolutions = [
+  ...relatedSolutions,
+  ...allSolutions
+    .filter(s => s.slug !== solution.slug && !relatedSlugs.includes(s.slug))
+    .sort((a, b) => a.data.order - b.data.order),
+].slice(0, 3);
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -138,13 +145,15 @@ if (faqLd) allLd.push(faqLd);
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {recommendedProducts.map(product => product && (
             <a
-              href={`/products/${product.slug}`}
+              href={`/products/${product.slug}/`}
               class="card-hover bg-white rounded-2xl overflow-hidden border border-steel-100 group"
             >
               <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
                 <img
                   src={product.data.images[0]}
                   alt={product.data.title.en}
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Industrial%20oil%20press%20machine%20product%20photo&image_size=landscape_4_3'"
                 />
@@ -195,7 +204,7 @@ if (faqLd) allLd.push(faqLd);
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {otherSolutions.map(s => (
             <a
-              href={`/solutions/${s.slug}`}
+              href={`/solutions/${s.slug}/`}
               class="card-hover bg-white rounded-2xl p-6 border border-steel-100 group hover:border-amber-300"
             >
               <div class="text-4xl mb-4">{seedIcons[s.data.seedName] || '🛢️'}</div>
