@@ -1,6 +1,6 @@
 ---
 title:
-  en: Electric Seed Steamer
+  en: Electric Seed Steamer for Commercial Oil Mills
   fr: Cuisseur Vapeur Électrique pour Graines
   ar: بخاخة بذور كهربائية
   id: Pengukus Biji-Bijian Listrik

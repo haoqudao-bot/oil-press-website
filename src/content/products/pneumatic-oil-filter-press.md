@@ -1,6 +1,6 @@
 ---
 title:
-  en: Pneumatic Oil Filter Press
+  en: Pneumatic Oil Filter Press for Crude Oil
   fr: Filtre-Presse Pneumatique à Huile
   ar: فلتر زيت هوائي
   id: Saringan Minyak Pneumatik

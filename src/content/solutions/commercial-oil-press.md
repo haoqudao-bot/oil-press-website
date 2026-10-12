@@ -5,7 +5,7 @@ title:
   ar: حل عصر الزيت التجاري
   id: Solusi Press Minyak Komersial
 seoTitle:
-  en: Commercial Oil Press Machine
+  en: Commercial Oil Press Machine for Oil Mills
   fr: Machine de Pressage d'Huile Commerciale
   ar: آلة عصر الزيت التجارية
   id: Mesin Press Minyak Komersial

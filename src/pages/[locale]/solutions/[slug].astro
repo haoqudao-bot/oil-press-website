@@ -24,6 +24,31 @@ const { solution } = Astro.props;
 const t = getTranslations(currentLocale);
 const { Content } = await solution.render();
 
+// Arabic oil-name phrase for keyword-rich template H2s (e.g. "عصر زيت الخردل")
+const arPressPhrases: Record<string, string> = {
+  almond: 'عصر زيت اللوز',
+  'animal-fat': 'عصر الدهون الحيوانية',
+  avocado: 'عصر زيت الأفوكادو',
+  castor: 'عصر زيت الخروع',
+  coconut: 'عصر زيت جوز الهند',
+  commercial: 'عصر الزيت التجاري',
+  cottonseed: 'عصر زيت بذرة القطن',
+  flaxseed: 'عصر زيت بذور الكتان',
+  industrial: 'العصر الصناعي للزيت',
+  mustard: 'عصر زيت الخردل',
+  olive: 'عصر زيت الزيتون',
+  palm: 'عصر زيت نواة النخيل',
+  peanut: 'عصر زيت الفول السوداني',
+  'rice-bran': 'عصر زيت نخالة الأرز',
+  sesame: 'عصر زيت السمسم',
+  shea: 'عصر زبدة الشيا',
+  'small-business': 'عصر الزيت للمشاريع الصغيرة',
+  soybean: 'عصر زيت الصويا',
+  sunflower: 'عصر زيت عباد الشمس',
+  walnut: 'عصر زيت الجوز',
+};
+const arPress = currentLocale === 'ar' ? (arPressPhrases[solution.data.seedName] ?? 'عصر الزيت') : '';
+
 // Select localized content (id > ar > fr > en four-level fallback)
 const steps = currentLocale === 'id' && solution.data.processStepsId?.length > 0
   ? solution.data.processStepsId
@@ -147,7 +172,7 @@ const seoKeywords = solution.data.seoKeywords;
   <!-- Process Flow -->
   <section class="py-12 md:py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title mb-12">{t.solutions.processFlow}</h2>
+      <h2 class="section-title mb-12">{currentLocale === 'ar' ? `تدفق عملية ${arPress}` : t.solutions.processFlow}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {steps.map((step, i) => (
           <div class="reveal relative bg-steel-50 rounded-2xl p-6" style={`animation-delay: ${i * 100}ms`}>
@@ -171,7 +196,7 @@ const seoKeywords = solution.data.seoKeywords;
   {recommendedProducts.length > 0 && (
     <section class="py-12 md:py-16 bg-steel-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title mb-12">{t.solutions.recommendedEquipment}</h2>
+        <h2 class="section-title mb-12">{currentLocale === 'ar' ? `معدات ${arPress} الموصى بها` : t.solutions.recommendedEquipment}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {recommendedProducts.map(product => product && (
             <a
@@ -210,7 +235,7 @@ const seoKeywords = solution.data.seoKeywords;
   {faqItems.length > 0 && (
     <section class="py-12 md:py-16 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title text-center mb-8">{t.solutions.faq}</h2>
+        <h2 class="section-title text-center mb-8">{currentLocale === 'ar' ? `الأسئلة الشائعة حول ${arPress}` : t.solutions.faq}</h2>
         <div class="space-y-4">
           {faqItems.map((item, i) => (
             <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>
@@ -251,7 +276,7 @@ const seoKeywords = solution.data.seoKeywords;
   <!-- CTA -->
   <section class="py-16 md:py-20 bg-steel-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{t.solutions.ctaTitle}</h2>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-4">{currentLocale === 'ar' ? `هل أنت مستعد لبدء مشروع ${arPress}؟` : t.solutions.ctaTitle}</h2>
       <p class="text-steel-300 text-lg mb-8">{t.solutions.ctaDesc}</p>
       <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
         {t.solutions.ctaButton}

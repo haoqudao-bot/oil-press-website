@@ -1,6 +1,6 @@
 ---
 title:
-  en: How to Maximize Oil Yield
+  en: How to Maximize Oil Yield in Your Oil Mill
   fr: Comment maximiser le rendement en huile
   ar: كيفية زيادة عائد الزيت
   id: Cara Memaksimalkan Hasil Minyak

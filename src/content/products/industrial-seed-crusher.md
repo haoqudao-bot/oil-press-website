@@ -1,6 +1,6 @@
 ---
 title:
-  en: Industrial Oil Cake Crusher
+  en: Industrial Oil Cake Crusher for Oil Mills
   fr: Broyeur de Tourteaux Industriel
   ar: كسارة كيك الزيت الصناعية
   id: Penghancur Kue Minyak Industri

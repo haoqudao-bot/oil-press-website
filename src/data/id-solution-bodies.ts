@@ -224,7 +224,7 @@ Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makana
 | Biji Wijen | 50-55% | 45-50% | ≤ 5% |
 | Kacang Tanah (Tanpa Kulit) | 45-55% | 40-48% | ≤ 5% |
 | Biji Bunga Matahari | 40-50% | 34-44% | ≤ 5% |
-| Biji Mustard | 35-40% | 30-36% | ≤ 5% |
+| Biji Sawi | 35-40% | 30-36% | ≤ 5% |
 | Kelapa (Kopra) | 62-68% | 55-62% | ≤ 5% |
 | Inti Sawit | 44-53% | 38-47% | ≤ 5% |
 
@@ -362,7 +362,7 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, operasi yang m
 | Biji Wijen | 50-55% | 46-52% | ≤ 4% |
 | Kacang Tanah (Tanpa Kulit) | 45-55% | 42-50% | ≤ 4% |
 | Biji Bunga Matahari | 40-50% | 36-45% | ≤ 4% |
-| Biji Mustard | 35-40% | 32-37% | ≤ 4% |
+| Biji Sawi | 35-40% | 32-37% | ≤ 4% |
 | Inti Sawit | 44-53% | 40-49% | ≤ 4% |
 | Biji Jarak | 45-55% | 42-51% | ≤ 4% |
 | Kacang Shea | 45-55% | 42-50% | ≤ 4% |
@@ -409,7 +409,7 @@ Solusi ini mendukung press dingin (untuk minyak sawi Kachi Ghani premium) dan pr
 - **Kandungan kelembapan**: Kelembapan penekanan optimal adalah 5-7%
 - **Metode penekanan**: Press dingin (Kachi Ghani) menghasilkan sedikit lebih sedikit tetapi menghasilkan minyak premium
 
-## Mengapa Memilih Mesin Press Minyak Mustard Kami
+## Mengapa Memilih Mesin Press Minyak Sawi Kami
 
 - **Dirancang untuk pasar Asia Selatan** — Solusi penekanan minyak sawi kami dibangun untuk memenuhi persyaratan spesifik produsen India, Bangladesh, dan Nepal, termasuk kemampuan produksi Kachi Ghani.
 - **Hasil unggul vs ghani tradisional** — Press hidrolik kami mengekstrak 15-25% lebih banyak minyak daripada ghani tradisional penggerak hewan, secara signifikan meningkatkan profitabilitas Anda.
@@ -715,7 +715,7 @@ Solusi ini cocok untuk produksi tingkat desa, operasi kios pasar, toko kecil, da
 | Biji Wijen | 50-55% | 45-50% | ≤ 5% |
 | Kacang Tanah (Tanpa Kulit) | 45-55% | 40-48% | ≤ 5% |
 | Biji Bunga Matahari | 40-50% | 34-44% | ≤ 5% |
-| Biji Mustard | 35-40% | 30-36% | ≤ 5% |
+| Biji Sawi | 35-40% | 30-36% | ≤ 5% |
 | Kelapa (Kopra) | 62-68% | 55-62% | ≤ 5% |
 
 **Keuntungan utama untuk usaha kecil:**
@@ -965,7 +965,7 @@ Rendering suhu rendah ditambah penekanan hidrolik juga melindungi kualitas: pana
 - **Ukuran gilingan**: Potongan kecil yang merata meleleh lebih cepat dan dipress lebih bersih
 - **Jenis bahan**: Ampas lemak babi mudah dipress; lemak sapi dan domba lebih keras dan membutuhkan press panas untuk pemulihan penuh
 
-## Mengapa Memilih Mesin Press Lemak Hewan Kami
+## Mengapa Memilih Mesin Press Lemak Babi Kami
 
 - **Saran teknik yang jujur** — Kami memberitahu Anda di awal: press bekerja bersama proses rendering Anda, bukan menggantikannya. Kami membantu Anda mengukur rendering, penekanan, dan filtrasi sebagai satu lini agar tidak ada hambatan.
 - **Dirancang untuk perdagangan rendering** — Solusi penekanan lemak hewani kami dibangun untuk rumah potong hewan dan pabrik rendering dari Meksiko dan Spanyol hingga Pakistan dan Mesir, dengan panduan memisahkan lini lemak halal dan lemak babi.

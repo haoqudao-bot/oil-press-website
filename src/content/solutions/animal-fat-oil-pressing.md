@@ -158,7 +158,7 @@ Low-temperature rendering plus hydraulic pressing also protects quality: gentle 
 - **Grinding size**: Small, even pieces render faster and press cleaner
 - **Material type**: Lard cracklings press easily; beef and mutton tallow is harder and needs hot pressing for full recovery
 
-## Why Choose Our Animal Fat Oil Press
+## Why Choose Our Lard & Tallow Press
 
 - **Honest engineering advice** — We tell you upfront: the press works with your rendering process, not instead of it. We help you size rendering, pressing and filtration as one line so nothing bottlenecks.
 - **Designed for the rendering trade** — Our animal fat pressing solution is built for slaughterhouses and rendering plants from Mexico and Spain to Pakistan and Egypt, with guidance on keeping halal tallow and lard lines separate.

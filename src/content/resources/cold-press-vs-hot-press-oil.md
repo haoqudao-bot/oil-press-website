@@ -1,6 +1,6 @@
 ---
 title:
-  en: Cold Press vs Hot Press Oil
+  en: "Cold Press vs Hot Press Oil: Which to Choose"
   fr: Pressage à froid vs Pressage à chaud
   ar: العصر البارد مقابل العصر الساخن للزيت
   id: Cold Press vs Hot Press Minyak

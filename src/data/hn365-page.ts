@@ -22,7 +22,7 @@ export const hn365Content: Record<HN365Locale, HN365Strings> = {
       '<b>30–40 min</b> hot · <b>~2 h</b> cold', 'Hot & cold pressing',
     ],
     btnQuote: 'Request a Quote →', btnWa: 'WhatsApp', trustBar: '🛡 1-Year Warranty&nbsp;•&nbsp;Lifetime Technical Support&nbsp;•&nbsp;48-h Full-Load Test',
-    h2Specs: 'What Makes the HN365 Hydraulic Oil Press Different', specsH3: 'HN365 Specifications',
+    h2Specs: 'What Makes the HN365 Commercial Hydraulic Oil Press Machine Different', specsH3: 'HN365 Specifications',
     h2Cap: 'How Much Can It Press Per Day?', capH3: 'Batch Cycle & Output',
     matH3: 'HN365 Materials', matHeaders: ['Part', 'Material & finish'],
     matRows: [
@@ -118,7 +118,7 @@ export const hn365Content: Record<HN365Locale, HN365Strings> = {
       '<b>30–40 min</b> à chaud · <b>~2 h</b> à froid', 'Pressage à chaud et à froid',
     ],
     btnQuote: 'Demander un Devis →', btnWa: 'WhatsApp', trustBar: '🛡 Garantie 1 an&nbsp;•&nbsp;Support technique à vie&nbsp;•&nbsp;Test pleine charge 48 h',
-    h2Specs: 'Ce qui distingue la presse à huile hydraulique HN365', specsH3: 'Spécifications HN365',
+    h2Specs: 'Ce qui distingue la presse à huile hydraulique commerciale HN365', specsH3: 'Spécifications HN365',
     h2Cap: 'Combien peut-il presser par jour ?', capH3: 'Cycle par lot et production',
     matH3: 'Matériaux HN365', matHeaders: ['Pièce', 'Matériau et finition'],
     matRows: [

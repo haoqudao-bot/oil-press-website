@@ -1,6 +1,6 @@
 ---
 title:
-  en: High Speed Seed Crusher
+  en: High Speed Seed Crusher for Oilseed Preparation
   fr: Broyeur de Graines à Grande Vitesse
   ar: كسارة بذور عالية السرعة
   id: Penghancur Biji-Bijian Kecepatan Tinggi

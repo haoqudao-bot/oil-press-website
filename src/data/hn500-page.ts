@@ -117,7 +117,7 @@ export const hn500Content: Record<HN500Locale, HN500Strings> = {
       'Pressage à chaud et à froid', '<b>Fût simple ou double</b>',
     ],
     btnQuote: 'Demander un Devis →', btnWa: 'WhatsApp', trustBar: '🛡 Garantie 1 an&nbsp;•&nbsp;Support technique à vie&nbsp;•&nbsp;Test pleine charge 48 h',
-    h2Specs: 'À quoi ressemblent 620 tonnes : spécifications et châssis de la HN500', specsH3: 'Spécifications HN500',
+    h2Specs: 'À quoi ressemblent 620 tonnes : spécifications et châssis de la presse à huile hydraulique industrielle HN500', specsH3: 'Spécifications HN500',
     h2Cap: 'Combien peut-il presser par jour ?', capH3: 'Cycle par lot et production',
     matH3: 'Matériaux HN500', matHeaders: ['Pièce', 'Matériau et finition'],
     matRows: [
@@ -278,7 +278,7 @@ export const hn500Content: Record<HN500Locale, HN500Strings> = {
     ],
     lineP1: 'أخبرنا ببذورك وهدفك اليومي وسنحدد المعدات بدقة. الخطوط الكاملة لكل بذرة: <a href="/ar/solutions/">حلول معالجة البذور الزيتية</a>.',
     lineP2: 'للزيوت الباردة الممتازة مثل جوز الهند، <a href="/ar/products/cold-press-hydraulic-oil-press/">HN426</a> هي الخيار المتخصص؛ وللعصر الساخن والبارد متعدد الأغراض بميزانية أضيق، <a href="/ar/products/standard-hydraulic-oil-press/">HN325</a> هي الأكثر مبيعاً.',
-    h2Setup: 'تخطيط خط إنتاج عالي السعة مع HN500',
+    h2Setup: 'تخطيط خط إنتاج عالي السعة مع معصرة زيت هيدروليكية صناعية HN500',
     setupP: 'خط HN500 النموذجي: منظّف وفارز بذور → محمصة (أسلوب ساخن) أو كسارة (أسلوب بارد) → <b>معصرة HN500</b> → مكبس ترشيح زيت (يحتجز الشوائب من الزيت الخام ليصبح صافياً وقابلاً للبيع). <a href="/ar/products/">تصفح المجموعة الكاملة</a> أو أرسل مادتك الخام — سنحدد الطرازات بدقة.',
     h2Del: 'التسليم والضمان والدعم',
     delRows: [

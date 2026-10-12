@@ -1,6 +1,6 @@
 ---
 title:
-  en: HN-CG60 Oilseed Pre-Press
+  en: HN-CG60 Oilseed Pre-Press for Oil Mill Pretreatment
   fr: Pré-presse oléagineuse HN-CG60
   ar: مكبس زيت بذور مسبق HN-CG60
   id: Pre-press Biji Minyak HN-CG60

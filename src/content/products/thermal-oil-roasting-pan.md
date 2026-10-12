@@ -1,6 +1,6 @@
 ---
 title:
-  en: Thermal Oil Roasting Pan
+  en: Thermal Oil Roasting Pan for Oilseeds
   fr: Poêle de Torréfaction à Huile Thermique
   ar: مقلاة تحميص بالزيت الحراري
   id: Panci Sangrai Minyak Termal

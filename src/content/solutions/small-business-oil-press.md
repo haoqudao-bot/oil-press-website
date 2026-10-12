@@ -5,7 +5,7 @@ title:
   ar: حل عصر الزيت للمشاريع الصغيرة
   id: Solusi Press Minyak untuk Usaha Kecil
 seoTitle:
-  en: Home & Mini Oil Press Machine
+  en: Home & Mini Oil Press Machine for Small Business
   fr: Machine de Pressage d'Huile Domestique & Mini
   ar: آلة عصر الزيت المنزلية والصغيرة
   id: Mesin Press Minyak Rumahan & Mini

@@ -1,6 +1,6 @@
 ---
 title:
-  en: Wood-Fired Seed Steamer
+  en: Wood-Fired Seed Steamer for Oil Mills
   fr: Cuisseur Vapeur à Bois pour Graines
   ar: بخاخة بذور تعمل بالحطب
   id: Pengukus Biji-Bijian Kayu
