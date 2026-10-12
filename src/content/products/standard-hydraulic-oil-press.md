@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Standard Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Standard
@@ -55,7 +55,7 @@ specifications:
     value: 1 Set
 featured: true
 related:
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
 applicableSeeds:
@@ -294,7 +294,7 @@ The press runs on a standard 380V / 50Hz supply; a 415V version is available on 
 |---|---|---|---|---|---|
 | [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Single / double barrel | Smaller batches (~60 kg), tightest budget |
 | **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (customizable)** | **Single / double barrel** | **Small & mid-size mills, all-purpose** |
-| [HN365](/products/hn365-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (customizable) | Single / double barrel | Higher daily volume, less waiting |
+| [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (customizable) | Single / double barrel | Higher daily volume, less waiting |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (customizable) | Single / double barrel | Cold-press business: coconut, walnut |
 | [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (customizable) | Single / double barrel | Hardest in-shell materials |
 

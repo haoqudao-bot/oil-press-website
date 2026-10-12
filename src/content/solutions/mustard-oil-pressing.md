@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Mustard Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Moutarde
@@ -18,7 +18,7 @@ description:
   id: Mesin press minyak sawi untuk ekstraksi minyak sawi dingin hasil tinggi. Teknologi press hidrolik cocok untuk pasar Asia Selatan.
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - electric-seed-steamer
   - wood-fired-seed-steamer
   - pneumatic-oil-filter-press

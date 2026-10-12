@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Cold Press Hydraulic Oil Press
   fr: Presse à Huile Hydraulique à Froid
@@ -54,7 +54,7 @@ specifications:
 featured: true
 related:
   - standard-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
 applicableSeeds:
   - tea seed

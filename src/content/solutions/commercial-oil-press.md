@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Commercial Oil Press Solution
   fr: Solution de Pressage d'Huile Commerciale
@@ -17,7 +17,7 @@ description:
   ar: آلة عصر زيت تجارية لإنتاج الزيت بمقياس متوسط إلى كبير. ضغط هيدروليكي مزدوج البرميل بإنتاجية عالية.
   id: Mesin press minyak komersial untuk produksi minyak skala menengah hingga besar. Press hidrolik barel ganda dengan throughput tinggi.
 recommendedProducts:
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
   - integrated-feeder-crusher-roaster
   - thermal-oil-roasting-pan

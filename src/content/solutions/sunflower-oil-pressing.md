@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Sunflower Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Tournesol
@@ -19,7 +19,7 @@ description:
 related: ["soybean-oil-pressing", "rice-bran-oil-pressing", "peanut-oil-pressing"]
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - oilseed-pre-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Medium Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Moyenne
@@ -53,7 +53,7 @@ specifications:
     value: 1 Set
 featured: false
 related:
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - standard-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
 applicableSeeds:
@@ -302,7 +302,7 @@ updatedAt: 2026-10-10
 
 ## Overview
 
-> **Looking for the current model?** The [HN365](/products/hn365-hydraulic-oil-press/) is the upgraded successor to the HN355 — 365 t pressing force, 30 MPa cake pressure, and a new vertical double-station frame with 3 cm steel plate and cartridge valves. Most buyers today choose the HN365. The HN355 remains in production for buyers replacing an existing HN355 or matching a previous quotation.
+> **Looking for the current model?** The [HN365](/products/commercial-hydraulic-oil-press/) is the upgraded successor to the HN355 — 365 t pressing force, 30 MPa cake pressure, and a new vertical double-station frame with 3 cm steel plate and cartridge valves. Most buyers today choose the HN365. The HN355 remains in production for buyers replacing an existing HN355 or matching a previous quotation.
 
 The HN355 is a 360-ton medium hydraulic oil press with a 355 mm cylinder and 390 mm barrel, delivering 30.15 MPa cake surface pressure. It processes up to approximately 100 kg of raw material per batch. The 2.2 kW motor keeps operating costs modest, and the machine runs on standard 220V/380V power.
 
@@ -343,4 +343,4 @@ The HN355 handles conventional oilseeds that benefit from medium pressing force:
 
 The HN355 is still manufactured and accepts orders. It shares the same barrel and common wear parts as the HN365, so spare parts remain available from stock. Production lead time is 15–25 working days for standard configurations.
 
-[Request an HN355 quote](/contact/) or [ask about the upgraded HN365 →](/products/hn365-hydraulic-oil-press/)
+[Request an HN355 quote](/contact/) or [ask about the upgraded HN365 →](/products/commercial-hydraulic-oil-press/)

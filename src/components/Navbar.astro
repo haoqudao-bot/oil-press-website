@@ -1,4 +1,4 @@
----
+﻿---
 import { getTranslations } from '../i18n';
 
 const { locale = 'en', overlay = false } = Astro.props;
@@ -50,7 +50,7 @@ const megaMenuColumns = [
     headerLabel: t.nav.hydraulicOilPress,
     products: [
       { href: '/products/standard-hydraulic-oil-press/', label: 'Standard (HN325)' },
-      { href: '/products/hn365-hydraulic-oil-press/', label: 'Commercial (HN365)' },
+      { href: '/products/commercial-hydraulic-oil-press/', label: 'Commercial (HN365)' },
       { href: '/products/cold-press-hydraulic-oil-press/', label: 'Cold Press (HN426)' },
       { href: '/products/ultra-high-pressure-hydraulic-oil-press/', label: 'Ultra High Pressure (HN500)' },
       { href: '/products/large-barrel-hydraulic-oil-press/', label: 'Sludge Dewatering Press' },
@@ -217,7 +217,7 @@ const comparisonItems = [
                   </div>
                 ))}
               </div>
-              <div class="mt-3 pt-3 border-t border-steel-100 grid grid-cols-2 gap-2">
+              <div class="mt-3 pt-3 border-t border-steel-100 grid grid-rows-2 grid-flow-col gap-2">
                   <a
                     href={localePath('/hydraulic-oil-press-machine/')}
                     class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"

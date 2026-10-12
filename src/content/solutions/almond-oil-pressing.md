@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Almond Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Amande
@@ -18,7 +18,7 @@ description:
   id: Mesin press minyak almond untuk minyak almond dingin premium. Press hidrolik dingin menjaga vitamin dan aroma.
 recommendedProducts:
   - cold-press-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - pneumatic-oil-filter-press
   - ultra-high-pressure-cold-press
 processSteps:

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Animal Fat Oil Pressing Solution
   fr: Solution de Pressage de Graisse Animale
@@ -18,7 +18,7 @@ description:
   id: Mesin press lemak hewani untuk produksi lemak babi dan lemak sapi. Press hidrolik ampas hasil rendering dengan panduan hasil jujur untuk Meksiko, Pakistan, Mesir, dan Eropa. Harga pabrik Haonuo.
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - large-barrel-hydraulic-oil-press
   - pneumatic-oil-filter-press
 processSteps:

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Castor Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Ricin
@@ -17,7 +17,7 @@ description:
   ar: آلة عصر زيت الخروع لاستخراج زيت الخروع الصناعي والطبي. ضغط هيدروليكي عالي الضغط بمعدل متبقي منخفض.
   id: Mesin press minyak jarak untuk ekstraksi minyak jarak industri dan obat. Press hidrolik tekanan tinggi dengan sisa rendah.
 recommendedProducts:
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
   - heavy-duty-hydraulic-oil-press
   - thermal-oil-roasting-pan

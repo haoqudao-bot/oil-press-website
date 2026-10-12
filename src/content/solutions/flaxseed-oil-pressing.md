@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: "Flaxseed Oil Pressing Solution"
   fr: "Solution de Pressage d'Huile de Lin"
@@ -18,7 +18,7 @@ description:
   id: "Solusi minyak biji rami press dingin premium. Kaya akan asam lemak omega-3."
 recommendedProducts:
   - cold-press-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - pneumatic-oil-filter-press
 processSteps:
   - step: "Seed Selection & Cleaning"

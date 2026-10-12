@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Ultra High Pressure Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Ultra Haute Pression
@@ -54,7 +54,7 @@ specifications:
 featured: true
 related:
   - standard-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
 applicableSeeds:
   - tea seed

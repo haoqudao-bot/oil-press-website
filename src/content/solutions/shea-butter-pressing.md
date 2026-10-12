@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Shea Butter Pressing Solution
   fr: Solution de Pressage du Beurre de Karité
@@ -17,7 +17,7 @@ description:
   ar: آلة عصر زبدة الشيا لاستخراج زبدة الشيا بكفاءة من جوز الشيا. ضغط هيدروليكي عالي الضغط لأسواق غرب أفريقيا.
   id: Mesin press mentega shea untuk ekstraksi mentega shea yang efisien. Press hidrolik tekanan tinggi untuk pasar Afrika Barat.
 recommendedProducts:
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
   - large-barrel-hydraulic-oil-press
   - thermal-oil-roasting-pan

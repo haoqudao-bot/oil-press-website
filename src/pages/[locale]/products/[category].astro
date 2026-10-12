@@ -31,7 +31,7 @@ const sortedCategories = allCategories.sort((a, b) => a.data.order - b.data.orde
 
 const sortPriority: Record<string, number> = {
   'standard-hydraulic-oil-press': 1,
-  'hn365-hydraulic-oil-press': 2,
+  'commercial-hydraulic-oil-press': 2,
   'cold-press-hydraulic-oil-press': 3,
   'ultra-high-pressure-hydraulic-oil-press': 4,
   'sesame-oil-hydraulic-press': 5,
@@ -107,7 +107,7 @@ const loc3 = (fr: string, ar: string, id: string): string =>
   currentLocale === 'fr' ? fr : currentLocale === 'ar' ? ar : id;
 const hydraulicCoreSlugs = [
   'standard-hydraulic-oil-press',
-  'hn365-hydraulic-oil-press',
+  'commercial-hydraulic-oil-press',
   'cold-press-hydraulic-oil-press',
   'ultra-high-pressure-hydraulic-oil-press',
 ];

@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -16,7 +16,7 @@ const categoryOrder: Record<string, number> = {
 
 const hydraulicOrder: Record<string, number> = {
   'standard-hydraulic-oil-press': 1,
-  'hn365-hydraulic-oil-press': 2,
+  'commercial-hydraulic-oil-press': 2,
   'cold-press-hydraulic-oil-press': 3,
   'ultra-high-pressure-hydraulic-oil-press': 4,
   'sesame-oil-hydraulic-press': 5,
@@ -67,7 +67,7 @@ const sortedProducts = visibleProducts.sort((a, b) => {
 
 const coreSlugs = [
   'standard-hydraulic-oil-press',
-  'hn365-hydraulic-oil-press',
+  'commercial-hydraulic-oil-press',
   'cold-press-hydraulic-oil-press',
   'ultra-high-pressure-hydraulic-oil-press',
 ];

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Commercial Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Commerciale
@@ -18,7 +18,7 @@ category: hydraulic-oil-press
 model: HN365
 modelId: ''
 images:
-  - /images/products/hn365-hydraulic-oil-press.webp
+  - /images/products/commercial-hydraulic-oil-press.webp
 imageAlt:
   en: "HN365 commercial hydraulic oil press machine, 365-ton upgraded model"
   fr: "Presse à huile hydraulique commerciale HN365, modèle amélioré 365 tonnes"

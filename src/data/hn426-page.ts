@@ -1,4 +1,4 @@
-// HN426 专用页（V4.4 漏斗结构）四语 UI 文案
+﻿// HN426 专用页（V4.4 漏斗结构）四语 UI 文案
 // 关键词策略（对齐 HN325/HN365 布局）：主词 cold press hydraulic oil press（冷榨工艺词），型号词（HN426）不作主词
 // 机型定位：冷榨专用机（椰子/核桃/高端油），单桶为默认配置，双桶为可选升级——不得定性为双桶机
 // specs 12 行 / FAQ 17 条 复用 frontmatter（specifications* / faq*），材质表（matRows）等模块文案存于此
@@ -51,12 +51,12 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitRows: [
       '<a href="/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Single / double barrel|Smaller batches (~60 kg), tightest budget',
       '<a href="/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (customizable)|Single / double barrel|Small & mid-size mills, all-purpose',
-      '<a href="/products/hn365-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (customizable)|Single / double barrel|Higher daily volume, hard seeds',
+      '<a href="/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (customizable)|Single / double barrel|Higher daily volume, hard seeds',
       '<b>HN426</b>|<b>500 t</b>|<b>42 MPa</b>|<b>Ø390 mm (customizable)</b>|<b>Single / double barrel</b>|<b>Cold press business: coconut, walnut, premium oils</b>',
       '<a href="/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (customizable)|Single / double barrel|Hardest in-shell materials',
     ],
     fitHighlight: 3,
-    fitNote: '<b>HN426 or HN325/HN365?</b> If most of your batches are cold-pressed premium oils — coconut, walnut, apricot kernel — the HN426’s 500-ton force protects yield and quality. For all-purpose hot pressing at higher daily volume, see the <a href="/products/hn365-hydraulic-oil-press/">HN365</a>.',
+    fitNote: '<b>HN426 or HN325/HN365?</b> If most of your batches are cold-pressed premium oils — coconut, walnut, apricot kernel — the HN426’s 500-ton force protects yield and quality. For all-purpose hot pressing at higher daily volume, see the <a href="/products/commercial-hydraulic-oil-press/">HN365</a>.',
     stripT: 'Not sure cold pressing fits your market? Ask us.',
     stripS: 'Our engineers reply with the right model and a factory quote — within one business day.',
     stripBtn: 'Get My Recommendation',
@@ -146,12 +146,12 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitRows: [
       '<a href="/fr/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Fût simple / double|Lots plus petits (~60 kg), budget le plus serré',
       '<a href="/fr/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (personnalisable)|Fût simple / double|Petites et moyennes huileries, usage polyvalent',
-      '<a href="/fr/products/hn365-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (personnalisable)|Fût simple / double|Volume journalier supérieur, graines dures',
+      '<a href="/fr/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (personnalisable)|Fût simple / double|Volume journalier supérieur, graines dures',
       '<b>HN426</b>|<b>500 t</b>|<b>42 MPa</b>|<b>Ø390 mm (personnalisable)</b>|<b>Fût simple / double</b>|<b>Activité de pressage à froid : coco, noix, huiles premium</b>',
       '<a href="/fr/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (personnalisable)|Fût simple / double|Matières les plus dures en coque',
     ],
     fitHighlight: 3,
-    fitNote: '<b>HN426 ou HN325/HN365 ?</b> Si la plupart de vos lots sont des huiles froides premium — coco, noix, noyau d’abricot — la force de 500 tonnes de la HN426 protège rendement et qualité. Pour un pressage à chaud polyvalent à volume plus élevé, voir la <a href="/fr/products/hn365-hydraulic-oil-press/">HN365</a>.',
+    fitNote: '<b>HN426 ou HN325/HN365 ?</b> Si la plupart de vos lots sont des huiles froides premium — coco, noix, noyau d’abricot — la force de 500 tonnes de la HN426 protège rendement et qualité. Pour un pressage à chaud polyvalent à volume plus élevé, voir la <a href="/fr/products/commercial-hydraulic-oil-press/">HN365</a>.',
     stripT: 'Le pressage à froid convient-il à votre marché ? Demandez-nous.',
     stripS: 'Nos ingénieurs répondent avec le bon modèle et un devis usine — sous un jour ouvré.',
     stripBtn: 'Recevoir Ma Recommandation',
@@ -241,12 +241,12 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitRows: [
       '<a href="/ar/products/mini-hydraulic-oil-press/">HN300</a>|300 طن|42 ميجاباسكال|Ø300 ملم|برميل مفرد / مزدوج|دفعات أصغر (~60 كجم)، أضيق ميزانية',
       '<a href="/ar/products/standard-hydraulic-oil-press/">HN325</a>|325 طناً|≈27 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|برميل مفرد / مزدوج|المعاصر الصغيرة والمتوسطة، متعددة الأغراض',
-      '<a href="/ar/products/hn365-hydraulic-oil-press/">HN365</a>|365 طناً|30 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|برميل مفرد / مزدوج|حجم يومي أكبر، بذور صلبة',
+      '<a href="/ar/products/commercial-hydraulic-oil-press/">HN365</a>|365 طناً|30 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|برميل مفرد / مزدوج|حجم يومي أكبر، بذور صلبة',
       '<b>HN426</b>|<b>500 طن</b>|<b>42 ميجاباسكال</b>|<b>Ø390 ملم (قابل للتخصيص)</b>|<b>برميل مفرد / مزدوج</b>|<b>عمل العصر البارد: جوز الهند والجوز والزيوت الممتازة</b>',
       '<a href="/ar/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 طناً|52 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|برميل مفرد / مزدوج|أقسى المواد بقشورها',
     ],
     fitHighlight: 3,
-    fitNote: '<b>HN426 أم HN325/HN365؟</b> إذا كانت معظم دفعاتك زيوتاً باردة ممتازة — جوز هند، جوز، لوز مشمش — فإن قوة 500 طن في HN426 تحمي العائد والجودة. للعصر الساخن متعدد الأغراض بحجم يومي أكبر، انظر <a href="/ar/products/hn365-hydraulic-oil-press/">HN365</a>.',
+    fitNote: '<b>HN426 أم HN325/HN365؟</b> إذا كانت معظم دفعاتك زيوتاً باردة ممتازة — جوز هند، جوز، لوز مشمش — فإن قوة 500 طن في HN426 تحمي العائد والجودة. للعصر الساخن متعدد الأغراض بحجم يومي أكبر، انظر <a href="/ar/products/commercial-hydraulic-oil-press/">HN365</a>.',
     stripT: 'غير متأكد أن العصر البارد يناسب سوقك؟ اسألنا.',
     stripS: 'يرد مهندسونا بالطراز المناسب وعرض سعر من المصنع — خلال يوم عمل واحد.',
     stripBtn: 'اطلب توصيتي',
@@ -336,12 +336,12 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitRows: [
       '<a href="/id/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Barel tunggal / ganda|Batch lebih kecil (~60 kg), anggaran paling ketat',
       '<a href="/id/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (dapat dikustom)|Barel tunggal / ganda|Pabrik kecil & menengah, serbaguna',
-      '<a href="/id/products/hn365-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (dapat dikustom)|Barel tunggal / ganda|Volume harian lebih besar, biji keras',
+      '<a href="/id/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (dapat dikustom)|Barel tunggal / ganda|Volume harian lebih besar, biji keras',
       '<b>HN426</b>|<b>500 t</b>|<b>42 MPa</b>|<b>Ø390 mm (dapat dikustom)</b>|<b>Barel tunggal / ganda</b>|<b>Bisnis press dingin: kelapa, kenari, minyak premium</b>',
       '<a href="/id/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (dapat dikustom)|Barel tunggal / ganda|Bahan bercangkang paling keras',
     ],
     fitHighlight: 3,
-    fitNote: '<b>HN426 atau HN325/HN365?</b> Jika sebagian besar batch Anda minyak dingin premium — kelapa, kenari, biji aprikot — gaya 500 ton HN426 melindungi rendemen dan kualitas. Untuk press panas serbaguna dengan volume lebih tinggi, lihat <a href="/id/products/hn365-hydraulic-oil-press/">HN365</a>.',
+    fitNote: '<b>HN426 atau HN325/HN365?</b> Jika sebagian besar batch Anda minyak dingin premium — kelapa, kenari, biji aprikot — gaya 500 ton HN426 melindungi rendemen dan kualitas. Untuk press panas serbaguna dengan volume lebih tinggi, lihat <a href="/id/products/commercial-hydraulic-oil-press/">HN365</a>.',
     stripT: 'Belum yakin press dingin cocok untuk pasar Anda? Tanyakan pada kami.',
     stripS: 'Insinyur kami membalas dengan model yang tepat dan harga pabrik — dalam satu hari kerja.',
     stripBtn: 'Minta Rekomendasi Saya',

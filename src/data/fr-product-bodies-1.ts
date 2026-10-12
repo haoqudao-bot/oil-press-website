@@ -1,4 +1,4 @@
-export const frProductBodies1: Record<string, string> = {
+﻿export const frProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `**Notre modèle le plus vendu — le meilleur rapport qualité-prix de la gamme Haonuo.** La HN325 est une presse à huile hydraulique commerciale conçue pour les petites et moyennes huileries : 325 tonnes de force de pressage, 20–100 kg par lot, pressage à chaud et à froid dans une seule machine, vente directe usine avec garantie 1 an.
 
 Elle presse la plupart des graines oléagineuses conventionnelles — sésame, arachide, noix, graine de camellia (thé), lin, colza, tournesol et soja, entre autres. Si votre objectif est d'environ une tonne de graines pressées à chaud par jour, c'est la machine par laquelle commencer.
@@ -27,7 +27,7 @@ La presse fonctionne sur une alimentation standard 380 V / 50 Hz ; une version 4
 |---|---|---|---|---|---|
 | [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Fût simple / double | Lots plus petits (~60 kg), budget le plus serré |
 | **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (personnalisable)** | **Fût simple / double** | **Petites et moyennes huileries, usage polyvalent** |
-| [HN365](/products/hn365-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (personnalisable) | Fût simple / double | Volume journalier supérieur, moins d'attente |
+| [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (personnalisable) | Fût simple / double | Volume journalier supérieur, moins d'attente |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (personnalisable) | Fût simple / double | Activité de pressage à froid : coco, noix |
 | [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (personnalisable) | Fût simple / double | Matières les plus dures en coque |
 
@@ -234,7 +234,7 @@ La HN300 est toujours fabriquée et accepte les commandes. Délai de production 
 
   'medium-hydraulic-oil-press': `## Aperçu
 
-> **Vous cherchez le modèle actuel ?** La [HN365](/products/hn365-hydraulic-oil-press/) est la successeure améliorée de la HN355 — 365 t de force de pressage, 30 MPa de pression de gâteau, châssis vertical double station. La plupart des acheteurs choisissent aujourd'hui la HN365. La HN355 reste en production.
+> **Vous cherchez le modèle actuel ?** La [HN365](/products/commercial-hydraulic-oil-press/) est la successeure améliorée de la HN355 — 365 t de force de pressage, 30 MPa de pression de gâteau, châssis vertical double station. La plupart des acheteurs choisissent aujourd'hui la HN365. La HN355 reste en production.
 
 La HN355 est une presse à huile hydraulique moyenne de 360 tonnes avec un cylindre de 355 mm et un fût de 390 mm, offrant 30,15 MPa de pression superficielle du gâteau. Elle traite environ 100 kg de matière première par lot. Son moteur de 2,2 kW maintient des coûts modestes.
 
@@ -263,7 +263,7 @@ Graines oléagineuses conventionnelles : graine de thé, colza, arachide, soja. 
 
 La HN355 est toujours fabriquée. Délai : 15–25 jours ouvrés.
 
-[Demander un devis HN355](/contact/) ou [voir la HN365 →](/products/hn365-hydraulic-oil-press/)`,
+[Demander un devis HN355](/contact/) ou [voir la HN365 →](/products/commercial-hydraulic-oil-press/)`,
 
   'ultra-high-pressure-hydraulic-oil-press': `## Aperçu
 
@@ -319,7 +319,7 @@ La HN500 délivre des taux d'huile résiduelle compétitifs sur tous les types d
 
 **Moyen-Orient (Arabie Saoudite, EAU, Égypte) :** La HN500 est notre meilleure recommandation pour la production d'huile de noix et d'huile de noix de haute valeur. La pression ultra-haute extrait un maximum d'huile des noix à coque dure tandis que le pressage statique, sans friction de vis, maintient une température basse qui aide à préserver les délicats acides gras oméga-3.`,
 
-  'hn365-hydraulic-oil-press': `## Aperçu
+  'commercial-hydraulic-oil-press': `## Aperçu
 
 La presse à huile hydraulique verticale HN365 affiche une force de pressage de 365 tonnes avec une pression superficielle de gâteau de 30 MPa, conçue pour les huileries moyennes et grandes qui ont dépassé les capacités des machines de classe 325. Son agencement vertical à double station fait alterner deux fûts afin que l'un puisse être chargé pendant que l'autre presse, prenant en charge le pressage à chaud et à froid de l'arachide, du sésame, de la noix et d'autres graines oléagineuses par lots de 40 à 90 minutes selon la matière. L'huile résiduelle dans le gâteau se situe généralement à 6–8 % (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation).
 

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Industrial Oil Press Solution
   fr: Solution de Pressage d'Huile Industrielle
@@ -18,7 +18,7 @@ description:
   id: Mesin press minyak hidrolik industri bertekanan ultra tinggi untuk fasilitas produksi berskala besar. Mesin press minyak industri untuk lini penekanan volume tinggi.
 recommendedProducts:
   - ultra-high-pressure-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - industrial-seed-crusher
   - vertical-screw-conveyor
   - pneumatic-oil-filter-press

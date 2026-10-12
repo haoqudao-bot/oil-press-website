@@ -1,4 +1,4 @@
-import type { CollectionEntry } from 'astro:content';
+﻿import type { CollectionEntry } from 'astro:content';
 
 type Product = CollectionEntry<'products'>;
 
@@ -8,7 +8,7 @@ type Product = CollectionEntry<'products'>;
  */
 export const MAIN_PRESS_SLUGS = [
   'standard-hydraulic-oil-press', // HN325
-  'hn365-hydraulic-oil-press', // HN365
+  'commercial-hydraulic-oil-press', // HN365
   'cold-press-hydraulic-oil-press', // HN426
   'ultra-high-pressure-hydraulic-oil-press', // HN500
 ];

@@ -1,4 +1,4 @@
-// Indonesian product body content - Part 1 (products 1-8)
+﻿// Indonesian product body content - Part 1 (products 1-8)
 export const idProductBodies1: Record<string, string> = {
   'standard-hydraulic-oil-press': `**Model terlaris kami — nilai terbaik di lini Haonuo.** HN325 adalah mesin press minyak hidrolik komersial untuk pabrik minyak kecil dan menengah: gaya press 325 ton, batch 20–100 kg, press panas & dingin dalam satu mesin, langsung dari pabrik dengan garansi 1 tahun.
 
@@ -28,7 +28,7 @@ Mesin bekerja pada pasokan standar 380V / 50Hz; versi 415V tersedia atas permint
 |---|---|---|---|---|---|
 | [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Barel tunggal / ganda | Batch lebih kecil (~60 kg), anggaran paling ketat |
 | **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (dapat dikustom)** | **Barel tunggal / ganda** | **Pabrik kecil & menengah, serbaguna** |
-| [HN365](/products/hn365-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (dapat dikustom) | Barel tunggal / ganda | Volume harian lebih besar, waktu tunggu lebih singkat |
+| [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (dapat dikustom) | Barel tunggal / ganda | Volume harian lebih besar, waktu tunggu lebih singkat |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (dapat dikustom) | Barel tunggal / ganda | Bisnis press dingin: kelapa, kenari |
 | [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (dapat dikustom) | Barel tunggal / ganda | Bahan bercangkang paling keras |
 
@@ -234,7 +234,7 @@ HN300 masih dibuat dan menerima pesanan. Waktu produksi: 15–25 hari kerja.
 
   'medium-hydraulic-oil-press': `## Ringkasan
 
-> **Mencari model terbaru?** [HN365](/products/hn365-hydraulic-oil-press/) adalah penerus yang ditingkatkan dari HN355 — 365 ton gaya press, 30 MPa tekanan kue, rangka stasiun ganda vertikal. Sebagian besar pembeli memilih HN365 saat ini. HN355 tetap diproduksi.
+> **Mencari model terbaru?** [HN365](/products/commercial-hydraulic-oil-press/) adalah penerus yang ditingkatkan dari HN355 — 365 ton gaya press, 30 MPa tekanan kue, rangka stasiun ganda vertikal. Sebagian besar pembeli memilih HN365 saat ini. HN355 tetap diproduksi.
 
 HN355 adalah mesin press minyak hidrolik menengah 360 ton dengan silinder 355 mm dan barel 390 mm, memberikan 30,15 MPa tekanan permukaan kue. Memproses sekitar 100 kg per batch. Motor 2,2 kW menjaga biaya tetap rendah.
 
@@ -259,7 +259,7 @@ Biji minyak konvensional: biji teh, rapeseed, kacang tanah, kedelai. Untuk bahan
 
 Waktu produksi: 15–25 hari kerja.
 
-[Minta penawaran HN355](/contact/) atau [lihat HN365 →](/products/hn365-hydraulic-oil-press/)`,
+[Minta penawaran HN355](/contact/) atau [lihat HN365 →](/products/commercial-hydraulic-oil-press/)`,
 
   'ultra-high-pressure-hydraulic-oil-press': `## Ringkasan
 
@@ -315,7 +315,7 @@ HN500 memberikan tingkat minyak sisa yang kompetitif di semua jenis bahan, menja
 
 **Timur Tengah (Arab Saudi, UEA, Mesir):** HN500 adalah rekomendasi teratas kami untuk produksi minyak walnut dan minyak kacang bernilai tinggi. Tekanan ultra tinggi mengekstraksi minyak maksimum dari kacak bercangkang keras sementara press statis tanpa gesekan sekrup menjaga suhu tetap rendah untuk membantu melindungi asam lemak omega-3 yang sensitif.`,
 
-  'hn365-hydraulic-oil-press': `## Ringkasan
+  'commercial-hydraulic-oil-press': `## Ringkasan
 
 Mesin press minyak hidrolik vertikal HN365 memiliki gaya press 365 ton dengan tekanan permukaan kue press 30 MPa, dirancang untuk pabrik minyak skala menengah dan besar yang telah melampaui kapasitas mesin kelas 325. Tata letak vertikal stasiun gandanya membuat dua barel bekerja bergantian sehingga satu dapat dimuat sementara yang lain menekan, mendukung press panas dan dingin untuk kacang tanah, wijen, kenari, dan biji minyak lainnya dalam batch 40–90 menit tergantung bahannya. Minyak sisa dalam kue press umumnya berada di 6–8% (uji pabrik Haonuo: wijen dan kacang tanah berkadar air 6-8%).
 

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Palm Kernel Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Palmiste
@@ -18,7 +18,7 @@ description:
   id: Mesin minyak sawit dan mesin press minyak inti sawit untuk ekstraksi minyak sawit dan inti sawit yang efisien. Press hidrolik tekanan tinggi untuk pasar Asia Tenggara dan Afrika.
 related: ["animal-fat-oil-pressing", "coconut-oil-pressing"]
 recommendedProducts:
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
   - heavy-duty-hydraulic-oil-press
   - pneumatic-oil-filter-press

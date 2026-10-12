@@ -1,9 +1,9 @@
 ---
 title:
-  en: Large Barrel Hydraulic Oil Press
-  fr: Presse à Huile Hydraulique à Grand Fût
-  ar: معصرة زيت هيدروليكية ببرميل كبير
-  id: Mesin Press Minyak Hidrolik Barel Besar
+  en: Sludge Dewatering Hydraulic Press
+  fr: Presse de Déshydratation des Boues Hydraulique
+  ar: مكبس نضح الحمأة الهيدروليكي
+  id: Mesin Dewatering Lumpur Hidrolik
 seoTitle:
   en: Hydraulic Sludge Dewatering Press — Large Barrel Residue
   fr: Presse de déshydratation de boues hydraulique — grand fût

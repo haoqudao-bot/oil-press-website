@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Rice Bran Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Son de Riz
@@ -18,7 +18,7 @@ description:
   id: Mesin press minyak bekatul padi untuk dedak segar dan distabilkan. Solusi press hidrolik dengan panduan jujur tentang pengendalian ketengikan untuk India, Bangladesh, dan Asia Tenggara. Harga pabrik Haonuo.
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - oilseed-pre-press
   - automatic-drum-roaster
   - pneumatic-oil-filter-press

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Peanut Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Arachide
@@ -19,7 +19,7 @@ description:
 related: ["rice-bran-oil-pressing", "animal-fat-oil-pressing", "soybean-oil-pressing"]
 recommendedProducts:
   - standard-hydraulic-oil-press
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - thermal-oil-roasting-pan
   - wood-fired-seed-steamer
   - pneumatic-oil-filter-press

@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Cottonseed Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Coton
@@ -17,7 +17,7 @@ description:
   ar: آلة عصر زيت بذرة القطن لاستخراج فعال. الضغط الهيدروليكي يتعامل مع بذور القطن عالية الألياف. سعر المصنع المباشر من هاونو.
   id: Mesin press minyak biji kapas untuk ekstraksi efisien. Tekanan hidrolik menangani biji kapas serat tinggi. Harga langsung pabrik Haonuo.
 recommendedProducts:
-  - hn365-hydraulic-oil-press
+  - commercial-hydraulic-oil-press
   - medium-hydraulic-oil-press
   - pneumatic-oil-filter-press
   - edible-oil-refining-system
