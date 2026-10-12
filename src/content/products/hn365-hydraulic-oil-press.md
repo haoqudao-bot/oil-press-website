@@ -1,9 +1,9 @@
 ---
 title:
-  en: HN365 Hydraulic Oil Press
-  fr: Presse à Huile Hydraulique HN365
-  ar: معصرة زيت هيدروليكية HN365
-  id: Mesin Press Minyak Hidrolik HN365
+  en: Commercial Hydraulic Oil Press
+  fr: Presse à Huile Hydraulique Commerciale
+  ar: معصرة زيت هيدروليكية تجارية
+  id: Mesin Press Minyak Hidrolik Komersial
 seoTitle:
   en: Commercial Hydraulic Oil Press Machine — 365 Ton
   fr: Presse à Huile Hydraulique Commerciale — 365 Tonnes

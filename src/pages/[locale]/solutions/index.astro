@@ -178,9 +178,13 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 2, name: t.solutions.title, item: `https://www.hydoilpress.com/${currentLocale}/solutions` },
   ],
 };
+
+const seoSolutionsTitle = currentLocale === 'fr' ? "Presse à Huile Hydraulique & Solutions d'Extraction par Type de Graine"
+  : currentLocale === 'ar' ? 'ماكينة عصر الزيت الهيدروليكي وحلول العصر حسب نوع البذرة'
+  : 'Mesin Press Minyak Hidrolik & Solusi Ekstraksi per Jenis Biji';
 ---
 
-<BaseLayout locale={currentLocale} title={t.solutions.title} description={t.solutions.subtitle} jsonLd={breadcrumbLd}>
+<BaseLayout locale={currentLocale} title={seoSolutionsTitle} description={t.solutions.subtitle} jsonLd={breadcrumbLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

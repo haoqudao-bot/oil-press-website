@@ -1,9 +1,9 @@
 ---
 title:
-  en: HN325 Standard Hydraulic Oil Press
-  fr: Presse à Huile Hydraulique Standard HN325
-  ar: معصرة الزيت الهيدروليكية القياسية HN325
-  id: Mesin Press Minyak Hidrolik Standar HN325
+  en: Standard Hydraulic Oil Press
+  fr: Presse à Huile Hydraulique Standard
+  ar: معصرة الزيت الهيدروليكية القياسية
+  id: Mesin Press Minyak Hidrolik Standar
 seoTitle:
   en: Hydraulic Oil Press Machine for Small Business — 325 Ton
   fr: Presse à Huile Hydraulique pour Petites Entreprises — 325 Tonnes
