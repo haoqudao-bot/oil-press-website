@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Shea Butter Oil Press Machine for Oil Mills
   fr: Machine à Beurre de Karité pour Moulins
-  ar: آلة زبدة الشيا للمعاصر
+  ar: آلة عصر زبدة الشيا لمطاحن الزيت
   id: Mesin Press Mentega Shea untuk Pabrik
 seedName: shea
 icon: shea
@@ -19,6 +19,7 @@ description:
 recommendedProducts:
   - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
+  - large-barrel-hydraulic-oil-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
 processSteps:

@@ -4,6 +4,9 @@ title:
   fr: Cuisseur Vapeur Électrique pour Graines
   ar: بخاخة بذور كهربائية
   id: Pengukus Biji-Bijian Listrik
+seoTitle:
+  ar: بخاخة بذور كهربائية لمطاحن الزيت التجارية
+  id: Pengukus Biji Listrik untuk Pabrik Minyak Komersial
 description:
   en: "Electric seed steamer for pre-press oil seed conditioning. Temperature-controlled steaming adjusts seed moisture and temperature for optimal oil yield."
   fr: "Cuiseur vapeur électrique pour graines. Température contrôlée pour rendement huile optimal."

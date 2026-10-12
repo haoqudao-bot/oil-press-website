@@ -4,6 +4,8 @@ title:
   fr: Broyeur de Tourteaux Industriel
   ar: كسارة كيك الزيت الصناعية
   id: Penghancur Kue Minyak Industri
+seoTitle:
+  ar: كسارة كيك الزيت الصناعية لمطاحن الزيت
 description:
   en: "Industrial-grade oil cake crusher for crushing pressed oil cakes into fine powder. Well-suited for recycling oil cake residue, producing animal feed, or further processing."
   fr: "Broyeur de tourteaux industriel pour réduire les tourteaux pressés en poudre fine. Adapté pour le recyclage des résidus, la production d'alimentation animale."

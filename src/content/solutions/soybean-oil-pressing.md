@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Soybean Oil Press Machine for Oil Producers
   fr: Machine à Huile de Soja pour Producteurs
-  ar: آلة عصر زيت الصويا للمنتجين
+  ar: آلة عصر زيت الصويا للمنتجين — مباشرة من المصنع
   id: Mesin Press Minyak Kedelai untuk Produsen
 seedName: soybean
 icon: soybean
@@ -20,7 +20,9 @@ related: ["rice-bran-oil-pressing", "animal-fat-oil-pressing", "peanut-oil-press
 recommendedProducts:
   - standard-hydraulic-oil-press
   - high-speed-seed-crusher
+  - oilseed-pre-press
   - pneumatic-oil-filter-press
+  - stainless-steel-oil-refining-equipment
 processSteps:
   - step: "Soybean Preparation"
     description: "Clean, dehull, and flake soybeans. Adjust moisture to 10-11% for optimal pressing."

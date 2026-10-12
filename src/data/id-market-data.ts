@@ -5,7 +5,7 @@ import type { MarketData } from './fr-market-data';
 
 export const idMarketData: Record<string, MarketData> = {
   nigeria: {
-    title: 'Mesin Press Minyak di Nigeria',
+    title: 'Mesin Press Minyak Hidrolik di Nigeria — Langsung Pabrik',
     description: 'Mesin press minyak di Nigeria untuk kacang tanah, inti sawit, dan wijen. Dukungan kepabeanan SONCAP, mesin siap genset, pengiriman ke Lagos. Minta penawaran harga pabrik.',
     heroTitle: 'Mesin Press Minyak di Nigeria — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak kacang tanah, inti sawit, wijen, dan kapas. Harga langsung pabrik, pengiriman ke Lagos dalam 25-30 hari, garansi 1 tahun.',
@@ -77,7 +77,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   india: {
-    title: 'Mesin Press Minyak di India',
+    title: 'Mesin Press Minyak Hidrolik di India — Langsung Pabrik',
     description: 'Mesin press minyak di India untuk sawi, kacang tanah, dan wijen. Alternatif hidrolik modern untuk mesin kachi ghani; 415V/50Hz, pengiriman ke Mundra/JNPT. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di India — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak sawi (kachi ghani), wijen, kacang tanah, dan kelapa. Harga langsung pabrik, pengiriman ke Mumbai dalam 18-22 hari, garansi 1 tahun.',
@@ -126,7 +126,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   indonesia: {
-    title: 'Mesin Press Minyak di Indonesia',
+    title: 'Mesin Press Minyak Hidrolik di Indonesia — Langsung Pabrik',
     description: 'Mesin press minyak hidrolik di Indonesia untuk kelapa, sawit, dan kacang tanah. Dokumen impor API/SNI, spesifikasi 380V/50Hz, pengiriman ke Jakarta. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Indonesia — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk kelapa (VCO), inti sawit, dan kacang tanah. Harga pabrik langsung, pengiriman ke Jakarta 15-20 hari, garansi 1 tahun.',
@@ -195,7 +195,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   pakistan: {
-    title: 'Mesin Press Minyak di Pakistan',
+    title: 'Mesin Press Minyak Hidrolik di Pakistan — Langsung Pabrik',
     description: 'Mesin press minyak di Pakistan untuk bunga matahari, sawi, dan wijen. Dokumentasi kepabeanan WeBOC dan dukungan inspeksi, mesin 220-240V, pengiriman ke Karachi. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Pakistan — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, sawi, wijen, dan kapas. Harga langsung pabrik, pengiriman ke Karachi dalam 20-25 hari, garansi 1 tahun.',
@@ -267,7 +267,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   philippines: {
-    title: 'Mesin Press Minyak di Filipina',
+    title: 'Mesin Press Minyak Hidrolik di Filipina — Langsung Pabrik',
     description: 'Mesin press minyak di Filipina untuk VCO kelapa, kacang tanah, dan kelor. Dibuat untuk pasokan 230V/60Hz; pengiriman ke Manila, Cebu, atau Davao. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Filipina — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak VCO kelapa, kacang tanah, kelor, dan bunga matahari. Harga langsung pabrik, pengiriman ke Manila dalam 12-16 hari, garansi 1 tahun.',
@@ -336,7 +336,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   egypt: {
-    title: 'Mesin Press Minyak di Mesir',
+    title: 'Mesin Press Minyak Hidrolik di Mesir — Langsung Pabrik',
     description: 'Mesin press minyak di Mesir untuk wijen, zaitun, dan bunga matahari. Dokumentasi ACID/GOEIC dan dukungan inspeksi pra-pengiriman, pengiriman ke Alexandria. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Mesir — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak wijen, zaitun, kacang tanah, dan bunga matahari. Harga langsung pabrik, pengiriman ke Alexandria dalam 20-24 hari, garansi 1 tahun.',
@@ -407,7 +407,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   'south-africa': {
-    title: 'Mesin Press Minyak di Afrika Selatan',
+    title: 'Mesin Press Minyak Hidrolik di Afrika Selatan — Langsung Pabrik',
     description: 'Mesin press minyak di Afrika Selatan untuk bunga matahari, kedelai, dan kanola. Berkas teknis NRCS LOA disediakan, mesin 400V/50Hz, pengiriman ke Durban. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Afrika Selatan — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, kacang tanah, kedelai, dan kanola. Harga langsung pabrik, pengiriman ke Durban dalam 22-26 hari, garansi 1 tahun.',
@@ -477,7 +477,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   kenya: {
-    title: 'Mesin Press Minyak di Kenya',
+    title: 'Mesin Press Minyak Hidrolik di Kenya — Langsung Pabrik',
     description: 'Mesin press minyak di Kenya untuk bunga matahari, wijen, dan kacang tanah. Sertifikat KEBS PVoC diatur sebelum pengiriman; mesin 415V/50Hz, pengiriman ke Mombasa. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Kenya — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, kacang tanah, wijen, dan biji kapas. Harga langsung pabrik, pengiriman ke Mombasa dalam 25-30 hari, garansi 1 tahun.',
@@ -549,7 +549,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   uk: {
-    title: 'Mesin Press Minyak di Inggris',
+    title: 'Mesin Press Minyak Hidrolik di Inggris — Langsung Pabrik',
     description: 'Mesin press minyak di Inggris untuk rapeseed, bunga matahari, dan rami. Dokumentasi CE/UKCA, mesin 400V, dan panduan PPN impor; pengiriman ke Felixstowe. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Inggris — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak rapeseed, bunga matahari, rami, dan biji rami press dingin. Harga langsung pabrik, pengiriman ke Felixstowe dalam 28-35 hari, garansi 1 tahun.',
@@ -619,7 +619,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   usa: {
-    title: 'Mesin Press Minyak di Amerika Serikat',
+    title: 'Mesin Press Minyak Hidrolik di Amerika Serikat — Langsung Pabrik',
     description: 'Mesin press minyak di Amerika Serikat yang dibuat untuk pasokan 480V/60Hz, dengan opsi komponen UL dan kontak pangan selaras FDA. Pengiriman ke LA atau NY. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Amerika Serikat — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak bunga matahari, kacang tanah, rami, dan almond press dingin. Harga langsung pabrik, pengiriman ke LA/NY dalam 30-40 hari, garansi 1 tahun.',
@@ -690,7 +690,7 @@ export const idMarketData: Record<string, MarketData> = {
   },
 
   'middle-east': {
-    title: 'Mesin Press Minyak di Timur Tengah',
+    title: 'Mesin Press Minyak Hidrolik di Timur Tengah — Langsung Pabrik',
     description: 'Mesin press minyak di Timur Tengah untuk wijen, zaitun, dan kenari. Dukungan sertifikasi SABER, G-Mark, dan ECAS untuk Arab Saudi dan UEA. Minta penawaran.',
     heroTitle: 'Mesin Press Minyak di Timur Tengah — Langsung dari Pabrik',
     heroDesc: 'Mesin press minyak hidrolik untuk produksi minyak wijen, kenari, dan zaitun di seluruh Arab Saudi, UEA, dan pasar Teluk yang lebih luas. Pasokan langsung pabrik, pengiriman ke Jeddah dan Dubai dalam 20-25 hari, garansi 1 tahun.',

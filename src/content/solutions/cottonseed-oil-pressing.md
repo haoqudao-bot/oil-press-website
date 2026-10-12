@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Cottonseed Oil Press Machine for Oil Mills
   fr: Machine à Huile de Graine de Coton pour Moulins
-  ar: آلة زيت بذور القطن للمطاحن
+  ar: آلة عصر زيت بذور القطن لمطاحن الزيت
   id: Mesin Minyak Biji Kapas untuk Pabrik
 seedName: cottonseed
 icon: cottonseed
@@ -18,7 +18,9 @@ description:
   id: Mesin press minyak biji kapas untuk ekstraksi efisien. Tekanan hidrolik menangani biji kapas serat tinggi. Harga langsung pabrik Haonuo.
 recommendedProducts:
   - hn365-hydraulic-oil-press
+  - medium-hydraulic-oil-press
   - pneumatic-oil-filter-press
+  - edible-oil-refining-system
 processSteps:
   - step: Delinting & Decortication
     description: Remove lint from cottonseed and separate hulls from kernels to improve oil yield and reduce fiber content

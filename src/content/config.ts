@@ -10,10 +10,10 @@ const products = defineCollection({
       id: z.string(),
     }),
     seoTitle: z.object({
-      en: z.string(),
-      fr: z.string(),
-      ar: z.string(),
-      id: z.string(),
+      en: z.string().optional(),
+      fr: z.string().optional(),
+      ar: z.string().optional(),
+      id: z.string().optional(),
     }).optional(),
     description: z.object({
       en: z.string(),

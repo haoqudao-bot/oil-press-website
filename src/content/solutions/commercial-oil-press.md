@@ -7,8 +7,8 @@ title:
 seoTitle:
   en: Commercial Oil Press Machine for Oil Mills
   fr: Machine de Pressage d'Huile Commerciale
-  ar: آلة عصر الزيت التجارية
-  id: Mesin Press Minyak Komersial
+  ar: آلة عصر الزيت التجارية لمطاحن الزيت
+  id: Mesin Press Minyak Komersial untuk Pabrik Minyak
 seedName: commercial
 icon: commercial
 description:
@@ -21,6 +21,7 @@ recommendedProducts:
   - cold-press-hydraulic-oil-press
   - integrated-feeder-crusher-roaster
   - thermal-oil-roasting-pan
+  - vertical-screw-conveyor
   - pneumatic-oil-filter-press
 processSteps:
   - step: Seed Processing

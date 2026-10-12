@@ -19,6 +19,7 @@ description:
 recommendedProducts:
   - cold-press-hydraulic-oil-press
   - pneumatic-oil-filter-press
+  - ultra-high-pressure-cold-press
 processSteps:
   - step: Olive Preparation
     description: Clean and sort olives, remove leaves and debris

@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Almond Oil Press Machine for Cold-Pressed Oil
   fr: Machine à Huile d'Amande, Pressage à Froid
-  ar: آلة زيت اللوز، عصر بارد
+  ar: آلة عصر زيت اللوز للزيت المعصور على البارد
   id: Mesin Minyak Almond, Press Dingin
 seedName: almond
 icon: almond
@@ -20,6 +20,7 @@ recommendedProducts:
   - cold-press-hydraulic-oil-press
   - hn365-hydraulic-oil-press
   - pneumatic-oil-filter-press
+  - ultra-high-pressure-cold-press
 processSteps:
   - step: Almond Preparation
     description: Clean and sort almonds, optionally blanch to remove skins

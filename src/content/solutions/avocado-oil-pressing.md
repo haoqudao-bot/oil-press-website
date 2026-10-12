@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Avocado Oil Press Machine for Cold-Pressed Oil
   fr: Machine à Huile d'Avocat, Pressage à Froid
-  ar: آلة زيت الأفوكادو، عصر بارد
+  ar: آلة عصر زيت الأفوكادو للزيت المعصور على البارد
   id: Mesin Minyak Alpukat, Press Dingin
 seedName: avocado
 icon: avocado
@@ -20,6 +20,7 @@ recommendedProducts:
   - cold-press-hydraulic-oil-press
   - high-speed-seed-crusher
   - pneumatic-oil-filter-press
+  - ultra-high-pressure-cold-press
 processSteps:
   - step: Avocado Preparation
     description: Remove pits and skins, mash avocado flesh

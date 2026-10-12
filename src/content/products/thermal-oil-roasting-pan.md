@@ -4,6 +4,9 @@ title:
   fr: Poêle de Torréfaction à Huile Thermique
   ar: مقلاة تحميص بالزيت الحراري
   id: Panci Sangrai Minyak Termal
+seoTitle:
+  ar: مقلاة تحميص بالزيت الحراري للبذور الزيتية
+  id: Panci Sangrai Minyak Termal untuk Biji-Bijian
 description:
   en: "Thermal oil roasting pan for seed roasting and temperature adjustment. Even heating with thermal oil circulation for consistent roasting and improved oil flavor."
   fr: "Poêle de torréfaction à huile thermique pour graines. Chauffage uniforme, meilleure saveur d'huile."

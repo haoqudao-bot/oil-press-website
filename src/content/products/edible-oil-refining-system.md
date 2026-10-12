@@ -4,6 +4,8 @@ title:
   fr: Système de Raffinage d'Huile Comestible
   ar: نظام تكرير زيت الطعام
   id: Sistem Pemurnian Minyak Goreng
+seoTitle:
+  ar: نظام تكرير زيت الطعام الكامل لمطاحن الزيت
 description:
   en: "Complete edible oil refining system with degumming, neutralization, bleaching, and deodorization. Batch or continuous processing for premium cooking oil production."
   fr: "Système de raffinage d'huile comestible complet. Dégommage, neutralisation, blanchiment, désodorisation."

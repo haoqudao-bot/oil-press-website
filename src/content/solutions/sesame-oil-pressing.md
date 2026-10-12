@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Sesame Oil Machine, Cold Press
   fr: Machine à Huile de Sésame, Pressage à Froid
-  ar: آلة زيت السمسم، عصر بارد
+  ar: آلة عصر زيت السمسم للعصر البارد
   id: Mesin Minyak Wijen, Press Dingin
 seedName: sesame
 icon: sesame
@@ -19,7 +19,9 @@ description:
 recommendedProducts:
   - standard-hydraulic-oil-press
   - sesame-oil-hydraulic-press
+  - medium-hydraulic-oil-press
   - thermal-oil-roasting-pan
+  - wood-fired-seed-steamer
   - pneumatic-oil-filter-press
 processSteps:
   - step: Seed Cleaning

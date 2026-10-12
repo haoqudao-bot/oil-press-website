@@ -2,7 +2,7 @@
 title:
   en: How to Maximize Oil Yield in Your Oil Mill
   fr: Comment maximiser le rendement en huile
-  ar: كيفية زيادة عائد الزيت
+  ar: كيفية زيادة عائد الزيت في مطحنة الزيت
   id: Cara Memaksimalkan Hasil Minyak
 description:
   en: Proven techniques to maximize oil yield including seed preparation, moisture control, temperature optimization, and pressing parameters for higher extraction rates

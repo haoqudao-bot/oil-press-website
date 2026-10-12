@@ -19,6 +19,7 @@ description:
 recommendedProducts:
   - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
+  - heavy-duty-hydraulic-oil-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
 processSteps:

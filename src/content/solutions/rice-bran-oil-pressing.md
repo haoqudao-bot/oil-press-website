@@ -19,8 +19,10 @@ description:
 recommendedProducts:
   - standard-hydraulic-oil-press
   - hn365-hydraulic-oil-press
+  - oilseed-pre-press
   - automatic-drum-roaster
   - pneumatic-oil-filter-press
+  - stainless-steel-oil-refining-equipment
 processSteps:
   - step: Stabilization
     description: Heat-stabilize fresh rice bran within hours of milling to stop lipase activity and control free fatty acids

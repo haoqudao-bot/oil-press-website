@@ -4,6 +4,10 @@ title:
   fr: Convoyeur à vis vertical
   ar: ناقل لولبي رأسي
   id: Konveyor Ulir Vertikal
+seoTitle:
+  fr: Convoyeur Élévateur à Vis Vertical pour Huileries
+  ar: ناقل لولبي رأسي للتغذية — لمطاحن الزيت
+  id: Konveyor Ulir Vertikal untuk Pengumpanan Biji
 description:
   en: "2-metre vertical stainless steel screw feeder for automatic oilseed feeding into presses, roasters and filters. 1.1 kW geared drive, 600×600×600 mm bin, enclosed dust-free conveying."
   fr: "Convoyeur à vis vertical en acier inoxydable de 2 m pour l'alimentation automatique des graines dans les presses, torréfacteurs et filtres. 1,1 kW, trémie 600×600×600 mm."

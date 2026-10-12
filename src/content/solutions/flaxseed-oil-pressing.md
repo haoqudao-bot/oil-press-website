@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Flaxseed (Linseed) Oil Press Machine, Cold Press
   fr: Machine à Huile de Lin, Pressage à Froid
-  ar: آلة زيت بذر الكتان، عصر بارد
+  ar: آلة عصر زيت بذر الكتان للعصر البارد
   id: Mesin Minyak Biji Rami, Press Dingin
 seedName: flaxseed
 icon: flaxseed

@@ -20,6 +20,7 @@ related: ["soybean-oil-pressing", "rice-bran-oil-pressing", "peanut-oil-pressing
 recommendedProducts:
   - standard-hydraulic-oil-press
   - hn365-hydraulic-oil-press
+  - oilseed-pre-press
   - thermal-oil-roasting-pan
   - pneumatic-oil-filter-press
 processSteps:

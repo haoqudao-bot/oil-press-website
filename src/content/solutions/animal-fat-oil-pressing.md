@@ -19,6 +19,7 @@ description:
 recommendedProducts:
   - standard-hydraulic-oil-press
   - hn365-hydraulic-oil-press
+  - large-barrel-hydraulic-oil-press
   - pneumatic-oil-filter-press
 processSteps:
   - step: Grinding & Cutting

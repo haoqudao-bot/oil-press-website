@@ -4,6 +4,9 @@ title:
   fr: Cuisseur Vapeur à Bois pour Graines
   ar: بخاخة بذور تعمل بالحطب
   id: Pengukus Biji-Bijian Kayu
+seoTitle:
+  ar: بخاخة بذور تعمل بالحطب لمطاحن الزيت
+  id: Pengukus Biji Bakar Kayu untuk Pabrik Minyak
 description:
   en: "Wood-fired seed steamer for cost-effective oil seed conditioning. Economical steaming solution using wood or biomass fuel for areas with limited electricity."
   fr: "Cuiseur vapeur à bois pour graines. Économique, bois ou biomasse, zones sans électricité fiable."

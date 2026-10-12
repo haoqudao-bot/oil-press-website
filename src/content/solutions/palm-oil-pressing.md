@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Palm & Palm Kernel Oil Machine
   fr: Machine à Huile de Palme & Palmiste
-  ar: آلة زيت النخيل ونواة النخيل
+  ar: آلة عصر زيت النخيل ونواة النخيل للمطاحن
   id: Mesin Minyak Sawit & Inti Sawit
 seedName: palm
 icon: palm
@@ -20,7 +20,9 @@ related: ["animal-fat-oil-pressing", "coconut-oil-pressing"]
 recommendedProducts:
   - hn365-hydraulic-oil-press
   - ultra-high-pressure-hydraulic-oil-press
+  - heavy-duty-hydraulic-oil-press
   - pneumatic-oil-filter-press
+  - edible-oil-refining-system
 processSteps:
   - step: Kernel Preparation
     description: Crack palm nuts and separate kernels from shells

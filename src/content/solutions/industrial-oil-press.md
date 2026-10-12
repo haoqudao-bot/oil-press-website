@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Industrial Oil Press Machine 300–620 Ton
   fr: Machine de Pressage Industrielle 300–620 Tonnes
-  ar: آلة عصر زيت صناعية 300–620 طن
+  ar: آلة عصر زيت صناعية 300–620 طن — مباشرة من المصنع
   id: Mesin Press Minyak Industri 300–620 Ton
 seedName: industrial
 icon: industrial
@@ -20,6 +20,7 @@ recommendedProducts:
   - ultra-high-pressure-hydraulic-oil-press
   - hn365-hydraulic-oil-press
   - industrial-seed-crusher
+  - vertical-screw-conveyor
   - pneumatic-oil-filter-press
 processSteps:
   - step: Industrial Seed Processing

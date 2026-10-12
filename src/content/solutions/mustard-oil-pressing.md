@@ -20,6 +20,7 @@ recommendedProducts:
   - standard-hydraulic-oil-press
   - hn365-hydraulic-oil-press
   - electric-seed-steamer
+  - wood-fired-seed-steamer
   - pneumatic-oil-filter-press
 processSteps:
   - step: Seed Cleaning

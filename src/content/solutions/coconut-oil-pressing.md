@@ -18,6 +18,8 @@ description:
   id: Mesin press minyak kelapa profesional untuk ekstraksi minyak kelapa perawan. Teknologi press hidrolik dingin dengan hasil tinggi.
 recommendedProducts:
   - cold-press-hydraulic-oil-press
+  - medium-hydraulic-oil-press
+  - large-barrel-hydraulic-oil-press
   - pneumatic-oil-filter-press
 processSteps:
   - step: Coconut Preparation

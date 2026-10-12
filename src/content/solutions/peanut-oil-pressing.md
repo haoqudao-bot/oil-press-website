@@ -7,8 +7,8 @@ title:
 seoTitle:
   en: Groundnut (Peanut) Oil Machine
   fr: Machine à Huile d'Arachide (Cacahuète)
-  ar: آلة زيت الفول السوداني
-  id: Mesin Minyak Kacang Tanah
+  ar: آلة عصر زيت الفول السوداني للمطاحن
+  id: Mesin Press Minyak Kacang Tanah untuk Pabrik
 seedName: peanut
 icon: peanut
 description:
@@ -21,6 +21,7 @@ recommendedProducts:
   - standard-hydraulic-oil-press
   - hn365-hydraulic-oil-press
   - thermal-oil-roasting-pan
+  - wood-fired-seed-steamer
   - pneumatic-oil-filter-press
 processSteps:
   - step: 1. Cleaning
