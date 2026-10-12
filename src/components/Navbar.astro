@@ -44,46 +44,47 @@ const productsSubItems = [
 ];
 
 // Mega menu: individual products per category (desktop hover only)
+const mm = (t as any).nav?.megaMenu || {};
 const megaMenuColumns = [
   {
     headerHref: '/products/hydraulic-oil-press/',
     headerLabel: t.nav.hydraulicOilPress,
     products: [
-      { href: '/products/standard-hydraulic-oil-press/', label: 'Standard (HN325)' },
-      { href: '/products/commercial-hydraulic-oil-press/', label: 'Commercial (HN365)' },
-      { href: '/products/cold-press-hydraulic-oil-press/', label: 'Cold Press (HN426)' },
-      { href: '/products/ultra-high-pressure-hydraulic-oil-press/', label: 'Ultra High Pressure (HN500)' },
-      { href: '/products/large-barrel-hydraulic-oil-press/', label: 'Sludge Dewatering Press' },
+      { href: '/products/standard-hydraulic-oil-press/', label: mm.standard || 'Standard (HN325)' },
+      { href: '/products/commercial-hydraulic-oil-press/', label: mm.commercial || 'Commercial (HN365)' },
+      { href: '/products/cold-press-hydraulic-oil-press/', label: mm.coldPress || 'Cold Press (HN426)' },
+      { href: '/products/ultra-high-pressure-hydraulic-oil-press/', label: mm.ultraHighPressure || 'Ultra High Pressure (HN500)' },
+      { href: '/products/large-barrel-hydraulic-oil-press/', label: mm.sludgeDewatering || 'Sludge Dewatering Press' },
     ],
   },
   {
     headerHref: '/products/seed-processing-equipment/',
     headerLabel: t.nav.seedProcessing,
     products: [
-      { href: '/products/high-speed-seed-crusher/', label: 'High Speed Crusher' },
-      { href: '/products/industrial-seed-crusher/', label: 'Industrial Cake Crusher' },
-      { href: '/products/integrated-feeder-crusher-roaster/', label: 'Integrated Feeder Crusher' },
-      { href: '/products/oilseed-pre-press/', label: 'Oilseed Pre-Press' },
-      { href: '/products/vertical-screw-conveyor/', label: 'Vertical Screw Conveyor' },
+      { href: '/products/high-speed-seed-crusher/', label: mm.highSpeedCrusher || 'High Speed Crusher' },
+      { href: '/products/industrial-seed-crusher/', label: mm.industrialCakeCrusher || 'Industrial Cake Crusher' },
+      { href: '/products/integrated-feeder-crusher-roaster/', label: mm.integratedFeederCrusher || 'Integrated Feeder Crusher' },
+      { href: '/products/oilseed-pre-press/', label: mm.oilseedPrePress || 'Oilseed Pre-Press' },
+      { href: '/products/vertical-screw-conveyor/', label: mm.verticalScrewConveyor || 'Vertical Screw Conveyor' },
     ],
   },
   {
     headerHref: '/products/roasting-steaming-equipment/',
     headerLabel: t.nav.roastingSteaming,
     products: [
-      { href: '/products/automatic-drum-roaster/', label: 'Automatic Drum Roaster' },
-      { href: '/products/electric-seed-steamer/', label: 'Electric Seed Steamer' },
-      { href: '/products/thermal-oil-roasting-pan/', label: 'Thermal Oil Roasting Pan' },
-      { href: '/products/wood-fired-seed-steamer/', label: 'Wood-Fired Seed Steamer' },
+      { href: '/products/automatic-drum-roaster/', label: mm.automaticDrumRoaster || 'Automatic Drum Roaster' },
+      { href: '/products/electric-seed-steamer/', label: mm.electricSeedSteamer || 'Electric Seed Steamer' },
+      { href: '/products/thermal-oil-roasting-pan/', label: mm.thermalOilRoastingPan || 'Thermal Oil Roasting Pan' },
+      { href: '/products/wood-fired-seed-steamer/', label: mm.woodFiredSeedSteamer || 'Wood-Fired Seed Steamer' },
     ],
   },
   {
     headerHref: '/products/filtration-refining-equipment/',
     headerLabel: t.nav.filtrationRefining,
     products: [
-      { href: '/products/edible-oil-refining-system/', label: 'Edible Oil Refining' },
-      { href: '/products/pneumatic-oil-filter-press/', label: 'Pneumatic Filter Press' },
-      { href: '/products/stainless-steel-oil-refining-equipment/', label: 'Stainless Steel Refining' },
+      { href: '/products/edible-oil-refining-system/', label: mm.edibleOilRefining || 'Edible Oil Refining' },
+      { href: '/products/pneumatic-oil-filter-press/', label: mm.pneumaticFilterPress || 'Pneumatic Filter Press' },
+      { href: '/products/stainless-steel-oil-refining-equipment/', label: mm.stainlessSteelRefining || 'Stainless Steel Refining' },
     ],
   },
 ];
