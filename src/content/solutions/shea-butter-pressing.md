@@ -8,7 +8,7 @@ seoTitle:
   en: Shea Butter Oil Press Machine for Oil Mills
   fr: Machine à Beurre de Karité pour Moulins
   ar: آلة زبدة الشيا للمعاصر
-  id: Mesin Minyak Shea untuk Pabrik
+  id: Mesin Press Mentega Shea untuk Pabrik
 seedName: shea
 icon: shea
 description:

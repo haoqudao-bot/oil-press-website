@@ -31,7 +31,7 @@ This guide profiles the seeds and nuts most commonly pressed on hydraulic lines,
 4. **Hardness and shell content** — hard shells and low-oil husks demand higher cake pressure and are often removed first.
 5. **Market value and demand** — walnut, almond, and cold-pressed sesame sell on quality at premium prices; soybean sells on volume and is unforgiving of high processing costs.
 
-## Common Oil-Bearing Materials
+## Common Oil-Bearing Raw Materials
 
 ### 1. Sesame Seeds
 

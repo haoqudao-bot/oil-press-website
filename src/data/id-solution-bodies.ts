@@ -537,7 +537,7 @@ Minyak inti sawit mentah baru-baru ini diperdagangkan sekitar **$900-1.400 per t
 - **Tekanan berkelanjutan 40-55 MPa** — dirancang khusus untuk inti sawit keras yang menghentikan press hidrolik standar
 - Motor dililit untuk **380V/50Hz (Indonesia), 415V/50Hz (Malaysia, Nigeria)** atau standar jaringan lokal Anda tanpa biaya tambahan
 - Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Belawan (Medan), Tanjung Priok (Jakarta), Port Klang, atau Lagos** dengan dokumen ekspor lengkap
-- Dipasangkan dengan pemecah kacang sawit dan seed crusher untuk lini lengkap dari inti hingga minyak dari satu pemasok
+- Dipasangkan dengan pemecah kacang sawit dan penghancur biji untuk lini lengkap dari inti hingga minyak dari satu pemasok
 - Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung suku cadang 1 tahun — demo penekanan langsung via panggilan video dengan inti Anda sendiri sebelum memesan`,
 
   'peanut-oil-pressing': `**Jawaban Cepat**

@@ -379,7 +379,7 @@ C'est le prix de détail qui commande cette fourchette — le gros se situe plus
 - Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
 - Démonstration de pressage en direct par appel vidéo avec vos propres graines de lin avant de commander`,
 
-  'industrial-oil-press': `## Aperçu
+  'industrial-oil-press': `## Aperçu de la Machine de Pressage Industrielle
 
 La production d'huile à l'échelle industrielle exige un équipement qui offre un débit maximal, une huile résiduelle minimale et une qualité constante à travers des milliers de tonnes de production par an. Une **machine de pressage d'huile industrielle** doit être suffisamment robuste pour un fonctionnement 24h/24 tout en maintenant la précision nécessaire pour une efficacité d'extraction optimale.
 
@@ -406,7 +406,7 @@ Cette solution est conçue pour les installations de production d'huile à grand
 - **Coordination du raffinage** : l'huile finie RBD utilise une ligne de raffinage séparée, approvisionnée indépendamment ; nous conseillons sur les spécifications et l'implantation
 - **Capacité 24h/24** : Construction robuste pour un fonctionnement industriel continu
 
-## Ligne de Production Complète
+## Ligne de Production de Pressage Industrielle Complète
 
 Une ligne de production d'huile industrielle intègre plusieurs étapes de traitement en une opération continue et transparente. Voici la disposition typique pour une ligne de production de 10-50 T/J (tonnes par jour) :
 

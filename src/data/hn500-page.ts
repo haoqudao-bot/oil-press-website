@@ -23,7 +23,7 @@ export const hn500Content: Record<HN500Locale, HN500Strings> = {
     ],
     btnQuote: 'Request a Quote →', btnWa: 'WhatsApp', trustBar: '🛡 1-Year Warranty&nbsp;•&nbsp;Lifetime Technical Support&nbsp;•&nbsp;48-h Full-Load Test',
     h2Specs: 'What 620 Tons Looks Like: HN500 Specs & Frame', specsH3: 'HN500 Specifications',
-    h2Cap: 'How Much Can It Press Per Day?', capH3: 'Batch Cycle & Output',
+    h2Cap: 'How Much Can This Hydraulic Oil Press Produce Per Day?', capH3: 'Batch Cycle & Output',
     matH3: 'HN500 Materials', matHeaders: ['Part', 'Material & finish'],
     matRows: [
       ['Hydraulic cylinder', 'Ø500 mm heavy-duty cylinder assembly — full-load tested at 75 MPa / 620 t'],
@@ -46,7 +46,7 @@ export const hn500Content: Record<HN500Locale, HN500Strings> = {
     capNote: 'Actual daily output depends on seed, batch size and staff rhythm — <b>not a guaranteed figure</b>. Tell us your seed and target tons per day and we will calculate your throughput.',
     powerH3: 'Power & Installation',
     powerP: 'Runs on a standard <b>380V / 50Hz</b> supply (2.2 kW motor); <b>other voltage standards can be customized</b>. Generator-friendly: a <b>7 kVA</b> generator is enough. The installation floor must support at least <b>4 tonnes</b> with <b>3 m</b> ceiling height — a reinforced concrete foundation is recommended.',
-    h2Fit: 'Which Model Fits Your Mill?',
+    h2Fit: 'Which Hydraulic Oil Press Model Fits Your Mill?',
     fitHeaders: ['Model', 'Force', 'Cake pressure', 'Barrel Ø (standard)', 'Configuration', 'Best for'],
     fitRows: [
       '<a href="/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Single / double barrel|Smaller batches (~60 kg), tightest budget',
@@ -141,7 +141,7 @@ export const hn500Content: Record<HN500Locale, HN500Strings> = {
     capNote: 'La production quotidienne réelle dépend de la graine, de la taille des lots et du rythme de l’équipe — <b>ce n’est pas un chiffre garanti</b>. Indiquez-nous votre graine et votre objectif en tonnes par jour, nous calculerons votre débit.',
     powerH3: 'Alimentation & Installation',
     powerP: 'Fonctionne sur une alimentation standard <b>380 V / 50 Hz</b> (moteur 2,2 kW) ; <b>d’autres normes de tension peuvent être personnalisées</b>. Compatible groupe électrogène : un groupe de <b>7 kVA</b> suffit. Le sol d’installation doit supporter au moins <b>4 tonnes</b> avec <b>3 m</b> de hauteur sous plafond — une fondation en béton armé est recommandée.',
-    h2Fit: 'Quel modèle convient à votre huilerie ?',
+    h2Fit: 'Quel modèle de presse à huile hydraulique convient à votre huilerie ?',
     fitHeaders: ['Modèle', 'Force', 'Pression sur gâteau', 'Ø fût (standard)', 'Configuration', 'Idéal pour'],
     fitRows: [
       '<a href="/fr/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Fût simple / double|Lots plus petits (~60 kg), budget le plus serré',
@@ -236,7 +236,7 @@ export const hn500Content: Record<HN500Locale, HN500Strings> = {
     capNote: 'الإنتاج اليومي الفعلي يعتمد على البذرة وحجم الدفعة وإيقاع العمال — <b>وليس رقماً مضموناً</b>. أخبرنا ببذورك وهدفك بالأطنان يومياً وسنحسب إنتاجيتك.',
     powerH3: 'الكهرباء والتركيب',
     powerP: 'تعمل على كهرباء قياسية <b>380 فولت / 50 هرتز</b> (محرك 2.2 كيلوواط)؛ <b>يمكن تخصيص معايير الجهد الأخرى</b>. متوافقة مع المولدات: مولد <b>7 كيلو فولت أمبير</b> يكفي. يجب أن يتحمل أرضية التركيب <b>4 أطنان</b> على الأقل بارتفاع سقف <b>3 أمتار</b> — ويُنصح بأساس خرسانة مسلحة.',
-    h2Fit: 'أي طراز يناسب معصرك؟',
+    h2Fit: 'أي معصرة زيت هيدروليكية تناسب معصرتك؟',
     fitHeaders: ['الطراز', 'القوة', 'ضغط الكعكة', 'قطر البرميل (قياسي)', 'التكوين', 'الأنسب لـ'],
     fitRows: [
       '<a href="/ar/products/mini-hydraulic-oil-press/">HN300</a>|300 طن|42 ميجاباسكال|Ø300 ملم|برميل مفرد / مزدوج|دفعات أصغر (~60 كجم)، أضيق ميزانية',
@@ -331,7 +331,7 @@ export const hn500Content: Record<HN500Locale, HN500Strings> = {
     capNote: 'Output harian aktual bergantung pada biji, ukuran batch, dan ritme staf — <b>bukan angka yang dijamin</b>. Sebutkan biji dan target ton per hari Anda, kami hitung throughput-nya.',
     powerH3: 'Listrik & Instalasi',
     powerP: 'Bekerja pada pasokan standar <b>380V / 50Hz</b> (motor 2,2 kW); <b>standar tegangan lainnya dapat disesuaikan</b>. Ramah genset: genset <b>7 kVA</b> sudah cukup. Lantai instalasi harus menahan setidaknya <b>4 ton</b> dengan tinggi plafon <b>3 m</b> — pondasi beton bertulang direkomendasikan.',
-    h2Fit: 'Model Mana yang Cocok untuk Pabrik Anda?',
+    h2Fit: 'Model Mesin Press Minyak Mana yang Cocok untuk Pabrik Anda?',
     fitHeaders: ['Model', 'Gaya', 'Tekanan kue', 'Diameter barel (standar)', 'Konfigurasi', 'Terbaik untuk'],
     fitRows: [
       '<a href="/id/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Barel tunggal / ganda|Batch lebih kecil (~60 kg), anggaran paling ketat',
