@@ -78,9 +78,20 @@ const breadcrumbLd = {
 
 // Use localized keywords for all locales (fall back to English if no specific keywords)
 const seoKeywords = resource.data.seoKeywords;
+
+// Per-resource SEO titles (differentiate <title> from H1 for high-value pages)
+const resourceSeoTitles: Record<string, Record<string, string>> = {
+  'oil-press-machine-price-guide': {
+    fr: 'Guide des Prix des Presses à Huile 2026 — Devis Direct Usine | Haonuo',
+    ar: 'دليل أسعار مكابس الزيت 2026 — عروض أسعار مباشرة من المصنع | Haonuo',
+    id: 'Panduan Harga Mesin Press Minyak 2026 — Penawaran Langsung Pabrik | Haonuo',
+  },
+};
+const resourcePageTitle = resourceSeoTitles[resource.slug]?.[currentLocale]
+  || resource.data.title[currentLocale] || resource.data.title.en;
 ---
 
-<BaseLayout locale={currentLocale} title={resource.data.title[currentLocale] || resource.data.title.en} description={resource.data.description[currentLocale] || resource.data.description.en} keywords={seoKeywords} jsonLd={breadcrumbLd}>
+<BaseLayout locale={currentLocale} title={resourcePageTitle} description={resource.data.description[currentLocale] || resource.data.description.en} keywords={seoKeywords} jsonLd={breadcrumbLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

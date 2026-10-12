@@ -9,6 +9,7 @@ const t = getTranslations('en');
 const { Content } = await resource.render();
 
 const title = resource.data.title.en;
+const seoTitle = 'Oil Press Machine Price Guide 2026 — Factory Direct Quotes | Haonuo';
 const description = resource.data.description.en;
 const seoKeywords = resource.data.seoKeywords;
 const publishedAt = resource.data.publishedAt;
@@ -50,7 +51,7 @@ const breadcrumbLd = {
 };
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={seoTitle} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
