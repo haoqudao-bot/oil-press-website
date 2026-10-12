@@ -43,6 +43,53 @@ const productsSubItems = [
   { href: '/products/filtration-refining-equipment/', label: t.nav.filtrationRefining },
 ];
 
+// Mega menu: individual products per category (desktop hover only)
+const megaMenuColumns = [
+  {
+    headerHref: '/products/hydraulic-oil-press/',
+    headerLabel: t.nav.hydraulicOilPress,
+    products: [
+      { href: '/products/standard-hydraulic-oil-press/', label: 'Standard (HN325)' },
+      { href: '/products/hn365-hydraulic-oil-press/', label: 'Commercial (HN365)' },
+      { href: '/products/cold-press-hydraulic-oil-press/', label: 'Cold Press (HN426)' },
+      { href: '/products/ultra-high-pressure-hydraulic-oil-press/', label: 'Ultra High Pressure (HN500)' },
+      { href: '/products/sesame-oil-hydraulic-press/', label: 'Sesame Oil Press' },
+      { href: '/products/coconut-oil-hydraulic-press/', label: 'Coconut Milk Press' },
+      { href: '/products/large-barrel-hydraulic-oil-press/', label: 'Sludge Dewatering Press' },
+    ],
+  },
+  {
+    headerHref: '/products/seed-processing-equipment/',
+    headerLabel: t.nav.seedProcessing,
+    products: [
+      { href: '/products/high-speed-seed-crusher/', label: 'High Speed Crusher' },
+      { href: '/products/industrial-seed-crusher/', label: 'Industrial Cake Crusher' },
+      { href: '/products/integrated-feeder-crusher-roaster/', label: 'Integrated Feeder Crusher' },
+      { href: '/products/oilseed-pre-press/', label: 'Oilseed Pre-Press' },
+      { href: '/products/vertical-screw-conveyor/', label: 'Vertical Screw Conveyor' },
+    ],
+  },
+  {
+    headerHref: '/products/roasting-steaming-equipment/',
+    headerLabel: t.nav.roastingSteaming,
+    products: [
+      { href: '/products/automatic-drum-roaster/', label: 'Automatic Drum Roaster' },
+      { href: '/products/electric-seed-steamer/', label: 'Electric Seed Steamer' },
+      { href: '/products/thermal-oil-roasting-pan/', label: 'Thermal Oil Roasting Pan' },
+      { href: '/products/wood-fired-seed-steamer/', label: 'Wood-Fired Seed Steamer' },
+    ],
+  },
+  {
+    headerHref: '/products/filtration-refining-equipment/',
+    headerLabel: t.nav.filtrationRefining,
+    products: [
+      { href: '/products/edible-oil-refining-system/', label: 'Edible Oil Refining' },
+      { href: '/products/pneumatic-oil-filter-press/', label: 'Pneumatic Filter Press' },
+      { href: '/products/stainless-steel-oil-refining-equipment/', label: 'Stainless Steel Refining' },
+    ],
+  },
+];
+
 const seedSolutions = [
   { href: '/solutions/soybean-oil-pressing/', label: t.nav.soybeanOil },
   { href: '/solutions/palm-oil-pressing/', label: t.nav.palmKernelOil },
@@ -146,56 +193,62 @@ const comparisonItems = [
           <button class="px-1 py-2 text-sm text-steel-700 hover:text-amber-500 transition-colors" aria-label={(t as any).contact?.toggleDropdown || 'Toggle dropdown'}>
             <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 4 6 8 10 4"/></svg>
           </button>
-          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-            <div class="bg-white rounded-xl shadow-xl border border-steel-100 p-4 min-w-[220px]">
-              <ul class="space-y-1">
-                {productsSubItems.map(item => (
-                  <li>
+          <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="bg-white rounded-xl shadow-xl border border-steel-100 p-5 w-[720px] max-w-[calc(100vw-2rem)]">
+              <div class="grid grid-cols-4 gap-x-4">
+                {megaMenuColumns.map(col => (
+                  <div>
                     <a
-                      href={localePath(item.href)}
-                      class="block px-3 py-2 text-sm text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors"
+                      href={localePath(col.headerHref)}
+                      class="block px-3 py-2 text-sm font-semibold text-steel-900 hover:text-amber-500 rounded-lg transition-colors mb-1"
                     >
-                      {item.label}
+                      {col.headerLabel}
                     </a>
-                  </li>
+                    <ul class="space-y-0.5">
+                      {col.products.map(product => (
+                        <li>
+                          <a
+                            href={localePath(product.href)}
+                            class="block px-3 py-1.5 text-xs text-steel-600 hover:text-amber-500 hover:bg-amber-50 rounded-lg transition-colors"
+                          >
+                            {product.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-                <li class="pt-2 mt-2 border-t border-steel-100">
-	                  <a
+              </div>
+              <div class="mt-3 pt-3 border-t border-steel-100 flex items-center gap-2 flex-wrap">
+                  <a
                     href={localePath('/hydraulic-oil-press-machine/')}
-                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                    class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
                   >
-                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     {(t as any).common?.hydraulicOilPressMachine || 'Hydraulic Oil Press Machine'}
                   </a>
-	                </li>
-	                <li>
-	                  <a
+                  <a
                     href={localePath('/cold-press-oil-machine/')}
-                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                    class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
                   >
-                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     {(t as any).common?.coldPressOilMachine || 'Cold Press Oil Machine'}
                   </a>
-                </li>
-                <li class="pt-2 mt-1 border-t border-steel-100">
                   <a
                     href={localePath('/products/model-comparison/')}
-                    class="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                    class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
                   >
-                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13h2v8H3zM9 5h2v16H9zM15 9h2v12h-2zM21 2h2v19h-2z"/></svg>
+                    <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13h2v8H3zM9 5h2v16H9zM15 9h2v12h-2zM21 2h2v19h-2z"/></svg>
                     {t.nav.modelComparison}
                   </a>
-                </li>
-                <li>
                   <a
                     href={localePath('/catalog/')}
-                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
+                    class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-steel-700 hover:text-amber-500 hover:bg-steel-50 rounded-lg transition-colors"
                   >
-                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     {(t as any).nav?.catalog || 'Product Catalog'}
                   </a>
-                </li>
-              </ul>
+              </div>
             </div>
           </div>
         </div>
