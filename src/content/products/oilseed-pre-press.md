@@ -1,9 +1,9 @@
 ---
 title:
-  en: HN-CG60 Oilseed Pre-Press for Oil Mill Pretreatment
-  fr: Pré-presse oléagineuse HN-CG60
-  ar: مكبس زيت بذور مسبق HN-CG60
-  id: Pre-press Biji Minyak HN-CG60
+  en: Oilseed Pre-Press for Oil Mill Pretreatment
+  fr: Pré-presse oléagineuse pour prétraitement d'huilerie
+  ar: مكبس البذور الزيتية المسبق للمعالجة الأولية
+  id: Pre-press Biji Minyak untuk Pra-Pengolahan
 description:
   en: "Screw oilseed pre-press that removes 35–40% of oil in a first pass and raises total plant yield by 3–5%. 7.5 kW (500 kg/h) or 11 kW (750 kg/h), ready for mustard, rapeseed and groundnut lines."
   fr: "Pré-presse à vis qui extrait 35–40 % de l'huile en premier passage et augmente le rendement global de 3–5 %. 7,5 kW (500 kg/h) ou 11 kW (750 kg/h)."

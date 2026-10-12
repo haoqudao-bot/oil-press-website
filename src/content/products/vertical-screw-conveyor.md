@@ -39,7 +39,7 @@ specifications:
 featured: false
 related:
   - integrated-feeder-crusher-roaster
-  - hn-cg60-oilseed-pre-press
+  - oilseed-pre-press
 applicableSeeds:
   - peanut
   - rapeseed

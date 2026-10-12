@@ -295,7 +295,7 @@ Prinsip fisik dan kimia yang dikombinasikan untuk penghilangan kotoran secara te
 - **Solusi yang Dapat Diskalakan** — Mulai kecil dan kembangkan seiring pertumbuhan pasar Anda; desain modular mendukung peningkatan kapasitas di masa depan
 - **Dukungan Teknis Berkelanjutan** — Optimalisasi proses, pemecahan masalah, dan pasokan suku cadang sepanjang umur pabrik Anda`,
 
-  'hn-cg60-oilseed-pre-press': `## Ringkasan
+  'oilseed-pre-press': `## Ringkasan
 
 Pre-press biji minyak HN-CG60 adalah expeller ulir yang dipasang di awal lini, sebelum sangrai dan pengepresan hidrolik. Mesin menghancurkan biji dan menggulingkannya menjadi serpihan atau kue kasar, memecah sel minyak dan memperluas area yang dipanaskan. Sekitar 35 hingga 40% minyak dilepaskan pada tahap pertama ini, lalu bahan yang sudah dipress dipindahkan ke sangrai dan press hidrolik utama. Pabrik yang menambahkan tahap ini biasanya melihat hasil minyak total naik 3 hingga 5%.
 
