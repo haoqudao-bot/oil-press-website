@@ -235,7 +235,7 @@ const seoKeywords = solution.data.seoKeywords;
   {faqItems.length > 0 && (
     <section class="py-12 md:py-16 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title text-center mb-8">{currentLocale === 'ar' ? `الأسئلة الشائعة حول ${arPress}` : t.solutions.faq}</h2>
+        <h2 class="section-title text-center mb-8">{currentLocale === 'ar' ? `الأسئلة الشائعة حول ${arPress}` : `${solution.data.title[currentLocale] || solution.data.title.en} — ${t.solutions.faq}`}</h2>
         <div class="space-y-4">
           {faqItems.map((item, i) => (
             <details class="reveal group bg-steel-50 rounded-xl overflow-hidden" style={`animation-delay: ${i * 80}ms`}>

@@ -213,9 +213,9 @@ const seedDetails: Record<string, {
               <div class="flex items-start gap-4 mb-4">
                 <span class="text-4xl flex-shrink-0">{seedIcons[solution.data.seedName] || '🛢️'}</span>
                 <div class="min-w-0">
-                  <h3 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">
+                  <h2 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">
                     {solution.data.title[currentLocale] || solution.data.title.en}
-                  </h3>
+                  </h2>
                   <div class="flex flex-wrap gap-2">
                     <span class="text-xs bg-steel-100 text-steel-600 px-2 py-0.5 rounded-full">{currentLocale === 'fr' ? 'Huile' : currentLocale === 'ar' ? 'زيت' : 'Minyak'}: {details?.oilContent}</span>
                     <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">{currentLocale === 'fr' ? 'Rendement' : currentLocale === 'ar' ? 'العائد' : 'Hasil'}: {details?.typicalYield}</span>
@@ -252,28 +252,28 @@ const seedDetails: Record<string, {
             <li class="flex items-start gap-3">
               <span class="text-amber-500 font-bold">1.</span>
               <div>
-                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Déterminez Votre Matière Première' : currentLocale === 'ar' ? 'حدد مادتك الخام' : 'Tentukan Bahan Baku Anda'}</h4>
+                <h3 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Déterminez Votre Matière Première' : currentLocale === 'ar' ? 'حدد مادتك الخام' : 'Tentukan Bahan Baku Anda'}</h3>
                 <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'Différentes graines oléagineuses nécessitent différentes pressions et températures de pressage.' : currentLocale === 'ar' ? 'البذور الزيتية المختلفة تحتاج إلى ضغوط ودرجات حرارة ضغط مختلفة.' : 'Biji minyak yang berbeda membutuhkan tekanan dan suhu press yang berbeda.'}</p>
               </div>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-amber-500 font-bold">2.</span>
               <div>
-                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Calculez la Capacité Quotidienne' : currentLocale === 'ar' ? 'احسب السعة اليومية' : 'Hitung Kapasitas Harian'}</h4>
+                <h3 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Calculez la Capacité Quotidienne' : currentLocale === 'ar' ? 'احسب السعة اليومية' : 'Hitung Kapasitas Harian'}</h3>
                 <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'De 50 kg/heure à 5 tonnes/heure, nous avons des machines pour toutes les échelles.' : currentLocale === 'ar' ? 'من 50 كجم/ساعة إلى 5 طن/ساعة، لدينا مكائن لجميع المقاييس.' : 'Dari 50 kg/jam hingga 5 ton/jam, kami memiliki mesin untuk semua skala.'}</p>
               </div>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-amber-500 font-bold">3.</span>
               <div>
-                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Choisissez Pressage à Froid ou à Chaud' : currentLocale === 'ar' ? 'اختر الضغط البارد أو الساخن' : 'Pilih Press Dingin atau Panas'}</h4>
+                <h3 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Choisissez Pressage à Froid ou à Chaud' : currentLocale === 'ar' ? 'اختر الضغط البارد أو الساخن' : 'Pilih Press Dingin atau Panas'}</h3>
                 <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'Le pressage à froid préserve les nutriments ; le pressage à chaud donne un rendement plus élevé.' : currentLocale === 'ar' ? 'الضغط البارد يحافظ على المغذيات؛ الضغط الساخن يعطي عائداً أعلى.' : 'Press dingin mempertahankan nutrisi; press panas memberikan hasil lebih tinggi.'}</p>
               </div>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-amber-500 font-bold">4.</span>
               <div>
-                <h4 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Considérez Votre Budget' : currentLocale === 'ar' ? 'اعتبر ميزانيتك' : 'Pertimbangkan Anggaran Anda'}</h4>
+                <h3 class="font-medium text-charcoal-900">{currentLocale === 'fr' ? 'Considérez Votre Budget' : currentLocale === 'ar' ? 'اعتبر ميزانيتك' : 'Pertimbangkan Anggaran Anda'}</h3>
                 <p class="text-sm text-steel-600">{currentLocale === 'fr' ? 'Nous proposons des machines de base aux lignes de production entièrement automatisées.' : currentLocale === 'ar' ? 'نقدم مكائن من الأساسية إلى خطوط الإنتاج المؤتمتة بالكامل.' : 'Kami menawarkan mesin dari dasar hingga lini produksi sepenuhnya otomatis.'}</p>
               </div>
             </li>

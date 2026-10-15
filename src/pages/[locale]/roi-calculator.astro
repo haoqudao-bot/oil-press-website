@@ -177,7 +177,7 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
         <div class="flex items-start gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <div>
-            <h3 class="font-display text-lg text-amber-800 mb-1">{disclaimerTitle}</h3>
+            <h2 class="font-display text-lg text-amber-800 mb-1">{disclaimerTitle}</h2>
             <p class="text-sm text-amber-700 leading-relaxed" set:html={disclaimerText} />
           </div>
         </div>
@@ -351,7 +351,7 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
 
           <!-- Bottom Disclaimer -->
           <div class="mt-6 bg-steel-50 rounded-xl p-5 border border-steel-200">
-            <h4 class="font-display text-sm text-charcoal-900 mb-2">{notesTitle}</h4>
+            <h3 class="font-display text-sm text-charcoal-900 mb-2">{notesTitle}</h3>
             <ul class="text-xs text-steel-500 space-y-1.5">
               <li>• {currentLocale === 'fr' ? 'Tous les chiffres sont des <strong>estimations approximatives</strong> basées sur les valeurs que vous avez entrées et les paramètres typiques de l\'industrie — ils ne sont <strong>PAS des garanties</strong> de performance réelle.' : currentLocale === 'ar' ? 'جميع الأرقام هي <strong>تقديرات تقريبية</strong> مبنية على القيم التي أدخلتها ومعلمات الصناعة النموذجية — هي <strong>ليست ضمانات</strong> للأداء الفعلي.' : 'Semua angka adalah <strong>estimasi kasar</strong> berdasarkan nilai yang Anda masukkan dan parameter industri khas — mereka <strong>BUKAN jaminan</strong> performa aktual.'}</li>
               <li>• {currentLocale === 'fr' ? 'Le rendement réel en huile dépend de la variété de matière première, de la teneur en humidité, de la température de pressage, de l\'habileté de l\'opérateur et de l\'état de la machine.' : currentLocale === 'ar' ? 'عائد الزيت الفعلي يعتمد على نوع المادة الخام ومحتوى الرطوبة ودرجة حرارة الضغط ومهارة المشغل وحالة المكينة.' : 'Hasil minyak aktual tergantung pada varietas bahan baku, kadar kelembapan, suhu press, keterampilan operator, dan kondisi mesin.'}</li>

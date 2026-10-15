@@ -43,7 +43,7 @@ const breadcrumbLd = {
         <div class="flex items-start gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <div>
-            <h3 class="font-display text-lg text-amber-800 mb-1">{t.roi.disclaimerTitle}</h3>
+            <h2 class="font-display text-lg text-amber-800 mb-1">{t.roi.disclaimerTitle}</h2>
             <p class="text-sm text-amber-700 leading-relaxed" set:html={t.roi.disclaimerText}></p>
           </div>
         </div>
@@ -205,7 +205,7 @@ const breadcrumbLd = {
           </div>
 
           <div class="mt-6 bg-steel-50 rounded-xl p-5 border border-steel-200">
-            <h4 class="font-display text-sm text-charcoal-900 mb-2">{t.roi.notesTitle}</h4>
+            <h3 class="font-display text-sm text-charcoal-900 mb-2">{t.roi.notesTitle}</h3>
             <ul class="text-xs text-steel-500 space-y-1.5">
               <li set:html={t.roi.note1}></li>
               <li>{t.roi.note2}</li>

@@ -8,6 +8,7 @@ const resource = resources.find(r => r.slug === 'complete-oil-production-line-gu
 const t = getTranslations('en');
 
 const title = resource?.data.title.en || 'Complete Oil Production Line Guide';
+const seoTitle = 'Oil Mill Plant Guide: Production Line, Layout & Cost';
 const description = resource?.data.description.en || 'From seed to bottled oil';
 const seoKeywords = resource?.data.seoKeywords || ['oil production line', 'complete oil plant', 'oil processing equipment'];
 const publishedAt = resource?.data.publishedAt || new Date();
@@ -79,7 +80,7 @@ const maintenanceSchedule = [
 ];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={seoTitle} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
@@ -179,7 +180,7 @@ const maintenanceSchedule = [
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {layoutTips.map((tip, index) => (
             <div key={index} class="bg-gradient-to-br from-blue-50 to-indigo-50 p-5 rounded-xl border border-blue-100">
-              <h4 class="font-semibold text-blue-800 mb-2">{tip.tip}</h4>
+              <h3 class="font-semibold text-blue-800 mb-2">{tip.tip}</h3>
               <p class="text-steel-700 text-sm">{tip.desc}</p>
             </div>
           ))}

@@ -29,6 +29,10 @@ const pageDesc = currentLocale === 'fr' ? 'Choisissez la bonne presse à huile h
                  currentLocale === 'ar' ? 'اختر مكينة الضغط الهيدروليكي المناسبة لحجم إنتاجك. من الاستخدام المنزلي (50-500 كجم/يوم) إلى الصناعي (5+ طن/يوم)، ابحث عن الحل المناسب لمشروعك.' :
                  'Pilih mesin press minyak hidrolik yang tepat untuk skala produksi Anda. Dari penggunaan rumahan (50-500 kg/hari) hingga industri (5+ ton/hari), temukan solusi sempurna untuk bisnis Anda.';
 
+const faqTopic = currentLocale === 'fr' ? 'Presse à huile par échelle de production' :
+                 currentLocale === 'ar' ? 'مكينة ضغط الزيت حسب حجم الإنتاج' :
+                 'Mesin Press Minyak berdasarkan Skala';
+
 const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -163,7 +167,7 @@ const faqItems = [
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <div class="text-6xl mb-6">{scale.icon}</div>
-            <h3 class="font-display text-2xl text-charcoal-900 mb-2">{scale.title}</h3>
+            <h2 class="font-display text-2xl text-charcoal-900 mb-2">{scale.title}</h2>
             <div class="inline-flex items-center gap-1 text-amber-500 font-medium text-sm mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               {scale.subtitle}
@@ -220,28 +224,28 @@ const faqItems = [
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">1</div>
               <div>
-                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Estimez Votre Capacité Quotidienne' : currentLocale === 'ar' ? 'قدر سعتك اليومية' : 'Estimasi Kapasitas Harian Anda'}</h4>
+                <h3 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Estimez Votre Capacité Quotidienne' : currentLocale === 'ar' ? 'قدر سعتك اليومية' : 'Estimasi Kapasitas Harian Anda'}</h3>
                 <p class="text-steel-600">{currentLocale === 'fr' ? 'Calculez combien d\'huile vous prévoyez de produire par jour. Commencez par la taille de votre marché cible et remontez.' : currentLocale === 'ar' ? 'احسب كم زيت تتوقع إنتاجه يومياً. ابدأ بحجم سوقك المستهدف واعمل للخلف.' : 'Hitung berapa banyak minyak yang Anda harapkan untuk diproduksi per hari. Mulai dari ukuran pasar target Anda dan bekerja mundur.'}</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">2</div>
               <div>
-                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Considérez Votre Budget' : currentLocale === 'ar' ? 'اعتبر ميزانيتك' : 'Pertimbangkan Anggaran Anda'}</h4>
+                <h3 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Considérez Votre Budget' : currentLocale === 'ar' ? 'اعتبر ميزانيتك' : 'Pertimbangkan Anggaran Anda'}</h3>
                 <p class="text-steel-600">{currentLocale === 'fr' ? 'Les machines plus grandes nécessitent un investissement initial plus élevé mais offrent une meilleure efficacité et un ROI plus rapide à l\'échelle.' : currentLocale === 'ar' ? 'المكائن الأكبر تحتاج استثماراً أولياً أعلى لكن توفر كفاءة أفضل وعائد أسرع على النطاق.' : 'Mesin yang lebih besar membutuhkan investasi awal lebih tinggi tetapi menawarkan efisiensi lebih baik dan ROI lebih cepat dalam skala besar.'}</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">3</div>
               <div>
-                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Planifiez la Croissance' : currentLocale === 'ar' ? 'خطط للنمو' : 'Rencanakan Pertumbuhan'}</h4>
+                <h3 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Planifiez la Croissance' : currentLocale === 'ar' ? 'خطط للنمو' : 'Rencanakan Pertumbuhan'}</h3>
                 <p class="text-steel-600">{currentLocale === 'fr' ? 'Choisissez une machine qui peut évoluer avec votre entreprise. Nos conceptions modulaires permettent des mises à niveau faciles ultérieurement.' : currentLocale === 'ar' ? 'اختر مكينة يمكنها النمو مع مشروعك. تصاميمنا المعيارية تسمح بالترقية السهلة لاحقاً.' : 'Pilih mesin yang dapat tumbuh dengan bisnis Anda. Desain modular kami memungkinkan upgrade mudah nanti.'}</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white font-display text-xl shrink-0">4</div>
               <div>
-                <h4 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Vérifiez l\'Alimentation et l\'Espace' : currentLocale === 'ar' ? 'تحقق من الطاقة والمساحة' : 'Periksa Daya dan Ruang'}</h4>
+                <h3 class="font-display text-lg text-charcoal-900 mb-1">{currentLocale === 'fr' ? 'Vérifiez l\'Alimentation et l\'Espace' : currentLocale === 'ar' ? 'تحقق من الطاقة والمساحة' : 'Periksa Daya dan Ruang'}</h3>
                 <p class="text-steel-600">{currentLocale === 'fr' ? 'Assurez-vous d\'avoir une capacité électrique et un espace au sol suffisants pour la machine choisie.' : currentLocale === 'ar' ? 'تأكد من أن لديك سعة كهربائية ومساحة أرضية كافيتين للمكينة المختارة.' : 'Pastikan Anda memiliki kapasitas listrik dan ruang lantai yang cukup untuk mesin yang dipilih.'}</p>
               </div>
             </div>
@@ -301,7 +305,7 @@ const faqItems = [
   <!-- FAQ -->
   <section class="py-16 md:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-8 text-center">{currentLocale === 'fr' ? 'Foire aux questions' : currentLocale === 'ar' ? 'أسئلة شائعة' : 'Pertanyaan yang Sering Diajukan'}</h2>
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-8 text-center">{faqTopic} — {t.solutions.faq}</h2>
       <div class="space-y-4">
         {faqItems.map((item) => (
           <details class="group bg-steel-50 rounded-xl overflow-hidden">

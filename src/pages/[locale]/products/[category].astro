@@ -239,7 +239,7 @@ if (catFaqLd) allLd.push(catFaqLd);
         <aside class="lg:w-56 shrink-0">
           <div class="sticky top-24 space-y-8">
             <div>
-              <h3 class="font-display text-lg text-charcoal-900 mb-4">{t.products.allCategories}</h3>
+              <h2 class="font-display text-lg text-charcoal-900 mb-4">{t.products.allCategories}</h2>
               <nav class="space-y-1">
                 <a
                   href={localePath('/products/')}
@@ -470,7 +470,7 @@ if (catFaqLd) allLd.push(catFaqLd);
               <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg mb-10">
                 <p class="text-steel-700"><strong>{currentLocale === 'fr' ? 'Position dans le processus' : currentLocale === 'ar' ? 'الموضع في العملية' : 'Posisi proses'}:</strong> {catContent.processPosition}</p>
               </div>
-              <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">{currentLocale === 'fr' ? 'Questions fréquentes' : currentLocale === 'ar' ? 'أسئلة شائعة' : 'Pertanyaan Umum'}</h2>
+              <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">{categoryLabel} — {t.solutions.faq}</h2>
               <div class="space-y-3">
                 {catContent.faq.map((item, i) => (
                   <details class="bg-steel-50 rounded-lg border border-steel-100 overflow-hidden">

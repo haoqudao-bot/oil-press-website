@@ -299,7 +299,7 @@ if (faqLd) allLd.push(faqLd);
       <!-- FAQ Section -->
       {faqItems.length > 0 && (
         <div class="mt-12 md:mt-16">
-          <h2 class="font-display text-3xl text-charcoal-900 mb-6">{t.solutions.faq}</h2>
+          <h2 class="font-display text-3xl text-charcoal-900 mb-6">{product.data.title[currentLocale] || product.data.title.en} — {t.solutions.faq}</h2>
           <div class="space-y-4">
             {faqItems.map((item, i) => (
               <details class="group bg-steel-50 rounded-xl overflow-hidden">
