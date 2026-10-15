@@ -456,16 +456,26 @@ const rangeModels = [
 
   <section class="bg-steel-900 py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">{t.hydraulic.heroTitle}</h1>
-      <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.hydraulic.heroDesc}</p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href={localePath('/contact/')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
-          {t.hydraulic.requestQuote}
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href={localePath('/products/model-comparison/')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
-          {t.hydraulic.compareModels}
-        </a>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4">{t.hydraulic.heroTitle}</h1>
+          <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.hydraulic.heroDesc}</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href={localePath('/contact/')} class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+              {t.hydraulic.requestQuote}
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href={localePath('/products/model-comparison/')} class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-steel-900 transition-colors text-lg">
+              {t.hydraulic.compareModels}
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <picture class="block overflow-hidden rounded-2xl shadow-2xl">
+            <img src="/images/hero/hydraulic-oil-press-machine.webp" alt="Haonuo hydraulic oil press machine — 325 to 620 ton range, cold and hot pressing" class="w-full h-full object-cover" loading="eager" width="800" height="600">
+          </picture>
+          <div class="absolute -bottom-4 -right-4 bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-display font-semibold text-sm shadow-lg">Built &amp; load-tested in our own factory</div>
+        </div>
       </div>
     </div>
   </section>
@@ -530,6 +540,14 @@ const rangeModels = [
           <h3 class="font-display text-xl text-charcoal-900 mb-2">{t.hydraulic.howWorksStep3.title}</h3>
           <p class="text-steel-600">{t.hydraulic.howWorksStep3.desc}</p>
         </div>
+      </div>
+
+      <!-- Photo: real factory assembly line -->
+      <div class="mt-10 max-w-3xl mx-auto">
+        <picture class="block overflow-hidden rounded-xl shadow-md">
+          <img src="/images/factory/assembly-line.webp" alt="Hydraulic oil press assembly line — barrel loading and pressing cycle at Haonuo Shandong factory" class="w-full h-64 object-cover" loading="lazy" width="1200" height="400">
+        </picture>
+        <p class="text-center text-xs text-steel-500 mt-2">A Haonuo production line — barrels loaded, hydraulic press running, crude oil filtered at the end of the cycle.</p>
       </div>
     </div>
   </section>
@@ -660,6 +678,29 @@ const rangeModels = [
             <p class="text-steel-600 text-sm leading-relaxed">{item.text}</p>
           </div>
         ))}
+      </div>
+
+      <!-- Factory photos — the evidence behind each number above -->
+      <div class="mt-10">
+        <h3 class="font-display text-xl text-charcoal-900 text-center mb-6">Inside Haonuo — Shandong factory</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-white rounded-xl overflow-hidden border border-steel-100 group">
+            <img src="/images/factory/factory-exterior.webp" alt="Haonuo hydraulic oil press factory exterior in Shandong, China" class="w-full h-32 md:h-40 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="300">
+            <p class="text-xs text-steel-600 px-3 py-2">Factory exterior · Shandong</p>
+          </div>
+          <div class="bg-white rounded-xl overflow-hidden border border-steel-100 group">
+            <img src="/images/factory/quality-control.webp" alt="Haonuo quality control inspection of hydraulic oil presses before shipment" class="w-full h-32 md:h-40 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="300">
+            <p class="text-xs text-steel-600 px-3 py-2">48h full-load test · QC</p>
+          </div>
+          <div class="bg-white rounded-xl overflow-hidden border border-steel-100 group">
+            <img src="/images/factory/warehouse.webp" alt="Packaged hydraulic oil presses in Haonuo export warehouse" class="w-full h-32 md:h-40 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="300">
+            <p class="text-xs text-steel-600 px-3 py-2">Export warehouse · ready to ship</p>
+          </div>
+          <div class="bg-white rounded-xl overflow-hidden border border-steel-100 group">
+            <img src="/images/factory/truck-loading.webp" alt="Haonuo hydraulic oil presses being loaded onto a truck for export" class="w-full h-32 md:h-40 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="300">
+            <p class="text-xs text-steel-600 px-3 py-2">50+ countries shipped · FOB Qingdao</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

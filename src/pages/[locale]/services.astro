@@ -460,31 +460,36 @@ const pageDesc = currentLocale === 'fr' ? 'Haonuo Machinery propose l\'achat de 
               </div>
             </div>
           </div>
-          <div class="bg-steel-800 rounded-xl p-8 border border-steel-700">
-            <h3 class="font-display text-xl text-white mb-4">
-              {currentLocale === 'fr' ? 'Prêt pour des Solutions Personnalisées ?' :
-               currentLocale === 'ar' ? 'هل أنت مستعد للحلول المخصصة؟' :
-               'Siap untuk Solusi Kustom?'}
-            </h3>
-            <p class="text-steel-400 text-sm mb-6">
-              {currentLocale === 'fr' ? 'Que vous ayez besoin de branding OEM, d\'ingénierie ODM personnalisée ou de conception de ligne de production complète, notre équipe est prête à vous aider. Contactez-nous aujourd\'hui pour une consultation gratuite.' :
-               currentLocale === 'ar' ? 'سواء كنت بحاجة إلى علامة تجارية OEM، هندسة ODM المخصصة، أو تصميم خط إنتاج كامل، فريقنا جاهز لمساعدتك. اتصل بنا اليوم للحصول على استشارة مجانية.' :
-               'Apakah Anda membutuhkan branding OEM, teknik ODM kustom, atau desain jalur produksi penuh, tim kami siap membantu. Hubungi kami hari ini untuk konsultasi gratis.'}
-            </p>
-            <ul class="space-y-2 mb-6 text-sm text-steel-300">
-              <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                {currentLocale === 'fr' ? 'Consultation d\'ingénierie gratuite' : currentLocale === 'ar' ? 'استشارة هندسية مجانية' : 'Konsultasi Teknis Gratis'}
-              </li>
-              <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                {currentLocale === 'fr' ? 'Réponse dans les 24 heures' : currentLocale === 'ar' ? 'استجابة في 24 ساعة' : 'Respon dalam 24 Jam'}
-              </li>
-            </ul>
-            <a href={localePath('/contact/')} class="block w-full text-center bg-amber-500 text-charcoal-900 font-semibold py-3 rounded-xl hover:bg-amber-400 transition-colors">
-              {currentLocale === 'fr' ? 'Demander un Devis OEM/ODM' : currentLocale === 'ar' ? 'طلب عرض أسعار OEM/ODM' : 'Dapatkan Penawaran OEM/ODM'}
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+          <div class="relative">
+            <picture class="block overflow-hidden rounded-xl">
+              <img src="/images/factory/machining-workshop.webp" alt="Haonuo Shandong factory — CNC machining workshop for ODM custom hydraulic press parts" class="w-full h-full object-cover min-h-[300px]" loading="lazy" width="800" height="600">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/70 to-charcoal-900/50 rounded-xl flex flex-col justify-end p-6 md:p-8">
+              <h3 class="font-display text-xl text-white mb-4">
+                {currentLocale === 'fr' ? 'Prêt pour des Solutions Personnalisées ?' :
+                 currentLocale === 'ar' ? 'هل أنت مستعد للحلول المخصصة؟' :
+                 'Siap untuk Solusi Kustom?'}
+              </h3>
+              <p class="text-steel-200 text-sm mb-6">
+                {currentLocale === 'fr' ? 'Que vous ayez besoin de branding OEM, d\'ingénierie ODM personnalisée ou de conception de ligne de production complète, notre équipe est prête à vous aider. Contactez-nous aujourd\'hui pour une consultation gratuite.' :
+                 currentLocale === 'ar' ? 'سواء كنت بحاجة إلى علامة تجارية OEM، هندسة ODM المخصصة، أو تصميم خط إنتاج كامل، فريقنا جاهز لمساعدتك. اتصل بنا اليوم للحصول على استشارة مجانية.' :
+                 'Apakah Anda membutuhkan branding OEM, teknik ODM kustom, atau desain jalur produksi penuh, tim kami siap membantu. Hubungi kami hari ini untuk konsultasi gratis.'}
+              </p>
+              <ul class="space-y-2 mb-6 text-sm text-steel-200">
+                <li class="flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {currentLocale === 'fr' ? 'Consultation d\'ingénierie gratuite' : currentLocale === 'ar' ? 'استشارة هندسية مجانية' : 'Konsultasi Teknis Gratis'}
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {currentLocale === 'fr' ? 'Réponse dans les 24 heures' : currentLocale === 'ar' ? 'استجابة في 24 ساعة' : 'Respon dalam 24 Jam'}
+                </li>
+              </ul>
+              <a href={localePath('/contact/')} class="block w-full text-center bg-amber-500 text-charcoal-900 font-semibold py-3 rounded-xl hover:bg-amber-400 transition-colors">
+                {currentLocale === 'fr' ? 'Demander un Devis OEM/ODM' : currentLocale === 'ar' ? 'طلب عرض أسعار OEM/ODM' : 'Dapatkan Penawaran OEM/ODM'}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -509,6 +514,14 @@ const pageDesc = currentLocale === 'fr' ? 'Haonuo Machinery propose l\'achat de 
               <p class="text-sm text-steel-600">{p.desc}</p>
             </div>
           ))}
+        </div>
+
+        <!-- Behind each step — our Shandong factory -->
+        <div class="mt-12 max-w-4xl mx-auto">
+          <picture class="block overflow-hidden rounded-xl shadow-md">
+            <img src="/images/factory/factory-exterior.webp" alt="Haonuo Machinery factory exterior in Shandong — 200+ workers, 15+ years hydraulic oil press manufacturing" class="w-full h-56 object-cover" loading="lazy" width="1200" height="400">
+          </picture>
+          <p class="text-center text-xs text-steel-500 mt-2">Shandong, China — drawing approval → CNC machining → assembly → 48h load test → export. Every step in our own factory.</p>
         </div>
       </div>
 

@@ -385,17 +385,25 @@ const rangeModels = [
   </section>
 
   <section class="bg-steel-900 py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.coldPress.heroTitle}</h1>
-      <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.coldPress.heroDesc}</p>
-      <div class="flex flex-wrap gap-4">
-        <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
-          {t.coldPress.requestQuote}
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href={localePath('/resources/cold-press-vs-hot-press-oil/')} class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
-          {t.coldPress.learnHow}
-        </a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{t.coldPress.heroTitle}</h1>
+        <p class="text-steel-300 text-lg max-w-3xl mb-8">{t.coldPress.heroDesc}</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+            {t.coldPress.requestQuote}
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href={localePath('/resources/cold-press-vs-hot-press-oil/')} class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+            {t.coldPress.learnHow}
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <picture class="block overflow-hidden rounded-2xl shadow-2xl">
+          <img src="/images/hero/cold-press-production-line.webp" alt="Haonuo cold press hydraulic oil production line — unroasted seed pressed below 60°C" class="w-full h-full object-cover" loading="eager" width="800" height="600">
+        </picture>
+        <div class="absolute -bottom-4 -right-4 bg-amber-500 text-charcoal-900 px-4 py-2 rounded-lg font-display font-semibold text-sm shadow-lg">No chemicals · no solvents · no screw friction</div>
       </div>
     </div>
   </section>
@@ -444,11 +452,18 @@ const rangeModels = [
   <!-- One machine, cold AND hot -->
   <section class="py-12 md:py-16 bg-steel-50 border-y border-steel-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-steel-900 to-charcoal-900 rounded-3xl p-8 md:p-12 text-center">
-        <div class="text-4xl mb-4">&#9889;</div>
-        <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{L.dualTitle}</h2>
-        <p class="text-steel-300 text-lg max-w-3xl mx-auto mb-6" set:html={richHtml(L.dualP1, 'text-white')}></p>
-        <p class="text-steel-400 text-sm max-w-2xl mx-auto">{L.dualP2}</p>
+      <div class="bg-gradient-to-br from-steel-900 to-charcoal-900 rounded-3xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+        <div class="lg:col-span-3 text-center lg:text-left">
+          <div class="text-4xl mb-4">&#9889;</div>
+          <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{L.dualTitle}</h2>
+          <p class="text-steel-300 text-lg max-w-3xl mx-auto lg:mx-0 mb-6" set:html={richHtml(L.dualP1, 'text-white')}></p>
+          <p class="text-steel-400 text-sm max-w-2xl mx-auto lg:mx-0">{L.dualP2}</p>
+        </div>
+        <div class="lg:col-span-2">
+          <picture class="block overflow-hidden rounded-2xl shadow-xl">
+            <img src="/images/products/cold-press-hydraulic-oil-press.webp" alt="Haonuo cold press hydraulic oil press — same machine switches between raw and roasted seed" class="w-full h-full object-cover" loading="lazy" width="600" height="600">
+          </picture>
+        </div>
       </div>
     </div>
   </section>
@@ -492,6 +507,37 @@ const rangeModels = [
       <span class="inline-block bg-amber-500/10 text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">{L.matBadge}</span>
       <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-3">{L.matTitle}</h2>
       <p class="text-steel-600 max-w-3xl mb-10" set:html={richHtml(L.matIntro)}></p>
+
+      <!-- Model lineup for visual confidence -->
+      <div class="mb-10">
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+          <a href={localePath('/products/standard-hydraulic-oil-press/')} class="group">
+            <div class="bg-white rounded-xl overflow-hidden border border-steel-100 w-40 md:w-48">
+              <img src="/images/models/hn325.webp" alt="HN325 — 325 ton hydraulic oil press, for soft seeds" class="w-full h-28 md:h-32 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="300" height="240">
+              <p class="text-xs text-charcoal-900 font-semibold text-center py-2">HN325 · soft seeds</p>
+            </div>
+          </a>
+          <a href={localePath('/products/commercial-hydraulic-oil-press/')} class="group">
+            <div class="bg-white rounded-xl overflow-hidden border border-steel-100 w-40 md:w-48">
+              <img src="/images/models/hn365.webp" alt="HN365 — 365 ton hydraulic oil press, mid-range cold pressing" class="w-full h-28 md:h-32 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="300" height="240">
+              <p class="text-xs text-charcoal-900 font-semibold text-center py-2">HN365 · premium seeds</p>
+            </div>
+          </a>
+          <a href={localePath('/products/cold-press-hydraulic-oil-press/')} class="group">
+            <div class="bg-white rounded-xl overflow-hidden border border-steel-100 w-40 md:w-48">
+              <img src="/images/models/hn426.webp" alt="HN426 — 426 ton hydraulic oil press, commercial capacity" class="w-full h-28 md:h-32 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="300" height="240">
+              <p class="text-xs text-charcoal-900 font-semibold text-center py-2">HN426 · commercial</p>
+            </div>
+          </a>
+          <a href={localePath('/products/ultra-high-pressure-hydraulic-oil-press/')} class="group">
+            <div class="bg-white rounded-xl overflow-hidden border border-steel-100 w-40 md:w-48">
+              <img src="/images/models/hn500.webp" alt="HN500 — 500 ton hydraulic oil press, industrial" class="w-full h-28 md:h-32 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="300" height="240">
+              <p class="text-xs text-charcoal-900 font-semibold text-center py-2">HN500 · industrial</p>
+            </div>
+          </a>
+        </div>
+        <p class="text-center text-xs text-steel-500 mt-3">All four models run cold press natively — choose pressure by your seed hardness.</p>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {L.materials.map(c => (

@@ -163,21 +163,26 @@ const breadcrumbLd = {
               </div>
             </div>
           </div>
-          <div class="bg-steel-800 rounded-xl p-8 border border-steel-700">
-            <h3 class="font-display text-xl text-white mb-4">{t.services.oemOdmHighlight.readyForCustom.title}</h3>
-            <p class="text-steel-400 text-sm mb-6">{t.services.oemOdmHighlight.readyForCustom.subtitle}</p>
-            <ul class="space-y-2 mb-6 text-sm text-steel-300">
-              {t.services.oemOdmHighlight.readyForCustom.benefits.map(benefit => (
-                <li class="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  {benefit}
-                </li>
-              ))}
-            </ul>
-            <a href="/contact/" class="block w-full text-center bg-amber-500 text-charcoal-900 font-semibold py-3 rounded-xl hover:bg-amber-400 transition-colors">
-              {t.services.oemOdmHighlight.readyForCustom.cta}
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+          <div class="relative">
+            <picture class="block overflow-hidden rounded-xl">
+              <img src="/images/factory/machining-workshop.webp" alt="Haonuo Shandong factory — CNC machining workshop for ODM custom hydraulic press parts" class="w-full h-full object-cover min-h-[300px]" loading="lazy" width="800" height="600">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/70 to-charcoal-900/50 rounded-xl flex flex-col justify-end p-6 md:p-8">
+              <h3 class="font-display text-xl text-white mb-4">{t.services.oemOdmHighlight.readyForCustom.title}</h3>
+              <p class="text-steel-300 text-sm mb-6">{t.services.oemOdmHighlight.readyForCustom.subtitle}</p>
+              <ul class="space-y-2 mb-6 text-sm text-steel-200">
+                {t.services.oemOdmHighlight.readyForCustom.benefits.map(benefit => (
+                  <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact/" class="block w-full text-center bg-amber-500 text-charcoal-900 font-semibold py-3 rounded-xl hover:bg-amber-400 transition-colors">
+                {t.services.oemOdmHighlight.readyForCustom.cta}
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -196,6 +201,14 @@ const breadcrumbLd = {
               <p class="text-sm text-steel-600">{t.services.process[`step${step}`].desc}</p>
             </div>
           ))}
+        </div>
+
+        <!-- Behind each step — our Shandong factory -->
+        <div class="mt-12 max-w-4xl mx-auto">
+          <picture class="block overflow-hidden rounded-xl shadow-md">
+            <img src="/images/factory/factory-exterior.webp" alt="Haonuo Machinery factory exterior in Shandong — 200+ workers, 15+ years hydraulic oil press manufacturing" class="w-full h-56 object-cover" loading="lazy" width="1200" height="400">
+          </picture>
+          <p class="text-center text-xs text-steel-500 mt-2">Shandong, China — drawing approval → CNC machining → assembly → 48h load test → export. Every step in our own factory.</p>
         </div>
       </div>
 
