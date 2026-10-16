@@ -598,13 +598,13 @@ Pada 800-1.200 kg/hari, satu HN325 mengubah kacang kupas menjadi produk senilai 
 
   'sesame-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk wijen. Harapkan **hasil 45-50% (press dingin)**, meningkat menjadi **47-52% dengan pemanggangan**, dengan **sisa minyak di bungkil 5% atau kurang** (≤4% panggang). Barrel 300 mm memuat **32,5 kg wijen per batch — hingga 50 kg dengan pra-kompresi** — dan siklus press panas berjalan sekitar **30-40 menit**. Panggang pada **160-180°C** untuk **+3-5% hasil** dan profil panggang aromatik, dan jaga kelembapan biji pada **5-7%**.
+Ya — press hidrolik Haonuo dirancang untuk wijen. Harapkan **hasil 45-50% (press dingin)**, meningkat menjadi **47-52% dengan pemanggangan**, dengan **sisa minyak di bungkil biasanya 6-8%** (serendah ~5% pada pemanggangan optimal). Barrel 300 mm memuat **32,5 kg wijen per batch — hingga 50 kg dengan pra-kompresi** — dan siklus press panas berjalan sekitar **30-40 menit**. Panggang pada **160-180°C** untuk **+3-5% hasil** dan profil panggang aromatik, dan jaga kelembapan biji pada **5-7%**.
 
 ## Ringkasan
 
 Minyak wijen adalah salah satu minyak goreng tertua dan paling berharga di dunia, dihargai karena rasa kacangnya yang khas dan profil nutrisi yang kaya. **Mesin press minyak wijen** berkinerja tinggi adalah landasan bisnis produksi minyak wijen yang menguntungkan, baik Anda menargetkan pasar minyak press dingin premium maupun segmen minyak wijen panggang volume tinggi yang populer di seluruh Asia dan Timur Tengah.
 
-Solusi penekanan minyak wijen Haonuo memanfaatkan teknologi press hidrolik proprietary kami, yang menghasilkan minyak dengan hasil signifikan lebih tinggi dibandingkan dengan mesin sekrup tradisional. **Press hidrolik minyak wijen** kami menerapkan tekanan seragam di seluruh ruang penekanan, biasanya mencapai tingkat minyak sisa sekitar 5% atau lebih rendah — artinya Anda umumnya dapat mengekstrak lebih banyak minyak dibandingkan dengan mesin sekrup. Hasil aktual tergantung pada kualitas biji dan parameter penekanan.
+Solusi penekanan minyak wijen Haonuo memanfaatkan teknologi press hidrolik proprietary kami, yang menghasilkan minyak dengan hasil signifikan lebih tinggi dibandingkan dengan mesin sekrup tradisional. **Press hidrolik minyak wijen** kami menerapkan tekanan seragam di seluruh ruang penekanan, biasanya mencapai tingkat minyak sisa 6-8% — artinya Anda umumnya dapat mengekstrak lebih banyak minyak dibandingkan dengan mesin sekrup. Hasil aktual tergantung pada kualitas biji dan parameter penekanan.
 
 Solusi ini mendukung press dingin (untuk minyak wijen kaya nutrisi premium) dan press panas dengan pemanggangan (untuk minyak wijen panggang aromatik), memberikan fleksibilitas untuk melayani segmen pasar yang berbeda dengan satu lini produksi.
 
@@ -612,9 +612,9 @@ Solusi ini mendukung press dingin (untuk minyak wijen kaya nutrisi premium) dan 
 
 | Bahan Baku | Kandungan Minyak | Hasil Press yang Diharapkan | Tingkat Minyak Sisa |
 |---|---|---|---|
-| Biji Wijen Putih | 50-55% | 45-50% | ≤ 5% |
-| Biji Wijen Hitam | 48-52% | 42-48% | ≤ 5% |
-| Biji Wijen Panggang | 50-55% | 47-52% | ≤ 4% |
+| Biji Wijen Putih | 50-55% | 45-50% | 6-8% |
+| Biji Wijen Hitam | 48-52% | 42-48% | 6-8% |
+| Biji Wijen Panggang | 50-55% | 47-52% | 5-7% |
 
 **Faktor utama yang mempengaruhi hasil:**
 - **Varietas biji**: Wijen putih biasanya menghasilkan sedikit lebih banyak minyak daripada wijen hitam
@@ -625,7 +625,7 @@ Solusi ini mendukung press dingin (untuk minyak wijen kaya nutrisi premium) dan 
 ## Mengapa Memilih Mesin Press Minyak Wijen Kami
 
 - **Keahlian penekanan wijen khusus** — Press hidrolik minyak wijen kami dirancang khusus untuk wijen, bukan mesin generik yang disesuaikan untuk tujuan tersebut. Ini berarti hasil lebih baik, minyak sisa lebih rendah, dan kualitas lebih konsisten.
-- **Tingkat minyak sisa di bawah 5%** — Teknologi hidrolik kami mengekstrak lebih banyak minyak per kilogram wijen daripada mesin sekrup, langsung meningkatkan profitabilitas Anda.
+- **Tingkat minyak sisa biasanya 6-8%** — Teknologi hidrolik kami mengekstrak lebih banyak minyak per kilogram wijen daripada mesin sekrup, langsung meningkatkan profitabilitas Anda.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi).
 - **Kemampuan press dingin/panas ganda** — Satu mesin melayani kedua segmen pasar, memaksimalkan pengembalian investasi Anda.
 - **Terbukti di seluruh Asia** — Mesin press minyak wijen kami beroperasi dengan sukses di India, China, Myanmar, dan Timur Tengah — pasar minyak wijen terbesar di dunia.
@@ -646,7 +646,59 @@ Menjalankan siklus press panas 30-40 menit berturut-turut, satu press memproses 
 - Geometri barrel khusus wijen — bukan press generik yang disesuaikan
 - Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Nhava Sheva, Yangon, atau Jebel Ali** dengan dokumen ekspor lengkap
 - Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
-- Demo penekanan langsung via panggilan video dengan wijen Anda sendiri sebelum memesan`,
+- Demo penekanan langsung via panggilan video dengan wijen Anda sendiri sebelum memesan
+
+## SOP Lengkap Penekanan Wijen
+
+Langkah-langkah di bawah mengubah angka hasil di atas menjadi rutinitas harian yang dapat diulang. Parameter adalah kisaran tipikal industri, disesuaikan dengan bahan baku Anda.
+
+### Lini Press Dingin (minyak premium, suhu biji di bawah 60°C)
+
+1. **Inspeksi penerimaan** — Terima biji dengan kelembapan ≤9%, tanpa jamur atau bau tengik. Press dingin tidak memaafkan stok lama: biji tengik berarti minyak tengik.
+2. **Pembersihan** — Ayakan getar + aspirasi untuk membuang tangkai, debu dan batu; lewatkan biji melalui separator magnetik untuk melindungi barrel.
+3. **Pencucian** — Bilas cepat untuk membuang lumpur dan debu permukaan. Jangan direndam — biji basah butuh waktu lama untuk kering kembali.
+4. **Pengeringan** — Kering angin atau suhu rendah (≤45°C) hingga kelembapan **5-7%**. Tes tangan: biji hancur bersih dan tidak lengket di jari.
+5. **Pemuatan** — Maks 32,5 kg per batch di barrel 300 mm (hingga 50 kg dengan pra-kompresi); sebarkan merata dan padatkan berlapis.
+6. **Penekanan** — Jalankan HN426 (42 MPa) atau HN500 (52 MPa) untuk siklus penuh sekitar 2 jam: kenaikan tekanan cepat untuk mengalirkan minyak bebas, lalu tahan tekanan untuk memeras sisanya. Jaga suhu biji di bawah 60°C — di bengkel panas, beri jeda singkat antar batch.
+7. **Penyaringan dan pengendapan** — Filter plate-and-frame, endapkan 24-48 jam, dan botolkan minyak jernih jauh dari cahaya. Jangan memurnikan minyak wijen press dingin — pemurnian menghapus alasan pembeli membayarnya.
+
+### Lini Press Panas (minyak panggang aromatik)
+
+1. **Inspeksi + pembersihan** — Sama seperti lini press dingin.
+2. **Pemanggangan** — Roaster drum pada **160-180°C** hingga kelembapan biji turun ke **2-3%**. Nilai dari warna, aroma dan rasa: amber gelap, wangi wijen kuat, minyak muncul saat biji dicubit. Panas tinggi, waktu singkat — pemanggangan lambat pada suhu rendah menghanguskan biji dan membuat minyak pahit.
+3. **Pendinginan dan pemuatan** — Hamparkan biji panggang, biarkan turun ke 90-100°C dan muat segera. Hasil turun saat biji mendingin — bergerak cepat.
+4. **Penekanan** — HN325 (~27 MPa) atau HN365 (30 MPa) cukup untuk biji panggang; waktu siklus 30-40 menit.
+5. **Penyaringan** — Minyak panggang membawa lebih banyak ampas; filter plate-and-frame standar, tambahkan lintasan sentrifugal kedua untuk kejernihan ekstra.
+6. **Pengendapan** — 24-48 jam.
+7. **Pembottolan / pemurnian opsional** — Minyak wijen aromatik biasanya dikirim tanpa pemurnian untuk menjaga rasa; murnikan hanya bila standar grade 1 pasar target atau aturan ekspor mensyaratkannya.
+
+### Dingin vs Panas Sekilas
+
+| Dimensi | Press dingin | Press panas (panggang) |
+|---|---|---|
+| Hasil press | 45-50% | 47-52% |
+| Minyak sisa di bungkil | 6-8% | 5-7% |
+| Waktu siklus | ~2 jam | 30-40 menit |
+| Press yang direkomendasikan | HN426 / HN500 (42-52 MPa) | HN325 / HN365 (27-30 MPa) |
+| Warna / aroma | Pucat, jernih, lembut | Amber gelap, aroma panggang kuat |
+| Roaster diperlukan | Tidak | Ya (drum atau ketel uap) |
+| Pemurnian | Tidak | Opsional, untuk grade ekspor |
+| Pasar tipikal | Ritel premium, ekspor | Layanan makanan, ritel umum |
+
+### Daftar Peralatan
+
+| Tahap | Lini press dingin | Lini press panas |
+|---|---|---|
+| Pembersihan | Pembersih getar + magnet | Pembersih getar + magnet |
+| Pencucian / pengeringan | Bak cuci + rak pengering (≤45°C) | Tidak diperlukan |
+| Perlakuan panas | — (tidak ada) | Roaster drum 160-180°C |
+| Penekanan | HN426 / HN500, double barrel lebih baik | HN325 / HN365, double barrel lebih baik |
+| Penyaringan | Filter plate-and-frame | Plate-and-frame + sentrifugal opsional |
+| Pengendapan | Tangki pengendapan, 24-48 jam | Tangki pengendapan, 24-48 jam |
+| Pemurnian | Tidak digunakan | Opsional |
+| Pembottolan | Botol terlindung cahaya | Pembottolan standar |
+
+*Angka di atas adalah kisaran tipikal industri; varietas biji, kelembapan dan kondisi mesin semuanya menggesernya.*`,
 
   'shea-butter-pressing': `**Jawaban Cepat**
 

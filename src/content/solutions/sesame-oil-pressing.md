@@ -85,7 +85,7 @@ faqFr:
   - question: Quel est le prix d'une machine de pressage d'huile de sésame ?
     answer: Demandez un devis pour votre modèle préféré. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien de temps dure chaque cycle de pressage ?
-    answer: Un cycle de pressage complet pour le sésame dure environ 8 à 10 minutes, permettant une production par lots efficace tout au long de la journée.
+    answer: Un cycle de pressage complet pour le sésame dure environ 30 à 40 minutes (pressage à chaud) ou environ 2 heures (pressage à froid), permettant une production par lots efficace tout au long de la journée.
   - question: "Quelle est la différence entre l'huile de sésame blanche et noire ?"
     answer: "L'huile de sésame blanche est l'huile de cuisson standard populaire dans la cuisine indienne et d'Asie du Sud-Est. L'huile de sésame noire a une saveur plus forte et plus terreuse, prisée dans la cuisine chinoise et coréenne tant pour des usages culinaires que médicinaux. Les deux peuvent être produites sur notre équipement."
   - question: "Comment faut-il stocker l'huile de sésame ?"
@@ -101,7 +101,7 @@ faqAr:
   - question: ما هو سعر آلة عصر زيت السمسم؟
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم تستغرق كل دورة عصر؟
-    answer: تستغرق دورة العصر الكاملة للسمسم حوالي 8-10 دقائق، مما يسمح بإنتاج دفعات فعال طوال اليوم.
+    answer: تستغرق دورة العصر الكاملة للسمسم حوالي 30-40 دقيقة (العصر الساخن) أو حوالي ساعتين (العصر البارد)، مما يسمح بإنتاج دفعات فعال طوال اليوم.
   - question: "ما الفرق بين زيت السمسم الأبيض والأسود؟"
     answer: "زيت السمسم الأبيض هو زيت الطبخ القياسي الشائع في المطبخ الهندي وجنوب شرق آسيا. زيت السمسم الأسود له نكهة أقوى وأكثر ترابية، يُقدر في المطبخ الصيني والكوري للاستخدامات الطهوية والطبية على حد سواء. كلاهما يمكن إنتاجه على معداتنا."
   - question: "كيف يجب تخزين زيت السمسم؟"
@@ -117,7 +117,7 @@ faqId:
   - question: Berapa harga mesin press minyak wijen?
     answer: Hubungi kami untuk harga model pilihan Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa lama setiap siklus penekanan?
-    answer: Satu siklus penekanan lengkap untuk wijen membutuhkan waktu sekitar 8-10 menit, memungkinkan produksi batch yang efisien sepanjang hari.
+    answer: Satu siklus penekanan lengkap untuk wijen membutuhkan waktu sekitar 30-40 menit (press panas) atau sekitar 2 jam (press dingin), memungkinkan produksi batch yang efisien sepanjang hari.
   - question: "Apa perbedaan antara minyak wijen putih dan hitam?"
     answer: "Minyak wijen putih adalah minyak goreng standar yang populer dalam masakan India dan Asia Tenggara. Minyak wijen hitam memiliki rasa yang lebih kuat dan lebih beraroma tanah dan dihargai dalam masakan China dan Korea untuk penggunaan kuliner dan obat. Keduanya dapat diproduksi pada peralatan kami."
   - question: "Bagaimana minyak wijen harus disimpan?"
@@ -134,13 +134,13 @@ order: 2
 
 **Quick Answer**
 
-Yes — the Haonuo hydraulic oil press is built for sesame. Expect **45-50% yield (cold press)**, rising to **47-52% with roasting**, with **residual oil in cake at 5% or below** (≤4% roasted). The 300 mm barrel takes **32.5 kg of sesame per batch — up to 50 kg with pre-compression** — and a hot-press cycle runs about **30-40 minutes**. Roast at **160-180°C** for **+3-5% yield** and the aromatic toasted profile, and hold seed moisture at **5-7%**.
+Yes — the Haonuo hydraulic oil press is built for sesame. Expect **45-50% yield (cold press)**, rising to **47-52% with roasting**, with **residual oil in cake typically 6-8%** (as low as ~5% under optimal roasting). The 300 mm barrel takes **32.5 kg of sesame per batch — up to 50 kg with pre-compression** — and a hot-press cycle runs about **30-40 minutes**. Roast at **160-180°C** for **+3-5% yield** and the aromatic toasted profile, and hold seed moisture at **5-7%**.
 
 ## Sesame Oil Press Overview
 
 Sesame oil is one of the oldest and most valued cooking oils in the world, prized for its distinctive nutty flavor and rich nutritional profile. A high-performance **sesame oil press machine** is the cornerstone of any profitable sesame oil production business, whether you are targeting the premium cold-pressed market or the high-volume roasted sesame oil segment popular across Asia and the Middle East.
 
-Haonuo's sesame oil pressing solution leverages our proprietary hydraulic press technology, which delivers significantly higher oil yield compared to traditional screw presses. Our **sesame oil hydraulic press** applies uniform pressure across the entire pressing chamber, typically achieving residual oil rates of approximately 5% or lower — meaning you can generally extract more oil compared to screw presses. Actual results depend on seed quality and pressing parameters.
+Haonuo's sesame oil pressing solution leverages our proprietary hydraulic press technology, which delivers significantly higher oil yield compared to traditional screw presses. Our **sesame oil hydraulic press** applies uniform pressure across the entire pressing chamber, typically achieving residual oil rates of 6-8% — meaning you can generally extract more oil compared to screw presses. Actual results depend on seed quality and pressing parameters.
 
 This solution supports both cold pressing (for premium, nutrient-rich sesame oil) and hot pressing with roasting (for aromatic toasted sesame oil), giving you the flexibility to serve different market segments with a single production line.
 
@@ -148,9 +148,9 @@ This solution supports both cold pressing (for premium, nutrient-rich sesame oil
 
 | Raw Material | Oil Content | Expected Press Yield | Residual Oil Rate |
 |---|---|---|---|
-| White Sesame Seeds | 50-55% | 45-50% | ≤ 5% |
-| Black Sesame Seeds | 48-52% | 42-48% | ≤ 5% |
-| Roasted Sesame Seeds | 50-55% | 47-52% | ≤ 4% |
+| White Sesame Seeds | 50-55% | 45-50% | 6-8% |
+| Black Sesame Seeds | 48-52% | 42-48% | 6-8% |
+| Roasted Sesame Seeds | 50-55% | 47-52% | 5-7% |
 
 **Key factors affecting yield:**
 - **Seed variety**: White sesame typically yields slightly more oil than black sesame
@@ -161,7 +161,7 @@ This solution supports both cold pressing (for premium, nutrient-rich sesame oil
 ## Why Choose Our Sesame Oil Press
 
 - **Specialized sesame pressing expertise** — Our sesame oil hydraulic press is purpose-built for sesame, not a generic machine adapted for the purpose. This means better yield, lower residual oil, and more consistent quality.
-- **Residual oil rate below 5%** — Our hydraulic technology extracts more oil per kilogram of sesame than screw presses, directly improving your profitability.
+- **Residual oil typically 6-8%** — Our hydraulic technology extracts more oil per kilogram of sesame than screw presses, directly improving your profitability.
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary).
 - **Dual cold/hot press capability** — One machine serves both market segments, maximizing your return on investment.
 - **Proven across Asia** — Our sesame oil press machines are operating successfully in India, China, Myanmar, and the Middle East — the world's largest sesame oil markets.
@@ -194,5 +194,57 @@ Running back-to-back 30-40 minute hot-press cycles, one press moves roughly 500-
 - Shipped **FOB Qingdao**; we arrange sea freight to **Nhava Sheva, Yangon or Jebel Ali** with full export documentation
 - Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
 - Video-call a live pressing demo with your own sesame before you order
+
+## Complete Sesame Pressing SOP
+
+The steps below turn the yield figures above into a repeatable daily routine. Parameters are industry-typical ranges; adjust them to your seed and conditions.
+
+### Cold-Press Line (Premium Oil, Seed Temp Below 60°C)
+
+1. **Incoming inspection** — Accept seed at ≤9% moisture with no mold or rancid smell. Cold pressing is unforgiving of old stock: rancid seed means rancid oil.
+2. **Cleaning** — Vibration screen plus aspiration to remove stems, dust and stones; pass seed over a magnetic separator to protect the barrel.
+3. **Washing** — Quick rinse to remove surface mud and dust. Do not soak — wet seed takes too long to dry back down.
+4. **Drying** — Air-dry or low-temperature dry (≤45°C) to **5-7% moisture**. Hand test: kernels crush cleanly and do not stick to fingers.
+5. **Loading** — Max 32.5 kg per batch in the 300 mm barrel (up to 50 kg with pre-compression); spread evenly and tamp in layers.
+6. **Pressing** — Run a full cycle of about 2 hours at 42-52 MPa (HN426 / HN500): fast pressure rise to drain free oil, then hold pressure to work out the remainder. Keep seed temperature below 60°C — in hot workshops, leave a short interval between batches.
+7. **Filtering and settling** — Plate-and-frame filter, settle 24-48 hours, and bottle the clear oil away from light. Do not refine cold-pressed sesame oil — refining erases the reason buyers pay for it.
+
+### Hot-Press Line (Aromatic Roasted Oil)
+
+1. **Incoming inspection + cleaning** — Same as the cold-press line.
+2. **Roasting** — Drum roaster at **160-180°C** until seed moisture falls to **2-3%**. Judge by color, aroma and feel: deep amber, strong sesame fragrance, oil showing when kernels are pinched. High heat, short time — slow roasting at low temperature scorches the seed and turns the oil bitter.
+3. **Cooling and loading** — Spread the roasted seed, let it fall to 90-100°C and load immediately. Yield drops as the seed cools, so move fast.
+4. **Pressing** — 27-30 MPa is enough for roasted seed (HN325 / HN365); cycle time 30-40 minutes.
+5. **Filtering** — Roasted oil carries more foots; plate-and-frame filter as standard, add a centrifugal second pass for extra clarity.
+6. **Settling** — 24-48 hours.
+7. **Bottling / optional refining** — Aromatic sesame oil usually ships unrefined to keep the flavor; refine only when the target market's grade-1 standard or export rules require it.
+
+### Cold vs Hot Press at a Glance
+
+| Dimension | Cold press | Hot press (roasted) |
+|---|---|---|
+| Press yield | 45-50% | 47-52% |
+| Residual oil in cake | 6-8% | 5-7% |
+| Cycle time | ~2 h | 30-40 min |
+| Recommended press | HN426 / HN500 (42-52 MPa) | HN325 / HN365 (27-30 MPa) |
+| Color / aroma | Pale, clear, mild | Deep amber, strong toasted aroma |
+| Roaster needed | No | Yes (drum roaster or steam kettle) |
+| Refining | No | Optional, for export grades |
+| Typical market | Premium retail, export | Food service, mainstream retail |
+
+### Equipment Checklist
+
+| Stage | Cold-press line | Hot-press line |
+|---|---|---|
+| Cleaning | Vibration cleaner + magnet | Vibration cleaner + magnet |
+| Washing / drying | Wash tank + drying rack (≤45°C) | Not needed |
+| Heat treatment | — (none) | Drum roaster, 160-180°C |
+| Pressing | HN426 / HN500, double-barrel preferred | HN325 / HN365, double-barrel preferred |
+| Filtering | Plate-and-frame filter | Plate-and-frame + optional centrifuge |
+| Settling | Settling tank, 24-48 h | Settling tank, 24-48 h |
+| Refining | Not used | Optional |
+| Bottling | Light-protected bottles | Standard bottling |
+
+*Figures above are industry-typical ranges; seed variety, moisture and machine condition all shift them.*
 
 

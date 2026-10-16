@@ -679,13 +679,13 @@ Chaque presse hydraulique Haonuo assure **les deux procédés sur une seule mach
 
   'sesame-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour le sésame. Comptez sur **45-50 % de rendement (pressage à froid)**, montant à **47-52 % avec torréfaction**, avec **5 % ou moins d'huile résiduelle dans le tourteau** (≤ 4 % en torréfié). Le fût de 300 mm prend **32,5 kg de sésame par lot — jusqu'à 50 kg avec pré-compression** — et un cycle de pressage à chaud dure environ **30-40 minutes**. Torréfiez à **160-180 °C** pour **+3-5 % de rendement** et le profil aromatique toasté, et maintenez l'humidité des graines à **5-7 %**.
+Oui — la presse hydraulique Haonuo est conçue pour le sésame. Comptez sur **45-50 % de rendement (pressage à froid)**, montant à **47-52 % avec torréfaction**, avec **typiquement 6-8 % d'huile résiduelle dans le tourteau** (jusqu'à ~5 % en torréfaction optimale). Le fût de 300 mm prend **32,5 kg de sésame par lot — jusqu'à 50 kg avec pré-compression** — et un cycle de pressage à chaud dure environ **30-40 minutes**. Torréfiez à **160-180 °C** pour **+3-5 % de rendement** et le profil aromatique toasté, et maintenez l'humidité des graines à **5-7 %**.
 
 ## Aperçu
 
 L'huile de sésame est l'une des huiles de cuisson les plus anciennes et les plus appréciées au monde, prisée pour sa saveur de noix distinctive et son riche profil nutritionnel. Une **machine de pressage d'huile de sésame** haute performance est la pierre angulaire de toute entreprise rentable de production d'huile de sésame, que vous cibliez le marché premium de l'huile pressée à froid ou le segment à fort volume de l'huile de sésame torréfiée populaire en Asie et au Moyen-Orient.
 
-La solution de pressage d'huile de sésame de Haonuo exploite notre technologie propriétaire de presse hydraulique, qui délivre un rendement en huile élevé. Notre **presse hydraulique pour huile de sésame** applique une pression uniforme sur l'ensemble de la chambre de pressage, atteignant typiquement des taux d'huile résiduelle d'environ 5 % ou moins. Les résultats réels dépendent de la qualité des graines et des paramètres de pressage.
+La solution de pressage d'huile de sésame de Haonuo exploite notre technologie propriétaire de presse hydraulique, qui délivre un rendement en huile élevé. Notre **presse hydraulique pour huile de sésame** applique une pression uniforme sur l'ensemble de la chambre de pressage, atteignant typiquement des taux d'huile résiduelle de 6-8 %. Les résultats réels dépendent de la qualité des graines et des paramètres de pressage.
 
 Cette solution prend en charge à la fois le pressage à froid (pour une huile de sésame premium riche en nutriments) et le pressage à chaud avec torréfaction (pour une huile de sésame grillée aromatique), vous offrant la flexibilité de servir différents segments de marché avec une seule ligne de production.
 
@@ -693,9 +693,9 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 
 | Matière Première | Teneur en Huile | Rendement de Pressage Attendu | Taux d'Huile Résiduel |
 |---|---|---|---|
-| Graines de Sésame Blanches | 50-55 % | 45-50 % | ≤ 5 % |
-| Graines de Sésame Noires | 48-52 % | 42-48 % | ≤ 5 % |
-| Graines de Sésame Torréfiées | 50-55 % | 47-52 % | ≤ 4 % |
+| Graines de Sésame Blanches | 50-55 % | 45-50 % | 6-8 % |
+| Graines de Sésame Noires | 48-52 % | 42-48 % | 6-8 % |
+| Graines de Sésame Torréfiées | 50-55 % | 47-52 % | 5-7 % |
 
 **Facteurs clés affectant le rendement :**
 - **Variété de graines** : Le sésame blanc donne généralement légèrement plus d'huile que le sésame noir
@@ -706,7 +706,7 @@ Cette solution prend en charge à la fois le pressage à froid (pour une huile d
 ## Pourquoi Choisir Notre Presse à Huile de Sésame
 
 - **Expertise spécialisée en pressage de sésame** — Notre presse hydraulique pour huile de sésame est conçue spécifiquement pour le sésame, et non une machine générique adaptée pour l'usage. Cela signifie un meilleur rendement, une huile résiduelle plus faible et une qualité plus constante.
-- **Taux d'huile résiduelle inférieur à 5 %** — Notre technologie hydraulique extrait plus d'huile par kilogramme de sésame, améliorant directement votre rentabilité.
+- **Huile résiduelle typiquement de 6-8 %** — Notre technologie hydraulique extrait plus d'huile par kilogramme de sésame, améliorant directement votre rentabilité.
 - **Prix directs d'usine** — Achetez directement au fabricant et économisez par rapport aux prix des sociétés de négoce (les économies réelles varient).
 - **Capacité double pression à froid/à chaud** — Une seule machine dessert les deux segments de marché, maximisant votre retour sur investissement.
 - **Prouvé à travers l'Asie** — Nos machines de pressage d'huile de sésame sont utilisées avec succès en Inde, en Chine, au Myanmar et au Moyen-Orient — les plus grands marchés d'huile de sésame du monde.
@@ -727,7 +727,59 @@ Avec des cycles de pressage à chaud de 30-40 minutes enchaînés, une presse fa
 - Géométrie de fût conçue spécifiquement pour le sésame — pas une presse générique adaptée pour l'usage
 - Expédié **FOB Qingdao** ; nous organisons le fret maritime vers **Nhava Sheva, Yangon ou Jebel Ali** avec documents d'exportation complets
 - Pièces d'usure (joints, toiles filtrantes) livrées avec la machine, plus un support de pièces de rechange d'un an
-- Démonstration de pressage en direct par appel vidéo avec votre propre sésame avant de commander`,
+- Démonstration de pressage en direct par appel vidéo avec votre propre sésame avant de commander
+
+## SOP Complet de Pressage du Sésame
+
+Les étapes ci-dessous transforment les chiffres de rendement ci-dessus en une routine quotidienne reproductible. Les paramètres sont des plages typiques de l'industrie, à adapter à votre matière première.
+
+### Ligne de Pressage à Froid (huile premium, graine sous 60 °C)
+
+1. **Contrôle à réception** — Acceptez des graines à ≤ 9 % d'humidité, sans moisissure ni odeur de rance. Le pressage à froid ne pardonne pas les stocks anciens : graine rance = huile rance.
+2. **Nettoyage** — Tamis vibrant + aspiration pour retirer tiges, poussières et pierres ; passage sur séparateur magnétique pour protéger le fût.
+3. **Lavage** — Rinçage rapide pour retirer boue et poussière de surface. Ne pas faire tremper — une graine trop mouillée met trop de temps à ressuyer.
+4. **Séchage** — Séchage à l'air ou à basse température (≤ 45 °C) jusqu'à **5-7 % d'humidité**. Test à la main : les graines s'écrasent franchement et ne collent pas aux doigts.
+5. **Chargement** — Max 32,5 kg par lot dans le fût de 300 mm (jusqu'à 50 kg avec pré-compression) ; répartir uniformément et tasser par couches.
+6. **Pressage** — HN426 (42 MPa) ou HN500 (52 MPa), cycle complet d'environ 2 heures : montée en pression rapide pour drainer l'huile libre, puis maintien de pression pour extraire le reste. Gardez la graine sous 60 °C — en atelier chaud, laissez un court intervalle entre les lots.
+7. **Filtration et décantation** — Filtre-presse, puis décantation 24-48 h ; embouteillez l'huile claire à l'abri de la lumière. Ne raffinez pas l'huile de sésame pressée à froid — le raffinage efface la raison pour laquelle les acheteurs la paient.
+
+### Ligne de Pressage à Chaud (huile aromatique torréfiée)
+
+1. **Contrôle + nettoyage** — Identique à la ligne à froid.
+2. **Torréfaction** — Torréfacteur à tambour à **160-180 °C** jusqu'à **2-3 % d'humidité**. Jugez à la couleur, l'arôme et le toucher : ambre foncé, forte fragrance de sésame, l'huile perle au pincement. Chaleur forte, temps court — une torréfaction lente à basse température brûle la graine et rend l'huile amère.
+3. **Refroidissement et chargement** — Étalez la graine torréfiée, laissez-la descendre à 90-100 °C et chargez immédiatement. Le rendement chute quand la graine refroidit — soyez rapide.
+4. **Pressage** — La HN325 (~27 MPa) ou HN365 (30 MPa) suffit pour la graine torréfiée ; cycle de 30-40 minutes.
+5. **Filtration** — L'huile torréfiée porte plus de résidus ; filtre-presse en standard, ajoutez un second passage centrifuge pour plus de clarté.
+6. **Décantation** — 24-48 h.
+7. **Embouteillage / raffinage optionnel** — L'huile de sésame aromatique part généralement non raffinée pour garder sa saveur ; ne raffinez que si la norme de grade 1 du marché cible ou les règles d'export l'exigent.
+
+### Froid vs Chaud en un Coup d'Œil
+
+| Dimension | Pressage à froid | Pressage à chaud (torréfié) |
+|---|---|---|
+| Rendement de pressage | 45-50 % | 47-52 % |
+| Huile résiduelle dans le tourteau | 6-8 % | 5-7 % |
+| Durée de cycle | ~2 h | 30-40 min |
+| Presse recommandée | HN426 / HN500 (42-52 MPa) | HN325 / HN365 (27-30 MPa) |
+| Couleur / arôme | Pâle, claire, douce | Ambre foncé, arôme toasté prononcé |
+| Torréfacteur requis | Non | Oui (tambour ou bouilloire vapeur) |
+| Raffinage | Non | Optionnel, pour grades export |
+| Marché typique | Retail premium, export | Restauration, retail grand public |
+
+### Liste d'Équipement
+
+| Étape | Ligne à froid | Ligne à chaud |
+|---|---|---|
+| Nettoyage | Nettoyeur vibrant + aimant | Nettoyeur vibrant + aimant |
+| Lavage / séchage | Bac de lavage + claie (≤ 45 °C) | Non requis |
+| Traitement thermique | — (aucun) | Torréfacteur à tambour 160-180 °C |
+| Pressage | HN426 / HN500, double fût de préférence | HN325 / HN365, double fût de préférence |
+| Filtration | Filtre-presse | Filtre-presse + centrifugeuse optionnelle |
+| Décantation | Cuve de décantation, 24-48 h | Cuve de décantation, 24-48 h |
+| Raffinage | Non utilisé | Optionnel |
+| Embouteillage | Bouteilles protégées de la lumière | Embouteillage standard |
+
+*Les chiffres ci-dessus sont des plages typiques de l'industrie ; variété, humidité et état de la machine les font varier.*`,
 
   'shea-butter-pressing': `**Réponse Rapide**
 
