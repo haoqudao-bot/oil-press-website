@@ -40,6 +40,21 @@ const breadcrumbLd = {
   ],
 };
 
+const howToLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description: 'How to produce peanut oil step by step, from shelling, cleaning, and sorting through roasting, pressing, and filtration.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Shell the Peanuts', text: 'Shelling is required for all peanut oil production. Use a disc dehuller or hammer mill and target a shelling rate above 95%.' },
+    { '@type': 'HowToStep', position: 2, name: 'Clean the Kernels', text: 'Remove stones, metal, and other hard impurities using magnetic separation for metal contaminants and gravity separation for light impurities.' },
+    { '@type': 'HowToStep', position: 3, name: 'Sort Out Moldy or Damaged Seeds', text: 'Visually inspect the kernels for moldy or damaged seeds, optionally using optical sorting by color and quality to keep contaminated seed out of the press.' },
+    { '@type': 'HowToStep', position: 4, name: 'Roast the Kernels', text: 'For hot pressing, roast the kernels at 160-180°C for 25-35 minutes, with a full cooking cycle of 40-90 minutes per batch, to develop flavor and maximize yield.' },
+    { '@type': 'HowToStep', position: 5, name: 'Press at Full Pressure', text: 'Load the prepared kernels into the hydraulic press and press at the working system pressure of 60 MPa to achieve a 45-55% oil yield from good quality seeds.' },
+    { '@type': 'HowToStep', position: 6, name: 'Filter and Store the Crude Oil', text: 'Pass the crude oil through a pneumatic multilayer filter press, then let it settle and transfer it to stainless steel storage tanks.' },
+  ],
+};
+
 const peanutTypes = [
   { type: 'Runner', characteristics: 'Medium size, uniform seeds', bestFor: 'General oil production' },
   { type: 'Virginia', characteristics: 'Large seeds, high quality', bestFor: 'Premium oil, export' },
@@ -94,7 +109,7 @@ const aflatoxinControl = [
 ];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">

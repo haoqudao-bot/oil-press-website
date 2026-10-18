@@ -36,6 +36,24 @@ const breadcrumbLd = {
   ],
 };
 
+const howToLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description: 'How to maximize oil yield step by step, from seed cleaning, moisture control, and roasting through pressing and pressure release.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Clean Seeds Thoroughly', text: 'Remove all stones, metal, and debris before processing. Even small stones can damage the press and reduce yield.' },
+    { '@type': 'HowToStep', position: 2, name: 'Dehull Properly', text: 'Remove seed coats as they absorb oil and reduce yield. Aim for 95%+ dehulling for most seeds.' },
+    { '@type': 'HowToStep', position: 3, name: 'Control Moisture Precisely', text: 'Condition seed to the optimal 5-8% moisture range for the material. Use a moisture meter if possible; material should hold together but crumble easily.' },
+    { '@type': 'HowToStep', position: 4, name: 'Roast Consistently', text: 'Roast at the material-specific temperature, such as 160-180°C for sesame or 165-185°C for peanut, to break down cell walls and release trapped oil. Use a thermometer to maintain consistent roasting temperature.' },
+    { '@type': 'HowToStep', position: 5, name: 'Grind to Optimal Size', text: 'Crush seed to 2-4mm for most seeds and 3-5mm for nuts. Too fine is difficult to press; too coarse gives uneven extraction.' },
+    { '@type': 'HowToStep', position: 6, name: 'Load Evenly', text: 'Distribute material evenly in the press chamber. Uneven loading causes uneven pressure and reduced yield.' },
+    { '@type': 'HowToStep', position: 7, name: 'Pre-Press to Expel Air', text: 'After the initial loading, hold 30-40 MPa for 2-3 minutes to expel air from the press chamber.' },
+    { '@type': 'HowToStep', position: 8, name: 'Press at Full Pressure', text: 'Raise to 50-60 MPa and hold for 5-10 minutes depending on material. Rushing the peak-pressure hold can reduce yield by 5-10%.' },
+    { '@type': 'HowToStep', position: 9, name: 'Release Pressure Gradually', text: 'Release pressure slowly at the end of the cycle; a gradual release prevents oil loss through foam.' },
+  ],
+};
+
 const yieldFactors = [
   { icon: 'seed', title: 'Raw Material Quality', desc: 'High-quality seeds = higher yield' },
   { icon: 'droplet', title: 'Moisture Content', desc: 'Optimal moisture = 5-8%' },
@@ -90,7 +108,7 @@ const maintenanceTips = [
 ];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">

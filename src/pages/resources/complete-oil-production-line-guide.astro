@@ -37,6 +37,23 @@ const breadcrumbLd = {
   ],
 };
 
+const howToLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description: 'The eight sequential stages of a complete oil production line, from seed cleaning through pressing to bottled oil.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Seed Cleaning', text: 'Remove debris, stones, metal, and damaged seeds using a vibrating screen and magnetic separator. This stage is essential for oil quality and equipment protection.' },
+    { '@type': 'HowToStep', position: 2, name: 'Dehulling', text: 'Remove seed coats with a sheller and separator to improve oil yield and cake quality.' },
+    { '@type': 'HowToStep', position: 3, name: 'Roasting', text: 'Heat seeds in a rotary roaster with temperature control to break down cell walls and improve flavor and yield.' },
+    { '@type': 'HowToStep', position: 4, name: 'Grinding', text: 'Reduce roasted seeds to optimal particle size with a hammer mill or roller mill for efficient pressing.' },
+    { '@type': 'HowToStep', position: 5, name: 'Pressing', text: 'Extract the oil using a hydraulic oil press at 40-60 MPa of pressure. Pressing is the heart of the production line.' },
+    { '@type': 'HowToStep', position: 6, name: 'Filtration', text: 'Remove solid particles and water from the crude oil using a filter press or centrifuge.' },
+    { '@type': 'HowToStep', position: 7, name: 'Drying', text: 'Reduce the filtered oil\'s moisture content to below 0.1% with an oil dryer or heater for shelf stability.' },
+    { '@type': 'HowToStep', position: 8, name: 'Bottling', text: 'Package the finished oil in final containers using a filling machine, capper, and labeler for retail or wholesale.' },
+  ],
+};
+
 const productionStages = [
   { stage: '1', title: 'Seed Cleaning', equipment: 'Vibrating screen, magnetic separator', desc: 'Remove debris, stones, metal, and damaged seeds. Essential for quality and equipment protection.' },
   { stage: '2', title: 'Dehulling', equipment: 'Sheller, separator', desc: 'Remove seed coats to improve oil yield and cake quality.' },
@@ -80,7 +97,7 @@ const maintenanceSchedule = [
 ];
 ---
 
-<BaseLayout title={seoTitle} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={seoTitle} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">

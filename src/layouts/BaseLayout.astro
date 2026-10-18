@@ -114,7 +114,18 @@ const organizationLd = {
   foundingDate: '2010',
 };
 
-const rawLd = jsonLd ? [organizationLd, jsonLd] : [organizationLd];
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${orgUrl}/#website`,
+  name: 'Haonuo Machinery — Hydraulic Oil Press Machines',
+  alternateName: 'Haonuo Machinery',
+  url: orgUrl,
+  publisher: { '@id': `${orgUrl}/#organization` },
+  inLanguage: currentLocale,
+};
+
+const rawLd = jsonLd ? [organizationLd, websiteLd, jsonLd] : [organizationLd, websiteLd];
 const mergedLd = rawLd.flat();
 ---
 

@@ -36,6 +36,21 @@ const breadcrumbLd = {
   ],
 };
 
+const howToLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: title,
+  description: 'A six-step process for filtering crude pressed oil, from settling and pre-filtration to final quality testing before bottling.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Settling', text: 'Let crude oil sit in a tank for 24-48 hours. Water and heavy solids settle to the bottom.' },
+    { '@type': 'HowToStep', position: 2, name: 'Pre-Filtration', text: 'Pass the oil through a coarse filter (50-100 micron) to remove large particles.' },
+    { '@type': 'HowToStep', position: 3, name: 'Main Filtration', text: 'Filter through a fine filter (5-20 micron) to remove fine sediment.' },
+    { '@type': 'HowToStep', position: 4, name: 'Polishing', text: 'Optionally filter through activated carbon or bleaching earth for crystal-clear oil.' },
+    { '@type': 'HowToStep', position: 5, name: 'Drying', text: 'Heat the oil to 80-90°C to remove residual moisture for long-term storage.' },
+    { '@type': 'HowToStep', position: 6, name: 'Final Testing', text: 'Check clarity, moisture content, and purity before bottling.' },
+  ],
+};
+
 const filtrationImportance = [
   { icon: 'shield', title: 'Remove Impurities', desc: 'Eliminate solid particles, moisture, and contaminants' },
   { icon: 'star', title: 'Improve Quality', desc: 'Clearer, purer oil with better appearance' },
@@ -83,7 +98,7 @@ const storageTips = [
 ];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
