@@ -23,7 +23,7 @@ imageAlt:
   id: "Mesin crusher industri untuk bungkil minyak dan biji minyak"
 specifications:
   - name: Model
-    value: Broyeur de graines industriel Type 370
+    value: Industrial Seed Crusher Type 370
   - name: Voltage
     value: 380V
   - name: Power
