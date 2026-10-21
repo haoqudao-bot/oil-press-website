@@ -5,7 +5,7 @@ title:
   ar: حل عصر زيت جوز الهند
   id: Solusi Penekanan Minyak Kelapa
 seoTitle:
-  en: Coconut Oil Machine, Cold Press VCO
+  en: Coconut Oil Making Machine, Cold Press VCO
   fr: Machine à Huile de Coco, Pressage à Froid VCO
   ar: آلة زيت جوز الهند، عصر بارد VCO
   id: Mesin Minyak Kelapa, Press Dingin VCO

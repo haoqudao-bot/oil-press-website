@@ -5,7 +5,7 @@ title:
   ar: حل عصر زيت الخردل
   id: Solusi Penekanan Minyak Sawi
 seoTitle:
-  en: Mustard Oil Machine for Small & Large Mills
+  en: Mustard Oil Machine & Plant for Small & Large Mills
   fr: Machine à Huile de Moutarde pour Petits et Grands Moulins
   ar: آلة زيت الخردل للمعاصر الصغيرة والكبيرة
   id: Mesin Minyak Sawi untuk Penggilingan Kecil & Besar
