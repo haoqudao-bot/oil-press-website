@@ -193,7 +193,16 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
               <option value="HN325">HN325 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Standard' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي قياسية' : 'Mesin Press Hidrolik Standar'}</option>
               <option value="HN365">HN365 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Lourde' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي ثقيلة' : 'Mesin Press Hidrolik Berat'}</option>
               <option value="HN426">HN426 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique à Froid' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي بارد' : 'Mesin Press Hidrolik Dingin'}</option>
-              <option value="HN480">HN480 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Haute Pression' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي عالية الضغط' : 'Mesin Press Hidrolik Tekanan Tinggi'}</option>
+              <option value="HN500">HN500 — {currentLocale === 'fr' ? 'Presse à Huile Hydraulique Ultra Haute Pression' : currentLocale === 'ar' ? 'مكينة ضغط هيدروليكي فائقة الضغط' : 'Mesin Press Hidrolik Tekanan Sangat Tinggi'}</option>
+            </select>
+          </div>
+
+          <!-- Pressing Method -->
+          <div>
+            <label for="press-type" class="block font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Mode de pressage' : currentLocale === 'ar' ? 'طريقة العصر' : 'Metode Pengepresan'}</label>
+            <select id="press-type" class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              <option value="hot">{currentLocale === 'fr' ? 'Pressage à chaud (~35 min par lot)' : currentLocale === 'ar' ? 'عصر ساخن (~35 دقيقة للدفعة)' : 'Press panas (~35 menit per batch)'}</option>
+              <option value="cold">{currentLocale === 'fr' ? 'Pressage à froid (~2 h par lot)' : currentLocale === 'ar' ? 'عصر بارد (~ساعتين للدفعة)' : 'Press dingin (~2 jam per batch)'}</option>
             </select>
           </div>
 
@@ -238,7 +247,7 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
               <option value="peanut">{currentLocale === 'fr' ? 'Arachide (env. 42% teneur en huile)' : currentLocale === 'ar' ? 'فول سوداني (حوالي 42% محتوى زيت)' : 'Kacang tanah (kurang lebih 42% kandungan minyak)'}</option>
               <option value="coconut">{currentLocale === 'fr' ? 'Coco (env. 55% teneur en huile)' : currentLocale === 'ar' ? 'جوز هند (حوالي 55% محتوى زيت)' : 'Kelapa (kurang lebih 55% kandungan minyak)'}</option>
               <option value="sunflower">{currentLocale === 'fr' ? 'Tournesol (env. 40% teneur en huile)' : currentLocale === 'ar' ? 'عباد الشمس (حوالي 40% محتوى زيت)' : 'Bunga matahari (kurang lebih 40% kandungan minyak)'}</option>
-              <option value="rapeseed">{currentLocale === 'fr' ? 'Colza (env. 38% teneur en huile)' : currentLocale === 'ar' ? 'كركديه (حوالي 38% محتوى زيت)' : 'Rapeseed (kurang lebih 38% kandungan minyak)'}</option>
+              <option value="rapeseed">{currentLocale === 'fr' ? 'Colza (env. 38% teneur en huile)' : currentLocale === 'ar' ? 'بذور اللفت (حوالي 38% محتوى زيت)' : 'Rapeseed (kurang lebih 38% kandungan minyak)'}</option>
             </select>
             <p class="text-xs text-steel-400 mt-1">{oilContentHint}</p>
           </div>
@@ -269,6 +278,19 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
               class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
             />
             <p class="text-xs text-steel-400 mt-1">{oilPriceHint}</p>
+          </div>
+
+          <!-- Cake Selling Price -->
+          <div>
+            <label for="cake-price" class="block font-display text-xl text-charcoal-900 mb-2">{currentLocale === 'fr' ? 'Prix de vente du tourteau par kg (USD)' : currentLocale === 'ar' ? 'سعر بيع كسب الزيت لكل كغ (دولار)' : 'Harga Jual Bungkil per kg (USD)'}</label>
+            <input
+              type="number"
+              id="cake-price"
+              min="0"
+              step="0.01"
+              placeholder={currentLocale === 'fr' ? 'Indiquez 0 si vous ne vendez pas le tourteau' : currentLocale === 'ar' ? 'أدخل 0 إذا كنت لا تبيع الكسب' : 'Isi 0 jika bungkil tidak dijual'}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
           </div>
 
           <!-- Additional Operating Costs -->
@@ -328,6 +350,10 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
               <div class="font-display text-3xl text-charcoal-900" id="result-daily-cost">—</div>
             </div>
             <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Revenu quotidien du tourteau' : currentLocale === 'ar' ? 'إيراد الكسب اليومي' : 'Pendapatan Bungkil Harian'}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-cake-revenue">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
               <div class="text-sm text-steel-500 mb-1">{currentLocale === 'fr' ? 'Coûts d\'Exploitation Quotidiens' : currentLocale === 'ar' ? 'تكاليف التشغيل اليومية' : 'Biaya Operasional Harian'}</div>
               <div class="font-display text-3xl text-charcoal-900" id="result-daily-opcost">—</div>
             </div>
@@ -380,22 +406,28 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
 
 <script>
   // Machine data - conservative estimates with utilization rate
-  const machineData: Record<string, { capacity: number; cycleMinutes: number }> = {
-    HN325: { capacity: 10, cycleMinutes: 15 },
-    HN365: { capacity: 15, cycleMinutes: 15 },
-    HN426: { capacity: 20, cycleMinutes: 15 },
-    HN480: { capacity: 25, cycleMinutes: 15 },
+  const machineData: Record<string, { capacity: number }> = {
+    HN325: { capacity: 100 },
+    HN365: { capacity: 100 },
+    HN426: { capacity: 100 },
+    HN500: { capacity: 100 },
   };
 
-  // Oil content - conservative mid-range values
+  // Oil content - label value +1% (conservative upward margin)
   const oilContent: Record<string, number> = {
-    sesame: 0.45,
-    peanut: 0.42,
-    coconut: 0.55,
-    sunflower: 0.40,
-    rapeseed: 0.38,
+    sesame: 0.46,
+    peanut: 0.43,
+    coconut: 0.56,
+    sunflower: 0.41,
+    rapeseed: 0.39,
   };
 
+  const cycleMinutes: Record<string, number> = {
+    hot: 35,
+    cold: 120,
+  };
+
+  const residualOilInCake = 0.07;
   const utilizationRate = 0.60;
 
   const hoursSlider = document.getElementById('daily-hours') as HTMLInputElement;
@@ -415,22 +447,28 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
     if (!ackCheckbox.checked) return;
 
     const model = (document.getElementById('machine-model') as HTMLSelectElement).value;
+    const pressType = (document.getElementById('press-type') as HTMLSelectElement).value;
     const machinePrice = parseFloat((document.getElementById('machine-price') as HTMLInputElement).value) || 0;
     const hours = parseFloat(hoursSlider.value);
     const material = (document.getElementById('raw-material') as HTMLSelectElement).value;
     const materialCost = parseFloat((document.getElementById('material-cost') as HTMLInputElement).value) || 0;
     const oilPrice = parseFloat((document.getElementById('oil-price') as HTMLInputElement).value) || 0;
+    const cakePrice = parseFloat((document.getElementById('cake-price') as HTMLInputElement).value) || 0;
     const dailyOpcost = parseFloat((document.getElementById('daily-opcost') as HTMLInputElement).value) || 0;
 
     const machine = machineData[model];
-    const yieldPct = oilContent[material];
+    const rawOilContent = oilContent[material];
+    const yieldPct = rawOilContent - residualOilInCake * (1 - rawOilContent);
+    const cycle = cycleMinutes[pressType];
 
-    const batchesPerHour = 60 / machine.cycleMinutes;
+    const batchesPerHour = 60 / cycle;
     const effectiveBatchesPerHour = batchesPerHour * utilizationRate;
     const dailyBatches = effectiveBatchesPerHour * hours;
     const dailyRawMaterial = machine.capacity * dailyBatches;
     const dailyOil = dailyRawMaterial * yieldPct;
-    const dailyRevenue = dailyOil * oilPrice;
+    const dailyCake = dailyRawMaterial - dailyOil;
+    const dailyCakeRevenue = dailyCake * cakePrice;
+    const dailyRevenue = dailyOil * oilPrice + dailyCakeRevenue;
     const dailyMaterialCost = dailyRawMaterial * materialCost;
     const dailyProfit = dailyRevenue - dailyMaterialCost - dailyOpcost;
     const monthlyProfit = dailyProfit * 25;
@@ -443,6 +481,7 @@ const oilContentHint = currentLocale === 'fr' ? 'La teneur en huile varie selon 
     document.getElementById('result-daily-oil')!.textContent = `${dailyOil.toFixed(1)} kg`;
     document.getElementById('result-daily-revenue')!.textContent = fmt(dailyRevenue);
     document.getElementById('result-daily-cost')!.textContent = fmt(dailyMaterialCost);
+    document.getElementById('result-cake-revenue')!.textContent = fmt(dailyCakeRevenue);
     document.getElementById('result-daily-opcost')!.textContent = fmt(dailyOpcost);
     document.getElementById('result-daily-profit')!.textContent = fmt(dailyProfit);
     document.getElementById('result-monthly-profit')!.textContent = fmt(monthlyProfit);

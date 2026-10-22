@@ -57,9 +57,17 @@ const breadcrumbLd = {
               <option value="HN325">{t.roi.modelHN325}</option>
               <option value="HN365">{t.roi.modelHN365}</option>
               <option value="HN426">{t.roi.modelHN426}</option>
-              <option value="HN480">{t.roi.modelHN480}</option>
               <option value="HN500">{t.roi.modelHN500}</option>
             </select>
+          </div>
+
+          <div>
+            <label for="press-type" class="block font-display text-xl text-charcoal-900 mb-2">{t.roi.pressType}</label>
+            <select id="press-type" class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+              <option value="hot">{t.roi.pressHot}</option>
+              <option value="cold">{t.roi.pressCold}</option>
+            </select>
+            <p class="text-xs text-steel-400 mt-1">{t.roi.pressNote}</p>
           </div>
 
           <div>
@@ -132,6 +140,19 @@ const breadcrumbLd = {
           </div>
 
           <div>
+            <label for="cake-price" class="block font-display text-xl text-charcoal-900 mb-2">{t.roi.cakePrice}</label>
+            <input
+              type="number"
+              id="cake-price"
+              min="0"
+              step="0.01"
+              placeholder={t.roi.cakePricePlaceholder}
+              class="w-full border border-steel-200 rounded-lg px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+            />
+            <p class="text-xs text-steel-400 mt-1">{t.roi.cakePriceNote}</p>
+          </div>
+
+          <div>
             <label for="daily-opcost" class="block font-display text-xl text-charcoal-900 mb-2">
               {t.roi.dailyOpcost}
             </label>
@@ -183,6 +204,10 @@ const breadcrumbLd = {
               <div class="font-display text-3xl text-charcoal-900" id="result-daily-cost">—</div>
             </div>
             <div class="bg-steel-50 rounded-2xl p-6">
+              <div class="text-sm text-steel-500 mb-1">{t.roi.resultCakeRevenue}</div>
+              <div class="font-display text-3xl text-charcoal-900" id="result-cake-revenue">—</div>
+            </div>
+            <div class="bg-steel-50 rounded-2xl p-6">
               <div class="text-sm text-steel-500 mb-1">{t.roi.resultDailyOpcost}</div>
               <div class="font-display text-3xl text-charcoal-900" id="result-daily-opcost">—</div>
             </div>
@@ -232,23 +257,28 @@ const breadcrumbLd = {
 </BaseLayout>
 
 <script>
-  const machineData: Record<string, { capacity: number; cycleMinutes: number }> = {
-    HN325: { capacity: 100, cycleMinutes: 35 },
-    HN365: { capacity: 100, cycleMinutes: 35 },
-    HN426: { capacity: 100, cycleMinutes: 35 },
-    HN480: { capacity: 100, cycleMinutes: 35 },
-    HN500: { capacity: 100, cycleMinutes: 35 },
+  const machineData: Record<string, { capacity: number }> = {
+    HN325: { capacity: 100 },
+    HN365: { capacity: 100 },
+    HN426: { capacity: 100 },
+    HN500: { capacity: 100 },
   };
 
   const oilContent: Record<string, number> = {
-    sesame: 0.48,
-    peanut: 0.45,
-    coconut: 0.60,
-    sunflower: 0.40,
-    rapeseed: 0.38,
+    sesame: 0.46,
+    peanut: 0.43,
+    coconut: 0.56,
+    sunflower: 0.41,
+    rapeseed: 0.39,
   };
 
-  const utilizationRate = 0.75;
+  const cycleMinutes: Record<string, number> = {
+    hot: 35,
+    cold: 120,
+  };
+
+  const residualOilInCake = 0.07;
+  const utilizationRate = 0.60;
 
   const hoursSlider = document.getElementById('daily-hours') as HTMLInputElement;
   const hoursDisplay = document.getElementById('hours-display')!;
@@ -267,22 +297,28 @@ const breadcrumbLd = {
     if (!ackCheckbox.checked) return;
 
     const model = (document.getElementById('machine-model') as HTMLSelectElement).value;
+    const pressType = (document.getElementById('press-type') as HTMLSelectElement).value;
     const machinePrice = parseFloat((document.getElementById('machine-price') as HTMLInputElement).value) || 0;
     const hours = parseFloat(hoursSlider.value);
     const material = (document.getElementById('raw-material') as HTMLSelectElement).value;
     const materialCost = parseFloat((document.getElementById('material-cost') as HTMLInputElement).value) || 0;
     const oilPrice = parseFloat((document.getElementById('oil-price') as HTMLInputElement).value) || 0;
+    const cakePrice = parseFloat((document.getElementById('cake-price') as HTMLInputElement).value) || 0;
     const dailyOpcost = parseFloat((document.getElementById('daily-opcost') as HTMLInputElement).value) || 0;
 
     const machine = machineData[model];
-    const yieldPct = oilContent[material];
+    const rawOilContent = oilContent[material];
+    const yieldPct = rawOilContent - residualOilInCake * (1 - rawOilContent);
+    const cycle = cycleMinutes[pressType];
 
-    const batchesPerHour = 60 / machine.cycleMinutes;
+    const batchesPerHour = 60 / cycle;
     const effectiveBatchesPerHour = batchesPerHour * utilizationRate;
     const dailyBatches = effectiveBatchesPerHour * hours;
     const dailyRawMaterial = machine.capacity * dailyBatches;
     const dailyOil = dailyRawMaterial * yieldPct;
-    const dailyRevenue = dailyOil * oilPrice;
+    const dailyCake = dailyRawMaterial - dailyOil;
+    const dailyCakeRevenue = dailyCake * cakePrice;
+    const dailyRevenue = dailyOil * oilPrice + dailyCakeRevenue;
     const dailyMaterialCost = dailyRawMaterial * materialCost;
     const dailyProfit = dailyRevenue - dailyMaterialCost - dailyOpcost;
     const monthlyProfit = dailyProfit * 25;
@@ -295,6 +331,7 @@ const breadcrumbLd = {
     document.getElementById('result-daily-oil')!.textContent = `${dailyOil.toFixed(1)} kg`;
     document.getElementById('result-daily-revenue')!.textContent = fmt(dailyRevenue);
     document.getElementById('result-daily-cost')!.textContent = fmt(dailyMaterialCost);
+    document.getElementById('result-cake-revenue')!.textContent = fmt(dailyCakeRevenue);
     document.getElementById('result-daily-opcost')!.textContent = fmt(dailyOpcost);
     document.getElementById('result-daily-profit')!.textContent = fmt(dailyProfit);
     document.getElementById('result-monthly-profit')!.textContent = fmt(monthlyProfit);
