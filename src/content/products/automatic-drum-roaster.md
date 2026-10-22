@@ -4,6 +4,11 @@ title:
   fr: Torréfacteur à tambour électromagnétique automatique
   ar: محمصة أسطوانية كهرومغناطيسية أوتوماتيكية
   id: Pemanggang Drum Elektromagnetik Otomatis
+seoTitle:
+  en: Automatic Electromagnetic Drum Roaster — 160-450 kg/batch
+  fr: Torréfacteur à tambour électromagnétique automatique — 160-450 kg/par lot
+  ar: محمصة أسطوانية كهرومغناطيسية أوتوماتيكية — 160-450 كجم/دفعة
+  id: Pemanggang Drum Elektromagnetik Otomatis — 160-450 kg/batch
 description:
   en: "Rotating-drum electromagnetic roaster with independent temperature control — even, flameless roasting before hot pressing. Three sizes from 160 to 450 kg per batch."
   fr: "Torréfacteur à tambour rotatif à chauffage électromagnétique avec contrôle de température indépendant — torréfaction uniforme sans flamme avant le pressage à chaud. 160 à 450 kg par lot."

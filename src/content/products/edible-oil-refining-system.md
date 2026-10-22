@@ -5,7 +5,10 @@ title:
   ar: نظام تكرير زيت الطعام
   id: Sistem Pemurnian Minyak Goreng
 seoTitle:
+  en: Edible Oil Refining System — 1-100 T/D, Batch & Continuous
+  fr: Système de raffinage d'huile comestible — 1-100 T/J, batch et continu
   ar: نظام تكرير زيت الطعام الكامل لمطاحن الزيت
+  id: Sistem pemurnian minyak goreng — 1-100 ton/hari, batch & kontinu
 description:
   en: "Complete edible oil refining system with degumming, neutralization, bleaching, and deodorization. Batch or continuous processing for premium cooking oil production."
   fr: "Système de raffinage d'huile comestible complet. Dégommage, neutralisation, blanchiment, désodorisation."

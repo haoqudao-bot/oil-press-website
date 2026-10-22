@@ -5,7 +5,10 @@ title:
   ar: كسارة كيك الزيت الصناعية
   id: Penghancur Bungkil Minyak Industri
 seoTitle:
+  en: Industrial Oil Cake Crusher — Fine Powder for Feed & Recycling
+  fr: Broyeur de tourteaux industriel — poudre fine pour alimentation & recyclage
   ar: كسارة كيك الزيت الصناعية لمطاحن الزيت
+  id: Penghancur bungkil minyak industri — bubuk halus untuk pakan & daur ulang
 description:
   en: "Industrial-grade oil cake crusher for crushing pressed oil cakes into fine powder. Well-suited for recycling oil cake residue, producing animal feed, or further processing."
   fr: "Broyeur de tourteaux industriel pour réduire les tourteaux pressés en poudre fine. Adapté pour le recyclage des résidus, la production d'alimentation animale."

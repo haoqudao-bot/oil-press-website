@@ -5,6 +5,8 @@ title:
   ar: فلتر زيت هوائي
   id: Saringan Minyak Pneumatik
 seoTitle:
+  en: Pneumatic Oil Filter Press — Compressed Air, Fine Filtration
+  fr: Filtre-presse pneumatique — air comprimé, filtration fine
   ar: فلتر زيت هوائي للزيت الخام — تصفية دقيقة
   id: Filter Press Minyak Pneumatik untuk Minyak Mentah
 description:

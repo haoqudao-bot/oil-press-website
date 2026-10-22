@@ -1,0 +1,258 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'mustard-oil-pressing-sop');
+const t = getTranslations('en');
+
+const title = resource?.data.title.en || 'Mustard Oil Pressing SOP';
+const description = resource?.data.description.en || 'Step-by-step SOP for mustard oil extraction';
+const seoKeywords = resource?.data.seoKeywords || [];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/mustard-sop-hero.webp',
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/mustard-oil-pressing-sop' },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[breadcrumbLd, articleLd]}>
+
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/resources/" class="hover:text-amber-500 transition-colors">Resources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">Mustard Oil SOP</span>
+    </nav>
+  </div>
+</section>
+
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16 md:py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Standard Operating Procedure</div>
+    <h1 class="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">Mustard Oil Pressing SOP — Kachi Ghani Cold Press &amp; Steamed Hot Press</h1>
+    <p class="text-steel-300 text-lg leading-relaxed">Field-tested operating procedure for mustard oil extraction on Haonuo hydraulic presses. Covers both traditional Kachi Ghani cold-pressed oil (≤ 60 °C, premium retail) and steamed hot-pressed production (higher yield, milder flavour).</p>
+  </div>
+</section>
+
+<!-- Quick Answer -->
+<section class="py-10 md:py-12 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl border border-amber-200 shadow-sm p-6 md:p-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">QUICK ANSWER</span>
+      </div>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mb-4">
+        Haonuo hydraulic presses extract <strong>30–38 % oil yield (cold press / Kachi Ghani)</strong> or <strong>33–41 % (hot press with steam)</strong> from clean mustard seeds, with residual oil in cake 6–8 %. An HN325 single-barrel press runs <strong>800–1,200 kg/day</strong>; a double-barrel or HN365 reaches <strong>1,500–2,500 kg/day</strong>. Same machine for both methods — only the <em>pre-steam step</em> changes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-steel-600 leading-relaxed text-lg mb-6">
+      Mustard (rapeseed) is India's most consumed cooking oil — roughly <strong>5.5 million tonnes per year</strong> across Rajasthan, Uttar Pradesh, Haryana, West Bengal, Bangladesh and Nepal. Two products coexist: <em>Kachi Ghani</em>, the traditional cold-pressed pungent oil that commands a ₹20–30 per litre retail premium, and refined / mild mustard oil for the mass market. The SOP below is written for Haonuo hydraulic press operators who need to run one machine in <strong>both modes on the same day</strong>.
+    </p>
+    <div class="flex flex-wrap gap-3 text-sm">
+      <a href="#cold-sop" class="bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ Kachi Ghani Cold Press SOP</a>
+      <a href="#hot-sop" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ Steamed Hot Press SOP</a>
+      <a href="#capacity" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ Capacity &amp; Yield per 100 kg</a>
+      <a href="/solutions/mustard-oil-pressing/" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">Mustard Oil Solution Page</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOP Cold Press -->
+<section id="cold-sop" class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-amber-50 border-l-4 border-amber-500 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">SOP ① — Kachi Ghani Cold-Pressed Mustard Oil</h2>
+      <p class="text-amber-700 text-sm mt-1">Run this first thing in the morning, before any steamed batches. Clean machine, no heat.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Seed cleaning (20–30 min / 100 kg)</h3>
+            <p class="text-steel-600 leading-relaxed">Remove stones, chaff and foreign matter with a winnower or gravity separator. Damaged or mouldy seeds reduce yield and contribute off-flavours to Kachi Ghani. Target moisture content: <strong>7–9 %</strong>. Do <em>not</em> soak or wash seeds — cold press relies on the seed's natural oil-bearing cell structure.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Load into tabung press (3 min)</h3>
+            <p class="text-steel-600 leading-relaxed">Load <strong>100 kg of clean seed</strong> into the slotted barrel (tabung press). The Haonuo HN325 barrel takes 100 kg standard; double HN365 barrels take 80–90 kg each. Spread seed evenly to prevent uneven pressure.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Press at 27–30 MPa, hold ≤ 60 °C (~ 2 h / batch)</h3>
+            <p class="text-steel-600 leading-relaxed">Run the standard pressure cycle. Cold press batches take <strong>about 2 hours per 100 kg</strong> — slower than hot press by design, because there is no steam to soften the cell walls. The Kachi Ghani retail premium is what offsets the longer cycle. Monitor barrel temperature — if it exceeds 60 °C, pause and let it cool. This is the legal definition of cold-pressed in India (FSSAI standard). Target cake residual oil: <strong>6–8 %</strong>.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Unload cake &amp; collect oil (5 min)</h3>
+            <p class="text-steel-600 leading-relaxed">Kachi Ghani cake has a coarse, dry structure. Collect oil from the press drip pan — expect <strong>30–38 L per 100 kg seed</strong>. Use a cloth filter or filter press to remove fine particles before bottling.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Store unrefined, bottled within 72 hours</h3>
+            <p class="text-steel-600 leading-relaxed">Kachi Ghani oil is unrefined. Store in food-grade plastic or stainless containers away from direct sun. Bottling within 72 hours preserves the pungent flavour buyers pay premium for.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SOP Hot Press -->
+<section id="hot-sop" class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-steel-50 border-l-4 border-steel-400 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">SOP ② — Steamed Hot-Pressed Mustard Oil</h2>
+      <p class="text-steel-600 text-sm mt-1">Run after cold-press batches, or as the only process. Higher yield, milder flavour.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Seed cleaning — same as cold press</h3>
+            <p class="text-steel-600 leading-relaxed">Same target: 7–9 % moisture, stones and debris removed. Hot press forgives slightly dirtier seed, but yield still drops if moisture is off.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pre-steam 10–15 min at ~ 90 °C</h3>
+            <p class="text-steel-600 leading-relaxed">This is the <strong>only difference</strong> from the cold-press SOP. Use an electric or wood-fired steamer. Steaming softens cell walls, raises yield by 3–5 %, and reduces the pungent mustard flavour. Do not over-steam (> 15 min) — you lose oil to the water vapour.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Load warm seed into tabung press (3 min)</h3>
+            <p class="text-steel-600 leading-relaxed">Warm steamed seed flows more easily — distribute evenly. The barrel will heat to ~ 80 °C naturally during hot-press batches; this is expected and correct.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Press at 27–30 MPa (35–45 min / batch)</h3>
+            <p class="text-steel-600 leading-relaxed">Cycle is shorter than cold-press because steamed cell walls release oil faster. Target cake residual oil <strong>6–8 %</strong> — same as cold-press.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Filter &amp; fill</h3>
+            <p class="text-steel-600 leading-relaxed">Oil is lighter in colour and milder. Filter press recommended for bulk production.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Capacity & yield -->
+<section id="capacity" class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6">100 kg of mustard seed — what you get</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200 shadow-sm">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Output</th>
+            <th class="px-4 py-3 text-left font-semibold">Kachi Ghani cold-press</th>
+            <th class="px-4 py-3 text-left font-semibold">Steamed hot-press</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Crude oil yield</td><td class="px-4 py-3">30–38 kg (<strong>≈ 33–41 L</strong>)</td><td class="px-4 py-3">33–41 kg (<strong>≈ 37–46 L</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Residual oil in cake</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Cake weight</td><td class="px-4 py-3">~ 62–70 kg (by-product, sold as animal feed)</td><td class="px-4 py-3">~ 59–67 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Cycle time / 100 kg</td><td class="px-4 py-3">≈ 2 h (cold cycle, no steam)</td><td class="px-4 py-3">35–45 min + 10–15 min steam prep</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Premium</td><td class="px-4 py-3">₹20–30 / L over refined mustard</td><td class="px-4 py-3">Close to refined market price</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">Yield numbers assume clean, dry seed at 7–9 % moisture. Wet or damaged seed reduces yield by 3–7 %.</p>
+
+    <h3 class="font-display text-xl text-charcoal-900 mt-10 mb-4">Daily capacity by Haonuo model</h3>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200 text-charcoal-900">
+          <tr><th class="px-4 py-2 text-left font-semibold">Model</th><th class="px-4 py-2 text-left font-semibold">Barrel config</th><th class="px-4 py-2 text-left font-semibold">Daily throughput (hot press, 8 hr)</th><th class="px-4 py-2 text-left font-semibold">Daily oil output</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200 text-steel-700">
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN325</td><td class="px-4 py-2">Single barrel</td><td class="px-4 py-2">800 – 1,200 kg</td><td class="px-4 py-2">265 – 490 L</td></tr>
+          <tr class="bg-white"><td class="px-4 py-2 text-amber-700 font-medium">HN365</td><td class="px-4 py-2">Double barrel</td><td class="px-4 py-2">1,500 – 2,500 kg</td><td class="px-4 py-2">495 – 1,025 L</td></tr>
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN426</td><td class="px-4 py-2">Cold-press dedicated (500 t)</td><td class="px-4 py-2">≈ 400 kg cold / ≈ 1,000 kg hot</td><td class="px-4 py-2">Premium Kachi Ghani line</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">Capacity based on 8-hour shift with one operator, hot-press basis. Cold-press capacity is roughly half of hot-press on the same machine — the cold cycle runs ~ 2 h vs 35–45 min.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-steel-600 mb-4">Running mustard oil production or planning to start? Use our <a href="/roi-calculator/" class="text-amber-600 font-semibold hover:underline">ROI calculator</a> with these yield numbers, see the <a href="/products/model-comparison/" class="text-amber-600 font-semibold hover:underline">full model comparison sheet</a>, or send us your daily capacity target for a specific machine recommendation.</p>
+    <a href="/contact/" class="inline-flex items-center gap-2 bg-steel-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-steel-800 transition-colors">
+      Get a mustard press quote →
+    </a>
+  </div>
+</section>
+
+</BaseLayout>

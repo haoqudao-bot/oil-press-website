@@ -4,6 +4,11 @@ title:
   fr: Équipement de Raffinage d'Huile en Acier Inoxydable
   ar: معدات تكرير الزيت من الفولاذ المقاوم للصدأ
   id: Peralatan Pemurnian Minyak Baja Tahan Karat
+seoTitle:
+  en: Stainless Steel Oil Refining Equipment — 1-50 T/D, Food Grade
+  fr: Équipement de raffinage d'huile en acier inoxydable — 1-50 T/J, qualité alimentaire
+  ar: معدات تكرير زيت من الفولاذ المقاوم للصدأ — 1-50 طن/يوم، درجة غذائية
+  id: Peralatan pemurnian minyak baja tahan karat — 1-50 ton/hari, food grade
 description:
   en: "Food-grade stainless steel oil refining equipment for premium oil production. Meets international food safety standards with 1-50 T/D processing capacity."
   fr: "Raffinage d'huile en acier inoxydable alimentaire. Capacité 1-50 T/J, normes sécurité alimentaire."

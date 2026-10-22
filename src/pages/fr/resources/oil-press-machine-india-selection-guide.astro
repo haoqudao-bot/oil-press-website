@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'oil-press-machine-india-selection-guide');
+const t = getTranslations('fr');
+
+const title = resource?.data.title.fr || resource?.data.title.en || 'Guide de sélection des presses à huile pour l\'Inde';
+const description = resource?.data.description.fr || resource?.data.description.en || 'Guide complet pour les nouvelles huileries indiennes';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/fr' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/oil-press-machine-india-selection-guide' },
+  ],
+};
+---
+
+<BaseLayout locale="fr" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/fr/" class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/fr/resources/" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">Guide Inde</span>
+    </nav>
+  </div>
+</section>
+
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Guide marché Inde</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">{title}</h1>
+    <p class="text-steel-300 text-lg">Guide de décision complet pour les nouvelles huileries indiennes : graines oléagineuses, capacité quotidienne, Kachi Ghani ou presse à chaud, tension 415V/50Hz, ports maritimes.</p>
+    <p class="text-steel-500 text-sm mt-4">Ce guide est une ressource spécifique au marché indien. Pour les lecteurs français qui ne ciblent pas l'Inde, nous recommandons plutôt <a href="/fr/resources/hydraulic-oil-press-buying-guide/" class="text-amber-400 hover:underline">le guide général d'achat</a>.</p>
+  </div>
+</section>
+
+<!-- Oilseed cards (FR) -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">1. Quelle graine oléagineuse et quel acheteur ?</h2>
+    <div class="space-y-4">
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🟡 Moutarde / Colza — Inde du Nord</h3>
+        <p class="text-steel-600 text-sm">Huile de cuisson la plus consommée (~ 5,5 Mt / an). Rajasthan, Uttar Pradesh, Haryana, Bengale Occidental. Le produit "Kachi Ghani" (presse à froid, goût piquant) bénéficie d'une prime de ₹20–30 / L.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Rendement froid : 30–38 %</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Rendement chaud : 33–41 %</span>
+        </div>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🥜 Arachide — Inde Occidentale &amp; du Sud</h3>
+        <p class="text-steel-600 text-sm">Gujarat (premier producteur), Maharashtra, Tamil Nadu. Goût plus doux, prix stable.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Rendement : 38–45 %</span>
+        </div>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🌴 Noix de coco — Kerala</h3>
+        <p class="text-steel-600 text-sm">Huile de coco vierge pressée à froid (VCO) prime. Rendement élevé (55–65 %). Contact inox 304 recommandé.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Rendement : 55–65 %</span>
+        </div>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🌿 Sésame — Niche premium</h3>
+        <p class="text-steel-600 text-sm">Tamil Nadu, Karnataka, Gujarat. "Til oil" premium pour Ayurveda et cosmétique.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Rendement : 42–50 %</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Capacity table (FR) -->
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">2. Capacité quotidienne — modèle recommandé</h2>
+    <p class="text-steel-600 text-sm mb-4">Pour graine nettoyée, presse à chaud, 8h / jour. Presse à froid : cycles ~ 2 h — environ moitié moins de volume quotidien ; la prime Kachi Ghani compense.</p>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200 shadow-sm">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Débit quotidien</th>
+            <th class="px-4 py-3 text-left font-semibold">Huile / jour</th>
+            <th class="px-4 py-3 text-left font-semibold">Modèle Haonuo</th>
+            <th class="px-4 py-3 text-left font-semibold">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100">
+          <tr class="bg-steel-50/50"><td class="px-4 py-3">500 – 800 kg</td><td class="px-4 py-3">150 – 300 L</td><td class="px-4 py-3 text-amber-700 font-medium">HN325 simple</td><td class="px-4 py-3 text-steel-600">Le plus petit modèle</td></tr>
+          <tr><td class="px-4 py-3">800 – 1 200 kg</td><td class="px-4 py-3">250 – 450 L</td><td class="px-4 py-3 text-amber-700 font-medium">HN325 simple (chaud)</td><td class="px-4 py-3 text-steel-600">Cycle 35–45 min / batch</td></tr>
+          <tr class="bg-steel-50/50"><td class="px-4 py-3">1 500 – 2 500 kg</td><td class="px-4 py-3">450 – 800 L</td><td class="px-4 py-3 text-amber-700 font-medium">HN365 double</td><td class="px-4 py-3 text-steel-600">Deux presses en alternance</td></tr>
+          <tr><td class="px-4 py-3">> 2 500 kg</td><td class="px-4 py-3">> 800 L</td><td class="px-4 py-3 text-amber-700 font-medium">Nous contacter</td><td class="px-4 py-3 text-steel-600">Ligne complète nécessaire</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Kachi vs Hot (FR) -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">3. Kachi Ghani (presse à froid) ou presse à chaud ?</h2>
+    <p class="text-steel-600 text-sm mb-4">La même machine fait les deux — seule la préparation change.</p>
+    <div class="overflow-x-auto bg-steel-50 rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200">
+          <tr><th class="px-3 py-2 text-left">Caractéristique</th><th class="px-3 py-2 text-left">Kachi Ghani</th><th class="px-3 py-2 text-left">Presse à chaud</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200 text-steel-700">
+          <tr><td class="px-3 py-2 font-medium">Pré-traitement</td><td class="px-3 py-2">Aucun</td><td class="px-3 py-2">Vapeur 10–15 min</td></tr>
+          <tr><td class="px-3 py-2 font-medium">Température</td><td class="px-3 py-2">≤ 60 °C</td><td class="px-3 py-2">~ 80 °C</td></tr>
+          <tr><td class="px-3 py-2 font-medium">Rendement moutarde</td><td class="px-3 py-2">30–38 %</td><td class="px-3 py-2">33–41 %</td></tr>
+          <tr><td class="px-3 py-2 font-medium">Goût</td><td class="px-3 py-2">Piquant, aromatique</td><td class="px-3 py-2">Doux, léger</td></tr>
+          <tr><td class="px-3 py-2 font-medium">Prime détail</td><td class="px-3 py-2">₹20–30 / L</td><td class="px-3 py-2">Proche du raffiné</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Local specs (FR) -->
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">4. Spécificités Inde</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-steel-600">
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">Tension :</strong> 415V / 50Hz triphasé — inclus sans surcoût pour l'Inde. Moteur 2,2 kW.
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">Ports :</strong> Mundra / Nhava Sheva (Mumbai) 18–22 j. Kolkata 25–30 j. Chennai 20–25 j.
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">Document :</strong> Facture, BL, liste de colisage, certificat d'origine. Code HS : 8479.82.
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">Après-vente :</strong> Guide WhatsApp gratuit pour la première mise en service. Pièces DHL 48 h.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Budget (FR) -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. Budget — référence opérationnelle Inde</h2>
+    <p class="text-steel-600 text-sm mb-4">Nous ne publions pas de tarif FOB public. Ces chiffres sont des repères d'exploitation : le tourteau (résidu de presse) se vend en Inde comme aliment animal, il compense <strong>15–25 % du coût d'achat des graines</strong>. Calculer votre ROI sur notre <a href="/fr/roi-calculator/" class="text-amber-600 hover:underline">calculateur en ligne</a>.</p>
+    <div class="bg-steel-50 rounded-xl p-5 border border-steel-200 text-sm text-steel-700 space-y-2">
+      <li><strong>Électricité (2,2 kW, 200 h / mois) :</strong> ₹1 800 – 2 500</li>
+      <li><strong>Salaires opérateur (8 h / jour) :</strong> ₹15 000 – 22 000 / mois</li>
+      <li><strong>Maintenance / pièces d'usure :</strong> ₹2 000 – 3 500 / mois</li>
+      <li><strong>Achat graines :</strong> 85 % du coût variable total — <em>ancrer votre plan sur le prix du mandi local</em></li>
+    </div>
+  </div>
+</section>
+
+<!-- Boundary (FR) -->
+<section class="py-12 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. Ce que Haonuo ne fournit pas</h2>
+    <div class="bg-white rounded-xl p-6 border border-amber-200 text-steel-700 space-y-3 text-sm">
+      <div><strong class="text-red-600">✕</strong> Presse à vis 6-bolt / 9-bolt</div>
+      <div><strong class="text-red-600">✕</strong> Kolhu / ghani traditionnel (à main ou animal)</div>
+      <div><strong class="text-red-600">✕</strong> Presse de table ou usage domestique</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-14 bg-steel-900 text-center">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-white mb-3">Besoin d'une recommandation précise ?</h2>
+    <p class="text-steel-300 mb-6 text-sm">Graines, débit quotidien, port — un ingénieur répond en 24h avec modèle, devis et estimation maritime.</p>
+    <a href="/fr/contact/" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition-colors">
+      Demander un devis →
+    </a>
+  </div>
+</section>
+</BaseLayout>

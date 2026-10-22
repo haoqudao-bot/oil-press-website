@@ -5,6 +5,7 @@ title:
   ar: ناقل لولبي رأسي
   id: Konveyor Ulir Vertikal
 seoTitle:
+  en: Vertical Screw Conveyor — 2m, Stainless Steel, Dust-Free
   fr: Convoyeur Élévateur à Vis Vertical pour Huileries
   ar: ناقل لولبي رأسي للتغذية — لمطاحن الزيت
   id: Konveyor Ulir Vertikal untuk Pengumpanan Biji

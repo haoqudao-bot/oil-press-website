@@ -4,6 +4,11 @@ title:
   fr: Unité Intégrée d'Alimentation, de Broyage et de Torréfaction
   ar: وحدة متكاملة للتغذية والسحق والتحميص
   id: Unitas Terpadu Pengumpan Penghancur Pengsangrai
+seoTitle:
+  en: Integrated Feeder Crusher Roaster — All-in-One Seed Prep
+  fr: Unité intégrée alimentation-broyage-torréfaction — tout-en-un
+  ar: وحدة متكاملة تغذية وسحق وتحميص — تحضير البذور متكامل
+  id: Unitas Terpadu Pengumpan Penghancur Pengsangrai — semua dalam satu
 description:
   en: "Integrated feeder, crusher, and roaster combo machine. All-in-one seed preparation system that feeds, crushes, and roasts oil seeds in a single operation."
   fr: "Unité intégrée alimentation-broyage-torréfaction. Préparation graines tout-en-un en une opération."

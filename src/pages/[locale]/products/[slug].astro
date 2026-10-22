@@ -128,12 +128,12 @@ const allLd = [breadcrumbLd];
 const productLd = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: product.data.title.en,
+  name: product.data.title[currentLocale] || product.data.title.en,
   brand: { '@type': 'Brand', name: 'Haonuo' },
   category: product.data.category,
   sku: product.data.model,
   image: product.data.images[0] ? `https://www.hydoilpress.com${product.data.images[0]}` : undefined,
-  description: product.data.description?.en || `Professional ${product.data.title.en.toLowerCase()} by Haonuo Machinery.`,
+  description: product.data.description?.[currentLocale] || product.data.description?.en || `Professional ${(product.data.title[currentLocale] || product.data.title.en).toLowerCase()} by Haonuo Machinery.`,
 };
 allLd.push(productLd);
 

@@ -1,0 +1,362 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'oil-press-machine-india-selection-guide');
+const t = getTranslations('en');
+
+const title = resource?.data.title.en || 'Oil Press Machine Selection Guide for Small & Medium Oil Mills in India';
+const description = resource?.data.description.en || 'Complete decision guide for Indian oil mill startups';
+const seoKeywords = resource?.data.seoKeywords || [];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/india-oil-mill-guide-hero.webp',
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/oil-press-machine-india-selection-guide' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'What voltage do oil press machines use in India?', acceptedAnswer: { '@type': 'Answer', text: 'Haonuo hydraulic oil presses are wound to 415V / 50Hz three-phase by default for Indian industrial supply. 220V single-phase is available as a special order for small workshop use.' } },
+    { '@type': 'Question', name: 'How much space do I need for a small oil mill in India?', acceptedAnswer: { '@type': 'Answer', text: 'A single HN325 barrel press occupies approximately 2 m × 2 m (floor area including operator clearance). A double-barrel HN365 or HN426 needs about 3 m × 4 m. Allow additional floor space for a seed cleaning area, an oil filter press, and dry storage for seed and cake.' } },
+    { '@type': 'Question', name: 'How many workers do I need to run one machine?', acceptedAnswer: { '@type': 'Answer', text: 'One operator can run a single HN325 barrel press continuously during pressing cycles (35–45 min per hot-press batch). You need a second person for seed preparation — cleaning the next batch, loading, and moving oil cake to storage. Total minimum: two people, one press.' } },
+    { '@type': 'Question', name: 'Can I make both Kachi Ghani cold-pressed mustard oil and hot-pressed oil with the same machine?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. All Haonuo hydraulic presses support both cold and hot pressing. For Kachi Ghani (≤ 60 °C, no steaming) you skip the pre-steam step. For hot-pressed oil you steam seeds for 10–15 min before pressing — higher yield, milder flavour. Same tabung press, same machine, different preparation.' } },
+    { '@type': 'Question', name: 'Do you make 6-bolt screw expellers or traditional kolhu ghanis?', acceptedAnswer: { '@type': 'Answer', text: 'No. Haonuo manufactures hydraulic oil presses only. Our smallest model is the HN300 — a 300-ton industrial press with a 1.2–1.5 ton frame. We do not supply 6-bolt or 9-bolt screw expellers, hand-operated kolhu/ghani, or table-top home presses.' } },
+    { '@type': 'Question', name: 'How long does shipping take to India and what ports do you use?', acceptedAnswer: { '@type': 'Answer', text: 'Sea freight from Qingdao to Mundra or Nhava Sheva (Mumbai) takes 18–22 days. Kolkata is 25–30 days. Chennai is 20–25 days. We handle export documentation and quote FOB or CIF. Import duty and clearance are handled by your customs broker.' } },
+    { '@type': 'Question', name: 'Is GST included in the price?', acceptedAnswer: { '@type': 'Answer', text: 'No. Haonuo quotes FOB Qingdao or CIF (shipping + insurance only). Import GST and customs duty are payable by the Indian importer at the port of arrival, classified under HS code 8479.82. We provide commercial invoice, packing list, bill of lading and certificate of origin for your broker.' } },
+    { '@type': 'Question', name: 'What is the yield for mustard and groundnut with a Haonuo press?', acceptedAnswer: { '@type': 'Answer', text: 'Mustard: 30–38 % cold-press (Kachi Ghani) or 33–41 % hot-press. Groundnut: 38–45 %. Residual oil in cake is 6–8 % with slotted-barrel pressing. See the capacity section of this guide for daily throughput by model.' } },
+    { '@type': 'Question', name: 'Can I get a trial or sample pressing before buying?', acceptedAnswer: { '@type': 'Answer', text: 'We do not offer send-ahead sample pressing as a standard service. However, we can put you in contact with oil mills in Rajasthan, Gujarat and Tamil Nadu that operate Haonuo presses — you are welcome to visit and see a machine running.' } },
+    { '@type': 'Question', name: 'How do I calculate my ROI before buying?', acceptedAnswer: { '@type': 'Answer', text: 'Use our online ROI calculator at /roi-calculator/ — enter your seed type, estimated daily capacity, local seed price, local oil selling price, and any cake income. This guide also lists India-specific cost assumptions (electricity, labour, cake resale value) to plug in.' } },
+    { '@type': 'Question', name: 'Do you provide installation support in India?', acceptedAnswer: { '@type': 'Answer', text: 'Every machine ships with a full English installation manual and a step-by-step video walkthrough. Our engineers guide first commissioning via WhatsApp or video call — free of charge. For large production-line orders we can send a technician on-site; travel and accommodation are quoted separately.' } },
+    { '@type': 'Question', name: 'Can you wind the motor for Indian 415V/50Hz three-phase power?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — 415V/50Hz three-phase winding is standard for all Indian orders, at no extra cost. Tell us your grid voltage when you request a quote and we will confirm.' } },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[breadcrumbLd, faqLd, articleLd]}>
+
+<!-- Breadcrumb -->
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/resources/" class="hover:text-amber-500 transition-colors">Resources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">India Oil Mill Selection Guide</span>
+    </nav>
+  </div>
+</section>
+
+<!-- Hero -->
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16 md:py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">India Market Guide</div>
+    <h1 class="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">Oil Press Machine Selection Guide for Small &amp; Medium Oil Mills in India</h1>
+    <p class="text-steel-300 text-lg leading-relaxed">Everything an Indian oil mill startup needs to decide before placing an order — seed selection, pressing method, daily capacity, 415V/50Hz electricity, port shipping, and local budget reference.</p>
+  </div>
+</section>
+
+<!-- Quick Answer Box -->
+<section class="py-10 md:py-12 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl border border-amber-200 shadow-sm p-6 md:p-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">QUICK ANSWER</span>
+        <span class="text-steel-500 text-xs">What to decide first</span>
+      </div>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mb-4">
+        Before choosing a machine, <strong>settle on two things</strong>: which oilseed you press and what daily output you need. Haonuo hydraulic presses are wound for <strong>415V / 50Hz three-phase</strong> and ship to Mundra, Nhava Sheva (Mumbai), Kolkata or Chennai in <strong>18–30 days</strong>. Daily output runs from <strong>≈ 150 L of mustard oil per day</strong> (500–800 kg of seed) on a single-barrel HN325 up to <strong>450–800 L</strong> (1,500–2,500 kg of seed) on the double-barrel HN365 — with the HN426 cold-press specialist and 620-ton HN500 flagship above that. Use the <a href="#capacity" class="text-amber-600 font-semibold underline">model table below</a> to map your target output.
+      </p>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <a href="#oilseed-choice" class="bg-steel-100 hover:bg-steel-200 text-charcoal-900 px-4 py-2 rounded-lg font-medium transition-colors">1. Choose oilseed</a>
+        <a href="#capacity" class="bg-steel-100 hover:bg-steel-200 text-charcoal-900 px-4 py-2 rounded-lg font-medium transition-colors">2. Match capacity to model</a>
+        <a href="#kachi-vs-hot" class="bg-steel-100 hover:bg-steel-200 text-charcoal-900 px-4 py-2 rounded-lg font-medium transition-colors">3. Kachi Ghani or hot press?</a>
+        <a href="#budget" class="bg-steel-100 hover:bg-steel-200 text-charcoal-900 px-4 py-2 rounded-lg font-medium transition-colors">4. Budget &amp; costs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1. Choose oilseed -->
+<section id="oilseed-choice" class="py-12 md:py-16 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-4">1. Which oilseed are you pressing, and who buys the oil?</h2>
+    <p class="text-steel-600 leading-relaxed mb-8">Start here. Indian cooking oil markets are not one market — each oilseed has a different consumer, a different state, a different price premium. Pressing the wrong oil for your location or your buyer means fighting an uphill price war. These are the four oilseeds we see most commonly in Haonuo orders from India.</p>
+
+    <div class="space-y-4">
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🟡 Mustard / Rapeseed — North India staple</h3>
+        <p class="text-steel-600 mb-3">India's most widely consumed cooking oil (~ 5.5 million tonnes / year). Rajasthan, Uttar Pradesh, Haryana and West Bengal are the major states. Consumers in these states prefer the pungent, unrefined "kachi ghani" cold-pressed product which carries a <strong>₹20–30 / litre premium</strong> over refined mustard oil.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Yield (cold): 30–38 %</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Yield (hot): 33–41 %</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Pungent flavour = premium</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">See → <a href="/solutions/mustard-oil-pressing/" class="text-amber-600 font-medium">Mustard Oil Pressing Solution</a></span>
+        </div>
+      </div>
+
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🥜 Groundnut / Peanut — Western &amp; Southern India</h3>
+        <p class="text-steel-600 mb-3">Gujarat (India's largest producer), Maharashtra, Tamil Nadu and Andhra Pradesh dominate. Groundnut oil is milder than mustard and sells at ₹130–180 / litre refined; cold-pressed unrefined fetches more in Gujarat's local retail markets. Good all-round oil with stable demand.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Yield: 38–45 %</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Mild, neutral flavour</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">See → <a href="/solutions/peanut-oil-pressing/" class="text-amber-600 font-medium">Peanut Oil Pressing Solution</a></span>
+        </div>
+      </div>
+
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🌴 Coconut — Kerala &amp; South India</h3>
+        <p class="text-steel-600 mb-3">Kerala is India's coconut heartland. Consumers here strongly prefer cold-pressed virgin coconut oil (VCO). Copra presses at 55–60 %; fresh grated coconut at 30–40 % (wet basis). Cold-pressed VCO needs stainless-steel contact parts to avoid coconut water corrosion — specify 304 SS when ordering if you plan to press coconut regularly.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Yield: 30–40 % fresh / 55–60 % copra</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">VCO premium market</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">304 SS recommended</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">See → <a href="/solutions/coconut-oil-pressing/" class="text-amber-600 font-medium">Coconut Oil Pressing Solution</a></span>
+        </div>
+      </div>
+
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🌿 Sesame — Niche premium &amp; export</h3>
+        <p class="text-steel-600 mb-3">Tamil Nadu, Karnataka and Gujarat produce most of India's sesame. "Til oil" (cold-pressed sesame) commands premium prices in Ayurveda, South Indian cuisine and cosmetics. Smaller volume than mustard or groundnut but consistent. Yield is highest of common Indian oils.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Yield: 42–50 %</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">Premium niche market</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">See → <a href="/solutions/sesame-oil-pressing/" class="text-amber-600 font-medium">Sesame Oil Pressing Solution</a></span>
+        </div>
+      </div>
+    </div>
+    <p class="text-steel-600 leading-relaxed mt-6"><strong>Planning to press more than one oilseed?</strong> Most mills start with one and add a second within the first year. Every Haonuo press handles all common oilseeds — your machine choice does not lock you in; only the pre-treatment changes.</p>
+  </div>
+</section>
+
+<!-- 2. Capacity table -->
+<section id="capacity" class="py-12 md:py-16 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-4">2. The four models we ship to India — and what each one produces per day</h2>
+    <p class="text-steel-600 leading-relaxed mb-8">Numbers below assume cleaned, dry mustard or groundnut on an 8-hour shift. One thing to plan around: <strong>cold-press cycles run about 2 hours per batch versus 35–45 minutes hot</strong>, so a Kachi Ghani cold-press line produces roughly half the daily volume of a hot-press line on the same machine — the ₹20–30/L retail premium is what offsets that. Treat these as planning figures; tell us your seed and target tons per day and we will calculate your exact throughput.</p>
+
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200 shadow-sm mb-4">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Model</th>
+            <th class="px-4 py-3 text-left font-semibold">Force</th>
+            <th class="px-4 py-3 text-left font-semibold">Best for</th>
+            <th class="px-4 py-3 text-left font-semibold">Daily throughput (seed, 8 h)*</th>
+            <th class="px-4 py-3 text-left font-semibold">≈ Oil per day (mustard, hot)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100">
+          <tr class="bg-steel-50/50"><td class="px-4 py-3 font-medium text-amber-700">HN325</td><td class="px-4 py-3 text-steel-700">325 t</td><td class="px-4 py-3 text-steel-600">Entry &amp; all-purpose mills; floor area ~ 2 m × 2 m</td><td class="px-4 py-3 font-medium text-charcoal-900">500 – 1,200 kg</td><td class="px-4 py-3 text-steel-700">150 – 450 L</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-amber-700">HN365</td><td class="px-4 py-3 text-steel-700">365 t</td><td class="px-4 py-3 text-steel-600">Higher daily volume; double barrel alternates press &amp; load</td><td class="px-4 py-3 font-medium text-charcoal-900">1,500 – 2,500 kg</td><td class="px-4 py-3 text-steel-700">450 – 800 L</td></tr>
+          <tr class="bg-steel-50/50"><td class="px-4 py-3 font-medium text-amber-700">HN426</td><td class="px-4 py-3 text-steel-700">500 t</td><td class="px-4 py-3 text-steel-600">Cold-pressed premium lines — Kachi Ghani, coconut, walnut; also runs hot</td><td class="px-4 py-3 font-medium text-charcoal-900">≈ 400 kg cold / ≈ 1,000 kg hot</td><td class="px-4 py-3 text-steel-700">Premium retail segment</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-amber-700">HN500</td><td class="px-4 py-3 text-steel-700">620 t</td><td class="px-4 py-3 text-steel-600">Industrial scale; hardest in-shell materials; single or double barrel</td><td class="px-4 py-3 font-medium text-charcoal-900">Sized to your target tons/day</td><td class="px-4 py-3 text-steel-700">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500">* Hot-press basis unless noted. Need more than an HN500 delivers? Multi-machine lines are common — <a href="/contact/" class="text-amber-600 hover:underline">talk to us</a>. See the <a href="/products/model-comparison/" class="text-amber-600 hover:underline">full model comparison sheet</a> for barrel dimensions, pressure and motor kW.</p>
+  </div>
+</section>
+
+<!-- 3. Kachi vs Hot -->
+<section id="kachi-vs-hot" class="py-12 md:py-16 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-4">3. Kachi Ghani cold press or hot press? Same machine, different process.</h2>
+    <p class="text-steel-600 leading-relaxed mb-8">Many first-time mill owners assume cold-pressed and hot-pressed oil need two separate machines. They do not. <strong>One press runs both processes</strong> — you only change what happens to the seed <em>before</em> it enters the tabung press. Which process you run on a given day depends entirely on who buys your oil.</p>
+
+    <div class="overflow-x-auto bg-steel-50 rounded-2xl border border-steel-200 shadow-sm mb-4">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200 text-charcoal-900">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Feature</th>
+            <th class="px-4 py-3 text-left font-semibold">Kachi Ghani cold press</th>
+            <th class="px-4 py-3 text-left font-semibold">Hot press (steamed)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Pre-treatment</td><td class="px-4 py-3 text-steel-700">None — clean, dry seed goes straight in</td><td class="px-4 py-3 text-steel-700">Steam 10–15 min at ~ 90 °C</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Press temperature</td><td class="px-4 py-3 text-steel-700">≤ 60 °C (ambient) — "cold press" by FSSAI</td><td class="px-4 py-3 text-steel-700">~ 80 °C after steaming</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Mustard yield</td><td class="px-4 py-3 text-steel-700">30–38 %</td><td class="px-4 py-3 text-steel-700">33–41 %</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Residual oil in cake</td><td class="px-4 py-3 text-steel-700">6–8 %</td><td class="px-4 py-3 text-steel-700">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Flavour profile</td><td class="px-4 py-3 text-steel-700">Full pungency, nutty aroma</td><td class="px-4 py-3 text-steel-700">Milder, lighter taste</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Retail premium</td><td class="px-4 py-3 text-steel-700">₹20–30 / L over refined</td><td class="px-4 py-3 text-steel-700">Close to refined market price</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Batch cycle time</td><td class="px-4 py-3 text-steel-700">~ 2 h / 100 kg batch — slower by design</td><td class="px-4 py-3 text-steel-700">35–45 min + 10–15 min steam prep</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-steel-600 leading-relaxed mt-6">
+      <strong>Practical note:</strong> Many bottlers in Rajasthan and Gujarat run a single Haonuo press in both modes — Kachi Ghani batches in the morning for premium retail, hot-pressed batches in the afternoon for refined bulk oil. No configuration change required on the machine itself, just a steamer (for hot-press batches) upstream. This is the "hybrid" setup that Haonuo's Indian customers most commonly ask for.
+    </p>
+  </div>
+</section>
+
+<!-- 4. India local specs -->
+<section class="py-12 md:py-16 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-4">4. India-specific: voltage, ports, shipping and customs</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-xl p-6 border border-steel-200">
+        <div class="text-2xl mb-3">⚡</div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">Voltage: 415V / 50Hz three-phase (standard)</h3>
+        <p class="text-sm text-steel-600 leading-relaxed">All Haonuo hydraulic oil presses are wound to <strong>415V / 50Hz three-phase</strong> at no extra charge when the order is for India. This matches the standard industrial supply across all Indian states. Single-phase 220V / 50Hz is available for small workshop orders — mention this when requesting a quote. Every model runs on a 2.2 kW motor, so a 5 KVA uninterrupted power supply or generator covers even the smallest grid-insecure locations.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-steel-200">
+        <div class="text-2xl mb-3">🚢</div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">Ports and transit</h3>
+        <div class="text-sm text-steel-600 space-y-2">
+          <p><strong>Mundra (Gujarat)</strong> — Qingdao → Mundra: 18–22 days. Best for Rajasthan, Gujarat, Haryana.</p>
+          <p><strong>Nhava Sheva / JNPT (Mumbai)</strong> — Qingdao → Mumbai: 18–22 days. Best for Maharashtra, Goa.</p>
+          <p><strong>Kolkata</strong> — Qingdao → Kolkata: 25–30 days. Best for West Bengal, Odisha, Northeast India.</p>
+          <p><strong>Chennai</strong> — Qingdao → Chennai: 20–25 days. Best for Tamil Nadu, Kerala, Karnataka.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-steel-200">
+        <div class="text-2xl mb-3">📋</div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">Export documentation</h3>
+        <p class="text-sm text-steel-600 leading-relaxed">Every shipment includes: commercial invoice, packing list, bill of lading (BL), certificate of origin, and HS code classification. HS heading for hydraulic oil presses is <strong>8479.82</strong>. Indian import GST and customs duty are payable by the Indian importer at the port of arrival — your local customs broker handles clearance using our export documents. Haonuo does not collect or pay GST on your behalf.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-steel-200">
+        <div class="text-2xl mb-3">🛠️</div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">After-sales and spares</h3>
+        <p class="text-sm text-steel-600 leading-relaxed">Every machine ships with an English installation manual and a step-by-step video walkthrough. Our engineers guide the first commissioning via WhatsApp or video call — free. Standard wear parts (barrel slotted rings, hydraulic seals, filters) are stocked and ship within 48 hours by DHL Express to any Indian port. On-site technician is quoted separately for production-line orders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Budget & local costs -->
+<section id="budget" class="py-12 md:py-16 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-4">5. Budget reference for India</h2>
+    <p class="text-steel-600 leading-relaxed mb-4">We do not publish a public FOB price table — the landed cost of a press varies by configuration and port. What follows are <em>operating-cost and by-product income benchmarks specific to Indian oil mills</em> you can plug into your own spreadsheet or our <a href="/roi-calculator/" class="text-amber-600 font-semibold hover:underline">ROI calculator</a>. For a general breakdown of the five factors that shape any hydraulic press quote (capacity, pressure, configuration, electricity, shipping), see our <a href="/resources/oil-press-machine-price-guide/" class="text-amber-600 font-semibold hover:underline">Price Guide 2026</a>.</p>
+
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-3">Oil cake income — offset 15–25 % of your seed purchase cost</h3>
+    <p class="text-steel-600 leading-relaxed mb-4">The solid residue after pressing (called "cake" or "meal") is high-protein animal feed. In India, local brokers buy mustard, groundnut and sesame cake at market rates that are tracked daily. With a Haonuo slotted-barrel press the residual oil in cake is <strong>6–8 %</strong>, so the cake grade is consistently high-value.</p>
+    <div class="overflow-x-auto bg-steel-50 rounded-xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200">
+          <tr><th class="px-4 py-2 text-left font-semibold">Oilseed</th><th class="px-4 py-2 text-left font-semibold">Cake protein</th><th class="px-4 py-2 text-left font-semibold">Typical local rate (example)</th><th class="px-4 py-2 text-left font-semibold">Cake per 100 kg seed</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200">
+          <tr><td class="px-4 py-2 text-charcoal-900">Mustard</td><td class="px-4 py-2 text-steel-700">38–42 %</td><td class="px-4 py-2 text-steel-700">₹35–45 / kg</td><td class="px-4 py-2 text-steel-700">~ 62–70 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-2 text-charcoal-900">Groundnut</td><td class="px-4 py-2 text-steel-700">45–50 %</td><td class="px-4 py-2 text-steel-700">₹40–50 / kg</td><td class="px-4 py-2 text-steel-700">~ 55–62 kg</td></tr>
+          <tr><td class="px-4 py-2 text-charcoal-900">Sesame</td><td class="px-4 py-2 text-steel-700">50–55 %</td><td class="px-4 py-2 text-steel-700">₹60–75 / kg</td><td class="px-4 py-2 text-steel-700">~ 50–58 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-2 text-charcoal-900">Coconut</td><td class="px-4 py-2 text-steel-700">20–25 %</td><td class="px-4 py-2 text-steel-700">₹18–25 / kg</td><td class="px-4 py-2 text-steel-700">~ 40–45 kg</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-2">Cake rates are example benchmarks; local mandi rates vary weekly. Many Indian oil mills negotiate direct contracts with poultry and dairy feed producers rather than selling on the open market — this locks in a price premium.</p>
+
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-3">Monthly operating cost benchmarks for a small mill</h3>
+    <p class="text-steel-600 leading-relaxed mb-4">Below are approximate monthly operating costs for a single HN325 barrel press running 8 hours / day, 25 days / month, pressing mustard in Rajasthan. Seed purchase is the dominant cost — do not try to run ROI with seed at an assumed flat rate; use your local mandi price.</p>
+    <div class="bg-steel-50 rounded-xl p-6 border border-steel-200">
+      <ul class="text-sm text-steel-700 space-y-2">
+        <li><strong>Electricity (2.2 kW motor, 200 hr / month):</strong> ₹1,800 – 2,500</li>
+        <li><strong>Operator wages (1 person, 8 hr / day):</strong> ₹15,000 – 22,000 (varies by state)</li>
+        <li><strong>Maintenance &amp; wear parts budget:</strong> ₹2,000 – 3,500 / month (slotted rings, seals, hydraulic filters)</li>
+        <li><strong>Seed purchase:</strong> ₹5,000 – 7,000 per quintal (100 kg) at mandi rates — <em>roughly 85 % of your variable cost; anchor your plan here</em></li>
+      </ul>
+      <p class="text-xs text-steel-500 mt-3">These are order-of-magnitude benchmarks only. Use <a href="/roi-calculator/" class="text-amber-600 hover:underline">Haonuo ROI calculator</a> with your actual local seed and oil prices. Cake resale income significantly improves payback — plug that in on the calculator's by-product line.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Boundary -->
+<section class="py-12 md:py-16 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-4">6. What Haonuo does NOT supply — important boundary</h2>
+      <p class="text-steel-600 leading-relaxed mb-6">Before you contact us: Haonuo manufactures hydraulic oil presses only. We explicitly do not supply equipment in three categories that are commonly searched in India. Saving you a conversation.</p>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <span class="text-red-500 font-bold mt-0.5">✕</span>
+          <div>
+            <strong class="text-charcoal-900">6-bolt and 9-bolt screw expellers</strong> — small screw-type oil presses named after the bolts that clamp the pressing cage; a common design in village-level mills across India. They are a different machine category from hydraulic presses. If your planned daily output is under 500 kg, a screw expeller may actually suit your scale better — Haonuo does not make them, and we would rather tell you that than sell you the wrong machine. Our smallest press is the HN300 (300-ton, Ø300 mm barrel, ~ 60 kg batches).
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-red-500 font-bold mt-0.5">✕</span>
+          <div>
+            <strong class="text-charcoal-900">Traditional kolhu / ghani (hand or animal operated)</strong> — We respect the tradition, but Haonuo presses run on 415V industrial electricity.
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-red-500 font-bold mt-0.5">✕</span>
+          <div>
+            <strong class="text-charcoal-900">Table-top and home-use oil presses</strong> — Our smallest press weighs over a ton. There is no "Haonuo home model".
+          </div>
+        </div>
+      </div>
+      <p class="text-sm text-steel-600 mt-6">If you are unsure which category your machine falls into, tell us your planned daily output and your oilseed — we will tell you honestly whether a hydraulic press fits before we quote.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-12 md:py-16 bg-steel-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-8">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faqLd.mainEntity.map((item, i) => (
+        <details class="group bg-white rounded-xl border border-steel-200 overflow-hidden">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none hover:bg-steel-100 transition-colors">
+            <span class="font-display text-lg text-charcoal-900 pr-4">{item.name}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-steel-600 leading-relaxed">{item.acceptedAnswer.text}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 md:py-20 bg-steel-900">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Need a recommendation for your exact seed and output?</h2>
+    <p class="text-steel-300 text-lg mb-8">Send us your oilseed, target daily kg, and your nearest port — an engineer replies within 24 hours with a specific model, a shipping estimate, and an ROI working for Indian market numbers.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="inline-flex items-center justify-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
+        Get a Factory Quote for India
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://wa.me/8618957149128?text=Hello%20Haonuo%2C%20I%20need%20an%20oil%20press%20recommendation%20for%20India%20%5Bseed%2C%20daily%20kg%2C%20port%5D" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-500 transition-colors text-lg">
+        WhatsApp an Engineer
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+    <p class="text-steel-500 text-sm mt-6">Already know your model? See the <a href="/products/model-comparison/" class="text-amber-400 hover:underline">full model comparison sheet</a>.</p>
+  </div>
+</section>
+
+</BaseLayout>

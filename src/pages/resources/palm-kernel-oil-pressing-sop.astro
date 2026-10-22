@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'palm-kernel-oil-pressing-sop');
+const t = getTranslations('en');
+const title = resource?.data.title.en || 'Palm Kernel Oil Pressing SOP';
+const description = resource?.data.description.en || 'Step-by-step SOP for PKO extraction';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+  { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/palm-kernel-oil-pressing-sop' },
+]};
+---
+<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/" class="hover:text-amber-500">Home</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/resources/" class="hover:text-amber-500">Resources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">Palm Kernel Oil SOP</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Standard Operating Procedure</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">Palm Kernel Oil Pressing SOP</h1>
+    <p class="text-steel-300">Field-tested SOP for PKO extraction on Haonuo high-pressure hydraulic presses (42 MPa). Shell cracking → kernel crushing → hydraulic pressing → filtration.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">QUICK ANSWER</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Haonuo high-pressure presses (<strong>42 MPa</strong>) extract <strong>45–52 % oil yield</strong> from crushed palm kernels, with residual oil in cake <strong>6–8 %</strong>. One batch of 80–100 kg takes <strong>40–50 min</strong>. Daily throughput: <strong>650–1,000 kg</strong> (single barrel, 8 hr).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Field-tested process</h2>
+    <div class="bg-steel-50 rounded-xl p-5 border border-steel-100 mb-6">
+      <h3 class="font-display text-lg text-charcoal-900 mb-2">📌 Palm shell vs palm kernel — know the difference</h3>
+      <p class="text-steel-600 text-sm mb-2">This SOP is for <strong>palm kernel</strong> (PKO — palm kernel oil), not <strong>palm fruit</strong> (CPO — crude palm oil). They are two different products with completely different processes:</p>
+      <div class="grid sm:grid-cols-2 gap-3 text-sm">
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1">🌴 Palm fruit → CPO</div>
+          <p class="text-steel-600">The outer fleshy red/orange fruit. Requires sterilization, digestion, screw pressing, and clarification. 20–25 % yield. Most common in Indonesia and Malaysia.</p>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1">🥥 Palm kernel → PKO</div>
+          <p class="text-steel-600">The hard white nut inside the fruit. This page's subject. Requires shell cracking, kernel separation, crushing, and hydraulic pressing. 45–52 % yield. Higher value, used in cosmetics and food.</p>
+        </div>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Shell cracking &amp; kernel separation</h3><p class="text-steel-600 text-sm">Use a palm nut cracker to separate kernels from hard shells. Target kernel purity <strong>≥ 95 %</strong> — shells absorb pressure and reduce yield. Moisture <strong>6–8 %</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Kernel crushing</h3><p class="text-steel-600 text-sm">Crush kernels with a seed crusher. Fine grind (<strong>3–5 mm</strong>) exposes more oil-bearing cells — do not over-grind into powder. Optional: steam 10 min at 90 °C to soften kernels and boost yield by 2–4 %.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">High-pressure hydraulic pressing</h3><p class="text-steel-600 text-sm">Load 80–100 kg crushed kernel into the barrel. Press at <strong>42 MPa</strong> — palm kernel is a hard seed, standard 27–30 MPa will not release full yield. Cycle time: <strong>40–50 min</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Filtration &amp; settling</h3><p class="text-steel-600 text-sm">PKO is light golden. Use a filter press for bulk clarity. Allow 72 hours settling before bottling for best appearance.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">100 kg crushed palm kernel — what you get</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Output</th><th class="px-4 py-3 text-left">Number</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">PKO yield</td><td class="px-4 py-3">45–52 kg (<strong>≈ 50–58 L</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Residual oil in cake</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Cake weight (by-product)</td><td class="px-4 py-3">~ 48–55 kg (animal feed / fertilizer)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Cycle time / batch</td><td class="px-4 py-3">40–50 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4">Recommended Haonuo models</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 Cold Press Hydraulic Oil Press" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Cold-Press Hard Seed Line</h4>
+          <p class="text-sm text-steel-600">500 t / 42 MPa. Palm kernel is a hard, high-oil seed — the HN426's cold-press frame protects yield on premium cosmetic-grade oil.</p>
+        </div>
+      </a>
+      <a href="/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 Ultra High Pressure Hydraulic Oil Press" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Industrial Flagship</h4>
+          <p class="text-sm text-steel-600">620 t / 52 MPa. Scales to 1–3 ton/day lines. Best for buyers running multi-barrel production for mixed hard seeds.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">See the <a href="/solutions/palm-oil-pressing/" class="text-amber-600 hover:underline">Palm &amp; Palm Kernel Oil Solution</a> page for more background. Daily throughput for your line? <a href="/contact/" class="text-amber-600 font-semibold hover:underline">Ask our engineer</a>.</p>
+  </div>
+</section>
+</BaseLayout>

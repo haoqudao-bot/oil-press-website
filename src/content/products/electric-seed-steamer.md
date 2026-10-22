@@ -5,6 +5,8 @@ title:
   ar: بخاخة بذور كهربائية
   id: Pengukus Biji-Bijian Listrik
 seoTitle:
+  en: Electric Seed Steamer — 27 KW, 100 kg/batch, Pre-Press Conditioning
+  fr: Cuiseur vapeur électrique pour graines — 27 KW, 100 kg/par lot
   ar: بخاخة بذور كهربائية لمطاحن الزيت التجارية
   id: Pengukus Biji Listrik untuk Pabrik Minyak Komersial
 description:

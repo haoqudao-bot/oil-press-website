@@ -5,6 +5,8 @@ title:
   ar: بخاخة بذور تعمل بالحطب
   id: Pengukus Biji-Bijian Kayu
 seoTitle:
+  en: Wood-Fired Seed Steamer — Economical, Off-Grid Steaming
+  fr: Cuiseur vapeur à bois — économique, hors réseau électrique
   ar: بخاخة بذور تعمل بالحطب لمطاحن الزيت
   id: Pengukus Biji Bakar Kayu untuk Pabrik Minyak
 description:

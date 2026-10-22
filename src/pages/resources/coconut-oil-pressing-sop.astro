@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'coconut-oil-pressing-sop');
+const t = getTranslations('en');
+const title = resource?.data.title.en || 'Coconut Oil Pressing SOP';
+const description = resource?.data.description.en || 'Cold-press SOP for VCO';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+  { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/coconut-oil-pressing-sop' },
+]};
+---
+<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/" class="hover:text-amber-500">Home</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/resources/" class="hover:text-amber-500">Resources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">Coconut Oil SOP</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Standard Operating Procedure</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">Virgin Coconut Oil (VCO) Cold Pressing SOP</h1>
+    <p class="text-steel-300">Cold-press SOP for VCO production. Requires <strong>304 stainless-steel contact parts</strong> to resist coconut water corrosion — specify when ordering.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">QUICK ANSWER</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Haonuo cold-press machines (<strong>HN426</strong>, ≤ 60 °C) extract <strong>30–40 % oil from fresh grated coconut</strong> (wet basis) or <strong>55–60 % from copra</strong>, residual oil in cake 6–8 %. A 100 kg batch takes <strong>about 2 hours</strong> — cold cycles are slow by design, and premium VCO pricing offsets this. Daily throughput <strong>≈ 400 kg fresh</strong> (8 hr, single barrel).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">Two feedstock paths — same machine</h2>
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">🥥 Fresh coconut</h3>
+        <p class="text-steel-600 text-sm">De-shell, pare the brown skin, grate finely. Use within 24 hours. High moisture content (50–55 %) — yield runs 30–40 % on wet weight.</p>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">🌴 Copra (dried coconut meat)</h3>
+        <p class="text-steel-600 text-sm">Sun-dried or kiln-dried coconut, 5–7 % moisture. Stores for months and yields more per kilogram than fresh — 55–60 % vs 30–40 % (fresh is wet basis).</p>
+      </div>
+    </div>
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Cold-press process</h2>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Load 100 kg grated coconut</h3><p class="text-steel-600 text-sm">Spread evenly in tabung press. Cold-press barrel must be 304 SS — coconut water corrodes mild steel in weeks.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Press at 27–30 MPa, ≤ 60 °C (~ 2 h / batch)</h3><p class="text-steel-600 text-sm">Monitor barrel temp. VCO flavour is sensitive to heat — do not exceed 60 °C. This is the <strong>FSSAI definition of cold-pressed</strong> for coconut oil. Cold cycles run ~ 2 h per 100 kg batch.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Filter &amp; bottle</h3><p class="text-steel-600 text-sm">VCO is clear, light-coloured. Filter press gives crystal-clear result. Bottles within 24 hours for best aroma retention.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">100 kg grated coconut — what you get</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Output</th><th class="px-4 py-3 text-left">Fresh coconut</th><th class="px-4 py-3 text-left">Copra</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Crude VCO yield</td><td class="px-4 py-3">30–40 kg (wet basis)</td><td class="px-4 py-3">55–60 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Residual oil in cake</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Cycle time</td><td class="px-4 py-3">≈ 2 h</td><td class="px-4 py-3">≈ 2 h</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">Need 304 SS contact parts? Tell us when quoting — free specification change. See <a href="/solutions/coconut-oil-pressing/" class="text-amber-600 hover:underline">Coconut Oil Solution</a> page for more.</p>
+  </div>
+</section>
+</BaseLayout>

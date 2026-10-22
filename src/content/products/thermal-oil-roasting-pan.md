@@ -5,6 +5,8 @@ title:
   ar: مقلاة تحميص بالزيت الحراري
   id: Panci Sangrai Minyak Termal
 seoTitle:
+  en: Thermal Oil Roasting Pan — Even Heating for Better Flavor
+  fr: Poêle de torréfaction à huile thermique — chauffage uniforme, saveur améliorée
   ar: مقلاة تحميص بالزيت الحراري للبذور الزيتية
   id: Panci Sangrai Minyak Termal untuk Biji-Bijian
 description:

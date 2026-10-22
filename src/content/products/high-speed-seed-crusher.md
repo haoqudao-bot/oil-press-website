@@ -5,7 +5,10 @@ title:
   ar: كسارة بذور عالية السرعة
   id: Penghancur Biji-Bijian Kecepatan Tinggi
 seoTitle:
+  en: High Speed Seed Crusher — Palm Kernel & Hard-Shell Oilseeds
+  fr: Broyeur de graines à grande vitesse — noyaux de palme & graines à coque dure
   ar: كسارة بذور عالية السرعة لتجهيز البذور الزيتية
+  id: Penghancur biji berkecepatan tinggi untuk inti sawit & biji bercangkang keras
 description:
   en: "High-speed seed crusher for pre-pressing oil seed preparation. Efficiently cracks and crushes palm kernel, copra, and hard-shelled seeds before hydraulic pressing."
   fr: "Broyeur de graines rapide pour pré-pressage. Noyaux de palme et graines à coque dure."

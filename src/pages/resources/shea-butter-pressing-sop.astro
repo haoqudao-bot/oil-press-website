@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'shea-butter-pressing-sop');
+const t = getTranslations('en');
+const title = resource?.data.title.en || 'Shea Butter Pressing SOP';
+const description = resource?.data.description.en || 'Shea butter extraction SOP';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+  { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/shea-butter-pressing-sop' },
+]};
+---
+<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/" class="hover:text-amber-500">Home</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/resources/" class="hover:text-amber-500">Resources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">Shea Butter SOP</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Standard Operating Procedure</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">Shea Butter Pressing SOP — West African Production</h1>
+    <p class="text-steel-300">SOP for unrefined shea butter extraction. Shea melts at ~ 34 °C — <strong>both cold and hot pressing work</strong>, with different yield and quality outcomes. Cold-press (HN426, ≤ 60 °C) preserves premium cosmetic-grade quality; hot-press (120 °C roast) maximizes yield for food-grade production.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">QUICK ANSWER</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Haonuo presses extract <strong>40–48 % yield</strong> from shea nuts. Two production paths: <strong>cold-press</strong> on HN426 (≤ 60 °C, 40–43 % yield, cosmetic-grade premium) and <strong>hot-press</strong> with 120 °C roast (45–48 % yield, food-grade). Batch 80–100 kg, cycle <strong>45–55 min hot / ≈ 2 h cold</strong>. Residual oil in cake <strong>6–8 %</strong>.</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Cold vs hot — two production paths</h2>
+    <p class="text-steel-600 mb-6">Shea butter melts at <strong>34–38 °C</strong>, so unlike mustard or groundnut, its behaviour differs sharply depending on press temperature. <strong>At 40 °C and above</strong>, the fat softens enough for hydraulic pressing — this is why cold-press HN426 works for shea (its ≤ 60 °C operating range is above the melting point). The trade-off is yield: cold-press keeps more unsaturated fat intact (cosmetic-grade premium) but releases slightly less total fat. Hot-press at 120 °C maximizes yield (food-grade bulk) but darkens the butter and lowers vitamin content.</p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded">COLD-PRESS</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">HN426 — cosmetic-grade</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• Pre-treatment: light roast 40–50 °C (optional), then grind</li>
+          <li>• Press temp: ≤ 60 °C</li>
+          <li>• Cycle: ≈ 2 h / 100 kg batch</li>
+          <li>• Yield: <strong>40–43 %</strong> (cleaner fat, higher premium)</li>
+          <li>• Target buyer: cosmetic companies, organic retailers</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 rounded-xl p-5 border border-amber-200">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-amber-200 text-amber-800 text-xs font-semibold px-2 py-1 rounded">HOT-PRESS</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">Any Haonuo press — food-grade</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• Pre-treatment: roast 25–30 min at <strong>120 °C</strong></li>
+          <li>• Press temp: ~ 80 °C after roasting</li>
+          <li>• Cycle: 45–55 min / 100 kg batch</li>
+          <li>• Yield: <strong>45–48 %</strong> (maximum total fat)</li>
+          <li>• Target buyer: food processors, bulk exporters</li>
+        </ul>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Crack &amp; clean shea nuts</h3><p class="text-steel-600 text-sm">Remove shells and foreign matter. Sort by size — uniform size = uniform roasting.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Roast 25–30 min at <strong>120 °C</strong> (hot-press) or skip (cold-press)</h3><p class="text-steel-600 text-sm"><strong>Hot-press:</strong> traditional wood-fired or electric roaster at 120 °C — this is non-negotiable for maximum yield, as shea fat liquefies fully only above 100 °C. <strong>Cold-press:</strong> skip roasting or do a light 40–50 °C warm-up only. Roasting browns the nuts, softens cell walls, and lowers fat viscosity. Do not burn.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Grind into fine paste</h3><p class="text-steel-600 text-sm">Seed crusher or stone mill. Target particle size <strong>≤ 3 mm</strong>. Shea paste is malleable, not powdery — this is correct.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Hydraulic pressing</h3><p class="text-steel-600 text-sm">Load 80–100 kg paste. <strong>Hot-press:</strong> 35–42 MPa, cycle 45–55 min, butter flows at ~ 80 °C. <strong>Cold-press (HN426):</strong> ≤ 60 °C, cycle ≈ 2 h, butter flows at ~ 50 °C. Cold-press yield is 40–43 % vs 45–48 % hot-press, but the premium cosmetic-grade quality justifies it.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">5</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Filter &amp; cool</h3><p class="text-steel-600 text-sm">Shea butter solidifies at room temperature. Filter while warm (~ 40 °C), then pour into moulds and let set.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">100 kg shea nut paste — what you get (cold vs hot)</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Output</th><th class="px-4 py-3 text-left">Cold-press (HN426, ≤ 60 °C)</th><th class="px-4 py-3 text-left">Hot-press (120 °C roast)</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Crude shea butter yield</td><td class="px-4 py-3">40–43 kg</td><td class="px-4 py-3">45–48 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Residual oil in cake</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Cake (by-product)</td><td class="px-4 py-3">~ 57–60 kg (fertilizer)</td><td class="px-4 py-3">~ 52–55 kg (fertilizer)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Cycle time / batch</td><td class="px-4 py-3">≈ 2 h</td><td class="px-4 py-3">45–55 min</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Butter grade</td><td class="px-4 py-3">Cosmetic-grade premium</td><td class="px-4 py-3">Food-grade bulk</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4">Recommended Haonuo models</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 Cold Press Hydraulic Oil Press" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Cold &amp; Hot Shea Line</h4>
+          <p class="text-sm text-steel-600">500 t / 42 MPa. Handles both cold-press cosmetic-grade and hot-press food-grade shea. The 2 h cold cycle keeps unsaturated fats intact for premium buyer pricing.</p>
+        </div>
+      </a>
+      <a href="/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 Ultra High Pressure Hydraulic Oil Press" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Industrial Scale</h4>
+          <p class="text-sm text-steel-600">620 t / 52 MPa. For multi-ton/day shea butter operations. Handles harder shell varieties with consistent residual oil in cake.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">See the <a href="/solutions/shea-butter-pressing/" class="text-amber-600 hover:underline">Shea Butter Solution</a> page for more. Ghana / Nigeria / Burkina Faso references available.</p>
+  </div>
+</section>
+</BaseLayout>

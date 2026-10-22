@@ -4,6 +4,11 @@ title:
   fr: Pré-presse oléagineuse pour prétraitement d'huilerie
   ar: مكبس البذور الزيتية المسبق للمعالجة الأولية
   id: Pre-press Biji Minyak untuk Pra-Pengolahan
+seoTitle:
+  en: Oilseed Screw Pre-Press — 35-40% First Pass Extraction
+  fr: Pré-presse à vis oléagineuse — extraction 35-40 % au premier passage
+  ar: مكبس زيت لولبي أولي — استخراج 35-40% في المرحلة الأولى
+  id: Pre-press biji minyak ulir — ekstraksi 35-40% tahap pertama
 description:
   en: "Screw oilseed pre-press that removes 35–40% of oil in a first pass and raises total plant yield by 3–5%. 7.5 kW (500 kg/h) or 11 kW (750 kg/h), ready for mustard, rapeseed and groundnut lines."
   fr: "Pré-presse à vis qui extrait 35–40 % de l'huile en premier passage et augmente le rendement global de 3–5 %. 7,5 kW (500 kg/h) ou 11 kW (750 kg/h)."

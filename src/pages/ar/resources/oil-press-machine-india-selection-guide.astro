@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'oil-press-machine-india-selection-guide');
+const t = getTranslations('ar');
+
+const title = resource?.data.title.ar || resource?.data.title.en || 'دليل اختيار مكابس الزيت لمصانع الزيت في الهند';
+const description = resource?.data.description.ar || resource?.data.description.en || 'دليل كامل لمصانع الزيت الجديدة في الهند';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.nav.home, item: 'https://www.hydoilpress.com/ar' },
+    { '@type': 'ListItem', position: 2, name: t.resources.title, item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/oil-press-machine-india-selection-guide' },
+  ],
+};
+---
+
+<BaseLayout locale="ar" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/ar/" class="hover:text-amber-500 transition-colors">{t.nav.home}</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/ar/resources/" class="hover:text-amber-500 transition-colors">{t.resources.title}</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">دليل السوق الهندي</span>
+    </nav>
+  </div>
+</section>
+
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right" dir="rtl">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">دليل سوق الهند</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">{title}</h1>
+    <p class="text-steel-300 text-lg">دليل قرارات شامل لمصانع الزيت الصغيرة والمتوسطة في الهند — بذور الزيت، السعة اليومية، Kachi Ghani مقابل الضغط الساخن، جهد 415V/50Hz، الشحن المينائي.</p>
+    <p class="text-steel-500 text-sm mt-4">هذا الدليل خاص بسوق الهند. للقراء العرب في أسواق أخرى، نوصي بدليل الشراء العام.</p>
+  </div>
+</section>
+
+<!-- Oilseed cards (AR) -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">1. بذور الزيت والمشتري</h2>
+    <div class="space-y-4">
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🟡 الخردل — شمال الهند</h3>
+        <p class="text-steel-600 text-sm">أكثر زيوت الطبخ استهلاكًا (~ 5.5 مليون طن / سنة). راجستان، أوتار براديش، هاريانا، البنغال الغربية. منتج "كاتشي غاني" (ضغط بارد، طعم حاد) يستحق قسط ₹20–30 / لتر.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">العائد البارد : 30–38 %</span>
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">العائد الساخن : 33–41 %</span>
+        </div>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🥜 الفول السوداني — غرب وجنوب الهند</h3>
+        <p class="text-steel-600 text-sm">غوجارات (أكبر منتج)، مهاراشترا، تاميل نادو. طعم معتدل، سعر مستقر.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">العائد : 38–45 %</span>
+        </div>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🌴 جوز الهند — كيرالا</h3>
+        <p class="text-steel-600 text-sm">زيت جوز الهند البكر المضغوط باردًا (VCO) عالي القيمة. العائد 55–65 %. توصي الفولاذ المقاوم للصدأ 304 للتلامس.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">العائد : 55–65 %</span>
+        </div>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <h3 class="font-display text-xl text-charcoal-900 mb-2">🌿 السمسم — فئة مميزة</h3>
+        <p class="text-steel-600 text-sm">تاميل نادو، كارناتاكا، غوجارات. "زيت تيل" عالي القيمة للأيورفيدا ومستحضرات التجميل.</p>
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="bg-white border border-steel-200 px-3 py-1 rounded-full">العائد : 42–50 %</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Capacity table (AR) -->
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">2. السعة اليومية — النموذج الموصى به</h2>
+    <p class="text-steel-600 text-sm mb-4">بذور نظيفة، ضغط ساخن، 8 ساعات / يوم. الضغط البارد : دورة ~ ساعتين — نصف الإنتاج اليومي تقريباً ; قسط كاتشي غاني يعوض ذلك.</p>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200 shadow-sm" dir="ltr">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">الإنتاج اليومي</th>
+            <th class="px-4 py-3 text-left font-semibold">زيت / يوم</th>
+            <th class="px-4 py-3 text-left font-semibold">نموذج Haonuo</th>
+            <th class="px-4 py-3 text-left font-semibold">ملاحظات</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-left">
+          <tr class="bg-steel-50/50"><td class="px-4 py-3">500 – 800 كجم</td><td class="px-4 py-3">150 – 300 لتر</td><td class="px-4 py-3 text-amber-700 font-medium">HN325 أسطوانة واحدة</td><td class="px-4 py-3 text-steel-600">أصغر نموذج نشحنه</td></tr>
+          <tr><td class="px-4 py-3">800 – 1,200 كجم</td><td class="px-4 py-3">250 – 450 لتر</td><td class="px-4 py-3 text-amber-700 font-medium">HN325 ساخن</td><td class="px-4 py-3 text-steel-600">دورة 35–45 دقيقة</td></tr>
+          <tr class="bg-steel-50/50"><td class="px-4 py-3">1,500 – 2,500 كجم</td><td class="px-4 py-3">450 – 800 لتر</td><td class="px-4 py-3 text-amber-700 font-medium">HN365 مزدوج</td><td class="px-4 py-3 text-steel-600">أسطوانتان بالتناوب</td></tr>
+          <tr><td class="px-4 py-3">> 2,500 كجم</td><td class="px-4 py-3">> 800 لتر</td><td class="px-4 py-3 text-amber-700 font-medium">تواصل معنا</td><td class="px-4 py-3 text-steel-600">تحتاج خط إنتاج كامل</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Kachi vs Hot (AR) -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">3. كاتشي غاني (ضغط بارد) مقابل الضغط الساخن</h2>
+    <p class="text-steel-600 text-sm mb-4">نفس الآلة تعمل بالطريقتين — التحضير فقط يتغير.</p>
+    <div class="overflow-x-auto bg-steel-50 rounded-2xl border border-steel-200" dir="ltr">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200">
+          <tr><th class="px-3 py-2 text-left">الميزة</th><th class="px-3 py-2 text-left">كاتشي غاني</th><th class="px-3 py-2 text-left">ضغط ساخن</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200 text-steel-700 text-left">
+          <tr><td class="px-3 py-2 font-medium">المعالجة المسبقة</td><td class="px-3 py-2">لا شيء</td><td class="px-3 py-2">بخار 10–15 دقيقة</td></tr>
+          <tr><td class="px-3 py-2 font-medium">درجة الحرارة</td><td class="px-3 py-2">≤ 60 °م</td><td class="px-3 py-2">~ 80 °م</td></tr>
+          <tr><td class="px-3 py-2 font-medium">عائد الخردل</td><td class="px-3 py-2">30–38 %</td><td class="px-3 py-2">33–41 %</td></tr>
+          <tr><td class="px-3 py-2 font-medium">النكهة</td><td class="px-3 py-2">حادة، عطرية</td><td class="px-3 py-2">معتدلة، خفيفة</td></tr>
+          <tr><td class="px-3 py-2 font-medium">قسط البيع</td><td class="px-3 py-2">₹20–30 / لتر</td><td class="px-3 py-2">قريب من المكرر</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Local specs (AR) -->
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">4. تفاصيل خاصة بالهند</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-steel-600">
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">الجهد الكهربائي :</strong> 415V / 50Hz ثلاثي الطور — مجاني للهند. محرك 2.2 كيلوواط.
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">الموانئ :</strong> Mundra / Nhava Sheva (مومباي) 18–22 يوم. Kolkata 25–30 يوم. Chennai 20–25 يوم.
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">الوثائق :</strong> فاتورة تجارية، بوليصة شحن، قائمة تعبئة، شهادة منشأ. كود HS 8479.82.
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-steel-200">
+        <strong class="text-charcoal-900">ما بعد البيع :</strong> دعم WhatsApp مجاني للتشغيل الأول. قطع غيار DHL 48 ساعة.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Budget (AR) -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">5. الميزانية — مرجع تشغيل الهندي</h2>
+    <p class="text-steel-600 text-sm mb-4">نحن لا ننشر أسعار FOB عامة. الأرقام أدناه هي مؤشرات تشغيلية : الكيك (بقايا الزيت بعد الضغط) يباع في الهند كعلف حيواني، يعادل <strong>15–25 % من تكلفة شراء البذور</strong>. احسب عائد استثمارك على حاسبتنا عبر الإنترنت.</p>
+    <div class="bg-steel-50 rounded-xl p-5 border border-steel-200 text-sm text-steel-700 space-y-2">
+      <li><strong>الكهرباء (2.2 كيلوواط، 200 ساعة / شهر) :</strong> ₹1,800 – 2,500</li>
+      <li><strong>أجور العمال :</strong> ₹15,000 – 22,000 / شهر</li>
+      <li><strong>الصيانة وقطع الغيار :</strong> ₹2,000 – 3,500 / شهر</li>
+      <li><strong>شراء البذور :</strong> 85 % من التكلفة المتغيرة — <em>اعتمد على سعر السوق المحلي</em></li>
+    </div>
+  </div>
+</section>
+
+<!-- Boundary (AR) -->
+<section class="py-12 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">6. ما لا توفره Haonuo</h2>
+    <div class="bg-white rounded-xl p-6 border border-amber-200 text-steel-700 space-y-3 text-sm">
+      <div><strong class="text-red-600">✕</strong> مكابس لولبية 6-bolt / 9-bolt</div>
+      <div><strong class="text-red-600">✕</strong> كولهو / غاني التقليدي (يدوي أو حيواني)</div>
+      <div><strong class="text-red-600">✕</strong> مكابس طاولة أو استخدام منزلي</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-14 bg-steel-900 text-center" dir="rtl">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-white mb-3">تحتاج توصية دقيقة؟</h2>
+    <p class="text-steel-300 mb-6 text-sm">بذور، إنتاج يومي، ميناء — مهندس يرد في 24 ساعة بنموذج، تسعير وتقدير الشحن.</p>
+    <a href="/ar/contact/" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition-colors">
+      طلب عرض سعر →
+    </a>
+  </div>
+</section>
+</BaseLayout>
