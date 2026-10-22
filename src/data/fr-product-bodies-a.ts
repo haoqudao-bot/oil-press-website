@@ -3,14 +3,14 @@ export const frProductBodiesA: Record<string, string> = {
 
 La Presse à Huile Hydraulique Standard HN325 est notre presse à huile hydraulique la plus populaire, adoptée par les producteurs d'huile du monde entier pour son excellent rapport qualité-prix et ses performances fiables. En tant que modèle standard à course prolongée de notre gamme, elle est dotée d'une course de cylindre de 850 mm qui presse jusqu'au fond, traitant facilement des lots de 5 à 100 kg. Que vous soyez un producteur à petite échelle ou que vous exploitiez une opération de taille moyenne, la HN325 offre des résultats d'extraction d'huile constants sur une large gamme de matières.
 
-Le cylindre HN325 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 27,78 MPa, permettant à la plupart des graines oléagineuses conventionnelles d'être entièrement pressées en un seul cycle. Cela peut contribuer à un rendement en huile plus élevé et à une huile résiduelle plus faible dans le gâteau. Le retour sur investissement réel dépend de nombreux facteurs, notamment les conditions du marché et l'efficacité opérationnelle.
+Le cylindre HN325 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du tourteau de 27,78 MPa, permettant à la plupart des graines oléagineuses conventionnelles d'être entièrement pressées en un seul cycle. Cela peut contribuer à un rendement en huile plus élevé et à une huile résiduelle plus faible dans le tourteau. Le retour sur investissement réel dépend de nombreux facteurs, notamment les conditions du marché et l'efficacité opérationnelle.
 
 ## Avantages Clés
 
 - **Rapport Qualité-Prix Populaire** — L'un de nos modèles les plus commandés, offrant un rapport prix-performance compétitif pour le pressage d'huile polyvalent.
 - **Pressage à Course Complète** — La course de cylindre de 850 mm presse jusqu'au fond, garantissant une extraction complète de l'huile de chaque lot.
 - **Capacité Polyvalente** — Traite de 5 à 100 kg par lot, adapté aussi bien aux productions petites que moyennes.
-- **Efficacité à Cycle Unique** — La pression de gâteau de 27,78 MPa est suffisante pour que la plupart des matières conventionnelles soient entièrement pressées en un seul cycle.
+- **Efficacité à Cycle Unique** — La pression de tourteau de 27,78 MPa est suffisante pour que la plupart des matières conventionnelles soient entièrement pressées en un seul cycle.
 - **Productivité à Double Fût** — La configuration à double fût avec rails coulissants doubles permet de charger un fût pendant que l'autre est en cours de pressage, doublant presque votre débit.
 - **Fût Personnalisable** — Le diamètre et la hauteur du fût peuvent être adaptés à vos exigences spécifiques en matière de matières.
 
@@ -18,7 +18,7 @@ Le cylindre HN325 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 - **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile nettement supérieure aux fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Pas de colmatage, pas de nettoyage entre les lots.
 - **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haute-basse. Pression de service jusqu'à 60 MPa avec retour rapide du cylindre.
-- **Retrait du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du gâteau — même après un pressage de nuit.
+- **Retrait du Tourteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du tourteau — même après un pressage de nuit.
 - **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour une longue durée de service sous une force de pressage de 325 tonnes. La durée de service réelle dépend des conditions de fonctionnement et de l'entretien.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement à l'huile finie en quelques minutes.
 - **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
@@ -51,14 +51,14 @@ La HN325 est adapté pour presser une grande variété de graines oléagineuses 
 
   'heavy-duty-hydraulic-oil-press': `## Aperçu
 
-La Presse à Huile Hydraulique Lourde HN355 est conçue pour les opérateurs qui exigent davantage de puissance de pressage et une plus grande durabilité. Dotée d'un cadre robuste en plaque d'acier de 3 cm d'épaisseur, ce modèle délivre une force de pressage de 360 tonnes avec une pression superficielle du gâteau de 30,15 MPa — un bond significatif par rapport au HN325 standard. Les graines oléagineuses conventionnelles sont entièrement pressées en un seul cycle, maximisant le rendement en huile et minimisant les pertes.
+La Presse à Huile Hydraulique Lourde HN355 est conçue pour les opérateurs qui exigent davantage de puissance de pressage et une plus grande durabilité. Dotée d'un cadre robuste en plaque d'acier de 3 cm d'épaisseur, ce modèle délivre une force de pressage de 360 tonnes avec une pression superficielle du tourteau de 30,15 MPa — un bond significatif par rapport au HN325 standard. Les graines oléagineuses conventionnelles sont entièrement pressées en un seul cycle, maximisant le rendement en huile et minimisant les pertes.
 
 Le cadre en acier renforcé non seulement résiste à des pressions de service plus élevées, mais assure également une stabilité structurelle à long terme sous une utilisation continue lourde. Si vos exigences de production dépassent ce que le modèle standard peut offrir, la HN355 vous apporte la marge de puissance supplémentaire dont vous avez besoin sans passer à un spécialiste du pressage à froid.
 
 ## Avantages Clés
 
 - **Cadre en Acier Lourd** — La construction en plaque d'acier de 3 cm d'épaisseur offre une rigidité supérieure et une durée de service prolongée dans des conditions exigeantes.
-- **Pression de Gâteau Supérieure** — La pression superficielle du gâteau de 30,15 MPa garantit que les matières conventionnelles sont entièrement pressées en un seul cycle, laissant moins d'huile résiduelle dans le gâteau.
+- **Pression de Tourteau Supérieure** — La pression superficielle du tourteau de 30,15 MPa garantit que les matières conventionnelles sont entièrement pressées en un seul cycle, laissant moins d'huile résiduelle dans le tourteau.
 - **Force de Pressage de 360 Tonnes** — 10 % de force en plus par rapport au HN325, vous donnant la marge nécessaire pour traiter les matières plus dures en toute confiance.
 - **Productivité à Double Fût** — La configuration à double fût avec rails coulissants doubles permet de charger un fût pendant que l'autre est en cours de pressage, augmentant significativement la production quotidienne.
 - **Extraction à Cycle Unique** — La plupart des matières conventionnelles atteignent une extraction complète de l'huile en un seul cycle de pressage, réduisant le temps de traitement et les coûts énergétiques.
@@ -67,7 +67,7 @@ Le cadre en acier renforcé non seulement résiste à des pressions de service p
 
 - **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile nettement supérieure aux fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Pas de colmatage, pas de nettoyage entre les lots.
 - **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haute-basse. Pression de service jusqu'à 63 MPa avec retour rapide du cylindre.
-- **Retrait du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du gâteau — même après un pressage de nuit.
+- **Retrait du Tourteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du tourteau — même après un pressage de nuit.
 - **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour une longue durée de service. La durée de service réelle dépend des conditions de fonctionnement et de l'entretien sous une force de pressage de 360 tonnes.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement à l'huile finie en quelques minutes.
 - **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
@@ -100,13 +100,13 @@ La HN355 excelle avec les graines oléagineuses conventionnelles et les matière
 
   'cold-press-hydraulic-oil-press': `## Aperçu
 
-La Presse à Huile Hydraulique à Froid HN426 est notre spécialiste dédié du pressage à froid, conçue pour extraire l'huile des matières délicates et à coque dure sans dégradation thermique. Avec une force de pressage de 500 tonnes et une pression superficielle du gâteau de 42 MPa, elle offre la puissance nécessaire pour presser à froid les amandes de noix, les noix en coque, les amandons d'abricot, le xanthocère, le souchet et des matières similaires exigeantes — toutes entièrement extraites en un seul cycle.
+La Presse à Huile Hydraulique à Froid HN426 est notre spécialiste dédié du pressage à froid, conçue pour extraire l'huile des matières délicates et à coque dure sans dégradation thermique. Avec une force de pressage de 500 tonnes et une pression superficielle du tourteau de 42 MPa, elle offre la puissance nécessaire pour presser à froid les amandes de noix, les noix en coque, les amandons d'abricot, le xanthocère, le souchet et des matières similaires exigeantes — toutes entièrement extraites en un seul cycle.
 
 Construite sur un cadre en plaque d'acier de 3 cm d'épaisseur, la HN426 combine robustesse structurelle et commande hydraulique de précision. Le pressage à froid préserve la saveur naturelle, l'arôme et la valeur nutritionnelle de votre huile, ce qui vous permet d'obtenir des prix premium sur le marché. Si vous produisez des huiles pressées à froid de haute valeur, cette machine est conçue pour maximiser à la fois votre rendement en huile et votre marge bénéficiaire.
 
 ## Avantages Clés
 
-- **Véritable Capacité de Pressage à Froid** — La pression superficielle du gâteau de 42 MPa extrait l'huile des matières à coque dure et délicates sans chauffage, préservant la qualité premium de l'huile.
+- **Véritable Capacité de Pressage à Froid** — La pression superficielle du tourteau de 42 MPa extrait l'huile des matières à coque dure et délicates sans chauffage, préservant la qualité premium de l'huile.
 - **Force de Pressage de 500 Tonnes** — Puissance substantielle pour traiter les matières les plus difficiles à froid, y compris les noix en coque et les amandons d'abricot, en un seul cycle.
 - **Extraction à Cycle Unique** — Les matières de pressage à froid sont entièrement pressées en un seul cycle, éliminant le besoin de repressage et économisant du temps et de l'énergie.
 - **Qualité d'Huile Premium** — Le pressage à froid conserve les antioxydants naturels, les vitamines et les composés aromatiques, vous permettant de vendre à des prix premium sur le marché.
@@ -117,7 +117,7 @@ Construite sur un cadre en plaque d'acier de 3 cm d'épaisseur, la HN426 combine
 
 - **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile nettement supérieure aux fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) — crucial pour les applications de pressage à froid où chaque point de pourcentage compte. Pas de colmatage, pas de nettoyage entre les lots.
 - **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haute-basse. Pression de service jusqu'à 70 MPa avec retour rapide du cylindre, délivrant la haute pression soutenue que les matières de pressage à froid exigent.
-- **Retrait du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du gâteau — même après un pressage de nuit de matières à coque dure.
+- **Retrait du Tourteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du tourteau — même après un pressage de nuit de matières à coque dure.
 - **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour une longue durée de service sous une force de pressage de 500 tonnes. La durée de service réelle dépend des conditions de fonctionnement et de l'entretien.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement à l'huile finie en quelques minutes.
 - **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
@@ -132,7 +132,7 @@ Construite sur un cadre en plaque d'acier de 3 cm d'épaisseur, la HN426 combine
 ### Matières Conventionnelles
 - Graine de thé, colza, arachide, soja, lin, graine de laque
 
-La HN426 traite toutes les matières ci-dessus avec un excellent rendement en huile. Pour les matières conventionnelles, la pression de gâteau élevée peut aider à réduire les taux d'huile résiduelle (les résultats varient selon la matière).
+La HN426 traite toutes les matières ci-dessus avec un excellent rendement en huile. Pour les matières conventionnelles, la pression de tourteau élevée peut aider à réduire les taux d'huile résiduelle (les résultats varient selon la matière).
 
 ## Pourquoi Choisir Notre Presse à Huile Hydraulique
 
@@ -157,7 +157,7 @@ La Presse à Huile Hydraulique Haute Pression HN480 comble le fossé entre notre
 ## Avantages Clés
 
 - **Performances Équilibrées** — Positionnée entre la HN426 et la HN500, offrant une forte force de pressage sans la prime du modèle phare.
-- **Capacité de Pressage à Froid** — Pression de gâteau suffisante pour le pressage à froid des amandes de noix, des amandons d'abricot et des matières similaires.
+- **Capacité de Pressage à Froid** — Pression de tourteau suffisante pour le pressage à froid des amandes de noix, des amandons d'abricot et des matières similaires.
 - **Application Polyvalente** — Traite à la fois les graines oléagineuses conventionnelles et les matières de pressage à froid avec un rendement en huile fiable.
 - **Économe en Énergie** — Le moteur de 2,2 KW maintient les coûts de fonctionnement bas tout en délivrant une force de pressage de qualité industrielle.
 
@@ -165,7 +165,7 @@ La Presse à Huile Hydraulique Haute Pression HN480 comble le fossé entre notre
 
 - **Fût à Fentes de Type Barre** — La conception de fût à fentes exclusive de Haonuo offre une surface d'extraction d'huile nettement supérieure aux fûts percés traditionnels. L'huile s'écoule plus rapidement et plus clairement, avec un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation). Pas de colmatage, pas de nettoyage entre les lots.
 - **Système Hydraulique Allemand** — Station de pompe hydraulique combinée ultra-haute pression avec double pompe haute-basse. Pression de service jusqu'à 72 MPa avec retour rapide du cylindre.
-- **Retrait du Gâteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du gâteau — même après un pressage de nuit.
+- **Retrait du Tourteau à 4 Crochets** — Le mécanisme innovant à 4 crochets assure un déchargement facile et fiable du tourteau — même après un pressage de nuit.
 - **Cadre en Acier à Haut Carbone** — Acier trempé à haute fréquence et traité thermiquement pour une longue durée de service. La durée de service réelle dépend des conditions de fonctionnement et de l'entretien sous une force de pressage de 560 tonnes.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé du chargement à l'huile finie en quelques minutes.
 - **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
@@ -187,7 +187,7 @@ La Presse à Huile Hydraulique Haute Pression HN480 comble le fossé entre notre
 
 La Mini Presse à Huile Hydraulique HN300 est notre presse à huile hydraulique la plus compacte et la plus accessible, spécialement conçue comme machine de pressage d'huile de sésame dédiée. Également connue sous le nom de petit moulin à huile de sésame ou presse à huile de sésame de style traditionnel, elle est légère, facile à utiliser et parfaitement adaptée à la production d'huile de sésame et de petites graines. Avec 300 tonnes de force de pressage et une pression système de 63 MPa, la HN300 offre une extraction d'huile fiable dans un encombrement réduit.
 
-Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 25 MPa, fournissant une pression suffisante pour que le sésame, l'arachide, le colza et la graine de thé soient entièrement pressés en un seul cycle. Ses dimensions globales compactes de 1100×1100×2350 mm la rendent adaptée pour les ateliers à espace limité, tandis que la configuration à fût unique de 1,2 tonne permet une installation et un déplacement faciles.
+Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du tourteau de 25 MPa, fournissant une pression suffisante pour que le sésame, l'arachide, le colza et la graine de thé soient entièrement pressés en un seul cycle. Ses dimensions globales compactes de 1100×1100×2350 mm la rendent adaptée pour les ateliers à espace limité, tandis que la configuration à fût unique de 1,2 tonne permet une installation et un déplacement faciles.
 
 ## Avantages Clés
 
@@ -195,14 +195,14 @@ Le cylindre HN300 associé à un fût de 390 mm de diamètre intérieur atteint 
 - **Spécialiste de l'Huile de Sésame** — Spécifiquement conçue et optimisée pour le pressage de l'huile de sésame, produisant une huile de sésame authentique de petit moulin avec un arôme et une saveur riches.
 - **Compacte et Légère** — À seulement 1,2 tonne (fût unique) et 1100×1100×2350 mm, elle s'intègre facilement dans les petits ateliers et nécessite un minimum d'espace au sol.
 - **Fonctionnement Facile** — La conception légère et conviviale permet aux opérateurs de tout niveau de compétence de produire une huile de haute qualité avec une formation minimale.
-- **Efficacité à Cycle Unique** — La pression de gâteau de 25 MPa est suffisante pour que le sésame et les petites graines soient entièrement pressés en un seul cycle.
+- **Efficacité à Cycle Unique** — La pression de tourteau de 25 MPa est suffisante pour que le sésame et les petites graines soient entièrement pressés en un seul cycle.
 - **Option Double Fût** — Configuration à double fût disponible pour les opérateurs souhaitant augmenter le débit sans un encombrement plus important.
 
 ## Technologie de Base
 
 - **Fût à Fentes de Type Barre** — Surface d'extraction d'huile nettement supérieure aux fûts percés, atteignant environ 2 à 3 % de rendement en huile plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) par lot.
 - **Système Hydraulique Allemand** — Pompe combinée ultra-haute pression délivrant une pression de service jusqu'à 63 MPa pour une extraction constante et puissante.
-- **Retrait du Gâteau à 4 Crochets** — Système de déchargement du gâteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage.
+- **Retrait du Tourteau à 4 Crochets** — Système de déchargement du tourteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage.
 - **Cadre en Acier à Haut Carbone** — Longue durée de service sous fonctionnement continu. La durée de service réelle dépend des conditions de fonctionnement et de l'entretien.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé avec fonctionnement à un bouton. Formation de base recommandée ; nous fournissons des tutoriels vidéo et un accompagnement à distance.
 - **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
@@ -228,15 +228,15 @@ La HN300 est adapté pour presser le sésame et autres petites graines oléagine
 
   'medium-hydraulic-oil-press': `## Aperçu
 
-La Presse à Huile Hydraulique Moyenne HN400 comble le fossé entre nos modèles standard et de pressage à froid, offrant 500 tonnes de force de pressage avec une pression superficielle du gâteau de 38 MPa. Cette machine polyvalente est adaptée au pressage à froid et fonctionne efficacement en toutes saisons sans être limitée par les conditions climatiques. Que vous traitiez des graines oléagineuses conventionnelles ou que vous vous lanciez dans la production de pressage à froid, la HN400 offre la puissance et la flexibilité dont vous avez besoin.
+La Presse à Huile Hydraulique Moyenne HN400 comble le fossé entre nos modèles standard et de pressage à froid, offrant 500 tonnes de force de pressage avec une pression superficielle du tourteau de 38 MPa. Cette machine polyvalente est adaptée au pressage à froid et fonctionne efficacement en toutes saisons sans être limitée par les conditions climatiques. Que vous traitiez des graines oléagineuses conventionnelles ou que vous vous lanciez dans la production de pressage à froid, la HN400 offre la puissance et la flexibilité dont vous avez besoin.
 
-Le cylindre HN400 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du gâteau de 38 MPa, permettant à la plupart des matières conventionnelles et semi-dures d'être entièrement pressées en un seul cycle. Sa capacité de pressage à froid signifie que vous pouvez produire des huiles pressées à froid premium à partir de graine de thé, d'amande de noix et de lin tout en préservant la saveur naturelle et la valeur nutritionnelle de votre produit.
+Le cylindre HN400 associé à un fût de 390 mm de diamètre intérieur atteint une pression superficielle du tourteau de 38 MPa, permettant à la plupart des matières conventionnelles et semi-dures d'être entièrement pressées en un seul cycle. Sa capacité de pressage à froid signifie que vous pouvez produire des huiles pressées à froid premium à partir de graine de thé, d'amande de noix et de lin tout en préservant la saveur naturelle et la valeur nutritionnelle de votre produit.
 
 ## Avantages Clés
 
 - **Capacité de Pressage à Froid Polyvalente** — Adaptée au pressage à froid, fonctionne en toutes saisons sans contraintes climatiques, préservant la qualité premium de l'huile toute l'année.
 - **Force de Pressage de 500 Tonnes** — Puissance substantielle qui comble le fossé entre les modèles standard et les modèles dédiés au pressage à froid, traitant une large gamme de matières avec aisance.
-- **Pression de Gâteau de 38 MPa** — Suffisante pour que la plupart des matières conventionnelles et semi-dures soient entièrement pressées en un seul cycle, avec des taux d'huile résiduelle inférieurs aux modèles standard.
+- **Pression de Tourteau de 38 MPa** — Suffisante pour que la plupart des matières conventionnelles et semi-dures soient entièrement pressées en un seul cycle, avec des taux d'huile résiduelle inférieurs aux modèles standard.
 - **Fonctionnement Toutes Saisons** — Conçue pour des performances fiables quelle que soit la température ambiante, assurant une production constante tout au long de l'année.
 - **Productivité à Double Fût** — La configuration à double fût avec rails coulissants doubles permet un fonctionnement continu — chargez un fût pendant que l'autre presse.
 - **Fût Personnalisable** — Le diamètre et la hauteur du fût peuvent être adaptés à vos exigences spécifiques en matière de matières.
@@ -245,7 +245,7 @@ Le cylindre HN400 associé à un fût de 390 mm de diamètre intérieur atteint 
 
 - **Fût à Fentes de Type Barre** — Surface d'extraction d'huile nettement supérieure aux fûts percés, atteignant environ 2 à 3 % de rendement en huile plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) par lot.
 - **Système Hydraulique Allemand** — Pompe combinée ultra-haute pression délivrant une pression de service jusqu'à 63 MPa pour une extraction constante et puissante.
-- **Retrait du Gâteau à 4 Crochets** — Système de déchargement du gâteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage.
+- **Retrait du Tourteau à 4 Crochets** — Système de déchargement du tourteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage.
 - **Cadre en Acier à Haut Carbone** — Longue durée de service sous fonctionnement continu. La durée de service réelle dépend des conditions de fonctionnement et de l'entretien.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé avec fonctionnement à un bouton. Formation de base recommandée ; nous fournissons des tutoriels vidéo et un accompagnement à distance.
 - **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).
@@ -273,14 +273,14 @@ La HN400 est adapté pour presser une grande variété de graines oléagineuses 
 
 La Presse à Huile Hydraulique en Acier Inoxydable HN325S est la variante de qualité alimentaire de notre populaire modèle Standard HN325, dotée d'une construction en acier inoxydable de qualité alimentaire pour le fût et toutes les surfaces de contact avec l'huile. Conçue spécifiquement pour les marchés d'exportation et les marques d'huile premium qui exigent une conformité stricte en matière de sécurité alimentaire, la HN325S utilise des matériaux de contact alimentaire conformes à la FDA, conformes aux normes internationales de sécurité alimentaire, y compris les réglementations de l'UE. Remarque : Nos machines n'ont pas été certifiées ou approuvées séparément par la FDA. Elle offre les mêmes performances de pressage fiables de 325 tonnes que le modèle standard tout en assurant le plus haut niveau d'hygiène et de sécurité des matériaux.
 
-Avec 325 tonnes de force de pressage, une pression système de 60 MPa et une pression superficielle du gâteau de 27,78 MPa, la HN325S traite toutes les graines oléagineuses conventionnelles avec aisance. Le fût en acier inoxydable et les surfaces de contact empêchent la contamination, la corrosion et la lixiviation des métaux, faisant de cette machine un bon choix pour les producteurs ciblant les marchés premium, la certification biologique et l'exportation internationale.
+Avec 325 tonnes de force de pressage, une pression système de 60 MPa et une pression superficielle du tourteau de 27,78 MPa, la HN325S traite toutes les graines oléagineuses conventionnelles avec aisance. Le fût en acier inoxydable et les surfaces de contact empêchent la contamination, la corrosion et la lixiviation des métaux, faisant de cette machine un bon choix pour les producteurs ciblant les marchés premium, la certification biologique et l'exportation internationale.
 
 ## Avantages Clés
 
 - **Acier Inoxydable de Qualité Alimentaire** — Le fût et toutes les surfaces de contact avec l'huile sont construits en acier inoxydable de qualité alimentaire, empêchant la contamination et garantissant la plus pure qualité d'huile.
 - **Conformité Internationale** — Utilise des matériaux de contact alimentaire conformes à la FDA, conformes aux normes de sécurité alimentaire de l'UE. Remarque : Les machines n'ont pas été certifiées ou approuvées séparément par la FDA. Adaptée pour les marchés d'exportation et les marques d'huile premium.
 - **Résistante à la Corrosion** — La construction en acier inoxydable élimine les problèmes de rouille et de corrosion, prolongeant la durée de service et réduisant les besoins d'entretien.
-- **Mêmes Performances Éprouvées** — Délivre une force de pressage identique de 325 tonnes et une pression de gâteau de 27,78 MPa comme le modèle HN325 standard.
+- **Mêmes Performances Éprouvées** — Délivre une force de pressage identique de 325 tonnes et une pression de tourteau de 27,78 MPa comme le modèle HN325 standard.
 - **Prête pour les Marques Premium** — La conception hygiénique en acier inoxydable supporte un positionnement premium, la certification biologique et les allégations de produits à étiquette propre.
 - **Productivité à Double Fût** — La configuration à double fût avec rails coulissants doubles permet un fonctionnement continu — chargez un fût pendant que l'autre presse.
 
@@ -288,7 +288,7 @@ Avec 325 tonnes de force de pressage, une pression système de 60 MPa et une pre
 
 - **Fût à Fentes de Type Barre** — Surface d'extraction d'huile nettement supérieure aux fûts percés, atteignant environ 2 à 3 % de rendement en huile plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) par lot, désormais en acier inoxydable de qualité alimentaire.
 - **Système Hydraulique Allemand** — Pompe combinée ultra-haute pression délivrant une pression de service jusqu'à 60 MPa pour une extraction constante et puissante.
-- **Retrait du Gâteau à 4 Crochets** — Système de déchargement du gâteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage.
+- **Retrait du Tourteau à 4 Crochets** — Système de déchargement du tourteau facile et fiable qui réduit les temps d'arrêt entre les cycles de pressage.
 - **Cadre en Acier à Haut Carbone** — Longue durée de service sous fonctionnement continu. La durée de service réelle dépend des conditions de fonctionnement et de l'entretien.
 - **Contrôle par Micro-ordinateur** — Cycle de pressage automatisé avec fonctionnement à un bouton. Formation de base recommandée ; nous fournissons des tutoriels vidéo et un accompagnement à distance.
 - **Économe en Énergie** — Conçu pour réduire la consommation électrique par rapport aux presses de génération précédente (les économies réelles varient selon les conditions de fonctionnement).

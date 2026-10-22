@@ -219,7 +219,7 @@ Press dingin mengekstrak minyak pada suhu rendah (umumnya di bawah 60°C / 140°
 
 ### Persyaratan Peralatan untuk Press Dingin
 - Tekanan permukaan cake tinggi (42 MPa atau lebih)
-- Desain barrel khusus untuk ekstraksi suhu rendah
+- Desain tabung press khusus untuk ekstraksi suhu rendah
 - Tanpa pemanasan eksternal — tekanan hidrolik statis menjaga suhu minyak tetap rendah secara alami
 - Model yang sesuai: HN426, HN480, HN500
 
@@ -914,14 +914,14 @@ HN500 adalah model unggulan kami, dirancang untuk aplikasi industri dengan gaya 
 - Kinerja seimbang -> HN480
 - Fleksibilitas maksimal -> HN500
 
-## Konfigurasi Satu Barrel vs Dua Barrel
+## Konfigurasi Satu Tabung press vs Dua Tabung press
 
-**Satu Barrel:**
+**Satu Tabung press:**
 - Biaya awal lebih rendah
 - Operasi lebih mudah
 - Cocok untuk operasi kecil atau startup
 
-**Dua Barrel:**
+**Dua Tabung press:**
 - Produksi hampir dua kali lipat
 - Kemampuan operasi kontinu
 - Disarankan untuk penggunaan komersial dan industri

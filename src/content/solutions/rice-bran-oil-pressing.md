@@ -128,7 +128,7 @@ order: 19
 
 **Quick Answer**
 
-Yes — the Haonuo hydraulic oil press handles rice bran, with one honest condition: **press it fresh or stabilized**. Expect **9-13% yield (cold press)** or **11-15% (hot press)** from fresh, well-stabilized bran (15-23% oil content), with results varying with bran freshness. One HN325 barrel takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. Bran left unstabilized for more than 24-48 hours produces high-FFA oil, so plan bran collection before you buy the machine.
+Yes — the Haonuo hydraulic oil press handles rice bran, with one honest condition: **press it fresh or stabilized**. Expect **9-13% yield (cold press)** or **11-15% (hot press)** from fresh, well-stabilized bran (15-23% oil content), with results varying with bran freshness. One HN325 tabung press takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. Bran left unstabilized for more than 24-48 hours produces high-FFA oil, so plan bran collection before you buy the machine.
 
 ## Rice Bran Oil Press Overview
 

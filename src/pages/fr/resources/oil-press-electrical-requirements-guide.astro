@@ -361,6 +361,43 @@ const costCalculation = ['Coût énergétique par jour = (Consommation d\'énerg
         </div>
       </section>
 
+      <section id="site-survey" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">L'audit du site avant livraison</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">La plupart des problèmes électriques se décident avant l'arrivée de la machine. Une simple photographie du tableau de distribution et cinq minutes avec une pince ampèremétrique évitent les retards de mise en service les plus courants : neutre manquant, raccordement sous-dimensionné ou déséquilibre de phases qui déclenche le disjoncteur en plein cycle. Parcourez le site avec cette liste avant l'expédition de la presse.</p>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100 my-4">
+          <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5">
+            <li><strong>Capacité de raccordement :</strong> kVA confirmés au compteur, pas sur la plaque du transformateur au bout de la rue.</li>
+            <li><strong>Équilibre des phases :</strong> courant mesuré sur chaque phase à charge de pointe ; déséquilibre inférieur à 10 %.</li>
+            <li><strong>Stabilité de tension :</strong> notez l'écart entre midi et le soir ; les chutes de tension endommagent moteurs et contacteurs.</li>
+            <li><strong>Chemin de terre :</strong> une véritable électrode de mise à la terre avec une résistance mesurée inférieure à 4 ohms.</li>
+            <li><strong>Place dans le tableau :</strong> de la place pour le disjoncteur de la presse plus les circuits du torréfacteur, du nettoyeur, du concasseur et du filtre.</li>
+            <li><strong>Chemin des câbles :</strong> protégé du trafic de chariots élévateurs, du lavage à grande eau et des surfaces chaudes du torréfacteur.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="full-line-distribution" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Répartir la puissance sur toute la ligne</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Le moteur de la presse ne fait que 2,2 kW, mais une ligne complète consomme 20–40 kVA, et le torréfacteur domine le total. Placez chaque machine importante sur son propre disjoncteur calibré à 1,25× son courant à pleine charge, séquencez le démarrage pour que le torréfacteur ne démarre pas en même temps que le moteur de la presse, et verrouillez le concasseur et le convoyeur afin qu'une machine arrêtée ne continue pas d'être alimentée.</p>
+        <p class="text-steel-700 leading-relaxed mb-4">La qualité de l'énergie compte autant que la quantité. De longs trajets de câbles avec des conducteurs sous-dimensionnés créent une chute de tension au moment même où la pompe démarre sous charge ; le moteur tire alors un courant excessif, chauffe et déclenche — une défaillance souvent mal diagnostiquée comme une panne de machine. Dimensionnez le câble pour une chute de tension inférieure à 3 % sur la longueur réelle du trajet, pas seulement pour l'ampacité. Si l'alimentation par groupe électrogène est prévue, suivez les règles de dimensionnement et de mise à la terre de notre section générateur ci-dessus plutôt que de louer un groupe calé uniquement sur la plaque de la presse.</p>
+      </section>
+
+      <section id="commissioning-verification" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Mise en service et contrôles de réception</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Avant d'accepter l'installation, vérifiez l'installation électrique en charge, pas à vide. Effectuez un cycle de pressage complet et relevez les courants de phase, la tension aux bornes du moteur au démarrage de la pompe, et la température des disjoncteurs et des cosses du câble principal après une heure de fonctionnement. Des cosses chaudes indiquent des connexions desserrées et sont la première cause d'incendies de tableau ultérieurs.</p>
+        <ul class="space-y-2 text-steel-700 list-disc pl-5 mb-4">
+          <li>Confirmez le sens de rotation du moteur avec la pompe désaccouplée, puis vérifiez le débit de la pompe sous pression.</li>
+          <li>Testez chaque arrêt d'urgence et le pressostat de limite de pression indépendamment — ne présumez pas qu'ils fonctionnent parce que le voyant s'allume.</li>
+          <li>Vérifiez la lecture de liaison de terre entre le bâti de la presse et la barre de terre du tableau.</li>
+          <li>Étiquetez chaque circuit et laissez au propriétaire le schéma unifilaire à jour ; la prochaine panne se répare en minutes avec des étiquettes, et en heures sans elles.</li>
+        </ul>
+        <p class="text-steel-700 leading-relaxed">Ces contrôles prennent environ une demi-journée à un électricien compétent et constituent l'assurance la moins chère qu'une huilerie puisse s'offrir. Pour la vision complète de l'installation — électricité, eau, drainage et charge au sol — consultez le <a href="/fr/resources/complete-oil-production-line-guide/" class="text-amber-600 hover:underline">guide de la ligne de production complète</a>.</p>
+        <h3 class="font-semibold text-lg mt-6 mb-3 text-charcoal-900">Diagnostiquer les déclenchements répétés du disjoncteur</h3>
+        <p class="text-steel-700 leading-relaxed mb-4">Un disjoncteur qui ne déclenche qu'à pression de pointe, ou seulement l'après-midi, fournit une information de diagnostic plutôt qu'il n'échoue simplement. Les déclenchements sous charge avec un câble tiède indiquent des conducteurs sous-dimensionnés ou une connexion desserrée qui ajoute de la résistance ; les déclenchements qui suivent l'heure de la journée indiquent une chute de tension du réseau lorsque les charges voisines se connectent ; les déclenchements aléatoires avec un équipement froid indiquent un disjoncteur faible ou une fuite à la terre. Résistez à l'instinct courant de poser un disjoncteur plus gros — cela supprime l'avertissement en laissant le défaut, et transforme un déclenchement gênant en moteur brûlé ou en incendie de tableau. Mesurez d'abord : pincez le courant au moment du déclenchement, relevez la tension aux bornes du moteur et serrez les cosses au couple avant de changer tout dispositif de protection.</p>
+        <p class="text-steel-700 leading-relaxed">Documentez chaque événement récurrent avec l'heure, l'état de la machine et la météo ; des motifs qui semblent aléatoires sur une semaine s'alignent souvent sur le minutage du cycle de torréfaction ou sur le basculement du groupe électrogène, et le journal permet à un électricien de corriger la cause en une seule visite au lieu de trois.</p>
+        <p class="text-steel-700 leading-relaxed mt-4">Deux habitudes finales préviennent la plupart des défauts décrits ici : tenez l'eau et l'huile loin du tableau et des gaines pendant le lavage — un tableau humide tombe en panne des semaines plus tard, pas le jour où il a été mouillé — et ne contournez jamais un dispositif de protection contre les fuites à la terre « pour continuer à produire ». La protection différentielle existe parce qu'un sol de presse combine eau, huile, charpente métallique conductrice et opérateurs ; ses déclenchements gênants sont eux-mêmes le signal que l'isolation ou la mise à la terre doit être vérifiée, et la bonne réponse est de trouver la fuite, jamais de désactiver la protection.</p>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Préparez votre alimentation avant l'arrivée de la presse</h2>
         <p class="text-steel-700 leading-relaxed">Une configuration électrique appropriée est essentielle pour un fonctionnement sûr et efficace des presses à huile hydrauliques. Pour des conseils personnalisés sur la configuration électrique, contactez l'équipe de support technique de Haonuo.</p>

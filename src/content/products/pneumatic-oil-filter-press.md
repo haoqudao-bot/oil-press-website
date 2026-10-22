@@ -208,7 +208,7 @@ The HN-10SL pneumatic oil filter press filters crude oil through 20 filter-paper
 
 The HN-10SL is a fully automatic, electronically controlled filtration system built entirely from 304L food-grade stainless steel for superior acid and alkali resistance. Featuring 20 filter plate layers with 10 m² of total filtration area, it delivers excellent filtration clarity with minimal liquid loss and supports 24-hour automatic constant-pressure continuous operation.
 
-Operation is a one-switch routine: connect the power and suction hose, turn on the suction switch, and the system automatically draws oil in, filters it through the filter paper media, and stops on its own when the set pressure is reached. Open the oil outlet and the filtered clean oil flows directly into clean oil barrels or finished product barrels — no transfer pump needed. This fully automated cycle removes the need for constant operator attention and is well-suited to continuous production. With 10 m² of filtration area and 0.3 MPa working pressure, it is sized to keep pace with the HN325/365/426/500 hydraulic presses.
+Operation is a one-switch routine: connect the power and suction hose, turn on the suction switch, and the system automatically draws oil in, filters it through the filter paper media, and stops on its own when the set pressure is reached. Open the oil outlet and the filtered clean oil flows directly into clean oil tabung press or finished product tabung press — no transfer pump needed. This fully automated cycle removes the need for constant operator attention and is well-suited to continuous production. With 10 m² of filtration area and 0.3 MPa working pressure, it is sized to keep pace with the HN325/365/426/500 hydraulic presses.
 
 ## Key Advantages
 

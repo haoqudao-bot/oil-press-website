@@ -46,9 +46,9 @@ const yieldFactors = [
 ];
 
 const moistureGuide = [
-  { material: 'Wijen', optimal: '5-6%', tooDry: 'Rapuh, hasil berkurang', tooWet: 'Emulsifikasi, kue lengket' },
+  { material: 'Wijen', optimal: '5-6%', tooDry: 'Rapuh, hasil berkurang', tooWet: 'Emulsifikasi, bungkil lengket' },
   { material: 'Kacang Tanah', optimal: '5-7%', tooDry: 'Sulit dipres', tooWet: 'Licin, ekstraksi tidak merata' },
-  { material: 'Kanola', optimal: '6-8%', tooDry: 'Kue keras, hasil rendah', tooWet: 'Kue basah, minyak hilang' },
+  { material: 'Kanola', optimal: '6-8%', tooDry: 'Bungkil keras, hasil rendah', tooWet: 'Bungkil basah, minyak hilang' },
   { material: 'Kenari', optimal: '7-9%', tooDry: 'Hancur, sulit dipres', tooWet: 'Risiko jamur' },
 ];
 
@@ -73,7 +73,7 @@ const proTips = [
   { title: 'Giling hingga Ukuran Optimal', desc: '2-4mm untuk sebagian besar biji, 3-5mm untuk kacang. Terlalu halus = sulit dipres, terlalu kasar = ekstraksi tidak merata.' },
   { title: 'Muat Secara Merata', desc: 'Distribusikan bahan secara merata di ruang pengepres. Pemuatan tidak merata menyebabkan tekanan tidak merata dan hasil berkurang.' },
   { title: 'Waktu Tahan Tekanan Puncak', desc: 'Tahan pada tekanan maksimum selama 5-10 menit. Terburu-buru langkah ini dapat mengurangi hasil sebesar 5-10%.' },
-  { title: 'Pengepresan Progresif', desc: 'Terapkan tekanan secara bertahap daripada tiba-tiba. Tekanan tiba-tiba dapat menjebak minyak di dalam kue.' },
+  { title: 'Pengepresan Progresif', desc: 'Terapkan tekanan secara bertahap daripada tiba-tiba. Tekanan tiba-tiba dapat menjebak minyak di dalam bungkil.' },
 ];
 
 const yieldComparison = [
@@ -274,6 +274,37 @@ const maintenanceTips = [
             ))}
           </ul>
         </div>
+      </section>
+
+      <section id="yield-economics" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Ekonomi di Balik Setiap Poin Persentase</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Biji biasanya menyumbang 80–90% dari biaya satu liter oli jadi, sehingga kenaikan hasil kecil cepat berlipat. Pada bengkel satu ton per hari, tambahan 2 poin persentase pemulihan pada kacang tanah berkandungan oli 42% berarti sekitar 20 liter oli lebih banyak per hari — lebih dari seluruh biaya tenaga kerja shift di banyak pasar.</p>
+        <p class="text-steel-700 leading-relaxed mb-4">Tiga tuas menggerakkan hasil lebih dari spesifikasi mesin apa pun: kelembapan umpan, penyangraian, dan profil penahanan tekanan. Membeli press lebih besar tidak berpengaruh apa pun terhadap pemulihan jika biji datang basah atau penyangraian tidak merata; memperbaiki dua variabel itu lebih dulu adalah peningkatan termurah yang tersedia bagi pabrik mana pun. Ketika keduanya terkendali, desain tabung press menjadi tuas berikutnya — tabung press berslot (strip-gap) untuk cold-press menyisakan 6–8% oli di bungkil, versus 10–12% yang umum pada tabung press lama yang dibor.</p>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100 my-4">
+          <h3 class="font-semibold text-lg mb-3 text-charcoal-900">Tolok ukur realistis: kacang tanah press panas, HN325</h3>
+          <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5">
+            <li>Bengkel yang dikelola baik: 40–45% pemulihan dari berat biji sebagai oli tersaring, tergantung kandungan oli inti.</li>
+            <li>Hasil bengkel umum: 35–38% — selisihnya adalah pengendalian kelembapan, keseragaman sangrai, dan waktu penahanan, bukan tonase mesin.</li>
+            <li>Oli sisa bungkil: sekitar 5–7% dengan praktik baik; di atas 8% menunjukkan umpan basah, penahanan terlalu singkat, atau tabung press aus.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cold-press-yield" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Hasil Cold-Press Tanpa Panas</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Cold pressing sengaja menukar 8–12 poin persentase hasil dengan rasa, warna, dan harga premium. Waktu siklus memanjang hingga sekitar dua jam dan throughput per shift turun — HN325 memproses sekitar 300–400 kg per shift 8 jam secara dingin dengan satu tabung press, atau 600–700 kg dengan tabung press ganda, versus 900–1.400 kg panas. Karena itu kelayakan bisnis bergantung sepenuhnya pada premi harga dan nilai bungkil, bukan pada volume.</p>
+        <p class="text-steel-700 leading-relaxed mb-4">Karena tidak ada panas yang mengencerkan oli, cold pressing memberi imbalan pada pemecahan yang lebih halus tetapi seragam, pengondisian suhu lingkungan hingga 4–6% kelembapan, dan waktu dwell tekanan penuh. <a href="/id/products/cold-press-hydraulic-oil-press/" class="text-amber-600 hover:underline">Model cold-press HN426</a> menggunakan sistem 70 MPa dengan tabung press berslot khusus untuk menjaga oli sisa bungkil pada 6–8% dalam kondisi yang lebih sulit ini. Bungkil dari cold pressing sejati juga dijual dengan premi sebagai food-grade atau pakan bernilai tinggi, yang harus dihitung dalam perbandingan yang dijelaskan dalam <a href="/id/resources/cold-press-vs-hot-press-oil/" class="text-amber-600 hover:underline">panduan press dingin vs panas</a> kami.</p>
+        <p class="text-steel-700 leading-relaxed">Kebiasaan tekanan sama pada kedua metode dan layak dinyatakan secara tepat: naikkan bertahap — dorongan awal untuk menempatkan dan memecah muatan, jeda singkat saat oli mengalir bebas, lalu tekanan penuh ditahan hingga akhir siklus. Operator di bawah tekanan waktu cenderung mencapai tekanan puncak secara instan dan melepaskan begitu aliran melambat; itu menyisakan beberapa poin persentase oli yang dapat dipulihkan di bungkil, setiap batch, tidak terlihat di tangki tetapi jelas dalam rekonsiliasi biji-ke-oli bulanan. Menahan tekanan penuh selama 3–5 menit terakhir, ketika aliran yang terlihat hanya tetesan, adalah tempat oli terakhir benar-benar dimenangkan.</p>
+      </section>
+
+      <section id="batch-records" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Jalankan Catatan Batch Selama Dua Minggu</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Masalah hasil tidak terlihat sampai angka dituliskan. Untuk setiap batch, catat sumber dan berat biji, perkiraan kelembapan, waktu dan suhu sangrai, setpoint tekanan dan waktu penahanan, berat oli setelah filtrasi, dan perkiraan oli sisa bungkil jika tersedia. Dalam dua minggu catatan tersebut menyingkap variabel mana — kelembapan, sangrai, atau dwell — yang menelan oli, jauh lebih andal daripada menyesuaikan berdasarkan perasaan.</p>
+        <ul class="space-y-2 text-steel-700 list-disc pl-5 mb-4">
+          <li>Timbang oli dan bungkil alih-alih menaksir dari level tangki; drift kalibrasi menyembunyikan kerugian.</li>
+          <li>Simpan satu lembar parameter "batch emas" per jenis biji setelah kombinasi terbaik ditemukan, dan tempel di atas press.</li>
+          <li>Periksa ulang tolok ukur setelah penggantian tabung press, seal, atau pompa, ketika performa diam-diam kembali bergeser.</li>
+        </ul>
       </section>
 
       <section id="conclusion" class="mb-12">

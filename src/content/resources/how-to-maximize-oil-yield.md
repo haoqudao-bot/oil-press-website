@@ -47,7 +47,7 @@ No setting on the press rescues bad raw material.
 
 ## Step 2: Clean and Sort Thoroughly
 
-Stones and hulls add dead weight to the barrel, absorb oil, and prevent even pressure.
+Stones and hulls add dead weight to the tabung press, absorb oil, and prevent even pressure.
 
 - Vibrating screen, magnetic separator, and destoner in sequence
 - Target: under 0.5% impurities entering the press
@@ -58,14 +58,14 @@ Stones and hulls add dead weight to the barrel, absorb oil, and prevent even pre
 
 | Material | Recommended Hull Removal | Why |
 |----------|--------------------------|-----|
-| Peanut | 95%+ | Hulls absorb oil and scratch the barrel |
+| Peanut | 95%+ | Hulls absorb oil and scratch the tabung press |
 | Sesame | 98%+ (for light oil) | Hull-on gives darker, stronger-flavoured oil |
 | Sunflower | Strip most hulls | Waxy hulls cloud the oil |
 | Walnut/almond | 100% shell removal | Shell fragments are hard and oil-free |
 
 ## Step 4: Condition Moisture to the Seed and Process
 
-Moisture changes how oil moves through crushed tissue. Too wet and oil binds with water into a paste; too dry and the meal bridges in the barrel without releasing.
+Moisture changes how oil moves through crushed tissue. Too wet and oil binds with water into a paste; too dry and the meal bridges in the tabung press without releasing.
 
 | Material | Hot Press Moisture | Cold Press Moisture |
 |----------|-------------------|---------------------|
@@ -82,7 +82,7 @@ Measure with a moisture meter every batch. If seed is too dry, add a fine water 
 - Most seeds: 2–4 mm grit; hard nuts: 3–5 mm
 - Grit that is too coarse leaves oil cells unopened and lengthens the cycle
 - Grit that is too fine compacts into impermeable flour — oil literally cannot escape, and cycle times rise while yield falls
-- If cakes come out dusty and barrel slots blind frequently, crush coarser
+- If cakes come out dusty and tabung press slots blind frequently, crush coarser
 
 ## Step 6: Optimise the Hot-Pressing Process
 
@@ -113,7 +113,7 @@ Standard hot-press cycle: **30–40 minutes per batch**. Ending the cycle early 
 
 Cold pressing trades some yield for quality, but the gap is smaller on a properly built high-pressure machine.
 
-- Keep meal and barrel below 60°C throughout; static hydraulic pressure adds no friction heat, which is the method's advantage over screw expellers.
+- Keep meal and tabung press below 60°C throughout; static hydraulic pressure adds no friction heat, which is the method's advantage over screw expellers.
 - Cold-press needs higher cake-surface pressure to break unheated cells: 42 MPa or more — the territory of the [HN426](/products/cold-press-hydraulic-oil-press/) (42 MPa) and HN500 (52 MPa).
 - Cycle runs about 2 hours per batch; do not shorten it, because unheated oil moves slowly.
 - Keep moisture slightly higher (7–9%) than for hot pressing.
@@ -131,7 +131,7 @@ You cannot improve what you do not weigh.
 
 - Weigh seed input, oil output, and cake for every batch.
 - Record seed lot, moisture, roast temperature/time, cycle time, and peak pressure.
-- Track yield per seed type on a simple weekly chart; drift downward usually signals dull crushers, worn barrel slots, or operator shortcuts before it becomes obvious in the oil.
+- Track yield per seed type on a simple weekly chart; drift downward usually signals dull crushers, worn tabung press slots, or operator shortcuts before it becomes obvious in the oil.
 - Compare against the expected ranges in the [raw materials guide](/resources/oil-press-raw-materials-guide/), not against other mills with different seed and machines.
 
 ## Yield Benchmarks by Material
@@ -155,7 +155,7 @@ You cannot improve what you do not weigh.
 | Low yield only with one seed lot | Poor or immature seed | Reject/replace lot; review supplier |
 | Cake comes out oily and soft | Too much moisture; particle size too fine; insufficient pressure | Dry to target; crush coarser; check pump and seals |
 | Oil is cloudy | Fines passing filter; water contamination | Replace filter media; dry seed; extend settling |
-| Cycle time keeps growing | Barrel slots fouled; filter clogged; hydraulic oil tired | Clean barrel slots; service filter; change ISO VG 46 oil |
+| Cycle time keeps growing | Tabung Press slots fouled; filter clogged; hydraulic oil tired | Clean tabung press slots; service filter; change ISO VG 46 oil |
 | Yield drops in cold weather | High oil viscosity; cold hydraulic oil | Warm the work area; let the hydraulic system idle to 30–50°C |
 
 ## Conclusion

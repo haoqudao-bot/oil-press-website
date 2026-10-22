@@ -19,7 +19,7 @@ seoKeywords:
 
 ## Introduction
 
-A hydraulic oil press has few moving parts compared with a screw expeller, and under a sensible maintenance routine its frame, cylinder, and barrel will outlast more than one ownership. The parts that do wear — seals, filter elements, valve internals — fail in predictable ways and give clear warning. Almost every expensive breakdown seen by service teams traces back to one of three neglected basics: contaminated hydraulic oil, an ignored leak, or an operator bypassing a safety interlock.
+A hydraulic oil press has few moving parts compared with a screw expeller, and under a sensible maintenance routine its frame, cylinder, and tabung press will outlast more than one ownership. The parts that do wear — seals, filter elements, valve internals — fail in predictable ways and give clear warning. Almost every expensive breakdown seen by service teams traces back to one of three neglected basics: contaminated hydraulic oil, an ignored leak, or an operator bypassing a safety interlock.
 
 This guide is built around a calendar (daily, weekly, monthly, quarterly, annual) and then covers the hydraulic, electrical, and structural systems in detail, a troubleshooting table for the faults mills actually encounter, and a spare-parts stock list sized to prevent downtime rather than to fill a shelf.
 
@@ -27,7 +27,7 @@ This guide is built around a calendar (daily, weekly, monthly, quarterly, annual
 
 | Frequency | Key Tasks | Time Needed |
 |-----------|-----------|-------------|
-| Daily | Clean machine and floor; check oil level and leaks; inspect barrel residue; test guards/e-stop | 15–20 min |
+| Daily | Clean machine and floor; check oil level and leaks; inspect tabung press residue; test guards/e-stop | 15–20 min |
 | Weekly | Clean tank return filter; check fittings and hoses; tighten electrical terminals; lubricate pins/hinges | 30–45 min |
 | Monthly | Check oil condition (sight/smell/sample); inspect seals; verify pressure gauge; calibrate temperature instruments | 1 hour |
 | Quarterly | Inspect cylinder rod and frame welds; change oil if hours reached; full e-stop and interlock test | Half day |
@@ -37,9 +37,9 @@ In a double-shift operation compress these intervals by calendar time and follow
 
 ## Daily Maintenance
 
-- Wipe down the frame, pressure plate, and barrel area; oil on the floor is both a slip hazard and evidence of a leak worth finding.
+- Wipe down the frame, pressure plate, and tabung press area; oil on the floor is both a slip hazard and evidence of a leak worth finding.
 - Check hydraulic oil level in the sight glass with the ram retracted; top up with the correct grade if low, and investigate if the same machine needs topping up again within a week.
-- Inspect the pressing chamber and barrel slots for compacted residue; baked-on fines reduce oil outlet area and lengthen cycles.
+- Inspect the pressing chamber and tabung press slots for compacted residue; baked-on fines reduce oil outlet area and lengthen cycles.
 - Confirm the emergency stop stops the pump and that guards are in place before starting.
 - Log pressure reached, cycle time, and anything unusual — a cycle that creeps from 35 to 45 minutes is usually the first warning of a tired filter or pump.
 
@@ -94,10 +94,10 @@ Hydraulic oil is a machine component, not a consumable to buy on price alone.
 
 ## Mechanical and Structural Care
 
-- Inspect barrel slots for peening or deformation; compare oil flow with commissioning performance. Bar-type slotted barrels are designed to clear themselves, but hardened residues between campaigns (especially coconut and cottonseed) should be removed with the recommended tools, never with a cutting torch.
+- Inspect tabung press slots for peening or deformation; compare oil flow with commissioning performance. Bar-type slotted tabung press are designed to clear themselves, but hardened residues between campaigns (especially coconut and cottonseed) should be removed with the recommended tools, never with a cutting torch.
 - Check the pressure plate for scoring and the cake discharge surfaces for burrs that tear filter cloth or scratch nickel-plated interiors.
 - On double-barrel machines, inspect the sliding rails and stops; misaligned stations are a frequent source of uneven cakes.
-- Keep food-grade barrels on coconut and cold-press lines protected from carbon-steel tooling; use plastic or stainless implements.
+- Keep food-grade tabung press on coconut and cold-press lines protected from carbon-steel tooling; use plastic or stainless implements.
 
 ## Electrical System Maintenance
 

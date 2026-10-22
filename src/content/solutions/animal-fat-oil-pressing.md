@@ -71,7 +71,7 @@ faq:
   - question: What is the price of an animal fat press machine?
     answer: Get pricing for your production needs. We offer competitive factory-direct pricing.
   - question: Can I use the same machine for animal fat and oilseeds?
-    answer: Yes. Our hydraulic oil presses can process animal fat cracklings, sesame, peanuts, sunflower seeds, coconut and many other oil-bearing materials. Clean the barrel thoroughly when switching between animal fat and vegetable oil, especially if you serve halal or vegetarian-sensitive markets.
+    answer: Yes. Our hydraulic oil presses can process animal fat cracklings, sesame, peanuts, sunflower seeds, coconut and many other oil-bearing materials. Clean the tabung press thoroughly when switching between animal fat and vegetable oil, especially if you serve halal or vegetarian-sensitive markets.
 
 faqFr:
   - question: Quel est le rendement en graisse des parures de graisse animale ?
@@ -87,7 +87,7 @@ faqFr:
   - question: Quel est le prix d'une machine de pressage de graisse animale ?
     answer: Obtenez un prix selon vos besoins de production. Nous offrons des prix compétitifs directs d'usine.
   - question: Puis-je utiliser la même machine pour la graisse animale et les oléagineux ?
-    answer: Oui. Nos presses hydrauliques à huile peuvent traiter les crétons de graisse animale, le sésame, les arachides, les graines de tournesol, la noix de coco et bien d'autres matières oléagineuses. Nettoyez soigneusement le baril lors du passage de la graisse animale à l'huile végétale, surtout si vous servez des marchés sensibles au halal ou au végétarisme.
+    answer: Oui. Nos presses hydrauliques à huile peuvent traiter les crétons de graisse animale, le sésame, les arachides, les graines de tournesol, la noix de coco et bien d'autres matières oléagineuses. Nettoyez soigneusement le fût lors du passage de la graisse animale à l'huile végétale, surtout si vous servez des marchés sensibles au halal ou au végétarisme.
 
 faqAr:
   - question: ما هو عائد الدهن من قصاصات الدهون الحيوانية؟
@@ -103,7 +103,7 @@ faqAr:
   - question: ما هو سعر آلة عصر الدهون الحيوانية؟
     answer: احصلوا على تسعيرة حسب احتياجات إنتاجكم. نقدم أسعاراً تنافسية مباشرة من المصنع.
   - question: هل يمكنني استخدام نفس الآلة للدهون الحيوانية والبذور الزيتية؟
-    answer: نعم. مضغوطاتنا الهيدروليكية يمكنها معالجة بقايا الدهون الحيوانية والسمسم والفول السوداني وبذور عباد الشمس وجوز الهند وغيرها كثير من المواد الزيتية. نظفوا البرميل جيداً عند التبديل بين الدهون الحيوانية والزيوت النباتية، خاصة إذا كنتم تخدمون أسواقاً حساسة للحلال أو النباتيين.
+    answer: نعم. مضغوطاتنا الهيدروليكية يمكنها معالجة بقايا الدهون الحيوانية والسمسم والفول السوداني وبذور عباد الشمس وجوز الهند وغيرها كثير من المواد الزيتية. نظفوا أسطوانة العصر جيداً عند التبديل بين الدهون الحيوانية والزيوت النباتية، خاصة إذا كنتم تخدمون أسواقاً حساسة للحلال أو النباتيين.
 
 faqId:
   - question: Berapa hasil lemak dari potongan lemak hewani?
@@ -134,7 +134,7 @@ order: 20
 
 **Quick Answer**
 
-Yes — the Haonuo hydraulic oil press is well suited to animal fat, working alongside your rendering kettle: render the ground fat at low temperature, then press the hot cracklings to recover the fat simple melting leaves behind. From **100 kg of clean fat trimmings (75-90% fat)** expect roughly **70-85 kg of rendered lard or tallow** plus **12-25 kg of pressed cracklings**, with results varying with fat quality and freshness. One HN325 barrel takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. If you serve Muslim markets, keep tallow (halal beef/mutton) and lard (pork) on fully separate lines.
+Yes — the Haonuo hydraulic oil press is well suited to animal fat, working alongside your rendering kettle: render the ground fat at low temperature, then press the hot cracklings to recover the fat simple melting leaves behind. From **100 kg of clean fat trimmings (75-90% fat)** expect roughly **70-85 kg of rendered lard or tallow** plus **12-25 kg of pressed cracklings**, with results varying with fat quality and freshness. One HN325 tabung press takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. If you serve Muslim markets, keep tallow (halal beef/mutton) and lard (pork) on fully separate lines.
 
 ## Overview
 

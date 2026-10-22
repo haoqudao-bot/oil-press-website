@@ -68,7 +68,7 @@ faq:
   - question: What is the price of a shea butter press machine?
     answer: Ask us about current model pricing. We offer factory-direct pricing with no middleman markup.
   - question: How much shea butter can I produce per day?
-    answer: With our heavy-duty model, you can process 600-1,200 kg of shea nuts per day (single barrel). The ultra-high-pressure model handles 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) (double barrel).
+    answer: With our heavy-duty model, you can process 600-1,200 kg of shea nuts per day (single tabung press). The ultra-high-pressure model handles 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) (double tabung press).
   - question: "What is the difference between unrefined and refined shea butter?"
     answer: "Unrefined (raw) shea butter retains its natural ivory color, nutty aroma, and all vitamins and nutrients. It commands the highest price in the cosmetics market. Refined shea butter is processed to remove color and odor, making it suitable for food industry applications and white cosmetic formulations."
 

@@ -7,9 +7,9 @@ const resources = await getCollection('resources');
 const resource = resources.find(r => r.slug === 'aflatoxin-control-guide');
 const t = getTranslations('ar');
 
-const title = resource?.data.title.ar || resource?.data.title.en || 'دليل مراقبة الأفلاطوكسين';
-const description = resource?.data.description.ar || resource?.data.description.en || 'إستراتيجيات شاملة لمنع ومراقبة تلوث الأفلاطوكسين في بذور الزيت';
-const seoKeywords = resource?.data.seoKeywords || ['مراقبة الأفلاطوكسين', 'منع الأفلاطوكسين', 'سلامة الغذاء'];
+const title = resource?.data.title.ar || resource?.data.title.en || 'دليل مراقبة الأفلاتوكسين';
+const description = resource?.data.description.ar || resource?.data.description.en || 'إستراتيجيات شاملة لمنع ومراقبة تلوث الأفلاتوكسين في بذور الزيت';
+const seoKeywords = resource?.data.seoKeywords || ['مراقبة الأفلاتوكسين', 'منع الأفلاتوكسين', 'سلامة الغذاء'];
 const publishedAt = resource?.data.publishedAt || new Date();
 const updatedAt = resource?.data.updatedAt || publishedAt;
 
@@ -41,10 +41,10 @@ const breadcrumbLd = {
 };
 
 const typesOfAflatoxins = [
-  { type: 'الأفلاطوكسين B1', danger: 'مُسمٍّ جداً', sources: 'الذرة، الفول السوداني، الأرز', effects: 'مسرطنة، تآكل الكبد' },
-  { type: 'الأفلاطوكسين B2', danger: 'مُسمٍّ', sources: 'الفول السوداني، الذرة', effects: 'أقل سمية من B1' },
-  { type: 'الأفلاطوكسين G1', danger: 'مُسمٍّ', sources: 'الحبوب، المكسرات', effects: 'مسرطنة' },
-  { type: 'الأفلاطوكسين G2', danger: 'أقل سمية', sources: 'الحبوب', effects: 'آثار طفيفة' },
+  { type: 'الأفلاتوكسين B1', danger: 'مُسمٍّ جداً', sources: 'الذرة، الفول السوداني، الأرز', effects: 'مسرطنة، تآكل الكبد' },
+  { type: 'الأفلاتوكسين B2', danger: 'مُسمٍّ', sources: 'الفول السوداني، الذرة', effects: 'أقل سمية من B1' },
+  { type: 'الأفلاتوكسين G1', danger: 'مُسمٍّ', sources: 'الحبوب، المكسرات', effects: 'مسرطنة' },
+  { type: 'الأفلاتوكسين G2', danger: 'أقل سمية', sources: 'الحبوب', effects: 'آثار طفيفة' },
 ];
 
 const contaminationSources = [
@@ -55,7 +55,7 @@ const contaminationSources = [
 ];
 
 const preventionStrategies = [
-  { title: 'مراقبة الحبوب', items: ['التحقق من الجودة قبل الشراء', 'تجنب الحبوب التالفة أو العفنة', 'اختبار الدفاتر على الأفلاطوكسين'] },
+  { title: 'مراقبة الحبوب', items: ['التحقق من الجودة قبل الشراء', 'تجنب الحبوب التالفة أو العفنة', 'اختبار الدفاتر على الأفلاتوكسين'] },
   { title: 'التخزين المناسب', items: ['الاحتفاظ في ظروف جافة', 'استخدام أكياس غير منفذة للماء', 'مراقبة نسبة الرطوبة'] },
   { title: 'التجفيف الفوري', items: ['تجفيف الحبوب في غضون 24 ساعة', 'الاحتفاظ بالرطوبة تحت 12%', 'استخدام مجففات صناعية'] },
 ];
@@ -125,14 +125,14 @@ function localePath(path: string): string {
   <main class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="introduction" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">لماذا تهم مكافحة الأفلاطوكسين في معاصر الزيت</h2>
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">لماذا تهم مكافحة الأفلاتوكسين في معاصر الزيت</h2>
         <p class="text-steel-700 leading-relaxed">
-          الأفلاطوكسينات هي سموم تنتجها بعض الفطريات (Aspergillus flavus و Aspergillus parasiticus) التي يمكن أن تلوث الحبوب المستخدمة لإنتاج الزيت. مراقبة الأفلاطوكسين أمر حيوي لضمان سلامة الغذاء والامتثال للمعايير الدولية.
+          الأفلاتوكسينات هي سموم تنتجها بعض الفطريات (Aspergillus flavus و Aspergillus parasiticus) التي يمكن أن تلوث الحبوب المستخدمة لإنتاج الزيت. مراقبة الأفلاتوكسين أمر حيوي لضمان سلامة الغذاء والامتثال للمعايير الدولية.
         </p>
       </section>
 
       <section id="types" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">أنواع الأفلاطوكسين</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">أنواع الأفلاتوكسين</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {typesOfAflatoxins.map((item, index) => (
             <div key={index} class="bg-white p-5 rounded-xl border border-steel-100 shadow-md">
@@ -157,7 +157,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="sources" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">من أين يبدأ تلوث الأفلاطوكسين</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">من أين يبدأ تلوث الأفلاتوكسين</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {contaminationSources.map((item, index) => (
             <div key={index} class="bg-orange-50 p-5 rounded-xl border border-orange-200">
@@ -169,7 +169,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="prevention" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الوقاية من الأفلاطوكسين من الحقل إلى المخزن</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">الوقاية من الأفلاتوكسين من الحقل إلى المخزن</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           {preventionStrategies.map((item, index) => (
             <div key={index} class="bg-green-50 p-5 rounded-xl border border-green-200">
@@ -188,7 +188,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="detection" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">كيفية فحص الأفلاطوكسين قبل العصر</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">كيفية فحص الأفلاتوكسين قبل العصر</h2>
         <div class="overflow-x-auto">
           <table class="w-full bg-white rounded-xl border border-steel-100 shadow-md">
             <thead class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
@@ -214,7 +214,7 @@ function localePath(path: string): string {
       </section>
 
       <section id="regulations" class="mb-12">
-        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">حدود الأفلاطوكسين في أسواق التصدير الرئيسية</h2>
+        <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">حدود الأفلاتوكسين في أسواق التصدير الرئيسية</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           {regulations.map((item, index) => (
             <div key={index} class="bg-purple-50 p-5 rounded-xl border border-purple-200">
@@ -276,7 +276,7 @@ function localePath(path: string): string {
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">خطة عملية لمكافحة الأفلاتوكسين في معصرتك</h2>
         <p class="text-steel-700 leading-relaxed">
-          مراقبة الأفلاطوكسين تتطلب نهجاً استباقياً في كل مرحلة من سلسلة التوريد. من خلال الجمع بين اختيار مادة أولية صارم، تخزين مناسب، وطرق كشف موثوقة، يمكنك ضمان سلامة منتجاتك والامتثال للمعايير الدولية.
+          مراقبة الأفلاتوكسين تتطلب نهجاً استباقياً في كل مرحلة من سلسلة التوريد. من خلال الجمع بين اختيار مادة أولية صارم، تخزين مناسب، وطرق كشف موثوقة، يمكنك ضمان سلامة منتجاتك والامتثال للمعايير الدولية.
         </p>
       </section>
     </div>

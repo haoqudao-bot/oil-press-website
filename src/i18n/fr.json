@@ -170,7 +170,7 @@
     "op1_title": "Démarrage en Une Touche",
     "op1_desc": "Chargez les graines, fermez le fût, appuyez sur le bouton vert. La machine ajuste automatiquement la pression et la température en fonction du type de graine sélectionné.",
     "op1_highlight": "2 MIN de Configuration",
-    "op2_title": "Déchargement Facile du Gâteau",
+    "op2_title": "Déchargement Facile du Tourteau",
     "op2_desc": "Notre système innovant de déchargement par le haut soulève le fût automatiquement. Plus besoin de se baisser — il sort facilement et en toute sécurité.",
     "op2_highlight": "10X Plus Rapide",
     "op3_title": "Système de Pression à Diaphragme",
@@ -639,7 +639,7 @@
     "op1_title": "Démarrage en un clic",
     "op1_desc": "Chargez les graines, fermez le fût, appuyez sur le bouton vert. La machine ajuste automatiquement la pression et la température en fonction du type de graine sélectionné.",
     "op1_highlight": "2 MIN de configuration",
-    "op2_title": "Décharge facile du gâteau",
+    "op2_title": "Décharge facile du tourteau",
     "op2_desc": "Notre système innovant de décharge par le haut soulève automatiquement le fût. Plus besoin de se baisser — il sort facilement et en toute sécurité.",
     "op2_highlight": "10X plus rapide",
     "op3_title": "Système de pression à diaphragme",
@@ -979,7 +979,7 @@
       "description": "Choisissez parmi notre gamme complète de presses hydrauliques à huile — du HN300 mini à HN500 haute pression. Chaque machine est testée en usine ; les modèles standard sont expédiés en 15 à 25 jours ouvrés, les configurations personnalisées en 30 à 45 jours.",
       "features": [
         "8 modèles standard + 4 modèles spécialisés en stock",
-        "Configurations simple ou double baril disponibles",
+        "Configurations simple ou double fût disponibles",
         "Options acier au carbone ou acier inoxydable alimentaire",
         "Kit accessoires complet inclus (tissu à huile, outils, manuel)",
         "Test de fonctionnement continu 48h avant expédition"
@@ -1004,9 +1004,9 @@
     "odm": {
       "title": "Ingénierie ODM / Personnalisée",
       "subtitle": "Solutions Personnalisées de A à Z",
-      "description": "Notre équipe d'ingénieurs conçoit et construit des presses hydrauliques personnalisées adaptées à vos besoins uniques — des dimensions du baril aux systèmes de pression en passant par l'intégration de l'automatisation.",
+      "description": "Notre équipe d'ingénieurs conçoit et construit des presses hydrauliques personnalisées adaptées à vos besoins uniques — des dimensions du fût aux systèmes de pression en passant par l'intégration de l'automatisation.",
       "features": [
-        "Diamètre et hauteur de baril personnalisés pour graines spécifiques",
+        "Diamètre et hauteur de fût personnalisés pour graines spécifiques",
         "Systèmes hydrauliques modifiés pour exigences de pression spéciales",
         "Intégration avec lignes de production existantes et automatisation",
         "Options de matériaux spéciaux (acier inoxydable 316L, placage nickel)",
@@ -1021,7 +1021,7 @@
       "description": "Pièces de rechange et accessoires Haonuo authentiques pour maintenir vos presses hydrauliques à huile à leur niveau de performance optimal. Expédition rapide dans le monde entier avec garantie de qualité.",
       "features": [
         "Cylindre hydraulique, joints et ensembles de pompe",
-        "Barils à huile (tailles standard et personnalisées)",
+        "Fûts de presse (tailles standard et personnalisées)",
         "Composants électriques et panneaux de commande",
         "Kits d'entretien complets pour chaque modèle"
       ],
@@ -1048,7 +1048,7 @@
       "description": "Mettez à niveau vos anciennes presses hydrauliques Haonuo ou tierces avec des composants modernes. Améliorez l'efficacité, la sécurité et le rendement sans acheter une machine neuve.",
       "features": [
         "Mise à niveau du système hydraulique pour plus de pression",
-        "Rétrofit de baril en acier inoxydable pour conformité alimentaire",
+        "Rétrofit de fût en acier inoxydable pour conformité alimentaire",
         "Modernisation du système électrique et améliorations de sécurité",
         "Ajouts d'automatisation (alimentation automatique, retrait automatique de la tourte)",
         "Optimisation de performance pour graines spécifiques"
@@ -1073,7 +1073,7 @@
       },
       "fullCustomization": {
         "title": "Capacité de Personnalisation Complète",
-        "desc": "Des dimensions du baril à la pression hydraulique en passant par le traitement de surface — nous pouvons personnaliser tous les aspects de la machine selon vos spécifications."
+        "desc": "Des dimensions du fût à la pression hydraulique en passant par le traitement de surface — nous pouvons personnaliser tous les aspects de la machine selon vos spécifications."
       },
       "readyForCustom": {
         "title": "Prêt pour des Solutions Personnalisées?",

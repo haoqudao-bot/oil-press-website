@@ -25,7 +25,7 @@
       "ultraHighPressure": "Tekanan Ultra Tinggi (HN500)",
       "sludgeDewatering": "Mesin Dewatering Lumpur",
       "highSpeedCrusher": "Crusher Kecepatan Tinggi",
-      "industrialCakeCrusher": "Crusher Kue Industri",
+      "industrialCakeCrusher": "Crusher Bungkil Industri",
       "integratedFeederCrusher": "Crusher Feeder Terpadu",
       "oilseedPrePress": "Pre-Press Biji Minyak",
       "verticalScrewConveyor": "Konveyor Sekrup Vertikal",
@@ -114,7 +114,7 @@
     "heroSlide1Cta": "Dapatkan Harga Pabrik",
     "heroSlide1Secondary": "Lihat Semua Model",
     "heroSlide2Title": "Spesialis Press Dingin",
-    "heroSlide2Desc": "Pertahankan nutrisi dan rasa alami dengan teknologi press dingin hidrolik kami. Barel berlapis nikel food-grade untuk kualitas minyak premium.",
+    "heroSlide2Desc": "Pertahankan nutrisi dan rasa alami dengan teknologi press dingin hidrolik kami. Tabung press berlapis nikel food-grade untuk kualitas minyak premium.",
     "heroSlide2Cta": "Jelajahi Press Dingin",
     "heroSlide2Secondary": "Lihat Solusi",
     "heroSlide3Title": "Produsen Langsung Pabrik",
@@ -170,8 +170,8 @@
     "op1_title": "Mulai Sekali Sentuh",
     "op1_desc": "Muat biji, tutup tabung, tekan tombol hijau. Mesin secara otomatis menyesuaikan tekanan dan suhu berdasarkan jenis biji yang dipilih.",
     "op1_highlight": "2 MENIT Persiapan",
-    "op2_title": "Pengeluaran Kue Mudah",
-    "op2_desc": "Sistem pengeluaran kue atas kami yang inovatif mengangkat tabung secara otomatis. Tidak perlu lagi jongkok — keluar dengan mudah dan aman.",
+    "op2_title": "Pengeluaran Bungkil Mudah",
+    "op2_desc": "Sistem pengeluaran bungkil atas kami yang inovatif mengangkat tabung secara otomatis. Tidak perlu lagi jongkok — keluar dengan mudah dan aman.",
     "op2_highlight": "10X Lebih Cepat",
     "op3_title": "Sistem Tekan Diafragma",
     "op3_desc": "14 pelat diafragma mendistribusikan tekanan secara merata ke seluruh lapisan biji untuk penekanan yang stabil dan menyeluruh, batch demi batch.",
@@ -300,12 +300,12 @@
       {
         "badge": "365 Ton",
         "name": "Mesin Press Minyak Hidrolik HN365",
-        "desc": "Peningkatan dari HN355 — rangka baja kekuatan tinggi 3 cm, barrel stasiun ganda."
+        "desc": "Peningkatan dari HN355 — rangka baja kekuatan tinggi 3 cm, tabung press stasiun ganda."
       },
       {
         "badge": "500 Ton",
         "name": "Mesin Press Minyak Hidrolik HN426",
-        "desc": "Tekanan ultra-tinggi 500 ton untuk biji keras — barrel tunggal atau ganda."
+        "desc": "Tekanan ultra-tinggi 500 ton untuk biji keras — tabung press tunggal atau ganda."
       },
       {
         "badge": "620 Ton",
@@ -331,7 +331,7 @@
     "section03Sub": "Pilih biji Anda, lalu sesuaikan jumlah mesin dengan target harian Anda.",
     "section04Kicker": "04 — ANATOMI PRESS",
     "section04Title": "Tujuh Komponen Menahan Beban",
-    "section04Sub": "Komponen yang gagal pada press murah adalah silinder, barrel, dan blok katup. Di sinilah tepatnya Haonuo berinvestasi pada baja.",
+    "section04Sub": "Komponen yang gagal pada press murah adalah silinder, tabung press, dan blok katup. Di sinilah tepatnya Haonuo berinvestasi pada baja.",
     "anatomyImageAlt": "Diagram tujuh komponen inti di dalam press hidrolik Haonuo",
     "parts": [
       {
@@ -347,7 +347,7 @@
       {
         "no": "03",
         "title": "Keranjang bahan",
-        "body": "<strong class=\"text-amber-400 font-semibold\">Baja kekuatan tinggi Q690</strong>, dilas dan <strong class=\"text-amber-400 font-semibold\">berlapis nikel di dalam dan luar</strong>. Dinding beralur bilah melepaskan minyak lebih cepat dibanding barrel berlubang konvensional, tanpa logam telanjang yang menyentuh biji."
+        "body": "<strong class=\"text-amber-400 font-semibold\">Baja kekuatan tinggi Q690</strong>, dilas dan <strong class=\"text-amber-400 font-semibold\">berlapis nikel di dalam dan luar</strong>. Dinding beralur bilah melepaskan minyak lebih cepat dibanding tabung press berlubang konvensional, tanpa logam telanjang yang menyentuh biji."
       },
       {
         "no": "04",
@@ -427,7 +427,7 @@
     "section07Title": "Beri Tahu Kami Biji dan Target Harian Anda",
     "section07Sub": "Balasan datang langsung dari pabrik, biasanya dalam satu hari kerja. Sertakan tegangan listrik Anda jika tahu.",
     "quoteBenefits": [
-      "Rekomendasi model dengan spesifikasi barrel dan tekanan",
+      "Rekomendasi model dengan spesifikasi tabung press dan tekanan",
       "Harga FOB Qingdao dan waktu produksi",
       "Jumlah mesin dan tata letak workshop untuk lini multi-press",
       "Konsultasi gratis · Harga langsung pabrik · Solusi khusus untuk biji dan skala produksi Anda"
@@ -639,7 +639,7 @@
     "op1_title": "Mulai dengan Satu Sentuhan",
     "op1_desc": "Masukkan biji, tutup bakar, tekan tombol hijau. Mesin secara otomatis menyesuaikan tekanan dan suhu berdasarkan jenis biji yang Anda pilih.",
     "op1_highlight": "2 MENIT Persiapan",
-    "op2_title": "Pengeluaran Kue Mudah",
+    "op2_title": "Pengeluaran Bungkil Mudah",
     "op2_desc": "Sistem pengeluaran dari atas kami yang inovatif secara otomatis mengangkat bakar. Tidak perlu lagi jongkok — keluar dengan mudah dan aman.",
     "op2_highlight": "10X Lebih Cepat",
     "op3_title": "Sistem Tekanan Diafragma",
@@ -688,8 +688,8 @@
       "pers1Cta": "Dapatkan penawaran awal →",
       "pers2Who": "BENGKEL SEDANG BERKEMBANG",
       "pers2H4": "Pres saya tidak mampu mengimbangi",
-      "pers2P": "Tonase lebih besar, barel ganda, atau garis lengkap — peningkatan yang tepat.",
-      "pers2Li1": "Barel ganda: +30–50% produksi harian",
+      "pers2P": "Tonase lebih besar, tabung press ganda, atau garis lengkap — peningkatan yang tepat.",
+      "pers2Li1": "Tabung press ganda: +30–50% produksi harian",
       "pers2Li2": "Pemanggang, penghancur, filter dalam satu garis",
       "pers2Cta": "Rencanakan pengembangan saya →",
       "pers3Who": "PABRIK MINYAK MANTAP",
@@ -726,7 +726,7 @@
       "linesH2": "Pres Minyak Hidrolik dan peralatan di sekitarnya",
       "linesP": "Dari satu pres ke lini produksi lengkap — penghancur, pemanggang, filter, dan pemurnian, semuanya dari satu pabrik.",
       "line1H4": "Pres Minyak Hidrolik",
-      "line1P": "HN300–HN500, 300–620 ton nyata. Barel tunggal atau ganda, penekanan panas atau dingin, khusus wijen/kelapa/barel besar.",
+      "line1P": "HN300–HN500, 300–620 ton nyata. Tabung press tunggal atau ganda, penekanan panas atau dingin, khusus wijen/kelapa/tabung press besar.",
       "line1Cta": "Tawarkan pres saya →",
       "line2H4": "Penghancur & Konveyor",
       "line2P": "Pulverizer, penghancur pakan, dan elevator sekrup untuk ukuran partikel konsisten dan pakan stabil.",
@@ -767,9 +767,9 @@
       "matA_tag1": "BAJA 27SiMn",
       "matA_tag2": "60–75 MPa",
       "matA_tag3": "2200 psi+",
-      "matB_title": "Barel Pres",
+      "matB_title": "Tabung press Pres",
       "matB_sub": "Baja Kekuatan Tinggi Q690",
-      "matB_desc": "Dilas dari baja Q690 dengan cincin flensa tanpa las, digerinda dan dielektrokan untuk mencegah karat. Drainase beralur kira-kira 15× dari barel yang dibor — aliran minyak lebih cepat, hasil lebih tinggi.",
+      "matB_desc": "Dilas dari baja Q690 dengan cincin flensa tanpa las, digerinda dan dielektrokan untuk mencegah karat. Drainase beralur kira-kira 15× dari tabung press yang dibor — aliran minyak lebih cepat, hasil lebih tinggi.",
       "matB_tag1": "BAJA Q690",
       "matB_tag2": "15× ALIRAN MINYAK",
       "matB_tag3": "FLENSA TANPA LAS",
@@ -979,7 +979,7 @@
       "description": "Pilih dari seluruh rangkaian mesin press minyak hidrolik kami — dari HN300 mini hingga HN500 tekanan ultra tinggi. Setiap mesin diuji pabrik; model standar dikirim dalam 15-25 hari kerja, konfigurasi khusus dalam 30-45 hari kerja.",
       "features": [
         "8 model standar + 4 model khusus dalam stok",
-        "Konfigurasi barel tunggal atau ganda tersedia",
+        "Konfigurasi tabung press tunggal atau ganda tersedia",
         "Opsi baja karbon atau baja tahan karat grade makanan",
         "Paket aksesori penuh termasuk (kain minyak, alat, manual)",
         "Tes berjalan terus 48 jam sebelum pengiriman"
@@ -1004,9 +1004,9 @@
     "odm": {
       "title": "Teknik ODM / Kustom",
       "subtitle": "Solusi Kustom dari Nol",
-      "description": "Tim teknisi kami merancang dan membangun mesin press hidrolik kustom yang disesuaikan dengan kebutuhan unik Anda — dari dimensi barel hingga sistem tekanan hingga integrasi otomasi.",
+      "description": "Tim teknisi kami merancang dan membangun mesin press hidrolik kustom yang disesuaikan dengan kebutuhan unik Anda — dari dimensi tabung press hingga sistem tekanan hingga integrasi otomasi.",
       "features": [
-        "Diameter dan tinggi barel kustom untuk biji minyak tertentu",
+        "Diameter dan tinggi tabung press kustom untuk biji minyak tertentu",
         "Sistem hidrolik dimodifikasi untuk kebutuhan tekanan khusus",
         "Integrasi dengan jalur produksi dan otomasi yang ada",
         "Opsi material khusus (baja tahan karat 316L, pelapisan nikel)",
@@ -1021,7 +1021,7 @@
       "description": "Suku cadang dan aksesori Haonuo asli untuk menjaga mesin press minyak hidrolik Anda beroperasi pada kinerja puncak. Pengiriman cepat ke seluruh dunia dengan jaminan kualitas.",
       "features": [
         "Silinder hidrolik, seal, dan rangkaian pompa",
-        "Barel minyak (ukuran standar dan kustom)",
+        "Tabung press minyak (ukuran standar dan kustom)",
         "Komponen listrik dan panel kontrol",
         "Kit perawatan lengkap untuk setiap model"
       ],
@@ -1048,7 +1048,7 @@
       "description": "Upgrade mesin press minyak hidrolik Haonuo atau pihak ketiga yang lebih lama dengan komponen modern. Tingkatkan efisiensi, keamanan, dan hasil minyak tanpa membeli mesin baru.",
       "features": [
         "Upgrade sistem hidrolik untuk tekanan lebih tinggi",
-        "Retrofit barel baja tahan karat untuk kepatuhan grade makanan",
+        "Retrofit tabung press baja tahan karat untuk kepatuhan grade makanan",
         "Modernisasi sistem listrik dan upgrade keamanan",
         "Tambahan otomasi (pengisian otomatis, pengangkatan cake otomatis)",
         "Optimasi kinerja untuk biji minyak tertentu"
@@ -1073,7 +1073,7 @@
       },
       "fullCustomization": {
         "title": "Kemampuan Kustomisasi Penuh",
-        "desc": "Dari dimensi barel hingga tekanan hidrolik hingga perlakuan permukaan — kami dapat menyesuaikan setiap aspek mesin sesuai spesifikasi Anda."
+        "desc": "Dari dimensi tabung press hingga tekanan hidrolik hingga perlakuan permukaan — kami dapat menyesuaikan setiap aspek mesin sesuai spesifikasi Anda."
       },
       "readyForCustom": {
         "title": "Siap untuk Solusi Kustom?",
@@ -1248,7 +1248,7 @@
       },
       {
         "question": "Berapa hasil dari mesin press minyak dingin?",
-        "answer": "Hasil bervariasi tergantung jenis biji: kelapa 55-65%, wijen 42-50%, kacang tanah 38-45%, walnut 50-60%, bunga matahari 40-48%, biji rami 30-38%, rapeseed 35-42%. Mesin press dingin hidrolik Haonuo dengan desain barrel beralur tipe batang mencapai hasil sekitar 2-3% lebih tinggi daripada press konvensional dengan barrel berlubang (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah bergradasi dengan kadar air 6-8%; hasil bervariasi menurut varietas biji dan persiapan), sehingga memperkecil kesenjangan hasil antara metode press dingin dan press panas."
+        "answer": "Hasil bervariasi tergantung jenis biji: kelapa 55-65%, wijen 42-50%, kacang tanah 38-45%, walnut 50-60%, bunga matahari 40-48%, biji rami 30-38%, rapeseed 35-42%. Mesin press dingin hidrolik Haonuo dengan desain tabung press beralur tipe batang mencapai hasil sekitar 2-3% lebih tinggi daripada press konvensional dengan tabung press berlubang (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah bergradasi dengan kadar air 6-8%; hasil bervariasi menurut varietas biji dan persiapan), sehingga memperkecil kesenjangan hasil antara metode press dingin dan press panas."
       },
       {
         "question": "Berapa harga mesin press minyak dingin?",
@@ -1359,7 +1359,7 @@
       },
       {
         "question": "Bagaimana cara kerja mesin press minyak hidrolik?",
-        "answer": "Mesin menggunakan pompa hidrolik untuk menghasilkan tekanan tinggi (sampai 75 MPa) yang menggerakkan piston ke dalam barrel berisi biji minyak yang sudah disiapkan. Tekanan memeras minyak keluar melalui barrel beralur sementara ampas biji yang terkompresi tetap berada di dalam. Siklus press biasanya memakan waktu 40-90 menit. Sistem kontrol mikrokomputer mengotomatiskan seluruh proses dari press hingga pengeluaran ampas."
+        "answer": "Mesin menggunakan pompa hidrolik untuk menghasilkan tekanan tinggi (sampai 75 MPa) yang menggerakkan piston ke dalam tabung press berisi biji minyak yang sudah disiapkan. Tekanan memeras minyak keluar melalui tabung press beralur sementara ampas biji yang terkompresi tetap berada di dalam. Siklus press biasanya memakan waktu 40-90 menit. Sistem kontrol mikrokomputer mengotomatiskan seluruh proses dari press hingga pengeluaran ampas."
       },
       {
         "question": "Biji apa saja yang dapat diproses mesin press minyak hidrolik?",
@@ -1367,11 +1367,11 @@
       },
       {
         "question": "Berapa hasil minyak dari mesin press minyak hidrolik?",
-        "answer": "Hasil minyak bervariasi tergantung jenis biji: wijen 42-50%, kacang tanah 38-45%, kelapa 55-65%, walnut 50-60%, rapeseed 35-45%, bunga matahari 40-48%. Mesin press hidrolik Haonuo menggunakan desain eksklusif barrel beralur tipe batang yang mencapai hasil sekitar 2-3% lebih tinggi daripada press konvensional dengan barrel berlubang (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah bergradasi dengan kadar air 6-8%; hasil bervariasi menurut varietas biji dan persiapan), dengan sisa minyak di ampas serendah 6-8%."
+        "answer": "Hasil minyak bervariasi tergantung jenis biji: wijen 42-50%, kacang tanah 38-45%, kelapa 55-65%, walnut 50-60%, rapeseed 35-45%, bunga matahari 40-48%. Mesin press hidrolik Haonuo menggunakan desain eksklusif tabung press beralur tipe batang yang mencapai hasil sekitar 2-3% lebih tinggi daripada press konvensional dengan tabung press berlubang (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah bergradasi dengan kadar air 6-8%; hasil bervariasi menurut varietas biji dan persiapan), dengan sisa minyak di ampas serendah 6-8%."
       },
       {
         "question": "Berapa harga mesin press minyak hidrolik?",
-        "answer": "Hubungi Haonuo untuk harga langsung pabrik. Kami menawarkan harga kompetitif tanpa markup perantara — penghematan dibanding harga distributor lokal (besar penghematan aktual bervariasi). Harga tergantung model, konfigurasi barrel (tunggal/ganda), dan opsi kustomisasi. Minta penawaran dan terima penawaran terperinci termasuk harga mesin, pengiriman, dan estimasi bea masuk dalam 24 jam."
+        "answer": "Hubungi Haonuo untuk harga langsung pabrik. Kami menawarkan harga kompetitif tanpa markup perantara — penghematan dibanding harga distributor lokal (besar penghematan aktual bervariasi). Harga tergantung model, konfigurasi tabung press (tunggal/ganda), dan opsi kustomisasi. Minta penawaran dan terima penawaran terperinci termasuk harga mesin, pengiriman, dan estimasi bea masuk dalam 24 jam."
       },
       {
         "question": "Apa perbedaan antara press dingin dan press panas?",

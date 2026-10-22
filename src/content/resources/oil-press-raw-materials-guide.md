@@ -19,7 +19,7 @@ seoKeywords:
 
 ## Introduction
 
-The press machine gets most of the attention when a mill is planned, but every experienced oil maker will tell you the raw material decides at least half of the outcome — often before the seed reaches the barrel. Oil content sets the ceiling on yield; moisture and size decide how easily the oil flows; hardness decides the pressure needed; and the market price of the oil decides whether the whole exercise is profitable. Two mills running identical machines can earn very different margins simply because one buys mature, clean, well-stored seed and the other does not.
+The press machine gets most of the attention when a mill is planned, but every experienced oil maker will tell you the raw material decides at least half of the outcome — often before the seed reaches the tabung press. Oil content sets the ceiling on yield; moisture and size decide how easily the oil flows; hardness decides the pressure needed; and the market price of the oil decides whether the whole exercise is profitable. Two mills running identical machines can earn very different margins simply because one buys mature, clean, well-stored seed and the other does not.
 
 This guide profiles the seeds and nuts most commonly pressed on hydraulic lines, explains the properties that matter, and gives preparation targets for each material so that the machine and the ingredient are matched.
 
@@ -27,7 +27,7 @@ This guide profiles the seeds and nuts most commonly pressed on hydraulic lines,
 
 1. **Oil content** — the laboratory percentage of oil in the kernel; higher content means more saleable oil per kilogram and more forgiving economics.
 2. **Moisture at pressing** — too dry locks oil in the meal; too wet creates sludge and emulsions. The target changes between hot and cold pressing.
-3. **Kernel size and shape** — determines crushing gap and whether material bridges in the barrel.
+3. **Kernel size and shape** — determines crushing gap and whether material bridges in the tabung press.
 4. **Hardness and shell content** — hard shells and low-oil husks demand higher cake pressure and are often removed first.
 5. **Market value and demand** — walnut, almond, and cold-pressed sesame sell on quality at premium prices; soybean sells on volume and is unforgiving of high processing costs.
 
@@ -104,9 +104,9 @@ Almond oil follows the same logic as walnut: premium culinary, cosmetic, and mas
 - Optimal moisture: 6–8%
 - Remove shell and husk; grate or cut to 1–2 mm
 - Expected yield: 60–65% hot from copra, 55–60% cold (VCO)
-- Suitable models: HN426, HN500 with a 600 mm food-grade stainless barrel
+- Suitable models: HN426, HN500 with a 600 mm food-grade stainless tabung press
 
-Copra is hard and abrasive — pre-cutting equipment and a large barrel matter. Virgin coconut oil (VCO) from fresh, dried, or cold-processed meat is a high-value export product with specific hygiene requirements; food-grade contact surfaces are non-negotiable.
+Copra is hard and abrasive — pre-cutting equipment and a large tabung press matter. Virgin coconut oil (VCO) from fresh, dried, or cold-processed meat is a high-value export product with specific hygiene requirements; food-grade contact surfaces are non-negotiable.
 
 ### 8. Soybeans
 
@@ -136,7 +136,7 @@ Camellia oil is a premium Chinese and East Asian cooking oil ("oriental olive oi
 |----------|-------------|-------|
 | Cottonseed | 15–25% | Press after lint removal; cake handling regulated (gossypol) |
 | Flaxseed/linseed | 35–45% | Cold press only for edible oil; oxidises fast, sell fresh |
-| Hemp seed | 30–35% | Cold press, low temperature, food-grade barrel; legal licensing varies |
+| Hemp seed | 30–35% | Cold press, low temperature, food-grade tabung press; legal licensing varies |
 | Palm kernel | 44–50% | Hard kernel, high pressure; cake is valuable feed |
 | Mustard seed | 35–45% | Pungent traditional oil; hot press common |
 | Moringa seed | 30–40% | Small niche, premium cosmetic/cooking oil |
@@ -146,7 +146,7 @@ Camellia oil is a premium Chinese and East Asian cooking oil ("oriental olive oi
 
 ### Cleaning
 
-Remove stones, metal, soil, husks, and broken kernels before anything else. Aim for under 0.5% impurities; this single step protects the barrel, improves colour, and prevents off-flavours.
+Remove stones, metal, soil, husks, and broken kernels before anything else. Aim for under 0.5% impurities; this single step protects the tabung press, improves colour, and prevents off-flavours.
 
 ### Moisture Conditioning
 
@@ -166,7 +166,7 @@ Remove stones, metal, soil, husks, and broken kernels before anything else. Aim 
 
 ### Crushing
 
-2–4 mm for most seeds; 3–5 mm for hard nuts; 1–2 mm for fresh coconut meat. Check the first cake after any change: a clean, firm cake that releases from the barrel says the particle size and moisture are in balance.
+2–4 mm for most seeds; 3–5 mm for hard nuts; 1–2 mm for fresh coconut meat. Check the first cake after any change: a clean, firm cake that releases from the tabung press says the particle size and moisture are in balance.
 
 ## Storage and Handling
 
@@ -188,4 +188,4 @@ This mix uses one flexible hydraulic line, spreads seasonal risk, and avoids com
 
 ## Conclusion
 
-The machine extracts the oil, but the seed defines how much oil there is to extract, how it will taste, and what you can charge for it. Match each material to its moisture target, roasting curve, particle size, and pressure class — HN325/HN365 for conventional hot-press seeds, HN426/HN500 for hard nuts and cold-press work — and buy, clean, and store as if the oil price depended entirely on those steps, because it largely does. Tell Haonuo which seeds you plan to press and in what proportions; we will confirm barrel configuration, pressure rating, and preparation equipment for the combination.
+The machine extracts the oil, but the seed defines how much oil there is to extract, how it will taste, and what you can charge for it. Match each material to its moisture target, roasting curve, particle size, and pressure class — HN325/HN365 for conventional hot-press seeds, HN426/HN500 for hard nuts and cold-press work — and buy, clean, and store as if the oil price depended entirely on those steps, because it largely does. Tell Haonuo which seeds you plan to press and in what proportions; we will confirm tabung press configuration, pressure rating, and preparation equipment for the combination.

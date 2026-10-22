@@ -25,7 +25,7 @@ imageAlt:
   id: "Wajan sangrai pemanas oli termal untuk pra-pengolahan biji minyak"
 specifications:
   - name: Model
-    value: 325 Large Barrel Single
+    value: 325 Large Tabung Press Single
   - name: Total Roaster Height
     value: 1550 mm
   - name: Pot Outer Diameter
@@ -83,7 +83,7 @@ faq:
     answer: The thermal oil roasting pan is a critical preprocessing step before hydraulic pressing. Properly roasted seeds achieve higher oil yield and better pressing efficiency. Roasted seeds are fed directly into the hydraulic oil press, creating an integrated roasting-and-pressing production line. The uniform heat distribution ensures consistent seed conditioning for optimal pressing results.
 specificationsFr:
   - name: Modèle
-    value: 325 Large Barrel Single
+    value: 325 Large Tabung Press Single
   - name: Hauteur totale du torréfacteur
     value: 1550 mm
   - name: Diamètre extérieur de la marmite
@@ -135,7 +135,7 @@ faqFr:
     answer: La poêle de torréfaction à huile thermique est une étape de prétraitement essentielle avant le pressage hydraulique. Les graines correctement torréfiées obtiennent un rendement en huile plus élevé et une meilleure efficacité de pressage. Les graines torréfiées sont alimentées directement dans la presse à huile hydraulique, créant une ligne de production intégrée de torréfaction et de pressage. La distribution uniforme de la chaleur garantit un conditionnement cohérent des graines pour des résultats de pressage optimaux.
 specificationsAr:
   - name: "الطراز"
-    value: "325 Large Barrel Single"
+    value: "325 Large Tabung Press Single"
   - name: "الارتفاع الإجمالي للمحمصة"
     value: "1550 ملم"
   - name: "القطر الخارجي للقدر"
@@ -160,7 +160,7 @@ specificationsAr:
     value: "1550×1200 ملم"
 specificationsId:
   - name: Model
-    value: 325 Large Barrel Single
+    value: 325 Large Tabung Press Single
   - name: Tinggi Total Sangrai
     value: 1550 mm
   - name: Diameter Luar Panci
@@ -241,7 +241,7 @@ videoUrl: ''
 seoKeywords:
   - thermal oil roasting pan
   - seed roasting machine
-  - 325 large barrel roaster
+  - 325 large tabung press roaster
   - oil seed roaster
   - seed frying pan
   - roasting equipment for oil press

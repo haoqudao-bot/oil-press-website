@@ -14,8 +14,8 @@ icon: commercial
 description:
   en: Commercial oil press machine for medium to large scale oil production and business use. Double-barrel hydraulic press with high throughput for commercial oil extraction. Well-suited for commercial cold press oil production. Haonuo factory-direct price.
   fr: Machine de pressage d'huile commerciale pour production d'huile à moyenne et grande échelle. Pression hydraulique à double fût avec débit élevé.
-  ar: آلة عصر زيت تجارية لإنتاج الزيت بمقياس متوسط إلى كبير. ضغط هيدروليكي مزدوج البرميل بإنتاجية عالية.
-  id: Mesin press minyak komersial untuk produksi minyak skala menengah hingga besar. Press hidrolik barel ganda dengan throughput tinggi.
+  ar: آلة عصر زيت تجارية لإنتاج الزيت بمقياس متوسط إلى كبير. ضغط هيدروليكي ثنائي الأسطوانة بإنتاجية عالية.
+  id: Mesin press minyak komersial untuk produksi minyak skala menengah hingga besar. Press hidrolik tabung press ganda dengan throughput tinggi.
 recommendedProducts:
   - commercial-hydraulic-oil-press
   - cold-press-hydraulic-oil-press
@@ -45,7 +45,7 @@ processStepsAr:
   - step: معالجة البذور
     description: استخدام وحدة التغذية والسحق والتحميص المتكاملة لتحضير البذور آلياً
   - step: الضغط الهيدروليكي
-    description: العصر باستخدام الطراز الثقيل (HN365) أو مضغوط الضغط البارد (HN426) مع خيار البرميل المزدوج لإنتاجية أعلى
+    description: العصر باستخدام الطراز الثقيل (HN365) أو مضغوط الضغط البارد (HN426) مع خيار أسطوانة العصر المزدوجة لإنتاجية أعلى
   - step: الترشيح
     description: الترشيح باستخدام المضغوط الترشيحي الهوائي لزيت بجودة تجارية
   - step: التعبئة
@@ -54,7 +54,7 @@ processStepsId:
   - step: Pengolahan Biji
     description: Gunakan Integrated Feeder Crusher Roaster untuk persiapan biji otomatis
   - step: Press Hidrolik
-    description: Tekan menggunakan Heavy Duty (HN365) atau Cold Press (HN426) dengan opsi barel ganda untuk throughput lebih tinggi
+    description: Tekan menggunakan Heavy Duty (HN365) atau Cold Press (HN426) dengan opsi tabung press ganda untuk throughput lebih tinggi
   - step: Filtrasi
     description: Saring menggunakan Pneumatic Oil Filter Press untuk minyak kualitas komersial
   - step: Pengemasan
@@ -83,26 +83,26 @@ faqFr:
     answer: Oui, les modèles HN365 و HN426 sont disponibles en configurations double fût, doublant effectivement votre débit avec le même encombrement.
 faqAr:
   - question: ما هو أفضل معصرة للاستخدام التجاري؟
-    answer: للإنتاج التجاري، نوصي بالطرازين الثقيل (HN365) أو مضغوط الضغط البارد (HN426) مع تكوين البرميل المزدوج. توفر هذه قوة ضغط أعلى وتشغيلاً مستمراً.
+    answer: للإنتاج التجاري، نوصي بالطرازين الثقيل (HN365) أو مضغوط الضغط البارد (HN426) مع تكوين أسطوانة العصر المزدوجة. توفر هذه قوة ضغط أعلى وتشغيلاً مستمراً.
   - question: كم زيت يمكن لمعصرة تجارية إنتاجه يومياً؟
-    answer: مع تكوين البرميل المزدوج و8-10 ساعات تشغيل، يمكن لطرازاتنا التجارية معالجة 2000-5000 كجم من البذور يومياً.
+    answer: مع تكوين أسطوانة العصر المزدوجة و8-10 ساعات تشغيل، يمكن لطرازاتنا التجارية معالجة 2000-5000 كجم من البذور يومياً.
   - question: هل تقدمون خطوط إنتاج كاملة؟
     answer: نعم، نقدم خطوط عصر زيت كاملة بما في ذلك معالجة البذور والتحميص والعصر والترشيح. أما معدات التكرير لزيت RBD فتُشترى بشكل مستقل ويمكننا المساعدة في دمجها.
   - question: ما هو سعر آلة العصر التجاري؟
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
-  - question: هل يمكنني الحصول على تكوين برميل مزدوج؟
-    answer: نعم، يتوفر طرازا HN365 و HN426 بتكوينات برميل مزدوج، مما يضاعف إنتاجيتك فعلياً بنفس المساحة.
+  - question: هل يمكنني الحصول على تكوين الأسطوانة المزدوجة؟
+    answer: نعم، يتوفر طرازا HN365 و HN426 بتكوينات الأسطوانة المزدوجة، مما يضاعف إنتاجيتك فعلياً بنفس المساحة.
 faqId:
   - question: Press minyak apa yang direkomendasikan untuk penggunaan komersial?
-    answer: Untuk produksi komersial, kami merekomendasikan model Heavy Duty (HN365) atau Cold Press (HN426) dengan konfigurasi barel ganda. Keduanya menawarkan gaya tekan lebih tinggi dan operasi berkelanjutan.
+    answer: Untuk produksi komersial, kami merekomendasikan model Heavy Duty (HN365) atau Cold Press (HN426) dengan konfigurasi tabung press ganda. Keduanya menawarkan gaya tekan lebih tinggi dan operasi berkelanjutan.
   - question: Berapa banyak minyak yang bisa dihasilkan press komersial per hari?
-    answer: Dengan konfigurasi barel ganda dan 8-10 jam operasi, model komersial kami dapat memproses 2.000-5.000 kg biji per hari.
+    answer: Dengan konfigurasi tabung press ganda dan 8-10 jam operasi, model komersial kami dapat memproses 2.000-5.000 kg biji per hari.
   - question: Apakah Anda menawarkan lini produksi lengkap?
     answer: Ya, kami menawarkan lini produksi penekanan minyak lengkap termasuk pengolahan biji, pengovenan, penekanan, dan filtrasi. Peralatan pemurnian untuk minyak RBD dibeli terpisah dan kami dapat membantu mengintegrasikannya.
   - question: Berapa harga mesin press minyak komersial?
     answer: Hubungi kami untuk harga sesuai model pilihan Anda. Kami menawarkan harga langsung pabrik tanpa markup perantara.
-  - question: Bisakah saya mendapatkan konfigurasi barel ganda?
-    answer: Ya, kedua model HN365 dan HN426 tersedia dalam konfigurasi barel ganda, secara efektif menggandakan throughput Anda dengan jejak yang sama.
+  - question: Bisakah saya mendapatkan konfigurasi tabung press ganda?
+    answer: Ya, kedua model HN365 dan HN426 tersedia dalam konfigurasi tabung press ganda, secara efektif menggandakan throughput Anda dengan jejak yang sama.
 seoKeywords:
   - commercial oil press machine
   - commercial oil press machine price
@@ -111,7 +111,7 @@ seoKeywords:
   - oil press machine for business
   - commercial cold press oil machine
   - oil press machine for commercial use
-  - double barrel oil press
+  - double tabung press oil press
 order: 13
 ---
 
@@ -140,22 +140,22 @@ Whether you are running a dedicated oil production facility, a food processing p
 - **Low residual oil**: Below 5% means maximum oil recovery and profitability
 - **Multi-seed capability**: Switch between seed types to serve diverse market demands
 
-## Single vs. Double Barrel Comparison
+## Single vs. Double Tabung Press Comparison
 
-| Feature | Single Barrel | Double Barrel |
+| Feature | Single Tabung Press | Double Tabung Press |
 |---|---|---|
 | Daily Capacity | 1,000-2,500 kg | 2,000-5,000 kg |
 | Barrels | 1 pressing chamber | 2 independent chambers |
-| Operation | Batch-by-batch | Near-continuous (alternate barrels) |
+| Operation | Batch-by-batch | Near-continuous (alternate tabung press) |
 | Floor Space | ~3 m² | ~4.5 m² |
 | Power Consumption | Single motor | Dual motor (shared hydraulics) |
 | Labor Required | 1 operator | 1-2 operators |
 | Best For | Startups, single-seed production | Multi-seed, high-volume operations |
 | Price Premium | Base price | ~60-70% more than single |
 
-**When to choose single barrel:** You're starting out, processing one seed type, or have limited space and budget.
+**When to choose single tabung press:** You're starting out, processing one seed type, or have limited space and budget.
 
-**When to choose double barrel:** You need higher daily throughput, want to process two seed types simultaneously, or need near-continuous operation to meet commercial orders.
+**When to choose double tabung press:** You need higher daily throughput, want to process two seed types simultaneously, or need near-continuous operation to meet commercial orders.
 
 ## Commercial Application Scenarios
 

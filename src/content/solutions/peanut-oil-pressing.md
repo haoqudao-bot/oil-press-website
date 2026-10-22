@@ -25,7 +25,7 @@ recommendedProducts:
   - pneumatic-oil-filter-press
 processSteps:
   - step: 1. Cleaning
-    description: Remove stones, dust and impurities from the pods. Clean seed protects the barrel and keeps oil flavor clean.
+    description: Remove stones, dust and impurities from the pods. Clean seed protects the tabung press and keeps oil flavor clean.
   - step: 2. Shelling
     description: Shell with a dedicated groundnut sheller. Shells absorb oil; pressing unshelled peanuts cuts yield by 15-25%.
   - step: 3. Crushing / Flaking
@@ -55,7 +55,7 @@ processStepsFr:
     description: Faites passer l'huile brute à travers le filtre-presse pneumatique pour éliminer les fines, puis laissez décanter 12-24 heures avant la mise en bouteille.
 processStepsAr:
   - step: 1. التنظيف
-    description: أزل الحجارة والغبار والشوائب من القرون. البذور النظيفة تحمي البرميل وتحافظ على نكهة زيت نقية.
+    description: أزل الحجارة والغبار والشوائب من القرون. البذور النظيفة تحمي أسطوانة العصر وتحافظ على نكهة زيت نقية.
   - step: 2. التقشير
     description: قشّر باستخدام مقشرة فول سوداني مخصصة. القشور تمتص الزيت؛ عصر الفول غير المقشر يخفض الإنتاج بنسبة 15-25%.
   - step: 3. السحق / الترقيق
@@ -70,7 +70,7 @@ processStepsAr:
     description: مرر الزيت الخام عبر مكبس الترشيح الهوائي لإزالة الشوائب الدقيقة، ثم اتركه يرقُد 12-24 ساعة قبل التعبئة.
 processStepsId:
   - step: 1. Pembersihan
-    description: Buang batu, debu dan kotoran dari polong. Biji bersih melindungi barrel dan menjaga rasa minyak tetap bersih.
+    description: Buang batu, debu dan kotoran dari polong. Biji bersih melindungi tabung press dan menjaga rasa minyak tetap bersih.
   - step: 2. Pengupasan
     description: Kupas dengan mesin pengupas kacang khusus. Kulit menyerap minyak; menekan kacang berkulit menurunkan hasil 15-25%.
   - step: 3. Penghancuran / Pembelahan
@@ -93,9 +93,9 @@ faq:
   - question: What is the difference between cold-pressed and hot-pressed peanut oil?
     answer: Cold-pressed peanut oil is pressed without roasting, so it keeps more vitamin E and natural peanut flavor and sells at a premium in health-food markets. Hot-pressed oil is made after roasting at around 130°C, gives 3-5% more oil per batch and has the strong roasted aroma preferred in Chinese and West African cooking. Every Haonuo hydraulic press does both — only the preparation changes.
   - question: How many kilograms of peanuts can I press per day?
-    answer: An HN325 single barrel holds 100 kg per batch. With roasted peanuts at 30-60 minutes per batch and an 8-10 hour working day, realistic throughput is about 800-1,200 kg/day; cold pressing runs at roughly half that. A double-barrel machine or the HN365 with alternating stations reaches about 1,500-2,500 kg/day. Actual output depends on cycle time, moisture, loading speed and operator practice.
+    answer: An HN325 single tabung press holds 100 kg per batch. With roasted peanuts at 30-60 minutes per batch and an 8-10 hour working day, realistic throughput is about 800-1,200 kg/day; cold pressing runs at roughly half that. A double-barrel machine or the HN365 with alternating stations reaches about 1,500-2,500 kg/day. Actual output depends on cycle time, moisture, loading speed and operator practice.
   - question: What is the price of a peanut oil press machine?
-    answer: Price depends on the model (HN325 or HN365), single or double barrel, and whether you add a roaster and filter. We trade FOB Qingdao and confirm payment terms on the proforma invoice. Send us your seed, target kg per day and local voltage, and we will return a detailed quotation within 24 hours.
+    answer: Price depends on the model (HN325 or HN365), single or double tabung press, and whether you add a roaster and filter. We trade FOB Qingdao and confirm payment terms on the proforma invoice. Send us your seed, target kg per day and local voltage, and we will return a detailed quotation within 24 hours.
   - question: How long does pressed peanut oil last?
     answer: Properly filtered and settled peanut oil keeps for 18-24 months in sealed, dark containers stored in a cool place. Cold-pressed oil is more sensitive to light and heat, so dark glass or opaque containers are recommended.
 faqFr:
@@ -114,8 +114,8 @@ faqFr:
   - question: Combien de temps se conserve l'huile d'arachide pressée ?
     answer: Correctement filtrée et décantée, l'huile d'arachide se conserve 18-24 mois en récipients sombres et fermés, dans un endroit frais. L'huile pressée à froid est plus sensible à la lumière et à la chaleur ; le verre sombre ou les récipients opaques sont recommandés.
 faqAr:
-  - question: ما نسبة الزيت في الفول السوداني وكم يتبقى من الزيت في الكعكة؟
-    answer: يحتوي الفول السوداني المقشر على 45-55% زيت. تترك معصرة هاونو الهيدروليكية عادةً 6-8% زيت متبقٍ في الكعكة (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير)، مقابل 10-12% في المعاصر التقليدية ذات البرميل المثقوب.
+  - question: ما نسبة الزيت في الفول السوداني وكم يتبقى من الزيت في الكسب؟
+    answer: يحتوي الفول السوداني المقشر على 45-55% زيت. تترك معصرة هاونو الهيدروليكية عادةً 6-8% زيت متبقٍ في الكسب (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير)، مقابل 10-12% في المعاصر التقليدية ذات أسطوانة العصر المثقوبة.
   - question: ما نسبة الرطوبة المناسبة للفول السوداني قبل العصر؟
     answer: للعصر الساخن، اضبط رطوبة الحبوب المقشرة على 4-6% بعد التحميص أو التكييف. وللعصر على البارد استهدف نسبة أعلى قليلاً 6-7% — فالحبوب الجافة جداً تطلق الزيت بصعوبة بدون حرارة. أما الحبوب شديدة الرطوبة فتسبب استحلاب الزيت وتخفض الإنتاج وتقصر الصلاحية. افحص الرطوبة بمقياس رطوبة بسيط واضبطها بالتحميص أو التبخير.
   - question: هل يمكن عصر الفول السوداني بقشره؟
@@ -123,14 +123,14 @@ faqAr:
   - question: ما الفرق بين زيت الفول السوداني المعصور على البارد والمعصور ساخناً؟
     answer: زيت الفول المعصور على البارد يُعصر بدون تحميص، فيحتفظ بمزيد من فيتامين E ونكهة الفول الطبيعية ويُباع بسعر أعلى في أسواق الأغذية الصحية. والزيت المعصور ساخناً يُنتج بعد التحميص عند حوالي 130°م، ويعطي 3-5% زيتاً أكثر لكل دفعة وله رائحة التحميص القوية المفضلة في المطبخ الصيني وغرب أفريقيا. كل معصرة هاونو الهيدروليكية تؤدي النوعين — ويتغير التحضير فقط.
   - question: كم كيلوغراماً من الفول السوداني يمكن عصرها يومياً؟
-    answer: تتسع HN325 أحادية البرميل لـ100 كجم لكل دفعة. مع الفول المحمص بدورة 30-60 دقيقة ويوم عمل 8-10 ساعات، يكون الإنتاج الواقعي حوالي 800-1200 كجم/يوم؛ والعصر على البارد بنحو النصف تقريباً. أما الآلة ثنائية البرميل أو HN365 ذات المحطتين المتبادلتين فتصل إلى حوالي 1500-2500 كجم/يوم. الإنتاج الفعلي يتوقف على زمن الدورة والرطوبة وسرعة التحميل ومهارة المشغل.
+    answer: تتسع HN325 أحادية الأسطوانة لـ100 كجم لكل دفعة. مع الفول المحمص بدورة 30-60 دقيقة ويوم عمل 8-10 ساعات، يكون الإنتاج الواقعي حوالي 800-1200 كجم/يوم؛ والعصر على البارد بنحو النصف تقريباً. أما الآلة ثنائية الأسطوانة أو HN365 ذات المحطتين المتبادلتين فتصل إلى حوالي 1500-2500 كجم/يوم. الإنتاج الفعلي يتوقف على زمن الدورة والرطوبة وسرعة التحميل ومهارة المشغل.
   - question: ما سعر آلة عصر زيت الفول السوداني؟
-    answer: يعتمد السعر على الطراز (HN325 أو HN365) وكون البرميل مفرداً أو مزدوجاً، وما إذا كنت ستضيف محمصة ومرشحاً. نتعامل FOB كينغداو وتُؤكد شروط الدفع في الفاتورة الأولية. أرسل لنا نوع البذور وهدفك بالكجم/يوم والكهرباء المحلية، وسنرسل عرض سعر مفصلاً خلال 24 ساعة.
+    answer: يعتمد السعر على الطراز (HN325 أو HN365) وكون الأسطوانة المفردة أو المزدوجة، وما إذا كنت ستضيف محمصة ومرشحاً. نتعامل FOB كينغداو وتُؤكد شروط الدفع في الفاتورة الأولية. أرسل لنا نوع البذور وهدفك بالكجم/يوم والكهرباء المحلية، وسنرسل عرض سعر مفصلاً خلال 24 ساعة.
   - question: كم مدة صلاحية زيت الفول السوداني المعصور؟
     answer: الزيت المُرشَّح والمُرقَد جيداً يحتفظ بجودته 18-24 شهراً في عبوات مظلمة محكمة بمكان بارد. زيت العصر على البارد أكثر حساسية للضوء والحرارة، لذا يُنصح بالزجاج الداكن أو العبوات غير الشفافة.
 faqId:
   - question: Berapa kandungan minyak kacang dan berapa sisa minyak di bungkil?
-    answer: Kacang kupasan mengandung 45-55% minyak. Press hidrolik Haonuo biasanya menyisakan 6-8% sisa minyak dalam bungkil (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan 10-12% pada press barrel berlubang tradisional.
+    answer: Kacang kupasan mengandung 45-55% minyak. Press hidrolik Haonuo biasanya menyisakan 6-8% sisa minyak dalam bungkil (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan 10-12% pada press tabung press berlubang tradisional.
   - question: Berapa kelembapan ideal kacang sebelum ditekan?
     answer: Untuk press panas, atur biji kupasan ke kelembapan 4-6% setelah pengovenan atau pengondisian. Untuk cold press, bidik sedikit lebih tinggi yaitu 6-7% — biji terlalu kering sulit melepas minyak tanpa panas. Biji terlalu basah mengemulsikan minyak, menurunkan hasil dan memperpendek umur simpan. Periksa kelembapan dengan moisture meter sederhana dan atur melalui pengovenan atau pengukusan.
   - question: Bisakah kacang ditekan bersama kulitnya?
@@ -138,9 +138,9 @@ faqId:
   - question: Apa bedanya minyak kacang cold press dan press panas?
     answer: Minyak kacang cold press ditekan tanpa pengovenan, sehingga mempertahankan lebih banyak vitamin E dan rasa kacang alami, serta dijual premium di pasar makanan sehat. Minyak press panas dibuat setelah pengovenan sekitar 130°C, memberi hasil 3-5% lebih banyak per batch dan aroma panggang kuat yang disukai masakan Tiongkok dan Afrika Barat. Semua press hidrolik Haonuo bisa keduanya — hanya persiapannya yang berbeda.
   - question: Berapa kg kacang yang bisa ditekan per hari?
-    answer: HN325 barrel tunggal menampung 100 kg per batch. Dengan kacang oven 30-60 menit per batch dan hari kerja 8-10 jam, kapasitas riil sekitar 800-1.200 kg/hari; cold press berjalan sekitar setengahnya. Mesin barrel ganda atau HN365 dengan stasiun selang-seling mencapai sekitar 1.500-2.500 kg/hari. Output aktual tergantung waktu siklus, kelembapan, kecepatan pengisian dan keterampilan operator.
+    answer: HN325 tabung press tunggal menampung 100 kg per batch. Dengan kacang oven 30-60 menit per batch dan hari kerja 8-10 jam, kapasitas riil sekitar 800-1.200 kg/hari; cold press berjalan sekitar setengahnya. Mesin tabung press ganda atau HN365 dengan stasiun selang-seling mencapai sekitar 1.500-2.500 kg/hari. Output aktual tergantung waktu siklus, kelembapan, kecepatan pengisian dan keterampilan operator.
   - question: Berapa harga mesin press minyak kacang?
-    answer: Harga tergantung model (HN325 atau HN365), barrel tunggal atau ganda, serta apakah menambah pemanggang dan filter. Kami berdagang FOB Qingdao dan syarat pembayaran dikonfirmasi pada faktur proforma. Kirimkan jenis biji, target kg/hari dan tegangan lokal Anda, kami kirim penawaran rinci dalam 24 jam.
+    answer: Harga tergantung model (HN325 atau HN365), tabung press tunggal atau ganda, serta apakah menambah pemanggang dan filter. Kami berdagang FOB Qingdao dan syarat pembayaran dikonfirmasi pada faktur proforma. Kirimkan jenis biji, target kg/hari dan tegangan lokal Anda, kami kirim penawaran rinci dalam 24 jam.
   - question: Berapa lama minyak kacang press dapat bertahan?
     answer: Minyak kacang yang terfilter dan terendap dengan baik tahan 18-24 bulan dalam wadah gelap tertutup di tempat sejuk. Minyak cold press lebih sensitif terhadap cahaya dan panas, jadi disarankan botol kaca gelap atau wadah buram.
 seoKeywords:
@@ -155,7 +155,7 @@ order: 3
 
 **Quick Answer**
 
-Yes — the Haonuo hydraulic oil press is built for peanuts (groundnuts). Expect **40-48% yield (hot press, roasted kernels)** or **38-44% (cold press)** from shelled kernels, with **residual oil in cake at 6-8%** — against 10-12% for conventional drilled-barrel presses. One HN325 barrel takes **100 kg per batch (30-60 min hot press)**, so a single machine runs roughly **800-1,200 kg/day**; a double-barrel or HN365 reaches **1,500-2,500 kg/day**. Always shell first: pressing unshelled peanuts cuts yield by 15-25%.
+Yes — the Haonuo hydraulic oil press is built for peanuts (groundnuts). Expect **40-48% yield (hot press, roasted kernels)** or **38-44% (cold press)** from shelled kernels, with **residual oil in cake at 6-8%** — against 10-12% for conventional drilled-barrel presses. One HN325 tabung press takes **100 kg per batch (30-60 min hot press)**, so a single machine runs roughly **800-1,200 kg/day**; a double-barrel or HN365 reaches **1,500-2,500 kg/day**. Always shell first: pressing unshelled peanuts cuts yield by 15-25%.
 
 ## Peanut Oil Press Overview
 
@@ -179,9 +179,9 @@ Every Haonuo hydraulic press handles **both routes on one machine**: cold pressi
 
 - **Shelling** — pressing unshelled peanuts cuts oil yield by 15-25% and darkens the oil.
 - **Variety** — high-oil varieties (Virginia, Spanish) outperform runner types.
-- **Moisture** — kernels entering the barrel should be at 4-6% for hot press, 6-7% for cold press.
+- **Moisture** — kernels entering the tabung press should be at 4-6% for hot press, 6-7% for cold press.
 - **Roasting** — conditioning at around 130°C (120-150°C) develops the nutty aroma and lifts yield by 3-5%.
-- **Barrel design** — the bar-type slotted barrel drains oil over a far larger area than a drilled barrel, typically extracting 2-3% more oil per batch.
+- **Tabung Press design** — the bar-type slotted tabung press drains oil over a far larger area than a drilled tabung press, typically extracting 2-3% more oil per batch.
 
 <!-- yield-block -->
 ### What you get from 100 kg of shelled peanuts

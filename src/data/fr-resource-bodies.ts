@@ -20,8 +20,8 @@ L'entretien régulier ne coûte pas d'argent — il en économise.
 
 Effectuez cette routine à la fin de chaque journée de pressage.
 
-### Étape 1 : Retirer le gâteau et les résidus d'huile
-Retirez le gâteau comprimé de la chambre de pressage. Essuyez les particules de graines et les résidus d'huile du fût, de la tête de piston et de la cage.
+### Étape 1 : Retirer le tourteau et les résidus d'huile
+Retirez le tourteau comprimé de la chambre de pressage. Essuyez les particules de graines et les résidus d'huile du fût, de la tête de piston et de la cage.
 
 ### Étape 2 : Nettoyer les toiles filtrantes
 Retirez les toiles filtrantes de la cage. Rincez-les immédiatement dans l'eau tiède. Pour un nettoyage approfondi, lavez avec du savon à vaisselle doux.
@@ -35,7 +35,7 @@ Videz le récipient de collecte et lavez-le avec de l'eau chaude et du savon. S�
 ### Étape 5 : Inspection visuelle rapide
 - Vérifiez les fuites d'huile autour des joints hydrauliques
 - Écoutez les bruits inhabituels
-- Vérifiez la consistance du gâteau
+- Vérifiez la consistance du tourteau
 - Vérifiez le niveau d'huile hydraulique
 
 ## Nettoyage approfondi hebdomadaire
@@ -98,8 +98,8 @@ Effectuez un nettoyage plus approfondi une fois par semaine.
 **Symptômes indiquant une usure :**
 
 - Le rendement en huile a diminué de 3% ou plus
-- Le gâteau est trop mou ou friable
-- L'huile apparaît dans le gâteau
+- Le tourteau est trop mou ou friable
+- L'huile apparaît dans le tourteau
 - Le cycle de pressage prend plus de temps que d'habitude
 - Bruits inhabituels pendant le pressage
 
@@ -138,7 +138,7 @@ Effectuez un nettoyage plus approfondi une fois par semaine.
 
 | Fréquence | Tâche | Temps requis |
 |-----------|------|---------------|
-| **Après chaque lot** | Retirer le gâteau, essuyer la chambre | 3-5 minutes |
+| **Après chaque lot** | Retirer le tourteau, essuyer la chambre | 3-5 minutes |
 | **Après chaque lot** | Rincer les toiles filtrantes | 5 minutes |
 | **Quotidien** | Essuyer les surfaces externes | 5-10 minutes |
 | **Quotidien** | Nettoyer le récipient de collecte | 5 minutes |
@@ -194,7 +194,7 @@ Obtenir le rendement en huile maximal de votre presse à huile est le facteur le
 
 ## Comprendre les bases du rendement en huile
 
-Le rendement en huile désigne le pourcentage d'huile extrait avec succès d'une quantité donnée de matière première. Par exemple, si vous traitez 100 kg de graines de sésame et que vous extrayez 45 kg d'huile, votre rendement en huile est de 45 %. Cependant, aucune presse à huile ne peut extraire 100 % de l'huile contenue dans les graines. Il reste toujours de l'huile résiduelle dans le gâteau pressé. L'objectif de l'optimisation du rendement est de minimiser cette huile résiduelle tout en maintenant la qualité de l'huile et l'efficacité opérationnelle.
+Le rendement en huile désigne le pourcentage d'huile extrait avec succès d'une quantité donnée de matière première. Par exemple, si vous traitez 100 kg de graines de sésame et que vous extrayez 45 kg d'huile, votre rendement en huile est de 45 %. Cependant, aucune presse à huile ne peut extraire 100 % de l'huile contenue dans les graines. Il reste toujours de l'huile résiduelle dans le tourteau pressé. L'objectif de l'optimisation du rendement est de minimiser cette huile résiduelle tout en maintenant la qualité de l'huile et l'efficacité opérationnelle.
 
 La teneur maximale théorique en huile varie considérablement selon le type de graine : le sésame contient environ 50 à 60 % d'huile, les arachides 45 à 55 %, la noix de coco (coprah) 65 à 72 %, le tournesol 40 à 50 %, et le colza 35 à 45 %. Votre rendement réel sera toujours inférieur au maximum théorique, mais avec des techniques appropriées, vous pouvez vous en approcher remarquablement.
 
@@ -232,7 +232,7 @@ Utilisez une cuve de conditionnement ou une chambre de chauffage à vapeur pour 
 
 ### Pression de pressage
 
-Une pression de pressage plus élevée produit généralement un rendement en huile plus élevé, mais il y a des rendements décroissants et des limites pratiques. Une pression excessive peut provoquer un compactage trop important du gâteau, bloquant en réalité les canaux d'écoulement de l'huile. Elle augmente également l'usure de la vis et du fût, réduisant la durée de vie de la machine.
+Une pression de pressage plus élevée produit généralement un rendement en huile plus élevé, mais il y a des rendements décroissants et des limites pratiques. Une pression excessive peut provoquer un compactage trop important du tourteau, bloquant en réalité les canaux d'écoulement de l'huile. Elle augmente également l'usure de la vis et du fût, réduisant la durée de vie de la machine.
 
 Pour les presses hydrauliques, ajustez la pression hydraulique en fonction du type de graine. Commencez à la pression recommandée par le fabricant et augmentez par petits incréments tout en surveillant le rendement. Suivez les directives du fabricant pour chaque type de graine.
 
@@ -260,12 +260,12 @@ La qualité de votre matière première a un impact direct sur le rendement en h
 
 ## Stratégie de pressage multi-passes
 
-Le pressage en une seule passe laisse typiquement 5 à 10 % d'huile résiduelle dans le gâteau. Le pressage multi-passes consiste à faire passer le gâteau dans la presse une deuxième voire une troisième fois pour extraire de l'huile supplémentaire. Cette technique peut améliorer le rendement total de 3 à 8 %.
+Le pressage en une seule passe laisse typiquement 5 à 10 % d'huile résiduelle dans le tourteau. Le pressage multi-passes consiste à faire passer le tourteau dans la presse une deuxième voire une troisième fois pour extraire de l'huile supplémentaire. Cette technique peut améliorer le rendement total de 3 à 8 %.
 
 **Comment mettre en œuvre le pressage multi-passes :**
-1. Collectez le gâteau du premier pressage
+1. Collectez le tourteau du premier pressage
 2. Ajustez la presse pour un réglage plus serré (jeu du fût plus étroit ou pression plus élevée)
-3. Réinjectez le gâteau dans la presse
+3. Réinjectez le tourteau dans la presse
 4. Surveillez la qualité de l'huile de la deuxième passe — elle peut être de qualité inférieure
 
 Le pressage multi-passes est le plus efficace pour les graines de grande valeur où l'huile supplémentaire justifie le temps et l'énergie supplémentaires. Pour les graines de faible valeur, le coût de la deuxième passe peut dépasser la valeur de l'huile supplémentaire extraite.
@@ -322,8 +322,8 @@ Le pressage à froid extrait l'huile à basse température (généralement en de
 5. Filtrage fin : Filtrage à plusieurs étages pour une huile cristalline
 
 ### Exigences en équipement pour le pressage à froid
-- Pression de surface de gâteau plus élevée (42 MPa ou plus)
-- Design de baril spécialisé pour l'extraction à basse température
+- Pression de surface de tourteau plus élevée (42 MPa ou plus)
+- Design de fût spécialisé pour l'extraction à basse température
 - Aucun chauffage externe — la pression hydraulique statique maintient naturellement la température de l'huile à un niveau bas
 - Modèles adaptés : HN426, HN480, HN500
 
@@ -530,7 +530,7 @@ Le processus de filtration et de clarification est critique pour produire des hu
 
 | Type d'impureté | Description | Source | Impact |
 |-----------------|-------------|--------|--------|
-| Particules solides | Fragments de graines, particules de gâteau | Processus de pressage | Opacité, sédimentation |
+| Particules solides | Fragments de graines, particules de tourteau | Processus de pressage | Opacité, sédimentation |
 | Composés phosphorés | Phospholipides (gommes) | Matériaux bruts | Formation d'émulsion |
 | Acides gras libres | Triglycérides hydrolysés | Dégradation | Acidité, saveur |
 | Composés colorants | Caténoïdes, chlorophylle | Matériaux bruts | Couleur foncée |
@@ -558,13 +558,13 @@ C'est la méthode de filtration la plus couramment utilisée pour les opération
 
 **Opération :**
 - L'huile est pompée à travers les plaques filtrantes
-- Les particules solides forment un gâteau filtrant
+- Les particules solides forment un tourteau filtrant
 - L'huile propre passe à travers le tissu filtrant
 
 **Avantages :**
 - Capacité de haute pression
 - Efficace pour l'huile brute à haute teneur en solides
-- Retrait facile du gâteau
+- Retrait facile du tourteau
 
 #### Filtre à sacs
 
@@ -657,10 +657,10 @@ La conception d'une ligne de production d'huile complète nécessite une planifi
 - Réservoirs en acier doux (avec revêtement)
 - Huile pressée à froid : Stocker à < 25°C, protégée de la lumière
 
-### 9. Système de manipulation du gâteau
-- Transporteur de gâteau
-- Broyeur de gâteau
-- Utilisations du gâteau : Alimentation animale, engrais, traitement secondaire
+### 9. Système de manipulation du tourteau
+- Transporteur de tourteau
+- Broyeur de tourteau
+- Utilisations du tourteau : Alimentation animale, engrais, traitement secondaire
 
 ## Planification de la capacité
 
@@ -944,7 +944,7 @@ Le HN325 est notre cheval de bataille d'entrée de gamme, adapté pour les opér
 **Spécifications clés :**
 - Force de pressage : 325 tonnes
 - Pression système : 60 MPa
-- Pression de surface du gâteau : 27,78 MPa
+- Pression de surface du tourteau : 27,78 MPa
 - Capacité par lot : 100 kg
 - Puissance moteur : 2,2 KW
 
@@ -959,7 +959,7 @@ Le HN365 est notre modèle commercial le plus populaire, offrant 10% de force de
 **Spécifications clés :**
 - Force de pressage : 365 tonnes
 - Pression système : 63 MPa
-- Pression de surface du gâteau : 30,15 MPa
+- Pression de surface du tourteau : 30,15 MPa
 - Capacité par lot : 100 kg
 
 ### HN426 Presse hydraulique à froid
@@ -973,7 +973,7 @@ Le HN426 est notre spécialiste dédié au pressage à froid, conçu pour les ma
 **Spécifications clés :**
 - Force de pressage : 500 tonnes
 - Pression système : 70 MPa
-- Pression de surface du gâteau : 42 MPa
+- Pression de surface du tourteau : 42 MPa
 - Capacité par lot : 100 kg
 
 ### HN480 Presse hydraulique haute pression
@@ -987,7 +987,7 @@ Le HN480 fait le pont entre le HN426 et le HN500, offrant des performances équi
 **Spécifications clés :**
 - Force de pressage : 560 tonnes
 - Pression système : 72 MPa
-- Pression de surface du gâteau : 48 MPa
+- Pression de surface du tourteau : 48 MPa
 - Capacité par lot : 100 kg
 
 ### HN500 Presse hydraulique ultra haute pression
@@ -1001,7 +1001,7 @@ Le HN500 est notre modèle phare, conçu pour les applications industrielles les
 **Spécifications clés :**
 - Force de pressage : 620 tonnes
 - Pression système : 75 MPa
-- Pression de surface du gâteau : 52 MPa
+- Pression de surface du tourteau : 52 MPa
 - Capacité par lot : 100 kg
 
 ## Arbre de décision de sélection
@@ -1022,14 +1022,14 @@ Le HN500 est notre modèle phare, conçu pour les applications industrielles les
 - Performance équilibrée -> HN480
 - Polyvalence maximale -> HN500
 
-## Configuration simple vs double baril
+## Configuration simple vs double fût
 
-**Simple baril :**
+**Simple fût :**
 - Coût initial plus bas
 - Fonctionnement plus simple
 - Adapté pour les opérations de petite échelle ou de démarrage
 
-**Double baril :**
+**Double fût :**
 - Double le débit presque
 - Capacité de fonctionnement continu
 - Recommandé pour l'utilisation commerciale et industrielle
@@ -1133,7 +1133,7 @@ Un contrôle efficace des aflatoxines nécessite une approche globale qui aborde
 
   'oil-press-machine-price-guide': `## Pourquoi ce guide n'inclut pas de grille tarifaire
 
-Si vous avez cherché « prix machine à presser l'huile », vous avez probablement remarqué que les fabricants ne publient presque jamais de tableau de prix fixe. La raison est simple : aucune presse ne quitte l'usine avec le même coût final. Un acheteur qui presse du sésame en Inde et un acheteur qui presse de la noix de coco aux Philippines peuvent commander le même modèle, mais le barillet, la tension du moteur, les accessoires inclus et la destination d'expédition modifient tous ce qu'ils paient. Une grille tarifaire publique serait fausse pour l'un d'eux — ou pour les deux.
+Si vous avez cherché « prix machine à presser l'huile », vous avez probablement remarqué que les fabricants ne publient presque jamais de tableau de prix fixe. La raison est simple : aucune presse ne quitte l'usine avec le même coût final. Un acheteur qui presse du sésame en Inde et un acheteur qui presse de la noix de coco aux Philippines peuvent commander le même modèle, mais le fût, la tension du moteur, les accessoires inclus et la destination d'expédition modifient tous ce qu'ils paient. Une grille tarifaire publique serait fausse pour l'un d'eux — ou pour les deux.
 
 Ce guide explique exactement ce qui détermine le prix d'une presse à huile hydraulique, afin que vous puissiez comprendre le devis d'un fournisseur, comparer les offres à égalité et planifier votre budget autour de variables réelles plutôt que de suppositions. À la fin, nous listons les informations à envoyer pour recevoir un devis précis et comparable.
 
@@ -1141,13 +1141,13 @@ Ce guide explique exactement ce qui détermine le prix d'une presse à huile hyd
 
 Cinq facteurs expliquent quasiment toutes les différences entre les devis.
 
-**1. Capacité et configuration du barillet.** Une machine à barillet simple et une machine à double barillet du même modèle n'ont pas le même prix, car le second barillet double le débit pendant que l'opérateur décharge et recharge l'un des côtés. Les barillets plus grands (diamètre et hauteur) contiennent plus de graines par lot et coûtent plus cher à usiner et à renforcer.
+**1. Capacité et configuration du fût.** Une machine à fût simple et une machine à double fût du même modèle n'ont pas le même prix, car le second fût double le débit pendant que l'opérateur décharge et recharge l'un des côtés. Les fûts plus grands (diamètre et hauteur) contiennent plus de graines par lot et coûtent plus cher à usiner et à renforcer.
 
-**2. Classe de pression de pressage.** Les presses standard fonctionnent à environ 27-30 MPa de pression surfacique du tourteau. Les applications à coque dure et à pressage à froid nécessitent 42 MPa ou plus, ce qui implique des barillets plus épais, des cylindres en acier allié plus résistants et des pompes hydrauliques de puissance supérieure. L'acier supplémentaire et le traitement thermique sont des coûts réels, pas un argument marketing.
+**2. Classe de pression de pressage.** Les presses standard fonctionnent à environ 27-30 MPa de pression surfacique du tourteau. Les applications à coque dure et à pressage à froid nécessitent 42 MPa ou plus, ce qui implique des fûts plus épais, des cylindres en acier allié plus résistants et des pompes hydrauliques de puissance supérieure. L'acier supplémentaire et le traitement thermique sont des coûts réels, pas un argument marketing.
 
 **3. Équipement inclus et configuration.** La presse seule a un prix ; une ligne complète (nettoyeur de graines, torréfacteur ou étuve, filtre-presse, réservoir d'huile, manutention du tourteau) en a un autre. Les acheteurs qui ne chiffrent que la presse découvrent souvent plus tard qu'un torréfacteur ou un filtre non budgété est indispensable pour atteindre le débit annoncé.
 
-**4. Électrique et personnalisation.** Les moteurs sont bobinés selon la norme de votre réseau local (par exemple 415 V/50 Hz, 380 V/50 Hz, 220 V monophasé) et c'est généralement gratuit sur un modèle standard. Des tailles de barillet personnalisées, des surfaces de contact en acier inoxydable alimentaire pour la noix de coco / VCO, des châssis à double barillet et des plates-formes opérateur ajoutent un coût.
+**4. Électrique et personnalisation.** Les moteurs sont bobinés selon la norme de votre réseau local (par exemple 415 V/50 Hz, 380 V/50 Hz, 220 V monophasé) et c'est généralement gratuit sur un modèle standard. Des tailles de fût personnalisées, des surfaces de contact en acier inoxydable alimentaire pour la noix de coco / VCO, des châssis à double fût et des plates-formes opérateur ajoutent un coût.
 
 **5. Conditions d'expédition et de livraison.** Le FOB Qingdao couvre la livraison au port d'embarquement. Les conditions CIF ou DAP ajoutent le fret maritime, l'assurance maritime et parfois les droits d'importation et le transport intérieur. La même machine cotée FOB et CIF vers des ports différents affichera un net visiblement différent.
 
@@ -1167,9 +1167,9 @@ Un fournisseur qui ne cite que le prix FOB de la machine ne cite pas votre coût
 
 Plutôt que de demander « combien coûte une presse », cadrez la question autour de ce que vous prévoyez de produire chaque jour.
 
-- **Démarrage / petite huilerie (500–1 500 kg de graines par jour) :** une presse à barillet simple, un nettoyeur de graines, un torréfacteur ou une étuve et un filtre-presse. C'est la configuration qui correspond à la gamme HN325.
-- **Commercial moyen (1 500–3 000 kg par jour) :** une presse à double barillet de force supérieure (classe HN365 ou HN426) afin qu'un barillet presse pendant que l'autre est rechargé, plus un torréfacteur et une filtration adaptés.
-- **Industriel / multi-produits (3 000 kg+ par jour) :** une ou plusieurs presses à double barillet de classe HN500, une alimentation et une manutention du tourteau automatisées, et souvent une petite ligne de raffinage pour huile de détail conditionnée.
+- **Démarrage / petite huilerie (500–1 500 kg de graines par jour) :** une presse à fût simple, un nettoyeur de graines, un torréfacteur ou une étuve et un filtre-presse. C'est la configuration qui correspond à la gamme HN325.
+- **Commercial moyen (1 500–3 000 kg par jour) :** une presse à double fût de force supérieure (classe HN365 ou HN426) afin qu'un fût presse pendant que l'autre est rechargé, plus un torréfacteur et une filtration adaptés.
+- **Industriel / multi-produits (3 000 kg+ par jour) :** une ou plusieurs presses à double fût de classe HN500, une alimentation et une manutention du tourteau automatisées, et souvent une petite ligne de raffinage pour huile de détail conditionnée.
 
 La liste d'équipements de chaque palier est fixe ; le prix en découle. Nous indiquer votre objectif quotidien de graines nous permet de dimensionner la ligne en une seule étape.
 
@@ -1180,11 +1180,11 @@ Une presse de 325 tonnes de deux fournisseurs n'est pas interchangeable. Quatre 
 **A. Vérin hydraulique — acier allié 27SiMn.**
 Conçu en acier allié 27SiMn, le vérin conserve sa résistance et sa ténacité sous 60–75 MPa (2 200 psi+). Chaque vérin est usiné, traité thermiquement et testé en pression avant assemblage. Un vérin usiné dans de l'acier au carbone ordinaire coûte moins cher mais ne survivra pas à des années de cycles quotidiens à haute pression.
 
-**B. Barillet de pressage — acier haute résistance Q690.**
-Soudé à partir d'acier Q690 avec des anneaux de bride sans soudure, rectifié et électroplaqué pour empêcher la rouille. Le drainage à fentes offre environ 15 fois le débit d'huile des barillets percés — un écoulement d'huile plus rapide, un rendement plus élevé. Les barillets bon marché utilisent un drainage percé et un acier plus fin ; la différence se manifeste à la fois dans le débit et la durée de vie du barillet.
+**B. Fût de pressage — acier haute résistance Q690.**
+Soudé à partir d'acier Q690 avec des anneaux de bride sans soudure, rectifié et électroplaqué pour empêcher la rouille. Le drainage à fentes offre environ 15 fois le débit d'huile des fûts percés — un écoulement d'huile plus rapide, un rendement plus élevé. Les fûts bon marché utilisent un drainage percé et un acier plus fin ; la différence se manifeste à la fois dans le débit et la durée de vie du fût.
 
 **C. Châssis de base — acier de construction Q355B.**
-Une plaque de 30 mm sur le HN426 et de 50 mm sur le HN500. L'acier Q355B épais signifie que le châssis ne se déformera pas après des années de cycles à très haute pression (testé au-delà de 500 tonnes). Un châssis plus léger fléchit sous la charge, désaxe le vérin et le barillet, et accélère l'usure des joints.
+Une plaque de 30 mm sur le HN426 et de 50 mm sur le HN500. L'acier Q355B épais signifie que le châssis ne se déformera pas après des années de cycles à très haute pression (testé au-delà de 500 tonnes). Un châssis plus léger fléchit sous la charge, désaxe le vérin et le fût, et accélère l'usure des joints.
 
 **D. Moteurs et vannes — cuivre pur · électrovanne.**
 Un moteur de 2,2 kW à 6 pôles en cuivre pur fonctionne silencieusement et reste frais en usage continu. Des vannes électroplaquées antirouille avec des orifices d'huile élargis offrent un débit plus rapide, moins de fuites et des cycles sans à-coups. Les moteurs bobinés avec de l'aluminium ou du cuivre mince, et les vannes avec de petits orifices, réduisent le prix de la facture mais augmentent la température de fonctionnement et le taux de panne.

@@ -82,7 +82,7 @@ faqFr:
     answer: Oui, nous fournissons des lignes de pressage clé en main de 1 à 100 tonnes par jour, y compris le traitement des graines, le pressage, la filtration et l'équipement de conditionnement. Les équipements de raffinage sont approvisionnés indépendamment et nos ingénieurs peuvent aider à les intégrer à votre implantation.
 faqAr:
   - question: ما هي السعة القصوى لمعصرتكم الصناعية؟
-    answer: يمكن لطرازنا فائق الضغط العالي (HN500) بتكوين البرميل المزدوج معالجة أكثر من 5000 كجم من البذور يومياً. نوفر خط العصر والترشيح الأساسي؛ أما معدات تكرير زيت RBD فتُشترى بشكل مستقل ونساعد في دمجها في تخطيطات من 1 إلى 100 طن/يوم.
+    answer: يمكن لطرازنا فائق الضغط العالي (HN500) بتكوين أسطوانة العصر المزدوجة معالجة أكثر من 5000 كجم من البذور يومياً. نوفر خط العصر والترشيح الأساسي؛ أما معدات تكرير زيت RBD فتُشترى بشكل مستقل ونساعد في دمجها في تخطيطات من 1 إلى 100 طن/يوم.
   - question: هل توفرون التركيب والتدريب؟
     answer: نعم، نقدم خدمات تركيب وتشغيل وتدريب المشغلين الكاملة للمعدات الصناعية. يمكن لمهندسينا السفر إلى منشأتكم في أي مكان بالعالم.
   - question: ما هو معدل الزيت المتبقي للعصر الصناعي؟
@@ -93,7 +93,7 @@ faqAr:
     answer: نعم، نوفر خطوط عصر جاهزة من 1 إلى 100 طن يومياً، بما في ذلك معالجة البذور والعصر والترشيح ومعدات التعبئة. أما معدات التكرير فتُشترى بشكل مستقل ويستطيع مهندسونا المساعدة في دمجها في مخطط منشأتكم.
 faqId:
   - question: Berapa kapasitas maksimum press minyak industri Anda?
-    answer: Model Ultra High Pressure kami (HN500) dengan konfigurasi barel ganda dapat memproses 5.000+ kg biji per hari. Kami menyediakan lini inti penekanan dan filtrasi; peralatan pemurnian untuk minyak RBD dibeli terpisah dan kami bantu mengintegrasikannya dalam tata letak 1-100 ton/hari.
+    answer: Model Ultra High Pressure kami (HN500) dengan konfigurasi tabung press ganda dapat memproses 5.000+ kg biji per hari. Kami menyediakan lini inti penekanan dan filtrasi; peralatan pemurnian untuk minyak RBD dibeli terpisah dan kami bantu mengintegrasikannya dalam tata letak 1-100 ton/hari.
   - question: Apakah Anda menyediakan instalasi dan pelatihan?
     answer: Ya, kami menyediakan layanan instalasi, commissioning, dan pelatihan operator lengkap untuk peralatan skala industri. Insinyur kami dapat datang ke fasilitas Anda di seluruh dunia.
   - question: Berapa tingkat minyak sisa untuk press industri?
@@ -185,9 +185,9 @@ Our industrial hydraulic oil presses are engineered for demanding continuous ope
 
 - **Heavy-duty construction** — Thick-walled steel cylinders, reinforced frames, and industrial-grade hydraulic systems withstand 24/7 operation without fatigue or deformation
 - **Thermal management** — Integrated cooling systems prevent hydraulic fluid overheating during extended operation. Oil temperature stays within optimal range even after 12+ hours of continuous pressing
-- **Maintenance windows** — Recommended 30-minute maintenance break every 8-10 hours for hydraulic fluid check, seal inspection, and barrel cleaning. Full maintenance schedule provided with every machine
+- **Maintenance windows** — Recommended 30-minute maintenance break every 8-10 hours for hydraulic fluid check, seal inspection, and tabung press cleaning. Full maintenance schedule provided with every machine
 - **Wear parts** — Hydraulic seals and filter elements are the primary wear items, with replacement intervals of 3-6 months depending on operation intensity. All wear parts are standardized and available from stock
-- **Redundancy option** — Double-barrel configuration allows you to service one barrel while the other continues pressing, eliminating production downtime during maintenance
+- **Redundancy option** — Double-barrel configuration allows you to service one tabung press while the other continues pressing, eliminating production downtime during maintenance
 - **Typical operation schedule** — 20 hours pressing + 2 hours cleaning + 2 hours maintenance = 24-hour cycle. Many of our clients achieve 300+ operating days per year
 
 ## Why Choose Our Industrial Oil Press

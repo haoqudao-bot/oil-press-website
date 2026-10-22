@@ -213,7 +213,7 @@ Pada 500-2.000 kg/hari, satu lini mengubah kopra menjadi sekitar **$420-3.100 pr
 
 Untuk produsen minyak mapan dan bisnis yang berkembang, **mesin press minyak komersial** harus menghasilkan throughput tinggi yang konsisten, performa yang andal, dan kualitas minyak kelas profesional — shift demi shift, hari demi hari. Solusi press minyak komersial Haonuo dirancang tepat untuk permintaan ini.
 
-Solusi komersial kami dibangun di sekitar Press Hidrolik Heavy Duty (HN365) dan Cold Press (HN426), keduanya tersedia dengan konfigurasi barel ganda yang secara efektif menggandakan kapasitas produksi Anda tanpa menggandakan ruang lantai. Mesin **press hidrolik komersial** ini menghasilkan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi menyeluruh, mencapai tingkat minyak sisa di bawah 5% pada semua biji minyak umum.
+Solusi komersial kami dibangun di sekitar Press Hidrolik Heavy Duty (HN365) dan Cold Press (HN426), keduanya tersedia dengan konfigurasi tabung press ganda yang secara efektif menggandakan kapasitas produksi Anda tanpa menggandakan ruang lantai. Mesin **press hidrolik komersial** ini menghasilkan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi menyeluruh, mencapai tingkat minyak sisa di bawah 5% pada semua biji minyak umum.
 
 Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makanan, atau operasi penekanan koperasi, solusi ini menyediakan throughput, keandalan, dan kualitas minyak yang dibutuhkan bisnis Anda.
 
@@ -229,14 +229,14 @@ Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makana
 | Inti Sawit | 44-53% | 38-47% | ≤ 5% |
 
 **Keuntungan skala komersial:**
-- **Throughput barel ganda**: Proses 2.000-5.000 kg biji per hari dengan konfigurasi barel ganda
+- **Throughput tabung press ganda**: Proses 2.000-5.000 kg biji per hari dengan konfigurasi tabung press ganda
 - **Kualitas konsisten**: Tekanan hidrolik memastikan ekstraksi seragam di setiap batch
 - **Minyak sisa rendah**: Di bawah 5% berarti pemulihan minyak dan profitabilitas maksimal
 - **Kemampuan multi-biji**: Beralih antar jenis biji untuk melayani permintaan pasar yang beragam
 
 ## Mengapa Memilih Mesin Press Minyak Komersial Kami
 
-- **Throughput kelas komersial** — Konfigurasi barel ganda menghasilkan kapasitas pemrosesan 2.000-5.000 kg/hari, memenuhi permintaan operasi komersial yang mapan.
+- **Throughput kelas komersial** — Konfigurasi tabung press ganda menghasilkan kapasitas pemrosesan 2.000-5.000 kg/hari, memenuhi permintaan operasi komersial yang mapan.
 - **Keandalan terbukti** — Mesin komersial kami dibangun untuk operasi harian kontinu dengan perawatan minimal. Konstruksi heavy duty memastikan bertahun-tahun layanan yang dapat diandalkan.
 - **Harga langsung pabrik** — Beli langsung dari produsen dan hemat dibandingkan harga perusahaan perdagangan (penghematan aktual bervariasi). Tanpa markup perusahaan perdagangan pada peralatan komersial.
 - **Lini produksi lengkap** — Dari penerimaan biji hingga minyak yang dikemas, kami menyediakan dan mengintegrasikan setiap komponen untuk operasi komersial yang mulus.
@@ -370,7 +370,7 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, operasi yang m
 **Keuntungan skala industri:**
 - **Tekanan ultra-tinggi**: Hingga 60 MPa untuk efisiensi ekstraksi maksimal
 - **Minyak sisa di bawah 4%**: Tingkat ekstraksi kompetitif pada sebagian besar bahan
-- **Opsi barel ganda**: Proses 5.000+ kg biji per hari
+- **Opsi tabung press ganda**: Proses 5.000+ kg biji per hari
 - **Koordinasi pemurnian**: minyak jadi RBD menggunakan lini pemurnian terpisah yang dibeli terpisah; kami memberi saran mengenai spesifikasi dan tata letak
 - **Mampu 24/7**: Konstruksi heavy duty untuk operasi industri kontinu
 
@@ -384,7 +384,7 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, operasi yang m
 
   'mustard-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk sawi. Harapkan **hasil 30-38% (press dingin)** atau **33-41% (press panas)** dari biji bersih, dengan **sisa minyak di bungkil di bawah 5%**. Satu barrel HN325 memuat **100 kg per batch (35-45 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari** — model barrel ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Untuk minyak sawi **Kachi Ghani** press dingin tradisional, lewati pengukusan dan tekan di bawah 60°C.
+Ya — press hidrolik Haonuo dirancang untuk sawi. Harapkan **hasil 30-38% (press dingin)** atau **33-41% (press panas)** dari biji bersih, dengan **sisa minyak di bungkil di bawah 5%**. Satu tabung press HN325 memuat **100 kg per batch (35-45 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari** — model tabung press ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Untuk minyak sawi **Kachi Ghani** press dingin tradisional, lewati pengukusan dan tekan di bawah 60°C.
 
 ## Ringkasan
 
@@ -490,7 +490,7 @@ Pada 300-1.000 kg/hari, satu lini press dingin mengubah zaitun menjadi sekitar *
 
   'palm-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik tekanan tinggi Haonuo dirancang untuk inti sawit, salah satu biji minyak paling keras untuk ditekan. Harapkan **hasil 42-50% dari inti kering tergerus** dengan **sisa minyak di bungkil 5% atau kurang** (hingga 4% pada rentang tekanan penuh 40-55 MPa). Model heavy duty barrel tunggal memproses **600-1.200 kg/hari**; model tekanan ultra-tinggi barrel ganda mencapai **1.200-1.700 kg/hari** press panas. Persiapan penting: pecahkan kacang sawit, keringkan inti di bawah 7% kelembapan, dan gerus menjadi potongan 2-4 mm sebelum menekan.
+Ya — press hidrolik tekanan tinggi Haonuo dirancang untuk inti sawit, salah satu biji minyak paling keras untuk ditekan. Harapkan **hasil 42-50% dari inti kering tergerus** dengan **sisa minyak di bungkil 5% atau kurang** (hingga 4% pada rentang tekanan penuh 40-55 MPa). Model heavy duty tabung press tunggal memproses **600-1.200 kg/hari**; model tekanan ultra-tinggi tabung press ganda mencapai **1.200-1.700 kg/hari** press panas. Persiapan penting: pecahkan kacang sawit, keringkan inti di bawah 7% kelembapan, dan gerus menjadi potongan 2-4 mm sebelum menekan.
 
 ## Ringkasan
 
@@ -530,7 +530,7 @@ Solusi ini mencakup proses dari pemisahan inti melalui penekanan dan filtrasi, d
 | Bungkil inti sawit (pakan ternak) | 48-56 kg | $5-11 |
 | **Total per 100 kg** | | **$47-91** |
 
-Minyak inti sawit mentah baru-baru ini diperdagangkan sekitar **$900-1.400 per ton** di pasar Asia Tenggara. Pada 1.200-1.700 kg/hari, satu press tekanan ultra-tinggi barrel ganda mengubah inti sawit menjadi produk senilai sekitar **$560-1.550 per hari**. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya inti dan harga jual Anda dan kami akan menghitung margin harian Anda secara tepat.
+Minyak inti sawit mentah baru-baru ini diperdagangkan sekitar **$900-1.400 per ton** di pasar Asia Tenggara. Pada 1.200-1.700 kg/hari, satu press tekanan ultra-tinggi tabung press ganda mengubah inti sawit menjadi produk senilai sekitar **$560-1.550 per hari**. Harga di atas adalah kisaran indikatif — konfirmasi harga lokal terkini, lalu beri tahu kami biaya inti dan harga jual Anda dan kami akan menghitung margin harian Anda secara tepat.
 
 ## Dibangun untuk Perdagangan Sawit Asia Tenggara
 
@@ -542,13 +542,13 @@ Minyak inti sawit mentah baru-baru ini diperdagangkan sekitar **$900-1.400 per t
 
   'peanut-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk kacang tanah. Harapkan **hasil 40-48% (press panas, inti terpanggang)** atau **38-44% (press dingin)** dari inti terkupas, dengan **sisa minyak di bungkil 6-8%** — dibandingkan 10-12% pada press barrel berlubang konvensional. Satu barrel HN325 memuat **100 kg per batch (30-60 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari**; model barrel ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Selalu kupas dulu: menekan kacang tanpa kupas memangkas hasil 15-25%.
+Ya — press hidrolik Haonuo dirancang untuk kacang tanah. Harapkan **hasil 40-48% (press panas, inti terpanggang)** atau **38-44% (press dingin)** dari inti terkupas, dengan **sisa minyak di bungkil 6-8%** — dibandingkan 10-12% pada press tabung press berlubang konvensional. Satu tabung press HN325 memuat **100 kg per batch (30-60 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari**; model tabung press ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Selalu kupas dulu: menekan kacang tanpa kupas memangkas hasil 15-25%.
 
 ## Ringkasan
 
 Minyak kacang tanah adalah minyak goreng sehari-hari di Afrika Barat — Nigeria salah satu produsen kacang tanah terbesar di dunia — dan permintaannya sama kuatnya di India, Tiongkok, serta Asia Tenggara. **Mesin press minyak kacang** hidrolik memungkinkan pabrik minyak kecil dan menengah memeras minyak panas yang aromatik atau minyak cold press premium langsung dari biji kupasan, baik untuk pasar lokal maupun pembeli ekspor.
 
-Solusi pengepresan kacang Haonuo dibangun di atas teknologi press hidrolik. Berbeda dengan expeller ulir yang menimbulkan panas gesek dan dapat menghanguskan minyak, **mesin ekstraksi minyak kacang tanah** kami menerapkan tekanan statis terkendali. Minyak tetap di bawah suhu hangus, rasa kacang alami terjaga, dan sisa minyak di bungkil biasanya berada di kisaran **6-8%** (pengujian pabrik Haonuo pada kacang tanah dan wijen berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan sekitar 10-12% pada press barrel berlubang konvensional.
+Solusi pengepresan kacang Haonuo dibangun di atas teknologi press hidrolik. Berbeda dengan expeller ulir yang menimbulkan panas gesek dan dapat menghanguskan minyak, **mesin ekstraksi minyak kacang tanah** kami menerapkan tekanan statis terkendali. Minyak tetap di bawah suhu hangus, rasa kacang alami terjaga, dan sisa minyak di bungkil biasanya berada di kisaran **6-8%** (pengujian pabrik Haonuo pada kacang tanah dan wijen berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan sekitar 10-12% pada press tabung press berlubang konvensional.
 
 Setiap press hidrolik Haonuo menangani **dua rute di satu mesin yang sama**: cold press untuk minyak premium kaya nutrisi, dan press panas setelah pengovenan untuk aroma lebih kuat dan 3-5% lebih banyak minyak per batch. Perbedaannya sepenuhnya pada persiapan biji — itulah sebabnya proses tujuh langkah di bawah ini penting.
 
@@ -566,9 +566,9 @@ Setiap press hidrolik Haonuo menangani **dua rute di satu mesin yang sama**: col
 
 - **Pengupasan** — menekan kacang berkulit memangkas hasil 15-25% dan menggelapkan minyak.
 - **Varietas** — varietas tinggi minyak (Virginia, Spanish) mengungguli tipe runner.
-- **Kelembapan** — biji yang masuk barrel sebaiknya 4-6% untuk press panas, 6-7% untuk cold press.
+- **Kelembapan** — biji yang masuk tabung press sebaiknya 4-6% untuk press panas, 6-7% untuk cold press.
 - **Pengovenan** — pengondisian sekitar 130°C (120-150°C) membangun aroma kacang dan menaikkan hasil 3-5%.
-- **Desain barrel** — barrel beralur tipe batang mengalirkan minyak lewat area jauh lebih besar daripada barrel berlubang, biasanya mengekstraksi 2-3% lebih banyak minyak per batch.
+- **Desain tabung press** — tabung press beralur tipe batang mengalirkan minyak lewat area jauh lebih besar daripada tabung press berlubang, biasanya mengekstraksi 2-3% lebih banyak minyak per batch.
 
 ## Mengapa Memilih Mesin Press Minyak Kacang Kami
 
@@ -598,7 +598,7 @@ Pada 800-1.200 kg/hari, satu HN325 mengubah kacang kupas menjadi produk senilai 
 
   'sesame-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk wijen. Harapkan **hasil 45-50% (press dingin)**, meningkat menjadi **47-52% dengan pemanggangan**, dengan **sisa minyak di bungkil biasanya 6-8%** (serendah ~5% pada pemanggangan optimal). Barrel 300 mm memuat **32,5 kg wijen per batch — hingga 50 kg dengan pra-kompresi** — dan siklus press panas berjalan sekitar **30-40 menit**. Panggang pada **160-180°C** untuk **+3-5% hasil** dan profil panggang aromatik, dan jaga kelembapan biji pada **5-7%**.
+Ya — press hidrolik Haonuo dirancang untuk wijen. Harapkan **hasil 45-50% (press dingin)**, meningkat menjadi **47-52% dengan pemanggangan**, dengan **sisa minyak di bungkil biasanya 6-8%** (serendah ~5% pada pemanggangan optimal). Tabung press 300 mm memuat **32,5 kg wijen per batch — hingga 50 kg dengan pra-kompresi** — dan siklus press panas berjalan sekitar **30-40 menit**. Panggang pada **160-180°C** untuk **+3-5% hasil** dan profil panggang aromatik, dan jaga kelembapan biji pada **5-7%**.
 
 ## Ringkasan
 
@@ -643,7 +643,7 @@ Menjalankan siklus press panas 30-40 menit berturut-turut, satu press memproses 
 ## Dibangun untuk Perdagangan Wijen Asia
 
 - Motor dililit untuk **415V/50Hz** (India), **400V/50Hz** (Myanmar) atau standar jaringan lokal Anda — kustomisasi tanpa biaya tambahan
-- Geometri barrel khusus wijen — bukan press generik yang disesuaikan
+- Geometri tabung press khusus wijen — bukan press generik yang disesuaikan
 - Dikirim **FOB Qingdao**; kami mengatur pengiriman laut ke **Nhava Sheva, Yangon, atau Jebel Ali** dengan dokumen ekspor lengkap
 - Suku cadang aus (seal, kain filter) dikirim bersama mesin, didukung dukungan suku cadang 1 tahun
 - Demo penekanan langsung via panggilan video dengan wijen Anda sendiri sebelum memesan
@@ -655,10 +655,10 @@ Langkah-langkah di bawah mengubah angka hasil di atas menjadi rutinitas harian y
 ### Lini Press Dingin (minyak premium, suhu biji di bawah 60°C)
 
 1. **Inspeksi penerimaan** — Terima biji dengan kelembapan ≤9%, tanpa jamur atau bau tengik. Press dingin tidak memaafkan stok lama: biji tengik berarti minyak tengik.
-2. **Pembersihan** — Ayakan getar + aspirasi untuk membuang tangkai, debu dan batu; lewatkan biji melalui separator magnetik untuk melindungi barrel.
+2. **Pembersihan** — Ayakan getar + aspirasi untuk membuang tangkai, debu dan batu; lewatkan biji melalui separator magnetik untuk melindungi tabung press.
 3. **Pencucian** — Bilas cepat untuk membuang lumpur dan debu permukaan. Jangan direndam — biji basah butuh waktu lama untuk kering kembali.
 4. **Pengeringan** — Kering angin atau suhu rendah (≤45°C) hingga kelembapan **5-7%**. Tes tangan: biji hancur bersih dan tidak lengket di jari.
-5. **Pemuatan** — Maks 32,5 kg per batch di barrel 300 mm (hingga 50 kg dengan pra-kompresi); sebarkan merata dan padatkan berlapis.
+5. **Pemuatan** — Maks 32,5 kg per batch di tabung press 300 mm (hingga 50 kg dengan pra-kompresi); sebarkan merata dan padatkan berlapis.
 6. **Penekanan** — Jalankan HN426 (42 MPa) atau HN500 (52 MPa) untuk siklus penuh sekitar 2 jam: kenaikan tekanan cepat untuk mengalirkan minyak bebas, lalu tahan tekanan untuk memeras sisanya. Jaga suhu biji di bawah 60°C — di bengkel panas, beri jeda singkat antar batch.
 7. **Penyaringan dan pengendapan** — Filter plate-and-frame, endapkan 24-48 jam, dan botolkan minyak jernih jauh dari cahaya. Jangan memurnikan minyak wijen press dingin — pemurnian menghapus alasan pembeli membayarnya.
 
@@ -692,7 +692,7 @@ Langkah-langkah di bawah mengubah angka hasil di atas menjadi rutinitas harian y
 | Pembersihan | Pembersih getar + magnet | Pembersih getar + magnet |
 | Pencucian / pengeringan | Bak cuci + rak pengering (≤45°C) | Tidak diperlukan |
 | Perlakuan panas | — (tidak ada) | Roaster drum 160-180°C |
-| Penekanan | HN426 / HN500, double barrel lebih baik | HN325 / HN365, double barrel lebih baik |
+| Penekanan | HN426 / HN500, double tabung press lebih baik | HN325 / HN365, double tabung press lebih baik |
 | Penyaringan | Filter plate-and-frame | Plate-and-frame + sentrifugal opsional |
 | Pengendapan | Tangki pengendapan, 24-48 jam | Tangki pengendapan, 24-48 jam |
 | Pemurnian | Tidak digunakan | Opsional |

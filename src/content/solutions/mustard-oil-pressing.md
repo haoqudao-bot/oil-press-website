@@ -135,7 +135,7 @@ order: 4
 
 **Quick Answer**
 
-Yes — the Haonuo hydraulic oil press is built for mustard. Expect **30-38% yield (cold press)** or **33-41% (hot press)** from cleaned seeds, with **residual oil in cake under 5%**. One HN325 barrel takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. For traditional **Kachi Ghani** cold-pressed mustard oil, skip steaming and press below 60°C.
+Yes — the Haonuo hydraulic oil press is built for mustard. Expect **30-38% yield (cold press)** or **33-41% (hot press)** from cleaned seeds, with **residual oil in cake under 5%**. One HN325 tabung press takes **100 kg per batch (35-45 min hot press)**, so a single machine runs roughly **800-1,200 kg/day** — a double-barrel or HN365 reaches **1,500-2,500 kg/day**. For traditional **Kachi Ghani** cold-pressed mustard oil, skip steaming and press below 60°C.
 
 ## Mustard Oil Press Overview
 

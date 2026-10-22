@@ -78,7 +78,7 @@ Hot pressing is the most common method for peanut oil production, offering highe
 | Roasting Temperature | 160-180°C |
 | Roasting Time | 25-35 minutes |
 | Pressing Cycle | 30-40 minutes/batch |
-| Total Cycle (2 barrels) | ~1.5 hours |
+| Total Cycle (2 tabung press) | ~1.5 hours |
 | System Pressure | 60 MPa |
 | Motor Power | 2.2 kW |
 

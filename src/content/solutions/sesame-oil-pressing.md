@@ -65,7 +65,7 @@ faq:
   - question: Cold press or hot press for sesame oil?
     answer: Both methods work. Cold pressing preserves nutrients and natural flavor. Hot pressing (with roasting) produces more aromatic oil with higher yield. Our hydraulic press supports both methods.
   - question: How much sesame can be pressed per batch?
-    answer: The 300mm barrel can process 32.5 kg of sesame per batch, or up to 50 kg with pre-compression.
+    answer: The 300mm tabung press can process 32.5 kg of sesame per batch, or up to 50 kg with pre-compression.
   - question: What is the price of a sesame oil press machine?
     answer: Request a quote for your preferred model. We offer factory-direct pricing with no middleman markup.
   - question: How long is each pressing cycle?
@@ -97,7 +97,7 @@ faqAr:
   - question: ضغط بارد أم ساخن لزيت السمسم؟
     answer: كلتا الطريقتين تعملان. يحافظ الضغط على البارد على المغذيات والنكهة الطبيعية. ينتج الضغط الساخن (مع التحميص) زيتاً أكثر عطرية بعائد أعلى. يدعم مضغوطنا الهيدروليكي كلتا الطريقتين.
   - question: كم سمسم يمكن عصره في الدفعة الواحدة؟
-    answer: يمكن للبرميل مقاس 300 مم معالجة 32.5 كجم من السمسم لكل دفعة، أو حتى 50 كجم مع ضغط مسبق.
+    answer: يمكن لأسطوانة العصر مقاس 300 مم معالجة 32.5 كجم من السمسم لكل دفعة، أو حتى 50 كجم مع ضغط مسبق.
   - question: ما هو سعر آلة عصر زيت السمسم؟
     answer: اطلبوا عرض أسعار للطراز المفضل لديكم. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم تستغرق كل دورة عصر؟
@@ -134,7 +134,7 @@ order: 2
 
 **Quick Answer**
 
-Yes — the Haonuo hydraulic oil press is built for sesame. Expect **45-50% yield (cold press)**, rising to **47-52% with roasting**, with **residual oil in cake typically 6-8%** (as low as ~5% under optimal roasting). The 300 mm barrel takes **32.5 kg of sesame per batch — up to 50 kg with pre-compression** — and a hot-press cycle runs about **30-40 minutes**. Roast at **160-180°C** for **+3-5% yield** and the aromatic toasted profile, and hold seed moisture at **5-7%**.
+Yes — the Haonuo hydraulic oil press is built for sesame. Expect **45-50% yield (cold press)**, rising to **47-52% with roasting**, with **residual oil in cake typically 6-8%** (as low as ~5% under optimal roasting). The 300 mm tabung press takes **32.5 kg of sesame per batch — up to 50 kg with pre-compression** — and a hot-press cycle runs about **30-40 minutes**. Roast at **160-180°C** for **+3-5% yield** and the aromatic toasted profile, and hold seed moisture at **5-7%**.
 
 ## Sesame Oil Press Overview
 
@@ -190,7 +190,7 @@ Running back-to-back 30-40 minute hot-press cycles, one press moves roughly 500-
 ## Built for the Asian Sesame Trade
 
 - Motors wound for **415V/50Hz** (India), **400V/50Hz** (Myanmar) or your local grid — customized at no extra cost
-- Purpose-built sesame barrel geometry — not a generic press adapted for the job
+- Purpose-built sesame tabung press geometry — not a generic press adapted for the job
 - Shipped **FOB Qingdao**; we arrange sea freight to **Nhava Sheva, Yangon or Jebel Ali** with full export documentation
 - Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
 - Video-call a live pressing demo with your own sesame before you order
@@ -202,10 +202,10 @@ The steps below turn the yield figures above into a repeatable daily routine. Pa
 ### Cold-Press Line (Premium Oil, Seed Temp Below 60°C)
 
 1. **Incoming inspection** — Accept seed at ≤9% moisture with no mold or rancid smell. Cold pressing is unforgiving of old stock: rancid seed means rancid oil.
-2. **Cleaning** — Vibration screen plus aspiration to remove stems, dust and stones; pass seed over a magnetic separator to protect the barrel.
+2. **Cleaning** — Vibration screen plus aspiration to remove stems, dust and stones; pass seed over a magnetic separator to protect the tabung press.
 3. **Washing** — Quick rinse to remove surface mud and dust. Do not soak — wet seed takes too long to dry back down.
 4. **Drying** — Air-dry or low-temperature dry (≤45°C) to **5-7% moisture**. Hand test: kernels crush cleanly and do not stick to fingers.
-5. **Loading** — Max 32.5 kg per batch in the 300 mm barrel (up to 50 kg with pre-compression); spread evenly and tamp in layers.
+5. **Loading** — Max 32.5 kg per batch in the 300 mm tabung press (up to 50 kg with pre-compression); spread evenly and tamp in layers.
 6. **Pressing** — Run a full cycle of about 2 hours at 42-52 MPa (HN426 / HN500): fast pressure rise to drain free oil, then hold pressure to work out the remainder. Keep seed temperature below 60°C — in hot workshops, leave a short interval between batches.
 7. **Filtering and settling** — Plate-and-frame filter, settle 24-48 hours, and bottle the clear oil away from light. Do not refine cold-pressed sesame oil — refining erases the reason buyers pay for it.
 

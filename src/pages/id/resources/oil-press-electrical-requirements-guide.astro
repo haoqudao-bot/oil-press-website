@@ -316,6 +316,43 @@ const costCalculation = ['Biaya Energi per Hari = (Konsumsi Energi x Jam x Tarif
         </div>
       </section>
 
+      <section id="site-survey" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Survei Lokasi Sebelum Pengiriman</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Sebagian besar masalah listrik ditentukan sebelum mesin tiba. Satu foto panel distribusi dan lima menit dengan clamp meter mencegah keterlambatan commissioning yang paling umum: netral hilang, kapasitas layanan kurang, atau ketidakseimbangan fase yang memicu breaker di tengah siklus. Telusuri lokasi dengan daftar periksa ini sebelum press dikirim.</p>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100 my-4">
+          <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5">
+            <li><strong>Kapasitas layanan:</strong> kVA terkonfirmasi di meter, bukan nameplate trafo di jalan.</li>
+            <li><strong>Keseimbangan fase:</strong> arus terukur pada setiap fase saat beban puncak; ketidakseimbangan di bawah 10%.</li>
+            <li><strong>Stabilitas tegangan:</strong> catat ayunan antara siang dan malam; brownout merusak motor dan kontaktor.</li>
+            <li><strong>Jalur pembumian:</strong> elektrode pembumian sejati dengan resistansi terukur di bawah 4 ohm.</li>
+            <li><strong>Ruang panel:</strong> tempat untuk breaker press plus sirkuit roaster, cleaner, crusher, dan filter.</li>
+            <li><strong>Jalur kabel:</strong> terlindung dari lalu lintas forklift, pencucian air, dan permukaan roaster yang panas.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="full-line-distribution" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Mendistribusikan Daya di Seluruh Lini</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Motor press hanya 2,2 kW, tetapi lini lengkap menarik 20–40 kVA, dan roaster mendominasi totalnya. Tempatkan setiap mesin utama pada breaker sendiri berukuran 1,25× arus beban penuhnya, atur urutan startup agar roaster tidak mulai bersamaan dengan motor press, dan interlock crusher dan konveyor agar mesin yang berhenti tidak terus diberi umpan.</p>
+        <p class="text-steel-700 leading-relaxed mb-4">Kualitas daya sama pentingnya dengan kuantitas. Jalur kabel panjang dengan konduktor kurang besar menciptakan sag tegangan tepat saat pompa mulai melawan beban; motor lalu menarik arus berlebih, memanas, dan trip — kegagalan yang sering salah didiagnosis sebagai kesalahan mesin. Ukur kabel untuk penurunan tegangan di bawah 3% sepanjang jalur aktual, bukan hanya untuk ampasitas. Jika daya generator direncanakan, ikuti aturan ukuran dan pembumian di bagian generator kami di atas alih-alih menyewa unit yang hanya disesuaikan dengan nameplate press.</p>
+      </section>
+
+      <section id="commissioning-verification" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Commissioning dan Pemeriksaan Penerimaan</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Sebelum menerima instalasi, verifikasi instalasi listrik di bawah beban, bukan saat idle. Jalankan siklus pengepresan penuh dan catat arus fase, tegangan di terminal motor saat pompa mulai, dan suhu breaker serta lug kabel utama setelah satu jam operasi. Lug panas menunjukkan koneksi longgar dan merupakan penyebab utama kebakaran panel di kemudian hari.</p>
+        <ul class="space-y-2 text-steel-700 list-disc pl-5 mb-4">
+          <li>Pastikan arah putaran motor dengan pompa terlepas, lalu periksa aliran pompa di bawah tekanan.</li>
+          <li>Uji setiap emergency stop dan sakelar batas tekanan secara independen — jangan menganggapnya berfungsi karena lampunya menyala.</li>
+          <li>Verifikasi pembacaan ikatan pembumian antara rangka press dan busbar pembumian panel.</li>
+          <li>Beri label setiap sirkuit dan tinggalkan diagram satu garis terbaru kepada pemilik; kesalahan berikutnya diperbaiki dalam hitungan menit dengan label dan dalam hitungan jam tanpanya.</li>
+        </ul>
+        <p class="text-steel-700 leading-relaxed">Pemeriksaan ini memakan waktu sekitar setengah hari bagi teknisi listrik yang kompeten dan merupakan asuransi termurah yang dapat dibeli pabrik. Untuk gambaran fasilitas lengkap — daya, air, drainase, dan beban lantai — lihat <a href="/id/resources/complete-oil-production-line-guide/" class="text-amber-600 hover:underline">panduan lini produksi lengkap</a>.</p>
+        <h3 class="font-semibold text-lg mt-6 mb-3 text-charcoal-900">Mendiagnosis breaker trip yang berulang</h3>
+        <p class="text-steel-700 leading-relaxed mb-4">Breaker yang trip hanya pada tekanan puncak, atau hanya pada sore hari, memberikan informasi diagnostik alih-alih sekadar gagal. Trip di bawah beban dengan kabel hangat menunjuk pada konduktor kurang besar atau koneksi longgar yang menambah resistansi; trip yang mengikuti waktu hari menunjuk pada sag tegangan jaringan saat beban tetangga online; trip acak dengan peralatan dingin menunjuk pada breaker lemah atau earth leakage. Hindari insting umum untuk memasang breaker lebih besar — itu menghilangkan peringatan sementara membiarkan kesalahannya, dan mengubah trip gangguan menjadi motor terbakar atau kebakaran panel. Ukur dulu: clamp arus pada saat trip, baca tegangan di terminal motor, dan kencangkan lug sesuai torsi sebelum mengganti perangkat proteksi apa pun.</p>
+        <p class="text-steel-700 leading-relaxed">Dokumentasikan setiap kejadian berulang dengan waktu, status mesin, dan cuaca; pola yang tampak acak selama seminggu biasanya sejajar dengan waktu siklus sangrai atau peralihan generator, dan log memungkinkan teknisi listrik memperbaiki penyebabnya dalam satu kunjungan alih-alih tiga.</p>
+        <p class="text-steel-700 leading-relaxed mt-4">Dua kebiasaan terakhir mencegah sebagian besar kesalahan yang dijelaskan di sini: jauhkan air dan oli dari panel dan conduit selama pencucian — panel lembap gagal berminggu-minggu kemudian, bukan pada hari basah — dan jangan pernah mem-bypass perangkat earth-leakage "agar produksi tetap berjalan". Proteksi arus sisa ada karena lantai press menggabungkan air, oli, struktur baja konduktif, dan operator manusia; trip gangguannya sendiri adalah sinyal bahwa insulasi atau pembumian perlu perhatian, dan respons yang benar adalah menemukan kebocoran, bukan menonaktifkan pelindung.</p>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Siapkan Daya Sebelum Mesin Press Tiba</h2>
         <p class="text-steel-700 leading-relaxed">Konfigurasi listrik yang tepat sangat penting untuk operasi yang aman dan efisien mesin press minyak hidrolik. Untuk saran konfigurasi listrik yang dipersonalisasi, hubungi tim dukungan teknis Haonuo.</p>

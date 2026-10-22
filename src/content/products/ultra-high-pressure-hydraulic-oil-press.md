@@ -10,10 +10,10 @@ seoTitle:
   ar: معصرة زيت هيدروليكية صناعية — 620 طن / 75 ميجاباسكال
   id: Mesin Press Minyak Hidrolik Industri — 620 Ton / 75 MPa
 description:
-  en: "Industrial hydraulic oil press with 620-ton force and 75 MPa system pressure. Heavy-duty pressing for the hardest in-shell materials — walnut in shell, apricot kernel and more. Single or double barrel, factory-direct."
+  en: "Industrial hydraulic oil press with 620-ton force and 75 MPa system pressure. Heavy-duty pressing for the hardest in-shell materials — walnut in shell, apricot kernel and more. Single or double tabung press, factory-direct."
   fr: "Presse à huile hydraulique industrielle 620 tonnes, pression système 75 MPa. Pressage renforcé pour les matières en coque les plus dures — noix en coque, noyau d’abricot et plus. Fût simple ou double, vente directe usine."
-  ar: "معصرة زيت هيدروليكية صناعية بقوة 620 طناً وضغط نظام 75 ميجاباسكال. عصر ثقيل لأقسى المواد بقشورها — الجوز بقشره ولوز المشمش وغيرها. برميل مفرد أو مزدوج، بيع مباشر من المصنع."
-  id: "Mesin press minyak hidrolik industri 620 ton dengan tekanan sistem 75 MPa. Press heavy-duty untuk bahan bercangkang paling keras — kenari bercangkang, biji aprikot, dan lainnya. Barel tunggal atau ganda, langsung dari pabrik."
+  ar: "معصرة زيت هيدروليكية صناعية بقوة 620 طناً وضغط نظام 75 ميجاباسكال. عصر ثقيل لأقسى المواد بقشورها — الجوز بقشره ولوز المشمش وغيرها. أسطوانة عصر مفردة أو مزدوجة، بيع مباشر من المصنع."
+  id: "Mesin press minyak hidrolik industri 620 ton dengan tekanan sistem 75 MPa. Press heavy-duty untuk bahan bercangkang paling keras — kenari bercangkang, biji aprikot, dan lainnya. Tabung Press tunggal atau ganda, langsung dari pabrik."
 category: hydraulic-oil-press
 model: HN500
 modelId: ''
@@ -39,9 +39,9 @@ specifications:
     value: 500 mm
   - name: Piston Inner Diameter
     value: 360 mm
-  - name: Barrel Standard Inner Diameter
+  - name: Tabung Press Standard Inner Diameter
     value: 390 mm (customizable)
-  - name: Barrel Standard Height
+  - name: Tabung Press Standard Height
     value: 800 mm (customizable)
   - name: Cylinder Standard Stroke
     value: 850 mm (customizable)
@@ -70,15 +70,15 @@ applicableSeeds:
   - tiger nut
 faq:
   - question: What is the oil yield of the HN500 hydraulic oil press?
-    answer: The oil yield depends on the raw material. For example, sesame yields 42-54%, peanuts 40-50%, and rapeseed 35-45%. The HN500's 620-ton pressing force and bar-type slotted barrel design achieve approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled barrel presses.
+    answer: The oil yield depends on the raw material. For example, sesame yields 42-54%, peanuts 40-50%, and rapeseed 35-45%. The HN500's 620-ton pressing force and bar-type slotted tabung press design achieve approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled tabung press presses.
   - question: What raw materials can the HN500 press?
     answer: The HN500 can press sesame, peanut, rapeseed, sunflower seed, flaxseed, tea seed, soybean, cottonseed, and more. It excels at cold pressing the hardest materials including in-shell walnuts, apricot kernels, and yellowhorn.
   - question: How long does one pressing cycle take?
     answer: Hot pressing (with pre-roasting) completes in 30-40 minutes per batch. Cold pressing takes approximately 2 hours to preserve oil quality at low temperatures. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for pressing?
     answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
-  - question: What is the difference between single and double barrel configurations?
-    answer: A single barrel press processes one batch at a time. A double barrel press has two barrels on sliding rails — while one barrel is pressing, you can load the other, nearly doubling your throughput. We recommend the double barrel for commercial and industrial operations.
+  - question: What is the difference between single and double tabung press configurations?
+    answer: A single tabung press press processes one batch at a time. A double tabung press press has two tabung press on sliding rails — while one tabung press is pressing, you can load the other, nearly doubling your throughput. We recommend the double tabung press for commercial and industrial operations.
   - question: What power supply does the HN500 require?
     answer: The HN500 requires 2.2 KW motor power and runs on a standard 380V/50Hz supply. The electrical system can be customized to match your local power standards — simply specify your voltage when ordering.
   - question: How many workers are needed to operate the machine?
@@ -91,10 +91,10 @@ faq:
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For the HN500, ensure your installation floor can support at least 4 tonnes and has a minimum ceiling height of 3m. We recommend a reinforced concrete foundation. For large orders, we can send a technician to your facility for on-site installation and training at cost.
   - question: What certifications does the machine have?
     answer: All machines undergo 48-hour continuous full-load testing before shipment. For the HN500, the full-load test is conducted at 75 MPa system pressure with 620 tonnes of pressing force — the highest in our product line.
-  - question: Can the barrel size be customized?
-    answer: Yes, barrel inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger barrels for bulk materials and food-grade stainless steel barrels for edible oil production.
+  - question: Can the tabung press size be customized?
+    answer: Yes, tabung press inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger tabung press for bulk materials and food-grade stainless steel tabung press for edible oil production.
   - question: What is the residual oil rate in the cake?
-    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
+    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted tabung press design, compared to 10-12% with traditional drilled tabung press presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
   - question: Can the machine operate on generator power?
     answer: Yes, our machines are fully compatible with generator power. For the HN500, we recommend a minimum 7kVA generator. The machine starts easily and runs stably on generator power, making it suitable for areas with unreliable electricity supply such as rural Nigeria, Kenya, and other African regions.
   - question: Do you provide voltage customization for different countries?
@@ -124,7 +124,7 @@ specificationsFr:
     value: 850 mm (personnalisable)
   - name: Dimensions globales (Simple/Double)
     value: 1200×1200×2750 / 2100×1200×2750 mm
-  - name: Pression superficielle du gâteau
+  - name: Pression superficielle du tourteau
     value: 52 MPa
 applicableSeedsFr:
   - graine de thé
@@ -144,13 +144,13 @@ faqFr:
   - question: Quelles matières premières la HN500 peut-il presser ?
     answer: Le HN500 peut presser le sésame, l'arachide, le colza, les graines de tournesol, le lin, les graines de thé, le soja, les graines de coton et plus encore. Il excelle dans le pressage à froid des matières les plus dures, y compris les noix en coque, les amandes d'abricot et le xanthocère.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Le pressage à chaud (après torréfaction) prend 30 à 40 minutes par lot. Le pressage à froid demande environ 2 heures pour conserver une huile de qualité à basse température. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau.
+    answer: Le pressage à chaud (après torréfaction) prend 30 à 40 minutes par lot. Le pressage à froid demande environ 2 heures pour conserver une huile de qualité à basse température. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
   - question: Quelle est la différence entre les configurations à un et à deux fûts ?
     answer: Une presse à un seul fût traite un lot à la fois. Une presse à double fût dispose de deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, doublant presque votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
   - question: Quelle alimentation électrique la HN500 nécessite-t-il ?
     answer: Le HN500 nécessite une puissance motrice de 2,2 KW et fonctionne sur une alimentation standard 380 V/50 Hz. Le système électrique peut être personnalisé selon vos normes locales — indiquez simplement votre tension lors de la commande.
   - question: Combien de travailleurs sont nécessaires pour faire fonctionner la machine ?
-    answer: Seulement 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du gâteau à 4 crochets facilite le déchargement même après un pressage de nuit.
+    answer: Seulement 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du tourteau à 4 crochets facilite le déchargement même après un pressage de nuit.
   - question: Quelle garantie fournissez-vous ?
     answer: Nous fournissons une garantie de 1 an couvrant tous les défauts de fabrication, ainsi qu'un support technique à vie. Pour le HN500, cela inclut une couverture spécifique du châssis en tôle d'acier de 5 cm d'épaisseur, de la pompe hydraulique ultra-haute pression et de l'assemblage de cylindre robuste. Les pièces de rechange sont disponibles en stock .
   - question: Comment la machine est-elle expédiée et combien de temps dure la livraison ?
@@ -161,8 +161,8 @@ faqFr:
     answer: Toutes les machines subissent un test en charge continue de 48 heures avant l'expédition. Pour le HN500, le test en charge complète est effectué à une pression système de 75 MPa avec 620 tonnes de force de pressage — la plus élevée de notre gamme.
   - question: La taille du fût peut-elle être personnalisée ?
     answer: Oui, le diamètre intérieur et la hauteur du fût peuvent être personnalisés pour correspondre à vos exigences spécifiques en matière de matière et de taille de lot. Les personnalisations courantes incluent des fûts plus grands pour les matières en vrac et des fûts en acier inoxydable de qualité alimentaire pour la production d'huile comestible.
-  - question: Quel est le taux d'huile résiduelle dans le gâteau ?
-    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matières avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile supplémentaire (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
+  - question: Quel est le taux d'huile résiduelle dans le tourteau ?
+    answer: Le taux d'huile résiduelle dans le tourteau est généralement de 6 à 8 % pour la plupart des matières avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile supplémentaire (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
   - question: La machine peut-elle fonctionner sur alimentation de groupe électrogène ?
     answer: Oui, nos machines sont entièrement compatibles avec l'alimentation par groupe électrogène. Pour la HN500, nous recommandons un groupe électrogène d'au moins 7 kVA. La machine démarre facilement et fonctionne de manière stable sur groupe électrogène, ce qui la rend adaptée aux zones avec une alimentation électrique peu fiable telles que les régions rurales du Nigeria, du Kenya et d'autres régions africaines.
   - question: Fournissez-vous la personnalisation de la tension pour différents pays ?
@@ -170,7 +170,7 @@ faqFr:
   - question: Comment puis-je obtenir rapidement des pièces de rechange en Afrique ou au Moyen-Orient ?
     answer: Nous maintenons un stock de toutes les pièces de rechange courantes (joints, tissu filtrant, huile hydraulique, composants de panneau de commande). Les pièces standard sont expédiées dans les 48 heures via DHL/FedEx, arrivant en 5 à 7 jours dans la plupart des pays africains et du Moyen-Orient.
 specificationsAr:
-  - name: "الطراز (مفرد/مزدوج)"
+  - name: "الطراز (مفردة/مزدوجة)"
     value: "HN500 مفرد / HN500 مزدوج"
   - name: "ضغط النظام"
     value: "75 ميجاباسكال"
@@ -178,19 +178,19 @@ specificationsAr:
     value: "620 طن"
   - name: "قدرة المحرك"
     value: "2.2 كيلوواط"
-  - name: "وزن الآلة (مفرد/مزدوج)"
+  - name: "وزن الآلة (مفردة/مزدوجة)"
     value: "3,5 / 3,88 طن"
   - name: "القطر الخارجي للاسطوانة"
     value: "500 مم"
   - name: "القطر الداخلي للمكبس"
     value: "360 مم"
-  - name: "القطر الداخلي القياسي للبرميل"
+  - name: "القطر الداخلي القياسي لأسطوانة العصر"
     value: "390 مم (قابل للتخصيص)"
-  - name: "الارتفاع القياسي للبرميل"
+  - name: "الارتفاع القياسي لأسطوانة العصر"
     value: "800 مم (قابل للتخصيص)"
   - name: "مشوار الاسطوانة القياسي"
     value: "850 مم (قابل للتخصيص)"
-  - name: "الأبعاد الكلية (مفرد/مزدوج)"
+  - name: "الأبعاد الكلية (مفردة/مزدوجة)"
     value: "1200×1200×2750 / 2100×1200×2750 مم"
   - name: "ضغط سطح الكيكة"
     value: "52 ميجاباسكال/سم²"
@@ -209,15 +209,15 @@ specificationsId:
     value: "500 mm"
   - name: "Diameter Dalam Piston"
     value: "360 mm"
-  - name: "Diameter Dalam Standar Barel"
+  - name: "Diameter Dalam Standar Tabung Press"
     value: "390 mm (dapat disesuaikan)"
-  - name: "Tinggi Standar Barel"
+  - name: "Tinggi Standar Tabung Press"
     value: "800 mm (dapat disesuaikan)"
   - name: "Langkah Standar Silinder"
     value: "850 mm (dapat disesuaikan)"
   - name: "Dimensi Keseluruhan (Tunggal/Ganda)"
     value: "1200×1200×2750 / 2100×1200×2750 mm"
-  - name: "Tekanan Permukaan Kue Press"
+  - name: "Tekanan Permukaan Bungkil"
     value: "52 MPa"
 applicableSeedsAr:
   - "بذور الشاي"
@@ -245,13 +245,13 @@ applicableSeedsId:
   - "biji tiger"
 faqAr:
   - question: "ما عائد الزيت من معصرة الزيت الهيدروليكية HN500؟"
-    answer: "يعتمد عائد الزيت على المادة الخام. على سبيل المثال، ينتج السمسم 42-54%، والفول السوداني 40-50%، وبذور اللفت 35-45%. تحقق قوة الضغط البالغة 620 طناً وتصميم البرميل ذو الشقوق من نوع القضيب في HN500 عائداً أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بالمعاصر التقليدية ذات البرميل المثقوب."
+    answer: "يعتمد عائد الزيت على المادة الخام. على سبيل المثال، ينتج السمسم 42-54%، والفول السوداني 40-50%، وبذور اللفت 35-45%. تحقق قوة الضغط البالغة 620 طناً وتصميم أسطوانة العصر ذات الشقوق من نوع القضيب في HN500 عائداً أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بالمعاصر التقليدية ذات أسطوانة العصر المثقوبة."
   - question: "ما المواد الخام التي يمكن لـ HN500 عصرها؟"
     answer: "يمكن لـ HN500 عصر السمسم والفول السوداني وبذور اللفت وبذور عباد الشمس وبذور الكتان وبذور الشاي وفول الصويا وبذور القطن والمزيد. يتميز بالعصر البارد لأصلب المواد بما في ذلك الجوز بقشره ولوز المشمش وشجرة الزانثوسيرا."
   - question: "كم تستغرق دورة العصر الواحدة؟"
     answer: "يستغرق العصر الساخن (بعد التحميص) 30-40 دقيقة لكل دفعة، بينما يستغرق العصر البارد نحو ساعتين للحفاظ على جودة الزيت في درجات الحرارة المنخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
-  - question: "ما الفرق بين تكوينات البرميل المفرد والمزدوج؟"
-    answer: "تعالج معصرة البرميل المفرد دفعة واحدة في كل مرة. تحتوي معصرة البرميل المزدوج على برميلين على قضبان انزلاقية — أثناء عصر أحد البرميلين، يمكنك تحميل الآخر، مما يضاعف الإنتاج تقريباً. نوصي بالبرميل المزدوج للعمليات التجارية والصناعية."
+  - question: "ما الفرق بين تكوينات أسطوانة العصر المفردة والمزدوج؟"
+    answer: "تعالج معصرة أسطوانة العصر المفردة دفعة واحدة في كل مرة. تحتوي معصرة أسطوانة العصر المزدوجة على أسطوانتين على قضبان انزلاقية — أثناء عصر أحد الأسطوانتين، يمكنك تحميل الآخر، مما يضاعف الإنتاج تقريباً. نوصي بأسطوانة العصر المزدوجة للعمليات التجارية والصناعية."
   - question: "ما مصدر الطاقة الذي يتطلبه HN500؟"
     answer: "يتطلب HN500 قدرة محرك 2.2 كيلوواط ويعمل على كهرباء قياسية 380 فولت/50 هرتز. يمكن تخصيص النظام الكهربائي ليتوافق مع معايير الطاقة المحلية لديك — يُرجى فقط تحديد الجهد المطلوب عند الطلب."
   - question: "كم عدد العمال المطلوبين لتشغيل الآلة؟"
@@ -264,10 +264,10 @@ faqAr:
     answer: "نعم، نوفر أدلة تركيب مفصلة ودروساً مصورة وإرشادات فنية عن بُعد. بالنسبة لـ HN500، تأكد من أن أرضية التركيب يمكنها تحمل 4 أطنان على الأقل وبارتفاع سقف أدنى 3 أمتار. نوصي بأساس خرسانة مسلحة. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة."
   - question: "ما الشهادات التي تمتلكها الآلة؟"
     answer: "تخضع جميع الآلات لاختبار تحميل كامل مستمر لمدة 48 ساعة قبل الشحن. بالنسبة لـ HN500، يُجرى اختبار التحميل الكامل عند ضغط نظام 75 ميجاباسكال بقوة ضغط 620 طناً — الأعلى في خط منتجاتنا."
-  - question: "هل يمكن تخصيص حجم البرميل؟"
-    answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع ليتوافقا مع متطلباتك المحددة من حيث المادة وحجم الدفعة. تشمل التخصيصات الشائعة براميل أكبر للمواد السائبة وبراميل من الفولاذ المقاوم للصدأ بدرجة غذائية لإنتاج الزيت الصالح للأكل."
+  - question: "هل يمكن تخصيص حجم أسطوانة العصر؟"
+    answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع ليتوافقا مع متطلباتك المحددة من حيث المادة وحجم الدفعة. تشمل التخصيصات الشائعة أسطوانات أكبر للمواد السائبة وأسطوانات من الفولاذ المقاوم للصدأ بدرجة غذائية لإنتاج الزيت الصالح للأكل."
   - question: "ما نسبة الزيت المتبقية في الكيكة؟"
-    answer: "نسبة الزيت المتبقية في الكيكة عادةً 6-8% لمعظم المواد مع تصميم البرميل ذو الشقوق من نوع القضيب، مقارنةً بـ 10-12% مع المعاصر التقليدية ذات البرميل المثقوب. هذا يعني أنك تستخرج حوالي 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
+    answer: "نسبة الزيت المتبقية في الكيكة عادةً 6-8% لمعظم المواد مع تصميم أسطوانة العصر ذات الشقوق من نوع القضيب، مقارنةً بـ 10-12% مع المعاصر التقليدية ذات أسطوانة العصر المثقوبة. هذا يعني أنك تستخرج حوالي 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
   - question: "هل يمكن تشغيل الآلة بالطاقة من المولد الكهربائي؟"
     answer: "نعم، آلاتنا متوافقة تماماً مع الطاقة من المولد الكهربائي. بالنسبة لـ HN500، نوصي بمولد كهربائي بحد أدنى 7 كيلو فولت أمبير. تبدأ الآلة بسهولة وتعمل باستقرار على الطاقة من المولد، مما يجعلها مناسبة للمناطق ذات الإمداد الكهربائي غير الموثوق مثل المناطق الريفية في نيجيريا وكينيا وغيرها من المناطق الأفريقية."
   - question: "هل توفرون تخصيص الجهد لدول مختلفة؟"
@@ -276,17 +276,17 @@ faqAr:
     answer: "نحتفظ بمخزون من جميع قطع الغيار الشائعة (حلقات مانعة للتسرب، قماش فلتر، زيت هيدروليكي، مكونات لوحة التحكم). تُشحن القطع القياسية في غضون 48 ساعة عبر DHL/FedEx، وتصل في 5-7 أيام إلى معظم الدول الأفريقية ودول الشرق الأوسط."
 faqId:
   - question: "Berapa hasil minyak dari mesin press minyak hidrolik HN500?"
-    answer: "Hasil minyak tergantung pada bahan baku. Misalnya, wijen menghasilkan 42-54%, kacang tanah 40-50%, dan rapeseed 35-45%. Gaya press 620 ton dan desain barrel beralur tipe bar HN500 mencapai hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press barrel berlubang tradisional."
+    answer: "Hasil minyak tergantung pada bahan baku. Misalnya, wijen menghasilkan 42-54%, kacang tanah 40-50%, dan rapeseed 35-45%. Gaya press 620 ton dan desain tabung press beralur tipe bar HN500 mencapai hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press tabung press berlubang tradisional."
   - question: "Bahan baku apa saja yang dapat ditekan oleh HN500?"
     answer: "HN500 dapat menekan wijen, kacang tanah, rapeseed, biji bunga matahari, biji rami, biji teh, kedelai, biji kapas, dan lainnya. Ini unggul dalam press dingin bahan terkeras termasuk kenari dengan cangkang, inti aprikot, dan yellowhorn."
   - question: "Berapa lama satu siklus press membutuhkan waktu?"
-    answer: "Press panas (setelah penyangraian) membutuhkan 30-40 menit per batch, sedangkan press dingin membutuhkan sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran kue."
-  - question: "Apa perbedaan antara konfigurasi barrel tunggal dan ganda?"
-    answer: "Mesin press barrel tunggal memproses satu batch pada satu waktu. Mesin press barrel ganda memiliki dua barrel pada rel geser — saat satu barrel sedang menekan, Anda dapat memuat yang lain, hampir menggandakan kapasitas produksi Anda. Kami merekomendasikan barrel ganda untuk operasi komersial dan industri."
+    answer: "Press panas (setelah penyangraian) membutuhkan 30-40 menit per batch, sedangkan press dingin membutuhkan sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil."
+  - question: "Apa perbedaan antara konfigurasi tabung press tunggal dan ganda?"
+    answer: "Mesin press tabung press tunggal memproses satu batch pada satu waktu. Mesin press tabung press ganda memiliki dua tabung press pada rel geser — saat satu tabung press sedang menekan, Anda dapat memuat yang lain, hampir menggandakan kapasitas produksi Anda. Kami merekomendasikan tabung press ganda untuk operasi komersial dan industri."
   - question: "Pasokan daya apa yang dibutuhkan HN500?"
     answer: "HN500 membutuhkan daya motor 2.2 KW dan bekerja pada pasokan standar 380V/50Hz. Sistem kelistrikan dapat disesuaikan agar sesuai dengan standar daya lokal Anda — cukup tentukan tegangan Anda saat memesan."
   - question: "Berapa banyak pekerja yang dibutuhkan untuk mengoperasikan mesin?"
-    answer: "Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme penghapusan kue 4-kait membuat pembongkaran mudah bahkan setelah press semalaman."
+    answer: "Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme penghapusan bungkil 4-kait membuat pembongkaran mudah bahkan setelah press semalaman."
   - question: "Garansi apa yang Anda berikan?"
     answer: "Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk HN500, ini mencakup cakupan khusus untuk rangka baja tebal 5 cm, pompa hidrolik tekanan ultra-tinggi, dan rakitan silinder berat. Suku cadang tersedia dari stok dan dapat dikirim dalam 48 jam ke seluruh dunia."
   - question: "Bagaimana mesin dikirim dan berapa lama pengiriman membutuhkan waktu?"
@@ -295,10 +295,10 @@ faqId:
     answer: "Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk HN500, pastikan lantai instalasi Anda dapat menopang setidaknya 4 ton dan memiliki tinggi langit-langit minimum 3m. Kami merekomendasikan fondasi beton bertulang. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya."
   - question: "Sertifikasi apa yang dimiliki mesin?"
     answer: "Semua mesin menjalani pengujian beban penuh berkelanjutan 48 jam sebelum pengiriman. Untuk HN500, pengujian beban penuh dilakukan pada tekanan sistem 75 MPa dengan gaya press 620 ton — yang tertinggi di lini produk kami."
-  - question: "Apakah ukuran barrel dapat disesuaikan?"
-    answer: "Ya, diameter dalam dan tinggi barrel dapat disesuaikan agar sesuai dengan persyaratan bahan dan ukuran batch spesifik Anda. Penyesuaian umum termasuk barrel yang lebih besar untuk bahan curah dan barrel baja tahan karat food-grade untuk produksi minyak edible."
-  - question: "Berapa tingkat minyak sisa dalam kue?"
-    answer: "Tingkat minyak sisa dalam kue biasanya 6-8% untuk sebagian besar bahan dengan desain barrel beralur tipe bar kami, dibandingkan dengan 10-12% dengan mesin press barrel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% lebih banyak minyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch."
+  - question: "Apakah ukuran tabung press dapat disesuaikan?"
+    answer: "Ya, diameter dalam dan tinggi tabung press dapat disesuaikan agar sesuai dengan persyaratan bahan dan ukuran batch spesifik Anda. Penyesuaian umum termasuk tabung press yang lebih besar untuk bahan curah dan tabung press baja tahan karat food-grade untuk produksi minyak edible."
+  - question: "Berapa tingkat minyak sisa dalam bungkil?"
+    answer: "Tingkat minyak sisa dalam bungkil biasanya 6-8% untuk sebagian besar bahan dengan desain tabung press beralur tipe bar kami, dibandingkan dengan 10-12% dengan mesin press tabung press berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% lebih banyak minyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch."
   - question: "Apakah mesin dapat beroperasi dengan daya generator?"
     answer: "Ya, mesin kami sepenuhnya kompatibel dengan daya generator. Untuk HN500, kami merekomendasikan generator minimum 7kVA. Mesin mudah menyala dan berjalan stabil dengan daya generator, cocok untuk daerah dengan pasokan listrik tidak andal seperti daerah pedesaan Nigeria, Kenya, dan wilayah Afrika lainnya."
   - question: "Apakah Anda menyediakan penyesuaian tegangan untuk berbagai negara?"
@@ -339,7 +339,7 @@ Whether you are cold pressing walnut kernels, in-shell walnuts, apricot kernels,
 
 ## Core Technology
 
-- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more oil extraction area than traditional drilled barrels. Oil flows faster and clearer, with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) — essential for ultra-high-pressure extraction where maximum yield is the priority. No clogging, no cleaning between batches.
+- **Bar-Type Slotted Tabung Press** — Haonuo's proprietary slotted tabung press design provides significantly more oil extraction area than traditional drilled tabung press. Oil flows faster and clearer, with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) — essential for ultra-high-pressure extraction where maximum yield is the priority. No clogging, no cleaning between batches.
 - **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 75 MPa with rapid cylinder return — the highest system pressure in our lineup.
 - **4-Hook Cake Removal** — Innovative 4-hook mechanism ensures easy, reliable cake discharge — even after overnight pressing of the toughest materials.
 - **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service. Actual service life depends on operating conditions and maintenance under 620-ton pressing force.
@@ -364,7 +364,7 @@ The HN500 delivers competitive residual oil rates across all material types, mak
 - **Uncompromising Build Quality** — The 5 cm thick steel plate frame is the strongest in our lineup, engineered to withstand years of ultra-high-pressure operation without fatigue.
 - **Quality Assurance** — Every HN500 undergoes comprehensive factory testing, including full-pressure load tests and multi-cycle operational verification, before it ships.
 - **After-Sales Support** — From commissioning and operator training to ongoing maintenance and spare parts, our team ensures your HN500 delivers peak performance throughout its service life.
-- **Customization Options** — Barrel dimensions, stroke length, and other specifications can be customized to match your exact production requirements and material characteristics.
+- **Customization Options** — Tabung Press dimensions, stroke length, and other specifications can be customized to match your exact production requirements and material characteristics.
 
 ## Regional Advantages
 

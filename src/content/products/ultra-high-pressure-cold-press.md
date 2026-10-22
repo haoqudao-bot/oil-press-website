@@ -11,9 +11,9 @@ seoTitle:
   id: Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, kustom
 description:
   en: "HN480B ultra high pressure cold press — 600 ton, 65 MPa system, 48 MPa cake pressure. Custom-configured for walnut, almond, and hard seeds. Made to order in 30-45 working days."
-  fr: "Presse à froid ultra haute pression HN480B — 600 tonnes, 65 MPa, 48 MPa sur gâteau. Sur mesure pour noix, amandes, graines dures. 30-45 jours ouvrés."
-  ar: "معصرة باردة فائقة الضغط HN480B — 600 طن، 65 ميجاباسكال، 48 ميجاباسكال على الكعكة. مخصصة للجوز واللوز والبذور الصلبة. 30-45 يوم عمل."
-  id: "Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, 65 MPa, 48 MPa pada kue. Kustom untuk walnut, almond, biji keras. 30-45 hari kerja."
+  fr: "Presse à froid ultra haute pression HN480B — 600 tonnes, 65 MPa, 48 MPa sur tourteau. Sur mesure pour noix, amandes, graines dures. 30-45 jours ouvrés."
+  ar: "معصرة باردة فائقة الضغط HN480B — 600 طن، 65 ميجاباسكال، 48 ميجاباسكال على الكسب. مخصصة للجوز واللوز والبذور الصلبة. 30-45 يوم عمل."
+  id: "Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, 65 MPa, 48 MPa pada bungkil. Kustom untuk walnut, almond, biji keras. 30-45 hari kerja."
 category: hydraulic-oil-press
 model: HN480B
 modelId: ''
@@ -39,9 +39,9 @@ specifications:
     value: 480 mm
   - name: Piston Inner Diameter
     value: 360 mm
-  - name: Barrel Standard Inner Diameter
+  - name: Tabung Press Standard Inner Diameter
     value: 390 mm (customizable)
-  - name: Barrel Standard Height
+  - name: Tabung Press Standard Height
     value: 800 mm (customizable)
   - name: Cylinder Standard Stroke
     value: 850 mm (customizable)
@@ -67,7 +67,7 @@ applicableSeeds:
   - pine nut
 faq:
   - question: What is the oil yield of the HN480B hydraulic oil press?
-    answer: The oil yield depends on the raw material. For example, sesame yields 42-54%, peanuts 40-50%, and rapeseed 35-45%. The HN480B's 600-ton pressing force and bar-type slotted barrel design achieve approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled barrel presses.
+    answer: The oil yield depends on the raw material. For example, sesame yields 42-54%, peanuts 40-50%, and rapeseed 35-45%. The HN480B's 600-ton pressing force and bar-type slotted tabung press design achieve approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled tabung press presses.
   - question: What raw materials can the HN480B press?
     answer: The HN480B can press sesame, peanut, rapeseed, sunflower seed, flaxseed, tea seed, soybean, cottonseed, and more. It is specifically optimized for walnut pressing with a complete walnut pressing solution, and also excels at cold pressing almonds, pine nuts, and apricot kernels.
   - question: How long does one pressing cycle take?
@@ -76,8 +76,8 @@ faq:
     answer: For cold pressing, the optimal moisture content range is 7-9%. This moisture level ensures smooth oil extraction while maintaining low-temperature conditions. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
   - question: What pre-processing equipment is needed for cold pressing?
     answer: Cold pressing requires careful pre-processing Seed cleaning and color sorting to remove impurities and damaged seeds; 2) Dehulling for high-shell-content materials (shell removal rate at least 95 percent); 3) Moisture conditioning to reach optimal 7-9% moisture; 4) Gentle crushing to break seeds without generating heat (below 60 degrees Celsius). Unlike hot pressing, cold pressing does not involve roasting, preserving natural nutrients and flavors.
-  - question: What is the difference between single and double barrel configurations?
-    answer: A single barrel press processes one batch at a time. A double barrel press has two barrels on sliding rails — while one barrel is pressing, you can load the other, nearly doubling your throughput. We recommend the double barrel for commercial and industrial operations.
+  - question: What is the difference between single and double tabung press configurations?
+    answer: A single tabung press press processes one batch at a time. A double tabung press press has two tabung press on sliding rails — while one tabung press is pressing, you can load the other, nearly doubling your throughput. We recommend the double tabung press for commercial and industrial operations.
   - question: What power supply does the HN480B require?
     answer: The HN480B requires 2.2 KW motor power, compatible with both 220V/50Hz and 380V/60Hz power supplies. We can customize the electrical system to match your local power standards at no extra charge.
   - question: How many workers are needed to operate the machine?
@@ -90,10 +90,10 @@ faq:
     answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician to your facility for on-site installation and training at cost. For the HN480B, ensure your installation floor can support at least 3.5 tonnes and has a minimum ceiling height of 3m for the extended stroke assembly.
   - question: What certifications does the machine have?
     answer: All machines undergo 48-hour continuous full-load testing before shipment. For the HN480B, the full-load test is conducted at 65 MPa with 600 tonnes of pressing force, including cold-press cycle verification.
-  - question: Can the barrel size be customized?
-    answer: Yes, barrel inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger barrels for bulk materials and food-grade stainless steel barrels for edible oil production.
+  - question: Can the tabung press size be customized?
+    answer: Yes, tabung press inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger tabung press for bulk materials and food-grade stainless steel tabung press for edible oil production.
   - question: What is the residual oil rate in the cake?
-    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
+    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted tabung press design, compared to 10-12% with traditional drilled tabung press presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
 specificationsFr:
   - name: Modèle (Simple/Double)
     value: HN480B Simple / HN480B Double
@@ -117,7 +117,7 @@ specificationsFr:
     value: 850 mm (personnalisable)
   - name: Dimensions globales (Simple/Double)
     value: 1300×1300×2800 / 2200×1300×2800 mm
-  - name: Pression superficielle du gâteau
+  - name: Pression superficielle du tourteau
     value: 48 MPa
 applicableSeedsFr:
   - cerneau de noix
@@ -135,13 +135,13 @@ faqFr:
   - question: Quelles matières premières la HN480B peut-il presser ?
     answer: Le HN480B peut presser le sésame, l'arachide, le colza, les graines de tournesol, le lin, la graine de thé, le soja, les graines de coton et bien d'autres. Il est spécialement optimisé pour le pressage des noix avec une solution complète de pressage des noix, et excelle également dans le pressage à froid des amandes, des pignons de pin et des amandons d'abricot.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du gâteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau.
+    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du tourteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
   - question: Quelle est la différence entre les configurations à fût simple et double ?
     answer: Une presse à fût simple traite un lot à la fois. Une presse à double fût possède deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, ce qui presque double votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
   - question: Quelle alimentation électrique la HN480B nécessite-t-il ?
     answer: Le HN480B nécessite une puissance moteur de 2,2 KW, compatible avec les alimentations 220V/50Hz et 380V/60Hz. Nous pouvons personnaliser le système électrique selon vos normes locales d'alimentation sans frais supplémentaires.
   - question: Combien de travailleurs sont nécessaires pour faire fonctionner la machine ?
-    answer: Seuls 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du gâteau à 4 crochets facilite le déchargement même après un pressage de nuit.
+    answer: Seuls 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du tourteau à 4 crochets facilite le déchargement même après un pressage de nuit.
   - question: Quelle garantie fournissez-vous ?
     answer: Nous fournissons une garantie de 1 an couvrant tous les défauts de fabrication, ainsi qu'un support technique à vie. Pour le HN480B, cela inclut une couverture spécifique du système hydraulique de pressage à froid et du cylindre à course prolongée. Les pièces de rechange sont disponibles en stock .
   - question: Comment la machine est-elle expédiée et combien de temps dure la livraison ?
@@ -152,10 +152,10 @@ faqFr:
     answer: Toutes les machines subissent un test de charge complète continue de 48 heures avant l'expédition. Pour le HN480B, le test en charge complète est effectué à 65 MPa avec 600 tonnes de force de pressage, incluant la vérification du cycle de pressage à froid.
   - question: La taille du fût peut-elle être personnalisée ?
     answer: Oui, le diamètre intérieur et la hauteur du fût peuvent être personnalisés pour répondre à vos besoins spécifiques en matière de matière première et de taille de lot. Les personnalisations courantes incluent des fûts plus grands pour les matériaux en vrac et des fûts en acier inoxydable de qualité alimentaire pour la production d'huile comestible.
-  - question: Quel est le taux d'huile résiduelle dans le gâteau ?
-    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matériaux avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile en plus (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
+  - question: Quel est le taux d'huile résiduelle dans le tourteau ?
+    answer: Le taux d'huile résiduelle dans le tourteau est généralement de 6 à 8 % pour la plupart des matériaux avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile en plus (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
 specificationsAr:
-  - name: "الطراز (مفرد/مزدوج)"
+  - name: "الطراز (مفردة/مزدوجة)"
     value: "HN480B مفرد / HN480B مزدوج"
   - name: "ضغط النظام"
     value: "65 ميجاباسكال"
@@ -163,19 +163,19 @@ specificationsAr:
     value: "600 طن"
   - name: "قدرة المحرك"
     value: "2.2 كيلوواط"
-  - name: "وزن الآلة (مفرد/مزدوج)"
+  - name: "وزن الآلة (مفردة/مزدوجة)"
     value: "2,8 / 3,1 طن"
   - name: "القطر الخارجي للاسطوانة"
     value: "480 مم"
   - name: "القطر الداخلي للمكبس"
     value: "360 مم"
-  - name: "القطر الداخلي القياسي للبرميل"
+  - name: "القطر الداخلي القياسي لأسطوانة العصر"
     value: "390 مم (قابل للتخصيص)"
-  - name: "الارتفاع القياسي للبرميل"
+  - name: "الارتفاع القياسي لأسطوانة العصر"
     value: "800 مم (قابل للتخصيص)"
   - name: "مشوار الاسطوانة القياسي"
     value: "850 مم (قابل للتخصيص)"
-  - name: "الأبعاد الكلية (مفرد/مزدوج)"
+  - name: "الأبعاد الكلية (مفردة/مزدوجة)"
     value: "1300×1300×2800 / 2200×1300×2800 مم"
   - name: "ضغط سطح الكيكة"
     value: "48 ميجاباسكال/سم²"
@@ -194,15 +194,15 @@ specificationsId:
     value: 480 mm
   - name: Diameter Dalam Piston
     value: 360 mm
-  - name: Diameter Dalam Standar Barel
+  - name: Diameter Dalam Standar Tabung Press
     value: 390 mm (dapat disesuaikan)
-  - name: Tinggi Standar Barel
+  - name: Tinggi Standar Tabung Press
     value: 800 mm (dapat disesuaikan)
   - name: Langkah Standar Silinder
     value: 850 mm (dapat disesuaikan)
   - name: Dimensi Keseluruhan (Tunggal/Ganda)
     value: 1300×1300×2800 / 2200×1300×2800 mm
-  - name: Tekanan Permukaan Kue Press
+  - name: Tekanan Permukaan Bungkil
     value: 48 MPa
 applicableSeedsAr:
   - "لوز الجوز"
@@ -226,13 +226,13 @@ applicableSeedsId:
   - biji pinus
 faqAr:
   - question: "ما عائد الزيت من معصرة الزيت الهيدروليكية HN480B؟"
-    answer: "يعتمد عائد الزيت على المادة الخام. على سبيل المثال، ينتج السمسم 42-54%، والفول السوداني 40-50%، وبذور اللفت 35-45%. تحقق قوة الضغط البالغة 600 طن وتصميم البرميل ذو الشقوق من نوع القضيب في HN480B عائداً أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بالمعاصر التقليدية ذات البرميل المثقوب."
+    answer: "يعتمد عائد الزيت على المادة الخام. على سبيل المثال، ينتج السمسم 42-54%، والفول السوداني 40-50%، وبذور اللفت 35-45%. تحقق قوة الضغط البالغة 600 طن وتصميم أسطوانة العصر ذات الشقوق من نوع القضيب في HN480B عائداً أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بالمعاصر التقليدية ذات أسطوانة العصر المثقوبة."
   - question: "ما المواد الخام التي يمكن لـ HN480B عصرها؟"
     answer: "يمكن لـ HN480B عصر السمسم والفول السوداني وبذور اللفت وبذور عباد الشمس وبذور الكتان وبذور الشاي وفول الصويا وبذور القطن والمزيد. صُمم خصيصاً ومحسّن لعصر الجوز مع حل عصر كامل للجوز، كما يتميز بالعصر البارد للوز والصنوبر ولوز المشمش."
   - question: "كم تستغرق دورة العصر الواحدة؟"
     answer: "تستغرق دورة العصر النموذجية 35-45 دقيقة حسب المادة ودرجة جفاف الكيكة المطلوبة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
-  - question: "ما الفرق بين تكوينات البرميل المفرد والمزدوج؟"
-    answer: "تعالج معصرة البرميل المفرد دفعة واحدة في كل مرة. تحتوي معصرة البرميل المزدوج على برميلين على قضبان انزلاقية — أثناء عصر أحد البرميلين، يمكنك تحميل الآخر، مما يضاعف الإنتاج تقريباً. نوصي بالبرميل المزدوج للعمليات التجارية والصناعية."
+  - question: "ما الفرق بين تكوينات أسطوانة العصر المفردة والمزدوج؟"
+    answer: "تعالج معصرة أسطوانة العصر المفردة دفعة واحدة في كل مرة. تحتوي معصرة أسطوانة العصر المزدوجة على أسطوانتين على قضبان انزلاقية — أثناء عصر أحد الأسطوانتين، يمكنك تحميل الآخر، مما يضاعف الإنتاج تقريباً. نوصي بأسطوانة العصر المزدوجة للعمليات التجارية والصناعية."
   - question: "ما مصدر الطاقة الذي يتطلبه HN480B؟"
     answer: "يتطلب HN480B قدرة محرك 2.2 كيلوواط، متوافق مع مصادر الطاقة 220 فولت/50 هرتز و380 فولت/60 هرتز. يمكننا تخصيص النظام الكهربائي ليتوافق مع معايير الطاقة المحلية لديك بدون رسوم إضافية."
   - question: "كم عدد العمال المطلوبين لتشغيل الآلة؟"
@@ -245,23 +245,23 @@ faqAr:
     answer: "نعم، نوفر أدلة تركيب مفصلة ودروساً مصورة وإرشادات فنية عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة. بالنسبة لـ HN480B، تأكد من أن أرضية التركيب يمكنها تحمل 3.5 طن على الأقل وبارتفاع سقف أدنى 3 أمتار لمجموعة المشوار الممتد."
   - question: "ما الشهادات التي تمتلكها الآلة؟"
     answer: "تخضع جميع الآلات لاختبار تحميل كامل مستمر لمدة 48 ساعة قبل الشحن. بالنسبة لـ HN480B، يُجرى اختبار التحميل الكامل عند 65 ميجاباسكال بقوة ضغط 600 طن، بما في ذلك التحقق من دورة العصر البارد."
-  - question: "هل يمكن تخصيص حجم البرميل؟"
-    answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع ليتوافقا مع متطلباتك المحددة من حيث المادة وحجم الدفعة. تشمل التخصيصات الشائعة براميل أكبر للمواد السائبة وبراميل من الفولاذ المقاوم للصدأ بدرجة غذائية لإنتاج الزيت الصالح للأكل."
+  - question: "هل يمكن تخصيص حجم أسطوانة العصر؟"
+    answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع ليتوافقا مع متطلباتك المحددة من حيث المادة وحجم الدفعة. تشمل التخصيصات الشائعة أسطوانات أكبر للمواد السائبة وأسطوانات من الفولاذ المقاوم للصدأ بدرجة غذائية لإنتاج الزيت الصالح للأكل."
   - question: "ما نسبة الزيت المتبقية في الكيكة؟"
-    answer: "نسبة الزيت المتبقية في الكيكة عادةً 6-8% لمعظم المواد مع تصميم البرميل ذو الشقوق من نوع القضيب، مقارنةً بـ 10-12% مع المعاصر التقليدية ذات البرميل المثقوب. هذا يعني أنك تستخرج حوالي 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
+    answer: "نسبة الزيت المتبقية في الكيكة عادةً 6-8% لمعظم المواد مع تصميم أسطوانة العصر ذات الشقوق من نوع القضيب، مقارنةً بـ 10-12% مع المعاصر التقليدية ذات أسطوانة العصر المثقوبة. هذا يعني أنك تستخرج حوالي 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
 faqId:
   - question: Berapa rendemen minyak dari mesin press hidrolik HN480B?
-    answer: Rendemen minyak tergantung pada bahan baku. Misalnya, wijen menghasilkan 42-54%, kacang tanah 40-50%, dan rapeseed 35-45%. Gaya press 600 ton dan desain barel ber-slot tipe batang pada HN480B menghasilkan rendemen sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press barel berlubang tradisional.
+    answer: Rendemen minyak tergantung pada bahan baku. Misalnya, wijen menghasilkan 42-54%, kacang tanah 40-50%, dan rapeseed 35-45%. Gaya press 600 ton dan desain tabung press ber-slot tipe batang pada HN480B menghasilkan rendemen sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press tabung press berlubang tradisional.
   - question: Bahan baku apa saja yang dapat dipress oleh HN480B?
     answer: HN480B dapat mempress wijen, kacang tanah, rapeseed, biji bunga matahari, biji rami, biji teh, kedelai, biji kapas, dan lainnya. Mesin ini secara khusus dioptimalkan untuk penekanan kenari dengan solusi penekanan kenari lengkap, dan juga unggul dalam press dingin almond, biji pinus, dan inti aprikot.
   - question: Berapa lama satu siklus press membutuhkan waktu?
-    answer: Siklus press tipikal membutuhkan waktu 35-45 menit tergantung pada bahan dan tingkat kekeringan kue press yang diinginkan. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran kue press.
-  - question: Apa perbedaan antara konfigurasi barel tunggal dan ganda?
-    answer: Mesin press barel tunggal memproses satu batch pada satu waktu. Mesin press barel ganda memiliki dua barel pada rel geser — saat satu barel sedang menekan, Anda dapat memuat barel lainnya, hampir melipatgandakan throughput. Kami merekomendasikan barel ganda untuk operasi komersial dan industri.
+    answer: Siklus press tipikal membutuhkan waktu 35-45 menit tergantung pada bahan dan tingkat kekeringan bungkil yang diinginkan. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil.
+  - question: Apa perbedaan antara konfigurasi tabung press tunggal dan ganda?
+    answer: Mesin press tabung press tunggal memproses satu batch pada satu waktu. Mesin press tabung press ganda memiliki dua tabung press pada rel geser — saat satu tabung press sedang menekan, Anda dapat memuat tabung press lainnya, hampir melipatgandakan throughput. Kami merekomendasikan tabung press ganda untuk operasi komersial dan industri.
   - question: Pasokan daya apa yang dibutuhkan HN480B?
     answer: HN480B membutuhkan daya motor 2.2 KW, kompatibel dengan pasokan daya 220V/50Hz dan 380V/60Hz. Kami dapat menyesuaikan sistem kelistrikan sesuai standar daya lokal Anda tanpa biaya tambahan.
   - question: Berapa banyak pekerja yang dibutuhkan untuk mengoperasikan mesin?
-    answer: Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme pelepasan kue press 4-kait memudahkan pembongkaran bahkan setelah press semalam.
+    answer: Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme pelepasan bungkil 4-kait memudahkan pembongkaran bahkan setelah press semalam.
   - question: Garansi apa yang Anda berikan?
     answer: Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk HN480B, ini mencakup cakupan khusus untuk sistem hidrolik press dingin dan silinder langkah panjang. Suku cadang tersedia dari stok dan dapat dikirim dalam 48 jam ke seluruh dunia.
   - question: Bagaimana mesin dikirim dan berapa lama waktu pengiriman?
@@ -270,10 +270,10 @@ faqId:
     answer: Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya. Untuk HN480B, pastikan lantai instalasi Anda dapat menahan setidaknya 3,5 ton dan memiliki tinggi plafon minimum 3m untuk perakitan langkah panjang.
   - question: Sertifikasi apa yang dimiliki mesin?
     answer: Semua mesin menjalani pengujian beban penuh berkelanjutan selama 48 jam sebelum pengiriman. Untuk HN480B, pengujian beban penuh dilakukan pada 65 MPa dengan gaya press 600 ton, termasuk verifikasi siklus press dingin.
-  - question: Apakah ukuran barel dapat disesuaikan?
-    answer: Ya, diameter dalam dan tinggi barel dapat disesuaikan sesuai kebutuhan bahan dan ukuran batch Anda. Penyesuaian umum termasuk barel lebih besar untuk bahan curukan dan barel baja tahan karat food-grade untuk produksi minyak nabati.
-  - question: Berapa tingkat minyak sisa dalam kue press?
-    answer: Tingkat minyak sisa dalam kue press biasanya 6-8% untuk sebagian besar bahan dengan desain barel ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press barel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
+  - question: Apakah ukuran tabung press dapat disesuaikan?
+    answer: Ya, diameter dalam dan tinggi tabung press dapat disesuaikan sesuai kebutuhan bahan dan ukuran batch Anda. Penyesuaian umum termasuk tabung press lebih besar untuk bahan curukan dan tabung press baja tahan karat food-grade untuk produksi minyak nabati.
+  - question: Berapa tingkat minyak sisa dalam bungkil?
+    answer: Tingkat minyak sisa dalam bungkil biasanya 6-8% untuk sebagian besar bahan dengan desain tabung press ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press tabung press berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
 videoUrl: ''
 seoKeywords:
   - 600 ton cold press
@@ -306,7 +306,7 @@ The HN480B is specifically optimized for walnut pressing with a complete walnut 
 
 ## Core Technology
 
-- **Bar-Type Slotted Barrel** — significantly more oil extraction area than drilled barrels, achieving approximately 2-3% higher oil yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) per batch.
+- **Bar-Type Slotted Tabung Press** — significantly more oil extraction area than drilled tabung press, achieving approximately 2-3% higher oil yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) per batch.
 - **German Hydraulic System** — Ultra-high pressure combined pump delivers working pressure up to 65 MPa for the most demanding cold-press applications.
 - **4-Hook Cake Removal** — Easy, reliable cake discharge system that reduces downtime between pressing cycles.
 - **High Carbon Steel Frame** — Long-lasting service under continuous operation. Actual service life depends on operating conditions and maintenance.
@@ -331,4 +331,4 @@ The HN480B delivers the highest oil yield from cold-press materials, making it a
 - **Walnut Pressing Expertise** — Our proprietary walnut pressing solution is the result of years of research and field testing, ensuring you get maximum yield from every batch.
 - **Quality Assurance** — Every HN480B undergoes comprehensive factory testing, including full-pressure load tests and cold-press cycle verification, before shipment.
 - **After-Sales Support** — From commissioning and operator training to ongoing maintenance and spare parts, our team ensures your HN480B delivers peak performance throughout its service life.
-- **Customization Options** — Barrel dimensions, stroke length, and other specifications can be customized to match your exact production requirements and material characteristics.
+- **Customization Options** — Tabung Press dimensions, stroke length, and other specifications can be customized to match your exact production requirements and material characteristics.

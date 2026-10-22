@@ -10,10 +10,10 @@ seoTitle:
   ar: معصرة زيت هيدروليكية تجارية — 365 طن
   id: Mesin Press Minyak Hidrolik Komersial — 365 Ton
 description:
-  en: "Commercial hydraulic oil press with 365-ton force and 30 MPa cake pressure. Single or double barrel, hot & cold pressing, factory-direct."
-  fr: "Presse à huile hydraulique commerciale de 365 tonnes, pression sur gâteau de 30 MPa. Fût simple ou double, pressage à chaud et à froid — amélioration haute efficacité pour huileries moyennes et grandes, direct usine."
-  ar: "معصرة زيت هيدروليكية تجارية بقوة 365 طناً وضغط كعكة 30 ميجاباسكال. برميل مفرد أو مزدوج، عصر ساخن وبارد — ترقية عالية الكفاءة للمعاصر المتوسطة والكبيرة، مباشرة من المصنع."
-  id: "Mesin press minyak hidrolik komersial dengan gaya 365 ton dan tekanan kue 30 MPa. Barel tunggal atau ganda, press panas & dingin — upgrade efisiensi tinggi untuk pabrik menengah dan besar, langsung pabrik."
+  en: "Commercial hydraulic oil press with 365-ton force and 30 MPa cake pressure. Single or double tabung press, hot & cold pressing, factory-direct."
+  fr: "Presse à huile hydraulique commerciale de 365 tonnes, pression sur tourteau de 30 MPa. Fût simple ou double, pressage à chaud et à froid — amélioration haute efficacité pour huileries moyennes et grandes, direct usine."
+  ar: "معصرة زيت هيدروليكية تجارية بقوة 365 طناً وضغط كسب 30 ميجاباسكال. أسطوانة عصر مفردة أو مزدوجة، عصر ساخن وبارد — ترقية عالية الكفاءة للمعاصر المتوسطة والكبيرة، مباشرة من المصنع."
+  id: "Mesin press minyak hidrolik komersial dengan gaya 365 ton dan tekanan bungkil 30 MPa. Tabung Press tunggal atau ganda, press panas & dingin — upgrade efisiensi tinggi untuk pabrik menengah dan besar, langsung pabrik."
 category: hydraulic-oil-press
 model: HN365
 modelId: ''
@@ -34,14 +34,14 @@ specifications:
   - name: Frame
     value: 3 cm high-strength steel plate
   - name: Structure
-    value: Vertical, single or double barrel
+    value: Vertical, single or double tabung press
   - name: Working Mode
     value: Manual / Semi-automatic, switchable
   - name: Pressing Process
     value: Hot pressing and cold pressing
   - name: Motor Starting
     value: Star-delta (Y-Δ) reduced-voltage start
-  - name: Barrel Configuration
+  - name: Tabung Press Configuration
     value: Single or double station
   - name: Applicable Seeds
     value: Peanut, sesame, rapeseed, camellia (tea) seed, walnut, flaxseed, sunflower, soybean, almond
@@ -66,17 +66,17 @@ applicableSeeds:
   - almond
 faq:
   - question: What is the HN365, and how does it differ from the HN355?
-    answer: The HN365 is the upgraded successor to the HN355. It keeps the same machine class but moves to a reinforced vertical frame built from 3 cm high-strength steel plate, a single or double barrel layout and an integrated cartridge-valve hydraulic pack. The rated pressing force is 365 tons with 30 MPa cake surface pressure, so it finishes hard seeds more completely than the HN325 while supporting continuous all-day batches.
+    answer: The HN365 is the upgraded successor to the HN355. It keeps the same machine class but moves to a reinforced vertical frame built from 3 cm high-strength steel plate, a single or double tabung press layout and an integrated cartridge-valve hydraulic pack. The rated pressing force is 365 tons with 30 MPa cake surface pressure, so it finishes hard seeds more completely than the HN325 while supporting continuous all-day batches.
   - question: Which oilseeds is the HN365 designed for?
     answer: It handles both soft and hard oilseeds — peanut, sesame, rapeseed, camellia (tea) seed, walnut, flaxseed, sunflower seed, soybean and almond. Buyers upgrading from a 325-class machine usually move to the HN365 when they press more hard seeds or need higher daily throughput.
   - question: Does the HN365 support both hot and cold pressing?
     answer: Yes. Pressure, stroke, holding time and pressure-rise speed are adjustable to match either process. Hot pressing after roasting gives higher yield and a stronger aroma; cold pressing keeps temperatures low for premium oil. Manual and semi-automatic modes switch with one button.
-  - question: Should I choose the single barrel or the double barrel?
-    answer: "The single barrel is the standard configuration — same 365-ton force and 30 MPa pressure at a lower entry cost, ideal for focused batch work. The double barrel adds a second station: one barrel presses while the other loads and unloads, removing idle time for substantially higher daily output. Both share the same frame, so you can start single and upgrade later."
+  - question: Should I choose the single tabung press or the double tabung press?
+    answer: "The single tabung press is the standard configuration — same 365-ton force and 30 MPa pressure at a lower entry cost, ideal for focused batch work. The double tabung press adds a second station: one tabung press presses while the other loads and unloads, removing idle time for substantially higher daily output. Both share the same frame, so you can start single and upgrade later."
   - question: What pressure does the HN365 reach?
     answer: Rated pressing force is 365 tons and maximum cake surface pressure is 30 MPa. The hydraulic cylinder is machined from 27SiMn alloy steel (GB/T 3077), quenched and tempered for repeated high-pressure cycling.
   - question: Are the oil-contact surfaces food-grade?
-    answer: The barrel interior and oil outlet are nickel-plated for food-grade contact, so carbon steel never touches the pressed oil. The slotted strip barrel also drains oil faster than a conventional drilled barrel.
+    answer: The tabung press interior and oil outlet are nickel-plated for food-grade contact, so carbon steel never touches the pressed oil. The slotted strip tabung press also drains oil faster than a conventional drilled tabung press.
   - question: What voltage can the machine be built for?
     answer: The electrical system can be built to your local power standard — simply tell us your country or voltage when ordering. The motor uses star-delta reduced-voltage starting to soften starting current.
   - question: What are your payment and trade terms?
@@ -140,7 +140,7 @@ specificationsAr:
     value: "معصرة زيت هيدروليكية عمودية HN365"
   - name: "قوة العصر المقدّرة"
     value: "365 طناً"
-  - name: "الضغط السطحي للكعكة"
+  - name: "الضغط السطحي للكسب"
     value: "30 ميجاباسكال"
   - name: "الهيكل"
     value: "صفيحة فولاذية عالية المقاومة بسمك 3 سم"
@@ -170,17 +170,17 @@ applicableSeedsAr:
   - "لوز"
 faqAr:
   - question: "ما هي HN365 وكيف تختلف عن HN355؟"
-    answer: "HN365 هي النسخة المطوّرة اللاحقة لـ HN355. تحافظ على نفس فئة الماكينة لكنها تنتقل إلى هيكل عمودي معزّز من صفيحة فولاذية عالية المقاومة بسمك 3 سم، وتصميم ببرميل مفرد أو مزدوج، ومجموعة هيدروليكية مدمجة بصمامات خرطوشية. تبلغ قوة العصر المقدّرة 365 طناً مع ضغط سطحي للكعكة 30 ميجاباسكال، لذا تُنهي البذور الصلبة بشكل أكمل من HN325 مع دعم دفعات متواصلة طوال اليوم."
+    answer: "HN365 هي النسخة المطوّرة اللاحقة لـ HN355. تحافظ على نفس فئة الماكينة لكنها تنتقل إلى هيكل عمودي معزّز من صفيحة فولاذية عالية المقاومة بسمك 3 سم، وتصميم بأسطوانة عصر مفردة أو مزدوجة، ومجموعة هيدروليكية مدمجة بصمامات خرطوشية. تبلغ قوة العصر المقدّرة 365 طناً مع ضغط سطحي للكسب 30 ميجاباسكال، لذا تُنهي البذور الصلبة بشكل أكمل من HN325 مع دعم دفعات متواصلة طوال اليوم."
   - question: "ما البذور الزيتية التي صُمّمت HN365 لها؟"
     answer: "تتعامل مع البذور الطرية والصلبة على حد سواء — الفول السوداني والسمسم وبذور اللفت وبذور الكاميليا (الشاي) والجوز وبذور الكتان ودوار الشمس وفول الصويا واللوز. عادةً ما ينتقل المشترون الذين يرقّون من ماكينة فئة 325 إلى HN365 عندما يعصرون مزيداً من البذور الصلبة أو يحتاجون إنتاجية يومية أعلى."
   - question: "هل تدعم HN365 العصر الساخن والبارد؟"
     answer: "نعم. يمكن ضبط الضغط والشوط وزمن التثبيت وسرعة ارتفاع الضغط لملاءمة كلتا العمليتين. العصر الساخن بعد التحميص يعطي عائداً أعلى ورائحة أقوى؛ أما العصر البارد فيُبقي درجات الحرارة منخفضة لإنتاج زيت فاخر. ويتم التبديل بين الوضع اليدوي ونصف الآلي بضغطة زر واحدة."
-  - question: "برميل مفرد أم مزدوج: كيف أختار؟"
-    answer: "البرميل المفرد هو التكوين القياسي — نفس قوة 365 طناً وضغط 30 ميجاباسكال بتكلفة أقل، مثالي للعمل بدفعات مركزة. ويضيف البرميل المزدوج محطة ثانية: برميل يعصر بينما يُحمَّل الآخر ويُفرَّغ، ما يلغي وقت التوقف ليرفع الإنتاج اليومي بشكل كبير. وكلاهما على نفس الهيكل — ابدأ بالمفرد وترقَّ لاحقاً."
+  - question: "أسطوانة عصر مفردة أم مزدوجة: كيف أختار؟"
+    answer: "أسطوانة العصر المفردة هي التكوين القياسي — نفس قوة 365 طناً وضغط 30 ميجاباسكال بتكلفة أقل، مثالي للعمل بدفعات مركزة. ويضيف أسطوانة العصر المزدوجة محطة ثانية: أسطوانة عصر تعصر بينما يُحمَّل الآخر ويُفرَّغ، ما يلغي وقت التوقف ليرفع الإنتاج اليومي بشكل كبير. وكلاهما على نفس الهيكل — ابدأ بالمفرد وترقَّ لاحقاً."
   - question: "ما الضغط الذي تصل إليه HN365؟"
-    answer: "قوة العصر المقدّرة 365 طناً، وأقصى ضغط سطحي على الكعكة 30 ميجاباسكال. تُخرَط الأسطوانة الهيدروليكية من فولاذ سبائكي 27SiMn (GB/T 3077) مُخمّد ومُقسّى لتحمل دورات الضغط العالي المتكررة."
+    answer: "قوة العصر المقدّرة 365 طناً، وأقصى ضغط سطحي على الكسب 30 ميجاباسكال. تُخرَط الأسطوانة الهيدروليكية من فولاذ سبائكي 27SiMn (GB/T 3077) مُخمّد ومُقسّى لتحمل دورات الضغط العالي المتكررة."
   - question: "هل الأسطح الملامسة للزيت غذائية؟"
-    answer: "الجزء الداخلي من البرميل ومخرج الزيت مطليّان بالنيكل لملامسة غذائية، لذا لا يلامس الفولاذ الكربوني الزيت المعصور أبداً. كما أن البرميل المشقوق بالقضبان يصفّي الزيت أسرع من البرميل المثقوب التقليدي."
+    answer: "الجزء الداخلي من أسطوانة العصر ومخرج الزيت مطليّان بالنيكل لملامسة غذائية، لذا لا يلامس الفولاذ الكربوني الزيت المعصور أبداً. كما أن أسطوانة العصر المشقوقة بالقضبان يصفّي الزيت أسرع من أسطوانة العصر المثقوبة التقليدي."
   - question: "ما الجهد الكهربائي الذي يمكن تصنيع الماكينة به؟"
     answer: "يمكن تصنيع النظام الكهربائي وفق معيار الكهرباء المحلي لديك؛ يُرجى فقط إبلاغنا ببلدك أو الجهد المطلوب عند الطلب. يستخدم المحرك تشغيلاً نجمياً-مثلثياً بجهد مخفّض لتلطيف تيار الإقلاع."
   - question: "ما شروط الدفع والتجارة لديكم؟"
@@ -192,19 +192,19 @@ specificationsId:
     value: "Mesin press minyak hidrolik vertikal HN365"
   - name: "Gaya Tekan Nominal"
     value: "365 Ton"
-  - name: "Tekanan Permukaan Kue"
+  - name: "Tekanan Permukaan Bungkil"
     value: "30 MPa"
   - name: "Rangka"
     value: "Pelat baja kekuatan tinggi 3 cm"
   - name: "Struktur"
-    value: "Vertikal, barel tunggal atau ganda"
+    value: "Vertikal, tabung press tunggal atau ganda"
   - name: "Mode Kerja"
     value: "Manual / Semi-otomatis, dapat dialihkan"
   - name: "Proses Press"
     value: "Press panas dan press dingin"
   - name: "Starting Motor"
     value: "Starting star-delta (Y-Δ) tegangan rendah"
-  - name: "Konfigurasi Barrel"
+  - name: "Konfigurasi Tabung Press"
     value: "Stasiun tunggal atau ganda"
   - name: "Biji yang Berlaku"
     value: "Kacang tanah, wijen, rapeseed, biji camellia (teh), walnut, biji rami, bunga matahari, kedelai, almond"
@@ -222,17 +222,17 @@ applicableSeedsId:
   - "almond"
 faqId:
   - question: "Apa itu HN365, dan apa bedanya dengan HN355?"
-    answer: "HN365 adalah penerus yang ditingkatkan dari HN355. Mesin ini tetap di kelas yang sama tetapi menggunakan rangka vertikal yang diperkuat dari pelat baja kekuatan tinggi 3 cm, tata letak barel tunggal atau ganda, dan paket hidrolik katup kartrid terintegrasi. Gaya tekan nominal 365 ton dengan tekanan permukaan kue 30 MPa, sehingga menyelesaikan biji keras lebih tuntas dibanding HN325 sekaligus mendukung batch terus-menerus sepanjang hari."
+    answer: "HN365 adalah penerus yang ditingkatkan dari HN355. Mesin ini tetap di kelas yang sama tetapi menggunakan rangka vertikal yang diperkuat dari pelat baja kekuatan tinggi 3 cm, tata letak tabung press tunggal atau ganda, dan paket hidrolik katup kartrid terintegrasi. Gaya tekan nominal 365 ton dengan tekanan permukaan bungkil 30 MPa, sehingga menyelesaikan biji keras lebih tuntas dibanding HN325 sekaligus mendukung batch terus-menerus sepanjang hari."
   - question: "Untuk biji minyak apa HN365 dirancang?"
     answer: "Mesin ini menangani biji lunak maupun keras — kacang tanah, wijen, rapeseed, biji camellia (teh), walnut, biji rami, bunga matahari, kedelai, dan almond. Pembeli yang naik kelas dari mesin kelas-325 biasanya memilih HN365 saat memproses lebih banyak biji keras atau membutuhkan kapasitas harian lebih tinggi."
   - question: "Apakah HN365 mendukung press panas dan press dingin?"
     answer: "Ya. Tekanan, langkah piston, waktu tahan, dan kecepatan kenaikan tekanan dapat diatur untuk menyesuaikan kedua proses. Press panas setelah penyangraian memberikan hasil lebih tinggi dan aroma lebih kuat; press dingin menjaga suhu tetap rendah untuk minyak premium. Mode manual dan semi-otomatis berpindah dengan satu tombol."
-  - question: "Barel tunggal atau ganda: mana yang harus dipilih?"
-    answer: "Barel tunggal adalah konfigurasi standar — gaya 365 ton dan tekanan 30 MPa yang sama dengan biaya masuk lebih rendah, ideal untuk kerja batch terfokus. Barel ganda menambah stasiun kedua: satu barel menekan sementara yang lain diisi dan dikosongkan, menghilangkan waktu menganggur untuk output harian yang jauh lebih tinggi. Keduanya berbagi rangka yang sama — mulai dari tunggal, upgrade nanti."
+  - question: "Tabung Press tunggal atau ganda: mana yang harus dipilih?"
+    answer: "Tabung Press tunggal adalah konfigurasi standar — gaya 365 ton dan tekanan 30 MPa yang sama dengan biaya masuk lebih rendah, ideal untuk kerja batch terfokus. Tabung Press ganda menambah stasiun kedua: satu tabung press menekan sementara yang lain diisi dan dikosongkan, menghilangkan waktu menganggur untuk output harian yang jauh lebih tinggi. Keduanya berbagi rangka yang sama — mulai dari tunggal, upgrade nanti."
   - question: "Berapa tekanan yang dicapai HN365?"
-    answer: "Gaya tekan nominal 365 ton dan tekanan permukaan kue maksimum 30 MPa. Silinder hidrolik dibubut dari baja paduan 27SiMn (GB/T 3077), di-quench dan temper untuk siklus tekanan tinggi berulang."
+    answer: "Gaya tekan nominal 365 ton dan tekanan permukaan bungkil maksimum 30 MPa. Silinder hidrolik dibubut dari baja paduan 27SiMn (GB/T 3077), di-quench dan temper untuk siklus tekanan tinggi berulang."
   - question: "Apakah permukaan yang bersentuhan dengan minyak food-grade?"
-    answer: "Bagian dalam barrel dan saluran keluar minyak berlapis nikel untuk kontak food-grade, sehingga baja karbon tidak pernah menyentuh minyak yang diperas. Barrel beralur batang juga mengalirkan minyak lebih cepat dibanding barrel berlubang konvensional."
+    answer: "Bagian dalam tabung press dan saluran keluar minyak berlapis nikel untuk kontak food-grade, sehingga baja karbon tidak pernah menyentuh minyak yang diperas. Tabung Press beralur batang juga mengalirkan minyak lebih cepat dibanding tabung press berlubang konvensional."
   - question: "Untuk tegangan apa mesin ini dapat dibuat?"
     answer: "Sistem kelistrikan dapat dibuat sesuai standar listrik lokal Anda; cukup informasikan negara atau tegangan Anda saat memesan. Motor menggunakan starting star-delta tegangan rendah untuk memperlembut arus starting."
   - question: "Apa syarat pembayaran dan perdagangan Anda?"
@@ -255,26 +255,26 @@ updatedAt: 2026-10-10
 
 ## Overview
 
-The HN365 vertical hydraulic oil press is rated at 365 tons of pressing force with 30 MPa cake surface pressure, built for medium and large oil mills that have outgrown 325-class machines. Its vertical layout is available with a single barrel or two alternating barrels — in the double configuration, one barrel is loaded while the other presses, supporting hot and cold pressing of peanut, sesame, walnut and other oilseeds in 40–90 minute batches depending on the material. Residual oil in the cake typically stays at 6–8% (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation).
+The HN365 vertical hydraulic oil press is rated at 365 tons of pressing force with 30 MPa cake surface pressure, built for medium and large oil mills that have outgrown 325-class machines. Its vertical layout is available with a single tabung press or two alternating tabung press — in the double configuration, one tabung press is loaded while the other presses, supporting hot and cold pressing of peanut, sesame, walnut and other oilseeds in 40–90 minute batches depending on the material. Residual oil in the cake typically stays at 6–8% (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation).
 
 The HN365 is our upgraded high-pressure vertical hydraulic oil press, developed for medium and large oil mills that have outgrown a 325-class machine. It is rated at **365 tons of pressing force** with **30 MPa cake surface pressure**, built on a frame made from **3 cm high-strength steel plate**. The extra force shows up where it matters: hard oilseeds such as walnut and camellia finish more completely, with lower residual oil left in the cake.
 
-The vertical structure saves floor space and sends cylinder force straight down, so pressure is even, cakes form neatly and the frame holds its precision over long high-pressure runs. Choose a **single barrel** for focused batches, or the **large double barrel** that keeps one station pressing while the other is loaded — the machine works through the whole shift.
+The vertical structure saves floor space and sends cylinder force straight down, so pressure is even, cakes form neatly and the frame holds its precision over long high-pressure runs. Choose a **single tabung press** for focused batches, or the **large double tabung press** that keeps one station pressing while the other is loaded — the machine works through the whole shift.
 
 ## Key Advantages
 
 - **Upgraded from the HN355** — Reinforced vertical frame, 365-ton force and modern cartridge hydraulics in the same machine class.
 - **365 Tons on Hard Seeds** — 30 MPa cake pressure finishes peanut, walnut, camellia and flaxseed more completely than a 325-class press.
 - **3 cm High-Strength Steel Frame** — Thickened plate with a higher load rating; vertical pressure travels with almost no loss and the frame does not deform under repeated cycling.
-- **Double-Station Productivity** — Alternating barrels remove idle loading time and lift daily output without a larger footprint.
+- **Double-Station Productivity** — Alternating tabung press remove idle loading time and lift daily output without a larger footprint.
 - **Hot and Cold Pressing** — Pressure, stroke and holding time are adjustable; switch between manual and semi-automatic modes with one button.
-- **Food-Grade Contact Parts** — Nickel-plated barrel interior and oil outlet; carbon steel never touches the oil.
+- **Food-Grade Contact Parts** — Nickel-plated tabung press interior and oil outlet; carbon steel never touches the oil.
 
 ## Build & Hydraulics
 
 The HN365 uses an integrated **cartridge-valve hydraulic pack** with very few seepage points. Pressure rises smoothly without impact or jitter, and the branded electrical components resist interference for stable 24-hour operation. The motor starts through a **star-delta (Y-Δ) reduced-voltage circuit**, softening starting current and reducing strain on weak grids and generators.
 
-The hydraulic cylinder is made from **27SiMn alloy steel (GB/T 3077)**, quenched and tempered for the right balance of hardness and toughness under repeated high-pressure cycles. Wear parts — columns, pressure plate and barrel — are reinforced, and the modular design keeps stripping, cleaning and maintenance simple for local technicians.
+The hydraulic cylinder is made from **27SiMn alloy steel (GB/T 3077)**, quenched and tempered for the right balance of hardness and toughness under repeated high-pressure cycles. Wear parts — columns, pressure plate and tabung press — are reinforced, and the modular design keeps stripping, cleaning and maintenance simple for local technicians.
 
 ## Applications
 

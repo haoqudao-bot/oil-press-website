@@ -69,7 +69,7 @@ faq:
   - question: What is the price of a palm kernel oil press machine?
     answer: Ask us about current model pricing. We offer factory-direct pricing with no middleman markup.
   - question: How much palm kernel oil can I produce per day?
-    answer: Our heavy-duty model processes 600-1,200 kg of palm kernels per day (single barrel), while the ultra-high-pressure model handles 1,200-1,700 kg/day (hot press) or 200-300 kg/day (cold press) (double barrel).
+    answer: Our heavy-duty model processes 600-1,200 kg of palm kernels per day (single tabung press), while the ultra-high-pressure model handles 1,200-1,700 kg/day (hot press) or 200-300 kg/day (cold press) (double tabung press).
   - question: "Can I press both palm fruit and palm kernels on the same machine?"
     answer: "Our hydraulic press can process both, but palm fruit and palm kernels require different preparation methods and pressing parameters. Palm fruit requires a different pre-treatment (sterilization and digestion) compared to palm kernels (cracking, separation, and crushing)."
   - question: "Is palm kernel oil pressing profitable?"
@@ -85,7 +85,7 @@ faqFr:
   - question: Quel est le prix d'une machine de pressage d'huile de palmiste ?
     answer: Demandez-nous les prix actuels des modèles. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien d'huile de palmiste puis-je produire par jour ?
-    answer: Notre modèle lourd traite 600 à 1 200 kg d'amandes de palmiste par jour (baril unique), tandis que le modèle ultra haute pression traite 1 200 à 1 700 kg/jour (pressage à chaud) ou 200 à 300 kg/jour (pressage à froid, double baril).
+    answer: Notre modèle lourd traite 600 à 1 200 kg d'amandes de palmiste par jour (fût unique), tandis que le modèle ultra haute pression traite 1 200 à 1 700 kg/jour (pressage à chaud) ou 200 à 300 kg/jour (pressage à froid, double fût).
   - question: "Puis-je presser à la fois le fruit du palmier et les amandes de palmiste sur la même machine ?"
     answer: "Notre presse hydraulique peut traiter les deux, mais le fruit du palmier et les amandes de palmiste nécessitent des méthodes de préparation et des paramètres de pressage différents. Le fruit du palmier nécessite un prétraitement différent (stérilisation et trituration) comparé aux amandes de palmiste (cassage, séparation et broyage)."
   - question: "Le pressage d'huile de palmiste est-il rentable ?"
@@ -101,7 +101,7 @@ faqAr:
   - question: ما هو سعر آلة عصر زيت نواة النخيل؟
     answer: اسألونا عن أسعار الطرازات الحالية. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم زيت نواة نخيل يمكنني إنتاجه يومياً؟
-    answer: يعالج طرازنا الثقيل 600-1,200 كجم من أنوية النخيل يومياً (برميل واحد)، بينما يعالج الطراز فائق الضغط العالي 1,200-1,700 كجم/يوم (عصر ساخن) أو 200-300 كجم/يوم (عصر بارد، برميل مزدوج).
+    answer: يعالج طرازنا الثقيل 600-1,200 كجم من أنوية النخيل يومياً (أسطوانة عصر واحدة)، بينما يعالج الطراز فائق الضغط العالي 1,200-1,700 كجم/يوم (عصر ساخن) أو 200-300 كجم/يوم (عصر بارد، أسطوانة عصر مزدوجة).
   - question: "هل يمكنني عصر ثمرة النخيل ولوز نواة النخيل على نفس الآلة؟"
     answer: "صحافتنا الهيدروليكية يمكنها معالجة كليهما، لكن ثمرة النخيل ولوز نواة النخيل يتطلبان طرق تحضير ومعلمات عصر مختلفة. ثمرة النخيل تتطلب معالجة مسبقة مختلفة (تعقيم وسحق) مقارنة بلوز نواة النخيل (كسر، فصل، طحن)."
   - question: "هل عصر زيت نواة النخيل مربح؟"
@@ -117,7 +117,7 @@ faqId:
   - question: Berapa harga mesin press minyak inti sawit?
     answer: Hubungi kami untuk harga model terbaru. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa banyak minyak inti sawit yang dapat saya produksi per hari?
-    answer: Model heavy-duty kami memproses 600-1.200 kg inti sawit per hari (barrel tunggal), sementara model ultra-high-pressure menangani 1.200-1.700 kg/hari (press panas) atau 200-300 kg/hari (press dingin, barrel ganda).
+    answer: Model heavy-duty kami memproses 600-1.200 kg inti sawit per hari (tabung press tunggal), sementara model ultra-high-pressure menangani 1.200-1.700 kg/hari (press panas) atau 200-300 kg/hari (press dingin, tabung press ganda).
   - question: "Bisakah saya menekan buah sawit dan inti sawit pada mesin yang sama?"
     answer: "Press hidrolik kami dapat memproses keduanya, tetapi buah sawit dan inti sawit membutuhkan metode persiapan dan parameter penekanan yang berbeda. Buah sawit membutuhkan pre-perlakuan yang berbeda (sterilisasi dan pencernaan) dibandingkan inti sawit (pemecahan, pemisahan, dan penghancuran)."
   - question: "Apakah press minyak inti sawit menguntungkan?"

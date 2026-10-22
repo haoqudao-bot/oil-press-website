@@ -28,9 +28,9 @@ specifications:
     value: New Electric Seed Steamer
   - name: Water Filling Method
     value: Manuel / Automatique (double mode)
-  - name: Steaming Barrel Depth
+  - name: Steaming Tabung Press Depth
     value: 600 mm
-  - name: Steaming Barrel Inner Diameter
+  - name: Steaming Tabung Press Inner Diameter
     value: 600 mm
   - name: Max Processing Capacity
     value: 100 kg par lot
@@ -130,9 +130,9 @@ specificationsAr:
     value: "New Electric Seed Steamer"
   - name: "طريقة تعبئة المياه"
     value: "يدوي / تلقائي (وضع مزدوج)"
-  - name: "عمق برميل التبخير"
+  - name: "عمق أسطوانة التبخير"
     value: "600 ملم"
-  - name: "القطر الداخلي لبرميل التبخير"
+  - name: "القطر الداخلي لأسطوانة التبخير"
     value: "600 ملم"
   - name: "أقصى قدرة معالجة"
     value: "100 كجم لكل دفعة"

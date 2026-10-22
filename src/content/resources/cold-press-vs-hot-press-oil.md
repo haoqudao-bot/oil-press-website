@@ -38,7 +38,7 @@ Cold pressing extracts oil using mechanical pressure alone, keeping the oil belo
 ### Equipment Requirements
 
 - High pressure: cold pressing starts where hot pressing stops — 42 MPa cake pressure on the [HN426](/products/cold-press-hydraulic-oil-press/), rising to 52 MPa on the HN500 for the toughest nuts.
-- Bar-type slotted barrels that drain oil quickly without clogging under long, cold cycles.
+- Bar-type slotted tabung press that drain oil quickly without clogging under long, cold cycles.
 - No roaster in the line, but filtration and settling capacity must be good — cold oil settles slowly.
 - Cold handling does not mean cold storage is optional: unsaturated cold-pressed oils need cool, dark storage and short distribution times.
 
@@ -94,7 +94,7 @@ The processes compete on different business models rather than on cost per litre
 | Dimension | Cold Press Line | Hot Press Line |
 |-----------|-----------------|----------------|
 | Equipment needed | High-pressure press, fine filtration | Roaster + standard press |
-| Output per shift | Lower (~300–700 kg depending on barrel) | Higher (~900–1,400 kg) |
+| Output per shift | Lower (~300–700 kg depending on tabung press) | Higher (~900–1,400 kg) |
 | Selling channel | Health shops, gourmet, online, export, cosmetic | Markets, restaurants, bulk cooking oil |
 | Price positioning | Premium, small bottles | Volume, larger containers |
 | Inventory risk | Higher — short shelf life, sell fresh | Lower — oil keeps longer |
@@ -138,4 +138,4 @@ The extra investment is mainly the roaster and stronger filtration; the press it
 
 ## Conclusion
 
-Cold and hot pressing are complementary tools, not rivals on a single quality scale. Hot pressing maximises yield, speed, shelf life, and roasted flavour for the cooking-oil market; cold pressing maximises nutrient retention, fresh flavour, and premium positioning for delicate seeds and nuts. Most growing mills end up running both on the same hydraulic line — HN325/HN365 configured around roasting for volume products, HN426/HN500 holding 42–52 MPa for cold-press and hard-nut work — and pricing each product for what the process genuinely delivers. If you tell Haonuo your seed list and target markets, we will configure the barrels, pressure ratings, filtration, and roaster capacity for the mix rather than for a single label.
+Cold and hot pressing are complementary tools, not rivals on a single quality scale. Hot pressing maximises yield, speed, shelf life, and roasted flavour for the cooking-oil market; cold pressing maximises nutrient retention, fresh flavour, and premium positioning for delicate seeds and nuts. Most growing mills end up running both on the same hydraulic line — HN325/HN365 configured around roasting for volume products, HN426/HN500 holding 42–52 MPa for cold-press and hard-nut work — and pricing each product for what the process genuinely delivers. If you tell Haonuo your seed list and target markets, we will configure the tabung press, pressure ratings, filtration, and roaster capacity for the mix rather than for a single label.

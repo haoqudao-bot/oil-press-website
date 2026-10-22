@@ -101,7 +101,7 @@ These are planning figures for the press alone; a qualified electrician must siz
 
 ### Control Panel
 
-Factory panels include main isolator, motor protection, starter, run/stop controls, pressure gauge, and an emergency stop. Install the panel within the operator's line of sight of the barrel but outside the splash zone, leave clearance for heat dissipation, and do not bypass the e-stop or door interlocks to save time.
+Factory panels include main isolator, motor protection, starter, run/stop controls, pressure gauge, and an emergency stop. Install the panel within the operator's line of sight of the tabung press but outside the splash zone, leave clearance for heat dissipation, and do not bypass the e-stop or door interlocks to save time.
 
 ## Safety Considerations
 

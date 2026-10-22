@@ -29,7 +29,7 @@ This guide walks through every station in a small-to-medium oil mill plant, expl
 
 ### 1. Seed Cleaning System
 
-Oilseed arriving from the farm contains stones, soil, stalks, metal fragments, and empty husks. Every kilogram of impurity that reaches the press wastes pressure, abrades the barrel, and darkens the oil. A basic cleaning train includes:
+Oilseed arriving from the farm contains stones, soil, stalks, metal fragments, and empty husks. Every kilogram of impurity that reaches the press wastes pressure, abrades the tabung press, and darkens the oil. A basic cleaning train includes:
 
 - **Vibrating screen cleaner** — removes oversized and undersized particles on two or three sieves
 - **Magnetic separator** — catches nails and metal dust before they enter the crusher
@@ -40,7 +40,7 @@ The cleaner should be rated at **1.5–2 times the pressing input rate**, becaus
 
 ### 2. Dehulling System
 
-Hulls absorb oil and add wax to the crude oil, so removing them raises effective yield and reduces barrel wear.
+Hulls absorb oil and add wax to the crude oil, so removing them raises effective yield and reduces tabung press wear.
 
 - Disc or blade dehuller for sunflower and oats; hammer-type dehuller for peanut
 - Peanut: aim for 95%+ hull removal; sesame: only dehull for light-coloured oil products
@@ -72,17 +72,17 @@ Whole seeds press poorly because oil must travel too far to escape. Crushing to 
 
 - Roller crusher for soft seeds (peanut, sesame); hammer mill for copra and hard cakes
 - Target particle size: **2–4 mm** for most seeds, 3–5 mm for hard nuts
-- Over-crushing produces flour that blinds the barrel slots — coarser is usually better than finer
+- Over-crushing produces flour that blinds the tabung press slots — coarser is usually better than finer
 
 ### 6. Hydraulic Oil Press
 
-The press applies static high pressure to the grit inside a slotted barrel; oil drains through the slots while the solids form a cake.
+The press applies static high pressure to the grit inside a slotted tabung press; oil drains through the slots while the solids form a cake.
 
 - Current Haonuo line: [HN325](/products/standard-hydraulic-oil-press/) (325 t, ~27 MPa cake pressure), HN365 (365 t, 30 MPa), [HN426](/products/cold-press-hydraulic-oil-press/) (500 t, 42 MPa, cold-press specialist), HN500 (620 t, 52 MPa, maximum extraction)
-- Batch size: 20–100 kg of crushed seed depending on barrel configuration
+- Batch size: 20–100 kg of crushed seed depending on tabung press configuration
 - Cycle: 30–40 minutes hot, about 2 hours cold
-- Double-barrel versions nearly double throughput by loading one barrel while the other presses
-- A bar-type slotted barrel typically leaves 6–8% residual oil in cake, versus 10–12% for old drilled barrels
+- Double-barrel versions nearly double throughput by loading one tabung press while the other presses
+- A bar-type slotted tabung press typically leaves 6–8% residual oil in cake, versus 10–12% for old drilled tabung press
 
 ### 7. Oil Filtration System
 
@@ -110,11 +110,11 @@ Crude oil leaving the press carries fine seed solids. Filtration turns it into a
 
 | Scale | Daily Seed Input | Press Configuration | Typical Staff |
 |-------|------------------|---------------------|---------------|
-| Small workshop | 500–1,000 kg | 1 × HN325, single barrel | 2–3 |
-| Medium mill | 1,000–2,500 kg | 1 × HN365/HN426, double barrel | 4–6 |
-| Large mill | 2,500–5,000 kg | 2 presses or HN500 double barrel | 7–10 |
+| Small workshop | 500–1,000 kg | 1 × HN325, single tabung press | 2–3 |
+| Medium mill | 1,000–2,500 kg | 1 × HN365/HN426, double tabung press | 4–6 |
+| Large mill | 2,500–5,000 kg | 2 presses or HN500 double tabung press | 7–10 |
 
-Remember that published hot-press tonnage assumes full 100 kg batches running back-to-back. Cold pressing takes three to four times longer per batch, so a line sold as "1 tonne per day hot" delivers roughly 300–700 kg cold depending on barrel configuration.
+Remember that published hot-press tonnage assumes full 100 kg batches running back-to-back. Cold pressing takes three to four times longer per batch, so a line sold as "1 tonne per day hot" delivers roughly 300–700 kg cold depending on tabung press configuration.
 
 ### Line Balance Rules
 
@@ -131,8 +131,8 @@ A useful design trick is to size every station against the press's *peak* output
 
 1. **Straight-line or U-shaped flow** — seed enters one end, oil and cake leave the other; raw material never crosses finished product.
 2. **Gravity where possible** — elevate cleaning and roasting so material drops into the crusher and press, saving conveyors.
-3. **Maintenance access** — leave 1 metre around the press for barrel withdrawal and 2 metres in front for loading.
-4. **Expansion room** — reserve floor space for a second barrel station or a second press from day one; moving an installed line is expensive.
+3. **Maintenance access** — leave 1 metre around the press for tabung press withdrawal and 2 metres in front for loading.
+4. **Expansion room** — reserve floor space for a second tabung press station or a second press from day one; moving an installed line is expensive.
 
 ### Space Requirements
 
@@ -173,7 +173,7 @@ A realistic budget covers more than the press. For a typical small-to-medium lin
 
 | Item | Share of Equipment Budget |
 |------|---------------------------|
-| Hydraulic press (single/double barrel) | 35–45% |
+| Hydraulic press (single/double tabung press) | 35–45% |
 | Cleaning, dehulling, crushing | 15–20% |
 | Roaster + conditioner | 15–25% |
 | Filtration + tanks | 10–15% |
@@ -184,7 +184,7 @@ On top of equipment, plan for sea or land freight, duties and local VAT, a 30–
 ## Implementation Sequence
 
 1. Confirm target seed(s), daily tonnage, and hot versus cold product mix.
-2. Lock the press model and barrel count; this fixes every other station's size.
+2. Lock the press model and tabung press count; this fixes every other station's size.
 3. List supporting equipment with capacities matched to peak press output.
 4. Draft the floor plan and confirm ceiling height, power, and water.
 5. Order with a spare-parts package and installation guidance; schedule operator training at commissioning.
@@ -192,4 +192,4 @@ On top of equipment, plan for sea or land freight, duties and local VAT, a 30–
 
 ## Conclusion
 
-A complete oil production line is a chain whose strength is set by its slowest link, not its most expensive machine. Sizing cleaning, roasting, crushing, filtration, and storage around the press's real peak output — and budgeting for the full system rather than a single machine — is what separates profitable mills from crowded workshops. Haonuo supplies the press, barrel configurations, filtration equipment, and layout support as a package; share your seed type and daily target and our engineers will return a balanced line drawing with a quotation.
+A complete oil production line is a chain whose strength is set by its slowest link, not its most expensive machine. Sizing cleaning, roasting, crushing, filtration, and storage around the press's real peak output — and budgeting for the full system rather than a single machine — is what separates profitable mills from crowded workshops. Haonuo supplies the press, tabung press configurations, filtration equipment, and layout support as a package; share your seed type and daily target and our engineers will return a balanced line drawing with a quotation.

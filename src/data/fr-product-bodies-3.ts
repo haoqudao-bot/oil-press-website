@@ -296,7 +296,7 @@ Principes physiques et chimiques combinés pour l'élimination ciblée des impur
 
   'oilseed-pre-press': `## Aperçu
 
-La pré-presse oléagineuse HN-CG60 est une expulseuse à vis installée en tête de ligne, avant la torréfaction et le pressage hydraulique. Elle écrase la graine et la roule en flocons ou en gâteau grossier, rompant les cellules huileuses et élargissant la surface chauffée. Environ 35 à 40 % de l'huile est libérée dès ce premier passage, puis le matériau pré-pressé passe à la torréfaction et à la presse hydraulique principale. Les huileries qui ajoutent cette étape voient généralement leur rendement global en huile augmenter de 3 à 5 %.
+La pré-presse oléagineuse HN-CG60 est une expulseuse à vis installée en tête de ligne, avant la torréfaction et le pressage hydraulique. Elle écrase la graine et la roule en flocons ou en tourteau grossier, rompant les cellules huileuses et élargissant la surface chauffée. Environ 35 à 40 % de l'huile est libérée dès ce premier passage, puis le matériau pré-pressé passe à la torréfaction et à la presse hydraulique principale. Les huileries qui ajoutent cette étape voient généralement leur rendement global en huile augmenter de 3 à 5 %.
 
 Cette configuration en deux étapes — pré-presse à vis puis finition hydraulique — est l'installation standard pour la moutarde, le colza et l'arachide en Inde, en Asie du Sud-Est et en Afrique. La machine est livrée entièrement assemblée, ne nécessite aucune installation spécialisée et un seul ouvrier la commande.
 

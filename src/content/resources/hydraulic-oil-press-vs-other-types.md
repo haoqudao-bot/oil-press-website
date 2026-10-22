@@ -27,7 +27,7 @@ This guide compares the three methods on the dimensions that actually decide pro
 
 ### Hydraulic Oil Press
 
-Seed is loaded into a slotted barrel in batches; a hydraulic ram applies static pressure of 325–620 tonnes and oil drains through the barrel walls. Nothing rotates against the seed, so the process generates essentially no friction heat. A cycle takes 30–40 minutes for hot pressing and about 2 hours for cold pressing; double-barrel machines overlap loading with pressing.
+Seed is loaded into a slotted tabung press in batches; a hydraulic ram applies static pressure of 325–620 tonnes and oil drains through the tabung press walls. Nothing rotates against the seed, so the process generates essentially no friction heat. A cycle takes 30–40 minutes for hot pressing and about 2 hours for cold pressing; double-barrel machines overlap loading with pressing.
 
 ### Screw Oil Press (Expeller)
 
@@ -47,7 +47,7 @@ Flaked seed is washed (usually with food-grade hexane) to dissolve the oil, whic
 | Startup/shutdown | Minutes | Minutes | Hours, with solvent management |
 | Flexibility between seeds | Excellent; clean between lots | Good; residue carry-over | Poor; dedicated campaigns |
 
-Hydraulic lines scale by adding presses or double barrels; screw and solvent lines scale in larger single jumps, which suits committed, single-product factories.
+Hydraulic lines scale by adding presses or double tabung press; screw and solvent lines scale in larger single jumps, which suits committed, single-product factories.
 
 ## Oil Quality Compared
 
@@ -72,7 +72,7 @@ Cold-pressed hydraulic oil can be sold unrefined at a significant price premium 
 | Rapeseed | 32–42% | 36–42% | ~42–44% |
 | Walnut | 45–50% cold | Poor — kernel shears and heats | Not economic at small scale |
 
-Modern bar-type slotted hydraulic barrels leave 6–8% residual oil in cake; screw expellers leave 5–8% depending on choke setting (pushed harder, they generate more heat and fines); solvent extraction takes cake residual oil below 1%. Solvent therefore wins the last drops of oil — but only at volumes large enough to carry the plant, refinery, safety systems, and compliance overhead.
+Modern bar-type slotted hydraulic tabung press leave 6–8% residual oil in cake; screw expellers leave 5–8% depending on choke setting (pushed harder, they generate more heat and fines); solvent extraction takes cake residual oil below 1%. Solvent therefore wins the last drops of oil — but only at volumes large enough to carry the plant, refinery, safety systems, and compliance overhead.
 
 ## Capital and Operating Cost
 
@@ -80,7 +80,7 @@ Modern bar-type slotted hydraulic barrels leave 6–8% residual oil in cake; scr
 |--------|----------------|-------------|-------------------|
 | Machine investment (entry) | Low–medium | Low–medium | Very high |
 | Plant and infrastructure | Simple workshop | Simple workshop | Flameproof plant, solvent storage, effluent treatment |
-| Wear parts | Seals, barrel (slow wear, static load) | Worm, cage bars, choke — fast wear under abrasion and heat | Extensive rotating equipment |
+| Wear parts | Seals, tabung press (slow wear, static load) | Worm, cage bars, choke — fast wear under abrasion and heat | Extensive rotating equipment |
 | Energy per tonne | Low–medium; 2.2 kW motor | Medium–high | High (evaporation, recovery) |
 | Operator skill | Trainable in days | Trainable in days | Chemical-plant operators and lab |
 | Maintenance | Moderate | Moderate–high | High, specialised |
@@ -89,11 +89,11 @@ A hydraulic press is the only one of the three that fits a 50–150 m² workshop
 
 ## Material Versatility
 
-Hydraulic presses accept an unusually wide range — sesame, peanut, rapeseed, sunflower, soybean, tea seed, coconut (with a 600 mm food-grade barrel), plus hard, high-value nuts that screw machines handle badly:
+Hydraulic presses accept an unusually wide range — sesame, peanut, rapeseed, sunflower, soybean, tea seed, coconut (with a 600 mm food-grade tabung press), plus hard, high-value nuts that screw machines handle badly:
 
 - **Walnut and almond** — soft, oil-rich kernels shear into paste inside a screw and lose quality to heat; high-pressure cold hydraulic pressing (42–52 MPa cake pressure on [HN426](/products/cold-press-hydraulic-oil-press/) / HN500 machines) is the established solution.
-- **Coconut and VCO** — batch pressing in stainless barrels supports virgin coconut oil without solvent contact.
-- **Small-lot and multi-seed businesses** — the barrel is cleaned between batches, so a morning of sesame and an afternoon of walnut is practical.
+- **Coconut and VCO** — batch pressing in stainless tabung press supports virgin coconut oil without solvent contact.
+- **Small-lot and multi-seed businesses** — the tabung press is cleaned between batches, so a morning of sesame and an afternoon of walnut is practical.
 
 Screw expellers favour continuous runs of conventional seeds (rapeseed, sunflower, soybean, peanut). Solvent extraction suits high-volume oilseeds and pre-pressed cake.
 

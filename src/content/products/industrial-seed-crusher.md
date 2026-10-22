@@ -3,14 +3,14 @@ title:
   en: Industrial Oil Cake Crusher for Oil Mills
   fr: Broyeur de Tourteaux Industriel
   ar: كسارة كيك الزيت الصناعية
-  id: Penghancur Kue Minyak Industri
+  id: Penghancur Bungkil Minyak Industri
 seoTitle:
   ar: كسارة كيك الزيت الصناعية لمطاحن الزيت
 description:
   en: "Industrial-grade oil cake crusher for crushing pressed oil cakes into fine powder. Well-suited for recycling oil cake residue, producing animal feed, or further processing."
   fr: "Broyeur de tourteaux industriel pour réduire les tourteaux pressés en poudre fine. Adapté pour le recyclage des résidus, la production d'alimentation animale."
   ar: "كسارة كيك الزيت الصناعية لسحق كيك الزيت المضغوط إلى مسحوق دقيق. مناسبة لإعادة تدوير بقايا كيك الزيت أو إنتاج العلف الحيواني."
-  id: "Penghancur kue minyak tingkat industri untuk menghancurkan kue minyak yang telah ditekan menjadi bubuk halus. Cocok untuk mendaur ulang residu kue minyak atau produksi pakan ternak."
+  id: "Penghancur bungkil minyak tingkat industri untuk menghancurkan bungkil minyak yang telah ditekan menjadi bubuk halus. Cocok untuk mendaur ulang residu bungkil minyak atau produksi pakan ternak."
 category: seed-processing-equipment
 model: 370 Type
 modelId: ''
@@ -19,7 +19,7 @@ images:
 imageAlt:
   en: "Industrial oil cake and oilseed crusher machine"
   fr: "Concasseur industriel pour tourteaux et graines oléagineuses"
-  ar: "كسارة صناعية لكعكة الزيت والبذور الزيتية"
+  ar: "كسارة صناعية لكسب الزيت والبذور الزيتية"
   id: "Mesin crusher industri untuk bungkil minyak dan biji minyak"
 specifications:
   - name: Model
@@ -137,10 +137,10 @@ applicableSeedsAr:
   - "كيك الفول السوداني"
   - "كيك الخردل"
 applicableSeedsId:
-  - kue minyak ditekan
-  - kue wijen
-  - kue kacang tanah
-  - kue sawit
+  - bungkil minyak ditekan
+  - bungkil wijen
+  - bungkil kacang tanah
+  - bungkil sawit
 faqAr:
   - question: "ما هي قدرة المعالجة لكسارة كيك الزيت الصناعية؟"
     answer: "تُعالج كسارة كيك الزيت الصناعية Type 370 ما يصل إلى 2000 كجم/ساعة بمحركها القوي بقوة 18.5 كيلو واط يعمل عند 3260 دورة/دقيقة — مناسبة لعمليات إعادة تدوير كيك الزيت على نطاق واسع."
@@ -163,10 +163,10 @@ faqAr:
   - question: "كيف تتكامل هذه المعدة مع معصرة الزيت الهيدروليكية؟"
     answer: "تُستخدم كسارة كيك الزيت الصناعية عادةً بعد عمليات عصر الزيت. تسحق بقايا كيك الزيت المضغوط إلى مسحوق دقيق، يمكن استخدامه لإنتاج العلف الحيواني أو تطبيقات أخرى، مما يخلق قيمة إضافية من المنتج الجانبي لعصر الزيت."
 faqId:
-  - question: Berapa kapasitas pengolahan Penghancur Kue Minyak Industri?
-    answer: Penghancur Kue Minyak Industri Type 370 memproses hingga 2000 kg/jam dengan motor 18.5 KW yang bertenaga beroperasi pada 3260 RPM — cocok untuk operasi daur ulang kue minyak skala besar.
+  - question: Berapa kapasitas pengolahan Penghancur Bungkil Minyak Industri?
+    answer: Penghancur Bungkil Minyak Industri Type 370 memproses hingga 2000 kg/jam dengan motor 18.5 KW yang bertenaga beroperasi pada 3260 RPM — cocok untuk operasi daur ulang bungkil minyak skala besar.
   - question: Bahan apa saja yang dapat diproses oleh peralatan ini?
-    answer: Type 370 dirancang khusus untuk menghancurkan kue minyak yang telah ditekan menjadi bubuk halus. Ini menangani kue wijen, kue kacang tanah, kue sawit, dan berbagai residu kue minyak lainnya dengan efisien.
+    answer: Type 370 dirancang khusus untuk menghancurkan bungkil minyak yang telah ditekan menjadi bubuk halus. Ini menangani bungkil wijen, bungkil kacang tanah, bungkil sawit, dan berbagai residu bungkil minyak lainnya dengan efisien.
   - question: Pasokan daya apa yang dibutuhkan?
     answer: Mesin membutuhkan pasokan daya 380V dengan daya motor 18.5 KW. Kami dapat menyesuaikan sistem kelistrikan sesuai standar daya lokal Anda.
   - question: Seberapa mudah mengoperasikan dan merawatnya?
@@ -182,7 +182,7 @@ faqId:
   - question: Sertifikasi apa yang dimiliki peralatan?
     answer: Semua peralatan menjalani pengujian beban penuh sebelum pengiriman. Untuk penghancur industri, pengujian beban penuh memverifikasi kinerja penghancuran yang konsisten pada kapasitas nominal maksimum.
   - question: Bagaimana peralatan ini berintegrasi dengan mesin press minyak hidrolik?
-    answer: Penghancur kue minyak industri biasanya digunakan setelah operasi pengepresan minyak. Ini menghancurkan residu kue minyak yang telah ditekan menjadi bubuk halus, yang dapat digunakan untuk produksi pakan ternak atau aplikasi lain, menciptakan nilai tambah dari produk sampingan pengepresan.
+    answer: Penghancur bungkil minyak industri biasanya digunakan setelah operasi pengepresan minyak. Ini menghancurkan residu bungkil minyak yang telah ditekan menjadi bubuk halus, yang dapat digunakan untuk produksi pakan ternak atau aplikasi lain, menciptakan nilai tambah dari produk sampingan pengepresan.
 videoUrl: ''
 seoKeywords:
   - industrial oil cake crusher

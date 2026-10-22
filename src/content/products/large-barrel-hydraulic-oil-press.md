@@ -5,26 +5,26 @@ title:
   ar: مكبس نضح الحمأة الهيدروليكي
   id: Mesin Dewatering Lumpur Hidrolik
 seoTitle:
-  en: Hydraulic Sludge Dewatering Press — Large Barrel Residue
+  en: Hydraulic Sludge Dewatering Press — Large Tabung Press Residue
   fr: Presse de déshydratation de boues hydraulique — grand fût
-  ar: مكبث نضح الحمأة الهيدروليكي — برميل كبير
-  id: Mesin dewatering lumpur hidrolik — barel besar
+  ar: مكبث نضح الحمأة الهيدروليكي — أسطوانة عصر كبيرة
+  id: Mesin dewatering lumpur hidrolik — tabung press besar
 description:
-  en: "Hydraulic sludge dewatering press with 630mm large barrel. For oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable dehydration. 325 ton, custom configuration."
+  en: "Hydraulic sludge dewatering press with 630mm large tabung press. For oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable dehydration. 325 ton, custom configuration."
   fr: "Presse de déshydratation de boues hydraulique avec grand fût 630mm. Pour boues d'huile, résidus animaux/végétaux, boues textiles, déshydratation fruits/légumes. 325 tonnes, sur mesure."
-  ar: "مكبث نضح الحمأة الهيدروليكي ببرميل كبير 630 مم. لحمأة الزيت، مخلفات الزيت الحيواني/النباتي، حمأة النسيج، نضح الفواكه/الخضروات. 325 طن، حسب الطلب."
-  id: "Mesin dewatering lumpur hidrolik dengan barel besar 630mm. Untuk lumpur minyak, residu minyak hewan/tumbuhan, lumpur tekstil, dewatering buah/sayur. 325 ton, kustom."
+  ar: "مكبث نضح الحمأة الهيدروليكي بأسطوانة عصر كبيرة 630 مم. لحمأة الزيت، مخلفات الزيت الحيواني/النباتي، حمأة النسيج، نضح الفواكه/الخضروات. 325 طن، حسب الطلب."
+  id: "Mesin dewatering lumpur hidrolik dengan tabung press besar 630mm. Untuk lumpur minyak, residu minyak hewan/tumbuhan, lumpur tekstil, dewatering buah/sayur. 325 ton, kustom."
 category: hydraulic-oil-press
-model: HN325 Large Barrel
+model: HN325 Large Tabung Press
 modelFr: HN325 Grand Fût
-modelId: HN325 Barel Besar
+modelId: HN325 Tabung Press Besar
 images:
   - /images/products/large-barrel-hydraulic-oil-press.webp
 imageAlt:
-  en: "Large barrel hydraulic press for oil residue and sludge dewatering"
+  en: "Large tabung press hydraulic press for oil residue and sludge dewatering"
   fr: "Presse hydraulique à grand fût pour résidus d’huile et déshydratation des boues"
-  ar: "مكبس هيدروليكي ببرميل كبير لمخلفات الزيت وتجفيف الحمأة"
-  id: "Mesin press hidrolik barel besar untuk ampas minyak dan pengeringan lumpur"
+  ar: "مكبس هيدروليكي بأسطوانة عصر كبيرة لمخلفات الزيت وتجفيف الحمأة"
+  id: "Mesin press hidrolik tabung press besar untuk ampas minyak dan pengeringan lumpur"
 specifications:
   - name: Model (Single/Double)
     value: HN325LB Simple / HN325LB Double
@@ -38,9 +38,9 @@ specifications:
     value: 60 MPa
   - name: Cake Surface Pressure
     value: 10.64 MPa
-  - name: Barrel Inner Diameter
+  - name: Tabung Press Inner Diameter
     value: 630 mm
-  - name: Barrel Height
+  - name: Tabung Press Height
     value: 1000 mm
   - name: Machine Weight (Single/Double)
     value: ~2,5 / ~3,5 Tonnes
@@ -63,31 +63,31 @@ applicableSeeds:
   - oil field sludge
 faq:
   - question: What is the oil yield of the HN325LB hydraulic oil press?
-    answer: The oil yield depends on the raw material. The HN325LB's 325-ton pressing force and oversized 630 mm barrel with bar-type slotted design achieve approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled barrel presses. For low-pressure materials like oil sludge and residues, the large barrel capacity maximizes per-batch throughput.
+    answer: The oil yield depends on the raw material. The HN325LB's 325-ton pressing force and oversized 630 mm tabung press with bar-type slotted design achieve approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled tabung press presses. For low-pressure materials like oil sludge and residues, the large tabung press capacity maximizes per-batch throughput.
   - question: What raw materials can the HN325LB press?
     answer: The HN325LB is designed for high-volume, low-pressure applications including animal oil residue, plant oil residue, oil sludge, textile sludge, fruit and vegetable dehydration, and oil field sludge. For conventional oil seeds requiring higher pressing force, we recommend our standard HN325 or cold press models.
   - question: How long does one pressing cycle take?
     answer: Hot pressing (with pre-roasting) completes in 30-40 minutes per batch. Cold pressing takes approximately 2 hours to preserve oil quality at low temperatures. The actual cycle time depends on factors like seed moisture content, desired cake dryness, and pressing temperature. The microcomputer control system automates the entire process from feeding to cake discharge.
   - question: What is the recommended raw material moisture content for pressing?
     answer: The optimal moisture content varies by material type and pressing method. For hot pressing, we recommend 5-8% moisture before roasting, with the roasted material reaching 3-5% moisture. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical — too high causes oil emulsification and yield loss, while too low increases friction and reduces throughput.
-  - question: What is the difference between single and double barrel configurations?
-    answer: A single barrel press processes one batch at a time. A double barrel press has two barrels with independent hydraulic systems — while one barrel is pressing, the top-cake cylinder on the other barrel allows simultaneous unloading and reloading, nearly doubling your throughput.
+  - question: What is the difference between single and double tabung press configurations?
+    answer: A single tabung press press processes one batch at a time. A double tabung press press has two tabung press with independent hydraulic systems — while one tabung press is pressing, the top-cake cylinder on the other tabung press allows simultaneous unloading and reloading, nearly doubling your throughput.
   - question: What power supply does the HN325LB require?
     answer: The HN325LB requires 2.2 KW motor power, compatible with both 220V/50Hz and 380V/60Hz power supplies. We can customize the electrical system to match your local power standards at no extra charge.
   - question: How many workers are needed to operate the machine?
     answer: Only 1-2 workers are needed. The microcomputer control system automates the pressing cycle, and the 4-hook cake removal mechanism makes unloading easy even after overnight pressing.
   - question: What warranty do you provide?
-    answer: We provide a 1-year warranty covering all manufacturing defects, plus lifetime technical support. For the HN325LB, this includes specific coverage for the oversized barrel assembly and dual hydraulic circuit system. Spare parts are available from stock.
+    answer: We provide a 1-year warranty covering all manufacturing defects, plus lifetime technical support. For the HN325LB, this includes specific coverage for the oversized tabung press assembly and dual hydraulic circuit system. Spare parts are available from stock.
   - question: How is the machine shipped and how long does delivery take?
     answer: The machine is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional). Air freight is available for urgent orders.
   - question: Do you provide installation and training?
-    answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician to your facility for on-site installation and training at cost. For the large-barrel model, ensure your installation floor can support the machine's weight plus a full barrel of material, and has adequate space for cake removal with the oversized barrel.
+    answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician to your facility for on-site installation and training at cost. For the large-barrel model, ensure your installation floor can support the machine's weight plus a full tabung press of material, and has adequate space for cake removal with the oversized tabung press.
   - question: What certifications does the machine have?
-    answer: All machines undergo 48-hour continuous full-load testing before shipment. For the large-barrel model, the full-load test verifies structural integrity of the extended barrel under maximum pressing force.
-  - question: Can the barrel size be customized?
-    answer: Yes, barrel inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger barrels for bulk materials and food-grade stainless steel barrels for edible oil production.
+    answer: All machines undergo 48-hour continuous full-load testing before shipment. For the large-barrel model, the full-load test verifies structural integrity of the extended tabung press under maximum pressing force.
+  - question: Can the tabung press size be customized?
+    answer: Yes, tabung press inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger tabung press for bulk materials and food-grade stainless steel tabung press for edible oil production.
   - question: What is the residual oil rate in the cake?
-    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted barrel design, compared to 10-12% with traditional drilled barrel presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
+    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted tabung press design, compared to 10-12% with traditional drilled tabung press presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
 specificationsFr:
   - name: Modèle (Simple/Double)
     value: HN325LB Simple / HN325LB Double
@@ -99,7 +99,7 @@ specificationsFr:
     value: 850 mm
   - name: Pression du système
     value: 60 MPa
-  - name: Pression superficielle du gâteau
+  - name: Pression superficielle du tourteau
     value: 10.64 MPa
   - name: Diamètre intérieur du fût
     value: 630 mm
@@ -109,7 +109,7 @@ specificationsFr:
     value: ~2,5 / ~3,5 Tonnes
   - name: Dimensions de l'équipement (Simple/Double)
     value: 1400×2100×2900 / 2700×2100×2900 mm
-  - name: Cylindre de gâteau supérieur (Simple/Double)
+  - name: Cylindre de tourteau supérieur (Simple/Double)
     value: 60 Tonnes / 30 MPa / 60 Tonnes / 30 MPa
 applicableSeedsFr:
   - résidu d'huile animale
@@ -124,27 +124,27 @@ faqFr:
   - question: Quelles matières premières la HN325LB peut-il presser ?
     answer: Le HN325LB est conçu pour les applications à grand volume et basse pression, notamment le résidu d'huile animale, le résidu d'huile végétale, les boues d'hydrocarbures, les boues textiles, la déshydratation de fruits et légumes, et les boues de champ pétrolifère. Pour les graines oléagineuses conventionnelles nécessitant une force de pressage plus élevée, nous recommandons nos modèles HN325 standard ou de pressage à froid.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du gâteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du gâteau.
+    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du tourteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
   - question: Quelle est la différence entre les configurations à fût simple et double ?
-    answer: Une presse à fût simple traite un lot à la fois. Une presse à double fût possède deux fûts avec des systèmes hydrauliques indépendants — pendant qu'un fût est en cours de pressage, le cylindre de gâteau supérieur de l'autre fût permet le déchargement et le rechargement simultanés, ce qui presque double votre débit.
+    answer: Une presse à fût simple traite un lot à la fois. Une presse à double fût possède deux fûts avec des systèmes hydrauliques indépendants — pendant qu'un fût est en cours de pressage, le cylindre de tourteau supérieur de l'autre fût permet le déchargement et le rechargement simultanés, ce qui presque double votre débit.
   - question: Quelle alimentation électrique la HN325LB nécessite-t-il ?
     answer: Le HN325LB nécessite une puissance moteur de 2,2 KW, compatible avec les alimentations 220V/50Hz et 380V/60Hz. Nous pouvons personnaliser le système électrique selon vos normes locales d'alimentation sans frais supplémentaires.
   - question: Combien de travailleurs sont nécessaires pour faire fonctionner la machine ?
-    answer: Seuls 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du gâteau à 4 crochets facilite le déchargement même après un pressage de nuit.
+    answer: Seuls 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du tourteau à 4 crochets facilite le déchargement même après un pressage de nuit.
   - question: Quelle garantie fournissez-vous ?
     answer: Nous fournissons une garantie de 1 an couvrant tous les défauts de fabrication, ainsi qu'un support technique à vie. Pour le HN325LB, cela inclut une couverture spécifique de l'assemblage de fût surdimensionné et du système à double circuit hydraulique. Les pièces de rechange sont disponibles en stock .
   - question: Comment la machine est-elle expédiée et combien de temps dure la livraison ?
     answer: La machine est expédiée dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 15 à 25 jours ouvrés de production pour les modèles standard et 30 à 45 jours pour les configurations personnalisées. Le fret aérien est disponible pour les commandes urgentes.
   - question: Fournissez-vous l'installation et la formation ?
-    answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien dans vos locaux pour l'installation et la formation sur site à nos frais. Pour le HN325LB, assurez-vous que votre sol d'installation peut supporter le poids de la machine plus un fût plein de matériau, et dispose d'un espace adéquat pour le retrait du gâteau avec le fût surdimensionné.
+    answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien dans vos locaux pour l'installation et la formation sur site à nos frais. Pour le HN325LB, assurez-vous que votre sol d'installation peut supporter le poids de la machine plus un fût plein de matériau, et dispose d'un espace adéquat pour le retrait du tourteau avec le fût surdimensionné.
   - question: Quelles certifications la machine possède-t-elle ?
     answer: Toutes les machines subissent un test de charge complète continue de 48 heures avant l'expédition. Pour le HN325LB, le test en charge complète vérifie l'intégrité structurelle du fût étendu sous force de pressage maximale.
   - question: La taille du fût peut-elle être personnalisée ?
     answer: Oui, le diamètre intérieur et la hauteur du fût peuvent être personnalisés pour répondre à vos besoins spécifiques en matière de matière première et de taille de lot. Les personnalisations courantes incluent des fûts plus grands pour les matériaux en vrac et des fûts en acier inoxydable de qualité alimentaire pour la production d'huile comestible.
-  - question: Quel est le taux d'huile résiduelle dans le gâteau ?
-    answer: Le taux d'huile résiduelle dans le gâteau est généralement de 6 à 8 % pour la plupart des matériaux avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile en plus (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
+  - question: Quel est le taux d'huile résiduelle dans le tourteau ?
+    answer: Le taux d'huile résiduelle dans le tourteau est généralement de 6 à 8 % pour la plupart des matériaux avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile en plus (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
 specificationsAr:
-  - name: "الطراز (مفرد/مزدوج)"
+  - name: "الطراز (مفردة/مزدوجة)"
     value: "HN325LB مفرد / HN325LB مزدوج"
   - name: "قدرة المحرك"
     value: "2.2 كيلو واط"
@@ -154,17 +154,17 @@ specificationsAr:
     value: "850 مم"
   - name: "ضغط النظام"
     value: "60 ميجاباسكال"
-  - name: "ضغط سطح الكعكة"
+  - name: "ضغط سطح الكسب"
     value: "10.64 ميجاباسكال/سم²"
-  - name: "القطر الداخلي للبرميل"
+  - name: "القطر الداخلي لأسطوانة العصر"
     value: "630 مم"
-  - name: "ارتفاع البرميل"
+  - name: "ارتفاع أسطوانة العصر"
     value: "1000 مم"
-  - name: "وزن الآلة (مفرد/مزدوج)"
+  - name: "وزن الآلة (مفردة/مزدوجة)"
     value: "~2.5 / ~3.5 طن"
-  - name: "أبعاد المعدات (مفرد/مزدوج)"
+  - name: "أبعاد المعدات (مفردة/مزدوجة)"
     value: "1400×2100×2900 / 2700×2100×2900 مم"
-  - name: "اسطوانة الكعكة العلوية (مفرد/مزدوج)"
+  - name: "اسطوانة الكسب العلوي (مفردة/مزدوجة)"
     value: "60 طن / 30 ميجاباسكال / 60 طن / 30 ميجاباسكال"
 specificationsId:
   - name: Model (Tunggal/Ganda)
@@ -177,17 +177,17 @@ specificationsId:
     value: 850 mm
   - name: Tekanan Sistem
     value: 60 MPa
-  - name: Tekanan Permukaan Kue Press
+  - name: Tekanan Permukaan Bungkil
     value: 10.64 MPa
-  - name: Diameter Dalam Barel
+  - name: Diameter Dalam Tabung Press
     value: 630 mm
-  - name: Tinggi Barel
+  - name: Tinggi Tabung Press
     value: 1000 mm
   - name: Berat Mesin (Tunggal/Ganda)
     value: ~2,5 / ~3,5 Ton
   - name: Dimensi Peralatan (Tunggal/Ganda)
     value: 1400×2100×2900 / 2700×2100×2900 mm
-  - name: Silinder Kue Press Atas (Tunggal/Ganda)
+  - name: Silinder Bungkil Atas (Tunggal/Ganda)
     value: 60 Ton / 30 MPa / 60 Ton / 30 MPa
 applicableSeedsAr:
   - "مخلفات زيت حيواني"
@@ -205,54 +205,54 @@ applicableSeedsId:
   - lumpur lapangan minyak
 faqAr:
   - question: "ما هو عائد الزيت من معصرة HN325LB الهيدروليكية؟"
-    answer: "يعتمد عائد الزيت على المادة الخام. قوة العصر البالغة 325 طن والبرميل كبير الحجم بقطر 630 مم مع تصميم الشقوق الشريطية في HN325LB تحقق عائدًا أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بمعاصر البرميل المثقب التقليدية. للمواد منخفضة الضغط مثل الحمأة الزيتية والمخلفات، تزيد سعة البرميل الكبيرة من الإنتاجية لكل دفعة."
+    answer: "يعتمد عائد الزيت على المادة الخام. قوة العصر البالغة 325 طن وأسطوانة العصر كبيرة الحجم بقطر 630 مم مع تصميم الشقوق الشريطية في HN325LB تحقق عائدًا أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بمعاصر أسطوانة العصر المثقبة التقليدية. للمواد منخفضة الضغط مثل الحمأة الزيتية والمخلفات، تزيد سعة أسطوانة العصر الكبيرة من الإنتاجية لكل دفعة."
   - question: "ما المواد الخام التي يمكن لمعصرة HN325LB عصرها؟"
     answer: "معصرة HN325LB مصممة للتطبيقات عالية الحجم ومنخفضة الضغط بما في ذلك مخلفات الزيت الحيواني ومخلفات الزيت النباتي والحمأة الزيتية والحمأة النسيجية وتجفيف الفواكه والخضروات وحمأة حقول النفط. للبذور الزيتية التقليدية التي تتطلب قوة عصر أعلى، نوصي بطرازات HN325 القياسية أو طرازات العصر البارد."
   - question: "كم يستغرق دور العصر الواحد؟"
-    answer: "يستغرق دور العصر النموذجي 35-45 دقيقة حسب المادة ودرجة جفاف الكعكة المطلوبة. نظام التحكم بالحاسوب المصغّر يؤتمت العملية بالكامل من التغذية إلى تفريغ الكعكة."
-  - question: "ما الفرق بين تكويني البرميل المفرد والمزدوج؟"
-    answer: "معصرة البرميل المفرد تعالج دفعة واحدة في كل مرة. معصرة البرميل المزدوج تحتوي على برميلين بنظامين هيدروليكيين مستقلين — أثناء عصر أحدهما، تتيح اسطوانة الكعكة العلوية للبرميل الآخر التفريغ والتحميل في آن واحد، مما يضاعف الإنتاج تقريبًا."
+    answer: "يستغرق دور العصر النموذجي 35-45 دقيقة حسب المادة ودرجة جفاف الكسب المطلوبة. نظام التحكم بالحاسوب المصغّر يؤتمت العملية بالكامل من التغذية إلى تفريغ الكسب."
+  - question: "ما الفرق بين تكويني أسطوانة العصر المفردة والمزدوج؟"
+    answer: "معصرة أسطوانة العصر المفردة تعالج دفعة واحدة في كل مرة. معصرة أسطوانة العصر المزدوجة تحتوي على أسطوانتين بنظامين هيدروليكيين مستقلين — أثناء عصر أحدهما، تتيح اسطوانة الكسب العلوي لأسطوانة العصر الآخر التفريغ والتحميل في آن واحد، مما يضاعف الإنتاج تقريبًا."
   - question: "ما مصدر الطاقة المطلوب لمعصرة HN325LB؟"
     answer: "تتطلب HN325LB قدرة محرك 2.2 كيلو واط، ومتوافقة مع مصادر الطاقة 220 فولت/50 هرتز و380 فولت/60 هرتز. يمكننا تخصيص النظام الكهربائي ليتوافق مع معايير الطاقة المحلية لديك دون رسوم إضافية."
   - question: "كم عدد العمال المطلوبين لتشغيل الآلة؟"
-    answer: "يُحتاج إلى 1-2 عمال فقط. نظام التحكم بالحاسوب المصغّر يؤتمت دورة العصر، وآلية إزالة الكعكة ذات الخطاطف الأربعة تُسهّل التفريغ حتى بعد العصر الليلي."
+    answer: "يُحتاج إلى 1-2 عمال فقط. نظام التحكم بالحاسوب المصغّر يؤتمت دورة العصر، وآلية إزالة الكسب ذات الخطاطف الأربعة تُسهّل التفريغ حتى بعد العصر الليلي."
   - question: "ما الضمان الذي تقدمونه؟"
-    answer: "نقدم ضمانًا لمدة عام واحد يغطي جميع عيوب التصنيع، بالإضافة إلى دعم فني مدى الحياة. لمعصرة HN325LB، يشمل ذلك تغطية خاصة لمجموعة البرميل كبير الحجم ونظام الدائرة الهيدروليكية المزدوجة. قطع الغيار متوفرة من المخزون ويمكن شحنها خلال 48 ساعة حول العالم."
+    answer: "نقدم ضمانًا لمدة عام واحد يغطي جميع عيوب التصنيع، بالإضافة إلى دعم فني مدى الحياة. لمعصرة HN325LB، يشمل ذلك تغطية خاصة لمجموعة أسطوانة العصر كبيرة الحجم ونظام الدائرة الهيدروليكية المزدوجة. قطع الغيار متوفرة من المخزون ويمكن شحنها خلال 48 ساعة حول العالم."
   - question: "كيف تُشحن الآلة وكم يستغرق التسليم؟"
     answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا، وإلى الموانئ في أمريكا الجنوبية 30-40 يومًا. هذا بالإضافة إلى 15-25 يوم عمل كمدة إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (مدة الشحن إضافية). الشحن الجوي متاح للطلبات المستعجلة."
   - question: "هل تقدمون خدمات التركيب والتدريب؟"
-    answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة. لطراز البرميل الكبير، تأكد من أن أرضية التركيب تتحمل وزن الآلة مضافًا إليه برميل مملوء بالمادة، وتتوفر مساحة كافية لإزالة الكعكة مع البرميل كبير الحجم."
+    answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة. لطراز أسطوانة العصر الكبيرة، تأكد من أن أرضية التركيب تتحمل وزن الآلة مضافًا إليه أسطوانة عصر مملوء بالمادة، وتتوفر مساحة كافية لإزالة الكسب مع أسطوانة العصر كبيرة الحجم."
   - question: "ما الشهادات التي تمتلكها الآلة؟"
-    answer: "جميع الآلات تخضع لاختبار تحميل كامل مستمر لمدة 48 ساعة قبل الشحن. لطراز البرميل الكبير، يتحقق اختبار التحميل الكامل من سلامة هيكل البرميل الممتد تحت قوة العصر القصوى."
-  - question: "هل يمكن تخصيص حجم البرميل؟"
-    answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع للبرميل ليتوافق مع متطلبات المادة الخام وحجم الدفعة الخاصة بك. تشمل التخصيصات الشائعة براميل أكبر للمواد السائبة وبراميل من الفولاذ المقاوم للصدأ من الدرجة الغذائية لإنتاج الزيت الصالح للأكل."
-  - question: "ما نسبة الزيت المتبقية في الكعكة؟"
-    answer: "نسبة الزيت المتبقية في الكعكة عادةً 6-8% لمعظم المواد مع تصميم البرميل ذو الشقوق الشريطية، مقارنةً بـ 10-12% مع معاصر البرميل المثقب التقليدية. هذا يعني أنك تستخلص نحو 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
+    answer: "جميع الآلات تخضع لاختبار تحميل كامل مستمر لمدة 48 ساعة قبل الشحن. لطراز أسطوانة العصر الكبيرة، يتحقق اختبار التحميل الكامل من سلامة هيكل أسطوانة العصر الممتدة تحت قوة العصر القصوى."
+  - question: "هل يمكن تخصيص حجم أسطوانة العصر؟"
+    answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع لأسطوانة العصر ليتوافق مع متطلبات المادة الخام وحجم الدفعة الخاصة بك. تشمل التخصيصات الشائعة أسطوانات أكبر للمواد السائبة وأسطوانات من الفولاذ المقاوم للصدأ من الدرجة الغذائية لإنتاج الزيت الصالح للأكل."
+  - question: "ما نسبة الزيت المتبقية في الكسب؟"
+    answer: "نسبة الزيت المتبقية في الكسب عادةً 6-8% لمعظم المواد مع تصميم أسطوانة العصر ذات الشقوق الشريطية، مقارنةً بـ 10-12% مع معاصر أسطوانة العصر المثقبة التقليدية. هذا يعني أنك تستخلص نحو 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
 faqId:
   - question: Berapa rendemen minyak dari mesin press hidrolik HN325LB?
-    answer: Rendemen minyak tergantung pada bahan baku. Gaya press 325 ton dan barel besar berdiameter 630 mm dengan desain ber-slot tipe batang pada HN325LB menghasilkan rendemen sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press barel berlubang tradisional. Untuk bahan bertekanan rendah seperti lumpur minyak dan residu, kapasitas barel besar memaksimalkan throughput per batch.
+    answer: Rendemen minyak tergantung pada bahan baku. Gaya press 325 ton dan tabung press besar berdiameter 630 mm dengan desain ber-slot tipe batang pada HN325LB menghasilkan rendemen sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press tabung press berlubang tradisional. Untuk bahan bertekanan rendah seperti lumpur minyak dan residu, kapasitas tabung press besar memaksimalkan throughput per batch.
   - question: Bahan baku apa saja yang dapat dipress oleh HN325LB?
     answer: HN325LB dirancang untuk aplikasi volume tinggi dan bertekanan rendah termasuk residu minyak hewan, residu minyak nabati, lumpur minyak, lumpur tekstil, dehidrasi buah sayur, dan lumpur lapangan minyak. Untuk biji minyak konvensional yang membutuhkan gaya press lebih tinggi, kami merekomendasikan model HN325 standar atau model press dingin.
   - question: Berapa lama satu siklus press membutuhkan waktu?
-    answer: Siklus press tipikal membutuhkan waktu 35-45 menit tergantung pada bahan dan tingkat kekeringan kue press yang diinginkan. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran kue press.
-  - question: Apa perbedaan antara konfigurasi barel tunggal dan ganda?
-    answer: Mesin press barel tunggal memproses satu batch pada satu waktu. Mesin press barel ganda memiliki dua barel dengan sistem hidrolik independen — saat satu barel sedang menekan, silinder kue press atas pada barel lainnya memungkinkan pembongkaran dan pemuatan ulang secara bersamaan, hampir melipatgandakan throughput.
+    answer: Siklus press tipikal membutuhkan waktu 35-45 menit tergantung pada bahan dan tingkat kekeringan bungkil yang diinginkan. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil.
+  - question: Apa perbedaan antara konfigurasi tabung press tunggal dan ganda?
+    answer: Mesin press tabung press tunggal memproses satu batch pada satu waktu. Mesin press tabung press ganda memiliki dua tabung press dengan sistem hidrolik independen — saat satu tabung press sedang menekan, silinder bungkil atas pada tabung press lainnya memungkinkan pembongkaran dan pemuatan ulang secara bersamaan, hampir melipatgandakan throughput.
   - question: Pasokan daya apa yang dibutuhkan HN325LB?
     answer: HN325LB membutuhkan daya motor 2.2 KW, kompatibel dengan pasokan daya 220V/50Hz dan 380V/60Hz. Kami dapat menyesuaikan sistem kelistrikan sesuai standar daya lokal Anda tanpa biaya tambahan.
   - question: Berapa banyak pekerja yang dibutuhkan untuk mengoperasikan mesin?
-    answer: Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme pelepasan kue press 4-kait memudahkan pembongkaran bahkan setelah press semalam.
+    answer: Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme pelepasan bungkil 4-kait memudahkan pembongkaran bahkan setelah press semalam.
   - question: Garansi apa yang Anda berikan?
-    answer: Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk HN325LB, ini mencakup cakupan khusus untuk perakitan barel besar dan sistem sirkuit hidrolik ganda. Suku cadang tersedia dari stok dan dapat dikirim dalam 48 jam ke seluruh dunia.
+    answer: Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk HN325LB, ini mencakup cakupan khusus untuk perakitan tabung press besar dan sistem sirkuit hidrolik ganda. Suku cadang tersedia dari stok dan dapat dikirim dalam 48 jam ke seluruh dunia.
   - question: Bagaimana mesin dikirim dan berapa lama waktu pengiriman?
     answer: Mesin dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini ditambah 15-25 hari kerja produksi untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus (waktu pengiriman tambahan). Pengiriman udara tersedia untuk pesanan mendesak.
   - question: Apakah Anda menyediakan instalasi dan pelatihan?
-    answer: Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya. Untuk model barel besar, pastikan lantai instalasi dapat menahan berat mesin ditambah barel penuh bahan, dan memiliki ruang yang cukup untuk pelepasan kue press dengan barel besar.
+    answer: Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya. Untuk model tabung press besar, pastikan lantai instalasi dapat menahan berat mesin ditambah tabung press penuh bahan, dan memiliki ruang yang cukup untuk pelepasan bungkil dengan tabung press besar.
   - question: Sertifikasi apa yang dimiliki mesin?
-    answer: Semua mesin menjalani pengujian beban penuh berkelanjutan selama 48 jam sebelum pengiriman. Untuk model barel besar, pengujian beban penuh memverifikasi integritas struktural barel yang diperpanjang di bawah gaya press maksimum.
-  - question: Apakah ukuran barel dapat disesuaikan?
-    answer: Ya, diameter dalam dan tinggi barel dapat disesuaikan sesuai kebutuhan bahan dan ukuran batch Anda. Penyesuaian umum termasuk barel lebih besar untuk bahan curukan dan barel baja tahan karat food-grade untuk produksi minyak nabati.
-  - question: Berapa tingkat minyak sisa dalam kue press?
-    answer: Tingkat minyak sisa dalam kue press biasanya 6-8% untuk sebagian besar bahan dengan desain barel ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press barel berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
+    answer: Semua mesin menjalani pengujian beban penuh berkelanjutan selama 48 jam sebelum pengiriman. Untuk model tabung press besar, pengujian beban penuh memverifikasi integritas struktural tabung press yang diperpanjang di bawah gaya press maksimum.
+  - question: Apakah ukuran tabung press dapat disesuaikan?
+    answer: Ya, diameter dalam dan tinggi tabung press dapat disesuaikan sesuai kebutuhan bahan dan ukuran batch Anda. Penyesuaian umum termasuk tabung press lebih besar untuk bahan curukan dan tabung press baja tahan karat food-grade untuk produksi minyak nabati.
+  - question: Berapa tingkat minyak sisa dalam bungkil?
+    answer: Tingkat minyak sisa dalam bungkil biasanya 6-8% untuk sebagian besar bahan dengan desain tabung press ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press tabung press berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
 videoUrl: ''
 seoKeywords:
   - hydraulic sludge dewatering press
@@ -268,23 +268,23 @@ updatedAt: 2026-10-10
 
 ## Overview
 
-> **Custom Configuration** — This is a made-to-order hydraulic sludge dewatering press with a 630 mm large barrel, optimized for oil sludge, oil residue, and industrial sludge dewatering. Production lead time is 30–45 working days. [Request a custom quote →](/contact/)
+> **Custom Configuration** — This is a made-to-order hydraulic sludge dewatering press with a 630 mm large tabung press, optimized for oil sludge, oil residue, and industrial sludge dewatering. Production lead time is 30–45 working days. [Request a custom quote →](/contact/)
 
-The HN325 Large Barrel is a hydraulic dewatering press with a 630 mm inner diameter, 1000 mm high barrel and two independent hydraulic systems, so one barrel presses while the other is unloaded and reloaded. It is built for processors that prioritize single-batch volume for sludge and residue dewatering rather than peak pressing force.
+The HN325 Large Tabung Press is a hydraulic dewatering press with a 630 mm inner diameter, 1000 mm high tabung press and two independent hydraulic systems, so one tabung press presses while the other is unloaded and reloaded. It is built for processors that prioritize single-batch volume for sludge and residue dewatering rather than peak pressing force.
 
-The dual-system design eliminates idle time: the main cylinder presses one barrel while the top-cake cylinder on the other barrel allows simultaneous unloading and reloading. With a cake surface pressure of 10.64 MPa, this model is suited for materials that do not require high pressing force but benefit from large batch sizes — such as oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable dehydration.
+The dual-system design eliminates idle time: the main cylinder presses one tabung press while the top-cake cylinder on the other tabung press allows simultaneous unloading and reloading. With a cake surface pressure of 10.64 MPa, this model is suited for materials that do not require high pressing force but benefit from large batch sizes — such as oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable dehydration.
 
 ## Key Advantages
 
-- **Massive Barrel Capacity** — 630 mm inner diameter × 1000 mm height barrel handles large volumes per batch, reducing the number of cycles needed to process bulk sludge and residue.
-- **Dual Independent Hydraulic Systems** — Each barrel operates independently with its own hydraulic circuit, so pressing on one side never blocks loading or unloading on the other.
+- **Massive Tabung Press Capacity** — 630 mm inner diameter × 1000 mm height tabung press handles large volumes per batch, reducing the number of cycles needed to process bulk sludge and residue.
+- **Dual Independent Hydraulic Systems** — Each tabung press operates independently with its own hydraulic circuit, so pressing on one side never blocks loading or unloading on the other.
 - **Top-Cake Design** — The top-cake cylinder (60 tons / 30 MPa) pushes the cake out from the top, making unloading fast and convenient even with large-volume materials.
-- **High Throughput** — Combined large barrel capacity and dual-system operation deliver the highest daily processing volume for low-pressure dewatering applications.
+- **High Throughput** — Combined large tabung press capacity and dual-system operation deliver the highest daily processing volume for low-pressure dewatering applications.
 - **Versatile Dewatering** — From oil residue dewatering to fruit juice extraction and industrial sludge processing, one machine serves multiple processing needs.
 
 ## Core Technology
 
-- **Bar-Type Slotted Barrel** — Haonuo's proprietary slotted barrel design provides significantly more drainage area than traditional drilled barrels. Liquid flows faster and clearer. No clogging, no cleaning between batches — especially beneficial for high-volume sludge and residue processing.
+- **Bar-Type Slotted Tabung Press** — Haonuo's proprietary slotted tabung press design provides significantly more drainage area than traditional drilled tabung press. Liquid flows faster and clearer. No clogging, no cleaning between batches — especially beneficial for high-volume sludge and residue processing.
 - **German Hydraulic System** — Ultra-high pressure combined hydraulic pump station with high-low dual pump. Working pressure up to 60 MPa with rapid cylinder return.
 - **4-Hook Cake Removal** — Innovative 4-hook mechanism ensures easy, reliable cake discharge — even after overnight pressing of bulky materials.
 - **High Carbon Steel Frame** — High-frequency quenched and heat-treated steel for long-lasting service. Actual service life depends on operating conditions and maintenance.
@@ -311,4 +311,4 @@ The dual-system design eliminates idle time: the main cylinder presses one barre
 - **Dual-System Engineering** — Our independent hydraulic system design is a proven solution for maximizing throughput, trusted by industrial processors across multiple sectors.
 - **Quality Assurance** — Every machine is tested under full-load conditions, including dual-system simultaneous operation verification, before shipment.
 - **After-Sales Support** — From installation and commissioning to process optimization for your specific material, our technical team provides comprehensive support.
-- **Customization Options** — Barrel dimensions, hydraulic system configuration, and top-cake cylinder specifications can be customized to your exact processing requirements.
+- **Customization Options** — Tabung Press dimensions, hydraulic system configuration, and top-cake cylinder specifications can be customized to your exact processing requirements.

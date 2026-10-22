@@ -227,6 +227,56 @@ const maintenanceSchedule = [
         </div>
       </section>
 
+      <section id="line-balance" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Menyeimbangkan Lini di Sekitar Press</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Lini hanya secepat stasiun paling lambatnya. Kesalahan umum adalah membeli press besar sementara roaster, crusher, atau filter dibiarkan kekurangan kapasitas — mesin mahal itu lalu menganggur sebagian setiap jam, menunggu biji atau tertahan oleh oli yang belum tersaring. Seimbangkan peralatan pendukung terhadap keluaran <em>puncak</em> press, karena sepuluh menit pertama setiap siklus melepaskan oli jauh lebih banyak daripada rata-rata sepanjang siklus.</p>
+        <div class="bg-steel-50 rounded-xl p-6 border border-steel-100 my-4">
+          <ul class="space-y-2 text-steel-700 text-sm list-disc pl-5">
+            <li><strong>Kapasitas penyangraian</strong> setidaknya dua kali laju pengepresan, agar press tidak pernah menunggu biji yang sudah disangrai.</li>
+            <li><strong>Penghancuran dan pengondisian</strong> harus sesuai dengan laju pengepresan dari jam ke jam.</li>
+            <li><strong>Filtrasi</strong> harus mengikuti keluaran oli; bottleneck filter membuat oli mentah menumpuk di ruang press.</li>
+            <li><strong>Tangki penyimpanan</strong> sebaiknya menampung setidaknya 3–5 hari produksi, memisahkan ritme pengepresan dari pengambilan truk.</li>
+            <li><strong>Pembersihan</strong> berjalan dalam semburan singkat dan sebaiknya berkapasitas 1,5–2× laju input.</li>
+          </ul>
+        </div>
+        <p class="text-steel-700 leading-relaxed mb-4">Ingat bahwa press panas dan dingin memiliki kapasitas yang sangat berbeda pada mesin yang sama. <a href="/id/products/standard-hydraulic-oil-press/" class="text-amber-600 hover:underline">HN325</a> dengan batch penuh 100 kg press panas kira-kira 900–1.000 kg per shift 8 jam dengan tabung press tunggal dan 1.200–1.400 kg dengan tabung press ganda; press dingin berjalan sekitar 300–400 kg tunggal atau 600–700 kg ganda karena setiap siklus memakan waktu sekitar dua jam alih-alih 30–40 menit. Sesuaikan ukuran lini dengan campuran produk yang benar-benar akan Anda jalankan.</p>
+      </section>
+
+      <section id="utilities" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Kebutuhan Utilitas</h2>
+        <p class="text-steel-700 leading-relaxed mb-4">Motor press hanya 2,2 kW, tetapi lini lengkap menarik daya jauh lebih besar. Sebelum menandatangani sewa atau memesan peralatan, pastikan pasokan tiga fase, total kVA, dan air di lokasi — kelalaian ini adalah penyebab paling umum keterlambatan commissioning.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border border-steel-100 rounded-lg">
+            <thead class="bg-steel-100">
+              <tr><th class="px-4 py-3 text-left font-semibold text-charcoal-900">Peralatan</th><th class="px-4 py-3 text-left font-semibold text-charcoal-900">Daya tipikal</th></tr>
+            </thead>
+            <tbody class="divide-y divide-steel-100">
+              <tr><td class="px-4 py-2">Press hidrolik</td><td class="px-4 py-2">2,2 kW (puncak ~3 kW)</td></tr>
+              <tr><td class="px-4 py-2">Pembersih getar dan destoner</td><td class="px-4 py-2">1,5–3 kW</td></tr>
+              <tr><td class="px-4 py-2">Roaster listrik</td><td class="px-4 py-2">15–40 kW (model gas mengurangi ini)</td></tr>
+              <tr><td class="px-4 py-2">Crusher</td><td class="px-4 py-2">3–7,5 kW</td></tr>
+              <tr><td class="px-4 py-2">Filter press</td><td class="px-4 py-2">1,5–3 kW</td></tr>
+              <tr><td class="px-4 py-2">Konveyor dan pompa</td><td class="px-4 py-2">3–8 kW</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-steel-700 leading-relaxed mt-4 mb-2">Anggarkan 20–40 kVA untuk lini kecil atau menengah yang lengkap. Penggunaan air sederhana: sekitar 0,5–1 m³/hari untuk pembersihan dan uap di pabrik kecil, ditambah 2–5 m³/hari air pendingin resirkulasi di iklim panas. Gas atau kayu untuk roaster sering menjadi biaya energi operasional terbesar setelah biji, jadi bandingkan harga keduanya secara lokal sebelum memilih roaster listrik.</p>
+      </section>
+
+      <section id="implementation" class="mb-12">
+        <h2 class="font-display font-bold text-2xl mb-4 text-charcoal-900">Urutan Implementasi</h2>
+        <div class="space-y-3">
+          <div class="flex gap-4 items-start"><div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div><p class="text-steel-700 text-sm pt-1">Konfirmasi biji target, tonase harian, dan campuran produk panas versus dingin sebelum mengutip apa pun.</p></div>
+          <div class="flex gap-4 items-start"><div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div><p class="text-steel-700 text-sm pt-1">Kunci model press dan jumlah tabung press — ini menetapkan ukuran setiap stasiun lainnya.</p></div>
+          <div class="flex gap-4 items-start"><div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div><p class="text-steel-700 text-sm pt-1">Daftar peralatan pendukung dengan kapasitas yang disesuaikan dengan keluaran puncak press, bukan rata-rata.</p></div>
+          <div class="flex gap-4 items-start"><div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div><p class="text-steel-700 text-sm pt-1">Buat draf denah lantai dan konfirmasi tinggi plafon, daya, air, dan drainase.</p></div>
+          <div class="flex gap-4 items-start"><div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">5</div><p class="text-steel-700 text-sm pt-1">Pesan dengan paket suku cadang dan panduan instalasi; jadwalkan pelatihan operator saat commissioning.</p></div>
+          <div class="flex gap-4 items-start"><div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">6</div><p class="text-steel-700 text-sm pt-1">Mulai dengan satu biji, satu resep, dan catatan batch tertulis sebelum menambahkan bahan kedua.</p></div>
+        </div>
+        <p class="text-steel-700 leading-relaxed mt-4">Dalam anggaran total, press biasanya hanya menyumbang 35–45% dari belanja peralatan; pembersihan, penghancuran, penyangraian, filtrasi, konveyor, dan instalasi merupakan sisanya. Tambahkan pengiriman, bea masuk, jendela commissioning 30–45 hari, dan modal kerja biji. Karena biji biasanya 80–90% dari biaya per liter oli, disiplin rendemen yang dijelaskan dalam <a href="/id/resources/how-to-maximize-oil-yield/" class="text-amber-600 hover:underline">panduan hasil oli</a> kami membayar kembali lebih cepat daripada diskon mesin apa pun.</p>
+        <p class="text-steel-700 leading-relaxed mt-4">Bangun tata letak untuk pembersihan sekaligus produksi. Lantai miring yang dapat dicuci di dekat press dan filter, saluran pembuangan yang tidak tersumbat, dan jalur sapu bersih khusus antara penanganan biji dan bungkil menghemat satu jam tenaga kerja setiap hari kerja dan menjaga kelembapan serta kontaminasi dari sisi biji. Sisakan ruang untuk lini yang mungkin Anda tambahkan dalam dua tahun — posisi press kedua, filter tambahan, atau stasiun pengemasan botol — karena memperluas lini kecil yang ditata dengan baik itu murah, sementara retrofit lini yang sempit biasanya berarti membangunnya ulang.</p>
+      </section>
+
       <section id="conclusion" class="mb-12">
         <h2 class="font-display font-bold text-2xl mb-6 text-charcoal-900">Lini Produksi Minyak Anda: dari Rencana ke Batch Pertama</h2>
         <p class="text-steel-700 leading-relaxed">Garis produksi minyak lengkap adalah investasi bisnis yang kuat. Dengan merencanakan setiap tahap secara hati-hati dan bekerja sama dengan pemasok peralatan yang berpengalaman, Anda dapat membangun operasi produksi minyak yang menguntungkan dan berkelanjutan. Hubungi tim kami untuk desain garis produksi yang dipersonalisasi dan penawaran harga.</p>

@@ -78,7 +78,7 @@ faqAr:
   - question: هل من السهل التشغيل للعمليات التجارية؟
     answer: نعم، مصاصراتنا الهيدروليكية مصممة للتشغيل التجاري الفعال. يمكن لمشغل واحد إدارة عملية العصر بالكامل مع تدريب طفيف. نقدم دليل التشغيل التفصيلي والتدريب بالفيديو مع كل آلة. يصبح معظم المشغلين مؤهلين في غضون 1-2 أيام.
   - question: ما البذور التي يمكن لمعدة التجارية معالجتها؟
-    answer: معالجة HN325 السمسم والفول السوداني وعباد الشمس والخردل وجوز الهند (الكوبرة) واللوز وجذور الكتان والعديد من البذور الزيتية الأخرى. يمكنك التبديل بين أنواع البذور من خلال تنظيف البرميل وتعديل معلمات الضغط.
+    answer: معالجة HN325 السمسم والفول السوداني وعباد الشمس والخردل وجوز الهند (الكوبرة) واللوز وجذور الكتان والعديد من البذور الزيتية الأخرى. يمكنك التبديل بين أنواع البذور من خلال تنظيف أسطوانة العصر وتعديل معلمات الضغط.
   - question: هل أحتاج مساحة كبيرة للمؤسسة التجارية؟
     answer: يحتاج طراز HN325 إلى حوالي 2-3 أمتار مربعة من مساحة الأرضية. مجموعات التجارية الكاملة مع طاحن ومضغوط ترشيح تحتاج حوالي 6-8 أمتار مربعة. هذا يجعلها مناسبة لمصانع عصر الزيت التجارية والمنشأت التعاونية ومراكز الإنتاج الإقليمية.
 faqId:
@@ -89,7 +89,7 @@ faqId:
   - question: Apakah mudah dioperasikan untuk operasi komersial?
     answer: Ya, press hidrolik minyak kami dirancang untuk operasi komersial yang efisien. Satu operator dapat mengelola seluruh proses penekanan dengan pelatihan minimal. Kami menyediakan manual operasi terperinci dan pelatihan video dengan setiap mesin. Kebanyakan operator menjadi mahir dalam 1-2 hari.
   - question: Biji apa saja yang dapat diproses oleh mesin press komersial?
-    answer: HN325 kami dapat memproses wijen, kacang tanah, bunga matahari, mustard, kelapa (copra), almond, biji rami, dan banyak biji serta kacang berminyak lainnya. Anda dapat beralih antara jenis biji dengan membersihkan barrel dan menyesuaikan parameter penekanan.
+    answer: HN325 kami dapat memproses wijen, kacang tanah, bunga matahari, mustard, kelapa (copra), almond, biji rami, dan banyak biji serta kacang berminyak lainnya. Anda dapat beralih antara jenis biji dengan membersihkan tabung press dan menyesuaikan parameter penekanan.
   - question: Apakah saya membutuhkan ruang besar untuk operasi komersial?
     answer: Model HN325 kami hanya membutuhkan sekitar 2-3 meter persegi luas lantai. Paket komersial lengkap dengan crusher dan press filter membutuhkan sekitar 6-8 meter persegi. Ini membuatnya cocok untuk pabrik press minyak komersial, fasilitas koperasi, dan pusat produksi regional.
 seoKeywords:

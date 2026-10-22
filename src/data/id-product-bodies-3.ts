@@ -297,7 +297,7 @@ Prinsip fisik dan kimia yang dikombinasikan untuk penghilangan kotoran secara te
 
   'oilseed-pre-press': `## Ringkasan
 
-Pre-press biji minyak HN-CG60 adalah expeller ulir yang dipasang di awal lini, sebelum sangrai dan pengepresan hidrolik. Mesin menghancurkan biji dan menggulingkannya menjadi serpihan atau kue kasar, memecah sel minyak dan memperluas area yang dipanaskan. Sekitar 35 hingga 40% minyak dilepaskan pada tahap pertama ini, lalu bahan yang sudah dipress dipindahkan ke sangrai dan press hidrolik utama. Pabrik yang menambahkan tahap ini biasanya melihat hasil minyak total naik 3 hingga 5%.
+Pre-press biji minyak HN-CG60 adalah expeller ulir yang dipasang di awal lini, sebelum sangrai dan pengepresan hidrolik. Mesin menghancurkan biji dan menggulingkannya menjadi serpihan atau bungkil kasar, memecah sel minyak dan memperluas area yang dipanaskan. Sekitar 35 hingga 40% minyak dilepaskan pada tahap pertama ini, lalu bahan yang sudah dipress dipindahkan ke sangrai dan press hidrolik utama. Pabrik yang menambahkan tahap ini biasanya melihat hasil minyak total naik 3 hingga 5%.
 
 Tata letak dua tahap ini — pre-press ulir lalu finishing hidrolik — adalah konfigurasi standar untuk mustard, lobak, dan kacang tanah di India, Asia Tenggara, dan Afrika. Mesin dikirimkan dalam keadaan terpasang penuh, tidak memerlukan instalasi khusus, dan satu pekerja mengoperasikannya.
 
