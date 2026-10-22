@@ -28,6 +28,15 @@ pnpm-debug.log*
 # Windows
 Thumbs.db
 
+# Business workspace (quotes, drafts, docs)
+_workspace/
+*.docx
+*.doc
+*.pdf
+*.xlsx
+*.xls
+*.pptx
+
 # Trae IDE internal docs (strategy/audit documents, keep local only)
 .trae/
 
