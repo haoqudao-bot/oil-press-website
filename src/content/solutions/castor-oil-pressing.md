@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Castor Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Ricin
@@ -7,14 +7,14 @@ title:
 seoTitle:
   en: Castor Oil Press Machine for Cold & Hot Pressing
   fr: Machine à Huile de Ricin, Pressage à Froid et à Chaud
-  ar: آلة عصر زيت الخروع، عصر بارد وساخن
+  ar: آلة عصر بذور وزيت الخروع، عصر بارد وساخن
   id: Mesin Press Minyak Jarak, Press Dingin & Panas
 seedName: castor
 icon: castor
 description:
   en: Castor oil press machine for industrial and medicinal castor oil extraction. High-pressure hydraulic press with low residual rate. Haonuo factory price.
   fr: Machine de pressage d'huile de ricin pour extraction d'huile de ricin industrielle et médicinale. Pression hydraulique haute pression avec faible taux résiduel.
-  ar: آلة عصر زيت الخروع لاستخراج زيت الخروع الصناعي والطبي. ضغط هيدروليكي عالي الضغط بمعدل متبقي منخفض.
+  ar: آلة عصر بذور وزيت الخروع لاستخراج زيت الخروع الصناعي والطبي. ضغط هيدروليكي عالي الضغط بمعدل متبقي منخفض. احصل على سعر المصنع.
   id: Mesin press minyak jarak untuk ekstraksi minyak jarak industri dan obat. Press hidrolik tekanan tinggi dengan sisa rendah.
 recommendedProducts:
   - commercial-hydraulic-oil-press

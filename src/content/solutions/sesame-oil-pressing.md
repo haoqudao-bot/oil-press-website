@@ -7,14 +7,14 @@ title:
 seoTitle:
   en: Sesame Oil Machine, Cold Press
   fr: Machine à Huile de Sésame, Pressage à Froid
-  ar: آلة عصر زيت السمسم للعصر البارد
+  ar: آلة عصر بذور وزيت السمسم، العصر البارد الهيدروليكي
   id: Mesin Minyak Wijen, Press Dingin
 seedName: sesame
 icon: sesame
 description:
   en: High-yield sesame oil press machine with hydraulic technology. Extract premium sesame oil with low residual rate. Cold and hot press options from Haonuo.
   fr: Machine de pressage d'huile de sésame à haut rendement avec technologie hydraulique. Extrayez l'huile de sésame premium avec un faible taux résiduel.
-  ar: آلة عصر زيت السمسم عالية العائد بتقنية هيدروليكية. استخرج زيت سمسم متميز بمعدل متبقي منخفض.
+  ar: آلة عصر بذور وزيت السمسم عالية العائد بتقنية هيدروليكية. استخرج زيت سمسم متميز بمعدل متبقي منخفض. احصل على سعر المصنع.
   id: Mesin press minyak wijen hasil tinggi dengan teknologi hidrolik. Ekstrak minyak wijen premium dengan sisa rendah.
 recommendedProducts:
   - standard-hydraulic-oil-press
