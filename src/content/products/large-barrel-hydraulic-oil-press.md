@@ -303,7 +303,7 @@ The dual-system design eliminates idle time: the main cylinder presses one tabun
 ### Food Processing Dehydration
 - Fruit and vegetable dehydration, fruit juice extraction
 
-> **Note**: This model is optimized for high-volume, low-pressure dewatering. For oilseed pressing requiring high pressing force, see the [HN325 Standard model](/products/standard-hydraulic-oil-press) or [HN426 Cold Press model](/products/cold-press-hydraulic-oil-press).
+> **Note**: This model is optimized for high-volume, low-pressure dewatering. For oilseed pressing requiring high pressing force, see the [HN325 Standard model](/products/standard-hydraulic-oil-press/) or [HN426 Cold Press model](/products/cold-press-hydraulic-oil-press/).
 
 ## Why Choose Our Hydraulic Oil Press
 

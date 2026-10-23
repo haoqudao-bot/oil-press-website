@@ -83,7 +83,7 @@ Tabung press berdiameter dalam 630 mm dan tinggi 1000 mm menyediakan kapasitas b
 ### Pengolahan Pangan
 - Pengeringan buah dan sayuran, ekstraksi jus buah
 
-> **Catatan**: Model ini dioptimalkan untuk aplikasi volume besar dan tekanan rendah. Untuk biji minyak yang memerlukan gaya press tinggi, disarankan [HN325 Standar](/products/standard-hydraulic-oil-press) atau [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press).
+> **Catatan**: Model ini dioptimalkan untuk aplikasi volume besar dan tekanan rendah. Untuk biji minyak yang memerlukan gaya press tinggi, disarankan [HN325 Standar](/products/standard-hydraulic-oil-press/) atau [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press/).
 
 ## Mengapa Memilih Mesin Press Minyak Hidrolik Kami
 

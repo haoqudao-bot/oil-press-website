@@ -233,7 +233,7 @@ const faqLd = {
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredMarkets.map(market => (
-            <a href={market.link} class="bg-white rounded-2xl border border-steel-100 overflow-hidden hover:shadow-lg transition-shadow group">
+            <a href={market.link.replace(/\/?$/, '/')} class="bg-white rounded-2xl border border-steel-100 overflow-hidden hover:shadow-lg transition-shadow group">
               <div class="h-48 bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center relative">
                 <span class="text-8xl opacity-80">{market.flag}</span>
                 <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>

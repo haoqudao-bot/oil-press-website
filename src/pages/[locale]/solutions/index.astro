@@ -281,7 +281,7 @@ const seoSolutionsTitle = currentLocale === 'fr' ? "Presse à Huile Hydraulique 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {markets.map((market) => (
           <a
-            href={localePath(market.link)}
+            href={localePath(market.link.replace(/\/?$/, '/'))}
             class="group bg-white rounded-2xl p-6 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
           >
             <div class="flex items-start gap-4">

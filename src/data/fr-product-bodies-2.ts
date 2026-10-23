@@ -193,7 +193,7 @@ Le fût de 630 mm de diamètre intérieur et 1000 mm de haut offre une capacité
 ### Transformation Alimentaire
 - Déshydratation de fruits et légumes, extraction de jus de fruits
 
-> **Remarque** : Ce modèle est optimisé pour les applications à grand volume et basse pression. Pour les graines oléagineuses nécessitant une force de pressage élevée, envisagez notre [modèle Standard HN325](/products/standard-hydraulic-oil-press) ou [modèle de Pressage à Froid HN426](/products/cold-press-hydraulic-oil-press).
+> **Remarque** : Ce modèle est optimisé pour les applications à grand volume et basse pression. Pour les graines oléagineuses nécessitant une force de pressage élevée, envisagez notre [modèle Standard HN325](/products/standard-hydraulic-oil-press/) ou [modèle de Pressage à Froid HN426](/products/cold-press-hydraulic-oil-press/).
 
 ## Pourquoi Choisir Notre Presse à Huile Hydraulique
 

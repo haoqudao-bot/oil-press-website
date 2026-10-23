@@ -113,7 +113,7 @@ const breadcrumbLd = {
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {scaleSolutions.map((scale, index) => (
           <a
-            href={scale.link}
+            href={scale.link.replace(/\/?$/, '/')}
             class="group bg-gradient-to-br from-steel-50 to-white rounded-2xl p-8 border border-steel-100 hover:border-amber-300 hover:shadow-xl transition-all"
             style={{ animationDelay: `${index * 100}ms` }}
           >

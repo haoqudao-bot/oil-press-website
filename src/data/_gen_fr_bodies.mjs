@@ -90,7 +90,7 @@ Le HN325 est idéal pour presser une grande variété de graines oléagineuses c
 - **Graines Oléagineuses** : Graine de thé, colza, arachide, soja, graine de laque, lin
 - **Autres Matières** : Graine de tournesol, graine de coton et matières de pressage conventionnelles similaires
 
-> **Remarque** : Pour les matières à coque dure ou de pressage à froid telles que les noix ou les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press) ou [modèle HN500 Ultra Haute Pression](/products/ultra-high-pressure-hydraulic-oil-press).
+> **Remarque** : Pour les matières à coque dure ou de pressage à froid telles que les noix ou les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press/) ou [modèle HN500 Ultra Haute Pression](/products/ultra-high-pressure-hydraulic-oil-press/).
 
 ## Pourquoi Choisir Notre Presse à Huile Hydraulique
 
@@ -140,7 +140,7 @@ Le HN355 excelle avec les graines oléagineuses conventionnelles et les matière
 - **Graines Oléagineuses** : Graine de thé, colza, arachide, soja, lin, graine de laque
 - **Matières Plus Dures** : Graines et matières légèrement plus dures que le HN325 peut ne pas extraire complètement en une seule passe
 
-> **Remarque** : Pour les applications de pressage à froid impliquant des matières à coque dure comme les noix et les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press).
+> **Remarque** : Pour les applications de pressage à froid impliquant des matières à coque dure comme les noix et les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press/).
 
 ## Pourquoi Choisir Notre Presse à Huile Hydraulique
 
@@ -279,7 +279,7 @@ Le HN300 est idéal pour presser le sésame et autres petites graines oléagineu
 - **Également Adapté** : Arachide, colza, graine de thé
 - **Autres Matières** : Petites graines similaires et matières de pressage conventionnelles
 
-> **Remarque** : Pour les matières à coque dure ou de pressage à froid telles que les noix ou les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press) ou [modèle HN500 Ultra Haute Pression](/products/ultra-high-pressure-hydraulic-oil-press).
+> **Remarque** : Pour les matières à coque dure ou de pressage à froid telles que les noix ou les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press/) ou [modèle HN500 Ultra Haute Pression](/products/ultra-high-pressure-hydraulic-oil-press/).
 
 ## Pourquoi Choisir Notre Presse à Huile Hydraulique
 
@@ -323,7 +323,7 @@ Le HN400 est idéal pour presser une grande variété de graines oléagineuses c
 - **Matières Conventionnelles** : Colza, arachide, soja
 - **Autres Matières** : Matières semi-dures et de pressage conventionnelles similaires
 
-> **Remarque** : Pour les matières de pressage à froid les plus exigeantes telles que les noix en coque et les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press) ou [modèle HN500 Ultra Haute Pression](/products/ultra-high-pressure-hydraulic-oil-press).
+> **Remarque** : Pour les matières de pressage à froid les plus exigeantes telles que les noix en coque et les amandons d'abricot, envisagez notre [modèle HN426 Pressage à Froid](/products/cold-press-hydraulic-oil-press/) ou [modèle HN500 Ultra Haute Pression](/products/ultra-high-pressure-hydraulic-oil-press/).
 
 ## Pourquoi Choisir Notre Presse à Huile Hydraulique
 
