@@ -154,7 +154,7 @@ This solution is designed for the growing avocado oil market in Mexico, Kenya, N
 - **Variety**: Hass avocados have the highest oil content (up to 25% when fully ripe)
 - **Ripeness**: Fully ripe avocados yield significantly more oil than underripe fruit
 - **Drying**: Dehydrating avocado pulp before pressing can double the yield percentage
-- **Pressing method**: Cold pressing preserves quality but yields slightly less than hot pressing
+- **Pressing method**: [cold pressing](/cold-press-oil-machine/) preserves quality but yields slightly less than hot pressing
 
 ## Why Choose Our Avocado Oil Press
 

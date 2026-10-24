@@ -140,7 +140,7 @@ Castor oil is a unique industrial oil with applications spanning pharmaceuticals
 
 Haonuo's castor oil pressing solution is built around our high-pressure hydraulic press technology, which is particularly effective for castor seed extraction. The hard, high-oil castor seeds require sustained high pressure for thorough extraction, and our **castor oil extraction machine** delivers exactly that — achieving residual oil rates below 5% that screw presses simply cannot match.
 
-This solution supports both cold pressing (for medicinal and cosmetic-grade castor oil) and hot pressing (for industrial-grade oil with higher yield), giving you the flexibility to serve different market segments.
+This solution supports both [cold pressing](/cold-press-oil-machine/) (for medicinal and cosmetic-grade castor oil) and hot pressing (for industrial-grade oil with higher yield), giving you the flexibility to serve different market segments.
 
 ## Castor Oil Yield Expectations
 

@@ -117,7 +117,7 @@ Yes — the Haonuo hydraulic oil press is built for walnut. Expect **50-62% yiel
 
 Walnut oil is one of the most premium edible oils in the world, prized for its rich omega-3 content, delicate nutty flavor, and numerous health benefits. The Middle East and Central Asia are among the largest consumers of walnut oil, where it is used both as a gourmet cooking oil and in traditional medicine.
 
-Haonuo Machinery's walnut oil pressing solution is specifically designed for producers who demand the highest quality cold-pressed walnut oil. Our ultra-high pressure hydraulic press technology ensures maximum oil extraction while preserving the heat-sensitive omega-3 fatty acids that make walnut oil so valuable.
+Haonuo Machinery's walnut oil pressing solution is specifically designed for producers who demand the highest quality cold-pressed walnut oil. Our ultra-high pressure hydraulic press technology ensures maximum [oil extraction](/resources/cold-press-vs-hot-press-oil/) while preserving the heat-sensitive omega-3 fatty acids that make walnut oil so valuable.
 
 ## Walnut Oil Yield Expectations
 

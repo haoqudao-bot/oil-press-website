@@ -19,7 +19,7 @@ seoKeywords:
 
 ## Introduction
 
-Oil cake is the solid residue remaining after oil extraction from oilseeds. This valuable by-product represents approximately 50-60% of the original seed weight and contains high levels of protein, fiber, and other nutrients. Proper utilization of oil cake can significantly improve the overall profitability of oil production operations.
+Oil cake is the solid residue remaining after [oil extraction](/resources/cold-press-vs-hot-press-oil/) from oilseeds. This valuable by-product represents approximately 50-60% of the original seed weight and contains high levels of protein, fiber, and other nutrients. Proper utilization of oil cake can significantly improve the overall profitability of oil production operations.
 
 ## Understanding Oil Cake Composition
 

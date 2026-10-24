@@ -106,7 +106,7 @@ order: 12
 
 ## Overview
 
-Starting an oil pressing business requires professional equipment that delivers consistent production capacity and high oil yield. Haonuo's **commercial-scale oil press solution** is the perfect entry point for entrepreneurs and small-to-medium businesses who want to produce high-quality cooking oil for local and regional markets. With 100 kg per batch capacity, you can meet commercial demand from day one.
+Starting an oil pressing business requires professional equipment that delivers consistent production capacity and high [oil yield](/resources/how-to-maximize-oil-yield/). Haonuo's **commercial-scale oil press solution** is the perfect entry point for entrepreneurs and small-to-medium businesses who want to produce high-quality cooking oil for local and regional markets. With 100 kg per batch capacity, you can meet commercial demand from day one.
 
 Haonuo's commercial oil press solution is built around our Standard Hydraulic Oil Press (HN325) — a professional-grade hydraulic press designed specifically for **commercial oil pressing applications**. Despite its efficient design, this machine delivers industrial-grade pressing performance with residual oil rates below 5%, meaning you extract more oil from every kilogram of seeds you process.
 

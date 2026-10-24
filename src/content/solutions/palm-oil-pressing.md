@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Palm Kernel Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Palmiste
@@ -138,9 +138,9 @@ Yes — the Haonuo high-pressure hydraulic press is built for palm kernels, one 
 
 ## Palm & Palm Kernel Oil Press Overview
 
-Palm kernel oil is a highly versatile oil derived from the kernel (seed) of the oil palm fruit, distinct from the more common palm oil extracted from the fruit's flesh. A dependable **palm kernel oil press machine** is essential for producers in Southeast Asia and Africa who want to maximize the value of their palm fruit harvest by processing both the flesh and the kernel.
+Palm kernel oil is a highly versatile oil derived from the kernel (seed) of the oil palm fruit, distinct from the more common palm oil extracted from the fruit's flesh. A dependable **palm kernel [oil press machine](/hydraulic-oil-press-machine/)** is essential for producers in Southeast Asia and Africa who want to maximize the value of their palm fruit harvest by processing both the flesh and the kernel.
 
-Haonuo's palm kernel oil pressing solution is built around our high-pressure hydraulic press technology, which is particularly well-suited for the hard, high-fat palm kernels that challenge conventional screw expellers. Our **palm kernel oil extraction machine** applies sustained high pressure that thoroughly extracts oil from crushed kernels, achieving residual oil rates below 5% — significantly better than screw presses that typically leave 6-8% residual oil.
+Haonuo's palm kernel oil pressing solution is built around our high-pressure hydraulic press technology, which is particularly well-suited for the hard, high-fat palm kernels that challenge conventional screw expellers. Our **palm kernel [oil extraction](/resources/cold-press-vs-hot-press-oil/) machine** applies sustained high pressure that thoroughly extracts oil from crushed kernels, achieving residual oil rates below 5% — significantly better than screw presses that typically leave 6-8% residual oil.
 
 This solution covers the process from kernel separation through pressing and filtration, with optional refining handled by separately sourced equipment, enabling you to produce both food-grade and industrial-grade palm kernel oil.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Mustard Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Moutarde
@@ -143,7 +143,7 @@ Mustard oil is a staple cooking oil across South Asia — India, Bangladesh, Nep
 
 Haonuo's mustard oil pressing solution is specifically designed for the high-demand South Asian market. Our hydraulic **mustard oil extraction machine** delivers superior yield compared to traditional ghani (animal-driven) presses and conventional screw expellers, while preserving the characteristic pungent flavor that consumers expect from authentic mustard oil.
 
-The solution supports both cold pressing (for premium Kachi Ghani mustard oil) and hot pressing with steaming (for higher yield and milder flavor), giving you the versatility to serve diverse market segments with a single production line.
+The solution supports both [cold pressing](/cold-press-oil-machine/) (for premium Kachi Ghani mustard oil) and hot pressing with steaming (for higher yield and milder flavor), giving you the versatility to serve diverse market segments with a single production line.
 
 ## Mustard Oil Yield Expectations
 

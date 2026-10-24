@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Peanut Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Arachide
@@ -161,13 +161,13 @@ Yes — the Haonuo hydraulic oil press is built for peanuts (groundnuts). Expect
 
 Groundnut (peanut) oil is the everyday cooking oil of West Africa — Nigeria is one of the world's largest groundnut producers — and demand is equally strong in India, China and Southeast Asia. A hydraulic **peanut oil press machine** lets small and mid-sized mills press aromatic hot-pressed oil or premium cold-pressed oil directly from shelled kernels, for local markets or export buyers.
 
-Haonuo's peanut pressing solution is built around hydraulic press technology. Unlike screw expellers, which generate friction heat that can scorch the oil, a hydraulic **groundnut oil extraction machine** applies static, controlled pressure. The oil stays below scorching temperature, the natural peanut flavor is preserved, and residual oil in the cake typically lands at **6-8%** (Haonuo factory tests with graded peanut and sesame at 6-8% moisture; results vary with seed variety and preparation) — against roughly 10-12% for a conventional drilled-barrel press.
+Haonuo's peanut pressing solution is built around hydraulic press technology. Unlike screw expellers, which generate friction heat that can scorch the oil, a hydraulic **groundnut [oil extraction](/resources/cold-press-vs-hot-press-oil/) machine** applies static, controlled pressure. The oil stays below scorching temperature, the natural peanut flavor is preserved, and residual oil in the cake typically lands at **6-8%** (Haonuo factory tests with graded peanut and sesame at 6-8% moisture; results vary with seed variety and preparation) — against roughly 10-12% for a conventional drilled-barrel press.
 
-Every Haonuo hydraulic press handles **both routes on one machine**: cold pressing for premium, nutrient-rich oil, and hot pressing after roasting for a stronger aroma and 3-5% more oil per batch. The difference is entirely in seed preparation, which is exactly why the seven-step process below matters.
+Every Haonuo hydraulic press handles **both routes on one machine**: [cold pressing](/cold-press-oil-machine/) for premium, nutrient-rich oil, and hot pressing after roasting for a stronger aroma and 3-5% more oil per batch. The difference is entirely in seed preparation, which is exactly why the seven-step process below matters.
 
 ## Peanut Oil Yield Expectations
 
-| Feed material | Oil content | Expected oil yield | Residual oil in cake |
+| Feed material | Oil content | Expected [oil yield](/resources/how-to-maximize-oil-yield/) | Residual oil in cake |
 |---|---|---|---|
 | Shelled kernels, roasted (hot press) | 45-55% | 40-48% | 6-8% |
 | Shelled kernels, raw (cold press) | 45-55% | 38-44% | 7-9% |

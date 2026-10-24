@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Industrial Oil Press Solution
   fr: Solution de Pressage d'Huile Industrielle
@@ -116,7 +116,7 @@ order: 14
 
 ## Overview
 
-Industrial-scale oil production demands equipment that delivers maximum throughput, minimum residual oil, and consistent quality across thousands of tons of production per year. An **industrial oil press machine** must be robust enough for 24/7 operation while maintaining the precision needed for optimal extraction efficiency.
+Industrial-scale oil production demands equipment that delivers maximum throughput, minimum residual oil, and consistent quality across thousands of tons of production per year. An **industrial [oil press machine](/hydraulic-oil-press-machine/)** must be robust enough for 24/7 operation while maintaining the precision needed for optimal extraction efficiency.
 
 Haonuo's industrial oil press solution is built around our Ultra High Pressure (HN500) and High Pressure (HN480) hydraulic oil presses — the most powerful machines in our lineup. These **industrial hydraulic oil press** systems deliver sustained pressing forces up to 60 MPa, achieving residual oil rates below 5% even on the most challenging oilseeds. We supply the core pressing and filtration line from 1 to 100 tons per day, and help you integrate independently sourced refining equipment when RBD finished oil is required.
 
@@ -171,7 +171,7 @@ Our turnkey scope covers the core pressing line — all press-line equipment, pi
 Processing 10-100 tons of oilseeds per day for wholesale and retail markets. Our HN500 double-barrel pressing line delivers consistent high-quality crude oil, and a separately sourced refining line completes the route to RBD-grade oil meeting national and international standards. Proven in facilities across India, Indonesia, and Egypt.
 
 ### Oil Refinery
-Adding pressing capacity to an existing refinery. Our hydraulic presses feed crude oil directly into your refining system. The ultra-high pressure ensures maximum crude oil yield before refining, improving overall plant efficiency by 15-20% compared to screw press feeds.
+Adding pressing capacity to an existing refinery. Our hydraulic presses feed crude oil directly into your refining system. The ultra-high pressure ensures maximum crude [oil yield](/resources/how-to-maximize-oil-yield/) before refining, improving overall plant efficiency by 15-20% compared to screw press feeds.
 
 ### Agribusiness & Plantation Group
 Vertically integrated operations that control the entire supply chain from plantation to packaged oil. Our core pressing lines process palm kernel, coconut, sesame, and other plantation crops at industrial scale, integrating with independently sourced refining equipment. We've equipped agribusiness groups in West Africa and Southeast Asia.

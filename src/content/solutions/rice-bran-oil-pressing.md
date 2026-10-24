@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Rice Bran Oil Pressing Solution
   fr: Solution de Pressage d'Huile de Son de Riz
@@ -132,11 +132,11 @@ Yes — the Haonuo hydraulic oil press handles rice bran, with one honest condit
 
 ## Rice Bran Oil Press Overview
 
-Rice bran oil is one of the healthiest cooking oils in the world — rich in gamma-oryzanol, vitamin E and natural antioxidants — and a fast-growing premium oil in India, Bangladesh, Japan and Southeast Asia. For rice millers, bran is a low-cost byproduct that is often sold cheap or discarded; a dependable **rice bran oil press machine** turns that byproduct into a high-value oil business.
+Rice bran oil is one of the healthiest cooking oils in the world — rich in gamma-oryzanol, vitamin E and natural antioxidants — and a fast-growing premium oil in India, Bangladesh, Japan and Southeast Asia. For rice millers, bran is a low-cost byproduct that is often sold cheap or discarded; a dependable **rice bran [oil press machine](/hydraulic-oil-press-machine/)** turns that byproduct into a high-value oil business.
 
-The challenge with rice bran is not the pressing — it is the clock. Freshly milled bran contains active lipase enzymes that raise free fatty acids within hours, ruining the oil grade. Haonuo's rice bran pressing solution is built around this reality: stabilize the bran with heat (our roaster or steamer) within hours of milling, then press with a hydraulic **rice bran oil extraction machine** for clean, low-FFA oil.
+The challenge with rice bran is not the pressing — it is the clock. Freshly milled bran contains active lipase enzymes that raise free fatty acids within hours, ruining the oil grade. Haonuo's rice bran pressing solution is built around this reality: stabilize the bran with heat (our roaster or steamer) within hours of milling, then press with a hydraulic **rice bran [oil extraction](/resources/cold-press-vs-hot-press-oil/) machine** for clean, low-FFA oil.
 
-The solution supports both cold pressing (for premium cold-pressed rice bran oil that retains gamma-oryzanol) and hot pressing with steaming (for higher yield), giving you the versatility to serve health-food and mass-market segments with a single production line.
+The solution supports both [cold press](/cold-press-oil-machine/)ing (for premium cold-pressed rice bran oil that retains gamma-oryzanol) and hot pressing with steaming (for higher yield), giving you the versatility to serve health-food and mass-market segments with a single production line.
 
 ## Rice Bran Oil Yield Expectations
 

@@ -263,7 +263,7 @@ Safety and maintainability are at the core of this design: electrical and water 
 This electric steamer is designed for pre-press seed steaming and conditioning:
 
 - **Tea seeds** — thorough steaming for optimal pressing moisture
-- **Rapeseed** — consistent conditioning for high oil yield
+- **Rapeseed** — consistent conditioning for high [oil yield](/resources/how-to-maximize-oil-yield/)
 - **Peanuts** — steam softening before pressing
 - **Sesame** — gentle steaming preserves oil quality
 - **Mustard seed** — pre-press moisture adjustment

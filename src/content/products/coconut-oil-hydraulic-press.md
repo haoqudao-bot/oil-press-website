@@ -299,7 +299,7 @@ This construction was previously offered as a separate "stainless steel hydrauli
 ## Key Advantages
 
 - **Full 304 Stainless Steel Construction** — Tabung Press, oil tray, machine body, and pressing head are all wrapped in 304 food-grade stainless steel for maximum corrosion resistance and food safety compliance.
-- **VCO-Optimized Design** — Purpose-built for Virgin Coconut Oil production, with a 600 mm wide tabung press that accommodates coconut meat and fiber for efficient juice and oil extraction.
+- **VCO-Optimized Design** — Purpose-built for Virgin Coconut Oil production, with a 600 mm wide tabung press that accommodates coconut meat and fiber for efficient juice and [oil extraction](/resources/cold-press-vs-hot-press-oil/).
 - **Food Safety Compliance** — 304 stainless steel contact surfaces meet food-grade standards, essential for coconut juice and VCO production.
 - **Multi-Purpose Capability** — Beyond coconut, this machine handles fruit juice extraction, fruit and vegetable dehydration, and oil sludge pressing — one machine, multiple revenue streams.
 - **Proven in Tropical Markets** — Trusted by producers across Hainan and Southeast Asia, the world's major coconut-producing regions.

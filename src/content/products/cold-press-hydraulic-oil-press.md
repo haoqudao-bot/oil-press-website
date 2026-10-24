@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Cold Press Hydraulic Oil Press
   fr: Presse à Huile Hydraulique à Froid
@@ -360,7 +360,7 @@ A note on cold pressing: every Haonuo hydraulic oil press supports both hot and 
 ### Conventional Materials
 - Tea seed, rapeseed, peanut, soybean, flaxseed, lacquer oil seed
 
-The HN426 handles all of the above with excellent oil yield. For conventional materials, the high cake pressure may help reduce residual oil rates (results vary by material).
+The HN426 handles all of the above with excellent [oil yield](/resources/how-to-maximize-oil-yield/). For conventional materials, the high cake pressure may help reduce residual oil rates (results vary by material).
 
 ## Why Choose Our Hydraulic Oil Press
 

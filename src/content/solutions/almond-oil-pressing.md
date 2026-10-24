@@ -1,4 +1,4 @@
-﻿---
+---
 title:
   en: Almond Oil Pressing Solution
   fr: Solution de Pressage d'Huile d'Amande
@@ -146,7 +146,7 @@ With almonds containing 50-55% oil — among the highest of all oilseeds — alm
 - **Almond variety**: Nonpareil and California varieties have excellent oil content
 - **Skin removal**: Blanching (removing skins) slightly improves yield and produces lighter-colored oil
 - **Moisture content**: Optimal pressing moisture is 4-6%
-- **Cold vs. hot press**: Cold pressing yields slightly less but produces premium-quality oil
+- **Cold vs. hot press**: [cold pressing](/cold-press-oil-machine/) yields slightly less but produces premium-quality oil
 
 ## Why Choose Our Almond Oil Press
 

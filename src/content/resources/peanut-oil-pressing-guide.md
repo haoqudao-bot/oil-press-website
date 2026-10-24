@@ -84,7 +84,7 @@ Hot pressing is the most common method for peanut oil production, offering highe
 
 ### Expected Yields
 
-| Material Condition | Oil Yield | Residual Oil |
+| Material Condition | [oil yield](/resources/how-to-maximize-oil-yield/) | Residual Oil |
 |-------------------|-----------|--------------|
 | Good quality kernels | 45-55% | 6-8% |
 | Average quality kernels | 40-45% | 8-10% |
