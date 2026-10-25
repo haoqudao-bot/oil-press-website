@@ -1106,4 +1106,56 @@ RFQ yang lengkap mengembalikan penawaran yang akurat dan tata letak jalur dalam 
 
 Kirimkan jenis biji dan target keluaran harian Anda melalui <a href="/id/contact/">halaman kontak</a> kami. Kami membalas dalam 24 jam dengan rekomendasi model, daftar peralatan lengkap, dan penawaran dengan pos yang transparan — tanpa biaya tambahan tersembunyi.`,
 
+  'shea-butter-pressing-sop': `Mentega shea meleleh pada sekitar 34 °C — **pengepresan dingin dan panas keduanya bekerja**, dengan hasil dan kualitas yang berbeda. Pengepresan dingin (HN426, ≤ 60 °C) mempertahankan kualitas premium kelas kosmetik; pengepresan panas (pemanggangan 120 °C) memaksimalkan hasil untuk kualitas makanan.
+
+**Jawaban Cepat** : Mesin pengepres Haonuo menghasilkan **40–48 % hasil** dari biji shea. Dua jalur produksi : **pengepresan dingin** pada HN426 (≤ 60 °C, hasil 40–43 %, kelas kosmetik premium) dan **pengepresan panas** dengan pemanggangan 120 °C (45–48 % hasil, kelas makanan). Batch 80–100 kg, siklus **45–55 menit panas / ≈ 2 jam dingin**. Sisa minyak dalam kue **6–8 %**.
+
+## Pengepresan Dingin vs Panas — Dua Jalur Produksi
+
+Mentega shea meleleh pada **34–38 °C**, jadi tidak seperti wijen atau kacang tanah, perilakunya berbeda tajam tergantung suhu pengepresan. **Pada 40 °C ke atas**, lemak melunak cukup untuk pengepresan hidrolik — inilah sebabnya pengepresan dingin HN426 bekerja untuk shea (rentang operasinya ≤ 60 °C berada di atas titik leleh). Trade-off adalah hasilnya : pengepresan dingin mempertahankan lebih banyak lemak tak jenuh (premium kosmetik) tetapi melepaskan sedikit lebih sedikit lemak total. Pengepresan panas pada 120 °C memaksimalkan hasil (makanan curah) tetapi menggelapkan mentega dan menurunkan kandungan vitamin.
+
+### Pengepresan Dingin (HN426) — Kelas Kosmetik
+- Pra-perlakuan : pemanggangan ringan 40–50 °C (opsional), lalu penggilingan
+- Suhu pengepresan : ≤ 60 °C
+- Siklus : ≈ 2 jam / batch 100 kg
+- Hasil : **40–43 %** (lemak lebih bersih, premium lebih tinggi)
+- Pembeli target : perusahaan kosmetik, distributor organik
+
+### Pengepresan Panas (Semua Model Haonuo) — Kelas Makanan
+- Pra-perlakuan : pemanggangan 25–30 menit pada **120 °C**
+- Suhu pengepresan : ~ 80 °C setelah pemanggangan
+- Siklus : 45–55 menit / batch 100 kg
+- Hasil : **45–48 %** (hasil maksimum lemak total)
+- Pembeli target : pengolah makanan, eksportir curah
+
+## SOP 5 Langkah
+
+1. **Pecah dan bersihkan biji shea** — Hapus cangkang dan benda asing. Sortir berdasarkan ukuran — ukuran seragam = pemanggangan seragam.
+2. **Panggang 25–30 menit pada 120 °C (pengepresan panas) atau lewati (pengepresan dingin)** — **Pengepresan panas :** pemanggang tradisional kayu atau listrik pada 120 °C — ini tidak dapat dinegosiasikan untuk hasil maksimal, karena lemak shea hanya mencair sepenuhnya di atas 100 °C. **Pengepresan dingin :** lewati pemanggangan atau lakukan pemanasan ringan 40–50 °C saja. Pemanggangan menghitamkan biji, melunakkan dinding sel, dan menurunkan viskositas lemak. Jangan gosong.
+3. **Giling menjadi pasta halus** — Penghancur biji atau batu giling. Ukuran partikel target **≤ 3 mm**. Pasta shea dapat dibentuk, bukan bubuk — ini benar.
+4. **Pengepresan hidrolik** — Muat 80–100 kg pasta. **Pengepresan panas :** 35–42 MPa, siklus 45–55 menit, mentega mengalir pada ~ 80 °C. **Pengepresan dingin (HN426) :** ≤ 60 °C, siklus ≈ 2 jam, mentega mengalir pada ~ 50 °C. Hasil dingin adalah 40–43 % vs 45–48 % panas, tetapi kualitas premium kosmetik membenarkan pilihan ini.
+5. **Saring dan dinginkan** — Mentega shea mengeras pada suhu ruang. Saring saat hangat (~ 40 °C), lalu tuang ke cetakan dan biarkan mengeras.
+
+## Batch 100 kg pasta biji shea — apa yang Anda dapatkan (dingin vs panas)
+
+| Output | Pengepresan Dingin (HN426, ≤ 60 °C) | Pengepresan Panas (pemanggangan 120 °C) |
+|--------|------------------------------------|----------------------------------------|
+| Hasil mentega shea mentah | 40–43 kg | 45–48 kg |
+| Sisa minyak dalam kue | 6–8 % | 6–8 % |
+| Kue (produk sampingan) | ~ 57–60 kg (pupuk) | ~ 52–55 kg (pupuk) |
+| Waktu siklus / batch | ≈ 2 jam | 45–55 menit |
+| Kelas mentega | Premium kosmetik | Makanan curah |
+
+## Model Haonuo yang Direkomendasikan
+
+### HN426 — Jalur Dingin & Panas Shea
+500 t / 42 MPa. Menangani baik pengepresan dingin kelas kosmetik maupun pengepresan panas kelas makanan untuk shea. Siklus dingin 2 jam mempertahankan lemak tak jenuh untuk harga premium pembeli.
+[Halaman Produk HN426](/id/products/cold-press-hydraulic-oil-press/)
+
+### HN500 — Skala Industri
+620 t / 52 MPa. Untuk operasi mentega shea multi-ton/hari. Menangani varietas cangkang lebih keras dengan sisa minyak konsisten dalam kue.
+[Halaman Produk HN500](/id/products/ultra-high-pressure-hydraulic-oil-press/)
+
+Lihat [Halaman Solusi Shea Butter](/id/solutions/shea-butter-pressing/) untuk detail lebih lanjut. Referensi Ghana / Nigeria / Burkina Faso tersedia.`,
+
 };
