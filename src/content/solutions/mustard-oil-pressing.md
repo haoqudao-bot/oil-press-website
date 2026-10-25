@@ -5,10 +5,10 @@ title:
   ar: حل عصر زيت الخردل
   id: Solusi Penekanan Minyak Sawi
 seoTitle:
-  en: Mustard Oil Machine & Plant for Small & Large Mills
-  fr: Machine à Huile de Moutarde pour Petits et Grands Moulins
-  ar: آلة زيت الخردل للمعاصر الصغيرة والكبيرة
-  id: Mesin Minyak Sawi untuk Penggilingan Kecil & Besar
+  en: Mustard Oil Machine Price & Kachi Ghani Press
+  fr: Prix des Machines à Huile de Moutarde & Presse Kachi Ghani
+  ar: سعر آلة زيت الخردل ومكبس كاتشي غاني
+  id: Harga Mesin Minyak Sawi & Press Kachi Ghani
 seedName: mustard
 icon: mustard
 description:
