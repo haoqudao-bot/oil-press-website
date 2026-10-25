@@ -155,7 +155,7 @@ Understanding expected yields is critical for business planning. Below are typic
 ## Why Choose Our Coconut Oil Press
 
 - **15+ years of hydraulic press manufacturing** — We specialize in hydraulic oil press technology, not screw presses. This focus means deeper expertise and better machines for your specific needs.
-- **Factory-direct pricing** — No middlemen. You get competitive pricing directly from the manufacturer, saving compared to trading company prices (actual savings vary).
+- **[Factory-direct pricing](/resources/oil-press-machine-price-guide/)** — No middlemen. You get competitive pricing directly from the manufacturer, saving compared to trading company prices (actual savings vary).
 - **Core solution provider** — From seed preparation to filtered oil, we supply the core pressing equipment you need and help you coordinate separately sourced refining equipment.
 - **Global installation support** — Our engineers provide on-site installation and training worldwide, ensuring your coconut oil press machine operates at peak efficiency from day one.
 - **Proven in tropical markets** — Our coconut oil pressing equipment is already running successfully in the Philippines, Indonesia, Sri Lanka, and India — the world's top coconut-producing regions.

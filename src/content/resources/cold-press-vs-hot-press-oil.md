@@ -89,7 +89,7 @@ Hot pressing extracts roughly 4–8 percentage points more oil from conventional
 
 ## Economics of the Two Products
 
-The processes compete on different business models rather than on cost per litre:
+The processes compete on different business models rather than on [cost per litre](/resources/oil-press-machine-price-guide/):
 
 | Dimension | Cold Press Line | Hot Press Line |
 |-----------|-----------------|----------------|

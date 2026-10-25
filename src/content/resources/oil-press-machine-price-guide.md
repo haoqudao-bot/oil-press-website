@@ -1,9 +1,9 @@
 ---
 title:
-  en: "Oil Press Machine Price Guide 2026: What Affects Your Quote"
-  fr: "Guide des prix des presses à huile 2026 : ce qui influence votre devis"
-  ar: "دليل أسعار مكابس الزيت الهيدروليكية 2026: ما الذي يؤثر على عرض السعر"
-  id: "Panduan Harga Mesin Press Minyak 2026: Apa yang Mempengaruhi Penawaran"
+  en: "Oil Machine Price 2026: What a Hydraulic Press Costs"
+  fr: "Prix des Machines à Huile 2026 : Ce que coûte une presse hydraulique"
+  ar: "سعر آلة الزيت 2026: ما الذي تكلفه المكبس الهيدروليكي"
+  id: "Harga Mesin Minyak 2026: Berapa Biaya Press Hidrolik"
 description:
   en: "Oil press machine price guide: what shapes the quote (capacity, pressure, configuration, shipping, materials), landed cost breakdown, and budget planning."
   fr: "Guide des prix des presses à huile : ce qui forme le devis (capacité, pression, configuration, conditions d'expédition, matériaux), le détail du coût de débarquement total, et comment budgétiser sans grille tarifaire publique."

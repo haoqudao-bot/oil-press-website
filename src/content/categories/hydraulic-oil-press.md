@@ -1,14 +1,14 @@
 ---
 name:
-  en: Hydraulic Oil Press
-  fr: Presse à Huile Hydraulique
-  ar: معصرة زيت هيدروليكية
-  id: Mesin Press Minyak Hidrolik
+  en: "Oil Extraction Machine: Hydraulic Press Range"
+  fr: "Machine d'extraction d'huile : Gamme de presses hydrauliques"
+  ar: "آلة استخراج الزيت: مجموعة المكابس الهيدروليكية"
+  id: "Mesin Ekstraksi Minyak: Rentang Press Hidrolik"
 icon: hydraulic-press
 description:
-  en: Professional hydraulic oil press machines for cold pressing various oil seeds with high oil yield and low residual oil rate.
-  fr: Machines de pressage à huile hydraulique professionnelles pour le pressage à froid de diverses graines oléagineuses avec un rendement élevé et un faible taux d'huile résiduelle.
-  ar: معاصر زيت هيدروليكية احترافية للعصر على البارد لمختلف البذور الزيتية مع عائد زيت عالي ومعدل زيت متبقي منخفض.
-  id: Mesin press minyak hidrolik profesional untuk penekanan dingin berbagai biji-bijian minyak dengan hasil minyak tinggi dan sisa minyak rendah.
+  en: "Professional oil extraction machines — hydraulic press range from 300 to 620 tons. Cold and hot pressing on one machine. High oil yield, low residual rate."
+  fr: "Machines professionnelles d'extraction d'huile — gamme de presses hydrauliques de 300 à 620 tonnes. Pressage à froid et à chaud sur la même machine. Rendement élevé, taux résiduel faible."
+  ar: "آلات استخراج زيت احترافية — مجموعة مكابس هيدروليكية من 300 إلى 620 طن. عصر بارد وساخن على نفس الماكينة. عائد مرتفع، معدل متبقي منخفض."
+  id: "Mesin ekstraksi minyak profesional — rentang press hidrolik 300 hingga 620 ton. Press dingin dan panas di satu mesin. Hasil tinggi, sisa rendah."
 order: 1
 ---

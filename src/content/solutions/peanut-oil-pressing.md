@@ -199,7 +199,7 @@ Every Haonuo hydraulic press handles **both routes on one machine**: [cold press
 - **Hydraulic, not screw** — static pressure keeps the oil below scorching temperature; no burnt taste, and 6-8% residual oil instead of 10-12%.
 - **One machine, two products** — switch between premium cold-pressed and aromatic hot-pressed peanut oil by changing preparation only.
 - **Complete line from one supplier** — shelling and preparation advice, roaster, press and filter matched as one balanced line.
-- **Factory-direct, built for your site** — FOB Qingdao pricing, payment terms confirmed on the proforma invoice, free voltage customization (415 V/50 Hz, 380 V/60 Hz or your local standard), standard models ready in 15-25 working days.
+- **[Factory-direct, built for your site](/resources/oil-press-machine-price-guide/)** — FOB Qingdao pricing, payment terms confirmed on the proforma invoice, free voltage customization (415 V/50 Hz, 380 V/60 Hz or your local standard), standard models ready in 15-25 working days.
 - **Tested before it ships** — every press runs under full working pressure and is checked for leaks before packing, with English manual, online video guidance and stocked spare parts.
 
 ## What 100 kg of Shelled Peanuts Is Worth

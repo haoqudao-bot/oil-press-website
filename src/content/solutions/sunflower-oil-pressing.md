@@ -12,7 +12,7 @@ seoTitle:
 seedName: sunflower
 icon: sunflower
 description:
-  en: Sunflower oil press machine for high-quality sunflower oil extraction. Hydraulic press with high yield and low residual rate. Haonuo factory-direct price.
+  en: Sunflower oil press machine for high-quality sunflower oil extraction. Hydraulic press with high yield and low residual rate. [factory-direct pricing](/resources/oil-press-machine-price-guide/).
   fr: Machine de pressage d'huile de tournesol pour extraction d'huile de tournesol de haute qualité. Pression hydraulique à haut rendement et faible taux résiduel.
   ar: آلة عصر زيت عباد الشمس لاستخراج زيت عباد الشمس عالي الجودة. ضغط هيدروليكي عالي العائد ومعدل متبقي منخفض.
   id: Mesin press minyak bunga matahari untuk ekstraksi minyak bunga matahari berkualitas tinggi. Press hidrolik hasil tinggi dan sisa rendah.

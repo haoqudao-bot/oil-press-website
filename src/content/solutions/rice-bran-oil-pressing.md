@@ -158,7 +158,7 @@ The solution supports both [cold press](/cold-press-oil-machine/)ing (for premiu
 - **Honest engineering advice** — We tell you upfront: rice bran oil success depends on bran logistics, not just the machine. We help you plan stabilization and collection so your oil grade is protected.
 - **Designed for the rice belt** — Our rice bran oil pressing solution is built for rice millers in India, Bangladesh, Vietnam, Thailand and Indonesia who sit on a daily supply of fresh bran.
 - **Cold and hot press in one line** — Produce premium cold-pressed rice bran oil or higher-yield hot-pressed oil with the same equipment by adjusting the preparation stage.
-- **Factory-direct pricing** — No middlemen. Competitive pricing directly from the manufacturer saves you compared to trading company prices (actual savings vary).
+- **[Factory-direct pricing](/resources/oil-press-machine-price-guide/)** — No middlemen. Competitive pricing directly from the manufacturer saves you compared to trading company prices (actual savings vary).
 - **Low running cost** — Hydraulic pressing has no wearing screw and consumes less power per kilogram of oil than continuous expellers of similar capacity.
 
 <!-- yield-block -->
