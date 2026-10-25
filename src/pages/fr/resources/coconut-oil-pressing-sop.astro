@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'coconut-oil-pressing-sop');
+const t = getTranslations('fr');
+const title = resource?.data.title.fr || resource?.data.title.en || 'SOP de pressage de l\'huile de coco';
+const description = resource?.data.description.fr || resource?.data.description.en || 'SOP de pressage à froid pour l\'huile de coco vierge';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+  { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/coconut-oil-pressing-sop' },
+]};
+---
+<BaseLayout locale="fr" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/fr/" class="hover:text-amber-500">Accueil</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/fr/resources/" class="hover:text-amber-500">Ressources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Huile de Coco</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Procédure Opérationnelle Standard</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">SOP de Pressage à Froid de l'Huile de Coco Vierge (HCV)</h1>
+    <p class="text-steel-300">SOP de pressage à froid pour la production d'HCV. Nécessite <strong>des pièces en acier inoxydable 304 en contact</strong> pour résister à la corrosion de l'eau de coco — à spécifier lors de la commande.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">RÉPONSE RAPIDE</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Les presses à froid Haonuo (<strong>HN426</strong>, ≤ 60 °C) extraient <strong>30 à 40 % d'huile de coco fraîche râpée</strong> (base humide) ou <strong>55 à 60 % à partir de coprah</strong>, avec une huile résiduelle dans le tourteau de 6 à 8 %. Un lot de 100 kg prend <strong>environ 2 heures</strong> — les cycles à froid sont lents par conception, et le prix premium de l'HCV compense cela. Débit journalier <strong>≈ 400 kg frais</strong> (8 h, un seul baril).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">Deux voies d'alimentation — même machine</h2>
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">🥥 Coco frais</h3>
+        <p class="text-steel-600 text-sm">Décortiquer, peler la peau brune, râper finement. Utiliser dans les 24 heures. Teneur en humidité élevée (50 à 55 %) — rendement de 30 à 40 % sur poids humide.</p>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">🌴 Coprah (chair de coco séchée)</h3>
+        <p class="text-steel-600 text-sm">Noix de coco séchée au soleil ou au four, 5 à 7 % d'humidité. Se conserve pendant des mois et rend plus par kilogramme que le frais — 55 à 60 % contre 30 à 40 % (le frais est sur base humide).</p>
+      </div>
+    </div>
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Procédé de pressage à froid</h2>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Charger 100 kg de coco râpée</h3><p class="text-steel-600 text-sm">Répartir uniformément dans la presse tabung. Le baril de pressage à froid doit être en acier inoxydable 304 — l'eau de coco corrode l'acier doux en quelques semaines.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Presser à 27–30 MPa, ≤ 60 °C (~ 2 h / lot)</h3><p class="text-steel-600 text-sm">Surveiller la température du baril. La saveur de l'HCV est sensible à la chaleur — ne pas dépasser 60 °C. C'est la <strong>définition FSSAI du pressage à froid</strong> pour l'huile de coco. Les cycles à froid durent ~ 2 h par lot de 100 kg.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Filtrer &amp; embouteiller</h3><p class="text-steel-600 text-sm">L'HCV est claire, de couleur claire. Le filtre-presse donne un résultat cristallin. Embouteiller dans les 24 heures pour une meilleure conservation de l'arôme.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">100 kg de coco râpée — ce que vous obtenez</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Sortie</th><th class="px-4 py-3 text-left">Coco fraîche</th><th class="px-4 py-3 text-left">Coprah</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Rendement brut HCV</td><td class="px-4 py-3">30–40 kg (base humide)</td><td class="px-4 py-3">55–60 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Huile résiduelle dans le tourteau</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Temps de cycle</td><td class="px-4 py-3">≈ 2 h</td><td class="px-4 py-3">≈ 2 h</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">Besoin de pièces en acier inoxydable 304 ? Indiquez-le lors du devis — modification de spécification gratuite. Voir la page <a href="/fr/solutions/coconut-oil-pressing/" class="text-amber-600 hover:underline">Solution Huile de Coco</a> pour plus de détails.</p>
+  </div>
+</section>
+</BaseLayout>

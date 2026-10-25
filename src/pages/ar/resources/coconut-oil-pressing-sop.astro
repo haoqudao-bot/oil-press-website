@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'coconut-oil-pressing-sop');
+const t = getTranslations('ar');
+const title = resource?.data.title.ar || resource?.data.title.en || 'إجراءات تشغيلية قياسية لعصر زيت جوز الهند';
+const description = resource?.data.description.ar || resource?.data.description.en || 'إجراءات تشغيلية قياسية للضغط البارد لزيت جوز الهند البكر';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+  { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/coconut-oil-pressing-sop' },
+]};
+---
+<BaseLayout locale="ar" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500" dir="rtl">
+      <a href="/ar/" class="hover:text-amber-500">الرئيسية</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/ar/resources/" class="hover:text-amber-500">الموارد</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">إجراءات زيت جوز الهند</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">إجراءات تشغيلية قياسية</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4" dir="rtl">إجراءات تشغيلية قياسية للضغط البارد لزيت جوز الهند البكر (HCV)</h1>
+    <p class="text-steel-300" dir="rtl">إجراءات تشغيلية قياسية للضغط البارد لإنتاج زيت جوز الهند البكر. يتطلب <strong>أجزاء ملامسة من الفولاذ المقاوم للصدأ 304</strong> لمقاومة تآكل ماء جوز الهند — حدد عند الطلب.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">إجابة سريعة</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3" dir="rtl">تستخرج مكابس الضغط البارد Haonuo (<strong>HN426</strong>، ≤ 60 درجة مئوية) <strong>30 إلى 40 % زيت من جوز الهند الطازج المبشور</strong> (الرطوبة) أو <strong>55 إلى 60 % من الكوبرا</strong>، مع زيت متبقي في الكيك 6 إلى 8 %. دفعة 100 كجم تستغرق <strong>حوالي ساعتين</strong> — الدورات الباردة بطيئة بطبيعتها، وسعر HCV المميز يعوض ذلك. الإنتاج اليومي <strong>≈ 400 كجم طازج</strong> (8 ساعات، برميل واحد).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6" dir="rtl">مساران للمادة الخام — نفس الماكينة</h2>
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2" dir="rtl">🥥 جوز هند طازج</h3>
+        <p class="text-steel-600 text-sm" dir="rtl">قشر، قشر القشرة البنية، ابشر ناعم. استخدم خلال 24 ساعة. محتوى رطوبة عالي (50–55 %) — العائد 30–40 % على وزن رطب.</p>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2" dir="rtl">🌴 كوبرا (لحم جوز الهند المجفف)</h3>
+        <p class="text-steel-600 text-sm" dir="rtl">جوز الهند المجفف بالشمس أو الفرن، 5–7 % رطوبة. يتخزن لأشهر ويعطي أكثر لكل كيلوجرام من الطازج — 55–60 % مقابل 30–40 % (الطازج على أساس رطب).</p>
+      </div>
+    </div>
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4" dir="rtl">عملية الضغط البارد</h2>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1" dir="rtl">تحميل 100 كجم من جوز الهند المبشور</h3><p class="text-steel-600 text-sm" dir="rtl">وزع بالتساوي في مكبس تابونج. يجب أن يكون برميل الضغط البارد من الفولاذ المقاوم للصدأ 304 — ماء جوز الهند يآكل الفولاذ العادي في أسابيع.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1" dir="rtl">الضغط عند 27–30 ميجا باسكال، ≤ 60 درجة مئوية (~ 2 ساعة / دفعة)</h3><p class="text-steel-600 text-sm" dir="rtl">راقب درجة حرارة البرميل. نكهة HCV حساسة للحرارة — لا تتجاوز 60 درجة مئوية. هذا هو <strong>تعريف FSSAI للضغط البارد</strong> لزيت جوز الهند. الدورات الباردة تستغرق ~ 2 ساعة لكل دفعة 100 كجم.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1" dir="rtl">الترشيح &amp; التعبئة</h3><p class="text-steel-600 text-sm" dir="rtl">HCV صافٍ، فاتح اللون. مكبس الترشيح يعطي نتيجة بلورية. اعبئ في 24 ساعة لأفضل حفظ للرائحة.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6" dir="rtl">100 كجم من جوز الهند المبشور — ما تحصل عليه</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">الإخراج</th><th class="px-4 py-3 text-left">جوز هند طازج</th><th class="px-4 py-3 text-left">كوبرا</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">عائد HCV الخام</td><td class="px-4 py-3">30–40 كجم (رطوبة)</td><td class="px-4 py-3">55–60 كجم</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">زيت متبقي في الكيك</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">وقت الدورة</td><td class="px-4 py-3">≈ 2 ساعة</td><td class="px-4 py-3">≈ 2 ساعة</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4" dir="rtl">تحتاج أجزاء فولاذ مقاوم للصدأ 304 ؟ أخبرنا عند التسعير — تغيير مواصفات مجاني. انظر صفحة <a href="/ar/solutions/coconut-oil-pressing/" class="text-amber-600 hover:underline">حل زيت جوز الهند</a> للمزيد.</p>
+  </div>
+</section>
+</BaseLayout>

@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'mustard-oil-pressing-sop');
+const t = getTranslations('id');
+const locale = 'id';
+
+const title = resource?.data.title.id || 'SOP Pengepresan Minyak Sawi';
+const description = resource?.data.description.id || 'Prosedur operasi standar langkah demi langkah untuk ekstraksi minyak sawi';
+const seoKeywords = resource?.data.seoKeywords || [];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/mustard-sop-hero.webp',
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+    { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/mustard-oil-pressing-sop' },
+  ],
+};
+---
+
+<BaseLayout locale={locale} title={title} description={description} keywords={seoKeywords} jsonLd={[breadcrumbLd, articleLd]}>
+
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/id/" class="hover:text-amber-500 transition-colors">Beranda</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/id/resources/" class="hover:text-amber-500 transition-colors">Sumber Daya</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Minyak Sawi</span>
+    </nav>
+  </div>
+</section>
+
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16 md:py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Prosedur Operasi Standar</div>
+    <h1 class="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">SOP Pengepresan Minyak Sawi — Kachi Ghani Pengepresan Dingin &amp; Pengepresan Panas Beruap</h1>
+    <p class="text-steel-300 text-lg leading-relaxed">Prosedur operasi yang telah diuji di lapangan untuk ekstraksi minyak sawi pada pengepres hidrolik Haonuo. Mencakup minyak Kachi Ghani tradisional yang diperas dingin (≤ 60 °C, eceran premium) dan produksi yang diperas panas dengan uap (hasil lebih tinggi, rasa lebih ringan).</p>
+  </div>
+</section>
+
+<!-- Quick Answer -->
+<section class="py-10 md:py-12 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl border border-amber-200 shadow-sm p-6 md:p-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">JAWABAN CEPAT</span>
+      </div>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mb-4">
+        Pengepres hidrolik Haonuo mengekstrak <strong>hasil minyak 30–38 % (pengepresan dingin / Kachi Ghani)</strong> atau <strong>33–41 % (pengepresan panas beruap)</strong> dari biji sawi bersih, dengan sisa minyak pada bungkil 6–8 %. Pengepres HN325 satu tabung beroperasi pada <strong>800–1 200 kg/hari</strong>; tabung ganda atau HN365 mencapai <strong>1 500–2 500 kg/hari</strong>. Mesin yang sama untuk kedua metode — hanya langkah <em>penguapan awal</em> yang berubah.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-steel-600 leading-relaxed text-lg mb-6">
+      Sawi (canola) adalah minyak goreng yang paling banyak dikonsumsi di India — sekitar <strong>5,5 juta ton per tahun</strong> di seluruh Rajasthan, Uttar Pradesh, Haryana, Benggala Barat, Bangladesh dan Nepal. Dua produk hidup berdampingan: <em>Kachi Ghani</em>, minyak tradisional yang diperas dingin dan pedas yang mendapat premium eceran ₹20–30 per liter, dan minyak sawi halus / ringan untuk pasar massal. SOP di bawah ini ditulis untuk operator pengepres hidrolik Haonuo yang perlu mengoperasikan satu mesin dalam <strong>kedua mode pada hari yang sama</strong>.
+    </p>
+    <div class="flex flex-wrap gap-3 text-sm">
+      <a href="#cold-sop" class="bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ SOP Pengepresan Dingin Kachi Ghani</a>
+      <a href="#hot-sop" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ SOP Pengepresan Panas Beruap</a>
+      <a href="#capacity" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ Kapasitas &amp; Hasil per 100 kg</a>
+      <a href="/id/solutions/mustard-oil-pressing/" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">Halaman Solusi Minyak Sawi</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOP Cold Press -->
+<section id="cold-sop" class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-amber-50 border-l-4 border-amber-500 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">SOP ① — Minyak Sawi Kachi Ghani Diperas Dingin</h2>
+      <p class="text-amber-700 text-sm mt-1">Jalankan ini pertama pagi hari, sebelum ada batch yang dikukus. Mesin bersih, tanpa panas.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pembersihan biji (20–30 menit / 100 kg)</h3>
+            <p class="text-steel-600 leading-relaxed">Buang batu, sekam, dan benda asing dengan penabur atau pemisah gravitasi. Biji yang rusak atau berjamur mengurangi hasil dan menyebabkan rasa tidak sedap pada Kachi Ghani. Kadar air target: <strong>7–9 %</strong>. Jangan <em>merendam atau mencuci biji</em> — pengepresan dingin mengandalkan struktur sel alami biji yang mengandung minyak.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Muat ke pengepres tabung (3 menit)</h3>
+            <p class="text-steel-600 leading-relaxed">Muat <strong>100 kg biji bersih</strong> ke dalam tabung berlubang (pengepres tabung). Tabung Haonuo HN325 menampung 100 kg standar; tabung ganda HN365 masing-masing menampung 80–90 kg. Ratakan biji secara merata untuk mencegah tekanan tidak merata.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pengepresan pada 27–30 MPa, tahan ≤ 60 °C (~ 2 jam / batch)</h3>
+            <p class="text-steel-600 leading-relaxed">Jalankan siklus tekanan standar. Batch pengepresan dingin memakan waktu <strong>sekitar 2 jam per 100 kg</strong> — lebih lambat dari pengepresan panas sesuai desain, karena tidak ada uap untuk melunakkan dinding sel. Premium eceran Kachi Ghani adalah yang mengimbangi siklus yang lebih lama. Pantau suhu tabung — jika melebihi 60 °C, hentikan sebentar dan biarkan dingin. Ini adalah definisi hukum dari diperas dingin di India (standar FSSAI). Sisa minyak target pada bungkil: <strong>6–8 %</strong>.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Bongkar bungkil &amp; kumpulkan minyak (5 menit)</h3>
+            <p class="text-steel-600 leading-relaxed">Bungkil Kachi Ghani memiliki struktur kasar dan kering. Kumpulkan minyak dari panci tetes pengepres — perkirakan <strong>30–38 L per 100 kg biji</strong>. Gunakan penyaring kain atau pengepres penyaring untuk membuang partikel halus sebelum pembotolan.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Simpan tidak dimurnikan, botolkan dalam 72 jam</h3>
+            <p class="text-steel-600 leading-relaxed">Minyak Kachi Ghani tidak dimurnikan. Simpan dalam wadah plastik atau baja tahan karat tingkat makanan jauh dari sinar matahari langsung. Pembotolan dalam 72 jam mempertahankan rasa pedas yang dibayar premium oleh pembeli.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SOP Hot Press -->
+<section id="hot-sop" class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-steel-50 border-l-4 border-steel-400 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">SOP ② — Minyak Sawi Diperas Panas Beruap</h2>
+      <p class="text-steel-600 text-sm mt-1">Jalankan setelah batch pengepresan dingin, atau sebagai satu-satunya proses. Hasil lebih tinggi, rasa lebih ringan.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pembersihan biji — sama dengan pengepresan dingin</h3>
+            <p class="text-steel-600 leading-relaxed">Target yang sama: 7–9 % kadar air, batu dan kotoran dibuang. Pengepresan panas lebih toleran terhadap biji yang sedikit lebih kotor, tetapi hasil tetap turun jika kadar air tidak tepat.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Penguapan awal 10–15 menit pada ~ 90 °C</h3>
+            <p class="text-steel-600 leading-relaxed">Ini adalah <strong>satu-satunya perbedaan</strong> dari SOP pengepresan dingin. Gunakan pengukus listrik atau berbahan bakar kayu. Pengukusan melunakkan dinding sel, meningkatkan hasil sebesar 3–5 %, dan mengurangi rasa pedas sawi. Jangan terlalu mengukus (> 15 menit) — Anda kehilangan minyak ke uap air.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Muat biji hangat ke pengepres tabung (3 menit)</h3>
+            <p class="text-steel-600 leading-relaxed">Biji kukus hangat mengalir lebih mudah — distribusikan secara merata. Tabung akan memanas secara alami hingga ~ 80 °C selama batch pengepresan panas; ini diharapkan dan benar.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pengepresan pada 27–30 MPa (35–45 menit / batch)</h3>
+            <p class="text-steel-600 leading-relaxed">Siklus lebih singkat dari pengepresan dingin karena dinding sel yang dikukus melepaskan minyak lebih cepat. Sisa minyak target pada bungkil: <strong>6–8 %</strong> — sama dengan pengepresan dingin.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Saring &amp; isi</h3>
+            <p class="text-steel-600 leading-relaxed">Minyak berwarna lebih terang dan lebih ringan. Pengepres penyaring direkomendasikan untuk produksi curah.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Capacity & yield -->
+<section id="capacity" class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6">100 kg biji sawi — apa yang Anda dapatkan</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200 shadow-sm">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Hasil</th>
+            <th class="px-4 py-3 text-left font-semibold">Kachi Ghani pengepresan dingin</th>
+            <th class="px-4 py-3 text-left font-semibold">Pengepresan panas beruap</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Hasil minyak mentah</td><td class="px-4 py-3">30–38 kg (<strong>≈ 33–41 L</strong>)</td><td class="px-4 py-3">33–41 kg (<strong>≈ 37–46 L</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Sisa minyak pada bungkil</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Berat bungkil</td><td class="px-4 py-3">~ 62–70 kg (produk sampingan, dijual sebagai pakan ternak)</td><td class="px-4 py-3">~ 59–67 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Waktu siklus / 100 kg</td><td class="px-4 py-3">≈ 2 jam (siklus dingin, tanpa uap)</td><td class="px-4 py-3">35–45 menit + 10–15 menit persiapan uap</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Premium</td><td class="px-4 py-3">₹20–30 / L di atas sawi halus</td><td class="px-4 py-3">Dekat dengan harga pasar halus</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">Angka hasil diasumsikan biji bersih dan kering dengan kadar air 7–9 %. Biji basah atau rusak mengurangi hasil sebesar 3–7 %.</p>
+
+    <h3 class="font-display text-xl text-charcoal-900 mt-10 mb-4">Kapasitas harian berdasarkan model Haonuo</h3>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200 text-charcoal-900">
+          <tr><th class="px-4 py-2 text-left font-semibold">Model</th><th class="px-4 py-2 text-left font-semibold">Konfigurasi tabung</th><th class="px-4 py-2 text-left font-semibold">Throughput harian (pengepresan panas, 8 jam)</th><th class="px-4 py-2 text-left font-semibold">Hasil minyak harian</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200 text-steel-700">
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN325</td><td class="px-4 py-2">Tabung tunggal</td><td class="px-4 py-2">800 – 1 200 kg</td><td class="px-4 py-2">265 – 490 L</td></tr>
+          <tr class="bg-white"><td class="px-4 py-2 text-amber-700 font-medium">HN365</td><td class="px-4 py-2">Tabung ganda</td><td class="px-4 py-2">1 500 – 2 500 kg</td><td class="px-4 py-2">495 – 1 025 L</td></tr>
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN426</td><td class="px-4 py-2">Khusus pengepresan dingin (500 t)</td><td class="px-4 py-2">≈ 400 kg dingin / ≈ 1 000 kg panas</td><td class="px-4 py-2">Garis premium Kachi Ghani</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">Kapasitas berdasarkan shift 8 jam dengan satu operator, dasar pengepresan panas. Kapasitas pengepresan dingin kira-kira setengah dari pengepresan panas pada mesin yang sama — siklus dingin berjalan ~ 2 jam vs 35–45 menit.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-steel-600 mb-4">Menjalankan produksi minyak sawi atau berencana memulai? Gunakan <a href="/roi-calculator/" class="text-amber-600 font-semibold hover:underline">kalkulator ROI</a> Anda dengan angka hasil ini, lihat <a href="/products/model-comparison/" class="text-amber-600 font-semibold hover:underline">lembar perbandingan model lengkap</a>, atau kirimkan target kapasitas harian Anda untuk rekomendasi mesin tertentu.</p>
+    <a href="/id/contact/" class="inline-flex items-center gap-2 bg-steel-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-steel-800 transition-colors">
+      Dapatkan penawaran pengepres sawi →
+    </a>
+  </div>
+</section>
+
+</BaseLayout>

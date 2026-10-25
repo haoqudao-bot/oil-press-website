@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'palm-kernel-oil-pressing-sop');
+const t = getTranslations('ar');
+const title = resource?.data.title.ar || resource?.data.title.en || 'إجراءات تشغيلية قياسية لعصر زيت نواة النخيل';
+const description = resource?.data.description.ar || resource?.data.description.en || 'إجراءات تشغيلية قياسية خطوة بخطوة لاستخراج زيت نواة النخيل (PKO)';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+  { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/palm-kernel-oil-pressing-sop' },
+]};
+---
+<BaseLayout locale="ar" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500" dir="rtl">
+      <a href="/ar/" class="hover:text-amber-500">الرئيسية</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/ar/resources/" class="hover:text-amber-500">الموارد</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">إجراءات زيت نواة النخيل</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">إجراءات تشغيلية قياسية</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4" dir="rtl">إجراءات تشغيلية قياسية لعصر زيت نواة النخيل (PKO)</h1>
+    <p class="text-steel-300" dir="rtl">إجراءات تشغيلية قياسية مجربة على الأرض لاستخراج زيت نواة النخيل على مكابس هيدروليكية عالية الضغط Haonuo (42 ميجا باسكال). تكسير الأصداف → طحن النوى → الضغط الهيدروليكي → الترشيح.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">إجابة سريعة</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3" dir="rtl">تستخرج مكابس الضغط العالي Haonuo (<strong>42 ميجا باسكال</strong>) <strong>45 إلى 52 % عائد زيت</strong> من نوى النخيل المطحونة، مع زيت متبقي في الكيك <strong>6 إلى 8 %</strong>. دفعة 80 إلى 100 كجم تستغرق <strong>40 إلى 50 دقيقة</strong>. الإنتاج اليومي: <strong>650 إلى 1000 كجم</strong> (برميل واحد، 8 ساعات).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4" dir="rtl">العملية المختبرة على الأرض</h2>
+    <div class="bg-steel-50 rounded-xl p-5 border border-steel-100 mb-6">
+      <h3 class="font-display text-lg text-charcoal-900 mb-2" dir="rtl">📌 قشرة النخيل مقابل نواة النخيل — تعرف على الفرق</h3>
+      <p class="text-steel-600 text-sm mb-2" dir="rtl">هذا الإجراء مخصص لـ <strong>نواة النخيل</strong> (PKO — زيت نواة النخيل)، وليس لـ <strong>ثمرة النخيل</strong> (CPO — زيت النخيل الخام). هما منتجان مختلفان تماماً بعمليات مختلفة:</p>
+      <div class="grid sm:grid-cols-2 gap-3 text-sm">
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1" dir="rtl">🌴 ثمرة النخيل → CPO</div>
+          <p class="text-steel-600" dir="rtl">الثمرة اللحمية الحمراء/البرتقالية الخارجية. تتطلب التعقيم، الهضم، الضغط اللولبي والتوضيح. العائد 20 إلى 25 %. الأكثر شيوعاً في إندونيسيا وماليزيا.</p>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1" dir="rtl">🥥 نواة النخيل → PKO</div>
+          <p class="text-steel-600" dir="rtl">الجوز الأبيض الصلب داخل الثمرة. موضوع هذه الصفحة. يتطلب تكسير الأصداف، فصل النوى، الطحن والضغط الهيدروليكي. العائد 45 إلى 52 %. قيمة أعلى، يُستخدم في مستحضرات التجميل والأغذية.</p>
+        </div>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1" dir="rtl">تكسير الأصداف &amp; فصل النوى</h3><p class="text-steel-600 text-sm" dir="rtl">استخدم كاسر جوز النخيل لفصل النوى عن الأصداف الصلبة. استهدف نقاوة النوى <strong>≥ 95 %</strong> — الأصداف تمتص الضغط وتقلل العائد. الرطوبة <strong>6 إلى 8 %</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1" dir="rtl">طحن النوى</h3><p class="text-steel-600 text-sm" dir="rtl">اطحن النوى باستخدام كاسر بذور. الطحن الناعم (<strong>3 إلى 5 ملم</strong>) يعرض المزيد من الخلايا الحاملة للزيت — لا تفرط في الطحن إلى مسحوق. اختياري: بخار 10 دقائق عند 90 درجة مئوية لتنعيم النوى وزيادة العائد بنسبة 2 إلى 4 %.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1" dir="rtl">الضغط الهيدروليكي عالي الضغط</h3><p class="text-steel-600 text-sm" dir="rtl">حمّل 80 إلى 100 كجم من النوى المطحونة في البرميل. اضغط عند <strong>42 ميجا باسكال</strong> — نواة النخيل بذرة صلبة، الضغط القياسي 27 إلى 30 ميجا باسكال لن يحرر العائد الكامل. وقت الدورة: <strong>40 إلى 50 دقيقة</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1" dir="rtl">الترشيح &amp; الترسيب</h3><p class="text-steel-600 text-sm" dir="rtl">زيت نواة النخيل ذهبي فاتح. استخدم مكبس الترشيح للحصول على وضوح بالجملة. اتركه يترسب 72 ساعة قبل التعبئة للحصول على مظهر مثالي.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6" dir="rtl">100 كجم من نوى النخيل المطحونة — ما تحصل عليه</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">الإخراج</th><th class="px-4 py-3 text-left">الرقم</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900" dir="rtl">عائد زيت نواة النخيل</td><td class="px-4 py-3">45–52 كجم (<strong>≈ 50–58 لتر</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900" dir="rtl">زيت متبقي في الكيك</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900" dir="rtl">وزن الكيك (منتج ثانوي)</td><td class="px-4 py-3">~ 48–55 كجم (علف حيواني / سماد)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900" dir="rtl">وقت الدورة / الدفعة</td><td class="px-4 py-3">40–50 دقيقة</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4" dir="rtl">نماذج Haonuo الموصى بها</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/ar/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 مكبس هيدروليكي للضغط البارد" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2" dir="rtl">سطر البذور الصلبة للضغط البارد</h4>
+          <p class="text-sm text-steel-600" dir="rtl">500 طن / 42 ميجا باسكال. نواة النخيل بذرة صلبة غنية بالزيت — إطار HN426 للضغط البارد يحمي العائد على الزيت المميز من الدرجة التجميلية.</p>
+        </div>
+      </a>
+      <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 مكبس هيدروليكي فائق الضغط" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2" dir="rtl">العلم الصناعي</h4>
+          <p class="text-sm text-steel-600" dir="rtl">620 طن / 52 ميجا باسكال. الانتقال إلى خطوط إنتاج من 1 إلى 3 أطنان يومياً. مثالي للمشترين الذين يشغلون إنتاجاً متعدد البراميل لأنواع مختلفة من البذور الصلبة.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4" dir="rtl">انظر صفحة <a href="/ar/solutions/palm-oil-pressing/" class="text-amber-600 hover:underline">حل زيت النخيل &amp; نواة النخيل</a> لمزيد من السياق. الإنتاج اليومي لخطك؟ <a href="/ar/contact/" class="text-amber-600 font-semibold hover:underline">اسأل مهندسنا</a>.</p>
+  </div>
+</section>
+</BaseLayout>

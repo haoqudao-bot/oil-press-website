@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'palm-kernel-oil-pressing-sop');
+const t = getTranslations('fr');
+const title = resource?.data.title.fr || resource?.data.title.en || 'SOP de Pressage d\'Huile de Noix de Palme';
+const description = resource?.data.description.fr || resource?.data.description.en || 'SOP étape par étape pour l\'extraction d\'HKP';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+  { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/palm-kernel-oil-pressing-sop' },
+]};
+---
+<BaseLayout locale="fr" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/fr/" class="hover:text-amber-500">Accueil</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/fr/resources/" class="hover:text-amber-500">Ressources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Huile de Noix de Palme</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Procédure Opérationnelle Standard</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">SOP de Pressage d'Huile de Noix de Palme</h1>
+    <p class="text-steel-300">SOP testé sur le terrain pour l'extraction d'HKP sur les presses hydrauliques haute pression Haonuo (42 MPa). Concassage de coquilles → broyage de noyaux → pressage hydraulique → filtration.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">RÉPONSE RAPIDE</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Les presses haute pression Haonuo (<strong>42 MPa</strong>) extraient <strong>45 à 52 % de rendement en huile</strong> des noyaux de palme broyés, avec une huile résiduelle dans le tourteau <strong>6 à 8 %</strong>. Un lot de 80 à 100 kg prend <strong>40 à 50 min</strong>. Débit journalier : <strong>650 à 1 000 kg</strong> (baril unique, 8 h).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Procédé testé sur le terrain</h2>
+    <div class="bg-steel-50 rounded-xl p-5 border border-steel-100 mb-6">
+      <h3 class="font-display text-lg text-charcoal-900 mb-2">📌 Coquille de palme vs noyau de palme — connaître la différence</h3>
+      <p class="text-steel-600 text-sm mb-2">Ce SOP est pour le <strong>noyau de palme</strong> (HKP — huile de noyau de palme), pas pour le <strong>fruit de palme</strong> (HCP — huile de palme brute). Ce sont deux produits différents avec des procédés complètement différents :</p>
+      <div class="grid sm:grid-cols-2 gap-3 text-sm">
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1">🌴 Fruit de palme → HCP</div>
+          <p class="text-steel-600">Le fruit charnu rouge/orange extérieur. Nécessite stérilisation, digestion, pressage à vis et clarification. Rendement 20 à 25 %. Le plus courant en Indonésie et Malaisie.</p>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1">🥥 Noyau de palme → HKP</div>
+          <p class="text-steel-600">La noix blanche dure à l'intérieur du fruit. Le sujet de cette page. Nécessite concassage de coquilles, séparation des noyaux, broyage et pressage hydraulique. Rendement 45 à 52 %. Valeur plus élevée, utilisé en cosmétique et alimentation.</p>
+        </div>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Concassage de coquilles &amp; séparation des noyaux</h3><p class="text-steel-600 text-sm">Utiliser un concasseur de noix de palme pour séparer les noyaux des coquilles dures. Cibler une pureté des noyaux <strong>≥ 95 %</strong> — les coquilles absorbent la pression et réduisent le rendement. Humidité <strong>6 à 8 %</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Broyage des noyaux</h3><p class="text-steel-600 text-sm">Broyer les noyaux avec un concasseur de graines. Broyage fin (<strong>3 à 5 mm</strong>) expose plus de cellules porteuses d'huile — ne pas sur-broyer en poudre. Optionnel : vapeur 10 min à 90 °C pour adoucir les noyaux et augmenter le rendement de 2 à 4 %.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Pressage hydraulique haute pression</h3><p class="text-steel-600 text-sm">Charger 80 à 100 kg de noyaux broyés dans le baril. Presser à <strong>42 MPa</strong> — le noyau de palme est une graine dure, le 27 à 30 MPa standard ne libérera pas le rendement complet. Temps de cycle : <strong>40 à 50 min</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Filtration &amp; décantation</h3><p class="text-steel-600 text-sm">L'HKP est doré clair. Utiliser un filtre-presse pour la clarté en vrac. Laisser décanter 72 heures avant embouteillage pour un aspect optimal.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">100 kg de noyaux de palme broyés — ce que vous obtenez</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Sortie</th><th class="px-4 py-3 text-left">Chiffre</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Rendement HKP</td><td class="px-4 py-3">45–52 kg (<strong>≈ 50–58 L</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Huile résiduelle dans le tourteau</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Poids du tourteau (sous-produit)</td><td class="px-4 py-3">~ 48–55 kg (alimentation animale / engrais)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Temps de cycle / lot</td><td class="px-4 py-3">40–50 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4">Modèles Haonuo recommandés</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/fr/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 Presse Hydraulique à Froid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Ligne de Graines Dures à Froid</h4>
+          <p class="text-sm text-steel-600">500 t / 42 MPa. Le noyau de palme est une graine dure riche en huile — le châssis à froid HN426 protège le rendement sur l'huile premium de grade cosmétique.</p>
+        </div>
+      </a>
+      <a href="/fr/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 Presse Hydraulique Ultra Haute Pression" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Drapeau Industriel</h4>
+          <p class="text-sm text-steel-600">620 t / 52 MPa. Passe à des lignes de 1–3 tonnes/jour. Idéal pour les acheteurs exploitant une production multi-barils pour diverses graines dures.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">Voir la page <a href="/fr/solutions/palm-oil-pressing/" class="text-amber-600 hover:underline">Solution Huile de Palme &amp; Noix de Palme</a> pour plus de contexte. Débit journalier pour votre ligne ? <a href="/fr/contact/" class="text-amber-600 font-semibold hover:underline">Demandez à notre ingénieur</a>.</p>
+  </div>
+</section>
+</BaseLayout>

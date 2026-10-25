@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'coconut-oil-pressing-sop');
+const t = getTranslations('id');
+const title = resource?.data.title.id || resource?.data.title.en || 'SOP Pengepresan Minyak Kelapa';
+const description = resource?.data.description.id || resource?.data.description.en || 'SOP pengepresan dingin untuk minyak kelapa murni';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+  { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/coconut-oil-pressing-sop' },
+]};
+---
+<BaseLayout locale="id" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/id/" class="hover:text-amber-500">Beranda</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/id/resources/" class="hover:text-amber-500">Sumber Daya</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Minyak Kelapa</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Prosedur Operasi Standar</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">SOP Pengepresan Dingin Minyak Kelapa Murni (VCO)</h1>
+    <p class="text-steel-300">SOP pengepresan dingin untuk produksi VCO. Memerlukan <strong>bagian kontak baja tahan karat 304</strong> untuk menahan korosi air kelapa — tentukan saat memesan.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">JAWABAN CEPAT</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Mesin pengepres dingin Haonuo (<strong>HN426</strong>, ≤ 60 °C) menghasilkan <strong>30–40 % minyak dari kelapa segar parut</strong> (basis basah) atau <strong>55–60 % dari kopra</strong>, sisa minyak dalam bungkil 6–8 %. Satu batch 100 kg memakan waktu <strong>sekitar 2 jam</strong> — siklus dingin lambat karena desain, dan harga premium VCO mengimbangi hal ini. Kapasitas harian <strong>≈ 400 kg segar</strong> (8 jam, satu drum).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">Dua jalur bahan baku — mesin yang sama</h2>
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">🥥 Kelapa segar</h3>
+        <p class="text-steel-600 text-sm">Bongkar cangkang, kupas kulit cokelat, parut halus. Gunakan dalam 24 jam. Kadar air tinggi (50–55 %) — hasil 30–40 % pada berat basah.</p>
+      </div>
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">🌴 Kopra (daging kelapa kering)</h3>
+        <p class="text-steel-600 text-sm">Kelapa kering matahari atau oven, 5–7 % kadar air. Tahan berbulan-bulan dan hasil lebih per kilogram daripada segar — 55–60 % vs 30–40 % (segar pada basis basah).</p>
+      </div>
+    </div>
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Proses pengepresan dingin</h2>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Muat 100 kg kelapa parut</h3><p class="text-steel-600 text-sm">Sebarkan merata di pengepres tabung. Drum pengepres dingin harus baja tahan karat 304 — air kelapa mengikis baja lunak dalam beberapa minggu.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Pengepresan pada 27–30 MPa, ≤ 60 °C (~ 2 jam / batch)</h3><p class="text-steel-600 text-sm">Pantau suhu drum. Rasa VCO sensitif terhadap panas — jangan melebihi 60 °C. Ini adalah <strong>definisi FSSAI dari pengepresan dingin</strong> untuk minyak kelapa. Siklus dingin berjalan ~ 2 jam per batch 100 kg.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Saring &amp; botolkan</h3><p class="text-steel-600 text-sm">VCO jernih, berwarna terang. Pengepres filter memberikan hasil kristal. Botolkan dalam 24 jam untuk retensi aroma terbaik.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">100 kg kelapa parut — apa yang Anda dapatkan</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Output</th><th class="px-4 py-3 text-left">Kelapa segar</th><th class="px-4 py-3 text-left">Kopra</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Hasil VCO mentah</td><td class="px-4 py-3">30–40 kg (basis basah)</td><td class="px-4 py-3">55–60 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Sisa minyak dalam bungkil</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Waktu siklus</td><td class="px-4 py-3">≈ 2 jam</td><td class="px-4 py-3">≈ 2 jam</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">Butuh bagian kontak baja tahan karat 304 ? Beritahu kami saat penawaran — perubahan spesifikasi gratis. Lihat halaman <a href="/id/solutions/coconut-oil-pressing/" class="text-amber-600 hover:underline">Solusi Minyak Kelapa</a> untuk detail lebih lanjut.</p>
+  </div>
+</section>
+</BaseLayout>

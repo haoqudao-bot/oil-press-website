@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'mustard-oil-pressing-sop');
+const t = getTranslations('ar');
+const locale = 'ar';
+
+const title = resource?.data.title.ar || 'إجراءات تشغيلية قياسية لعصر زيت الخردل';
+const description = resource?.data.description.ar || 'إجراءات تشغيلية قياسية خطوة بخطوة لاستخراج زيت الخردل';
+const seoKeywords = resource?.data.seoKeywords || [];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/mustard-sop-hero.webp',
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+    { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/mustard-oil-pressing-sop' },
+  ],
+};
+---
+
+<BaseLayout locale={locale} title={title} description={description} keywords={seoKeywords} jsonLd={[breadcrumbLd, articleLd]}>
+
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500" dir="rtl">
+      <a href="/ar/" class="hover:text-amber-500 transition-colors">الرئيسية</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/ar/resources/" class="hover:text-amber-500 transition-colors">الموارد</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">إجراءات تشغيلية قياسية لزيت الخردل</span>
+    </nav>
+  </div>
+</section>
+
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16 md:py-20" dir="rtl">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">إجراءات تشغيلية قياسية</div>
+    <h1 class="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">إجراءات تشغيلية قياسية لعصر زيت الخردل — كاتشي غاني العصر البارد &amp; العصر الساخن بالبخار</h1>
+    <p class="text-steel-300 text-lg leading-relaxed">إجراءات تشغيلية مجربة ميدانياً لاستخراج زيت الخردل على مكابس هاونيو الهيدروليكية. يغطي زيت كاتشي غاني التقليدي المعصور بارداً (≤ 60 °C، بيع تجزئة ممتاز) والإنتاج المعصور ساخناً بالبخار (عائد أعلى، نكهة أخف).</p>
+  </div>
+</section>
+
+<!-- Quick Answer -->
+<section class="py-10 md:py-12 bg-amber-50 border-b border-amber-100" dir="rtl">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl border border-amber-200 shadow-sm p-6 md:p-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">إجابة سريعة</span>
+      </div>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mb-4">
+        تستخرج مكابس هاونيو الهيدروليكية <strong>عائد زيت 30–38 % (عصر بارد / كاتشي غاني)</strong> أو <strong>33–41 % (عصر ساخن بالبخار)</strong> من بذور الخردل النظيفة، مع زيت متبقي في الكيك بنسبة 6–8 %. مكبس HN325 أحادي البرميل يعمل بـ <strong>800–1 200 كجم/يوم</strong>؛ مكبس ثنائي البرميل أو HN365 يصل إلى <strong>1 500–2 500 كجم/يوم</strong>. نفس الماكينة لكلتا الطريقتين — فقط <em>خطوة التبخير المسبق</em> تتغير.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-12 bg-white border-b border-steel-100" dir="rtl">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-steel-600 leading-relaxed text-lg mb-6">
+      الخردل (اللفت) هو زيت الطبخ الأكثر استهلاكاً في الهند — حوالي <strong>5.5 مليون طن سنوياً</strong> عبر راجستان، أوتار براديش، هاريانا، البنغال الغربية، بنغلاديش ونيبال. يتعايش منتجان: <em>كاتشي غاني</em>، الزيت التقليدي المعصور بارداً والحار الذي يحظى بعلاوة تجزئة ₹20–30 للتر، وزيت خردل مكرر / خفيف للسوق الشامل. إجراءات التشغيل القياسية أدناه مكتوبة لمشغلي مكابس هاونيو الهيدروليكية الذين يحتاجون لتشغيل ماكينة واحدة في <strong>الوضعين في نفس اليوم</strong>.
+    </p>
+    <div class="flex flex-wrap gap-3 text-sm">
+      <a href="#cold-sop" class="bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ إجراءات عصر بارد كاتشي غاني</a>
+      <a href="#hot-sop" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ إجراءات عصر ساخن بالبخار</a>
+      <a href="#capacity" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ السعة والعائد لكل 100 كجم</a>
+      <a href="/ar/solutions/mustard-oil-pressing/" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">صفحة حل زيت الخردل</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOP Cold Press -->
+<section id="cold-sop" class="py-12 bg-white border-b border-steel-100" dir="rtl">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-amber-50 border-l-4 border-amber-500 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">إجراءات التشغيل ① — زيت خردل كاتشي غاني معصور بارداً</h2>
+      <p class="text-amber-700 text-sm mt-1">قم بتشغيل هذا أول شيء في الصباح، قبل أي دفعات مطبوخة بالبخار. ماكينة نظيفة، لا حرارة.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">تنظيف البذور (20–30 دقيقة / 100 كجم)</h3>
+            <p class="text-steel-600 leading-relaxed">أزل الحجارة والقش والمواد الغريبة باستخدام منخل أو فاصل بالجاذبية. البذور التالفة أو المتعفنة تقلل العائد وتسبب نكهات غير مرغوبة في كاتشي غاني. الرطوبة المستهدفة: <strong>7–9 %</strong>. لا تنقع أو تغسل البذور — العصر البارد يعتمد على البنية الخلوية الطبيعية للبذور الحاملة للزيت.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">التحميل في مكبس البرميل (3 دقائق)</h3>
+            <p class="text-steel-600 leading-relaxed">حمل <strong>100 كجم من البذور النظيفة</strong> في البرميل المشقوق (مكبس البرميل). برميل هاونيو HN325 يستوعب 100 كجم قياسي؛ براميل HN365 المزدوجة تستوعب 80–90 كجم لكل منها. افرد البذور بالتساوي لمنع الضغط غير المتكافئ.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">العصر عند 27–30 ميجا باسكال، الحفاظ على ≤ 60 °C (~ 2 ساعة / دفعة)</h3>
+            <p class="text-steel-600 leading-relaxed">شغل دورة الضغط القياسية. الدفعات المعصورة بارداً تستغرق <strong>حوالي ساعتين لكل 100 كجم</strong> — أبطأ من العصر الساخن حسب التصميم، لأنه لا يوجد بخار لتنعيم جدران الخلايا. علاوة بيع كاتشي غاني التجزئة هي ما يعوض الدورة الأطول. راقب درجة حرارة البرميل — إذا تجاوزت 60 °C، توقف مؤقتاً واتركه يبرد. هذا هو التعريف القانوني للمعصور بارداً في الهند (معيار FSSAI). زيت متبقي مستهدف في الكيك: <strong>6–8 %</strong>.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">تفريغ الكيك &amp; جمع الزيت (5 دقائق)</h3>
+            <p class="text-steel-600 leading-relaxed">كيك كاتشي غاني له بنية خشنة وجافة. اجمع الزيت من صينية التقطير في المكبس — توقع <strong>30–38 لتر لكل 100 كجم بذور</strong>. استخدم مرشح قماش أو مكبس ترشيح لإزالة الجسيمات الدقيقة قبل التعبئة.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">تخزين غير مكرر، تعبئة في زجاجات خلال 72 ساعة</h3>
+            <p class="text-steel-600 leading-relaxed">زيت كاتشي غاني غير مكرر. خزن في حاويات بلاستيكية أو فولاذية غذائية بعيداً عن الشمس المباشرة. التعبئة في زجاجات خلال 72 ساعة يحافظ على النكهة الحارة التي يدفع المشترون علاوة مقابلها.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SOP Hot Press -->
+<section id="hot-sop" class="py-12 bg-white border-b border-steel-100" dir="rtl">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-steel-50 border-l-4 border-steel-400 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">إجراءات التشغيل ② — زيت خردل معصور ساخناً بالبخار</h2>
+      <p class="text-steel-600 text-sm mt-1">قم بتشغيله بعد دفعات العصر البارد، أو كعملية وحيدة. عائد أعلى، نكهة أخف.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">تنظيف البذور — نفس العصر البارد</h3>
+            <p class="text-steel-600 leading-relaxed">نفس الهدف: 7–9 % رطوبة، إزالة الحجارة والحطام. العصر الساخن يتسامح مع بذور أكثر قساوة قليلاً، لكن العائد لا يزال ينخفض إذا كانت الرطوبة غير صحيحة.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">تبخير مسبق 10–15 دقيقة عند ~ 90 °C</h3>
+            <p class="text-steel-600 leading-relaxed">هذا هو <strong>الفرق الوحيد</strong> عن إجراءات العصر البارد. استخدم مبخرة كهربائية أو تعمل بالخشب. التبخير ينعّم جدران الخلايا، يرفع العائد بنسبة 3–5 %، ويقلل نكهة الخردل الحارة. لا تفرط في التبخير (> 15 دقيقة) — تفقد الزيت في بخار الماء.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">تحميل البذور الدافئة في مكبس البرميل (3 دقائق)</h3>
+            <p class="text-steel-600 leading-relaxed">البذور المبخرة الدافئة تتدفق بسهولة أكبر — وزّع بالتساوي. البرميل يسخن بشكل طبيعي إلى ~ 80 °C أثناء دفعات العصر الساخن؛ هذا متوقع وصحيح.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">العصر عند 27–30 ميجا باسكال (35–45 دقيقة / دفعة)</h3>
+            <p class="text-steel-600 leading-relaxed">الدورة أقصر من العصر البارد لأن جدران الخلايا المبخرة تطلق الزيت بشكل أسرع. زيت متبقي مستهدف في الكيك: <strong>6–8 %</strong> — نفس العصر البارد.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">ترشيح &amp; تعبئة</h3>
+            <p class="text-steel-600 leading-relaxed">الزيت أفتح لوناً وأخف. مكبس ترشيح موصى به للإنتاج بالجملة.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Capacity & yield -->
+<section id="capacity" class="py-12 bg-steel-50 border-b border-steel-100" dir="rtl">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6">100 كجم من بذور الخردل — ما تحصل عليه</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200 shadow-sm">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">الإخراج</th>
+            <th class="px-4 py-3 text-left font-semibold">كاتشي غاني عصر بارد</th>
+            <th class="px-4 py-3 text-left font-semibold">عصر ساخن بالبخار</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">عائد الزيت الخام</td><td class="px-4 py-3">30–38 كجم (<strong>≈ 33–41 لتر</strong>)</td><td class="px-4 py-3">33–41 كجم (<strong>≈ 37–46 لتر</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">الزيت المتبقي في الكيك</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">وزن الكيك</td><td class="px-4 py-3">~ 62–70 كجم (منتج ثانوي، يباع كعلف حيواني)</td><td class="px-4 py-3">~ 59–67 كجم</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">وقت الدورة / 100 كجم</td><td class="px-4 py-3">≈ 2 ساعة (دورة باردة، لا بخار)</td><td class="px-4 py-3">35–45 دقيقة + 10–15 دقيقة تحضير بالبخار</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">العلاوة</td><td class="px-4 py-3">₹20–30 / لتر فوق الخردل المكرر</td><td class="px-4 py-3">قريب من سوق المكرر</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">أرقام العائد تفترض بذور نظيفة وجافة برطوبة 7–9 %. البذور الرطبة أو التالفة تقلل العائد بنسبة 3–7 %.</p>
+
+    <h3 class="font-display text-xl text-charcoal-900 mt-10 mb-4">السعة اليومية حسب طراز هاونيو</h3>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200 text-charcoal-900">
+          <tr><th class="px-4 py-2 text-left font-semibold">الطراز</th><th class="px-4 py-2 text-left font-semibold">تكوين البرميل</th><th class="px-4 py-2 text-left font-semibold">الإنتاج اليومي (عصر ساخن، 8 ساعات)</th><th class="px-4 py-2 text-left font-semibold">الإنتاج اليومي من الزيت</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200 text-steel-700">
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN325</td><td class="px-4 py-2">برميل واحد</td><td class="px-4 py-2">800 – 1 200 كجم</td><td class="px-4 py-2">265 – 490 لتر</td></tr>
+          <tr class="bg-white"><td class="px-4 py-2 text-amber-700 font-medium">HN365</td><td class="px-4 py-2">برميلان</td><td class="px-4 py-2">1 500 – 2 500 كجم</td><td class="px-4 py-2">495 – 1 025 لتر</td></tr>
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN426</td><td class="px-4 py-2">مخصص عصر بارد (500 طن)</td><td class="px-4 py-2">≈ 400 كجم بارد / ≈ 1 000 كجم ساخن</td><td class="px-4 py-2">خط كاتشي غاني ممتاز</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">السعة بناءً على وردية 8 ساعات بمشغل واحد، أساس عصر ساخن. سعة العصر البارد هي تقريباً نصف العصر الساخن على نفس الماكينة — الدورة الباردة تستغرق ~ 2 ساعة مقابل 35–45 دقيقة.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 bg-white" dir="rtl">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-steel-600 mb-4">هل تدير إنتاج زيت الخردل أو تخطط للبدء؟ استخدم <a href="/roi-calculator/" class="text-amber-600 font-semibold hover:underline">حاسبة العائد على الاستثمار</a> بأرقام العائد هذه، انظر إلى <a href="/products/model-comparison/" class="text-amber-600 font-semibold hover:underline">جدول مقارنة الطرازات الكامل</a>، أو أرسل لنا هدف السعة اليومية لتوصية ماكينة محددة.</p>
+    <a href="/ar/contact/" class="inline-flex items-center gap-2 bg-steel-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-steel-800 transition-colors">
+      احصل على عرض سعر لمكبس زيت خردل →
+    </a>
+  </div>
+</section>
+
+</BaseLayout>

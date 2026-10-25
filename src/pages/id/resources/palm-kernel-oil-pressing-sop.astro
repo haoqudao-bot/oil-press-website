@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'palm-kernel-oil-pressing-sop');
+const t = getTranslations('id');
+const title = resource?.data.title.id || resource?.data.title.en || 'SOP Pengepresan Minyak Inti Sawit';
+const description = resource?.data.description.id || resource?.data.description.en || 'Prosedur operasi standar langkah demi langkah untuk ekstraksi minyak inti sawit (PKO)';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+  { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/palm-kernel-oil-pressing-sop' },
+]};
+---
+<BaseLayout locale="id" title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/id/" class="hover:text-amber-500">Beranda</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/id/resources/" class="hover:text-amber-500">Sumber Daya</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Minyak Inti Sawit</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Prosedur Operasi Standar</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">SOP Pengepresan Minyak Inti Sawit (PKO)</h1>
+    <p class="text-steel-300">SOP teruji lapangan untuk ekstraksi PKO pada mesin pengepres hidrolik tekanan tinggi Haonuo (42 MPa). Pemecahan cangkang → penggilingan inti → pengepresan hidrolik → penyaringan.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">JAWABAN CEPAT</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Mesin pengepres tekanan tinggi Haonuo (<strong>42 MPa</strong>) menghasilkan <strong>45–52 % hasil minyak</strong> dari inti sawit yang digiling, dengan sisa minyak dalam bungkil <strong>6–8 %</strong>. Satu batch 80–100 kg memakan waktu <strong>40–50 menit</strong>. Kapasitas harian: <strong>650–1.000 kg</strong> (satu drum, 8 jam).</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Proses teruji lapangan</h2>
+    <div class="bg-steel-50 rounded-xl p-5 border border-steel-100 mb-6">
+      <h3 class="font-display text-lg text-charcoal-900 mb-2">📌 Cangkang sawit vs inti sawit — pahami perbedaannya</h3>
+      <p class="text-steel-600 text-sm mb-2">SOP ini untuk <strong>inti sawit</strong> (PKO — minyak inti sawit), bukan untuk <strong>buah sawit</strong> (CPO — minyak sawit mentah). Keduanya produk berbeda dengan proses yang sama sekali berbeda:</p>
+      <div class="grid sm:grid-cols-2 gap-3 text-sm">
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1">🌴 Buah sawit → CPO</div>
+          <p class="text-steel-600">Daging buah merah/oranye di luar. Memerlukan sterilisasi, digestasi, pengepresan ulir dan klarifikasi. Hasil 20–25 %. Paling umum di Indonesia dan Malaysia.</p>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-steel-200">
+          <div class="text-amber-700 font-medium mb-1">🥥 Inti sawit → PKO</div>
+          <p class="text-steel-600">Kacang putih keras di dalam buah. Subjek halaman ini. Memerlukan pemecahan cangkang, pemisahan inti, penggilingan dan pengepresan hidrolik. Hasil 45–52 %. Nilai lebih tinggi, digunakan dalam kosmetik dan makanan.</p>
+        </div>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Pemecahan cangkang &amp; pemisahan inti</h3><p class="text-steel-600 text-sm">Gunakan pemecah kacang sawit untuk memisahkan inti dari cangkang keras. Targetkan kemurnian inti <strong>≥ 95 %</strong> — cangkang menyerap tekanan dan mengurangi hasil. Kelembapan <strong>6–8 %</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Penggilingan inti</h3><p class="text-steel-600 text-sm">Giling inti dengan pemecah biji. Penggilingan halus (<strong>3–5 mm</strong>) mengekspos lebih banyak sel pembawa minyak — jangan menggiling berlebih menjadi bubuk. Opsional: uap 10 menit pada 90 °C untuk melunakkan inti dan meningkatkan hasil sebesar 2–4 %.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Pengepresan hidrolik tekanan tinggi</h3><p class="text-steel-600 text-sm">Muat 80–100 kg inti giling ke dalam drum. Tekan pada <strong>42 MPa</strong> — inti sawit adalah biji keras, tekanan standar 27–30 MPa tidak akan melepaskan hasil penuh. Waktu siklus: <strong>40–50 menit</strong>.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Penyaringan &amp; pengendapan</h3><p class="text-steel-600 text-sm">PKO berwarna keemasan terang. Gunakan pengepres filter untuk kejelasan massal. Biarkan mengendap 72 jam sebelum pembotolan untuk tampilan optimal.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">100 kg inti sawit giling — apa yang Anda dapatkan</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Output</th><th class="px-4 py-3 text-left">Angka</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Hasil PKO</td><td class="px-4 py-3">45–52 kg (<strong>≈ 50–58 L</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Sisa minyak dalam bungkil</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Berat bungkil (produk sampingan)</td><td class="px-4 py-3">~ 48–55 kg (pakan ternak / pupuk)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Waktu siklus / batch</td><td class="px-4 py-3">40–50 menit</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4">Model Haonuo yang direkomendasikan</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/id/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 Mesin Pengepres Hidrolik Dingin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Jalur Biji Keras Pengepresan Dingin</h4>
+          <p class="text-sm text-steel-600">500 t / 42 MPa. Inti sawit adalah biji keras kaya minyak — rangka HN426 pengepresan dingin melindungi hasil pada minyak premium grade kosmetik.</p>
+        </div>
+      </a>
+      <a href="/id/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 Mesin Pengepres Hidrolik Tekanan Ultra Tinggi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Bendera Industri</h4>
+          <p class="text-sm text-steel-600">620 t / 52 MPa. Naik ke jalur 1–3 ton/hari. Ideal untuk pembeli yang menjalankan produksi multi-drum untuk berbagai biji keras.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">Lihat halaman <a href="/id/solutions/palm-oil-pressing/" class="text-amber-600 hover:underline">Solusi Minyak Sawit &amp; Inti Sawit</a> untuk latar belakang lebih lanjut. Kapasitas harian untuk jalur Anda? <a href="/id/contact/" class="text-amber-600 font-semibold hover:underline">Tanya insinyur kami</a>.</p>
+  </div>
+</section>
+</BaseLayout>

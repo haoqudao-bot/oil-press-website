@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'mustard-oil-pressing-sop');
+const t = getTranslations('fr');
+const locale = 'fr';
+
+const title = resource?.data.title.fr || 'SOP Pressage Huile de Moutarde';
+const description = resource?.data.description.fr || 'Procédure opérationnelle standard pour l\'extraction d\'huile de moutarde';
+const seoKeywords = resource?.data.seoKeywords || [];
+const publishedAt = resource?.data.publishedAt || new Date();
+const updatedAt = resource?.data.updatedAt || publishedAt;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: 'https://www.hydoilpress.com/images/mustard-sop-hero.webp',
+  author: { '@type': 'Organization', name: 'Haonuo Engineering Team', url: 'https://www.hydoilpress.com/about' },
+  publisher: { '@type': 'Organization', name: 'Haonuo Machinery', logo: { '@type': 'ImageObject', url: 'https://www.hydoilpress.com/apple-touch-icon.png' } },
+  datePublished: publishedAt.toISOString(),
+  dateModified: updatedAt.toISOString(),
+  keywords: seoKeywords.join(', '),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+    { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+    { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/mustard-oil-pressing-sop' },
+  ],
+};
+---
+
+<BaseLayout locale={locale} title={title} description={description} keywords={seoKeywords} jsonLd={[breadcrumbLd, articleLd]}>
+
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/fr/" class="hover:text-amber-500 transition-colors">Accueil</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/fr/resources/" class="hover:text-amber-500 transition-colors">Ressources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Huile de Moutarde</span>
+    </nav>
+  </div>
+</section>
+
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16 md:py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Procédure Opérationnelle Standard</div>
+    <h1 class="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">SOP Pressage Huile de Moutarde — Kachi Ghani Pressage à Froid &amp; Pressage à Chaud à la Vapeur</h1>
+    <p class="text-steel-300 text-lg leading-relaxed">Procédure d'opération testée sur le terrain pour l'extraction d'huile de moutarde sur les presses hydrauliques Haonuo. Couvre à la fois l'huile traditionnelle Kachi Ghani pressée à froid (≤ 60 °C, vente au détail premium) et la production pressée à chaud à la vapeur (rendement plus élevé, saveur plus douce).</p>
+  </div>
+</section>
+
+<!-- Quick Answer -->
+<section class="py-10 md:py-12 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl border border-amber-200 shadow-sm p-6 md:p-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">RÉPONSE RAPIDE</span>
+      </div>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mb-4">
+        Les presses hydrauliques Haonuo extraient <strong>30–38 % de rendement en huile (pressage à froid / Kachi Ghani)</strong> ou <strong>33–41 % (pressage à chaud à la vapeur)</strong> de graines de moutarde propres, avec une huile résiduelle dans le tourteau de 6–8 %. Une presse HN325 à un baril fonctionne à <strong>800–1 200 kg/jour</strong> ; un double baril ou HN365 atteint <strong>1 500–2 500 kg/jour</strong>. Même machine pour les deux méthodes — seule l'<em>étape de pré-vapeur</em> change.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-steel-600 leading-relaxed text-lg mb-6">
+      La moutarde (colza) est l'huile de cuisson la plus consommée en Inde — environ <strong>5,5 millions de tonnes par an</strong> à travers le Rajasthan, l'Uttar Pradesh, l'Haryana, le Bengale-Occidental, le Bangladesh et le Népal. Deux produits coexistent : <em>Kachi Ghani</em>, l'huile traditionnelle pressée à froid et piquante qui bénéficie d'une prime au détail de ₹20–30 par litre, et l'huile de moutarde raffinée / douce pour le marché de masse. Le SOP ci-dessous est écrit pour les opérateurs de presses hydrauliques Haonuo qui ont besoin de faire fonctionner une machine dans <strong>les deux modes le même jour</strong>.
+    </p>
+    <div class="flex flex-wrap gap-3 text-sm">
+      <a href="#cold-sop" class="bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ SOP Pressage à Froid Kachi Ghani</a>
+      <a href="#hot-sop" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ SOP Pressage à Chaud à la Vapeur</a>
+      <a href="#capacity" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">↓ Capacité &amp; Rendement par 100 kg</a>
+      <a href="/fr/solutions/mustard-oil-pressing/" class="bg-steel-100 text-charcoal-900 hover:bg-steel-200 border border-steel-200 px-4 py-2 rounded-lg font-medium transition-colors">Page Solution Huile de Moutarde</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOP Cold Press -->
+<section id="cold-sop" class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-amber-50 border-l-4 border-amber-500 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">SOP ① — Huile de Moutarde Kachi Ghani Pressée à Froid</h2>
+      <p class="text-amber-700 text-sm mt-1">À exécuter le matin, avant tout lot cuit à la vapeur. Machine propre, pas de chaleur.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Nettoyage des graines (20–30 min / 100 kg)</h3>
+            <p class="text-steel-600 leading-relaxed">Éliminez les pierres, la paille et les corps étrangers avec un vanner ou un séparateur par gravité. Les graines endommagées ou moisies réduisent le rendement et apportent des goûts indésirables au Kachi Ghani. Teneur en humidité cible : <strong>7–9 %</strong>. Ne faites <em>pas</em> tremper ou laver les graines — le pressage à froid dépend de la structure cellulaire naturelle des graines porteuses d'huile.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Chargement dans la presse à baril (3 min)</h3>
+            <p class="text-steel-600 leading-relaxed">Chargez <strong>100 kg de graines propres</strong> dans le baril à fentes (presse à baril). Le baril Haonuo HN325 accepte 100 kg en standard ; les doubles barils HN365 acceptent 80–90 kg chacun. Étalez les graines uniformément pour éviter une pression inégale.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pressage à 27–30 MPa, maintenir ≤ 60 °C (~ 2 h / lot)</h3>
+            <p class="text-steel-600 leading-relaxed">Exécutez le cycle de pression standard. Les lots pressés à froid prennent <strong>environ 2 heures par 100 kg</strong> — plus lent que le pressage à chaud par conception, car il n'y a pas de vapeur pour ramollir les parois cellulaires. La prime au détail du Kachi Ghani compense le cycle plus long. Surveillez la température du baril — si elle dépasse 60 °C, faites une pause et laissez refroidir. C'est la définition légale du pressé à froid en Inde (norme FSSAI). Huile résiduelle cible dans le tourteau : <strong>6–8 %</strong>.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Déchargement du tourteau &amp; collecte de l'huile (5 min)</h3>
+            <p class="text-steel-600 leading-relaxed">Le tourteau Kachi Ghani a une structure grossière et sèche. Collectez l'huile dans le bac de récupération de la presse — prévoyez <strong>30–38 L par 100 kg de graines</strong>. Utilisez un filtre tissu ou une presse filtrante pour éliminer les particules fines avant l'embouteillage.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Stockage non raffiné, embouteillage dans les 72 heures</h3>
+            <p class="text-steel-600 leading-relaxed">L'huile Kachi Ghani est non raffinée. Stockez dans des conteneurs alimentaires en plastique ou inox à l'abri du soleil direct. L'embouteillage dans les 72 heures préserve la saveur piquante pour laquelle les acheteurs paient une prime.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SOP Hot Press -->
+<section id="hot-sop" class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-steel-50 border-l-4 border-steel-400 pl-4 mb-6">
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">SOP ② — Huile de Moutarde Pressée à Chaud à la Vapeur</h2>
+      <p class="text-steel-600 text-sm mt-1">À exécuter après les lots pressés à froid, ou comme unique procédé. Rendement plus élevé, saveur plus douce.</p>
+    </div>
+
+    <ol class="space-y-6">
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Nettoyage des graines — identique au pressage à froid</h3>
+            <p class="text-steel-600 leading-relaxed">Même cible : 7–9 % d'humidité, pierres et débris éliminés. Le pressage à chaud tolère des graines légèrement plus sales, mais le rendement baisse quand même si l'humidité est incorrecte.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pré-vapeur 10–15 min à ~ 90 °C</h3>
+            <p class="text-steel-600 leading-relaxed">C'est la <strong>seule différence</strong> avec le SOP pressage à froid. Utilisez un cuiseur à vapeur électrique ou à bois. La cuisson à la vapeur ramollit les parois cellulaires, augmente le rendement de 3–5 % et réduit la saveur piquante de la moutarde. Ne sur-passeez pas 15 min — vous perdez de l'huile dans la vapeur d'eau.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Chargement des graines chaudes dans la presse à baril (3 min)</h3>
+            <p class="text-steel-600 leading-relaxed">Les graines cuites à la vapeur chaudes s'écoulent plus facilement — répartissez-les uniformément. Le baril chauffe naturellement à ~ 80 °C pendant les lots pressés à chaud ; c'est attendu et correct.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">4</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Pressage à 27–30 MPa (35–45 min / lot)</h3>
+            <p class="text-steel-600 leading-relaxed">Le cycle est plus court que le pressage à froid car les parois cellulaires cuites à la vapeur libèrent l'huile plus rapidement. Huile résiduelle cible dans le tourteau : <strong>6–8 %</strong> — identique au pressage à froid.</p>
+          </div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-6 border border-steel-100">
+        <div class="flex items-start gap-4">
+          <span class="flex-shrink-0 w-9 h-9 bg-steel-700 text-white font-bold rounded-full flex items-center justify-center">5</span>
+          <div>
+            <h3 class="font-display text-lg text-charcoal-900 mb-2">Filtration &amp; remplissage</h3>
+            <p class="text-steel-600 leading-relaxed">L'huile est plus claire et plus douce. Presse filtrante recommandée pour la production en vrac.</p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Capacity & yield -->
+<section id="capacity" class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6">100 kg de graines de moutarde — ce que vous obtenez</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200 shadow-sm">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold">Sortie</th>
+            <th class="px-4 py-3 text-left font-semibold">Kachi Ghani pressage à froid</th>
+            <th class="px-4 py-3 text-left font-semibold">Pressage à chaud à la vapeur</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Rendement en huile brute</td><td class="px-4 py-3">30–38 kg (<strong>≈ 33–41 L</strong>)</td><td class="px-4 py-3">33–41 kg (<strong>≈ 37–46 L</strong>)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Huile résiduelle dans le tourteau</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Poids du tourteau</td><td class="px-4 py-3">~ 62–70 kg (sous-produit, vendu comme aliment pour animaux)</td><td class="px-4 py-3">~ 59–67 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Temps de cycle / 100 kg</td><td class="px-4 py-3">≈ 2 h (cycle froid, pas de vapeur)</td><td class="px-4 py-3">35–45 min + 10–15 min de préparation à la vapeur</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Prime</td><td class="px-4 py-3">₹20–30 / L par rapport à l'huile de moutarde raffinée</td><td class="px-4 py-3">Proche du prix du marché raffiné</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">Les chiffres de rendement supposent des graines propres et sèches à 7–9 % d'humidité. Des graines humides ou endommagées réduisent le rendement de 3–7 %.</p>
+
+    <h3 class="font-display text-xl text-charcoal-900 mt-10 mb-4">Capacité quotidienne par modèle Haonuo</h3>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-200 text-charcoal-900">
+          <tr><th class="px-4 py-2 text-left font-semibold">Modèle</th><th class="px-4 py-2 text-left font-semibold">Configuration du baril</th><th class="px-4 py-2 text-left font-semibold">Débit quotidien (pressage à chaud, 8 h)</th><th class="px-4 py-2 text-left font-semibold">Production quotidienne d'huile</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-200 text-steel-700">
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN325</td><td class="px-4 py-2">Baril simple</td><td class="px-4 py-2">800 – 1 200 kg</td><td class="px-4 py-2">265 – 490 L</td></tr>
+          <tr class="bg-white"><td class="px-4 py-2 text-amber-700 font-medium">HN365</td><td class="px-4 py-2">Double baril</td><td class="px-4 py-2">1 500 – 2 500 kg</td><td class="px-4 py-2">495 – 1 025 L</td></tr>
+          <tr><td class="px-4 py-2 text-amber-700 font-medium">HN426</td><td class="px-4 py-2">Dédié pressage à froid (500 t)</td><td class="px-4 py-2">≈ 400 kg froid / ≈ 1 000 kg chaud</td><td class="px-4 py-2">Ligne premium Kachi Ghani</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-steel-500 mt-3">Capacité basée sur un poste de 8 heures avec un opérateur, base pressage à chaud. La capacité de pressage à froid est environ la moitié du pressage à chaud sur la même machine — le cycle froid dure ~ 2 h contre 35–45 min.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-steel-600 mb-4">Vous exploitez une production d'huile de moutarde ou prévoyez de commencer ? Utilisez notre <a href="/roi-calculator/" class="text-amber-600 font-semibold hover:underline">calculateur ROI</a> avec ces chiffres de rendement, consultez le <a href="/products/model-comparison/" class="text-amber-600 font-semibold hover:underline">tableau comparatif complet des modèles</a>, ou envoyez-nous votre objectif de capacité quotidienne pour une recommandation de machine spécifique.</p>
+    <a href="/fr/contact/" class="inline-flex items-center gap-2 bg-steel-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-steel-800 transition-colors">
+      Obtenez un devis de presse à huile de moutarde →
+    </a>
+  </div>
+</section>
+
+</BaseLayout>
