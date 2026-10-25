@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'shea-butter-pressing-sop');
+const t = getTranslations('ar');
+const locale = 'ar';
+const title = resource?.data.title.ar || 'إجراءات تشغيلية قياسية لعصر زبدة الشيا';
+const description = resource?.data.description.ar || 'إجراءات تشغيلية قياسية لاستخراج زبدة الشيا';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
+  { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/shea-butter-pressing-sop' },
+]};
+---
+<BaseLayout locale={locale} title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500" dir="rtl">
+      <a href="/ar/" class="hover:text-amber-500">الرئيسية</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/ar/resources/" class="hover:text-amber-500">الموارد</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">إجراءات تشغيلية قياسية لزبدة الشيا</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4" dir="rtl">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">إجراءات تشغيلية قياسية</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">إجراءات تشغيلية قياسية لعصر زبدة الشيا — إنتاج غرب أفريقيا</h1>
+    <p class="text-steel-300">إجراءات تشغيلية قياسية لاستخراج زبدة الشيا غير المكررة. زبدة الشيا تذوب عند ~ 34 °C — **الضغط البارد والساخن يعملان كلاهما**، مع اختلافات في العائد والجودة. الضغط البارد (HN426، ≤ 60 °C) يحافظ على جودة ممتازة من الدرجة التجميلية؛ الضغط الساخن (التحميص عند 120 °C) يزيد العائد لجودة غذائية.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4" dir="rtl">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">إجابة سريعة</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">تستخرج مكابس Haonuo **عائدًا من 40 إلى 48 %** من جوز الشيا. مساران للإنتاج : **الضغط البارد** على HN426 (≤ 60 °C، عائد 40 إلى 43 %، درجة تجميلية ممتازة) و **الضغط الساخن** مع التحميص عند 120 °C (عائد 45 إلى 48 %، درجة غذائية). دفعة 80 إلى 100 كجم، دورة **45 إلى 55 دقيقة ساخن / حوالي 2 ساعة بارد**. زيت متبقي في الكيك **6 إلى 8 %**.</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">بارد مقابل ساخن — مساران للإنتاج</h2>
+    <p class="text-steel-600 mb-6">زبدة الشيا تذوب عند **34-38 درجة مئوية**، لذلك على عكس السمسم أو الفول السوداني، يختلف سلوكها بشكل حاد حسب درجة حرارة الضغط. **عند 40 درجة مئوية وأكثر**، يلين الدهون بما يكفي للضغط الهيدروليكي — وهذا هو سبب عمل الضغط البارد HN426 للشيا (نطاق تشغيله ≤ 60 درجة مئوية فوق نقطة الانصهار). المقايضة هي العائد : الضغط البارد يحافظ على المزيد من الدهون غير المشبعة (ممتاز تجميلياً) ولكن يطلق أقل بقليل من الدهون الكلية. الضغط الساخن عند 120 درجة مئوية يزيد العائد (غذائي بالجملة) ولكن يغمق الزبدة ويقلل محتوى الفيتامينات.</p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded">الضغط البارد</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">HN426 — درجة تجميلية</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• المعالجة المسبقة : تحميص خفيف 40-50 درجة مئوية (اختياري)، ثم طحن</li>
+          <li>• درجة حرارة الضغط : ≤ 60 درجة مئوية</li>
+          <li>• الدورة : حوالي 2 ساعة / دفعة 100 كجم</li>
+          <li>• العائد : **40 إلى 43 %** (دهون أنظف، ممتاز أعلى)</li>
+          <li>• المشتري المستهدف : شركات مستحضرات التجميل، موزعون عضويون</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 rounded-xl p-5 border border-amber-200">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-amber-200 text-amber-800 text-xs font-semibold px-2 py-1 rounded">الضغط الساخن</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">أي موديل Haonuo — درجة غذائية</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• المعالجة المسبقة : تحميص 25-30 دقيقة عند **120 درجة مئوية**</li>
+          <li>• درجة حرارة الضغط : ~ 80 درجة مئوية بعد التحميص</li>
+          <li>• الدورة : 45-55 دقيقة / دفعة 100 كجم</li>
+          <li>• العائد : **45 إلى 48 %** (عائد أقصى من الدهون الكلية)</li>
+          <li>• المشتري المستهدف : معالجو الأغذية، مصدرون بالجملة</li>
+        </ul>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">تكسير وتنظيف جوز الشيا</h3><p class="text-steel-600 text-sm">إزالة القشور والمواد الغريبة. فرز حسب الحجم — حجم موحد = تحميص موحد.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">تحميص 25-30 دقيقة عند **120 درجة مئوية** (ضغط ساخن) أو تخطي (ضغط بارد)</h3><p class="text-steel-600 text-sm"><strong>الضغط الساخن :</strong> محمص تقليدي يعمل بالخشب أو كهربائي عند 120 درجة مئوية — هذا غير قابل للتفاوض للحصول على أقصى عائد، لأن دهون الشيا لا تذوب تماماً إلا فوق 100 درجة مئوية. <strong>الضغط البارد :</strong> تخطي التحميص أو القيام بتسخين خفيف فقط عند 40-50 درجة مئوية. التحميص يغمق الجوز، يلين جدران الخلايا، ويقلل لزوجة الدهون. لا تحرق.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">طحن إلى معجون ناعم</h3><p class="text-steel-600 text-sm">مطحنة بذور أو طاحونة حجرية. حجم الجسيمات المستهدف **≤ 3 مم**. معجون الشيا قابل للطرق، وليس مسحوقاً — هذا صحيح.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">الضغط الهيدروليكي</h3><p class="text-steel-600 text-sm">تحميل 80-100 كجم من المعجون. <strong>الضغط الساخن :</strong> 35-42 ميجا باسكال، دورة 45-55 دقيقة، الزبدة تتدفق عند حوالي 80 درجة مئوية. <strong>الضغط البارد (HN426) :</strong> ≤ 60 درجة مئوية، دورة حوالي 2 ساعة، الزبدة تتدفق عند حوالي 50 درجة مئوية. العائد البارد هو 40 إلى 43 % مقابل 45 إلى 48 % ساخن، ولكن الجودة الممتازة التجميلية تبرر الاختيار.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">5</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">الترشيح والتبريد</h3><p class="text-steel-600 text-sm">زبدة الشيا تتصلب في درجة حرارة الغرفة. ترشيح بينما هي دافئة (حوالي 40 درجة مئوية)، ثم صب في قوالب وترك لتتصلب.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4" dir="rtl">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">دفعة 100 كجم من معجون جوز الشيا — ما تحصل عليه (بارد مقابل ساخن)</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">الإخراج</th><th class="px-4 py-3 text-left">الضغط البارد (HN426، ≤ 60 درجة مئوية)</th><th class="px-4 py-3 text-left">الضغط الساخن (تحميص 120 درجة مئوية)</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">عائد زبدة الشيا الخام</td><td class="px-4 py-3">40-43 كجم</td><td class="px-4 py-3">45-48 كجم</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">زيت متبقي في الكيك</td><td class="px-4 py-3">6-8 %</td><td class="px-4 py-3">6-8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">الكيك (منتج ثانوي)</td><td class="px-4 py-3">حوالي 57-60 كجم (سماد)</td><td class="px-4 py-3">حوالي 52-55 كجم (سماد)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">وقت الدورة / دفعة</td><td class="px-4 py-3">حوالي 2 ساعة</td><td class="px-4 py-3">45-55 دقيقة</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">درجة الزبدة</td><td class="px-4 py-3">ممتاز تجميلي</td><td class="px-4 py-3">غذائي بالجملة</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4">الموديلات الموصى بها من Haonuo</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/ar/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 مكبس زيت هيدروليكي بارد" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">خط بارد وساخن للشيا</h4>
+          <p class="text-sm text-steel-600">500 طن / 42 ميجا باسكال. يتعامل مع كل من الضغط البارد درجة تجميلية والضغط الساخن درجة غذائية للشيا. دورة باردة لمدة 2 ساعة تحافظ على الدهون غير المشبعة للحصول على سعر ممتاز.</p>
+        </div>
+      </a>
+      <a href="/ar/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 مكبس هيدروليكي عالي الضغط" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">المقياس الصناعي</h4>
+          <p class="text-sm text-steel-600">620 طن / 52 ميجا باسكال. لعمليات زبدة الشيا بعدة أطنان يومياً. يتعامل مع الأصناف ذات القشور الأكثر صلابة مع زيت متبقي ثابت في الكيك.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4" dir="rtl">
+    <p class="text-steel-600 mb-4">انظر <a href="/ar/solutions/shea-butter-pressing/" class="text-amber-600 hover:underline">صفحة حل الشيا</a> للحصول على مزيد من التفاصيل. مراجع غانا / نيجيريا / بوركينا فاسو متاحة.</p>
+  </div>
+</section>
+</BaseLayout>

@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'shea-butter-pressing-sop');
+const t = getTranslations('fr');
+const locale = 'fr';
+const title = resource?.data.title.fr || 'SOP de pressage du beurre de karité';
+const description = resource?.data.description.fr || 'SOP pour l\'extraction du beurre de karité';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
+  { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/shea-butter-pressing-sop' },
+]};
+---
+<BaseLayout locale={locale} title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/fr/" class="hover:text-amber-500">Accueil</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/fr/resources/" class="hover:text-amber-500">Ressources</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Beurre de Karité</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Procédure Opérationnelle Standard</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">SOP de pressage du beurre de karité — Production ouest-africaine</h1>
+    <p class="text-steel-300">SOP pour l'extraction du beurre de karité brut. Le karité fond à ~ 34 °C — <strong>le pressage à froid et à chaud fonctionnent tous deux</strong>, avec des rendements et des qualités différents. Le pressage à froid (HN426, ≤ 60 °C) préserve une qualité premium de grade cosmétique ; le pressage à chaud (torréfaction à 120 °C) maximise le rendement pour une qualité alimentaire.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">RÉPONSE RAPIDE</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Les presses Haonuo extraient <strong>40–48 % de rendement</strong> des noix de karité. Deux voies de production : <strong>pressage à froid</strong> sur HN426 (≤ 60 °C, rendement 40–43 %, grade cosmétique premium) et <strong>pressage à chaud</strong> avec torréfaction à 120 °C (45–48 % de rendement, grade alimentaire). Lot de 80–100 kg, cycle <strong>45–55 min à chaud / ≈ 2 h à froid</strong>. Huile résiduelle dans le tourteau <strong>6–8 %</strong>.</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">À froid vs à chaud — deux voies de production</h2>
+    <p class="text-steel-600 mb-6">Le beurre de karité fond à <strong>34–38 °C</strong>, donc contrairement au sésame ou à l'arachide, son comportement diffère nettement selon la température de pressage. <strong>À 40 °C et plus</strong>, la graisse se ramollit suffisamment pour le pressage hydraulique — c'est pourquoi le pressage à froid HN426 fonctionne pour le karité (sa plage de fonctionnement ≤ 60 °C est au-dessus du point de fusion). Le compromis est le rendement : le pressage à froid conserve plus de graisses insaturées (premium cosmétique) mais libère légèrement moins de graisse totale. Le pressage à chaud à 120 °C maximise le rendement (alimentaire en vrac) mais fonce le beurre et diminue la teneur en vitamines.</p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded">PRESSAGE À FROID</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">HN426 — grade cosmétique</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• Pré-traitement : légère torréfaction 40–50 °C (optionnel), puis broyage</li>
+          <li>• Température de pressage : ≤ 60 °C</li>
+          <li>• Cycle : ≈ 2 h / lot de 100 kg</li>
+          <li>• Rendement : <strong>40–43 %</strong> (graisse plus propre, premium plus élevé)</li>
+          <li>• Acheteur cible : entreprises cosmétiques, distributeurs biologiques</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 rounded-xl p-5 border border-amber-200">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-amber-200 text-amber-800 text-xs font-semibold px-2 py-1 rounded">PRESSAGE À CHAUD</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">Toute presse Haonuo — grade alimentaire</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• Pré-traitement : torréfaction 25–30 min à <strong>120 °C</strong></li>
+          <li>• Température de pressage : ~ 80 °C après torréfaction</li>
+          <li>• Cycle : 45–55 min / lot de 100 kg</li>
+          <li>• Rendement : <strong>45–48 %</strong> (rendement maximal de graisse totale)</li>
+          <li>• Acheteur cible : transformateurs alimentaires, exportateurs en vrac</li>
+        </ul>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Casser et nettoyer les noix de karité</h3><p class="text-steel-600 text-sm">Retirer les coques et les corps étrangers. Trier par taille — taille uniforme = torréfaction uniforme.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Torréfaction 25–30 min à <strong>120 °C</strong> (pressage à chaud) ou sauter (pressage à froid)</h3><p class="text-steel-600 text-sm"><strong>Pressage à chaud :</strong> torréfacteur traditionnel à bois ou électrique à 120 °C — ceci est non négociable pour un rendement maximal, car la graisse de karité ne se liquéfie pleinement qu'au-dessus de 100 °C. <strong>Pressage à froid :</strong> sauter la torréfaction ou faire un léger réchauffement à 40–50 °C seulement. La torréfaction brunit les noix, ramollit les parois cellulaires et diminue la viscosité de la graisse. Ne pas brûler.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Broyer en pâte fine</h3><p class="text-steel-600 text-sm">Broyeur à graines ou meule en pierre. Taille de particule cible <strong>≤ 3 mm</strong>. La pâte de karité est malléable, pas poudreuse — c'est correct.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Pressage hydraulique</h3><p class="text-steel-600 text-sm">Charger 80–100 kg de pâte. <strong>Pressage à chaud :</strong> 35–42 MPa, cycle 45–55 min, le beurre coule à ~ 80 °C. <strong>Pressage à froid (HN426) :</strong> ≤ 60 °C, cycle ≈ 2 h, le beurre coule à ~ 50 °C. Le rendement à froid est de 40–43 % contre 45–48 % à chaud, mais la qualité premium cosmétique justifie le choix.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">5</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Filtrer et refroidir</h3><p class="text-steel-600 text-sm">Le beurre de karité se solidifie à température ambiante. Filtrer pendant qu'il est chaud (~ 40 °C), puis verser dans des moules et laisser prendre.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">Lot de 100 kg de pâte de karité — ce que vous obtenez (à froid vs à chaud)</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Sortie</th><th class="px-4 py-3 text-left">Pressage à froid (HN426, ≤ 60 °C)</th><th class="px-4 py-3 text-left">Pressage à chaud (torréfaction 120 °C)</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Rendement en beurre de karité brut</td><td class="px-4 py-3">40–43 kg</td><td class="px-4 py-3">45–48 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Huile résiduelle dans le tourteau</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Tourteau (sous-produit)</td><td class="px-4 py-3">~ 57–60 kg (engrais)</td><td class="px-4 py-3">~ 52–55 kg (engrais)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Temps de cycle / lot</td><td class="px-4 py-3">≈ 2 h</td><td class="px-4 py-3">45–55 min</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Grade du beurre</td><td class="px-4 py-3">Premium cosmétique</td><td class="px-4 py-3">Alimentaire en vrac</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4">Modèles Haonuo recommandés</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/fr/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 Pressage Hydraulique à Froid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Ligne à froid et à chaud pour karité</h4>
+          <p class="text-sm text-steel-600">500 t / 42 MPa. Gère à la fois le pressage à froid grade cosmétique et le pressage à chaud grade alimentaire pour le karité. Le cycle à froid de 2 h conserve les graisses insaturées pour un achat premium.</p>
+        </div>
+      </a>
+      <a href="/fr/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 Presse Hydraulique Ultra Haute Pression" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Échelle industrielle</h4>
+          <p class="text-sm text-steel-600">620 t / 52 MPa. Pour les opérations de beurre de karité de plusieurs tonnes par jour. Gère les variétés à coque plus dure avec une huile résiduelle constante dans le tourteau.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">Voir la <a href="/fr/solutions/shea-butter-pressing/" class="text-amber-600 hover:underline">page Solution Karité</a> pour plus de détails. Références Ghana / Nigeria / Burkina Faso disponibles.</p>
+  </div>
+</section>
+</BaseLayout>

@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+const resources = await getCollection('resources');
+const resource = resources.find(r => r.slug === 'shea-butter-pressing-sop');
+const t = getTranslations('id');
+const locale = 'id';
+const title = resource?.data.title.id || 'SOP Pengepresan Mentega Shea';
+const description = resource?.data.description.id || 'SOP ekstraksi mentega shea';
+const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
+  { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/shea-butter-pressing-sop' },
+]};
+---
+<BaseLayout locale={locale} title={title} description={description} jsonLd={[breadcrumbLd]}>
+<section class="bg-steel-50 py-4 border-b border-steel-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <nav class="flex items-center gap-2 text-sm text-steel-500">
+      <a href="/id/" class="hover:text-amber-500">Beranda</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/id/resources/" class="hover:text-amber-500">Sumber Daya</a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="text-charcoal-900 font-semibold">SOP Mentega Shea</span>
+    </nav>
+  </div>
+</section>
+<section class="bg-gradient-to-br from-steel-900 to-steel-800 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="inline-block bg-amber-500 text-charcoal-900 text-xs font-semibold px-3 py-1 rounded-full mb-4">Prosedur Operasi Standar</div>
+    <h1 class="font-display text-3xl md:text-4xl text-white mb-4">SOP Pengepresan Mentega Shea — Produksi Afrika Barat</h1>
+    <p class="text-steel-300">SOP untuk ekstraksi mentega shea mentah. Mentega shea meleleh pada ~ 34 °C — **pengepresan dingin dan panas keduanya bekerja**, dengan hasil dan kualitas yang berbeda. Pengepresan dingin (HN426, ≤ 60 °C) mempertahankan kualitas premium kelas kosmetik; pengepresan panas (pemanggangan 120 °C) memaksimalkan hasil untuk kualitas makanan.</p>
+  </div>
+</section>
+<section class="py-10 bg-amber-50 border-b border-amber-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-2xl border border-amber-200 p-6 md:p-8">
+      <span class="bg-amber-500 text-charcoal-900 text-xs font-bold px-2 py-0.5 rounded">JAWABAN CEPAT</span>
+      <p class="text-charcoal-900 font-medium text-lg leading-relaxed mt-3">Mesin pengepres Haonuo menghasilkan **40–48 % hasil** dari biji shea. Dua jalur produksi : **pengepresan dingin** pada HN426 (≤ 60 °C, hasil 40–43 %, kelas kosmetik premium) dan **pengepresan panas** dengan pemanggangan 120 °C (45–48 % hasil, kelas makanan). Batch 80–100 kg, siklus **45–55 menit panas / ≈ 2 jam dingin**. Sisa minyak dalam kue **6–8 %**.</p>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-4">Dingin vs Panas — Dua Jalur Produksi</h2>
+    <p class="text-steel-600 mb-6">Mentega shea meleleh pada **34–38 °C**, jadi tidak seperti wijen atau kacang tanah, perilakunya berbeda tajam tergantung suhu pengepresan. **Pada 40 °C ke atas**, lemak melunak cukup untuk pengepresan hidrolik — inilah sebabnya pengepresan dingin HN426 bekerja untuk shea (rentang operasinya ≤ 60 °C berada di atas titik leleh). Trade-off adalah hasilnya : pengepresan dingin mempertahankan lebih banyak lemak tak jenuh (premium kosmetik) tetapi melepaskan sedikit lebih sedikit lemak total. Pengepresan panas pada 120 °C memaksimalkan hasil (makanan curah) tetapi menggelapkan mentega dan menurunkan kandungan vitamin.</p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded">PENGEPRESAN DINGIN</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">HN426 — kelas kosmetik</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• Pra-perlakuan : pemanggangan ringan 40–50 °C (opsional), lalu penggilingan</li>
+          <li>• Suhu pengepresan : ≤ 60 °C</li>
+          <li>• Siklus : ≈ 2 jam / batch 100 kg</li>
+          <li>• Hasil : **40–43 %** (lemak lebih bersih, premium lebih tinggi)</li>
+          <li>• Pembeli target : perusahaan kosmetik, distributor organik</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 rounded-xl p-5 border border-amber-200">
+        <div class="flex items-center gap-2 mb-2"><span class="bg-amber-200 text-amber-800 text-xs font-semibold px-2 py-1 rounded">PENGEPRESAN PANAS</span></div>
+        <h3 class="font-display text-lg text-charcoal-900 mb-2">Semua model Haonuo — kelas makanan</h3>
+        <ul class="text-sm text-steel-600 space-y-1">
+          <li>• Pra-perlakuan : pemanggangan 25–30 menit pada **120 °C**</li>
+          <li>• Suhu pengepresan : ~ 80 °C setelah pemanggangan</li>
+          <li>• Siklus : 45–55 menit / batch 100 kg</li>
+          <li>• Hasil : **45–48 %** (hasil maksimum lemak total)</li>
+          <li>• Pembeli target : pengolah makanan, eksportir curah</li>
+        </ul>
+      </div>
+    </div>
+    <ol class="space-y-4">
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">1</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Pecah dan bersihkan biji shea</h3><p class="text-steel-600 text-sm">Hapus cangkang dan benda asing. Sortir berdasarkan ukuran — ukuran seragam = pemanggangan seragam.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">2</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Panggang 25–30 menit pada **120 °C** (pengepresan panas) atau lewati (pengepresan dingin)</h3><p class="text-steel-600 text-sm"><strong>Pengepresan panas :</strong> pemanggang tradisional kayu atau listrik pada 120 °C — ini tidak dapat dinegosiasikan untuk hasil maksimal, karena lemak shea hanya mencair sepenuhnya di atas 100 °C. <strong>Pengepresan dingin :</strong> lewati pemanggangan atau lakukan pemanasan ringan 40–50 °C saja. Pemanggangan menghitamkan biji, melunakkan dinding sel, dan menurunkan viskositas lemak. Jangan gosong.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">3</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Giling menjadi pasta halus</h3><p class="text-steel-600 text-sm">Penghancur biji atau batu giling. Ukuran partikel target **≤ 3 mm**. Pasta shea dapat dibentuk, bukan bubuk — ini benar.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">4</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Pengepresan hidrolik</h3><p class="text-steel-600 text-sm">Muat 80–100 kg pasta. <strong>Pengepresan panas :</strong> 35–42 MPa, siklus 45–55 menit, mentega mengalir pada ~ 80 °C. <strong>Pengepresan dingin (HN426) :</strong> ≤ 60 °C, siklus ≈ 2 jam, mentega mengalir pada ~ 50 °C. Hasil dingin adalah 40–43 % vs 45–48 % panas, tetapi kualitas premium kosmetik membenarkan pilihan ini.</p></div>
+        </div>
+      </li>
+      <li class="bg-steel-50 rounded-xl p-5 border border-steel-100">
+        <div class="flex items-start gap-3">
+          <span class="w-8 h-8 bg-amber-500 text-charcoal-900 font-bold rounded-full flex items-center justify-center flex-shrink-0">5</span>
+          <div><h3 class="font-display text-lg text-charcoal-900 mb-1">Saring dan dinginkan</h3><p class="text-steel-600 text-sm">Mentega shea mengeras pada suhu ruang. Saring saat hangat (~ 40 °C), lalu tuang ke cetakan dan biarkan mengeras.</p></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="py-12 bg-steel-50 border-b border-steel-100">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl text-charcoal-900 mb-6">Batch 100 kg pasta biji shea — apa yang Anda dapatkan (dingin vs panas)</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border border-steel-200">
+      <table class="w-full text-sm">
+        <thead class="bg-steel-900 text-white">
+          <tr><th class="px-4 py-3 text-left">Output</th><th class="px-4 py-3 text-left">Pengepresan Dingin (HN426, ≤ 60 °C)</th><th class="px-4 py-3 text-left">Pengepresan Panas (pemanggangan 120 °C)</th></tr>
+        </thead>
+        <tbody class="divide-y divide-steel-100 text-steel-700">
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Hasil mentega shea mentah</td><td class="px-4 py-3">40–43 kg</td><td class="px-4 py-3">45–48 kg</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Sisa minyak dalam kue</td><td class="px-4 py-3">6–8 %</td><td class="px-4 py-3">6–8 %</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Kue (produk sampingan)</td><td class="px-4 py-3">~ 57–60 kg (pupuk)</td><td class="px-4 py-3">~ 52–55 kg (pupuk)</td></tr>
+          <tr class="bg-white"><td class="px-4 py-3 font-medium text-charcoal-900">Waktu siklus / batch</td><td class="px-4 py-3">≈ 2 jam</td><td class="px-4 py-3">45–55 menit</td></tr>
+          <tr><td class="px-4 py-3 font-medium text-charcoal-900">Kelas mentega</td><td class="px-4 py-3">Premium kosmetik</td><td class="px-4 py-3">Makanan curah</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="font-display text-xl text-charcoal-900 mt-8 mb-4">Model Haonuo yang Direkomendasikan</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <a href="/id/products/cold-press-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn426.webp" alt="HN426 Mesin Press Hydraulic Cold Press" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN426</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Jalur Dingin & Panas Shea</h4>
+          <p class="text-sm text-steel-600">500 t / 42 MPa. Menangani baik pengepresan dingin kelas kosmetik maupun pengepresan panas kelas makanan untuk shea. Siklus dingin 2 jam mempertahankan lemak tak jenuh untuk harga premium pembeli.</p>
+        </div>
+      </a>
+      <a href="/id/products/ultra-high-pressure-hydraulic-oil-press/" class="bg-white border border-steel-200 rounded-xl overflow-hidden hover:border-amber-300 transition-colors group">
+        <div class="aspect-[4/3] bg-steel-100 overflow-hidden">
+          <img loading="lazy" src="/images/models/hn500.webp" alt="HN500 Mesin Press Hydraulic Tekanan Tinggi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hydraulic%20oil%20press%20machine%20factory&image_size=landscape_4_3'" />
+        </div>
+        <div class="p-4">
+          <div class="text-xs text-amber-500 font-medium mb-1">HN500</div>
+          <h4 class="font-display text-lg text-charcoal-900 mb-2">Skala Industri</h4>
+          <p class="text-sm text-steel-600">620 t / 52 MPa. Untuk operasi mentega shea multi-ton/hari. Menangani varietas cangkang lebih keras dengan sisa minyak konsisten dalam kue.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-12 bg-white text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="text-steel-600 mb-4">Lihat <a href="/id/solutions/shea-butter-pressing/" class="text-amber-600 hover:underline">Halaman Solusi Shea Butter</a> untuk detail lebih lanjut. Referensi Ghana / Nigeria / Burkina Faso tersedia.</p>
+  </div>
+</section>
+</BaseLayout>
