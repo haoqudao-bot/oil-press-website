@@ -6,8 +6,7 @@ export function getStaticPaths() {
   return [
     { params: { locale: 'fr' } },
     { params: { locale: 'ar' } },
-    { params: { locale: 'id' } },
-  ];
+    { params: { locale: 'id' } }];
 }
 
 const { locale } = Astro.params;
@@ -63,14 +62,12 @@ const ui: Record<Locale, Ui> = {
       { label: "Capacité par lot", value: "jusqu'à 100 kg / fût" },
       { label: "Temps de cycle", value: "30–90 min en général" },
       { label: "Moteur", value: "2,2 kW (générateur 5–7 kVA)" },
-      { label: "Huile résiduelle dans le tourteau", value: "6–8 % en général" },
-    ],
+      { label: "Huile résiduelle dans le tourteau", value: "6–8 % en général" }],
     factsNote: "Les chiffres varient selon le modèle, la variété de graine et le taux d'humidité (fourchette d'essais usine type 6–8 %). Nous confirmons les specs exactes pour votre matière avant commande.",
     cards: [
       { title: "Naturellement apte au pressage à froid", desc: "La pression statique ne génère aucune chaleur de friction — aucun élément chauffant n'est nécessaire pour maintenir l'huile pressée à froid sous 60°C." },
       { title: "Fonctionne presque partout", desc: "Un moteur de 2,2 kW fonctionne sur une alimentation monophasée standard ou un générateur de 5–7 kVA — éprouvé dans les zones rurales hors réseau." },
-      { title: "Fût à barres, +2–3 % de rendement", desc: "Le fût rainuré de type barre extrait environ 2–3 % d'huile en plus que les fûts percés conventionnels (essai usine, sésame et arachide)." },
-    ],
+      { title: "Fût à barres, +2–3 % de rendement", desc: "Le fût rainuré de type barre extrait environ 2–3 % d'huile en plus que les fûts percés conventionnels (essai usine, sésame et arachide)." }],
     chooseBadge: "CHOISIR SELON VOTRE GRAINE",
     chooseTitle: "Quelle presse hydraulique vous faut-il ?",
     chooseIntro: "Pas besoin de retenir les numéros de modèle — partez de votre graine et de votre volume quotidien. Chaque chemin ci-dessous mène à la page modèle exacte avec les specs complètes. La matrice complète des paramètres est conservée à un seul endroit : la page de comparaison des modèles.",
@@ -84,8 +81,7 @@ const ui: Record<Locale, Ui> = {
         models: [
           { name: "HN300", href: "/products/mini-hydraulic-oil-press/", note: "modèle compact de démarrage" },
           { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "meilleure vente" },
-          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "double poste, journée continue" },
-        ],
+          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "double poste, journée continue" }],
       },
       {
         tag: "Qualité alimentaire",
@@ -94,8 +90,7 @@ const ui: Record<Locale, Ui> = {
         force: "300–325 tonnes · acier inoxydable 304",
         desc: "Fûts et bâtis entièrement en inox 304 au contact alimentaire, pour le pressage par voie humide et les sites d'export audités.",
         models: [
-          { name: "300 Type Coconut", href: "/products/coconut-oil-hydraulic-press/", note: "fût de 600 mm, inox 304" },
-        ],
+          { name: "300 Type Coconut", href: "/products/coconut-oil-hydraulic-press/", note: "fût de 600 mm, inox 304" }],
       },
       {
         tag: "Pressage à froid",
@@ -104,9 +99,7 @@ const ui: Record<Locale, Ui> = {
         force: "500–600 tonnes · pression de tourteau 42–48 MPa",
         desc: "Une pression de surface élevée sur le tourteau est ce qu'exige le pressage à froid. La pression statique n'ajoute aucune chaleur de friction : la graine crue séchée est pressée sous 60°C.",
         models: [
-          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "vedette du pressage à froid" },
-          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 t, fabrication sur commande" },
-        ],
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "vedette du pressage à froid" }],
       },
       {
         tag: "Industriel",
@@ -115,11 +108,8 @@ const ui: Record<Locale, Ui> = {
         force: "560–620 tonnes · jusqu'à 75 MPa de pression système",
         desc: "La force la plus élevée de la gamme pour les matières les plus dures ; configurations double fût pour un débit continu important.",
         models: [
-          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 t, montée en puissance" },
-          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, modèle phare" },
-        ],
-      },
-    ],
+{ name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, modèle phare" }],
+      }],
     rangeTitle: "La gamme de force HN300–HN500",
     rangeSub: "Graine plus dure ou matière en coque → pression de tourteau plus élevée requise. Cliquez sur un modèle pour ouvrir sa page.",
     compareAll: "Comparer tous les modèles — matrice complète",
@@ -135,33 +125,27 @@ const ui: Record<Locale, Ui> = {
       { stat: "Test 48 h", text: "Chaque presse subit un test continu de 48 heures à pleine charge avant expédition, avec vidéos disponibles sur demande." },
       { stat: "Vérin 27SiMn", text: "Vérin hydraulique en acier allié haute pression, conçu pour une longue durée de vie sous cycles répétés à haute force." },
       { stat: "+2-3 % Rendement", text: "La conception du fût rainuré de type barre donne environ 2-3 % de rendement en plus que les fûts percés conventionnels (essai usine, sésame et arachide)." },
-      { stat: "Garantie 1 an", text: "Garantie d'usine 1 an plus support technique à vie. Pièces de rechange expédiées dans le monde entier." },
-    ],
+      { stat: "Garantie 1 an", text: "Garantie d'usine 1 an plus support technique à vie. Pièces de rechange expédiées dans le monde entier." }],
     buyTitle: "Achat et logistique",
     buySub: "À quoi vous attendre en commandant directement à l'usine.",
     buyCards: [
       { title: "Commande et délai", body: [
         "**MOQ :** 1 unité pour les modèles standards ; à partir de 5 unités pour la marque OEM.",
         "**Délai :** 15–25 jours ouvrés pour les modèles standards ; 30–45 jours pour les configurations spéciales.",
-        "**Paiement :** généralement acompte 30 % T/T, solde 70 % avant expédition ; L/C possible pour les grosses commandes.",
-      ] },
+        "**Paiement :** généralement acompte 30 % T/T, solde 70 % avant expédition ; L/C possible pour les grosses commandes."] },
       { title: "Expédition et conformité", body: [
         "**Conditions :** FOB Qingdao, CIF ou DDU — au choix.",
         "**Tension :** 220V / 380V, 50 ou 60 Hz — adaptée à votre réseau local sans frais supplémentaires.",
-        "**Documents :** facture commerciale, liste de colisage, connaissement, certificat d'origine et Form A/E selon les besoins.",
-      ] },
+        "**Documents :** facture commerciale, liste de colisage, connaissement, certificat d'origine et Form A/E selon les besoins."] },
       { title: "Installation et support", body: [
         "Guide d'installation vidéo et manuel opérateur inclus.",
         "Dépannage à distance via WhatsApp / appel vidéo.",
-        "Installation et formation sur site possibles sur demande (certaines régions).",
-      ] },
+        "Installation et formation sur site possibles sur demande (certaines régions)."] },
       { title: "Avant de nous consulter", pre: "Pour obtenir un devis précis plus vite, dites-nous :", ordered: true, body: [
         "Votre graine ou noix oléagineuse principale.",
         "La production quotidienne visée (kg/jour).",
         "La tension locale (ex. 380V triphasé 50 Hz).",
-        "Si vous avez surtout besoin de pressage à froid ou à chaud.",
-      ] },
-    ],
+        "Si vous avez surtout besoin de pressage à froid ou à chaud."] }],
     finalPre: "Le prix final dépend du modèle, de la taille du fût, du fût simple/double et des accessoires.",
     finalLink: "Demander un devis usine →",
   },
@@ -179,14 +163,12 @@ const ui: Record<Locale, Ui> = {
       { label: "سعة الدفعة", value: "حتى 100 كجم / أسطوانة عصر" },
       { label: "زمن الدورة", value: "30–90 دقيقة عادة" },
       { label: "المحرك", value: "2.2 كيلوواط (مولد 5–7 ك.ف.أ)" },
-      { label: "الزيت المتبقي في الكسب", value: "6–8% عادة" },
-    ],
+      { label: "الزيت المتبقي في الكسب", value: "6–8% عادة" }],
     factsNote: "تختلف الأرقام حسب الطراز وصنف البذرة ونسبة الرطوبة (نطاق الاختبار المصنعي المعتاد 6–8%). نؤكد المواصفات الدقيقة لمادتك قبل الطلب.",
     cards: [
       { title: "مناسبة طبيعيًا للعصر البارد", desc: "الضغط الساكن لا ينتج حرارة احتكاك — لا حاجة لعنصر تسخين لإبقاء زيت العصر البارد تحت 60°م." },
       { title: "تعمل في أي مكان تقريبًا", desc: "محرك 2.2 كيلوواط يعمل على تيار أحادي الطور قياسي أو مولد 5–7 ك.ف.أ — مثبت في المناطق الريفية خارج الشبكة." },
-      { title: "أسطوانة عصر قضباني، إنتاجية +2–3%", desc: "أسطوانة العصر المشقوقة بنوع القضبان يستخرج زيتًا أكثر بنحو 2–3% من الأسطوانات المثقوبة التقليدية (اختبار مصنعي، سمسم وفول سوداني)." },
-    ],
+      { title: "أسطوانة عصر قضباني، إنتاجية +2–3%", desc: "أسطوانة العصر المشقوقة بنوع القضبان يستخرج زيتًا أكثر بنحو 2–3% من الأسطوانات المثقوبة التقليدية (اختبار مصنعي، سمسم وفول سوداني)." }],
     chooseBadge: "اختر حسب بذرتك",
     chooseTitle: "أي مكبس هيدروليكي تحتاج؟",
     chooseIntro: "لا حاجة لحفظ أرقام الطرازات — ابدأ من بذرتك وحجمك اليومي. كل مسار أدناه يرتبط بصفحة الطراز المحدد بمواصفاته الكاملة. تُحفظ مصفوفة المواصفات الكاملة في مكان واحد: صفحة مقارنة الطرازات.",
@@ -200,8 +182,7 @@ const ui: Record<Locale, Ui> = {
         models: [
           { name: "HN300", href: "/products/mini-hydraulic-oil-press/", note: "طراز مدمج للمبتدئين" },
           { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "الأكثر مبيعًا" },
-          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "محطة مزدوجة، طوال اليوم" },
-        ],
+          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "محطة مزدوجة، طوال اليوم" }],
       },
       {
         tag: "درجة غذائية",
@@ -210,8 +191,7 @@ const ui: Record<Locale, Ui> = {
         force: "300–325 طنًا · ستانلس ستيل 304",
         desc: "أسطوانات وهياكل ستانلس ستيل 304 كاملة الملامسة للغذاء، للعصر الرطب ومنشآت التصدير الخاضعة للتدقيق.",
         models: [
-          { name: "300 Type Coconut", href: "/products/coconut-oil-hydraulic-press/", note: "أسطوانة عصر 600 مم، ستانلس 304" },
-        ],
+          { name: "300 Type Coconut", href: "/products/coconut-oil-hydraulic-press/", note: "أسطوانة عصر 600 مم، ستانلس 304" }],
       },
       {
         tag: "عصر بارد",
@@ -220,9 +200,7 @@ const ui: Record<Locale, Ui> = {
         force: "500–600 طن · ضغط كسب 42–48 ميجاباسكال",
         desc: "ضغط السطح المرتفع على الكسب هو ما يتطلبه العصر البارد. الضغط الساكن لا يضيف حرارة احتكاك، لذا تُعصر البذرة الخام المجففة تحت 60°م.",
         models: [
-          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "الرائد في العصر البارد" },
-          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 طن، حسب الطلب" },
-        ],
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "الرائد في العصر البارد" }],
       },
       {
         tag: "صناعي",
@@ -231,11 +209,8 @@ const ui: Record<Locale, Ui> = {
         force: "560–620 طنًا · حتى 75 ميجاباسكال ضغط نظام",
         desc: "أعلى قوة في المجموعة لأصلب المواد؛ تكوينات الأسطوانة المزدوجة لإنتاجية مستمرة عالية.",
         models: [
-          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 طن، خطوة أعلى" },
-          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 طن، الطراز الأعلى" },
-        ],
-      },
-    ],
+{ name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 طن، الطراز الأعلى" }],
+      }],
     rangeTitle: "نطاق قوة HN300–HN500",
     rangeSub: "بذرة أصلب أو مادة بقشرها → حاجة لضغط كسب أعلى. انقر على طراز لفتح صفحته.",
     compareAll: "قارن كل الطرازات — المصفوفة الكاملة",
@@ -251,33 +226,27 @@ const ui: Record<Locale, Ui> = {
       { stat: "اختبار 48 ساعة", text: "تخضع كل مكبس لاختبار مستمر 48 ساعة بحمل كامل قبل الشحن، مع تسجيلات فيديو عند الطلب." },
       { stat: "أسطوانة 27SiMn", text: "أسطوانة هيدروليكية من فولاذ السبائك عالي الضغط، مصممة لعمر طويل في ظل الدورات المتكررة عالية القوة." },
       { stat: "+2-3% إنتاجية", text: "تصميم أسطوانة العصر القضباني المشقوق يعطي إنتاجية أعلى بنحو 2-3% من الأسطوانات المثقوبة التقليدية (اختبار مصنعي، سمسم وفول سوداني)." },
-      { stat: "ضمان سنة", text: "ضمان مصنعي لمدة سنة بالإضافة إلى دعم فني مدى الحياة. قطع الغيار تُشحن إلى جميع أنحاء العالم." },
-    ],
+      { stat: "ضمان سنة", text: "ضمان مصنعي لمدة سنة بالإضافة إلى دعم فني مدى الحياة. قطع الغيار تُشحن إلى جميع أنحاء العالم." }],
     buyTitle: "الشراء والخدمات اللوجستية",
     buySub: "ما يمكن توقعه عند الطلب من المصنع.",
     buyCards: [
       { title: "الطلب ومهلة التسليم", body: [
         "**الحد الأدنى للطلب:** وحدة واحدة للطرازات القياسية؛ من 5 وحدات للعلامة التجارية OEM.",
         "**المهلة:** 15–25 يوم عمل للطرازات القياسية؛ 30–45 يومًا للتكوينات المخصصة.",
-        "**الدفع:** عادة 30% دفعة مقدمة T/T و70% قبل الشحن؛ الاعتماد المستندي متاح للطلبات الكبيرة.",
-      ] },
+        "**الدفع:** عادة 30% دفعة مقدمة T/T و70% قبل الشحن؛ الاعتماد المستندي متاح للطلبات الكبيرة."] },
       { title: "الشحن والامتثال", body: [
         "**الشروط:** FOB تشينغداو أو CIF أو DDU — حسب اختيارك.",
         "**الجهد:** 220V / 380V، 50 أو 60 هرتز — مكيّفة لشبكتك المحلية دون تكلفة إضافية.",
-        "**المستندات:** فاتورة تجارية وقائمة تعبئة وبوليصة شحن وشهادة منشأ ونموذج A/E حسب الحاجة.",
-      ] },
+        "**المستندات:** فاتورة تجارية وقائمة تعبئة وبوليصة شحن وشهادة منشأ ونموذج A/E حسب الحاجة."] },
       { title: "التركيب والدعم", body: [
         "يتضمن دليل تركيب بالفيديو وكتالوج التشغيل.",
         "استكشاف الأعطال عن بُعد عبر واتساب / مكالمة فيديو.",
-        "تركيب وتدريب في الموقع عند الطلب (مناطق مختارة).",
-      ] },
+        "تركيب وتدريب في الموقع عند الطلب (مناطق مختارة)."] },
       { title: "قبل الاستفسار", pre: "للحصول على عرض سعر دقيق بشكل أسرع، أخبرنا:", ordered: true, body: [
         "بذرتك أو جوزتك الزيتية الرئيسية.",
         "الإنتاج اليومي المستهدف (كجم/يوم).",
         "الجهد المحلي (مثال 380V ثلاثي الطور 50 هرتز).",
-        "ما إذا كنت تحتاج العصر البارد أم الساخن غالبًا.",
-      ] },
-    ],
+        "ما إذا كنت تحتاج العصر البارد أم الساخن غالبًا."] }],
     finalPre: "السعر النهائي يعتمد على الطراز وحجم أسطوانة العصر وأسطوانة العصر المفردة/المزدوج والملحقات.",
     finalLink: "اطلب عرض سعر المصنع ←",
   },
@@ -295,14 +264,12 @@ const ui: Record<Locale, Ui> = {
       { label: "Kapasitas batch", value: "hingga 100 kg / tabung press" },
       { label: "Waktu siklus", value: "khas 30–90 menit" },
       { label: "Motor", value: "2,2 kW (generator 5–7 kVA)" },
-      { label: "Sisa minyak di bungkil", value: "umumnya 6–8%" },
-    ],
+      { label: "Sisa minyak di bungkil", value: "umumnya 6–8%" }],
     factsNote: "Angka bervariasi menurut model, varietas biji, dan kadar air (rentang uji pabrik khas 6–8%). Kami konfirmasi spesifikasi pasti untuk bahan Anda sebelum pemesanan.",
     cards: [
       { title: "Alami cocok untuk press dingin", desc: "Tekanan statis berarti tanpa panas gesekan — tidak perlu elemen pemanas untuk menjaga minyak cold-press di bawah 60°C." },
       { title: "Berjalan hampir di mana saja", desc: "Motor 2,2 kW bekerja pada pasokan satu fasa standar atau generator 5–7 kVA — terbukti di daerah pedesaan tanpa jaringan listrik." },
-      { title: "Tabung press beralur batang, hasil +2–3%", desc: "Tabung press beralur batang mengekstraksi minyak sekitar 2–3% lebih banyak dibanding tabung press bor konvensional (uji pabrik, wijen & kacang tanah)." },
-    ],
+      { title: "Tabung press beralur batang, hasil +2–3%", desc: "Tabung press beralur batang mengekstraksi minyak sekitar 2–3% lebih banyak dibanding tabung press bor konvensional (uji pabrik, wijen & kacang tanah)." }],
     chooseBadge: "PILIH BERDASARKAN BIJI",
     chooseTitle: "Mesin press hidrolik mana yang Anda butuhkan?",
     chooseIntro: "Tidak perlu menghafal nomor model — mulailah dari biji dan volume harian Anda. Setiap jalur di bawah tertaut ke halaman model yang tepat dengan spesifikasi lengkap. Matriks parameter lengkap ada di satu tempat: halaman perbandingan model.",
@@ -316,8 +283,7 @@ const ui: Record<Locale, Ui> = {
         models: [
           { name: "HN300", href: "/products/mini-hydraulic-oil-press/", note: "model starter ringkas" },
           { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "terlaris" },
-          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "stasiun ganda, sepanjang hari" },
-        ],
+          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "stasiun ganda, sepanjang hari" }],
       },
       {
         tag: "Food grade",
@@ -326,8 +292,7 @@ const ui: Record<Locale, Ui> = {
         force: "300–325 ton · baja tahan karat 304",
         desc: "Tabung press dan rangka baja nirkarat 304 food-contact penuh untuk press basah dan fasilitas ekspor yang diaudit.",
         models: [
-          { name: "300 Type Coconut", href: "/products/coconut-oil-hydraulic-press/", note: "tabung press 600 mm, stainless 304" },
-        ],
+          { name: "300 Type Coconut", href: "/products/coconut-oil-hydraulic-press/", note: "tabung press 600 mm, stainless 304" }],
       },
       {
         tag: "Press dingin",
@@ -336,9 +301,7 @@ const ui: Record<Locale, Ui> = {
         force: "500–600 ton · tekanan bungkil 42–48 MPa",
         desc: "Tekanan permukaan cake tinggi adalah kebutuhan press dingin. Tekanan statis tidak menambah panas gesekan, sehingga biji mentah kering terpress di bawah 60°C.",
         models: [
-          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "unggulan press dingin" },
-          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 t, dibuat sesuai pesanan" },
-        ],
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "unggulan press dingin" }],
       },
       {
         tag: "Industri",
@@ -347,11 +310,8 @@ const ui: Record<Locale, Ui> = {
         force: "560–620 ton · hingga 75 MPa tekanan sistem",
         desc: "Gaya tertinggi dalam rentang untuk bahan terkeras; konfigurasi tabung press ganda untuk throughput tinggi yang berkelanjutan.",
         models: [
-          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 t, peningkatan" },
-          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, flagship" },
-        ],
-      },
-    ],
+{ name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, flagship" }],
+      }],
     rangeTitle: "Rentang gaya HN300–HN500",
     rangeSub: "Biji lebih keras atau bercangkang → butuh tekanan bungkil lebih tinggi. Klik model untuk membuka halamannya.",
     compareAll: "Bandingkan semua model — matriks lengkap",
@@ -367,33 +327,27 @@ const ui: Record<Locale, Ui> = {
       { stat: "Uji 48 Jam", text: "Setiap press menjalani uji beban penuh berkelanjutan 48 jam sebelum pengiriman, dengan rekaman video tersedia sesuai permintaan." },
       { stat: "Silinder 27SiMn", text: "Silinder hidrolik baja paduan tekanan tinggi, dirancang untuk masa pakai panjang di bawah siklus gaya tinggi berulang." },
       { stat: "+2-3% Hasil", text: "Desain tabung press celah batang memberi hasil minyak sekitar 2-3% lebih tinggi dari tabung press bor konvensional (uji pabrik, wijen & kacang tanah)." },
-      { stat: "Garansi 1 Tahun", text: "Garansi pabrik 1 tahun plus dukungan teknis seumur hidup. Suku cadang dikirim ke seluruh dunia." },
-    ],
+      { stat: "Garansi 1 Tahun", text: "Garansi pabrik 1 tahun plus dukungan teknis seumur hidup. Suku cadang dikirim ke seluruh dunia." }],
     buyTitle: "Pembelian & logistik",
     buySub: "Yang diharapkan saat memesan langsung dari pabrik.",
     buyCards: [
       { title: "Pemesanan & waktu produksi", body: [
         "**MOQ:** 1 unit untuk model standar; mulai 5 unit untuk branding OEM.",
         "**Waktu produksi:** 15–25 hari kerja untuk model standar; 30–45 hari untuk konfigurasi khusus.",
-        "**Pembayaran:** biasanya DP 30% T/T, 70% sebelum pengiriman; L/C tersedia untuk pesanan besar.",
-      ] },
+        "**Pembayaran:** biasanya DP 30% T/T, 70% sebelum pengiriman; L/C tersedia untuk pesanan besar."] },
       { title: "Pengiriman & kepatuhan", body: [
         "**Syarat:** FOB Qingdao, CIF, atau DDU — pilihan Anda.",
         "**Tegangan:** 220V / 380V, 50 atau 60 Hz — disesuaikan dengan jaringan lokal tanpa biaya tambahan.",
-        "**Dokumen:** faktur komersial, packing list, bill of lading, sertifikat asal dan Form A/E sesuai kebutuhan.",
-      ] },
+        "**Dokumen:** faktur komersial, packing list, bill of lading, sertifikat asal dan Form A/E sesuai kebutuhan."] },
       { title: "Instalasi & dukungan", body: [
         "Panduan instalasi video dan buku manual operator disertakan.",
         "Bantuan pemecahan masalah jarak jauh via WhatsApp / panggilan video.",
-        "Instalasi dan pelatihan di lokasi tersedia berdasarkan permintaan (wilayah tertentu).",
-      ] },
+        "Instalasi dan pelatihan di lokasi tersedia berdasarkan permintaan (wilayah tertentu)."] },
       { title: "Sebelum bertanya", pre: "Untuk penawaran akurat lebih cepat, beri tahu kami:", ordered: true, body: [
         "Biji atau kacang minyak utama Anda.",
         "Target produksi harian (kg/hari).",
         "Tegangan lokal (mis. 380V 3 fasa 50Hz).",
-        "Apakah Anda lebih membutuhkan press dingin atau panas.",
-      ] },
-    ],
+        "Apakah Anda lebih membutuhkan press dingin atau panas."] }],
     finalPre: "Harga akhir tergantung model, ukuran tabung press, tabung press tunggal/ganda, dan aksesori.",
     finalLink: "Minta penawaran pabrik →",
   },
@@ -410,8 +364,7 @@ const breadcrumbLd = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
     { '@type': 'ListItem', position: 2, name: t.nav.products, item: `https://www.hydoilpress.com/${currentLocale}/products` },
-    { '@type': 'ListItem', position: 3, name: t.common.hydraulicOilPressMachine, item: `https://www.hydoilpress.com/${currentLocale}/hydraulic-oil-press-machine` },
-  ],
+    { '@type': 'ListItem', position: 3, name: t.common.hydraulicOilPressMachine, item: `https://www.hydoilpress.com/${currentLocale}/hydraulic-oil-press-machine` }],
 };
 
 const faqLd = {
@@ -429,10 +382,7 @@ const rangeModels = [
   { model: 'HN325', force: '325 t', href: '/products/standard-hydraulic-oil-press/' },
   { model: 'HN365', force: '365 t', href: '/products/commercial-hydraulic-oil-press/' },
   { model: 'HN426', force: '500 t', href: '/products/cold-press-hydraulic-oil-press/' },
-  { model: 'HN480', force: '560 t', href: '/products/high-pressure-hydraulic-oil-press/' },
-  { model: 'HN480B', force: '600 t', href: '/products/ultra-high-pressure-cold-press/' },
-  { model: 'HN500', force: '620 t', href: '/products/ultra-high-pressure-hydraulic-oil-press/' },
-];
+{ model: 'HN500', force: '620 t', href: '/products/ultra-high-pressure-hydraulic-oil-press/' }];
 ---
 
 <BaseLayout

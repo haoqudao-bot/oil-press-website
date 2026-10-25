@@ -6,8 +6,7 @@ export function getStaticPaths() {
   return [
     { params: { locale: 'fr' } },
     { params: { locale: 'ar' } },
-    { params: { locale: 'id' } },
-  ];
+    { params: { locale: 'id' } }];
 }
 
 const { locale } = Astro.params;
@@ -65,14 +64,12 @@ const ui: Record<Locale, Ui> = {
       { label: "Capacité par lot", value: "jusqu'à 100 kg / fût" },
       { label: "Cycle à froid", value: "jusqu'à ~2 h par lot" },
       { label: "Méthode", value: "mécanique uniquement, sans produits chimiques" },
-      { label: "Résultat", value: "non raffiné, prêt à filtrer" },
-    ],
+      { label: "Résultat", value: "non raffiné, prêt à filtrer" }],
     factsNote: "La température et le cycle varient selon la graine, l'humidité et les réglages du tourteau. Le pressage à chaud sur la même machine dure 30–40 min avec des graines pré-torréfiées.",
     cards: [
       { title: "Nutriments et goût naturel préservés", desc: "Sous 60°C, les acides gras sensibles, les antioxydants et l'arôme d'origine de la graine survivent largement — la base de la qualité premium." },
       { title: "Prix de marché premium", desc: "Les huiles non raffinées pressées à froid se vendent généralement environ 30–80 % plus cher que les huiles raffinées sur les marchés qui reconnaissent cette qualité (très variable selon les pays)." },
-      { title: "Aucun raffinage chimique", desc: "Extraction mécanique et filtration naturelle — pas d'hexane, pas de ligne de neutralisation, conformité plus simple pour les acheteurs alimentaires et cosmétiques." },
-    ],
+      { title: "Aucun raffinage chimique", desc: "Extraction mécanique et filtration naturelle — pas d'hexane, pas de ligne de neutralisation, conformité plus simple pour les acheteurs alimentaires et cosmétiques." }],
     dualTitle: "Une seule machine, pressage à froid ET à chaud",
     dualP1: "Une presse hydraulique Haonuo n'est pas réservée au seul pressage à froid. La même machine fait le **pressage à froid** (graines crues, sous 60°C) pour l'huile premium et le **pressage à chaud** (graines torréfiées/étuvées) pour un meilleur rendement — vous changez selon la préparation des graines, sans acheter une autre machine.",
     dualP2: "C'est l'avantage clé de la pression hydraulique statique : aucune chaleur de friction d'une vis, la température de l'huile dépend donc de votre préparation des graines. Produisez aujourd'hui de l'huile premium à froid et demain de l'huile de masse à chaud sur le même équipement. Pour le pressage à chaud, associez la presse à un torréfacteur ou un étuveur séparé — la presse elle-même n'a aucun chauffage intégré.",
@@ -81,20 +78,17 @@ const ui: Record<Locale, Ui> = {
     chips: [
       "Jusqu'à 100 kg de graines par fût et par cycle — taille de lot commerciale",
       "Cycle à froid jusqu'à ~2 h contre 30–40 min à chaud",
-      "Prime type 30–80 % — à vérifier sur votre marché local",
-    ],
+      "Prime type 30–80 % — à vérifier sur votre marché local"],
     winsTitle: "Quand le pressage à froid gagne",
     wins: [
       "Marchés premium / bio / cosmétique (VCO, noix, argan, sésame).",
       "Lorsque l'huile pressée à froid commande une prime de prix nette et bancable sur l'huile raffinée.",
-      "Quand la prime par litre dépasse la valeur du rendement supplémentaire en pressage à chaud — cet écart de marge, pas la taille du lot, est le facteur décisif.",
-    ],
+      "Quand la prime par litre dépasse la valeur du rendement supplémentaire en pressage à chaud — cet écart de marge, pas la taille du lot, est le facteur décisif."],
     hotTitle: "Quand le pressage à chaud a du sens",
     hot: [
       "Huile de cuisson en vrac où le volume et le faible coût comptent avant tout.",
       "Approvisionnement continu à gros volume pour les distributeurs ou raffineries.",
-      "Graines où la torréfaction préalable augmente sensiblement le rendement et où votre marché ne paie pas de prime au pressage à froid.",
-    ],
+      "Graines où la torréfaction préalable augmente sensiblement le rendement et où votre marché ne paie pas de prime au pressage à froid."],
     roiLink: "Estimez votre retour avec le calculateur de ROI",
     matBadge: "CHOISIR SELON VOTRE MATIÈRE",
     matTitle: "Quelle machine à froid pour votre graine ?",
@@ -108,8 +102,7 @@ const ui: Record<Locale, Ui> = {
         desc: "L'huile de sésame et d'arachide pressée à froid se vend fortement sur les marchés du Moyen-Orient et d'Asie. La HN325 est la meilleure vente d'entrée de gamme ; la HN365 ajoute un double poste pour des lots toute la journée.",
         models: [
           { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "meilleure vente" },
-          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "double poste" },
-        ],
+          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "double poste" }],
       },
       {
         tag: "Noix premium",
@@ -118,22 +111,17 @@ const ui: Record<Locale, Ui> = {
         pressure: "500–600 tonnes · pression de tourteau 42–48 MPa",
         desc: "C'est là que le pressage à froid gagne sa marge — des huiles délicates à haute valeur. Une pression de 42 MPa+ rompt les cellules dures sans chaleur, en préservant oméga-3 et saveur.",
         models: [
-          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "vedette du pressage à froid" },
-          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 t, fabrication sur commande" },
-        ],
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "vedette du pressage à froid" }],
       },
       {
         tag: "Dur / en coque",
         title: "Matières dures, en coque et fibreuses",
         seeds: "Coprah pour VCO · noix en coque · souchet · karité · yellowhorn · chanvre",
         pressure: "560–620 tonnes · jusqu'à 75 MPa",
-        desc: "Les matières les plus dures exigent la force maximale de la gamme. HN480 et HN500 extraient un maximum d'huile en moins de passages — y compris les noix pressées en coque.",
+        desc: "Les matières les plus dures exigent la force maximale de la gamme. HN500 extraient un maximum d'huile en moins de passages — y compris les noix pressées en coque.",
         models: [
-          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 t" },
-          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, modèle phare" },
-        ],
-      },
-    ],
+{ name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, modèle phare" }],
+      }],
     ssBold: "Pressage humide du lait de coco, ou besoin d'un inox entièrement alimentaire pour l'export ?",
     ssSee: "Voir les modèles inox 304",
     ssAnd: "et",
@@ -157,14 +145,12 @@ const ui: Record<Locale, Ui> = {
       { label: "سعة الدفعة", value: "حتى 100 كجم / أسطوانة عصر" },
       { label: "الدورة الباردة", value: "حتى ~2 ساعة للدفعة" },
       { label: "الطريقة", value: "ميكانيكي فقط، بلا مواد كيميائية" },
-      { label: "النتيجة", value: "غير مكرر، جاهز للترشيح" },
-    ],
+      { label: "النتيجة", value: "غير مكرر، جاهز للترشيح" }],
     factsNote: "تختلف الحرارة والدورة حسب البذرة والرطوبة وإعدادات الكسب. العصر الساخن على نفس الماكينة يستغرق 30–40 دقيقة ببذور محمّصة مسبقًا.",
     cards: [
       { title: "العناصر الغذائية والنكهة الطبيعية محفوظة", desc: "تحت 60°م، تبقى الأحماض الدهنية الحساسة ومضادات الأكسدة ورائحة البذرة الأصلية إلى حد كبير — أساس الدرجة الفاخرة." },
       { title: "سعر سوق مميز", desc: "تباع الزيوت غير المكررة المعصورة على البارد عادة بأعلى من الزيوت المكررة بنحو 30–80% في الأسواق التي تعترف بهذه الدرجة (يختلف كثيرًا حسب البلد)." },
-      { title: "بلا تكرير كيميائي", desc: "استخلاص ميكانيكي وترشيح طبيعي — بلا هكسان وبلا خط معادلة، وامتثال أسهل لمشتري الأغذية ومستحضرات التجميل." },
-    ],
+      { title: "بلا تكرير كيميائي", desc: "استخلاص ميكانيكي وترشيح طبيعي — بلا هكسان وبلا خط معادلة، وامتثال أسهل لمشتري الأغذية ومستحضرات التجميل." }],
     dualTitle: "ماكينة واحدة، عصر بارد وساخن",
     dualP1: "مكبس هاونو الهيدروليكي ليس مقصورًا على العصر البارد فقط. نفس الماكينة تُجري **العصر البارد** (بذور خام، تحت 60°م) لزيت فاخر و**العصر الساخن** (بذور محمّصة/مبخّرة) لإنتاجية أعلى — تتحول بتغيير تحضير البذرة، لا بشراء ماكينة أخرى.",
     dualP2: "هذه الميزة الأساسية للضغط الهيدروليكي الساكن: لا حرارة احتكاك من لولب، لذا تحكم حرارة الزيت هو تحضيرك للبذرة. أنتج اليوم زيتًا باردًا فاخرًا وغدًا زيتًا ساخنًا بكميات كبيرة على نفس المعدة. للعصر الساخن، اقرن المكبس بمحمّصة أو قدر تبخير منفصل — المكبس نفسه لا يحتوي على سخّان مدمج.",
@@ -173,20 +159,17 @@ const ui: Record<Locale, Ui> = {
     chips: [
       "حتى 100 كجم بذور لكل أسطوانة عصر لكل دورة — حجم دفعة تجاري",
       "دورة باردة حتى ~2 ساعة مقابل 30–40 دقيقة ساخنة",
-      "علاوة نموذجية 30–80% — تحقق منها في سوقك المحلي",
-    ],
+      "علاوة نموذجية 30–80% — تحقق منها في سوقك المحلي"],
     winsTitle: "متى يربح العصر البارد",
     wins: [
       "الأسواق الفاخرة / العضوية / التجميلية (VCO، جوز، أرغان، سمسم).",
       "حين يحقق زيت العصر البارد علاوة سعرية واضحة ومضمونة على الزيت المكرر.",
-      "حين تتجاوز العلاوة لكل لتر قيمة الإنتاجية الإضافية للعصر الساخن — فجوة الهامش هذه، لا حجم الدفعة، هي العامل الحاسم.",
-    ],
+      "حين تتجاوز العلاوة لكل لتر قيمة الإنتاجية الإضافية للعصر الساخن — فجوة الهامش هذه، لا حجم الدفعة، هي العامل الحاسم."],
     hotTitle: "متى يكون العصر الساخن منطقيًا",
     hot: [
       "زيت طبخ سائب حيث الحجم والتكلفة المنخفضة أهم ما يهم.",
       "توريد مستمر بكميات كبيرة للموزعين أو المصافي.",
-      "بذور تزيد فيها التحميصة المسبقة الإنتاجية بشكل ملموس بينما لا يدفع سوقك علاوة العصر البارد.",
-    ],
+      "بذور تزيد فيها التحميصة المسبقة الإنتاجية بشكل ملموس بينما لا يدفع سوقك علاوة العصر البارد."],
     roiLink: "قدّر عائدك مع حاسبة العائد على الاستثمار",
     matBadge: "اختر حسب مادتك",
     matTitle: "أي ماكينة عصر بارد لبذرتك؟",
@@ -200,8 +183,7 @@ const ui: Record<Locale, Ui> = {
         desc: "يزداد بيع زيت السمسم والفول السوداني المعصور على البارد في أسواق الشرق الأوسط وآسيا. HN325 هي الأكثر مبيعًا للمبتدئين؛ وتضيف HN365 محطة مزدوجة لدفعات طوال اليوم.",
         models: [
           { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "الأكثر مبيعًا" },
-          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "محطة مزدوجة" },
-        ],
+          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "محطة مزدوجة" }],
       },
       {
         tag: "مكسرات فاخرة",
@@ -210,22 +192,17 @@ const ui: Record<Locale, Ui> = {
         pressure: "500–600 طن · ضغط كسب 42–48 ميجاباسكال",
         desc: "هنا يكسب العصر البارد هامشه — زيوت رفيعة عالية القيمة. ضغط 42 ميجاباسكال+ يكسر الخلايا الصلبة دون حرارة، ويحافظ على أوميغا-3 والنكهة.",
         models: [
-          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "الرائد في العصر البارد" },
-          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 طن، حسب الطلب" },
-        ],
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "الرائد في العصر البارد" }],
       },
       {
         tag: "صلب / بقشره",
         title: "مواد صلبة بقشرها وليفية",
         seeds: "كوبرا لـVCO · جوز بقشره · حب العزيز · شيا · الزانثوسيراس · قنب",
         pressure: "560–620 طنًا · حتى 75 ميجاباسكال",
-        desc: "أصلب المواد تتطلب أعلى قوة في المجموعة. HN480 وHN500 تستخلصان أقصى زيت في عدد مرات أقل — بما في ذلك الجوز المعصور بقشره.",
+        desc: "أصلب المواد تتطلب أعلى قوة في المجموعة. HN500 تستخلصان أقصى زيت في عدد مرات أقل — بما في ذلك الجوز المعصور بقشره.",
         models: [
-          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 طن" },
-          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 طن، الطراز الأعلى" },
-        ],
-      },
-    ],
+{ name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 طن، الطراز الأعلى" }],
+      }],
     ssBold: "عصر رطب لحليب جوز الهند، أو تحتاج ستانلس كامل بدرجة غذائية للتصدير؟",
     ssSee: "راجع طرازي ستانلس 304",
     ssAnd: "و",
@@ -249,14 +226,12 @@ const ui: Record<Locale, Ui> = {
       { label: "Kapasitas batch", value: "hingga 100 kg / barrel" },
       { label: "Siklus dingin", value: "hingga ~2 jam per batch" },
       { label: "Metode", value: "hanya mekanis, tanpa kimia" },
-      { label: "Hasil", value: "tidak dimurnikan, siap difiltrasi" },
-    ],
+      { label: "Hasil", value: "tidak dimurnikan, siap difiltrasi" }],
     factsNote: "Suhu dan siklus bervariasi menurut biji, kadar air, dan pengaturan cake. Press panas pada mesin yang sama berjalan 30–40 menit dengan biji yang telah disangrai.",
     cards: [
       { title: "Nutrisi & rasa alami terjaga", desc: "Di bawah 60°C, asam lemak sensitif, antioksidan, dan aroma asli biji sebagian besar bertahan — dasar kualitas premium." },
       { title: "Harga pasar premium", desc: "Minyak cold-press tidak dimurnikan biasanya terjual sekitar 30–80% lebih mahal dari minyak refined di pasar yang mengenal kualitas ini (sangat bervariasi per negara)." },
-      { title: "Tanpa pemurnian kimia", desc: "Ekstraksi mekanis plus filtrasi alami — tanpa heksana, tanpa lini netralisasi, kepatuhan lebih sederhana bagi pembeli pangan dan kosmetik." },
-    ],
+      { title: "Tanpa pemurnian kimia", desc: "Ekstraksi mekanis plus filtrasi alami — tanpa heksana, tanpa lini netralisasi, kepatuhan lebih sederhana bagi pembeli pangan dan kosmetik." }],
     dualTitle: "Satu mesin, press dingin DAN panas",
     dualP1: "Press hidrolik Haonuo tidak terkunci hanya untuk press dingin. Mesin yang sama menjalankan **press dingin** (biji mentah, di bawah 60°C) untuk minyak premium dan **press panas** (biji sangrai/kukus) untuk hasil lebih tinggi — Anda beralih lewat cara menyiapkan biji, bukan membeli mesin lain.",
     dualP2: "Inilah keunggulan utama tekanan hidrolik statis: tidak ada panas gesekan dari sekrup, sehingga suhu minyak ditentukan oleh persiapan biji Anda. Produksi minyak cold-press premium hari ini dan minyak panas curah besok pada peralatan yang sama. Untuk press panas, pasangkan press dengan roaster atau steamer terpisah — press itu sendiri tidak memiliki pemanas bawaan.",
@@ -265,20 +240,17 @@ const ui: Record<Locale, Ui> = {
     chips: [
       "Hingga 100 kg biji per barrel per siklus — ukuran batch komersial",
       "Siklus dingin hingga ~2 jam vs 30–40 menit panas",
-      "Premium khas 30–80% — verifikasi di pasar lokal Anda",
-    ],
+      "Premium khas 30–80% — verifikasi di pasar lokal Anda"],
     winsTitle: "Kapan press dingin menang",
     wins: [
       "Pasar premium / organik / kosmetik (VCO, kenari, argan, wijen).",
       "Jika minyak cold-press mendapat premium harga yang jelas dan pasti di atas minyak refined.",
-      "Jika premium per liter melebihi nilai hasil tambahan press panas — kesenjangan margin ini, bukan ukuran batch, yang jadi faktor penentu.",
-    ],
+      "Jika premium per liter melebihi nilai hasil tambahan press panas — kesenjangan margin ini, bukan ukuran batch, yang jadi faktor penentu."],
     hotTitle: "Kapan press panas masuk akal",
     hot: [
       "Minyak goreng curah di mana volume dan biaya rendah paling penting.",
       "Pasokan kontinu volume tinggi ke distributor atau refinery.",
-      "Biji di mana penyangraian awal meningkatkan hasil secara nyata dan pasar Anda tidak membayar premium cold-press.",
-    ],
+      "Biji di mana penyangraian awal meningkatkan hasil secara nyata dan pasar Anda tidak membayar premium cold-press."],
     roiLink: "Hitung estimasi keuntungan Anda dengan kalkulator ROI",
     matBadge: "PILIH BERDASARKAN BAHAN",
     matTitle: "Mesin press dingin mana untuk biji Anda?",
@@ -292,8 +264,7 @@ const ui: Record<Locale, Ui> = {
         desc: "Minyak wijen dan kacang tanah cold-press laku kuat di pasar Timur Tengah dan Asia. HN325 adalah terlaris level pemula; HN365 menambah stasiun ganda untuk batch sepanjang hari.",
         models: [
           { name: "HN325", href: "/products/standard-hydraulic-oil-press/", note: "terlaris" },
-          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "stasiun ganda" },
-        ],
+          { name: "HN365", href: "/products/commercial-hydraulic-oil-press/", note: "stasiun ganda" }],
       },
       {
         tag: "Kacang premium",
@@ -302,22 +273,17 @@ const ui: Record<Locale, Ui> = {
         pressure: "500–600 ton · tekanan cake 42–48 MPa",
         desc: "Di sinilah press dingin mendapatkan marginnya — minyak bernilai tinggi yang sensitif. Tekanan cake 42 MPa+ memecah sel keras tanpa panas, menjaga omega-3 dan rasa.",
         models: [
-          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "unggulan press dingin" },
-          { name: "HN480B", href: "/products/ultra-high-pressure-cold-press/", note: "600 t, dibuat sesuai pesanan" },
-        ],
+          { name: "HN426", href: "/products/cold-press-hydraulic-oil-press/", note: "unggulan press dingin" }],
       },
       {
         tag: "Keras / bercangkang",
         title: "Bahan keras, bercangkang & berserat",
         seeds: "Kopra untuk VCO · kenari bercangkang · rumput teki · shea · yellowhorn · rami",
-        pressure: "560–620 ton · hingga 75 MPa",
-        desc: "Bahan terkeras membutuhkan gaya tertinggi dalam rentang. HN480 dan HN500 mengekstraksi minyak maksimum dalam lebih sedikit lintasan — termasuk kacang yang dipress bercangkang.",
+        pressure: "620 ton · hingga 75 MPa",
+        desc: "Bahan terkeras membutuhkan gaya tertinggi dalam rentang. HN500 mengekstraksi minyak maksimum dalam lebih sedikit lintasan — termasuk kacang yang dipress bercangkang.",
         models: [
-          { name: "HN480", href: "/products/high-pressure-hydraulic-oil-press/", note: "560 t" },
-          { name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, flagship" },
-        ],
-      },
-    ],
+{ name: "HN500", href: "/products/ultra-high-pressure-hydraulic-oil-press/", note: "620 t, flagship" }],
+      }],
     ssBold: "Press basah santan, atau butuh baja nirkarat food-grade penuh untuk ekspor?",
     ssSee: "Lihat model baja nirkarat 304",
     ssAnd: "dan",
@@ -340,8 +306,7 @@ const breadcrumbLd = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: t.nav.home, item: `https://www.hydoilpress.com/${currentLocale}` },
     { '@type': 'ListItem', position: 2, name: t.nav.products, item: `https://www.hydoilpress.com/${currentLocale}/products` },
-    { '@type': 'ListItem', position: 3, name: t.common.coldPressOilMachine, item: `https://www.hydoilpress.com/${currentLocale}/cold-press-oil-machine` },
-  ],
+    { '@type': 'ListItem', position: 3, name: t.common.coldPressOilMachine, item: `https://www.hydoilpress.com/${currentLocale}/cold-press-oil-machine` }],
 };
 
 const faqLd = {
@@ -359,10 +324,7 @@ const rangeModels = [
   { model: 'HN325', force: '325 t', href: '/products/standard-hydraulic-oil-press/' },
   { model: 'HN365', force: '365 t', href: '/products/commercial-hydraulic-oil-press/' },
   { model: 'HN426', force: '500 t', href: '/products/cold-press-hydraulic-oil-press/' },
-  { model: 'HN480', force: '560 t', href: '/products/high-pressure-hydraulic-oil-press/' },
-  { model: 'HN480B', force: '600 t', href: '/products/ultra-high-pressure-cold-press/' },
-  { model: 'HN500', force: '620 t', href: '/products/ultra-high-pressure-hydraulic-oil-press/' },
-];
+{ model: 'HN500', force: '620 t', href: '/products/ultra-high-pressure-hydraulic-oil-press/' }];
 ---
 
 <BaseLayout
