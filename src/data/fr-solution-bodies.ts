@@ -1,7 +1,7 @@
 export const frSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour l'amande. Comptez sur **44-50 % de rendement (pressage à froid)** à partir d'amandes douces décortiquées — jusqu'à **47-52 % avec des amandes torréfiées** — avec **moins de 5 % d'huile résiduelle dans le tourteau**. Une ligne de pressage à froid traite **300-1 000 kg d'amandes par jour**, produisant environ **150-500 litres d'huile**. Décortiquez les amandes avant le pressage (le blanchiment pour retirer les peaux améliore le rendement et éclaircit l'huile), maintenez l'humidité à **4-6 %**, et gardez la presse **sous 60 °C** pour protéger la vitamine E qui justifie les prix premium.
+Oui — la presse hydraulique Haonuo est conçue pour l'amande. Comptez sur **44-50 % de rendement ([pressage à froid](/fr/cold-press-oil-machine/))** à partir d'amandes douces décortiquées — jusqu'à **47-52 % avec des amandes torréfiées** — avec **moins de 5 % d'huile résiduelle dans le tourteau**. Une ligne de pressage à froid traite **300-1 000 kg d'amandes par jour**, produisant environ **150-500 litres d'huile**. Décortiquez les amandes avant le pressage (le blanchiment pour retirer les peaux améliore le rendement et éclaircit l'huile), maintenez l'humidité à **4-6 %**, et gardez la presse **sous 60 °C** pour protéger la vitamine E qui justifie les prix premium.
 
 ## Aperçu
 
@@ -53,7 +53,7 @@ Avec des amandes contenant 50-55 % d'huile — l'une des plus fortes teneurs par
 
   'avocado-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour l'avocat. À partir de pulpe de Hass fraîche, comptez sur **14-20 % de rendement (pressage à froid)** ; sécher d'abord la pulpe porte ce rendement à **30-44 %**, avec **5-6 % ou moins d'huile résiduelle dans le tourteau**. Une ligne de pressage à froid traite **300-1 000 kg de pulpe d'avocat par jour**. L'étape de préparation critique : la chair d'avocat fraîche contient environ **70 % d'eau**, ce qui crée des émulsions et fait chuter le rendement — séchez la pulpe avant le pressage et vous pouvez quasiment **doubler votre rendement effectif**, tout en restant sous 60 °C pour préserver la couleur émeraude que les acheteurs paient.
+Oui — la presse hydraulique Haonuo est conçue pour l'avocat. À partir de pulpe de Hass fraîche, comptez sur **14-20 % de rendement ([pressage à froid](/fr/cold-press-oil-machine/))** ; sécher d'abord la pulpe porte ce rendement à **30-44 %**, avec **5-6 % ou moins d'huile résiduelle dans le tourteau**. Une ligne de pressage à froid traite **300-1 000 kg de pulpe d'avocat par jour**. L'étape de préparation critique : la chair d'avocat fraîche contient environ **70 % d'eau**, ce qui crée des émulsions et fait chuter le rendement — séchez la pulpe avant le pressage et vous pouvez quasiment **doubler votre rendement effectif**, tout en restant sous 60 °C pour préserver la couleur émeraude que les acheteurs paient.
 
 ## Aperçu
 
@@ -114,7 +114,7 @@ L'huile de ricin est une huile industrielle unique dont les applications couvren
 
 La solution de pressage d'huile de ricin de Haonuo est construite autour de notre technologie de presse hydraulique haute pression, particulièrement efficace pour l'extraction des graines de ricin. Les graines de ricin dures et riches en huile nécessitent une pression élevée soutenue pour une extraction approfondie, et notre **machine d'extraction d'huile de ricin** délivre exactement cela — atteignant des taux d'huile résiduelle inférieurs à 5 %.
 
-Cette solution prend en charge à la fois le pressage à froid (pour l'huile de ricin de qualité médicinale et cosmétique) et le pressage à chaud (pour l'huile de qualité industrielle avec un rendement plus élevé), vous offrant la flexibilité de servir différents segments de marché.
+Cette solution prend en charge à la fois le [pressage à froid](/fr/cold-press-oil-machine/) (pour l'huile de ricin de qualité médicinale et cosmétique) et le pressage à chaud (pour l'huile de qualité industrielle avec un rendement plus élevé), vous offrant la flexibilité de servir différents segments de marché.
 
 ## Rendements Attendus en Huile
 
@@ -164,7 +164,7 @@ Oui — la presse hydraulique Haonuo est conçue pour la noix de coco. À partir
 
 L'huile de coco reste l'une des huiles végétales les plus recherchées au monde, portée par la demande croissante dans les industries alimentaire, cosmétique et de la santé. Une **machine de pressage d'huile de coco** fiable est essentielle pour les producteurs qui souhaitent extraire une huile de haute qualité tout en maximisant le rendement et en minimisant les pertes. Que vous produisiez de l'huile de coco vierge (VCO) pour le marché premium de la santé ou de l'huile de coco RBD pour la transformation alimentaire commerciale, disposer du bon équipement fait toute la différence.
 
-La solution de pressage d'huile de coco de Haonuo est construite autour de notre technologie de presse hydraulique spécialisée, qui excelle tant pour le pressage à froid pour la VCO que pour le pressage à chaud pour une production à rendement plus élevé. Notre presse hydraulique à huile de coco applique une pression élevée uniforme sans dégrader la qualité de l'huile, préservant la teneur naturelle en acide laurique et le délicat arôme de coco que les consommateurs apprécient.
+La solution de pressage d'huile de coco de Haonuo est construite autour de notre technologie de presse hydraulique spécialisée, qui excelle tant pour le [pressage à froid](/fr/cold-press-oil-machine/) pour la VCO que pour le pressage à chaud pour une production à rendement plus élevé. Notre presse hydraulique à huile de coco applique une pression élevée uniforme sans dégrader la qualité de l'huile, préservant la teneur naturelle en acide laurique et le délicat arôme de coco que les consommateurs apprécient.
 
 Cette solution couvre chaque étape, de la préparation de la noix de coco brute à la filtration, le raffinage optionnel étant assuré par un équipement approvisionné séparément, vous offrant une ligne de production adaptable de 500 kg à plus de 2 000 kg de coco par jour.
 
@@ -276,7 +276,7 @@ Pressez de l'huile pour d'autres marques sous contrat. Nos machines de qualité 
 
   'cottonseed-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour la graine de coton. La graine de coton entière donne **15-18 %** ; après délinatage et décorticage, les amandes donnent **28-34 %**, avec **5-7 % d'huile résiduelle dans le tourteau**. La graine de coton se presse presque toujours **à chaud** — le pressage à froid n'est pas courant pour cette graine. L'étape de préparation critique : **délinatez avant le pressage** — la fibre de coton absorbe l'huile et vous coûte **3-5 % de rendement**. Et rappelez-vous : l'huile de coton brute doit être raffinée pour éliminer le gossypol avant de pouvoir être vendue comme huile alimentaire.
+Oui — la presse hydraulique Haonuo est conçue pour la graine de coton. La graine de coton entière donne **15-18 %** ; après délinatage et décorticage, les amandes donnent **28-34 %**, avec **5-7 % d'huile résiduelle dans le tourteau**. La graine de coton se presse presque toujours **à chaud** — le [pressage à froid](/fr/cold-press-oil-machine/) n'est pas courant pour cette graine. L'étape de préparation critique : **délinatez avant le pressage** — la fibre de coton absorbe l'huile et vous coûte **3-5 % de rendement**. Et rappelez-vous : l'huile de coton brute doit être raffinée pour éliminer le gossypol avant de pouvoir être vendue comme huile alimentaire.
 
 ## Aperçu
 
@@ -320,7 +320,7 @@ L'huile brute doit être raffinée pour éliminer le gossypol avant la vente ali
 
   'flaxseed-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour la graine de lin. Comptez sur **28-35 % de rendement en pressage à froid** à partir de graines affichant **33-43 % de teneur en huile**. La seule règle non négociable : pressez **sous 50 °C** — l'huile de lin contient **50-60 % d'oméga-3 ALA**, qui commence à se dégrader au-dessus de cette température, et c'est précisément cette teneur en oméga-3 qui fait que l'huile de lin pressée à froid se vend au détail à **15-30 $/L**. Filtrez naturellement, embouteillez en verre foncé sous azote et stockez au frais : la durée de conservation est de **3-6 mois au réfrigérateur**.
+Oui — la presse hydraulique Haonuo est conçue pour la graine de lin. Comptez sur **28-35 % de rendement en [pressage à froid](/fr/cold-press-oil-machine/)** à partir de graines affichant **33-43 % de teneur en huile**. La seule règle non négociable : pressez **sous 50 °C** — l'huile de lin contient **50-60 % d'oméga-3 ALA**, qui commence à se dégrader au-dessus de cette température, et c'est précisément cette teneur en oméga-3 qui fait que l'huile de lin pressée à froid se vend au détail à **15-30 $/L**. Filtrez naturellement, embouteillez en verre foncé sous azote et stockez au frais : la durée de conservation est de **3-6 mois au réfrigérateur**.
 
 ## Solution de Pressage d'Huile de Lin
 
@@ -436,7 +436,7 @@ Notre périmètre clé en main couvre la ligne de pressage centrale — tout l'�
 Traitement de 10 à 100 tonnes de graines oléagineuses par jour pour les marchés de gros et de détail. Notre ligne de pressage HN500 double fût délivre une huile brute de qualité constante, et une ligne de raffinage approvisionnée séparément complète le parcours vers l'huile RBD répondant aux normes nationales et internationales. Prouvé dans des installations en Inde, en Indonésie et en Égypte.
 
 ### Raffinerie d'Huile
-Ajout de capacité de pressage à une raffinerie existante. Nos presses hydrauliques alimentent l'huile brute directement dans votre système de raffinage. L'ultra haute pression assure un rendement maximal en huile brute avant le raffinage, améliorant l'efficacité globale de l'usine.
+Ajout de capacité de pressage à une raffinerie existante. Nos presses hydrauliques alimentent l'huile brute directement dans votre système de raffinage. L'ultra haute pression assure un [rendement](/fr/resources/how-to-maximize-oil-yield/) maximal en huile brute avant le raffinage, améliorant l'efficacité globale de l'usine.
 
 ### Groupe Agro-industriel et Plantation
 Opérations verticalement intégrées contrôlant l'ensemble de la chaîne d'approvisionnement, de la plantation à l'huile conditionnée. Nos lignes de pressage centrales traitent le palmiste, la coco, le sésame et d'autres cultures de plantation à l'échelle industrielle, en s'intégrant à un équipement de raffinage approvisionné indépendamment. Nous avons équipé des groupes agro-industriels en Afrique de l'Ouest et en Asie du Sud-Est.
@@ -465,7 +465,7 @@ Nos presses hydrauliques industrielles à huile sont conçues pour des programme
 
   'mustard-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour la moutarde. Comptez sur **30-38 % de rendement (pressage à froid)** ou **33-41 % (pressage à chaud)** à partir de graines nettoyées, avec **moins de 5 % d'huile résiduelle dans le tourteau**. Un fût HN325 traite **100 kg par lot (35-45 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine — un modèle double fût ou HN365 atteint **1 500-2 500 kg/jour**. Pour l'huile de moutarde **Kachi Ghani** traditionnelle pressée à froid, sautez la cuisson vapeur et pressez sous 60 °C.
+Oui — la presse hydraulique Haonuo est conçue pour la moutarde. Comptez sur **30-38 % de rendement ([pressage à froid](/fr/cold-press-oil-machine/))** ou **33-41 % (pressage à chaud)** à partir de graines nettoyées, avec **moins de 5 % d'huile résiduelle dans le tourteau**. Un fût HN325 traite **100 kg par lot (35-45 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine — un modèle double fût ou HN365 atteint **1 500-2 500 kg/jour**. Pour l'huile de moutarde **Kachi Ghani** traditionnelle pressée à froid, sautez la cuisson vapeur et pressez sous 60 °C.
 
 ## Aperçu
 
@@ -518,7 +518,7 @@ La solution prend en charge à la fois le pressage à froid (pour l'huile de mou
 
   'olive-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour l'olive. Comptez sur **12-16 % de rendement à partir d'olives vertes** et **16-25 % à partir d'olives noires mûres** (pressage à froid), avec **moins de 5-6 % d'huile résiduelle dans le grignon**. Une ligne de pressage à froid traite **300-1 000 kg d'olives par jour**, produisant environ **50-250 litres d'huile** selon la variété. La règle critique : pressez **dans les 24 heures suivant la récolte** — les olives s'oxydent vite, et des délais au-delà de 48 heures dégradent significativement l'huile.
+Oui — la presse hydraulique Haonuo est conçue pour l'olive. Comptez sur **12-16 % de rendement à partir d'olives vertes** et **16-25 % à partir d'olives noires mûres** ([pressage à froid](/fr/cold-press-oil-machine/)), avec **moins de 5-6 % d'huile résiduelle dans le grignon**. Une ligne de pressage à froid traite **300-1 000 kg d'olives par jour**, produisant environ **50-250 litres d'huile** selon la variété. La règle critique : pressez **dans les 24 heures suivant la récolte** — les olives s'oxydent vite, et des délais au-delà de 48 heures dégradent significativement l'huile.
 
 ## Aperçu
 
@@ -577,7 +577,7 @@ Oui — la presse hydraulique haute pression Haonuo est conçue pour les amandes
 
 L'huile de palmiste est une huile très polyvalente dérivée de l'amande (graine) du fruit du palmier à huile, distincte de l'huile de palme plus courante extraite de la chair du fruit. Une **machine de pressage d'huile de palmiste** fiable est essentielle pour les producteurs d'Asie du Sud-Est et d'Afrique qui souhaitent maximiser la valeur de leur récolte de palmier à huile en traitant à la fois la chair et l'amande.
 
-La solution de pressage d'huile de palmiste de Haonuo est construite autour de notre technologie de presse hydraulique haute pression, particulièrement bien adaptée aux amandes de palmiste dures et riches en graisses. Notre **machine d'extraction d'huile de palmiste** applique une pression élevée soutenue qui extrait minutieusement l'huile des amandes broyées, atteignant des taux d'huile résiduelle inférieurs à 5 %.
+La solution de pressage d'huile de palmiste de Haonuo est construite autour de notre technologie de presse hydraulique haute pression, particulièrement bien adaptée aux amandes de palmiste dures et riches en graisses. Notre **machine d'[extraction d'huile](/fr/resources/cold-press-vs-hot-press-oil/) de palmiste** applique une pression élevée soutenue qui extrait minutieusement l'huile des amandes broyées, atteignant des taux d'huile résiduelle inférieurs à 5 %.
 
 Cette solution couvre le processus, de la séparation des amandes au pressage et à la filtration, le raffinage optionnel étant assuré par un équipement approvisionné séparément, vous permettant de produire de l'huile de palmiste de qualité alimentaire et industrielle.
 
@@ -623,13 +623,13 @@ L'huile de palmiste brute s'est récemment négociée autour de **$900-1 400 la 
 
   'peanut-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour l'arachide. Comptez sur **40-48 % de rendement (pressage à chaud, amandes torréfiées)** ou **38-44 % (pressage à froid)** à partir d'amandes décortiquées, avec **6-8 % d'huile résiduelle dans le tourteau** — contre 10-12 % pour les presses conventionnelles à fût percé. Un fût HN325 traite **100 kg par lot (30-60 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine ; un double fût ou HN365 atteint **1 500-2 500 kg/jour**. Décortiquez toujours d'abord : presser des arachides non décortiquées réduit le rendement de 15-25 %.
+Oui — la presse hydraulique Haonuo est conçue pour l'arachide. Comptez sur **40-48 % de [rendement](/fr/resources/how-to-maximize-oil-yield/) (pressage à chaud, amandes torréfiées)** ou **38-44 % ([pressage à froid](/fr/cold-press-oil-machine/))** à partir d'amandes décortiquées, avec **6-8 % d'huile résiduelle dans le tourteau** — contre 10-12 % pour les presses conventionnelles à fût percé. Un fût HN325 traite **100 kg par lot (30-60 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine ; un double fût ou HN365 atteint **1 500-2 500 kg/jour**. Décortiquez toujours d'abord : presser des arachides non décortiquées réduit le rendement de 15-25 %.
 
 ## Aperçu
 
 L'huile d'arachide (aussi appelée huile de cacahuète) est l'huile de cuisson quotidienne d'Afrique de l'Ouest — le Nigeria est l'un des plus grands producteurs mondiaux d'arachides — et la demande est tout aussi forte en Inde, en Chine et en Asie du Sud-Est. Une **machine de pressage d'huile d'arachide** hydraulique permet aux petites et moyennes huileries de presser une huile chaude aromatique ou une huile premium pressée à froid directement à partir d'amandes décortiquées, pour les marchés locaux ou l'exportation.
 
-La solution de pressage d'arachide de Haonuo repose sur la technologie de presse hydraulique. Contrairement aux expelleurs à vis, qui génèrent une chaleur de friction susceptible de brûler l'huile, notre **machine d'extraction d'huile d'arachide** applique une pression statique maîtrisée. L'huile reste en dessous de la température de brûlure, la saveur naturelle d'arachide est préservée, et l'huile résiduelle dans le tourteau se situe généralement à **6-8 %** (tests usine Haonuo sur arachide et sésame calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation), contre environ 10-12 % pour une presse conventionnelle à fût percé.
+La solution de pressage d'arachide de Haonuo repose sur la technologie de presse hydraulique. Contrairement aux expelleurs à vis, qui génèrent une chaleur de friction susceptible de brûler l'huile, notre **machine d'[extraction d'huile](/fr/resources/cold-press-vs-hot-press-oil/) d'arachide** applique une pression statique maîtrisée. L'huile reste en dessous de la température de brûlure, la saveur naturelle d'arachide est préservée, et l'huile résiduelle dans le tourteau se situe généralement à **6-8 %** (tests usine Haonuo sur arachide et sésame calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation), contre environ 10-12 % pour une presse conventionnelle à fût percé.
 
 Chaque presse hydraulique Haonuo assure **les deux procédés sur une seule machine** : pressage à froid pour une huile premium riche en nutriments, et pressage à chaud après torréfaction pour un arôme plus fort et 3-5 % d'huile en plus par lot. La différence tient entièrement à la préparation des graines — c'est précisément pourquoi le processus en sept étapes ci-dessous compte.
 
@@ -679,13 +679,13 @@ Chaque presse hydraulique Haonuo assure **les deux procédés sur une seule mach
 
   'sesame-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo est conçue pour le sésame. Comptez sur **45-50 % de rendement (pressage à froid)**, montant à **47-52 % avec torréfaction**, avec **typiquement 6-8 % d'huile résiduelle dans le tourteau** (jusqu'à ~5 % en torréfaction optimale). Le fût de 300 mm prend **32,5 kg de sésame par lot — jusqu'à 50 kg avec pré-compression** — et un cycle de pressage à chaud dure environ **30-40 minutes**. Torréfiez à **160-180 °C** pour **+3-5 % de rendement** et le profil aromatique toasté, et maintenez l'humidité des graines à **5-7 %**.
+Oui — la presse hydraulique Haonuo est conçue pour le sésame. Comptez sur **45-50 % de rendement ([pressage à froid](/fr/cold-press-oil-machine/))**, montant à **47-52 % avec torréfaction**, avec **typiquement 6-8 % d'huile résiduelle dans le tourteau** (jusqu'à ~5 % en torréfaction optimale). Le fût de 300 mm prend **32,5 kg de sésame par lot — jusqu'à 50 kg avec pré-compression** — et un cycle de pressage à chaud dure environ **30-40 minutes**. Torréfiez à **160-180 °C** pour **+3-5 % de rendement** et le profil aromatique toasté, et maintenez l'humidité des graines à **5-7 %**.
 
 ## Aperçu
 
 L'huile de sésame est l'une des huiles de cuisson les plus anciennes et les plus appréciées au monde, prisée pour sa saveur de noix distinctive et son riche profil nutritionnel. Une **machine de pressage d'huile de sésame** haute performance est la pierre angulaire de toute entreprise rentable de production d'huile de sésame, que vous cibliez le marché premium de l'huile pressée à froid ou le segment à fort volume de l'huile de sésame torréfiée populaire en Asie et au Moyen-Orient.
 
-La solution de pressage d'huile de sésame de Haonuo exploite notre technologie propriétaire de presse hydraulique, qui délivre un rendement en huile élevé. Notre **presse hydraulique pour huile de sésame** applique une pression uniforme sur l'ensemble de la chambre de pressage, atteignant typiquement des taux d'huile résiduelle de 6-8 %. Les résultats réels dépendent de la qualité des graines et des paramètres de pressage.
+La solution de pressage d'huile de sésame de Haonuo exploite notre technologie propriétaire de presse hydraulique, qui délivre un [rendement en huile](/fr/resources/how-to-maximize-oil-yield/) élevé. Notre **presse hydraulique pour huile de sésame** applique une pression uniforme sur l'ensemble de la chambre de pressage, atteignant typiquement des taux d'huile résiduelle de 6-8 %. Les résultats réels dépendent de la qualité des graines et des paramètres de pressage.
 
 Cette solution prend en charge à la fois le pressage à froid (pour une huile de sésame premium riche en nutriments) et le pressage à chaud avec torréfaction (pour une huile de sésame grillée aromatique), vous offrant la flexibilité de servir différents segments de marché avec une seule ligne de production.
 
@@ -855,7 +855,7 @@ Cette solution est adaptée pour la production au niveau du village, les opérat
 - **Faible besoin en matière première** : Commencez avec aussi peu que 25 kg de graines par lot
 - **Temps de cycle rapide** : 35-45 minutes par lot signifie un roulement rapide
 - **Polyvalente** : Traitez plusieurs types de graines sur la même machine
-- **Haut rendement** : Huile résiduelle inférieure à 5 % maximise le profit de chaque kilogramme
+- **Haut [rendement](/fr/resources/how-to-maximize-oil-yield/)** : Huile résiduelle inférieure à 5 % maximise le profit de chaque kilogramme
 
 ## Pourquoi Choisir Notre Presse à Huile pour Petite Entreprise
 
@@ -981,7 +981,7 @@ Oui — la presse hydraulique Haonuo est conçue pour la noix. Comptez sur **50-
 
 L'huile de noix est l'une des huiles alimentaires les plus premium au monde, prisée pour sa riche teneur en oméga-3, sa délicate saveur de noix et ses nombreux bienfaits pour la santé. Le Moyen-Orient et l'Asie centrale figurent parmi les plus grands consommateurs d'huile de noix, où elle est utilisée à la fois comme huile de cuisson gastronomique et en médecine traditionnelle.
 
-La solution de pressage d'huile de noix de Haonuo Machinery est spécifiquement conçue pour les producteurs qui exigent l'huile de noix pressée à froid de la plus haute qualité. Notre technologie de presse hydraulique ultra haute pression assure une extraction maximale de l'huile tout en préservant les acides gras oméga-3 sensibles à la chaleur qui rendent l'huile de noix si précieuse.
+La solution de pressage d'huile de noix de Haonuo Machinery est spécifiquement conçue pour les producteurs qui exigent l'huile de noix pressée à froid de la plus haute qualité. Notre technologie de presse hydraulique ultra haute pression assure une [extraction](/fr/resources/cold-press-vs-hot-press-oil/) maximale de l'huile tout en préservant les acides gras oméga-3 sensibles à la chaleur qui rendent l'huile de noix si précieuse.
 
 ## Rendements Attendus en Huile
 
@@ -1020,13 +1020,13 @@ La solution de pressage d'huile de noix de Haonuo Machinery est spécifiquement 
 
   'rice-bran-oil-pressing': `**Réponse Rapide**
 
-Oui — la presse hydraulique Haonuo traite le son de riz, à une condition honnête : **pressez-le frais ou stabilisé**. Comptez sur **9-13 % de rendement (pressage à froid)** ou **11-15 % (pressage à chaud)** à partir de son frais et bien stabilisé (15-23 % de teneur en huile), les résultats variant avec la fraîcheur du son. Un fût HN325 traite **100 kg par lot (35-45 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine — un modèle double fût ou HN365 atteint **1 500-2 500 kg/jour**. Le son non stabilisé depuis plus de 24-48 heures produit une huile riche en FFA ; planifiez donc la collecte du son avant d'acheter la machine.
+Oui — la presse hydraulique Haonuo traite le son de riz, à une condition honnête : **pressez-le frais ou stabilisé**. Comptez sur **9-13 % de rendement ([pressage à froid](/fr/cold-press-oil-machine/))** ou **11-15 % (pressage à chaud)** à partir de son frais et bien stabilisé (15-23 % de teneur en huile), les résultats variant avec la fraîcheur du son. Un fût HN325 traite **100 kg par lot (35-45 min en pressage à chaud)**, soit environ **800-1 200 kg/jour** par machine — un modèle double fût ou HN365 atteint **1 500-2 500 kg/jour**. Le son non stabilisé depuis plus de 24-48 heures produit une huile riche en FFA ; planifiez donc la collecte du son avant d'acheter la machine.
 
 ## Aperçu
 
 L'huile de son de riz est l'une des huiles de cuisson les plus saines au monde — riche en gamma-oryzanol, vitamine E et antioxydants naturels — et une huile premium en forte croissance en Inde, au Bangladesh, au Japon et en Asie du Sud-Est. Pour les riziculteurs, le son est un sous-produit à faible coût souvent vendu à bas prix ou jeté ; une **machine de pressage d'huile de son de riz** fiable transforme ce sous-produit en une activité huileuse à haute valeur.
 
-Le défi avec le son de riz n'est pas le pressage — c'est le temps. Le son fraîchement moulu contient des enzymes lipases actives qui augmentent les acides gras libres en quelques heures, ruinant la qualité de l'huile. La solution de pressage de son de riz Haonuo est construite autour de cette réalité : stabiliser le son à la chaleur (notre torréfacteur ou notre cuiseur vapeur) dans les heures suivant la mouture, puis presser avec une **machine d'extraction d'huile de son de riz** hydraulique pour une huile propre à faible FFA.
+Le défi avec le son de riz n'est pas le pressage — c'est le temps. Le son fraîchement moulu contient des enzymes lipases actives qui augmentent les acides gras libres en quelques heures, ruinant la qualité de l'huile. La solution de pressage de son de riz Haonuo est construite autour de cette réalité : stabiliser le son à la chaleur (notre torréfacteur ou notre cuiseur vapeur) dans les heures suivant la mouture, puis presser avec une **machine d'[extraction d'huile](/fr/resources/cold-press-vs-hot-press-oil/) de son de riz** hydraulique pour une huile propre à faible FFA.
 
 La solution prend en charge à la fois le pressage à froid (pour une huile de son de riz pressée à froid premium qui conserve le gamma-oryzanol) et le pressage à chaud avec cuisson vapeur (pour un rendement plus élevé), vous offrant la polyvalence de servir les segments diététiques et de masse avec une seule ligne de production.
 

@@ -2,7 +2,7 @@
 export const idSolutionBodies: Record<string, string> = {
   'almond-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk almond. Harapkan **hasil 44-50% (press dingin)** dari almond manis tanpa kulit — hingga **47-52% dengan inti panggang** — dengan **sisa minyak di bungkil di bawah 5%**. Satu lini press dingin memproses **300-1.000 kg almond per hari**, menghasilkan sekitar **150-500 liter minyak**. Kupas almond sebelum ditekan (blanching untuk menghilangkan kulit meningkatkan hasil dan membuat minyak lebih terang), jaga kelembapan pada **4-6%**, dan pertahankan press **di bawah 60°C** untuk melindungi vitamin E yang menjadi alasan harga premium.
+Ya — press hidrolik Haonuo dirancang untuk almond. Harapkan **hasil 44-50% ([press dingin](/id/cold-press-oil-machine/))** dari almond manis tanpa kulit — hingga **47-52% dengan inti panggang** — dengan **sisa minyak di bungkil di bawah 5%**. Satu lini press dingin memproses **300-1.000 kg almond per hari**, menghasilkan sekitar **150-500 liter minyak**. Kupas almond sebelum ditekan (blanching untuk menghilangkan kulit meningkatkan hasil dan membuat minyak lebih terang), jaga kelembapan pada **4-6%**, dan pertahankan press **di bawah 60°C** untuk melindungi vitamin E yang menjadi alasan harga premium.
 
 ## Ringkasan
 
@@ -54,7 +54,7 @@ Pada 300-1.000 kg/hari, satu lini press dingin mengubah almond menjadi sekitar *
 
   'avocado-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk alpukat. Dari daging alpukat Hass segar harapkan **hasil 14-20% (press dingin)**; mengeringkan daging terlebih dahulu menaikkan itu menjadi **30-44%**, dengan **sisa minyak di bungkil di bawah 5-6%**. Satu lini press dingin memproses **300-1.000 kg daging alpukat per hari**. Langkah persiapan penting: daging alpukat segar mengandung sekitar **70% air**, yang menciptakan emulsi dan memangkas hasil — keringkan daging sebelum ditekan dan Anda dapat menggandakan hasil efektif Anda, sambil menjaga suhu di bawah 60°C untuk mempertahankan warna zamrud yang dibayar pembeli.
+Ya — press hidrolik Haonuo dirancang untuk alpukat. Dari daging alpukat Hass segar harapkan **hasil 14-20% ([press dingin](/id/cold-press-oil-machine/))**; mengeringkan daging terlebih dahulu menaikkan itu menjadi **30-44%**, dengan **sisa minyak di bungkil di bawah 5-6%**. Satu lini press dingin memproses **300-1.000 kg daging alpukat per hari**. Langkah persiapan penting: daging alpukat segar mengandung sekitar **70% air**, yang menciptakan emulsi dan memangkas hasil — keringkan daging sebelum ditekan dan Anda dapat menggandakan hasil efektif Anda, sambil menjaga suhu di bawah 60°C untuk mempertahankan warna zamrud yang dibayar pembeli.
 
 ## Ringkasan
 
@@ -115,7 +115,7 @@ Minyak jarak adalah minyak industri unik dengan aplikasi yang mencakup farmasi, 
 
 Solusi penekanan minyak jarak Haonuo dibangun di sekitar teknologi press hidrolik tekanan tinggi kami, yang sangat efektif untuk ekstraksi biji jarak. Biji jarak yang keras dan berminyak tinggi membutuhkan tekanan tinggi berkelanjutan untuk ekstraksi menyeluruh, dan **mesin ekstraksi minyak jarak** kami memberikan tepat itu — mencapai tingkat minyak sisa di bawah 5% yang tidak dapat dicapai oleh mesin sekrup.
 
-Solusi ini mendukung press dingin (untuk minyak jarak kelas obat dan kosmetik) dan press panas (untuk minyak kelas industri dengan hasil lebih tinggi), memberikan fleksibilitas untuk melayani segmen pasar yang berbeda.
+Solusi ini mendukung [press dingin](/id/cold-press-oil-machine/) (untuk minyak jarak kelas obat dan kosmetik) dan press panas (untuk minyak kelas industri dengan hasil lebih tinggi), memberikan fleksibilitas untuk melayani segmen pasar yang berbeda.
 
 ## Hasil Minyak yang Diharapkan
 
@@ -159,7 +159,7 @@ Solusi ini mendukung press dingin (untuk minyak jarak kelas obat dan kosmetik) d
 
   'coconut-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk kelapa. Dari kopra kering harapkan **hasil 55-62% (press panas)**; dari daging segar parut untuk VCO, **28-32%** — dengan **sisa minyak di bungkil 5-6% atau kurang**. Satu siklus penekanan berjalan sekitar **30-40 menit press panas (sekitar 2 jam press dingin)**, dan satu lini memproses **500-2.000 kg kelapa per hari**. Angka penting: press kopra pada **kelembapan di bawah 6%** — bahan yang dikeringkan dengan baik melepaskan minyak jauh lebih banyak daripada daging segar.
+Ya — press hidrolik Haonuo dirancang untuk kelapa. Dari kopra kering harapkan **hasil 55-62% (press panas)**; dari daging segar parut untuk VCO, **28-32%** — dengan **sisa minyak di bungkil 5-6% atau kurang**. Satu siklus penekanan berjalan sekitar **30-40 menit press panas (sekitar 2 jam [press dingin](/id/cold-press-oil-machine/))**, dan satu lini memproses **500-2.000 kg kelapa per hari**. Angka penting: press kopra pada **kelembapan di bawah 6%** — bahan yang dikeringkan dengan baik melepaskan minyak jauh lebih banyak daripada daging segar.
 
 ## Ringkasan
 
@@ -211,7 +211,7 @@ Pada 500-2.000 kg/hari, satu lini mengubah kopra menjadi sekitar **$420-3.100 pr
 
   'commercial-oil-press': `## Ringkasan
 
-Untuk produsen minyak mapan dan bisnis yang berkembang, **mesin press minyak komersial** harus menghasilkan throughput tinggi yang konsisten, performa yang andal, dan kualitas minyak kelas profesional — shift demi shift, hari demi hari. Solusi press minyak komersial Haonuo dirancang tepat untuk permintaan ini.
+Untuk produsen minyak mapan dan bisnis yang berkembang, **[mesin press minyak](/id/hydraulic-oil-press-machine/) komersial** harus menghasilkan throughput tinggi yang konsisten, performa yang andal, dan kualitas minyak kelas profesional — shift demi shift, hari demi hari. Solusi press minyak komersial Haonuo dirancang tepat untuk permintaan ini.
 
 Solusi komersial kami dibangun di sekitar Press Hidrolik Heavy Duty (HN365) dan Cold Press (HN426), keduanya tersedia dengan konfigurasi tabung press ganda yang secara efektif menggandakan kapasitas produksi Anda tanpa menggandakan ruang lantai. Mesin **press hidrolik komersial** ini menghasilkan tekanan tinggi berkelanjutan yang diperlukan untuk ekstraksi menyeluruh, mencapai tingkat minyak sisa di bawah 5% pada semua biji minyak umum.
 
@@ -244,7 +244,7 @@ Baik Anda menjalankan fasilitas produksi minyak khusus, pabrik pengolahan makana
 
   'cottonseed-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk biji kapas. Biji kapas utuh menghasilkan **15-18%**; setelah penghilangan serat dan dekortikasi, inti menghasilkan **28-34%**, dengan **sisa minyak di bungkil 5-7%**. Biji kapas hampir selalu **dipress panas** — press dingin tidak umum untuk biji ini. Langkah persiapan penting: **hilangkan serat sebelum menekan** — serat kapas menyerap minyak dan memangkas hasil Anda **3-5%**. Dan ingat minyak biji kapas mentah harus dimurnikan untuk menghilangkan gossypol sebelum dapat dijual sebagai minyak makanan.
+Ya — press hidrolik Haonuo dirancang untuk biji kapas. Biji kapas utuh menghasilkan **15-18%**; setelah penghilangan serat dan dekortikasi, inti menghasilkan **28-34%**, dengan **sisa minyak di bungkil 5-7%**. Biji kapas hampir selalu **dipress panas** — [press dingin](/id/cold-press-oil-machine/) tidak umum untuk biji ini. Langkah persiapan penting: **hilangkan serat sebelum menekan** — serat kapas menyerap minyak dan memangkas hasil Anda **3-5%**. Dan ingat minyak biji kapas mentah harus dimurnikan untuk menghilangkan gossypol sebelum dapat dijual sebagai minyak makanan.
 
 ## Ringkasan
 
@@ -288,7 +288,7 @@ Minyak mentah harus dimurnikan untuk menghilangkan gossypol sebelum dijual sebag
 
   'flaxseed-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk biji rami. Harapkan **hasil 28-35% press dingin** dari biji dengan kandungan minyak **33-43%**. Satu aturan yang tidak dapat ditawar: press **di bawah 50°C** — minyak biji rami mengandung **50-60% omega-3 ALA**, yang mulai terdegradasi di atas suhu itu, dan kandungan omega-3 itulah mengapa minyak biji rami press dingin dijual ritel **$15-30/L**. Saring secara alami, botolkan dalam kaca gelap di bawah nitrogen, dan simpan dingin: masa simpan **3-6 bulan di kulkas**.
+Ya — press hidrolik Haonuo dirancang untuk biji rami. Harapkan **hasil 28-35% [press dingin](/id/cold-press-oil-machine/)** dari biji dengan kandungan minyak **33-43%**. Satu aturan yang tidak dapat ditawar: press **di bawah 50°C** — minyak biji rami mengandung **50-60% omega-3 ALA**, yang mulai terdegradasi di atas suhu itu, dan kandungan omega-3 itulah mengapa minyak biji rami press dingin dijual ritel **$15-30/L**. Saring secara alami, botolkan dalam kaca gelap di bawah nitrogen, dan simpan dingin: masa simpan **3-6 bulan di kulkas**.
 
 ## Solusi Penekanan Minyak Biji Rami
 
@@ -349,7 +349,7 @@ Harga ritel yang mendorong kisaran tersebut — grosir curah berada lebih rendah
 
   'industrial-oil-press': `## Ringkasan
 
-Produksi minyak skala industri menuntut peralatan yang menghasilkan throughput maksimum, minyak sisa minimum, dan kualitas konsisten di ribuan ton produksi per tahun. **Mesin press minyak industri** harus cukup tangguh untuk operasi 24/7 sambil mempertahankan presisi yang diperlukan untuk efisiensi ekstraksi optimal.
+Produksi minyak skala industri menuntut peralatan yang meng[hasil](/id/resources/how-to-maximize-oil-yield/)kan throughput maksimum, minyak sisa minimum, dan kualitas konsisten di ribuan ton produksi per tahun. **Mesin press minyak industri** harus cukup tangguh untuk operasi 24/7 sambil mempertahankan presisi yang diperlukan untuk efisiensi ekstraksi optimal.
 
 Solusi press minyak industri Haonuo dibangun di sekitar Press Hidrolik Ultra High Pressure (HN500) dan High Pressure (HN480) kami — mesin paling bertenaga dalam lini kami. Sistem **press hidrolik industri** ini menghasilkan gaya press berkelanjutan hingga 60 MPa, mencapai tingkat minyak sisa di bawah 5% bahkan pada biji minyak paling menantang. Kami menyediakan lini inti penekanan dan filtrasi dari 1 hingga 100 ton per hari, dan membantu mengintegrasikan peralatan pemurnian yang dibeli terpisah saat minyak jadi RBD diperlukan.
 
@@ -384,7 +384,7 @@ Solusi ini dirancang untuk fasilitas produksi minyak skala besar, operasi yang m
 
   'mustard-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk sawi. Harapkan **hasil 30-38% (press dingin)** atau **33-41% (press panas)** dari biji bersih, dengan **sisa minyak di bungkil di bawah 5%**. Satu tabung press HN325 memuat **100 kg per batch (35-45 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari** — model tabung press ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Untuk minyak sawi **Kachi Ghani** press dingin tradisional, lewati pengukusan dan tekan di bawah 60°C.
+Ya — press hidrolik Haonuo dirancang untuk sawi. Harapkan **hasil 30-38% ([press dingin](/id/cold-press-oil-machine/))** atau **33-41% (press panas)** dari biji bersih, dengan **sisa minyak di bungkil di bawah 5%**. Satu tabung press HN325 memuat **100 kg per batch (35-45 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari** — model tabung press ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Untuk minyak sawi **Kachi Ghani** press dingin tradisional, lewati pengukusan dan tekan di bawah 60°C.
 
 ## Ringkasan
 
@@ -437,13 +437,13 @@ Pada 800-1.200 kg/hari, satu HN325 mengubah biji sawi menjadi produk senilai sek
 
   'olive-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk zaitun. Harapkan **hasil 12-16% dari zaitun hijau** dan **16-25% dari zaitun hitam matang** (press dingin), dengan **sisa minyak di ampas di bawah 5-6%**. Satu lini press dingin memproses **300-1.000 kg zaitun per hari**, menghasilkan sekitar **50-250 liter minyak** tergantung varietas. Aturan penting: press **dalam 24 jam setelah panen** — zaitun cepat teroksidasi, dan penundaan lebih dari 48 jam secara signifikan menurunkan kualitas minyak.
+Ya — press hidrolik Haonuo dirancang untuk zaitun. Harapkan **hasil 12-16% dari zaitun hijau** dan **16-25% dari zaitun hitam matang** ([press dingin](/id/cold-press-oil-machine/)), dengan **sisa minyak di ampas di bawah 5-6%**. Satu lini press dingin memproses **300-1.000 kg zaitun per hari**, menghasilkan sekitar **50-250 liter minyak** tergantung varietas. Aturan penting: press **dalam 24 jam setelah panen** — zaitun cepat teroksidasi, dan penundaan lebih dari 48 jam secara signifikan menurunkan kualitas minyak.
 
 ## Ringkasan
 
 Minyak zaitun adalah andalan masakan Mediterania dan salah satu minyak goreng paling berharga di dunia, dengan minyak zaitun extra virgin (EVOO) dijual dengan harga premium di pasar global. **Mesin press minyak zaitun** berkualitas sangat penting bagi petani zaitun dan produsen minyak yang ingin mengekstrak minyak berkualitas dari panen mereka sambil mempertahankan rasa, aroma, dan sifat nutrisi yang mendefinisikan minyak zaitun premium.
 
-Solusi penekanan minyak zaitun Haonuo dibangun di sekitar teknologi press hidrolik dingin kami, yang merupakan metode cocok untuk memproduksi minyak zaitun extra virgin. Berbeda dengan hammer mill dan mesin sekrup tradisional yang dapat menghasilkan panas berlebihan dan memperkenalkan rasa logam, **mesin press minyak zaitun** hidrolik kami menerapkan tekanan lembut dan seragam pada suhu di bawah 60°C, menjaga polifenol, asam oleat, dan rasa buah yang lembut yang membedakan minyak zaitun yang benar-benar luar biasa.
+Solusi penekanan minyak zaitun Haonuo dibangun di sekitar teknologi press hidrolik dingin kami, yang merupakan metode cocok untuk memproduksi minyak zaitun extra virgin. Berbeda dengan hammer mill dan mesin sekrup tradisional yang dapat menghasilkan panas berlebihan dan memperkenalkan rasa logam, **[mesin press minyak](/id/hydraulic-oil-press-machine/) zaitun** hidrolik kami menerapkan tekanan lembut dan seragam pada suhu di bawah 60°C, menjaga polifenol, asam oleat, dan rasa buah yang lembut yang membedakan minyak zaitun yang benar-benar luar biasa.
 
 Solusi ini dirancang untuk produsen minyak zaitun Mediterania, Timur Tengah, dan Dunia Baru yang menuntut kualitas tertinggi dari panen zaitun mereka.
 
@@ -496,7 +496,7 @@ Ya — press hidrolik tekanan tinggi Haonuo dirancang untuk inti sawit, salah sa
 
 Minyak inti sawit adalah minyak yang sangat serbaguna yang berasal dari inti (biji) buah kelapa sawit, berbeda dari minyak sawit yang lebih umum yang diekstrak dari daging buah. **Mesin press minyak inti sawit** yang andal sangat penting bagi produsen di Asia Tenggara dan Afrika yang ingin memaksimalkan nilai panen buah sawit mereka dengan memproses baik daging maupun inti.
 
-Solusi penekanan minyak inti sawit Haonuo dibangun di sekitar teknologi press hidrolik tekanan tinggi kami, yang sangat cocok untuk inti sawit yang keras dan berlemak tinggi yang menantang mesin sekrup konvensional. **Mesin ekstraksi minyak inti sawit** kami menerapkan tekanan tinggi berkelanjutan yang mengekstrak minyak secara menyeluruh dari inti yang dihancurkan, mencapai tingkat minyak sisa di bawah 5% — jauh lebih baik daripada mesin sekrup yang biasanya meninggalkan 6-8% minyak sisa.
+Solusi penekanan minyak inti sawit Haonuo dibangun di sekitar teknologi press hidrolik tekanan tinggi kami, yang sangat cocok untuk inti sawit yang keras dan berlemak tinggi yang menantang mesin sekrup konvensional. **Mesin [ekstraksi minyak](/id/resources/cold-press-vs-hot-press-oil/) inti sawit** kami menerapkan tekanan tinggi berkelanjutan yang mengekstrak minyak secara menyeluruh dari inti yang dihancurkan, mencapai tingkat minyak sisa di bawah 5% — jauh lebih baik daripada mesin sekrup yang biasanya meninggalkan 6-8% minyak sisa.
 
 Solusi ini mencakup proses dari pemisahan inti melalui penekanan dan filtrasi, dengan pemurnian opsional ditangani peralatan yang dibeli terpisah, memungkinkan Anda memproduksi minyak inti sawit kelas makanan dan kelas industri.
 
@@ -542,13 +542,13 @@ Minyak inti sawit mentah baru-baru ini diperdagangkan sekitar **$900-1.400 per t
 
   'peanut-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk kacang tanah. Harapkan **hasil 40-48% (press panas, inti terpanggang)** atau **38-44% (press dingin)** dari inti terkupas, dengan **sisa minyak di bungkil 6-8%** — dibandingkan 10-12% pada press tabung press berlubang konvensional. Satu tabung press HN325 memuat **100 kg per batch (30-60 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari**; model tabung press ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Selalu kupas dulu: menekan kacang tanpa kupas memangkas hasil 15-25%.
+Ya — press hidrolik Haonuo dirancang untuk kacang tanah. Harapkan **[hasil](/id/resources/how-to-maximize-oil-yield/) 40-48% (press panas, inti terpanggang)** atau **38-44% ([press dingin](/id/cold-press-oil-machine/))** dari inti terkupas, dengan **sisa minyak di bungkil 6-8%** — dibandingkan 10-12% pada press tabung press berlubang konvensional. Satu tabung press HN325 memuat **100 kg per batch (30-60 menit press panas)**, sehingga satu mesin memproses sekitar **800-1.200 kg/hari**; model tabung press ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Selalu kupas dulu: menekan kacang tanpa kupas memangkas hasil 15-25%.
 
 ## Ringkasan
 
 Minyak kacang tanah adalah minyak goreng sehari-hari di Afrika Barat — Nigeria salah satu produsen kacang tanah terbesar di dunia — dan permintaannya sama kuatnya di India, Tiongkok, serta Asia Tenggara. **Mesin press minyak kacang** hidrolik memungkinkan pabrik minyak kecil dan menengah memeras minyak panas yang aromatik atau minyak cold press premium langsung dari biji kupasan, baik untuk pasar lokal maupun pembeli ekspor.
 
-Solusi pengepresan kacang Haonuo dibangun di atas teknologi press hidrolik. Berbeda dengan expeller ulir yang menimbulkan panas gesek dan dapat menghanguskan minyak, **mesin ekstraksi minyak kacang tanah** kami menerapkan tekanan statis terkendali. Minyak tetap di bawah suhu hangus, rasa kacang alami terjaga, dan sisa minyak di bungkil biasanya berada di kisaran **6-8%** (pengujian pabrik Haonuo pada kacang tanah dan wijen berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan sekitar 10-12% pada press tabung press berlubang konvensional.
+Solusi pengepresan kacang Haonuo dibangun di atas teknologi press hidrolik. Berbeda dengan expeller ulir yang menimbulkan panas gesek dan dapat menghanguskan minyak, **mesin [ekstraksi minyak](/id/resources/cold-press-vs-hot-press-oil/) kacang tanah** kami menerapkan tekanan statis terkendali. Minyak tetap di bawah suhu hangus, rasa kacang alami terjaga, dan sisa minyak di bungkil biasanya berada di kisaran **6-8%** (pengujian pabrik Haonuo pada kacang tanah dan wijen berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan), dibandingkan sekitar 10-12% pada press tabung press berlubang konvensional.
 
 Setiap press hidrolik Haonuo menangani **dua rute di satu mesin yang sama**: cold press untuk minyak premium kaya nutrisi, dan press panas setelah pengovenan untuk aroma lebih kuat dan 3-5% lebih banyak minyak per batch. Perbedaannya sepenuhnya pada persiapan biji — itulah sebabnya proses tujuh langkah di bawah ini penting.
 
@@ -598,7 +598,7 @@ Pada 800-1.200 kg/hari, satu HN325 mengubah kacang kupas menjadi produk senilai 
 
   'sesame-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo dirancang untuk wijen. Harapkan **hasil 45-50% (press dingin)**, meningkat menjadi **47-52% dengan pemanggangan**, dengan **sisa minyak di bungkil biasanya 6-8%** (serendah ~5% pada pemanggangan optimal). Tabung press 300 mm memuat **32,5 kg wijen per batch — hingga 50 kg dengan pra-kompresi** — dan siklus press panas berjalan sekitar **30-40 menit**. Panggang pada **160-180°C** untuk **+3-5% hasil** dan profil panggang aromatik, dan jaga kelembapan biji pada **5-7%**.
+Ya — press hidrolik Haonuo dirancang untuk wijen. Harapkan **[hasil](/id/resources/how-to-maximize-oil-yield/) 45-50% ([press dingin](/id/cold-press-oil-machine/))**, meningkat menjadi **47-52% dengan pemanggangan**, dengan **sisa minyak di bungkil biasanya 6-8%** (serendah ~5% pada pemanggangan optimal). Tabung press 300 mm memuat **32,5 kg wijen per batch — hingga 50 kg dengan pra-kompresi** — dan siklus press panas berjalan sekitar **30-40 menit**. Panggang pada **160-180°C** untuk **+3-5% hasil** dan profil panggang aromatik, dan jaga kelembapan biji pada **5-7%**.
 
 ## Ringkasan
 
@@ -754,7 +754,7 @@ Pada 600-1.200 kg/hari, satu mesin heavy duty mengubah kacang shea menjadi sekit
 
   'small-business-oil-press': `## Ringkasan
 
-Memulai bisnis penekanan minyak tidak memerlukan investasi besar atau pabrik besar. **Mesin press minyak kecil** adalah titik masuk yang sempurna untuk wirausahawan, pemilik usaha kecil, dan koperasi yang ingin memproduksi minyak goreng berkualitas tinggi untuk pasar lokal. Dengan peralatan yang tepat, Anda dapat mulai menghasilkan pendapatan dari hari pertama.
+Memulai bisnis penekanan minyak tidak memerlukan investasi besar atau pabrik besar. **Mesin press minyak kecil** adalah titik masuk yang sempurna untuk wirausahawan, pemilik usaha kecil, dan koperasi yang ingin memproduksi minyak goreng berkualitas tinggi untuk pasar lokal. Dengan peralatan yang tepat, Anda dapat mulai meng[hasil](/id/resources/how-to-maximize-oil-yield/)kan pendapatan dari hari pertama.
 
 Solusi press minyak usaha kecil Haonuo dibangun di sekitar Press Hidrolik Standar (HN325) kami — model paling terjangkau dan kompak yang dirancang khusus untuk aplikasi **mesin press minyak untuk usaha kecil**. Meskipun jejaknya kecil, mesin ini menghasilkan performa penekanan kelas profesional dengan tingkat minyak sisa di bawah 5%, artinya Anda mengekstrak lebih banyak minyak dari setiap kilogram biji yang Anda proses.
 
@@ -900,7 +900,7 @@ Ya — press hidrolik Haonuo dirancang untuk kenari. Harapkan **hasil 50-62% dar
 
 Minyak kenari adalah salah satu minyak konsumsi paling premium di dunia, dihargai karena kandungan omega-3 yang kaya, rasa kacang yang lembut, dan banyak manfaat kesehatan. Timur Tengah dan Asia Tengah termasuk konsumen terbesar minyak kenari, di mana ia digunakan baik sebagai minyak goreng gourmet maupun dalam pengobatan tradisional.
 
-Solusi penekanan minyak kenari Haonuo Machinery secara khusus dirancang untuk produsen yang menuntut minyak kenari press dingin berkualitas tertinggi. Teknologi press hidrolik ultra-tinggi kami memastikan ekstraksi minyak maksimal sambil menjaga asam lemak omega-3 yang sensitif terhadap panas yang membuat minyak kenari begitu berharga.
+Solusi penekanan minyak kenari Haonuo Machinery secara khusus dirancang untuk produsen yang menuntut minyak kenari press dingin berkualitas tertinggi. Teknologi press hidrolik ultra-tinggi kami memastikan [ekstraksi minyak](/id/resources/cold-press-vs-hot-press-oil/) maksimal sambil menjaga asam lemak omega-3 yang sensitif terhadap panas yang membuat minyak kenari begitu berharga.
 
 ## Hasil Minyak yang Diharapkan
 
@@ -939,13 +939,13 @@ Pada 4-6 batch per jam, satu HN500 mempress 3,2-4,8 ton inti per hari 8 jam — 
 
   'rice-bran-oil-pressing': `**Jawaban Cepat**
 
-Ya — press hidrolik Haonuo menangani bekatul padi, dengan satu syarat jujur: **press saat segar atau distabilkan**. Harapkan **hasil 9-13% (press dingin)** atau **11-15% (press panas)** dari dedak segar yang distabilkan dengan baik (kandungan minyak 15-23%), dengan hasil bervariasi sesuai kesegaran dedak. Satu tabung HN325 menangani **100 kg per batch (35-45 menit press panas)**, jadi satu mesin menjalankan sekitar **800-1.200 kg/hari** — model tabung ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Dedak yang tidak distabilkan lebih dari 24-48 jam menghasilkan minyak FFA tinggi, jadi rencanakan pengumpulan dedak sebelum Anda membeli mesin.
+Ya — press hidrolik Haonuo menangani bekatul padi, dengan satu syarat jujur: **press saat segar atau distabilkan**. Harapkan **hasil 9-13% ([press dingin](/id/cold-press-oil-machine/))** atau **11-15% (press panas)** dari dedak segar yang distabilkan dengan baik (kandungan minyak 15-23%), dengan hasil bervariasi sesuai kesegaran dedak. Satu tabung HN325 menangani **100 kg per batch (35-45 menit press panas)**, jadi satu mesin menjalankan sekitar **800-1.200 kg/hari** — model tabung ganda atau HN365 mencapai **1.500-2.500 kg/hari**. Dedak yang tidak distabilkan lebih dari 24-48 jam menghasilkan minyak FFA tinggi, jadi rencanakan pengumpulan dedak sebelum Anda membeli mesin.
 
 ## Ringkasan
 
-Minyak bekatul padi adalah salah satu minyak goreng tersehat di dunia — kaya gamma-oryzanol, vitamin E, dan antioksidan alami — dan minyak premium yang tumbuh cepat di India, Bangladesh, Jepang, dan Asia Tenggara. Bagi penggilingan padi, dedak adalah produk sampingan berbiaya rendah yang sering dijual murah atau dibuang; **mesin press minyak bekatul** yang andal mengubah produk sampingan itu menjadi bisnis minyak bernilai tinggi.
+Minyak bekatul padi adalah salah satu minyak goreng tersehat di dunia — kaya gamma-oryzanol, vitamin E, dan antioksidan alami — dan minyak premium yang tumbuh cepat di India, Bangladesh, Jepang, dan Asia Tenggara. Bagi penggilingan padi, dedak adalah produk sampingan berbiaya rendah yang sering dijual murah atau dibuang; **[mesin press minyak](/id/hydraulic-oil-press-machine/) bekatul** yang andal mengubah produk sampingan itu menjadi bisnis minyak bernilai tinggi.
 
-Tantangan bekatul bukanlah penekanannya — melainkan waktunya. Dedak yang baru digiling mengandung enzim lipase aktif yang menaikkan asam lemak bebas dalam hitungan jam, merusak kualitas minyak. Solusi penekanan bekatul Haonuo dibangun berdasarkan kenyataan ini: stabilkan dedak dengan panas (roaster atau steamer kami) dalam hitungan jam setelah penggilingan, lalu press dengan **mesin ekstraksi minyak bekatul** hidrolik untuk minyak bersih dengan FFA rendah.
+Tantangan bekatul bukanlah penekanannya — melainkan waktunya. Dedak yang baru digiling mengandung enzim lipase aktif yang menaikkan asam lemak bebas dalam hitungan jam, merusak kualitas minyak. Solusi penekanan bekatul Haonuo dibangun berdasarkan kenyataan ini: stabilkan dedak dengan panas (roaster atau steamer kami) dalam hitungan jam setelah penggilingan, lalu press dengan **mesin [ekstraksi minyak](/id/resources/cold-press-vs-hot-press-oil/) bekatul** hidrolik untuk minyak bersih dengan FFA rendah.
 
 Solusi ini mendukung press dingin (untuk minyak bekatul press dingin premium yang mempertahankan gamma-oryzanol) dan press panas dengan pengukusan (untuk hasil lebih tinggi), memberi Anda fleksibilitas melayani segmen makanan kesehatan dan pasar massal dengan satu lini produksi.
 

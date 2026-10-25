@@ -352,7 +352,7 @@ Persiapan listrik yang tepat penting untuk operasi yang aman dan efisien mesin p
 
   'oil-cake-byproduct-guide': `# Panduan Memanfaatkan Hasil Samping Cake Minyak
 
-Cake minyak adalah sisa padat yang tersisa setelah ekstraksi minyak dari biji minyak. Hasil samping berharga ini mewakili sekitar 50-60% dari berat biji asli dan mengandung tingkat tinggi protein, serat, dan nutrisi lainnya. Penggunaan yang tepat dari cake minyak dapat secara signifikan meningkatkan profitabilitas keseluruhan dari operasi produksi minyak.
+Cake minyak adalah sisa padat yang tersisa setelah [ekstraksi minyak](/id/resources/cold-press-vs-hot-press-oil/) dari biji minyak. Hasil samping berharga ini mewakili sekitar 50-60% dari berat biji asli dan mengandung tingkat tinggi protein, serat, dan nutrisi lainnya. Penggunaan yang tepat dari cake minyak dapat secara signifikan meningkatkan profitabilitas keseluruhan dari operasi produksi minyak.
 
 ## Memahami Komposisi Cake Minyak
 
@@ -581,7 +581,7 @@ Minyak kacang tanah adalah salah satu minyak makan paling populer di dunia, terk
 
 ### Pengupasan
 - Tingkat pengupasan yang disarankan: 95%+
-- Penghapusan kulit untuk meningkatkan hasil
+- Penghapusan kulit untuk meningkatkan [hasil](/id/resources/how-to-maximize-oil-yield/)
 
 ### Pengaturan Kelembaban
 - Press panas: 5-7% kelembaban

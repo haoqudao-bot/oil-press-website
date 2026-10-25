@@ -460,7 +460,7 @@ Une configuration électrique appropriée est essentielle pour le fonctionnement
 
   'oil-cake-byproduct-guide': `# Guide d'utilisation du tourteau d'huile comme sous-produit
 
-Le tourteau d'huile est le résidu solide restant après extraction de l'huile des graines oléagineuses. Ce sous-produit précieux représente environ 50-60% du poids original de la graine et contient des niveaux élevés de protéines, de fibres et d'autres nutriments. Une utilisation appropriée du tourteau peut améliorer considérablement la rentabilité globale des opérations de production d'huile.
+Le tourteau d'huile est le résidu solide restant après [extraction](/fr/resources/cold-press-vs-hot-press-oil/) de l'huile des graines oléagineuses. Ce sous-produit précieux représente environ 50-60% du poids original de la graine et contient des niveaux élevés de protéines, de fibres et d'autres nutriments. Une utilisation appropriée du tourteau peut améliorer considérablement la rentabilité globale des opérations de production d'huile.
 
 ## Comprendre la composition du tourteau d'huile
 
@@ -689,7 +689,7 @@ L'huile d'arachide est l'une des huiles comestibles les plus populaires au monde
 
 ### Écorticage
 - Taux de retrait recommandé : 95%+
-- Élimination de la coque pour augmenter le rendement
+- Élimination de la coque pour augmenter le [rendement](/fr/resources/how-to-maximize-oil-yield/)
 
 ### Conditionnement de l'humidité
 - Pressage à chaud : 5-7% d'humidité
