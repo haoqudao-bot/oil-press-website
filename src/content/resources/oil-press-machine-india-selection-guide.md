@@ -1,6 +1,6 @@
 ---
 title:
-  en: "Oil Press Machine Selection Guide for Small & Medium Oil Mills in India"
+  en: "Oil Press Machine Guide for Small Oil Mills in India"
   fr: "Guide de sélection des presses à huile pour moulins à huile petites et moyennes en Inde"
   ar: "دليل اختيار مكابس الزيت لمصانع الزيت الصغيرة والمتوسطة في الهند"
   id: "Panduan Pemilihan Mesin Press Minyak untuk Pabrik Minyak Kecil & Menengah di India"

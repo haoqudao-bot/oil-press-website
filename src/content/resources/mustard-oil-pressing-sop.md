@@ -1,6 +1,6 @@
 ---
 title:
-  en: "Mustard Oil Pressing SOP — Kachi Ghani Cold Press & Hot Press"
+  en: "Mustard Oil SOP — Kachi Ghani Cold & Hot Press"
   fr: "SOP de pressage d'huile de moutarde — Kachi Ghani à froid & à chaud"
   ar: "إجراءات تشغيلية قياسية لعصر زيت الخردل — كاتشي غاني بارد وساخن"
   id: "SOP Pengepresan Minyak Mustard — Kachi Ghani Dingin & Panas"

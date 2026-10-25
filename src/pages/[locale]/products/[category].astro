@@ -210,7 +210,7 @@ const allLd = [itemListLd, breadcrumbLd];
 if (catFaqLd) allLd.push(catFaqLd);
 ---
 
-<BaseLayout locale={currentLocale} title={`${categoryLabel} — ${({ fr: 'Équipement pour Huilerie', ar: 'معدات معالجة الزيت', id: 'Peralatan Pengolahan Minyak' } as Record<string, string>)[currentLocale] || 'Oil Processing Equipment'}`} description={category.data.description[currentLocale] || category.data.description.en} keywords={pageKeywords} jsonLd={allLd}>
+<BaseLayout locale={currentLocale} title={categoryLabel} description={category.data.description[currentLocale] || category.data.description.en} keywords={pageKeywords} jsonLd={allLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
