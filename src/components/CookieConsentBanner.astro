@@ -67,6 +67,7 @@ const text = getCookieText();
     if (!banner) return;
 
     var implicitAttached = false;
+    var timeoutId = null;
 
     function hasStoredChoice() {
       return document.cookie.split(';').some(function(row) {
@@ -98,11 +99,17 @@ const text = getCookieText();
       window.addEventListener('scroll', onFirstInteraction, { passive: true, capture: true });
       document.addEventListener('click', onFirstInteraction, true);
       document.addEventListener('touchstart', onFirstInteraction, { passive: true, capture: true });
+      // Fallback: 5 s of staying on the page also counts as implicit acceptance,
+      // catching visitors who read the hero and leave without scrolling/tapping.
+      timeoutId = setTimeout(function() {
+        if (implicitAttached && !hasStoredChoice()) setConsent(true);
+      }, 5000);
     }
 
     function detachImplicitConsent() {
       if (!implicitAttached) return;
       implicitAttached = false;
+      if (timeoutId) { clearTimeout(timeoutId); timeoutId = null; }
       window.removeEventListener('scroll', onFirstInteraction, true);
       document.removeEventListener('click', onFirstInteraction, true);
       document.removeEventListener('touchstart', onFirstInteraction, true);
