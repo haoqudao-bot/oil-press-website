@@ -9,25 +9,25 @@ function localePath(p: string) { return locale === 'en' ? p : `/${locale}${p}`; 
 function getCookieText() {
   const texts = {
     en: {
-      message: 'We use cookies to enhance your browsing experience.',
+      message: 'We use cookies to analyse traffic and improve your experience. Continuing to browse means you accept them.',
       accept: 'Accept',
       reject: 'Reject',
       learnMore: 'Cookie Policy',
     },
     fr: {
-      message: 'Nous utilisons des cookies pour améliorer votre expérience.',
+      message: 'Nous utilisons des cookies pour analyser le trafic et améliorer votre expérience. En continuant à naviguer, vous les acceptez.',
       accept: 'Accepter',
       reject: 'Refuser',
       learnMore: 'Politique de cookies',
     },
     ar: {
-      message: 'نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك.',
+      message: 'نستخدم ملفات تعريف الارتباط لتحليل الزيارات وتحسين تجربتك. استمرارك في التصفح يعني موافقتك عليها.',
       accept: 'قبول',
       reject: 'رفض',
       learnMore: 'سياسة ملفات تعريف الارتباط',
     },
     id: {
-      message: 'Kami menggunakan cookie untuk meningkatkan pengalaman browsing Anda.',
+      message: 'Kami menggunakan cookie untuk menganalisis lalu lintas dan meningkatkan pengalaman Anda. Melanjutkan penjelajahan berarti Anda menyetujui cookie tersebut.',
       accept: 'Terima',
       reject: 'Tolak',
       learnMore: 'Kebijakan Cookie',
@@ -66,18 +66,54 @@ const text = getCookieText();
     var banner = document.getElementById('cookie-consent-banner');
     if (!banner) return;
 
+    var implicitAttached = false;
+
+    function hasStoredChoice() {
+      return document.cookie.split(';').some(function(row) {
+        return row.trim().indexOf(cookieName + '=') === 0;
+      });
+    }
+
     function setConsent(accepted) {
       document.cookie = cookieName + '=' + (accepted ? 'accepted' : 'rejected') + '; expires=' + new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString() + '; path=/';
       banner.style.display = 'none';
+      // Explicit choice wins: stop implicit listeners so a later scroll cannot flip a Reject to Accept
+      detachImplicitConsent();
       // Notify GA/Clarity and other third-party scripts: only load after consent
       document.dispatchEvent(new CustomEvent('haonuo-consent-changed', { detail: accepted }));
     }
 
+    // Implicit consent (EDPB-recognised): scrolling / tapping / clicking the page
+    // counts as accepting analytics cookies. Banner stays visible until then,
+    // and clicking the banner's own buttons is handled explicitly, not here.
+    function onFirstInteraction(event) {
+      if (event && event.target && banner.contains(event.target)) return;
+      if (hasStoredChoice()) { detachImplicitConsent(); return; }
+      setConsent(true);
+    }
+
+    function attachImplicitConsent() {
+      if (implicitAttached) return;
+      implicitAttached = true;
+      window.addEventListener('scroll', onFirstInteraction, { passive: true, capture: true });
+      document.addEventListener('click', onFirstInteraction, true);
+      document.addEventListener('touchstart', onFirstInteraction, { passive: true, capture: true });
+    }
+
+    function detachImplicitConsent() {
+      if (!implicitAttached) return;
+      implicitAttached = false;
+      window.removeEventListener('scroll', onFirstInteraction, true);
+      document.removeEventListener('click', onFirstInteraction, true);
+      document.removeEventListener('touchstart', onFirstInteraction, true);
+    }
+
     // Hide immediately if user already chose (inline script runs right after the banner node to avoid flicker)
-    var consent = document.cookie.split(';').some(function(row) {
-      return row.trim().indexOf(cookieName + '=') === 0;
-    });
-    if (consent) banner.style.display = 'none';
+    if (hasStoredChoice()) {
+      banner.style.display = 'none';
+    } else {
+      attachImplicitConsent();
+    }
 
     document.getElementById('cookie-accept').addEventListener('click', function() { setConsent(true); });
     document.getElementById('cookie-reject').addEventListener('click', function() { setConsent(false); });
