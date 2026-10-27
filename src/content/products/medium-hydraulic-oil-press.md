@@ -5,15 +5,15 @@ title:
   ar: معصرة زيت هيدروليكية متوسطة
   id: Mesin Press Minyak Hidrolik Sedang
 seoTitle:
-  en: "HN355 Hydraulic Oil Press — 360 Ton (Upgraded: HN365)"
-  fr: "Presse à huile hydraulique HN355 — 360 tonnes (successeur : HN365)"
-  ar: "معصرة زيت هيدروليكية HN355 — 360 طن (الإصدار المحدث: HN365)"
-  id: "Mesin press minyak hidrolik HN355 — 360 ton (penerus: HN365)"
+  en: "HN355 Hydraulic Oil Press — 360 Ton Medium Series"
+  fr: "Presse à huile hydraulique HN355 — Série moyenne 360 tonnes"
+  ar: "معصرة زيت هيدروليكية HN355 — السلسلة المتوسطة 360 طن"
+  id: "Mesin press minyak hidrolik HN355 — Seri menengah 360 ton"
 description:
-  en: "HN355 hydraulic oil press — 360 ton medium model with 30.15 MPa cake pressure. Previous generation, succeeded by the upgraded HN365. 390mm tabung press, ~100kg per batch. Still in production."
-  fr: "Presse à huile hydraulique HN355 — 360 tonnes, génération précédente, succédée par la HN365 améliorée. Fût 390mm, ~100kg par lot. Toujours en production."
-  ar: "معصرة زيت هيدروليكية HN355 — 360 طن، الجيل السابق، تم استبدالها بـ HN365 المحدثة. أسطوانة عصر 390 مم، ~100 كجم لكل دفعة. لا تزال في الإنتاج."
-  id: "Mesin press minyak hidrolik HN355 — 360 ton, generasi sebelumnya, diteruskan oleh HN365 yang ditingkatkan. Tabung Press 390mm, ~100kg per batch. Masih dalam produksi."
+  en: "HN355 hydraulic oil press — 360 ton medium model with 30.15 MPa cake pressure. 390mm tabung press, ~100kg per batch. Still in production for spare-part compatibility."
+  fr: "Presse à huile hydraulique HN355 — modèle moyen de 360 tonnes avec pression de surface du tourteau de 30,15 MPa. Fût 390mm, ~100kg par lot. Toujours en production."
+  ar: "معصرة زيت هيدروليكية HN355 — نموذج متوسط بقوة 360 طناً وضغط سطحي للكسب 30.15 ميجاباسكال. أسطوانة عصر 390 مم، ~100 كجم لكل دفعة. لا تزال في الإنتاج."
+  id: "Mesin press minyak hidrolik HN355 — model menengah 360 ton dengan tekanan permukaan bungkil 30,15 MPa. Tabung Press 390mm, ~100kg per batch. Masih dalam produksi."
 category: hydraulic-oil-press
 model: HN355
 modelId: ''
