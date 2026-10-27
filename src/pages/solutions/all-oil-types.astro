@@ -26,23 +26,6 @@ const seedIcons: Record<string, string> = {
   'rice-bran': '🍚', 'animal-fat': '🐄',
 };
 
-const seedImages: Record<string, string> = {
-  palm: '/images/oilseeds/palm.webp',
-  sesame: '/images/oilseeds/sesame.webp',
-  peanut: '/images/oilseeds/peanut.webp',
-  mustard: '/images/oilseeds/mustard.webp',
-  sunflower: '/images/oilseeds/sunflower.webp',
-  shea: '/images/oilseeds/shea.webp',
-};
-
-function seedIconHtml(seedName: string): string {
-  const img = seedImages[seedName];
-  if (img) {
-    return `<img src="${img}" alt="${seedName}" loading="lazy" class="w-12 h-12 rounded-full object-cover flex-shrink-0 shadow-sm">`;
-  }
-  return `<span class="text-4xl flex-shrink-0">${seedIcons[seedName] || '🛢️'}</span>`;
-}
-
 const seedDetails: Record<string, {
   description: string;
   oilContent: string;
@@ -200,7 +183,7 @@ const breadcrumbLd = {
               class="group bg-white rounded-2xl p-6 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all"
             >
               <div class="flex items-start gap-4 mb-4">
-                <div set:html={seedIconHtml(solution.data.seedName)}></div>
+                <span class="text-4xl flex-shrink-0">{seedIcons[solution.data.seedName] || '🛢️'}</span>
                 <div class="min-w-0">
                   <h2 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">
                     {solution.data.title.en}
