@@ -129,7 +129,7 @@ seoKeywords:
   - palm kernel oil extraction machine
   - palm kernel oil press machine
   - palm kernel oil press machine price
-order: 7
+order: 1
 ---
 
 **Quick Answer**

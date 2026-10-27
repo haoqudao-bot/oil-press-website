@@ -121,7 +121,7 @@ seoKeywords:
   - virgin coconut oil press
   - coconut oil making machine
   - coconut oil press machine price
-order: 1
+order: 21
 ---
 
 **Quick Answer**

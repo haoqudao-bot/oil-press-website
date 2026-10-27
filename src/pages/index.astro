@@ -33,6 +33,30 @@ const seedIcons: Record<string, string> = {
   industrial: '⚙️',
 };
 
+// 有真实油料图的 seedName（裁过底、去了中文标签）
+const seedImages: Record<string, string> = {
+  palm: '/images/oilseeds/palm.png',
+  sesame: '/images/oilseeds/sesame.png',
+  mustard: '/images/oilseeds/mustard.png',
+  sunflower: '/images/oilseeds/sunflower.png',
+  // peanut / shea 图待补，保持 emoji
+};
+
+function seedIconHtml(seedName: string): string {
+  const img = seedImages[seedName];
+  if (img) {
+    return `<img src="${img}" alt="${seedName}" loading="lazy" class="w-14 h-14 rounded-full object-cover mx-auto shadow-sm">`;
+  }
+  return `<div class="text-3xl mb-2">${seedIcons[seedName] || '🛢️'}</div>`;
+}
+function seedIconHtmlInline(seedName: string): string {
+  const img = seedImages[seedName];
+  if (img) {
+    return `<img src="${img}" alt="${seedName}" loading="lazy" class="w-10 h-10 rounded-full object-cover shrink-0 shadow-sm">`;
+  }
+  return `<div class="text-3xl shrink-0">${seedIcons[seedName] || '🏭'}</div>`;
+}
+
 /* Four core models — image and model verified one-to-one */
 const models = [
   {
@@ -498,7 +522,7 @@ const modelListLd = {
             class="reveal group bg-steel-50 hover:bg-amber-50 border border-transparent hover:border-amber-200 rounded-xl p-5 text-center transition-colors"
             style={`transition-delay:${i * 40}ms`}
           >
-            <div class="text-3xl mb-2">{seedIcons[solution.data.seedName] || '🛢️'}</div>
+            <div set:html={seedIconHtml(solution.data.seedName)}></div>
             <h3 class="font-bold text-sm text-charcoal-900 group-hover:text-amber-600 transition-colors leading-snug">{solution.data.title.en}</h3>
           </a>
         ))}
@@ -512,7 +536,7 @@ const modelListLd = {
             class="reveal group flex items-center gap-4 bg-white border border-steel-100 hover:border-amber-300 rounded-xl p-5 transition-colors"
             style={`transition-delay:${i * 60}ms`}
           >
-            <div class="text-3xl shrink-0">{seedIcons[solution.data.seedName] || '🏭'}</div>
+            <div set:html={seedIconHtmlInline(solution.data.seedName)}></div>
             <div class="min-w-0">
               <h3 class="font-bold text-base text-charcoal-900 group-hover:text-amber-600 transition-colors">{solution.data.title.en}</h3>
               <p class="text-sm text-steel-500 line-clamp-1 mt-0.5">{solution.data.description.en}</p>
