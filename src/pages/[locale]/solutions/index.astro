@@ -48,21 +48,18 @@ function seedIconHtml(seedName: string, sizeClass = 'w-14 h-14'): string {
 function localePath(path: string): string {
   return `/${currentLocale}${path}`;
 }
-function getText(record: Record<string, Record<string, string>>, key: string): string {
-  return record[key]?.[currentLocale] || record[key]?.['en'] || '';
-}
 
 // --- Featured 6 markets (compact grid, NOT all 11) ---
 const featuredMarkets = [
   { name: currentLocale === 'ar' ? 'نيجيريا' : currentLocale === 'fr' ? 'Nigéria' : 'Nigeria', flag: '🇳🇬', desc: { en: "Africa's largest groundnut & palm oil market", fr: "Le plus grand marché d'huile d'arachide et de palme d'Afrique", ar: 'أكبر سوق لزيت الفول السوداني وزيت النخيل في أفريقيا', id: 'Pasar minyak kacang tanah dan sawit terbesar di Afrika' }, link: '/markets/nigeria' },
   { name: currentLocale === 'ar' ? 'الهند' : currentLocale === 'fr' ? 'Inde' : 'India', flag: '🇮🇳', desc: { en: "World's largest edible oil consumer", fr: 'Le plus grand consommateur d\'huile alimentaire au monde', ar: 'أكبر مستهلك للزيت الصالح للأكل في العالم', id: 'Konsumen minyak nabati terbesar di dunia' }, link: '/markets/india' },
-  { name: currentLocale === 'ar' ? 'إندونيسيا' : currentLocale === 'fr' ? 'Indonésie' : 'Indonesia', flag: '🇮🇩', desc: { en: 'Leading palm oil producer', fr: 'Premier producteur d\'huile de palme', ar: 'المنتج الرائد لزيت النخيل', id: 'Produsen minyak sawit terkemuka' }, link: '/markets/indonesia' },
+  { name: currentLocale === 'ar' ? 'إندونيسيا' : currentLocale === 'fr' ? 'Indonésie' : 'Indonesia', flag: '🇮🇩', desc: { en: 'Leading palm kernel oil producer', fr: 'Premier producteur d\'huile de palme', ar: 'المنتج الرائد لزيت النخيل', id: 'Produsen minyak sawit terkemuka' }, link: '/markets/indonesia' },
   { name: currentLocale === 'ar' ? 'كينيا' : 'Kenya', flag: '🇰🇪', desc: { en: "East Africa's sunflower & peanut hub", fr: "Centre du tournesol et de l'arachide en Afrique de l'Est", ar: 'مركز عباد الشمس والفول السوداني في شرق أفريقيا', id: 'Pusat bunga matahari dan kacang tanah Afrika Timur' }, link: '/markets/kenya' },
-  { name: currentLocale === 'ar' ? 'مصر' : currentLocale === 'fr' ? 'Égypte' : 'Egypt', flag: '🇪🇬', desc: { en: 'Sesame & soybean oil producer', fr: 'Producteur d\'huile de sésame et soja', ar: 'منتج زيت السمسم وفول الصويا', id: 'Produsen minyak wijen dan kedelai' }, link: '/markets/egypt' },
+  { name: currentLocale === 'ar' ? 'مصر' : currentLocale === 'fr' ? 'Égypte' : 'Egypt', flag: '🇪🇬', desc: { en: 'Soybean & sesame oil producer', fr: 'Producteur d\'huile de sésame et soja', ar: 'منتج زيت السمسم وفول الصويا', id: 'Produsen minyak wijen dan kedelai' }, link: '/markets/egypt' },
   { name: currentLocale === 'ar' ? 'الفلبين' : 'Philippines', flag: '🇵🇭', desc: { en: 'Coconut & cold-pressed VCO market', fr: "Marché de l'huile de coco vierge cold-pressée", ar: 'سوق زيت جوز الهند البكر المعصور على البارد', id: 'Pasar minyak kelapa virgin cold-press' }, link: '/markets/philippines' },
 ];
 
-// --- Quick Facts ---
+// --- Quick Facts (multi-language) ---
 const quickFacts = [
   { num: '50+', label: { en: 'Oil Seeds', fr: 'Graines Oléagineuses', ar: 'بذور زيتية', id: 'Biji Minyak' }, sub: { en: 'Peanut · sesame · mustard · sunflower · soybean · olive · coconut · and more', fr: 'Arachide · sésame · moutarde · tournesol · soja · olive · coco · et plus', ar: 'فول سوداني · سمسم · خردل · عباد الشمس · فول صويا · زيتون · جوز هند · والمزيد', id: 'Kacang tanah · wijen · sawi · bunga matahari · kedelai · zaitun · kelapa · dan lainnya' } },
   { num: '300–620', label: { en: 'Tonnage Range', fr: 'Plage de Tonnage', ar: 'نطاق الحمولة', id: 'Rentang Tonase' }, sub: { en: 'From compact home units to industrial continuous lines', fr: 'Des unités domestiques compactes aux lignes industrielles continues', ar: 'من الوحدات المنزلية المدمجة إلى الخطوط الصناعية المستمرة', id: 'Dari unit rumah kompak hingga lini industri berkelanjutan' } },
@@ -70,14 +67,143 @@ const quickFacts = [
   { num: '50+', label: { en: 'Countries Served', fr: 'Pays Desservis', ar: 'دول مخدومة', id: 'Negara yang Dilayani' }, sub: { en: 'Shipped worldwide — Nigeria · India · Indonesia · Kenya · Philippines …', fr: 'Expédié dans le monde entier — Nigéria · Inde · Indonésie · Kenya · Philippines …', ar: 'تم الشحن عالمياً — نيجيريا · الهند · إندونيسيا · كينيا · الفلبين …', id: 'Dikirim ke seluruh dunia — Nigeria · India · Indonesia · Kenya · Philippines …' } },
 ];
 
-// --- Scale card model badges ---
+// --- Scale model badges ---
 const scaleModelBadges: Record<string, { btn: string; sub: Record<string, string> }> = {
   'small-business-oil-press': { btn: 'HN300 / HN325', sub: { en: '400 – 1,400 kg/day', fr: '400 – 1 400 kg/jour', ar: '400 – 1400 كجم/يوم', id: '400 – 1.400 kg/hari' } },
   'commercial-oil-press': { btn: 'HN365 / HN426', sub: { en: '1,500 – 10,000 kg/day', fr: '1 500 – 10 000 kg/jour', ar: '1500 – 10000 كجم/يوم', id: '1.500 – 10.000 kg/hari' } },
   'industrial-oil-press': { btn: 'HN426 / HN500', sub: { en: '10,000+ kg/day', fr: '10 000+ kg/jour', ar: '+10000 كجم/يوم', id: '10.000+ kg/hari' } },
 };
 
-// --- Schema.org ---
+// --- Section copy (multi-language) ---
+const sectionCopy = {
+  heroDesc: {
+    en: 'From seed preparation to bottled oil — Haonuo pairs every hydraulic press with matched roasting, filtration, and cake-handling equipment. Pressing 50+ oil seeds at 3 production scales, shipped to 50+ countries.',
+    fr: 'De la préparation des graines à l\'huile en bouteille — Haonuo associe chaque presse hydraulique à des équipements de torréfaction, filtration et traitement du tourteau adaptés. Pressage de 50+ graines oléagineuses à 3 échelles de production, expédié dans 50+ pays.',
+    ar: 'من تحضير البذور إلى الزيت المعبأ في زجاجات — يقترن Haonuo كل ماكينة هيدروليكية بمعدات تحميص وترشيح ومعالجة كيك متطابقة. عصر أكثر من 50 بذرة زيتية في 3 نطاقات إنتاج، تم الشحن إلى أكثر من 50 دولة.',
+    id: 'Dari persiapan biji hingga minyak kemasan — Haonuo memasangkan setiap mesin press hidrolik dengan peralatan pemanggangan, filtrasi, dan penanganan kue yang cocok. Menekan 50+ biji minyak pada 3 skala produksi, dikirim ke 50+ negara.',
+  },
+  factoryBadge: { en: '🏭 Factory Direct · Shandong, China · Since 2010', fr: '🏭 Direct Usine · Shandong, Chine · Depuis 2010', ar: '🏭 مباشرة من المصنع · شاندونغ، الصين · منذ 2010', id: '🏭 Langsung Pabrik · Shandong, China · Sejak 2010' },
+  featuredSeedsSub: {
+    en: 'Every solution pairs a matched hydraulic press with the right preparation equipment — because pressing <em>palm kernel</em> (high oil content, hard shell) is a different line than pressing <em>mustard</em> (small hard seeds, pungent flavor).',
+    fr: 'Chaque solution associe une presse hydraulique adaptée au bon équipement de préparation — car presser le <em>noyau de palme</em> (teneur en huile élevée, coque dure) est une ligne différente de presser la <em>moutarde</em> (petites graines dures, saveur piquante).',
+    ar: 'كل حل يقترن بمكينة هيدروليكية مطابقة مع معدات التحضير المناسبة — لأن عصر <em>نواة النخيل</em> (محتوى زيت عالي، قشرة صلبة) يختلف عن عصر <em>الخردل</em> (بذور صلبة صغيرة، نكهة حارة).',
+    id: 'Setiap solusi memasangkan mesin press hidrolik yang cocok dengan peralatan persiapan yang tepat — karena menekan <em>inti sawit</em> (kandungan minyak tinggi, cangkang keras) adalah lini yang berbeda dari menekan <em>sawi</em> (biji kecil keras, rasa tajam).',
+  },
+  scalesTitle: { en: 'Which Production Scale Fits You?', fr: 'Quelle Échelle de Production Vous Convient ?', ar: 'ما نطاق الإنتاج المناسب لك؟', id: 'Skala Produksi Mana yang Cocok untuk Anda?' },
+  scalesSub: {
+    en: 'A 300-ton single-barrel unit (800–1,200 kg/day) suits a village cooperative. A 620-ton double-barrel continuous line (10+ tons/day) suits an industrial mill. Choose your target output, we give you the equipment list.',
+    fr: 'Une unité à fût unique de 300 tonnes (800–1 200 kg/jour) convient à une coopérative villageoise. Une ligne continue à double fût de 620 tonnes (10+ tonnes/jour) convient à une usine industrielle. Choisissez votre production cible, nous vous donnons la liste d\'équipements.',
+    ar: 'وحدة ذات أسطوانة واحدة بوزن 300 طن (800–1200 كجم/يوم) تناسب تعاونية قروية. خط مستمر ذو أسطوانة مزدوجة بوزن 620 طن (10+ أطنان/يوم) يناسب مصنع صناعي. اختر إنتاجك المستهدف، نعطيك قائمة المعدات.',
+    id: 'Unit barrel tunggal 300 ton (800–1.200 kg/hari) cocok untuk koperasi desa. Lini berkelanjutan barrel ganda 620 ton (10+ ton/hari) cocok untuk pabrik industri. Pilih target output Anda, kami berikan daftar peralatan.',
+  },
+  marketsTitle: { en: 'Top Markets We Ship To', fr: 'Top Marchés', ar: 'أهم الأسواق', id: 'Pasar Utama' },
+  marketsSub: {
+    en: 'Local oil seeds, local regulations, local business norms — we tailor each line to your market, not a catalog.',
+    fr: 'Graines oléagineuses locales, réglementations locales, normes commerciales locales — nous adaptons chaque ligne à votre marché, pas à un catalogue.',
+    ar: 'بذور زيتية محلية، لوائح تنظيمية محلية، معايير تجارية محلية — نخصص كل خط لسوقك، لا لكتالوج.',
+    id: 'Biji minyak lokal, peraturan lokal, norma bisnis lokal — kami menyesuaikan setiap lini dengan pasar Anda, bukan katalog.',
+  },
+
+  // ===== WHAT A SOLUTION INCLUDES (3 paragraphs) =====
+  includesTitle: { en: 'What a Complete Oil Pressing Solution Includes', fr: "Ce qu'inclut une Solution Complète de Pressage d'Huile", ar: 'ما يتضمنه حل عصر زيت كامل', id: 'Apa yang Disertakan dalam Solusi Press Minyak Lengkap' },
+  includesP1: {
+    en: 'Every profitable oil business starts from the same two questions: <strong class="text-charcoal-900">what are you pressing, and how much of it per day?</strong> A hydraulic oil press is the heart of the line, but seed cleaning, roasting or steaming, filtration, and cake handling decide whether the line actually reaches its rated yield. That is why each Haonuo solution pairs the press with matched preparation and filtration equipment — a mustard oil line for India looks different from a coconut oil line for the Philippines, even when the core machine is the same hydraulic press.',
+    fr: 'Chaque entreprise huilière rentable commence par les deux mêmes questions : <strong class="text-charcoal-900">qu\'allez-vous presser, et en quelle quantité par jour ?</strong> Une presse hydraulique est le cœur de la ligne, mais le nettoyage des graines, la torréfaction ou la cuisson à la vapeur, la filtration et le traitement du tourteau décident si la ligne atteint réellement son rendement nominal. C\'est pourquoi chaque solution Haonuo associe la presse à des équipements de préparation et de filtration adaptés — une ligne d\'huile de moutarde pour l\'Inde est différente d\'une ligne d\'huile de coco pour les Philippines, même lorsque la machine centrale est la même presse hydraulique.',
+    ar: 'يبدأ كل مشروع زيت مربح بنفس السؤالين: <strong class="text-charcoal-900">ماذا تعصر، وكم منه يومياً؟</strong> الماكينة الهيدروليكية هي قلب الخط، لكن تنظيف البذور، والتحميص أو البخار، والترشيح، ومعالجة الكيك تحدد ما إذا كان الخط سيصل فعلياً إلى عائده المصنف. لهذا السبب يقترن كل حل Haonuo الماكينة بمعدات تحضير وترشيح متطابقة — خط زيت خردل للهند يختلف عن خط زيت جوز الهند للفلبين، حتى عندما تكون الماكينة الأساسية هي نفس الماكينة الهيدروليكية.',
+    id: 'Setiap bisnis minyak yang menguntungkan dimulai dari dua pertanyaan yang sama: <strong class="text-charcoal-900">apa yang Anda tekan, dan berapa banyak per hari?</strong> Mesin press hidrolik adalah jantung lini, tetapi pembersihan biji, pemanggangan atau pengukusan, filtrasi, dan penanganan kue menentukan apakah lini benar-benar mencapai hasil yang dinilai. Itulah sebabnya setiap solusi Haonuo memasangkan mesin press dengan peralatan persiapan dan filtrasi yang cocok — lini minyak sawi untuk India terlihat berbeda dari lini minyak kelapa untuk Filipina, bahkan ketika mesin inti adalah mesin press hidrolik yang sama.',
+  },
+  includesP2: {
+    en: 'A typical small-to-medium line combines four stages: a roaster or steamer to condition the seed, the hydraulic press itself (a single barrel like the HN325 handles roughly 800–1,200 kg of prepared seed per day), a filter press for clear, market-ready oil, and simple cake handling. Cold-pressed premium oils skip the roasting stage entirely, trading a few points of yield for the higher prices that cold-pressed oil commands in health-food and export markets.',
+    fr: 'Une ligne typique de petite à moyenne taille combine quatre étapes : un torréfacteur ou un cuiseur à la vapeur pour conditionner la graine, la presse hydraulique elle-même (un fût unique comme le HN325 traite environ 800–1 200 kg de graine préparée par jour), une presse filtrante pour une huile claire prête au marché, et un traitement simple du tourteau. Les huiles premium cold-pressées sautent complètement l\'étape de torréfaction, échangeant quelques points de rendement contre les prix plus élevés que l\'huile cold-pressée atteint sur les marchés des aliments de santé et d\'exportation.',
+    ar: 'يجمع الخط النموذجي من الصغير إلى المتوسط أربع مراحل: المحمص أو الباخرة لتهيئة البذرة، الماكينة الهيدروليكية نفسها (الأسطوانة الواحدة مثل HN325 تتعامل مع حوالي 800–1200 كجم من البذرة المحضرة يومياً)، ماكينة الترشيح لزيت صافٍ جاهز للسوق، ومعالجة كيك بسيطة. تزيت الزيوت الممتازة المعصورة على البارد مرحلة التحميص تماماً، وتتخلى عن بضع نقاط من العائد مقابل الأسعار الأعلى التي تفرضها الزيت المعصور على البارد في أسواق الأغذية الصحية والتصدير.',
+    id: 'Lini kecil hingga menengah yang khas menggabungkan empat tahap: pemanggang atau pengukus untuk mengondisikan biji, mesin press hidrolik itu sendiri (barrel tunggal seperti HN325 menangani sekitar 800–1.200 kg biji yang disiapkan per hari), filter press untuk minyak jernih siap pasar, dan penanganan kue sederhana. Minyak premium cold-press melewati tahap pemanggangan sepenuhnya, menukar beberapa poin hasil dengan harga lebih tinggi yang diperintah oleh minyak cold-press di pasar makanan kesehatan dan ekspor.',
+  },
+  includesP3: {
+    en: 'Because we manufacture the machines ourselves, every solution is quoted factory-direct, customized to your local voltage, and shipped with the wear parts and documentation your customs clearance requires — whether you land the container in Lagos, Kolkata, Jakarta, or Felixstowe.',
+    fr: 'Parce que nous fabriquons les machines nous-mêmes, chaque solution est proposée directement par l\'usine, personnalisée pour votre tension locale, et expédiée avec les pièces d\'usure et la documentation dont votre dédouanement a besoin — que vous déchargiez le conteneur à Lagos, Kolkata, Jakarta ou Felixstowe.',
+    ar: 'لأننا نصنع الماكينات بأنفسنا، يتم تسعير كل حل مباشرة من المصنع، ومخصص لجهدك المحلي، ويتم الشحن مع قطع الغيار والوثائق التي يتطلبها تخليصك الجمركي — سواء هبطت الحاوية في لاغوس، كولكاتا، جاكرتا، أو فيليكستو.',
+    id: 'Karena kami memproduksi mesin sendiri, setiap solusi dikutip langsung dari pabrik, disesuaikan dengan tegangan lokal Anda, dan dikirimkan dengan suku cadang aus dan dokumentasi yang dibutuhkan kepabeanan Anda — baik Anda mendaratkan wadah di Lagos, Kolkata, Jakarta, atau Felixstowe.',
+  },
+
+  // ===== HOW TO CHOOSE (3 steps) =====
+  chooseTitle: { en: 'How to Choose the Right Oil Press Solution', fr: 'Comment Choisir la Bonne Solution de Pressage d\'Huile', ar: 'كيف تختار حل عصر الزيت المناسب', id: 'Cara Memilih Solusi Press Minyak yang Tepat' },
+  chooseSteps: [
+    {
+      num: '1',
+      title: { en: 'Start with your seed', fr: 'Commencez par votre graine', ar: 'ابدأ ببذرتك', id: 'Mulailah dengan biji Anda' },
+      body: {
+        en: 'The seed decides everything — oil content, hardness, fiber. Sesame and peanut press easily at 325 tons and reward tight temperature control. Palm kernels and copra are hard, high-oil-content seeds that need 500+ tons and a different line configuration. Check our oil-type pages for realistic yield ranges and preparation steps before asking for a quote.',
+        fr: 'La graine décide tout — teneur en huile, dureté, fibres. Le sésame et l\'arachide se pressent facilement à 325 tonnes et récompensent un contrôle de température serré. Les noyaux de palme et le coprah sont des graines dures à haute teneur en huile qui ont besoin de 500+ tonnes et d\'une configuration de ligne différente. Consultez nos pages de type d\'huile pour des plages de rendement réalistes et des étapes de préparation avant de demander un devis.',
+        ar: 'البذرة تقرر كل شيء — محتوى الزيت، الصلابة، الألياف. السمسم والفول السوداني يُعصران بسهولة عند 325 طن ويكافئان التحكم الدقيق في درجة الحرارة. نواة النخيل والكوبرا بذور صلبة عالية المحتوى الزيتي وتحتاج إلى 500+ طن وتكوين خط مختلف. تحقق من صفحات نوع الزيت لدينا لمعرفة نطاقات العائد الواقعية وخطوات التحضير قبل طلب عرض سعر.',
+        id: 'Biji memutuskan segalanya — kandungan minyak, kekerasan, serat. Wijen dan kacang tanah mudah ditekan pada 325 ton dan memberi hadiah kontrol suhu yang ketat. Inti sawit dan kopra adalah biji keras dengan kandungan minyak tinggi yang membutuhkan 500+ ton dan konfigurasi lini yang berbeda. Periksa halaman jenis minyak kami untuk rentang hasil yang realistis dan langkah persiapan sebelum meminta penawaran.',
+      },
+    },
+    {
+      num: '2',
+      title: { en: 'Size to your actual daily target', fr: 'Dimensionnez selon votre objectif quotidien réel', ar: 'اختر الحجم وفقاً لهدفك اليومي الفعلي', id: 'Sesuaikan dengan target harian Anda yang sebenarnya' },
+      body: {
+        en: 'A single-barrel 325-ton unit handles 800–1,200 kg of prepared seed per day — enough for village cooperatives and startup mills. Double-barrel 500-ton lines reach 10,000+ kg/day for continuous industrial operation. Don\'t over-buy: a 300-ton with a 300mm barrel for concentrated pressure can out-produce an oversized general-purpose machine on small hard seeds. See our scale guides for concrete equipment lists at each tier.',
+        fr: 'Une unité à fût unique de 325 tonnes traite 800–1 200 kg de graine préparée par jour — suffisamment pour les coopératives villageoises et les usines de démarrage. Les lignes à double fût de 500 tonnes atteignent 10 000+ kg/jour pour un fonctionnement industriel continu. N\'achetez pas trop : une 300 tonnes avec un fût de 300 mm pour une pression concentrée peut surpasser une machine polyvalente surdimensionnée sur les petites graines dures. Consultez nos guides d\'échelle pour des listes d\'équipements concrètes à chaque niveau.',
+        ar: 'وحدة ذات أسطوانة واحدة بوزن 325 طن تتعامل مع 800–1200 كجم من البذرة المحضرة يومياً — يكفي لتعاونيات القرى ومصانع البداية. الخطوط ذات الأسطوانة المزدوجة بوزن 500 طن تصل إلى 10000+ كجم/يوم للتشغيل الصناعي المستمر. لا تشترِ أكثر من اللازم: الماكينة 300 طن ذات أسطوانة 300 مم للضغط المركز يمكن أن تنتج أكثر من ماكينة عامة كبيرة الحجم على البذور الصلبة الصغيرة. انظر أدلة النطاق الخاصة بنا للحصول على قوائم معدات ملموسة في كل مستوى.',
+        id: 'Unit barrel tunggal 325 ton menangani 800–1.200 kg biji yang disiapkan per hari — cukup untuk koperasi desa dan pabrik pemula. Lini barrel ganda 500 ton mencapai 10.000+ kg/hari untuk operasi industri berkelanjutan. Jangan berlebihan: 300 ton dengan barrel 300 mm untuk tekanan terkonsentrasi bisa menghasilkan lebih banyak daripada mesin serba guna yang terlalu besar pada biji keras kecil. Lihat panduan skala kami untuk daftar peralatan konkret di setiap tingkat.',
+      },
+    },
+    {
+      num: '3',
+      title: { en: 'Run the numbers before you commit', fr: 'Faites les calculs avant de vous engager', ar: 'احسب الأرقام قبل أن تلتزم', id: 'Hitung angka sebelum Anda berkomitmen' },
+      body: {
+        en: 'Each solution page includes a worked example: what 100 kg of raw material returns in oil and cake, with indicative local pricing. Plug in your actual seed cost and local oil price to estimate daily margin — or send us your numbers and we\'ll calculate the payback for your specific market. We\'ve done this for buyers in Nigeria, India, Indonesia, and 50+ other countries — ask for the right machine the first time.',
+        fr: 'Chaque page de solution inclut un exemple calculé : ce que 100 kg de matière première retournent en huile et en tourteau, avec des prix locaux indicatifs. Entrez votre coût de graine réel et votre prix d\'huile local pour estimer la marge quotidienne — ou envoyez-nous vos chiffres et nous calculerons le retour sur investissement pour votre marché spécifique. Nous l\'avons fait pour des acheteurs au Nigeria, en Inde, en Indonésie et dans 50+ autres pays — demandez la bonne machine la première fois.',
+        ar: 'تتضمن كل صفحة حل مثالاً محسوباً: ما يعيده 100 كجم من المواد الخام في زيت وكيك، مع أسعار محلية إرشادية. أدخل تكلفة بذرتك الفعلية وسعر زيتك المحلي لتقدير الهامش اليومي — أو أرسل لنا أرقامك وسنحسب الاسترداد لسوقك المحدد. لقد فعلنا ذلك لمشترين في نيجيريا والهند وإندونيسيا و50+ دولة أخرى — اطلب الماكينة المناسبة في المرة الأولى.',
+        id: 'Setiap halaman solusi menyertakan contoh yang dihitung: apa yang dihasilkan 100 kg bahan mentah dalam minyak dan kue, dengan harga lokal indikatif. Masukkan biaya biji Anda yang sebenarnya dan harga minyak lokal untuk memperkirakan margin harian — atau kirimkan angka Anda kepada kami dan kami akan menghitung pengembalian untuk pasar spesifik Anda. Kami telah melakukan ini untuk pembeli di Nigeria, India, Indonesia, dan 50+ negara lain — mintalah mesin yang tepat sejak pertama kali.',
+      },
+    },
+  ],
+
+  // ===== FAQ (6 Q&A) =====
+  faqTitle: { en: 'Frequently Asked Questions', fr: 'Questions Fréquemment Posées', ar: 'الأسئلة الشائعة', id: 'Pertanyaan yang Sering Diajukan' },
+  faqs: [
+    { q: { en: 'What oil seeds can a hydraulic oil press handle?', fr: 'Quelles graines oléagineuses une presse hydraulique peut-elle traiter ?', ar: 'ما البذور الزيتية التي يمكن للماكينة الهيدروليكية معالجتها؟', id: 'Biji minyak apa yang bisa ditangani oleh mesin press hidrolik?' },
+      a: { en: 'We have dedicated solution pages for 17+ oil seeds (peanut, sesame, mustard, sunflower, soybean, palm kernel, coconut, olive, shea, cottonseed, castor, flaxseed, avocado, almond, walnut, rice bran, animal fat). Our presses also handle 50+ oil-bearing materials including grapeseed, safflower, and various nut oils.', fr: 'Nous avons des pages de solution dédiées pour 17+ graines oléagineuses (arachide, sésame, moutarde, tournesol, soja, palmiste, coco, olive, karité, coton, ricin, lin, avocat, amande, noix, son de riz, graisse animale). Nos presses traitent aussi 50+ matières oléagineuses dont pépins de raisin, carthame et diverses huiles de noix.', ar: 'لدينا صفحات حل مخصصة لأكثر من 17 بذرة زيتية (فول سوداني، سمسم، خردل، عباد الشمس، فول صويا، نواة نخيل، جوز هند، زيتون، شيا، قطن، خروع، كتان، أفوكادو، لوز، جوز، نخالة أرز، دهون حيوانية). كما تعالج ماكيناتنا أكثر من 50 مادة زيتية بما في ذلك بذور العنب والعصفر وزيوت المكسرات المختلفة.', id: 'Kami memiliki halaman solusi khusus untuk 17+ biji minyak (kacang tanah, wijen, sawi, bunga matahari, kedelai, inti sawit, kelapa, zaitun, shea, kapas, jarak, flax, alpukat, almond, kenari, bekatul, lemak hewani). Mesin press kami juga menangani 50+ bahan minyak termasuk biji anggur, safflower, dan berbagai minyak kacang.' } },
+    { q: { en: 'How much oil does a hydraulic press extract compared to a screw press?', fr: 'Combien d\'huile une presse hydraulique extrait-elle par rapport à une presse à vis ?', ar: 'كم زيت تستخلص الماكينة الهيدروليكية مقارنة بماكينة اللولب؟', id: 'Berapa banyak minyak yang diekstrak mesin press hidrolik dibandingkan dengan press sekrup?' },
+      a: { en: 'Hydraulic presses achieve 90–95% extraction efficiency on graded seeds (sesame, peanut at 6–8% moisture), comparable to single-screw expellers. The real advantage is cold-pressing capability — premium cold-pressed oil commands 20–40% higher market prices.', fr: 'Les presses hydrauliques atteignent une efficacité d\'extraction de 90–95 % sur des graines calibrées (sésame, arachide à 6-8 % d\'humidité), comparable aux expelleurs à vis unique. Le véritable avantage est la capacité de pressage à froid — l\'huile premium cold-pressée atteint des prix de marché 20-40 % plus élevés.', ar: 'تحقق الماكينات الهيدروليكية كفاءة استخلاص 90-95% على البذور المدرجة (السمسم والفول السوداني برطوبة 6-8%)، مماثلة لمكابس اللولب الواحدة. الميزة الحقيقية هي القدرة على العصر على البارد — الزيت الممتاز المعصور على البارد يفرض أسعار سوق أعلى بنسبة 20-40%.', id: 'Mesin press hidrolik mencapai efisiensi ekstraksi 90–95% pada biji yang dinilai (wijen, kacang tanah pada kadar air 6-8%), sebanding dengan expeller sekrup tunggal. Keuntungan nyata adalah kemampuan cold-press — minyak premium cold-press memiliki harga pasar 20–40% lebih tinggi.' } },
+    { q: { en: 'What tonnage press do I need for my seed?', fr: 'Quelle tonnage de presse me faut-il pour ma graine ?', ar: 'ما حمولة الماكينة التي أحتاجها لبذرتي؟', id: 'Tonase mesin press apa yang saya butuhkan untuk biji saya?' },
+      a: { en: 'Our range covers 300–620 tons. Soft seeds (sesame, peanut, mustard) → 325–400 tons. Medium-hard seeds (sunflower, soybean) → 400–500 tons. Hard seeds (palm kernel, copra, walnut, almond) → 500–620 tons. Tell us your seed and we recommend the right model.', fr: 'Notre gamme couvre 300–620 tonnes. Graines molles (sésame, arachide, moutarde) → 325–400 tonnes. Graines moyennement dures (tournesol, soja) → 400–500 tonnes. Graines dures (palmiste, coprah, noix, amande) → 500–620 tonnes. Dites-nous votre graine et nous recommandons le bon modèle.', ar: 'نطاقنا يغطي 300–620 طن. البذور الناعمة (السمسم والفول السوداني والخردل) → 325–400 طن. البذور المتوسطة الصلابة (عباد الشمس وفول الصويا) → 400–500 طن. البذور الصلبة (نواة النخيل والكوبرا والجوز واللوز) → 500–620 طن. أخبرنا ببذرتك ونوصي بالموديل المناسب.', id: 'Rentang kami mencakup 300–620 ton. Biji lunak (wijen, kacang tanah, sawi) → 325–400 ton. Biji sedang keras (bunga matahari, kedelai) → 400–500 ton. Biji keras (inti sawit, kopra, kenari, almond) → 500–620 ton. Beritahu kami biji Anda dan kami merekomendasikan model yang tepat.' } },
+    { q: { en: 'How long does production and shipping take?', fr: 'Combien de temps prend la production et l\'expédition ?', ar: 'كم يستغرق الإنتاج والشحن؟', id: 'Berapa lama produksi dan pengiriman?' },
+      a: { en: 'Standard models: 15–25 working days production, 6–10 weeks sea freight full-cycle. Custom configurations (SS304, double-barrel, automation): 30–45 working days. We provide complete export documentation (CO, Form A/E, embassy legalization) to smooth customs clearance.', fr: 'Modèles standard : 15–25 jours ouvrés de production, cycle complet de fret maritime de 6–10 semaines. Configurations personnalisées (SS304, double fût, automatisation) : 30–45 jours ouvrés. Nous fournissons une documentation d\'exportation complète (CO, Formulaire A/E, légalisation d\'ambassade) pour faciliter le dédouanement.', ar: 'الموديلات القياسية: 15–25 يوم عمل للإنتاج، دورة كاملة للشحن البحري من 6–10 أسابيع. التكوينات المخصصة (SS304، الأسطوانة المزدوجة، الأتمتة): 30–45 يوم عمل. نحن نقدم وثائق تصدير كاملة (CO، النموذج A/E، تصديق السفارة) لتسهيل التخليص الجمركي.', id: 'Model standar: 15–25 hari kerja produksi, siklus penuh pengiriman laut 6–10 minggu. Konfigurasi khusus (SS304, barrel ganda, otomatisasi): 30–45 hari kerja. Kami menyediakan dokumentasi ekspor lengkap (CO, Formulir A/E, legalisasi kedutaan) untuk memperlancar kepabeanan.' } },
+    { q: { en: "What's the difference between cold press and hot press?", fr: 'Quelle est la différence entre pressage à froid et pressage à chaud ?', ar: 'ما الفرق بين العصر على البارد والعصر على الساخن؟', id: 'Apa perbedaan antara cold press dan hot press?' },
+      a: { en: 'Hot press cooks the seed (80–110°C) before pressing for maximum yield — neutral, stable oil suitable for refined edible markets. Cold press presses at ambient or low temperature (≤40°C) without pre-heating — preserves flavor and micronutrients, premium price. Hydraulic presses excel at both.', fr: 'Le pressage à chaud cuit la graine (80–110 °C) avant le pressage pour un rendement maximal — huile neutre et stable adaptée aux marchés alimentaires raffinés. Le pressage à froid presse à température ambiante ou basse (≤40 °C) sans pré-chauffage — préserve la saveur et les micronutriments, prix premium. Les presses hydrauliques excellent dans les deux modes.', ar: 'العصر على الساخن يطبخ البذرة (80–110 درجة مئوية) قبل العصر للحصول على أقصى عائد — زيت محايد مستقر مناسب للأسواق الغذائية المكررة. العصر على البارد يعصر في درجة حرارة الغرفة أو منخفضة (≤40 درجة مئوية) بدون تسخين مسبق — يحافظ على النكهة والمغذيات الدقيقة، سعر ممتاز. الماكينات الهيدروليكية ممتازة في كلا الوضعين.', id: 'Hot press memasak biji (80–110°C) sebelum ditekan untuk hasil maksimal — minyak netral stabil cocok untuk pasar makanan olahan. Cold press menekan pada suhu sekitar atau rendah (≤40°C) tanpa pemanasan awal — mempertahankan rasa dan mikronutrien, harga premium. Mesin press hidrolik unggul di keduanya.' } },
+    { q: { en: 'Do you provide installation and after-sales support?', fr: 'Fournissez-vous une installation et un service après-vente ?', ar: 'هل تقدمون التركيب ودعم ما بعد البيع؟', id: 'Apakah Anda menyediakan instalasi dan dukungan purna jual?' },
+      a: { en: 'Every machine ships with complete export documentation, assembly video guides, and lifetime 24/7 remote support via phone, email, and video call. Spare parts are always in stock and shipped via DHL/FedEx in 3–7 days worldwide. 1-year factory warranty covers manufacturing defects.', fr: 'Chaque machine est expédiée avec une documentation d\'exportation complète, des guides vidéo d\'assemblage et un support à distance à vie 24/7 par téléphone, e-mail et appel vidéo. Les pièces de rechange sont toujours en stock et expédiées via DHL/FedEx en 3–7 jours dans le monde entier. La garantie usine de 1 an couvre les défauts de fabrication.', ar: 'يتم شحن كل ماكينة مع وثائق تصدير كاملة، وأدلة فيديو للتجميع، ودعم عن بُعد مدى الحياة على مدار الساعة عبر الهاتف والبريد الإلكتروني ومكالمات الفيديو. قطع الغيار دائماً متوفرة في المخزون ويتم شحنها عبر DHL/FedEx في 3-7 أيام عالمياً. ضمان مصنع لمدة سنة واحدة يغطي عيوب التصنيع.', id: 'Setiap mesin dikirimkan dengan dokumentasi ekspor lengkap, panduan video perakitan, dan dukungan jarak jauh seumur hidup 24/7 melalui telepon, email, dan panggilan video. Suku cadang selalu tersedia dan dikirim melalui DHL/FedEx dalam 3–7 hari ke seluruh dunia. Garansi pabrik 1 tahun mencakup cacat produksi.' } },
+  ],
+
+  // ===== Why Haonuo + CTA =====
+  whyTitle: { en: 'Trusted by Oil Producers in 50+ Countries', fr: 'La Confiance des Producteurs d\'Huile dans 50+ Pays', ar: 'ثقة منتجي الزيت في أكثر من 50 دولة', id: 'Dipercaya Produsen Minyak di 50+ Negara' },
+  whySub: {
+    en: 'From small home businesses to large industrial plants, our solutions power oil production worldwide.',
+    fr: 'Des petites entreprises familiales aux grandes usines industrielles, nos solutions font tourner la production d\'huile dans le monde entier.',
+    ar: 'من الأعمال المنزلية الصغيرة إلى المصانع الصناعية الكبرى، حلولنا تشغّل إنتاج الزيت حول العالم.',
+    id: 'Dari usaha rumahan kecil hingga pabrik industri besar, solusi kami menggerakkan produksi minyak di seluruh dunia.',
+  },
+  whyCards: [
+    { icon: '🛡️', title: { en: '1-year warranty', fr: 'Garantie 1 an', ar: 'ضمان سنة واحدة', id: 'Garansi 1 tahun' },
+      desc: { en: 'Full coverage on manufacturing defects plus lifetime technical support by phone, email, and video call.', fr: 'Couverture complète des défauts de fabrication, plus support technique à vie par téléphone, e-mail et appel vidéo.', ar: 'تغطية كاملة لعيوب التصنيع بالإضافة إلى دعم فني مدى الحياة عبر الهاتف والبريد الإلكتروني ومكالمات الفيديو.', id: 'Cakupan penuh untuk cacat produksi ditambah dukungan teknis seumur hidup melalui telepon, email, dan panggilan video.' } },
+    { icon: '🚚', title: { en: 'Production & Shipping', fr: 'Production & Expédition', ar: 'الإنتاج والشحن', id: 'Produksi & Pengiriman' },
+      desc: { en: 'Standard models: 15–25 working days. Custom configurations: 30–45 working days. 6–10 weeks sea transit. Complete export documentation.', fr: 'Modèles standard : 15–25 jours ouvrés. Configurations personnalisées : 30–45 jours ouvrés. Transit maritime de 6-10 semaines. Documents d\'exportation complets.', ar: 'الموديلات القياسية: 15–25 يوم عمل. التكوينات المخصصة: 30–45 يوم عمل. 6-10 أسابيع عبور بحري. وثائق تصدير كاملة.', id: 'Model standar: 15–25 hari kerja. Konfigurasi khusus: 30–45 hari kerja. 6–10 minggu transit laut. Dokumen ekspor lengkap.' } },
+    { icon: '💰', title: { en: 'Factory-Direct Pricing', fr: 'Prix Direct Usine', ar: 'أسعار مباشرة من المصنع', id: 'Harga Langsung Pabrik' },
+      desc: { en: 'Direct manufacturer with no trading company markups. OEM/ODM available with custom branding and stainless steel upgrade.', fr: 'Fabricant direct sans marge d\'une société de négoce. OEM/ODM disponible avec marque personnalisée et amélioration en acier inoxydable.', ar: 'مصنع مباشر بدون هوامش الشركات الوسيطة. OEM/ODM متوفر مع علامة تجارية مخصصة وترقية الفولاذ المقاوم للصدأ.', id: 'Produsen langsung tanpa markup perusahaan perdagangan. OEM/ODM tersedia dengan branding khusus dan peningkatan stainless steel.' } },
+  ],
+  ctaTitle: { en: 'Not Sure Which Solution Fits You?', fr: 'Vous ne savez pas quelle solution vous convient ?', ar: 'لست متأكداً من الحل المناسب لك؟', id: 'Tidak yakin solusi mana yang cocok untuk Anda?' },
+  ctaSub: {
+    en: 'Tell us your raw material, daily capacity, and budget — our engineers will recommend the best oil press setup for your business.',
+    fr: 'Dites-nous votre matière première, votre capacité quotidienne et votre budget — nos ingénieurs vous recommanderont la meilleure configuration de presse à huile pour votre entreprise.',
+    ar: 'أخبرنا بمادتك الخام، وسعتك اليومية، وميزانيتك — مهندسونا سيوصون بأفضل إعداد لماكينة عصر الزيت لأعمالك.',
+    id: 'Beri tahu kami bahan mentah, kapasitas harian, dan anggaran Anda — insinyur kami akan merekomendasikan pengaturan mesin press minyak terbaik untuk bisnis Anda.',
+  },
+  ctaBtn: { en: 'Get Free Consultation', fr: 'Obtenir une Consultation Gratuite', ar: 'احصل على استشارة مجانية', id: 'Dapatkan Konsultasi Gratis' },
+};
+
+// --- Schema.org (Breadcrumb + ItemList + FAQPage) ---
 const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -101,34 +227,24 @@ const solutionItemList = {
 const faqLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: { en: 'What oil seeds can a hydraulic oil press handle?', fr: 'Quelles graines oléagineuses une presse hydraulique peut-elle traiter ?', ar: 'ما البذور الزيتية التي يمكن للماكينة الهيدروليكية معالجتها؟', id: 'Biji minyak apa yang bisa ditangani oleh mesin press hidrolik?' }[currentLocale], acceptedAnswer: { '@type': 'Answer', text: { en: '17+ oil seeds with dedicated solution pages; our presses also handle 50+ materials.', fr: 'Plus de 17 graines oléagineuses avec des pages de solution dédiées ; nos presses traitent aussi 50+ matières.', ar: 'أكثر من 17 بذرة زيتية مع صفحات حل مخصصة؛ كما تعالج ماكيناتنا أكثر من 50 مادة.', id: '17+ biji minyak dengan halaman solusi khusus; mesin press kami juga menangani 50+ bahan.' }[currentLocale] } },
-    { '@type': 'Question', name: { en: 'What tonnage press do I need?', fr: 'Quelle tonnage de presse me faut-il ?', ar: 'ما حمولة الماكينة التي أحتاجها؟', id: 'Tonase mesin press apa yang saya butuhkan?' }[currentLocale], acceptedAnswer: { '@type': 'Answer', text: { en: 'Our range covers 300–620 tons: soft seeds 325–400t, medium 400–500t, hard seeds 500–620t.', fr: 'Notre gamme couvre 300–620 tonnes : graines molles 325–400t, moyennes 400–500t, dures 500–620t.', ar: 'نطاقنا يغطي 300–620 طن: البذور الناعمة 325–400t، المتوسطة 400–500t، الصلبة 500–620t.', id: 'Rentang kami mencakup 300–620 ton: biji lunak 325–400t, sedang 400–500t, keras 500–620t.' }[currentLocale] } },
-    { '@type': 'Question', name: { en: 'How long does production and shipping take?', fr: 'Combien de temps prend la production et l\'expédition ?', ar: 'كم يستغرق الإنتاج والشحن؟', id: 'Berapa lama produksi dan pengiriman?' }[currentLocale], acceptedAnswer: { '@type': 'Answer', text: { en: 'Standard models: 15–25 working days. Custom: 30–45 days. Sea freight: 6–10 weeks.', fr: 'Modèles standard : 15–25 jours ouvrés. Personnalisés : 30–45 jours. Fret maritime : 6–10 semaines.', ar: 'الموديلات القياسية: 15–25 يوم عمل. المخصصة: 30–45 يوم. الشحن البحري: 6–10 أسابيع.', id: 'Model standar: 15–25 hari kerja. Khusus: 30–45 hari. Pengiriman laut: 6–10 minggu.' }[currentLocale] } },
-  ],
-};
-
-const iconPaths: Record<string, string> = {
-  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-  clock: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
-  hand: '<path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>',
+  mainEntity: sectionCopy.faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q[currentLocale],
+    acceptedAnswer: { '@type': 'Answer', text: f.a[currentLocale] },
+  })),
 };
 
 const allLd = [breadcrumbLd, solutionItemList, faqLd];
 
-const factoryBadge = {
-  en: '🏭 Factory Direct · Shandong, China · Since 2010',
-  fr: '🏭 Direct Usine · Shandong, Chine · Depuis 2010',
-  ar: '🏭 مباشرة من المصنع · شاندونغ، الصين · منذ 2010',
-  id: '🏭 Langsung Pabrik · Shandong, China · Sejak 2010',
-};
-
-const heroDesc = {
-  en: 'From seed preparation to bottled oil — Haonuo pairs every hydraulic press with matched roasting, filtration, and cake-handling equipment. Pressing 50+ oil seeds at 3 production scales, shipped to 50+ countries.',
-  fr: 'De la préparation des graines à l\'huile en bouteille — Haonuo associe chaque presse hydraulique à des équipements de torréfaction, filtration et traitement du tourteau adaptés. Pressage de 50+ graines oléagineuses à 3 échelles de production, expédié dans 50+ pays.',
-  ar: 'من تحضير البذور إلى الزيت المعبأ في زجاجات — يقترن Haonuo كل ماكينة هيدروليكية بمعدات تحميص وترشيح ومعالجة كيك متطابقة. عصر أكثر من 50 بذرة زيتية في 3 نطاقات إنتاج، تم الشحن إلى أكثر من 50 دولة.',
-  id: 'Dari persiapan biji hingga minyak kemasan — Haonuo memasangkan setiap mesin press hidrolik dengan peralatan pemanggangan, filtrasi, dan penanganan kue yang cocok. Menekan 50+ biji minyak pada 3 skala produksi, dikirim ke 50+ negara.',
-};
+// --- Helper labels (multi-language) ---
+const viewSolutionLabel = { en: 'View solution', fr: 'Voir la solution', ar: 'عرض الحل', id: 'Lihat solusi' };
+const viewAll = { en: 'Browse all oil types — compare yield, moisture target, and press tonnage', fr: 'Voir toutes les graines — comparer le rendement, l\'humidité cible et tonnage', ar: 'عرض جميع البذور — مقارنة العائد، الهدف من الرطوبة، والحمولة', id: 'Lihat semua biji — bandingkan hasil, target kadar air, dan tonase' };
+const compareAllScales = { en: 'Compare all three scales side-by-side', fr: 'Comparer les trois échelles côte à côte', ar: 'مقارنة النطاقات الثلاثة جنباً إلى جنب', id: 'Bandingkan ketiga skala berdampingan' };
+const seeAllMarkets = { en: 'See all market guides', fr: 'Tous les guides de marché', ar: 'جميع أدلة الأسواق', id: 'Semua panduan pasar' };
+const recommendedLabel = { en: 'Recommended', fr: 'Recommandé', ar: 'موصى به', id: 'Direkomendasikan' };
+const byOilTypeLabel = { en: 'By Oil Type', fr: 'Par Type de Graine', ar: 'حسب نوع البذرة', id: 'Menurut Jenis Biji' };
+const byScaleLabel = { en: 'By Production Scale', fr: 'Par Échelle de Production', ar: 'حسب نطاق الإنتاج', id: 'Menurut Skala Produksi' };
+const byMarketLabel = { en: 'By Market', fr: 'Par Marché', ar: 'حسب السوق', id: 'Menurut Pasar' };
 ---
 
 <BaseLayout locale={currentLocale} title={t.solutions.title} description={t.solutions.subtitle} jsonLd={allLd}>
@@ -152,18 +268,16 @@ const heroDesc = {
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full mb-6">
-          {factoryBadge[currentLocale]}
+          {sectionCopy.factoryBadge[currentLocale]}
         </div>
         <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-6 leading-tight">
           {t.solutions.title}
         </h1>
-        <p class="text-steel-300 text-lg md:text-xl leading-relaxed mb-8">
-          {heroDesc[currentLocale]}
-        </p>
+        <p class="text-steel-300 text-lg md:text-xl leading-relaxed mb-8">{sectionCopy.heroDesc[currentLocale]}</p>
         <div class="flex flex-wrap gap-3">
-          <a href="#seeds" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition-colors">🥕 {t.solutions.byOilType}</a>
-          <a href="#scales" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">⚙️ {t.solutions.byScale}</a>
-          <a href="#markets" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">🌍 {t.solutions.byRegion}</a>
+          <a href="#seeds" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition-colors">🥕 {byOilTypeLabel[currentLocale]}</a>
+          <a href="#scales" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">⚙️ {byScaleLabel[currentLocale]}</a>
+          <a href="#markets" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">🌍 {byMarketLabel[currentLocale]}</a>
         </div>
       </div>
     </div>
@@ -184,12 +298,12 @@ const heroDesc = {
     </div>
   </section>
 
-  <!-- ===== BY OIL TYPE (Featured 4, NOT all 15) ===== -->
+  <!-- ===== BY OIL TYPE (Featured) ===== -->
   <section id="seeds" class="py-16 md:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.solutions.byOilType}</h2>
-        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{t.solutions.byOilTypeDesc}</p>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{sectionCopy.featuredSeedsSub[currentLocale]}</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {featuredSeeds.map(seed => (
@@ -199,7 +313,7 @@ const heroDesc = {
               <div class="mb-4" set:html={seedIconHtml(seed.data.seedName, 'w-16 h-16')}></div>
               <h3 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">{seed.data.title[currentLocale] || seed.data.title.en}</h3>
               <p class="text-sm text-steel-600 line-clamp-2 mb-3">{seed.data.description[currentLocale] || seed.data.description.en}</p>
-              <span class="text-amber-600 text-sm font-semibold">{t.solutions.viewSolution} →</span>
+              <span class="text-amber-600 text-sm font-semibold">{viewSolutionLabel[currentLocale]} →</span>
             </div>
           </a>
         ))}
@@ -207,18 +321,18 @@ const heroDesc = {
       <div class="mt-10 text-center">
         <a href={localePath('/solutions/all-oil-types/')}
           class="inline-flex items-center gap-3 bg-steel-900 text-white font-semibold px-8 py-3 rounded-xl hover:bg-charcoal-800 transition-colors">
-          {currentLocale === 'fr' ? 'Voir toutes les graines' : currentLocale === 'ar' ? 'عرض جميع البذور' : currentLocale === 'id' ? 'Lihat semua biji' : 'Browse all oil types'} →
+          {viewAll[currentLocale]} →
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== BY PRODUCTION SCALE (3 cards + model badges + compare button) ===== -->
+  <!-- ===== BY PRODUCTION SCALE ===== -->
   <section id="scales" class="py-16 md:py-20 bg-steel-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{t.solutions.byScale}</h2>
-        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{t.solutions.byScaleDesc}</p>
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{sectionCopy.scalesTitle[currentLocale]}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{sectionCopy.scalesSub[currentLocale]}</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {featuredScales.map(scale => {
@@ -226,11 +340,11 @@ const heroDesc = {
           return (
             <a href={localePath(`/solutions/${scale.slug}/`)}
               class="group bg-white rounded-2xl p-7 border-2 border-steel-300 hover:border-amber-400 hover:shadow-lg transition-all">
-              <span class="text-4xl block mb-4">{scale.slug === 'small-business-oil-press' ? '🏪' : scale.slug === 'commercial-oil-press' ? '🏭' : '⚙️'}</span>
+              <div class="text-4xl mb-4">{scale.slug === 'small-business-oil-press' ? '🏪' : scale.slug === 'commercial-oil-press' ? '🏭' : '⚙️'}</div>
               <h3 class="font-display text-xl text-charcoal-900 mb-1 group-hover:text-amber-600 transition-colors">{scale.data.title[currentLocale] || scale.data.title.en}</h3>
               {badge && <div class="text-amber-600 font-semibold text-sm mb-3">{badge.sub[currentLocale]}</div>}
               <p class="text-sm text-steel-600 leading-relaxed mb-4">{scale.data.description[currentLocale] || scale.data.description.en}</p>
-              {badge && <div class="text-xs bg-amber-50 border border-amber-200 text-amber-800 px-2.5 py-1 rounded-md font-semibold inline-block">{currentLocale === 'fr' ? 'Recommandé' : currentLocale === 'ar' ? 'موصى به' : currentLocale === 'id' ? 'Direkomendasikan' : 'Recommended'}: {badge.btn}</div>}
+              {badge && <div class="text-xs bg-amber-50 border border-amber-200 text-amber-800 px-2.5 py-1 rounded-md font-semibold inline-block">{recommendedLabel[currentLocale]}: {badge.btn}</div>}
             </a>
           );
         })}
@@ -238,17 +352,18 @@ const heroDesc = {
       <div class="mt-10 text-center">
         <a href={localePath('/solutions/by-scale/')}
           class="inline-flex items-center gap-3 bg-steel-900 text-white font-semibold px-8 py-3 rounded-xl hover:bg-charcoal-800 transition-colors">
-          {currentLocale === 'fr' ? 'Comparer les trois échelles' : currentLocale === 'ar' ? 'مقارنة النطاقات الثلاثة' : currentLocale === 'id' ? 'Bandingkan ketiga skala' : 'Compare all three scales'} →
+          {compareAllScales[currentLocale]} →
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== BY MARKET (Featured 6, compact grid, NOT all 11) ===== -->
+  <!-- ===== BY MARKET (Featured 6) ===== -->
   <section id="markets" class="py-16 md:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{currentLocale === 'fr' ? 'Top Marchés' : currentLocale === 'ar' ? 'أهم الأسواق' : currentLocale === 'id' ? 'Pasar Utama' : 'Top Markets We Ship To'}</h2>
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{sectionCopy.marketsTitle[currentLocale]}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{sectionCopy.marketsSub[currentLocale]}</p>
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         {featuredMarkets.map(m => (
@@ -263,8 +378,75 @@ const heroDesc = {
       <div class="mt-10 text-center">
         <a href={localePath('/markets/')}
           class="inline-flex items-center gap-3 bg-steel-900 text-white font-semibold px-8 py-3 rounded-xl hover:bg-charcoal-800 transition-colors">
-          {currentLocale === 'fr' ? 'Tous les guides de marché' : currentLocale === 'ar' ? 'جميع أدلة الأسواق' : currentLocale === 'id' ? 'Semua panduan pasar' : 'See all market guides'} →
+          {seeAllMarkets[currentLocale]} →
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT A SOLUTION INCLUDES (NEW — was missing) ===== -->
+  <section class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-6 text-center">{sectionCopy.includesTitle[currentLocale]}</h2>
+      <div class="space-y-5 text-steel-700 leading-relaxed">
+        <p>{sectionCopy.includesP1[currentLocale]}</p>
+        <p>{sectionCopy.includesP2[currentLocale]}</p>
+        <p>{sectionCopy.includesP3[currentLocale]}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO CHOOSE (NEW — was missing) ===== -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-8 text-center">{sectionCopy.chooseTitle[currentLocale]}</h2>
+      <div class="space-y-6">
+        {sectionCopy.chooseSteps.map(step => (
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-charcoal-900 font-display text-xl flex-shrink-0">{step.num}</div>
+            <div>
+              <h3 class="font-display text-xl text-charcoal-900 mb-2">{step.title[currentLocale]}</h3>
+              <p class="text-steel-600 leading-relaxed">{step.body[currentLocale]}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (NEW — was missing UI) ===== -->
+  <section class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-8 text-center">{sectionCopy.faqTitle[currentLocale]}</h2>
+      <div class="space-y-3">
+        {sectionCopy.faqs.map(f => (
+          <details class="group bg-white rounded-xl border border-steel-100 hover:border-amber-300 transition-colors">
+            <summary class="cursor-pointer px-6 py-5 font-display text-charcoal-900 text-lg flex items-center justify-between select-none">
+              {f.q[currentLocale]}
+              <span class="text-amber-600 text-2xl ml-4 group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-6 pb-5 text-steel-600 leading-relaxed border-t border-steel-100 pt-4">{f.a[currentLocale]}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY HAONUO ===== -->
+  <section class="py-16 md:py-20 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">{sectionCopy.whyTitle[currentLocale]}</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">{sectionCopy.whySub[currentLocale]}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {sectionCopy.whyCards.map(card => (
+          <div class="bg-white rounded-2xl p-6 border border-steel-100">
+            <div class="text-3xl mb-3">{card.icon}</div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">{card.title[currentLocale]}</h3>
+            <p class="text-sm text-steel-600">{card.desc[currentLocale]}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -272,10 +454,10 @@ const heroDesc = {
   <!-- ===== CTA ===== -->
   <section class="py-16 md:py-20 bg-steel-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{t.home.ctaTitle}</h2>
-      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">{t.home.ctaDesc}</p>
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-4">{sectionCopy.ctaTitle[currentLocale]}</h2>
+      <p class="text-steel-300 text-lg mb-8 max-w-2xl mx-auto">{sectionCopy.ctaSub[currentLocale]}</p>
       <a href={localePath('/contact/')} class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-8 py-4 rounded-lg hover:bg-amber-400 transition-colors text-lg">
-        {t.home.ctaButton}
+        {sectionCopy.ctaBtn[currentLocale]}
       </a>
     </div>
   </section>
