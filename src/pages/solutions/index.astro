@@ -1,51 +1,116 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
 
-const t = getTranslations('en');
+const allSolutions = await getCollection('solutions');
 
-const solutionCategories = [
-  {
-    icon: '🛢️',
-    title: 'By Oil Type',
-    description: 'Complete hydraulic oil pressing solutions for 15+ oil seeds including soybean, coconut, sesame, sunflower, peanut, olive, and more.',
-    link: '/solutions/all-oil-types',
-    keywords: ['soybean oil press', 'coconut oil press', 'sesame oil press', 'sunflower oil press'],
-    image: '/images/hero/hydraulic-oil-press-production.webp',
-  },
-  {
-    icon: '🌍',
-    title: 'By Region',
-    description: 'Tailored solutions for local markets. We understand the specific oil seeds, regulations, and business needs in each region.',
-    link: '/markets',
-    keywords: ['oil press Nigeria', 'oil press India', 'oil press Indonesia', 'oil press Africa'],
-    image: '/images/hero/cold-press-production-line.webp',
-  },
-  {
-    icon: '⚙️',
-    title: 'By Production Scale',
-    description: 'From small home businesses to large industrial plants, find the perfect equipment for your production capacity.',
-    link: '/solutions/by-scale',
-    keywords: ['small oil press', 'commercial oil press', 'industrial oil press'],
-    image: '/images/hero/factory-workshop.webp',
-  },
+// --- Featured selections (curated, not full lists) ---
+const featuredSeeds = allSolutions
+  .filter(s => ['palm-oil-pressing', 'peanut-oil-pressing', 'sesame-oil-pressing', 'soybean-oil-pressing'].includes(s.slug));
+
+const featuredMarkets = [
+  { name: 'Nigeria', flag: '🇳🇬', desc: "Africa's largest groundnut & palm oil market", link: '/markets/nigeria/' },
+  { name: 'India', flag: '🇮🇳', desc: "World's largest edible oil consumer", link: '/markets/india/' },
+  { name: 'Indonesia', flag: '🇮🇩', desc: "Leading palm kernel oil producer", link: '/markets/indonesia/' },
+  { name: 'Kenya', flag: '🇰🇪', desc: "East Africa's sunflower & peanut hub", link: '/markets/kenya/' },
+  { name: 'Egypt', flag: '🇪🇬', desc: "Soybean, olive & sesame oil producer", link: '/markets/egypt/' },
+  { name: 'Philippines', flag: '🇵🇭', desc: "Coconut & cold-pressed VCO market", link: '/markets/philippines/' },
 ];
 
-const popularSolutions = [
-  { href: '/solutions/coconut-oil-pressing/', label: 'Coconut Oil' },
-  { href: '/solutions/sesame-oil-pressing/', label: 'Sesame Oil' },
-  { href: '/solutions/peanut-oil-pressing/', label: 'Peanut Oil' },
-  { href: '/solutions/sunflower-oil-pressing/', label: 'Sunflower Oil' },
-  { href: '/solutions/mustard-oil-pressing/', label: 'Mustard Oil' },
-  { href: '/solutions/palm-oil-pressing/', label: 'Palm Oil' },
-];
+// --- Seed images & fallback emojis ---
+const seedImages: Record<string, string> = {
+  palm: '/images/oilseeds/palm.webp',
+  sesame: '/images/oilseeds/sesame.webp',
+  peanut: '/images/oilseeds/peanut.webp',
+  mustard: '/images/oilseeds/mustard.webp',
+  soybean: '/images/oilseeds/soybean.webp',
+};
 
-const popularMarkets = [
-  { href: '/markets/nigeria/', label: 'Nigeria' },
-  { href: '/markets/india/', label: 'India' },
-  { href: '/markets/indonesia/', label: 'Indonesia' },
-  { href: '/markets/pakistan/', label: 'Pakistan' },
-];
+const seedEmojis: Record<string, string> = {
+  sunflower: '🌻', olive: '🫒', soybean: '🫘', coconut: '🥥',
+  shea: '🧈', cottonseed: '🎯', walnut: '🌰', almond: '🌰',
+  flaxseed: '🌾', castor: '🌱', avocado: '🥑', 'rice-bran': '🍚', 'animal-fat': '🐄',
+};
+
+function seedIconHtml(seedName: string, sizeClass = 'w-14 h-14'): string {
+  const img = seedImages[seedName];
+  if (img) {
+    return `<img src="${img}" alt="${seedName}" loading="lazy" class="${sizeClass} rounded-full object-cover shadow-sm">`;
+  }
+  return `<div class="text-4xl">${seedEmojis[seedName] || '🛢️'}</div>`;
+}
+
+// --- Schema.org structured data ---
+const solutionItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Haonuo Hydraulic Oil Press Solutions',
+  description: 'Complete hydraulic oil pressing solutions for 50+ oil seeds and 3 production scales.',
+  numberOfItems: allSolutions.length,
+  itemListElement: allSolutions
+    .sort((a, b) => a.data.order - b.data.order)
+    .map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.data.title.en,
+      url: `https://www.hydoilpress.com/solutions/${s.slug}/`,
+    })),
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What oil seeds can a hydraulic oil press handle?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We have dedicated solution pages for 17+ oil seeds: peanut, sesame, mustard, sunflower, soybean, palm kernel, coconut, olive, shea, cottonseed, castor, flaxseed, avocado, almond, walnut, rice bran, and animal fat. Our presses also handle 50+ oil-bearing materials including grapeseed, safflower, and various nut oils — just tell us your raw material.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much oil does a hydraulic press extract compared to a screw press?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hydraulic presses typically achieve 90-95% extraction efficiency on graded seeds (sesame, peanut at 6-8% moisture), comparable to single-screw expellers. The real advantage is cold-pressing capability — hydraulic presses deliver premium-quality cold-pressed oil without overheating, commanding 20-40% higher market prices.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What tonnage press do I need for my seed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our press range covers 300–620 tons. Soft seeds (sesame, peanut, mustard) need 325–400 tons. Medium-hard seeds (sunflower, soybean) need 400–500 tons. Hard seeds (palm kernel, copra, walnut, almond) need 500–620 tons. Tell us your seed and we recommend the right model.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does production and shipping take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard models: 15–25 working days production, 6–10 weeks sea freight full-cycle. Custom configurations (SS304, double-barrel, automation): 30–45 working days production. We provide complete export documentation (CO, Form A/E, embassy legalization) to smooth customs clearance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "What's the difference between cold press and hot press?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hot press cooks the seed (80–110°C) before pressing for maximum yield — neutral, stable oil suitable for refined edible markets. Cold press presses at ambient or low temperature (≤40°C) without pre-heating — preserves flavor and micronutrients, commands a premium price in health-food and export markets. Hydraulic presses excel at both modes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you provide installation and after-sales support?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Every machine ships with complete export documentation, assembly video guides, and lifetime 24/7 remote support via phone, email, and video call. Spare parts are always in stock and shipped via DHL/FedEx in 3–7 days worldwide. 1-year factory warranty covers manufacturing defects.',
+      },
+    },
+  ],
+};
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',
@@ -55,9 +120,17 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://www.hydoilpress.com/solutions' },
   ],
 };
+
+const allLd = [solutionItemList, faqLd, breadcrumbLd];
 ---
 
-<BaseLayout title="Oil Press Solutions by Seed & Scale" description="Find complete hydraulic oil pressing solutions by oil type, region, and production scale. Get tailored recommendations for your oil pressing business." keywords={['hydraulic oil press solutions', 'oil press machine', 'cold press oil machine', 'oil pressing equipment']} jsonLd={breadcrumbLd}>
+<BaseLayout
+  title="Oil Press Solutions by Seed & Scale"
+  description="Find complete hydraulic oil pressing solutions by oil type, region, and production scale. Get tailored recommendations for your oil pressing business."
+  keywords={['hydraulic oil press solutions', 'oil press machine', 'cold press oil machine', 'oil pressing equipment']}
+  jsonLd={allLd}
+>
+
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,199 +142,236 @@ const breadcrumbLd = {
     </div>
   </section>
 
-  <!-- Page Header -->
+  <!-- ===== HERO ===== -->
   <section class="relative bg-steel-900 py-16 md:py-24 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-      <img src="/images/hero/hydraulic-oil-press-production.webp" alt="Hydraulic oil press production line at the Haonuo factory" width="1200" height="800" class="w-full h-full object-cover" />
+      <img src="/images/hero/hydraulic-oil-press-production.webp" alt="" width="1200" height="800" class="w-full h-full object-cover" />
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
-        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-6">
-          Oil Pressing Solutions
+        <div class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full mb-6">
+          <span>🏭</span> Factory Direct · Shandong, China · Since 2010
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white mb-6 leading-tight">
+          Hydraulic Oil Press<br/>
+          <span class="text-amber-400">Complete Solutions</span> by Seed &amp; Scale
         </h1>
         <p class="text-steel-300 text-lg md:text-xl leading-relaxed mb-8">
-          From seed to oil — complete hydraulic oil pressing solutions for <strong class="text-amber-400">15+ oil seeds</strong>, serving <strong class="text-amber-400">50+ countries</strong>, across <strong class="text-amber-400">all production scales</strong>. Find the perfect oil press machine for your business.
+          From seed preparation to bottled oil — Haonuo pairs every hydraulic press with matched roasting, filtration, and cake-handling equipment. Pressing <strong class="text-white">50+ oil seeds</strong> at <strong class="text-white">3 production scales</strong>, shipped to <strong class="text-white">50+ countries</strong>.
         </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#seeds" class="inline-flex items-center gap-2 bg-amber-500 text-charcoal-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition-colors">
+            🥕 By Oil Type
+          </a>
+          <a href="#scales" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">
+            ⚙️ By Production Scale
+          </a>
+          <a href="#markets" class="inline-flex items-center gap-2 border border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">
+            🌍 By Market
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Solution Categories -->
-  <section class="py-16 md:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Explore Solutions</h2>
-        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
-          Choose how you want to browse our hydraulic oil press solutions — by oil type, by region, or by production scale.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {solutionCategories.map((category) => (
-          <a
-            href={category.link.replace(/\/?$/, '/')}
-            class="group relative bg-steel-900 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300"
-          >
-            <div class="aspect-video overflow-hidden">
-              <img src={category.image} alt={category.title} width="600" height="338" loading="lazy" class="w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500" />
-            </div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-              <span class="text-5xl mb-4">{category.icon}</span>
-              <h3 class="font-display text-2xl text-white mb-2">{category.title}</h3>
-              <p class="text-steel-300 text-sm">{category.description}</p>
-              <span class="inline-flex items-center gap-1 text-amber-400 text-sm font-medium mt-4 group-hover:translate-x-1 transition-transform">
-                Explore
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </span>
-            </div>
-          </a>
+  <!-- ===== QUICK FACTS ===== -->
+  <section class="py-10 md:py-14 bg-white border-b border-steel-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          { num: '50+', label: 'Oil Seeds', sub: 'Peanut · sesame · mustard · sunflower · soybean · olive · coconut · shea · and more' },
+          { num: '300–620', label: 'Tonnage Range', sub: 'From compact home units to industrial continuous lines' },
+          { num: '90–95%', label: 'Extraction Efficiency', sub: 'Factory-tested on graded sesame & peanut at 6–8% moisture' },
+          { num: '50+', label: 'Countries Served', sub: 'Shipped worldwide — Nigeria · India · Indonesia · Kenya · Philippines …' },
+        ].map(fact => (
+          <div class="text-center">
+            <div class="font-display text-4xl md:text-5xl text-amber-600 font-bold mb-2">{fact.num}</div>
+            <div class="text-charcoal-900 font-semibold text-base md:text-lg mb-1">{fact.label}</div>
+            <div class="text-steel-500 text-xs md:text-sm leading-snug">{fact.sub}</div>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- What a Solution Includes -->
+  <!-- ===== BY OIL TYPE (Featured) ===== -->
+  <section id="seeds" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Featured Oil Types</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          Every solution pairs a matched hydraulic press with the right preparation equipment — because pressing <em>palm kernel</em> (high oil content, hard shell) is a different line than pressing <em>mustard</em> (small hard seeds, pungent flavor).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {featuredSeeds.map(seed => {
+          const sn = seed.data.seedName;
+          return (
+            <a href={`/solutions/${seed.slug}/`}
+              class="group bg-white rounded-2xl p-6 border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all">
+              <div class="flex flex-col items-center text-center">
+                <div class="mb-4" set:html={seedIconHtml(sn, 'w-16 h-16')}></div>
+                <h3 class="font-display text-lg text-charcoal-900 mb-1.5 group-hover:text-amber-600 transition-colors">{seed.data.title.en}</h3>
+                <p class="text-sm text-steel-600 line-clamp-2 mb-3">{seed.data.description.en}</p>
+                <span class="text-amber-600 text-sm font-semibold inline-flex items-center gap-1">View solution →</span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/solutions/all-oil-types/"
+          class="inline-flex items-center gap-3 bg-steel-900 text-white font-semibold px-8 py-3 rounded-xl hover:bg-charcoal-800 transition-colors">
+          Browse all oil types — compare yield, moisture target, and press tonnage
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BY PRODUCTION SCALE ===== -->
+  <section id="scales" class="py-16 md:py-20 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Which Production Scale Fits You?</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          A 300-ton single-barrel unit (800–1,200 kg/day) suits a village cooperative. A 620-ton double-barrel continuous line (10+ tons/day) suits an industrial mill. Choose your target output, we give you the equipment list.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { slug: 'small-business-oil-press', icon: '🏪', title: 'Home & Small Business', sub: '400 – 1,400 kg/day', desc: 'Start with a single 100 kg batch. Compact, low power, fast ROI for village and neighborhood markets.', btn: 'HN300 / HN325' },
+          { slug: 'commercial-oil-press', icon: '🏭', title: 'Commercial Mill', sub: '1,500 – 10,000 kg/day', desc: 'Mid-range lines with automated controls. Matched roaster + filter press + cake handling.', btn: 'HN365 / HN426' },
+          { slug: 'industrial-oil-press', icon: '⚙️', title: 'Industrial Plant', sub: '10,000+ kg/day', desc: 'Continuous double-barrel lines with full automation. Factory design consultation included.', btn: 'HN426 / HN500' },
+        ].map(s => (
+          <a href={`/solutions/${s.slug}/`}
+            class="group bg-white rounded-2xl p-7 border-2 border-steel-300 hover:border-amber-400 hover:shadow-lg transition-all">
+            <div class="text-4xl mb-4">{s.icon}</div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-1 group-hover:text-amber-600 transition-colors">{s.title}</h3>
+            <div class="text-amber-600 font-semibold text-sm mb-3">{s.sub}</div>
+            <p class="text-sm text-steel-600 leading-relaxed mb-4">{s.desc}</p>
+            <div class="text-xs bg-amber-50 border border-amber-200 text-amber-800 px-2.5 py-1 rounded-md font-semibold inline-block">Recommended: {s.btn}</div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/solutions/by-scale/"
+          class="inline-flex items-center gap-3 bg-steel-900 text-white font-semibold px-8 py-3 rounded-xl hover:bg-charcoal-800 transition-colors">
+          Compare all three scales side-by-side
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BY MARKET (Featured) ===== -->
+  <section id="markets" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Top Markets We Ship To</h2>
+        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
+          Local oil seeds, local regulations, local business norms — we tailor each line to your market, not a catalog.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {featuredMarkets.map(m => (
+          <a href={m.link}
+            class="group bg-white rounded-xl p-5 border-2 border-steel-300 hover:border-amber-400 hover:bg-amber-50/50 hover:shadow-lg transition-all">
+            <div class="text-3xl mb-2">{m.flag}</div>
+            <h3 class="font-display text-base text-charcoal-900 mb-1 group-hover:text-amber-600 transition-colors">{m.name}</h3>
+            <p class="text-xs text-steel-600 leading-snug">{m.desc}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/markets/" class="inline-flex items-center gap-3 bg-steel-900 text-white font-semibold px-8 py-3 rounded-xl hover:bg-charcoal-800 transition-colors">
+          See all market guides →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT A SOLUTION INCLUDES ===== -->
   <section class="py-16 md:py-20 bg-steel-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-6">What a Complete Oil Pressing Solution Includes</h2>
-      <div class="space-y-5 text-steel-600 leading-relaxed">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-6 text-center">What a Complete Oil Pressing Solution Includes</h2>
+
+      <div class="space-y-5 text-steel-700 leading-relaxed">
         <p>
           Every profitable oil business starts from the same two questions: <strong class="text-charcoal-900">what are you pressing, and how much of it per day?</strong> A hydraulic oil press is the heart of the line, but seed cleaning, roasting or steaming, filtration, and cake handling decide whether the line actually reaches its rated yield. That is why each Haonuo solution pairs the press with matched preparation and filtration equipment — a <a href="/solutions/mustard-oil-pressing/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">mustard oil line for India</a> looks different from a <a href="/solutions/coconut-oil-pressing/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">coconut oil line for the Philippines</a>, even when the core machine is the same hydraulic press.
         </p>
         <p>
-          A typical small-to-medium line combines four stages: a roaster or steamer to condition the seed, the hydraulic press itself (a single barrel like the HN325 handles roughly 800-1,200 kg of prepared seed per day), a filter press for clear, market-ready oil, and simple cake handling. Cold-pressed premium oils skip the roasting stage entirely, trading a few points of yield for the higher prices that cold-pressed oil commands in health-food and export markets.
+          A typical small-to-medium line combines four stages: a roaster or steamer to condition the seed, the hydraulic press itself (a single barrel like the HN325 handles roughly 800–1,200 kg of prepared seed per day), a filter press for clear, market-ready oil, and simple cake handling. Cold-pressed premium oils skip the roasting stage entirely, trading a few points of yield for the higher prices that cold-pressed oil commands in health-food and export markets.
         </p>
         <p>
-          Because we manufacture the machines ourselves, every solution is quoted factory-direct, customized to your local voltage, and shipped with the wear parts and documentation your customs clearance requires — whether you land the container in Lagos, Kolkata, Jakarta or Felixstowe.
+          Because we manufacture the machines ourselves, every solution is quoted factory-direct, customized to your local voltage, and shipped with the wear parts and documentation your customs clearance requires — whether you land the container in Lagos, Kolkata, Jakarta, or Felixstowe.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- How to Choose -->
+  <!-- ===== HOW TO CHOOSE ===== -->
   <section class="py-16 md:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-6">How to Choose the Right Oil Press Solution</h2>
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-8 text-center">How to Choose the Right Oil Press Solution</h2>
       <div class="space-y-6">
         <div class="flex gap-4">
           <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-charcoal-900 font-display text-xl flex-shrink-0">1</div>
           <div>
-            <h3 class="font-display text-xl text-charcoal-900 mb-2">Start from your seed, not the machine</h3>
-            <p class="text-steel-600 leading-relaxed">Oil content, hardness and fiber decide everything. Sesame and peanut press easily and reward temperature control; palm kernels and copra demand 40-55 MPa of sustained pressure; mustard and sunflower sit in between. Our <a href="/solutions/all-oil-types/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">oil-type solution pages</a> list realistic yield ranges, moisture targets and preparation steps for 15+ seeds, so you can check fit before you ever ask for a quote.</p>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">Start with your seed</h3>
+            <p class="text-steel-600 leading-relaxed">The seed decides everything — oil content, hardness, fiber. Sesame and peanut press easily at 325 tons and reward tight temperature control. Palm kernels and copra are hard, high-oil-content seeds that need 500+ tons and a different line configuration. Check our <a href="/solutions/all-oil-types/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">oil-type pages</a> for realistic yield ranges and preparation steps before asking for a quote.</p>
           </div>
         </div>
         <div class="flex gap-4">
           <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-charcoal-900 font-display text-xl flex-shrink-0">2</div>
           <div>
-            <h3 class="font-display text-xl text-charcoal-900 mb-2">Match capacity to your real market</h3>
-            <p class="text-steel-600 leading-relaxed">A single-barrel press producing 800-1,200 kg/day suits village and startup operations selling within the region. Double-barrel and HN365 configurations reaching 1,500-2,500 kg/day serve established mills with wholesale contracts. Investors building branded supply should plan a full line — preparation, pressing and filtration balanced so no stage starves the next. Our <a href="/solutions/by-scale/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">production-scale guides</a> map each tier to concrete equipment lists.</p>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">Size to your actual daily target</h3>
+            <p class="text-steel-600 leading-relaxed">A single-barrel 325-ton unit handles 800–1,200 kg of prepared seed per day — enough for village cooperatives and startup mills. Double-barrel 500-ton lines reach 10,000+ kg/day for continuous industrial operation. Don't over-buy: a 300-ton with a 300mm barrel for concentrated pressure can out-produce an oversized general-purpose machine on small hard seeds. See our <a href="/solutions/by-scale/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">scale guides</a> for concrete equipment lists at each tier.</p>
           </div>
         </div>
         <div class="flex gap-4">
           <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-charcoal-900 font-display text-xl flex-shrink-0">3</div>
           <div>
-            <h3 class="font-display text-xl text-charcoal-900 mb-2">Plan the economics before the purchase</h3>
-            <p class="text-steel-600 leading-relaxed">Each seed solution page includes a worked example of what 100 kg of raw material returns in oil and cake, with indicative local pricing. Use it with your own seed cost and selling price to estimate daily margin — or send us your figures and we will calculate the line payback for your market, from <a href="/markets/nigeria/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">Nigeria</a> to <a href="/markets/indonesia/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">Indonesia</a>. Buyers who model the economics first consistently choose the right capacity the first time.</p>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">Run the numbers before you commit</h3>
+            <p class="text-steel-600 leading-relaxed">Each solution page includes a worked example: what 100 kg of raw material returns in oil and cake, with indicative local pricing. Plug in your actual seed cost and local oil price to estimate daily margin — or send us your numbers and we'll calculate the payback for your specific market. We've done this for buyers in <a href="/markets/nigeria/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">Nigeria</a>, <a href="/markets/india/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">India</a>, <a href="/markets/indonesia/" class="text-amber-600 hover:text-amber-700 underline underline-offset-2">Indonesia</a>, and 50+ other countries — ask for the right machine the first time.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quick Access -->
+  <!-- ===== FAQ ===== -->
   <section class="py-16 md:py-20 bg-steel-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Popular Oil Types -->
-        <div>
-          <div class="flex items-center gap-3 mb-6">
-            <span class="text-3xl">🛢️</span>
-            <h3 class="font-display text-2xl text-charcoal-900">Popular Oil Types</h3>
-          </div>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {popularSolutions.map((item) => (
-              <a
-                href={item.href}
-                class="bg-white px-4 py-3 rounded-xl border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all text-center"
-              >
-                <span class="text-sm font-medium text-steel-700 hover:text-amber-600">{item.label}</span>
-              </a>
-            ))}
-          </div>
-          <a href="/solutions/all-oil-types/" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
-            View All 15+ Oil Types
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-
-        <!-- Popular Markets -->
-        <div>
-          <div class="flex items-center gap-3 mb-6">
-            <span class="text-3xl">🌍</span>
-            <h3 class="font-display text-2xl text-charcoal-900">Popular Markets</h3>
-          </div>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {popularMarkets.map((item) => (
-              <a
-                href={item.href}
-                class="bg-white px-4 py-3 rounded-xl border border-steel-100 hover:border-amber-300 hover:bg-amber-50/50 transition-all text-center"
-              >
-                <span class="text-sm font-medium text-steel-700 hover:text-amber-600">{item.label}</span>
-              </a>
-            ))}
-          </div>
-          <a href="/markets/" class="inline-flex items-center gap-1 text-amber-500 text-sm font-medium mt-4 hover:text-amber-600">
-            View All 50+ Markets
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-3">
+        {[
+          ['What oil seeds can a hydraulic oil press handle?', '17+ oil seeds with dedicated solution pages (peanut, sesame, mustard, sunflower, soybean, palm kernel, coconut, olive, shea, cottonseed, castor, flaxseed, avocado, almond, walnut, rice bran, animal fat). Our presses also handle 50+ oil-bearing materials including grapeseed, safflower, and nut oils — see the <a href="/solutions/all-oil-types/" class="text-amber-600 underline">All Oil Types</a> page for parameters.'],
+          ['How much oil does a hydraulic press extract compared to a screw press?', 'Hydraulic presses achieve 90–95% extraction efficiency on graded seeds (sesame, peanut at 6–8% moisture), comparable to single-screw expellers. The real advantage is cold-pressing capability — premium cold-pressed oil commands 20–40% higher market prices.'],
+          ['What tonnage press do I need for my seed?', 'Our range covers 300–620 tons. Soft seeds (sesame, peanut, mustard) → 325–400 tons. Medium-hard (sunflower, soybean) → 400–500 tons. Hard (palm kernel, copra, walnut, almond) → 500–620 tons.'],
+          ['How long does production and shipping take?', 'Standard models: 15–25 working days production, 6–10 weeks sea freight full-cycle. Custom configurations (SS304, double-barrel, automation): 30–45 working days production. Complete export documentation (CO, Form A/E, embassy legalization) provided.'],
+          ["What's the difference between cold press and hot press?", 'Hot press cooks the seed (80–110°C) for maximum yield → neutral, stable oil for refined edible markets. Cold press presses at ≤40°C without pre-heating → preserves flavor and micronutrients, premium price. Hydraulic presses excel at both.'],
+          ['Do you provide installation and after-sales support?', 'Every machine ships with complete export docs, assembly video guides, and lifetime 24/7 remote support (phone, email, video). Spare parts in stock, DHL/FedEx 3–7 days worldwide. 1-year factory warranty.'],
+        ].map(([q, a]) => (
+          <details class="group bg-white rounded-xl border border-steel-100 hover:border-amber-300 transition-colors">
+            <summary class="cursor-pointer px-6 py-5 font-display text-charcoal-900 text-lg flex items-center justify-between select-none">
+              {q}
+              <span class="text-amber-600 text-2xl ml-4 group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-6 pb-5 text-steel-600 leading-relaxed border-t border-steel-100 pt-4" set:html={a}></div>
+          </details>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Hydraulic Oil Press -->
-  <section class="py-16 md:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="font-display text-3xl md:text-4xl text-charcoal-900 mb-4">Why Choose Hydraulic Oil Pressing</h2>
-        <p class="text-steel-600 text-lg max-w-2xl mx-auto">
-          Hydraulic oil pressing technology offers unique advantages for quality-conscious oil producers worldwide.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">High Oil Yield</h3>
-          <p class="text-sm text-steel-600">High oil yield with approximately 90-95% extraction efficiency based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture (results vary with seed variety and preparation). Efficient extraction helps retain more oil in every batch.</p>
-        </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">Cold Press Capability</h3>
-          <p class="text-sm text-steel-600">Preserve natural nutrients, flavor, and color through low-temperature pressing. Premium oil commands higher market prices.</p>
-        </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">Wide Seed Compatibility</h3>
-          <p class="text-sm text-steel-600">One machine handles sesame, peanut, coconut, walnut, almond, sunflower, and 50+ oil seeds with minimal adjustments.</p>
-        </div>
-        <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">Low Maintenance</h3>
-          <p class="text-sm text-steel-600">Simple mechanical design with fewer moving parts. Reduced downtime and lower operating costs over the machine's lifetime.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Haonuo -->
+  <!-- ===== WHY HAONUO ===== -->
   <section class="py-16 md:py-20 bg-amber-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
@@ -271,32 +381,22 @@ const breadcrumbLd = {
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        {[
+          { icon: '🛡️', title: '1-year warranty', desc: 'Full coverage on manufacturing defects plus lifetime technical support by phone, email, and video call.' },
+          { icon: '🚚', title: 'Production & Shipping', desc: 'Standard models: 15–25 working days. Custom configurations: 30–45 working days. 6–10 weeks sea transit. Complete export documentation.' },
+          { icon: '💰', title: 'Factory-Direct Pricing', desc: 'Direct manufacturer with no trading company markups. OEM/ODM available with custom branding and stainless steel upgrade.' },
+        ].map(card => (
+          <div class="bg-white rounded-2xl p-6 border border-steel-100">
+            <div class="text-3xl mb-3">{card.icon}</div>
+            <h3 class="font-display text-xl text-charcoal-900 mb-2">{card.title}</h3>
+            <p class="text-sm text-steel-600">{card.desc}</p>
           </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">1-year warranty</h3>
-          <p class="text-steel-600 text-sm">Full coverage on manufacturing defects plus lifetime technical support by phone, email, and video call.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">Production &amp; Shipping</h3>
-	          <p class="text-steel-600 text-sm">Production: 15-25 working days for standard models, 30-45 days for custom configurations. Shipping transit varies by destination (typically 6-10 weeks total from order to arrival). Full export documentation provided.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-steel-100">
-          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-charcoal-900 mb-2">Factory-Direct Pricing</h3>
-          <p class="text-steel-600 text-sm">As a direct manufacturer, we offer competitive factory-direct prices with no trading company markups.</p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- ===== CTA ===== -->
   <section class="py-16 md:py-20 bg-steel-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-display text-3xl md:text-4xl text-white mb-4">
