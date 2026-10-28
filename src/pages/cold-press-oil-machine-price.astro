@@ -310,11 +310,7 @@ const coldPressModels = [
     </div>
   </section>
 
-<script is:inline define:vars={{
-  sendingText: t.contact.sending,
-  submitText: t.contact.submit,
-  requiredField: t.contact.requiredField,
-}}>
+<script is:inline>
   function toggleFaq(idx) {
     const items = document.querySelectorAll('.faq-item');
     const item = items[idx];
@@ -325,21 +321,19 @@ const coldPressModels = [
     chev.textContent = item.classList.contains('open') ? '×' : '+';
     chev.classList.toggle('rotate-45');
   }
-
   const form = document.getElementById('contact-form');
   if (form) {
     const inputs = form.querySelectorAll('input[required], textarea[required]');
     inputs.forEach(input => {
       input.addEventListener('invalid', function(e) {
         e.preventDefault();
-        if (!input.value.trim()) { input.setCustomValidity(requiredField); }
+        if (!input.value.trim()) { input.setCustomValidity('This field is required'); }
         else { input.setCustomValidity(''); }
         input.reportValidity();
       });
       input.addEventListener('input', function() { input.setCustomValidity(''); });
     });
   }
-
   function submitForm(event) {
     event.preventDefault();
     const form = event.target;
@@ -352,7 +346,7 @@ const coldPressModels = [
     const turnstileResponse = form.querySelector('input[name="cf-turnstile-response"]');
     if (turnstileResponse) { formData.append('cf-turnstile-response', turnstileResponse.value); }
     submitBtn.disabled = true;
-    btnText.textContent = sendingText;
+    btnText.textContent = 'Sending...';
     btnIcon.style.display = 'none';
     fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
     .then(response => {
@@ -360,13 +354,11 @@ const coldPressModels = [
         form.reset();
         form.classList.add('hidden');
         successDiv.classList.remove('hidden');
-        if (typeof gtag === 'function') {
-          gtag('event', 'generate_lead', { currency: 'USD', value: 1 });
-        }
+        if (typeof gtag === 'function') { gtag('event', 'generate_lead', { currency: 'USD', value: 1 }); }
       } else { throw new Error('Submission failed'); }
     })
     .catch(() => { form.classList.add('hidden'); errorDiv.classList.remove('hidden'); })
-    .finally(() => { submitBtn.disabled = false; btnText.textContent = submitText; btnIcon.style.display = ''; });
+    .finally(() => { submitBtn.disabled = false; btnText.textContent = 'Send Inquiry'; btnIcon.style.display = ''; });
     return false;
   }
   window.submitForm = submitForm;
