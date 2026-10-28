@@ -100,4 +100,4 @@ A complete RFQ returns a precise quote and a line layout in one exchange, avoidi
 
 ## Get Your Quote
 
-Send your seed type and daily output target through our <a href="/oil-machine-price/">factory-direct quote page</a>. We reply within 24 hours with a model recommendation, a complete equipment list, and a quote with transparent line items — no hidden extras.
+Send your seed type and daily output target through our <a href="/contact/" data-static-en-only>contact page</a>. We reply within 24 hours with a model recommendation, a complete equipment list, and a quote with transparent line items — no hidden extras.
