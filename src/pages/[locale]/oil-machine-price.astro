@@ -12,6 +12,27 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const currentLocale = locale as Locale;
 const t = getTranslations(currentLocale);
+const productOptions = [
+  'HN300 Hydraulic Oil Press',
+  'HN325 Hydraulic Oil Press',
+  'HN325S Hydraulic Oil Press',
+  'HN365 Hydraulic Oil Press',
+  'HN400 Hydraulic Oil Press',
+  'HN426 Hydraulic Oil Press',
+  'HN480B Hydraulic Oil Press',
+  'HN500 Hydraulic Oil Press',
+  'Sesame Special Oil Press',
+  'Coconut/VCO Special Oil Press',
+  'Barrel Type Oil Press',
+  'Custom / Other Product',
+];
+
+const countryOptions = [
+  'India', 'Nigeria', 'Pakistan', 'Philippines', 'Kenya',
+  'Saudi Arabia', 'UAE', 'Egypt', 'Ghana', 'Tanzania', 'Indonesia',
+  'Vietnam', 'Thailand', 'Myanmar', 'Sri Lanka', 'Turkey', 'Iraq',
+  'Uganda', 'Kazakhstan', 'Uzbekistan', 'Other',
+];
 
 function localePath(path: string): string {
   return `/${currentLocale}${path}`;
@@ -583,59 +604,16 @@ const trustCountries = ['🇮🇳', '🇳🇬', '🇮🇩', '🇵🇭', '🇰�
           <p class="text-steel-400 text-xs">{L.formEmailPref} <a href={`mailto:${L.formEmailLabel}`} class="text-amber-400 hover:underline">{L.formEmailLabel}</a> · <span class="text-amber-400">{L.formEmailPhone}</span></p>
         </div>
         <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
-          <h3 class="text-charcoal-900 text-xl font-bold mb-1">{L.formSubTitle}</h3>
-          <p class="text-steel-500 text-sm mb-5">{L.formSubP}</p>
-          <form id="quote-form" action="/api/inquiry" method="POST" class="space-y-3" onsubmit="return submitPriceForm(event)">
-            <input type="hidden" name="source" value="Price page inquiry" />
-            <input type="text" name="_gotcha" style="display:none" />
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAFIiDuJVsJp4_WlY"></div>
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.name} <span class="text-red-500">*</span></label>
-                <input type="text" name="name" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.namePh}>
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.email} <span class="text-red-500">*</span></label>
-                <input type="email" name="email" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.emailPh}>
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.whatsapp}</label>
-              <input type="tel" name="whatsapp" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.whatsappPh}>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.seed}</label>
-                <input type="text" name="seed" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.seedPh}>
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.capacity}</label>
-                <input type="text" name="capacity" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.capacityPh}>
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.country}</label>
-              <input type="text" name="country" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.countryPh}>
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.message}</label>
-              <textarea name="message" rows="2" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 resize-none" placeholder={L.form.messagePh}></textarea>
-            </div>
-            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-5 rounded-lg text-sm shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
-              {L.form.submit} →
-            </button>
-            <p class="text-center text-xs text-steel-400">{L.form.noSpam}</p>
-          </form>
-          <div id="form-error" class="hidden bg-red-50 border border-red-200 text-red-700 rounded-lg p-4 text-center text-sm font-semibold mt-3">✗ Failed to send. Please email info@hydoilpress.com directly.</div>
-          <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-lg p-4 text-center text-sm font-semibold mt-3">
-            ✓ {L.form.success}
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-<script is:inline>
+<script is:inline define:vars={{
+  sendingText: t.contact.sending,
+  submitText: t.contact.submit,
+  requiredField: t.contact.requiredField,
+}}>
   function toggleFaq(idx) {
     const items = document.querySelectorAll('.faq-item');
     const item = items[idx];
@@ -646,40 +624,58 @@ const trustCountries = ['🇮🇳', '🇳🇬', '🇮🇩', '🇵🇭', '🇰�
     chev.textContent = item.classList.contains('open') ? '×' : '+';
     chev.classList.toggle('rotate-45');
   }
-  function submitPriceForm(e) {
-    e.preventDefault();
-    const form = e.target;
-    const btn = form.querySelector('button[type=submit]');
-    const btnText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
 
+  const form = document.getElementById('contact-form');
+  if (form) {
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    inputs.forEach(input => {
+      input.addEventListener('invalid', function(e) {
+        e.preventDefault();
+        if (!input.value.trim()) { input.setCustomValidity(requiredField); }
+        else { input.setCustomValidity(''); }
+        input.reportValidity();
+      });
+      input.addEventListener('input', function() { input.setCustomValidity(''); });
+    });
+  }
+
+  function submitForm(event) {
+    event.preventDefault();
+    const form = event.target;
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+    const successDiv = document.getElementById('form-success');
+    const errorDiv = document.getElementById('form-error');
     const formData = new FormData(form);
-    const tr = form.querySelector('input[name="cf-turnstile-response"]');
-    if (tr) formData.append('cf-turnstile-response', tr.value);
-
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(r => {
-      if (r.ok) {
+    const turnstileResponse = form.querySelector('input[name="cf-turnstile-response"]');
+    if (turnstileResponse) { formData.append('cf-turnstile-response', turnstileResponse.value); }
+    submitBtn.disabled = true;
+    btnText.textContent = sendingText;
+    btnIcon.style.display = 'none';
+    fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
+    .then(response => {
+      if (response.ok) {
         form.reset();
         form.classList.add('hidden');
-        document.getElementById('form-success').classList.remove('hidden');
-      } else throw new Error('fail');
+        successDiv.classList.remove('hidden');
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', { currency: 'USD', value: 1 });
+        }
+      } else { throw new Error('Submission failed'); }
     })
-    .catch(() => {
-      form.classList.add('hidden');
-      document.getElementById('form-error').classList.remove('hidden');
-    })
-    .finally(() => {
-      btn.disabled = false;
-      btn.textContent = btnText;
-    });
+    .catch(() => { form.classList.add('hidden'); errorDiv.classList.remove('hidden'); })
+    .finally(() => { submitBtn.disabled = false; btnText.textContent = submitText; btnIcon.style.display = ''; });
     return false;
   }
+  window.submitForm = submitForm;
+  document.getElementById('form-another')?.addEventListener('click', () => {
+    document.getElementById('form-success')?.classList.add('hidden');
+    document.getElementById('form-error')?.classList.add('hidden');
+    const f = document.getElementById('contact-form');
+    if (f) { f.reset(); f.classList.remove('hidden'); }
+    if (window.turnstile) window.turnstile.reset();
+  });
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </BaseLayout>

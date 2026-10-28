@@ -87,10 +87,13 @@ const widgetId = `chat-widget-${locale}`;
     </div>
   </div>
 
-  <button data-toggle-chat class="w-14 h-14 bg-amber-500 hover:bg-amber-600 text-charcoal-900 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center" aria-label={t.chat.title}>
-    <svg id={`${widgetId}-icon-open`} xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    <svg id={`${widgetId}-icon-close`} class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
+  <div class="relative">
+    <span data-chat-ripple class="absolute inset-0 rounded-full bg-amber-400/40 pointer-events-none"></span>
+    <button data-toggle-chat class="relative w-14 h-14 bg-amber-500 hover:bg-amber-600 text-charcoal-900 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center animate-chat-bob" aria-label={t.chat.title}>
+      <svg id={`${widgetId}-icon-open`} xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <svg id={`${widgetId}-icon-close`} class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
 </div>
 
 <script is:inline define:vars={{ widgetId, wechatId }}>
@@ -113,6 +116,8 @@ const widgetId = `chat-widget-${locale}`;
       panel.classList.toggle('hidden', !willShow);
       iconOpen.classList.toggle('hidden', willShow);
       iconClose.classList.toggle('hidden', !willShow);
+      btn.setAttribute('data-open', willShow ? 'true' : 'false');
+      btn.classList.toggle('animate-chat-bob', !willShow);
       if (!willShow && wechatPopup) wechatPopup.classList.add('hidden');
     }
 
@@ -145,4 +150,55 @@ const widgetId = `chat-widget-${locale}`;
       });
     }
   })();
+
+  // 波纹 + 跳动动画触发
+  const ripple = document.querySelector('[data-chat-ripple]');
+  if (ripple) {
+    setInterval(() => {
+      ripple.classList.remove('chat-ripple');
+      // force reflow to restart animation
+      void ripple.offsetWidth;
+      ripple.classList.add('chat-ripple');
+    }, 3800);
+    // initial trigger shortly after page load
+    setTimeout(() => {
+      ripple.classList.add('chat-ripple');
+    }, 1500);
+  }
 </script>
+
+<style is:inline>
+  /* 按钮上下轻跳（持续但柔和） */
+  .animate-chat-bob {
+    animation: chat-bob 2.4s ease-in-out infinite;
+  }
+  @keyframes chat-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  /* 外圈涟漪：从按钮边界向外扩散 + 淡出 */
+  [data-chat-ripple] {
+    transform: scale(1);
+    opacity: 0;
+  }
+  [data-chat-ripple].chat-ripple {
+    animation: chat-ripple 1.6s ease-out forwards;
+  }
+  @keyframes chat-ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      transform: scale(2.6);
+      opacity: 0;
+    }
+  }
+
+  /* 点击/打开面板时：停止跳动、隐藏波纹（静态态） */
+  [data-toggle-chat]:not([data-open="false"]):has(+ *) { }
+</style>
