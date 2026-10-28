@@ -1,4 +1,29 @@
 /**
+ * ============================================================================
+ *  PROJECT DEVELOPMENT RULES (GOLDEN RULES — ALL AGENTS MUST FOLLOW)
+ * ============================================================================
+ *
+ *  RULE 1 — 新建页面必须用模式 A（强制）
+ *    ✅ 模式 A: src/pages/[locale]/page-name.astro
+ *       — 一个文件覆盖 en + fr + ar + id 四语言
+ *       — 用 ui: Record<Locale, Ui> = { en: {...}, fr: {...}, ar: {...}, id: {...} }
+ *       — 或动态路由 + 多语言数据文件
+ *    ❌ 禁止模式 B: src/pages/ar/page-name.astro + fr/page-name.astro + id/page-name.astro
+ *       — 独立目录文件，容易漏改一个
+ *    🛡️ 由 M 检查自动拦截：任何新建英文页如果没有 locale 覆盖 → build exit code 1
+ *
+ *  RULE 2 — 加内链时：只新增，不改原有链接（强制）
+ *    ✅ 正确：在老页面原来没有链接的位置 <p>里加一句 "See our [new page →]"
+ *    ❌ 错误：把原来指向 /contact/ 的 CTA 改成指向新价格页
+ *    ❌ 错误：删除原有链接再换位置添加新链接
+ *    🛡️ 执行前先用 git diff / git show HEAD 核对原有 href 不被改动
+ *
+ *  RULE 3 — 价格页不显示公开价格（强制）
+ *    ✅ 只显示 "Get factory quote in 24 hours"
+ *    ❌ 禁止显示 "$XXX – $XXX" 或 "from ¥X" 之类的数字范围
+ *
+ * ============================================================================
+ *
  * 网站上线前自动化巡检脚本（每次构建后/部署前一键运行）
  * 运行方式：
  *   node scripts/site-audit.mjs              # 仅做本地静态检查（翻译 key、src/pages 结构）
