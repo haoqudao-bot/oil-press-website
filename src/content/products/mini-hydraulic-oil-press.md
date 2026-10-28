@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Mini Hydraulic Oil Press
   fr: Mini Presse à Huile Hydraulique
@@ -123,7 +123,7 @@ faqFr:
   - question: Quelles matières premières la HN300 peut-il presser ?
     answer: Le HN300 peut presser le sésame, l'arachide, le colza, les graines de tournesol, le lin, les graines de thé, le soja, les graines de coton et plus encore. Il est spécifiquement optimisé comme machine de pressage d'huile de sésame dédiée. Pour les matières à coque dure comme les noix et les amandes, nous recommandons nos modèles à froid ou ultra-haute pression.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du tourteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
+    answer: Le pressage à chaud (avec pré-torréfaction) se termine en 30 à 40 minutes par lot. Le pressage à froid prend environ 2 heures pour préserver la qualité de l'huile à basse température. La durée réelle du cycle dépend de facteurs tels que l'humidité des graines, le degré de sécheresse du tourteau souhaité et la température de pressage. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
   - question: Quelle est la différence entre les configurations à un et à deux fûts ?
     answer: Une presse à un seul fût traite un lot à la fois. Une presse à double fût dispose de deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, doublant presque votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
   - question: Quelle alimentation électrique la HN300 nécessite-t-il ?
@@ -208,7 +208,7 @@ faqAr:
   - question: "ما المواد الخام التي يمكن لـ HN300 عصرها؟"
     answer: "يمكن لـ HN300 عصر السمسم والفول السوداني وبذور اللفت وبذور عباد الشمس وبذور الكتان وبذور الشاي وفول الصويا وبذور القطن والمزيد. صُمم خصيصاً ومحسّن كمعصرة زيت سمسم متخصصة. بالنسبة للمواد ذات القشرة الصلبة مثل الجوز واللوز، نوصي بنماذج العصر البارد أو فائقة الضغط لدينا."
   - question: "كم تستغرق دورة العصر الواحدة؟"
-    answer: "تستغرق دورة العصر النموذجية 35-45 دقيقة حسب المادة ودرجة جفاف الكيكة المطلوبة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
+    answer: "يستغرق العصر الساخن (بعد التحميص) 30-40 دقيقة لكل دفعة، بينما يستغرق العصر البارد نحو ساعتين للحفاظ على جودة الزيت في درجات الحرارة المنخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
   - question: "ما الفرق بين تكوينات أسطوانة العصر المفردة والمزدوج؟"
     answer: "تعالج معصرة أسطوانة العصر المفردة دفعة واحدة في كل مرة. تحتوي معصرة أسطوانة العصر المزدوجة على أسطوانتين على قضبان انزلاقية — أثناء عصر أحد الأسطوانتين، يمكنك تحميل الآخر، مما يضاعف الإنتاج تقريباً. نوصي بأسطوانة العصر المزدوجة للعمليات التجارية والصناعية."
   - question: "ما مصدر الطاقة الذي يتطلبه HN300؟"
@@ -233,7 +233,7 @@ faqId:
   - question: "Bahan baku apa saja yang dapat ditekan oleh HN300?"
     answer: "HN300 dapat menekan wijen, kacang tanah, rapeseed, biji bunga matahari, biji rami, biji teh, kedelai, biji kapas, dan lainnya. Ini secara khusus dioptimalkan sebagai mesin press minyak wijen khusus. Untuk bahan bertempurung keras seperti kenari dan almond, kami merekomendasikan model press dingin atau tekanan ultra-tinggi kami."
   - question: "Berapa lama satu siklus press membutuhkan waktu?"
-    answer: "Siklus press tipikal membutuhkan 35-45 menit tergantung pada bahan dan tingkat kekeringan bungkil yang diinginkan. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil."
+    answer: "Press panas (setelah penyangraian) membutuhkan 30-40 menit per batch, sedangkan press dingin membutuhkan sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil."
   - question: "Apa perbedaan antara konfigurasi tabung press tunggal dan ganda?"
     answer: "Mesin press tabung press tunggal memproses satu batch pada satu waktu. Mesin press tabung press ganda memiliki dua tabung press pada rel geser — saat satu tabung press sedang menekan, Anda dapat memuat yang lain, hampir menggandakan kapasitas produksi Anda. Kami merekomendasikan tabung press ganda untuk operasi komersial dan industri."
   - question: "Pasokan daya apa yang dibutuhkan HN300?"

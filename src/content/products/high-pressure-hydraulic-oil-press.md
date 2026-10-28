@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: High Pressure Hydraulic Oil Press
   fr: Presse à Huile Hydraulique Haute Pression
@@ -174,7 +174,7 @@ faqAr:
   - question: "ما المواد الخام التي يمكن لـ HN480 عصرها؟"
     answer: "يمكن لـ HN480 عصر السمسم والفول السوداني وبذور اللفت وبذور عباد الشمس وبذور الكتان وبذور الشاي وفول الصويا وبذور القطن والمزيد. كما يعالج بفعالية مواد العصر البارد مثل لوز الجوز ولوز المشمش."
   - question: "كم تستغرق دورة العصر الواحدة؟"
-    answer: "تستغرق دورة العصر النموذجية 35-45 دقيقة حسب المادة ودرجة جفاف الكيكة المطلوبة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
+    answer: "يستغرق العصر الساخن (بعد التحميص) 30-40 دقيقة لكل دفعة، بينما يستغرق العصر البارد نحو ساعتين للحفاظ على جودة الزيت في درجات الحرارة المنخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
   - question: "ما الفرق بين تكوينات أسطوانة العصر المفردة والمزدوج؟"
     answer: "تعالج معصرة أسطوانة العصر المفردة دفعة واحدة في كل مرة. تحتوي معصرة أسطوانة العصر المزدوجة على أسطوانتين على قضبان انزلاقية — أثناء عصر أحد الأسطوانتين، يمكنك تحميل الآخر، مما يضاعف الإنتاج تقريباً. نوصي بأسطوانة العصر المزدوجة للعمليات التجارية والصناعية."
   - question: "ما مصدر الطاقة الذي يتطلبه HN480؟"
@@ -199,7 +199,7 @@ faqId:
   - question: "Bahan baku apa saja yang dapat ditekan oleh HN480?"
     answer: "HN480 dapat menekan wijen, kacang tanah, rapeseed, biji bunga matahari, biji rami, biji teh, kedelai, biji kapas, dan lainnya. Ini juga menangani bahan press dingin seperti inti kenari dan inti aprikot secara efektif."
   - question: "Berapa lama satu siklus press membutuhkan waktu?"
-    answer: "Siklus press tipikal membutuhkan 35-45 menit tergantung pada bahan dan tingkat kekeringan bungkil yang diinginkan. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil."
+    answer: "Press panas (setelah penyangraian) membutuhkan 30-40 menit per batch, sedangkan press dingin membutuhkan sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil."
   - question: "Apa perbedaan antara konfigurasi tabung press tunggal dan ganda?"
     answer: "Mesin press tabung press tunggal memproses satu batch pada satu waktu. Mesin press tabung press ganda memiliki dua tabung press pada rel geser — saat satu tabung press sedang menekan, Anda dapat memuat yang lain, hampir menggandakan kapasitas produksi Anda. Kami merekomendasikan tabung press ganda untuk operasi komersial dan industri."
   - question: "Pasokan daya apa yang dibutuhkan HN480?"

@@ -173,7 +173,7 @@ Press oil for other brands under contract. Our commercial-grade machines deliver
 
 ## Why Choose Our Commercial Oil Press
 
-- **Commercial-grade throughput** — Double-barrel configurations deliver 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) processing capacity, meeting the demands of established commercial operations.
+- **Commercial-grade throughput** — Double-barrel configurations deliver 1,200-1,700 kg/day hot press or 600-700 kg/day cold press, meeting the demands of established commercial operations.
 - **Proven reliability** — Our commercial machines are built for continuous daily operation with minimal maintenance. Heavy-duty construction ensures years of dependable service.
 - **Factory-direct pricing** — Buy directly from the manufacturer and save compared to trading company prices (actual savings vary). No middleman markup on commercial equipment.
 - **Complete production lines** — From seed receiving to packaged oil, we supply and integrate every component for a smooth commercial operation.

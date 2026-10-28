@@ -66,7 +66,7 @@ faq:
   - question: What is the shelf life of cold-pressed walnut oil?
     answer: Properly filtered and stored cold-pressed walnut oil has a shelf life of 6-12 months when kept in a cool, dark place. Using dark glass bottles and nitrogen flushing can extend this to 18 months.
   - question: How much walnut oil can I produce per day?
-    answer: With the HN500 model processing 100kg per batch and 4-6 batches per hour over an 8-hour shift, you can produce approximately 2,000-3,000 kg of walnut oil per day.
+    answer: With the HN500 model processing 80-100 kg per batch at a 90-120 minute cold-press cycle, a single tabung press processes about 320-400 kg of walnut kernels per 8-hour day, yielding roughly 160-250 kg of cold-pressed walnut oil. The double-tabung press (recommended for commercial production) alternates between two pressing chambers and nearly doubles throughput to 560-700 kg kernels per day, or roughly 280-430 kg of oil.
 faqFr:
   - question: Pourquoi le pressage à froid est-il important pour l'huile de noix ?
     answer: Les noix sont riches en acides gras oméga-3 (ALA) qui sont sensibles à la chaleur. Le pressage à froid en dessous de 60°C préserve ces nutriments essentiels et la délicate saveur de noix. Le pressage à chaud peut dégrader la teneur en oméga-3 de 30 à 40 %.
@@ -77,7 +77,7 @@ faqFr:
   - question: Quelle est la durée de conservation de l'huile de noix pressée à froid ?
     answer: L'huile de noix pressée à froid correctement filtrée et stockée a une durée de conservation de 6 à 12 mois lorsqu'elle est conservée dans un endroit frais et sombre. L'utilisation de bouteilles en verre sombre et le rinçage à l'azote peuvent prolonger cette durée jusqu'à 18 mois.
   - question: Combien d'huile de noix puis-je produire par jour ?
-    answer: Avec le modèle HN500 traitant 25 kg par lot et 5 lots par heure sur un poste de 8 heures, vous pouvez produire environ 500 à 650 kg d'huile de noix par jour.
+    answer: Avec le modèle HN500 traitant 80-100 kg par lot à un cycle de pressage à froid de 90-120 minutes, une presse à fût simple traite environ 320-400 kg de cerneaux de noix par jour de 8 heures, produisant environ 160-250 kg d'huile de noix pressée à froid. La presse à double fût (recommandée pour la production commerciale) alterne entre deux chambres de pressage et double quasiment le débit pour atteindre 560-700 kg de cerneaux par jour, soit environ 280-430 kg d'huile.
 faqAr:
   - question: لماذا يُعد الضغط على البارد مهماً لزيت الجوز؟
     answer: الجوز غني بأحماض أوميغا-3 الدهنية (ALA) الحساسة للحرارة. يحافظ الضغط على البارد أقل من 60 درجة مئوية على هذه المغذيات الأساسية ونكهة الجوز الرقيقة. يمكن أن يؤدي الضغط الساخن إلى تدهور محتوى أوميغا-3 بنسبة 30-40%.
@@ -88,7 +88,7 @@ faqAr:
   - question: ما هي مدة صلاحية زيت الجوز المضغوط على البارد؟
     answer: زيت الجوز المضغوط على البارد المرشح والمخزن بشكل صحيح له مدة صلاحية تتراوح بين 6-12 شهراً عند حفظه في مكان بارد ومظلم. يمكن أن يمتد استخدام الزجاجات الزجاجية الداكنة والغسيل بالنيتروجين هذه المدة إلى 18 شهراً.
   - question: كم يمكنني إنتاج زيت جوز في اليوم؟
-    answer: مع طراز HN500 الذي يعالج 25 كجم لكل دفعة و5 دفعات في الساعة خلال وردية 8 ساعات، يمكن إنتاج حوالي 500-650 كجم من زيت الجوز يومياً.
+    answer: مع طراز HN500 الذي يعالج 80-100 كجم لكل دفعة بدورة ضغط بارد مدتها 90-120 دقيقة، فإن المضغوط ذات البرميل الواحد يعالج حوالي 320-400 كجم من لوز الجوز في يوم عمل مدته 8 ساعات، مما ينتج عنه حوالي 160-250 كجم من زيت الجوز المضغوط على البارد. أما المضغوط ذات البرميل المزدوج (الموصى بها للإنتاج التجاري) فيتناوب بين غرفتي ضغط ويضاعف تقريباً الإنتاج ليصل إلى 560-700 كجم من لوز الجوز يومياً، أو حوالي 280-430 كجم من الزيت.
 faqId:
   - question: Mengapa press dingin penting untuk minyak kenari?
     answer: Kenari kaya akan asam lemak omega-3 (ALA) yang sensitif terhadap panas. Press dingin di bawah 60°C mempertahankan nutrisi penting ini dan rasa kenari yang halus. Press panas dapat menurunkan kandungan omega-3 sebesar 30-40%.
@@ -99,7 +99,7 @@ faqId:
   - question: Berapa masa simpan minyak kenari press dingin?
     answer: Minyak kenari press dingin yang telah disaring dan disimpan dengan baik memiliki masa simpan 6-12 bulan jika disimpan di tempat sejuk dan gelap. Penggunaan botol kaca gelap dan pembilasan nitrogen dapat memperpanjang hingga 18 bulan.
   - question: Berapa banyak minyak kenari yang dapat saya produksi per hari?
-    answer: Dengan model HN500 yang memproses 100 kg per batch dan 4-6 batch per jam selama shift 8 jam, Anda dapat memproduksi sekitar 2,000-3,000 kg minyak kenari per hari.
+    answer: Dengan model HN500 yang memproses 80-100 kg per batch pada siklus press dingin 90-120 menit, press tabung tunggal memproses sekitar 320-400 kg inti kenari per hari kerja 8 jam, menghasilkan sekitar 160-250 kg minyak kenari press dingin. Press tabung ganda (direkomendasikan untuk produksi komersial) bergantian antara dua ruang press dan hampir melipatgandakan throughput menjadi 560-700 kg inti kenari per hari, atau sekitar 280-430 kg minyak.
 seoKeywords:
   - walnut oil press machine
   - walnut oil extraction machine
@@ -111,7 +111,7 @@ order: 15
 
 **Quick Answer**
 
-Yes — the Haonuo hydraulic oil press is built for walnut. Expect **50-62% yield from walnut kernels** cold-pressed below 60°C, with **residual oil in cake at 5-8%**. The HN500 ultra-high-pressure press takes **100 kg per batch** at **4-6 batches per hour**, producing roughly **2,000-3,000 kg of walnut oil per 8-hour day**. The critical rule: keep it cold — hot pressing can destroy **30-40% of the omega-3 content** that makes walnut oil worth premium prices.
+Yes — the Haonuo hydraulic oil press is built for walnut. Expect **50-62% yield from walnut kernels** cold-pressed below 60°C, with **residual oil in cake at 5-8%**. The HN500 ultra-high-pressure press takes **80-100 kg per batch** with a **90-120 minute cold-press cycle**, producing roughly **160-250 kg of walnut oil per 8-hour day on a single tabung press**, or **280-430 kg with the double-tabung configuration**. The critical rule: keep it cold — hot pressing can destroy **30-40% of the omega-3 content** that makes walnut oil worth premium prices.
 
 ## Walnut Oil Press Overview
 
@@ -155,7 +155,7 @@ Haonuo Machinery's walnut oil pressing solution is specifically designed for pro
 | Walnut cake | 40-53 kg | $20-53 |
 | **Total per 100 kg** | | **$412-953** |
 
-At 4-6 batches per hour, one HN500 presses 3.2-4.8 tonnes of kernels per 8-hour day — roughly **$13,000-46,000 of product per day** at indicative prices. Prices above are indicative ranges — confirm current local rates, then tell us your kernel cost and oil price and we will calculate your exact daily margin.
+At 80-100 kg per batch with a 90-120 minute cold-press cycle, one HN500 single tabung press processes 320-400 kg of kernels per 8-hour day — roughly **$1,300-3,800 of product per day**. The double-tabung configuration reaches 560-700 kg kernels per day for about **$2,300-6,700 of product**. Prices above are indicative ranges — confirm current local rates, then tell us your kernel cost and oil price and we will calculate your exact daily margin.
 
 ## Built for the Middle Eastern Walnut Oil Trade
 

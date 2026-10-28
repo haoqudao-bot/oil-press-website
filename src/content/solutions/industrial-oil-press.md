@@ -71,7 +71,7 @@ faq:
     answer: Yes, we supply turnkey pressing lines from 1 to 100 tons per day, including seed processing, pressing, filtration, and packaging equipment. Refining equipment is sourced independently and our engineers can help integrate it into your layout.
 faqFr:
   - question: Quelle est la capacité maximale de votre presse à huile industrielle ?
-    answer: Notre modèle ultra haute pression (HN500) en configuration double fût peut traiter plus de 5 000 kg de graines par jour. Nous fournissons la ligne centrale de pressage et de filtration ; les équipements de raffinage pour l'huile RBD sont approvisionnés indépendamment et nous aidons à les intégrer dans des configurations de 1 à 100 tonnes/jour.
+    answer: Notre modèle ultra haute pression (HN500) en configuration double fût peut traiter 1 200-2 400 kg de graines par jour par unité. Plusieurs unités permettent d'atteindre 5 000+ kg/jour. Nous fournissons la ligne centrale de pressage et de filtration ; les équipements de raffinage pour l'huile RBD sont approvisionnés indépendamment et nous aidons à les intégrer dans des configurations de 1 à 100 tonnes/jour.
   - question: Fournissez-vous l'installation et la formation ?
     answer: Oui, nous fournissons des services complets d'installation, de mise en service et de formation des opérateurs pour les équipements à échelle industrielle. Nos ingénieurs peuvent se rendre dans votre installation partout dans le monde.
   - question: Quel est le taux d'huile résiduel pour le pressage industriel ?
@@ -82,7 +82,7 @@ faqFr:
     answer: Oui, nous fournissons des lignes de pressage clé en main de 1 à 100 tonnes par jour, y compris le traitement des graines, le pressage, la filtration et l'équipement de conditionnement. Les équipements de raffinage sont approvisionnés indépendamment et nos ingénieurs peuvent aider à les intégrer à votre implantation.
 faqAr:
   - question: ما هي السعة القصوى لمعصرتكم الصناعية؟
-    answer: يمكن لطرازنا فائق الضغط العالي (HN500) بتكوين أسطوانة العصر المزدوجة معالجة أكثر من 5000 كجم من البذور يومياً. نوفر خط العصر والترشيح الأساسي؛ أما معدات تكرير زيت RBD فتُشترى بشكل مستقل ونساعد في دمجها في تخطيطات من 1 إلى 100 طن/يوم.
+    answer: يمكن لطرازنا فائق الضغط العالي (HN500) بتكوين أسطوانة العصر المزدوجة معالجة 1,200-2,400 كجم من البذور يومياً لكل وحدة. ويمكن لعدة وحدات تحقيق أكثر من 5000 كجم/يوم. نوفر خط العصر والترشيح الأساسي؛ أما معدات تكرير زيت RBD فتُشترى بشكل مستقل ونساعد في دمجها في تخطيطات من 1 إلى 100 طن/يوم.
   - question: هل توفرون التركيب والتدريب؟
     answer: نعم، نقدم خدمات تركيب وتشغيل وتدريب المشغلين الكاملة للمعدات الصناعية. يمكن لمهندسينا السفر إلى منشأتكم في أي مكان بالعالم.
   - question: ما هو معدل الزيت المتبقي للعصر الصناعي؟
@@ -93,7 +93,7 @@ faqAr:
     answer: نعم، نوفر خطوط عصر جاهزة من 1 إلى 100 طن يومياً، بما في ذلك معالجة البذور والعصر والترشيح ومعدات التعبئة. أما معدات التكرير فتُشترى بشكل مستقل ويستطيع مهندسونا المساعدة في دمجها في مخطط منشأتكم.
 faqId:
   - question: Berapa kapasitas maksimum press minyak industri Anda?
-    answer: Model Ultra High Pressure kami (HN500) dengan konfigurasi tabung press ganda dapat memproses 5.000+ kg biji per hari. Kami menyediakan lini inti penekanan dan filtrasi; peralatan pemurnian untuk minyak RBD dibeli terpisah dan kami bantu mengintegrasikannya dalam tata letak 1-100 ton/hari.
+    answer: Model Ultra High Pressure kami (HN500) dengan konfigurasi tabung press ganda dapat memproses 1.200-2.400 kg biji per hari per unit. Beberapa unit dapat mencapai 5.000+ kg/hari. Kami menyediakan lini inti penekanan dan filtrasi; peralatan pemurnian untuk minyak RBD dibeli terpisah dan kami bantu mengintegrasikannya dalam tata letak 1-100 ton/hari.
   - question: Apakah Anda menyediakan instalasi dan pelatihan?
     answer: Ya, kami menyediakan layanan instalasi, commissioning, dan pelatihan operator lengkap untuk peralatan skala industri. Insinyur kami dapat datang ke fasilitas Anda di seluruh dunia.
   - question: Berapa tingkat minyak sisa untuk press industri?
@@ -137,7 +137,7 @@ This solution is designed for large-scale oil production facilities, operations 
 **Industrial-scale advantages:**
 - **Ultra-high pressure**: Up to 60 MPa for maximum extraction efficiency
 - **Residual oil below 4%**: Competitive extraction rates on most materials
-- **Double-barrel option**: Process 5,000+ kg of seeds per day
+- **Double-barrel option**: Process 1,200-2,400 kg per unit per day; multiple units scale to 5,000+ kg/day
 - **Refining coordination**: RBD finished oil uses a separate refining line sourced independently; we advise on specifications and layout
 - **24/7 capable**: Heavy-duty construction for continuous industrial operation
 

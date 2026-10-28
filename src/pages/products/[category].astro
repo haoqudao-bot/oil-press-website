@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -212,13 +212,13 @@ if (catFaqLd) allLd.push(catFaqLd);
       <div class="flex flex-col lg:flex-row gap-8">
         <!-- Sidebar Filter -->
         <aside class="lg:w-56 shrink-0">
-          <div class="sticky top-24 space-y-8">
+          <div class="sticky top-24 space-y-4">
             <div>
-              <h2 class="font-display text-lg text-charcoal-900 mb-4">Category</h2>
+              <h2 class="font-display text-lg text-charcoal-900 mb-2">Category</h2>
               <nav class="space-y-1">
                 <a
                   href="/products/"
-                  class="block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                  class="block px-4 py-2 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   {t.products.allCategories}
                 </a>
@@ -226,7 +226,7 @@ if (catFaqLd) allLd.push(catFaqLd);
                   <a
                     href={`/products/${cat.slug}/`}
                     class:list={[
-                      'block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
+                      'block px-4 py-2 rounded-lg text-sm font-medium transition-colors',
                       category.slug === cat.slug ? 'bg-amber-500 text-charcoal-900' : 'text-steel-600 hover:bg-steel-50'
                     ]}
                   >
@@ -236,43 +236,43 @@ if (catFaqLd) allLd.push(catFaqLd);
               </nav>
             </div>
 
-            <div class="pt-6 border-t border-steel-100">
+            <div class="pt-4 border-t border-steel-100">
               <nav class="space-y-1">
                 <a
                   href="/hydraulic-oil-press-machine/"
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                  class="flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                   <span>{t.common.hydraulicOilPressMachine}</span>
                 </a>
                 <a
                   href="/cold-press-oil-machine/"
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                  class="flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                   <span>{t.common.coldPressOilMachine}</span>
                 </a>
                 <a
                   href="/oil-machine-price/"
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                  class="flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                  <span>Oil Machine Price Guide</span>
+                  <span>Oil Machine Price</span>
                 </a>
                 <a
                   href="/cold-press-oil-machine-price/"
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
+                  class="flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-colors text-steel-600 hover:bg-steel-50"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                  <span>Cold Press Machine Price</span>
+                  <span>Cold Press Price</span>
                 </a>
               </nav>
             </div>
 
-            <div class="pt-6 border-t border-steel-100">
+            <div class="pt-4 border-t border-steel-100">
               <a
                 href="/catalog/"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group mb-2"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group mb-1"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
                 <div>
@@ -282,7 +282,7 @@ if (catFaqLd) allLd.push(catFaqLd);
               </a>
               <a
                 href="/products/model-comparison/"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 transition-colors group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
                 <div>

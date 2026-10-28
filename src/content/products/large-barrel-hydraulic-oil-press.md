@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Sludge Dewatering Hydraulic Press
   fr: Presse de Déshydratation des Boues Hydraulique
@@ -124,7 +124,7 @@ faqFr:
   - question: Quelles matières premières la HN325LB peut-il presser ?
     answer: Le HN325LB est conçu pour les applications à grand volume et basse pression, notamment le résidu d'huile animale, le résidu d'huile végétale, les boues d'hydrocarbures, les boues textiles, la déshydratation de fruits et légumes, et les boues de champ pétrolifère. Pour les graines oléagineuses conventionnelles nécessitant une force de pressage plus élevée, nous recommandons nos modèles HN325 standard ou de pressage à froid.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du tourteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
+    answer: Le pressage à chaud (avec pré-torréfaction) se termine en 30 à 40 minutes par lot. Le pressage à froid prend environ 2 heures pour préserver la qualité de l'huile à basse température. La durée réelle du cycle dépend de facteurs tels que l'humidité des graines, le degré de sécheresse du tourteau souhaité et la température de pressage. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
   - question: Quelle est la différence entre les configurations à fût simple et double ?
     answer: Une presse à fût simple traite un lot à la fois. Une presse à double fût possède deux fûts avec des systèmes hydrauliques indépendants — pendant qu'un fût est en cours de pressage, le cylindre de tourteau supérieur de l'autre fût permet le déchargement et le rechargement simultanés, ce qui presque double votre débit.
   - question: Quelle alimentation électrique la HN325LB nécessite-t-il ?
@@ -209,7 +209,7 @@ faqAr:
   - question: "ما المواد الخام التي يمكن لمعصرة HN325LB عصرها؟"
     answer: "معصرة HN325LB مصممة للتطبيقات عالية الحجم ومنخفضة الضغط بما في ذلك مخلفات الزيت الحيواني ومخلفات الزيت النباتي والحمأة الزيتية والحمأة النسيجية وتجفيف الفواكه والخضروات وحمأة حقول النفط. للبذور الزيتية التقليدية التي تتطلب قوة عصر أعلى، نوصي بطرازات HN325 القياسية أو طرازات العصر البارد."
   - question: "كم يستغرق دور العصر الواحد؟"
-    answer: "يستغرق دور العصر النموذجي 35-45 دقيقة حسب المادة ودرجة جفاف الكسب المطلوبة. نظام التحكم بالحاسوب المصغّر يؤتمت العملية بالكامل من التغذية إلى تفريغ الكسب."
+    answer: "يستغرق العصر الساخن (بعد التحميص) 30-40 دقيقة لكل دفعة، بينما يستغرق العصر البارد نحو ساعتين للحفاظ على جودة الزيت في درجات الحرارة المنخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكسب."
   - question: "ما الفرق بين تكويني أسطوانة العصر المفردة والمزدوج؟"
     answer: "معصرة أسطوانة العصر المفردة تعالج دفعة واحدة في كل مرة. معصرة أسطوانة العصر المزدوجة تحتوي على أسطوانتين بنظامين هيدروليكيين مستقلين — أثناء عصر أحدهما، تتيح اسطوانة الكسب العلوي لأسطوانة العصر الآخر التفريغ والتحميل في آن واحد، مما يضاعف الإنتاج تقريبًا."
   - question: "ما مصدر الطاقة المطلوب لمعصرة HN325LB؟"

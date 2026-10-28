@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Ultra High Pressure Cold Press
   fr: Presse à Froid Ultra Haute Pression
@@ -135,7 +135,7 @@ faqFr:
   - question: Quelles matières premières la HN480B peut-il presser ?
     answer: Le HN480B peut presser le sésame, l'arachide, le colza, les graines de tournesol, le lin, la graine de thé, le soja, les graines de coton et bien d'autres. Il est spécialement optimisé pour le pressage des noix avec une solution complète de pressage des noix, et excelle également dans le pressage à froid des amandes, des pignons de pin et des amandons d'abricot.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes selon la matière et le degré de sécheresse du tourteau souhaité. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
+    answer: Le pressage à chaud (avec pré-torréfaction) se termine en 30 à 40 minutes par lot. Le pressage à froid prend environ 2 heures pour préserver la qualité de l'huile à basse température. La durée réelle du cycle dépend de facteurs tels que l'humidité des graines, le degré de sécheresse du tourteau souhaité et la température de pressage. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
   - question: Quelle est la différence entre les configurations à fût simple et double ?
     answer: Une presse à fût simple traite un lot à la fois. Une presse à double fût possède deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, ce qui presque double votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
   - question: Quelle alimentation électrique la HN480B nécessite-t-il ?

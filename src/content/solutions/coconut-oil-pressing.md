@@ -81,7 +81,7 @@ faqFr:
   - question: Quel est le prix d'une machine de pressage d'huile de coco ?
     answer: Contactez-nous pour obtenir les prix actuels en fonction de votre modèle et de vos besoins en capacité. Envoyez-nous vos spécifications pour un devis détaillé.
   - question: Combien de temps faut-il pour presser un lot de coco ?
-    answer: Chaque cycle de pressage prend environ 8 à 12 minutes selon le matériau et les réglages de pression, permettant une production par lots efficace.
+    answer: Chaque cycle de pressage prend environ 30-40 minutes (pressage à chaud) ou environ 2 heures (pressage à froid), selon le matériau et les réglages de pression.
   - question: "Quelle est la durée de conservation de l'huile de coco pressée à froid ?"
     answer: "L'huile de coco vierge correctement filtrée a une durée de conservation de 2 à 3 ans lorsqu'elle est stockée dans un endroit frais et sec à l'abri de la lumière directe du soleil. La forte teneur en acide laurique offre des propriétés antimicrobiennes naturelles."
 
@@ -95,7 +95,7 @@ faqAr:
   - question: ما هو سعر آلة عصر زيت جوز الهند؟
     answer: تواصلوا معنا للحصول على الأسعار الحالية بناءً على طرازكم ومتطلبات السعة. أرسلوا لنا مواصفاتكم للحصول على عرض أسعار مفصل.
   - question: كم يستغرق عصر دفعة واحدة من جوز الهند؟
-    answer: تستغرق كل دورة عصر حوالي 8-12 دقيقة حسب المادة وإعدادات الضغط، مما يسمح بإنتاج دفعات فعال.
+    answer: تستغرق كل دورة عصر حوالي 30-40 دقيقة (العصر الساخن) أو حوالي ساعتين (العصر البارد) حسب المادة وإعدادات الضغط.
   - question: "ما هي مدة صلاحية زيت جوز الهند المعصور على البارد؟"
     answer: "زيت جوز الهند البكر المرشح بشكل صحيح له مدة صلاحية من 2 إلى 3 سنوات عند تخزينه في مكان بارد وجاف بعيداً عن أشعة الشمس المباشرة. المحتوى العالي من حمض اللوريك يوفر خصائص مضادة للميكروبات طبيعية."
 
@@ -109,7 +109,7 @@ faqId:
   - question: Berapa harga mesin press minyak kelapa?
     answer: Hubungi kami untuk harga terkini berdasarkan model dan kebutuhan kapasitas Anda. Kirimkan spesifikasi Anda untuk penawaran harga rinci.
   - question: Berapa lama waktu yang dibutuhkan untuk menekan satu batch kelapa?
-    answer: Setiap siklus penekanan membutuhkan waktu sekitar 8-12 menit tergantung bahan dan pengaturan tekanan, memungkinkan produksi batch yang efisien.
+    answer: Setiap siklus penekanan membutuhkan waktu sekitar 30-40 menit (press panas) atau sekitar 2 jam (press dingin) tergantung bahan dan pengaturan tekanan.
   - question: "Berapa masa simpan minyak kelapa press dingin?"
     answer: "Minyak kelapa perawan yang difiltrasi dengan benar memiliki masa simpan 2-3 tahun saat disimpan di tempat sejuk dan kering jauh dari sinar matahari langsung. Kandungan asam laurat tinggi memberikan sifat antimikroba alami."
 
@@ -163,10 +163,10 @@ Understanding expected yields is critical for business planning. Below are typic
 <!-- yield-block -->
 ### What you get from 100 kg of coconut
 
-| Output | Hot press | Cold press (VCO) |
+| Output | Hot press (dried copra) | Cold press VCO (fresh grated meat) |
 |---|---|---|
-| Oil | 60-65 kg (≈65-71 L) from dried copra | ≈32-38 kg |
-| Cake/residue | ≈30-35 kg (≈33-38 L) from fresh coconut meat (VCO) | ≈≈62-68 kg |
+| Crude oil | 55-62 kg (≈60-67 L) | 28-32 kg (≈30-35 L) |
+| Cake/residue | ≈38-45 kg | ≈68-72 kg |
 
 *Typical figures at standard machine settings; actual results vary with variety, maturity, moisture and cycle settings. Liters assume an oil density of approximately 0.92 kg/L. Hot-press figures are for dried copra; cold-press VCO figures are for fresh grated meat.*
 <!-- /yield-block -->

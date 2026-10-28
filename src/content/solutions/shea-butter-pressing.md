@@ -68,7 +68,7 @@ faq:
   - question: What is the price of a shea butter press machine?
     answer: Ask us about current model pricing. We offer factory-direct pricing with no middleman markup.
   - question: How much shea butter can I produce per day?
-    answer: With our heavy-duty model, you can process 600-1,200 kg of shea nuts per day (single tabung press). The ultra-high-pressure model handles 1,200-1,700 kg/day (hot press) or 400-600 kg/day (hot press) or 200-300 kg/day (cold press) (cold press) (double tabung press).
+    answer: With our heavy-duty model, you can process 600-1,200 kg of shea nuts per day (single tabung press). The ultra-high-pressure model handles 1,200-1,700 kg/day hot press or 600-700 kg/day cold press (double tabung press).
   - question: "What is the difference between unrefined and refined shea butter?"
     answer: "Unrefined (raw) shea butter retains its natural ivory color, nutty aroma, and all vitamins and nutrients. It commands the highest price in the cosmetics market. Refined shea butter is processed to remove color and odor, making it suitable for food industry applications and white cosmetic formulations."
 
@@ -82,7 +82,7 @@ faqFr:
   - question: Quel est le prix d'une machine de pressage de beurre de karité ?
     answer: Demandez-nous les prix actuels des modèles. Nous offrons des prix directs d'usine sans majoration d'intermédiaire.
   - question: Combien de beurre de karité puis-je produire par jour ?
-    answer: Avec notre modèle lourd, vous pouvez traiter 800 à 2 000 kg de noix de karité par jour. Le modèle ultra haute pression traite jusqu'à 3 000 kg/jour.
+    answer: Avec notre modèle lourd, vous pouvez traiter 600 à 1 200 kg de noix de karité par jour (fût unique). Le modèle ultra haute pression traite 1 200 à 1 700 kg/jour pressage à chaud ou 600-700 kg/jour pressage à froid (double fût).
   - question: "Quelle est la différence entre le beurre de karité non raffiné et raffiné ?"
     answer: "Le beurre de karité non raffiné (brut) conserve sa couleur ivoire naturelle, son arôme de noix et toutes ses vitamines et nutriments. Il se vend au prix le plus élevé sur le marché des cosmétiques. Le beurre de karité raffiné est traité pour éliminer la couleur et l'odeur, le rendant adapté aux applications de l'industrie alimentaire et aux formulations cosmétiques blanches."
 
@@ -96,7 +96,7 @@ faqAr:
   - question: ما هو سعر آلة عصر زبدة الشيا؟
     answer: اسألونا عن أسعار الطرازات الحالية. نقدم أسعار المصنع المباشر بدون وسيط.
   - question: كم زبدة شيا يمكنني إنتاجها يومياً؟
-    answer: مع طرازنا الثقيل، يمكن معالجة 800-2000 كجم من جوز الشيا يومياً. يعالج الطراز فائق الضغط العالي حتى 3000 كجم/يوم.
+    answer: مع طرازنا الثقيل، يمكن معالجة 600-1,200 كجم من جوز الشيا يومياً (أسطوانة عصر واحدة). يعالج الطراز فائق الضغط العالي 1,200-1,700 كجم/يوم عصر ساخن أو 600-700 كجم/يوم عصر بارد (أسطوانة عصر مزدوجة).
   - question: "ما الفرق بين زبدة الشيه غير المكررة والمكررة؟"
     answer: "زبدة الشيه غير المكررة (الخام) تحتفظ بلونها العاجي الطبيعي ورائحة الجوز وجميع الفيتامينات والمغذيات. تُباع بأعلى سعر في سوق مستحضرات التجميل. زبدة الشيه المكررة معالجة لإزالة اللون والرائحة، مما يجعلها ملائمة لتطبيقات الصناعة الغذائية وتركيبات مستحضرات التجميل البيضاء."
 
@@ -110,7 +110,7 @@ faqId:
   - question: Berapa harga mesin press mentega shea?
     answer: Hubungi kami untuk harga model terkini. Kami menawarkan harga langsung pabrik tanpa markup perantara.
   - question: Berapa banyak mentega shea yang dapat saya produksi per hari?
-    answer: Dengan model berat kami, Anda dapat memproses 800-2.000 kg kacang shea per hari. Model ultra tekanan tinggi menangani hingga 3.000 kg/hari.
+    answer: Dengan model berat kami, Anda dapat memproses 600-1.200 kg kacang shea per hari (tabung press tunggal). Model ultra tekanan tinggi menangani 1.200-1.700 kg/hari press panas atau 600-700 kg/hari press dingin (tabung press ganda).
   - question: "Apa perbedaan antara mentega shea yang tidak dimurnikan dan dimurnikan?"
     answer: "Mentega shea yang tidak dimurnikan (mentah) mempertahankan warni gading alami, aroma kacang, dan semua vitamin dan nutrisi. Ini dijual dengan harga tertinggi di pasar kosmetik. Mentega shea yang dimurnikan diproses untuk menghilangkan warna dan bau, membuatnya cocok untuk aplikasi industri makanan dan formulasi kosmetik putih."
 

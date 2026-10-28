@@ -1,4 +1,4 @@
----
+﻿---
 title:
   en: Sesame Oil Hydraulic Press
   fr: Presse Hydraulique à Huile de Sésame
@@ -128,7 +128,7 @@ faqFr:
   - question: Quelles matières premières la Presse Hydraulique à Huile de Sésame peut-elle presser ?
     answer: La Presse Hydraulique à Huile de Sésame est spécialement optimisée pour l'extraction de l'huile de sésame. Elle excelle également dans le pressage des noix en coque (sauf les noix de fer) en environ 30 minutes par lot, et traite la graine de thé, le colza, l'arachide, le soja, la graine de laque et le lin avec des taux d'huile résiduelle encore plus bas que les modèles standard.
   - question: Combien de temps dure un cycle de pressage ?
-    answer: Un cycle de pressage typique dure 8 à 15 minutes pour le sésame, selon le degré de sécheresse du tourteau souhaité. Le cycle rapide est essentiel pour le pressage du sésame sensible à la température — minimiser la perte de chaleur préserve la qualité de l'huile et maximise le rendement. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus.
+    answer: Le pressage à chaud (avec pré-torréfaction) se termine en 30 à 40 minutes par lot. Le pressage à froid prend environ 2 heures pour préserver la qualité de l'huile à basse température. La durée réelle du cycle dépend de facteurs tels que l'humidité des graines, le degré de sécheresse du tourteau souhaité et la température de pressage. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
   - question: Quelle est la différence entre les configurations à fût simple et double ?
     answer: Une presse à fût simple traite un lot à la fois. Une presse à double fût possède deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, ce qui presque double votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
   - question: Quelle alimentation électrique la Presse Hydraulique à Huile de Sésame nécessite-t-elle ?
@@ -217,7 +217,7 @@ faqAr:
   - question: "ما المواد الخام التي يمكن لمعصرة زيت السمسم الهيدروليكية عصرها؟"
     answer: "معصرة زيت السمسم الهيدروليكية محسّنة خصيصًا لاستخلاص زيت السمسم. كما أنها ممتازة في عصر الجوز بقشره (ما عدا الجوز الحديدي) في نحو 30 دقيقة لكل دفعة، وتعالج بذور الشاي وبذور اللفت والفول السوداني وفول الصويا وبذور اللكر وبذور الكنان بمعدلات زيت متبقٍ أقل من الطرازات القياسية."
   - question: "كم يستغرق دور العصر الواحد؟"
-    answer: "يستغرق دور العصر النموذجي 35-45 دقيقة للسمسم حسب درجة جفاف الكسب المطلوبة. الدور السريع ضروري لعصر السمسم الحساس لدرجة الحرارة — فتقليل فقدان الحرارة يحافظ على جودة الزيت ويزيد العائد. نظام التحكم بالحاسوب المصغّر يؤتمت العملية بالكامل."
+    answer: "يستغرق العصر الساخن للسمسم 30-40 دقيقة لكل دفعة، بينما يستغرق العصر البارد نحو ساعتين للحفاظ على جودة الزيت في درجات الحرارة المنخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
   - question: "ما الفرق بين تكويني أسطوانة العصر المفردة والمزدوج؟"
     answer: "معصرة أسطوانة العصر المفردة تعالج دفعة واحدة في كل مرة. معصرة أسطوانة العصر المزدوجة تحتوي على أسطوانتين على قضبان انزلاقية — أثناء عصر أحدهما يمكن تحميل الآخر، مما يضاعف الإنتاج تقريبًا. نوصي بأسطوانة العصر المزدوجة للعمليات التجارية والصناعية."
   - question: "ما مصدر الطاقة المطلوب لمعصرة زيت السمسم الهيدروليكية؟"
@@ -242,7 +242,7 @@ faqId:
   - question: Bahan baku apa saja yang dapat dipress oleh Mesin Press Minyak Wijen Hidrolik?
     answer: Mesin Press Minyak Wijen Hidrolik secara khusus dioptimalkan untuk ekstraksi minyak wijen. Mesin ini juga unggul dalam penekanan kenari dengan cangkang (kecuali kenari besi) dalam waktu sekitar 30 menit per batch, dan menangani biji teh, rapeseed, kacang tanah, kedelai, biji lak, dan biji rami dengan tingkat minyak sisa yang lebih rendah dari model standar.
   - question: Berapa lama satu siklus press membutuhkan waktu?
-    answer: Siklus press tipikal membutuhkan waktu 35-45 menit untuk wijen tergantung pada tingkat kekeringan bungkil yang diinginkan. Siklus cepat ini penting untuk press wijen yang sensitif terhadap suhu — meminimalkan kehilangan panas menjaga kualitas minyak dan memaksimalkan rendemen. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses.
+    answer: Siklus press panas untuk wijen membutuhkan waktu 30-40 menit per batch, sedangkan press dingin membutuhkan sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil.
   - question: Apa perbedaan antara konfigurasi tabung press tunggal dan ganda?
     answer: Mesin press tabung press tunggal memproses satu batch pada satu waktu. Mesin press tabung press ganda memiliki dua tabung press pada rel geser — saat satu tabung press sedang menekan, Anda dapat memuat tabung press lainnya, hampir melipatgandakan throughput. Kami merekomendasikan tabung press ganda untuk operasi komersial dan industri.
   - question: Pasokan daya apa yang dibutuhkan Mesin Press Minyak Wijen Hidrolik?
