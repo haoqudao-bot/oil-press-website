@@ -1,0 +1,673 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+type KachiGhaniUi = {
+  title: string;
+  description: string;
+  keywords: string[];
+  breadcrumb: { home: string; page: string };
+  badge: string;
+  h1Line1: string;
+  h1Line2: string;
+  heroP: string;
+  heroCta: string;
+  trust: { served: string; years: string; reply: string; projects: string; shippedTo: string; more: string };
+  whyBadge: string;
+  whyTitle: string;
+  whyP1: string;
+  whyP2: string;
+  factorsBadge: string;
+  factorsTitle: string;
+  factors: { num: string; title: string; desc: string }[];
+  budgetBadge: string;
+  budgetTitle: string;
+  budgetSub: string;
+  budget: { label: string; emoji: string; desc: string }[];
+  modelsBadge: string;
+  modelsTitle: string;
+  modelsSub: string;
+  modelsHeader: { model: string; tonnage: string; pressure: string; bestFor: string };
+  hnModels: { code: string; tonnage: string; pressure: string; best: string }[];
+  faqBadge: string;
+  faqTitle: string;
+  faqs: { q: string; a: string }[];
+  formTitle: string;
+  formTitleAccent: string;
+  formP: string;
+  formGuarantee: { html: string }[];
+  formMeta: string[];
+  formEmailPref: string;
+  formEmailLabel: string;
+  formEmailPhone: string;
+  formSubTitle: string;
+  formSubP: string;
+  form: {
+    name: string; email: string; whatsapp: string; capacity: string; process: string; voltage: string; port: string; message: string;
+    namePh: string; emailPh: string; whatsappPh: string; capacityPh: string; processPh: string; voltagePh: string; portPh: string; messagePh: string;
+    submit: string; noSpam: string; success: string;
+  };
+};
+
+const ui: Record<Locale, KachiGhaniUi> = {
+  fr: {
+    title: "Prix Machine Huile de Moutarde Kachi Ghani — Devis Usine en 24 Heures",
+    description: "Prix machine Kachi Ghani pour l'Inde 415V/50Hz. Dites-nous votre objectif journalier moutarde — obtenez modèle HN (HN325 démarrage / HN426 fleuron), prix usine, CIF Mundra, et calendrier production sous 24 heures.",
+    keywords: ['prix machine kachi ghani', 'prix presse kachi ghani', 'prix machine huile de moutarde', 'prix presse kachi ghani', 'machine huile de moutarde indienne'],
+    breadcrumb: { home: 'Accueil', page: 'Prix Machine Huile de Moutarde Kachi Ghani' },
+    badge: "🇮🇳 Kachi Ghani Authentique · Sous 60°C · Prêt pour l'Inde 415V",
+    h1Line1: "Huile de Moutarde Kachi Ghani —",
+    h1Line2: "Prix Usine Exact pour Huileries Indiennes",
+    heroP: "« 4 lakh – 12 lakh ₹ » ne veut rien dire pour un atelier du Punjab vs une huilerie commerciale du Gujarat. Indiquez votre objectif journalier moutarde, obtenez un **devis usine 415V/50Hz exact en 24 heures**. CIF Mundra. Sans jeu.",
+    heroCta: "Obtenir Mon Devis Kachi Ghani →",
+    trust: { served: 'Pays desservis', years: 'Ans de fabrication', reply: 'Temps de réponse devis', projects: 'Projets clients', shippedTo: 'Machines expédiées vers', more: '35 autres' },
+    whyBadge: "Notre Philosophie de Prix",
+    whyTitle: "Kachi Ghani a des Besoins Uniques — Nous Devisons Exactement, Pas en Fourchettes",
+    whyP1: "Un producteur Kachi Ghani au Punjab qui presse 500 kg/jour et un autre au Gujarat qui presse 3 000 kg/jour ont tous deux besoin de machines à froid pour moutarde — mais avec des configurations de fûts, une tension, et des conditions d'expédition différentes. Une liste publique « prix à partir de X ₹ » vous tromperait tous les deux.",
+    whyP2: "À la place, nous donnons des devis honnêtes et personnalisés pour le marché indien — standard 415V/50Hz, CIF vers les ports indiens, communication adaptée WhatsApp. Indiquez votre objectif journalier, et nous envoyons votre devis complet dans les 24 heures.",
+    factorsBadge: "Ce Qui Façonne Votre Devis",
+    factorsTitle: "Cinq Facteurs de Prix Machine Huile de Moutarde Kachi Ghani",
+    factors: [
+      { num: '01', title: 'Pression pour la Dureté de la Moutarde', desc: "La graine de moutarde a une enveloppe dure. Le pressage à froid Kachi Ghani demande 42–50 MPa contre 30 MPa pour le pressage à chaud standard. **Cette seule différence peut faire varier le devis de ~15–25 %** — fûts plus épais, vérins 27SiMn plus résistants, et pompes à plus haute performance : ce sont de vrais coûts acier." },
+      { num: '02', title: 'Contrôle de Température Pressage à Froid', desc: "Le Kachi Ghani authentique maintient le pressage sous 60°C pour préserver la piquanté et l'arôme. Les machines ont besoin d'un réglage précis du temps de maintien et de la montée de pression — les modèles standard pressage à chaud manquent ce contrôle." },
+      { num: '03', title: 'Simple vs Double Station', desc: "Les presses à un fût traitent un lot à la fois. La double station (un fût presse tandis que l'autre se charge) double presque le débit journalier — idéal pour les huileries Kachi Ghani commerciales. Le second fût ajoute du coût matière mais élimine les temps d'arrêt." },
+      { num: '04', title: 'Tension et Configuration Inde', desc: "L'Inde utilise 415V/50Hz 3 phases (commercial) ou 220V/50Hz mono (petits ateliers). Nous bobinons les moteurs selon votre standard exact **sans supplément** sur les modèles standard." },
+      { num: '05', title: 'Expédition vers les Ports Indiens', desc: 'FOB Qingdao ne couvre que le chargement. CIF vers Mundra/Nhava Sheva ajoute ~28–32 jours de fret maritime + assurance. Les différents ports ont des tarifs légèrement différents. Nous vous montrons le détail complet, y compris l\'estimation des droits d\'import.' },
+    ],
+    budgetBadge: "Cadre Budgétaire",
+    budgetTitle: "Trois Niveaux de Projet Kachi Ghani — Trouvez le Vôtre",
+    budgetSub: "Indiquez votre objectif journalier moutarde et nous recommandons la configuration HN exacte — sans sur-achat.",
+    budget: [
+      { label: 'Démarrage', emoji: '🌾', desc: "500–1 500 kg de moutarde / jour. **Presse à un fût HN325** — point d'entrée pour petits ateliers Kachi Ghani. 220V mono ou 415V 3 phases disponibles." },
+      { label: 'Commercial', emoji: '❄️', desc: "1 500–3 000 kg de moutarde / jour. **HN426 fleuron pressage à froid** — pression plus élevée pour l'enveloppe dure de la moutarde, presse sous 60°C pour préserver la piquanté authentique Kachi Ghani." },
+      { label: 'Industriel', emoji: '🏭', desc: "3 000 kg+ de moutarde / jour. **HN426 double station ou HN500 plusieurs presses** — un fût presse tandis que l'autre se charge. Standard 415V/50Hz." },
+    ],
+    modelsBadge: "À Propos de Haonuo",
+    modelsTitle: "2 Modèles HN Kachi Ghani · Direct Usine depuis 2010",
+    modelsSub: "Des démarrages 325 tonnes aux fleurons pressage à froid authentique 500 tonnes — une usine, deux modèles calibrés pour la moutarde, sans intermédiaire.",
+    modelsHeader: { model: 'Modèle', tonnage: 'Tonnage', pressure: 'Pression', bestFor: 'Idéal Pour' },
+    hnModels: [
+      { code: 'HN325', tonnage: '325', pressure: '27 MPa', best: 'Démarrage Kachi Ghani — petits ateliers indiens, un fût, 415V/50Hz' },
+      { code: 'HN426', tonnage: '500', pressure: '42 MPa', best: "Fleuron Kachi Ghani — pressage à froid authentique sous 60°C, enveloppe dure moutarde" },
+    ],
+    faqBadge: "FAQ",
+    faqTitle: "Prix Machine Huile de Moutarde Kachi Ghani — Questions Fréquentes",
+    faqs: [
+      { q: "Mon devis de prix machine Kachi Ghani inclura-t-il l'expédition vers l'Inde ?", a: "Oui — nous pouvons deviser FOB Qingdao, CIF vers Mundra/Nhava Sheva/Kandla, ou DAP porte à porte partout en Inde. Le fret maritime vers Mundra prend ~28–32 jours. Indiquez votre port le plus proche ou l'adresse de votre usine et nous incluons le fret exact dans votre devis." },
+      { q: "Je débute en Kachi Ghani — m'aidez-vous à choisir la bonne machine ?", a: "Absolument. Le Kachi Ghani demande un pressage à froid à basse température (sous 60°C) pour préserver la piquanté authentique. Indiquez votre objectif journalier moutarde. HN325 pour petits ateliers, HN426 pour les producteurs Kachi Ghani sérieux (le fleuron — pression supplémentaire pour l'enveloppe dure de la moutarde). Nous fabriquons toutes les machines en 415V/50Hz ou 220V/50Hz pour l'Inde — sans supplément." },
+      { q: "Quels facteurs façonnent le prix machine huile de moutarde Kachi Ghani ?", a: "Cinq différences clés vs pressage à chaud standard moutarde : (1) pression pressage à froid — 42–50 MPa vs 30 MPa standard, (2) contrôle de température pour presser sous 60°C, (3) simple vs double station, (4) bobinage tension indienne (gratuit sur standard), (5) expédition vers ports indiens (varie selon le port). La différence de pression seule peut faire varier le devis de ~15–25 %." },
+      { q: "Quelles sont les conditions de paiement et la livraison vers l'Inde ?", a: 'Paiement : 30 % T/T acompte, 70 % avant expédition. L/C à vue disponible. Production : 15–25 jours ouvrés pour modèles HN standard, 30–45 jours pour double station ou fûts personnalisés. Fret maritime vers Mundra : ~28–32 jours. Pièces détachées par DHL/FedEx en 5–7 jours.' },
+      { q: "Combien de temps faut-il pour obtenir un devis Kachi Ghani, est-ce gratuit ?", a: 'Gratuit, sans engagement, et généralement dans les 24 heures. Si vous voulez d\'abord un budget approximatif, envoyez l\'objectif moutarde et nous répondons en 1–2 heures. Nous savons que les acheteurs indiens utilisent souvent WhatsApp — vous pouvez envoyer directement à notre numéro ci-dessus pour une réponse plus rapide.' },
+      { q: "Une machine peut-elle faire à la fois Kachi Ghani pressage à froid et pressage à chaud moutarde classique ?", a: 'Oui — nos modèles HN manuels/semi-automatiques gèrent les deux modes. Pression, course, temps de maintien et vitesse de montée sont réglables. Le pressage à froid se fait sous 60°C ; le pressage à chaud après torréfaction donne un rendement plus élevé avec un profil de saveur différent.' },
+    ],
+    formTitle: "Votre Devis Kachi Ghani Comprend",
+    formTitleAccent: "Ces 5 Éléments — Garantis",
+    formP: "Conçu pour l'Inde — standard 415V/50Hz, CIF Mundra, pression spécifique moutarde. Un devis personnalisé, pas de jeux de fourchettes, pas de suppléments cachés. Voici exactement ce que vous recevez :",
+    formGuarantee: [
+      { html: '<strong class="text-amber-300">Correspondance du modèle HN</strong> — HN325 pour ateliers, HN426 fleuron pour producteurs Kachi Ghani sérieux' },
+      { html: '<strong class="text-amber-300">Prix FOB Qingdao exact</strong> — postes détaillés, direct usine, sans intermédiaire' },
+      { html: '<strong class="text-amber-300">CIF Mundra/Nhava Sheva</strong> — fret maritime en temps réel inclus' },
+      { html: '<strong class="text-amber-300">Câblage prêt pour l\'Inde</strong> — 415V/50Hz ou 220V/50Hz, votre choix sans supplément' },
+      { html: '<strong class="text-amber-300">Calendrier production + paiement</strong> — délais 15–25 jours, suivi compatible WhatsApp' },
+    ],
+    formMeta: [
+      "Gratuit et sans engagement",
+      "Réponse sous 24 heures ouvrées",
+      "Direct usine, sans intermédiaire",
+    ],
+    formEmailPref: "Préférez-vous email ou WhatsApp ?",
+    formEmailLabel: "info@hydoilpress.com",
+    formEmailPhone: "+86 189 5714 9128",
+    formSubTitle: "Demandez Votre Devis Kachi Ghani",
+    formSubP: "Réponse sous 24 h. WhatsApp +91 xxx xxx xxxx pour aller plus vite.",
+    form: {
+      name: 'Nom', email: 'Email', whatsapp: 'WhatsApp (Inde : +91 9xx)',
+      capacity: 'Objectif journalier moutarde (kg/jour)',
+      process: 'Processus',
+      voltage: 'Tension locale',
+      port: 'Port indien le plus proche',
+      message: 'Message',
+      namePh: 'Votre nom', emailPh: 'vous@entreprise.com', whatsappPh: '+91 98765 43210',
+      capacityPh: 'ex. 1000, ou « pas encore sûr »',
+      processPh: 'Kachi Ghani froid seulement, ou froid + chaud ?',
+      voltagePh: 'ex. 415V/50Hz 3 phases ou 220V mono',
+      portPh: 'Mundra, Nhava Sheva, Kandla, ou autre port',
+      messagePh: "D'autres exigences ? (double fût, agent local, etc.)",
+      submit: "Obtenir Mon Devis Prix Kachi Ghani →",
+      noSpam: "Pas de spam. Nous répondons une fois avec votre devis complet.",
+      success: "✓ Merci ! Votre demande de devis Kachi Ghani a été envoyée. Nous répondrons dans les 24 heures.",
+    },
+  },
+
+  ar: {
+    title: "سعر مكبس عصر زيت الخردل Kachi Ghani — احصل على عرض مصنع خلال 24 ساعة",
+    description: "سعر مكبس Kachi Ghani المصمم للهند 415V/50Hz. أخبرنا بهدفك اليومي من الخردل — احصل على توصية طراز HN (HN325 مبتدئ / HN426 رائد)، عرض مصنع، CIF إلى Mundra، وجدول إنتاج خلال 24 ساعة.",
+    keywords: ['سعر مكبس kachi ghani', 'سعر مكبس عصر kachi ghani', 'سعر مكبس زيت الخردل', 'سعر مكبس kachi ghani', 'مكبس زيت خردل هندي'],
+    breadcrumb: { home: 'الرئيسية', page: 'سعر مكبس عصر زيت الخردل Kachi Ghani' },
+    badge: "🇮🇳 Kachi Ghani أصيل · تحت 60°C · جاهز للهند 415V",
+    h1Line1: "زيت الخردل Kachi Ghani —",
+    h1Line2: "سعر مصنع دقيق لمطاحن الهند",
+    heroP: "«4 – 12 لكخ روبية» لا يعني شيئًا لورشة في البنجاب مقابل مطحنة تجارية في غوجارات. أخبرنا بهدفك اليومي من الخردل، واحصل على **عرض مصنع 415V/50Hz دقيق خلال 24 ساعة**. CIF إلى Mundra. بدون تلاعب.",
+    heroCta: "احصل على عرضي لـ Kachi Ghani →",
+    trust: { served: 'دولة تمت خدمتها', years: 'سنوات تصنيع', reply: 'وقت الرد على العرض', projects: 'مشاريع عملاء', shippedTo: 'آلات تم شحنها إلى', more: 'و 35 دولة أخرى' },
+    whyBadge: "فلسفتنا في التسعير",
+    whyTitle: "Kachi Ghani له احتياجات فريدة — نحن نقدم عروضًا دقيقة، لا نطاقات",
+    whyP1: "منتج Kachi Ghani في البنجاب يعصر 500 كجم/يوم وآخر في غوجارات يعصر 3000 كجم/يوم كلاهما يحتاج مكابس باردة للخردل — ولكن بإعدادات أسطوانة مختلفة، ومواصفات جهد كهربائي، وشروط شحن مختلفة. قائمة عامة «السعر من X روبية» ستضلكما كليكما.",
+    whyP2: "بدل ذلك، نقدم عروضًا صادقة ومخصصة للسوق الهندية — مواصفات 415V/50Hz، CIF إلى الموانئ الهندية، وتواصل مناسب لـ WhatsApp. أخبرنا بهدفك اليومي، وسنرسل عرضك الكامل خلال 24 ساعة.",
+    factorsBadge: "ما الذي يشكل عرضك",
+    factorsTitle: "خمسة عوامل سعر مكبس عصر زيت الخردل Kachi Ghani",
+    factors: [
+      { num: '01', title: 'الضغط لصلابة بذرة الخردل', desc: 'بذرة الخردل لها قشرة صلبة. عصر Kachi Ghani على البارد يحتاج 42–50 ميجاباسكال مقابل 30 ميجاباسكال للعصر الساخن القياسي. **هذا الاختلاف الواحد يمكن أن يؤثر على العرض بنسبة ~15–25%** — أسطوانات أكثر سمكًا، أسطوانات 27SiMn أقوى، ومضخات تصنيف أعلى: هذه تكاليف فولاذية حقيقية.' },
+      { num: '02', title: 'التحكم بدرجة الحرارة للعصر البارد', desc: 'Kachi Ghani الأصيل يحافظ على العصر تحت 60°C لحماية الحدة والنكهة. المكابس تحتاج ضبط دقيق لوقت الاحتفاظ وارتفاع الضغط — النماذج القياسية للعصر الساخن تفتقر هذا التحكم.' },
+      { num: '03', title: 'محطة مفردة مقابل مزدوجة', desc: 'المكابس ذات الأسطوانة الواحدة تعالج دفعة واحدة في كل مرة. المحطة المزدوجة (أسطوانة تعصر بينما تملأ الأخرى) تضاعف تقريبًا الإنتاج اليومي — مثالي لمطاحن Kachi Ghani التجارية. الأسطوانة الثانية تضيف تكلفة مادة ولكنها تلغي وقت التوقف.' },
+      { num: '04', title: 'الجهد وإعداد الهند', desc: 'الهند تستخدم 415V/50Hz 3 أطوار (تجاري) أو 220V/50Hz أحادي الطور (ورش صغيرة). نحن نلف المحركات حسب معيارك الدقيق **بدون تكلفة إضافية** على النماذج القياسية.' },
+      { num: '05', title: 'الشحن إلى الموانئ الهندية', desc: 'FOB Qingdao يغطي التحميل فقط. CIF إلى Mundra/Nhava Sheva يضيف ~28–32 يومًا شحن بحري + تأمين. الموانئ المختلفة لها أسعار مختلفة قليلاً. سنعرض لك التفصيل الكامل بما في ذلك تقدير رسوم الاستيراد.' },
+    ],
+    budgetBadge: "إطار الميزانية",
+    budgetTitle: "ثلاثة مستويات لمشاريع Kachi Ghani — ابحث عن مكانك",
+    budgetSub: "أخبرنا بهدفك اليومي من الخردل وسنوصي بإعداد HN الدقيق — بدون شراء زائد.",
+    budget: [
+      { label: 'بداية', emoji: '🌾', desc: '500–1500 كجم خردل/يوم. **مكبس واحد بأسطوانة واحدة HN325** — نقطة دخول لورش Kachi Ghani الصغيرة. 220V أحادي الطور أو 415V 3 أطوار متاح.' },
+      { label: 'تجاري', emoji: '❄️', desc: '1500–3000 كجم خردل/يوم. **HN426 رائد العصر البارد** — ضغط أعلى لقشرة الخردل الصلبة، يعصر تحت 60°C لحماية الحدة الأصلية لـ Kachi Ghani.' },
+      { label: 'صناعي', emoji: '🏭', desc: '3000 كجم+ خردل/يوم. **HN426 محطة مزدوجة أو HN500 مكابس متعددة** — أسطوانة تعصر بينما تملأ الأخرى. قياسي 415V/50Hz.' },
+    ],
+    modelsBadge: "حول هاونو",
+    modelsTitle: "طرازان HN لـ Kachi Ghani · مباشر من المصنع منذ 2010",
+    modelsSub: 'من ورش 325 طن إلى رائد العصر البارد الأصيل 500 طن — مصنع واحد، طرازان مضبوطان للخردل، بدون وسيط.',
+    modelsHeader: { model: 'الطراز', tonnage: 'الطناجة', pressure: 'الضغط', bestFor: 'الأنسب لـ' },
+    hnModels: [
+      { code: 'HN325', tonnage: '325', pressure: '27 ميجاباسكال', best: 'مبتدئ Kachi Ghani — ورش هندية صغيرة، أسطوانة واحدة، 415V/50Hz' },
+      { code: 'HN426', tonnage: '500', pressure: '42 ميجاباسكال', best: 'رائد Kachi Ghani — عصر بارد أصيل تحت 60°C، قشرة خردل صلبة' },
+    ],
+    faqBadge: "أسئلة شائعة",
+    faqTitle: "سعر مكبس عصر زيت الخردل Kachi Ghani — أسئلة شائعة",
+    faqs: [
+      { q: "هل سيتضمن عرض سعر مكبس Kachi Ghani الشحن إلى الهند؟", a: "نعم — يمكننا تقديم عرض FOB Qingdao، CIF إلى Mundra/Nhava Sheva/Kandla، أو DAP من الباب إلى الباب في أي مكان في الهند. الشحن البحري إلى Mundra يستغرق ~28–32 يومًا. أخبرنا بأقرب ميناء أو عنوان مصنعك وسنقوم بتضمين تقدير شحن شفاف في نفس العرض." },
+      { q: "أنا مبتدئ في Kachi Ghani — هل تساعدون المشترين الجدد على تحديد المكتب المناسب؟", a: "بالتأكيد. Kachi Ghani يحتاج عصر بارد بدرجة حرارة منخفضة (تحت 60°C) لحماية الحدة الأصلية. أخبرنا بهدفك اليومي من الخردل. HN325 للورش الصغيرة، HN426 لمنتجي Kachi Ghani الجادين (الرائد — ضغط إضافي لقشرة الخردل الصلبة). نحن نصنع جميع المكابس بمواصفات 415V/50Hz أو 220V/50Hz للهند — بدون تكلفة إضافية." },
+      { q: "ما هي العوامل التي تشكل سعر مكبس عصر زيت الخردل Kachi Ghani؟", a: 'خمسة اختلافات رئيسية مقارنة بالعصر الساخن القياسي للخردل: (1) ضغط العصر البارد — 42–50 ميجاباسكال مقابل 30 ميجاباسكال القياسي، (2) التحكم بدرجة الحرارة للعصر تحت 60°C، (3) محطة مفردة مقابل مزدوجة، (4) لف المحرك للجهد الهندي (مجاني على القياسي)، (5) الشحن إلى الموانئ الهندية (يختلف حسب الميناء). الاختلاف في الضغط وحده يمكن أن يؤثر على العرض بنسبة ~15–25%.' },
+      { q: "ما هي شروط الدفع ومدة التسليم إلى الهند؟", a: 'الدفع: 30% T/T دفعة مقدمة، 70% قبل الشحن. L/C عند الاطلاع متاح. وقت الإنتاج: 15–25 يوم عمل للطرازات HN القياسية، 30–45 يوم للمحطة المزدوجة أو الأسطوانات الخاصة. الشحن البحري إلى Mundra: ~28–32 يومًا. قطع الغيار تشحن DHL/FedEx خلال 5–7 أيام.' },
+      { q: "كم من الوقت يستغرق الحصول على عرض Kachi Ghani، وهل هو مجاني؟", a: 'مجاني، بدون التزام، وعادةً خلال 24 ساعة. إذا كنت تريد ميزانية تقريبية أولاً، أرسل هدف الخردل وسنرد في 1–2 ساعة. نحن نعلم أن المشترين الهنود غالبًا يستخدمون WhatsApp — يمكنك الإرسال مباشرة إلى رقمنا أعلاه لرد أسرع.' },
+      { q: "هل يمكن لمكبس واحد القيام بكل من Kachi Ghani العصر البارد والعصر الساخن الكلاسيكي للخردل؟", a: 'نعم — نماذجنا اليدوية/شبه الآلية من HN تدعم كلا الوضعين. الضغط، الشوط، وقت الاحتفاظ، وسرعة الصعود قابلة للضبط. العصر البارد يعمل تحت 60°C؛ والعصر الساخن بعد التحميص يعطي إنتاجية أعلى بنكهة مختلفة.' },
+    ],
+    formTitle: "عرض Kachi Ghani الخاص بك يتضمن",
+    formTitleAccent: "هذه العناصر الخمسة — مضمونة",
+    formP: "مصمم للهند — مواصفات 415V/50Hz، CIF إلى Mundra، ضغط خاص بالخردل. عرض واحد مخصص، لا ألعاب نطاقات، لا تكاليف خفية. إليك بالضبط ما تحصل عليه:",
+    formGuarantee: [
+      { html: '<strong class="text-amber-300">تطابق طراز HN</strong> — HN325 للورش، HN426 رائد لمنتجي Kachi Ghani الجادين' },
+      { html: '<strong class="text-amber-300">سعر FOB Qingdao الدقيق</strong> — كل بند مفصل، مباشر من المصنع، بدون وسيط' },
+      { html: '<strong class="text-amber-300">CIF إلى Mundra/Nhava Sheva</strong> — أسعار بحرية فعلية مشمولة' },
+      { html: '<strong class="text-amber-300">الأسلاك جاهزة للهند</strong> — 415V/50Hz أو 220V/50Hz، اختيارك بدون تكلفة إضافية' },
+      { html: '<strong class="text-amber-300">جدول الإنتاج + الدفع</strong> — مهلة 15–25 يوم، متابعة مناسبة لـ WhatsApp' },
+    ],
+    formMeta: [
+      'مجاني وبدون التزام',
+      'رد خلال 24 ساعة عمل',
+      'مباشر من المصنع، بدون وسيط',
+    ],
+    formEmailPref: 'تفضل البريد الإلكتروني أم WhatsApp؟',
+    formEmailLabel: 'info@hydoilpress.com',
+    formEmailPhone: '+86 189 5714 9128',
+    formSubTitle: 'اطلب عرضك لـ Kachi Ghani',
+    formSubP: 'رد خلال 24 ساعة. WhatsApp +91 xxx xxx xxxx للأسرع.',
+    form: {
+      name: 'الاسم', email: 'البريد الإلكتروني', whatsapp: 'WhatsApp (الهند: +91 9xx)',
+      capacity: 'الهدف اليومي من الخردل (كجم/يوم)',
+      process: 'العملية',
+      voltage: 'الجهد المحلي',
+      port: 'أقرب ميناء هندي',
+      message: 'الرسالة',
+      namePh: 'اسمك', emailPh: 'you@company.com', whatsappPh: '+91 98765 43210',
+      capacityPh: 'مثال 1000، أو «لست متأكدًا بعد»',
+      processPh: 'Kachi Ghani بارد فقط، أم بارد + ساخن؟',
+      voltagePh: 'مثال 415V/50Hz 3 أطوار أو 220V أحادي',
+      portPh: 'Mundra، Nhava Sheva، Kandla، أو أي ميناء',
+      messagePh: 'أي متطلبات؟ (أسطوانة مزدوجة، وكيل محلي، إلخ.)',
+      submit: 'احصل على عرض سعر Kachi Ghani الخاص بي →',
+      noSpam: 'لا بريد مزعج. نحن نرد مرة واحدة مع عرضك الكامل.',
+      success: '✓ شكرًا! تم إرسال طلب عرض Kachi Ghani الخاص بك. سنرد خلال 24 ساعة.',
+    },
+  },
+
+  id: {
+    title: "Harga Mesin Minyak Mustard Kachi Ghani — Dapatkan Penawaran Pabrik dalam 24 Jam",
+    description: "Harga mesin Kachi Ghani untuk India 415V/50Hz. Beritahu kami target harian mustard Anda — dapatkan model HN (HN325 pemula / HN426 unggulan), harga pabrik, CIF ke Mundra, dan jadwal produksi dalam 24 jam.",
+    keywords: ['harga mesin kachi ghani', 'harga press kachi ghani', 'harga mesin minyak mustard', 'harga press kachi ghani', 'mesin minyak mustard india'],
+    breadcrumb: { home: 'Beranda', page: 'Harga Mesin Minyak Mustard Kachi Ghani' },
+    badge: "🇮🇳 Kachi Ghani Otentik · Di bawah 60°C · Siap India 415V",
+    h1Line1: "Minyak Mustard Kachi Ghani —",
+    h1Line2: "Harga Pabrik Tepat untuk Penggiling India",
+    heroP: "«₹4 lakh – ₹12 lakh» tidak berarti apa-apa untuk bengkel Punjab vs penggilingan komersial Gujarat. Beritahu kami target harian mustard Anda, dapatkan **penawaran FOB tepat 415V/50Hz dalam 24 jam**. CIF ke Mundra. Tanpa tipu.",
+    heroCta: "Dapatkan Penawaran Kachi Ghani Saya →",
+    trust: { served: 'Negara Dilayani', years: 'Tahun Manufaktur', reply: 'Waktu Balas Penawaran', projects: 'Proyek Klien', shippedTo: 'Mesin Dikirim ke', more: '+ 35 negara lagi' },
+    whyBadge: "Filosofi Harga Kami",
+    whyTitle: "Kachi Ghani Membutuhkan Hal Unik — Kami Menawarkan Tepat, Bukan Rentang",
+    whyP1: "Produser Kachi Ghani di Punjab yang mempress 500 kg/hari dan satu di Gujarat yang mempress 3.000 kg/hari keduanya membutuhkan mesin dingin untuk mustard — tetapi dengan konfigurasi barrel, tegangan, dan syarat pengiriman yang berbeda. Daftar publik «harga mulai dari ₹X» akan menyesatkan kalian berdua.",
+    whyP2: "Sebaliknya kami memberikan penawaran yang jujur dan disesuaikan untuk pasar India — standar 415V/50Hz, CIF ke pelabuhan India, komunikasi yang cocok dengan WhatsApp. Beritahu kami target harian Anda, dan kami akan mengirimkan penawaran lengkap Anda dalam 24 jam.",
+    factorsBadge: "Apa yang Membentuk Penawaran Anda",
+    factorsTitle: "Lima Faktor Harga Mesin Minyak Mustard Kachi Ghani",
+    factors: [
+      { num: '01', title: 'Tekanan untuk Kekerasan Biji Mustard', desc: 'Biji mustard memiliki cangkang yang keras. Press dingin Kachi Ghani membutuhkan 42–50 MPa vs 30 MPa untuk press panas standar. **Perbedaan tunggal ini dapat memengaruhi penawaran sekitar ~15–25%** — barrel yang lebih tebal, silinder 27SiMn yang lebih kuat, dan pompa dengan peringkat lebih tinggi adalah biaya baja yang nyata.' },
+      { num: '02', title: 'Kontrol Suhu Press Dingin', desc: 'Kachi Ghani otentik menjaga press di bawah 60°C untuk melindungi kepedasan dan aroma. Mesin membutuhkan penyesuaian waktu tahan dan kenaikan tekanan yang tepat — model press panas standar tidak memiliki kontrol ini.' },
+      { num: '03', title: 'Stasiun Tunggal vs Ganda', desc: 'Press barrel tunggal memproses satu batch sekaligus. Stasiun ganda (satu barrel mempress sementara yang lain mengisi ulang) hampir menggandakan throughput harian — ideal untuk penggilingan Kachi Ghani komersial. Barrel kedua menambah biaya bahan tetapi menghilangkan waktu menganggur.' },
+      { num: '04', title: 'Tegangan & Pengaturan Khusus India', desc: 'India menggunakan 415V/50Hz 3 fase (komersial) atau 220V/50Hz fase tunggal (bengkel kecil). Kami melilitkan motor sesuai standar tepat Anda **tanpa biaya tambahan** pada model standar.' },
+      { num: '05', title: 'Pengiriman ke Pelabuhan India', desc: 'FOB Qingdao hanya mencakup pemuatan. CIF ke Mundra/Nhava Sheva menambah ~28–32 hari biaya pengiriman laut + asuransi. Pelabuhan yang berbeda memiliki tarif yang sedikit berbeda. Kami akan menunjukkan rincian lengkap termasuk estimasi bea impor.' },
+    ],
+    budgetBadge: "Kerangka Anggaran",
+    budgetTitle: "Tiga Tingkatan Proyek Kachi Ghani — Temukan Posisi Anda",
+    budgetSub: "Beritahu kami target harian mustard Anda dan kami merekomendasikan konfigurasi HN yang tepat — tanpa membeli berlebih.",
+    budget: [
+      { label: 'Startup', emoji: '🌾', desc: '500–1.500 kg biji mustard/hari. **Press barrel tunggal HN325** — titik masuk untuk bengkel kecil Kachi Ghani. Tersedia 220V fase tunggal atau 415V 3 fase.' },
+      { label: 'Komersial', emoji: '❄️', desc: '1.500–3.000 kg biji mustard/hari. **HN426 unggulan press dingin** — tekanan lebih tinggi untuk cangkang mustard yang keras, press di bawah 60°C untuk melindungi kepedasan otentik Kachi Ghani.' },
+      { label: 'Industri', emoji: '🏭', desc: '3.000 kg+ biji mustard/hari. **HN426 stasiun ganda atau HN500 beberapa press** — satu barrel mempress sementara yang lain mengisi ulang. Standar 415V/50Hz.' },
+    ],
+    modelsBadge: "Tentang Haonuo",
+    modelsTitle: "2 Model HN Kachi Ghani · Langsung Pabrik Sejak 2010",
+    modelsSub: 'Dari bengkel 325 ton hingga unggulan press dingin otentik 500 ton — satu pabrik, dua model dikalibrasi untuk mustard, tanpa perantara.',
+    modelsHeader: { model: 'Model', tonnage: 'Tonnase', pressure: 'Tekanan', bestFor: 'Terbaik Untuk' },
+    hnModels: [
+      { code: 'HN325', tonnage: '325', pressure: '27 MPa', best: 'Pemula Kachi Ghani — bengkel kecil India, barrel tunggal, 415V/50Hz' },
+      { code: 'HN426', tonnage: '500', pressure: '42 MPa', best: 'Unggulan Kachi Ghani — press dingin otentik di bawah 60°C, cangkang mustard keras' },
+    ],
+    faqBadge: "FAQ",
+    faqTitle: "Harga Mesin Minyak Mustard Kachi Ghani — Pertanyaan yang Sering Diajukan",
+    faqs: [
+      { q: "Apakah penawaran harga mesin Kachi Ghani saya akan mencakup pengiriman ke India?", a: "Ya — kami dapat menawarkan FOB Qingdao, CIF ke Mundra/Nhava Sheva/Kandla, atau DAP door-to-door ke mana saja di India. Pengiriman laut ke Mundra membutuhkan ~28–32 hari. Beritahu kami pelabuhan terdekat atau alamat pabrik Anda dan kami akan menyertakan pengiriman tepat dalam penawaran yang sama." },
+      { q: "Saya baru memulai Kachi Ghani — apakah Anda membantu pembeli baru memilih mesin yang tepat?", a: "Tentu. Kachi Ghani membutuhkan press dingin dengan suhu rendah (di bawah 60°C) untuk melindungi kepedasan otentik. Beritahu kami target harian mustard Anda. HN325 untuk bengkel kecil, HN426 untuk produser Kachi Ghani serius (unggulan — tekanan tambahan untuk cangkang mustard yang keras). Kami memproduksi semua mesin dalam 415V/50Hz atau 220V/50Hz untuk India — tanpa biaya tambahan." },
+      { q: "Apa faktor yang membentuk harga mesin minyak mustard Kachi Ghani?", a: 'Lima perbedaan utama vs press panas standar mustard: (1) tekanan press dingin — 42–50 MPa vs 30 MPa standar, (2) kontrol suhu untuk press di bawah 60°C, (3) stasiun tunggal vs ganda, (4) lilit tegangan India (gratis pada standar), (5) pengiriman ke pelabuhan India (bervariasi tergantung pelabuhan). Perbedaan tekanan saja dapat memengaruhi penawaran sebesar ~15–25%.' },
+      { q: "Apa syarat pembayaran dan berapa lama pengiriman ke India?", a: 'Pembayaran: 30% T/T deposit, 70% sebelum pengiriman. L/C at sight tersedia. Waktu produksi: 15–25 hari kerja untuk model HN standar, 30–45 hari untuk stasiun ganda atau barrel kustom. Pengiriman laut ke Mundra: ~28–32 hari. Suku cadang dikirim DHL/FedEx dalam 5–7 hari.' },
+      { q: "Berapa lama untuk mendapatkan penawaran Kachi Ghani, dan apakah gratis?", a: 'Gratis, tanpa kewajiban, dan biasanya dalam 24 jam. Jika Anda hanya ingin anggaran kasar terlebih dahulu, kirim target mustard dan kami akan membalas dalam 1–2 jam. Kami tahu pembeli India sering menggunakan WhatsApp — Anda dapat mengirim langsung ke nomor kami di atas untuk balas lebih cepat.' },
+      { q: "Bisakah satu mesin melakukan Kachi Ghani press dingin dan press panas mustard klasik?", a: 'Ya — model HN manual/semi-otomatis kami mendukung kedua mode. Tekanan, langkah, waktu tahan, dan kecepatan kenaikan dapat diatur. Press dingin berjalan di bawah 60°C; press panas setelah pemanggangan memberikan hasil lebih tinggi dengan profil rasa yang berbeda.' },
+    ],
+    formTitle: "Penawaran Kachi Ghani Anda Dilengkapi dengan",
+    formTitleAccent: "5 Hal Ini — Dijamin",
+    formP: "Direkayasa untuk India — standar 415V/50Hz, CIF ke Mundra, tekanan khusus mustard. Satu penawaran yang disesuaikan, tidak ada permainan rentang, tidak ada biaya tersembunyi. Berikut tepat apa yang Anda dapatkan:",
+    formGuarantee: [
+      { html: '<strong class="text-amber-300">Kesesuaian model HN</strong> — HN325 untuk bengkel, HN426 unggulan untuk produser Kachi Ghani serius' },
+      { html: '<strong class="text-amber-300">Harga FOB Qingdao tepat</strong> — setiap rincian dipecah, langsung pabrik, tanpa perantara' },
+      { html: '<strong class="text-amber-300">CIF ke Mundra/Nhava Sheva</strong> — tarif laut waktu nyata termasuk' },
+      { html: '<strong class="text-amber-300">Kabel siap India</strong> — 415V/50Hz atau 220V/50Hz, pilihan Anda tanpa biaya tambahan' },
+      { html: '<strong class="text-amber-300">Jadwal produksi + pembayaran</strong> — lead time 15–25 hari, tindak lanjut cocok WhatsApp' },
+    ],
+    formMeta: [
+      'Gratis & tanpa kewajiban',
+      'Balas dalam 24 jam kerja',
+      'Langsung pabrik, tanpa perantara',
+    ],
+    formEmailPref: 'Lebih suka email atau WhatsApp?',
+    formEmailLabel: 'info@hydoilpress.com',
+    formEmailPhone: '+86 189 5714 9128',
+    formSubTitle: 'Minta Penawaran Kachi Ghani Anda',
+    formSubP: 'Balas dalam 24 jam. WhatsApp +91 xxx xxx xxxx untuk tercepat.',
+    form: {
+      name: 'Nama', email: 'Email', whatsapp: 'WhatsApp (India: +91 9xx)',
+      capacity: 'Target harian biji mustard (kg/hari)',
+      process: 'Proses',
+      voltage: 'Tegangan lokal',
+      port: 'Pelabuhan India terdekat',
+      message: 'Pesan',
+      namePh: 'Nama Anda', emailPh: 'anda@perusahaan.com', whatsappPh: '+91 98765 43210',
+      capacityPh: 'mis. 1000, atau «belum yakin»',
+      processPh: 'Kachi Ghani dingin saja, atau dingin + panas?',
+      voltagePh: 'mis. 415V/50Hz 3 fase atau 220V fase tunggal',
+      portPh: 'Mundra, Nhava Sheva, Kandla, atau pelabuhan apa saja',
+      messagePh: 'Persyaratan lain? (barrel ganda, agen lokal, dll.)',
+      submit: 'Dapatkan Penawaran Harga Kachi Ghani Saya →',
+      noSpam: 'Tidak ada spam. Kami membalas sekali dengan penawaran lengkap Anda.',
+      success: '✓ Terima kasih! Permintaan penawaran Kachi Ghani Anda telah dikirim. Kami akan membalas dalam 24 jam.',
+    },
+  },
+};
+
+const L = ui[currentLocale];
+
+// Helper: render **bold** markdown in UI strings
+const richHtml = (s: string, cls = 'text-charcoal-900') =>
+  s.replace(/\*\*(.+?)\*\*/g, `<b class="${cls}">$1</b>`);
+
+// Breadcrumb JSON-LD
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: L.breadcrumb.home, item: `https://www.hydoilpress.com/${currentLocale}/` },
+    { '@type': 'ListItem', position: 2, name: L.breadcrumb.page, item: `https://www.hydoilpress.com/${currentLocale}/kachi-ghani-mustard-oil-machine-price` },
+  ],
+};
+
+// FAQ JSON-LD — MUST use localized strings
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: L.faqs.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
+const trustStats = [
+  { num: '50+', label: L.trust.served },
+  { num: '15+', label: L.trust.years },
+  { num: '24h', label: L.trust.reply },
+  { num: '1,000+', label: L.trust.projects },
+];
+const trustCountries = ['🇮🇳', '🇳🇬', '🇮🇩', '🇵🇭', '🇵🇰', '🇧🇩', '🇪🇬', '🇰🇪', '🇻🇳', '🇲🇲', '🇺🇸', '🇬🇧'];
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={L.title}
+  description={L.description}
+  keywords={L.keywords}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{L.breadcrumb.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{L.breadcrumb.page}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-amber-900 via-steel-900 to-emerald-900 py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-amber-300 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <span class="inline-block bg-amber-500/20 text-amber-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-5">
+            {L.badge}
+          </span>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
+            {L.h1Line1}<br>
+            <span class="text-amber-400">{L.h1Line2}</span>
+          </h1>
+          <p class="text-lg text-steel-300 mb-6 leading-relaxed" set:html={richHtml(L.heroP, 'text-amber-300')}></p>
+          <a href="#price-form" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
+            {L.heroCta} →
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-900">
+          <img src="/images/models/hn426.webp" alt="HN426 hydraulic oil press machine — Kachi Ghani factory direct" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="py-8 bg-steel-50 border-y border-steel-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {trustStats.map(s => (
+          <div class="text-center">
+            <div class="text-amber-600 font-display text-2xl md:text-3xl font-bold">{s.num}</div>
+            <div class="text-steel-600 text-xs md:text-sm uppercase tracking-wider mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center text-steel-500 text-xs uppercase tracking-wider mb-3">{L.trust.shippedTo}</div>
+      <div class="flex justify-center gap-2 flex-wrap">
+        {trustCountries.map(c => <span class="text-2xl" title="Shipped here before">{c}</span>)}
+        <span class="text-xs text-steel-400 self-center ml-2">{L.trust.more}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Factory Quotes -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.whyBadge}</span>
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold mb-4">
+        {L.whyTitle}
+      </h2>
+      <p class="text-steel-600 leading-relaxed mb-4">
+        {L.whyP1}
+      </p>
+      <p class="text-steel-600 leading-relaxed">
+        {L.whyP2}
+      </p>
+    </div>
+  </section>
+
+  <!-- 5 Price Factors -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.factorsBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.factorsTitle}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {L.factors.map(f => (
+          <div class="bg-white rounded-xl p-6 border border-steel-100 hover:shadow-lg hover:border-amber-200 transition-all">
+            <div class="text-amber-500 font-bold text-2xl mb-3">{f.num}</div>
+            <h3 class="font-bold text-charcoal-900 mb-2">{f.title}</h3>
+            <p class="text-steel-600 text-sm leading-relaxed" set:html={richHtml(f.desc)}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget Tiers -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.budgetBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.budgetTitle}</h2>
+        <p class="text-steel-500 mt-3">{L.budgetSub}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        {L.budget.map(b => (
+          <div class="bg-steel-50 rounded-xl p-6 border border-steel-200 hover:border-amber-400 hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-4xl">{b.emoji}</span>
+              <h3 class="font-bold text-charcoal-900 text-lg">{b.label}</h3>
+            </div>
+            <p class="text-steel-600 text-sm leading-relaxed" set:html={richHtml(b.desc)}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Company -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.modelsBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.modelsTitle}</h2>
+        <p class="text-steel-500 mt-3">{L.modelsSub}</p>
+      </div>
+
+      <!-- Kachi Ghani HN Model Table -->
+      <div class="overflow-x-auto mb-10">
+        <table class="w-full text-sm bg-white rounded-xl overflow-hidden border border-steel-200">
+          <thead class="bg-amber-900 text-white">
+            <tr>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.model}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.tonnage}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.pressure}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.bestFor}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {L.hnModels.map((m, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                <td class="px-5 py-3 font-bold text-amber-600">{m.code}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.tonnage}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.pressure}</td>
+                <td class="px-5 py-3 text-steel-600">{m.best}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Factory Photos -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/painting-workshop.webp" alt="Haonuo factory painting workshop" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/quality-control.webp" alt="Haonuo quality control lab" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/warehouse.webp" alt="Haonuo finished machine warehouse" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/office-building.webp" alt="Haonuo factory office building" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.faqBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.faqTitle}</h2>
+      </div>
+      <div class="space-y-3" id="faq-container">
+        {L.faqs.map((item, idx) => (
+          <div class="faq-item bg-steel-50 rounded-xl border border-steel-200 overflow-hidden">
+            <button class="faq-q w-full text-left px-5 py-4 flex items-center justify-between gap-4 hover:bg-white transition-colors" onclick={`toggleFaq(${idx})`}>
+              <span class="font-semibold text-charcoal-900 pr-4">{item.q}</span>
+              <span class="chev text-amber-500 text-xl font-bold shrink-0 transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-a hidden px-5 pb-5 text-steel-600 text-sm leading-relaxed bg-white">{item.a}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry form -->
+  <section id="price-form" class="py-14 md:py-20 bg-gradient-to-br from-amber-900 via-steel-900 to-emerald-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div>
+          <h2 class="font-display text-3xl md:text-4xl text-white font-bold leading-tight mb-4">
+            {L.formTitle}<br>
+            <span class="text-amber-400">{L.formTitleAccent}</span>
+          </h2>
+          <p class="text-steel-300 mb-5 leading-relaxed">
+            {L.formP}
+          </p>
+          <ul class="space-y-2.5 text-steel-200 text-sm mb-6">
+            {L.formGuarantee.map(line => (
+              <li class="flex items-start gap-2.5"><span class="text-amber-400 mt-0.5 text-base leading-none">✓</span><span set:html={line.html}></span></li>
+            ))}
+          </ul>
+          <div class="flex flex-wrap gap-4 text-xs text-steel-400 mb-4">
+            {L.formMeta.map(meta => (
+              <span class="flex items-center gap-1.5"><span class="text-amber-400">✓</span>{meta}</span>
+            ))}
+          </div>
+          <p class="text-steel-400 text-xs">{L.formEmailPref} <a href={`mailto:${L.formEmailLabel}`} class="text-amber-400 hover:underline">{L.formEmailLabel}</a> · <span class="text-amber-400">{L.formEmailPhone}</span></p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <h3 class="text-charcoal-900 text-xl font-bold mb-1">{L.formSubTitle}</h3>
+          <p class="text-steel-500 text-sm mb-5">{L.formSubP}</p>
+          <form id="quote-form" class="space-y-3" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.name} <span class="text-red-500">*</span></label>
+                <input type="text" name="name" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.namePh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.email} <span class="text-red-500">*</span></label>
+                <input type="email" name="email" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.emailPh}>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.whatsapp} <span class="text-red-500">*</span></label>
+              <input type="tel" name="whatsapp" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.whatsappPh}>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.capacity}</label>
+                <input type="text" name="capacity" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.capacityPh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.process}</label>
+                <input type="text" name="process" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.processPh}>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.voltage}</label>
+                <input type="text" name="voltage" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.voltagePh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.port}</label>
+                <input type="text" name="port" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.portPh}>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.message}</label>
+              <textarea name="message" rows="2" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 resize-none" placeholder={L.form.messagePh}></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-5 rounded-lg text-sm shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
+              {L.form.submit} →
+            </button>
+            <p class="text-center text-xs text-steel-400">{L.form.noSpam}</p>
+          </form>
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-lg p-4 text-center text-sm font-semibold mt-3">
+            ✓ {L.form.success}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script is:inline>
+  function toggleFaq(idx) {
+    const items = document.querySelectorAll('.faq-item');
+    const item = items[idx];
+    const answer = item.querySelector('.faq-a');
+    const chev = item.querySelector('.chev');
+    item.classList.toggle('open');
+    answer.classList.toggle('hidden');
+    chev.textContent = item.classList.contains('open') ? '×' : '+';
+    chev.classList.toggle('rotate-45');
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      document.getElementById('quote-form').reset();
+      document.getElementById('form-success').classList.remove('hidden');
+      setTimeout(() => document.getElementById('form-success').classList.add('hidden'), 5000);
+    }, 1000);
+  }
+</script>
+</BaseLayout>

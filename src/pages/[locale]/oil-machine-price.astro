@@ -1,0 +1,660 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } }];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+type PriceUi = {
+  title: string;
+  description: string;
+  keywords: string[];
+  breadcrumb: { home: string; page: string };
+  badge: string;
+  h1Line1: string;
+  h1Line2: string;
+  heroP: string;
+  heroCta: string;
+  trust: { served: string; years: string; reply: string; projects: string; shippedTo: string; more: string };
+  whyBadge: string;
+  whyTitle: string;
+  whyP1: string;
+  whyP2: string;
+  factorsBadge: string;
+  factorsTitle: string;
+  factors: { num: string; title: string; desc: string }[];
+  budgetBadge: string;
+  budgetTitle: string;
+  budgetSub: string;
+  budget: { label: string; emoji: string; desc: string }[];
+  modelsBadge: string;
+  modelsTitle: string;
+  modelsSub: string;
+  modelsHeader: { model: string; tonnage: string; pressure: string; bestFor: string };
+  hnModels: { code: string; tonnage: string; pressure: string; seed: string }[];
+  faqBadge: string;
+  faqTitle: string;
+  faqs: { q: string; a: string }[];
+  formTitle: string;
+  formTitleAccent: string;
+  formP: string;
+  formGuarantee: string[];
+  formMeta: string[];
+  formEmailPref: string;
+  formEmailLabel: string;
+  formEmailPhone: string;
+  formSubTitle: string;
+  formSubP: string;
+  form: {
+    name: string; email: string; whatsapp: string; seed: string; capacity: string; country: string; message: string;
+    namePh: string; emailPh: string; whatsappPh: string; seedPh: string; capacityPh: string; countryPh: string; messagePh: string;
+    submit: string; noSpam: string; success: string;
+  };
+};
+
+const ui: Record<Locale, PriceUi> = {
+  fr: {
+    title: "Prix des Presses à Huile — Devis Direct Usine en 24 Heures",
+    description: "Prix des presses à huile Haonuo, usine directe. Indiquez votre graine et votre capacité journalière — recevez une recommandation de modèle HN, devis FOB/CIF, estimation d'expédition et liste d'équipements sous 24 h. Sans intermédiaire, détails transparents.",
+    keywords: ['prix presse à huile', 'prix machine à huile', 'prix presse hydraulique à huile', 'prix machine extraction huile', 'prix machine huilerie'],
+    breadcrumb: { home: 'Accueil', page: 'Prix des Presses à Huile' },
+    badge: "🏭 Direct Usine · Shandong, Chine · Depuis 2010",
+    h1Line1: "Marre des listes de prix",
+    h1Line2: "« à partir de » qui ne veulent rien dire ?",
+    heroP: "« Entre 8 000 et 25 000 $ » n'est pas un prix — c'est une distraction. Nous sommes une vraie usine. Indiquez votre graine et votre objectif journalier, obtenez un **devis FOB exact en 24 heures**. Sans intermédiaire. Sans jeu.",
+    heroCta: "Obtenir Mon Devis Usine Exact →",
+    trust: { served: 'Pays desservis', years: 'Ans de fabrication', reply: 'Temps de réponse devis', projects: 'Projets clients', shippedTo: 'Machines expédiées vers', more: '35 autres' },
+    whyBadge: "Notre Philosophie de Prix",
+    whyTitle: "Pas de listes fourre-tout — seulement des devis usine précis",
+    whyP1: "Un acheteur qui presse de la moutarde en Inde et un autre qui presse du sésame au Nigeria peuvent commander le même modèle HN365 — mais avec des configurations de fûts, des tensions et des conditions d'expédition différentes. Une liste publique « prix à partir de X $ » vous tromperait tous les deux.",
+    whyP2: "À la place, nous donnons des devis honnêtes et personnalisés pour que vous payiez exactement ce dont vous avez besoin — rien de plus, rien de moins. Indiquez votre graine et votre objectif journalier, et nous envoyons votre devis complet dans les 24 heures.",
+    factorsBadge: "Ce Qui Façonne le Devis",
+    factorsTitle: "Cinq Facteurs qui Déterminent le Prix de Votre Presse à Huile",
+    factors: [
+      { num: '01', title: 'Capacité & Configuration des Fûts', desc: "Les presses à un fût coûtent moins cher que les doubles fûts du même modèle — le second fût double quasiment le débit tandis qu'un côté est chargé. Exemple : HN325 simple vs HN325 double → différence de prix d'environ 1,8x, pas 2x, car le système hydraulique est partagé." },
+      { num: '02', title: "Classe de Pression", desc: "Les presses standard fonctionnent à ~30 MPa de pression de surface du tourteau (arachide, soja, tournesol). Les applications graines dures et pressage à froid (noix, amande, moutarde) demandent 42 MPa ou plus. **Cette seule différence peut faire varier le devis de ~15–25 %** — fûts plus épais, vérins en acier allié plus résistants, pompes à plus haute performance : ce sont de vrais coûts acier." },
+      { num: '03', title: "Équipements Inclus", desc: "La presse seule est un prix ; une ligne complète (épierreuse, torréfacteur/étuveur, filtre-presse, cuve à huile, manutention du tourteau) en est un autre. Les acheteurs qui demandent un devis sur la presse seule découvrent souvent des équipements essentiels qu'ils n'avaient pas budgétés. Nous devisons toujours la ligne complète pour que vous compariez pomme à pomme." },
+      { num: '04', title: "Électrique & Personnalisation", desc: "Les moteurs sont bobinés selon votre réseau local (415V/50Hz Inde, 220V monophasé petits ateliers, etc.) — généralement offert sur les modèles standard. Inox SS304 alimentaire, châssis double fût, fûts sur mesure et plateformes opérateur ajoutent 5–20 % selon la portée." },
+      { num: '05', title: "Conditions d'Expédition & Livraison", desc: "FOB Qingdao ne couvre que le chargement. CIF ou DAP ajoutent le fret maritime, l'assurance marine, et parfois les droits d'import et le transport intérieur. La même machine débarquée à Lagos vs Mundra vs Manille peut différer de 800–2 000 $ rien que sur le fret — nous vous montrons le détail complet." },
+    ],
+    budgetBadge: "Cadre Budgétaire",
+    budgetTitle: "Trois Niveaux de Projet — Trouvez le Vôtre",
+    budgetSub: "Indiquez votre objectif journalier et nous recommandons la configuration HN exacte — sans sur-achat.",
+    budget: [
+      { label: 'Démarrage', emoji: '🏠', desc: "500–1 500 kg de graines / jour. **Une presse à un fût** (classe HN325), épierreuse, torréfacteur ou étuveur, filtre-presse. Convient aux petits ateliers et acheteurs débutants. Investissement unique par ligne." },
+      { label: 'Commercial', emoji: '🏪', desc: "1 500–3 000 kg de graines / jour. **Une presse double fût** (HN365 ou HN426) — un fût presse tandis que l'autre se remplit. Torréfacteur et filtration adaptés pour des lots toute la journée." },
+      { label: 'Industriel', emoji: '🏭', desc: "3 000 kg+ de graines / jour. **Plusieurs presses double fût** (classe HN500), alimentation automatique et manutention du tourteau, souvent une petite ligne de raffinage pour huile de détail emballée." },
+    ],
+    modelsBadge: "À Propos de Haonuo",
+    modelsTitle: "5 Modèles de Presses Hydrauliques HN · Direct Usine depuis 2010",
+    modelsSub: "Des petits ateliers de 300 tonnes aux lignes industrielles de 620 tonnes — une usine, cinq modèles, sans intermédiaire.",
+    modelsHeader: { model: 'Modèle', tonnage: 'Tonnage', pressure: 'Pression', bestFor: 'Idéal Pour' },
+    hnModels: [
+      { code: 'HN300', tonnage: '300', pressure: '25 MPa', seed: 'Entrée de gamme — arachide, sésame, colza' },
+      { code: 'HN325', tonnage: '325', pressure: '27 MPa', seed: 'Meilleure vente — arachide, sésame, noix, la plupart des graines' },
+      { code: 'HN365', tonnage: '365', pressure: '30 MPa', seed: "Commercial — volume journalier plus élevé, moins d'attente de cycle" },
+      { code: 'HN426', tonnage: '500', pressure: '42 MPa', seed: 'Pavillon pressage à froid — olive, noix, noix dures, huiles premium' },
+      { code: 'HN500', tonnage: '620', pressure: '52 MPa', seed: 'Industriel — matériaux en coque les plus durs, rendement maximum' },
+    ],
+    faqBadge: "FAQ",
+    faqTitle: "Prix des Presses à Huile — Questions Fréquentes",
+    faqs: [
+      { q: "Mon devis de prix de presse à huile inclura-t-il l'expédition vers mon pays ?", a: "Oui — nous pouvons deviser FOB Qingdao, CIF vers votre port le plus proche, ou DAP porte à porte. Indiquez votre pays et votre port de destination, et nous inclurons une estimation de fret transparente dans le même devis. Nous expédions dans le monde entier — ports courants : Mundra (Inde), Lagos (Nigeria), Manille (Philippines), Jakarta (Indonésie), Mombasa (Kenya), Alexandrie (Égypte), Karachi (Pakistan)." },
+      { q: "Je débute — aidez-vous les nouveaux acheteurs à savoir ce dont ils ont besoin ?", a: "Absolument. Indiquez-nous seulement deux choses : quelle graine vous voulez presser, et environ combien de kilogrammes par jour. Nous suggérons d'abord la configuration HN la plus simple — pas de sur-ingénierie, pas de vente forcée. Si vous avez besoin de plus, nous vous montrerons la voie pour évoluer." },
+      { q: "Quels sont les principaux facteurs qui façonnent le prix d'une presse à huile ?", a: "Cinq facteurs expliquent presque toutes les différences de devis : (1) capacité et configuration des fûts — simple vs double fût, (2) classe de pression — standard 30 MPa vs graines dures 42–75 MPa, (3) équipements inclus — presse seule vs ligne de production complète, (4) personnalisation — inox SS304 alimentaire, châssis double fût, fûts spéciaux, (5) conditions d'expédition — FOB Qingdao vs CIF/DAP vers votre port de destination." },
+      { q: "Quelles sont les conditions de paiement et les délais de livraison ?", a: "Paiement : 30 % T/T acompte pour démarrer la production, 70 % avant expédition. L/C à vue disponible pour les clients établis. Délai de production : 15–25 jours ouvrés pour les modèles HN standard, 30–45 jours pour les configurations personnalisées (double station, SS304, fûts spéciaux). Fret maritime vers l'Inde/Nigeria/Philippines : ~25–35 jours depuis Qingdao." },
+      { q: "Combien de temps faut-il pour obtenir un devis, est-ce gratuit ?", a: "Gratuit, sans engagement, et généralement dans les 24 heures les jours ouvrés. Si vous voulez d'abord un budget approximatif, envoyez le type de graine + l'objectif journalier et nous répondrons avec une indication rapide en 1–2 heures. Nous ne faisons jamais de pression — si le devis ne convient pas à votre budget, nous suggérerons des configurations plus simples." },
+      { q: "Puis-je négocier le prix d'une presse à huile pour une commande plus importante ?", a: "Nous fabriquons en interne avec des postes de dépenses transparents — il n'y a pas de marge de revendeur à négocier. Cela dit, les lignes de production complètes (plusieurs presses) ouvrent droit à une considération volume sur les accessoires et pièces de rechange. Indiquez la portée complète et nous deviserons en conséquence." },
+    ],
+    formTitle: "Votre Devis Usine Comprend",
+    formTitleAccent: "Ces 5 Éléments — Garantis",
+    formP: "Pas de listes de fourchettes, pas de « à partir de X $ » vague. Un devis personnalisé, des postes transparents, pas de surprises. Voici exactement ce que vous recevez :",
+    formGuarantee: [
+      "Correspondance du modèle HN — conçu pour votre graine et votre objectif journalier",
+      "Prix FOB Qingdao exact — chaque poste détaillé",
+      "Expédition vers votre port — CIF ou DAP, tarifs maritimes en temps réel",
+      "Liste complète des équipements — presse + accessoires, rien de manquant",
+      "Calendrier de production + paiement — délais standard 15–25 jours",
+    ],
+    formMeta: [
+      "Gratuit et sans engagement",
+      "Réponse sous 24 heures ouvrées",
+      "Direct usine, sans intermédiaire",
+    ],
+    formEmailPref: "Préférez-vous email ou WhatsApp ?",
+    formEmailLabel: "info@hydoilpress.com",
+    formEmailPhone: "+86 189 5714 9128",
+    formSubTitle: "Demandez Votre Devis Usine",
+    formSubP: "Réponse sous 24 h. Nous envoyons modèle HN + prix + expédition.",
+    form: {
+      name: 'Nom', email: 'Email', whatsapp: 'WhatsApp / Téléphone (facultatif — réponse plus rapide)',
+      seed: "Graine oléagineuse (quelle graine voulez-vous presser ?)", capacity: 'Objectif de capacité journalière (kg/jour)',
+      country: 'Pays / Port de destination', message: 'Message',
+      namePh: 'Votre nom', emailPh: 'vous@entreprise.com', whatsappPh: '+91 9xxx xxx xxxx ou +234 ...',
+      seedPh: 'Arachide, moutarde, sésame, soja...', capacityPh: 'ex. 1000, ou « pas encore sûr »',
+      countryPh: "N'importe quel pays · ex. Nigeria / Lagos",
+      messagePh: "Exigences spécifiques ? (inox, double fût, tension locale, etc.)",
+      submit: "Obtenir Mon Devis de Prix Usine →",
+      noSpam: "Pas de spam. Nous répondons une fois avec votre devis complet.",
+      success: "✓ Merci ! Votre demande de devis a été envoyée. Nous répondrons dans les 24 heures.",
+    },
+  },
+
+  ar: {
+    title: "سعر مكبس عصر الزيت — احصل على عرض مباشر من المصنع خلال 24 ساعة",
+    description: "سعر مكبس عصر الزيت من مصنع هاونو. أخبرنا بنوع البذرة وطاقتك اليومية — احصل على توصية طراز HN، عرض FOB/CIF، تقدير شحن، وقائمة معدات خلال 24 ساعة. بدون وسيط، بنود شفافة.",
+    keywords: ['سعر مكبس عصر الزيت', 'سعر مكينة عصر الزيت', 'سعر مكبس هيدروليكي زيت', 'سعر مكينة استخراج زيت', 'سعر مكينة الزيت'],
+    breadcrumb: { home: 'الرئيسية', page: 'سعر مكبس عصر الزيت' },
+    badge: "🏭 مباشر من المصنع · شاندونغ، الصين · منذ 2010",
+    h1Line1: "هل سئمت من قوائم الأسعار",
+    h1Line2: "«من X$» التي لا تعني شيئًا؟",
+    heroP: "«8000 – 25000$» ليس سعرًا — إنه تشتيت. نحن مصنع حقيقي. أخبرنا ببذرتك وهدفك اليومي، واحصل على **عرض FOB دقيق خلال 24 ساعة**. بدون وسيط. بدون تلاعب.",
+    heroCta: "احصل على عرضي الدقيق من المصنع →",
+    trust: { served: 'دولة تمت خدمتها', years: 'سنوات تصنيع', reply: 'وقت الرد على العرض', projects: 'مشاريع عملاء', shippedTo: 'آلات تم شحنها إلى', more: 'و 35 دولة أخرى' },
+    whyBadge: "فلسفتنا في التسعير",
+    whyTitle: "لا قوائم أسعار مضللة — فقط عروض مصانع دقيقة",
+    whyP1: "المشتري الذي يعصر الخردل في الهند والمشتري الذي يعصر السمسم في نيجيريا قد يطلبان نفس طراز HN365 — ولكن مع إعدادات أسطوانة عصر مختلفة، ومواصفات جهد كهربائي، وشروط شحن مختلفة. قائمة عامة «السعر من X$» ستضلكما كليكما.",
+    whyP2: "بدل ذلك، نقدم عروضًا صادقة ومخصصة بحيث تدفع بالضبط ما تحتاجه — لا أكثر ولا أقل. أخبرنا بنوع بذرتك وهدفك اليومي، وسنرسل عرضك الكامل خلال 24 ساعة.",
+    factorsBadge: "ما الذي يشكل العرض",
+    factorsTitle: "خمسة عوامل تحدد سعر مكبس عصر الزيت الخاص بك",
+    factors: [
+      { num: '01', title: 'السعة وإعداد أسطوانة العصر', desc: 'المكابس ذات الأسطوانة الواحدة تكلف أقل من المزدوجة من نفس الطراز — الأسطوانة الثانية تضاعف الإنتاج تقريبًا بينما يتم تحميل الجانب الآخر. مثال: HN325 مفرد مقابل HN325 مزدوج → فرق سعر حوالي 1.8x وليس 2x لأن النظام الهيدروليكي مشترك.' },
+      { num: '02', title: 'فئة الضغط', desc: 'المكابس القياسية تعمل عند ~30 ميجاباسكال ضغط سطح الكسب (فول سوداني، فول صويا، عباد الشمس). التطبيقات ذات القشرة الصلبة والعصر البارد (جوز، لوز، خردل) تحتاج 42 ميجاباسكال أو أكثر. **هذا الاختلاف الواحد يمكن أن يؤثر على العرض بنسبة ~15–25%** — أسطوانات أكثر سمكًا، أسطوانات ستان ألومنيوم أقوى، ومضخات تصنيف أعلى: هذه تكاليف فولاذية حقيقية.' },
+      { num: '03', title: 'المعدات المشمولة', desc: 'المكبس وحده له سعر؛ والخط الكامل (آلة تنظيف البذور، محمّصة/باخرة، مكبس ترشيح، خزان زيت، مناولة الكسب) له سعر آخر. المشترون الذين يطلبون عرضًا للمكبس وحده يكتشفون غالبًا معدات أساسية لم يضعوها في الميزانية. نحن دائمًا نقدم عرضًا للخط الكامل لكي تقارن تفاحًا بتفاح.' },
+      { num: '04', title: 'الكهرباء والتخصيص', desc: 'المحركات ملفوفة حسب معيار شبكتك المحلية (415V/50Hz الهند، 220V أحادي الطور للورش الصغيرة، إلخ) — عادةً مجاني على الطرازات القياسية. الستان SS304 الغذائي، إطارات الأسطوانة المزدوجة، أحجام الأسطوانة المخصصة، ومنصات المشغل تضيف 5–20% حسب النطاق.' },
+      { num: '05', title: 'شروط الشحن والتسليم', desc: 'FOB Qingdao يغطي التحميل فقط. CIF أو DAP تضيف الشحن البحري، التأمين البحري، وأحيانًا رسوم الاستيراد والنقل الداخلي. نفس الآلة في Lagos مقابل Mundra مقابل Manilla يمكن أن تختلف بـ 800–2000$ في الشحن وحده — سنعرض لك التفصيل الكامل.' },
+    ],
+    budgetBadge: "إطار الميزانية",
+    budgetTitle: "ثلاثة مستويات للمشاريع — ابحث عن مكانك",
+    budgetSub: "أخبرنا بهدفك اليومي وسنوصي بإعداد HN الدقيق — بدون شراء زائد.",
+    budget: [
+      { label: 'بداية', emoji: '🏠', desc: '500–1500 كجم بذور/يوم. **مكبس واحد بأسطوانة واحدة** (فئة HN325)، آلة تنظيف بذور، محمّصة أو باخرة، مكبس ترشيح. يناسب الورش الصغيرة والمشترين المبتدئين. استثمار واحد لكل خط.' },
+      { label: 'تجاري', emoji: '🏪', desc: '1500–3000 كجم بذور/يوم. **مكبس واحد مزدوج الأسطوانة** (HN365 أو HN426) — أسطوانة تعصر بينما تملأ الأخرى. محمّصة وترشيح متطابق للدفعات طوال اليوم.' },
+      { label: 'صناعي', emoji: '🏭', desc: '3000 كجم+ بذور/يوم. **مكابس متعددة مزدوجة الأسطوانة** (فئة HN500)، تغذية آلية ومناولة الكسب، غالبًا خط تكرير صغير لزيت التجزئة المعبأ.' },
+    ],
+    modelsBadge: "حول هاونو",
+    modelsTitle: "5 طرازات مكابس هيدروليكية HN · مباشر من المصنع منذ 2010",
+    modelsSub: 'من ورش صغيرة 300 طن إلى خطوط صناعية 620 طن — مصنع واحد، خمسة طرازات، بدون وسيط.',
+    modelsHeader: { model: 'الطراز', tonnage: 'الطناجة', pressure: 'الضغط', bestFor: 'الأنسب لـ' },
+    hnModels: [
+      { code: 'HN300', tonnage: '300', pressure: '25 ميجاباسكال', seed: 'مبتدئ — فول سوداني، سمسم، لفت' },
+      { code: 'HN325', tonnage: '325', pressure: '27 ميجاباسكال', seed: 'الأكثر مبيعًا — فول سوداني، سمسم، جوز، معظم البذور' },
+      { code: 'HN365', tonnage: '365', pressure: '30 ميجاباسكال', seed: 'تجاري — حجم يومي أعلى، وقت دورة أقل' },
+      { code: 'HN426', tonnage: '500', pressure: '42 ميجاباسكال', seed: 'رائد العصر البارد — زيت زيتون، جوز، مكسرات صلبة، زيوت فاخرة' },
+      { code: 'HN500', tonnage: '620', pressure: '52 ميجاباسكال', seed: 'صناعي — المواد الأصلب بقشرها، أقصى إنتاج' },
+    ],
+    faqBadge: "أسئلة شائعة",
+    faqTitle: "سعر مكبس عصر الزيت — أسئلة شائعة",
+    faqs: [
+      { q: "هل سيتضمن عرض سعر مكبس عصر الزيت الخاص بي الشحن إلى بلدي؟", a: "نعم — يمكننا تقديم عرض FOB Qingdao، CIF إلى أقرب ميناء لديك، أو DAP من الباب إلى الباب. أخبرنا بدولة وميناء وجهتك، وسنقوم بتضمين تقدير شحن شفاف في نفس العرض. نشحن إلى جميع أنحاء العالم — الموانئ الشائعة تشمل Mundra (الهند)، Lagos (نيجيريا)، Manilla (الفلبين)، Jakarta (إندونيسيا)، Mombasa (كينيا)، Alexandrie (مصر)، Karachi (باكستان)." },
+      { q: "أنا مبتدئ — هل تساعدون المشترين الجدد على تحديد احتياجاتهم؟", a: "بالتأكيد. أخبرنا بشيئين فقط: أي بذرة تريد عصرها، وكم كيلوجرام تقريبًا يوميًا. سنقترح أولاً أبسط إعداد لطراز HN — بدون تعقيد مفرط، بدون بيع قسري. إذا اتضح أنك بحاجة إلى المزيد، سنعرض عليك مسار التوسع." },
+      { q: "ما هي العوامل الرئيسية التي تشكل سعر مكبس عصر الزيت؟", a: 'خمسة عوامل تفسر تقريبًا جميع الاختلافات في العروض: (1) السعة وإعداد أسطوانة العصر — مفرد مقابل مزدوج، (2) فئة الضغط — قياسي 30 ميجاباسكال مقابل القشرة الصلبة 42–75 ميجاباسكال، (3) المعدات المشمولة — المكبس وحده مقابل خط إنتاج كامل، (4) التخصيص — ستان SS304 الغذائي، إطار مزدوج الأسطوانة، أحجام أسطوانة خاصة، (5) شروط الشحن — FOB Qingdao مقابل CIF/DAP إلى ميناء وجهتك.' },
+      { q: "ما هي شروط الدفع ومدة التسليم؟", a: 'الدفع: 30% T/T دفعة مقدمة لبدء الإنتاج، 70% قبل الشحن. L/C عند الاطلاع متاح للعملاء المعتمدين. وقت الإنتاج: 15–25 يوم عمل للطرازات HN القياسية، 30–45 يوم للإعدادات المخصصة (محطة مزدوجة، SS304، أسطوانات خاصة). الشحن البحري إلى الهند/نيجيريا/الفلبين: ~25–35 يومًا من Qingdao.' },
+      { q: "كم من الوقت يستغرق الحصول على عرض، وهل هو مجاني؟", a: 'مجاني، بدون التزام، وعادةً خلال 24 ساعة في أيام العمل. إذا كنت تريد ميزانية تقريبية أولاً، أرسل نوع البذرة + الهدف اليومي وسنرد بإشارة سريعة خلال 1–2 ساعة. نحن لا نمارس ضغطًا على المشترين أبدًا — إذا لم يناسب العرض ميزانيتك، سنقترح إعدادات أبسط.' },
+      { q: "هل يمكنني التفاوض على سعر مكبس عصر الزيت لطلب أكبر؟", a: "نحن نصنع داخليًا ببنود شفافة — لا يوجد هامش وسيط للتفاوض. ومع ذلك، فإن خطوط الإنتاج الكاملة (عدة مكابس) تؤهل للحصول على اعتبار الحجم على الملحقات وقطع الغيار. أخبرنا بالنطاق الكامل وسنقدم العرض وفقًا لذلك." },
+    ],
+    formTitle: "عرضك من المصنع يتضمن",
+    formTitleAccent: "هذه العناصر الخمسة — مضمونة",
+    formP: "لا قوائم نطاق، لا «من X$» غامضة. عرض واحد مخصص، بنود شفافة، لا مفاجآت. إليك بالضبط ما تحصل عليه:",
+    formGuarantee: [
+      'تطابق طراز HN — مصمم لنوع بذرتك وهدفك اليومي',
+      'سعر FOB Qingdao الدقيق — كل بند مفصل',
+      'الشحن إلى مينائك — CIF أو DAP، أسعار بحرية فعلية',
+      'قائمة المعدات الكاملة — مكبس + ملحقات، لا قطع مفقودة',
+      'جدول الإنتاج + الدفع — 15–25 يوم كقياسي',
+    ],
+    formMeta: [
+      'مجاني وبدون التزام',
+      'رد خلال 24 ساعة عمل',
+      'مباشر من المصنع، بدون وسيط',
+    ],
+    formEmailPref: 'تفضل البريد الإلكتروني أم WhatsApp؟',
+    formEmailLabel: 'info@hydoilpress.com',
+    formEmailPhone: '+86 189 5714 9128',
+    formSubTitle: 'اطلب عرضك من المصنع',
+    formSubP: 'رد خلال 24 ساعة. سنرسل طراز HN + السعر + الشحن.',
+    form: {
+      name: 'الاسم', email: 'البريد الإلكتروني', whatsapp: 'WhatsApp / هاتف (اختياري — رد أسرع)',
+      seed: 'بذرة الزيت (ماذا تعصر؟)', capacity: 'الهدف من السعة اليومية (كجم/يوم)',
+      country: 'الدولة / ميناء الوجهة', message: 'الرسالة',
+      namePh: 'اسمك', emailPh: 'you@company.com', whatsappPh: '+91 9xxx xxx xxxx أو +234 ...',
+      seedPh: 'فول سوداني، خردل، سمسم، فول صويا...', capacityPh: 'مثال 1000، أو «لست متأكدًا بعد»',
+      countryPh: 'أي دولة · مثال نيجيريا / Lagos',
+      messagePh: 'أي متطلبات خاصة؟ (ستان، أسطوانة مزدوجة، جهد محلي، إلخ.)',
+      submit: 'احصل على عرض سعر مكبسي من المصنع →',
+      noSpam: 'لا بريد مزعج. نحن نرد مرة واحدة مع عرضك الكامل.',
+      success: '✓ شكرًا! تم إرسال طلب عرضك. سنرد خلال 24 ساعة.',
+    },
+  },
+
+  id: {
+    title: "Harga Mesin Press Minyak — Dapatkan Penawaran Pabrik dalam 24 Jam",
+    description: "Harga mesin press minyak dari pabrik Haonuo. Beritahu kami jenis biji dan target kapasitas harian Anda — dapatkan rekomendasi model HN, penawaran FOB/CIF, estimasi pengiriman, dan daftar peralatan dalam 24 jam. Tanpa perantara, rincian transparan.",
+    keywords: ['harga mesin press minyak', 'harga mesin pengepres minyak', 'harga mesin hidrolik press minyak', 'harga mesin ekstraksi minyak', 'harga mesin pabrik minyak'],
+    breadcrumb: { home: 'Beranda', page: 'Harga Mesin Press Minyak' },
+    badge: "🏭 Langsung Pabrik · Shandong, China · Sejak 2010",
+    h1Line1: "Bosan dengan daftar harga",
+    h1Line2: "«mulai dari X$» yang tidak berarti?",
+    heroP: "«8.000 – 25.000 $» bukan harga — itu gangguan. Kami pabrik asli. Beritahu kami biji dan target harian Anda, dapatkan **penawaran FOB tepat dalam 24 jam**. Tanpa perantara. Tanpa tipu.",
+    heroCta: "Dapatkan Penawaran Pabrik Tepat Saya →",
+    trust: { served: 'Negara Dilayani', years: 'Tahun Manufaktur', reply: 'Waktu Balas Penawaran', projects: 'Proyek Klien', shippedTo: 'Mesin Dikirim ke', more: '+ 35 negara lagi' },
+    whyBadge: "Filosofi Harga Kami",
+    whyTitle: "Tidak Ada Daftar Rentang — Hanya Penawaran Pabrik yang Tepat",
+    whyP1: "Pembeli yang mempress biji sesawi di India dan pembeli yang mempress wijen di Nigeria mungkin memesan model HN365 yang sama — tetapi dengan konfigurasi barrel yang berbeda, spesifikasi tegangan, dan syarat pengiriman yang berbeda. Daftar publik «harga mulai dari X$» akan menyesatkan kalian berdua.",
+    whyP2: "Sebaliknya kami memberikan penawaran yang jujur dan disesuaikan agar Anda membayar tepat untuk apa yang Anda butuhkan — tidak lebih, tidak kurang. Beritahu kami jenis biji dan target harian Anda, dan kami akan mengirimkan penawaran lengkap Anda dalam 24 jam.",
+    factorsBadge: "Apa yang Membentuk Penawaran",
+    factorsTitle: "Lima Faktor yang Menentukan Harga Mesin Press Minyak Anda",
+    factors: [
+      { num: '01', title: 'Kapasitas & Konfigurasi Barrel', desc: 'Mesin barrel tunggal lebih murah daripada barrel ganda dari model yang sama — barrel kedua hampir menggandakan throughput sementara satu sisi sedang dimuat. Contoh: HN325 tunggal vs HN325 ganda adalah perbedaan harga kira-kira 1.8x, bukan 2x karena sistem hidrolik digunakan bersama.' },
+      { num: '02', title: 'Kelas Tekanan', desc: 'Press standar beroperasi pada ~30 MPa tekanan permukaan cake (kacang tanah, kedelai, bunga matahari). Aplikasi cangkang keras dan cold-press (kenari, almond, sesawi) membutuhkan 42 MPa atau lebih. **Perbedaan tunggal ini dapat memengaruhi penawaran sekitar ~15–25%** — barrel yang lebih tebal, silinder baja paduan yang lebih kuat, dan pompa dengan peringkat lebih tinggi adalah biaya baja yang nyata.' },
+      { num: '03', title: 'Peralatan yang Termasuk', desc: 'Press saja adalah satu harga; lini lengkap (pembersih biji, roaster/steamer, filter press, tangki minyak, penanganan cake) adalah harga lain. Pembeli yang menawar press secara terpisah sering menemukan peralatan penting yang tidak mereka anggarkan. Kami selalu menawarkan lini lengkap agar Anda bisa membandingkan apel dengan apel.' },
+      { num: '04', title: 'Listrik & Kustomisasi', desc: 'Motor dililit sesuai standar jaringan lokal Anda (415V/50Hz India, 220V fase tunggal untuk bengkel kecil, dll.) — biasanya gratis pada model standar. SS304 food-grade, frame barrel ganda, ukuran barrel khusus, dan platform operator menambah 5–20% tergantung cakupan.' },
+      { num: '05', title: 'Syarat Pengiriman & Pengiriman', desc: 'FOB Qingdao hanya mencakup pemuatan. CIF atau DAP menambah biaya pengiriman laut, asuransi laut, dan terkadang bea impor serta transportasi darat. Mesin yang sama yang mendarat di Lagos vs Mundra vs Manila bisa berbeda $800–$2.000 hanya di biaya pengiriman — kami akan menunjukkan rincian lengkapnya.' },
+    ],
+    budgetBadge: "Kerangka Anggaran",
+    budgetTitle: "Tiga Tingkatan Proyek — Temukan Posisi Anda",
+    budgetSub: "Beritahu kami target harian Anda dan kami merekomendasikan konfigurasi HN yang tepat — tanpa membeli berlebih.",
+    budget: [
+      { label: 'Startup', emoji: '🏠', desc: '500–1.500 kg biji/hari. **Satu press barrel tunggal** (kelas HN325), pembersih biji, roaster atau steamer, filter press. Cocok untuk bengkel kecil dan pembeli pemula. Investasi satu kali per lini.' },
+      { label: 'Komersial', emoji: '🏪', desc: '1.500–3.000 kg biji/hari. **Satu press barrel ganda** (HN365 atau HN426) — satu barrel mempress sementara yang lain mengisi ulang. Roaster dan filtrasi yang cocok untuk batch sepanjang hari.' },
+      { label: 'Industri', emoji: '🏭', desc: '3.000 kg+ biji/hari. **Beberapa press barrel ganda** (kelas HN500), pengumpanan otomatis dan penanganan cake, seringkali lini pemurnian kecil untuk minyak ritel kemasan.' },
+    ],
+    modelsBadge: "Tentang Haonuo",
+    modelsTitle: "5 Model Press Minyak Hidrolik HN · Langsung Pabrik Sejak 2010",
+    modelsSub: 'Dari bengkel kecil 300 ton hingga lini industri 620 ton — satu pabrik, lima model, tanpa perantara.',
+    modelsHeader: { model: 'Model', tonnage: 'Tonnase', pressure: 'Tekanan', bestFor: 'Terbaik Untuk' },
+    hnModels: [
+      { code: 'HN300', tonnage: '300', pressure: '25 MPa', seed: 'Pemula — kacang tanah, wijen, kanola' },
+      { code: 'HN325', tonnage: '325', pressure: '27 MPa', seed: 'Terlaris — kacang tanah, wijen, kenari, sebagian besar biji' },
+      { code: 'HN365', tonnage: '365', pressure: '30 MPa', seed: 'Komersial — volume harian lebih tinggi, waktu siklus lebih singkat' },
+      { code: 'HN426', tonnage: '500', pressure: '42 MPa', seed: 'Unggulan cold-press — minyak zaitun, kenari, kacang keras, minyak premium' },
+      { code: 'HN500', tonnage: '620', pressure: '52 MPa', seed: 'Industri — bahan cangkang terkeras, hasil maksimum' },
+    ],
+    faqBadge: "FAQ",
+    faqTitle: "Harga Mesin Press Minyak — Pertanyaan yang Sering Diajukan",
+    faqs: [
+      { q: "Apakah penawaran harga mesin press minyak saya akan mencakup pengiriman ke negara saya?", a: "Ya — kami dapat menawarkan FOB Qingdao, CIF ke pelabuhan terdekat Anda, atau DAP door-to-door. Beritahu kami negara dan pelabuhan tujuan Anda, dan kami akan menyertakan estimasi biaya pengiriman yang transparan dalam penawaran yang sama. Kami mengirim ke seluruh dunia — pelabuhan umum termasuk Mundra (India), Lagos (Nigeria), Manila (Filipina), Jakarta (Indonesia), Mombasa (Kenya), Alexandria (Mesir), Karachi (Pakistan)." },
+      { q: "Saya baru memulai — apakah Anda membantu pembeli baru mengetahui apa yang mereka butuhkan?", a: "Tentu. Beritahu kami hanya dua hal: biji apa yang ingin Anda press, dan kira-kira berapa kilogram per hari. Kami akan menyarankan konfigurasi model HN paling sederhana terlebih dahulu — tidak ada rekayasa berlebih, tidak ada penjualan paksa. Jika ternyata Anda membutuhkan lebih, kami akan menunjukkan jalur untuk berkembang." },
+      { q: "Apa faktor utama yang membentuk harga mesin press minyak?", a: 'Lima faktor menjelaskan hampir semua perbedaan penawaran: (1) kapasitas dan konfigurasi barrel — tunggal vs ganda, (2) kelas tekanan — standar 30 MPa vs cangkang keras 42–75 MPa, (3) peralatan yang termasuk — press saja vs lini produksi lengkap, (4) kustomisasi — baja nirkarat SS304 food-grade, frame barrel ganda, ukuran barrel khusus, (5) syarat pengiriman — FOB Qingdao vs CIF/DAP ke pelabuhan tujuan Anda.' },
+      { q: "Apa syarat pembayaran dan berapa lama pengiriman?", a: 'Pembayaran: 30% T/T deposit untuk memulai produksi, 70% sebelum pengiriman. L/C at sight tersedia untuk pelanggan tetap. Waktu produksi: 15–25 hari kerja untuk model HN standar, 30–45 hari untuk konfigurasi kustom (stasiun ganda, SS304, barrel khusus). Pengiriman laut ke India/Nigeria/Filipina: ~25–35 hari dari Qingdao.' },
+      { q: "Berapa lama untuk mendapatkan penawaran, dan apakah gratis?", a: 'Gratis, tanpa kewajiban, dan biasanya dalam 24 jam pada hari kerja. Jika Anda hanya ingin anggaran kasar terlebih dahulu, kirim jenis biji + target harian dan kami akan membalas dengan petunjuk cepat dalam 1–2 jam. Kami tidak pernah menekan pembeli — jika penawaran tidak sesuai dengan anggaran Anda, kami akan menyarankan konfigurasi yang lebih sederhana.' },
+      { q: "Bisakah saya menegosiasikan harga mesin press minyak untuk pesanan yang lebih besar?", a: "Kami memproduksi sendiri dengan rincian yang transparan — tidak ada markup reseller yang bisa dinegosiasikan. Namun, lini produksi lengkap (beberapa press) memang memenuhi syarat untuk pertimbangan volume pada aksesori dan suku cadang. Beritahu kami cakupan penuh dan kami akan menawarkan sesuai." },
+    ],
+    formTitle: "Penawaran Pabrik Anda Dilengkapi dengan",
+    formTitleAccent: "5 Hal Ini — Dijamin",
+    formP: "Tidak ada daftar rentang, tidak ada «mulai dari X$» yang samar. Satu penawaran yang disesuaikan, rincian transparan, tidak ada biaya kejutan. Berikut tepat apa yang Anda dapatkan:",
+    formGuarantee: [
+      'Kesesuaian model HN — dirancang untuk jenis biji dan target harian Anda',
+      'Harga FOB Qingdao tepat — setiap rincian dipecah',
+      'Pengiriman ke pelabuhan Anda — CIF atau DAP, tarif laut waktu nyata',
+      'Daftar peralatan lengkap — press + aksesori, tidak ada bagian yang hilang',
+      'Jadwal produksi + pembayaran — lead time 15–25 hari sebagai standar',
+    ],
+    formMeta: [
+      'Gratis & tanpa kewajiban',
+      'Balas dalam 24 jam kerja',
+      'Langsung pabrik, tanpa perantara',
+    ],
+    formEmailPref: 'Lebih suka email atau WhatsApp?',
+    formEmailLabel: 'info@hydoilpress.com',
+    formEmailPhone: '+86 189 5714 9128',
+    formSubTitle: 'Minta Penawaran Pabrik Anda',
+    formSubP: 'Balas dalam 24 jam. Kami akan mengirim model HN + harga + pengiriman.',
+    form: {
+      name: 'Nama', email: 'Email', whatsapp: 'WhatsApp / Telepon (opsional — balas lebih cepat)',
+      seed: 'Biji minyak (apa yang ingin Anda press?)', capacity: 'Target kapasitas harian (kg/hari)',
+      country: 'Negara / Pelabuhan Tujuan', message: 'Pesan',
+      namePh: 'Nama Anda', emailPh: 'anda@perusahaan.com', whatsappPh: '+91 9xxx xxx xxxx atau +234 ...',
+      seedPh: 'Kacang tanah, sesawi, wijen, kedelai...', capacityPh: 'mis. 1000, atau «belum yakin»',
+      countryPh: 'Negara apa saja · mis. Nigeria / Lagos',
+      messagePh: 'Persyaratan khusus? (baja nirkarat, barrel ganda, tegangan lokal, dll.)',
+      submit: 'Dapatkan Penawaran Harga Pabrik Saya →',
+      noSpam: 'Tidak ada spam. Kami membalas sekali dengan penawaran lengkap Anda.',
+      success: '✓ Terima kasih! Permintaan penawaran Anda telah dikirim. Kami akan membalas dalam 24 jam.',
+    },
+  },
+};
+
+const L = ui[currentLocale];
+
+// Helper: render **bold** markdown in UI strings
+const richHtml = (s: string, cls = 'text-charcoal-900') =>
+  s.replace(/\*\*(.+?)\*\*/g, `<b class="${cls}">$1</b>`);
+
+// Breadcrumb JSON-LD
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: L.breadcrumb.home, item: `https://www.hydoilpress.com/${currentLocale}/` },
+    { '@type': 'ListItem', position: 2, name: L.breadcrumb.page, item: `https://www.hydoilpress.com/${currentLocale}/oil-machine-price` },
+  ],
+};
+
+// FAQ JSON-LD — MUST use localized strings
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: L.faqs.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
+const trustStats = [
+  { num: '50+', label: L.trust.served },
+  { num: '15+', label: L.trust.years },
+  { num: '24h', label: L.trust.reply },
+  { num: '1,000+', label: L.trust.projects },
+];
+const trustCountries = ['🇮🇳', '🇳🇬', '🇮🇩', '🇵🇭', '🇰🇪', '🇪🇬', '🇵🇰', '🇧🇩', '🇻🇳', '🇲🇲', '🇺🇸', '🇬🇧', '🇹🇿', '🇬🇭', '🇪🇹'];
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={L.title}
+  description={L.description}
+  keywords={L.keywords}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-amber-500 transition-colors">{L.breadcrumb.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{L.breadcrumb.page}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero — pure content, no form -->
+  <section class="bg-steel-900 py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-amber-500 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-sky-500 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-5">
+            {L.badge}
+          </span>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
+            {L.h1Line1}<br>
+            <span class="text-amber-400">{L.h1Line2}</span>
+          </h1>
+          <p class="text-lg text-steel-300 mb-6 leading-relaxed" set:html={richHtml(L.heroP, 'text-amber-300')}></p>
+          <a href="#price-form" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
+            {L.heroCta} →
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-steel-800">
+          <img src="/images/models/hn426.webp" alt="HN426 hydraulic oil press machine — factory direct" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="py-8 bg-steel-50 border-y border-steel-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {trustStats.map(s => (
+          <div class="text-center">
+            <div class="text-amber-600 font-display text-2xl md:text-3xl font-bold">{s.num}</div>
+            <div class="text-steel-600 text-xs md:text-sm uppercase tracking-wider mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center text-steel-500 text-xs uppercase tracking-wider mb-3">{L.trust.shippedTo}</div>
+      <div class="flex justify-center gap-2 flex-wrap">
+        {trustCountries.map(c => <span class="text-2xl" title="Shipped here before">{c}</span>)}
+        <span class="text-xs text-steel-400 self-center ml-2">{L.trust.more}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Factory Quotes (positive framing) -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.whyBadge}</span>
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold mb-4">
+        {L.whyTitle}
+      </h2>
+      <p class="text-steel-600 leading-relaxed mb-4">
+        {L.whyP1}
+      </p>
+      <p class="text-steel-600 leading-relaxed">
+        {L.whyP2}
+      </p>
+    </div>
+  </section>
+
+  <!-- 5 Price Factors -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.factorsBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.factorsTitle}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {L.factors.map(f => (
+          <div class="bg-white rounded-xl p-6 border border-steel-100 hover:shadow-lg hover:border-amber-200 transition-all">
+            <div class="text-amber-500 font-bold text-2xl mb-3">{f.num}</div>
+            <h3 class="font-bold text-charcoal-900 mb-2">{f.title}</h3>
+            <p class="text-steel-600 text-sm leading-relaxed" set:html={richHtml(f.desc)}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget Tiers -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.budgetBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.budgetTitle}</h2>
+        <p class="text-steel-500 mt-3">{L.budgetSub}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        {L.budget.map(b => (
+          <div class="bg-steel-50 rounded-xl p-6 border border-steel-200 hover:border-amber-400 hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-4xl">{b.emoji}</span>
+              <h3 class="font-bold text-charcoal-900 text-lg">{b.label}</h3>
+            </div>
+            <p class="text-steel-600 text-sm leading-relaxed" set:html={richHtml(b.desc)}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Company -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.modelsBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.modelsTitle}</h2>
+        <p class="text-steel-500 mt-3">{L.modelsSub}</p>
+      </div>
+
+      <!-- HN Model Table -->
+      <div class="overflow-x-auto mb-10">
+        <table class="w-full text-sm bg-white rounded-xl overflow-hidden border border-steel-200">
+          <thead class="bg-steel-900 text-white">
+            <tr>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.model}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.tonnage}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.pressure}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.bestFor}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {L.hnModels.map((m, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                <td class="px-5 py-3 font-bold text-amber-600">{m.code}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.tonnage}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.pressure}</td>
+                <td class="px-5 py-3 text-steel-600">{m.seed}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Factory Photos -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/painting-workshop.webp" alt="Haonuo factory painting workshop" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/quality-control.webp" alt="Haonuo quality control lab" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/warehouse.webp" alt="Haonuo finished machine warehouse" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/office-building.webp" alt="Haonuo factory office building" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">{L.faqBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.faqTitle}</h2>
+      </div>
+      <div class="space-y-3" id="faq-container">
+        {L.faqs.map((item, idx) => (
+          <div class="faq-item bg-steel-50 rounded-xl border border-steel-200 overflow-hidden">
+            <button class="faq-q w-full text-left px-5 py-4 flex items-center justify-between gap-4 hover:bg-white transition-colors" onclick={`toggleFaq(${idx})`}>
+              <span class="font-semibold text-charcoal-900 pr-4">{item.q}</span>
+              <span class="chev text-amber-500 text-xl font-bold shrink-0 transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-a hidden px-5 pb-5 text-steel-600 text-sm leading-relaxed bg-white">{item.a}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry form (bottom) -->
+  <section id="price-form" class="py-14 md:py-20 bg-steel-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div>
+          <h2 class="font-display text-3xl md:text-4xl text-white font-bold leading-tight mb-4">
+            {L.formTitle}<br>
+            <span class="text-amber-400">{L.formTitleAccent}</span>
+          </h2>
+          <p class="text-steel-300 mb-5 leading-relaxed">
+            {L.formP}
+          </p>
+          <ul class="space-y-2.5 text-steel-200 text-sm mb-6">
+            {L.formGuarantee.map(line => (
+              <li class="flex items-start gap-2.5"><span class="text-amber-400 mt-0.5 text-base leading-none">✓</span><span>{line}</span></li>
+            ))}
+          </ul>
+          <div class="flex flex-wrap gap-4 text-xs text-steel-400 mb-4">
+            {L.formMeta.map(meta => (
+              <span class="flex items-center gap-1.5"><span class="text-amber-400">✓</span>{meta}</span>
+            ))}
+          </div>
+          <p class="text-steel-400 text-xs">{L.formEmailPref} <a href={`mailto:${L.formEmailLabel}`} class="text-amber-400 hover:underline">{L.formEmailLabel}</a> · <span class="text-amber-400">{L.formEmailPhone}</span></p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <h3 class="text-charcoal-900 text-xl font-bold mb-1">{L.formSubTitle}</h3>
+          <p class="text-steel-500 text-sm mb-5">{L.formSubP}</p>
+          <form id="quote-form" class="space-y-3" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.name} <span class="text-red-500">*</span></label>
+                <input type="text" name="name" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.namePh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.email} <span class="text-red-500">*</span></label>
+                <input type="email" name="email" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.emailPh}>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.whatsapp}</label>
+              <input type="tel" name="whatsapp" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.whatsappPh}>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.seed}</label>
+                <input type="text" name="seed" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.seedPh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.capacity}</label>
+                <input type="text" name="capacity" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.capacityPh}>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.country}</label>
+              <input type="text" name="country" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder={L.form.countryPh}>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.message}</label>
+              <textarea name="message" rows="2" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 resize-none" placeholder={L.form.messagePh}></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-5 rounded-lg text-sm shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
+              {L.form.submit} →
+            </button>
+            <p class="text-center text-xs text-steel-400">{L.form.noSpam}</p>
+          </form>
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-lg p-4 text-center text-sm font-semibold mt-3">
+            ✓ {L.form.success}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script is:inline>
+  function toggleFaq(idx) {
+    const items = document.querySelectorAll('.faq-item');
+    const item = items[idx];
+    const answer = item.querySelector('.faq-a');
+    const chev = item.querySelector('.chev');
+    item.classList.toggle('open');
+    answer.classList.toggle('hidden');
+    chev.textContent = item.classList.contains('open') ? '×' : '+';
+    chev.classList.toggle('rotate-45');
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      document.getElementById('quote-form').reset();
+      document.getElementById('form-success').classList.remove('hidden');
+      setTimeout(() => document.getElementById('form-success').classList.add('hidden'), 5000);
+    }, 1000);
+  }
+</script>
+</BaseLayout>

@@ -27,7 +27,7 @@ Mesin bekerja pada pasokan standar 380V / 50Hz; versi 415V tersedia atas permint
 | Model | Gaya | Tekanan bungkil | Diameter tabung press (standar) | Konfigurasi | Terbaik untuk |
 |---|---|---|---|---|---|
 | [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Tabung press tunggal / ganda | Batch lebih kecil (~60 kg), anggaran paling ketat |
-| **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (dapat dikustom)** | **Tabung press tunggal / ganda** | **Pabrik kecil & menengah, serbaguna** |
+| **HN325** | **325 t** | **27 MPa** | **Ø390 mm (dapat dikustom)** | **Tabung press tunggal / ganda** | **Pabrik kecil & menengah, serbaguna** |
 | [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (dapat dikustom) | Tabung press tunggal / ganda | Volume harian lebih besar, waktu tunggu lebih singkat |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (dapat dikustom) | Tabung press tunggal / ganda | Bisnis press dingin: kelapa, kenari |
 | [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (dapat dikustom) | Tabung press tunggal / ganda | Bahan bercangkang paling keras |

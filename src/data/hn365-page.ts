@@ -1,4 +1,4 @@
-// HN365 专用页（V4.4 漏斗结构）四语 UI 文案
+﻿// HN365 专用页（V4.4 漏斗结构）四语 UI 文案
 // 关键词策略（对齐 HN325 布局）：主词 commercial hydraulic oil press（规模升级词），型号词/结构词（double station）不作主词
 // 机型定位：单桶为默认配置，双桶为可选升级（与竞品页 oilpress-china 一致）——不得把 HN365 定性为双桶机
 // specs 11 行 / FAQ 8 条 复用 frontmatter（specifications* / faq*），材质表（matRows）等模块文案存于此
@@ -51,7 +51,7 @@ export const hn365Content: Record<HN365Locale, HN365Strings> = {
     fitHeaders: ['Model', 'Force', 'Cake pressure', 'Barrel Ø (standard)', 'Configuration', 'Best for'],
     fitRows: [
       '<a href="/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Single / double barrel|Smaller batches (~60 kg), tightest budget',
-      '<a href="/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (customizable)|Single / double barrel|Small & mid-size mills, all-purpose',
+      '<a href="/products/standard-hydraulic-oil-press/">HN325</a>|325 t|27 MPa|Ø390 mm (customizable)|Single / double barrel|Small & mid-size mills, all-purpose',
       '<b>HN365</b>|<b>365 t</b>|<b>30 MPa</b>|<b>Ø390 mm (customizable)</b>|<b>Single / double barrel</b>|<b>Higher daily volume, hard seeds, medium & large mills</b>',
       '<a href="/products/cold-press-hydraulic-oil-press/">HN426</a>|500 t|42 MPa|Ø390 mm (customizable)|Single / double barrel|Cold press business: coconut, walnut',
       '<a href="/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (customizable)|Single / double barrel|Hardest in-shell materials',
@@ -147,7 +147,7 @@ export const hn365Content: Record<HN365Locale, HN365Strings> = {
     fitHeaders: ['Modèle', 'Force', 'Pression sur tourteau', 'Ø fût (standard)', 'Configuration', 'Idéal pour'],
     fitRows: [
       '<a href="/fr/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Fût simple / double|Lots plus petits (~60 kg), budget le plus serré',
-      '<a href="/fr/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (personnalisable)|Fût simple / double|Petites et moyennes huileries, usage polyvalent',
+      '<a href="/fr/products/standard-hydraulic-oil-press/">HN325</a>|325 t|27 MPa|Ø390 mm (personnalisable)|Fût simple / double|Petites et moyennes huileries, usage polyvalent',
       '<b>HN365</b>|<b>365 t</b>|<b>30 MPa</b>|<b>Ø390 mm (personnalisable)</b>|<b>Fût simple / double</b>|<b>Volume journalier supérieur, graines dures, huileries moyennes et grandes</b>',
       '<a href="/fr/products/cold-press-hydraulic-oil-press/">HN426</a>|500 t|42 MPa|Ø390 mm (personnalisable)|Fût simple / double|Activité de pressage à froid : coco, noix',
       '<a href="/fr/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (personnalisable)|Fût simple / double|Matières les plus dures en coque',
@@ -243,7 +243,7 @@ export const hn365Content: Record<HN365Locale, HN365Strings> = {
     fitHeaders: ['الطراز', 'القوة', 'ضغط الكسب', 'قطر أسطوانة العصر (قياسي)', 'التكوين', 'الأنسب لـ'],
     fitRows: [
       '<a href="/ar/products/mini-hydraulic-oil-press/">HN300</a>|300 طن|42 ميجاباسكال|Ø300 ملم|أسطوانة عصر مفردة / مزدوج|دفعات أصغر (~60 كجم)، أضيق ميزانية',
-      '<a href="/ar/products/standard-hydraulic-oil-press/">HN325</a>|325 طناً|≈27 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|المعاصر الصغيرة والمتوسطة، متعددة الأغراض',
+      '<a href="/ar/products/standard-hydraulic-oil-press/">HN325</a>|325 طناً|27 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|المعاصر الصغيرة والمتوسطة، متعددة الأغراض',
       '<b>HN365</b>|<b>365 طناً</b>|<b>30 ميجاباسكال</b>|<b>Ø390 ملم (قابل للتخصيص)</b>|<b>أسطوانة عصر مفردة / مزدوج</b>|<b>حجم يومي أكبر، بذور صلبة، معاصر متوسطة وكبيرة</b>',
       '<a href="/ar/products/cold-press-hydraulic-oil-press/">HN426</a>|500 طن|42 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|عمل العصر البارد: جوز الهند والجوز',
       '<a href="/ar/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 طناً|52 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|أقسى المواد بقشورها',
@@ -339,7 +339,7 @@ export const hn365Content: Record<HN365Locale, HN365Strings> = {
     fitHeaders: ['Model', 'Gaya', 'Tekanan bungkil', 'Diameter tabung press (standar)', 'Konfigurasi', 'Terbaik untuk'],
     fitRows: [
       '<a href="/id/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Tabung press tunggal / ganda|Batch lebih kecil (~60 kg), anggaran paling ketat',
-      '<a href="/id/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Pabrik kecil & menengah, serbaguna',
+      '<a href="/id/products/standard-hydraulic-oil-press/">HN325</a>|325 t|27 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Pabrik kecil & menengah, serbaguna',
       '<b>HN365</b>|<b>365 t</b>|<b>30 MPa</b>|<b>Ø390 mm (dapat dikustom)</b>|<b>Tabung press tunggal / ganda</b>|<b>Volume harian lebih besar, biji keras, pabrik menengah & besar</b>',
       '<a href="/id/products/cold-press-hydraulic-oil-press/">HN426</a>|500 t|42 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Bisnis press dingin: kelapa, kenari',
       '<a href="/id/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Bahan bercangkang paling keras',

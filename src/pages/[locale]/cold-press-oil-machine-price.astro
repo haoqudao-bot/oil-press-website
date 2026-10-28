@@ -1,0 +1,664 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'fr' } },
+    { params: { locale: 'ar' } },
+    { params: { locale: 'id' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const currentLocale = locale as Locale;
+const t = getTranslations(currentLocale);
+
+function localePath(path: string): string {
+  return `/${currentLocale}${path}`;
+}
+
+type ColdPressUi = {
+  title: string;
+  description: string;
+  keywords: string[];
+  breadcrumb: { home: string; page: string };
+  badge: string;
+  h1Line1: string;
+  h1Line2: string;
+  heroP: string;
+  heroCta: string;
+  trust: { served: string; years: string; reply: string; projects: string; shippedTo: string; more: string };
+  whyBadge: string;
+  whyTitle: string;
+  whyP1: string;
+  whyP2: string;
+  factorsBadge: string;
+  factorsTitle: string;
+  factors: { num: string; title: string; desc: string }[];
+  budgetBadge: string;
+  budgetTitle: string;
+  budgetSub: string;
+  budget: { label: string; emoji: string; desc: string }[];
+  modelsBadge: string;
+  modelsTitle: string;
+  modelsSub: string;
+  modelsHeader: { model: string; tonnage: string; pressure: string; bestFor: string };
+  hnModels: { code: string; tonnage: string; pressure: string; best: string }[];
+  faqBadge: string;
+  faqTitle: string;
+  faqs: { q: string; a: string }[];
+  formTitle: string;
+  formTitleAccent: string;
+  formP: string;
+  formGuarantee: { html: string }[];
+  formMeta: string[];
+  formEmailPref: string;
+  formEmailLabel: string;
+  formEmailPhone: string;
+  formSubTitle: string;
+  formSubP: string;
+  form: {
+    name: string; email: string; whatsapp: string; seed: string; capacity: string; process: string; country: string; message: string;
+    namePh: string; emailPh: string; whatsappPh: string; seedPh: string; capacityPh: string; processPh: string; countryPh: string; messagePh: string;
+    submit: string; noSpam: string; success: string;
+  };
+};
+
+const ui: Record<Locale, ColdPressUi> = {
+  fr: {
+    title: "Prix Machine Huile Pressée à Froid — Devis Usine en 24 Heures",
+    description: "Prix machine huile pressée à froid d'Haonuo. Dites-nous votre graine (noix, amande, olive, sésame) et votre capacité journalière — obtenez modèle HN, prix usine, estimation d'expédition et option SS304 sous 24 heures.",
+    keywords: ['prix machine huile pressée à froid', 'prix presse à froid', 'prix huile pressée à froid', 'prix presse hydraulique à froid', 'prix extraction huile à froid'],
+    breadcrumb: { home: 'Accueil', page: 'Prix Machine Huile Pressée à Froid' },
+    badge: "❄️ Sous 60°C · Usine Haonuo · Depuis 2010",
+    h1Line1: "Prix Machine Huile Pressée à Froid —",
+    h1Line2: "Arrêtez de Deviner, Obtenez Exact",
+    heroP: "« À partir de 6 000 $ » ne dit rien sur la classe de pression, le SS304, ou la double station. Les machines à froid sont conçues pour 42–52 MPa — dites-nous votre graine, obtenez un **devis usine exact en 24 heures**.",
+    heroCta: "Obtenir Mon Devis Pressage à Froid →",
+    trust: { served: 'Pays desservis', years: 'Ans de fabrication', reply: 'Temps de réponse devis', projects: 'Projets clients', shippedTo: 'Machines expédiées vers', more: '35 autres' },
+    whyBadge: "Notre Philosophie de Prix",
+    whyTitle: "Le Pressage à Froid est Différent — Nous Devisons Exactement, Pas en Fourchettes",
+    whyP1: "Un acheteur qui presse de l'olive en Espagne et un autre qui presse de la noix en Inde ont tous deux besoin de machines à froid — mais avec des pressions différentes, des exigences SS304, et des conditions d'expédition différentes. Une liste publique « prix à partir de X $ » vous tromperait tous les deux.",
+    whyP2: "À la place, nous donnons des devis honnêtes et personnalisés pour que vous payiez exactement ce dont vous avez besoin — rien de plus, rien de moins. Indiquez votre graine et votre objectif journalier, et nous envoyons votre devis complet dans les 24 heures.",
+    factorsBadge: "Ce Qui Façonne Votre Devis à Froid",
+    factorsTitle: "Cinq Facteurs de Prix Spécifiques au Pressage à Froid",
+    factors: [
+      { num: '01', title: 'Classe de Pression', desc: 'Le pressage à froid de matériaux à coque dure (noix, amande, olive) demande 42–50 MPa contre 30 MPa pour le pressage à chaud standard. **Cette seule différence peut faire varier le devis de ~15–25 %** — fûts plus épais, vérins 27SiMn plus résistants, et pompes à plus haute performance : ce sont de vrais coûts acier.' },
+      { num: '02', title: 'SS304 Alimentaire', desc: "L'export d'huile comestible premium (huile d'olive extra vierge, noix, amande) demande des pièces en contact SS304 alimentaire — coût supplémentaire contre l'acier nickelé standard. Le SS304 ajoute ~10–15 % mais en vaut la peine pour les huiles pressées à froid de qualité export." },
+      { num: '03', title: 'Froid Seul ou Chaud + Froid', desc: "Certains acheteurs veulent purement pressage à froid ; d'autres veulent une machine qui bascule entre froid et chaud. Les modèles manuels/semi-automatiques gèrent les deux mais coûtent légèrement plus cher que les unités dédiées à froid." },
+      { num: '04', title: 'Taille du Fût & Double Station', desc: "Des fûts plus grands contiennent plus de graines par lot. Les cadres double station — un fût presse tandis que l'autre se charge — doublent presque le débit journalier. Idéal pour commercial et industriel, mais surdimensionné pour les démarrages." },
+      { num: '05', title: 'Expédition & Destination', desc: 'FOB Qingdao ne couvre que le chargement. CIF ou DAP ajoutent le fret maritime, l\'assurance, les droits d\'import et le transport intérieur. La même HN426 débarquée à Cebu vs Hambourg vs LA peut différer de 800–2 000 $ — nous vous montrons le détail complet.' },
+    ],
+    budgetBadge: "Cadre Budgétaire",
+    budgetTitle: "Trois Niveaux de Projet à Froid — Trouvez le Vôtre",
+    budgetSub: "Indiquez votre objectif journalier et nous recommandons la configuration HN exacte — sans sur-achat.",
+    budget: [
+      { label: 'Démarrage', emoji: '🌰', desc: "500–1 500 kg de graines / jour. **Presse à un fût HN325** — best-seller pour noix, amande, avocat. Entrée basse pour démarrages huile de noix premium." },
+      { label: 'Commercial', emoji: '❄️', desc: "1 500–3 000 kg de graines / jour. **HN426 double fût** — fleuron pressage à froid pour olive, sésame, lin, noix dures. SS304 alimentaire disponible. Presse sous 60°C." },
+      { label: 'Industriel', emoji: '🏭', desc: "3 000 kg+ de graines / jour. **HN500 plusieurs presses double fût** pour matériaux super durs et grandes huileries premium. Jusqu'à 75 MPa. Capable qualité premium." },
+    ],
+    modelsBadge: "À Propos de Haonuo",
+    modelsTitle: "3 Modèles HN Pressage à Froid · Direct Usine depuis 2010",
+    modelsSub: "Des démarrages 325 tonnes aux huileries premium industrielles 620 tonnes — une usine, trois modèles à froid, sans intermédiaire.",
+    modelsHeader: { model: 'Modèle', tonnage: 'Tonnage', pressure: 'Pression', bestFor: 'Idéal Pour' },
+    hnModels: [
+      { code: 'HN325', tonnage: '325', pressure: '27 MPa', best: 'Démarrage pressage à froid — graines molles à moyennes, noix, amande, avocat' },
+      { code: 'HN426', tonnage: '500', pressure: '42 MPa', best: "Fleuron pressage à froid — olive, sésame, lin, noix dures. SS304 disponible" },
+      { code: 'HN500', tonnage: '620', pressure: '52 MPa', best: 'Pressage à froid industriel — matériaux en coque super durs, rendement maximum' },
+    ],
+    faqBadge: "FAQ",
+    faqTitle: "Prix Machine Huile Pressée à Froid — Questions Fréquentes",
+    faqs: [
+      { q: "Mon devis de prix machine huile pressée à froid inclura-t-il l'expédition vers mon pays ?", a: "Oui — nous pouvons deviser FOB Qingdao, CIF vers votre port le plus proche, ou DAP porte à porte. Indiquez votre destination et nous incluons le fret dans le même devis. Destinations courantes pour acheteurs à froid : Philippines, Indonésie, Espagne, Italie, côte ouest USA, Inde." },
+      { q: "Je débute en pressage à froid — m'aidez-vous à savoir ce dont j'ai besoin ?", a: "Absolument. Le pressage à froid demande plus de pression que le pressage à chaud standard (42 MPa+ vs 30 MPa). Indiquez quelle graine vous pressez (noix, amande, olive, sésame, lin ?) et votre objectif journalier approximatif. Nous suggérons le modèle HN le plus simple — HN325 pour graines molles, HN426 pour noix dures. Pas de sur-ingénierie." },
+      { q: "Quels facteurs de prix sont uniques aux machines à froid ?", a: "Le pressage à froid a trois facteurs de coût supplémentaires au-delà des presses standard : (1) pression plus élevée — 42 MPa+ pour noix dures, demandant des fûts plus épais et des vérins plus résistants, (2) pièces en contact SS304 alimentaire — standard pour l'export d'huile comestible premium, (3) contrôle de basse température — maintenir le pressage sous 60°C pour préserver l'arôme et les nutriments. Ces éléments peuvent faire varier le devis de 15–25 %." },
+      { q: "Quelles sont les conditions de paiement et les délais de livraison à froid ?", a: 'Paiement : 30 % T/T acompte, 70 % avant expédition. L/C disponible. Production : 15–25 jours ouvrés pour HN325/HN426 standard, 30–45 jours pour fûts SS304 personnalisés ou cadres double station. Fret maritime : 25–35 jours vers Asie du Sud-Est/Inde, 15–20 jours vers UE/côte ouest USA.' },
+      { q: "Combien de temps faut-il pour obtenir un devis pressage à froid, est-ce gratuit ?", a: 'Gratuit, sans engagement, et généralement dans les 24 heures. Si vous voulez d\'abord un budget approximatif, envoyez le type de graine + l\'objectif journalier et nous répondrons avec une indication rapide en 1–2 heures. Les demandes à froid peuvent prendre une heure supplémentaire pour que l\'ingénierie confirme les spécifications de pression.' },
+      { q: "Le pressage à froid coûte-t-il plus cher que le pressage à chaud ?", a: 'En général, oui — car le pressage à froid demande une pression plus élevée et souvent des matériaux alimentaires. Mais les huiles premium pressées à froid (huile de noix, amande, huile d\'olive extra vierge, sésame premium) se vendent 2–3 x plus cher que les huiles pressées à chaud sur les marchés spécialisés. Nous vous aidons à calculer le retour sur investissement lorsque vous envoyez votre demande.' },
+    ],
+    formTitle: "Votre Devis Pressage à Froid Comprend",
+    formTitleAccent: "Ces 5 Éléments — Garantis",
+    formP: "Pas de fourchettes, pas de confusion de classe de pression, pas de vente forcée SS304. Un devis technique, spécifique au pressage à froid, certifié « Sous 60°C ». Voici exactement ce que vous recevez :",
+    formGuarantee: [
+      { html: '<strong class="text-emerald-300">Correspondance du modèle HN</strong> — pression 42–52 MPa conçue pour votre graine (noix, olive, sésame, lin...)' },
+      { html: '<strong class="text-emerald-300">Prix FOB avec postes détaillés</strong> — classe de pression, SS304, double station, tout décomposé' },
+      { html: '<strong class="text-emerald-300">Expédition vers votre port</strong> — CIF ou DAP, tarifs maritimes réels compatibles cold chain' },
+      { html: '<strong class="text-emerald-300">Liste complète des équipements</strong> — presse + torréfacteur + filtre, aucune pièce manquante' },
+      { html: '<strong class="text-emerald-300">Calendrier production + paiement</strong> — délais standard 15–25 jours' },
+    ],
+    formMeta: [
+      "Gratuit et sans engagement",
+      "Réponse sous 24 heures ouvrées",
+      "Direct usine, sans intermédiaire",
+    ],
+    formEmailPref: "Préférez-vous email ou WhatsApp ?",
+    formEmailLabel: "info@hydoilpress.com",
+    formEmailPhone: "+86 189 5714 9128",
+    formSubTitle: "Demandez Votre Devis Pressage à Froid",
+    formSubP: "Réponse sous 24 h. Nous envoyons modèle HN + prix + option SS304.",
+    form: {
+      name: 'Nom', email: 'Email', whatsapp: 'WhatsApp / Téléphone (facultatif — réponse plus rapide)',
+      seed: "Graine pressée à froid", capacity: 'Objectif de capacité journalière (kg/jour)',
+      process: 'Froid seul ou Froid + Chaud ?', country: 'Pays / Port de destination', message: 'Message',
+      namePh: 'Votre nom', emailPh: 'vous@entreprise.com', whatsappPh: '+63 9xxx xxx xxxx ou +34 ...',
+      seedPh: 'Noix, amande, olive, sésame, lin...', capacityPh: 'ex. 800, ou « pas encore sûr »',
+      processPh: 'Froid seul, ou froid + pressage à chaud ?',
+      countryPh: "N'importe quel pays · ex. Espagne / Barcelone",
+      messagePh: 'Besoin de SS304 ? Double station ? Exigences particulières ?',
+      submit: "Obtenir Mon Devis Prix Pressage à Froid →",
+      noSpam: "Pas de spam. Nous répondons une fois avec votre devis complet.",
+      success: "✓ Merci ! Votre demande de devis pressage à froid a été envoyée. Nous répondrons dans les 24 heures.",
+    },
+  },
+
+  ar: {
+    title: "سعر مكبس عصر الزيت على البارد — احصل على عرض مصنع خلال 24 ساعة",
+    description: "سعر مكبس عصر الزيت على البارد من مصنع هاونو. أخبرنا بنوع البذرة (جوز، لوز، زيت زيتون، سمسم) وطاقتك اليومية — احصل على توصية طراز HN، عرض مصنع، تقدير شحن، وخيار SS304 خلال 24 ساعة.",
+    keywords: ['سعر مكبس عصر الزيت على البارد', 'سعر مكبس العصر البارد', 'سعر زيت معصور على البارد', 'سعر مكبس هيدروليكي بارد', 'سعر استخراج زيت بارد'],
+    breadcrumb: { home: 'الرئيسية', page: 'سعر مكبس عصر الزيت على البارد' },
+    badge: "❄️ تحت 60°C · مصنع هاونو · منذ 2010",
+    h1Line1: "مكبس عصر زيت على البارد —",
+    h1Line2: "توقف عن التخمين، احصل على السعر الدقيق",
+    heroP: "«من 6000$» لا يخبرك شيئًا عن فئة الضغط، الستان SS304، أو المحطة المزدوجة. مكابس البارد مصممة لـ 42–52 ميجاباسكال — أخبرنا ببذرتك، واحصل على **عرض FOB دقيق خلال 24 ساعة**.",
+    heroCta: "احصل على عرضي للعصر البارد →",
+    trust: { served: 'دولة تمت خدمتها', years: 'سنوات تصنيع', reply: 'وقت الرد على العرض', projects: 'مشاريع عملاء', shippedTo: 'آلات تم شحنها إلى', more: 'و 35 دولة أخرى' },
+    whyBadge: "فلسفتنا في التسعير",
+    whyTitle: "العصر البارد مختلف — نحن نقدم عروضًا دقيقة، لا نطاقات",
+    whyP1: "المشتري الذي يعصر الزيت الزيتون في إسبانيا والمشتري الذي يعصر الجوز في الهند كلاهما يحتاج مكابس بارد — ولكن بمواصفات ضغط مختلفة، ومتطلبات SS304، وشروط شحن مختلفة. قائمة عامة «السعر من X$» ستضلكما كليكما.",
+    whyP2: "بدل ذلك، نقدم عروضًا صادقة ومخصصة بحيث تدفع بالضبط ما تحتاجه — لا أكثر ولا أقل. أخبرنا بنوع بذرتك وهدفك اليومي، وسنرسل عرضك الكامل خلال 24 ساعة.",
+    factorsBadge: "ما الذي يشكل عرض العصر البارد",
+    factorsTitle: "خمسة عوامل سعر خاصة بالعصر البارد",
+    factors: [
+      { num: '01', title: 'فئة الضغط', desc: 'العصر البارد للمواد ذات القشرة الصلبة (جوز، لوز، زيت زيتون) يحتاج 42–50 ميجاباسكال مقابل 30 ميجاباسكال للعصر الساخن القياسي. **هذا الاختلاف الواحد يمكن أن يؤثر على العرض بنسبة ~15–25%** — أسطوانات أكثر سمكًا، أسطوانات 27SiMn أقوى، ومضخات تصنيف أعلى: هذه تكاليف فولاذية حقيقية.' },
+      { num: '02', title: 'ستان SS304 الغذائي', desc: 'تصدير زيت الطعام الفاخر (زيت زيتون بكر ممتاز، جوز، لوز) يتطلب أجزاء ملامسة من الستان SS304 الغذائي — تكلفة إضافية مقابل الفولاذ المطلي بالنيكل القياسي. الـ SS304 يضيف ~10–15% لكنه يستحق لزيوت العصر البارد من الدرجة التصديرية.' },
+      { num: '03', title: 'بارد فقط أو ساخن + بارد', desc: 'بعض المشترين يريدون عصر بارد خالص؛ آخرون يريدون مكبسًا يتبدل بين البارد والساخن. النماذج اليدوية/شبه الآلية تدعم كليهما ولكن تكلف أكثر قليلاً من الوحدات المخصصة للعصر البارد.' },
+      { num: '04', title: 'حجم الأسطوانة والمحطة المزدوجة', desc: 'الأسطوانات الأكبر تحمل بذورًا أكثر لكل دفعة. الإطارات المزدوجة المحطة — أسطوانة تعصر بينما تملأ الأخرى — تضاعف تقريبًا الإنتاج اليومي. مثالي للتجاري والصناعي، ولكن مبالغ فيه للمشاريع الناشئة.' },
+      { num: '05', title: 'الشحن والوجهة', desc: 'FOB Qingdao يغطي التحميل فقط. CIF أو DAP تضيف الشحن البحري، التأمين، رسوم الاستيراد، والنقل الداخلي. نفس HN426 التي تصل في Cebu مقابل هامبورغ مقابل لوس أنجلوس يمكن أن تختلف بـ 800–2000$ — سنعرض لك التفصيل الكامل.' },
+    ],
+    budgetBadge: "إطار الميزانية",
+    budgetTitle: "ثلاثة مستويات لمشاريع العصر البارد — ابحث عن مكانك",
+    budgetSub: "أخبرنا بهدفك اليومي وسنوصي بإعداد HN الدقيق — بدون شراء زائد.",
+    budget: [
+      { label: 'بداية', emoji: '🌰', desc: '500–1500 كجم بذور/يوم. **مكبس واحد بأسطوانة واحدة HN325** — الأكثر مبيعًا للجوز، اللوز، الأفوكادو. نقطة دخول منخفضة لمشاريع زيت المكسرات الفاخر.' },
+      { label: 'تجاري', emoji: '❄️', desc: '1500–3000 كجم بذور/يوم. **HN426 مزدوج الأسطوانة** — رائد العصر البارد للزيت الزيتون، السمسم، الكتان، المكسرات الصلبة. SS304 الغذائي متاح. يعصر تحت 60°C.' },
+      { label: 'صناعي', emoji: '🏭', desc: '3000 كجم+ بذور/يوم. **HN500 مكابس متعددة مزدوجة الأسطوانة** للمواد فائقة الصلابة والمطاحن الفاخرة الكبرى. حتى 75 ميجاباسكال. قادر على الدرجة الفاخرة.' },
+    ],
+    modelsBadge: "حول هاونو",
+    modelsTitle: "3 طرازات HN للعصر البارد · مباشر من المصنع منذ 2010",
+    modelsSub: 'من ورش 325 طن إلى مطاحن فاخرة صناعية 620 طن — مصنع واحد، ثلاثة طرازات للعصر البارد، بدون وسيط.',
+    modelsHeader: { model: 'الطراز', tonnage: 'الطناجة', pressure: 'الضغط', bestFor: 'الأنسب لـ' },
+    hnModels: [
+      { code: 'HN325', tonnage: '325', pressure: '27 ميجاباسكال', best: 'مبتدئ العصر البارد — بذور ناعمة إلى متوسطة، جوز، لوز، أفوكادو' },
+      { code: 'HN426', tonnage: '500', pressure: '42 ميجاباسكال', best: 'رائد العصر البارد — زيت زيتون، سمسم، كتان، مكسرات صلبة. SS304 متاح' },
+      { code: 'HN500', tonnage: '620', pressure: '52 ميجاباسكال', best: 'صناعي العصر البارد — مواد قشرية فائقة الصلابة، أقصى إنتاج' },
+    ],
+    faqBadge: "أسئلة شائعة",
+    faqTitle: "سعر مكبس عصر الزيت على البارد — أسئلة شائعة",
+    faqs: [
+      { q: "هل سيتضمن عرض سعر مكبس عصر الزيت على البارد الشحن إلى بلدي؟", a: "نعم — يمكننا تقديم عرض FOB Qingdao، CIF إلى أقرب ميناء لديك، أو DAP من الباب إلى الباب. أخبرنا بوجهتك وسنقوم بتضمين تقدير شحن شفاف في نفس العرض. الوجهات الشائعة لمشتري البارد تشمل الفلبين، إندونيسيا، إسبانيا، إيطاليا، الساحل الغربي للولايات المتحدة، الهند." },
+      { q: "أنا مبتدئ في العصر البارد — هل تساعدون المشترين الجدد على تحديد احتياجاتهم؟", a: "بالتأكيد. العصر البارد يحتاج ضغطًا أعلى من العصر الساخن القياسي (42 ميجاباسكال+ مقابل 30 ميجاباسكال). أخبرنا بأي بذرة تريد عصرها (جوز، لوز، زيت زيتون، سمسم، كتان؟) وهدفك اليومي التقريبي. سنقترح أبسط طراز HN — HN325 للبذور الناعمة، HN426 للمكسرات الصلبة. بدون تعقيد مفرط." },
+      { q: "ما هي عوامل السعر الفريدة لمكابس العصر البارد؟", a: 'للعصر البارد ثلاثة محركات تكلفة إضافية مقارنة بالمكابس القياسية: (1) ضغط أعلى — 42 ميجاباسكال+ للمكسرات الصلبة، يتطلب أسطوانات أكثر سمكًا وأسطوانات أقوى، (2) أجزاء ملامسة SS304 الغذائي — قياسي لتصدير زيت الطعام الفاخر، (3) التحكم بدرجة الحرارة المنخفضة — الحفاظ على العصر تحت 60°C لحماية النكهة والمغذيات. هذه يمكن أن تؤثر على العرض بنسبة 15–25%.' },
+      { q: "ما هي شروط الدفع ومدة التسليم للعصر البارد؟", a: "الدفع: 30% T/T دفعة مقدمة، 70% قبل الشحن. L/C متاح. وقت الإنتاج: 15–25 يوم عمل للطرازات HN325/HN426 القياسية، 30–45 يوم للأسطوانات SS304 المخصصة أو الأطراف ذات المحطة المزدوجة. الشحن البحري: 25–35 يومًا إلى جنوب شرق آسيا/الهند، 15–20 يومًا إلى أوروبا/الساحل الغربي للولايات المتحدة." },
+      { q: "كم من الوقت يستغرق الحصول على عرض عصر بارد، وهل هو مجاني؟", a: 'مجاني، بدون التزام، وعادةً خلال 24 ساعة. إذا كنت تريد ميزانية تقريبية أولاً، أرسل نوع البذرة + الهدف اليومي وسنرد بإشارة سريعة خلال 1–2 ساعة. طلبات العصر البارد قد تستغرق ساعة إضافية ليتأكد قسم الهندسة من مواصفات الضغط.' },
+      { q: "هل العصر البارد أغلى من العصر الساخن؟", a: 'بشكل عام نعم — لأن العصر البارد يحتاج ضغطًا أعلى وغالبًا مواد غذائية. ولكن الزيوت الفاخرة المعصورة على البارد (زيت جوز، لوز، زيت زيتون بكر ممتاز، سمسم فاخر) تُباع بـ 2–3 أضعاف سعر الزيوت المعصورة على الساخن في الأسواق المتخصصة. سنحسب لك فترة الاسترداد عندما ترسل طلبك.' },
+    ],
+    formTitle: "عرض العصر البارد الخاص بك يتضمن",
+    formTitleAccent: "هذه العناصر الخمسة — مضمونة",
+    formP: "لا نطاقات، لا تشويش بفئة الضغط، لا مبيعات قسرية لـ SS304. عرض واحد هندسي، خاص بالعصر البارد، معتمد «تحت 60°C». إليك بالضبط ما تحصل عليه:",
+    formGuarantee: [
+      { html: '<strong class="text-emerald-300">تطابق طراز HN</strong> — ضغط 42–52 ميجاباسكال مصمم لبذرتك (جوز، زيت زيتون، سمسم، كتان...)' },
+      { html: '<strong class="text-emerald-300">سعر FOB مع بنود مفصلة</strong> — فئة الضغط، SS304، المحطة المزدوجة، كل شيء مقسم' },
+      { html: '<strong class="text-emerald-300">الشحن إلى مينائك</strong> — CIF أو DAP، أسعار بحرية حقيقية جاهزة للسلسلة الباردة' },
+      { html: '<strong class="text-emerald-300">قائمة المعدات الكاملة</strong> — مكبس + محمصة + مكبس ترشيح، لا قطع مفقودة' },
+      { html: '<strong class="text-emerald-300">جدول الإنتاج + الدفع</strong> — مهلة 15–25 يوم كقياسي' },
+    ],
+    formMeta: [
+      'مجاني وبدون التزام',
+      'رد خلال 24 ساعة عمل',
+      'مباشر من المصنع، بدون وسيط',
+    ],
+    formEmailPref: 'تفضل البريد الإلكتروني أم WhatsApp؟',
+    formEmailLabel: 'info@hydoilpress.com',
+    formEmailPhone: '+86 189 5714 9128',
+    formSubTitle: 'اطلب عرضك للعصر البارد',
+    formSubP: 'رد خلال 24 ساعة. سنرسل طراز HN + السعر + خيار SS304.',
+    form: {
+      name: 'الاسم', email: 'البريد الإلكتروني', whatsapp: 'WhatsApp / هاتف (اختياري — رد أسرع)',
+      seed: 'بذرة معصورة على البارد', capacity: 'الهدف من السعة اليومية (كجم/يوم)',
+      process: 'بارد فقط أم بارد + ساخن؟', country: 'الدولة / ميناء الوجهة', message: 'الرسالة',
+      namePh: 'اسمك', emailPh: 'you@company.com', whatsappPh: '+63 9xxx xxx xxxx أو +34 ...',
+      seedPh: 'جوز، لوز، زيت زيتون، سمسم، كتان...', capacityPh: 'مثال 800، أو «لست متأكدًا بعد»',
+      processPh: 'بارد فقط، أم بارد + عصر ساخن؟',
+      countryPh: 'أي دولة · مثال إسبانيا / برشلونة',
+      messagePh: 'تحتاج SS304؟ محطة مزدوجة؟ أي متطلبات خاصة؟',
+      submit: 'احصل على عرض سعر العصر البارد الخاص بي →',
+      noSpam: 'لا بريد مزعج. نحن نرد مرة واحدة مع عرضك الكامل.',
+      success: '✓ شكرًا! تم إرسال طلب عرض العصر البارد الخاص بك. سنرد خلال 24 ساعة.',
+    },
+  },
+
+  id: {
+    title: "Harga Mesin Press Minyak Dingin — Dapatkan Penawaran Pabrik dalam 24 Jam",
+    description: "Harga mesin press minyak dingin dari pabrik Haonuo. Beritahu kami biji apa (kenari, almond, zaitun, wijen) dan kapasitas harian Anda — dapatkan model HN, harga pabrik, estimasi pengiriman, dan opsi SS304 dalam 24 jam.",
+    keywords: ['harga mesin press minyak dingin', 'harga mesin press dingin', 'harga minyak press dingin', 'harga press hidrolik dingin', 'harga ekstraksi minyak dingin'],
+    breadcrumb: { home: 'Beranda', page: 'Harga Mesin Press Minyak Dingin' },
+    badge: "❄️ Di bawah 60°C · Pabrik Haonuo · Sejak 2010",
+    h1Line1: "Mesin Press Minyak Dingin —",
+    h1Line2: "Berhenti Menebak, Dapatkan Harga Tepat",
+    heroP: "«Mulai dari $6.000» tidak memberi tahu apa-apa tentang kelas tekanan, SS304, atau stasiun ganda. Mesin dingin direkayasa untuk 42–52 MPa — beritahu kami biji Anda, dapatkan **penawaran FOB tepat dalam 24 jam**.",
+    heroCta: "Dapatkan Penawaran Press Dingin Saya →",
+    trust: { served: 'Negara Dilayani', years: 'Tahun Manufaktur', reply: 'Waktu Balas Penawaran', projects: 'Proyek Klien', shippedTo: 'Mesin Dikirim ke', more: '+ 35 negara lagi' },
+    whyBadge: "Filosofi Harga Kami",
+    whyTitle: "Press Dingin Berbeda — Kami Menawarkan Tepat, Bukan Rentang",
+    whyP1: "Pembeli yang mempress zaitun di Spanyol dan pembeli yang mempress kenari di India keduanya membutuhkan mesin press dingin — tetapi dengan peringkat tekanan yang berbeda, persyaratan SS304, dan syarat pengiriman yang berbeda. Daftar publik «harga mulai dari X$» akan menyesatkan kalian berdua.",
+    whyP2: "Sebaliknya kami memberikan penawaran yang jujur dan disesuaikan agar Anda membayar tepat untuk apa yang Anda butuhkan — tidak lebih, tidak kurang. Beritahu kami jenis biji dan target harian Anda, dan kami akan mengirimkan penawaran lengkap Anda dalam 24 jam.",
+    factorsBadge: "Apa yang Membentuk Penawaran Press Dingin Anda",
+    factorsTitle: "Lima Faktor Harga Khusus Press Dingin",
+    factors: [
+      { num: '01', title: 'Kelas Tekanan', desc: 'Press dingin untuk bahan cangkang keras (kenari, almond, zaitun) membutuhkan 42–50 MPa vs 30 MPa untuk press panas standar. **Perbedaan tunggal ini dapat memengaruhi penawaran sekitar ~15–25%** — barrel yang lebih tebal, silinder 27SiMn yang lebih kuat, dan pompa dengan peringkat lebih tinggi adalah biaya baja yang nyata.' },
+      { num: '02', title: 'SS304 Food-Grade', desc: 'Ekspor minyak makanan premium (zaitun extra virgin, kenari, almond) membutuhkan bagian kontak SS304 food-grade — biaya tambahan vs baja berlapis nikel standar. SS304 menambah ~10–15% tetapi sebanding untuk minyak press dingin kualitas ekspor.' },
+      { num: '03', title: 'Dingin Saja atau Panas + Dingin', desc: 'Beberapa pembeli menginginkan murni press dingin; yang lain menginginkan satu mesin yang beralih antara dingin dan panas. Model manual/semi-otomatis mendukung keduanya tetapi harganya sedikit lebih mahal daripada unit khusus press dingin.' },
+      { num: '04', title: 'Ukuran Barrel & Stasiun Ganda', desc: 'Barrel yang lebih besar menampung lebih banyak biji per batch. Bingkai stasiun ganda — satu barrel mempress sementara yang lain mengisi ulang — hampir menggandakan throughput harian. Ideal untuk komersial dan industri tetapi berlebih untuk startup.' },
+      { num: '05', title: 'Pengiriman & Tujuan', desc: 'FOB Qingdao hanya mencakup pemuatan. CIF atau DAP menambah biaya pengiriman laut, asuransi, bea impor, dan transportasi darat. HN426 yang sama yang mendarat di Cebu vs Hamburg vs LA bisa berbeda $800–$2.000 — kami akan menunjukkan rincian lengkapnya.' },
+    ],
+    budgetBadge: "Kerangka Anggaran",
+    budgetTitle: "Tiga Tingkatan Proyek Press Dingin — Temukan Posisi Anda",
+    budgetSub: "Beritahu kami target harian Anda dan kami merekomendasikan konfigurasi HN yang tepat — tanpa membeli berlebih.",
+    budget: [
+      { label: 'Startup', emoji: '🌰', desc: '500–1.500 kg biji/hari. **Press barrel tunggal HN325** — terlaris untuk kenari, almond, alpukat. Titik masuk rendah untuk startup minyak kacang premium.' },
+      { label: 'Komersial', emoji: '❄️', desc: '1.500–3.000 kg biji/hari. **HN426 barrel ganda** — unggulan press dingin untuk zaitun, wijen, biji rami, kacang keras. SS304 food-grade tersedia. Presses di bawah 60°C.' },
+      { label: 'Industri', emoji: '🏭', desc: '3.000 kg+ biji/hari. **Beberapa press barrel ganda HN500** untuk bahan super keras dan penggilingan premium skala besar. Hingga 75 MPa. Mampu kualitas premium.' },
+    ],
+    modelsBadge: "Tentang Haonuo",
+    modelsTitle: "3 Model HN Press Dingin · Langsung Pabrik Sejak 2010",
+    modelsSub: 'Dari bengkel 325 ton hingga penggilingan premium industri 620 ton — satu pabrik, tiga model press dingin, tanpa perantara.',
+    modelsHeader: { model: 'Model', tonnage: 'Tonnase', pressure: 'Tekanan', bestFor: 'Terbaik Untuk' },
+    hnModels: [
+      { code: 'HN325', tonnage: '325', pressure: '27 MPa', best: 'Pemula press dingin — biji lunak hingga sedang, kenari, almond, alpukat' },
+      { code: 'HN426', tonnage: '500', pressure: '42 MPa', best: 'Unggulan press dingin — zaitun, wijen, biji rami, kacang keras. SS304 tersedia' },
+      { code: 'HN500', tonnage: '620', pressure: '52 MPa', best: 'Industri press dingin — bahan cangkang super keras, hasil maksimum' },
+    ],
+    faqBadge: "FAQ",
+    faqTitle: "Harga Mesin Press Minyak Dingin — Pertanyaan yang Sering Diajukan",
+    faqs: [
+      { q: "Apakah penawaran harga mesin press minyak dingin saya akan mencakup pengiriman ke negara saya?", a: "Ya — kami dapat menawarkan FOB Qingdao, CIF ke pelabuhan terdekat Anda, atau DAP door-to-door. Beritahu kami tujuan Anda dan kami akan menyertakan estimasi pengiriman dalam penawaran yang sama. Tujuan umum untuk pembeli press dingin termasuk Filipina, Indonesia, Spanyol, Italia, pantai barat AS, India." },
+      { q: "Saya baru memulai press dingin — apakah Anda membantu pembeli baru mengetahui apa yang mereka butuhkan?", a: "Tentu. Press dingin membutuhkan tekanan yang lebih tinggi daripada press panas standar (42 MPa+ vs 30 MPa). Beritahu kami biji apa yang ingin Anda press (kenari, almond, zaitun, wijen, biji rami?) dan target harian kasar Anda. Kami akan menyarankan model HN paling sederhana — HN325 untuk biji lunak, HN426 untuk kacang keras. Tidak ada rekayasa berlebih." },
+      { q: "Apa faktor harga yang unik untuk mesin press dingin?", a: 'Press dingin memiliki tiga pendorong biaya tambahan di luar press standar: (1) tekanan lebih tinggi — 42 MPa+ untuk kacang keras, membutuhkan barrel yang lebih tebal dan silinder yang lebih kuat, (2) bagian kontak SS304 food-grade — standar untuk ekspor minyak makanan premium, (3) kontrol suhu rendah — menjaga press di bawah 60°C untuk melindungi aroma dan nutrisi. Ini dapat memengaruhi penawaran sebesar 15–25%.' },
+      { q: "Apa syarat pembayaran dan berapa lama pengiriman press dingin?", a: 'Pembayaran: 30% T/T deposit, 70% sebelum pengiriman. L/C tersedia. Waktu produksi: 15–25 hari kerja untuk HN325/HN426 standar, 30–45 hari untuk barrel SS304 kustom atau bingkai stasiun ganda. Pengiriman laut: 25–35 hari ke SE Asia/India, 15–20 hari ke UE/pantai barat AS.' },
+      { q: "Berapa lama untuk mendapatkan penawaran press dingin, dan apakah gratis?", a: 'Gratis, tanpa kewajiban, dan biasanya dalam 24 jam. Jika Anda hanya ingin anggaran kasar terlebih dahulu, kirim jenis biji + target harian dan kami akan membalas dengan petunjuk cepat dalam 1–2 jam. Permintaan press dingin mungkin membutuhkan satu jam tambahan untuk rekayasa mengonfirmasi spesifikasi tekanan.' },
+      { q: "Apakah press dingin lebih mahal daripada press panas?", a: 'Secara umum ya — karena press dingin membutuhkan tekanan yang lebih tinggi dan seringkali bahan food-grade. Tetapi minyak premium yang dipress dingin (minyak kenari, almond, zaitun extra virgin, wijen premium) dijual 2–3x lebih mahal daripada yang dipress panas di pasar khusus. Kami akan membantu Anda menghitung periode pengembalian saat Anda mengirim permintaan.' },
+    ],
+    formTitle: "Penawaran Press Dingin Anda Dilengkapi dengan",
+    formTitleAccent: "5 Hal Ini — Dijamin",
+    formP: "Tidak ada rentang, tidak ada kebingungan kelas tekanan, tidak ada penjualan paksa SS304. Satu penawaran yang direkayasa, khusus press dingin, bersertifikat «Di bawah 60°C». Berikut tepat apa yang Anda dapatkan:",
+    formGuarantee: [
+      { html: '<strong class="text-emerald-300">Kesesuaian model HN</strong> — tekanan 42–52 MPa direkayasa untuk biji Anda (kenari, zaitun, wijen, biji rami...)' },
+      { html: '<strong class="text-emerald-300">Harga FOB dengan rincian</strong> — kelas tekanan, SS304, stasiun ganda, semuanya dipecah' },
+      { html: '<strong class="text-emerald-300">Pengiriman ke pelabuhan Anda</strong> — CIF atau DAP, tarif laut waktu nyata siap cold chain' },
+      { html: '<strong class="text-emerald-300">Daftar peralatan lengkap</strong> — press + roaster + filter, tidak ada bagian yang hilang' },
+      { html: '<strong class="text-emerald-300">Jadwal produksi + pembayaran</strong> — lead time 15–25 hari sebagai standar' },
+    ],
+    formMeta: [
+      'Gratis & tanpa kewajiban',
+      'Balas dalam 24 jam kerja',
+      'Langsung pabrik, tanpa perantara',
+    ],
+    formEmailPref: 'Lebih suka email atau WhatsApp?',
+    formEmailLabel: 'info@hydoilpress.com',
+    formEmailPhone: '+86 189 5714 9128',
+    formSubTitle: 'Minta Penawaran Press Dingin Anda',
+    formSubP: 'Balas dalam 24 jam. Kami akan mengirim model HN + harga + opsi SS304.',
+    form: {
+      name: 'Nama', email: 'Email', whatsapp: 'WhatsApp / Telepon (opsional — balas lebih cepat)',
+      seed: 'Biji yang Dipress Dingin', capacity: 'Target kapasitas harian (kg/hari)',
+      process: 'Dingin Saja atau Dingin + Panas?', country: 'Negara / Pelabuhan Tujuan', message: 'Pesan',
+      namePh: 'Nama Anda', emailPh: 'anda@perusahaan.com', whatsappPh: '+63 9xxx xxx xxxx atau +34 ...',
+      seedPh: 'Kenari, almond, zaitun, wijen, biji rami...', capacityPh: 'mis. 800, atau «belum yakin»',
+      processPh: 'Dingin saja, atau dingin + press panas?',
+      countryPh: 'Negara apa saja · mis. Spanyol / Barcelona',
+      messagePh: 'Butuh SS304? Stasiun ganda? Ada persyaratan khusus?',
+      submit: 'Dapatkan Penawaran Harga Press Dingin Saya →',
+      noSpam: 'Tidak ada spam. Kami membalas sekali dengan penawaran lengkap Anda.',
+      success: '✓ Terima kasih! Permintaan penawaran press dingin Anda telah dikirim. Kami akan membalas dalam 24 jam.',
+    },
+  },
+};
+
+const L = ui[currentLocale];
+
+// Helper: render **bold** markdown in UI strings
+const richHtml = (s: string, cls = 'text-charcoal-900') =>
+  s.replace(/\*\*(.+?)\*\*/g, `<b class="${cls}">$1</b>`);
+
+// Breadcrumb JSON-LD
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: L.breadcrumb.home, item: `https://www.hydoilpress.com/${currentLocale}/` },
+    { '@type': 'ListItem', position: 2, name: L.breadcrumb.page, item: `https://www.hydoilpress.com/${currentLocale}/cold-press-oil-machine-price` },
+  ],
+};
+
+// FAQ JSON-LD — MUST use localized strings
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: L.faqs.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
+const trustStats = [
+  { num: '50+', label: L.trust.served },
+  { num: '15+', label: L.trust.years },
+  { num: '24h', label: L.trust.reply },
+  { num: '1,000+', label: L.trust.projects },
+];
+const trustCountries = ['🇮🇳', '🇮🇩', '🇵🇭', '🇪🇸', '🇮🇹', '🇺🇸', '🇩🇪', '🇫🇷', '🇬🇧', '🇹🇷', '🇯🇵', '🇰🇷', '🇹🇼', '🇦🇺', '🇨🇦'];
+---
+
+<BaseLayout
+  locale={currentLocale}
+  title={L.title}
+  description={L.description}
+  keywords={L.keywords}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href={localePath('/')} class="hover:text-emerald-500 transition-colors">{L.breadcrumb.home}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">{L.breadcrumb.page}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-steel-900 via-emerald-950 to-steel-900 py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-emerald-400 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-sky-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <span class="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-5">
+            {L.badge}
+          </span>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
+            {L.h1Line1}<br>
+            <span class="text-emerald-400">{L.h1Line2}</span>
+          </h1>
+          <p class="text-lg text-steel-300 mb-6 leading-relaxed" set:html={richHtml(L.heroP, 'text-emerald-300')}></p>
+          <a href="#price-form" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5">
+            {L.heroCta} →
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-emerald-900">
+          <img src="/images/models/hn426.webp" alt="HN426 cold press hydraulic oil press machine — factory direct" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="py-8 bg-steel-50 border-y border-steel-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {trustStats.map(s => (
+          <div class="text-center">
+            <div class="text-emerald-600 font-display text-2xl md:text-3xl font-bold">{s.num}</div>
+            <div class="text-steel-600 text-xs md:text-sm uppercase tracking-wider mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center text-steel-500 text-xs uppercase tracking-wider mb-3">{L.trust.shippedTo}</div>
+      <div class="flex justify-center gap-2 flex-wrap">
+        {trustCountries.map(c => <span class="text-2xl" title="Shipped here before">{c}</span>)}
+        <span class="text-xs text-steel-400 self-center ml-2">{L.trust.more}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Factory Quotes -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">{L.whyBadge}</span>
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold mb-4">
+        {L.whyTitle}
+      </h2>
+      <p class="text-steel-600 leading-relaxed mb-4">
+        {L.whyP1}
+      </p>
+      <p class="text-steel-600 leading-relaxed">
+        {L.whyP2}
+      </p>
+    </div>
+  </section>
+
+  <!-- 5 Cold Press Price Factors -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">{L.factorsBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.factorsTitle}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {L.factors.map(f => (
+          <div class="bg-white rounded-xl p-6 border border-steel-100 hover:shadow-lg hover:border-emerald-200 transition-all">
+            <div class="text-emerald-500 font-bold text-2xl mb-3">{f.num}</div>
+            <h3 class="font-bold text-charcoal-900 mb-2">{f.title}</h3>
+            <p class="text-steel-600 text-sm leading-relaxed" set:html={richHtml(f.desc)}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget Tiers -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">{L.budgetBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.budgetTitle}</h2>
+        <p class="text-steel-500 mt-3">{L.budgetSub}</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        {L.budget.map(b => (
+          <div class="bg-steel-50 rounded-xl p-6 border border-steel-200 hover:border-emerald-400 hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-4xl">{b.emoji}</span>
+              <h3 class="font-bold text-charcoal-900 text-lg">{b.label}</h3>
+            </div>
+            <p class="text-steel-600 text-sm leading-relaxed" set:html={richHtml(b.desc)}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Company -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">{L.modelsBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.modelsTitle}</h2>
+        <p class="text-steel-500 mt-3">{L.modelsSub}</p>
+      </div>
+
+      <!-- Cold Press HN Model Table -->
+      <div class="overflow-x-auto mb-10">
+        <table class="w-full text-sm bg-white rounded-xl overflow-hidden border border-steel-200">
+          <thead class="bg-emerald-900 text-white">
+            <tr>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.model}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.tonnage}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.pressure}</th>
+              <th class="px-5 py-3 text-left font-bold">{L.modelsHeader.bestFor}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {L.hnModels.map((m, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                <td class="px-5 py-3 font-bold text-emerald-600">{m.code}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.tonnage}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.pressure}</td>
+                <td class="px-5 py-3 text-steel-600">{m.best}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Factory Photos -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/painting-workshop.webp" alt="Haonuo factory painting workshop" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/quality-control.webp" alt="Haonuo quality control lab" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/warehouse.webp" alt="Haonuo finished machine warehouse" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/office-building.webp" alt="Haonuo factory office building" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">{L.faqBadge}</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">{L.faqTitle}</h2>
+      </div>
+      <div class="space-y-3" id="faq-container">
+        {L.faqs.map((item, idx) => (
+          <div class="faq-item bg-steel-50 rounded-xl border border-steel-200 overflow-hidden">
+            <button class="faq-q w-full text-left px-5 py-4 flex items-center justify-between gap-4 hover:bg-white transition-colors" onclick={`toggleFaq(${idx})`}>
+              <span class="font-semibold text-charcoal-900 pr-4">{item.q}</span>
+              <span class="chev text-emerald-500 text-xl font-bold shrink-0 transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-a hidden px-5 pb-5 text-steel-600 text-sm leading-relaxed bg-white">{item.a}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry form -->
+  <section id="price-form" class="py-14 md:py-20 bg-gradient-to-br from-steel-900 via-emerald-950 to-steel-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div>
+          <h2 class="font-display text-3xl md:text-4xl text-white font-bold leading-tight mb-4">
+            {L.formTitle}<br>
+            <span class="text-emerald-400">{L.formTitleAccent}</span>
+          </h2>
+          <p class="text-steel-300 mb-5 leading-relaxed">
+            {L.formP}
+          </p>
+          <ul class="space-y-2.5 text-steel-200 text-sm mb-6">
+            {L.formGuarantee.map(line => (
+              <li class="flex items-start gap-2.5"><span class="text-emerald-400 mt-0.5 text-base leading-none">✓</span><span set:html={line.html}></span></li>
+            ))}
+          </ul>
+          <div class="flex flex-wrap gap-4 text-xs text-steel-400 mb-4">
+            {L.formMeta.map(meta => (
+              <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span>{meta}</span>
+            ))}
+          </div>
+          <p class="text-steel-400 text-xs">{L.formEmailPref} <a href={`mailto:${L.formEmailLabel}`} class="text-emerald-400 hover:underline">{L.formEmailLabel}</a> · <span class="text-emerald-400">{L.formEmailPhone}</span></p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <h3 class="text-charcoal-900 text-xl font-bold mb-1">{L.formSubTitle}</h3>
+          <p class="text-steel-500 text-sm mb-5">{L.formSubP}</p>
+          <form id="quote-form" class="space-y-3" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.name} <span class="text-red-500">*</span></label>
+                <input type="text" name="name" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder={L.form.namePh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.email} <span class="text-red-500">*</span></label>
+                <input type="email" name="email" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder={L.form.emailPh}>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.whatsapp}</label>
+              <input type="tel" name="whatsapp" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder={L.form.whatsappPh}>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.seed}</label>
+                <input type="text" name="seed" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder={L.form.seedPh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.capacity}</label>
+                <input type="text" name="capacity" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder={L.form.capacityPh}>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.process}</label>
+                <input type="text" name="process" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder={L.form.processPh}>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.country}</label>
+                <input type="text" name="country" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder={L.form.countryPh}>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">{L.form.message}</label>
+              <textarea name="message" rows="2" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 resize-none" placeholder={L.form.messagePh}></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 px-5 rounded-lg text-sm shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5">
+              {L.form.submit} →
+            </button>
+            <p class="text-center text-xs text-steel-400">{L.form.noSpam}</p>
+          </form>
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-lg p-4 text-center text-sm font-semibold mt-3">
+            ✓ {L.form.success}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script is:inline>
+  function toggleFaq(idx) {
+    const items = document.querySelectorAll('.faq-item');
+    const item = items[idx];
+    const answer = item.querySelector('.faq-a');
+    const chev = item.querySelector('.chev');
+    item.classList.toggle('open');
+    answer.classList.toggle('hidden');
+    chev.textContent = item.classList.contains('open') ? '×' : '+';
+    chev.classList.toggle('rotate-45');
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      document.getElementById('quote-form').reset();
+      document.getElementById('form-success').classList.remove('hidden');
+      setTimeout(() => document.getElementById('form-success').classList.add('hidden'), 5000);
+    }, 1000);
+  }
+</script>
+</BaseLayout>

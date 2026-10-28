@@ -36,7 +36,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     bestLine: '★ Best-selling model — best value in our lineup',
     sub: 'A 325-ton hydraulic press built for small and mid-size oil mills. 20–100 kg per batch, hot and cold pressing in one machine, factory-direct from the manufacturer.',
     badges: [
-      '<b>325 ton</b> force', '<b>≈27 MPa</b> cake pressure', '<b>60 MPa</b> system pressure',
+      '<b>325 ton</b> force', '<b>27 MPa</b> cake pressure', '<b>60 MPa</b> system pressure',
       '<b>20–100 kg</b> per batch', '<b>30–40 min</b> hot pressing · <b>~2 h</b> cold pressing',
     ],
     btnQuote: 'Request a Quote →', btnWa: 'WhatsApp', trustBar: '🛡 1-Year Warranty&nbsp;•&nbsp;Lifetime Technical Support&nbsp;•&nbsp;48-h Full-Load Test',
@@ -61,7 +61,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     fitHeaders: ['Model', 'Force', 'Cake pressure', 'Barrel Ø (standard)', 'Configuration', 'Best for'],
     fitRows: [
       '<a href="/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Single / double barrel|Smaller batches (~60 kg), tightest budget',
-      '<b>HN325</b>|<b>325 t</b>|<b>≈27 MPa</b>|<b>Ø390 mm (customizable)</b>|<b>Single / double barrel</b>|<b>Small & mid-size mills, all-purpose</b>',
+      '<b>HN325</b>|<b>325 t</b>|<b>27 MPa</b>|<b>Ø390 mm (customizable)</b>|<b>Single / double barrel</b>|<b>Small & mid-size mills, all-purpose</b>',
       '<a href="/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (customizable)|Single / double barrel|Higher daily volume, less waiting',
       '<a href="/products/cold-press-hydraulic-oil-press/">HN426</a>|500 t|42 MPa|Ø390 mm (customizable)|Single / double barrel|Cold press business: coconut, walnut',
       '<a href="/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (customizable)|Single / double barrel|Hardest in-shell materials',
@@ -123,7 +123,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     bestLine: '★ Notre modèle le plus vendu — le meilleur rapport qualité-prix de la gamme',
     sub: 'Une presse hydraulique de 325 tonnes conçue pour les petites et moyennes huileries. 20–100 kg par lot, pressage à chaud et à froid dans une seule machine, vente directe usine.',
     badges: [
-      '<b>325 tonnes</b> de force', '<b>≈27 MPa</b> pression sur tourteau', '<b>60 MPa</b> pression système',
+      '<b>325 tonnes</b> de force', '<b>27 MPa</b> pression sur tourteau', '<b>60 MPa</b> pression système',
       '<b>20–100 kg</b> par lot', '<b>30–40 min</b> à chaud · <b>~2 h</b> à froid',
     ],
     btnQuote: 'Demander un Devis →', btnWa: 'WhatsApp', trustBar: '🛡 Garantie 1 an&nbsp;•&nbsp;Support technique à vie&nbsp;•&nbsp;Test pleine charge 48 h',
@@ -148,7 +148,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     fitHeaders: ['Modèle', 'Force', 'Pression sur tourteau', 'Ø fût (standard)', 'Configuration', 'Idéal pour'],
     fitRows: [
       '<a href="/fr/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Fût simple / double|Lots plus petits (~60 kg), budget le plus serré',
-      '<b>HN325</b>|<b>325 t</b>|<b>≈27 MPa</b>|<b>Ø390 mm (personnalisable)</b>|<b>Fût simple / double</b>|<b>Petites et moyennes huileries, usage polyvalent</b>',
+      '<b>HN325</b>|<b>325 t</b>|<b>27 MPa</b>|<b>Ø390 mm (personnalisable)</b>|<b>Fût simple / double</b>|<b>Petites et moyennes huileries, usage polyvalent</b>',
       '<a href="/fr/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (personnalisable)|Fût simple / double|Volume journalier supérieur, moins d’attente',
       '<a href="/fr/products/cold-press-hydraulic-oil-press/">HN426</a>|500 t|42 MPa|Ø390 mm (personnalisable)|Fût simple / double|Activité de pressage à froid : coco, noix',
       '<a href="/fr/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (personnalisable)|Fût simple / double|Matières les plus dures en coque',
@@ -210,7 +210,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     bestLine: '★ طرازنا الأكثر مبيعاً — أفضل قيمة مقابل السعر في تشكيلتنا',
     sub: 'معصرة هيدروليكية ب قوة 325 طناً مصممة للمعاصر الصغيرة والمتوسطة. دفعات 20–100 كجم، عصر ساخن وبارد في آلة واحدة، بيع مباشر من المصنع.',
     badges: [
-      '<b>325 طناً</b> قوة ضغط', '<b>≈27 ميجاباسكال</b> ضغط الكسب', '<b>60 ميجاباسكال</b> ضغط النظام',
+      '<b>325 طناً</b> قوة ضغط', '<b>27 ميجاباسكال</b> ضغط الكسب', '<b>60 ميجاباسكال</b> ضغط النظام',
       '<b>20–100 كجم</b> في الدفعة', '<b>30–40 دقيقة</b> عصر ساخن · <b>~2 ساعة</b> عصر بارد',
     ],
     btnQuote: 'اطلب عرض سعر ←', btnWa: 'واتساب', trustBar: '🛡 ضمان سنة&nbsp;•&nbsp;دعم فني مدى الحياة&nbsp;•&nbsp;اختبار حمل كامل 48 ساعة',
@@ -235,7 +235,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     fitHeaders: ['الطراز', 'القوة', 'ضغط الكسب', 'قطر أسطوانة العصر (قياسي)', 'التكوين', 'الأنسب لـ'],
     fitRows: [
       '<a href="/ar/products/mini-hydraulic-oil-press/">HN300</a>|300 طن|42 ميجاباسكال|Ø300 ملم|أسطوانة عصر مفردة / مزدوج|دفعات أصغر (~60 كجم)، أضيق ميزانية',
-      '<b>HN325</b>|<b>325 طناً</b>|<b>≈27 ميجاباسكال</b>|<b>Ø390 ملم (قابل للتخصيص)</b>|<b>أسطوانة عصر مفردة / مزدوج</b>|<b>المعاصر الصغيرة والمتوسطة، متعددة الأغراض</b>',
+      '<b>HN325</b>|<b>325 طناً</b>|<b>27 ميجاباسكال</b>|<b>Ø390 ملم (قابل للتخصيص)</b>|<b>أسطوانة عصر مفردة / مزدوج</b>|<b>المعاصر الصغيرة والمتوسطة، متعددة الأغراض</b>',
       '<a href="/ar/products/commercial-hydraulic-oil-press/">HN365</a>|365 طناً|30 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|حجم يومي أكبر، انتظار أقل',
       '<a href="/ar/products/cold-press-hydraulic-oil-press/">HN426</a>|500 طن|42 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|عمل العصر البارد: جوز الهند والجوز',
       '<a href="/ar/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 طناً|52 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|أقسى المواد بقشورها',
@@ -297,7 +297,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     bestLine: '★ Model terlaris kami — nilai terbaik di lini kami',
     sub: 'Mesin press hidrolik 325 ton untuk pabrik minyak kecil dan menengah. Batch 20–100 kg, press panas & dingin dalam satu mesin, langsung dari pabrik.',
     badges: [
-      '<b>325 ton</b> gaya press', '<b>≈27 MPa</b> tekanan bungkil', '<b>60 MPa</b> tekanan sistem',
+      '<b>325 ton</b> gaya press', '<b>27 MPa</b> tekanan bungkil', '<b>60 MPa</b> tekanan sistem',
       '<b>20–100 kg</b> per batch', '<b>30–40 menit</b> press panas · <b>~2 jam</b> press dingin',
     ],
     btnQuote: 'Minta Penawaran →', btnWa: 'WhatsApp', trustBar: '🛡 Garansi 1 tahun&nbsp;•&nbsp;Dukungan teknis seumur hidup&nbsp;•&nbsp;Uji beban penuh 48 jam',
@@ -322,7 +322,7 @@ export const hn325Content: Record<HN325Locale, HN325Strings> = {
     fitHeaders: ['Model', 'Gaya', 'Tekanan bungkil', 'Diameter tabung press (standar)', 'Konfigurasi', 'Terbaik untuk'],
     fitRows: [
       '<a href="/id/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Tabung press tunggal / ganda|Batch lebih kecil (~60 kg), anggaran paling ketat',
-      '<b>HN325</b>|<b>325 t</b>|<b>≈27 MPa</b>|<b>Ø390 mm (dapat dikustom)</b>|<b>Tabung press tunggal / ganda</b>|<b>Pabrik kecil & menengah, serbaguna</b>',
+      '<b>HN325</b>|<b>325 t</b>|<b>27 MPa</b>|<b>Ø390 mm (dapat dikustom)</b>|<b>Tabung press tunggal / ganda</b>|<b>Pabrik kecil & menengah, serbaguna</b>',
       '<a href="/id/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Volume harian lebih besar, waktu tunggu lebih singkat',
       '<a href="/id/products/cold-press-hydraulic-oil-press/">HN426</a>|500 t|42 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Bisnis press dingin: kelapa, kenari',
       '<a href="/id/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Bahan bercangkang paling keras',

@@ -245,6 +245,91 @@ for (const r of criticalRoutes) {
 if (cMissingTotal === 0) pass('C', `${criticalRoutes.length} 条关键路由在 [locale]/ 或 ar/fr/id 静态目录中均有实现`);
 
 // ===========================
+//  M. 根级英文页 → locale 完整性（每个 src/pages/*.astro 必须在 [locale]/ 下有对应文件，且不能是 redirect stub）
+// ===========================
+console.log('\n━━━ M. 根级英文 .astro 必须有 [locale]/ 对应页，且不能是 redirect stub ━━━');
+// 根目录直接下的 .astro 文件（不含子目录、不含 ar/fr/id、不含 [locale]）
+const rootLevelAstros = [];
+for (const f of readdirSync(PAGES_ROOT)) {
+  const p = join(PAGES_ROOT, f);
+  if (f.endsWith('.astro')) rootLevelAstros.push(f);
+}
+// 子目录下的 .astro（如 resources/xxx.astro）也需要检查
+const subDirAstros = [];
+for (const f of readdirSync(PAGES_ROOT)) {
+  const p = join(PAGES_ROOT, f);
+  if (!statSync(p).isDirectory()) continue;
+  if (f === '[locale]' || f === 'ar' || f === 'fr' || f === 'id' || f === 'node_modules') continue;
+  listAstro(p, f + '/', subDirAstros);
+}
+// 排除不该有 locale 对的（内部路由、ADS 英文专用页等）
+const M_EXCLUDE_DIRS = ['ads/'];  // Google Ads 着陆页英文专用，不需要小语种
+const M_EXCLUDE_FILES = new Set([
+  '_slug-template.astro',
+  'index.astro',          // 首页 [locale]/index.astro 存在
+  '404.astro',            // [locale]/404.astro 存在
+]);
+let mTotal = 0;
+let mBad = 0;
+const mChecked = [];
+
+// === 先收集 [locale]/ 下的动态路由文件（含 [slug] 的）===
+// 动态路由如 markets/[market].astro 会覆盖整个 markets/ 子目录
+const dynamicRouteDirs = new Set();
+function findDynamicRoutes(dir, prefix = '') {
+  for (const f of readdirSync(dir)) {
+    const p = join(dir, f);
+    const s = statSync(p);
+    if (s.isDirectory()) {
+      findDynamicRoutes(p, prefix + f + '/');
+    } else if (f.endsWith('.astro') && f.includes('[')) {
+      // 提取父目录路径，例如 "markets/[market].astro" → "markets/"
+      const rel = prefix + f;
+      const firstSlash = rel.indexOf('/');
+      if (firstSlash > 0) {
+        dynamicRouteDirs.add(rel.substring(0, firstSlash + 1));
+      }
+    }
+  }
+}
+findDynamicRoutes(PAGES_LOC);
+
+for (const rel of [...rootLevelAstros.map(f => f), ...subDirAstros]) {
+  if (M_EXCLUDE_FILES.has(rel)) continue;
+  // 排除 ADS 目录
+  if (M_EXCLUDE_DIRS.some(d => rel.startsWith(d))) continue;
+  // 如果此页面属于某个动态路由覆盖的子目录 → 跳过（已被模式 A 覆盖）
+  const parentDir = rel.includes('/') ? rel.substring(0, rel.indexOf('/') + 1) : '';
+  if (parentDir && dynamicRouteDirs.has(parentDir)) continue;
+  mTotal++;
+
+  // 两种合法翻译模式任选其一：
+  // 模式 A: [locale]/ 动态路由文件（同一个文件里有 fr/ar/id 三语）
+  // 模式 B: ar/ + fr/ + id/ 三个独立物理目录文件（都存在才算）
+  const locPath = join(PAGES_LOC, rel);
+  const inDynamic = existsSync(locPath);
+  const inAllStatic = KEY_LANGS.every(l => existsSync(join(PAGES_ROOT, l, rel)));
+
+  if (!inDynamic && !inAllStatic) {
+    warn('M', `根级页 [${rel}] 既无 [locale]/ 动态路由，也无 ar/fr/id 独立目录文件 → 小语种 URL 返回英文或 404`);
+    mBad++;
+    continue;
+  }
+
+  // 模式 A 存在 → 检查是不是 redirect stub
+  if (inDynamic) {
+    const content = readFileSync(locPath, 'utf8');
+    if (content.includes('http-equiv="refresh"') || content.includes("http-equiv='refresh'")) {
+      warn('M', `[locale]/${rel} 是 redirect stub（http-equiv refresh） → 小语种用户瞬间跳英文，SEO 无效`);
+      mBad++;
+      continue;
+    }
+  }
+  mChecked.push(rel);
+}
+if (mBad === 0) pass('M', `全部 ${mTotal} 个根级英文页均有小语种翻译（[locale]/ 动态路由 或 ar/fr/id 独立目录）。动态路由覆盖子目录: [${[...dynamicRouteDirs].join(', ')}]`);
+
+// ===========================
 //  D. 构建产物 dist 文本检查
 // ===========================
 console.log('\n━━━ D. dist/ 构建产物文本检查（小语种页面含有英文 UI 词 = 回退/漏翻）━━━');
@@ -573,7 +658,7 @@ if (typeof lBad !== 'undefined') console.log(`  · L. 翻译长度异常: ${lBad
 console.log(`\n  （dist 构建产物检查 F/G/H/I 若 dist 存在会显示告警明细，否则已跳过）`);
 if (issues.length) {
   console.log('\n  ❗ 有告警项，请逐条检查并修复。脚本退出码 = 1（非 0 阻止部署流程）。');
-  console.log('  💡 A/C/D/E/F/G/H/I/J/K/L → 阻塞级，必须修复；B 类如确系合理保留，可扩展脚本内 B_EXC* 白名单');
+  console.log('  💡 A/C/D/E/F/G/H/I/J/K/L/M → 阻塞级，必须修复；B 类如确系合理保留，可扩展脚本内 B_EXC* 白名单');
   process.exit(1);
 } else {
   console.log('\n  🎉 全部通过！');

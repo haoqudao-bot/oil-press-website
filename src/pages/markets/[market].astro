@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getMarketProducts } from '../../data/market-products';
+import { enMarketData } from '../../data/en-market-data';
+import MarketPageContent from '../../components/markets/MarketPageContent.astro';
+
+// Seed keywords for product filtering per market
+const marketSeedKeywords: Record<string, string[]> = {
+  nigeria: ['peanut', 'palm kernel', 'cottonseed', 'sesame', 'shea'],
+  india: ['mustard', 'sesame', 'peanut', 'coconut', 'sunflower'],
+  indonesia: ['coconut', 'palm kernel', 'peanut'],
+  pakistan: ['sesame', 'mustard', 'peanut', 'cottonseed', 'sunflower'],
+  philippines: ['coconut', 'peanut', 'sesame', 'sunflower', 'moringa'],
+  egypt: ['sesame', 'olive', 'peanut', 'sunflower'],
+  'south-africa': ['sunflower', 'peanut', 'soybean', 'canola', 'rapeseed'],
+  kenya: ['sunflower', 'peanut', 'sesame', 'cottonseed'],
+  uk: ['rapeseed', 'canola', 'sunflower', 'hemp', 'flaxseed', 'linseed'],
+  usa: ['sunflower', 'peanut', 'hemp', 'almond'],
+  'middle-east': ['sesame', 'walnut', 'olive', 'almond'],
+};
+
+const marketNameMap: Record<string, string> = {
+  nigeria: 'Nigeria', india: 'India', indonesia: 'Indonesia',
+  pakistan: 'Pakistan', philippines: 'Philippines', egypt: 'Egypt',
+  'south-africa': 'South Africa', kenya: 'Kenya', uk: 'UK', usa: 'USA',
+  'middle-east': 'Middle East',
+};
+
+export function getStaticPaths() {
+  const marketSlugs = Object.keys(enMarketData);
+  return marketSlugs.map(market => ({ params: { market } }));
+}
+
+const { market } = Astro.params;
+const locale = 'en' as const;
+
+const allProducts = await getCollection('products');
+const seedKeywords = marketSeedKeywords[market] || [];
+const { mainProducts, auxProducts } = getMarketProducts(allProducts, seedKeywords);
+
+const marketData = enMarketData[market];
+if (!marketData) return Astro.redirect('/markets');
+
+function localePath(path: string): string { return path; }
+
+const shippingLabels = { port: 'Port', transit: 'Transit Time', cost: 'Shipping Cost' };
+const productGroupLabels = { core: 'Main Hydraulic Presses', matching: 'Complementary Equipment' };
+
+const breadcrumbHome = 'Home';
+const breadcrumbMarkets = 'Markets';
+const breadcrumbMarket = marketNameMap[market] || market;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: breadcrumbHome, item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: breadcrumbMarkets, item: 'https://www.hydoilpress.com/markets/' },
+    { '@type': 'ListItem', position: 3, name: breadcrumbMarket, item: `https://www.hydoilpress.com/markets/${market}/` },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: marketData.faqs.map(faq => ({
+    '@type': 'Question', name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+---
+
+<BaseLayout
+  locale="en"
+  title={marketData.title}
+  description={marketData.description}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+  <MarketPageContent
+    locale={locale}
+    marketData={marketData}
+    market={market}
+    mainProducts={mainProducts}
+    auxProducts={auxProducts}
+    localePath={localePath}
+    shippingLabels={shippingLabels}
+    productGroupLabels={productGroupLabels}
+    breadcrumbHome={breadcrumbHome}
+    breadcrumbMarkets={breadcrumbMarkets}
+    breadcrumbMarket={breadcrumbMarket}
+  />
+</BaseLayout>

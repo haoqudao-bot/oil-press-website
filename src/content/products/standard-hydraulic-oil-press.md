@@ -30,7 +30,7 @@ specifications:
   - name: Pressing Force
     value: 325 Tonnes
   - name: Cake Surface Pressure
-    value: ≈27 MPa (Ø390 tabung press)
+    value: 27 MPa (Ø390 tabung press)
   - name: Hydraulic System Pressure
     value: 60 MPa
   - name: Tabung Press Diameter
@@ -92,7 +92,7 @@ specificationsFr:
   - name: Force de pressage
     value: 325 Tonnes
   - name: Pression superficielle du tourteau
-    value: ≈27 MPa (fût Ø390)
+    value: 27 MPa (fût Ø390)
   - name: Pression du système hydraulique
     value: 60 MPa
   - name: Diamètre du fût
@@ -147,7 +147,7 @@ specificationsAr:
   - name: "قوة الضغط"
     value: "325 طن"
   - name: "ضغط سطح الكسب"
-    value: "≈27 ميجاباسكال (أسطوانة عصر Ø390)"
+    value: "27 ميجاباسكال (أسطوانة عصر Ø390)"
   - name: "ضغط النظام الهيدروليكي"
     value: "60 ميجاباسكال"
   - name: "قطر أسطوانة العصر"
@@ -202,7 +202,7 @@ specificationsId:
   - name: "Gaya Press"
     value: "325 Ton"
   - name: "Tekanan Permukaan Bungkil"
-    value: "≈27 MPa (tabung press Ø390)"
+    value: "27 MPa (tabung press Ø390)"
   - name: "Tekanan Sistem Hidrolik"
     value: "60 MPa"
   - name: "Diameter Tabung Press"
@@ -293,7 +293,7 @@ The press runs on a standard 380V / 50Hz supply; a 415V version is available on 
 | Model | Force | Cake pressure | Tabung Press Ø (standard) | Configuration | Best for |
 |---|---|---|---|---|---|
 | [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Single / double tabung press | Smaller batches (~60 kg), tightest budget |
-| **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (customizable)** | **Single / double tabung press** | **Small & mid-size mills, all-purpose** |
+| **HN325** | **325 t** | **27 MPa** | **Ø390 mm (customizable)** | **Single / double tabung press** | **Small & mid-size mills, all-purpose** |
 | [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (customizable) | Single / double tabung press | Higher daily volume, less waiting |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (customizable) | Single / double tabung press | Cold-press business: coconut, walnut |
 | [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (customizable) | Single / double tabung press | Hardest in-shell materials |

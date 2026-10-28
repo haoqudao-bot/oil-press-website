@@ -26,7 +26,7 @@ La presse fonctionne sur une alimentation standard 380 V / 50 Hz ; une version 4
 | Modèle | Force | Pression sur tourteau | Ø fût (standard) | Configuration | Idéal pour |
 |---|---|---|---|---|---|
 | [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Fût simple / double | Lots plus petits (~60 kg), budget le plus serré |
-| **HN325** | **325 t** | **≈27 MPa** | **Ø390 mm (personnalisable)** | **Fût simple / double** | **Petites et moyennes huileries, usage polyvalent** |
+| **HN325** | **325 t** | **27 MPa** | **Ø390 mm (personnalisable)** | **Fût simple / double** | **Petites et moyennes huileries, usage polyvalent** |
 | [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (personnalisable) | Fût simple / double | Volume journalier supérieur, moins d'attente |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (personnalisable) | Fût simple / double | Activité de pressage à froid : coco, noix |
 | [HN500](/products/ultra-high-pressure-hydraulic-oil-press/) | 620 t | 52 MPa | Ø390 mm (personnalisable) | Fût simple / double | Matières les plus dures en coque |

@@ -1,0 +1,363 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Kachi Ghani Mustard Oil Machine Price', item: 'https://www.hydoilpress.com/kachi-ghani-mustard-oil-machine-price' },
+  ],
+};
+
+const faqItems = [
+  { q: 'Will my Kachi Ghani mustard oil machine price include shipping to India?', a: 'Yes — we can quote FOB Qingdao, CIF to Mundra/Nhava Sheva/Kandla, or DAP door-to-door anywhere in India. Sea freight to Mundra takes ~28–32 days. Tell us your nearest port or factory address and we\'ll include the exact freight in your quotation.' },
+  { q: 'I\'m new to Kachi Ghani — do you help Indian buyers choose the right machine?', a: 'Absolutely. Kachi Ghani needs cold-press at low temperature (below 60°C) to preserve authentic pungency. Tell us your daily mustard seed target. HN325 for small workshops, HN426 for serious Kachi Ghani producers (the flagship — extra pressure for mustard\'s tough seed coat). We build all machines to 415V/50Hz or 220V/50Hz for India — no extra charge.' },
+  { q: 'What factors shape a Kachi Ghani mustard oil machine price?', a: 'Five key differences from standard hot-press mustard: (1) cold-press pressure — 42–50 MPa vs 30 MPa standard, (2) temperature control for pressing below 60°C, (3) single vs double barrel station, (4) Indian voltage winding (free on standard), (5) shipping to Indian ports (varies by port). The pressure difference alone can affect the quote by ~15–25%.' },
+  { q: 'What are payment terms and delivery to India?', a: 'Payment: 30% T/T deposit, 70% before shipment. L/C at sight available. Production: 15–25 working days for standard HN models, 30–45 days for double-station or custom barrels. Sea freight to Mundra: ~28–32 days. Spare parts ship DHL/FedEx in 5–7 days.' },
+  { q: 'How long to get a Kachi Ghani quote, and is it free?', a: 'Free, no obligation, and typically within 24 hours. If you just want a rough budget first, send mustard seed target and we\'ll reply in 1–2 hours. We know Indian buyers often WhatsApp — you can send directly to our number above for faster reply.' },
+  { q: 'Can one machine do both Kachi Ghani cold press and regular hot-press mustard?', a: 'Yes — our manual/semi-automatic HN models support both modes. Pressure, stroke, holding time, and rise-speed are adjustable. Cold pressing runs below 60°C; hot pressing after roasting gives higher yield with a different flavor profile.' },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
+const priceFactors = [
+  { num: '01', title: 'Pressure for Mustard Hardness', desc: 'Mustard seed has a tough seed coat. Kachi Ghani cold-pressing needs 42–50 MPa vs 30 MPa for standard hot-press. **This single difference can affect the quote by ~15–25%** — thicker barrels, stronger 27SiMn cylinders, and higher-rated pumps are real steel costs.' },
+  { num: '02', title: 'Cold-Press Temperature Control', desc: 'Authentic Kachi Ghani keeps pressing below 60°C to preserve pungency and aroma. Machines need precise holding-time and pressure-rise adjustment — standard hot-press models lack this control.' },
+  { num: '03', title: 'Single vs Double Station', desc: 'Single barrel presses one batch at a time. Double station (one presses while other loads) nearly doubles daily throughput — ideal for commercial Kachi Ghani mills. The second barrel adds material cost but eliminates idle time.' },
+  { num: '04', title: 'Voltage & India-Specific Setup', desc: 'India uses 415V/50Hz 3-phase (commercial) or 220V/50Hz single-phase (small workshops). We wind motors to your exact standard at **no extra charge** on standard models.' },
+  { num: '05', title: 'Shipping to Indian Ports', desc: 'FOB Qingdao covers loading only. CIF to Mundra/Nhava Sheva adds ~28–32 days sea freight + insurance. Different ports have slightly different rates. We\'ll show you the full breakdown including estimated import duty.' },
+];
+
+const kachiGhaniTiers = [
+  { label: 'Startup', emoji: '🌾', desc: '500–1,500 kg mustard seed/day. **HN325 single-barrel press** — entry point for small Kachi Ghani workshops. 220V single-phase or 415V 3-phase available.' },
+  { label: 'Commercial', emoji: '❄️', desc: '1,500–3,000 kg mustard seed/day. **HN426 cold-press flagship** — higher pressure for mustard\'s tough seed coat, pressing below 60°C to preserve authentic Kachi Ghani pungency.' },
+  { label: 'Industrial', emoji: '🏭', desc: '3,000 kg+ mustard seed/day. **HN426 double-station or HN500 multiple presses** — one barrel presses while other loads. 415V/50Hz standard.' },
+];
+
+const trustStats = [
+  { num: '50+', label: 'Countries Served' },
+  { num: '15+', label: 'Years Manufacturing' },
+  { num: '24h', label: 'Quote Reply Time' },
+  { num: '1,000+', label: 'Client Projects' },
+];
+const trustCountries = ['🇮🇳', '🇳🇬', '🇮🇩', '🇵🇭', '🇵🇰', '🇧🇩', '🇪🇬', '🇰🇪', '🇻🇳', '🇲🇲', '🇺🇸', '🇬🇧'];
+
+const kachiGhaniModels = [
+  { code: 'HN325', tonnage: '325', pressure: '27 MPa', best: 'Kachi Ghani Starter — small Indian workshops, single barrel, 415V/50Hz' },
+  { code: 'HN426', tonnage: '500', pressure: '42 MPa', best: 'Kachi Ghani Flagship — authentic cold-press below 60°C, mustard hard seed coat' },
+];
+---
+
+<BaseLayout
+  title="Kachi Ghani Mustard Oil Machine Price — Factory Quote in 24 Hours"
+  description="Kachi Ghani mustard oil machine price from Haonuo factory. Made for Indian 415V/50Hz grid. Tell us your daily mustard target — get HN model (HN325 starter / HN426 flagship), factory price, CIF to Mundra, and production timeline within 24 hours."
+  keywords={['kachi ghani mustard oil machine price', 'kachi ghani machine price', 'mustard oil machine price', 'kachi ghani press price', 'indian mustard oil machine']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Kachi Ghani Mustard Oil Machine Price</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero — 纯内容，无表单 -->
+  <section class="bg-gradient-to-br from-amber-900 via-steel-900 to-emerald-900 py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-amber-300 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <span class="inline-block bg-amber-500/20 text-amber-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-5">
+            🇮🇳 Authentic Kachi Ghani · Below 60°C · 415V India-Ready
+          </span>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
+            Kachi Ghani Mustard Oil —<br>
+            <span class="text-amber-400">Exact Factory Price for Indian Mills</span>
+          </h1>
+          <p class="text-lg text-steel-300 mb-6 leading-relaxed">
+            "₹4 lakh – ₹12 lakh" means nothing to a Punjab workshop vs a Gujarat commercial mill. Tell us your daily mustard target, get an <strong class="text-amber-300">exact 415V/50Hz factory quote in 24 hours</strong>. CIF to Mundra. No games.
+          </p>
+          <a href="#price-form" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
+            Get My Kachi Ghani Quote →
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-900">
+          <img src="/images/models/hn426.webp" alt="HN426 hydraulic oil press machine — Kachi Ghani factory direct" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="py-8 bg-steel-50 border-y border-steel-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {trustStats.map(s => (
+          <div class="text-center">
+            <div class="text-amber-600 font-display text-2xl md:text-3xl font-bold">{s.num}</div>
+            <div class="text-steel-600 text-xs md:text-sm uppercase tracking-wider mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center text-steel-500 text-xs uppercase tracking-wider mb-3">Machines shipped to</div>
+      <div class="flex justify-center gap-2 flex-wrap">
+        {trustCountries.map(c => <span class="text-2xl" title="Shipped here before">{c}</span>)}
+        <span class="text-xs text-steel-400 self-center ml-2">+ 35 more</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Factory Quotes -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">Our Pricing Philosophy</span>
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold mb-4">
+        Kachi Ghani Has Unique Needs — We Quote Exactly, Not in Ranges
+      </h2>
+      <p class="text-steel-600 leading-relaxed mb-4">
+        A Kachi Ghani producer in Punjab pressing 500 kg/day and one in Gujarat pressing 3,000 kg/day may both need cold-press mustard machines — but with different barrel configurations, voltage, and shipping terms. A public "price from ₹X" list would mislead both of you.
+      </p>
+      <p class="text-steel-600 leading-relaxed">
+        Instead we give honest, tailored quotes for the Indian market — 415V/50Hz standard, CIF to Indian ports, WhatsApp-friendly communication. Tell us your daily target, and we'll send your full quotation within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5 Kachi Ghani Price Factors -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">What Shapes Your Quote</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">Five Kachi Ghani Mustard Oil Machine Price Factors</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {priceFactors.map(f => (
+          <div class="bg-white rounded-xl p-6 border border-steel-100 hover:shadow-lg hover:border-amber-200 transition-all">
+            <div class="text-amber-500 font-bold text-2xl mb-3">{f.num}</div>
+            <h3 class="font-bold text-charcoal-900 mb-2">{f.title}</h3>
+            <p class="text-steel-600 text-sm leading-relaxed">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget Tiers -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">Budget Framework</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">Three Kachi Ghani Project Tiers — Find Where You Fit</h2>
+        <p class="text-steel-500 mt-3">Tell us your daily mustard target and we recommend the exact HN cold-press configuration — no over-buying.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        {kachiGhaniTiers.map(b => (
+          <div class="bg-steel-50 rounded-xl p-6 border border-steel-200 hover:border-amber-400 hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-4xl">{b.emoji}</span>
+              <h3 class="font-bold text-charcoal-900 text-lg">{b.label}</h3>
+            </div>
+            <p class="text-steel-600 text-sm leading-relaxed">{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Company -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">About Haonuo</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">2 Kachi Ghani HN Models · Factory-Direct since 2010</h2>
+        <p class="text-steel-500 mt-3">From 325-ton Kachi Ghani starters to 500-ton authentic cold-press flagship — one factory, two models calibrated for mustard, no middleman.</p>
+      </div>
+
+      <!-- Kachi Ghani HN Model Table -->
+      <div class="overflow-x-auto mb-10">
+        <table class="w-full text-sm bg-white rounded-xl overflow-hidden border border-steel-200">
+          <thead class="bg-amber-900 text-white">
+            <tr>
+              <th class="px-5 py-3 text-left font-bold">Model</th>
+              <th class="px-5 py-3 text-left font-bold">Tonnage</th>
+              <th class="px-5 py-3 text-left font-bold">Pressure</th>
+              <th class="px-5 py-3 text-left font-bold">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            {kachiGhaniModels.map((m, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                <td class="px-5 py-3 font-bold text-amber-600">{m.code}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.tonnage} tons</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.pressure}</td>
+                <td class="px-5 py-3 text-steel-600">{m.best}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Factory Photos -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/painting-workshop.webp" alt="Haonuo factory painting workshop" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/quality-control.webp" alt="Haonuo quality control lab" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/warehouse.webp" alt="Haonuo finished machine warehouse" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/office-building.webp" alt="Haonuo factory office building" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-amber-600 font-bold text-sm uppercase tracking-wider mb-2">FAQ</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">Kachi Ghani Mustard Oil Machine Price — Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-3" id="faq-container">
+        {faqItems.map((item, idx) => (
+          <div class="faq-item bg-steel-50 rounded-xl border border-steel-200 overflow-hidden">
+            <button class="faq-q w-full text-left px-5 py-4 flex items-center justify-between gap-4 hover:bg-white transition-colors" onclick={`toggleFaq(${idx})`}>
+              <span class="font-semibold text-charcoal-900 pr-4" set:html={item.q}></span>
+              <span class="chev text-amber-500 text-xl font-bold shrink-0 transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-a hidden px-5 pb-5 text-steel-600 text-sm leading-relaxed bg-white" set:html={item.a}></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 询盘表单（移到底部！） -->
+  <section id="price-form" class="py-14 md:py-20 bg-gradient-to-br from-amber-900 via-steel-900 to-emerald-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div>
+          <h2 class="font-display text-3xl md:text-4xl text-white font-bold leading-tight mb-4">
+            Your Kachi Ghani Quote Comes With<br>
+            <span class="text-amber-400">All 5 of These — Guaranteed</span>
+          </h2>
+          <p class="text-steel-300 mb-5 leading-relaxed">
+            Engineered for India — 415V/50Hz standard, CIF to Mundra, mustard-specific pressure. One tailored quote, no range games, no hidden extras. Here's exactly what you get:
+          </p>
+          <ul class="space-y-2.5 text-steel-200 text-sm mb-6">
+            <li class="flex items-start gap-2.5"><span class="text-amber-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-amber-300">HN model match</strong> — HN325 for workshops, HN426 flagship for serious Kachi Ghani producers</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-amber-300">Exact FOB Qingdao price</strong> — line items, factory-direct, no middleman</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-amber-300">CIF to Mundra/Nhava Sheva</strong> — real-time sea freight included</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-amber-300">India-ready wiring</strong> — 415V/50Hz or 220V/50Hz, your choice at no extra cost</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-amber-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-amber-300">Production + payment timeline</strong> — 15–25 day lead times, WhatsApp-friendly follow-up</span></li>
+          </ul>
+          <div class="flex flex-wrap gap-4 text-xs text-steel-400 mb-4">
+            <span class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> Free & no obligation</span>
+            <span class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> Reply in 24 working hours</span>
+            <span class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> Factory-direct, no middleman</span>
+          </div>
+          <p class="text-steel-400 text-xs">Prefer email or WhatsApp? <a href="mailto:info@hydoilpress.com" class="text-amber-400 hover:underline">info@hydoilpress.com</a> · <span class="text-amber-400">+86 189 5714 9128</span></p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <h3 class="text-charcoal-900 text-xl font-bold mb-1">Request Your Kachi Ghani Quote</h3>
+          <p class="text-steel-500 text-sm mb-5">24h reply. WhatsApp +91 xxx xxx xxxx for fastest.</p>
+          <form id="quote-form" class="space-y-3" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Name <span class="text-red-500">*</span></label>
+                <input type="text" name="name" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder="Your name">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Email <span class="text-red-500">*</span></label>
+                <input type="email" name="email" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder="you@company.com">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">WhatsApp <span class="text-red-500">*</span> (India: +91 9xx)</label>
+              <input type="tel" name="whatsapp" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder="+91 98765 43210">
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Daily Mustard Seed (kg/day)</label>
+                <input type="text" name="capacity" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder="e.g. 1000, or 'not sure yet'">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Process</label>
+                <input type="text" name="process" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder="Kachi Ghani cold only, or cold + hot press?">
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Local Voltage</label>
+                <input type="text" name="voltage" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder="e.g. 415V/50Hz 3-phase or 220V single">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Nearest Indian Port</label>
+                <input type="text" name="port" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20" placeholder="Mundra, Nhava Sheva, Kandla, or any port">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">Message</label>
+              <textarea name="message" rows="2" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 resize-none" placeholder="Any requirements? (double barrel, local agent, etc.)"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-5 rounded-lg text-sm shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
+              Get My Kachi Ghani Price Quote →
+            </button>
+            <p class="text-center text-xs text-steel-400">No spam. We reply once with your full quotation.</p>
+          </form>
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-lg p-4 text-center text-sm font-semibold mt-3">
+            ✓ Thanks! Your Kachi Ghani quote request has been sent. We'll reply within 24 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script is:inline>
+  function toggleFaq(idx) {
+    const items = document.querySelectorAll('.faq-item');
+    const item = items[idx];
+    const answer = item.querySelector('.faq-a');
+    const chev = item.querySelector('.chev');
+    item.classList.toggle('open');
+    answer.classList.toggle('hidden');
+    chev.textContent = item.classList.contains('open') ? '×' : '+';
+    chev.classList.toggle('rotate-45');
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      document.getElementById('quote-form').reset();
+      document.getElementById('form-success').classList.remove('hidden');
+      setTimeout(() => document.getElementById('form-success').classList.add('hidden'), 5000);
+    }, 1000);
+  }
+</script>
+</BaseLayout>

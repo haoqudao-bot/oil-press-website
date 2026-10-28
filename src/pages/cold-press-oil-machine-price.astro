@@ -1,0 +1,364 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hydoilpress.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Cold Press Oil Machine Price', item: 'https://www.hydoilpress.com/cold-press-oil-machine-price' },
+  ],
+};
+
+const faqItems = [
+  { q: 'Will my cold press oil machine price quote include shipping to my country?', a: 'Yes — we can quote FOB Qingdao, CIF to your nearest port, or DAP door-to-door. Tell us your destination and we\'ll include freight in the same quote. Common destinations for cold press buyers: Philippines, Indonesia, Spain, Italy, USA west coast, India.' },
+  { q: 'I\'m new to cold pressing — do you help me figure out what I need?', a: 'Absolutely. Cold press needs higher pressure than standard hot-press (42 MPa+ vs 30 MPa). Tell us which seed you press (walnut, almond, olive, sesame, flaxseed?) and your rough daily target. We\'ll suggest the simplest HN model — HN325 for soft seeds, HN426 for hard nuts. No over-engineering.' },
+  { q: 'What price factors are unique to cold press machines?', a: 'Cold press has three extra cost drivers beyond standard presses: (1) higher pressure — 42 MPa+ for hard nuts, requiring thicker barrels and stronger cylinders, (2) SS304 food-grade contact parts — standard for premium edible oil export, (3) low-temperature process control — keeping pressing below 60°C to preserve aroma and nutrients. These can affect the quote by 15–25%.' },
+  { q: 'What are the payment terms and how long does cold press delivery take?', a: 'Payment: 30% T/T deposit, 70% before shipment. L/C available. Production: 15–25 working days for standard HN325/HN426, 30–45 days for SS304 custom barrels or double-station frames. Sea freight: 25–35 days to SE Asia/India, 15–20 days to EU/US west coast.' },
+  { q: 'How long to get a cold press price quote, and is it free?', a: 'Free, no obligation, and typically within 24 hours. If you just want a rough budget first, send seed type + daily target and we\'ll reply with a quick hint in 1–2 hours. Cold press inquiries may take an extra hour for engineering to confirm pressure specs.' },
+  { q: 'Does cold press cost more than hot press?', a: 'In general, yes — because cold press requires higher pressure and often food-grade materials. But premium cold-pressed oils (walnut oil, almond oil, extra virgin olive oil, premium sesame) sell for 2–3x more than hot-pressed on specialty markets. We\'ll help you calculate payback when you send your inquiry.' },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
+const coldPressFactors = [
+  { num: '01', title: 'Pressure Class', desc: 'Cold pressing hard-shell materials (walnut, almond, olive) needs 42–50 MPa vs 30 MPa for standard hot-press. **This single difference can affect the quote by ~15–25%** — thicker barrels, stronger 27SiMn cylinders, and higher-rated pumps are real steel costs.' },
+  { num: '02', title: 'Food-Grade SS304', desc: 'Premium edible oil export (extra virgin olive, walnut, almond) requires SS304 food-grade contact parts — adding cost vs standard nickel-plated steel. SS304 adds ~10–15% but is worth it for export-grade cold-pressed oils.' },
+  { num: '03', title: 'Cold-Only or Hot + Cold', desc: 'Some buyers need pure cold-press only; others want one machine that switches between cold and hot pressing. Manual/semi-automatic models support both but cost slightly more than dedicated cold-press units.' },
+  { num: '04', title: 'Barrel Size & Double Station', desc: 'Larger barrels hold more seed per batch. Double-station frames — one barrel presses while the other loads — nearly double daily throughput. Ideal for commercial and industrial buyers but overkill for startups.' },
+  { num: '05', title: 'Shipping & Destination', desc: 'FOB Qingdao covers loading. CIF or DAP terms add sea freight, insurance, import duty, and inland transport. Same HN426 landed in Cebu vs Hamburg vs LA can differ by $800–$2,000. We\'ll show you the full breakdown.' },
+];
+
+const coldPressTiers = [
+  { label: 'Startup', emoji: '🌰', desc: '500–1,500 kg seed/day. **HN325 single-barrel press** — best seller for walnut, almond, avocado. Low entry point for premium nut oil startups.' },
+  { label: 'Commercial', emoji: '❄️', desc: '1,500–3,000 kg seed/day. **HN426 double-barrel** — cold-press flagship for olive, sesame, flaxseed, hard nuts. SS304 food-grade available. Presses below 60°C.' },
+  { label: 'Industrial', emoji: '🏭', desc: '3,000 kg+ seed/day. **HN500 multiple double-barrel presses** for super-hard materials and large-scale premium mills. Up to 75 MPa. Premium-grade capable.' },
+];
+
+const trustStats = [
+  { num: '50+', label: 'Countries Served' },
+  { num: '15+', label: 'Years Manufacturing' },
+  { num: '24h', label: 'Quote Reply Time' },
+  { num: '1,000+', label: 'Client Projects' },
+];
+const trustCountries = ['🇮🇳', '🇮🇩', '🇵🇭', '🇪🇸', '🇮🇹', '🇺🇸', '🇩🇪', '🇫🇷', '🇬🇧', '🇹🇷', '🇯🇵', '🇰🇷', '🇹🇼', '🇦🇺', '🇨🇦'];
+
+const coldPressModels = [
+  { code: 'HN325', tonnage: '325', pressure: '27 MPa', best: 'Cold-press starter — soft-to-medium seeds, walnut, almond, avocado' },
+  { code: 'HN426', tonnage: '500', pressure: '42 MPa', best: 'Cold-press flagship — olive, sesame, flaxseed, hard nuts. SS304 available' },
+  { code: 'HN500', tonnage: '620', pressure: '52 MPa', best: 'Industrial cold-press — super-hard in-shell materials, maximum yield' },
+];
+---
+
+<BaseLayout
+  title="Cold Press Oil Machine Price — Get Factory Quote in 24 Hours"
+  description="Cold press oil machine price from Haonuo factory. Tell us your cold-pressed seed (walnut, almond, olive, sesame) and daily capacity — get HN model, factory price, shipping estimate, and SS304 option within 24 hours."
+  keywords={['cold press oil machine price', 'cold press machine price', 'cold pressed oil machine price', 'cold press hydraulic oil press price', 'cold oil extraction machine price']}
+  jsonLd={[breadcrumbLd, faqLd]}
+>
+
+  <!-- Breadcrumb -->
+  <section class="bg-steel-50 py-4 border-b border-steel-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm text-steel-500">
+        <a href="/" class="hover:text-amber-500 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-charcoal-900 font-semibold">Cold Press Oil Machine Price</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero — 纯内容，无表单 -->
+  <section class="bg-gradient-to-br from-steel-900 via-emerald-950 to-steel-900 py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-emerald-400 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-sky-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <span class="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-5">
+            ❄️ Below 60°C · Haonuo Factory · Since 2010
+          </span>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
+            Cold Press Oil Machine Price —<br>
+            <span class="text-emerald-400">Stop Guessing, Get Exact</span>
+          </h1>
+          <p class="text-lg text-steel-300 mb-6 leading-relaxed">
+            "From $6,000" tells you nothing about pressure class, SS304, or double-station. Cold-press machines are engineered to 42–52 MPa — tell us your seed, get an <strong class="text-emerald-300">exact factory quote in 24 hours</strong>.
+          </p>
+          <a href="#price-form" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5">
+            Get My Cold Press Quote →
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-emerald-900">
+          <img src="/images/models/hn426.webp" alt="HN426 cold press hydraulic oil press machine — factory direct" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="py-8 bg-steel-50 border-y border-steel-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {trustStats.map(s => (
+          <div class="text-center">
+            <div class="text-emerald-600 font-display text-2xl md:text-3xl font-bold">{s.num}</div>
+            <div class="text-steel-600 text-xs md:text-sm uppercase tracking-wider mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center text-steel-500 text-xs uppercase tracking-wider mb-3">Cold press machines shipped to</div>
+      <div class="flex justify-center gap-2 flex-wrap">
+        {trustCountries.map(c => <span class="text-2xl" title="Shipped here before">{c}</span>)}
+        <span class="text-xs text-steel-400 self-center ml-2">+ 35 more</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Factory Quotes -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">Our Pricing Philosophy</span>
+      <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold mb-4">
+        Cold Press Price Is Different — We Quote Exactly, Not in Ranges
+      </h2>
+      <p class="text-steel-600 leading-relaxed mb-4">
+        A buyer pressing olive in Spain and a buyer pressing walnut in India may both need cold-press machines — but with different pressure ratings, SS304 requirements, and shipping terms. A public "price from $X" list would mislead both of you.
+      </p>
+      <p class="text-steel-600 leading-relaxed">
+        Instead we give honest, tailored quotes so you pay for exactly what you need — nothing more, nothing less. Tell us your seed type and daily target, and we'll send your full quotation within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5 Cold Press Price Factors -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">What Shapes Your Cold Press Quote</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">Five Cold-Press-Specific Price Factors</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {coldPressFactors.map(f => (
+          <div class="bg-white rounded-xl p-6 border border-steel-100 hover:shadow-lg hover:border-emerald-200 transition-all">
+            <div class="text-emerald-500 font-bold text-2xl mb-3">{f.num}</div>
+            <h3 class="font-bold text-charcoal-900 mb-2">{f.title}</h3>
+            <p class="text-steel-600 text-sm leading-relaxed">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget Tiers -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">Budget Framework</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">Three Cold Press Project Tiers — Find Where You Fit</h2>
+        <p class="text-steel-500 mt-3">Tell us your daily target and we recommend the exact HN cold-press configuration — no over-buying.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        {coldPressTiers.map(b => (
+          <div class="bg-steel-50 rounded-xl p-6 border border-steel-200 hover:border-emerald-400 hover:shadow-lg transition-all">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-4xl">{b.emoji}</span>
+              <h3 class="font-bold text-charcoal-900 text-lg">{b.label}</h3>
+            </div>
+            <p class="text-steel-600 text-sm leading-relaxed">{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Company -->
+  <section class="py-12 md:py-16 bg-steel-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">About Haonuo</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">3 Cold Press HN Models · Factory-Direct since 2010</h2>
+        <p class="text-steel-500 mt-3">From 325-ton cold-press starters to 620-ton industrial premium mills — one factory, three cold-press models, no middleman.</p>
+      </div>
+
+      <!-- Cold Press HN Model Table -->
+      <div class="overflow-x-auto mb-10">
+        <table class="w-full text-sm bg-white rounded-xl overflow-hidden border border-steel-200">
+          <thead class="bg-emerald-900 text-white">
+            <tr>
+              <th class="px-5 py-3 text-left font-bold">Model</th>
+              <th class="px-5 py-3 text-left font-bold">Tonnage</th>
+              <th class="px-5 py-3 text-left font-bold">Pressure</th>
+              <th class="px-5 py-3 text-left font-bold">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            {coldPressModels.map((m, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-steel-50'}>
+                <td class="px-5 py-3 font-bold text-emerald-600">{m.code}</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.tonnage} tons</td>
+                <td class="px-5 py-3 text-charcoal-900">{m.pressure}</td>
+                <td class="px-5 py-3 text-steel-600">{m.best}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Factory Photos -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/painting-workshop.webp" alt="Haonuo factory painting workshop" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/quality-control.webp" alt="Haonuo quality control lab" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/warehouse.webp" alt="Haonuo finished machine warehouse" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <img src="/images/factory/office-building.webp" alt="Haonuo factory office building" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="inline-block text-emerald-600 font-bold text-sm uppercase tracking-wider mb-2">FAQ</span>
+        <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 font-bold">Cold Press Oil Machine Price — Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-3" id="faq-container">
+        {faqItems.map((item, idx) => (
+          <div class="faq-item bg-steel-50 rounded-xl border border-steel-200 overflow-hidden">
+            <button class="faq-q w-full text-left px-5 py-4 flex items-center justify-between gap-4 hover:bg-white transition-colors" onclick={`toggleFaq(${idx})`}>
+              <span class="font-semibold text-charcoal-900 pr-4" set:html={item.q}></span>
+              <span class="chev text-emerald-500 text-xl font-bold shrink-0 transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-a hidden px-5 pb-5 text-steel-600 text-sm leading-relaxed bg-white" set:html={item.a}></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 询盘表单（移到底部！） -->
+  <section id="price-form" class="py-14 md:py-20 bg-gradient-to-br from-steel-900 via-emerald-950 to-steel-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div>
+          <h2 class="font-display text-3xl md:text-4xl text-white font-bold leading-tight mb-4">
+            Your Cold Press Quote Comes With<br>
+            <span class="text-emerald-400">All 5 of These — Guaranteed</span>
+          </h2>
+          <p class="text-steel-300 mb-5 leading-relaxed">
+            No ranges, no pressure-class confusion, no hidden SS304 upsells. One engineered quote, cold-press specific, Below 60°C certified. Here's exactly what you get:
+          </p>
+          <ul class="space-y-2.5 text-steel-200 text-sm mb-6">
+            <li class="flex items-start gap-2.5"><span class="text-emerald-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-emerald-300">HN model match</strong> — 42–52 MPa pressure engineered for your seed (walnut, olive, sesame, flaxseed...)</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-emerald-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-emerald-300">FOB price with line items</strong> — pressure class, SS304, double-station, all broken out</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-emerald-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-emerald-300">Shipping to your port</strong> — CIF or DAP, real-time cold-chain ready ocean rates</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-emerald-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-emerald-300">Full equipment list</strong> — press + roaster + filter, no missing pieces</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-emerald-400 mt-0.5 text-base leading-none">✓</span><span><strong class="text-emerald-300">Production + payment timeline</strong> — 15–25 day lead times standard</span></li>
+          </ul>
+          <div class="flex flex-wrap gap-4 text-xs text-steel-400 mb-4">
+            <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Free & no obligation</span>
+            <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Reply in 24 working hours</span>
+            <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Factory-direct, no middleman</span>
+          </div>
+          <p class="text-steel-400 text-xs">Prefer email or WhatsApp? <a href="mailto:info@hydoilpress.com" class="text-emerald-400 hover:underline">info@hydoilpress.com</a> · <span class="text-emerald-400">+86 189 5714 9128</span></p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+          <h3 class="text-charcoal-900 text-xl font-bold mb-1">Request Your Cold Press Quote</h3>
+          <p class="text-steel-500 text-sm mb-5">24h reply. We'll send HN model + price + SS304 option.</p>
+          <form id="quote-form" class="space-y-3" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Name <span class="text-red-500">*</span></label>
+                <input type="text" name="name" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder="Your name">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Email <span class="text-red-500">*</span></label>
+                <input type="email" name="email" required class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder="you@company.com">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">WhatsApp / Phone (optional — faster reply)</label>
+              <input type="tel" name="whatsapp" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder="+63 9xxx xxx xxxx or +34 ...">
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Cold-Pressed Seed</label>
+                <input type="text" name="seed" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder="Walnut, almond, olive, sesame, flaxseed...">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Daily capacity target (kg/day)</label>
+                <input type="text" name="capacity" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder="e.g. 800, or 'not sure yet'">
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Cold-Only or Both?</label>
+                <input type="text" name="process" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder="Cold only, or cold + hot press?">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-steel-700 mb-1">Country / Destination Port</label>
+                <input type="text" name="country" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20" placeholder="Any country · e.g. Spain / Barcelona">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-steel-700 mb-1">Message</label>
+              <textarea name="message" rows="2" class="w-full px-3 py-2.5 border border-steel-300 rounded-lg text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 resize-none" placeholder="Need SS304? Double station? Any special requirements?"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 px-5 rounded-lg text-sm shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5">
+              Get My Cold Press Price Quote →
+            </button>
+            <p class="text-center text-xs text-steel-400">No spam. We reply once with your full quotation.</p>
+          </form>
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-lg p-4 text-center text-sm font-semibold mt-3">
+            ✓ Thanks! Your cold press quote request has been sent. We'll reply within 24 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script is:inline>
+  function toggleFaq(idx) {
+    const items = document.querySelectorAll('.faq-item');
+    const item = items[idx];
+    const answer = item.querySelector('.faq-a');
+    const chev = item.querySelector('.chev');
+    item.classList.toggle('open');
+    answer.classList.toggle('hidden');
+    chev.textContent = item.classList.contains('open') ? '×' : '+';
+    chev.classList.toggle('rotate-45');
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+      document.getElementById('quote-form').reset();
+      document.getElementById('form-success').classList.remove('hidden');
+      setTimeout(() => document.getElementById('form-success').classList.add('hidden'), 5000);
+    }, 1000);
+  }
+</script>
+</BaseLayout>

@@ -50,7 +50,7 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitHeaders: ['Model', 'Force', 'Cake pressure', 'Barrel Ø (standard)', 'Configuration', 'Best for'],
     fitRows: [
       '<a href="/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Single / double barrel|Smaller batches (~60 kg), tightest budget',
-      '<a href="/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (customizable)|Single / double barrel|Small & mid-size mills, all-purpose',
+      '<a href="/products/standard-hydraulic-oil-press/">HN325</a>|325 t|27 MPa|Ø390 mm (customizable)|Single / double barrel|Small & mid-size mills, all-purpose',
       '<a href="/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (customizable)|Single / double barrel|Higher daily volume, hard seeds',
       '<b>HN426</b>|<b>500 t</b>|<b>42 MPa</b>|<b>Ø390 mm (customizable)</b>|<b>Single / double barrel</b>|<b>Cold press business: coconut, walnut, premium oils</b>',
       '<a href="/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (customizable)|Single / double barrel|Hardest in-shell materials',
@@ -145,7 +145,7 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitHeaders: ['Modèle', 'Force', 'Pression sur tourteau', 'Ø fût (standard)', 'Configuration', 'Idéal pour'],
     fitRows: [
       '<a href="/fr/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Fût simple / double|Lots plus petits (~60 kg), budget le plus serré',
-      '<a href="/fr/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (personnalisable)|Fût simple / double|Petites et moyennes huileries, usage polyvalent',
+      '<a href="/fr/products/standard-hydraulic-oil-press/">HN325</a>|325 t|27 MPa|Ø390 mm (personnalisable)|Fût simple / double|Petites et moyennes huileries, usage polyvalent',
       '<a href="/fr/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (personnalisable)|Fût simple / double|Volume journalier supérieur, graines dures',
       '<b>HN426</b>|<b>500 t</b>|<b>42 MPa</b>|<b>Ø390 mm (personnalisable)</b>|<b>Fût simple / double</b>|<b>Activité de pressage à froid : coco, noix, huiles premium</b>',
       '<a href="/fr/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (personnalisable)|Fût simple / double|Matières les plus dures en coque',
@@ -240,7 +240,7 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitHeaders: ['الطراز', 'القوة', 'ضغط الكسب', 'قطر أسطوانة العصر (قياسي)', 'التكوين', 'الأنسب لـ'],
     fitRows: [
       '<a href="/ar/products/mini-hydraulic-oil-press/">HN300</a>|300 طن|42 ميجاباسكال|Ø300 ملم|أسطوانة عصر مفردة / مزدوج|دفعات أصغر (~60 كجم)، أضيق ميزانية',
-      '<a href="/ar/products/standard-hydraulic-oil-press/">HN325</a>|325 طناً|≈27 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|المعاصر الصغيرة والمتوسطة، متعددة الأغراض',
+      '<a href="/ar/products/standard-hydraulic-oil-press/">HN325</a>|325 طناً|27 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|المعاصر الصغيرة والمتوسطة، متعددة الأغراض',
       '<a href="/ar/products/commercial-hydraulic-oil-press/">HN365</a>|365 طناً|30 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|حجم يومي أكبر، بذور صلبة',
       '<b>HN426</b>|<b>500 طن</b>|<b>42 ميجاباسكال</b>|<b>Ø390 ملم (قابل للتخصيص)</b>|<b>أسطوانة عصر مفردة / مزدوج</b>|<b>عمل العصر البارد: جوز الهند والجوز والزيوت الممتازة</b>',
       '<a href="/ar/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 طناً|52 ميجاباسكال|Ø390 ملم (قابل للتخصيص)|أسطوانة عصر مفردة / مزدوج|أقسى المواد بقشورها',
@@ -335,7 +335,7 @@ export const hn426Content: Record<HN426Locale, HN426Strings> = {
     fitHeaders: ['Model', 'Gaya', 'Tekanan bungkil', 'Diameter tabung press (standar)', 'Konfigurasi', 'Terbaik untuk'],
     fitRows: [
       '<a href="/id/products/mini-hydraulic-oil-press/">HN300</a>|300 t|42 MPa|Ø300 mm|Tabung press tunggal / ganda|Batch lebih kecil (~60 kg), anggaran paling ketat',
-      '<a href="/id/products/standard-hydraulic-oil-press/">HN325</a>|325 t|≈27 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Pabrik kecil & menengah, serbaguna',
+      '<a href="/id/products/standard-hydraulic-oil-press/">HN325</a>|325 t|27 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Pabrik kecil & menengah, serbaguna',
       '<a href="/id/products/commercial-hydraulic-oil-press/">HN365</a>|365 t|30 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Volume harian lebih besar, biji keras',
       '<b>HN426</b>|<b>500 t</b>|<b>42 MPa</b>|<b>Ø390 mm (dapat dikustom)</b>|<b>Tabung press tunggal / ganda</b>|<b>Bisnis press dingin: kelapa, kenari, minyak premium</b>',
       '<a href="/id/products/ultra-high-pressure-hydraulic-oil-press/">HN500</a>|620 t|52 MPa|Ø390 mm (dapat dikustom)|Tabung press tunggal / ganda|Bahan bercangkang paling keras',
