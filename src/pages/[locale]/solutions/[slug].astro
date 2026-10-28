@@ -243,7 +243,7 @@ const seoKeywords = solution.data.seoKeywords;
                 <span class="font-display text-lg text-charcoal-900">{item.question}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
               </summary>
-              <div class="px-6 pb-4 text-steel-600 leading-relaxed">{item.answer}</div>
+              <div class="px-6 pb-4 text-steel-600 leading-relaxed" set:html={item.answer}></div>
             </details>
           ))}
         </div>
