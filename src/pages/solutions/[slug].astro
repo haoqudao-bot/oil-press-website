@@ -102,20 +102,17 @@ if (faqLd) allLd.push(faqLd);
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="font-display text-5xl md:text-6xl text-white mb-4">{solution.data.title.en}</h1>
       <p class="text-steel-300 text-lg max-w-3xl">{solution.data.description.en}</p>
+      {solution.slug === 'mustard-oil-pressing' && (
+        <div class="mt-6 pt-4 border-t border-steel-700">
+          <p class="text-amber-400 font-semibold mb-2 text-base">💡 Cold-pressed Kachi Ghani mustard oil?</p>
+          <p class="text-steel-300 text-sm mb-4 max-w-2xl">HN325S and HN426 engineered for Indian 415V/50Hz. CIF to Mundra / Nhava Sheva / Kandla. Tell us your daily mustard target — full factory quote in 24 hours.</p>
+          <a href="/kachi-ghani-mustard-oil-machine-price/" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-charcoal-900 font-semibold px-6 py-3 rounded-lg transition-colors">
+            Get Kachi Ghani Price →
+          </a>
+        </div>
+      )}
     </div>
   </section>
-
-  {solution.slug === 'mustard-oil-pressing' && (
-    <section class="py-6 md:py-8 bg-steel-900">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-amber-400 font-semibold mb-2 text-base">💡 Cold-pressed Kachi Ghani mustard oil?</p>
-        <p class="text-steel-300 text-sm mb-4 max-w-2xl">HN325S and HN426 engineered for Indian 415V/50Hz. CIF to Mundra / Nhava Sheva / Kandla. Tell us your daily mustard target — full factory quote in 24 hours.</p>
-        <a href="/kachi-ghani-mustard-oil-machine-price/" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-charcoal-900 font-semibold px-6 py-3 rounded-lg transition-colors">
-          Get Kachi Ghani Price →
-        </a>
-      </div>
-    </section>
-  )}
 
   <!-- Body Content (Overview, Oil Yield, Why Choose Our Oil Presses, etc.) -->
   {solution.body && (
