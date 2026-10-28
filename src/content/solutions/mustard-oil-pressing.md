@@ -66,7 +66,7 @@ faq:
   - question: Can I produce cold-pressed mustard oil?
     answer: Yes, our Cold Press Hydraulic Oil Press (HN426) is excellent for cold-pressed mustard oil production.
   - question: What is the price of a mustard oil press machine?
-    answer: Get pricing for your production needs. We offer competitive factory-direct pricing.
+    answer: Get pricing for your production needs. We offer competitive factory-direct pricing. See our <a href="/kachi-ghani-mustard-oil-machine-price/">Kachi Ghani mustard oil press price page</a> for exact 24-hour quotes.
   - question: Is steaming necessary before pressing mustard seeds?
     answer: Steaming is recommended for hot-pressed mustard oil as it increases yield by 3-5% and reduces pungency. For cold-pressed (Kachi Ghani) oil, skip steaming to preserve the natural sharp flavor.
   - question: "What is Kachi Ghani mustard oil?"
@@ -82,7 +82,7 @@ faqFr:
   - question: Puis-je produire de l'huile de moutarde pressée à froid ?
     answer: Oui, notre presse hydraulique à froid (HN426) est excellente pour la production d'huile de moutarde pressée à froid.
   - question: Quel est le prix d'une machine de pressage d'huile de moutarde ?
-    answer: Obtenez un prix selon vos besoins de production. Nous offrons des prix compétitifs directs d'usine.
+    answer: Obtenez un prix selon vos besoins de production. Nous offrons des prix compétitifs directs d'usine. Voir notre <a href="/fr/kachi-ghani-mustard-oil-machine-price/">page de prix presse Kachi Ghani</a>.
   - question: La cuisson à la vapeur est-elle nécessaire avant de presser les graines de moutarde ?
     answer: La cuisson à la vapeur est recommandée pour l'huile de moutarde pressée à chaud car elle augmente le rendement de 3 à 5 % et réduit le piquant. Pour l'huile pressée à froid (Kachi Ghani), sautez la vapeur pour préserver la saveur piquante naturelle.
   - question: "Qu'est-ce que l'huile de moutarde Kachi Ghani ?"
@@ -98,7 +98,7 @@ faqAr:
   - question: هل يمكنني إنتاج زيت خردل مضغوط على البارد؟
     answer: نعم، مضغوطنا الهيدروليكي على البارد (HN426) ممتاز لإنتاج زيت الخردل المضغوط على البارد.
   - question: ما هو سعر آلة عصر زيت الخردل؟
-    answer: احصلوا على تسعيرة حسب احتياجات إنتاجكم. نقدم أسعاراً تنافسية مباشرة من المصنع.
+    answer: احصلوا على تسعيرة حسب احتياجات إنتاجكم. نقدم أسعاراً تنافسية مباشرة من المصنع. راجع <a href="/ar/kachi-ghani-mustard-oil-machine-price/">صفحة سعر مكينة ضغط زيت الخردل كاتشي غاني</a>.
   - question: هل التبخير ضروري قبل عصر بذور الخردل؟
     answer: يُنصح بالتبخير لزيت الخردل المضغوط ساخناً لأنه يزيد العائد بنسبة 3-5% ويقلل الحدة. لزيت الخردل المضغوط على البارد (كاتشي غاني)، تخطى التبخير للحفاظ على النكهة الحادة الطبيعية.
   - question: "ما هو زيت الخردل كاتشي غاني؟"
@@ -114,7 +114,7 @@ faqId:
   - question: Apakah saya bisa memproduksi minyak sawi press dingin?
     answer: Ya, mesin press hidrolik dingin kami (HN426) sangat baik untuk produksi minyak sawi press dingin.
   - question: Berapa harga mesin press minyak sawi?
-    answer: Hubungi kami untuk harga sesuai kebutuhan produksi Anda. Kami menawarkan harga langsung pabrik yang kompetitif.
+    answer: Hubungi kami untuk harga sesuai kebutuhan produksi Anda. Kami menawarkan harga langsung pabrik yang kompetitif. Lihat <a href="/id/kachi-ghani-mustard-oil-machine-price/">halaman harga press Kachi Ghani mustard</a>.
   - question: Apakah pengukusan diperlukan sebelum menekan biji sawi?
     answer: Pengukusan disarankan untuk minyak sawi press panas karena meningkatkan hasil sebesar 3-5% dan mengurangi rasa pedas. Untuk minyak press dingin (Kachi Ghani), lewati pengukusan untuk menjaga rasa tajam alami.
   - question: "Apa itu minyak sawi Kachi Ghani?"
