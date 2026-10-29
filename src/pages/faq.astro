@@ -184,6 +184,8 @@ const allLd = [faqLd, breadcrumbLd];
         {faqCategories.map(cat => (
           <a
             href={`#${cat.id}`}
+            data-faq-nav
+            data-target={cat.id}
             class="px-4 py-2 rounded-full bg-steel-100 hover:bg-amber-500 hover:text-white text-steel-700 font-medium text-sm transition-colors"
           >
             {cat.title}
