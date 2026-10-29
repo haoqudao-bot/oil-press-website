@@ -178,71 +178,140 @@ const allLd = [faqLd, breadcrumbLd];
 
   <!-- FAQ Categories -->
   <section class="py-12 md:py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Quick Navigation -->
-      <div class="flex flex-wrap justify-center gap-3 mb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Quick Navigation (mobile only, original style) -->
+      <div class="lg:hidden flex flex-wrap justify-center gap-3 mb-12">
         {faqCategories.map(cat => (
-          <a
-            href={`#${cat.id}`}
-            class="px-4 py-2 rounded-full bg-steel-100 hover:bg-amber-500 hover:text-white text-steel-700 font-medium text-sm transition-colors"
-          >
+          <a href={`#${cat.id}`}
+             class="px-4 py-2 rounded-full bg-steel-100 hover:bg-amber-500 hover:text-white text-steel-700 font-medium text-sm transition-colors">
             {cat.title}
           </a>
         ))}
       </div>
 
-      <!-- FAQ Sections -->
-      {faqCategories.map(cat => (
-        <section id={cat.id} class="mb-16 scroll-mt-24">
-          <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6 pb-3 border-b border-steel-200">
-            {cat.title}
-          </h2>
-          <div class="space-y-4">
-            {cat.faqs.map((faq, index) => (
-              <details
-                class="group bg-white rounded-xl border border-steel-200 hover:border-amber-300 transition-colors shadow-sm overflow-hidden"
-              >
-                <summary class="flex items-start gap-4 p-5 cursor-pointer list-none">
-                  <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-charcoal-900 font-bold text-sm flex items-center justify-center group-open:rotate-45 transition-transform">
-                    {index + 1}
-                  </span>
-                  <h3 class="font-display text-lg text-charcoal-900 flex-1">
-                    {faq.question}
-                  </h3>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </summary>
-                <div class="px-5 pb-5 pl-17 text-steel-600 leading-relaxed border-t border-steel-100 pt-4 ml-12">
-                  {faq.answer}
-                </div>
-              </details>
-            ))}
+      <!-- Desktop two-column -->
+      <div class="faq-layout hidden lg:flex gap-10">
+        <aside class="faq-side w-56 flex-shrink-0">
+          <div class="faq-side-inner sticky top-[92px]">
+            <div class="text-xs uppercase tracking-widest text-steel-400 font-semibold mb-3 px-3">حسب الفئة</div>
+            <nav class="flex flex-col gap-1">
+              {faqCategories.map(cat => (
+                <a href={`#${cat.id}`} data-faq-nav data-target={cat.id}
+                   class="faq-nav-item group flex items-center gap-2 px-3 py-2 rounded-lg text-steel-600 hover:text-charcoal-900 hover:bg-steel-100 transition-colors text-sm">
+                  <span class="faq-indicator w-1 h-6 rounded-full bg-transparent group-[.active]:bg-amber-500 transition-colors"></span>
+                  <span class="faq-label group-[.active]:font-semibold group-[.active]:text-amber-600 transition-colors">{cat.title}</span>
+                </a>
+              ))}
+            </nav>
+          </div>
+        </aside>
+
+        <div class="flex-1 min-w-0">
+          {faqCategories.map(cat => (
+            <section id={cat.id} data-faq-section class="mb-16 scroll-mt-24">
+              <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6 pb-3 border-b border-steel-200">{cat.title}</h2>
+              <div class="space-y-4">
+                {cat.faqs.map((faq, index) => (
+                  <details class="group bg-white rounded-xl border border-steel-200 hover:border-amber-300 transition-colors shadow-sm overflow-hidden">
+                    <summary class="flex items-start gap-4 p-5 cursor-pointer list-none">
+                      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-charcoal-900 font-bold text-sm flex items-center justify-center group-open:rotate-45 transition-transform">{index + 1}</span>
+                      <h3 class="font-display text-lg text-charcoal-900 flex-1">{faq.question}</h3>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <div class="px-5 pb-5 pl-17 text-steel-600 leading-relaxed border-t border-steel-100 pt-4 ml-12">{faq.answer}</div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          ))}
+
+          <section class="mt-16 bg-gradient-to-r from-steel-900 to-steel-700 rounded-2xl p-8 md:p-12 text-center">
+            <h2 class="font-display text-2xl md:text-3xl text-white mb-4">هل لا تزال لديك أسئلة؟</h2>
+            <p class="text-steel-300 mb-6 max-w-xl mx-auto">فريقنا الفني جاهز للمساعدة. اتصل بنا للحصول على نصائح مخصصة وعروض أسعار ودعم ما بعد البيع.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="/ar/contact/" class="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold rounded-lg transition-colors">اتصل بنا</a>
+              <a href="/ar/products/" class="inline-flex items-center gap-2 px-6 py-3 border border-steel-500 hover:border-white text-white font-semibold rounded-lg transition-colors">عرض المنتجات</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Single column on mobile -->
+      <div class="lg:hidden">
+        {faqCategories.map(cat => (
+          <section id={cat.id} data-faq-section class="mb-16 scroll-mt-24">
+            <h2 class="font-display text-2xl md:text-3xl text-charcoal-900 mb-6 pb-3 border-b border-steel-200">{cat.title}</h2>
+            <div class="space-y-4">
+              {cat.faqs.map((faq, index) => (
+                <details class="group bg-white rounded-xl border border-steel-200 hover:border-amber-300 transition-colors shadow-sm overflow-hidden">
+                  <summary class="flex items-start gap-4 p-5 cursor-pointer list-none">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-charcoal-900 font-bold text-sm flex items-center justify-center group-open:rotate-45 transition-transform">{index + 1}</span>
+                    <h3 class="font-display text-lg text-charcoal-900 flex-1">{faq.question}</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-steel-400 group-open:rotate-180 transition-transform flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                  </summary>
+                  <div class="px-5 pb-5 pl-17 text-steel-600 leading-relaxed border-t border-steel-100 pt-4 ml-12">{faq.answer}</div>
+                </details>
+              ))}
+            </div>
+          </section>
+        ))}
+        <section class="mt-16 bg-gradient-to-r from-steel-900 to-steel-700 rounded-2xl p-8 md:p-12 text-center">
+          <h2 class="font-display text-2xl md:text-3xl text-white mb-4">هل لا تزال لديك أسئلة؟</h2>
+          <p class="text-steel-300 mb-6 max-w-xl mx-auto">فريقنا الفني جاهز للمساعدة. اتصل بنا للحصول على نصائح مخصصة وعروض أسعار ودعم ما بعد البيع.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/ar/contact/" class="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold rounded-lg transition-colors">اتصل بنا</a>
+            <a href="/ar/products/" class="inline-flex items-center gap-2 px-6 py-3 border border-steel-500 hover:border-white text-white font-semibold rounded-lg transition-colors">عرض المنتجات</a>
           </div>
         </section>
-      ))}
-
-      <!-- Contact CTA -->
-      <section class="mt-16 bg-gradient-to-r from-steel-900 to-steel-700 rounded-2xl p-8 md:p-12 text-center">
-        <h2 class="font-display text-2xl md:text-3xl text-white mb-4">
-          هل لا تزال لديك أسئلة؟
-        </h2>
-        <p class="text-steel-300 mb-6 max-w-xl mx-auto">
-          فريقنا الفني جاهز للمساعدة. اتصل بنا للحصول على نصائح مخصصة وعروض أسعار ودعم ما بعد البيع.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a
-            href="/ar/contact/"
-            class="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-charcoal-900 font-semibold rounded-lg transition-colors"
-          >
-            اتصل بنا
-          </a>
-          <a
-            href="/ar/products/"
-            class="inline-flex items-center gap-2 px-6 py-3 border border-steel-500 hover:border-white text-white font-semibold rounded-lg transition-colors"
-          >
-            عرض المنتجات
-          </a>
-        </div>
-      </section>
+      </div>
     </div>
   </section>
+
+  <style is:global>
+    [dir="rtl"] .faq-layout { flex-direction: row-reverse; }
+    [dir="rtl"] .faq-side { margin-left: 0; }
+    [dir="rtl"] .faq-nav-item { justify-content: flex-end; }
+    [dir="rtl"] .faq-indicator { margin-right: 0; }
+  </style>
+
+  <script>
+    const sections = document.querySelectorAll('[data-faq-section]');
+    const navItems = document.querySelectorAll('[data-faq-nav]');
+    function setActive(id) {
+      navItems.forEach(a => {
+        a.classList.toggle('active', a.dataset.target === id);
+        if (a.classList.contains('faq-nav-pill')) {
+          if (a.dataset.target === id) { a.classList.add('bg-amber-500','text-white'); a.classList.remove('bg-steel-100','text-steel-700'); }
+          else { a.classList.remove('bg-amber-500','text-white'); a.classList.add('bg-steel-100','text-steel-700'); }
+        }
+      });
+    }
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+      if (visible.length) setActive(visible[0].target.id);
+    }, { rootMargin: '-120px 0px -55% 0px', threshold: [0.1,0.3,0.5,0.7] });
+    sections.forEach(s => observer.observe(s));
+    navItems.forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = a.dataset.target, target = document.getElementById(id);
+        if (target) {
+          const top = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: 'smooth' });
+          history.pushState(null, '', '#'+id);
+          setActive(id);
+        }
+      });
+    });
+    window.addEventListener('load', () => {
+      if (location.hash) {
+        const id = location.hash.slice(1), target = document.getElementById(id);
+        if (target) setTimeout(() => {
+          const top = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: 'auto' });
+          setActive(id);
+        }, 100);
+      }
+    });
+  </script>
 </BaseLayout>
