@@ -26,6 +26,41 @@ const whatsappNumber = '8618957149128';
 const baseUrl = 'https://www.hydoilpress.com';
 const locPrefix = locale === 'en' ? '' : `/${locale}`;
 
+// Seed name → solution slug mapping (covers all name variants across market data)
+const seedToSolutionSlug: Record<string, string> = {
+  // Peanut / Groundnut variants
+  'Peanut': 'peanut-oil-pressing',
+  'Groundnut': 'peanut-oil-pressing',
+  'Groundnut (Peanut)': 'peanut-oil-pressing',
+  'Peanut/Groundnut': 'peanut-oil-pressing',
+
+  // Coconut variants
+  'Coconut': 'coconut-oil-pressing',
+  'Coconut (VCO)': 'coconut-oil-pressing',
+
+  // Others
+  'Sesame': 'sesame-oil-pressing',
+  'Olive': 'olive-oil-pressing',
+  'Sunflower': 'sunflower-oil-pressing',
+  'Mustard': 'mustard-oil-pressing',
+  'Shea Butter': 'shea-butter-pressing',
+  'Palm Kernel': 'palm-oil-pressing',
+  'Cottonseed': 'cottonseed-oil-pressing',
+  'Soybean': 'soybean-oil-pressing',
+  'Rapeseed': 'flaxseed-oil-pressing',     // no dedicated rapeseed page → fallback
+  'Canola': 'flaxseed-oil-pressing',      // same
+  'Flaxseed': 'flaxseed-oil-pressing',
+  'Linseed': 'flaxseed-oil-pressing',
+  'Walnut': 'walnut-oil-pressing',
+  'Almond': 'almond-oil-pressing',
+  'Avocado': 'avocado-oil-pressing',
+  'Castor': 'castor-oil-pressing',
+  'Rice Bran': 'rice-bran-oil-pressing',
+  'Moringa': '',                           // no page → skip
+  'Hemp': '',                              // no page → skip
+  'Animal Fat': 'animal-fat-oil-pressing',
+};
+
 function productTitle(p: any) {
   return p.data.title[locale] || p.data.title.en;
 }
@@ -89,14 +124,29 @@ const faqLd = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title mb-12">{marketData.seedsTitle}</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {marketData.seeds.map(seed => (
-          <div class="bg-steel-50 rounded-2xl p-6 border border-steel-100">
-            <div class="text-3xl mb-3">{seed.emoji}</div>
-            <h3 class="font-display text-xl text-charcoal-900 mb-2">{seed.name}</h3>
-            <p class="text-sm text-steel-600 mb-3">{seed.description}</p>
-            <div class="text-amber-500 font-semibold text-sm">{seed.yield}</div>
-          </div>
-        ))}
+        {marketData.seeds.map(seed => {
+          const solutionSlug = seedToSolutionSlug[seed.name];
+          const wrapperClass = "bg-steel-50 rounded-2xl p-6 border border-steel-100";
+          const cardClass = "card-hover bg-steel-50 rounded-2xl p-6 border border-steel-100 block group cursor-pointer hover:border-amber-300 transition-all";
+          if (solutionSlug) {
+            return (
+              <a href={localePath(`/solutions/${solutionSlug}/`)} class={cardClass}>
+                <div class="text-3xl mb-3">{seed.emoji}</div>
+                <h3 class="font-display text-xl text-charcoal-900 mb-2 group-hover:text-amber-600 transition-colors">{seed.name}</h3>
+                <p class="text-sm text-steel-600 mb-3">{seed.description}</p>
+                <div class="text-amber-500 font-semibold text-sm">{seed.yield} →</div>
+              </a>
+            );
+          }
+          return (
+            <div class={wrapperClass}>
+              <div class="text-3xl mb-3">{seed.emoji}</div>
+              <h3 class="font-display text-xl text-charcoal-900 mb-2">{seed.name}</h3>
+              <p class="text-sm text-steel-600 mb-3">{seed.description}</p>
+              <div class="text-amber-500 font-semibold text-sm">{seed.yield}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>
