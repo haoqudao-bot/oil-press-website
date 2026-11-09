@@ -89,6 +89,10 @@ const organizationLd = {
   alternateName: 'Haonuo Machinery',
   url: orgUrl,
   sameAs: ['https://grainocraft.com'],
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'section:first-of-type p:first-of-type'],
+  },
   logo: 'https://www.hydoilpress.com/apple-touch-icon.png',
   description: (t as any).common?.orgDesc || 'Professional hydraulic oil press manufacturer since 2010',
   address: {

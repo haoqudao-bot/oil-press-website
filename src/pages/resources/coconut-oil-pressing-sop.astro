@@ -12,8 +12,23 @@ const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
   { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources/' },
   { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/coconut-oil-pressing-sop/' },
 ]};
+const howToLd = {
+  '@context': 'https://schema.org', '@type': 'HowTo',
+  name: 'Coconut Oil Pressing Step by Step',
+  description: 'Virgin coconut oil (VCO) cold-press SOP. Load grated coconut → hydraulic press at 27-30 MPa → filter & bottle.',
+  tool: [
+    { '@type': 'HowToTool', name: 'HN426 Cold-Press Hydraulic Oil Press' },
+    { '@type': 'HowToTool', name: 'Pneumatic Oil Filter Press' },
+  ],
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Prepare feedstock', text: 'Choose fresh coconut or copra (dried meat). Grate into fine flakes.' },
+    { '@type': 'HowToStep', position: 2, name: 'Load into press', text: 'Load 100 kg grated coconut into barrel. Use double-barrel for continuous output.' },
+    { '@type': 'HowToStep', position: 3, name: 'Cold hydraulic pressing', text: 'Press at 27-30 MPa, keep temperature ≤ 60 °C to preserve VCO quality. ~2 hours per batch.' },
+    { '@type': 'HowToStep', position: 4, name: 'Filter & bottle', text: 'Filter with press filter. Bottle within 72 hours for maximum freshness.' },
+  ],
+};
 ---
-<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd]}>
+<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd, howToLd]}>
 <section class="bg-steel-50 py-4 border-b border-steel-100">
   <div class="max-w-7xl mx-auto px-4">
     <nav class="flex items-center gap-2 text-sm text-steel-500">

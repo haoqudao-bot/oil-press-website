@@ -35,9 +35,26 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/mustard-oil-pressing-sop/' },
   ],
 };
+const howToLd = {
+  '@context': 'https://schema.org', '@type': 'HowTo',
+  name: 'Mustard Oil Pressing Step by Step',
+  description: 'Cold-press mustard oil SOP. Seed cleaning → load → hydraulic press at 27-30 MPa → filter. ~2 hours per batch.',
+  tool: [
+    { '@type': 'HowToTool', name: 'Seed Cleaner' },
+    { '@type': 'HowToTool', name: 'HN325 Standard Hydraulic Oil Press' },
+    { '@type': 'HowToTool', name: 'Pneumatic Oil Filter Press' },
+  ],
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Seed cleaning', text: 'Clean mustard seeds to remove dust, stones, and broken grains. 20-30 min per 100 kg.' },
+    { '@type': 'HowToStep', position: 2, name: 'Load into tabung press', text: 'Load clean seeds into barrel. 3 min loading time.' },
+    { '@type': 'HowToStep', position: 3, name: 'Cold hydraulic pressing', text: 'Press at 27-30 MPa, keep temperature ≤ 60 °C to preserve pungency. ~2 hours per batch.' },
+    { '@type': 'HowToStep', position: 4, name: 'Unload & collect oil', text: 'Remove cake from barrel. Collect filtered oil.' },
+    { '@type': 'HowToStep', position: 5, name: 'Store & bottle', text: 'Store unrefined oil. Bottle within 72 hours for best flavor retention.' },
+  ],
+};
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[breadcrumbLd, articleLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[breadcrumbLd, articleLd, howToLd]}>
 
 <section class="bg-steel-50 py-4 border-b border-steel-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -12,8 +12,25 @@ const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
   { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources/' },
   { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/palm-kernel-oil-pressing-sop/' },
 ]};
+const howToLd = {
+  '@context': 'https://schema.org', '@type': 'HowTo',
+  name: 'Palm Kernel Oil Pressing Step by Step',
+  description: 'Shell cracking → kernel crushing → high-pressure hydraulic pressing → filtration. 45-52% yield on Haonuo HN426/HN500 presses.',
+  tool: [
+    { '@type': 'HowToTool', name: 'Palm Nut Cracker' },
+    { '@type': 'HowToTool', name: 'Seed Crusher' },
+    { '@type': 'HowToTool', name: 'HN426 Cold-Press Hydraulic Oil Press' },
+    { '@type': 'HowToTool', name: 'Pneumatic Oil Filter Press' },
+  ],
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Shell cracking & kernel separation', text: 'Use a palm nut cracker to separate kernels from hard shells. Target kernel purity ≥ 95 %. Moisture 6-8 %.' },
+    { '@type': 'HowToStep', position: 2, name: 'Kernel crushing', text: 'Crush kernels with a seed crusher to fine 3-5 mm grind. Optional: steam 10 min at 90 °C to boost yield by 2-4 %.' },
+    { '@type': 'HowToStep', position: 3, name: 'High-pressure hydraulic pressing', text: 'Load 80-100 kg crushed kernel into barrel. Press at 42 MPa. Cycle time 40-50 min per batch.' },
+    { '@type': 'HowToStep', position: 4, name: 'Filtration & settling', text: 'PKO is light golden. Use filter press for clarity. Allow 72 hours settling before bottling.' },
+  ],
+};
 ---
-<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd]}>
+<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd, howToLd]}>
 <section class="bg-steel-50 py-4 border-b border-steel-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="flex items-center gap-2 text-sm text-steel-500">

@@ -12,8 +12,25 @@ const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbLis
   { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.hydoilpress.com/resources/' },
   { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/resources/shea-butter-pressing-sop/' },
 ]};
+const howToLd = {
+  '@context': 'https://schema.org', '@type': 'HowTo',
+  name: 'Shea Butter Pressing Step by Step',
+  description: 'Cold-press shea butter SOP. Crack & clean nuts → grind → hydraulic press → filter & cool.',
+  tool: [
+    { '@type': 'HowToTool', name: 'Nut Cracker' },
+    { '@type': 'HowToTool', name: 'Grinding Mill' },
+    { '@type': 'HowToTool', name: 'HN426 Cold-Press Hydraulic Oil Press' },
+    { '@type': 'HowToTool', name: 'Pneumatic Oil Filter Press' },
+  ],
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Crack & clean shea nuts', text: 'Use a nut cracker to remove hard shells. Wash kernels thoroughly to remove dust and debris.' },
+    { '@type': 'HowToStep', position: 2, name: 'Grind into fine paste', text: 'Grind kernels into a smooth, fine paste for maximum surface area exposure.' },
+    { '@type': 'HowToStep', position: 3, name: 'Hydraulic pressing', text: 'Load paste into barrel. Press at 27-30 MPa (HN426) or 365 t force (HN365). Hold pressure to extract butter.' },
+    { '@type': 'HowToStep', position: 4, name: 'Filter & cool', text: 'Filter the molten butter. Allow slow cooling for smooth texture. Cosmetic-grade use HN426 for lower heat exposure.' },
+  ],
+};
 ---
-<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd]}>
+<BaseLayout title={title} description={description} jsonLd={[breadcrumbLd, howToLd]}>
 <section class="bg-steel-50 py-4 border-b border-steel-100">
   <div class="max-w-7xl mx-auto px-4">
     <nav class="flex items-center gap-2 text-sm text-steel-500">

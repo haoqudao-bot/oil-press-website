@@ -1,0 +1,352 @@
+# Haonuo Machinery — hydoilpress.com (llms-full.txt)
+
+Extended dataset for deep research AI agents. This file provides page summaries,
+key specifications, and factual data so crawlers can answer buyer questions
+without fetching every page individually.
+
+## Company Quick Facts
+
+- **Full name**: Shandong Haonuo Machinery Equipment Group Co., Ltd.
+- **Brand**: Haonuo Machinery
+- **Founded**: 2010
+- **Location**: Qingzhou, Weifang, Shandong Province, China
+- **Factory**: 8,000 m2 workshop, 200+ workers, own CNC machining center
+- **Exported to**: 40+ countries (Nigeria, Kenya, India, Indonesia, Egypt, Pakistan, South Africa, Philippines, UAE, UK, USA)
+- **Production capacity**: 300-620 ton hydraulic presses + seed processing equipment
+- **Contact**: info@hydoilpress.com, +86-18957149128 (WhatsApp/WeChat)
+- **Languages supported**: English, French, Arabic, Indonesian
+- **Warranty**: 1-year full machine, 3-month wearing parts, 48-hour technical response
+- **Certifications**: CE, ISO 9001
+
+---
+
+## Core Products (Hydraulic Oil Press Machines)
+
+### HN325 Standard Hydraulic Oil Press
+URL: https://www.hydoilpress.com/products/standard-hydraulic-oil-press/
+Slug: standard-hydraulic-oil-press | Model: HN325 | Force: 325 tons | Pressure: 27-30 MPa
+
+Summary: Entry-level double-barrel hydraulic press for small businesses and village-level oil mills.
+Single-phase power available. Best for low-to-medium daily volume.
+
+- **Capacity**: 200-500 kg/day (8-hour shift, single barrel)
+- **Cycle time**: 25-35 min per batch
+- **Oil yield**: peanut 40-50%, sesame 42-54%, sunflower 38-48%, mustard 35-45%
+- **Power**: 380V/50Hz 3-phase 7.5 kW (220V 1-phase available as custom)
+- **Dimensions**: 1750 x 1050 x 1700 mm | Weight: ~1,200 kg
+- **Materials**: 27SiMn steel cylinder, 304 stainless steel barrel
+- **Process**: Hot press (standard), cold press (optional cooler)
+- **Target users**: Small business owners, local oil mills, home-based production
+- **Recommended for**: Sesame, peanut, sunflower, mustard, canola
+- **FOB Price range**: Contact for quotation (single/double barrel options)
+
+FAQ:
+- Q: Can it run on 220V? A: Standard is 380V 3-phase. 220V 1-phase available as custom order (+$300).
+- Q: How many kg per hour? A: 25-40 kg/hour depending on seed type and moisture content.
+- Q: Is it suitable for cold-press (VCO)? A: Yes, add optional cooling system.
+
+### HN365 Commercial Hydraulic Oil Press
+URL: https://www.hydoilpress.com/products/commercial-hydraulic-oil-press/
+Slug: commercial-hydraulic-oil-press | Model: HN365 | Force: 365 tons | Pressure: 27-30 MPa
+
+Summary: Mid-range commercial press with double-barrel standard. Higher throughput with less waiting
+between batches. Most popular model in Nigeria, Kenya, and India.
+
+- **Capacity**: 500-1,200 kg/day (8-hour shift, double barrel)
+- **Cycle time**: 30-40 min per batch
+- **Oil yield**: peanut 40-50%, sesame 42-54%, sunflower 38-48%, cottonseed 28-38%
+- **Power**: 380V/50Hz 3-phase 11 kW (415V/60Hz for Nigeria custom)
+- **Dimensions**: 1950 x 1150 x 1750 mm | Weight: ~1,500 kg
+- **Materials**: 27SiMn steel cylinder, 304 stainless steel barrel
+- **Process**: Hot press (standard), cold press capable (temperature-controlled)
+- **Target users**: Mid-size commercial oil mills, cooperative processing centers
+- **Recommended for**: Peanut, sesame, sunflower, mustard, rapeseed, olive
+- **FOB Price range**: Contact for quotation
+
+### HN426 Cold-Press Hydraulic Oil Press
+URL: https://www.hydoilpress.com/products/cold-press-hydraulic-oil-press/
+Slug: cold-press-hydraulic-oil-press | Model: HN426 | Force: 500 tons | Pressure: 36-42 MPa
+
+Summary: Cold-press optimized for premium and hard-to-press seeds. 42 MPa pressure releases
+maximum oil from dense kernels (palm kernel, shea nut, walnut). Maintains low temperature
+(≤60°C) to preserve nutritional value and flavor.
+
+- **Capacity**: 400-800 kg/day (8-hour shift)
+- **Cycle time**: 40-60 min per batch (harder seeds take longer)
+- **Oil yield**: coconut 55-65% (VCO quality), walnut 55-65%, palm kernel 45-52%, shea butter 40-50%
+- **Power**: 380V/50Hz 3-phase 15 kW
+- **Dimensions**: 2050 x 1200 x 1850 mm | Weight: ~1,800 kg
+- **Pressure**: Up to 42 MPa (vs 27-30 MPa on standard models)
+- **Key feature**: Enhanced pressure frame for hard seeds, temperature-controlled cooling system
+- **Target users**: Premium oil producers, cosmetic-grade shea butter/VCO, health food brands
+- **Recommended for**: Coconut (VCO), palm kernel, shea butter, walnut, almond, avocado
+- **FOB Price range**: Contact for quotation
+
+### HN500 Ultra High Pressure Hydraulic Oil Press
+URL: https://www.hydoilpress.com/products/ultra-high-pressure-hydraulic-oil-press/
+Slug: ultra-high-pressure-hydraulic-oil-press | Model: HN500 | Force: 620 tons | Pressure: 48-52 MPa
+
+Summary: Industrial flagship model for continuous multi-ton production. Highest pressure
+in Haonuo lineup. Suitable for buyers scaling beyond single-barrel operation.
+
+- **Capacity**: 1,500-3,000 kg/day (with 2-3 barrel configuration)
+- **Cycle time**: 35-50 min per batch
+- **Oil yield**: highest across all models (adds 2-5% yield vs HN365 on hard seeds)
+- **Power**: 380V/50Hz 3-phase 22 kW
+- **Dimensions**: 2250 x 1300 x 1950 mm | Weight: ~2,500 kg
+- **Materials**: Reinforced 27SiMn steel, thicker barrel walls
+- **Target users**: Large commercial mills, factory-level production, multi-seed processing
+- **FOB Price range**: Contact for quotation
+
+---
+
+## Equipment Categories
+
+### Hydraulic Oil Press Machines
+URL: https://www.hydoilpress.com/products/hydraulic-oil-press/
+All 4 flagship models + heavy-duty variants. Compare HN325/HN365/HN426/HN500 side by side.
+
+### Seed Processing Equipment
+URL: https://www.hydoilpress.com/products/seed-processing-equipment/
+Seed crushers (high-speed 7.5 kW, industrial 15 kW), integrated feeder-crusher-roasters,
+oilseed pre-press. Complementary equipment for complete production lines.
+
+### Roasting & Steaming Equipment
+URL: https://www.hydoilpress.com/products/roasting-steaming-equipment/
+Automatic drum roasters (electric + wood-fired), thermal oil roasting pans. Pre-heating
+seeds boosts yield by 2-4% on most oil types.
+
+### Filtration & Refining Equipment
+URL: https://www.hydoilpress.com/products/filtration-refining-equipment/
+Pneumatic oil filter presses, crude oil refining systems. Post-extraction clarification
+for food-grade and cosmetic-grade oil quality.
+
+---
+
+## Oil Seed Solutions
+
+Each page covers: suitable Haonuo model selection, pre-processing requirements,
+typical yield, batch cycle time, and buyer recommendations by country/region.
+
+### Peanut Oil Pressing
+URL: https://www.hydoilpress.com/solutions/peanut-oil-pressing/
+Primary models: HN325 (small), HN365 (medium), HN426 (cold-press premium)
+Yield: 40-50% hot press | Key markets: Nigeria, India, Indonesia, Philippines, Kenya
+
+### Sesame Oil Pressing
+URL: https://www.hydoilpress.com/solutions/sesame-oil-pressing/
+Primary models: HN325-HN426 (all suitable)
+Yield: 42-54% | Key markets: India, Nigeria, Middle East, Pakistan, Turkey
+
+### Coconut Oil Pressing
+URL: https://www.hydoilpress.com/solutions/coconut-oil-pressing/
+Primary model: HN426 (cold-press for VCO quality)
+Yield: 55-65% cold-press (VCO), 60-70% hot-press
+Key markets: Philippines, Indonesia, Sri Lanka, India, Thailand
+
+### Sunflower Oil Pressing
+URL: https://www.hydoilpress.com/solutions/sunflower-oil-pressing/
+Primary models: HN325-HN365
+Yield: 38-48% | Key markets: South Africa, Kenya, India, Pakistan, Europe
+
+### Mustard Oil Pressing (Kachi Ghani)
+URL: https://www.hydoilpress.com/solutions/mustard-oil-pressing/
+Primary model: HN325-HN365
+Yield: 35-45% | Key markets: India, Pakistan, Bangladesh
+Note: Kachi Ghani (cold-pressed mustard oil) requires temperature control ≤60°C
+
+### Palm Kernel Oil Pressing
+URL: https://www.hydoilpress.com/solutions/palm-oil-pressing/
+Primary model: HN426-HN500 (hard seed needs 42+ MPa pressure)
+Yield: 45-52% | Key markets: Indonesia, Malaysia, Nigeria
+
+### Shea Butter Pressing
+URL: https://www.hydoilpress.com/solutions/shea-butter-pressing/
+Primary models: HN365 (food-grade), HN426 (cosmetic-grade)
+Yield: 40-50% | Key markets: Nigeria, Ghana, Burkina Faso, Mali
+
+### All Oil Seed Solutions Hub
+URL: https://www.hydoilpress.com/solutions/
+20+ oil seed guides including soybean, avocado, walnut, almond, cottonseed, castor,
+rice bran, flaxseed, rapeseed/canola, olive, safflower.
+
+---
+
+## Buyer Guides & Resources
+
+### Hydraulic Oil Press Buying Guide
+URL: https://www.hydoilpress.com/resources/hydraulic-oil-press-buying-guide/
+Covers: How to choose tonnage (325/365/426/500), pressure requirements, barrel count
+(single vs double), heat exchanger options, 220V vs 380V electrical, factory verification
+checklist before paying deposit. Key question: "How many kg per day do you need?"
+
+### Oil Press Machine Price Guide
+URL: https://www.hydoilpress.com/resources/oil-press-machine-price-guide/
+Price range by model and configuration. Factors affecting price: tonnage, barrel type,
+voltage customization, included accessories (roaster, filter, conveyor), FOB vs CIF.
+No exact prices listed — contact for quotation.
+
+### How to Maximize Oil Yield
+URL: https://www.hydoilpress.com/resources/how-to-maximize-oil-yield/
+Top yield factors: seed moisture content (8-12% optimal), particle size (3-5 mm),
+pre-heat temperature, pressure applied, holding time, cake thickness control.
+
+### Cold Press vs Hot Press Oil
+URL: https://www.hydoilpress.com/resources/cold-press-vs-hot-press-oil/
+Cold press: higher quality, more nutrients preserved, lower yield (5-10% less).
+Hot press: higher yield, darker color, suitable for bulk food-grade oil.
+When to choose cold press: VCO, mustard Kachi Ghani, cosmetic shea butter, avocado.
+
+### Complete Oil Production Line Guide
+URL: https://www.hydoilpress.com/resources/complete-oil-production-line-guide/
+From seed to bottled oil: cleaning → crushing → cooking → pressing → filtration →
+settling → bottling. Haonuo supplies presses, roasters, crushers, filters, conveyors,
+and refining systems for complete turnkey lines.
+
+### SOP: Palm Kernel Oil Pressing
+URL: https://www.hydoilpress.com/resources/palm-kernel-oil-pressing-sop/
+4-step field-tested process: (1) shell cracking → (2) kernel crushing → (3) high-pressure
+hydraulic pressing at 42 MPa, 40-50 min/batch → (4) filtration & 72-hour settling.
+45-52% yield, 6-8% residual oil in cake. Recommended models: HN426, HN500.
+
+### SOP: Mustard Oil Pressing (Cold + Hot)
+URL: https://www.hydoilpress.com/resources/mustard-oil-pressing-sop/
+Cold-press Kachi Ghani: 5-step process targeting ≤60°C temperature.
+Hot-press: 5-step process with 10-15 min steam pre-heat at 90°C for 2-4% higher yield.
+Recommended models: HN325-HN365.
+
+### SOP: Coconut Oil Pressing (VCO)
+URL: https://www.hydoilpress.com/resources/coconut-oil-pressing-sop/
+Virgin Coconut Oil cold-press SOP using fresh coconut or copra.
+4 steps: prepare feedstock → load → cold press at 27-30 MPa, ≤60°C → filter & bottle.
+Recommended model: HN426.
+
+### SOP: Shea Butter Pressing
+URL: https://www.hydoilpress.com/resources/shea-butter-pressing-sop/
+Cosmetic-grade (HN426) vs food-grade (HN365) configurations.
+4 steps: crack & clean → grind → hydraulic press → filter & cool.
+
+---
+
+## Market Pages
+
+Regional buying guides: common oil seeds, local electrical grids, typical buyer profiles,
+recommended Haonuo models per country.
+
+### Nigeria
+URL: https://www.hydoilpress.com/markets/nigeria/
+Top seeds: peanut (groundnut), palm kernel, cottonseed, sesame, shea
+Grid: 415V / 50Hz (HN365 + 415V customization needed)
+Popular model: HN365 (double barrel, commercial grade)
+
+### Kenya
+URL: https://www.hydoilpress.com/markets/kenya/
+Top seeds: sunflower, peanut, sesame, cottonseed
+Popular models: HN325 (small mill), HN365 (commercial)
+
+### India
+URL: https://www.hydoilpress.com/markets/india/
+Top seeds: mustard, sesame, peanut, coconut, sunflower
+Grid: 415V / 50Hz
+Special focus: Kachi Ghani (cold-press mustard oil) — HN325-HN365
+
+### Indonesia
+URL: https://www.hydoilpress.com/markets/indonesia/
+Top seeds: coconut, palm kernel, peanut
+Special focus: VCO (coconut), palm kernel oil — HN426 recommended
+
+### Egypt
+URL: https://www.hydoilpress.com/markets/egypt/
+Top seeds: sesame, olive, peanut, sunflower
+
+### Pakistan
+URL: https://www.hydoilpress.com/markets/pakistan/
+Top seeds: sesame, mustard, peanut, cottonseed, sunflower
+
+### Philippines
+URL: https://www.hydoilpress.com/markets/philippines/
+Top seeds: coconut, peanut, sesame, sunflower
+Special focus: VCO production — HN426
+
+### South Africa
+URL: https://www.hydoilpress.com/markets/south-africa/
+Top seeds: sunflower, peanut, soybean
+
+### Middle East
+URL: https://www.hydoilpress.com/markets/middle-east/
+Top seeds: sesame, walnut, olive, almond
+
+### USA
+URL: https://www.hydoilpress.com/markets/usa/
+Top seeds: sunflower, peanut, hemp, almond
+
+### UK
+URL: https://www.hydoilpress.com/markets/uk/
+Top seeds: rapeseed/canola, sunflower, flaxseed
+
+---
+
+## Tools & Quick Utilities
+
+### ROI Calculator
+URL: https://www.hydoilpress.com/roi-calculator/
+Input: seed type, daily capacity, current oil price. Output: estimated payback period
+and monthly revenue. Helps buyers decide which Haonuo model fits their budget.
+
+### Model Comparison
+URL: https://www.hydoilpress.com/products/model-comparison/
+Side-by-side table of HN325 vs HN365 vs HN426 vs HN500: tonnage, pressure, daily capacity,
+power, dimensions, weight, target use case.
+
+---
+
+## Contact & Buyer Resources
+
+### Contact Page
+URL: https://www.hydoilpress.com/contact/
+Quote request form with fields: name, company, email, phone, country, product interest,
+daily capacity target, message. WhatsApp direct link for instant chat.
+
+### FAQ Page
+URL: https://www.hydoilpress.com/faq/
+50+ questions covering: machine selection, electrical requirements, lead times, shipping,
+installation, spare parts, warranty, maintenance, troubleshooting.
+
+### About Haonuo Machinery
+URL: https://www.hydoilpress.com/about/
+Company background, factory tour, team, quality control, export history.
+
+### Services (OEM / Customization)
+URL: https://www.hydoilpress.com/services/
+Voltage customization (220V/380V/415V/480V), barrel modification, white-label/OEM,
+turnkey project consulting, installation & training.
+
+### Cold-Press Oil Machine Price
+URL: https://www.hydoilpress.com/cold-press-oil-machine-price/
+Dedicated pricing inquiry page for cold-press machines (HN426) suitable for VCO,
+shea butter, walnut, almond oil.
+
+### Oil Machine Price (Generic)
+URL: https://www.hydoilpress.com/oil-machine-price/
+General price inquiry page for all Haonuo hydraulic oil press models.
+
+### Kachi Ghani Mustard Oil Machine Price
+URL: https://www.hydoilpress.com/kachi-ghani-mustard-oil-machine-price/
+Dedicated India market price page for cold-press mustard oil (Kachi Ghani) production.
+
+---
+
+## Hydraulic Press Range Hub
+URL: https://www.hydoilpress.com/hydraulic-oil-press-machine/
+Overview page explaining Haonuo's 4-model hydraulic press lineup, how tonnage maps to
+use cases, and which model fits which daily capacity target.
+
+---
+
+## Language Prefixes
+- English: root path (no prefix)
+- French: /fr/
+- Arabic: /ar/
+- Indonesian: /id/
+
+Example: https://www.hydoilpress.com/fr/products/standard-hydraulic-oil-press/
