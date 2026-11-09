@@ -9,8 +9,8 @@ const title = resource?.data.title.fr || resource?.data.title.en || 'SOP de pres
 const description = resource?.data.description.fr || resource?.data.description.en || 'SOP de pressage à froid pour l\'huile de coco vierge';
 const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.hydoilpress.com/fr/' },
-  { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources' },
-  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/coconut-oil-pressing-sop' },
+  { '@type': 'ListItem', position: 2, name: 'Ressources', item: 'https://www.hydoilpress.com/fr/resources/' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/fr/resources/coconut-oil-pressing-sop/' },
 ]};
 ---
 <BaseLayout locale="fr" title={title} description={description} jsonLd={[breadcrumbLd]}>

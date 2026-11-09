@@ -9,8 +9,8 @@ const title = resource?.data.title.id || resource?.data.title.en || 'SOP Pengepr
 const description = resource?.data.description.id || resource?.data.description.en || 'SOP pengepresan dingin untuk minyak kelapa murni';
 const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://www.hydoilpress.com/id/' },
-  { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources' },
-  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/coconut-oil-pressing-sop' },
+  { '@type': 'ListItem', position: 2, name: 'Sumber Daya', item: 'https://www.hydoilpress.com/id/resources/' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/id/resources/coconut-oil-pressing-sop/' },
 ]};
 ---
 <BaseLayout locale="id" title={title} description={description} jsonLd={[breadcrumbLd]}>

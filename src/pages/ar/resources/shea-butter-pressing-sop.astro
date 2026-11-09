@@ -10,8 +10,8 @@ const title = resource?.data.title.ar || 'إجراءات تشغيلية قياس
 const description = resource?.data.description.ar || 'إجراءات تشغيلية قياسية لاستخراج زبدة الشيا';
 const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.hydoilpress.com/ar/' },
-  { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources' },
-  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/shea-butter-pressing-sop' },
+  { '@type': 'ListItem', position: 2, name: 'الموارد', item: 'https://www.hydoilpress.com/ar/resources/' },
+  { '@type': 'ListItem', position: 3, name: title, item: 'https://www.hydoilpress.com/ar/resources/shea-butter-pressing-sop/' },
 ]};
 ---
 <BaseLayout locale={locale} title={title} description={description} jsonLd={[breadcrumbLd]}>
