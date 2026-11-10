@@ -1,9 +1,9 @@
 ---
 title:
-  en: "Oil Machine Price 2026: What a Hydraulic Press Costs"
-  fr: "Prix des Machines à Huile 2026 : Ce que coûte une presse hydraulique"
-  ar: "سعر آلة الزيت 2026: ما الذي تكلفه المكبس الهيدروليكي"
-  id: "Harga Mesin Minyak 2026: Berapa Biaya Press Hidrolik"
+  en: "How Oil Press Machine Prices Are Calculated (2026 Cost Breakdown)"
+  fr: "Comment sont calculés les prix des presses à huile (décomposition des coûts 2026)"
+  ar: "كيف يتم حساب أسعار مكابس الزيت الهيدروليكية (تفصيل التكلفة 2026)"
+  id: "Bagaimana Harga Mesin Press Minyak Dihitung (Rincian Biaya 2026)"
 description:
   en: "Oil press machine price guide: what shapes the quote (capacity, pressure, configuration, shipping, materials), landed cost breakdown, and budget planning."
   fr: "Guide des prix des presses à huile : ce qui forme le devis (capacité, pression, configuration, conditions d'expédition, matériaux), le détail du coût de débarquement total, et comment budgétiser sans grille tarifaire publique."
@@ -101,3 +101,5 @@ A complete RFQ returns a precise quote and a line layout in one exchange, avoidi
 ## Get Your Quote
 
 Send your seed type and daily output target through our <a href="/contact/" data-static-en-only>contact page</a>. We reply within 24 hours with a model recommendation, a complete equipment list, and a quote with transparent line items — no hidden extras.
+
+Looking for our current oil machine price list for HN325, HN365, HN426 and HN500 models? Visit the <a href="/oil-machine-price/" data-static-en-only>price landing page</a> for factory-direct ranges, or request a <a href="/cold-press-oil-machine-price/" data-static-en-only>cold-press-specific quote</a> if you press coconut, walnut, or premium cold-pressed oils.

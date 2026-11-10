@@ -11,8 +11,8 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      // 广告落地页（noindex）和 404 页面不进 sitemap
-      filter: (page) => !/\/(ads|404)(\/|$)/.test(page),
+      // 广告落地页、404 和法律页（privacy-policy / terms-of-service / cookie-policy 均设 noindex, nofollow）不进 sitemap
+      filter: (page) => !/\/(ads|404|privacy-policy|terms-of-service|cookie-policy)(\/|$)/.test(page),
       // 补充 lastmod（取构建日期），便于搜索引擎评估内容新鲜度
       serialize(item) {
         return { ...item, lastmod: new Date().toISOString().slice(0, 10) };

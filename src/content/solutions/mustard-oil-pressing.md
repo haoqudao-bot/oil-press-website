@@ -5,10 +5,10 @@ title:
   ar: حل عصر زيت الخردل
   id: Solusi Penekanan Minyak Sawi
 seoTitle:
-  en: Mustard Oil Machine Price & Kachi Ghani Press
-  fr: Prix des Machines à Huile de Moutarde & Presse Kachi Ghani
-  ar: سعر آلة زيت الخردل ومكبس كاتشي غاني
-  id: Harga Mesin Minyak Sawi & Press Kachi Ghani
+  en: Mustard Oil Pressing — Kachi Ghani & Cold Press Process
+  fr: Pressage d'Huile de Moutarde — Procédé Kachi Ghani & Pressage à Froid
+  ar: عصر زيت الخردل — مكبس كاتشي غاني & عملية العصر على البارد
+  id: Penekanan Minyak Sawi — Proses Kachi Ghani & Press Dingin
 seedName: mustard
 icon: mustard
 description:

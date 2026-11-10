@@ -99,7 +99,7 @@ const breadcrumbLd = {
 };
 ---
 
-<BaseLayout title="Hydraulic Oil Press Product Catalog & Price List" description="Printable product catalog for Haonuo hydraulic oil presses and oil processing equipment. Download, print, or email to customers." locale="en">
+<BaseLayout title="Hydraulic Oil Press Product Catalog & Price List" description="Printable product catalog for Haonuo hydraulic oil presses and oil processing equipment. Download, print, or email to customers." locale="en" jsonLd={[breadcrumbLd]}>
   <section class="bg-amber-500 py-8 md:py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-amber-100 text-sm mb-4">
@@ -241,6 +241,12 @@ const breadcrumbLd = {
         </div>
       )}
     </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-6 no-print">
+    <p class="text-steel-500 text-sm">
+      Looking for factory-direct price ranges for HN325, HN365, HN426 and HN500? Visit our <a href="/oil-machine-price/" class="text-amber-600 hover:text-amber-700 font-medium hover:underline">oil machine price page</a> or request a <a href="/cold-press-oil-machine-price/" class="text-amber-600 hover:text-amber-700 font-medium hover:underline">cold-press-specific quote</a>.
+    </p>
   </section>
 
   <section class="bg-charcoal-900 py-12 no-print">
