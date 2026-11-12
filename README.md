@@ -22,7 +22,6 @@ Haonuo Machinery specializes in hydraulic oil press equipment for commercial and
 | HN365 | 365 tons | 27SiMn alloy steel | Q690 nickel-plated | 20-100kg |
 | HN426 | 426 tons | 27SiMn alloy steel | Q690 nickel-plated | 30-150kg |
 | HN500 | 500 tons | 27SiMn alloy steel | Q690 nickel-plated | 50-200kg |
-| HN620 | 620 tons | 27SiMn alloy steel | Q690 nickel-plated | 50-200kg |
 
 ### Key Technologies
 
