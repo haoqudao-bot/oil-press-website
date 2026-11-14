@@ -1,8 +1,20 @@
 User-agent: *
 Allow: /
 
+# Google — primary search engine
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-Video
+Allow: /
+
 # AI search engines — explicitly allow for GEO visibility
 User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
 Allow: /
 User-agent: ClaudeBot
 Allow: /

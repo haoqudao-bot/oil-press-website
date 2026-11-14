@@ -100,14 +100,14 @@ if (faqLd) allLd.push(faqLd);
           <h3>{s.specsH3}</h3>
           <div class="tbl-wrap"><table>
             {specs.map((spec: any) => (
-              <tr><td>{spec.name}</td><td set:html={spec.value} /></tr>
+              <tr><th scope="row">{spec.name}</th><td set:html={spec.value} /></tr>
             ))}
           </table></div>
         </div>
         <div class="col-module">
           <h3>{s.matH3}</h3>
           <div class="tbl-wrap"><table>
-            <tr><th>{s.matHeaders[0]}</th><th>{s.matHeaders[1]}</th></tr>
+            <tr><th scope="col">{s.matHeaders[0]}</th><th scope="col">{s.matHeaders[1]}</th></tr>
             {s.matRows.map((row) => (
               <tr><td>{row[0]}</td><td>{row[1]}</td></tr>
             ))}
@@ -125,7 +125,7 @@ if (faqLd) allLd.push(faqLd);
           <h3>{s.capH3}</h3>
           <div class="tbl-wrap"><table>
             {s.capHeaders ? (
-              <tr><th>{s.capHeaders[0]}</th><th>{s.capHeaders[1]}</th><th>{s.capHeaders[2]}</th></tr>
+              <tr><th scope="col">{s.capHeaders[0]}</th><th scope="col">{s.capHeaders[1]}</th><th scope="col">{s.capHeaders[2]}</th></tr>
             ) : null}
             {s.capRows.map((row) => (
               <tr><td>{row[0]}</td><td>{row[1]}</td>{row[2] !== undefined && <td>{row[2]}</td>}</tr>
@@ -150,7 +150,7 @@ if (faqLd) allLd.push(faqLd);
     <section class="section">
       <h2>{s.h2Fit}</h2>
       <div class="tbl-wrap"><table>
-        <tr>{s.fitHeaders.map((h) => <th>{h}</th>)}</tr>
+        <tr>{s.fitHeaders.map((h) => <th scope="col">{h}</th>)}</tr>
         {fitRows.map((row, i) => (
           <tr class={i === (s.fitHighlight ?? 1) ? 'hl' : undefined}>
             {row.map((cell) => <td set:html={cell} />)}
@@ -172,7 +172,7 @@ if (faqLd) allLd.push(faqLd);
         <div class="col-module">
           <h3>{s.yieldH3}</h3>
           <div class="tbl-wrap"><table>
-            <tr><th>{s.yieldHeaders[0]}</th><th>{s.yieldHeaders[1]}</th><th>{s.yieldHeaders[2]}</th></tr>
+            <tr><th scope="col">{s.yieldHeaders[0]}</th><th scope="col">{s.yieldHeaders[1]}</th><th scope="col">{s.yieldHeaders[2]}</th></tr>
             {yieldRows.map((row) => (
               <tr><td>{row[0]}</td><td set:html={row[1]} /><td set:html={row[2]} /></tr>
             ))}
