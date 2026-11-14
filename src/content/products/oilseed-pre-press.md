@@ -7,7 +7,7 @@ title:
 seoTitle:
   en: Oilseed Screw Pre-Press — 35-40% First Pass Extraction
   fr: Pré-presse à vis oléagineuse — extraction 35-40 % au premier passage
-  ar: مكبس زيت لولبي أولي — استخراج 35-40% في المرحلة الأولى
+  ar: مكبس لولبي لعصر الدهن — مكبس زيت أولي لاستخراج 35-40% في المرحلة الأولى
   id: Pre-press biji minyak ulir — ekstraksi 35-40% tahap pertama
 description:
   en: "Screw oilseed pre-press that removes 35–40% of oil in a first pass and raises total plant yield by 3–5%. 7.5 kW (500 kg/h) or 11 kW (750 kg/h), ready for mustard, rapeseed and groundnut lines."

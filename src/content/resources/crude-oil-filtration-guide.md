@@ -1,11 +1,11 @@
 ---
 title:
-  en: Crude Oil Filtration and Clarification Guide
+  en: Crude Oil Filtration Process and Clarification Guide
   fr: Guide de filtration et clarification de l'huile brute
   ar: دليل ترشيح وتنقية الزيت الخام
   id: Panduan Filtrasi dan Pembersihan Minyak Mentah
 description:
-  en: Comprehensive guide to filtering and clarifying crude oil after pressing
+  en: Step-by-step crude oil filtration process with equipment options, pressure settings and yield tables for hydraulic press mills.
   fr: Guide complet de filtration et clarification de l'huile brute apres pressage
   ar: دليل شامل لترشيح وتنقية الزيت الخام بعد العصر
   id: Panduan lengkap filtrasi dan pembersihan minyak mentah setelah pemerasan

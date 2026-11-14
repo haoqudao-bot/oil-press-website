@@ -158,7 +158,7 @@ export const frMarketData: Record<string, MarketData> = {
   },
 
   india: {
-    title: 'Machine à Huile Inde — Prix, Capacité & Guide d\'Importation',
+    title: 'Presse à Huile Hydraulique pour l\'Inde — Prix Usine Chine',
     description: 'Presse à huile en Inde pour moutarde, arachide et sésame. Une alternative hydraulique moderne aux machines kachi ghani ; 415V/50Hz, expédition vers Mundra/JNPT. Demandez un devis.',
     heroTitle: 'Presse à Huile en Inde — Direct Usine',
     heroDesc: 'Presses à huile hydrauliques pour la production d\'huile de moutarde, de sésame, d\'arachide et de coco. Prix direct usine, expédition vers Mumbai en 18-22 jours, garantie 1 an.',
