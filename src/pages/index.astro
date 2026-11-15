@@ -183,7 +183,11 @@ const modelListLd = {
 };
 ---
 
-<BaseLayout overlayHeader jsonLd={[breadcrumbLd, modelListLd]}>
+<BaseLayout
+  title="Hydraulic Oil Press Machine Manufacturer Since 2010 | Haonuo Machinery"
+  description="WhatsApp +86 189 5714 9128 — Haonuo Machinery, factory-direct hydraulic oil press for coconut, sesame, peanut, shea butter, olive, palm kernel. 300-620 ton models, cold & hot pressing. ISO 9001."
+  jsonLd={[breadcrumbLd, modelListLd]}
+>
   <!-- ============ HERO CAROUSEL ============ -->
   <section class="relative h-[88vh] min-h-[600px] overflow-hidden bg-steel-950" id="hero-carousel">
     <div class="hero-slides" id="hero-slides">
@@ -518,12 +522,14 @@ const modelListLd = {
       </div>
 
       <!-- Seeds -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" role="list" aria-label="Oilseed-by-oilseed solutions">
         {featuredSolutions.map((solution, i) => (
           <a
             href={`/solutions/${solution.slug}/`}
             class="reveal group bg-steel-50 hover:bg-amber-50 border border-transparent hover:border-amber-200 rounded-xl p-5 text-center transition-colors"
             style={`transition-delay:${i * 40}ms`}
+            role="listitem"
+            aria-label={`${solution.data.title.en} solution`}
           >
             <div set:html={seedIconHtml(solution.data.seedName)}></div>
             <h3 class="font-bold text-sm text-charcoal-900 group-hover:text-amber-600 transition-colors leading-snug">{solution.data.title.en}</h3>
@@ -532,12 +538,14 @@ const modelListLd = {
       </div>
 
       <!-- Scale -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6" role="list" aria-label="Scale-based solutions">
         {scaleSolutions.map((solution, i) => (
           <a
             href={`/solutions/${solution.slug}/`}
             class="reveal group flex items-center gap-4 bg-white border border-steel-100 hover:border-amber-300 rounded-xl p-5 transition-colors"
             style={`transition-delay:${i * 60}ms`}
+            role="listitem"
+            aria-label={`${solution.data.title.en}: ${solution.data.description.en}`}
           >
             <div set:html={seedIconHtmlInline(solution.data.seedName)}></div>
             <div class="min-w-0">
