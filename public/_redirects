@@ -1,8 +1,10 @@
 # Cloudflare Pages Redirect Rules
 # Format: source destination status_code
 # IMPORTANT: Order matters! First matching rule wins.
-# Rules are processed BEFORE Cloudflare's built-in trailing-slash 308 normalization.
-# So precise rules (below) override the 308 that GSC flagged as "redirect errors".
+
+# ── DIAGNOSTIC: exact no-slash test ──
+/solutions/coconut-oil-pressing /solutions/coconut-oil-pressing/index.html 200
+/products/cold-press-hydraulic-oil-press /products/cold-press-hydraulic-oil-press/index.html 200
 
 # ═══════════════════════════════════════════════════════════════
 # 1. Exact redirects (must come BEFORE proxy rules)
