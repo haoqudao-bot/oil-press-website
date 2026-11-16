@@ -1,11 +1,18 @@
 # Cloudflare Pages Redirect Rules
 # Format: source destination status_code
+# IMPORTANT: Order matters! First matching rule wins.
+# Rules are processed BEFORE Cloudflare's built-in trailing-slash 308 normalization.
+# So precise rules (below) override the 308 that GSC flagged as "redirect errors".
+
+# ═══════════════════════════════════════════════════════════════
+# 1. Exact redirects (must come BEFORE proxy rules)
+# ═══════════════════════════════════════════════════════════════
 
 # Sitemap alias: SEO tools commonly probe /sitemap.xml; actual file is /sitemap-index.xml
 /sitemap.xml /sitemap-index.xml 301
 
-# Discontinued manual oil press page (manual machines are not manufactured);
-# send visitors to the smallest hydraulic model instead
+# --- Discontinued/renamed product URLs (301 → new URL) ---
+# manual-oil-press-machine → mini-hydraulic-oil-press (4 langs × 2 slash variants)
 /manual-oil-press-machine /products/mini-hydraulic-oil-press/ 301
 /manual-oil-press-machine/ /products/mini-hydraulic-oil-press/ 301
 /fr/manual-oil-press-machine /fr/products/mini-hydraulic-oil-press/ 301
@@ -15,8 +22,7 @@
 /id/manual-oil-press-machine /id/products/mini-hydraulic-oil-press/ 301
 /id/manual-oil-press-machine/ /id/products/mini-hydraulic-oil-press/ 301
 
-# Discontinued HN325S stainless steel oil press page;
-# merged into the Coconut Milk Hydraulic Press (food-grade 304 stainless steel barrel)
+# stainless-steel-hydraulic-oil-press → coconut-oil-hydraulic-press
 /products/stainless-steel-hydraulic-oil-press /products/coconut-oil-hydraulic-press/ 301
 /products/stainless-steel-hydraulic-oil-press/ /products/coconut-oil-hydraulic-press/ 301
 /fr/products/stainless-steel-hydraulic-oil-press /fr/products/coconut-oil-hydraulic-press/ 301
@@ -26,7 +32,7 @@
 /id/products/stainless-steel-hydraulic-oil-press /id/products/coconut-oil-hydraulic-press/ 301
 /id/products/stainless-steel-hydraulic-oil-press/ /id/products/coconut-oil-hydraulic-press/ 301
 
-# HN365 product URL renamed: hn365-hydraulic-oil-press → commercial-hydraulic-oil-press
+# HN365 renamed: hn365-hydraulic-oil-press → commercial-hydraulic-oil-press
 /products/hn365-hydraulic-oil-press /products/commercial-hydraulic-oil-press/ 301
 /products/hn365-hydraulic-oil-press/ /products/commercial-hydraulic-oil-press/ 301
 /fr/products/hn365-hydraulic-oil-press /fr/products/commercial-hydraulic-oil-press/ 301
@@ -35,3 +41,99 @@
 /ar/products/hn365-hydraulic-oil-press/ /ar/products/commercial-hydraulic-oil-press/ 301
 /id/products/hn365-hydraulic-oil-press /id/products/commercial-hydraulic-oil-press/ 301
 /id/products/hn365-hydraulic-oil-press/ /id/products/commercial-hydraulic-oil-press/ 301
+
+# ═══════════════════════════════════════════════════════════════
+# 2. Proxy rules (200 = internal rewrite to index.html)
+#    Goal: skip Cloudflare's 308 trailing-slash normalization
+#    so /page (no slash) returns 200 directly, not 308 → /page/
+# ═══════════════════════════════════════════════════════════════
+
+# --- Language locale HOME pages ---
+/fr /fr/index.html 200
+/ar /ar/index.html 200
+/id /id/index.html 200
+
+# --- Language locale LIST pages ---
+/fr/products /fr/products/index.html 200
+/fr/solutions /fr/solutions/index.html 200
+/fr/resources /fr/resources/index.html 200
+/fr/markets /fr/markets/index.html 200
+/ar/products /ar/products/index.html 200
+/ar/solutions /ar/solutions/index.html 200
+/ar/resources /ar/resources/index.html 200
+/ar/markets /ar/markets/index.html 200
+/id/products /id/products/index.html 200
+/id/solutions /id/solutions/index.html 200
+/id/resources /id/resources/index.html 200
+/id/markets /id/markets/index.html 200
+
+# --- Language locale COLLECTION DETAIL pages (placeholder = one path segment) ---
+/fr/products/:slug /fr/products/:slug/index.html 200
+/fr/solutions/:slug /fr/solutions/:slug/index.html 200
+/fr/resources/:slug /fr/resources/:slug/index.html 200
+/fr/markets/:market /fr/markets/:market/index.html 200
+/ar/products/:slug /ar/products/:slug/index.html 200
+/ar/solutions/:slug /ar/solutions/:slug/index.html 200
+/ar/resources/:slug /ar/resources/:slug/index.html 200
+/ar/markets/:market /ar/markets/:market/index.html 200
+/id/products/:slug /id/products/:slug/index.html 200
+/id/solutions/:slug /id/solutions/:slug/index.html 200
+/id/resources/:slug /id/resources/:slug/index.html 200
+/id/markets/:market /id/markets/:market/index.html 200
+
+# --- Language locale STATIC pages ---
+/fr/about /fr/about/index.html 200
+/fr/contact /fr/contact/index.html 200
+/fr/faq /fr/faq/index.html 200
+/fr/catalog /fr/catalog/index.html 200
+/fr/services /fr/services/index.html 200
+/fr/roi-calculator /fr/roi-calculator/index.html 200
+/fr/hydraulic-oil-press-machine /fr/hydraulic-oil-press-machine/index.html 200
+/fr/cold-press-oil-machine /fr/cold-press-oil-machine/index.html 200
+/fr/cold-press-oil-machine-price /fr/cold-press-oil-machine-price/index.html 200
+/fr/oil-machine-price /fr/oil-machine-price/index.html 200
+/ar/about /ar/about/index.html 200
+/ar/contact /ar/contact/index.html 200
+/ar/faq /ar/faq/index.html 200
+/ar/catalog /ar/catalog/index.html 200
+/ar/services /ar/services/index.html 200
+/ar/roi-calculator /ar/roi-calculator/index.html 200
+/ar/hydraulic-oil-press-machine /ar/hydraulic-oil-press-machine/index.html 200
+/ar/cold-press-oil-machine /ar/cold-press-oil-machine/index.html 200
+/ar/cold-press-oil-machine-price /ar/cold-press-oil-machine-price/index.html 200
+/ar/oil-machine-price /ar/oil-machine-price/index.html 200
+/id/about /id/about/index.html 200
+/id/contact /id/contact/index.html 200
+/id/faq /id/faq/index.html 200
+/id/catalog /id/catalog/index.html 200
+/id/services /id/services/index.html 200
+/id/roi-calculator /id/roi-calculator/index.html 200
+/id/hydraulic-oil-press-machine /id/hydraulic-oil-press-machine/index.html 200
+/id/cold-press-oil-machine /id/cold-press-oil-machine/index.html 200
+/id/cold-press-oil-machine-price /id/cold-press-oil-machine-price/index.html 200
+/id/oil-machine-price /id/oil-machine-price/index.html 200
+
+# --- English default: LIST pages ---
+/products /products/index.html 200
+/solutions /solutions/index.html 200
+/resources /resources/index.html 200
+/markets /markets/index.html 200
+
+# --- English default: COLLECTION DETAIL pages ---
+/products/:slug /products/:slug/index.html 200
+/solutions/:slug /solutions/:slug/index.html 200
+/resources/:slug /resources/:slug/index.html 200
+/markets/:market /markets/:market/index.html 200
+
+# --- English default: STATIC pages ---
+/about /about/index.html 200
+/contact /contact/index.html 200
+/faq /faq/index.html 200
+/catalog /catalog/index.html 200
+/services /services/index.html 200
+/roi-calculator /roi-calculator/index.html 200
+/hydraulic-oil-press-machine /hydraulic-oil-press-machine/index.html 200
+/cold-press-oil-machine /cold-press-oil-machine/index.html 200
+/cold-press-oil-machine-price /cold-press-oil-machine-price/index.html 200
+/oil-machine-price /oil-machine-price/index.html 200
+/kachi-ghani-mustard-oil-machine-price /kachi-ghani-mustard-oil-machine-price/index.html 200

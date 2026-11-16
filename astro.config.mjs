@@ -71,7 +71,7 @@ function urlToRelFileCandidates(itemUrl) {
 
 export default defineConfig({
   site: 'https://www.hydoilpress.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   devToolbar: {
     enabled: false,
   },
