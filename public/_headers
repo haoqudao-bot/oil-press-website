@@ -2,6 +2,8 @@
 # (later rules below override the cache for static assets)
 /*
   Cache-Control: public, max-age=86400
+  Link: </llms-full.txt>; rel="describedby"; type="text/markdown"
+  Link: </.well-known/llms.txt>; rel="describedby"; type="text/markdown"
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block

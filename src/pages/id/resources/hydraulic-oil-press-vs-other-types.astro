@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const title = resource?.data.title.id || 'Pengepres Minyak Hidrolik vs Jenis Lai
 const description = resource?.data.description.id || 'Pilih pengepres yang tepat untuk kebutuhan Anda';
 const seoKeywords = resource?.data.seoKeywords || ['pengepres minyak hidrolik vs ulir', 'perbandingan pengepres minyak', 'pengepres minyak mana yang harus dipilih'];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',

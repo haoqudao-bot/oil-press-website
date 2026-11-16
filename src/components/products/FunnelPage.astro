@@ -57,6 +57,11 @@ const productLd = {
   category: product.data.category, sku: product.data.model,
   image: `https://www.hydoilpress.com${img}`,
   description: pageDesc,
+  additionalProperty: specs.map((spec: { name: string; value: string }) => ({
+    '@type': 'PropertyValue',
+    name: spec.name,
+    value: spec.value,
+  })),
 };
 const allLd = [breadcrumbLd, productLd];
 if (faqLd) allLd.push(faqLd);
@@ -90,6 +95,16 @@ if (faqLd) allLd.push(faqLd);
           <div class="trust-bar" set:html={s.trustBar} />
         </div>
       </div>
+    </section>
+
+    <!-- Quick Facts: numbered list for AI crawlers (high citation value) -->
+    <section class="section">
+      <h2>Quick Facts</h2>
+      <ol class="quick-facts">
+        {specs.slice(0, 6).map((spec: any) => (
+          <li><strong>{spec.name}:</strong> <span set:html={spec.value} /></li>
+        ))}
+      </ol>
     </section>
 
     <!-- 规格 + 材质 -->

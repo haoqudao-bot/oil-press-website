@@ -72,6 +72,11 @@ const productLd = {
   sku: product.data.model,
   image: product.data.images[0] ? `https://www.hydoilpress.com${product.data.images[0]}` : undefined,
   description: product.data.description?.en || `Professional ${product.data.title.en.toLowerCase()} by Haonuo Machinery.`,
+  additionalProperty: product.data.specifications.map((spec: { name: string; value: string }) => ({
+    '@type': 'PropertyValue',
+    name: spec.name,
+    value: spec.value,
+  })),
 };
 allLd.push(productLd);
 
@@ -160,9 +165,22 @@ if (faqLd) allLd.push(faqLd);
           <p class="text-steel-500 text-sm mb-3">Model: {product.data.model}</p>
 
           <!-- Summary paragraph (40-60 word conclusion前置) -->
-          <p class="text-steel-700 text-base leading-relaxed mb-6">
+          <p class="text-steel-700 text-base leading-relaxed mb-4">
             {product.data.description?.en || ''}
           </p>
+
+          <!-- Quick Facts: numbered list for AI crawlers (first 30% of page, high citation value) -->
+          <div class="mb-6 bg-amber-50 border border-amber-200 rounded-xl p-5">
+            <h3 class="font-display text-lg text-charcoal-900 mb-3">Quick Facts</h3>
+            <ol class="space-y-1.5 text-sm text-charcoal-800">
+              {product.data.specifications.slice(0, 6).map((spec: { name: string; value: string }) => (
+                <li class="flex gap-2">
+                  <span class="text-amber-600 font-bold shrink-0">{spec.name}:</span>
+                  <span class="font-medium">{spec.value}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
 
           <!-- Warranty Badge -->
           <div class="flex items-center gap-2 mb-6 bg-green-50 border border-green-200 rounded-lg px-4 py-2">

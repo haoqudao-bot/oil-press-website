@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const title = resource?.data.title.id || 'Perawatan Pengepres Minyak Hidrolik';
 const description = resource?.data.description.id || 'Panduan perawatan yang lengkap';
 const seoKeywords = resource?.data.seoKeywords || ['perawatan pengepres minyak hidrolik', 'servis pengepres minyak'];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',

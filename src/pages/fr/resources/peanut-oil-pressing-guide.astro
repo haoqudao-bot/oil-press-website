@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const title = resource?.data.title.fr || 'Guide complet de la fabrication de l\'
 const description = resource?.data.description.fr || 'Guide complet de la production d\'huile d\'arachide';
 const seoKeywords = resource?.data.seoKeywords || ['huile d\'arachide', 'production d\'huile'];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',

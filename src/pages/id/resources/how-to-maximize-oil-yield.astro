@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const title = resource?.data.title.id || 'Cara Memaksimalkan Hasil Minyak';
 const description = resource?.data.description.id || 'Dapatkan lebih banyak minyak dari setiap biji';
 const seoKeywords = resource?.data.seoKeywords || ['memaksimalkan hasil minyak', 'meningkatkan ekstraksi minyak', 'optimisasi hasil minyak'];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',

@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const title = resource?.data.title.id || 'Panduan Lengkap Teknik Pemasakan Minya
 const description = resource?.data.description.id || 'Panduan komprehensif untuk produksi minyak kacang tanah';
 const seoKeywords = resource?.data.seoKeywords || ['minyak kacang tanah', 'produksi minyak'];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',

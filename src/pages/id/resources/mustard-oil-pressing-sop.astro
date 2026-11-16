@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -12,7 +12,7 @@ const title = resource?.data.title.id || 'SOP Pengepresan Minyak Sawi';
 const description = resource?.data.description.id || 'Prosedur operasi standar langkah demi langkah untuk ekstraksi minyak sawi';
 const seoKeywords = resource?.data.seoKeywords || [];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',

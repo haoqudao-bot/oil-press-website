@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const title = resource?.data.title.fr || resource?.data.title.en || 'Maintenance
 const description = resource?.data.description.fr || resource?.data.description.en || 'Guide complet de maintenance';
 const seoKeywords = resource?.data.seoKeywords || ['maintenance presse hydraulique', 'entretien huile press'];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',

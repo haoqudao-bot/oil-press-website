@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
@@ -11,7 +11,7 @@ const title = resource?.data.title.en || 'Cold Press vs Hot Press Oil';
 const description = resource?.data.description.en || 'Which is right for you?';
 const seoKeywords = resource?.data.seoKeywords || ['cold press vs hot press oil', 'cold pressed oil benefits', 'hot pressed oil'];
 const publishedAt = resource?.data.publishedAt || new Date();
-const updatedAt = resource?.data.updatedAt || publishedAt;
+const updatedAt = new Date();
 
 const articleLd = {
   '@context': 'https://schema.org',
