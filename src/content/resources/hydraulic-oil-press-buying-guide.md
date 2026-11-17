@@ -1,9 +1,9 @@
 ---
 title:
-  en: Hydraulic Oil Press Buying Guide
-  fr: Guide d'achat de presse hydraulique
-  ar: دليل شراء المكبس الزيتي الهيدروليكي
-  id: Panduan Membeli Mesin Press Minyak Hidrolik
+  en: "Which Hydraulic Oil Press Should I Buy? 2026 Decision Guide"
+  fr: "Quelle presse hydraulique à huile acheter ? Guide de décision 2026"
+  ar: "أي مكبس زيت هيدروليكي يجب أن أشتريه؟ دليل قرار 2026"
+  id: "Mesin Press Minyak Hidrolik Mana yang Harus Saya Beli? Panduan Keputusan 2026"
 description:
   en: Complete buying guide for hydraulic oil press machines covering capacity selection, pressure requirements, material quality, supplier evaluation, and budget planning
   fr: Guide d'achat complet pour presses à huile hydrauliques couvrant la sélection de capacité, les exigences de pression, la qualité des matériaux et la planification budgétaire

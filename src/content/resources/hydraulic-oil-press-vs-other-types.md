@@ -1,9 +1,9 @@
 ---
 title:
-  en: Oil Expeller vs Hydraulic Oil Press
-  fr: Presse à Vis vs Presse Hydraulique
-  ar: المكبس اللولبي مقابل المكبس الهيدروليكي
-  id: Oil Expeller vs Press Hidrolik
+  en: "Hydraulic vs Screw Oil Press: Which Is Better for Coconut, Walnut, and Peanut?"
+  fr: "Presse hydraulique vs presse à vis : laquelle est meilleure pour la noix de coco, le noyer et l'arachide ?"
+  ar: "المكبس الهيدروليكي مقابل المكبس اللولبي: أيهما أفضل لجوز الهند والجوز والفول السوداني؟"
+  id: "Press Hidrolik vs Press Sekrup: Mana yang Lebih Baik untuk Kelapa, Kenari, dan Kacang Tanah?"
 description:
   en: Oil expeller (screw press) vs hydraulic oil press vs solvent extraction comparison covering oil quality, residual oil rate, equipment cost, operating cost, and applicable scenarios
   fr: Comparaison presse à vis (expeller) vs presse hydraulique vs extraction par solvant couvrant la qualité d'huile, le taux d'huile résiduelle, le coût des équipements et les scénarios applicables
