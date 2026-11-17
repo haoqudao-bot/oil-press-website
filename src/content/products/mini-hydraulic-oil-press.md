@@ -10,7 +10,7 @@ seoTitle:
   ar: آلة زيت مصغرة HN300 — مكبس دخول 300 طن، المواصفات والسعر
   id: Mesin minyak mini HN300 — press entry 300 ton, spesifikasi & harga
 description:
-  en: "HN300 hydraulic oil press — 300 ton entry-level model with 25 MPa cake pressure. Compact 390mm tabung press for sesame, peanut, rapeseed. ~55-60kg per batch. Still in production."
+  en: "300-ton entry-level hydraulic oil press for small batch production. 25 MPa cake pressure, 55–60 kg per batch. Compact 390mm tabung press for sesame, peanut, rapeseed, or sunflower seed. 2.2 kW motor, still in active production, factory-direct."
   fr: "Presse à huile hydraulique HN300 — 300 tonnes, modèle d'entrée, 25 MPa. Fût 390mm pour sésame, arachide, colza. ~55-60kg par lot. Toujours en production."
   ar: "معصرة زيت هيدروليكية HN300 — 300 طن، موديل دخول، 25 ميجاباسكال. أسطوانة عصر 390 مم للسمسم والفول السوداني واللفت. ~55-60 كجم لكل دفعة. لا تزال في الإنتاج."
   id: "Mesin press minyak hidrolik HN300 — 300 ton model entry, 25 MPa. Tabung Press 390mm untuk wijen, kacang tanah, rapeseed. ~55-60kg per batch. Masih dalam produksi."

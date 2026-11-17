@@ -10,7 +10,7 @@ seoTitle:
   ar: معصرة باردة فائقة الضغط HN480B — 600 طن، حسب الطلب
   id: Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, kustom
 description:
-  en: "HN480B ultra high pressure cold press — 600 ton, 65 MPa system, 48 MPa cake pressure. Custom-configured for walnut, almond, and hard seeds. Made to order in 30-45 working days."
+  en: "600-ton ultra-high-pressure cold press for hard-shell premium oils. 65 MPa system pressure, 48 MPa cake pressure. Custom-configured for cold-pressing walnut, almond, or copra without heat damage. Made to order, 30–45 working days lead time, factory-direct."
   fr: "Presse à froid ultra haute pression HN480B — 600 tonnes, 65 MPa, 48 MPa sur tourteau. Sur mesure pour noix, amandes, graines dures. 30-45 jours ouvrés."
   ar: "معصرة باردة فائقة الضغط HN480B — 600 طن، 65 ميجاباسكال، 48 ميجاباسكال على الكسب. مخصصة للجوز واللوز والبذور الصلبة. 30-45 يوم عمل."
   id: "Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, 65 MPa, 48 MPa pada bungkil. Kustom untuk walnut, almond, biji keras. 30-45 hari kerja."

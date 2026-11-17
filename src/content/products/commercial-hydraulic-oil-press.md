@@ -10,7 +10,7 @@ seoTitle:
   ar: معصرة زيت هيدروليكية تجارية — 365 طن
   id: Mesin Press Minyak Hidrolik Komersial — 365 Ton
 description:
-  en: "Commercial hydraulic oil press with 365-ton force and 30 MPa cake pressure. Single or double tabung press, hot & cold pressing, factory-direct."
+  en: "365-ton hydraulic oil press for medium to large commercial operations. 30 MPa cake pressure, single or double tabung press. Hot or cold pressing of peanut, sesame, rapeseed, tea seed, walnut, or soybean. Vertical structure, manual or semi-automatic, factory-direct."
   fr: "Presse à huile hydraulique commerciale de 365 tonnes, pression sur tourteau de 30 MPa. Fût simple ou double, pressage à chaud et à froid — amélioration haute efficacité pour huileries moyennes et grandes, direct usine."
   ar: "معصرة زيت هيدروليكية تجارية بقوة 365 طناً وضغط كسب 30 ميجاباسكال. أسطوانة عصر مفردة أو مزدوجة، عصر ساخن وبارد — ترقية عالية الكفاءة للمعاصر المتوسطة والكبيرة، مباشرة من المصنع."
   id: "Mesin press minyak hidrolik komersial dengan gaya 365 ton dan tekanan bungkil 30 MPa. Tabung Press tunggal atau ganda, press panas & dingin — upgrade efisiensi tinggi untuk pabrik menengah dan besar, langsung pabrik."

@@ -10,7 +10,7 @@ seoTitle:
   ar: ماكينة عصر زيت هيدروليكية للأعمال الصغيرة — 325 طن
   id: Mesin Press Minyak Hidrolik untuk Usaha Kecil — 325 Ton
 description:
-  en: "Commercial hydraulic oil press machine for small business and oil mills. 325-ton force, 20–100 kg batches, hot & cold pressing. Factory-direct, 1-year warranty."
+  en: "325-ton hydraulic oil press for small workshops and starter oil mills. 20–100 kg per batch, 27 MPa cake pressure. Hot or cold pressing of peanut, sesame, rapeseed, tea seed, sunflower, or flaxseed. Compact footprint, factory-direct pricing, 1-year warranty."
   fr: "Machine de presse à huile hydraulique commerciale pour petites entreprises et huileries : force 325 tonnes, lots de 20–100 kg, pressage à chaud et à froid. Direct usine, garantie 1 an."
   ar: "ماكينة عصر زيت هيدروليكية تجارية للأعمال الصغيرة والمعاصر: قوة 325 طن، دفعات 20–100 كجم، عصر ساخن وبارد. مباشرة من المصنع، ضمان سنة."
   id: "Mesin press minyak hidrolik komersial untuk usaha kecil dan pabrik: 325 ton, batch 20–100 kg, press panas & dingin. Garansi 1 tahun."

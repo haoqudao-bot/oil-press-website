@@ -10,7 +10,7 @@ seoTitle:
   ar: معصرة زيت سمسم هيدروليكية — تخصيص حسب الطلب
   id: Mesin press minyak wijen hidrolik — konfigurasi kustom
 description:
-  en: "Custom-configured hydraulic sesame oil press machine based on HN325/HN355. 47-51 MPa cake pressure, 300mm narrow tabung press for maximum sesame yield. Made to order in 30-45 working days."
+  en: "Custom-configured hydraulic press optimized for maximum sesame oil yield. 47–51 MPa cake pressure, 300mm narrow tabung press concentrates force on small seeds. Based on HN325 or HN355 platform. Made to order, 30–45 working days lead time."
   fr: "Presse hydraulique à huile de sésame sur mesure basée sur HN325/HN355. 47-51 MPa, fût étroit 300mm. Fabrication sur commande en 30-45 jours ouvrés."
   ar: "معصرة زيت سمسم هيدروليكية مخصصة بناءً على HN325/HN355. 47-51 ميجاباسكال، أسطوانة عصر ضيقة 300 مم. تصنيع حسب الطلب خلال 30-45 يوم عمل."
   id: "Mesin press minyak wijen hidrolik kustom berbasis HN325/HN355. 47-51 MPa, tabung press sempit 300mm. Buat pesanan dalam 30-45 hari kerja."

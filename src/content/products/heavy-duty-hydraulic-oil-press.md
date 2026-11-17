@@ -10,7 +10,7 @@ seoTitle:
   ar: معصرة زيت هيدروليكية HN400 — 500 طن، عصر ساخن وبارد
   id: Mesin press minyak hidrolik HN400 — 500 ton, panas dan dingin
 description:
-  en: "HN400 hydraulic oil press — 500 ton model with 38 MPa cake pressure. Hot and cold press for tea seed, walnut, rapeseed. 390mm tabung press, ~100kg per batch. Still in production."
+  en: "400-ton heavy-duty hydraulic oil press for high-yield seed extraction. 38 MPa cake pressure, ~100 kg per batch. Hot or cold pressing of tea seed, walnut, rapeseed, or camellia. 390mm tabung press, 380V 11 kW motor, still in production."
   fr: "Presse à huile hydraulique HN400 — 500 tonnes, 38 MPa. Pressage chaud et froid pour graine de thé, noix, colza. Fût 390mm, ~100kg par lot. Toujours en production."
   ar: "معصرة زيت هيدروليكية HN400 — 500 طن، 38 ميجاباسكال. عصر ساخن وبارد لبذور الشاي والجوز واللفت. أسطوانة عصر 390 مم، ~100 كجم لكل دفعة. لا تزال في الإنتاج."
   id: "Mesin press minyak hidrolik HN400 — 500 ton, 38 MPa. Press panas dan dingin untuk biji teh, walnut, rapeseed. Tabung Press 390mm, ~100kg per batch. Masih dalam produksi."

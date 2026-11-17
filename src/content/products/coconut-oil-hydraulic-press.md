@@ -10,7 +10,7 @@ seoTitle:
   ar: معصرة حليب جوز الهند الهيدروليكية — 600 مم، جودة غذائية (حسب الطلب)
   id: Mesin press santan kelapa hidrolik — 600mm, food grade (kustom)
 description:
-  en: "Coconut milk hydraulic press with 600mm food-grade stainless steel tabung press. 300 ton press for coconut cream/VCO extraction. Custom configuration, 30-45 working day lead time."
+  en: "300-ton hydraulic press with 600mm food-grade stainless steel tabung. Purpose-built for coconut milk, coconut cream, and VCO extraction. Custom configuration for coconut-only operations, 30–45 working days lead time, factory-direct."
   fr: "Presse hydraulique à lait de coco avec fût 600mm en acier inoxydable alimentaire. 300 tonnes pour crème de coco/VCO. Sur mesure, 30-45 jours ouvrés."
   ar: "معصرة حليب جوز الهند الهيدروليكية بأسطوانة عصر 600 مم من الفولاذ المقاوم للصدأ الغذائي. 300 طن لاستخراج كريمة جوز الهند/زيت جوز الهند البكر. حسب الطلب، 30-45 يوم عمل."
   id: "Mesin press santan kelapa hidrolik dengan tabung press 600mm stainless steel food-grade. 300 ton untuk ekstraksi krim kelapa/VCO. Kustom, 30-45 hari kerja."

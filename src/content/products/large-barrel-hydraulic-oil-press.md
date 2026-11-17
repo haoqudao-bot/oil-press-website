@@ -10,7 +10,7 @@ seoTitle:
   ar: مكبث نضح الحمأة الهيدروليكي — أسطوانة عصر كبيرة
   id: Mesin dewatering lumpur hidrolik — tabung press besar
 description:
-  en: "Hydraulic sludge dewatering press with 630mm large tabung press. For oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable dehydration. 325 ton, custom configuration."
+  en: "325-ton hydraulic press with 630mm large tabung for sludge and residue dewatering. Handles oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable pulp dehydration. Custom configuration, 30–45 working days lead time."
   fr: "Presse de déshydratation de boues hydraulique avec grand fût 630mm. Pour boues d'huile, résidus animaux/végétaux, boues textiles, déshydratation fruits/légumes. 325 tonnes, sur mesure."
   ar: "مكبث نضح الحمأة الهيدروليكي بأسطوانة عصر كبيرة 630 مم. لحمأة الزيت، مخلفات الزيت الحيواني/النباتي، حمأة النسيج، نضح الفواكه/الخضروات. 325 طن، حسب الطلب."
   id: "Mesin dewatering lumpur hidrolik dengan tabung press besar 630mm. Untuk lumpur minyak, residu minyak hewan/tumbuhan, lumpur tekstil, dewatering buah/sayur. 325 ton, kustom."

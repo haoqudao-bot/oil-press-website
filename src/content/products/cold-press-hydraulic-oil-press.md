@@ -10,7 +10,7 @@ seoTitle:
   ar: معصرة زيت هيدروليكية للعصر البارد — 500 طن / 70 ميجاباسكال
   id: Mesin Press Minyak Hidrolik Dingin — 500 Ton / 70 MPa
 description:
-  en: "Cold press hydraulic oil press with 500-ton force and 70 MPa system pressure. Purpose-built for coconut, walnut and premium cold-pressed oils — hot pressing also supported. Single or double tabung press, factory-direct."
+  en: "500-ton hydraulic press purpose-built for cold-pressing premium oils. 70 MPa system pressure, 42 MPa cake pressure. Low-heat extraction for coconut VCO, walnut, almond, or flaxseed. Hot pressing also supported. Single or double tabung press, factory-direct."
   fr: "Presse à huile hydraulique à froid 500 tonnes, pression système 70 MPa. Conçue pour l’huile de coco, de noix et les huiles pressées à froid premium — pressage à chaud également possible. Fût simple ou double, vente directe usine."
   ar: "معصرة زيت هيدروليكية للعصر البارد بقوة 500 طن وضغط نظام 70 ميجاباسكال. مصممة خصيصاً لزيت جوز الهند والجوز والزيوت الباردة الممتازة — ويدعم أيضاً العصر الساخن. أسطوانة عصر مفردة أو مزدوجة، بيع مباشر من المصنع."
   id: "Mesin press minyak hidrolik dingin 500 ton dengan tekanan sistem 70 MPa. Dirancang khusus untuk minyak kelapa, kenari, dan minyak premium press dingin — press panas juga didukung. Tabung Press tunggal atau ganda, langsung dari pabrik."

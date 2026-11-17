@@ -10,7 +10,7 @@ seoTitle:
   ar: معصرة زيت هيدروليكية صناعية — 620 طن / 75 ميجاباسكال
   id: Mesin Press Minyak Hidrolik Industri — 620 Ton / 75 MPa
 description:
-  en: "Industrial hydraulic oil press with 620-ton force and 75 MPa system pressure. Heavy-duty pressing for the hardest in-shell materials — walnut in shell, apricot kernel and more. Single or double tabung press, factory-direct."
+  en: "620-ton industrial hydraulic oil press for the hardest in-shell materials. 75 MPa system pressure, 52 MPa cake pressure. Presses in-shell walnut, apricot kernel, copra, or palm kernel. Single or double tabung press, heavy-duty steel frame, factory-direct."
   fr: "Presse à huile hydraulique industrielle 620 tonnes, pression système 75 MPa. Pressage renforcé pour les matières en coque les plus dures — noix en coque, noyau d’abricot et plus. Fût simple ou double, vente directe usine."
   ar: "معصرة زيت هيدروليكية صناعية بقوة 620 طناً وضغط نظام 75 ميجاباسكال. عصر ثقيل لأقسى المواد بقشورها — الجوز بقشره ولوز المشمش وغيرها. أسطوانة عصر مفردة أو مزدوجة، بيع مباشر من المصنع."
   id: "Mesin press minyak hidrolik industri 620 ton dengan tekanan sistem 75 MPa. Press heavy-duty untuk bahan bercangkang paling keras — kenari bercangkang, biji aprikot, dan lainnya. Tabung Press tunggal atau ganda, langsung dari pabrik."
