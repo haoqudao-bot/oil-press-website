@@ -11,9 +11,9 @@ seoTitle:
   id: Mesin press minyak hidrolik HN480 — 560 ton, 72 MPa
 description:
   en: "560-ton high-pressure hydraulic oil press for hard-to-press seeds. 72 MPa system pressure, 390mm tabung press. Designed for walnut, almond, copra, or palm kernel requiring maximum force. Previous generation, still in production, factory-direct."
-  fr: "Presse à huile hydraulique HN480 — 560 tonnes, 72 MPa. Pour noix, amandes et graines dures. Fût 390mm. Génération précédente, toujours en production."
-  ar: "معصرة زيت هيدروليكية HN480 — 560 طن، 72 ميجاباسكال. للجوز واللوز والبذور الصعبة العصر. أسطوانة عصر 390 مم. الجيل السابق، لا يزال في الإنتاج."
-  id: "Mesin press minyak hidrolik HN480 — 560 ton, 72 MPa. Untuk walnut, almond, dan biji sulit ditekan. Tabung Press 390mm. Generasi sebelumnya, masih dalam produksi."
+  fr: "Presse hydraulique haute pression de 560 tonnes pour graines difficiles à presser. Pression système 72 MPa, cuve 390 mm. Conçue pour noix, amande, coprah ou palmiste nécessitant une force maximale. Génération précédente, toujours en production."
+  ar: "معصرة هيدروليكية عالية الضغط بقوة 560 طن للبذور الصعبة العصر. ضغط النظام 72 ميجا باسكال، أسطوانة 390 مم. مصممة للجوز، اللوز، لب جوز الهند أو نواة النخيل التي تتطلب قوة قصوى. جيل سابق، لا تزال قيد الإنتاج."
+  id: "Mesin press hidrolik tekanan tinggi 560 ton untuk biji sulit press. Tekanan sistem 72 MPa, tabung 390mm. Dirancang untuk kenari, almond, kopra atau inti sawit yang butuh gaya maksimal. Generasi sebelumnya, masih produksi."
 category: hydraulic-oil-press
 model: HN480
 modelId: ''

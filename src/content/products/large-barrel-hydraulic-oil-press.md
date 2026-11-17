@@ -11,9 +11,9 @@ seoTitle:
   id: Mesin dewatering lumpur hidrolik — tabung press besar
 description:
   en: "325-ton hydraulic press with 630mm large tabung for sludge and residue dewatering. Handles oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable pulp dehydration. Custom configuration, 30–45 working days lead time."
-  fr: "Presse de déshydratation de boues hydraulique avec grand fût 630mm. Pour boues d'huile, résidus animaux/végétaux, boues textiles, déshydratation fruits/légumes. 325 tonnes, sur mesure."
-  ar: "مكبث نضح الحمأة الهيدروليكي بأسطوانة عصر كبيرة 630 مم. لحمأة الزيت، مخلفات الزيت الحيواني/النباتي، حمأة النسيج، نضح الفواكه/الخضروات. 325 طن، حسب الطلب."
-  id: "Mesin dewatering lumpur hidrolik dengan tabung press besar 630mm. Untuk lumpur minyak, residu minyak hewan/tumbuhan, lumpur tekstil, dewatering buah/sayur. 325 ton, kustom."
+  fr: "Presse hydraulique 325 tonnes avec grand fût 630 mm pour déshydratation des boues et résidus. Traite boue d'huile, résidus graisseux animal/végétal, boue textile et déshydratation de pulpe de fruits/légumes. Configuration sur mesure, délai 30–45 jours ouvrés."
+  ar: "معصرة هيدروليكية 325 طن بأسطوانة كبيرة 630 مم لتجفيف الحمأة والمخلفات. تعالج حمأة الزيت، مخلفات الدهون الحيوانية/النباتية، الحمأة النسيجية وتجفيف لب الفواكه/الخضروات. حسب الطلب، 30–45 يوم عمل."
+  id: "Mesin press hidrolik 325 ton dengan tabung besar 630mm untuk dewatering lumpur dan residu. Menangani lumpur minyak, residu lemak hewan/tumbuhan, lumpur tekstil dan dewatering pulp buah/sayur. Konfigurasi custom, lead time 30–45 hari kerja."
 category: hydraulic-oil-press
 model: HN325 Large Tabung Press
 modelFr: HN325 Grand Fût

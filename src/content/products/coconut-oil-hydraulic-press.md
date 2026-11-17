@@ -11,9 +11,9 @@ seoTitle:
   id: Mesin press santan kelapa hidrolik — 600mm, food grade (kustom)
 description:
   en: "300-ton hydraulic press with 600mm food-grade stainless steel tabung. Purpose-built for coconut milk, coconut cream, and VCO extraction. Custom configuration for coconut-only operations, 30–45 working days lead time, factory-direct."
-  fr: "Presse hydraulique à lait de coco avec fût 600mm en acier inoxydable alimentaire. 300 tonnes pour crème de coco/VCO. Sur mesure, 30-45 jours ouvrés."
-  ar: "معصرة حليب جوز الهند الهيدروليكية بأسطوانة عصر 600 مم من الفولاذ المقاوم للصدأ الغذائي. 300 طن لاستخراج كريمة جوز الهند/زيت جوز الهند البكر. حسب الطلب، 30-45 يوم عمل."
-  id: "Mesin press santan kelapa hidrolik dengan tabung press 600mm stainless steel food-grade. 300 ton untuk ekstraksi krim kelapa/VCO. Kustom, 30-45 hari kerja."
+  fr: "Presse hydraulique 300 tonnes avec fût 600 mm inox alimentaire. Conçue pour lait de coco, crème de coco et VCO. Configuration sur mesure pour opérations dédiées coco, délai 30–45 jours ouvrés, prix usine."
+  ar: "معصرة هيدروليكية 300 طن بأسطوانة 600 مم من الفولاذ المقاوم للصدأ الغذائي. مصممة لحليب جوز الهند، كريمة جوز الهند وVCO. حسب الطلب لعمليات جوز الهند المخصصة، 30–45 يوم عمل، مباشر من المصنع."
+  id: "Mesin press hidrolik 300 ton dengan tabung 600mm stainless steel food-grade. Dirancang untuk santan kelapa, krim kelapa dan VCO. Konfigurasi custom untuk operasi kelapa khusus, lead time 30–45 hari kerja, harga pabrik."
 category: hydraulic-oil-press
 model: 300 Type Coconut
 modelFr: 300 Type Coco

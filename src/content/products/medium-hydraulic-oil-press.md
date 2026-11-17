@@ -6,9 +6,9 @@ title:
   id: Mesin Press Minyak Hidrolik Sedang
 seoTitle:
   en: "HN355 Hydraulic Oil Press — 360 Ton Medium Series"
-  fr: "Presse à huile hydraulique HN355 — Série moyenne 360 tonnes"
-  ar: "معصرة زيت هيدروليكية HN355 — السلسلة المتوسطة 360 طن"
-  id: "Mesin press minyak hidrolik HN355 — Seri menengah 360 ton"
+  fr: "Presse hydraulique moyenne de 360 tonnes pour opérations de taille moyenne. Pression gâteau 30,15 MPa, ~100 kg par lot. Cuve 390 mm pour arachide, sésame, thé ou colza. Conçu pour compatibilité pièces détachées avec lignes existantes."
+  ar: "معصرة هيدروليكية متوسطة بقوة 360 طن للعمليات متوسطة الحجم. ضغط كعكة 30.15 ميجا باسكال، ~100 كجم لكل دفعة. أسطوانة 390 مم للفول السوداني، السمسم، بذور الشاي أو الكانولا. مصممة لتوافق قطع الغيار مع الخطوط الحالية."
+  id: "Mesin press hidrolik menengah 360 ton untuk operasi skala menengah. Tekanan kue 30,15 MPa, ~100 kg per batch. Tabung 390mm untuk kacang tanah, wijen, biji teh atau rapeseed. Dirancang untuk kompatibilitas suku cadang dengan jalur yang ada."
 description:
   en: "360-ton medium hydraulic oil press for mid-scale operations. 30.15 MPa cake pressure, ~100 kg per batch. 390mm tabung press for peanut, sesame, tea seed, or rapeseed. Built for spare-part compatibility with existing lines, factory-direct."
   fr: "Presse à huile hydraulique HN355 — modèle moyen de 360 tonnes avec pression de surface du tourteau de 30,15 MPa. Fût 390mm, ~100kg par lot. Toujours en production."

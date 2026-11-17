@@ -11,9 +11,9 @@ seoTitle:
   id: Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, kustom
 description:
   en: "600-ton ultra-high-pressure cold press for hard-shell premium oils. 65 MPa system pressure, 48 MPa cake pressure. Custom-configured for cold-pressing walnut, almond, or copra without heat damage. Made to order, 30–45 working days lead time, factory-direct."
-  fr: "Presse à froid ultra haute pression HN480B — 600 tonnes, 65 MPa, 48 MPa sur tourteau. Sur mesure pour noix, amandes, graines dures. 30-45 jours ouvrés."
-  ar: "معصرة باردة فائقة الضغط HN480B — 600 طن، 65 ميجاباسكال، 48 ميجاباسكال على الكسب. مخصصة للجوز واللوز والبذور الصلبة. 30-45 يوم عمل."
-  id: "Mesin press dingin ultra-tekanan tinggi HN480B — 600 ton, 65 MPa, 48 MPa pada bungkil. Kustom untuk walnut, almond, biji keras. 30-45 hari kerja."
+  fr: "Presse hydraulique 600 tonnes ultra-haute pression pour huiles premium à coque dure. Pression système 65 MPa, pression gâteau 48 MPa. Configurée sur mesure pour pressage à froid de noix, amande ou coprah sans altération thermique. Sur commande, 30–45 jours ouvrés."
+  ar: "معصرة هيدروليكية فائقة الضغط بقوة 600 طن للزيوت الفاخرة ذات القشرة الصلبة. ضغط النظام 65 ميجا باسكال، ضغط الكعكة 48 ميجا باسكال. حسب الطلب للعصر البارد للجوز، اللوز أو لب جوز الهند بدون تلف حراري. حسب الطلب، 30–45 يوم عمل."
+  id: "Mesin press hidrolik ultra-tekanan 600 ton untuk minyak premium cangkang keras. Tekanan sistem 65 MPa, tekanan kue 48 MPa. Config khusus untuk press dingin kenari, almond atau kopra tanpa kerusakan panas. Made to order, lead time 30–45 hari kerja."
 category: hydraulic-oil-press
 model: HN480B
 modelId: ''
