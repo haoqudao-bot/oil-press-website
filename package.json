@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && node scripts/strip-html-comments.mjs && node scripts/add-html-alias.mjs",
+    "build": "astro build && node scripts/strip-html-comments.mjs",
     "postbuild": "node scripts/site-audit.mjs && node scripts/verify-gptbot.mjs",
     "preview": "astro preview",
     "astro": "astro",

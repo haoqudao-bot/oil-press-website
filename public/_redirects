@@ -3,6 +3,14 @@
 # NOTE: Cloudflare trailing-slash 308 happens BEFORE _redirects matching.
 # So no-slash proxy rules are useless here. Use post-build script instead.
 
+# Trailing-slash → no-slash canonicalization:
+# HANDLED BY CLOUDFLARE DASHBOARD → Rules → Redirect Rules
+# (Cloudflare Rules Redirect has higher priority than Pages 308,
+# so it works where _redirects does not.)
+# Rule expression: http.host eq "www.hydoilpress.com" and not ends_with(http.request.uri.path, "/") and not regex_match(http.request.uri.path, "\.[a-zA-Z0-9]{2,5}$")
+# Redirect to: concat("https://www.hydoilpress.com", http.request.uri.path, "/")
+# Status: 301 Permanent Redirect, Preserve query string: ON
+
 # Sitemap alias: SEO tools commonly probe /sitemap.xml; actual file is /sitemap-index.xml
 /sitemap.xml /sitemap-index.xml 301
 
