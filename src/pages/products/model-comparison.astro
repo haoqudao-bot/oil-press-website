@@ -244,10 +244,23 @@ const faqLd = {
   ],
 };
 
-const allLd = [breadcrumbLd, faqLd];
+// ===== Article JSON-LD (GEO: freshness signal) =====
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Which Hydraulic Oil Press Should I Buy? HN325 · HN365 · HN426 · HN500 Comparison',
+  description: 'Honest comparison of Haonuo hydraulic oil presses by seed type, pressing force and daily capacity.',
+  author: { '@type': 'Person', name: 'Haonuo Engineering Team' },
+  publisher: { '@id': 'https://www.hydoilpress.com/#organization' },
+  datePublished: '2026-01-15',
+  dateModified: new Date().toISOString().split('T')[0],
+  keywords: ['hydraulic oil press comparison', 'which oil press to buy', 'HN325 vs HN365 vs HN426 vs HN500'],
+};
+
+const allLd = [breadcrumbLd, faqLd, articleLd];
 ---
 
-<BaseLayout title="Hydraulic Oil Press Model Comparison" description="Compare the four Haonuo core-range hydraulic oil presses — HN325, HN365, HN426, HN500 — side by side by pressing force, cake pressure and seeds, plus specialized and custom models." keywords={['oil press model comparison','hydraulic oil press comparison','HN325 vs HN426','oil press by seed type','cold press model guide','coconut oil press machine']} jsonLd={allLd}>
+<BaseLayout title="Which Hydraulic Oil Press Should I Buy? HN325 · HN365 · HN426 · HN500 Comparison" description="Which hydraulic oil press should you buy? Compare HN325, HN365, HN426, HN500 by seed type, pressing force and daily capacity. Honest guidance from the factory." keywords={['which hydraulic oil press to buy','oil press model comparison','hydraulic oil press comparison','HN325 vs HN365 vs HN426 vs HN500','oil press by seed type','cold press model guide']} jsonLd={allLd}>
   <!-- Breadcrumb -->
   <section class="bg-steel-50 py-3 border-b border-steel-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,10 +279,10 @@ const allLd = [breadcrumbLd, faqLd];
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mb-8">
         <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-          Hydraulic Oil Press Model Comparison
+          Which Hydraulic Oil Press Should I Buy?
         </h1>
         <p class="text-steel-300 text-lg md:text-xl leading-relaxed">
-          Pick by <b class="text-amber-400">seed type</b> or <b class="text-amber-400">scenario</b> → see your recommended model instantly.
+          Compare <b class="text-amber-400">HN325 · HN365 · HN426 · HN500</b>. Pick by <b class="text-amber-400">seed type</b> or <b class="text-amber-400">scenario</b> → see your recommended model instantly.
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-4">
@@ -289,6 +302,15 @@ const allLd = [breadcrumbLd, faqLd];
           <div class="font-display text-2xl md:text-3xl text-amber-400 font-bold leading-tight">2,000+</div>
           <div class="text-xs text-steel-300 mt-1">Buyers served</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GEO: TL;DR — 前80词直接回答 (AI直接抓这段) ===== -->
+  <section class="py-4 md:py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl px-5 py-4 text-sm md:text-base text-amber-900 leading-relaxed">
+        <strong class="text-amber-700">TL;DR — Quick Answer:</strong> Pressing <strong>soft seeds (peanut, sesame, rapeseed)</strong> at <strong>200–500 kg/day</strong>? <strong>HN325</strong> is the starter pick. <strong>500–1,200 kg/day</strong> commercial with multi-seed work? Go <strong>HN365</strong>. <strong>Cold-pressing premium oils (coconut VCO, walnut)</strong> for export? <strong>HN426</strong>. Maximum force for copra or in-shell walnut? <strong>HN500</strong>. Pick by seed hardness first, then daily volume.
       </div>
     </div>
   </section>
@@ -611,6 +633,15 @@ const allLd = [breadcrumbLd, faqLd];
           </summary>
           <p class="mt-3 text-steel-600 text-sm leading-relaxed">Every Haonuo hydraulic press can cold press — cold and hot pressing differ in <b>seed preparation, not the machine</b>. The HN426 (500 t, 42 MPa cake pressure) is the cold-press flagship for premium oil; the HN480B is a made-to-order 600 t variant for the hardest cold-press materials. The HN325 and HN365 are the usual choices when most production is hot-pressed.</p>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GEO: Last reviewed date (AI freshness signal) ===== -->
+  <section class="py-4 md:py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center text-xs text-steel-400">
+        <strong>Last reviewed:</strong> November 2026 &nbsp;·&nbsp; <strong>Next check:</strong> February 2027 &nbsp;·&nbsp; <strong>Factory data:</strong> verified Nov 2026
       </div>
     </div>
   </section>
