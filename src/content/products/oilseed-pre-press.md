@@ -5,15 +5,15 @@ title:
   ar: مكبس البذور الزيتية المسبق للمعالجة الأولية
   id: Pre-press Biji Minyak untuk Pra-Pengolahan
 seoTitle:
-  en: Oilseed Screw Pre-Press — 35-40% First Pass Extraction
-  fr: Pré-presse à vis oléagineuse — extraction 35-40 % au premier passage
-  ar: مكبس لولبي لعصر الدهن — مكبس زيت أولي لاستخراج 35-40% في المرحلة الأولى
-  id: Pre-press biji minyak ulir — ekstraksi 35-40% tahap pertama
+  en: Oilseed Screw Pre-Press — Seed Preparation Before Hydraulic Pressing
+  fr: Pré-presse à vis oléagineuse — préparation des graines avant pressage hydraulique
+  ar: مكبس لولبي للبذور الزيتية — تحضير البذور قبل الضغط الهيدروليكي
+  id: Pre-press biji minyak ulir — persiapan biji sebelum pengepresan hidrolik
 description:
-  en: "Screw oilseed pre-press that removes 35–40% of oil in a first pass and raises total plant yield by 3–5%. 7.5 kW (500 kg/h) or 11 kW (750 kg/h), ready for mustard, rapeseed and groundnut lines."
-  fr: "Pré-presse à vis qui extrait 35–40 % de l'huile en premier passage et augmente le rendement global de 3–5 %. 7,5 kW (500 kg/h) ou 11 kW (750 kg/h)."
-  ar: "مكبس بذور زيت لولبي يستخرج 35–40% من الزيت في المرحلة الأولى ويزيد إنتاج المصنع بنسبة 3–5%. 7.5 كيلوواط (500 كجم/ساعة) أو 11 كيلوواط (750 كجم/ساعة)."
-  id: "Pre-press biji minyak ulir yang mengambil 35–40% minyak pada tahap pertama dan menaikkan hasil total 3–5%. 7,5 kW (500 kg/jam) atau 11 kW (750 kg/jam)."
+  en: "Screw oilseed pre-press that crushes seeds into flakes and raises total plant oil yield by 3–5% before the main hydraulic press. 7.5 kW (500 kg/h) or 11 kW (750 kg/h), ready for mustard, rapeseed and groundnut lines."
+  fr: "Pré-presse à vis qui écrase les graines en flocons et augmente le rendement global en huile de 3–5 % avant la presse hydraulique principale. 7,5 kW (500 kg/h) ou 11 kW (750 kg/h)."
+  ar: "مكبس بذور زيت لولبي يهش البذور إلى رقائق ويزيد إنتاج المصنع الإجمالي للزيت بنسبة 3–5% قبل المكبس الهيدروليكي الرئيسي. 7.5 كيلوواط (500 كجم/ساعة) أو 11 كيلوواط (750 كجم/ساعة)."
+  id: "Pre-press biji minyak ulir yang menghancurkan biji menjadi serpihan dan menaikkan hasil minyak total pabrik sebesar 3–5% sebelum press hidrolik utama. 7,5 kW (500 kg/jam) atau 11 kW (750 kg/jam)."
 category: seed-processing-equipment
 model: HN-CG60
 modelId: ''
@@ -39,8 +39,8 @@ specifications:
     value: 1030 × 1000 × 750 mm
   - name: Machine Weight
     value: 174 kg
-  - name: Pre-Pass Oil Output
-    value: 35–40% of seed oil
+  - name: Crushing Action
+    value: Flakes seed, cracks oil cells — no oil output itself
   - name: Typical Yield Increase
     value: 3–5% total oil yield with hydraulic finishing
   - name: MOQ
@@ -60,7 +60,7 @@ applicableSeeds:
   - cotton seed
 faq:
   - question: What does the HN-CG60 oilseed pre-press do?
-    answer: The HN-CG60 is a screw expeller placed before the roasting and hydraulic pressing stages. It crushes and roll-presses the seed, releasing roughly 35–40% of the oil in a first pass, so the downstream hydraulic press finishes faster and the plant's overall oil yield rises by 3–5%.
+    answer: The HN-CG60 is a screw crusher placed before the roasting and hydraulic pressing stages. It crushes and roll-presses the seed into flakes, cracking the oil cells and enlarging surface area. This prepares the seed so the downstream hydraulic press extracts oil faster and the plant's overall oil yield rises by 3–5%. The pre-press itself does not produce oil — that is done by the hydraulic press.
   - question: What is the capacity of the HN-CG60?
     answer: The standard 7.5 kW version processes about 500 kg/h; an optional 11 kW version handles around 750 kg/h. Both run on 380V (other voltages available on request).
   - question: Which seeds can it process?
@@ -90,8 +90,8 @@ specificationsFr:
     value: 1030 × 1000 × 750 mm
   - name: Poids
     value: 174 kg
-  - name: Huile extraite au premier passage
-    value: 35–40 % de l'huile de la graine
+  - name: Action de broyage
+    value: Floconne la graine, fissure les cellules oléagineuses — ne produit pas d'huile elle-même
   - name: Gain de rendement typique
     value: 3–5 % de rendement total avec finition hydraulique
 applicableSeedsFr:
@@ -105,7 +105,7 @@ applicableSeedsFr:
   - coton
 faqFr:
   - question: À quoi sert la pré-presse oléagineuse HN-CG60 ?
-    answer: La HN-CG60 est une expulseuse à vis placée avant les étapes de torréfaction et de pressage hydraulique. Elle écrase et pré-presse la graine, libérant environ 35–40 % de l'huile dès le premier passage, ce qui accélère la presse hydraulique en aval et augmente le rendement global de 3–5 %.
+    answer: La HN-CG60 est un broyeur à vis placé avant les étapes de torréfaction et de pressage hydraulique. Il écrase et lamelle la graine en flocons, fissurant les cellules oléagineuses et augmentant la surface disponible. Cela prépare la graine pour que la presse hydraulique en aval extraie l'huile plus vite et augmente le rendement global de 3–5 %. La pré-presse elle-même ne produit pas d'huile — c'est la presse hydraulique qui l'extrait.
   - question: Quelle est la capacité de la HN-CG60 ?
     answer: La version standard de 7,5 kW traite environ 500 kg/h ; une version optionnelle de 11 kW atteint 750 kg/h. Les deux fonctionnent en 380V (autres tensions sur demande).
   - question: Quelles graines peut-elle traiter ?
@@ -135,8 +135,8 @@ specificationsAr:
     value: "1030 × 1000 × 750 مم"
   - name: "الوزن"
     value: "174 كجم"
-  - name: "الزيت المستخرج بالمرحلة الأولى"
-    value: "35–40% من زيت البذرة"
+  - name: "عملية التكسير"
+    value: "تحول البذور إلى رقائق، تكسر الخلايا الزيتية — لا ينتج زيتاً بحد ذاته"
   - name: "زيادة العائد النموذجية"
     value: "3–5% من إجمالي زيت الزيتون مع التشطيب الهيدروليكي"
 specificationsId:
@@ -154,8 +154,8 @@ specificationsId:
     value: 1030 × 1000 × 750 mm
   - name: Berat
     value: 174 kg
-  - name: Minyak Tahap Pertama
-    value: 35–40% dari minyak biji
+  - name: Aksi Penghancuran
+    value: Menghancurkan biji menjadi serpihan, memecah sel minyak — tidak menghasilkan minyak sendiri
   - name: Kenaikan Hasil Khas
     value: 3–5% hasil total dengan finishing hidrolik
 applicableSeedsAr:
@@ -178,7 +178,7 @@ applicableSeedsId:
   - biji kapas
 faqAr:
   - question: "ما وظيفة مكبس البذور الزيتية المسبق HN-CG60؟"
-    answer: "إن HN-CG60 عبارة عن مكبس لولبي يوضع قبل مراحل التحميص والضغط الهيدروليكي. يهش ويعصر البذور مسبقاً، مطلقاً حوالي 35–40% من الزيت في المرحلة الأولى، مما يسرع المكبس الهيدروليكي اللاحق ويزيد إنتاج المصنع الإجمالي للزيت بنسبة 3–5%."
+    answer: "إن HN-CG60 عبارة عن مكبس لولبي يوضع قبل مراحل التحميص والضغط الهيدروليكي. يهش ويسحق البذور إلى رقائق، يكسر الخلايا الزيتية ويزيد المساحة السطحية. هذا يحضر البذور بحيث يستخرج المكبس الهيدروليكي اللاحق الزيت بشكل أسرع ويزيد إنتاج المصنع الإجمالي بنسبة 3–5%. المكبس المسبق لا ينتج زيتاً بحد ذاته — بل المكبس الهيدروليكي هو من يقوم بالاستخراج."
   - question: "ما قدرة HN-CG60؟"
     answer: "النسخة القياسية بقوة 7.5 كيلوواط تعالج حوالي 500 كجم/ساعة؛ والنسخة الاختيارية بقوة 11 كيلوواط تصل إلى 750 كجم/ساعة. تعمل كلاهما بجهد 380 فولت (جهود أخرى متاحة عند الطلب)."
   - question: "ما البذور التي يمكنها معالجتها؟"
@@ -195,7 +195,7 @@ faqAr:
     answer: "نقدم ضماناً لمدة عام يغطي جميع عيوب التصنيع، بالإضافة إلى دعم فني مدى الحياة. قطع الغيار متوفرة من المخزون."
 faqId:
   - question: Apa fungsi pre-press biji minyak HN-CG60?
-    answer: HN-CG60 adalah expeller ulir yang ditempatkan sebelum tahap sangrai dan pengepresan hidrolik. Mesin menghancurkan dan mempress biji, melepaskan sekitar 35–40% minyak pada tahap pertama, sehingga press hidrolik di hilir bekerja lebih cepat dan hasil minyak total pabrik naik 3–5%.
+    answer: HN-CG60 adalah crusher ulir yang ditempatkan sebelum tahap sangrai dan pengepresan hidrolik. Mesin menghancurkan biji menjadi serpihan, memecah sel minyak dan memperluas luas permukaan. Ini mempersiapkan biji agar press hidrolik di hilir mengekstraksi minyak lebih cepat dan hasil minyak total pabrik naik 3–5%. Pre-press ini sendiri tidak menghasilkan minyak — ekstraksi dilakukan oleh press hidrolik.
   - question: Berapa kapasitas HN-CG60?
     answer: Versi standar 7,5 kW memproses sekitar 500 kg/jam; versi opsional 11 kW mencapai 750 kg/jam. Keduanya beroperasi pada 380V (tegangan lain tersedia berdasarkan permintaan).
   - question: Biji apa saja yang dapat diproses?
@@ -227,13 +227,13 @@ updatedAt: 2025-11-05
 
 ## Overview
 
-The HN-CG60 oilseed pre-press is a screw expeller installed at the front of an oil line, before roasting and hydraulic pressing. It crushes the seed and rolls it into flakes or a rough cake, cracking the oil cells and enlarging the heated surface area. Around 35–40% of the oil is released in this first pass, and the pre-pressed material then moves on to roasting and the main hydraulic press. Mills that add this stage typically see their total oil yield rise by 3–5%.
+The HN-CG60 oilseed pre-press is a screw crusher installed at the front of an oil line, before roasting and hydraulic pressing. It crushes the seed and rolls it into flakes or a rough cake, cracking the oil cells and enlarging the heated surface area. **The pre-press itself does not produce oil** — it only prepares the seed for the downstream press. The pre-pressed material then moves on to roasting and the main hydraulic press, which extracts the oil. Mills that add this pre-treatment stage typically see their total oil yield rise by 3–5%.
 
 This two-stage layout — screw pre-press followed by hydraulic finishing — is the standard setup for mustard, rapeseed and groundnut in India, Southeast Asia and Africa. The machine arrives fully assembled, needs no specialist installation, and one worker operates it.
 
 ## Key Advantages
 
-- **Higher total yield** — removes 35–40% of the oil before the main press, raising overall plant output by 3–5%
+- **Higher total yield** — flaking and pre-treatment raise downstream hydraulic press efficiency, boosting overall plant output by 3–5%
 - **Two throughput options** — 7.5 kW for about 500 kg/h, or 11 kW for about 750 kg/h
 - **Compact footprint** — 1030 × 1000 × 750 mm frame, roughly 1 m² and 174 kg, fits into an existing line
 - **Adjustable flake thickness** — the discharge cone sets the gap, so output matches your pressing recipe
@@ -249,7 +249,7 @@ Seeds enter the hopper and are pushed by the screw through the pressing chamber,
 The HN-CG60 works across many oilseeds by adjusting the cone gap:
 
 - **Rapeseed & mustard** — the classic two-stage lines of India, Southeast Asia and Africa
-- **Groundnut** — high-oil kernel where the first pass captures most of the free oil
+- **Groundnut** — high-oil kernel where flaking helps the downstream press reach more oil cells
 - **Soybean, flaxseed, sesame, walnut, sunflower, cotton seed** — all handled by gap adjustment
 
 ## Why Choose Our Oil Press Equipment

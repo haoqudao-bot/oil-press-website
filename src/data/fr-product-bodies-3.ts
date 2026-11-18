@@ -296,13 +296,13 @@ Principes physiques et chimiques combinés pour l'élimination ciblée des impur
 
   'oilseed-pre-press': `## Aperçu
 
-La pré-presse oléagineuse HN-CG60 est une expulseuse à vis installée en tête de ligne, avant la torréfaction et le pressage hydraulique. Elle écrase la graine et la roule en flocons ou en tourteau grossier, rompant les cellules huileuses et élargissant la surface chauffée. Environ 35 à 40 % de l'huile est libérée dès ce premier passage, puis le matériau pré-pressé passe à la torréfaction et à la presse hydraulique principale. Les huileries qui ajoutent cette étape voient généralement leur rendement global en huile augmenter de 3 à 5 %.
+La pré-presse oléagineuse HN-CG60 est un broyeur à vis installé en tête de ligne, avant la torréfaction et le pressage hydraulique. Elle écrase la graine et la roule en flocons ou en tourteau grossier, rompant les cellules huileuses et élargissant la surface chauffée. **La pré-presse ne produit pas d'huile elle-même** — elle prépare seulement la graine pour la presse en aval. Le matériau broyé passe à la torréfaction et à la presse hydraulique principale qui extrait l'huile. Les huileries qui ajoutent cette étape voient généralement leur rendement global en huile augmenter de 3 à 5 %.
 
 Cette configuration en deux étapes — pré-presse à vis puis finition hydraulique — est l'installation standard pour la moutarde, le colza et l'arachide en Inde, en Asie du Sud-Est et en Afrique. La machine est livrée entièrement assemblée, ne nécessite aucune installation spécialisée et un seul ouvrier la commande.
 
 ## Avantages Clés
 
-- **Rendement global plus élevé** — retire 35 à 40 % de l'huile avant la presse principale, augmentant la production de l'usine de 3 à 5 %
+- **Rendement global plus élevé** — le floconnage améliore l'efficacité de la presse hydraulique en aval, augmentant la production de l'usine de 3 à 5 %
 - **Deux options de débit** — 7,5 kW pour environ 500 kg/h, ou 11 kW pour environ 750 kg/h
 - **Encombrement réduit** — châssis de 1030 × 1000 × 750 mm, environ 1 m² et 174 kg, s'intègre à une ligne existante
 - **Épaisseur de flocons réglable** — le cône de sortie règle l'espacement, la sortie correspond donc à votre recette de pressage

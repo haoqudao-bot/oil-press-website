@@ -297,9 +297,9 @@ Prinsip fisik dan kimia yang dikombinasikan untuk penghilangan kotoran secara te
 
   'oilseed-pre-press': `## Ringkasan
 
-Pre-press biji minyak HN-CG60 adalah expeller ulir yang dipasang di awal lini, sebelum sangrai dan pengepresan hidrolik. Mesin menghancurkan biji dan menggulingkannya menjadi serpihan atau bungkil kasar, memecah sel minyak dan memperluas area yang dipanaskan. Sekitar 35 hingga 40% minyak dilepaskan pada tahap pertama ini, lalu bahan yang sudah dipress dipindahkan ke sangrai dan press hidrolik utama. Pabrik yang menambahkan tahap ini biasanya melihat hasil minyak total naik 3 hingga 5%.
+Pre-press biji minyak HN-CG60 adalah crusher ulir yang dipasang di awal lini, sebelum sangrai dan pengepresan hidrolik. Mesin menghancurkan biji dan menggulingkannya menjadi serpihan atau bungkil kasar, memecah sel minyak dan memperluas area yang dipanaskan. **Pre-press ini sendiri tidak menghasilkan minyak** — hanya mempersiapkan biji untuk press hilir. Bahan yang sudah dihancurkan lalu dipindahkan ke sangrai dan press hidrolik utama yang mengekstraksi minyak. Pabrik yang menambahkan tahap perlakuan awal ini biasanya melihat hasil minyak total naik 3 hingga 5%.
 
-Tata letak dua tahap ini — pre-press ulir lalu finishing hidrolik — adalah konfigurasi standar untuk mustard, lobak, dan kacang tanah di India, Asia Tenggara, dan Afrika. Mesin dikirimkan dalam keadaan terpasang penuh, tidak memerlukan instalasi khusus, dan satu pekerja mengoperasikannya.
+Tata letak dua tahap ini — pre-press ulir (penghancuran) lalu finishing hidrolik (ekstraksi minyak) — adalah konfigurasi standar untuk mustard, lobak, dan kacang tanah di India, Asia Tenggara, dan Afrika. Mesin dikirimkan dalam keadaan terpasang penuh, tidak memerlukan instalasi khusus, dan satu pekerja mengoperasikannya.
 
 ## Keunggulan Utama
 
@@ -312,7 +312,7 @@ Tata letak dua tahap ini — pre-press ulir lalu finishing hidrolik — adalah k
 
 ## Struktur & Konstruksi
 
-Biji masuk ke corong dan didorong ulir melalui ruang pengepresan, di mana biji dihancurkan, digosok, dan dipress menjadi serpihan. Kerucut di keluaran mengatur celah, memberi kendali atas ketebalan serpihan dan kekencangan pre-press. Seluruhnya — motor, ruang pengepresan, dan corong — berdiri pada rangka baja kompak, dan penggerak berjalan melalui sabuk dan katrol untuk meredam beban kejut dan menekan biaya perawatan.
+Biji masuk ke corong dan didorong ulir melalui ruang penghancuran, di mana biji dihancurkan, digosok, dan digiling menjadi serpihan. Kerucut di keluaran mengatur celah, memberi kendali atas ketebalan serpihan dan tingkat penghancuran. Seluruhnya — motor, ruang pengepresan, dan corong — berdiri pada rangka baja kompak, dan penggerak berjalan melalui sabuk dan katrol untuk meredam beban kejut dan menekan biaya perawatan.
 
 ## Aplikasi & Bahan yang Cocok
 
