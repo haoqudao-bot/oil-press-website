@@ -54,6 +54,61 @@ const howToLd = {
   ],
 };
 
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does a complete oil production line cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Investment breakdown: Core equipment (press + auxiliary) 40-50%, installation and commissioning 10-15%, building and infrastructure 15-25%, initial raw materials 5-10%, working capital 10-15%. The press typically accounts for only 35-45% of equipment spend; cleaning, crushing, roasting, filtration, conveyors, and installation make up the rest. Add freight, duties, and a 30-45 day commissioning window. Budget 20-40 kVA for a complete small or medium line.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What size production line do I need?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Capacity guide: Home Workshop (100-500 kg/day) uses HN325 press + small roaster + manual filter. Small Business (500-2000 kg/day) uses HN365 + rotary roaster + filter system. Medium Factory (2000-5000 kg/day) uses HN426/HN480 + full roaster + centrifuge + complete line. Large Industrial (5000+ kg/day) uses multiple HN500 presses + industrial roasters + full refining. Size the line for the product mix you will actually run.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I balance my production line around the press?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A line is only as fast as its slowest station. Balance supporting equipment against the peak output of the press, not averages. Roasting capacity should be at least twice the pressing rate so the press never waits for roasted seed. Crushing and conditioning should match pressing rate hour by hour. Filtration must keep pace with oil output. Storage tanks should hold at least 3-5 days of production, decoupling pressing rhythm from truck collection. Cleaning runs in short bursts and is best rated at 1.5-2× the input rate.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What utilities do I need for a complete oil production line?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The press motor is only 2.2 kW but a complete line draws considerably more. Before signing a lease or ordering equipment, confirm three-phase supply, total kVA, and water at the site. Typical power: hydraulic press 2.2 kW (peak ~3 kW), vibrating cleaner and destoner 1.5-3 kW, electric roaster 15-40 kW, crusher 3-7.5 kW, filter press 1.5-3 kW, conveyors and pumps 3-8 kW. Budget 20-40 kVA total. Water use is modest: about 0.5-1 m³/day for cleaning, plus 2-5 m³/day of recirculated cooling water.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the implementation sequence for a new oil production line?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Six steps in order: 1) Confirm target seeds, daily tonnage, and hot-versus-cold product mix before quoting anything. 2) Lock the press model and barrel count — this fixes the size of every other station. 3) List supporting equipment with capacities matched to peak press output, not averages. 4) Draft the floor plan and confirm ceiling height, power, water, and drainage. 5) Order with a spare-parts package and installation guidance; schedule operator training at commissioning. 6) Start with one seed, one recipe, and written batch records before adding a second material.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I maintain a complete oil production line?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Maintenance schedule: Daily — clean equipment, check hydraulic oil level, inspect filters, check safety devices. Weekly — replace filters, check belt tension, inspect press chamber, lubricate moving parts. Monthly — change hydraulic oil, inspect hoses, calibrate temperature controls, check electrical connections. Quarterly — full system inspection, replace worn parts, test safety systems, clean storage tanks. Annually — overhaul hydraulic system, replace seals, full electrical inspection, update records. Building the layout for washable floors with drains that do not back up saves an hour of labour every day.',
+      },
+    },
+  ],
+};
+
 const productionStages = [
   { stage: '1', title: 'Seed Cleaning', equipment: 'Vibrating screen, magnetic separator', desc: 'Remove debris, stones, metal, and damaged seeds. Essential for quality and equipment protection.' },
   { stage: '2', title: 'Dehulling', equipment: 'Sheller, separator', desc: 'Remove seed coats to improve oil yield and cake quality.' },
@@ -97,7 +152,7 @@ const maintenanceSchedule = [
 ];
 ---
 
-<BaseLayout title={seoTitle} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd]}>
+<BaseLayout title={seoTitle} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd, faqLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
@@ -301,6 +356,24 @@ const maintenanceSchedule = [
       </section>
     </div>
   </main>
+
+<!-- ===== GEO: FAQ Schema (visible + JSON-LD) ===== -->
+  <section class="py-8 border-t border-steel-200 bg-steel-50/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-2xl font-bold text-charcoal-900 mb-6 text-center">Frequently Asked Questions About Oil Production Lines</h2>
+      <div class="space-y-3">
+        {faqLd.mainEntity.map((item, i) => (
+          <details class="bg-white rounded-xl border border-steel-100 shadow-sm group">
+            <summary class="cursor-pointer px-5 py-4 font-semibold text-charcoal-900 flex justify-between items-center list-none [&::-webkit-details-marker]:hidden">
+              <span class="flex items-start gap-3"><span class="text-amber-500 font-bold">{i + 1}.</span>{item.name}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="px-5 pb-5 pt-0 text-steel-700 leading-relaxed border-t border-steel-100 pt-4">{item.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
 
 <!-- ===== GEO: Sources & References (AI trust signal) ===== -->
   <section class="py-4 border-t border-steel-200">

@@ -54,6 +54,61 @@ const howToLd = {
   ],
 };
 
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the optimal moisture content for oilseed pressing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Optimal moisture varies by seed: sesame 5-6%, peanut 5-7%, rapeseed 6-8%, walnut 7-9%. Too dry causes brittle material and reduced yield; too wet causes emulsification, sticky cake, and mold risk. Test by squeezing — material should hold together but crumble easily. A moisture meter gives precision.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does roasting increase oil yield?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Proper roasting increases yield by 3-5% by breaking down cell walls and releasing trapped oil. Sesame roasted at 160-180°C for 25-30 minutes reaches 48-54% yield vs. 42-46% unroasted. Peanut roasted at 165-185°C for 30-35 minutes reaches 45-50% vs. 38-42% unroasted. Use a thermometer — inconsistent roasting gives inconsistent yield.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long should I hold peak pressure during pressing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Hold full pressure (50-60 MPa) for 5-10 minutes depending on the material. Rushing the peak-pressure hold can reduce yield by 5-10%. The pressure habit is the same for both hot and cold: ramp in stages — initial squeeze to seat and crack the charge, short pause while oil flows freely, then full pressure held to the end of the cycle. Holding full pressure for the final 3-5 minutes, when visible flow is only a trickle, is where the last oil is actually won.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why is my cake still oily after pressing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cake residual oil above 8% points to one of four causes: wet feed (fix moisture to 5-8%), too-short holding time at peak pressure (add 3-5 minutes), a worn barrel (inspect and replace if needed), or uneven loading (distribute material evenly in the chamber). A slotted (strip-gap) cold-press barrel leaves 6-8% residual oil vs. 10-12% with older drilled barrels.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I get 10-20% more oil from my seeds?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Proper technique can increase yield by 10-20%. The three levers that move yield more than any machine specification are feed moisture, roasting, and the pressure-holding profile. Buying a larger press does nothing for recovery if seed arrives wet or roasts unevenly. Fix those two variables first — that is the cheapest upgrade available to any mill. Start a batch record: log seed weight, moisture estimate, roast time and temperature, pressure setpoint and holding time, oil weight after filtration, and cake residual. Within two weeks the records expose which variable is costing oil.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between hot-press and cold-press yield?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cold pressing deliberately trades 8-12 percentage points of yield for flavour, colour, and a premium price. Hot-pressed sesame reaches 48-54% while cold-pressed sesame typically yields 38-44%. Cold-press cycle times stretch to roughly two hours vs. 30-40 minutes hot, so per-shift throughput falls significantly. The business case depends entirely on the price premium and cake value, not on volume.',
+      },
+    },
+  ],
+};
+
 const yieldFactors = [
   { icon: 'seed', title: 'Raw Material Quality', desc: 'High-quality seeds = higher yield' },
   { icon: 'droplet', title: 'Moisture Content', desc: 'Optimal moisture = 5-8%' },
@@ -108,7 +163,7 @@ const maintenanceTips = [
 ];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd, faqLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">
@@ -330,6 +385,24 @@ const maintenanceTips = [
         <p class="text-steel-700 leading-relaxed">Maximizing oil yield is a combination of proper preparation, correct technique, and consistent practice. By implementing the tips in this guide, you can significantly increase your oil production and profitability. For personalized optimization advice, contact our engineering team.</p>
       </section>
     </div>
+  <!-- ===== GEO: FAQ Schema (visible + JSON-LD) ===== -->
+  <section class="py-8 border-t border-steel-200 bg-steel-50/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-2xl font-bold text-charcoal-900 mb-6 text-center">Frequently Asked Questions About Oil Yield</h2>
+      <div class="space-y-3">
+        {faqLd.mainEntity.map((item, i) => (
+          <details class="bg-white rounded-xl border border-steel-100 shadow-sm group">
+            <summary class="cursor-pointer px-5 py-4 font-semibold text-charcoal-900 flex justify-between items-center list-none [&::-webkit-details-marker]:hidden">
+              <span class="flex items-start gap-3"><span class="text-amber-500 font-bold">{i + 1}.</span>{item.name}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="px-5 pb-5 pt-0 text-steel-700 leading-relaxed border-t border-steel-100 pt-4">{item.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- ===== GEO: Sources & References (AI trust signal) ===== -->
   <section class="py-4 border-t border-steel-200">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
