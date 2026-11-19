@@ -51,6 +51,61 @@ const howToLd = {
   ],
 };
 
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is crude oil filtration and why is it needed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Crude oil filtration is the process of removing solid particles, water, and other impurities from oil after pressing. Proper filtration transforms raw pressed oil into a clear, marketable product that meets quality standards for appearance, flavor, and shelf life. Cloudy oil with sediment gets rejected or discounted by wholesale buyers, foams and smokes when heated, spoils faster due to seed solids oxidising, and cannot support premium or export claims.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What impurities does crude oil contain after pressing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'After hydraulic pressing, crude oil typically contains 2-5% solid particles (seed fragments, cake particles), 0.5-2% moisture, phospholipids (gums), free fatty acids, color compounds, and potential aflatoxins. Filtration removes solids and some moisture, but dissolved substances like gums and free fatty acids require degumming or neutralisation to fully remove.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between settling and filtration?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Settling uses gravity to let particles sink to the bottom of a tank over 24-72 hours, producing clear oil from the top. Filtration uses a barrier (paper, cloth, or centrifuge) to physically trap particles as oil passes through. Settling is low-cost and preserves quality but slow, while filtration is faster and more effective for fine particles but requires equipment and consumables. Most mills combine both.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What equipment do I need for crude oil filtration?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For small workshops (500-1,500 kg/day), a single plate-and-frame filter press with settling tanks is sufficient. Medium mills (1,500-3,000 kg/day) need multi-stage filtration with pre-filtration, primary plate filter, and polishing. Large operations use automated filtration lines with centrifuges. A general rule is to size filtration capacity at 1.5-2x the press\'s average hourly oil output to avoid bottlenecks.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I fix cloudy oil after filtration?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cloudy or re-clouding oil after an initially bright filtrate usually means cloth bypass or a cracked plate. Slow cycles with high pressure indicate blinded cloth, overly fine solids from over-crushing, or oil that is too cold — warming crude gently to 35-45°C lowers viscosity dramatically. Oil that looks bright but deposits sediment in bottles after days points to inadequate fine polishing; a second pass through finer cloth or a polish filter solves it.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between filtration and refining?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Filtration removes only particles — seed solids, fines, and with activated carbon some colour and aflatoxin. It does not remove dissolved substances: phospholipids (gums), free fatty acids, waxes, and odour compounds. Filtered cold-pressed oil is the natural product for local, artisanal, and premium markets. If the market demands neutral taste, light colour, long shelf life, or bulk commodity standards, the line needs degumming, neutralisation, bleaching, and deodorisation — a refining investment realistic from roughly 5 tonnes/day upward.',
+      },
+    },
+  ],
+};
+
 const filtrationImportance = [
   { icon: 'shield', title: 'Remove Impurities', desc: 'Eliminate solid particles, moisture, and contaminants' },
   { icon: 'star', title: 'Improve Quality', desc: 'Clearer, purer oil with better appearance' },
@@ -98,7 +153,7 @@ const storageTips = [
 ];
 ---
 
-<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd]}>
+<BaseLayout title={title} description={description} keywords={seoKeywords} jsonLd={[articleLd, breadcrumbLd, howToLd, faqLd]}>
   <section class="bg-steel-50 py-4 border-b border-steel-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm text-steel-500">

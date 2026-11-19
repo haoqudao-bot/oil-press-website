@@ -196,3 +196,67 @@ At 800-1,200 kg/day, one HN325 turns fat trimmings into roughly **$440-1,680 of 
 - Shipped **FOB Qingdao**; we arrange sea freight to **Karachi, Alexandria, Veracruz, Gdansk or Barcelona** with full export documentation
 - Wear parts (seals, filter cloths) ship with the machine, backed by 1-year spares support
 - Video-call a live pressing demo with your own fat trimmings before you order
+
+## Market Demand & Regional Opportunities
+
+Animal fat markets are growing because they are tied to two long-term trends: rising meat consumption in emerging economies, and the circular economy push to recover value from every byproduct.
+
+**Key markets by fat type:**
+
+| Market | Primary Fat | Demand Driver | Typical Price Range |
+|---|---|---|---|
+| Mexico & Central America | Lard (food-grade) | Bakery, traditional cooking, corn tortilla production | $0.90–1.50/kg |
+| Pakistan & Middle East | Tallow (halal industrial) | Soap manufacturing, biodiesel feedstock, animal feed | $0.70–1.10/kg |
+| Egypt & North Africa | Tallow (halal food + industrial) | Traditional fat consumption + oleochemicals | $0.65–1.00/kg |
+| Spain & Southern Europe | Lard + Tallow | Charcuterie, bakery, traditional foods | $1.20–2.00/kg |
+| India | Tallow (feed + soap) | Soap and oleochemical industries | $0.60–0.90/kg |
+
+**What this means for press sizing:** A Mexican slaughterhouse producing 20 tonnes/day of beef trimmings can recover an extra 1,000–1,500 kg/day of tallow by pressing cracklings — at $0.90/kg that is **$900–1,350/day of additional revenue** from material that would otherwise become low-value feed or be disposed of. A Pakistan rendering plant processing 5 tonnes/day of mutton fat trimmings adds roughly **$280–520/day** in recovered halal tallow revenue.
+
+## Food-Grade vs Industrial-Grade Production
+
+Not all fat needs the same treatment, and understanding where your product sits protects against costly misalignment with buyer expectations.
+
+**Food-grade lard and tallow** require:
+- Fresh edible-grade trimmings from inspected slaughter
+- Low-temperature rendering (80–95°C, no scorching) to preserve light colour and neutral flavour
+- Filtration with food-grade filter aids (diatomaceous earth, activated carbon)
+- Moisture below 0.1% and acid value below 1.0 mg KOH/g
+- Clean stainless-steel tanks and lines, documented cleaning schedules
+
+**Industrial-grade tallow** for soap, biodiesel, and oleochemicals:
+- Lower-grade trimmings including inedible offal fat
+- Higher-temperature rendering (100–130°C) for maximum recovery
+- Simple filtration; colour and flavour are not premium concerns
+- Water content up to 0.5% is acceptable for industrial buyers
+- Separate lines recommended if you also produce food-grade
+
+**Why this matters for machine selection:** Food-grade producers should press hot cracklings (to 70°C oil exit) and filter immediately — the Haonuo HN325 with plate-and-frame filter press handles this cleanly. Industrial producers can press at slightly lower temperature and skip the polish filter step to reduce running cost. Tell us your target grade and we size the line accordingly.
+
+## Equipment Sizing for Different Plant Scales
+
+Your press should match your rendering kettle output — an oversized press wastes capital, and an undersized one creates a bottleneck that forces you to tank up hot cracklings and lose quality.
+
+| Plant Scale | Trimmings per Day | Recommended Press | Press Frequency | Daily Press Yield |
+|---|---|---|---|---|
+| Small rendering (1-2 workers) | 500-1,000 kg | HN325 Single Barrel | 8-12 batches/day | 350-820 kg rendered + pressed fat |
+| Medium slaughterhouse | 2,000-5,000 kg | HN325 Double Barrel or HN365 | 10-15 batches/day | 1,400-4,100 kg |
+| Large industrial | 8,000+ kg | HN365 or HN426 + double-barrel | Continuous scheduling | 5,600+ kg |
+
+**The bottleneck rule:** Press throughput should equal 60–70% of rendering kettle output — this gives you buffer so you are not racing the kettle. If rendering runs 2 tonnes/hour target, the press should handle 1,200–1,400 kg/hour through one barrel.
+
+Your rendering kettle also matters. A 500 L jacketed kettle running at 90°C renders about 300 kg of fat trimmings per hour. Two kettles feeding one HN325 Double Barrel press is a balanced line for medium operations.
+
+## Troubleshooting: When Pressing Doesn't Deliver Full Yield
+
+Press recovery depends on three variables the operator controls. When results fall short, work down this checklist before blaming the machine.
+
+| Symptom | Likely Cause | Fix |
+|---|---|---|
+| Cake still oozes fat after pressing | Not pressed hot enough | Press cracklings while still 60–80°C from the rendering kettle; cold cracklings refuse to release residual fat |
+| High residual fat in cake (> 9%) | Cycle ended too early, pressure not held | Hold final pressure for 15–20 minutes after flow stops, not just 10 minutes |
+| Fat contains too much water or sediment | Settling tank undersized or filter bypassing | Allow 24-hour settling before pressing; check filter cloth for tears and replace any cloth that leaks cloudy filtrate |
+| Lard recovery worse than tallow | Lard is pressed from softer cracklings — increase cycle time for lard | Add 5 minutes to lard cycles vs. tallow cycles; lard cake needs more time under pressure |
+| Press smells burnt after first run | Rendering kettle ran too hot; press is fine | Lower rendering temperature to 90°C max for food-grade lard; industrial tallow can run to 115°C |
+
+**Real numbers from our customers:** A Pakistani rendering plant was getting 62% recovery from mutton cracklings before they added a HN325. After 40 batches, they held pressure 18 minutes instead of 10, pressed at 75°C crackling temp, and hit 71% recovery — an extra 9% of fat from the same trimmings, with the same machine.
