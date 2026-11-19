@@ -292,7 +292,7 @@ This page exists as a reference for buyers searching specifically for the HN300 
 - You need around 80–100 kg per batch
 - You want the current main model with ongoing design improvements
 
-[Compare HN300 vs HN325 and all models →](/products/model-comparison/)
+Compare HN300 vs HN325 and all models on our model comparison page.
 
 ## Suitable Applications
 
@@ -300,10 +300,10 @@ The HN300 is optimized for small-seed oil production:
 
 - **Primary use**: Sesame oil pressing — the HN300 is well-suited as a dedicated sesame oil press machine
 - **Also suitable**: Peanut, rapeseed, tea seed
-- **Not recommended**: Walnut, almond, and other hard-shell or cold-press materials — see the [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) or [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) instead
+- **Not recommended**: Walnut, almond, and other hard-shell or cold-press materials — use the HN426 Cold Press or HN500 Ultra High Pressure model instead
 
 ## Still in Production
 
 The HN300 is still manufactured and accepts orders. It shares the same tabung press and common wear parts as the HN325, so spare parts remain available from stock. Production lead time is 15–25 working days for standard configurations.
 
-[Request an HN300 quote](/contact/) or [ask about the upgraded HN325 →](/products/standard-hydraulic-oil-press/)
+Request an HN300 quote or ask about the upgraded HN325 model — see the contact form and model pages linked from this site.

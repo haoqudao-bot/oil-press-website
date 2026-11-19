@@ -233,7 +233,7 @@ updatedAt: 2026-10-10
 
 ## Overview
 
-> **Looking for a current model?** Most buyers today choose the [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) (620 t, 75 MPa) for maximum pressing force, or the [HN426 Cold Press](/products/cold-press-hydraulic-oil-press/) (500 t, 70 MPa) for premium cold-pressed oil. The HN480 remains in production for buyers replacing an existing HN480 or matching a previous quotation.
+> **Looking for a current model?** Most buyers today choose the HN500 Ultra High Pressure (620 t, 75 MPa) for maximum pressing force, or the HN426 Cold Press (500 t, 70 MPa) for premium cold-pressed oil. The HN480 remains in production for buyers replacing an existing HN480 or matching a previous quotation.
 
 The HN480 is a 560-ton high-pressure hydraulic oil press with a 480 mm cylinder and 390 mm tabung press, running at 72 MPa system pressure. It sits between the HN426 cold-press model and the HN500 ultra-high-pressure flagship, handling both conventional and cold-press oil extraction. The 2.2 kW motor keeps operating costs modest.
 
@@ -261,7 +261,7 @@ This page serves as a reference for buyers searching specifically for the HN480 
 - You need maximum force (620 t) and pressure (75 MPa) for the hardest seeds
 - You want the current flagship ultra-high-pressure model
 
-[Compare HN480 with all models →](/products/model-comparison/)
+Compare HN480 with all models on our model comparison page.
 
 ## Suitable Applications
 
@@ -269,10 +269,10 @@ The HN480 handles both conventional and cold-press materials at high pressure:
 
 - **Conventional oilseeds**: Tea seed, rapeseed, peanut
 - **Cold-press materials**: Walnut kernel, apricot kernel
-- **For the hardest seeds** (in-shell walnut, copra, tiger nut), see the [HN500 Ultra High Pressure](/products/ultra-high-pressure-hydraulic-oil-press/) instead
+- **For the hardest seeds** (in-shell walnut, copra, tiger nut), use the HN500 Ultra High Pressure model instead
 
 ## Still in Production
 
 The HN480 is still manufactured and accepts orders. Production lead time is 15–25 working days for standard configurations.
 
-[Request an HN480 quote](/contact/) or [compare current models →](/products/model-comparison/)
+Request an HN480 quote or compare current models — see the contact form and model pages linked from this site.
