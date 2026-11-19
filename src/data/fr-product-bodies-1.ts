@@ -25,7 +25,7 @@ La presse fonctionne sur une alimentation standard 380 V / 50 Hz ; une version 4
 
 | Modèle | Force | Pression sur tourteau | Ø fût (standard) | Configuration | Idéal pour |
 |---|---|---|---|---|---|
-| [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Fût simple / double | Lots plus petits (~60 kg), budget le plus serré |
+| [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Fût simple / double | Lots compacts (~60 kg), format réduit |
 | **HN325** | **325 t** | **27 MPa** | **Ø390 mm (personnalisable)** | **Fût simple / double** | **Petites et moyennes huileries, usage polyvalent** |
 | [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (personnalisable) | Fût simple / double | Volume journalier supérieur, moins d'attente |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (personnalisable) | Fût simple / double | Activité de pressage à froid : coco, noix |
@@ -35,7 +35,7 @@ La pression sur tourteau correspond à la force de pressage divisée par la surf
 
 **HN325 ou HN365 ?** Jusqu'à environ une tonne de graines pressées à chaud par jour, la HN325 double fût suffit — deux fûts sur rails coulissants partagent une station hydraulique : vous chargez l'un pendant que l'autre presse. La HN365 (365 t) réduit encore le temps d'attente pour de plus gros volumes ; envoyez-nous votre graine et votre objectif journalier pour un calcul de débit.
 
-**Budget plus serré ?** La [HN300](/products/mini-hydraulic-oil-press/) reste en production et reprend la conception hydraulique et les pièces d'usure courantes de la HN325. Son fût Ø300 plus petit contient environ 55–60 kg par lot et presse à environ 42 MPa de pression sur tourteau — une machine d'entrée solide pour de plus petits volumes quotidiens.
+**Vous cherchez une presse 300 tonnes ?** La [HN300](/products/mini-hydraulic-oil-press/) reste en production et reprend la conception hydraulique et les pièces d'usure courantes de la HN325. Son fût Ø300 plus petit contient environ 55–60 kg par lot et presse à environ 42 MPa de pression sur tourteau — une presse compacte pour des volumes quotidiens plus petits.
 
 **L'huile pressée à froid comme produit principal ?** La [HN426](/products/cold-press-hydraulic-oil-press/) (500 t) apporte la force supérieure que valorisent les huiles de coco et de noix pressées à froid.
 
@@ -200,7 +200,7 @@ Délai : 15–25 jours ouvrés.
 
   'mini-hydraulic-oil-press': `## Aperçu
 
-> **Vous cherchez le modèle actuel ?** La [HN325](/products/standard-hydraulic-oil-press/) est le successeur amélioré de la HN300 — 325 t de force de pressage, 35,5 MPa de pression de tourteau. La plupart des acheteurs choisissent aujourd'hui la HN325. La HN300 reste en production pour ceux qui remplacent une HN300 existante ou reprennent un devis antérieur.
+> La HN300 est le choix adapté pour les opérations qui ont besoin d'une presse de 300 tonnes dans un format compact. Elle partage la conception hydraulique et les pièces d'usure courantes de la HN325, donc les pièces de rechange restent facilement disponibles — et le fût Ø390 traite la même gamme de graines : sésame, arachide, colza, tournesol.
 
 La HN300 est une presse à huile hydraulique compacte de 300 tonnes avec un cylindre de 300 mm et un fût de 390 mm, offrant 25 MPa de pression superficielle du tourteau. Son moteur de 2,2 kW maintient des coûts de fonctionnement modestes, et la machine fonctionne sur alimentation standard 220V/380V.
 
@@ -208,7 +208,7 @@ Cette page sert de référence pour les acheteurs recherchant spécifiquement la
 
 ## HN300 vs HN325 — Lequel choisir ?
 
-| Paramètre | HN300 (génération précédente) | HN325 (modèle actuel) |
+| Paramètre | HN300 | HN325 |
 |-----------|-------------------------------|-----------------------|
 | Force de pressage | 300 tonnes | 325 tonnes |
 | Pression de tourteau | 25 MPa | 35,5 MPa |
@@ -216,7 +216,7 @@ Cette page sert de référence pour les acheteurs recherchant spécifiquement la
 | Capacité par lot | ~100 kg | ~100 kg |
 | Configuration | Simple / double fût | Simple / double fût |
 
-**Choisissez la HN300 si :** vous remplacez une HN300 existante, vous reprenez un devis spécifiant la HN300, ou vous préférez le modèle d'entrée de gamme.
+**Choisissez la HN300 si :** vous remplacez une HN300 existante, vous reprenez un devis spécifiant la HN300, ou vous préférez le modèle compact 300 tonnes.
 
 **Choisissez la HN325 si :** vous voulez le modèle actuel avec plus de force (325 t) et de pression de tourteau (35,5 MPa).
 

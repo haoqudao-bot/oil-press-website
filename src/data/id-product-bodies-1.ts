@@ -26,7 +26,7 @@ Mesin bekerja pada pasokan standar 380V / 50Hz; versi 415V tersedia atas permint
 
 | Model | Gaya | Tekanan bungkil | Diameter tabung press (standar) | Konfigurasi | Terbaik untuk |
 |---|---|---|---|---|---|
-| [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Tabung press tunggal / ganda | Batch lebih kecil (~60 kg), anggaran paling ketat |
+| [HN300](/products/mini-hydraulic-oil-press/) | 300 t | 42 MPa | Ø300 mm | Tabung press tunggal / ganda | Batch ringkas (~60 kg), format ringkas |
 | **HN325** | **325 t** | **27 MPa** | **Ø390 mm (dapat dikustom)** | **Tabung press tunggal / ganda** | **Pabrik kecil & menengah, serbaguna** |
 | [HN365](/products/commercial-hydraulic-oil-press/) | 365 t | 30 MPa | Ø390 mm (dapat dikustom) | Tabung press tunggal / ganda | Volume harian lebih besar, waktu tunggu lebih singkat |
 | [HN426](/products/cold-press-hydraulic-oil-press/) | 500 t | 42 MPa | Ø390 mm (dapat dikustom) | Tabung press tunggal / ganda | Bisnis press dingin: kelapa, kenari |
@@ -36,7 +36,7 @@ Tekanan bungkil = gaya press ÷ luas tabung press, jadi tabung press lebih kecil
 
 **HN325 atau HN365?** Untuk hingga sekitar satu ton biji press panas per hari, HN325 tabung press ganda sudah cukup — dua tabung press di rel geser berbagi satu stasiun hidrolik, Anda mengisi satu sementara yang lain menekan. HN365 (365 t) memangkas waktu tunggu lebih jauh untuk volume lebih besar; kirimkan jenis biji dan target harian Anda untuk perhitungan throughput.
 
-**Anggaran lebih ketat?** [HN300](/products/mini-hydraulic-oil-press/) masih diproduksi dan berbagi desain hidrolik serta suku cadang umum dengan HN325. Tabung press Ø300-nya yang lebih kecil menampung sekitar 55–60 kg per batch dan menekan pada tekanan bungkil sekitar 42 MPa — mesin awal yang solid untuk batch harian lebih kecil.
+**Mencari press 300 ton?** HN300 masih diproduksi dan berbagi desain hidrolik serta suku cadang umum dengan HN325. Tabung press Ø300-nya yang lebih kecil menampung sekitar 55–60 kg per batch dan menekan pada tekanan bungkil sekitar 42 MPa — press ringkas untuk batch harian lebih kecil.
 
 **Minyak press dingin sebagai produk utama?** [HN426](/products/cold-press-hydraulic-oil-press/) (500 t) memberikan gaya lebih besar yang dibutuhkan minyak kelapa dan kenari press dingin.
 
@@ -93,115 +93,7 @@ Syarat pembayaran: 30% deposit saat pemesanan, 70% pelunasan sebelum pengiriman.
 
   'heavy-duty-hydraulic-oil-press': `## Ringkasan
 
-> **Mencari model terbaru?** Sebagian besar pembeli memilih [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press/) (500 ton, 42 MPa) atau [HN500 Tekanan Ultra Tinggi](/products/ultra-high-pressure-hydraulic-oil-press/) (620 ton) saat ini. HN400 tetap diproduksi.
-
-HN400 adalah mesin press minyak hidrolik 500 ton dengan silinder 400 mm dan tabung press 390 mm, memberikan 38 MPa tekanan permukaan bungkil. Mendukung press panas dan dingin, memproses sekitar 100 kg per batch. Motor 2,2 kW berjalan pada listrik standar.
-
-Halaman ini menjadi referensi bagi pembeli yang mencari HN400 secara spesifik.
-
-## HN400 vs Model Terbaru
-
-| Parameter | HN400 (Generasi Sebelumnya) | HN426 (Dingin) | HN500 (Ultra) |
-|-----------|-----------------------------|----------------|---------------|
-| Gaya Press | 500 ton | 500 ton | 620 ton |
-| Tekanan Bungkil | 38 MPa | 42 MPa | 52 MPa |
-| Tabung press | 390 mm | 390 mm | 390 mm |
-
-[Bandingkan HN400 dengan semua model →](/products/model-comparison/)
-
-## Aplikasi yang Sesuai
-
-Press panas dan dingin: biji teh, rapeseed, kacang tanah, kedelai, inti walnut, biji rami. Untuk biji yang lebih keras, lihat [HN500](/products/ultra-high-pressure-hydraulic-oil-press/).
-
-## Masih Diproduksi
-
-Waktu produksi: 15–25 hari kerja.
-
-[Minta penawaran HN400](/contact/) atau [bandingkan model →](/products/model-comparison/)`,
-
-  'cold-press-hydraulic-oil-press': `## Ringkasan
-
-Mesin press minyak hidrolik cold press HN426 menerapkan gaya press 500 ton pada tekanan sistem 70 MPa, memeras dingin bahan bercangkang keras seperti inti walnut dan biji aprikot dalam satu siklus. Cocok untuk produsen minyak premium cold-pressed yang tidak dapat memanaskan bahan; batch berjalan 40–90 menit tergantung bahan, dengan 6–8% minyak sisa dalam bungkil press (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan). Motor 2,2 kW berjalan pada listrik standar 220V/380V.
-
-Mesin Press Minyak Hidrolik Press Dingin HN426 adalah spesialis press dingin khusus kami, direkayasa untuk mengekstraksi minyak dari bahan yang sensitif dan bercangkang keras tanpa degradasi panas. Dengan gaya press 500 ton dan tekanan permukaan bungkil press 42 MPa, mesin ini memberikan daya yang dibutuhkan untuk press dingin inti walnut, walnut dengan cangkang, biji aprikot, xanthoceras, biji tiger nut, dan bahan menantang serupa — semuanya diekstraksi secara penuh dalam satu siklus.
-
-Dibangun di atas rangka pelat baja tebal 3 cm, HN426 menggabungkan ketahanan struktural dengan kontrol hidrolik presisi. Press dingin menjaga rasa alami, aroma, dan nilai gizi minyak Anda, memperoleh harga premium di pasar. Jika Anda memproduksi minyak press dingin bernilai tinggi, mesin ini dirancang untuk memaksimalkan baik hasil minyak maupun margin keuntungan Anda.
-
-## Keunggulan Utama
-
-- **Kemampuan Press Dingin Sejati** — Tekanan permukaan bungkil press 42 MPa mengekstraksi minyak dari bahan bercangkang keras dan sensitif tanpa pemanasan, menjaga kualitas minyak premium.
-- **Gaya Press 500 Ton** — Daya yang substansial untuk menangani bahan press dingin tersulit, termasuk walnut dengan cangkang dan biji aprikot, dalam satu siklus.
-- **Ekstraksi Satu Siklus** — Bahan press dingin ditekan secara penuh dalam satu siklus, menghilangkan kebutuhan untuk menekan ulang dan menghemat waktu dan energi.
-- **Kualitas Minyak Premium** — Press dingin mempertahankan antioksidan alami, vitamin, dan senyawa rasa, memungkinkan Anda menjual dengan harga pasar premium.
-- **Rangka Berat** — Konstruksi pelat baja tebal 3 cm memastikan stabilitas dan umur panjang di bawah tekanan tinggi yang diperlukan untuk press dingin.
-- **Produktivitas Tabung press Ganda** — Konfigurasi tabung press ganda dengan rel geser ganda memungkinkan operasi kontinu — muat satu tabung press sementara yang lain ditekan.
-
-## Teknologi Inti
-
-- **Tabung press Alur Tipe Batang** — Desain tabung press alur eksklusif Haonuo menyediakan area ekstraksi minyak yang jauh lebih besar dibandingkan tabung press berlubang tradisional. Minyak mengalir lebih cepat dan lebih jernih, dengan hasil sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) — penting untuk aplikasi press dingin di mana setiap persentase berarti. Tidak ada penyumbatan, tidak perlu pembersihan antar batch.
-- **Sistem Hidrolik Jerman** — Stasiun pompa hidrolik gabungan tekanan ultra-tinggi dengan pompa ganda tinggi-rendah. Tekanan kerja hingga 70 MPa dengan pengembalian silinder cepat, memberikan tekanan tinggi berkelanjutan yang dibutuhkan bahan press dingin.
-- **Pengeluaran Bungkil Press 4 Kait** — Mekanisme 4 kait inovatif memastikan pengeluaran bungkil press yang mudah dan andal — bahkan setelah penekanan semalam bahan bercangkang keras.
-- **Rangka Baja Karbon Tinggi** — Baja yang diperkeras frekuensi tinggi dan perlakuan panas untuk layanan tahan lama di bawah gaya press 500 ton. Umur layanan aktual bergantung pada kondisi operasional dan perawatan.
-- **Kontrol Mikrokomputer** — Siklus penekanan otomatis dari pemuatan hingga minyak jadi dalam hitungan menit.
-- **Hemat Energi** — Dirancang untuk mengurangi konsumsi daya dibandingkan mesin press generasi sebelumnya (penghematan aktual bervariasi tergantung kondisi operasional).
-- **Hemat Tenaga Kerja** — Hanya dibutuhkan 1-2 operator, mengurangi kebutuhan tenaga kerja dibandingkan metode penekanan manual.
-
-## Aplikasi & Bahan yang Sesuai
-
-### Bahan Press Dingin
-- Inti walnut, walnut dengan cangkang, biji aprikot
-- Xanthoceras (Xanthoceras sorbifolium), tiger nut (Cyperus esculentus)
-
-### Bahan Konvensional
-- Biji teh, biji rapeseed, kacang tanah, kedelai, biji rami, biji lak
-
-HN426 menangani semua bahan di atas dengan hasil minyak yang sangat baik. Untuk bahan konvensional, tekanan bungkil press yang tinggi dapat membantu mengurangi tingkat minyak sisa (hasil bervariasi tergantung bahan).
-
-## Mengapa Memilih Mesin Press Minyak Hidrolik Kami
-
-- **Harga Langsung Pabrik** — Dapatkan kemampuan press dingin dengan harga langsung produsen. Tanpa perantara, tanpa biaya yang membesar — hanya performa kelas industri dengan harga yang wajar.
-- **Keahlian Press Dingin** — Kami memahami tuntutan unik press dingin dan telah mengoptimalkan HN426 secara khusus untuk aplikasi ini.
-- **Jaminan Kualitas** — Setiap mesin diuji di pabrik di bawah beban penuh, termasuk verifikasi siklus press dingin, sebelum pengiriman.
-- **Dukungan Purna Jual** — Tim teknis kami menyediakan panduan instalasi, pelatihan operasional, dan pemecahan masalah berkelanjutan untuk memastikan Anda mendapatkan hasil yang baik dari hari pertama.
-- **Opsi Penyesuaian** — Dimensi tabung press, panjang langkah, dan parameter lain dapat disesuaikan dengan kebutuhan bahan press dingin spesifik Anda.
-
-## Keunggulan Regional
-
-**Asia Tenggara (Indonesia, Malaysia, Thailand, Vietnam):** HN426 adalah mesin press dingin yang cocok untuk produksi VCO (Virgin Coconut Oil) premium. Suhu tetap di bawah 50°C selama penekanan, menjaga kandungan asam laurat alami minyak kelapa dan aroma kelapa segar.
-
-**Afrika (Nigeria, Kenya, Ghana, Tanzania):** Meskipun terutama merupakan mesin press dingin, HN426 juga menangani press panas untuk minyak kacang tanah dan wijen. Desain serbagunanya menjadikannya mesin serba guna yang sangat baik bagi produsen minyak Afrika yang memproses berbagai jenis biji.
-
-**Timur Tengah (Arab Saudi, UEA, Mesir):** Kontrol suhu presisi HN426 menjadikannya sangat cocok untuk produksi minyak wijen press dingin premium. Dirancang untuk memenuhi standar keamanan pangan untuk pasar Timur Tengah. Kepatuhan halal bergantung pada proses sertifikasi lokal Anda.`,
-
-  'high-pressure-hydraulic-oil-press': `## Ringkasan
-
-> **Mencari model terbaru?** [HN500 Tekanan Ultra Tinggi](/products/ultra-high-pressure-hydraulic-oil-press/) (620 ton, 75 MPa) atau [HN426 Press Dingin](/products/cold-press-hydraulic-oil-press/) (500 ton) adalah pilihan saat ini. HN480 tetap diproduksi.
-
-HN480 adalah mesin press minyak hidrolik tekanan tinggi 560 ton dengan silinder 480 mm dan tabung press 390 mm, pada 72 MPa tekanan sistem. Terletak antara HN426 dan HN500.
-
-## HN480 vs Model Terbaru
-
-| Parameter | HN480 (Generasi Sebelumnya) | HN426 (Dingin) | HN500 (Ultra) |
-|-----------|-----------------------------|----------------|---------------|
-| Gaya Press | 560 ton | 500 ton | 620 ton |
-| Tekanan Sistem | 72 MPa | 70 MPa | 75 MPa |
-| Tabung press | 390 mm | 390 mm | 390 mm |
-
-[Bandingkan HN480 dengan semua model →](/products/model-comparison/)
-
-## Aplikasi yang Sesuai
-
-Biji teh, rapeseed, kacang tanah, inti walnut, biji aprikot. Untuk biji yang lebih keras, lihat [HN500](/products/ultra-high-pressure-hydraulic-oil-press/).
-
-## Masih Diproduksi
-
-Waktu produksi: 15–25 hari kerja.
-
-[Minta penawaran HN480](/contact/) atau [bandingkan model →](/products/model-comparison/)`,
-
-  'mini-hydraulic-oil-press': `## Ringkasan
-
-> **Mencari model terbaru?** [HN325](/products/standard-hydraulic-oil-press/) adalah penerus yang ditingkatkan dari HN300 — 325 ton gaya press, 35,5 MPa tekanan bungkil. Sebagian besar pembeli memilih HN325 saat ini. HN300 tetap diproduksi untuk yang mengganti HN300 lama atau mencocokkan penawaran sebelumnya.
+> > HN300 adalah pilihan yang tepat untuk operasi yang membutuhkan press 300 ton dalam format ringkas. Ia berbagi desain hidrolik dan suku cadang umum dengan HN325, jadi suku cadang tetap tersedia — dan tabung press Ø390 menangani rentang biji yang sama : wijen, kacang tanah, rapeseed, bunga matahari.
 
 HN300 adalah mesin press minyak hidrolik ringkas 300 ton dengan silinder 300 mm dan tabung press 390 mm, memberikan 25 MPa tekanan permukaan bungkil. Motor 2,2 kW menjaga biaya tetap rendah, dan mesin berjalan pada listrik standar 220V/380V.
 
@@ -209,7 +101,7 @@ Halaman ini menjadi referensi bagi pembeli yang mencari HN300 secara spesifik be
 
 ## HN300 vs HN325 — Mana yang Harus Dipilih?
 
-| Parameter | HN300 (Generasi Sebelumnya) | HN325 (Model Terbaru) |
+| Parameter | HN300 | HN325 |
 |-----------|-----------------------------|------------------------|
 | Gaya Press | 300 ton | 325 ton |
 | Tekanan Bungkil | 25 MPa | 35,5 MPa |

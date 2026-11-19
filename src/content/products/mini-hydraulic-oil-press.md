@@ -257,9 +257,8 @@ seoKeywords:
   - HN300 oil press
   - 300 ton hydraulic oil press
   - compact hydraulic oil press
-  - entry-level hydraulic oil press
-  - smallest hydraulic oil press
   - HN300 hydraulic oil press
+  - small hydraulic oil press
   - 300 ton oil press
   - sesame oil press machine
 updatedAt: 2026-10-10
@@ -267,26 +266,26 @@ updatedAt: 2026-10-10
 
 ## Overview
 
-> **Looking for our current main model?** Most buyers today choose the upgraded [HN325 Hydraulic Oil Press](/products/standard-hydraulic-oil-press/) — 325 tons, improved tabung press design, and shared wear parts with the HN300. The HN300 remains in production for buyers on a tight budget or replacing an existing HN300.
+> The HN300 is the right choice for operations that need a 300-ton press in a compact footprint. It shares its tabung press and common wear parts with the HN325, so spare parts remain readily available — and the 390 mm cylinder handles the same range of oilseeds including sesame, peanut, rapeseed, and sunflower.
 
-The HN300 is our 300-ton entry-level hydraulic oil press. Its 300 mm cylinder paired with a 390 mm tabung press delivers 25 MPa cake surface pressure, processing approximately 55–60 kg of raw material per batch. The 2.2 kW motor keeps operating costs modest, and the machine runs on standard 220V/380V power. At 1.2 tons (single tabung press) and 1100×1100×2350 mm footprint, it fits into small workshops with limited floor space.
+The HN300 is our 300-ton hydraulic oil press. Its 300 mm cylinder paired with a 390 mm tabung press delivers 25 MPa cake surface pressure, processing approximately 55–60 kg of raw material per batch. The 2.2 kW motor keeps operating costs modest, and the machine runs on standard 220V/380V power. At 1.2 tons (single tabung press) and 1100×1100×2350 mm footprint, it fits into factory workshops with limited floor space.
 
 This page exists as a reference for buyers searching specifically for the HN300 by model number — for example, to match an existing machine in their workshop or to compare specs against a previous quotation. The HN300 shares its tabung press and common wear parts with the HN325, so spare parts remain readily available.
 
 ## HN300 vs HN325 — Which Should You Choose?
 
-| Parameter | HN300 (Entry Model) | HN325 (Upgraded) |
-|-----------|---------------------|------------------|
+| Parameter | HN300 | HN325 |
+|-----------|-------|-------|
 | Pressing force | 300 tons | 325 tons |
 | Cake surface pressure | 25 MPa | 27.78 MPa |
 | Tabung Press inner diameter | 390 mm | 390 mm |
 | Batch capacity | ~55–60 kg | ~80–100 kg |
-| Positioning | Entry-level, tight budget | Best seller, most buyers |
+| Positioning | Compact 300-ton model | Best seller, 325 tons |
 
 **Choose the HN300 if:**
-- Your daily output is under approximately 800 kg of raw material
+- You need a 300-ton press in a compact footprint
 - You are replacing an existing HN300 and want spare-part compatibility
-- Budget is the primary constraint and you do not need the higher cake pressure of the HN325
+- Batch sizes are consistently 60 kg or less, and you do not need the higher cake pressure of the HN325
 
 **Choose the HN325 if:**
 - You want higher cake pressure (27.78 MPa) for approximately 2–3% better oil yield (based on Haonuo factory tests with graded sesame and peanut at 6–8% moisture; results vary with seed variety and preparation)
