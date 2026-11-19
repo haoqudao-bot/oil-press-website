@@ -5,15 +5,15 @@ title:
   ar: معصرة زيت سمسم هيدروليكية
   id: Mesin Press Minyak Wijen Hidrolik
 seoTitle:
-  en: Hydraulic Sesame Oil Press Machine — Custom Configuration
-  fr: Presse hydraulique à huile de sésame — Configuration sur mesure
-  ar: معصرة زيت سمسم هيدروليكية — تخصيص حسب الطلب
-  id: Mesin press minyak wijen hidrolik — konfigurasi kustom
+  en: Hydraulic Sesame Oil Press Machine — 42-54% Oil Yield
+  fr: Presse hydraulique à huile de sésame — Rendement 42-54%
+  ar: معصرة زيت السمسم الهيدروليكية — عائد زيت 42-54%
+  id: Mesin Press Minyak Wijen Hidrolik — Rendemen 42-54%
 description:
-  en: "Custom-configured hydraulic press optimized for maximum sesame oil yield. 47–51 MPa cake pressure, 300mm narrow tabung press concentrates force on small seeds. Based on HN325 or HN355 platform. Made to order, 30–45 working days lead time."
-  fr: "Presse hydraulique configurée sur mesure pour rendement sésame maximal. Pression gâteau 47–51 MPa, cuve étroite 300 mm concentre la force sur petites graines. Basé sur plateforme HN325 ou HN355. Fabrication sur commande, 30–45 jours ouvrés."
-  ar: "معصرة هيدروليكية مخصصة لتعزيز إنتاج زيت السمسم. ضغط كعكة 47–51 ميجا باسكال، أسطوانة ضيقة 300 مم تركز القوة على البذور الصغيرة. على منصة HN325 أو HN355. حسب الطلب، 30–45 يوم عمل."
-  id: "Mesin press hidrolik kustom untuk hasil minyak wijen maksimal. Tekanan kue 47–51 MPa, tabung sempit 300mm memusatkan gaya pada biji kecil. Berdasarkan platform HN325 atau HN355. Made to order, lead time 30–45 hari kerja."
+  en: "Purpose-built hydraulic press for maximum sesame oil yield. 47–51 MPa cake pressure from a 300mm narrow tabung press concentrates force on small seeds. 42–54% sesame oil yield, 6–8% residual oil in cake. 30–40 minutes per hot-pressing cycle."
+  fr: "Presse hydraulique dédiée pour rendement maximal en huile de sésame. Pression gâteau 47–51 MPa avec cuve étroite de 300 mm concentrant la force sur petites graines. Rendement 42–54%, huile résiduelle 6–8%. Cycle de pressage 30–40 minutes."
+  ar: "معصرة هيدروليكية مصممة خصيصًا لعائد زيت السمسم الأقصى. ضغط كعكة 47–51 ميجا باسكال من أسطوانة ضيقة 300 مم تركز القوة على البذور الصغيرة. عائد زيت 42–54%, زيت متبقٍ 6–8%. دورة 30–40 دقيقة."
+  id: "Mesin press hidrolik khusus untuk rendemen minyak wijen maksimal. Tekanan bungkil 47–51 MPa dari tabung press sempit 300 mm memusatkan gaya pada biji kecil. Rendemen 42–54%, minyak sisa 6–8%. Siklus press 30–40 menit."
 category: hydraulic-oil-press
 model: HN325/355 Sesame
 modelFr: HN325/355 Sésame
@@ -64,32 +64,22 @@ applicableSeeds:
   - lacquer oil seed
   - flaxseed
 faq:
-  - question: What is the oil yield of the Sesame Oil Hydraulic Press?
-    answer: The oil yield for sesame is 42-54% depending on the variety and moisture content. The narrower 300 mm tabung press concentrates pressing force to 47–51 MPa cake surface pressure, achieving complete sesame oil extraction in a single fast cycle with approximately 2-3% higher yield (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) than traditional drilled tabung press presses.
-  - question: What raw materials can the Sesame Oil Hydraulic Press press?
-    answer: The Sesame Oil Hydraulic Press is specifically optimized for sesame oil extraction. It also excels at pressing in-shell walnuts (except iron walnuts) in approximately 30 minutes per batch, and handles tea seed, rapeseed, peanut, soybean, lacquer oil seed, and flaxseed with even lower residual oil rates than standard models.
-  - question: How long does one pressing cycle take?
-    answer: A typical hot pressing cycle takes 30-40 minutes for sesame depending on the desired cake dryness and moisture content. The rapid cycle is critical for sesame's temperature-sensitive pressing — minimizing heat loss preserves oil quality and maximizes yield. For cold pressing, the cycle takes approximately 2 hours. The microcomputer control system automates the entire process from feeding to cake discharge.
-  - question: What is the recommended raw material moisture content for sesame pressing?
-    answer: For sesame hot pressing, we recommend 5-8% moisture content before roasting. The roasted sesame should reach 3-5% moisture for optimal oil extraction. For cold pressing, the optimal range is 7-9% moisture. Proper moisture control is critical for sesame — too high causes oil emulsification, while too low increases friction and reduces yield.
-  - question: What is the difference between single and double tabung press configurations?
-    answer: A single tabung press press processes one batch at a time. A double tabung press press has two tabung press on sliding rails — while one tabung press is pressing, you can load the other, nearly doubling your throughput. We recommend the double tabung press for commercial and industrial operations.
-  - question: What power supply does the Sesame Oil Hydraulic Press require?
-    answer: The Sesame Oil Hydraulic Press requires 2.2 KW motor power, compatible with both 220V/50Hz and 380V/60Hz power supplies. We can customize the electrical system to match your local power standards at no extra charge.
-  - question: How many workers are needed to operate the machine?
-    answer: Only 1-2 workers are needed. The microcomputer control system automates the pressing cycle, and the 4-hook cake removal mechanism makes unloading easy even after overnight pressing.
-  - question: What warranty do you provide?
-    answer: We provide a 1-year warranty covering all manufacturing defects, plus lifetime technical support. For the Sesame Oil Press, this includes specific coverage for the narrow-gap tabung press assembly and temperature-sensitive pressing system. Spare parts are available from stock.
-  - question: How is the machine shipped and how long does delivery take?
-    answer: The machine is shipped in a wooden crate via sea freight. Delivery to most Asian ports takes 15-20 days, to African ports 25-35 days, and to South American ports 30-40 days. This is in addition to production time — 15-25 working days for standard models and 30-45 days for custom or special configurations (shipping time additional). Air freight is available for urgent orders.
-  - question: Do you provide installation and training?
-    answer: Yes, we provide detailed installation manuals, video tutorials, and remote technical guidance. For large orders, we can send a technician to your facility for on-site installation and training at cost. For the sesame model, we recommend installing near your seed cleaning area to minimize sesame seed handling and prevent contamination.
-  - question: What certifications does the machine have?
-    answer: All machines undergo 48-hour continuous full-load testing before shipment. For the Sesame Oil Press, the full-load test includes sesame pressing cycle verification, confirming consistent oil yield across multiple batches.
-  - question: Can the tabung press size be customized?
-    answer: Yes, tabung press inner diameter and height can be customized to match your specific material and batch size requirements. Common customizations include larger tabung press for bulk materials and food-grade stainless steel tabung press for edible oil production.
-  - question: What is the residual oil rate in the cake?
-    answer: The residual oil rate in the cake is typically 6-8% for most materials with our bar-type slotted tabung press design, compared to 10-12% with traditional drilled tabung press presses. This means you extract approximately 2-3% more oil (based on Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation) from every batch.
+  - question: What is the sesame oil yield percentage?
+    answer: Sesame oil yield ranges from 42-54% depending on variety and moisture content. Our 300 mm narrow tabung press concentrates pressing force to 47–51 MPa cake surface pressure, achieving complete extraction in a single fast cycle with approximately 2-3% higher yield than standard hydraulic press models (based on Haonuo factory tests with graded sesame at 6-8% moisture; results vary with seed variety and preparation).
+  - question: Why use a narrower 300mm tabung press for sesame?
+    answer: Sesame seeds are small and require concentrated pressure for complete oil release. A standard 355 mm tabung press distributes force too widely, leaving residual oil. Our 300 mm inner diameter tabung press focuses 47–51 MPa of cake pressure directly on the sesame bed, extracting more oil in one cycle without over-compacting the cake.
+  - question: What is the optimal moisture content for sesame before pressing?
+    answer: For hot pressing, we recommend 5-6% moisture content before roasting. After roasting, sesame should reach 3-5% moisture for optimal oil extraction. For cold pressing (unroasted sesame), the optimal range is 7-9% moisture. Proper moisture control prevents oil emulsification (too high) and excessive friction with reduced yield (too low).
+  - question: How long does a sesame pressing cycle take?
+    answer: A typical hot pressing cycle (with pre-roasting) takes 30-40 minutes per batch. The rapid cycle is critical for sesame — minimizing heat loss preserves oil quality and maximizes yield. For cold pressing, the cycle takes approximately 2 hours to maintain low-temperature oil quality. The microcomputer control system automates the entire process from feeding to cake discharge.
+  - question: What temperature should sesame be roasted to before pressing?
+    answer: Roast sesame to 110-130°C (230-265°F) for 15-20 minutes, until the seeds darken slightly and develop aroma. Proper roasting breaks down cell walls and releases bound oil — under-roasting leaves 3-5% more residual oil, while over-roasting can burn the surface and reduce oil quality. The optimal roast level depends on your target sesame oil flavor profile.
+  - question: Can this press also handle other oilseeds?
+    answer: Yes. While optimized for sesame, this press excels at pressing in-shell walnuts (except iron walnuts) in approximately 30 minutes per batch. It also handles tea seed, rapeseed, peanut, soybean, lacquer oil seed, and flaxseed with even lower residual oil rates than standard models.
+  - question: What residual oil rate can I expect in the sesame cake?
+    answer: With our bar-type slotted tabung press design, the residual oil rate is typically 6-8% for sesame, compared to 10-12% with traditional drilled tabung press presses. This means you extract approximately 2-3% more oil from every batch — significant for high-volume sesame production where each extra percent adds up over thousands of kilograms processed.
+  - question: Is this machine suitable for cold-pressed sesame oil?
+    answer: Yes, cold pressing is available. For unroasted sesame oil (often sold as "cold-pressed" or "virgin" sesame oil), the cycle takes about 2 hours at lower pressure settings to avoid generating excessive heat. Cold-pressed sesame oil has a lighter color, milder flavor, and retains more natural antioxidants than hot-pressed sesame oil.
 specificationsFr:
   - name: Modèle (325/355)
     value: HN325 Sesame / HN355 Sesame
@@ -123,30 +113,22 @@ applicableSeedsFr:
   - graine de laque
   - lin
 faqFr:
-  - question: Quel est le rendement en huile de la Presse Hydraulique à Huile de Sésame ?
-    answer: Le rendement en huile pour le sésame est de 42 à 54 % selon la variété et la teneur en humidité. Le fût plus étroit de 300 mm concentre la force de pressage pour atteindre une pression superficielle du tourteau de 47 à 51 MPa, permettant une extraction complète de l'huile de sésame en un seul cycle rapide avec un rendement environ 2 à 3 % plus élevé (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) que les presses traditionnelles à fût percé.
-  - question: Quelles matières premières la Presse Hydraulique à Huile de Sésame peut-elle presser ?
-    answer: La Presse Hydraulique à Huile de Sésame est spécialement optimisée pour l'extraction de l'huile de sésame. Elle excelle également dans le pressage des noix en coque (sauf les noix de fer) en environ 30 minutes par lot, et traite la graine de thé, le colza, l'arachide, le soja, la graine de laque et le lin avec des taux d'huile résiduelle encore plus bas que les modèles standard.
-  - question: Combien de temps dure un cycle de pressage ?
-    answer: Le pressage à chaud (avec pré-torréfaction) se termine en 30 à 40 minutes par lot. Le pressage à froid prend environ 2 heures pour préserver la qualité de l'huile à basse température. La durée réelle du cycle dépend de facteurs tels que l'humidité des graines, le degré de sécheresse du tourteau souhaité et la température de pressage. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus, de l'alimentation au déchargement du tourteau.
-  - question: Quelle est la différence entre les configurations à fût simple et double ?
-    answer: Une presse à fût simple traite un lot à la fois. Une presse à double fût possède deux fûts sur des rails coulissants — pendant qu'un fût est en cours de pressage, vous pouvez charger l'autre, ce qui presque double votre débit. Nous recommandons le double fût pour les opérations commerciales et industrielles.
-  - question: Quelle alimentation électrique la Presse Hydraulique à Huile de Sésame nécessite-t-elle ?
-    answer: La Presse Hydraulique à Huile de Sésame nécessite une puissance moteur de 2,2 KW, compatible avec les alimentations 220V/50Hz et 380V/60Hz. Nous pouvons personnaliser le système électrique selon vos normes locales d'alimentation sans frais supplémentaires.
-  - question: Combien de travailleurs sont nécessaires pour faire fonctionner la machine ?
-    answer: Seuls 1 à 2 travailleurs sont nécessaires. Le système de contrôle par micro-ordinateur automatise le cycle de pressage, et le mécanisme de retrait du tourteau à 4 crochets facilite le déchargement même après un pressage de nuit.
-  - question: Quelle garantie fournissez-vous ?
-    answer: Nous fournissons une garantie de 1 an couvrant tous les défauts de fabrication, ainsi qu'un support technique à vie. Pour la presse à huile de sésame, cela inclut une couverture spécifique de l'assemblage de fût à faible espace et du système de pressage sensible à la température. Les pièces de rechange sont disponibles en stock .
-  - question: Comment la machine est-elle expédiée et combien de temps dure la livraison ?
-    answer: La machine est expédiée dans une caisse en bois par fret maritime. La livraison vers la plupart des ports asiatiques prend 15 à 20 jours, vers les ports africains 25 à 35 jours, et vers les ports sud-américains 30 à 40 jours. Ceci s'ajoute aux 15 à 25 jours ouvrés de production pour les modèles standard et 30 à 45 jours pour les configurations personnalisées. Le fret aérien est disponible pour les commandes urgentes.
-  - question: Fournissez-vous l'installation et la formation ?
-    answer: Oui, nous fournissons des manuels d'installation détaillés, des tutoriels vidéo et un accompagnement technique à distance. Pour les grosses commandes, nous pouvons envoyer un technicien dans vos locaux pour l'installation et la formation sur site à nos frais. Pour la presse à huile de sésame, nous recommandons d'installer à proximité de votre zone de nettoyage des graines pour minimiser la manipulation des graines de sésame et prévenir la contamination.
-  - question: Quelles certifications la machine possède-t-elle ?
-    answer: Toutes les machines subissent un test de charge complète continue de 48 heures avant l'expédition. Pour la presse à huile de sésame, le test en charge complète inclut la vérification du cycle de pressage de sésame, confirmant un rendement en huile constant sur plusieurs lots.
-  - question: La taille du fût peut-elle être personnalisée ?
-    answer: Oui, le diamètre intérieur et la hauteur du fût peuvent être personnalisés pour répondre à vos besoins spécifiques en matière de matière première et de taille de lot. Les personnalisations courantes incluent des fûts plus grands pour les matériaux en vrac et des fûts en acier inoxydable de qualité alimentaire pour la production d'huile comestible.
-  - question: Quel est le taux d'huile résiduelle dans le tourteau ?
-    answer: Le taux d'huile résiduelle dans le tourteau est généralement de 6 à 8 % pour la plupart des matériaux avec notre conception de fût à fentes de type barre, contre 10 à 12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2 à 3 % d'huile en plus (d'après les tests usine Haonuo sur sésame et arachide calibrés à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation) de chaque lot.
+  - question: Quel est le pourcentage de rendement en huile de sésame ?
+    answer: Le rendement en huile de sésame varie de 42 à 54 % selon la variété et la teneur en humidité. Notre fût étroit de 300 mm concentre la force de pressage pour atteindre une pression superficielle du tourteau de 47–51 MPa, permettant une extraction complète en un seul cycle rapide avec un rendement environ 2–3 % supérieur aux modèles de presse hydraulique standard (d'après les tests usine Haonuo sur sésame calibré à 6-8 % d'humidité ; les résultats varient selon la graine et la préparation).
+  - question: Pourquoi utiliser un fût étroit de 300 mm pour le sésame ?
+    answer: Les graines de sésame sont petites et nécessitent une pression concentrée pour libérer toute l'huile. Un fût standard de 355 mm répartit la force trop largement, laissant de l'huile résiduelle. Notre fût de 300 mm concentre 47–51 MPa de pression directement sur le lit de sésame, extrayant plus d'huile en un cycle sans compacter excessivement le tourteau.
+  - question: Quelle est la teneur en humidité optimale du sésame avant pressage ?
+    answer: Pour le pressage à chaud, nous recommandons 5-6 % d'humidité avant torréfaction. Après torréfaction, le sésame doit atteindre 3-5 % d'humidité pour une extraction optimale. Pour le pressage à froid (sans torréfaction), la plage optimale est de 7-9 %. Un contrôle approprié de l'humidité évite l'émulsification (trop élevé) et la friction excessive avec rendement réduit (trop bas).
+  - question: Combien de temps dure un cycle de pressage de sésame ?
+    answer: Un cycle de pressage à chaud typique (avec torréfaction préalable) prend 30-40 minutes par lot. Le cycle rapide est essentiel pour le sésame — minimiser la perte de chaleur préserve la qualité de l'huile et maximise le rendement. Pour le pressage à froid, le cycle dure environ 2 heures pour maintenir une qualité d'huile à basse température. Le système de contrôle par micro-ordinateur automatise l'ensemble du processus.
+  - question: À quelle température le sésame doit-il être torréfié avant pressage ?
+    answer: Torréfiez le sésame à 110-130°C pendant 15-20 minutes, jusqu'à ce que les graines foncent légèrement et développent un arôme. Une torréfaction adéquate détruit les parois cellulaires et libère l'huile liée — sous-torréfaction laisse 3-5 % de plus d'huile résiduelle, tandis que la sur-torréfaction peut brûler la surface et réduire la qualité de l'huile.
+  - question: Cette presse peut-elle traiter d'autres graines oléagineuses ?
+    answer: Oui. Bien qu'optimisée pour le sésame, cette presse excelle dans le pressage des noix en coque (sauf les noix de fer) en environ 30 minutes par lot. Elle traite également la graine de thé, le colza, l'arachide, le soja, la graine de laque et le lin avec des taux d'huile résiduelle encore plus bas que les modèles standard.
+  - question: Quel taux d'huile résiduelle attendre dans le tourteau de sésame ?
+    answer: Avec notre conception de fût à fentes de type barre, le taux d'huile résiduelle est généralement de 6-8 % pour le sésame, contre 10-12 % avec les presses traditionnelles à fût percé. Cela signifie que vous extrayez environ 2-3 % d'huile en plus de chaque lot — significatif pour la production de sésame à haut volume.
+  - question: Cette machine convient-elle à l'huile de sésame pressée à froid ?
+    answer: Oui, le pressage à froid est disponible. Pour l'huile de sésame non torréfiée (souvent vendue comme "pressée à froid" ou "vierge"), le cycle dure environ 2 heures à des réglages de pression plus bas pour éviter de générer une chaleur excessive. L'huile de sésame pressée à froid a une couleur plus claire, une saveur plus douce et conserve plus d'antioxydants naturels.
 specificationsAr:
   - name: "الطراز (325/355)"
     value: "HN325 Sesame / HN355 Sesame"
@@ -212,55 +194,39 @@ applicableSeedsId:
   - biji lak
   - biji rami
 faqAr:
-  - question: "ما هو عائد الزيت من معصرة زيت السمسم الهيدروليكية؟"
-    answer: "يتراوح عائد الزيت للسمسم بين 42-54% حسب الصنف ومحتوى الرطوبة. يُركّز أسطوانة العصر الضيقة بقطر 300 مم قوة العصر ليصل ضغط سطح الكسب إلى 47-51 ميجاباسكال/سم²، مما يتيح استخلاص زيت السمسم بالكامل في دورة سريعة واحدة بعائد أعلى بنحو 2-3% (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) مقارنة بمعاصر أسطوانة العصر المثقبة التقليدية."
-  - question: "ما المواد الخام التي يمكن لمعصرة زيت السمسم الهيدروليكية عصرها؟"
-    answer: "معصرة زيت السمسم الهيدروليكية محسّنة خصيصًا لاستخلاص زيت السمسم. كما أنها ممتازة في عصر الجوز بقشره (ما عدا الجوز الحديدي) في نحو 30 دقيقة لكل دفعة، وتعالج بذور الشاي وبذور اللفت والفول السوداني وفول الصويا وبذور اللكر وبذور الكنان بمعدلات زيت متبقٍ أقل من الطرازات القياسية."
-  - question: "كم يستغرق دور العصر الواحد؟"
-    answer: "يستغرق العصر الساخن للسمسم 30-40 دقيقة لكل دفعة، بينما يستغرق العصر البارد نحو ساعتين للحفاظ على جودة الزيت في درجات الحرارة المنخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل من التغذية إلى تفريغ الكيكة."
-  - question: "ما الفرق بين تكويني أسطوانة العصر المفردة والمزدوج؟"
-    answer: "معصرة أسطوانة العصر المفردة تعالج دفعة واحدة في كل مرة. معصرة أسطوانة العصر المزدوجة تحتوي على أسطوانتين على قضبان انزلاقية — أثناء عصر أحدهما يمكن تحميل الآخر، مما يضاعف الإنتاج تقريبًا. نوصي بأسطوانة العصر المزدوجة للعمليات التجارية والصناعية."
-  - question: "ما مصدر الطاقة المطلوب لمعصرة زيت السمسم الهيدروليكية؟"
-    answer: "تتطلب معصرة زيت السمسم الهيدروليكية قدرة محرك 2.2 كيلو واط، ومتوافقة مع مصادر الطاقة 220 فولت/50 هرتز و380 فولت/60 هرتز. يمكننا تخصيص النظام الكهربائي ليتوافق مع معايير الطاقة المحلية لديك دون رسوم إضافية."
-  - question: "كم عدد العمال المطلوبين لتشغيل الآلة؟"
-    answer: "يُحتاج إلى 1-2 عمال فقط. نظام التحكم بالحاسوب المصغّر يؤتمت دورة العصر، وآلية إزالة الكسب ذات الخطاطف الأربعة تُسهّل التفريغ حتى بعد عصر ليلي طويل."
-  - question: "ما الضمان الذي تقدمونه؟"
-    answer: "نقدم ضمانًا لمدة عام واحد يغطي جميع عيوب التصنيع، بالإضافة إلى دعم فني مدى الحياة. لمعصرة زيت السمسم، يشمل ذلك تغطية خاصة لمجموعة أسطوانة العصر ذات الفجوة الضيقة ونظام العصر الحساس لدرجة الحرارة. قطع الغيار متوفرة من المخزون ويمكن شحنها خلال 48 ساعة حول العالم."
-  - question: "كيف تُشحن الآلة وكم يستغرق التسليم؟"
-    answer: "تُشحن الآلة في صندوق خشبي عبر الشحن البحري. يستغرق التسليم إلى معظم الموانئ الآسيوية 15-20 يومًا، وإلى الموانئ الأفريقية 25-35 يومًا، وإلى الموانئ في أمريكا الجنوبية 30-40 يومًا. هذا بالإضافة إلى 15-25 يوم عمل كمدة إنتاج للموديلات القياسية و30-45 يوم عمل للتكوينات المخصصة (مدة الشحن إضافية). الشحن الجوي متاح للطلبات المستعجلة."
-  - question: "هل تقدمون خدمات التركيب والتدريب؟"
-    answer: "نعم، نقدم أدلة تركيب مفصلة ودروس فيديو وإرشاد فني عن بُعد. للطلبات الكبيرة، يمكننا إرسال فني إلى منشأتك للتركيب والتدريب في الموقع بالتكلفة. لمعصرة السمسم، نوصي بالتركيب بالقرب من منطقة تنظيف البذور لتقليل مناولة بذور السمسم ومنع التلوث."
-  - question: "ما الشهادات التي تمتلكها الآلة؟"
-    answer: "جميع الآلات تخضع لاختبار تحميل كامل مستمر لمدة 48 ساعة قبل الشحن. لمعصرة زيت السمسم، يتضمن اختبار التحميل الكامل التحقق من دورة عصر السمسم، مؤكدًا ثبات عائد الزيت عبر دفعات متعددة."
-  - question: "هل يمكن تخصيص حجم أسطوانة العصر؟"
-    answer: "نعم، يمكن تخصيص القطر الداخلي والارتفاع لأسطوانة العصر ليتوافق مع متطلبات المادة الخام وحجم الدفعة الخاصة بك. تشمل التخصيصات الشائعة أسطوانات أكبر للمواد السائبة وأسطوانات من الفولاذ المقاوم للصدأ من الدرجة الغذائية لإنتاج الزيت الصالح للأكل."
-  - question: "ما نسبة الزيت المتبقية في الكسب؟"
-    answer: "نسبة الزيت المتبقية في الكسب عادةً 6-8% لمعظم المواد مع تصميم أسطوانة العصر ذات الشقوق الشريطية، مقارنةً بـ 10-12% مع معاصر أسطوانة العصر المثقبة التقليدية. هذا يعني أنك تستخلص نحو 2-3% زيت إضافي (استناداً إلى اختبارات مصنع هاونو على السمسم والفول السوداني المدرجين برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير) من كل دفعة."
+  - question: "ما هي النسبة المئوية لعائد زيت السمسم؟"
+    answer: "يتراوح عائد زيت السمسم بين 42-54% حسب الصنف ومحتوى الرطوبة. أسطوانة العصر الضيقة بقطر 300 مم تركز قوة العصر لتصل ضغط سطح الكسب إلى 47–51 ميجاباسكال، مما يتيح استخلاص كامل في دورة سريعة واحدة بعائد أعلى بنحو 2-3% من طرازات المعاصر الهيدروليكية القياسية (استناداً إلى اختبارات مصنع هاونو على السمسم المدرج برطوبة 6-8%؛ تختلف النتائج حسب نوع البذور والتحضير)."
+  - question: "لماذا استخدام أسطوانة عصر ضيقة بقطر 300 مم للسمسم؟"
+    answer: "بذور السمسم صغيرة وتتطلب ضغطاً مركزاً لتحرير كل الزيت. أسطوانة قياسية بقطر 355 مم توزع القوة بشكل واسع جداً، مما يترك زيتاً متبقياً. أسطوانتنا بقطر 300 مم تركز 47–51 ميجاباسكال من الضغط مباشرة على طبقة السمسم، مستخرجة زيتاً أكثر في دورة واحدة دون ضغط الكسب بشكل مفرط."
+  - question: "ما هي محتوى الرطوبة الأمثل للسمسم قبل العصر؟"
+    answer: "للعصر الساخن، نوصي بـ 5-6% رطوبة قبل التحميص. بعد التحميص، يجب أن يصل السمسم إلى 3-5% رطوبة لاستخلاص أمثل. للعصر البارد (بدون تحميص)، النطاق الأمثل هو 7-9%. التحكم السليم في الرطوبة يمنع الاستحلاب (مرتفع جداً) والاحتكاك المفرط مع انخفاض العائد (منخفض جداً)."
+  - question: "كم يستغرق دورة عصر السمسم؟"
+    answer: "تستغرق دورة العصر الساخن النموذجية (مع تحميص مسبق) 30-40 دقيقة لكل دفعة. الدورة السريعة ضرورية للسمسم — تقليل فقدان الحرارة يحافظ على جودة الزيت ويزيد العائد. للعصر البارد، تستغرق الدورة حوالي ساعتين للحفاظ على جودة الزيت عند درجات حرارة منخفضة. يقوم نظام التحكم بالكمبيوتر المصغر بأتمتة العملية بالكامل."
+  - question: "إلى أي درجة حرارة يجب تحميص السمسم قبل العصر؟"
+    answer: "حمّص السمسم عند 110-130 درجة مئوية لمدة 15-20 دقيقة، حتى تغمق البذور قليلاً وتطور رائحة. التحميص السليم يكسر جدران الخلايا ويطلق الزيت المرتبط — نقص التحميص يترك 3-5% زيت متبقٍ إضافي، بينما الإفراط في التحميص يمكن أن يحرق السطح ويقلل من جودة الزيت."
+  - question: "هل يمكن لهذه المعصرة معالجة بذور زيتية أخرى؟"
+    answer: "نعم. على الرغم من أنها محسّنة للسمسم، تتفوق هذه المعصرة في عصر الجوز بقشره (ما عدا الجوز الحديدي) في نحو 30 دقيقة لكل دفعة. كما تعالج بذور الشاي وبذور اللفت والفول السوداني وفول الصويا وبذور اللكر وبذور الكتان بمعدلات زيت متبقٍ أقل من الطرازات القياسية."
+  - question: "ما نسبة الزيت المتبقية المتوقعة في كعكة السمسم؟"
+    answer: "مع تصميم أسطوانة العصر ذات الشقوق الشريطية، تكون نسبة الزيت المتبقية عادةً 6-8% للسمسم، مقارنةً بـ 10-12% مع معاصر الأسطوانة المثقبة التقليدية. هذا يعني أنك تستخلص نحو 2-3% زيت إضافي من كل دفعة — وهو أمر مهم لإنتاج السمسم عالي الحجم."
+  - question: "هل هذه الآلة مناسبة لزيت السمسم المعصور على البارد؟"
+    answer: "نعم، العصر البارد متاح. لزيت السمسم غير المحمص (الذي يُباع غالباً باسم 'معصور على البارد' أو 'بكر')، تستغرق الدورة حوالي ساعتين عند إعدادات ضغط أقل لتجنب توليد حرارة مفرطة. زيت السمسم المعصور على البارد له لون أفتح ونكهة أخف ويحتفظ بمضادات الأكسدة الطبيعية أكثر من زيت السمسم المعصور على الساخن."
 faqId:
-  - question: Berapa rendemen minyak dari Mesin Press Minyak Wijen Hidrolik?
-    answer: Rendemen minyak untuk wijen adalah 42-54% tergantung pada varietas dan kandungan kelembapan. Tabung Press sempit berdiameter 300 mm memusatkan gaya press hingga tekanan permukaan bungkil 47–51 MPa, menghasilkan ekstraksi minyak wijen lengkap dalam satu siklus cepat dengan rendemen sekitar 2-3% lebih tinggi (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dibandingkan mesin press tabung press berlubang tradisional.
-  - question: Bahan baku apa saja yang dapat dipress oleh Mesin Press Minyak Wijen Hidrolik?
-    answer: Mesin Press Minyak Wijen Hidrolik secara khusus dioptimalkan untuk ekstraksi minyak wijen. Mesin ini juga unggul dalam penekanan kenari dengan cangkang (kecuali kenari besi) dalam waktu sekitar 30 menit per batch, dan menangani biji teh, rapeseed, kacang tanah, kedelai, biji lak, dan biji rami dengan tingkat minyak sisa yang lebih rendah dari model standar.
-  - question: Berapa lama satu siklus press membutuhkan waktu?
-    answer: Siklus press panas untuk wijen membutuhkan waktu 30-40 menit per batch, sedangkan press dingin membutuhkan sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses dari pemuatan hingga pengeluaran bungkil.
-  - question: Apa perbedaan antara konfigurasi tabung press tunggal dan ganda?
-    answer: Mesin press tabung press tunggal memproses satu batch pada satu waktu. Mesin press tabung press ganda memiliki dua tabung press pada rel geser — saat satu tabung press sedang menekan, Anda dapat memuat tabung press lainnya, hampir melipatgandakan throughput. Kami merekomendasikan tabung press ganda untuk operasi komersial dan industri.
-  - question: Pasokan daya apa yang dibutuhkan Mesin Press Minyak Wijen Hidrolik?
-    answer: Mesin Press Minyak Wijen Hidrolik membutuhkan daya motor 2.2 KW, kompatibel dengan pasokan daya 220V/50Hz dan 380V/60Hz. Kami dapat menyesuaikan sistem kelistrikan sesuai standar daya lokal Anda tanpa biaya tambahan.
-  - question: Berapa banyak pekerja yang dibutuhkan untuk mengoperasikan mesin?
-    answer: Hanya dibutuhkan 1-2 pekerja. Sistem kontrol mikrokomputer mengotomatisasi siklus press, dan mekanisme pelepasan bungkil 4-kait memudahkan pembongkaran bahkan setelah press semalam.
-  - question: Garansi apa yang Anda berikan?
-    answer: Kami memberikan garansi 1 tahun yang mencakup semua cacat pabrikan, ditambah dukungan teknis seumur hidup. Untuk mesin press wijen, ini mencakup cakupan khusus untuk perakitan tabung press celah sempit dan sistem press sensitif suhu. Suku cadang tersedia dari stok dan dapat dikirim dalam 48 jam ke seluruh dunia.
-  - question: Bagaimana mesin dikirim dan berapa lama waktu pengiriman?
-    answer: Mesin dikirim dalam peti kayu melalui pengiriman laut. Pengiriman ke sebagian besar pelabuhan Asia membutuhkan 15-20 hari, ke pelabuhan Afrika 25-35 hari, dan ke pelabuhan Amerika Selatan 30-40 hari. Ini ditambah 15-25 hari kerja produksi untuk model standar dan 30-45 hari kerja untuk konfigurasi khusus (waktu pengiriman tambahan). Pengiriman udara tersedia untuk pesanan mendesak.
-  - question: Apakah Anda menyediakan instalasi dan pelatihan?
-    answer: Ya, kami menyediakan manual instalasi terperinci, tutorial video, dan panduan teknis jarak jauh. Untuk pesanan besar, kami dapat mengirim teknisi ke fasilitas Anda untuk instalasi dan pelatihan di tempat dengan biaya. Untuk model wijen, kami merekomendasikan instalasi di dekat area pembersihan biji untuk meminimalkan penanganan biji wijen dan mencegah kontaminasi.
-  - question: Sertifikasi apa yang dimiliki mesin?
-    answer: Semua mesin menjalani pengujian beban penuh berkelanjutan selama 48 jam sebelum pengiriman. Untuk mesin press wijen, pengujian beban penuh termasuk verifikasi siklus press wijen, mengkonfirmasi rendemen minyak yang konsisten di beberapa batch.
-  - question: Apakah ukuran tabung press dapat disesuaikan?
-    answer: Ya, diameter dalam dan tinggi tabung press dapat disesuaikan sesuai kebutuhan bahan dan ukuran batch Anda. Penyesuaian umum termasuk tabung press lebih besar untuk bahan curukan dan tabung press baja tahan karat food-grade untuk produksi minyak nabati.
-  - question: Berapa tingkat minyak sisa dalam bungkil?
-    answer: Tingkat minyak sisa dalam bungkil biasanya 6-8% untuk sebagian besar bahan dengan desain tabung press ber-slot tipe batang kami, dibandingkan dengan 10-12% pada mesin press tabung press berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak (berdasarkan pengujian pabrik Haonuo pada wijen dan kacang tanah berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan) dari setiap batch.
+  - question: Berapa persentase rendemen minyak wijen?
+    answer: Rendemen minyak wijen berkisar 42-54% tergantung varietas dan kandungan kelembapan. Tabung Press sempit berdiameter 300 mm memusatkan gaya press hingga tekanan permukaan bungkil 47–51 MPa, menghasilkan ekstraksi lengkap dalam satu siklus cepat dengan rendemen sekitar 2-3% lebih tinggi dibandingkan model press hidrolik standar (berdasarkan pengujian pabrik Haonuo pada wijen berkadar air 6-8%; hasil bervariasi menurut jenis biji dan persiapan).
+  - question: Mengapa menggunakan tabung press sempit 300 mm untuk wijen?
+    answer: Biji wijen kecil dan membutuhkan tekanan terkonsentrasi untuk melepaskan semua minyak. Tabung standar 355 mm menyebarkan gaya terlalu luas, meninggalkan minyak sisa. Tabung kami berdiameter 300 mm memusatkan 47–51 MPa tekanan langsung pada lapisan wijen, mengekstraksi lebih banyak minyak dalam satu siklus tanpa memadatkan bungkil secara berlebihan.
+  - question: Berapa kandungan kelembapan optimal wijen sebelum dipress?
+    answer: Untuk press panas, kami merekomendasikan 5-6% kelembapan sebelum sangrai. Setelah disangrai, wijen harus mencapai 3-5% kelembapan untuk ekstraksi optimal. Untuk press dingin (tanpa sangrai), rentang optimal adalah 7-9%. Kontrol kelembapan yang tepat mencegah emulsifikasi (terlalu tinggi) dan gesekan berlebih dengan penurunan rendemen (terlalu rendah).
+  - question: Berapa lama siklus press wijen berlangsung?
+    answer: Siklus press panas khas (dengan sangrai awal) membutuhkan waktu 30-40 menit per batch. Siklus cepat sangat penting untuk wijen — meminimalkan kehilangan panas menjaga kualitas minyak dan memaksimalkan rendemen. Untuk press dingin, siklus memakan waktu sekitar 2 jam untuk menjaga kualitas minyak pada suhu rendah. Sistem kontrol mikrokomputer mengotomatisasi seluruh proses.
+  - question: Pada suhu berapa wijen harus disangrai sebelum dipress?
+    answer: Sangrai wijen pada suhu 110-130°C selama 15-20 menit, sampai biji sedikit menggelap dan mengeluarkan aroma. Sangrai yang tepat memecah dinding sel dan melepaskan minyak terikat — kurang sangrai meninggalkan 3-5% minyak sisa tambahan, sementara kelebihan sangrai dapat membakar permukaan dan mengurangi kualitas minyak.
+  - question: Apakah press ini juga bisa menangani biji minyak lain?
+    answer: Ya. Meskipun dioptimalkan untuk wijen, press ini unggul dalam penekanan kenari dengan cangkang (kecuali kenari besi) dalam waktu sekitar 30 menit per batch. Ia juga menangani biji teh, rapeseed, kacang tanah, kedelai, biji lak, dan biji rami dengan tingkat minyak sisa yang lebih rendah dari model standar.
+  - question: Berapa tingkat minyak sisa yang diharapkan dalam bungkil wijen?
+    answer: Dengan desain tabung press ber-slot tipe batang kami, tingkat minyak sisa biasanya 6-8% untuk wijen, dibandingkan dengan 10-12% pada mesin press tabung berlubang tradisional. Ini berarti Anda mengekstrak sekitar 2-3% minyak lebih banyak dari setiap batch — signifikan untuk produksi wijen volume tinggi.
+  - question: Apakah mesin ini cocok untuk minyak wijen dingin?
+    answer: Ya, press dingin tersedia. Untuk minyak wijen tidak disangrai (sering dijual sebagai "press dingin" atau "virgin"), siklus memakan waktu sekitar 2 jam pada pengaturan tekanan lebih rendah untuk menghindari panas berlebih. Minyak wijen dingin memiliki warna lebih terang, rasa lebih lembut, dan mempertahankan lebih banyak antioksidan alami dibandingkan minyak wijen panas.
 videoUrl: ''
 seoKeywords:
   - hydraulic sesame oil press
@@ -276,21 +242,17 @@ updatedAt: 2026-10-10
 
 ## Overview
 
-> **Custom Configuration** — This is a made-to-order hydraulic sesame oil press built on the HN325 or HN355 base with a narrower 300 mm tabung press optimized for sesame. Production lead time is 30–45 working days. [Request a custom quote →](/contact/)
+The Sesame Oil Hydraulic Press is a purpose-built hydraulic oil press machine designed specifically for maximum sesame oil yield and fast pressing cycles. Sesame pressing demands strict temperature control — to prevent heat loss and reduced oil yield, pressing must be completed in the shortest possible time. This model uses a narrower 300 mm inner diameter tabung press that concentrates pressing force to achieve 47–51 MPa cake surface pressure, allowing sesame to be fully pressed in a single rapid cycle with 42–54% oil yield.
 
-The HN325/355 Sesame hydraulic oil press holds 32.5 kg of sesame per batch (up to 50 kg with pre-compression) and finishes a hot pressing cycle in about 30–40 minutes, suiting sesame oil mills and tahini producers running small-to-medium daily batches. Its narrower 300 mm tabung press concentrates force to 47–51 MPa cake surface pressure, leaving 6–8% residual oil in the cake (Haonuo factory tests with graded sesame and peanut at 6-8% moisture; results vary with seed variety and preparation). The 2.2 kW motor runs on standard 220V/380V power.
-
-The Sesame Oil Hydraulic Press is a purpose-built hydraulic oil press machine designed specifically for sesame oil extraction. Sesame pressing demands strict temperature control — to prevent heat loss and reduced oil yield, pressing must be completed in the shortest possible time. This model pairs the HN325 or HN355 cylinder with a narrower 300 mm inner diameter tabung press, concentrating the pressing force to achieve 47–51 MPa cake surface pressure, allowing sesame to be fully pressed clean in a single rapid cycle.
-
-The 300 mm inner diameter, 800 mm high tabung press holds 32.5 kg of sesame per batch. With pre-compression to create additional space, a single batch can process up to 50 kg of sesame — significantly more than Korean-style hydraulic sesame oil presses, offering superior capacity and value for money.
+Each batch holds 32.5 kg of sesame by standard load (up to 50 kg with pre-compression). A hot pressing cycle finishes in 30–40 minutes, with only 6–8% residual oil remaining in the cake — approximately 2–3% lower than standard hydraulic press models (based on Haonuo factory tests with graded sesame and peanut at 6–8% moisture; results vary with seed variety and preparation). The 2.2 kW motor runs on standard 220V/380V power.
 
 ## Key Advantages
 
 - **Optimized for Sesame** — Narrower 300 mm tabung press concentrates pressing force to 47–51 MPa, achieving complete sesame oil extraction in a single fast cycle.
 - **Temperature-Sensitive Design** — Rapid pressing cycle minimizes heat loss, preserving sesame oil quality and maximizing oil yield.
-- **Large Batch Capacity** — 32.5 kg standard load, up to 50 kg with pre-compression — far exceeding Korean-style sesame oil presses in single-batch capacity.
+- **Large Batch Capacity** — 32.5 kg standard load, up to 50 kg with pre-compression — more than sufficient for small-to-medium sesame oil mills and tahini producers.
 - **Versatile Performance** — Also excels at pressing in-shell walnuts (except iron walnuts) in approximately 30 minutes per batch, and delivers even lower residual oil rates on conventional materials.
-- **Two Power Options** — Available in HN325 (47 MPa) and HN355 (51 MPa) configurations to match your production needs and budget.
+- **Two Pressure Options** — Choose 47 MPa or 51 MPa cake pressure to match your production needs and target oil yield.
 
 ## Core Technology
 
@@ -311,10 +273,10 @@ The 300 mm inner diameter, 800 mm high tabung press holds 32.5 kg of sesame per 
 - In-shell walnut (except iron walnut) — approximately 30 minutes per batch
 - Tea seed, rapeseed, peanut, soybean, lacquer oil seed, flaxseed — with even lower residual oil rates than standard models
 
-## Why Choose Our Hydraulic Oil Press
+## Why Choose Our Sesame Oil Hydraulic Press
 
-- **Factory-Direct Pricing** — Get a dedicated sesame oil press at manufacturer-direct prices, with significantly better value than Korean-style sesame oil machines.
-- **Sesame Pressing Expertise** — We designed this model specifically for sesame, understanding the critical relationship between temperature, speed, and oil yield.
-- **Quality Assurance** — Every machine is tested with actual sesame pressing cycles before shipment, ensuring it meets our strict oil yield standards.
-- **After-Sales Support** — Our team provides pressing parameter guidance, recipe optimization tips, and full technical support to help you achieve the best sesame oil extraction results.
-- **Customization Options** — Tabung Press dimensions and pressing parameters can be fine-tuned to match your specific sesame variety and desired oil output.
+- **Factory-Direct Pricing** — Get a purpose-built sesame oil press at manufacturer-direct prices, with full spare parts support and no middleman markup.
+- **Sesame Pressing Expertise** — We designed this model specifically for sesame, understanding the critical relationship between temperature, speed, moisture, and oil yield.
+- **Quality Assurance** — Every machine is tested with actual sesame pressing cycles before shipment, ensuring consistent oil yield across multiple batches.
+- **After-Sales Support** — Our team provides pressing parameter guidance, roasting recipe optimization tips, and full technical support to help you achieve the best sesame oil extraction results.
+- **Fine-Tuning Options** — Tabung Press dimensions and pressing parameters can be adjusted to match your specific sesame variety and desired oil output.
