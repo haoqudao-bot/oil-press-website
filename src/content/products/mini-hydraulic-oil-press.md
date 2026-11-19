@@ -5,25 +5,25 @@ title:
   ar: معصرة زيت هيدروليكية مصغرة
   id: Mesin Press Minyak Hidrolik Mini
 seoTitle:
-  en: Mini Oil Machine HN300 — 300 Ton Entry Press, Specs & Price
-  fr: Mini machine à huile HN300 — presse d'entrée de 300 tonnes, caractéristiques et prix
-  ar: آلة زيت مصغرة HN300 — مكبس دخول 300 طن، المواصفات والسعر
-  id: Mesin minyak mini HN300 — press entry 300 ton, spesifikasi & harga
+  en: Mini Oil Machine HN300 — 300 Ton Press, Specs & Factory Price
+  fr: Mini machine à huile HN300 — presse hydraulique 300 tonnes, caractéristiques et prix usine
+  ar: آلة زيت مصغرة HN300 — مكبس هيدروليكي 300 طن، المواصفات والسعر
+  id: Mesin minyak mini HN300 — press hidrolik 300 ton, spesifikasi & harga pabrik
 description:
-  en: "300-ton entry-level hydraulic oil press for small batch production. 25 MPa cake pressure, 55–60 kg per batch. Compact 390mm tabung press for sesame, peanut, rapeseed, or sunflower seed. 2.2 kW motor, still in active production, factory-direct."
-  fr: "Presse à huile hydraulique d'entrée de gamme de 300 tonnes pour petites productions artisanales. Pression gâteau 25 MPa, 55–60 kg par lot. Cuve compacte de 390 mm pour sésame, arachide, colza ou tournesol. Moteur 2,2 kW, toujours en production, prix usine direct, garantie 1 an."
-  ar: "معصرة زيت هيدروليكية مبتدئة بقوة 300 طن لإنتاج الدفعات الصغيرة. ضغط كعكة 25 ميجا باسكال، 55–60 كجم لكل دفعة. معصرة بأسطوانة مدمجة 390 مم للسمسم، الفول السوداني، الكانولا أو عباد الشمس. محرك 2.2 كيلووات، مباشر من المصنع، ضمان سنة واحدة."
-  id: "Mesin press minyak hidrolik entry-level 300 ton untuk produksi batch kecil. Tekanan kue 25 MPa, 55–60 kg per batch. Press tabung kompak 390mm untuk wijen, kacang tanah, rapeseed atau bunga matahari. Motor 2,2 kW, harga pabrik langsung, garansi 1 tahun."
+  en: "300-ton hydraulic oil press for small factory production. 25 MPa cake pressure, 55–60 kg per batch. Compact 390mm tabung press for sesame, peanut, rapeseed, or sunflower seed. 2.2 kW motor, factory-direct, 1-year warranty."
+  fr: "Presse hydraulique de 300 tonnes pour petites usines. Pression gâteau 25 MPa, 55–60 kg par lot. Cuve compacte de 390 mm pour sésame, arachide, colza ou tournesol. Moteur 2,2 kW, prix usine direct, garantie 1 an."
+  ar: "معصرة هيدروليكية بقوة 300 طن للمصانع الصغيرة. ضغط كعكة 25 ميجا باسكال، 55–60 كجم لكل دفعة. أسطوانة مدمجة 390 مم للسمسم، الفول السوداني، الكانولا أو عباد الشمس. محرك 2.2 كيلووات، سعر المصنع مباشرة، ضمان سنة واحدة."
+  id: "Press hidrolik 300 ton untuk pabrik kecil. Tekanan kue 25 MPa, 55–60 kg per batch. Press tabung kompak 390mm untuk wijen, kacang tanah, rapeseed atau bunga matahari. Motor 2,2 kW, harga pabrik langsung, garansi 1 tahun."
 category: hydraulic-oil-press
 model: HN300
 modelId: ''
 images:
   - /images/products/mini-hydraulic-oil-press.webp
 imageAlt:
-  en: "HN300 mini hydraulic oil press machine, 300-ton entry-level model"
-  fr: "Mini presse à huile hydraulique HN300, modèle d’entrée 300 tonnes"
-  ar: "معصرة زيت هيدروليكية مصغرة HN300، موديل دخول بقدرة 300 طن"
-  id: "Mesin press minyak hidrolik mini HN300, model entry 300 ton"
+  en: "HN300 mini hydraulic oil press machine, 300-ton model"
+  fr: "Mini presse à huile hydraulique HN300, modèle 300 tonnes"
+  ar: "معصرة زيت هيدروليكية مصغرة HN300، موديل 300 طن"
+  id: "Mesin press minyak hidrolik mini HN300, model 300 ton"
 specifications:
   - name: Model (Single/Double)
     value: HN300 Simple / HN300 Double

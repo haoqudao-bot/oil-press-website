@@ -158,6 +158,28 @@ This solution supports both cold pressing (for premium, nutrient-rich sesame oil
 - **Roasting**: Pre-roasting at 160-180°C increases yield by 3-5% and enhances aroma
 - **Pressing pressure**: Our hydraulic press delivers up to 50 MPa for thorough extraction
 
+## Sesame Oil Yield by Press Type
+
+Choosing the right press type is the single biggest decision affecting your yield, operating cost, and product quality. Here is how the four main press technologies compare on sesame:
+
+| Press Type | Typical Sesame Yield | Residual Oil in Cake | Cycle Time | Machine Cost | Best For |
+|---|---|---|---|---|---|
+| **Manual / Traditional (ganzuo)** | 35-40% | 15-20% | 2-4 h per batch | Low ($200-500) | Home use, local village markets, low volume |
+| **Screw Press (1-stage)** | 38-43% | 12-16% | 2-3 min per kg | Medium ($1,500-3,000) | Moderate-volume workshops, hot-press only |
+| **Screw Press (2-stage with pre-press)** | 42-46% | 8-12% | 2-3 min per kg | Higher ($3,500-6,000) | Higher-volume operations, hot-press only |
+| **Hydraulic Press (Haonuo HN300/HN325)** | **45-50%** | **6-8%** | 30-40 min per batch (hot) / ~2 h (cold) | Medium ($2,500-5,000) | **All sesame operations — cold and hot press** |
+| **Hydraulic Press (Ultra-High Pressure HN500)** | **48-52%** | **5-7%** | ~2 h per batch (cold) | Higher ($8,000-12,000) | Premium cold-pressed export oil |
+
+**Three things stand out:**
+
+1. **Hydraulic presses consistently outperform screw presses by 3-7 percentage points** on sesame — 45-50% vs 38-46%. On 1,000 kg of white sesame, that is **450-500 kg of oil vs 380-460 kg** — an extra 70-90 kg of oil per tonne, worth roughly **$56-72 at current wholesale prices**.
+
+2. **Hydraulic presses do cold press** — screw presses only work reliably for hot pressing (roasted seed). If you want to serve the premium cold-pressed market (retail, health food, export), a hydraulic press is your only practical option.
+
+3. **Residual oil in cake matters** — hydraulic presses leave 6-8% vs 12-16% for screws. That means your cake is a better animal feed (less oil, more protein), and you are not leaving money on the table in the cake.
+
+**What this means for sizing:** If you are a small workshop pressing 500 kg/day, the HN300 at 45-50% yield gives you **225-250 kg of oil** vs a typical screw at 40% giving you 200 kg — an extra **25-50 kg of oil per day** with the same input. At $6/L that is **$150-300 extra revenue per day**, which pays for the price difference between machines in a few months.
+
 ## Why Choose Our Sesame Oil Press
 
 - **Specialized sesame pressing expertise** — Our sesame oil hydraulic press is purpose-built for sesame, not a generic machine adapted for the purpose. This means better yield, lower residual oil, and more consistent quality.
