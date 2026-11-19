@@ -10,10 +10,10 @@ seoTitle:
   ar: معصرة زيت السمسم الهيدروليكية — عائد زيت 42-54%
   id: Mesin Press Minyak Wijen Hidrolik — Rendemen 42-54%
 description:
-  en: "Purpose-built hydraulic press for maximum sesame oil yield. 47–51 MPa cake pressure from a 300mm narrow tabung press concentrates force on small seeds. 42–54% sesame oil yield, 6–8% residual oil in cake. 30–40 minutes per hot-pressing cycle."
-  fr: "Presse hydraulique dédiée pour rendement maximal en huile de sésame. Pression gâteau 47–51 MPa avec cuve étroite de 300 mm concentrant la force sur petites graines. Rendement 42–54%, huile résiduelle 6–8%. Cycle de pressage 30–40 minutes."
-  ar: "معصرة هيدروليكية مصممة خصيصًا لعائد زيت السمسم الأقصى. ضغط كعكة 47–51 ميجا باسكال من أسطوانة ضيقة 300 مم تركز القوة على البذور الصغيرة. عائد زيت 42–54%, زيت متبقٍ 6–8%. دورة 30–40 دقيقة."
-  id: "Mesin press hidrolik khusus untuk rendemen minyak wijen maksimal. Tekanan bungkil 47–51 MPa dari tabung press sempit 300 mm memusatkan gaya pada biji kecil. Rendemen 42–54%, minyak sisa 6–8%. Siklus press 30–40 menit."
+  en: "Purpose-built hydraulic press for sesame oil. 42-54% max yield, 47–51 MPa cake pressure from 300mm narrow tabung press."
+  fr: "Presse hydraulique dédiée au sésame. Rendement max 42-54%, pression gâteau 47–51 MPa, fût étroit 300 mm."
+  ar: "معصرة هيدروليكية مخصصة لزيت السمسم. عائد أقصى 42-54%, ضغط كعكة 47–51 ميجا باسكال, أسطوانة ضيقة 300 مم."
+  id: "Mesin press hidrolik khusus minyak wijen. Rendemen maks 42-54%, tekanan bungkil 47–51 MPa, tabung sempit 300 mm."
 category: hydraulic-oil-press
 model: HN325/355 Sesame
 modelFr: HN325/355 Sésame
