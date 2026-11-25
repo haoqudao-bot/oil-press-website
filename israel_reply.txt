@@ -1,0 +1,13 @@
+Hi there! Thanks for clarifying.
+
+So you already have an extraction system (solvent or supercritical CO2), and now you want a hydraulic press to squeeze residual liquid out of the post-extraction biomass. That makes sense!
+
+A few quick questions to recommend the right press:
+
+1. What kind of biomass is it? (e.g. olive pomace, grape marc, cannabis/hemp, other?)
+2. How many kg of post-extraction biomass per day?
+3. What liquid are you squeezing out? (crude oil, CBD oil, something else?)
+4. Is it cold-press only, or do you heat the biomass slightly before pressing?
+5. Voltage? (Israel is usually 380V/50Hz 3-phase)
+
+Once I know these, I'll suggest the right press model and send a quotation right away.

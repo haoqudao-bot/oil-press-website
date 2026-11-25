@@ -24,7 +24,7 @@ const en: Record<string, CategoryContent> = {
     ],
     modelRange: [
       'Haonuo offers 13 hydraulic press models spanning pressing forces from 300 tonnes to 620 tonnes. All standard models share the same 100 kg batch capacity per cycle. Pressure rating is the key differentiator — higher forces handle harder seed shells and achieve lower residual oil rates. Every model is available in both single-barrel and double-barrel configurations.',
-      'The product line covers four pressure tiers: 300-tonne entry-level (HN300), 325–360-tonne standard and heavy-duty (HN325, HN355) for most common oilseeds, 500-tonne cold-press (HN426) for premium oil production, and the flagship 600–620-tonne ultra-high-pressure models (HN480B, HN500) that press in-shell walnuts, almonds, and the toughest materials in a single cycle. A specialised large-barrel variant (HN325LB) handles coconut meat and shea nut at 20–35 kg per batch with a wider 500 mm barrel.',
+      'The product line covers four pressure tiers: 300-tonne compact (HN300), 325–360-tonne standard and heavy-duty (HN325, HN355) for most common oilseeds, 500-tonne cold-press (HN426) for premium oil production, and the flagship 600–620-tonne ultra-high-pressure models (HN480B, HN500) that press in-shell walnuts, almonds, and the toughest materials in a single cycle. A specialised large-barrel variant (HN325LB) handles coconut meat and shea nut at 20–35 kg per batch with a wider 500 mm barrel.',
     ],
     selectionCriteria: [
       { label: 'Pressing force', desc: '300 tonnes for soft seeds (sesame, flax); 325–360 tonnes for common oilseeds (peanut, rapeseed, sunflower, cottonseed); 500+ tonnes for hard-shell materials (walnut, almond, in-shell seeds)' },
