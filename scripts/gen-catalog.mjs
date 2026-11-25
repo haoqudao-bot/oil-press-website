@@ -1,4 +1,4 @@
-// Generate Word product catalog from Astro markdown files
+﻿// Generate Word product catalog from Astro markdown files
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
@@ -190,7 +190,7 @@ children.push(makePara([
 ]));
 children.push(makePara([
   makeRun('Email: ', { bold: true }),
-  makeRun('sales@hydoilpress.com'),
+  makeRun('info@hydoilpress.com'),
 ]));
 children.push(makePara([
   makeRun('Website: ', { bold: true }),

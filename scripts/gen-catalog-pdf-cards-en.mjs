@@ -1,4 +1,4 @@
-// Cards Catalog PDF — ENGLISH
+﻿// Cards Catalog PDF — ENGLISH
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
@@ -292,7 +292,7 @@ a{color:#d97706;text-decoration:underline;}
     <h3>CONTACT</h3>
     <div class="contact-row"><span class="label">Contact</span><span class="val">Eason</span></div>
     <div class="contact-row"><span class="label">WhatsApp</span><span class="val">+86 189 5714 9128</span></div>
-    <div class="contact-row"><span class="label">Email</span><span class="val"><a href="mailto:sales@hydoilpress.com" style="color:#F59E0B;text-decoration:underline;">sales@hydoilpress.com</a></span></div>
+    <div class="contact-row"><span class="label">Email</span><span class="val"><a href="mailto:info@hydoilpress.com" style="color:#F59E0B;text-decoration:underline;">info@hydoilpress.com</a></span></div>
     <div class="contact-row"><span class="label">Web</span><span class="val"><a href="https://www.hydoilpress.com" style="color:#F59E0B;text-decoration:underline;">www.hydoilpress.com</a></span></div>
   </div>
 </div>

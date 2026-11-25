@@ -1,4 +1,4 @@
-// 表格版 中文产品目录 PDF
+﻿// 表格版 中文产品目录 PDF
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
@@ -477,7 +477,7 @@ a{color:#d97706;text-decoration:underline;}
     <h3>联系方式</h3>
     <div class="contact-row"><span class="label">联系人</span><span class="val">Eason</span></div>
     <div class="contact-row"><span class="label">WhatsApp</span><span class="val">+86 189 5714 9128</span></div>
-    <div class="contact-row"><span class="label">邮箱</span><span class="val"><a href="mailto:sales@hydoilpress.com" style="color:#F59E0B;text-decoration:underline;">sales@hydoilpress.com</a></span></div>
+    <div class="contact-row"><span class="label">邮箱</span><span class="val"><a href="mailto:info@hydoilpress.com" style="color:#F59E0B;text-decoration:underline;">info@hydoilpress.com</a></span></div>
     <div class="contact-row"><span class="label">官网</span><span class="val"><a href="https://www.hydoilpress.com" style="color:#F59E0B;text-decoration:underline;">www.hydoilpress.com</a></span></div>
   </div>
 </div>

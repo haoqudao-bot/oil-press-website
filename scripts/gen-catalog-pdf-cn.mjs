@@ -1,4 +1,4 @@
-// 中文产品目录 PDF 生成器
+﻿// 中文产品目录 PDF 生成器
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
@@ -287,7 +287,7 @@ const html = `<!doctype html>
     <h3>联系方式</h3>
     <div class="contact-row"><span class="label">联系人</span><span class="val">Eason</span></div>
     <div class="contact-row"><span class="label">WhatsApp</span><span class="val">+86 189 5714 9128</span></div>
-    <div class="contact-row"><span class="label">邮箱</span><span class="val">sales@hydoilpress.com</span></div>
+    <div class="contact-row"><span class="label">邮箱</span><span class="val">info@hydoilpress.com</span></div>
     <div class="contact-row"><span class="label">官网</span><span class="val">www.hydoilpress.com</span></div>
     <div class="contact-row"><span class="label">地址</span><span class="val">山东省</span></div>
   </div>

@@ -1,4 +1,4 @@
-// Generate catalog-pdf.html from product markdown files → print to PDF
+﻿// Generate catalog-pdf.html from product markdown files → print to PDF
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
@@ -248,7 +248,7 @@ const html = `<!doctype html>
     <h3>Contact Us</h3>
     <div class="contact-row"><span class="label">CONTACT</span><span class="val">Eason</span></div>
     <div class="contact-row"><span class="label">WHATSAPP</span><span class="val">+86 189 5714 9128</span></div>
-    <div class="contact-row"><span class="label">EMAIL</span><span class="val">sales@hydoilpress.com</span></div>
+    <div class="contact-row"><span class="label">EMAIL</span><span class="val">info@hydoilpress.com</span></div>
     <div class="contact-row"><span class="label">WEBSITE</span><span class="val">www.hydoilpress.com</span></div>
     <div class="contact-row"><span class="label">LOCATION</span><span class="val">Shandong Province, China</span></div>
   </div>

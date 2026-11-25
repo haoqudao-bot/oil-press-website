@@ -1,4 +1,4 @@
-// 中文产品目录生成器 - 带产品图，紧凑版
+﻿// 中文产品目录生成器 - 带产品图，紧凑版
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
@@ -245,7 +245,7 @@ allChildren.push(P([
 const contactItems = [
   '联系人：Eason',
   'WhatsApp：+86 189 5714 9128',
-  '邮箱：sales@hydoilpress.com',
+  '邮箱：info@hydoilpress.com',
   '官网：www.hydoilpress.com',
   '地址：山东省',
 ];
