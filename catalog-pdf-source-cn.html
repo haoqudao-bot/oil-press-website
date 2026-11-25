@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>海诺机械 · 液压榨油机产品目录 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 14mm 12mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; font-size: 11px; color: #1f2937; line-height: 1.5; }
+  .page-break { page-break-before: always; break-before: page; }
+  h1, h2, h3 { font-weight: 700; }
+  a { color: #d97706; text-decoration: underline; }
+
+  /* ===== COVER ===== */
+  .cover { page-break-after: always; padding-top: 60mm; position: relative; min-height: 260mm; }
+  .cover-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50mm; }
+  .cover-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22pt; color: #0A0E17; letter-spacing: 1px; }
+  .cover-logo .dot { color: #F59E0B; }
+  .cover-tag { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #6b7280; }
+  .cover-sub { font-size: 10pt; color: #6b7280; letter-spacing: 2px; margin-bottom: 14pt; }
+  .cover-title { font-family: 'Bebas Neue', sans-serif; font-size: 64pt; line-height: 0.9; color: #0A0E17; margin-bottom: 4pt; }
+  .cover-title .zh { font-family: 'Noto Sans SC', sans-serif; font-size: 28pt; letter-spacing: 8px; margin-left: 6pt; }
+  .cover-title .amber { color: #F59E0B; }
+  .cover-desc { font-size: 12pt; color: #4b5563; max-width: 140mm; line-height: 1.8; margin-bottom: 40mm; }
+  .cover-stats { display: flex; gap: 28pt; border-top: 2px solid #0A0E17; padding-top: 14pt; }
+  .cover-stat .num { font-family: 'Bebas Neue', sans-serif; font-size: 26pt; color: #F59E0B; }
+  .cover-stat .lbl { font-size: 9pt; color: #6b7280; letter-spacing: 1px; }
+  .cover-bottom { position: absolute; bottom: 18mm; left: 14mm; right: 14mm; display: flex; justify-content: space-between; font-size: 8pt; color: #6b7280; }
+
+  /* ===== INTRO ===== */
+  .intro { page-break-after: always; padding-top: 10mm; }
+  .intro h1 { font-family: 'Bebas Neue', sans-serif; font-size: 32pt; color: #0A0E17; border-bottom: 3pt solid #F59E0B; padding-bottom: 6pt; margin-bottom: 12pt; }
+  .intro-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20pt; margin-bottom: 16pt; }
+  .intro-text { font-size: 11pt; color: #374151; line-height: 1.9; }
+  .intro-text p { margin-bottom: 8pt; }
+  .intro-side { background: #f9fafb; border-left: 3pt solid #F59E0B; padding: 12pt; }
+  .intro-side h3 { font-family: 'Bebas Neue', sans-serif; font-size: 14pt; color: #0A0E17; margin-bottom: 8pt; }
+  .intro-side p { font-size: 10pt; color: #4b5563; margin-bottom: 6pt; line-height: 1.7; }
+  .intro-side .price { color: #d97706; font-weight: 600; }
+  .contact-block { margin-top: 16pt; padding: 12pt; background: #0A0E17; color: white; border-radius: 4pt; }
+  .contact-block h3 { font-family: 'Bebas Neue', sans-serif; font-size: 16pt; color: #F59E0B; margin-bottom: 8pt; }
+  .contact-row { display: flex; justify-content: space-between; font-size: 10pt; margin-bottom: 4pt; }
+  .contact-row .label { color: #9ca3af; }
+  .contact-row .val { color: white; }
+
+  /* ===== CATEGORY ===== */
+  .cat-section { padding-top: 4mm; }
+  .cat-title { font-family: 'Noto Sans SC', sans-serif; font-size: 20pt; color: #0A0E17; border-top: 3pt solid #F59E0B; padding-top: 8pt; margin-bottom: 8pt; display: flex; justify-content: space-between; align-items: baseline; }
+  .cat-en { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #9ca3af; letter-spacing: 1px; }
+
+  /* ===== PRODUCT CARD ===== */
+  .prod-card { margin-bottom: 14pt; page-break-inside: avoid; break-inside: avoid; }
+  .prod-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4pt; }
+  .prod-model { font-family: 'JetBrains Mono', monospace; font-size: 10pt; font-weight: 500; color: #F59E0B; background: #fffbeb; padding: 2pt 6pt; border-radius: 2pt; border: 1pt solid #fde68a; }
+  .prod-title { font-size: 12pt; color: #0A0E17; flex: 1; margin-left: 8pt; font-weight: 700; }
+  .prod-body { display: grid; grid-template-columns: 38mm 1fr; gap: 8pt; border: 1pt solid #e5e7eb; border-radius: 3pt; overflow: hidden; }
+  .prod-img { background: #f9fafb; display: flex; align-items: center; justify-content: center; height: 28mm; }
+  .prod-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .prod-right { padding: 6pt 8pt; }
+  .prod-desc { font-size: 10pt; color: #374151; line-height: 1.7; margin-bottom: 4pt; }
+  .seeds { font-size: 8pt; color: #6b7280; margin-bottom: 4pt; }
+  .seeds .sl { color: #9ca3af; font-size: 7pt; margin-right: 4pt; }
+  .specs { width: 100%; border-collapse: collapse; font-size: 9pt; margin-bottom: 4pt; }
+  .specs td { padding: 2pt 4pt; border-bottom: 1pt solid #f3f4f6; }
+  .specs .sn { color: #6b7280; width: 38%; }
+  .specs .sv { color: #0A0E17; font-weight: 500; }
+  .specs tr.alt td { background: #f9fafb; }
+  .prod-link { font-size: 8pt; font-family: 'JetBrains Mono', monospace; }
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-logo">HAONUO<span class="dot">.</span></div>
+    <div class="cover-tag">产品目录 · 2026</div>
+  </div>
+  <div class="cover-sub">液压榨油机 · 成套榨油设备</div>
+  <div class="cover-title">HYDRAULIC<br/><span class="amber">OIL PRESS</span><br/><span class="zh">产品目录</span></div>
+  <p class="cover-desc">山东海诺机械装备集团有限公司，专业液压榨油设备制造商。2010年建厂，产品出口20多个国家和地区，覆盖从小型油坊到工业油厂的完整需求。</p>
+  <div class="cover-stats">
+    <div class="cover-stat"><div class="num">300–620</div><div class="lbl">吨位压力</div></div>
+    <div class="cover-stat"><div class="num">18</div><div class="lbl">标准型号</div></div>
+    <div class="cover-stat"><div class="num">20+</div><div class="lbl">出口国家</div></div>
+    <div class="cover-stat"><div class="num">2010</div><div class="lbl">建厂年份</div></div>
+  </div>
+  <div class="cover-bottom">
+    <span>山东海诺机械装备集团有限公司</span>
+    <span>hydoilpress.com</span>
+  </div>
+</div>
+
+<!-- 简介 -->
+<div class="intro">
+  <h1>公司简介 ABOUT HAONUO</h1>
+  <div class="intro-grid">
+    <div class="intro-text">
+      <p><strong>山东海诺机械装备集团有限公司</strong>坐落于山东省，是一家专业设计和生产液压榨油设备的制造企业。自2010年起，我们为亚洲、非洲、拉丁美洲的油坊和油厂提供<strong>批次式液压榨油机</strong>、<strong>种子预处理设备</strong>、<strong>炒籽蒸籽设备</strong>以及<strong>从种子到毛油的成套生产线</strong>。</p>
+      <p>我们的<strong>HN系列</strong>覆盖300至620吨压力——可压榨芝麻、花生、核桃、椰子VCO、乳木果、菜籽、亚麻籽、葵花籽、棕榈仁等20多种油料。所有机型均为自有工厂生产，采用<strong>Q690高强钢制榨筒</strong>、<strong>27SiMn合金钢制液压缸</strong>和<strong>食品接触面镀镍</strong>工艺。</p>
+      <p>本目录列出公司全部标准生产型号，按设备分类组织。具体机型可根据客户需求定制配置。</p>
+    </div>
+    <div class="intro-side">
+      <h3>产品线</h3>
+      <p><strong>① 液压榨油机</strong><br/>300–620吨压力，12款标准机型，含冷榨、芝麻定制、椰子大桶等变种。</p>
+      <p><strong>② 种子预处理</strong><br/>螺旋预压机、高速破碎机、立式输送机——集成后提升3–5%总出油率。</p>
+      <p><strong>③ 炒籽蒸籽</strong><br/>电磁滚筒炒籽机、电热/柴火蒸籽机、导热油炒籽锅。</p>
+      <p><strong>④ 过滤设备</strong><br/>气动压滤机，压榨后原油澄清。</p>
+      <p class="price">支持定制配置，按客户需求推荐最适合方案。</p>
+    </div>
+  </div>
+  <div class="contact-block">
+    <h3>联系方式</h3>
+    <div class="contact-row"><span class="label">联系人</span><span class="val">Eason</span></div>
+    <div class="contact-row"><span class="label">WhatsApp</span><span class="val">+86 189 5714 9128</span></div>
+    <div class="contact-row"><span class="label">邮箱</span><span class="val">sales@hydoilpress.com</span></div>
+    <div class="contact-row"><span class="label">官网</span><span class="val">www.hydoilpress.com</span></div>
+    <div class="contact-row"><span class="label">地址</span><span class="val">山东省</span></div>
+  </div>
+</div>
+
+<!-- 产品分类 -->
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">液压榨油机</span><span class="cat-en">Hydraulic Oil Presses · 8款</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN300</div>
+      <h3 class="prod-title">HN300 小型液压榨油机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/mini-hydraulic-oil-press.webp" alt="HN300 小型液压榨油机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">300吨压力，适合油坊起步阶段。20–60kg/批次，热榨冷榨通用，1.1kw电机。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>sesame · peanut · rapeseed · tea seed</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">300 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">1,2 / 1,5 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">300 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Inner Diameter</td>
+          <td class="sv">240 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Standard Inner Diameter</td>
+          <td class="sv">390 mm (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Standard Height</td>
+          <td class="sv">800 mm (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Standard Stroke</td>
+          <td class="sv">850 mm (customizable)</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/mini-hydraulic-oil-press/">查看完整产品页 → https://www.hydoilpress.com/products/mini-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN325</div>
+      <h3 class="prod-title">HN325 标准型液压榨油机（畅销款）</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/standard-hydraulic-oil-press.webp" alt="HN325 标准型液压榨油机（畅销款）" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">工厂主打型号，325吨压力，20–100kg/批次，27MPa饼面压力。热榨30–40分钟/批次，冷榨约2小时。单缸1.42吨，双缸1.72吨。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>sesame · peanut · walnut · tea seed · flaxseed · rapeseed · sunflower seed · soybean</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">325 Tonnes</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">27 MPa (Ø390 tabung press)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Hydraulic System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Diameter</td>
+          <td class="sv">Ø390 mm standard (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">800 mm standard (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Stroke</td>
+          <td class="sv">850 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Batch Capacity</td>
+          <td class="sv">About 20–100 kg per batch (100 kg max, crushed seed)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Power</td>
+          <td class="sv">380V / 50Hz (415V optional)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/standard-hydraulic-oil-press/">查看完整产品页 → https://www.hydoilpress.com/products/standard-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN365</div>
+      <h3 class="prod-title">HN365 商业级液压榨油机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/commercial-hydraulic-oil-press.webp" alt="HN365 商业级液压榨油机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">365吨压力，适合商业油厂，日处理量更大，双缸配置可选。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>peanut · sesame · rapeseed · camellia seed · walnut · flaxseed · sunflower · soybean · almond</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Rated Pressing Force</td>
+          <td class="sv">365 Tonnes</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">30 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Frame</td>
+          <td class="sv">3 cm high-strength steel plate</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Structure</td>
+          <td class="sv">Vertical, single or double tabung press</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Working Mode</td>
+          <td class="sv">Manual / Semi-automatic, switchable</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Process</td>
+          <td class="sv">Hot pressing and cold pressing</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Starting</td>
+          <td class="sv">Star-delta (Y-Δ) reduced-voltage start</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Configuration</td>
+          <td class="sv">Single or double station</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Applicable Seeds</td>
+          <td class="sv">Peanut, sesame, rapeseed, camellia (tea) seed, walnut, flaxseed, sunflower, soybean, almond</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/commercial-hydraulic-oil-press/">查看完整产品页 → https://www.hydoilpress.com/products/commercial-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN426</div>
+      <h3 class="prod-title">HN426 冷榨液压榨油机（500吨）</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/cold-press-hydraulic-oil-press.webp" alt="HN426 冷榨液压榨油机（500吨）" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">500吨冷榨专用，70MPa系统压力/42MPa饼面压力。低温压榨保留营养，主打椰子VCO、核桃油、亚麻籽油等高端油品。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>tea seed · rapeseed · peanut · soybean · flaxseed · lacquer oil seed · walnut kernel · in-shell walnut · apricot kernel · yellowhorn · tiger nut</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">System Pressure</td>
+          <td class="sv">70 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">500 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">2,4 / 2,7 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">426 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Inner Diameter</td>
+          <td class="sv">320 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Standard Inner Diameter</td>
+          <td class="sv">390 mm (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Standard Height</td>
+          <td class="sv">800 mm (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Standard Stroke</td>
+          <td class="sv">850 mm (customizable)</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/cold-press-hydraulic-oil-press/">查看完整产品页 → https://www.hydoilpress.com/products/cold-press-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN500</div>
+      <h3 class="prod-title">HN500 超高压液压榨油机（旗舰款）</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/ultra-high-pressure-hydraulic-oil-press.webp" alt="HN500 超高压液压榨油机（旗舰款）" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">600–620吨旗舰机型，最强压力，核桃、杏仁等硬壳油料单周期直接压透。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>tea seed · rapeseed · peanut · soybean · flaxseed · lacquer oil seed · walnut kernel · in-shell walnut · apricot kernel · yellowhorn · tiger nut</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">System Pressure</td>
+          <td class="sv">75 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">620 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">3,5 / 3,88 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">500 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Inner Diameter</td>
+          <td class="sv">360 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Standard Inner Diameter</td>
+          <td class="sv">390 mm (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Standard Height</td>
+          <td class="sv">800 mm (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Standard Stroke</td>
+          <td class="sv">850 mm (customizable)</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/ultra-high-pressure-hydraulic-oil-press/">查看完整产品页 → https://www.hydoilpress.com/products/ultra-high-pressure-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN325/355 Sesame</div>
+      <h3 class="prod-title">定制款芝麻专用液压榨油机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/sesame-oil-hydraulic-press.webp" alt="定制款芝麻专用液压榨油机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">芝麻定制款——Ø300mm窄桶集中压力，47–51MPa饼面压力，42–54%出油率。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>sesame · in-shell walnut · tea seed · rapeseed · peanut · soybean · lacquer oil seed · flaxseed</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Outer Diameter (325/355)</td>
+          <td class="sv">325 / 360 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Inner Diameter (325/355)</td>
+          <td class="sv">260 / 280 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Stroke</td>
+          <td class="sv">850 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">System Pressure (325/355)</td>
+          <td class="sv">60 / 63 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cake Surface Pressure (325/355)</td>
+          <td class="sv">47 / 51 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Inner Diameter</td>
+          <td class="sv">300 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">800 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Machine Weight (325/355)</td>
+          <td class="sv">~1,4 / ~2,1 Tonnes</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/sesame-oil-hydraulic-press/">查看完整产品页 → https://www.hydoilpress.com/products/sesame-oil-hydraulic-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">300 Type Coconut</div>
+      <h3 class="prod-title">300型椰奶液压榨油机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/coconut-oil-hydraulic-press.webp" alt="300型椰奶液压榨油机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">300型椰奶/椰油专用液压榨油机，定制桶形。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>coconut milk</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">300 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Inner Diameter</td>
+          <td class="sv">240 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Stroke</td>
+          <td class="sv">700 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">300 Tonnes</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">10.83 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Inner Diameter</td>
+          <td class="sv">600 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">600 mm</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/coconut-oil-hydraulic-press/">查看完整产品页 → https://www.hydoilpress.com/products/coconut-oil-hydraulic-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN325 Large Tabung Press</div>
+      <h3 class="prod-title">HN325 大桶压滤机（椰子/乳木果）</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/large-barrel-hydraulic-oil-press.webp" alt="HN325 大桶压滤机（椰子/乳木果）" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">HN325加大桶径版本（Ø500mm），针对椰子肉、乳木果设计，20–35kg/批次。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>animal oil residue · plant oil residue · oil sludge · textile sludge · fruit vegetable dehydration · oil field sludge</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">325 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Stroke</td>
+          <td class="sv">850 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">10.64 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Inner Diameter</td>
+          <td class="sv">630 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">1000 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">~2,5 / ~3,5 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Equipment Dimensions (Single/Double)</td>
+          <td class="sv">1400×2100×2900 / 2700×2100×2900 mm</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/large-barrel-hydraulic-oil-press/">查看完整产品页 → https://www.hydoilpress.com/products/large-barrel-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">种子预处理设备</span><span class="cat-en">Seed Processing Equipment · 5款</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN-CG60</div>
+      <h3 class="prod-title">HN-CG60 螺旋预压机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/hn-cg60-oilseed-pre-press.webp" alt="HN-CG60 螺旋预压机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">螺旋预压机——主榨前先压一遍，压成薄片破坏油细胞。增加3–5%总出油率。500kg/h（7.5kw）/750kg/h（11kw）。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>rapeseed · mustard seed · groundnut · soybean · flaxseed · sesame · sunflower seed · cotton seed</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">7.5 kW standard / 11 kW optional</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Voltage</td>
+          <td class="sv">380V (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Speed</td>
+          <td class="sv">1460 r/min</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">500 kg/h (7.5 kW) / 750 kg/h (11 kW)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Overall Dimension</td>
+          <td class="sv">1030 × 1000 × 750 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight</td>
+          <td class="sv">174 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Crushing Action</td>
+          <td class="sv">Flakes seed, cracks oil cells — no oil output itself</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Typical Yield Increase</td>
+          <td class="sv">3–5% total oil yield with hydraulic finishing</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/oilseed-pre-press/">查看完整产品页 → https://www.hydoilpress.com/products/oilseed-pre-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">220 Type</div>
+      <h3 class="prod-title">220型高速种子破碎机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/high-speed-seed-crusher.webp" alt="220型高速种子破碎机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">220型高速破碎机，棕榈仁、棉籽等硬壳物料破碎。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>tea seed · yellowhorn · avocado seed · hard shell seeds</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Voltage</td>
+          <td class="sv">380V</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Power</td>
+          <td class="sv">11 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Rotation Speed</td>
+          <td class="sv">1460 RPM</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">750 kg/h (1500 jin/h)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Noise</td>
+          <td class="sv">~82 dB</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Weight</td>
+          <td class="sv">218 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Equipment Dimensions</td>
+          <td class="sv">1400×802×800 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/high-speed-seed-crusher/">查看完整产品页 → https://www.hydoilpress.com/products/high-speed-seed-crusher/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN-SC</div>
+      <h3 class="prod-title">HN-SC 立式螺旋输送机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/vertical-screw-conveyor.webp" alt="HN-SC 立式螺旋输送机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">立式螺旋输送机，自动将物料从炒籽机送入榨油机料斗。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>peanut · rapeseed · soybean · sesame · sunflower seed · granular oilseeds</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Material</td>
+          <td class="sv">Stainless steel (screw, tube, bin, frame)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Drive Motor</td>
+          <td class="sv">1.1 kW geared motor</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Lift Height</td>
+          <td class="sv">2 metres</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Feed Bin Size</td>
+          <td class="sv">600 × 600 × 600 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Conveying Type</td>
+          <td class="sv">Enclosed vertical screw, dust-free</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Typical Pairing</td>
+          <td class="sv">Hydraulic oil press, oil filter, drum/pan roaster</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/vertical-screw-conveyor/">查看完整产品页 → https://www.hydoilpress.com/products/vertical-screw-conveyor/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">All-in-One</div>
+      <h3 class="prod-title">一体式提升·破碎·炒籽机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/integrated-feeder-crusher-roaster.webp" alt="一体式提升·破碎·炒籽机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">一体化提升·破碎·炒籽三合一设备，紧凑型作坊配置。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>tea seed · rapeseed · peanut · sunflower seed</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">500-1000 kg/h (selon la configuration)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Integrated Functions</td>
+          <td class="sv">Alimentation automatique + Concassage + Torréfaction</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/integrated-feeder-crusher-roaster/">查看完整产品页 → https://www.hydoilpress.com/products/integrated-feeder-crusher-roaster/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">370 Type</div>
+      <h3 class="prod-title">370型油饼工业粉碎机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/industrial-seed-crusher.webp" alt="370型油饼工业粉碎机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">370型油饼粉碎机，把榨完的油饼粉碎成动物饲料粉末。2000kg/h。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>pressed oil cake · sesame cake · peanut cake · rapeseed cake</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Voltage</td>
+          <td class="sv">380V</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Power</td>
+          <td class="sv">18.5 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Rotation Speed</td>
+          <td class="sv">3260 RPM</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">2000 kg/h</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Weight</td>
+          <td class="sv">308 kg</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/industrial-seed-crusher/">查看完整产品页 → https://www.hydoilpress.com/products/industrial-seed-crusher/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">炒籽蒸籽设备</span><span class="cat-en">Roasting & Steaming Equipment · 4款</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">100# / 130#</div>
+      <h3 class="prod-title">电磁滚筒炒籽机（100型/130型）</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/automatic-drum-roaster.webp" alt="电磁滚筒炒籽机（100型/130型）" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">电磁加热滚筒炒籽机，100型（160kg/批次）、130型（450kg/批次）。电磁无明火，温度精准可调。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>sesame · peanut · rapeseed · sunflower seed · flaxseed · camellia seed</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Capacity per Batch</td>
+          <td class="sv">160–220 kg / 200–350 kg / 360–450 kg</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Drum Size</td>
+          <td class="sv">70×98 cm / 73×130 cm / 80×130 cm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor</td>
+          <td class="sv">0.75 kW / 1.1 kW / 1.5 kW (three-phase 4-pole)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Heating Power</td>
+          <td class="sv">18 kW / 27 kW / 27 kW (electromagnetic)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Heating Method</td>
+          <td class="sv">Electromagnetic, flameless, sealed drum</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Control</td>
+          <td class="sv">Independent temperature control with automatic shut-off</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/automatic-drum-roaster/">查看完整产品页 → https://www.hydoilpress.com/products/automatic-drum-roaster/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">Thermal Oil Type</div>
+      <h3 class="prod-title">导热油炒籽锅</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/thermal-oil-roasting-pan.webp" alt="导热油炒籽锅" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">导热油炒籽锅，导热油循环加热，受热均匀，适合传统风味炒籽工艺。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>tea seed · rapeseed · peanut · sesame · sunflower seed</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Total Roaster Height</td>
+          <td class="sv">1550 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Outer Diameter</td>
+          <td class="sv">1200 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Pot Inner Diameter</td>
+          <td class="sv">1000 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Depth</td>
+          <td class="sv">380 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Discharge Outlet Width</td>
+          <td class="sv">260 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Discharge Outlet Height from Ground</td>
+          <td class="sv">500 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">100-150 kg par lot (200-300 jin)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Reducer Power</td>
+          <td class="sv">1.1 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Heating Power</td>
+          <td class="sv">27 KW</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/thermal-oil-roasting-pan/">查看完整产品页 → https://www.hydoilpress.com/products/thermal-oil-roasting-pan/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">60 Type Wood-Fired</div>
+      <h3 class="prod-title">60型柴火蒸籽机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/wood-fired-seed-steamer.webp" alt="60型柴火蒸籽机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">60型柴火蒸籽机，无电或电力不足地区首选，烧木柴/生物质燃料。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>tea seed · rapeseed · peanut · sesame</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Stove Body Material</td>
+          <td class="sv">Acier au carbone Q355B</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Body Material</td>
+          <td class="sv">Acier inoxydable 304 (finition miroir)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Stove Body Dimensions</td>
+          <td class="sv">500×500×750 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Body Dimensions</td>
+          <td class="sv">φ600×610 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Fuel Types</td>
+          <td class="sv">Charbon, Bois, Gaz</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Capacity</td>
+          <td class="sv">~100 kg par lot (~200 jin)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Chimney Outer Diameter</td>
+          <td class="sv">8.7 cm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Total Equipment Weight</td>
+          <td class="sv">78 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/wood-fired-seed-steamer/">查看完整产品页 → https://www.hydoilpress.com/products/wood-fired-seed-steamer/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">27KW Electric</div>
+      <h3 class="prod-title">27KW 电热蒸籽机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/electric-seed-steamer.webp" alt="27KW 电热蒸籽机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">27KW电热蒸籽机，增加物料水分软化细胞，提高出油率。温度可控。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>tea seed · rapeseed · peanut · sesame · mustard seed</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Equipment Name</td>
+          <td class="sv">New Electric Seed Steamer</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Water Filling Method</td>
+          <td class="sv">Manuel / Automatique (double mode)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Steaming Tabung Press Depth</td>
+          <td class="sv">600 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Steaming Tabung Press Inner Diameter</td>
+          <td class="sv">600 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Max Processing Capacity</td>
+          <td class="sv">100 kg par lot</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Total Power</td>
+          <td class="sv">27 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Heating Power</td>
+          <td class="sv">9 / 18 / 27 KW (3 niveaux réglables)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight</td>
+          <td class="sv">~54 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Equipment Material</td>
+          <td class="sv">Acier inoxydable 201</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/electric-seed-steamer/">查看完整产品页 → https://www.hydoilpress.com/products/electric-seed-steamer/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">过滤设备</span><span class="cat-en">Filtration Equipment · 1款</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN-10SL</div>
+      <h3 class="prod-title">HN-10SL 气动压滤机</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/pneumatic-oil-filter-press-v2.webp" alt="HN-10SL 气动压滤机" onerror="this.src='public/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">气动压滤机——用压缩空气加压，压榨原油除去悬浮杂质。比普通板框压滤机精度更高、速度更快。</p>
+        
+        <div class="seeds"><span class="sl">适用油料：</span>all oil seeds</div>
+        <div class="spec-wrap">
+          <table class="specs"><tbody>
+        <tr class="">
+          <td class="sn">Rated Working Pressure</td>
+          <td class="sv">0.2-0.3 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Material</td>
+          <td class="sv">304L Stainless Steel</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Filtration Area</td>
+          <td class="sv">10 m²</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Filter Plate Layers</td>
+          <td class="sv">20 Layers</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Filter Media Material</td>
+          <td class="sv">Filter Paper</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Filtration Temperature</td>
+          <td class="sv">15-170 degrees Celsius</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Machine Power</td>
+          <td class="sv">1.1-2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Working Voltage</td>
+          <td class="sv">220V / 380V</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody></table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/pneumatic-oil-filter-press/">查看完整产品页 → https://www.hydoilpress.com/products/pneumatic-oil-filter-press/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ const categories = {
   'hydraulic-oil-press': 'Hydraulic Oil Presses',
   'roasting-steaming-equipment': 'Roasting & Steaming Equipment',
   'seed-processing-equipment': 'Seed Processing Equipment',
-  'filtration-refining-equipment': 'Filtration & Refining Equipment',
+  'filtration-refining-equipment': 'Filtration Equipment',
 };
 
 const categoryOrder = [
@@ -21,13 +21,29 @@ const categoryOrder = [
 ];
 
 const hydraulicSortOrder = [
+  'HN300',
   'HN325',
   'HN365',
   'HN426',
   'HN500',
-  'HN325 Large Barrel',
   'HN325/355 Sesame',
   '300 Type Coconut',
+  'HN325 Large Tabung Press',
+];
+
+const roastingSortOrder = [
+  '100# / 130#',
+  'Thermal Oil Type',
+  '60 Type Wood-Fired',
+  '27KW Electric',
+];
+
+const processingSortOrder = [
+  'HN-CG60',
+  '220 Type',
+  'HN-SC',
+  'All-in-One',
+  '370 Type',
 ];
 
 /* Catalog-facing model labels (HN355 superseded by HN365) */
@@ -40,19 +56,25 @@ const catalogText = (s: string) => (s || '').replace(/355/g, '365');
 
 /* Models retired from the catalog page (still available as product pages) */
 const archivedSlugs = [
-  'mini-hydraulic-oil-press',
   'medium-hydraulic-oil-press',
   'heavy-duty-hydraulic-oil-press',
   'high-pressure-hydraulic-oil-press',
+  'ultra-high-pressure-cold-press',
 ];
-const catalogHiddenSlugs = new Set(archivedSlugs);
+
+/* Extra slugs hidden from catalog but not archived (no predecessor card) */
+const hiddenSlugs = [
+  'edible-oil-refining-system',
+  'stainless-steel-oil-refining-equipment',
+];
+const catalogHiddenSlugs = new Set([...archivedSlugs, ...hiddenSlugs]);
 
 /* Successor model shown on archive cards */
 const successorLabel: Record<string, string> = {
-  'mini-hydraulic-oil-press': 'HN325',
   'medium-hydraulic-oil-press': 'HN365',
   'heavy-duty-hydraulic-oil-press': 'HN426 / HN500',
   'high-pressure-hydraulic-oil-press': 'HN426 / HN500',
+  'ultra-high-pressure-cold-press': 'HN500',
 };
 
 /* Previous-generation models rendered in the collapsed archive section */
@@ -60,10 +82,11 @@ const archivedProducts = archivedSlugs
   .map(slug => products.find(p => p.slug === slug))
   .filter(Boolean);
 
-function getHydraulicSortIndex(product) {
-  const model = product.data.model;
-  const index = hydraulicSortOrder.indexOf(model);
-  return index >= 0 ? index : hydraulicSortOrder.length + products.indexOf(product);
+function makeSortIndexFn(order) {
+  return (product) => {
+    const idx = order.indexOf(product.data.model);
+    return idx >= 0 ? idx : order.length + products.indexOf(product);
+  };
 }
 
 const categorizedProducts = products.reduce((acc, product) => {
@@ -74,10 +97,17 @@ const categorizedProducts = products.reduce((acc, product) => {
   return acc;
 }, {});
 
-if (categorizedProducts['hydraulic-oil-press']) {
-  categorizedProducts['hydraulic-oil-press'].sort((a, b) => {
-    return getHydraulicSortIndex(a) - getHydraulicSortIndex(b);
-  });
+const categorySortOrders: Record<string, string[]> = {
+  'hydraulic-oil-press': hydraulicSortOrder,
+  'roasting-steaming-equipment': roastingSortOrder,
+  'seed-processing-equipment': processingSortOrder,
+};
+
+for (const [cat, order] of Object.entries(categorySortOrders)) {
+  if (categorizedProducts[cat]) {
+    const fn = makeSortIndexFn(order);
+    categorizedProducts[cat].sort((a, b) => fn(a) - fn(b));
+  }
 }
 
 const sortedCategoryEntries = Object.entries(categorizedProducts).sort(([a], [b]) => {
@@ -116,9 +146,9 @@ const breadcrumbLd = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center mb-8">
         <p class="text-steel-600">{(t as any).footer?.companyName || 'Shandong Haonuo Machinery Equipment Group Co., Ltd.'}</p>
-        <button onclick="window.print()" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-medium transition-colors hidden md:block no-print">
-          Print Catalog
-        </button>
+        <a href="/Haonuo-Hydraulic-Oil-Press-Catalog-Table.pdf" download class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-medium transition-colors hidden md:block no-print inline-flex items-center gap-2">
+          下载产品目录
+        </a>
       </div>
 
       {sortedCategoryEntries.map(([category, items]) => (
@@ -180,7 +210,7 @@ const breadcrumbLd = {
               <div>
                 <div class="inline-block text-xs font-bold tracking-widest text-steel-500 bg-white border border-steel-200 px-3 py-1 rounded-full mb-2">PREVIOUS MODELS</div>
                 <h2 class="font-display text-2xl md:text-3xl text-charcoal-900">Previous-generation models (archive)</h2>
-                <p class="text-steel-500 text-sm mt-1 max-w-2xl">HN300 · HN355 · HN400 · HN480 — superseded by the current HN325 · HN365 · HN426 · HN500 line, but still manufactured and supported.</p>
+                <p class="text-steel-500 text-sm mt-1 max-w-2xl">HN355 · HN400 · HN480 · HN480B — superseded by the current HN325 · HN365 · HN426 · HN500 line, but still manufactured and supported.</p>
               </div>
               <span class="shrink-0 hidden md:inline-flex items-center gap-2 text-sm font-medium text-amber-600 no-print">
                 <span class="archive-label-closed">Show previous models</span>

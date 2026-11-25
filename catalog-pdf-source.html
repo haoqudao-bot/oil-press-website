@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Haonuo Machinery — Product Catalog 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 14mm 12mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; font-size: 11px; color: #1f2937; line-height: 1.5; }
+  .page-break { page-break-before: always; break-before: page; }
+  h1, h2, h3 { font-weight: 700; }
+  a { color: #d97706; text-decoration: underline; }
+
+  /* ===== COVER ===== */
+  .cover { page-break-after: always; padding-top: 60mm; position: relative; min-height: 260mm; }
+  .cover-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50mm; }
+  .cover-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22pt; color: #0A0E17; letter-spacing: 1px; }
+  .cover-logo .dot { color: #F59E0B; }
+  .cover-tag { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #6b7280; }
+  .cover-sub { font-family: 'JetBrains Mono', monospace; font-size: 10pt; color: #6b7280; letter-spacing: 2px; margin-bottom: 14pt; }
+  .cover-title { font-family: 'Bebas Neue', sans-serif; font-size: 72pt; line-height: 0.9; color: #0A0E17; margin-bottom: 8pt; }
+  .cover-title .amber { color: #F59E0B; }
+  .cover-desc { font-size: 13pt; color: #4b5563; max-width: 140mm; line-height: 1.6; margin-bottom: 40mm; }
+  .cover-stats { display: flex; gap: 30pt; border-top: 2px solid #0A0E17; padding-top: 14pt; }
+  .cover-stat .num { font-family: 'Bebas Neue', sans-serif; font-size: 28pt; color: #F59E0B; }
+  .cover-stat .lbl { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; }
+  .cover-bottom { position: absolute; bottom: 18mm; left: 14mm; right: 14mm; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 8pt; color: #6b7280; }
+
+  /* ===== INTRO ===== */
+  .intro { page-break-after: always; padding-top: 10mm; }
+  .intro h1 { font-family: 'Bebas Neue', sans-serif; font-size: 36pt; color: #0A0E17; border-bottom: 3pt solid #F59E0B; padding-bottom: 6pt; margin-bottom: 12pt; }
+  .intro-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20pt; margin-bottom: 16pt; }
+  .intro-text { font-size: 11pt; color: #374151; line-height: 1.7; }
+  .intro-text p { margin-bottom: 8pt; }
+  .intro-side { background: #f9fafb; border-left: 3pt solid #F59E0B; padding: 12pt; }
+  .intro-side h3 { font-family: 'Bebas Neue', sans-serif; font-size: 14pt; color: #0A0E17; margin-bottom: 8pt; }
+  .intro-side p { font-size: 10pt; color: #4b5563; margin-bottom: 6pt; line-height: 1.6; }
+  .intro-side .price { color: #d97706; font-weight: 600; }
+  .contact-block { margin-top: 16pt; padding: 12pt; background: #0A0E17; color: white; border-radius: 4pt; }
+  .contact-block h3 { font-family: 'Bebas Neue', sans-serif; font-size: 16pt; color: #F59E0B; margin-bottom: 8pt; }
+  .contact-row { display: flex; justify-content: space-between; font-size: 10pt; margin-bottom: 4pt; font-family: 'JetBrains Mono', monospace; }
+  .contact-row .label { color: #9ca3af; }
+  .contact-row .val { color: white; }
+
+  /* ===== CATEGORY SECTION ===== */
+  .cat-section { padding-top: 4mm; }
+  .cat-title { font-family: 'Bebas Neue', sans-serif; font-size: 22pt; color: #0A0E17; border-top: 3pt solid #F59E0B; padding-top: 8pt; margin-bottom: 8pt; display: flex; justify-content: space-between; align-items: baseline; }
+  .cat-label { }
+  .cat-en { font-family: 'JetBrains Mono', monospace; font-size: 10pt; color: #9ca3af; letter-spacing: 1px; }
+
+  /* ===== PRODUCT CARD ===== */
+  .prod-card { margin-bottom: 14pt; page-break-inside: avoid; break-inside: avoid; }
+  .prod-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4pt; }
+  .prod-model { font-family: 'JetBrains Mono', monospace; font-size: 11pt; font-weight: 500; color: #F59E0B; background: #fffbeb; padding: 2pt 6pt; border-radius: 2pt; border: 1pt solid #fde68a; }
+  .prod-title { font-family: 'Inter', sans-serif; font-size: 12pt; color: #0A0E17; flex: 1; margin-left: 8pt; }
+  .prod-body { display: grid; grid-template-columns: 38mm 1fr; gap: 8pt; border: 1pt solid #e5e7eb; border-radius: 3pt; overflow: hidden; }
+  .prod-img { background: #f9fafb; display: flex; align-items: center; justify-content: center; height: 28mm; }
+  .prod-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .prod-right { padding: 6pt 8pt; }
+  .prod-desc { font-size: 10pt; color: #374151; line-height: 1.5; margin-bottom: 4pt; }
+  .seeds { font-size: 8pt; color: #6b7280; margin-bottom: 4pt; font-family: 'JetBrains Mono', monospace; }
+  .seeds .sl { color: #9ca3af; text-transform: uppercase; font-size: 7pt; letter-spacing: 1px; margin-right: 4pt; }
+  .specs { width: 100%; border-collapse: collapse; font-size: 9pt; margin-bottom: 4pt; }
+  .specs td { padding: 2pt 4pt; border-bottom: 1pt solid #f3f4f6; }
+  .specs .sn { color: #6b7280; width: 38%; }
+  .specs .sv { color: #0A0E17; font-weight: 500; }
+  .specs tr.alt td { background: #f9fafb; }
+  .prod-link { font-size: 8pt; font-family: 'JetBrains Mono', monospace; }
+
+  /* ===== FOOTER ===== */
+  .doc-footer { position: fixed; bottom: -6mm; left: 14mm; right: 14mm; font-family: 'JetBrains Mono', monospace; font-size: 7pt; color: #9ca3af; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-logo">HAONUO<span class="dot">.</span></div>
+    <div class="cover-tag">PRODUCT CATALOG · 2026</div>
+  </div>
+  <div class="cover-sub">HYDRAULIC OIL PRESS · OIL MILL EQUIPMENT</div>
+  <div class="cover-title">HYDRAULIC<br/><span class="amber">OIL PRESS</span><br/>EQUIPMENT</div>
+  <p class="cover-desc">Factory-direct manufacturer of batch-mode hydraulic oil presses, seed preparation equipment, and complete oil production lines. Serving small workshops through to industrial mills across 20+ countries.</p>
+  <div class="cover-stats">
+    <div class="cover-stat"><div class="num">300–620</div><div class="lbl">TONNES FORCE</div></div>
+    <div class="cover-stat"><div class="num">18</div><div class="lbl">STANDARD MODELS</div></div>
+    <div class="cover-stat"><div class="num">20+</div><div class="lbl">COUNTRIES</div></div>
+    <div class="cover-stat"><div class="num">2010</div><div class="lbl">ESTABLISHED</div></div>
+  </div>
+  <div class="cover-bottom">
+    <span>Shandong Haonuo Machinery Equipment Group Co., Ltd.</span>
+    <span>hydoilpress.com</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="intro">
+  <h1>About Haonuo Machinery</h1>
+  <div class="intro-grid">
+    <div class="intro-text">
+      <p><strong>Shandong Haonuo Machinery Equipment Group Co., Ltd.</strong> is a professional hydraulic oil press manufacturer based in Shandong Province, China. Since 2010 we have designed and built batch-mode hydraulic presses, seed preparation equipment, roasting & steaming machines, and complete oil production lines for small workshops through to industrial oil mills.</p>
+      <p>Our flagship <strong>HN series</strong> covers pressing forces from 300 to 620 tonnes — pressing sesame, peanut, walnut, coconut VCO, shea butter, rapeseed, flaxseed, sunflower, palm kernel, and 20+ other oilseeds. All machines are built in our own factory with <strong>Q690 high-strength steel barrels</strong>, <strong>27SiMn alloy steel cylinders</strong>, and <strong>nickel-plated food-contact surfaces</strong>.</p>
+      <p>We export to markets across Southeast Asia, Africa, the Middle East, and Latin America. This catalog lists all standard production models organized by equipment category.</p>
+    </div>
+    <div class="intro-side">
+      <h3>Product Line</h3>
+      <p><strong>① Hydraulic Oil Presses</strong><br/>300 – 620 tonne presses, 12 standard models including cold-press and custom variants.</p>
+      <p><strong>② Seed Processing</strong><br/>Pre-press, crushing, conveying — +3–5% total oil yield when integrated.</p>
+      <p><strong>③ Roasting & Steaming</strong><br/>Electromagnetic drum roasters, electric & wood-fired steamers, thermal oil pans.</p>
+      <p><strong>④ Filtration</strong><br/>Pneumatic filter press for post-press crude oil clarification.</p>
+      <p class="price">Custom configurations available on request.</p>
+    </div>
+  </div>
+  <div class="contact-block">
+    <h3>Contact Us</h3>
+    <div class="contact-row"><span class="label">CONTACT</span><span class="val">Eason</span></div>
+    <div class="contact-row"><span class="label">WHATSAPP</span><span class="val">+86 189 5714 9128</span></div>
+    <div class="contact-row"><span class="label">EMAIL</span><span class="val">sales@hydoilpress.com</span></div>
+    <div class="contact-row"><span class="label">WEBSITE</span><span class="val">www.hydoilpress.com</span></div>
+    <div class="contact-row"><span class="label">LOCATION</span><span class="val">Shandong Province, China</span></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">Hydraulic Oil Presses</span><span class="cat-en">8 MODELS</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN300</div>
+      <h3 class="prod-title">Mini Hydraulic Oil Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/mini-hydraulic-oil-press.webp" alt="Mini Hydraulic Oil Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">300-ton hydraulic oil press for small factory production. 25 MPa cake pressure, 55–60 kg per batch. Compact 390mm tabung press for sesame, peanut, rapeseed, or sunflower seed. 2.2 kW motor, factory-direct, 1-year warranty.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> sesame · peanut · rapeseed · tea seed</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">300 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">1,2 / 1,5 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">300 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Inner Diameter</td>
+          <td class="sv">240 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Standard Inner Diameter</td>
+          <td class="sv">390 mm (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Standard Height</td>
+          <td class="sv">800 mm (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Standard Stroke</td>
+          <td class="sv">850 mm (customizable)</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/mini-hydraulic-oil-press/">View full details → https://www.hydoilpress.com/products/mini-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN325</div>
+      <h3 class="prod-title">Standard Hydraulic Oil Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/standard-hydraulic-oil-press.webp" alt="Standard Hydraulic Oil Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">325-ton hydraulic oil press for small workshops and starter oil mills. 20–100 kg per batch, 27 MPa cake pressure. Hot or cold pressing of peanut, sesame, rapeseed, tea seed, sunflower, or flaxseed. Compact footprint, factory-direct pricing, 1-year warranty.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> sesame · peanut · walnut · tea seed · flaxseed · rapeseed · sunflower seed · soybean</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">325 Tonnes</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">27 MPa (Ø390 tabung press)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Hydraulic System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Diameter</td>
+          <td class="sv">Ø390 mm standard (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">800 mm standard (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Stroke</td>
+          <td class="sv">850 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Batch Capacity</td>
+          <td class="sv">About 20–100 kg per batch (100 kg max, crushed seed)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Power</td>
+          <td class="sv">380V / 50Hz (415V optional)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/standard-hydraulic-oil-press/">View full details → https://www.hydoilpress.com/products/standard-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN365</div>
+      <h3 class="prod-title">Commercial Hydraulic Oil Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/commercial-hydraulic-oil-press.webp" alt="Commercial Hydraulic Oil Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">365-ton hydraulic oil press for medium to large commercial operations. 30 MPa cake pressure, single or double tabung press. Hot or cold pressing of peanut, sesame, rapeseed, tea seed, walnut, or soybean. Vertical structure, manual or semi-automatic, factory-direct.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> peanut · sesame · rapeseed · camellia seed · walnut · flaxseed · sunflower · soybean · almond</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Rated Pressing Force</td>
+          <td class="sv">365 Tonnes</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">30 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Frame</td>
+          <td class="sv">3 cm high-strength steel plate</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Structure</td>
+          <td class="sv">Vertical, single or double tabung press</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Working Mode</td>
+          <td class="sv">Manual / Semi-automatic, switchable</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Process</td>
+          <td class="sv">Hot pressing and cold pressing</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Starting</td>
+          <td class="sv">Star-delta (Y-Δ) reduced-voltage start</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Configuration</td>
+          <td class="sv">Single or double station</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Applicable Seeds</td>
+          <td class="sv">Peanut, sesame, rapeseed, camellia (tea) seed, walnut, flaxseed, sunflower, soybean, almond</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/commercial-hydraulic-oil-press/">View full details → https://www.hydoilpress.com/products/commercial-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN426</div>
+      <h3 class="prod-title">Cold Press Hydraulic Oil Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/cold-press-hydraulic-oil-press.webp" alt="Cold Press Hydraulic Oil Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">500-ton hydraulic press purpose-built for cold-pressing premium oils. 70 MPa system pressure, 42 MPa cake pressure. Low-heat extraction for coconut VCO, walnut, almond, or flaxseed. Hot pressing also supported. Single or double tabung press, factory-direct.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> tea seed · rapeseed · peanut · soybean · flaxseed · lacquer oil seed · walnut kernel · in-shell walnut · apricot kernel · yellowhorn · tiger nut</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">System Pressure</td>
+          <td class="sv">70 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">500 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">2,4 / 2,7 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">426 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Inner Diameter</td>
+          <td class="sv">320 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Standard Inner Diameter</td>
+          <td class="sv">390 mm (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Standard Height</td>
+          <td class="sv">800 mm (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Standard Stroke</td>
+          <td class="sv">850 mm (customizable)</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/cold-press-hydraulic-oil-press/">View full details → https://www.hydoilpress.com/products/cold-press-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN500</div>
+      <h3 class="prod-title">Ultra High Pressure Hydraulic Oil Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/ultra-high-pressure-hydraulic-oil-press.webp" alt="Ultra High Pressure Hydraulic Oil Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">620-ton industrial hydraulic oil press for the hardest in-shell materials. 75 MPa system pressure, 52 MPa cake pressure. Presses in-shell walnut, apricot kernel, copra, or palm kernel. Single or double tabung press, heavy-duty steel frame, factory-direct.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> tea seed · rapeseed · peanut · soybean · flaxseed · lacquer oil seed · walnut kernel · in-shell walnut · apricot kernel · yellowhorn · tiger nut</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">System Pressure</td>
+          <td class="sv">75 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">620 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">3,5 / 3,88 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">500 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Piston Inner Diameter</td>
+          <td class="sv">360 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Standard Inner Diameter</td>
+          <td class="sv">390 mm (customizable)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Standard Height</td>
+          <td class="sv">800 mm (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Standard Stroke</td>
+          <td class="sv">850 mm (customizable)</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/ultra-high-pressure-hydraulic-oil-press/">View full details → https://www.hydoilpress.com/products/ultra-high-pressure-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN325/355 Sesame</div>
+      <h3 class="prod-title">Sesame Oil Hydraulic Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/sesame-oil-hydraulic-press.webp" alt="Sesame Oil Hydraulic Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Purpose-built hydraulic press for sesame oil. 42-54% max yield, 47–51 MPa cake pressure from 300mm narrow tabung press.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> sesame · in-shell walnut · tea seed · rapeseed · peanut · soybean · lacquer oil seed · flaxseed</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Outer Diameter (325/355)</td>
+          <td class="sv">325 / 360 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Inner Diameter (325/355)</td>
+          <td class="sv">260 / 280 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Stroke</td>
+          <td class="sv">850 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">System Pressure (325/355)</td>
+          <td class="sv">60 / 63 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cake Surface Pressure (325/355)</td>
+          <td class="sv">47 / 51 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Inner Diameter</td>
+          <td class="sv">300 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">800 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Machine Weight (325/355)</td>
+          <td class="sv">~1,4 / ~2,1 Tonnes</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/sesame-oil-hydraulic-press/">View full details → https://www.hydoilpress.com/products/sesame-oil-hydraulic-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">300 Type Coconut</div>
+      <h3 class="prod-title">Coconut Milk Hydraulic Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/coconut-oil-hydraulic-press.webp" alt="Coconut Milk Hydraulic Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">300-ton hydraulic press with 600mm food-grade stainless steel tabung. Purpose-built for coconut milk, coconut cream, and VCO extraction. Custom configuration for coconut-only operations, 30–45 working days lead time, factory-direct.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> coconut milk</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">300 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Inner Diameter</td>
+          <td class="sv">240 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Stroke</td>
+          <td class="sv">700 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Pressing Force</td>
+          <td class="sv">300 Tonnes</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">10.83 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Inner Diameter</td>
+          <td class="sv">600 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">600 mm</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/coconut-oil-hydraulic-press/">View full details → https://www.hydoilpress.com/products/coconut-oil-hydraulic-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN325 Large Tabung Press</div>
+      <h3 class="prod-title">Sludge Dewatering Hydraulic Press</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/large-barrel-hydraulic-oil-press.webp" alt="Sludge Dewatering Hydraulic Press" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">325-ton hydraulic press with 630mm large tabung for sludge and residue dewatering. Handles oil sludge, animal/plant oil residue, textile sludge, and fruit/vegetable pulp dehydration. Custom configuration, 30–45 working days lead time.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> animal oil residue · plant oil residue · oil sludge · textile sludge · fruit vegetable dehydration · oil field sludge</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Cylinder Outer Diameter</td>
+          <td class="sv">325 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cylinder Stroke</td>
+          <td class="sv">850 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">System Pressure</td>
+          <td class="sv">60 MPa</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Cake Surface Pressure</td>
+          <td class="sv">10.64 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Tabung Press Inner Diameter</td>
+          <td class="sv">630 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Tabung Press Height</td>
+          <td class="sv">1000 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight (Single/Double)</td>
+          <td class="sv">~2,5 / ~3,5 Tonnes</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Equipment Dimensions (Single/Double)</td>
+          <td class="sv">1400×2100×2900 / 2700×2100×2900 mm</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/large-barrel-hydraulic-oil-press/">View full details → https://www.hydoilpress.com/products/large-barrel-hydraulic-oil-press/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">Seed Processing Equipment</span><span class="cat-en">5 MODELS</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN-CG60</div>
+      <h3 class="prod-title">Oilseed Pre-Press for Oil Mill Pretreatment</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/hn-cg60-oilseed-pre-press.webp" alt="Oilseed Pre-Press for Oil Mill Pretreatment" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Screw oilseed pre-press that crushes seeds into flakes and raises total plant oil yield by 3–5% before the main hydraulic press. 7.5 kW (500 kg/h) or 11 kW (750 kg/h), ready for mustard, rapeseed and groundnut lines.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> rapeseed · mustard seed · groundnut · soybean · flaxseed · sesame · sunflower seed · cotton seed</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Motor Power</td>
+          <td class="sv">7.5 kW standard / 11 kW optional</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Voltage</td>
+          <td class="sv">380V (customizable)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor Speed</td>
+          <td class="sv">1460 r/min</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">500 kg/h (7.5 kW) / 750 kg/h (11 kW)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Overall Dimension</td>
+          <td class="sv">1030 × 1000 × 750 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight</td>
+          <td class="sv">174 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Crushing Action</td>
+          <td class="sv">Flakes seed, cracks oil cells — no oil output itself</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Typical Yield Increase</td>
+          <td class="sv">3–5% total oil yield with hydraulic finishing</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/oilseed-pre-press/">View full details → https://www.hydoilpress.com/products/oilseed-pre-press/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">220 Type</div>
+      <h3 class="prod-title">High Speed Seed Crusher for Oilseed Preparation</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/high-speed-seed-crusher.webp" alt="High Speed Seed Crusher for Oilseed Preparation" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">High-speed seed crusher for pre-pressing oil seed preparation. Efficiently cracks and crushes palm kernel, copra, and hard-shelled seeds before hydraulic pressing.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> tea seed · yellowhorn · avocado seed · hard shell seeds</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Voltage</td>
+          <td class="sv">380V</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Power</td>
+          <td class="sv">11 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Rotation Speed</td>
+          <td class="sv">1460 RPM</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">750 kg/h (1500 jin/h)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Noise</td>
+          <td class="sv">~82 dB</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Weight</td>
+          <td class="sv">218 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Equipment Dimensions</td>
+          <td class="sv">1400×802×800 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/high-speed-seed-crusher/">View full details → https://www.hydoilpress.com/products/high-speed-seed-crusher/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN-SC</div>
+      <h3 class="prod-title">Vertical Screw Conveyor Feeder</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/vertical-screw-conveyor.webp" alt="Vertical Screw Conveyor Feeder" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">2-metre vertical stainless steel screw feeder for automatic oilseed feeding into presses, roasters and filters. 1.1 kW geared drive, 600×600×600 mm bin, enclosed dust-free conveying.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> peanut · rapeseed · soybean · sesame · sunflower seed · granular oilseeds</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Material</td>
+          <td class="sv">Stainless steel (screw, tube, bin, frame)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Drive Motor</td>
+          <td class="sv">1.1 kW geared motor</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Lift Height</td>
+          <td class="sv">2 metres</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Feed Bin Size</td>
+          <td class="sv">600 × 600 × 600 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Conveying Type</td>
+          <td class="sv">Enclosed vertical screw, dust-free</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Typical Pairing</td>
+          <td class="sv">Hydraulic oil press, oil filter, drum/pan roaster</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/vertical-screw-conveyor/">View full details → https://www.hydoilpress.com/products/vertical-screw-conveyor/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">All-in-One</div>
+      <h3 class="prod-title">Integrated Feeder Crusher Roaster</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/integrated-feeder-crusher-roaster.webp" alt="Integrated Feeder Crusher Roaster" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Integrated feeder, crusher, and roaster combo machine. All-in-one seed preparation system that feeds, crushes, and roasts oil seeds in a single operation.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> tea seed · rapeseed · peanut · sunflower seed</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">500-1000 kg/h (selon la configuration)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Integrated Functions</td>
+          <td class="sv">Alimentation automatique + Concassage + Torréfaction</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/integrated-feeder-crusher-roaster/">View full details → https://www.hydoilpress.com/products/integrated-feeder-crusher-roaster/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">370 Type</div>
+      <h3 class="prod-title">Industrial Oil Cake Crusher for Oil Mills</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/industrial-seed-crusher.webp" alt="Industrial Oil Cake Crusher for Oil Mills" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Industrial-grade oil cake crusher for crushing pressed oil cakes into fine powder. Well-suited for recycling oil cake residue, producing animal feed, or further processing.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> pressed oil cake · sesame cake · peanut cake · rapeseed cake</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Voltage</td>
+          <td class="sv">380V</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Power</td>
+          <td class="sv">18.5 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Rotation Speed</td>
+          <td class="sv">3260 RPM</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">2000 kg/h</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Weight</td>
+          <td class="sv">308 kg</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/industrial-seed-crusher/">View full details → https://www.hydoilpress.com/products/industrial-seed-crusher/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">Roasting & Steaming Equipment</span><span class="cat-en">4 MODELS</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">100# / 130#</div>
+      <h3 class="prod-title">Automatic Electromagnetic Drum Roaster</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/automatic-drum-roaster.webp" alt="Automatic Electromagnetic Drum Roaster" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Rotating-drum electromagnetic roaster with independent temperature control — even, flameless roasting before hot pressing. Three sizes from 160 to 450 kg per batch.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> sesame · peanut · rapeseed · sunflower seed · flaxseed · camellia seed</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Capacity per Batch</td>
+          <td class="sv">160–220 kg / 200–350 kg / 360–450 kg</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Drum Size</td>
+          <td class="sv">70×98 cm / 73×130 cm / 80×130 cm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Motor</td>
+          <td class="sv">0.75 kW / 1.1 kW / 1.5 kW (three-phase 4-pole)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Heating Power</td>
+          <td class="sv">18 kW / 27 kW / 27 kW (electromagnetic)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Heating Method</td>
+          <td class="sv">Electromagnetic, flameless, sealed drum</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Control</td>
+          <td class="sv">Independent temperature control with automatic shut-off</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/automatic-drum-roaster/">View full details → https://www.hydoilpress.com/products/automatic-drum-roaster/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">Thermal Oil Type</div>
+      <h3 class="prod-title">Thermal Oil Roasting Pan for Oilseeds</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/thermal-oil-roasting-pan.webp" alt="Thermal Oil Roasting Pan for Oilseeds" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Thermal oil roasting pan for seed roasting and temperature adjustment. Even heating with thermal oil circulation for consistent roasting and improved oil flavor.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> tea seed · rapeseed · peanut · sesame · sunflower seed</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Total Roaster Height</td>
+          <td class="sv">1550 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Outer Diameter</td>
+          <td class="sv">1200 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Pot Inner Diameter</td>
+          <td class="sv">1000 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Depth</td>
+          <td class="sv">380 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Discharge Outlet Width</td>
+          <td class="sv">260 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Discharge Outlet Height from Ground</td>
+          <td class="sv">500 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Processing Capacity</td>
+          <td class="sv">100-150 kg par lot (200-300 jin)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Reducer Power</td>
+          <td class="sv">1.1 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Heating Power</td>
+          <td class="sv">27 KW</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/thermal-oil-roasting-pan/">View full details → https://www.hydoilpress.com/products/thermal-oil-roasting-pan/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">60 Type Wood-Fired</div>
+      <h3 class="prod-title">Wood-Fired Seed Steamer for Oil Mills</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/wood-fired-seed-steamer.webp" alt="Wood-Fired Seed Steamer for Oil Mills" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Wood-fired seed steamer for cost-effective oil seed conditioning. Economical steaming solution using wood or biomass fuel for areas with limited electricity.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> tea seed · rapeseed · peanut · sesame</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Stove Body Material</td>
+          <td class="sv">Acier au carbone Q355B</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Body Material</td>
+          <td class="sv">Acier inoxydable 304 (finition miroir)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Stove Body Dimensions</td>
+          <td class="sv">500×500×750 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Body Dimensions</td>
+          <td class="sv">φ600×610 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Fuel Types</td>
+          <td class="sv">Charbon, Bois, Gaz</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Pot Capacity</td>
+          <td class="sv">~100 kg par lot (~200 jin)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Chimney Outer Diameter</td>
+          <td class="sv">8.7 cm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Total Equipment Weight</td>
+          <td class="sv">78 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/wood-fired-seed-steamer/">View full details → https://www.hydoilpress.com/products/wood-fired-seed-steamer/</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">27KW Electric</div>
+      <h3 class="prod-title">Electric Seed Steamer for Commercial Oil Mills</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/electric-seed-steamer.webp" alt="Electric Seed Steamer for Commercial Oil Mills" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Electric seed steamer for pre-press oil seed conditioning. Temperature-controlled steaming adjusts seed moisture and temperature for optimal oil yield.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> tea seed · rapeseed · peanut · sesame · mustard seed</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Equipment Name</td>
+          <td class="sv">New Electric Seed Steamer</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Water Filling Method</td>
+          <td class="sv">Manuel / Automatique (double mode)</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Steaming Tabung Press Depth</td>
+          <td class="sv">600 mm</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Steaming Tabung Press Inner Diameter</td>
+          <td class="sv">600 mm</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Max Processing Capacity</td>
+          <td class="sv">100 kg par lot</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Total Power</td>
+          <td class="sv">27 KW</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Heating Power</td>
+          <td class="sv">9 / 18 / 27 KW (3 niveaux réglables)</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Machine Weight</td>
+          <td class="sv">~54 kg</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Equipment Material</td>
+          <td class="sv">Acier inoxydable 201</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/electric-seed-steamer/">View full details → https://www.hydoilpress.com/products/electric-seed-steamer/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+<section class="cat-section">
+  <h2 class="cat-title"><span class="cat-label">Filtration Equipment</span><span class="cat-en">1 MODELS</span></h2>
+  
+  <div class="prod-card">
+    <div class="prod-head">
+      <div class="prod-model">HN-10SL</div>
+      <h3 class="prod-title">Pneumatic Oil Filter Press for Crude Oil</h3>
+    </div>
+    <div class="prod-body">
+      <div class="prod-img">
+        <img src="public/images/products/pneumatic-oil-filter-press-v2.webp" alt="Pneumatic Oil Filter Press for Crude Oil" onerror="this.src='/images/products/default-product.webp'"/>
+      </div>
+      <div class="prod-right">
+        <p class="prod-desc">Pneumatic oil filter press for crude oil filtration and purification. Compressed air-driven filtration removes impurities and residue for clear, market-ready oil.</p>
+        
+        <div class="seeds"><span class="sl">Oilseeds:</span> all oil seeds</div>
+        <div class="spec-wrap">
+          <table class="specs">
+            <tbody>
+        <tr class="">
+          <td class="sn">Rated Working Pressure</td>
+          <td class="sv">0.2-0.3 MPa</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Material</td>
+          <td class="sv">304L Stainless Steel</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Filtration Area</td>
+          <td class="sv">10 m²</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Filter Plate Layers</td>
+          <td class="sv">20 Layers</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Filter Media Material</td>
+          <td class="sv">Filter Paper</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Filtration Temperature</td>
+          <td class="sv">15-170 degrees Celsius</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">Machine Power</td>
+          <td class="sv">1.1-2.2 KW</td>
+        </tr>
+
+        <tr class="alt">
+          <td class="sn">Working Voltage</td>
+          <td class="sv">220V / 380V</td>
+        </tr>
+
+        <tr class="">
+          <td class="sn">MOQ</td>
+          <td class="sv">1 Set</td>
+        </tr></tbody>
+          </table>
+        </div>
+        <div class="prod-link"><a href="https://www.hydoilpress.com/products/pneumatic-oil-filter-press/">View full details → https://www.hydoilpress.com/products/pneumatic-oil-filter-press/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="page-break"></div>
+
+</body>
+</html>
